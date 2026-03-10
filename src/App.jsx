@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
 
-const STRIPE_LINK = "https://buy.stripe.com/bJedR9aJtbrW27T4JH6wE00";
+const STRIPE_LINK = https://buy.stripe.com/bJedR9aJtbrW27T4JH6wE00;
 const FREE_INTERVIEWS = 1;
 const PRO_PRICE = "9€";
 
