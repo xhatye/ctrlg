@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CTRL·G — Simulateur d'entretien Contrôle de Gestion</title>
+    <meta name="description" content="Préparez votre entretien contrôle de gestion avec un recruteur IA senior. Score, feedback, flashcards et quiz — DCG, DSCG, Bac+5 finance." />
+    <meta property="og:title" content="CTRL·G — Simulateur d'entretien CdG" />
+    <meta property="og:description" content="IA recruteur senior, score instantané, 6 thématiques, flashcards, quiz." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>" />
+    <style>
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      body { background: #080b14; font-family: 'DM Mono','Courier New',monospace; }
+      button { font-family: 'DM Mono','Courier New',monospace; cursor: pointer; }
+      @keyframes fsu { from{opacity:0;transform:translateY(26px)} to{opacity:1;transform:translateY(0)} }
+      @keyframes fi { from{opacity:0} to{opacity:1} }
+      @keyframes shim { 0%,100%{opacity:.5} 50%{opacity:1} }
+      @keyframes puls { 0%,100%{opacity:.2;transform:scale(.8)} 50%{opacity:1;transform:scale(1.1)} }
+      @keyframes glow { 0%,100%{box-shadow:0 0 20px rgba(226,201,126,.18)} 50%{box-shadow:0 0 40px rgba(226,201,126,.38),0 0 80px rgba(226,201,126,.09)} }
+      @keyframes bglow { 0%,100%{border-color:rgba(226,201,126,.25)} 50%{border-color:rgba(226,201,126,.7)} }
+      @keyframes spin { to{transform:rotate(360deg)} }
+      @keyframes scan { 0%{transform:translateY(-2%)} 100%{transform:translateY(102vh)} }
+      @keyframes o1 { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(60px,40px) scale(1.06)} 66%{transform:translate(-30px,60px) scale(0.95)} }
+      @keyframes o2 { 0%,100%{transform:translate(0,0)} 40%{transform:translate(-50px,-40px) scale(1.08)} 70%{transform:translate(40px,-20px) scale(0.96)} }
+      @keyframes o3 { 0%,100%{transform:translate(-50%,-50%) scale(1)} 50%{transform:translate(-50%,-50%) scale(1.2)} }
+      .fc:hover{border-color:rgba(226,201,126,.38)!important;transform:translateY(-2px);box-shadow:0 8px 28px rgba(226,201,126,.07)}
+      .mb:hover{border-color:rgba(226,201,126,.28)!important;transform:translateY(-1px)}
+      .cg:hover{box-shadow:0 0 28px rgba(226,201,126,.45)!important;transform:translateY(-1px)}
+      .gh:hover{border-color:rgba(226,201,126,.35)!important;color:#e2c97e!important}
+      .fc,.mb,.cg,.gh{transition:all .2s}
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
