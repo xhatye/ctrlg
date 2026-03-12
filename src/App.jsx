@@ -1,8 +1,24 @@
 import { useState, useRef, useEffect } from "react";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
+import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore, doc, getDoc, setDoc, updateDoc, arrayUnion } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+};
+const firebaseApp = initializeApp(firebaseConfig);
+const auth = getAuth(firebaseApp);
+const db = getFirestore(firebaseApp);
+const googleProvider = new GoogleAuthProvider();
 
 // ── CONFIG ────────────────────────────────────────────────────────────────────
-const STRIPE_LINK = "https://buy.stripe.com/YOUR_LINK_HERE";
+const STRIPE_LINK = "https://buy.stripe.com/bJedR9aJtbrW27T4JH6wE00";
 const PRO_PRICE = "9€";
 const FREE_INTERVIEWS = 1;
 const FREE_QCM_PER_UE = 3;
@@ -99,15 +115,39 @@ async function callClaudeJSON(system, prompt, maxTokens = 2500) {
   catch { return null; }
 }
 
-// ── STORAGE ───────────────────────────────────────────────────────────────────
-const Store = {
-  get: async (k) => { try { if (window.storage) { const r = await window.storage.get(k); return r ? r.value : null; } return localStorage.getItem(k); } catch { return localStorage.getItem(k); } },
-  set: async (k, v) => { try { if (window.storage) { await window.storage.set(k, v); return; } localStorage.setItem(k, v); } catch { localStorage.setItem(k, v); } },
+// ── STORAGE (Firestore) ───────────────────────────────────────────────────────
+const getUserDoc = (uid) => doc(db, "users", uid);
+const saveHistory = async (uid, entry) => {
+  try { await updateDoc(getUserDoc(uid), { history: arrayUnion(entry) }); } catch {}
 };
-const saveHistory = async (email, entry) => { try { const k = `simdcg:${email}:history`; const raw = await Store.get(k); let h = raw ? JSON.parse(raw) : []; h.unshift(entry); if (h.length > 100) h = h.slice(0, 100); await Store.set(k, JSON.stringify(h)); } catch {} };
-const loadHistory = async (email) => { try { const r = await Store.get(`simdcg:${email}:history`); return r ? JSON.parse(r) : []; } catch { return []; } };
-const updateStreak = async (email) => { try { const k = `simdcg:${email}:streak`; const raw = await Store.get(k); let s = raw ? JSON.parse(raw) : { count: 0, lastDate: "" }; const t = today(); if (s.lastDate === t) return s.count; const y = new Date(); y.setDate(y.getDate() - 1); const ys = y.toISOString().split("T")[0]; const n = s.lastDate === ys ? s.count + 1 : 1; await Store.set(k, JSON.stringify({ count: n, lastDate: t })); return n; } catch { return 1; } };
-const loadStreak = async (email) => { try { const raw = await Store.get(`simdcg:${email}:streak`); if (!raw) return 0; const s = JSON.parse(raw); const y = new Date(); y.setDate(y.getDate() - 1); if (s.lastDate !== today() && s.lastDate !== y.toISOString().split("T")[0]) return 0; return s.count; } catch { return 0; } };
+const loadHistory = async (uid) => {
+  try { const snap = await getDoc(getUserDoc(uid)); return snap.exists() ? (snap.data().history || []).reverse() : []; } catch { return []; }
+};
+const updateStreak = async (uid) => {
+  try {
+    const snap = await getDoc(getUserDoc(uid));
+    const data = snap.exists() ? snap.data() : {};
+    const s = data.streak || { count: 0, lastDate: "" };
+    const t = today();
+    if (s.lastDate === t) return s.count;
+    const y = new Date(); y.setDate(y.getDate() - 1);
+    const ys = y.toISOString().split("T")[0];
+    const n = s.lastDate === ys ? s.count + 1 : 1;
+    await updateDoc(getUserDoc(uid), { streak: { count: n, lastDate: t } });
+    return n;
+  } catch { return 1; }
+};
+const loadStreak = async (uid) => {
+  try {
+    const snap = await getDoc(getUserDoc(uid));
+    if (!snap.exists()) return 0;
+    const s = snap.data().streak;
+    if (!s) return 0;
+    const y = new Date(); y.setDate(y.getDate() - 1);
+    if (s.lastDate !== today() && s.lastDate !== y.toISOString().split("T")[0]) return 0;
+    return s.count;
+  } catch { return 0; }
+};
 
 // ── PARTICLES ─────────────────────────────────────────────────────────────────
 function ParticleCanvas() {
@@ -176,6 +216,29 @@ export default function App() {
   const [selectedUE, setSelectedUE] = useState(null);
   const [interviewCfg, setInterviewCfg] = useState(null);
   const [result, setResult] = useState(null);
+  const [loadingAuth, setLoadingAuth] = useState(true);
+
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, async (firebaseUser) => {
+      if (firebaseUser) {
+        const ref = doc(db, "users", firebaseUser.uid);
+        const snap = await getDoc(ref);
+        if (!snap.exists()) {
+          await setDoc(ref, { name: firebaseUser.displayName || firebaseUser.email.split("@")[0], email: firebaseUser.email, isPro: false, interviewsUsed: 0, streak: { count: 0, lastDate: "" }, history: [], createdAt: new Date().toISOString() });
+        }
+        const data = snap.exists() ? snap.data() : {};
+        const streak = await loadStreak(firebaseUser.uid);
+        const hist = (data.history || []).filter(h => h.type === "entretien");
+        setUser({ uid: firebaseUser.uid, name: data.name || firebaseUser.displayName || firebaseUser.email.split("@")[0], email: firebaseUser.email, isPro: data.isPro || false, interviewsUsed: hist.length, streak });
+        setScreen(s => s === "landing" ? "dashboard" : s);
+      } else {
+        setUser(null);
+        setScreen("landing");
+      }
+      setLoadingAuth(false);
+    });
+    return unsub;
+  }, []);
 
   const isPro = user?.isPro;
   const nav = (s) => setScreen(s);
@@ -183,24 +246,25 @@ export default function App() {
 
   const onInterviewDone = async (data) => {
     const entry = { ...data, type: "entretien", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
-    if (user) { await saveHistory(user.email, entry); const s = await updateStreak(user.email); setUser(u => ({ ...u, interviewsUsed: (u.interviewsUsed || 0) + 1, streak: s })); }
+    if (user) { await saveHistory(user.uid, entry); const s = await updateStreak(user.uid); setUser(u => ({ ...u, interviewsUsed: (u.interviewsUsed || 0) + 1, streak: s })); }
     setResult(entry); nav("results_interview");
   };
   const onQCMDone = async (data) => {
     const entry = { ...data, type: "qcm", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
-    if (user) { await saveHistory(user.email, entry); const s = await updateStreak(user.email); setUser(u => ({ ...u, streak: s })); }
+    if (user) { await saveHistory(user.uid, entry); const s = await updateStreak(user.uid); setUser(u => ({ ...u, streak: s })); }
     setResult(entry); nav("results_qcm");
   };
   const onCasDone = async (data) => {
     const entry = { ...data, type: "cas", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
-    if (user) { await saveHistory(user.email, entry); const s = await updateStreak(user.email); setUser(u => ({ ...u, streak: s })); }
+    if (user) { await saveHistory(user.uid, entry); const s = await updateStreak(user.uid); setUser(u => ({ ...u, streak: s })); }
     setResult(entry); nav("results_cas");
   };
 
+  if (loadingAuth) return <div style={{ background: "#080b14", minHeight: "100vh" }} />;
   if (screen === "landing")          return <Landing onAuth={toAuth} onPricing={() => nav("pricing")} />;
   if (screen === "pricing")          return <Pricing onAuth={toAuth} onBack={() => nav("landing")} />;
   if (screen === "auth")             return <Auth mode={authMode} setMode={setAuthMode} onDone={async (u) => { setUser(u); nav("dashboard"); }} onBack={() => nav("landing")} />;
-  if (screen === "dashboard")        return <Dashboard user={user} onLogout={() => { setUser(null); nav("landing"); }} onNav={nav} onSelectUE={(ue) => { setSelectedUE(ue); nav("subject_hub"); }} isPro={isPro} />;
+  if (screen === "dashboard")        return <Dashboard user={user} onLogout={() => { signOut(auth); setUser(null); nav("landing"); }} onNav={nav} onSelectUE={(ue) => { setSelectedUE(ue); nav("subject_hub"); }} isPro={isPro} />;
   if (screen === "subject_hub")      return <SubjectHub ue={selectedUE} user={user} onNav={nav} onBack={() => nav("dashboard")} />;
   if (screen === "qcm")              return <QCMScreen ue={selectedUE} user={user} onDone={onQCMDone} onBack={() => nav("subject_hub")} />;
   if (screen === "flashcards")       return <FlashcardsScreen ue={selectedUE} onBack={() => nav("subject_hub")} />;
@@ -312,9 +376,42 @@ function Auth({ mode, setMode, onDone, onBack }) {
   const submit = async () => {
     if (!email || !pass || (mode === "signup" && !name)) { setErr("Tous les champs sont requis."); return; }
     if (pass.length < 6) { setErr("Mot de passe : 6 caractères minimum."); return; }
-    setLoading(true); await new Promise(r => setTimeout(r, 600));
-    const streak = await loadStreak(email); const hist = await loadHistory(email);
-    onDone({ name: name || email.split("@")[0], email, isPro: false, interviewsUsed: hist.filter(h => h.type === "entretien").length, streak });
+    setLoading(true); setErr("");
+    try {
+      let cred;
+      if (mode === "signup") {
+        cred = await createUserWithEmailAndPassword(auth, email, pass);
+        const ref = doc(db, "users", cred.user.uid);
+        await setDoc(ref, { name, email, isPro: false, interviewsUsed: 0, streak: { count: 0, lastDate: "" }, history: [], createdAt: new Date().toISOString() });
+      } else {
+        cred = await signInWithEmailAndPassword(auth, email, pass);
+      }
+      const snap = await getDoc(doc(db, "users", cred.user.uid));
+      const data = snap.exists() ? snap.data() : {};
+      const streak = await loadStreak(cred.user.uid);
+      const hist = (data.history || []).filter(h => h.type === "entretien");
+      onDone({ uid: cred.user.uid, name: data.name || name || email.split("@")[0], email, isPro: data.isPro || false, interviewsUsed: hist.length, streak });
+    } catch (e) {
+      const msgs = { "auth/email-already-in-use": "Email déjà utilisé.", "auth/user-not-found": "Compte introuvable.", "auth/wrong-password": "Mot de passe incorrect.", "auth/invalid-credential": "Email ou mot de passe incorrect." };
+      setErr(msgs[e.code] || "Erreur. Réessayez.");
+    }
+    setLoading(false);
+  };
+  const googleSignIn = async () => {
+    setLoading(true); setErr("");
+    try {
+      const cred = await signInWithPopup(auth, googleProvider);
+      const ref = doc(db, "users", cred.user.uid);
+      const snap = await getDoc(ref);
+      if (!snap.exists()) {
+        await setDoc(ref, { name: cred.user.displayName || cred.user.email.split("@")[0], email: cred.user.email, isPro: false, interviewsUsed: 0, streak: { count: 0, lastDate: "" }, history: [], createdAt: new Date().toISOString() });
+      }
+      const data = snap.exists() ? snap.data() : {};
+      const streak = await loadStreak(cred.user.uid);
+      const hist = (data.history || []).filter(h => h.type === "entretien");
+      onDone({ uid: cred.user.uid, name: data.name || cred.user.displayName || cred.user.email.split("@")[0], email: cred.user.email, isPro: data.isPro || false, interviewsUsed: hist.length, streak });
+    } catch (e) { setErr("Erreur Google. Réessayez."); }
+    setLoading(false);
   };
   return (
     <div style={S.root}><ParticleCanvas /><OrbBg />
@@ -323,6 +420,10 @@ function Auth({ mode, setMode, onDone, onBack }) {
         <Logo />
         <h2 style={{ fontSize: 22, margin: "12px 0 4px", color: "#e8e4d9" }}>{mode === "signup" ? "Créer un compte" : "Se connecter"}</h2>
         <p style={{ fontSize: 13, color: "#6b7280", marginBottom: 12 }}>{mode === "signup" ? "Accès gratuit inclus. Aucune carte requise." : "Bon retour."}</p>
+        <button style={{ background: "#0d1117", border: "1px solid #1f2937", color: "#e8e4d9", padding: "11px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit", display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }} onClick={googleSignIn} disabled={loading}>
+          <span style={{ fontSize: 16 }}>G</span> Continuer avec Google
+        </button>
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}><div style={{ flex: 1, height: 1, background: "#1f2937" }} /><span style={{ fontSize: 10, color: "#374151" }}>ou</span><div style={{ flex: 1, height: 1, background: "#1f2937" }} /></div>
         {mode === "signup" && <FInput label="Prénom" value={name} set={setName} ph="Jean-Baptiste" />}
         <FInput label="Email" value={email} set={setEmail} ph="jean@exemple.fr" type="email" />
         <FInput label="Mot de passe" value={pass} set={setPass} ph="••••••••" type="password" />
