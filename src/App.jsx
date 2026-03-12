@@ -101,7 +101,7 @@ async function callClaude(system, messages, maxTokens = 1200) {
     headers["anthropic-version"] = "2023-06-01";
     headers["anthropic-dangerous-direct-browser-access"] = "true";
   }
-  const r = await fetch("https://api.anthropic.com/v1/messages", {
+  const r = await fetch("/api/chat", {
     method: "POST", headers,
     body: JSON.stringify({ model: "claude-sonnet-4-20250514", max_tokens: maxTokens, system, messages }),
   });
