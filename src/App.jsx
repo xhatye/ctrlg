@@ -24,6 +24,7 @@ const FREE_INTERVIEWS = 1;
 const FREE_QCM_PER_UE = 3;
 const FREE_FLASH_PER_UE = 5;
 const PRO_FLASH_PER_UE = 12;
+const FREE_AI_CALLS_PER_DAY = 10;
 
 // ── UES DATA ──────────────────────────────────────────────────────────────────
 const DCG_UES = [
@@ -88,6 +89,16 @@ const CAS_EVAL_PROMPT = (cas, reponse) =>
   `Expert correcteur examen. Cas : ${JSON.stringify(cas)}\nRéponse candidat : ${reponse}\nJSON strict :
 {"note":<0-20>,"appreciation":"<TB|B|AB|P|I>","correction_par_question":[{"num":1,"note":<0-4>,"commentaire":"...","elements_attendus":"..."},{"num":2,"note":<0-6>,"commentaire":"...","elements_attendus":"..."},{"num":3,"note":<0-10>,"commentaire":"...","elements_attendus":"..."}],"conseil":"conseil pour progresser"}`;
 
+const RESUME_PROMPT = (ue) =>
+  `Expert ${ue.label} (${ue.level}). Génère un résumé de cours complet et structuré pour révision examen. JSON strict sans markdown :
+{"sections":[{"titre":"...","points":["...","...","...","..."]}],"points_cles":["...","...","...","...","..."],"pieges_frequents":["...","...","..."],"conseil_exam":"..."}
+Génère 4 à 6 sections couvrant l'ensemble du programme, chaque section avec 4 points précis et actionnables.`;
+
+const PLANNING_PROMPT = (weeks, level, subjects) =>
+  `Tu es un coach DCG/DSCG expert. Planning de révision sur ${weeks} semaines pour ${level} (matières : ${subjects}). JSON strict sans markdown :
+{"semaines":[{"num":1,"focus":"thème principal de la semaine","ues":["UE1"],"objectifs":["objectif précis 1","objectif précis 2","objectif précis 3"],"conseil":"1 conseil pratique pour cette semaine"}],"conseil_global":"conseil général pour réussir","rythme_conseille":"X heures par jour"}
+Génère exactement ${weeks} semaines avec une progression logique du général vers le spécifique.`;
+
 // ── HELPERS ───────────────────────────────────────────────────────────────────
 const fmt = (s) => `${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`;
 const scoreColor = (s) => s >= 80 ? "#4ade80" : s >= 60 ? "#f59e0b" : "#f87171";
@@ -117,12 +128,18 @@ async function callClaudeJSON(system, prompt, maxTokens = 2500, user = null) {
 
 // ── STORAGE (Firestore) ───────────────────────────────────────────────────────
 const getUserDoc = (uid) => doc(db, "users", uid);
+
 const saveHistory = async (uid, entry) => {
   try { await updateDoc(getUserDoc(uid), { history: arrayUnion(entry) }); } catch {}
 };
+
 const loadHistory = async (uid) => {
-  try { const snap = await getDoc(getUserDoc(uid)); return snap.exists() ? (snap.data().history || []).reverse() : []; } catch { return []; }
+  try {
+    const snap = await getDoc(getUserDoc(uid));
+    return snap.exists() ? (snap.data().history || []).reverse() : [];
+  } catch { return []; }
 };
+
 const updateStreak = async (uid) => {
   try {
     const snap = await getDoc(getUserDoc(uid));
@@ -137,6 +154,7 @@ const updateStreak = async (uid) => {
     return n;
   } catch { return 1; }
 };
+
 const loadStreak = async (uid) => {
   try {
     const snap = await getDoc(getUserDoc(uid));
@@ -148,25 +166,45 @@ const loadStreak = async (uid) => {
     return s.count;
   } catch { return 0; }
 };
-const FREE_AI_CALLS_PER_DAY = 10;
 
 const checkAndIncrementQuota = async (uid) => {
-  // Retourne true si l'appel est autorisé, false si quota dépassé
   try {
     const snap = await getDoc(getUserDoc(uid));
     const data = snap.exists() ? snap.data() : {};
     const t = today();
     const quota = data.aiQuota || { count: 0, date: "" };
     if (quota.date !== t) {
-      // Nouveau jour → reset
       await updateDoc(getUserDoc(uid), { aiQuota: { count: 1, date: t } });
       return true;
     }
     if (quota.count >= FREE_AI_CALLS_PER_DAY) return false;
     await updateDoc(getUserDoc(uid), { aiQuota: { count: quota.count + 1, date: t } });
     return true;
-  } catch { return true; } // En cas d'erreur on laisse passer
+  } catch { return true; }
 };
+
+const saveMastery = async (uid, ueId, pct) => {
+  try {
+    const snap = await getDoc(getUserDoc(uid));
+    const data = snap.exists() ? snap.data() : {};
+    const mastery = data.mastery || {};
+    const existing = mastery[ueId] || { best: 0, attempts: 0 };
+    const updated = {
+      best: Math.max(existing.best, pct),
+      attempts: (existing.attempts || 0) + 1,
+      lastDate: today(),
+    };
+    await updateDoc(getUserDoc(uid), { [`mastery.${ueId}`]: updated });
+  } catch {}
+};
+
+const loadMastery = async (uid) => {
+  try {
+    const snap = await getDoc(getUserDoc(uid));
+    return snap.exists() ? (snap.data().mastery || {}) : {};
+  } catch { return {}; }
+};
+
 // ── PARTICLES ─────────────────────────────────────────────────────────────────
 function ParticleCanvas() {
   const canvasRef = useRef(null);
@@ -225,14 +263,12 @@ function OrbBg() {
     const ctx = canvas.getContext("2d");
     const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
     resize(); window.addEventListener("resize", resize);
-    // Stars
     const stars = Array.from({ length: 220 }, () => ({
       x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight,
       r: Math.random() * 1.2 + 0.2, op: Math.random() * 0.7 + 0.15,
       phase: Math.random() * Math.PI * 2, speed: Math.random() * 0.008 + 0.003,
-      layer: Math.floor(Math.random() * 3), // 0=far,1=mid,2=near
+      layer: Math.floor(Math.random() * 3),
     }));
-    // Nebulae
     const nebulae = [
       { x: 0.15, y: 0.2, r: 300, c: "rgba(96,165,250,0.022)" },
       { x: 0.85, y: 0.75, r: 260, c: "rgba(167,139,250,0.018)" },
@@ -243,21 +279,18 @@ function OrbBg() {
     const draw = () => {
       t += 1;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      // Draw nebulae
       nebulae.forEach(n => {
         const grd = ctx.createRadialGradient(n.x * canvas.width, n.y * canvas.height, 0, n.x * canvas.width, n.y * canvas.height, n.r);
         grd.addColorStop(0, n.c); grd.addColorStop(1, "transparent");
         ctx.beginPath(); ctx.arc(n.x * canvas.width, n.y * canvas.height, n.r, 0, Math.PI * 2);
         ctx.fillStyle = grd; ctx.fill();
       });
-      // Draw stars
       stars.forEach(s => {
         const twinkle = 0.5 + 0.5 * Math.sin(s.phase + t * s.speed);
         const op = s.op * (0.6 + 0.4 * twinkle);
         const size = s.r * (0.85 + 0.15 * twinkle);
         ctx.beginPath(); ctx.arc(s.x, s.y, size, 0, Math.PI * 2);
         if (s.layer === 2) {
-          // Bright stars get a glow
           const grd = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, size * 4);
           grd.addColorStop(0, `rgba(255,255,255,${op * 0.5})`); grd.addColorStop(1, "transparent");
           ctx.fillStyle = grd; ctx.arc(s.x, s.y, size * 4, 0, Math.PI * 2); ctx.fill();
@@ -278,6 +311,21 @@ function OrbBg() {
   return <canvas ref={canvasRef} style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none" }} />;
 }
 
+// ── CSS ANIMATIONS ────────────────────────────────────────────────────────────
+const CSS = `
+@keyframes fsu { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+@keyframes fi  { from { opacity:0; } to { opacity:1; } }
+@keyframes spin { to { transform:rotate(360deg); } }
+@keyframes glow { 0%,100% { box-shadow:0 0 18px rgba(226,201,126,.18); } 50% { box-shadow:0 0 36px rgba(226,201,126,.38); } }
+@keyframes puls { 0%,100% { opacity:.2; transform:scale(.8); } 50% { opacity:1; transform:scale(1.1); } }
+@keyframes slide-in { from { opacity:0; transform:translateX(20px); } to { opacity:1; transform:translateX(0); } }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:#080b14; }
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-track { background:#0d1117; }
+::-webkit-scrollbar-thumb { background:#1f2937; border-radius:2px; }
+`;
+
 // ── ROOT ──────────────────────────────────────────────────────────────────────
 export default function App() {
   const [user, setUser] = useState(null);
@@ -289,12 +337,28 @@ export default function App() {
   const [loadingAuth, setLoadingAuth] = useState(true);
 
   useEffect(() => {
+    const style = document.createElement("style");
+    style.textContent = CSS;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, []);
+
+  useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (firebaseUser) => {
       if (firebaseUser) {
         const ref = doc(db, "users", firebaseUser.uid);
         const snap = await getDoc(ref);
         if (!snap.exists()) {
-          await setDoc(ref, { name: firebaseUser.displayName || firebaseUser.email.split("@")[0], email: firebaseUser.email, isPro: false, interviewsUsed: 0, streak: { count: 0, lastDate: "" }, history: [], createdAt: new Date().toISOString() });
+          await setDoc(ref, {
+            name: firebaseUser.displayName || firebaseUser.email.split("@")[0],
+            email: firebaseUser.email,
+            isPro: false,
+            interviewsUsed: 0,
+            streak: { count: 0, lastDate: "" },
+            history: [],
+            mastery: {},
+            createdAt: new Date().toISOString()
+          });
         }
         const data = snap.exists() ? snap.data() : {};
         const streak = await loadStreak(firebaseUser.uid);
@@ -320,8 +384,14 @@ export default function App() {
     setResult(entry); nav("results_interview");
   };
   const onQCMDone = async (data) => {
+    const pct = Math.round(data.score / data.total * 100);
     const entry = { ...data, type: "qcm", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
-    if (user) { await saveHistory(user.uid, entry); const s = await updateStreak(user.uid); setUser(u => ({ ...u, streak: s })); }
+    if (user) {
+      await saveHistory(user.uid, entry);
+      await saveMastery(user.uid, data.ue, pct);
+      const s = await updateStreak(user.uid);
+      setUser(u => ({ ...u, streak: s }));
+    }
     setResult(entry); nav("results_qcm");
   };
   const onCasDone = async (data) => {
@@ -337,14 +407,16 @@ export default function App() {
   if (screen === "dashboard")        return <Dashboard user={user} onLogout={() => { signOut(auth); setUser(null); nav("landing"); }} onNav={nav} onSelectUE={(ue) => { setSelectedUE(ue); nav("subject_hub"); }} isPro={isPro} />;
   if (screen === "subject_hub")      return <SubjectHub ue={selectedUE} user={user} onNav={nav} onBack={() => nav("dashboard")} />;
   if (screen === "qcm")              return <QCMScreen ue={selectedUE} user={user} onDone={onQCMDone} onBack={() => nav("subject_hub")} />;
-  if (screen === "flashcards")       return <FlashcardsScreen ue={selectedUE} user={user} onBack={() => nav("subject_hub")} />;
+  if (screen === "flashcards")       return <FlashcardsScreen ue={selectedUE} user={user} onBack={() => nav("subject_hub")} onUpgrade={() => { window.open(STRIPE_LINK, "_blank"); }} />;
+  if (screen === "resume_cours")     return <ResumeCoursScreen ue={selectedUE} user={user} onBack={() => nav("subject_hub")} />;
   if (screen === "cas_pratique")     return <CasPratiqueScreen ue={selectedUE} user={user} onDone={onCasDone} onBack={() => nav("subject_hub")} />;
+  if (screen === "planning")         return <PlanningScreen user={user} onBack={() => nav("dashboard")} onUpgrade={() => { window.open(STRIPE_LINK, "_blank"); }} />;
   if (screen === "interview_config") return <InterviewConfig user={user} onStart={(cfg) => { setInterviewCfg(cfg); nav("interview"); }} onBack={() => nav("dashboard")} />;
   if (screen === "interview")        return <InterviewScreen cfg={interviewCfg} onDone={onInterviewDone} />;
   if (screen === "results_interview")return <ResultsInterview data={result} onNew={() => nav("interview_config")} onDash={() => nav("dashboard")} />;
   if (screen === "results_qcm")      return <ResultsQCM data={result} onNew={() => nav("qcm")} onDash={() => nav("subject_hub")} />;
   if (screen === "results_cas")      return <ResultsCas data={result} onNew={() => nav("cas_pratique")} onDash={() => nav("subject_hub")} />;
-  if (screen === "paywall")          return <Paywall onUpgrade={() => { window.open(STRIPE_LINK, "_blank"); setUser(u => ({ ...u, isPro: true })); }} onBack={() => nav("dashboard")} />;
+  if (screen === "paywall")          return <Paywall onUpgrade={() => { window.open(STRIPE_LINK, "_blank"); }} onBack={() => nav("dashboard")} />;
   if (screen === "history")          return <History user={user} onBack={() => nav("dashboard")} />;
   if (screen === "progress")         return <ProgressScreen user={user} onBack={() => nav("dashboard")} />;
   return null;
@@ -370,7 +442,7 @@ function Landing({ onAuth, onPricing }) {
           <span style={{ color: "#e2c97e" }}>DCG / DSCG</span>
         </h1>
         <p style={{ fontSize: 15, color: "#4b5563", lineHeight: 1.75, margin: 0, maxWidth: 480, animation: "fsu .7s .2s both" }}>
-          QCM générés par IA, cas pratiques, flashcards et simulateur d'entretien — tout ce qu'il faut pour décrocher le diplôme et le poste.
+          QCM générés par IA, résumés de cours, cas pratiques, flashcards et simulateur d'entretien — tout ce qu'il faut pour décrocher le diplôme et le poste.
         </p>
         <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center", animation: "fsu .7s .3s both" }}>
           <button style={{ ...S.ctag, animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Commencer gratuitement →</button>
@@ -379,15 +451,16 @@ function Landing({ onAuth, onPricing }) {
         <p style={{ fontSize: 11, color: "#374151", letterSpacing: ".08em", animation: "fi 1s .5s both" }}>Accès gratuit · Sans carte bancaire</p>
       </div>
 
-      <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px 40px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, position: "relative", zIndex: 1 }}>
+      <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px 40px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, position: "relative", zIndex: 1 }}>
         {[
-          { icon: "🎓", label: "Mode Diplôme", color: "#60a5fa", items: ["QCM IA illimités par UE", "Cas pratiques style examen", "Flashcards de révision IA", "13 matières DCG + DSCG"] },
+          { icon: "🎓", label: "Mode Diplôme", color: "#60a5fa", items: ["QCM IA illimités par UE", "Résumés de cours gratuits", "Cas pratiques style examen", "13 matières DCG + DSCG"] },
+          { icon: "◈", label: "Révision Intelligente", color: "#4ade80", items: ["Flashcards générées par IA", "Révision espacée (Pro)", "Planning personnalisé (Pro)", "Suivi de progression par UE"] },
           { icon: "💼", label: "Mode Carrière", color: "#e2c97e", items: ["Simulateur d'entretien IA", "6 thématiques Finance/Gestion", "Score et coaching personnalisé", "Feedback recruteur senior"] },
         ].map((m, i) => (
           <div key={m.label} style={{ ...S.fc, borderColor: `${m.color}20`, animation: `fsu .6s ${.4 + i * .1}s both` }}>
-            <div style={{ fontSize: 32, marginBottom: 10 }}>{m.icon}</div>
-            <p style={{ fontSize: 14, fontWeight: 700, color: m.color, margin: "0 0 12px", letterSpacing: ".05em" }}>{m.label}</p>
-            {m.items.map(it => <p key={it} style={{ fontSize: 12, color: "#4b5563", margin: "3px 0" }}>✓ {it}</p>)}
+            <div style={{ fontSize: 28, marginBottom: 10 }}>{m.icon}</div>
+            <p style={{ fontSize: 13, fontWeight: 700, color: m.color, margin: "0 0 12px", letterSpacing: ".05em" }}>{m.label}</p>
+            {m.items.map(it => <p key={it} style={{ fontSize: 11, color: "#4b5563", margin: "3px 0" }}>✓ {it}</p>)}
           </div>
         ))}
       </div>
@@ -418,8 +491,8 @@ function Pricing({ onAuth, onBack }) {
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
           {[
-            { label: "Gratuit", price: "0€", hl: false, cta: "Commencer →", fn: () => onAuth("signup"), feats: ["3 QCM par matière (UE1, UE4, UE9)", "5 flashcards par matière", "1 entretien simulé", "2 matières DCG accessibles"] },
-            { label: "Pro", price: PRO_PRICE, hl: true, cta: "Démarrer Pro →", fn: () => window.open(STRIPE_LINK, "_blank"), feats: ["QCM illimités par UE", "Cas pratiques illimités", "12 flashcards par matière", "Entretiens illimités", "13 matières DCG + DSCG", "Historique & progression", "Streak quotidien"] },
+            { label: "Gratuit", price: "0€", hl: false, cta: "Commencer →", fn: () => onAuth("signup"), feats: ["3 QCM par matière (UE1, UE4, UE9)", "5 flashcards par matière", "Résumés de cours IA — toutes matières", "Barres de progression par UE", "1 entretien simulé"] },
+            { label: "Pro", price: PRO_PRICE, hl: true, cta: "Démarrer Pro →", fn: () => window.open(STRIPE_LINK, "_blank"), feats: ["QCM illimités — 13 matières DCG + DSCG", "Cas pratiques illimités corrigés par IA", "12 flashcards + révision espacée", "Planning de révision IA personnalisé", "Entretiens illimités (6 thématiques)", "Historique complet & progression", "Toutes les matières DSCG"] },
           ].map(p => (
             <div key={p.label} style={{ ...S.pc, ...(p.hl ? S.phl : {}), ...(p.hl ? { animation: "glow 3s ease-in-out infinite" } : {}) }}>
               {p.hl && <div style={S.pb}>RECOMMANDÉ</div>}
@@ -452,7 +525,7 @@ function Auth({ mode, setMode, onDone, onBack }) {
       if (mode === "signup") {
         cred = await createUserWithEmailAndPassword(auth, email, pass);
         const ref = doc(db, "users", cred.user.uid);
-        await setDoc(ref, { name, email, isPro: false, interviewsUsed: 0, streak: { count: 0, lastDate: "" }, history: [], createdAt: new Date().toISOString() });
+        await setDoc(ref, { name, email, isPro: false, interviewsUsed: 0, streak: { count: 0, lastDate: "" }, history: [], mastery: {}, createdAt: new Date().toISOString() });
       } else {
         cred = await signInWithEmailAndPassword(auth, email, pass);
       }
@@ -474,7 +547,7 @@ function Auth({ mode, setMode, onDone, onBack }) {
       const ref = doc(db, "users", cred.user.uid);
       const snap = await getDoc(ref);
       if (!snap.exists()) {
-        await setDoc(ref, { name: cred.user.displayName || cred.user.email.split("@")[0], email: cred.user.email, isPro: false, interviewsUsed: 0, streak: { count: 0, lastDate: "" }, history: [], createdAt: new Date().toISOString() });
+        await setDoc(ref, { name: cred.user.displayName || cred.user.email.split("@")[0], email: cred.user.email, isPro: false, interviewsUsed: 0, streak: { count: 0, lastDate: "" }, history: [], mastery: {}, createdAt: new Date().toISOString() });
       }
       const data = snap.exists() ? snap.data() : {};
       const streak = await loadStreak(cred.user.uid);
@@ -515,8 +588,13 @@ function Auth({ mode, setMode, onDone, onBack }) {
 // ── DASHBOARD ─────────────────────────────────────────────────────────────────
 function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
   const [activeTab, setActiveTab] = useState("diplome");
+  const [mastery, setMastery] = useState({});
   const interviewsUsed = user?.interviewsUsed || 0;
   const canInterview = isPro || interviewsUsed < FREE_INTERVIEWS;
+
+  useEffect(() => {
+    if (user?.uid) loadMastery(user.uid).then(setMastery);
+  }, [user?.uid]);
 
   return (
     <div style={S.root}><OrbBg />
@@ -528,9 +606,12 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
           <button style={S.no} onClick={onLogout}>Déconnexion</button>
         </div>
       </nav>
-      <div style={{ maxWidth: 780, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1 }}>
+      <div style={{ maxWidth: 800, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1 }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 10, marginBottom: 24, animation: "fsu .5s ease both" }}>
-          <SC v={user?.streak || 0} l="🔥 Streak" /><SC v={isPro ? "Pro ✦" : "Gratuit"} l="Plan" hl /><SC v={interviewsUsed} l="Entretiens" /><SC v={isPro ? "∞" : Math.max(0, FREE_INTERVIEWS - interviewsUsed)} l="Restants" />
+          <SC v={user?.streak || 0} l="🔥 Streak" />
+          <SC v={isPro ? "Pro ✦" : "Gratuit"} l="Plan" hl />
+          <SC v={Object.keys(mastery).length} l="UE maîtrisées" />
+          <SC v={isPro ? "∞" : Math.max(0, FREE_INTERVIEWS - interviewsUsed)} l="Entretiens restants" />
         </div>
 
         <div style={{ display: "flex", gap: 0, marginBottom: 24, borderBottom: "1px solid #111827" }}>
@@ -548,14 +629,23 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
               <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8 }}>
                 {DCG_UES.map((ue, i) => {
                   const locked = ue.proOnly && !isPro;
+                  const m = mastery[ue.id];
                   return (
                     <button key={ue.id} onClick={() => locked ? onNav("paywall") : onSelectUE(ue)}
-                      style={{ ...S.uecard, borderColor: `${ue.color}20`, opacity: locked ? .45 : 1, animation: `fsu .4s ${i * .04}s both` }}
+                      style={{ ...S.uecard, borderColor: `${ue.color}20`, opacity: locked ? .55 : 1, animation: `fsu .4s ${i * .04}s both`, position: "relative" }}
                       onMouseEnter={e => { if (!locked) { e.currentTarget.style.borderColor = `${ue.color}50`; e.currentTarget.style.background = `${ue.color}08`; } }}
-                      onMouseLeave={e => { e.currentTarget.style.borderColor = `${ue.color}20`; e.currentTarget.style.background = "#0d1117"; }}>
-                      <span style={{ fontSize: 20, marginBottom: 6 }}>{ue.icon}</span>
+                      onMouseLeave={e => { e.currentTarget.style.borderColor = m ? `${ue.color}30` : `${ue.color}20`; e.currentTarget.style.background = "#0d1117"; }}>
+                      <span style={{ fontSize: 20, marginBottom: 4 }}>{ue.icon}</span>
                       <span style={{ fontSize: 10, color: ue.color, fontWeight: 700, letterSpacing: ".08em" }}>{ue.id}</span>
-                      <span style={{ fontSize: 11, color: "#9ca3af", marginTop: 2, lineHeight: 1.3 }}>{locked ? "🔒 Pro" : ue.short}</span>
+                      <span style={{ fontSize: 10, color: "#9ca3af", marginTop: 1, lineHeight: 1.3 }}>{locked ? "🔒 Pro" : ue.short}</span>
+                      {m && !locked && (
+                        <div style={{ width: "100%", marginTop: 6 }}>
+                          <div style={{ height: 2, background: "#111827", borderRadius: 1 }}>
+                            <div style={{ height: "100%", width: `${m.best}%`, background: m.best >= 80 ? "#4ade80" : m.best >= 60 ? "#f59e0b" : "#f87171", borderRadius: 1, transition: "width .5s" }} />
+                          </div>
+                          <span style={{ fontSize: 8, color: m.best >= 80 ? "#4ade80" : m.best >= 60 ? "#f59e0b" : "#f87171", marginTop: 2, display: "block" }}>{m.best}%</span>
+                        </div>
+                      )}
                     </button>
                   );
                 })}
@@ -564,16 +654,35 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
             <div>
               <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#374151", marginBottom: 12 }}>DSCG — 5 MATIÈRES {!isPro && <span style={{ color: "#e2c97e" }}>· Pro requis</span>}</p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 8 }}>
-                {DSCG_UES.map((ue, i) => (
-                  <button key={ue.id} onClick={() => isPro ? onSelectUE(ue) : onNav("paywall")}
-                    style={{ ...S.uecard, borderColor: `${ue.color}20`, opacity: isPro ? 1 : .4, animation: `fsu .4s ${.3 + i * .04}s both` }}>
-                    <span style={{ fontSize: 20, marginBottom: 6 }}>{ue.icon}</span>
-                    <span style={{ fontSize: 10, color: ue.color, fontWeight: 700, letterSpacing: ".08em" }}>{ue.id.replace("DSCG", "D")}</span>
-                    <span style={{ fontSize: 11, color: "#9ca3af", marginTop: 2, lineHeight: 1.3 }}>{isPro ? ue.short : "🔒 Pro"}</span>
-                  </button>
-                ))}
+                {DSCG_UES.map((ue, i) => {
+                  const m = mastery[ue.id];
+                  return (
+                    <button key={ue.id} onClick={() => isPro ? onSelectUE(ue) : onNav("paywall")}
+                      style={{ ...S.uecard, borderColor: `${ue.color}20`, opacity: isPro ? 1 : .4, animation: `fsu .4s ${.3 + i * .04}s both` }}>
+                      <span style={{ fontSize: 20, marginBottom: 4 }}>{ue.icon}</span>
+                      <span style={{ fontSize: 10, color: ue.color, fontWeight: 700, letterSpacing: ".08em" }}>{ue.id.replace("DSCG", "D")}</span>
+                      <span style={{ fontSize: 10, color: "#9ca3af", marginTop: 1, lineHeight: 1.3 }}>{isPro ? ue.short : "🔒 Pro"}</span>
+                      {m && isPro && (
+                        <div style={{ width: "100%", marginTop: 6 }}>
+                          <div style={{ height: 2, background: "#111827" }}>
+                            <div style={{ height: "100%", width: `${m.best}%`, background: m.best >= 80 ? "#4ade80" : m.best >= 60 ? "#f59e0b" : "#f87171" }} />
+                          </div>
+                          <span style={{ fontSize: 8, color: "#6b7280", marginTop: 2, display: "block" }}>{m.best}%</span>
+                        </div>
+                      )}
+                    </button>
+                  );
+                })}
               </div>
             </div>
+            {isPro && (
+              <div style={{ marginTop: 16 }}>
+                <button onClick={() => onNav("planning")} style={{ width: "100%", background: "rgba(226,201,126,.04)", border: "1px solid rgba(226,201,126,.2)", color: "#e2c97e", padding: "14px 20px", cursor: "pointer", fontSize: 13, fontFamily: "inherit", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <span>◈ Planning de révision IA personnalisé</span>
+                  <span style={{ fontSize: 11, color: "#6b7280" }}>Générer →</span>
+                </button>
+              </div>
+            )}
           </div>
         )}
 
@@ -600,7 +709,7 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
           <div style={{ marginTop: 24, display: "flex", alignItems: "center", justifyContent: "space-between", background: "rgba(226,201,126,.03)", border: "1px solid rgba(226,201,126,.15)", padding: "14px 18px", gap: 12 }}>
             <div>
               <p style={{ fontSize: 13, fontWeight: 700, color: "#e8e4d9", margin: "0 0 3px" }}>Passez Pro — {PRO_PRICE}/mois</p>
-              <p style={{ fontSize: 11, color: "#6b7280", margin: 0 }}>QCM illimités, cas pratiques, DSCG, historique complet.</p>
+              <p style={{ fontSize: 11, color: "#6b7280", margin: 0 }}>QCM illimités, cas pratiques, DSCG, planning IA, historique.</p>
             </div>
             <button style={{ ...S.ctag, whiteSpace: "nowrap", fontSize: 12 }} onClick={() => onNav("pricing")}>Voir →</button>
           </div>
@@ -614,9 +723,11 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
 function SubjectHub({ ue, user, onNav, onBack }) {
   if (!ue) return null;
   const isPro = user?.isPro;
+  const isLockedSubject = ue.proOnly && !isPro;
   const actions = [
-    { key: "qcm", icon: "△", label: "QCM", sub: `${isPro ? "10" : FREE_QCM_PER_UE} questions générées par IA`, color: "#60a5fa", free: true },
-    { key: "flashcards", icon: "◈", label: "Flashcards", sub: `${isPro ? PRO_FLASH_PER_UE : FREE_FLASH_PER_UE} fiches de révision IA`, color: "#4ade80", free: true },
+    { key: "resume_cours", icon: "📖", label: "Résumé de cours", sub: "Sections, points clés, pièges d'examen", color: "#a78bfa", free: true, alwaysFree: true },
+    { key: "qcm", icon: "△", label: "QCM", sub: `${isPro ? "10" : FREE_QCM_PER_UE} questions générées par IA`, color: "#60a5fa", free: !isLockedSubject },
+    { key: "flashcards", icon: "◈", label: "Flashcards", sub: `${isPro ? `${PRO_FLASH_PER_UE} fiches + révision espacée` : `${FREE_FLASH_PER_UE} fiches de révision`}`, color: "#4ade80", free: !isLockedSubject },
     { key: "cas_pratique", icon: "📝", label: "Cas pratique", sub: "Style épreuve examen corrigé par IA", color: "#f59e0b", free: false },
   ];
   return (
@@ -629,22 +740,26 @@ function SubjectHub({ ue, user, onNav, onBack }) {
             <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 4 }}>
               <span style={{ ...S.badge, fontSize: 9, padding: "2px 8px" }}>{ue.level}</span>
               <span style={{ fontSize: 12, color: ue.color, fontWeight: 700 }}>{ue.id}</span>
+              {isLockedSubject && <span style={{ fontSize: 9, background: "rgba(226,201,126,.08)", border: "1px solid rgba(226,201,126,.2)", color: "#e2c97e", padding: "2px 8px" }}>RÉSUMÉ GRATUIT</span>}
             </div>
             <h2 style={{ fontSize: 20, margin: 0, color: "#e8e4d9" }}>{ue.label}</h2>
             <p style={{ fontSize: 12, color: "#4b5563", margin: "4px 0 0" }}>{ue.desc}</p>
           </div>
         </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {actions.map((a, i) => {
             const locked = !a.free && !isPro;
             return (
               <button key={a.key} onClick={() => locked ? onNav("paywall") : onNav(a.key)}
-                style={{ background: "#0d1117", border: `1px solid ${locked ? "#1a1f2e" : `${a.color}25`}`, padding: "18px 20px", display: "flex", alignItems: "center", gap: 16, cursor: locked ? "default" : "pointer", opacity: locked ? .5 : 1, transition: "all .2s", textAlign: "left", animation: `fsu .4s ${i * .08}s both` }}
+                style={{ background: "#0d1117", border: `1px solid ${locked ? "#1a1f2e" : `${a.color}25`}`, padding: "16px 20px", display: "flex", alignItems: "center", gap: 16, cursor: locked ? "default" : "pointer", opacity: locked ? .5 : 1, transition: "all .2s", textAlign: "left", animation: `fsu .4s ${i * .07}s both`, fontFamily: "inherit" }}
                 onMouseEnter={e => { if (!locked) e.currentTarget.style.borderColor = `${a.color}50`; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = locked ? "#1a1f2e" : `${a.color}25`; }}>
-                <span style={{ fontSize: 28, width: 40, textAlign: "center" }}>{a.icon}</span>
+                <span style={{ fontSize: 26, width: 36, textAlign: "center" }}>{a.icon}</span>
                 <div style={{ flex: 1 }}>
-                  <p style={{ fontSize: 14, fontWeight: 700, color: locked ? "#374151" : a.color, margin: "0 0 3px" }}>{a.label}</p>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 2 }}>
+                    <p style={{ fontSize: 14, fontWeight: 700, color: locked ? "#374151" : a.color, margin: 0 }}>{a.label}</p>
+                    {a.alwaysFree && <span style={{ fontSize: 9, color: "#4ade80", border: "1px solid #4ade8030", padding: "1px 6px" }}>GRATUIT</span>}
+                  </div>
                   <p style={{ fontSize: 12, color: "#4b5563", margin: 0 }}>{locked ? "🔒 Réservé Pro" : a.sub}</p>
                 </div>
                 <span style={{ fontSize: 18, color: locked ? "#1f2937" : a.color }}>→</span>
@@ -739,7 +854,7 @@ function QCMScreen({ ue, user, onDone, onBack }) {
 }
 
 // ── FLASHCARDS ────────────────────────────────────────────────────────────────
-function FlashcardsScreen({ ue, user, onBack }) {
+function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
   const isPro = user?.isPro;
   const nCards = isPro ? PRO_FLASH_PER_UE : FREE_FLASH_PER_UE;
   const [cards, setCards] = useState(null);
@@ -747,6 +862,11 @@ function FlashcardsScreen({ ue, user, onBack }) {
   const [flipped, setFlipped] = useState(false);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState("Tous");
+  const [difficult, setDifficult] = useState([]);
+  const [reviewMode, setReviewMode] = useState(false);
+  const [reviewIdx, setReviewIdx] = useState(0);
+  const [reviewFlipped, setReviewFlipped] = useState(false);
+  const [sessionDone, setSessionDone] = useState(false);
 
   useEffect(() => {
     callClaudeJSON(`Tu génères des flashcards pour ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`, FLASHCARD_PROMPT(ue, nCards), 2000)
@@ -757,8 +877,81 @@ function FlashcardsScreen({ ue, user, onBack }) {
   const tags = cards ? ["Tous", ...new Set(cards.map(c => c.tag))] : [];
   const filtered = cards ? (filter === "Tous" ? cards : cards.filter(c => c.tag === filter)) : [];
   const card = filtered[idx % Math.max(filtered.length, 1)];
+  const isLast = idx >= filtered.length - 1;
+
+  const markKnown = () => { setFlipped(false); if (isLast) { setSessionDone(true); } else { setTimeout(() => setIdx(i => i + 1), 150); } };
+  const markDifficult = () => {
+    setDifficult(d => [...d, card]);
+    setFlipped(false);
+    if (isLast) { setSessionDone(true); }
+    else { setTimeout(() => setIdx(i => i + 1), 150); }
+  };
   const next = () => { setFlipped(false); setTimeout(() => setIdx(i => (i + 1) % filtered.length), 150); };
   const prev = () => { setFlipped(false); setTimeout(() => setIdx(i => (i - 1 + filtered.length) % filtered.length), 150); };
+
+  // Review mode (Pro)
+  if (reviewMode && difficult.length > 0) {
+    const rCard = difficult[reviewIdx];
+    return (
+      <div style={S.root}><OrbBg />
+        <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← {ue.id}</button></nav>
+        <div style={{ maxWidth: 580, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1, animation: "fsu .4s ease both" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
+            <h2 style={{ fontSize: 18, margin: 0, color: "#f87171" }}>◈ Révision des cartes difficiles</h2>
+            <span style={{ fontSize: 12, color: "#4b5563" }}>{reviewIdx + 1} / {difficult.length}</span>
+          </div>
+          <div style={{ perspective: 1200, marginBottom: 20, cursor: "pointer" }} onClick={() => setReviewFlipped(f => !f)}>
+            <div style={{ position: "relative", transformStyle: "preserve-3d", transition: "transform .55s cubic-bezier(.4,0,.2,1)", transform: reviewFlipped ? "rotateY(180deg)" : "rotateY(0)", height: 220 }}>
+              <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "center", borderColor: "#f8717125" }}>
+                <p style={{ fontSize: 10, color: "#f87171", letterSpacing: ".12em", margin: "0 0 14px" }}>{rCard?.tag || ue.short} · À REVOIR</p>
+                <p style={{ fontSize: 15, color: "#e8e4d9", lineHeight: 1.6, margin: "0 0 16px", fontWeight: 600 }}>{rCard?.q}</p>
+                <p style={{ fontSize: 11, color: "#374151" }}>Cliquer pour révéler →</p>
+              </div>
+              <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, transform: "rotateY(180deg)", borderColor: "#4ade8030", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                <p style={{ fontSize: 10, color: "#4ade80", letterSpacing: ".12em", margin: "0 0 14px" }}>RÉPONSE</p>
+                <p style={{ fontSize: 13, color: "#c9c3b5", lineHeight: 1.7, margin: 0 }}>{rCard?.a}</p>
+              </div>
+            </div>
+          </div>
+          <div style={{ display: "flex", gap: 10 }}>
+            {reviewIdx > 0 && <button style={{ ...S.ctagh, flex: 1 }} onClick={() => { setReviewFlipped(false); setReviewIdx(i => i - 1); }}>← Précédente</button>}
+            {reviewIdx < difficult.length - 1
+              ? <button style={{ ...S.ctag, flex: 1 }} onClick={() => { setReviewFlipped(false); setReviewIdx(i => i + 1); }}>Suivante →</button>
+              : <button style={{ ...S.ctag, flex: 1 }} onClick={onBack}>Terminer ✓</button>
+            }
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Session done screen
+  if (sessionDone) {
+    return (
+      <div style={S.root}><OrbBg />
+        <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← {ue.id}</button></nav>
+        <div style={{ maxWidth: 500, margin: "0 auto", padding: "80px 24px", textAlign: "center", position: "relative", zIndex: 1, animation: "fsu .5s ease both", display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
+          <span style={{ fontSize: 40 }}>◈</span>
+          <h2 style={{ fontSize: 22, color: "#e8e4d9" }}>Session terminée</h2>
+          <p style={{ fontSize: 14, color: "#6b7280" }}>{filtered.length} cartes révisées · {difficult.length} marquées difficiles</p>
+          {difficult.length > 0 && (
+            isPro ? (
+              <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={() => { setReviewMode(true); setReviewIdx(0); }}>
+                Réviser les {difficult.length} cartes difficiles →
+              </button>
+            ) : (
+              <div style={{ background: "rgba(226,201,126,.04)", border: "1px solid rgba(226,201,126,.2)", padding: "16px 20px", width: "100%" }}>
+                <p style={{ fontSize: 13, color: "#e8e4d9", margin: "0 0 8px", fontWeight: 700 }}>✦ Révision espacée — Pro</p>
+                <p style={{ fontSize: 12, color: "#6b7280", margin: "0 0 12px" }}>Passez Pro pour revoir automatiquement vos {difficult.length} cartes difficiles et consolider votre mémoire.</p>
+                <button style={{ ...S.ctag, width: "100%", padding: 10, fontSize: 12 }} onClick={onUpgrade}>Passer Pro — {PRO_PRICE}/mois →</button>
+              </div>
+            )
+          )}
+          <button style={{ ...S.ctagh, width: "100%" }} onClick={onBack}>← Retour à la matière</button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={S.root}><OrbBg />
@@ -766,7 +959,7 @@ function FlashcardsScreen({ ue, user, onBack }) {
       <div style={{ maxWidth: 580, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1, animation: "fsu .4s ease both" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
           <h2 style={{ fontSize: 18, margin: 0, color: "#e8e4d9" }}>◈ Flashcards — {ue.short}</h2>
-          {cards && <span style={{ fontSize: 12, color: "#4b5563" }}>{(idx % filtered.length) + 1} / {filtered.length}</span>}
+          {cards && <span style={{ fontSize: 12, color: "#4b5563" }}>{idx + 1} / {filtered.length}</span>}
         </div>
         {loading ? (
           <div style={{ textAlign: "center", padding: 60 }}><div style={{ width: 36, height: 36, border: "3px solid #1f2937", borderTop: `3px solid ${ue.color}`, borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 16px" }} /><p style={{ color: "#6b7280", fontSize: 13 }}>Génération des flashcards…</p></div>
@@ -777,7 +970,7 @@ function FlashcardsScreen({ ue, user, onBack }) {
             </div>
             {card && (
               <>
-                <div style={{ perspective: 1200, marginBottom: 20, cursor: "pointer" }} onClick={() => setFlipped(f => !f)}>
+                <div style={{ perspective: 1200, marginBottom: 16, cursor: "pointer" }} onClick={() => setFlipped(f => !f)}>
                   <div style={{ position: "relative", transformStyle: "preserve-3d", transition: "transform .55s cubic-bezier(.4,0,.2,1)", transform: flipped ? "rotateY(180deg)" : "rotateY(0)", height: 220 }}>
                     <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "center", borderColor: `${ue.color}15` }}>
                       <p style={{ fontSize: 10, color: ue.color, letterSpacing: ".12em", margin: "0 0 14px" }}>{card.tag || ue.short}</p>
@@ -790,13 +983,284 @@ function FlashcardsScreen({ ue, user, onBack }) {
                     </div>
                   </div>
                 </div>
-                <div style={{ display: "flex", gap: 10 }}>
-                  <button style={{ ...S.ctagh, flex: 1 }} onClick={prev}>← Précédente</button>
-                  <button style={{ ...S.ctag, flex: 1 }} onClick={next}>Suivante →</button>
-                </div>
+                {flipped ? (
+                  <div style={{ display: "flex", gap: 10, marginBottom: 12 }}>
+                    <button style={{ flex: 1, background: "#f8717112", border: "1px solid #f8717140", color: "#f87171", padding: "12px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit" }} onClick={markDifficult}>✗ À revoir</button>
+                    <button style={{ flex: 1, background: "#4ade8012", border: "1px solid #4ade8040", color: "#4ade80", padding: "12px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit" }} onClick={markKnown}>✓ Je savais</button>
+                  </div>
+                ) : (
+                  <div style={{ display: "flex", gap: 10 }}>
+                    <button style={{ ...S.ctagh, flex: 1 }} onClick={prev}>← Précédente</button>
+                    <button style={{ ...S.ctag, flex: 1 }} onClick={next}>Suivante →</button>
+                  </div>
+                )}
+                {isPro && difficult.length > 0 && <p style={{ fontSize: 11, color: "#f87171", textAlign: "center" }}>{difficult.length} carte{difficult.length > 1 ? "s" : ""} marquée{difficult.length > 1 ? "s" : ""} difficile{difficult.length > 1 ? "s" : ""}</p>}
               </>
             )}
           </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── RÉSUMÉ DE COURS ───────────────────────────────────────────────────────────
+function ResumeCoursScreen({ ue, user, onBack }) {
+  const [resume, setResume] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [openSection, setOpenSection] = useState(0);
+
+  useEffect(() => {
+    const gen = async () => {
+      setLoading(true);
+      const data = await callClaudeJSON(
+        `Tu es un professeur expert en ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`,
+        RESUME_PROMPT(ue),
+        3000
+      );
+      setResume(data);
+      setLoading(false);
+    };
+    gen();
+  }, []);
+
+  return (
+    <div style={S.root}><OrbBg />
+      <nav style={S.nav}>
+        <Logo />
+        <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+          <span style={{ fontSize: 11, color: "#a78bfa", border: "1px solid #a78bfa30", padding: "3px 8px" }}>📖 RÉSUMÉ</span>
+          <button style={S.nl} onClick={onBack}>← {ue.id}</button>
+        </div>
+      </nav>
+
+      <div style={{ maxWidth: 680, margin: "0 auto", padding: "36px 24px 60px", position: "relative", zIndex: 1 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 28, animation: "fsu .4s ease both" }}>
+          <div style={{ width: 48, height: 48, background: `${ue.color}15`, border: `1px solid ${ue.color}30`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 22, flexShrink: 0 }}>{ue.icon}</div>
+          <div>
+            <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 2 }}>
+              <span style={{ ...S.badge, fontSize: 9, padding: "2px 8px" }}>{ue.level}</span>
+              <span style={{ fontSize: 10, color: "#4ade80", border: "1px solid #4ade8030", padding: "2px 8px" }}>GRATUIT</span>
+            </div>
+            <h2 style={{ fontSize: 19, margin: 0, color: "#e8e4d9" }}>{ue.label}</h2>
+          </div>
+        </div>
+
+        {loading && (
+          <div style={{ textAlign: "center", padding: "80px 24px" }}>
+            <div style={{ width: 40, height: 40, border: "3px solid #1f2937", borderTop: "3px solid #a78bfa", borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 20px" }} />
+            <p style={{ color: "#6b7280", fontSize: 13 }}>Génération du résumé par IA…</p>
+          </div>
+        )}
+
+        {!loading && resume && (
+          <div style={{ display: "flex", flexDirection: "column", gap: 12, animation: "fsu .4s ease both" }}>
+            {/* Sections accordion */}
+            {resume.sections?.map((sec, i) => (
+              <div key={i} style={{ background: "#0d1117", border: `1px solid ${openSection === i ? "#a78bfa30" : "#111827"}`, transition: "border-color .2s" }}>
+                <button onClick={() => setOpenSection(openSection === i ? -1 : i)}
+                  style={{ width: "100%", background: "none", border: "none", padding: "14px 18px", display: "flex", justifyContent: "space-between", alignItems: "center", cursor: "pointer", fontFamily: "inherit" }}>
+                  <span style={{ fontSize: 13, fontWeight: 700, color: openSection === i ? "#a78bfa" : "#e8e4d9" }}>{sec.titre}</span>
+                  <span style={{ color: "#374151", fontSize: 12 }}>{openSection === i ? "▲" : "▼"}</span>
+                </button>
+                {openSection === i && (
+                  <div style={{ padding: "0 18px 16px", display: "flex", flexDirection: "column", gap: 7, animation: "fsu .2s ease both" }}>
+                    {sec.points?.map((pt, j) => (
+                      <p key={j} style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.65, paddingLeft: 12, borderLeft: "2px solid #a78bfa30" }}>
+                        {pt}
+                      </p>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {/* Points clés */}
+            {resume.points_cles && (
+              <div style={{ background: "rgba(96,165,250,.04)", border: "1px solid rgba(96,165,250,.15)", padding: "18px 20px" }}>
+                <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#60a5fa", margin: "0 0 12px" }}>✦ POINTS CLÉS À RETENIR</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  {resume.points_cles.map((pt, i) => (
+                    <p key={i} style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.6, display: "flex", gap: 10 }}>
+                      <span style={{ color: "#60a5fa", flexShrink: 0 }}>→</span>{pt}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Pièges fréquents */}
+            {resume.pieges_frequents && (
+              <div style={{ background: "rgba(248,113,113,.04)", border: "1px solid rgba(248,113,113,.15)", padding: "18px 20px" }}>
+                <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#f87171", margin: "0 0 12px" }}>⚠ PIÈGES FRÉQUENTS À L'EXAMEN</p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                  {resume.pieges_frequents.map((p, i) => (
+                    <p key={i} style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.6, display: "flex", gap: 10 }}>
+                      <span style={{ color: "#f87171", flexShrink: 0 }}>✗</span>{p}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Conseil examen */}
+            {resume.conseil_exam && (
+              <div style={{ background: "rgba(226,201,126,.04)", border: "1px solid rgba(226,201,126,.2)", padding: "16px 20px" }}>
+                <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#e2c97e", margin: "0 0 8px" }}>◈ CONSEIL EXAMINATEUR</p>
+                <p style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.7, fontStyle: "italic" }}>{resume.conseil_exam}</p>
+              </div>
+            )}
+
+            <button style={{ ...S.ctag, width: "100%", padding: 13, marginTop: 4 }} onClick={onBack}>← Retour à la matière</button>
+          </div>
+        )}
+
+        {!loading && !resume && (
+          <div style={{ textAlign: "center", padding: 40 }}>
+            <p style={{ color: "#f87171" }}>Erreur de génération.</p>
+            <button style={S.ctag} onClick={onBack}>Retour</button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── PLANNING ──────────────────────────────────────────────────────────────────
+function PlanningScreen({ user, onBack, onUpgrade }) {
+  const isPro = user?.isPro;
+  const [weeks, setWeeks] = useState(6);
+  const [level, setLevel] = useState("DCG");
+  const [planning, setPlanning] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const generate = async () => {
+    setLoading(true);
+    setPlanning(null);
+    const subjects = level === "DCG"
+      ? DCG_UES.map(u => u.id).join(", ")
+      : [...DCG_UES, ...DSCG_UES].map(u => u.id).join(", ");
+    const data = await callClaudeJSON(
+      `Tu es un coach expert DCG/DSCG. Réponds UNIQUEMENT en JSON valide.`,
+      PLANNING_PROMPT(weeks, level, subjects),
+      3500
+    );
+    setPlanning(data);
+    setLoading(false);
+  };
+
+  if (!isPro) {
+    return (
+      <div style={S.root}><OrbBg />
+        <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← Dashboard</button></nav>
+        <div style={{ maxWidth: 460, margin: "0 auto", padding: "80px 24px", display: "flex", flexDirection: "column", alignItems: "center", gap: 20, textAlign: "center", position: "relative", zIndex: 1, animation: "fsu .5s ease both" }}>
+          <span style={{ fontSize: 40 }}>◈</span>
+          <h2 style={{ fontSize: 22, margin: 0, color: "#e8e4d9" }}>Planning de révision IA</h2>
+          <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.7 }}>Générez un planning personnalisé sur 2 à 12 semaines, avec objectifs hebdomadaires et conseils adaptés à votre niveau.</p>
+          <div style={{ ...S.pc, ...S.phl, width: "100%" }}>
+            <div style={S.pb}>PRO REQUIS</div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 7, margin: "20px 0" }}>
+              {["Planning sur 2 à 12 semaines", "Objectifs hebdomadaires précis", "Répartition intelligente par UE", "Conseils personnalisés semaine par semaine"].map(f => <p key={f} style={{ fontSize: 12, color: "#c9c3b5", margin: 0 }}>✓ {f}</p>)}
+            </div>
+            <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={onUpgrade}>Passer Pro — {PRO_PRICE}/mois →</button>
+          </div>
+          <button style={S.back} onClick={onBack}>← Retour</button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div style={S.root}><OrbBg />
+      <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← Dashboard</button></nav>
+      <div style={{ maxWidth: 680, margin: "0 auto", padding: "36px 24px 60px", position: "relative", zIndex: 1 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 28, animation: "fsu .4s ease both" }}>
+          <div>
+            <h2 style={{ fontSize: 20, margin: "0 0 4px", color: "#e8e4d9" }}>◈ Planning de révision IA</h2>
+            <p style={{ fontSize: 13, color: "#6b7280", margin: 0 }}>Générez un programme sur-mesure pour votre préparation.</p>
+          </div>
+        </div>
+
+        {!planning && !loading && (
+          <div style={{ display: "flex", flexDirection: "column", gap: 20, animation: "fsu .4s ease both" }}>
+            <Sect label="Niveau de préparation">
+              <div style={{ display: "flex", gap: 10 }}>
+                <OB active={level === "DCG"} color="#60a5fa" onClick={() => setLevel("DCG")} main="DCG" sub="8 matières" />
+                <OB active={level === "DCG+DSCG"} color="#a78bfa" onClick={() => setLevel("DCG+DSCG")} main="DCG + DSCG" sub="13 matières" />
+              </div>
+            </Sect>
+            <Sect label="Durée du planning">
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8 }}>
+                {[2, 4, 6, 8, 10, 12].map(w => (
+                  <OB key={w} active={weeks === w} color="#e2c97e" onClick={() => setWeeks(w)} main={`${w} sem.`} sub={w <= 4 ? "Sprint" : w <= 8 ? "Standard" : "Long terme"} />
+                ))}
+              </div>
+            </Sect>
+            <button style={{ ...S.ctag, padding: 15, fontSize: 14, animation: "glow 3s ease-in-out infinite" }} onClick={generate}>
+              Générer mon planning →
+            </button>
+          </div>
+        )}
+
+        {loading && (
+          <div style={{ textAlign: "center", padding: "80px 24px" }}>
+            <div style={{ width: 40, height: 40, border: "3px solid #1f2937", borderTop: "3px solid #e2c97e", borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 20px" }} />
+            <p style={{ color: "#6b7280", fontSize: 13 }}>Génération du planning en cours…</p>
+          </div>
+        )}
+
+        {planning && !loading && (
+          <div style={{ display: "flex", flexDirection: "column", gap: 14, animation: "fsu .4s ease both" }}>
+            <div style={{ display: "flex", gap: 10, marginBottom: 6 }}>
+              {planning.rythme_conseille && <span style={{ fontSize: 11, color: "#e2c97e", border: "1px solid rgba(226,201,126,.2)", padding: "4px 12px" }}>⏱ {planning.rythme_conseille}</span>}
+              <span style={{ fontSize: 11, color: "#60a5fa", border: "1px solid rgba(96,165,250,.2)", padding: "4px 12px" }}>{level} · {weeks} semaines</span>
+            </div>
+
+            {planning.conseil_global && (
+              <div style={{ background: "rgba(226,201,126,.04)", border: "1px solid rgba(226,201,126,.15)", padding: "14px 18px" }}>
+                <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#e2c97e", margin: "0 0 6px" }}>◈ STRATÉGIE GLOBALE</p>
+                <p style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.7 }}>{planning.conseil_global}</p>
+              </div>
+            )}
+
+            <div style={{ position: "relative" }}>
+              {/* Ligne verticale */}
+              <div style={{ position: "absolute", left: 18, top: 0, bottom: 0, width: 1, background: "#1f2937", zIndex: 0 }} />
+              <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
+                {planning.semaines?.map((sem, i) => (
+                  <div key={i} style={{ display: "flex", gap: 0, animation: `fsu .3s ${i * .06}s both` }}>
+                    <div style={{ width: 37, flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "center", paddingTop: 18 }}>
+                      <div style={{ width: 12, height: 12, borderRadius: "50%", background: "#e2c97e", border: "2px solid #080b14", zIndex: 1, flexShrink: 0 }} />
+                    </div>
+                    <div style={{ flex: 1, background: "#0d1117", border: "1px solid #111827", padding: "14px 16px", marginBottom: 8, marginLeft: 0 }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
+                        <span style={{ fontSize: 11, fontWeight: 700, color: "#e2c97e" }}>Semaine {sem.num}</span>
+                        <span style={{ fontSize: 10, color: "#374151", background: "#111827", padding: "2px 8px" }}>{sem.ues?.join(", ")}</span>
+                      </div>
+                      <p style={{ fontSize: 13, color: "#e8e4d9", fontWeight: 700, margin: "0 0 8px" }}>{sem.focus}</p>
+                      <div style={{ display: "flex", flexDirection: "column", gap: 4, marginBottom: sem.conseil ? 10 : 0 }}>
+                        {sem.objectifs?.map((obj, j) => (
+                          <p key={j} style={{ fontSize: 12, color: "#6b7280", margin: 0, display: "flex", gap: 8 }}>
+                            <span style={{ color: "#4ade80", flexShrink: 0 }}>→</span>{obj}
+                          </p>
+                        ))}
+                      </div>
+                      {sem.conseil && (
+                        <p style={{ fontSize: 11, color: "#4b5563", margin: 0, paddingTop: 8, borderTop: "1px solid #111827", fontStyle: "italic" }}>
+                          💡 {sem.conseil}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div style={{ display: "flex", gap: 10, marginTop: 8 }}>
+              <button style={{ ...S.ctagh, flex: 1 }} onClick={() => { setPlanning(null); }}>← Modifier</button>
+              <button style={{ ...S.ctag, flex: 1 }} onClick={generate}>↺ Regénérer</button>
+            </div>
+          </div>
         )}
       </div>
     </div>
@@ -1004,6 +1468,7 @@ function ResultsInterview({ data, onNew, onDash }) {
             <text x="60" y="54" textAnchor="middle" fill="white" fontSize="28" fontWeight="900" fontFamily="monospace">{anim}</text>
             <text x="60" y="70" textAnchor="middle" fill="#374151" fontSize="10" fontFamily="monospace">/100</text>
           </svg>
+          <p style={{ fontSize: 14, color: "#6b7280", margin: 0 }}>{topic} · {fmt(duration)}</p>
           <span style={{ fontSize: 11, letterSpacing: ".15em", color: sc, border: `1px solid ${sc}50`, padding: "4px 16px", fontWeight: 700 }}>{ev.niveau}</span>
         </div>
         <div style={{ background: "#0d1117", border: "1px solid #1a1f2e", padding: "20px 24px", width: "100%", textAlign: "center" }}>
@@ -1100,7 +1565,7 @@ function ResultsCas({ data, onNew, onDash }) {
 // ── HISTORY ───────────────────────────────────────────────────────────────────
 function History({ user, onBack }) {
   const [history, setHistory] = useState([]); const [loading, setLoading] = useState(true);
-  useEffect(() => { loadHistory(user.email).then(h => { setHistory(h); setLoading(false); }); }, []);
+  useEffect(() => { loadHistory(user.uid).then(h => { setHistory(h); setLoading(false); }); }, []);
   const typeColor = (t) => t === "entretien" ? "#e2c97e" : t === "cas" ? "#f59e0b" : "#60a5fa";
   const typeIcon = (t) => t === "entretien" ? "💼" : t === "cas" ? "📝" : "△";
   return (
@@ -1138,7 +1603,7 @@ function History({ user, onBack }) {
 // ── PROGRESS ──────────────────────────────────────────────────────────────────
 function ProgressScreen({ user, onBack }) {
   const [history, setHistory] = useState([]); const [loading, setLoading] = useState(true);
-  useEffect(() => { loadHistory(user.email).then(h => { setHistory(h.slice(0, 30).reverse()); setLoading(false); }); }, []);
+  useEffect(() => { loadHistory(user.uid).then(h => { setHistory(h.slice(0, 30).reverse()); setLoading(false); }); }, []);
   const interviews = history.filter(h => h.type === "entretien");
   const qcms = history.filter(h => h.type === "qcm");
   const cas = history.filter(h => h.type === "cas");
@@ -1184,7 +1649,7 @@ function Paywall({ onUpgrade, onBack }) {
           <div style={S.pb}>SIMDCG PRO</div>
           <p style={{ fontSize: 40, fontWeight: 900, color: "#e8e4d9", margin: "12px 0 4px" }}>{PRO_PRICE}<span style={{ fontSize: 14, color: "#6b7280" }}>/mois</span></p>
           <div style={{ display: "flex", flexDirection: "column", gap: 7, margin: "14px 0 20px" }}>
-            {["QCM illimités par UE", "Cas pratiques corrigés par IA", "13 matières DCG + DSCG", "Entretiens illimités", "12 flashcards par matière", "Historique & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "#c9c3b5", margin: 0 }}>✓ {f}</p>)}
+            {["QCM illimités — 13 matières DCG + DSCG", "Cas pratiques illimités corrigés par IA", "Flashcards 12/UE + révision espacée", "Planning de révision IA personnalisé", "Entretiens illimités (6 thématiques)", "Historique complet & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "#c9c3b5", margin: 0 }}>✓ {f}</p>)}
           </div>
           <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={onUpgrade}>Passer à Pro →</button>
         </div>
