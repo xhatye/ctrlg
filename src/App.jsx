@@ -18,7 +18,7 @@ const db = getFirestore(firebaseApp);
 const googleProvider = new GoogleAuthProvider();
 
 // ── CONFIG ────────────────────────────────────────────────────────────────────
-const STRIPE_LINK = "https://buy.stripe.com/bJedR9aJtbrW27T4JH6wE00";
+const STRIPE_LINK = "https://buy.stripe.com/3cI4gz9FpbrWfYJ4JH6wE02";
 const PRO_PRICE = "15€";
 const FREE_INTERVIEWS = 1;
 const FREE_QCM_PER_UE = 3;
@@ -97,7 +97,7 @@ const today = () => new Date().toISOString().split("T")[0];
 // ── API ───────────────────────────────────────────────────────────────────────
 async function callClaude(system, messages, maxTokens = 1200, user = null) {
   if (user && !user.isPro) {
-    const allowed = await checkAndIncrementQuota(user);
+    const allowed = await checkAndIncrementQuota(user.uid);
     if (!allowed) throw new Error("QUOTA_EXCEEDED");
   }
   const r = await fetch("/api/chat", {
@@ -148,27 +148,25 @@ const loadStreak = async (uid) => {
     return s.count;
   } catch { return 0; }
 };
-
-// ── QUOTA ─────────────────────────────────────────────────────────────────────
 const FREE_AI_CALLS_PER_DAY = 10;
 
-const checkAndIncrementQuota = async (user) => {
-  if (!user || user.isPro) return true; // Pro = illimité
+const checkAndIncrementQuota = async (uid) => {
+  // Retourne true si l'appel est autorisé, false si quota dépassé
   try {
-    const snap = await getDoc(getUserDoc(user.uid));
+    const snap = await getDoc(getUserDoc(uid));
     const data = snap.exists() ? snap.data() : {};
     const t = today();
     const quota = data.aiQuota || { count: 0, date: "" };
     if (quota.date !== t) {
-      await updateDoc(getUserDoc(user.uid), { aiQuota: { count: 1, date: t } });
+      // Nouveau jour → reset
+      await updateDoc(getUserDoc(uid), { aiQuota: { count: 1, date: t } });
       return true;
     }
     if (quota.count >= FREE_AI_CALLS_PER_DAY) return false;
-    await updateDoc(getUserDoc(user.uid), { aiQuota: { count: quota.count + 1, date: t } });
+    await updateDoc(getUserDoc(uid), { aiQuota: { count: quota.count + 1, date: t } });
     return true;
-  } catch { return true; }
+  } catch { return true; } // En cas d'erreur on laisse passer
 };
-
 // ── PARTICLES ─────────────────────────────────────────────────────────────────
 function ParticleCanvas() {
   const canvasRef = useRef(null);
@@ -676,14 +674,9 @@ function QCMScreen({ ue, user, onDone, onBack }) {
   useEffect(() => {
     const gen = async () => {
       setLoading(true);
-      try {
-        const data = await callClaudeJSON(`Tu génères des QCM pour l'examen ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`, QCM_PROMPT(ue, nQuestions), 2500, user);
-        if (Array.isArray(data) && data.length > 0) { setQuestions(data); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000); }
-        else setError(true);
-      } catch (e) {
-        if (e.message === "QUOTA_EXCEEDED") setError("quota");
-        else setError(true);
-      }
+      const data = await callClaudeJSON(`Tu génères des QCM pour l'examen ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`, QCM_PROMPT(ue, nQuestions), 2500);
+      if (Array.isArray(data) && data.length > 0) { setQuestions(data); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000); }
+      else setError(true);
       setLoading(false);
     };
     gen();
@@ -719,8 +712,7 @@ function QCMScreen({ ue, user, onDone, onBack }) {
 
       <div style={{ maxWidth: 580, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1 }}>
         {loading && <div style={{ textAlign: "center", padding: "80px 24px" }}><div style={{ width: 40, height: 40, border: "3px solid #1f2937", borderTop: `3px solid ${ue.color}`, borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 20px" }} /><p style={{ color: "#6b7280", fontSize: 13 }}>Génération des questions par IA…</p></div>}
-        {error === "quota" && <div style={{ textAlign: "center", padding: 40 }}><p style={{ fontSize: 28, marginBottom: 16 }}>⚡</p><p style={{ color: "#e2c97e", fontWeight: 700, marginBottom: 8 }}>Limite quotidienne atteinte</p><p style={{ color: "#6b7280", fontSize: 13, marginBottom: 20 }}>Tu as utilisé tes {FREE_AI_CALLS_PER_DAY} appels IA gratuits aujourd'hui. Reviens demain ou passe à Pro.</p><button style={S.ctag} onClick={onBack}>Retour</button></div>}
-        {error && error !== "quota" && <div style={{ textAlign: "center", padding: 40 }}><p style={{ color: "#f87171" }}>Erreur lors de la génération.</p><button style={S.ctag} onClick={onBack}>Retour</button></div>}
+        {error && <div style={{ textAlign: "center", padding: 40 }}><p style={{ color: "#f87171" }}>Erreur lors de la génération.</p><button style={S.ctag} onClick={onBack}>Retour</button></div>}
         {!loading && !error && q && (
           <div style={{ animation: "fsu .3s ease both" }}>
             <div style={{ ...S.card, marginBottom: 14, borderColor: `${ue.color}15` }}>
@@ -755,12 +747,10 @@ function FlashcardsScreen({ ue, user, onBack }) {
   const [flipped, setFlipped] = useState(false);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState("Tous");
-  const [quotaError, setQuotaError] = useState(false);
 
   useEffect(() => {
-    callClaudeJSON(`Tu génères des flashcards pour ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`, FLASHCARD_PROMPT(ue, nCards), 2000, user)
-      .then(data => { setCards(Array.isArray(data) ? data : []); setLoading(false); })
-      .catch(e => { if (e.message === "QUOTA_EXCEEDED") setQuotaError(true); setLoading(false); });
+    callClaudeJSON(`Tu génères des flashcards pour ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`, FLASHCARD_PROMPT(ue, nCards), 2000)
+      .then(data => { setCards(Array.isArray(data) ? data : []); setLoading(false); });
   }, []);
 
   if (!ue) return null;
@@ -780,8 +770,6 @@ function FlashcardsScreen({ ue, user, onBack }) {
         </div>
         {loading ? (
           <div style={{ textAlign: "center", padding: 60 }}><div style={{ width: 36, height: 36, border: "3px solid #1f2937", borderTop: `3px solid ${ue.color}`, borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 16px" }} /><p style={{ color: "#6b7280", fontSize: 13 }}>Génération des flashcards…</p></div>
-        ) : quotaError ? (
-          <div style={{ textAlign: "center", padding: 40 }}><p style={{ fontSize: 28, marginBottom: 16 }}>⚡</p><p style={{ color: "#e2c97e", fontWeight: 700, marginBottom: 8 }}>Limite quotidienne atteinte</p><p style={{ color: "#6b7280", fontSize: 13, marginBottom: 20 }}>Tu as utilisé tes {FREE_AI_CALLS_PER_DAY} appels IA gratuits aujourd'hui. Reviens demain ou passe à Pro.</p><button style={S.ctag} onClick={onBack}>Retour</button></div>
         ) : (
           <>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
@@ -806,7 +794,7 @@ function FlashcardsScreen({ ue, user, onBack }) {
                   <button style={{ ...S.ctagh, flex: 1 }} onClick={prev}>← Précédente</button>
                   <button style={{ ...S.ctag, flex: 1 }} onClick={next}>Suivante →</button>
                 </div>
-                  </>
+              </>
             )}
           </>
         )}
@@ -826,10 +814,8 @@ function CasPratiqueScreen({ ue, user, onDone, onBack }) {
 
   useEffect(() => {
     const gen = async () => {
-      try {
-        const data = await callClaudeJSON(`Tu génères des cas pratiques style examen DCG/DSCG. Réponds UNIQUEMENT en JSON valide.`, CAS_PROMPT(ue), 1500, user);
-        if (data) { setCas({ ...data, ue: ue.id, ueName: ue.label, level: ue.level }); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000); }
-      } catch (e) { /* quota ou erreur */ }
+      const data = await callClaudeJSON(`Tu génères des cas pratiques style examen DCG/DSCG. Réponds UNIQUEMENT en JSON valide.`, CAS_PROMPT(ue), 1500);
+      if (data) { setCas({ ...data, ue: ue.id, ueName: ue.label, level: ue.level }); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000); }
       setLoading(false);
     };
     gen();
@@ -839,7 +825,7 @@ function CasPratiqueScreen({ ue, user, onDone, onBack }) {
   const submit = async () => {
     if (!reponse.trim() || evaluating) return;
     clearInterval(timerRef.current); setEvaluating(true);
-    const eval_ = await callClaudeJSON(`Tu es un correcteur d'examen ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`, CAS_EVAL_PROMPT(cas, reponse), 2000, user);
+    const eval_ = await callClaudeJSON(`Tu es un correcteur d'examen ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`, CAS_EVAL_PROMPT(cas, reponse), 2000);
     onDone({ cas, reponse, evaluation: eval_, duration: timer, ue: ue.id, ueName: ue.label });
   };
 
@@ -1114,7 +1100,7 @@ function ResultsCas({ data, onNew, onDash }) {
 // ── HISTORY ───────────────────────────────────────────────────────────────────
 function History({ user, onBack }) {
   const [history, setHistory] = useState([]); const [loading, setLoading] = useState(true);
-  useEffect(() => { loadHistory(user.uid).then(h => { setHistory(h); setLoading(false); }); }, []);
+  useEffect(() => { loadHistory(user.email).then(h => { setHistory(h); setLoading(false); }); }, []);
   const typeColor = (t) => t === "entretien" ? "#e2c97e" : t === "cas" ? "#f59e0b" : "#60a5fa";
   const typeIcon = (t) => t === "entretien" ? "💼" : t === "cas" ? "📝" : "△";
   return (
@@ -1152,7 +1138,7 @@ function History({ user, onBack }) {
 // ── PROGRESS ──────────────────────────────────────────────────────────────────
 function ProgressScreen({ user, onBack }) {
   const [history, setHistory] = useState([]); const [loading, setLoading] = useState(true);
-  useEffect(() => { loadHistory(user.uid).then(h => { setHistory(h.slice(0, 30).reverse()); setLoading(false); }); }, []);
+  useEffect(() => { loadHistory(user.email).then(h => { setHistory(h.slice(0, 30).reverse()); setLoading(false); }); }, []);
   const interviews = history.filter(h => h.type === "entretien");
   const qcms = history.filter(h => h.type === "qcm");
   const cas = history.filter(h => h.type === "cas");
