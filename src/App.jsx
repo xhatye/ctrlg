@@ -19,20 +19,22 @@ const googleProvider = new GoogleAuthProvider();
 
 // ── CONFIG ────────────────────────────────────────────────────────────────────
 const STRIPE_LINK = "https://buy.stripe.com/bJedR9aJtbrW27T4JH6wE00";
-const PRO_PRICE = "9€";
+const PRO_PRICE = "15€";
 const FREE_INTERVIEWS = 1;
 const FREE_QCM_PER_UE = 3;
+const FREE_FLASH_PER_UE = 5;
+const PRO_FLASH_PER_UE = 12;
 
 // ── UES DATA ──────────────────────────────────────────────────────────────────
 const DCG_UES = [
   { id:"UE1", label:"Introduction au droit", short:"Droit général", icon:"⚖", color:"#60a5fa", desc:"Sources du droit, contrats, responsabilité civile et pénale", level:"DCG" },
-  { id:"UE2", label:"Droit des sociétés", short:"Droit sociétés", icon:"🏛", color:"#a78bfa", desc:"SARL, SAS, SA, droit commun des sociétés, liquidation", level:"DCG" },
-  { id:"UE3", label:"Droit social", short:"Droit social", icon:"🤝", color:"#34d399", desc:"Contrat de travail, conventions collectives, licenciement", level:"DCG" },
+  { id:"UE2", label:"Droit des sociétés", short:"Droit sociétés", icon:"🏛", color:"#a78bfa", desc:"SARL, SAS, SA, droit commun des sociétés, liquidation", level:"DCG", proOnly:true },
+  { id:"UE3", label:"Droit social", short:"Droit social", icon:"🤝", color:"#34d399", desc:"Contrat de travail, conventions collectives, licenciement", level:"DCG", proOnly:true },
   { id:"UE4", label:"Fiscalité", short:"Fiscalité", icon:"📋", color:"#fbbf24", desc:"IS, IR, TVA, droits d'enregistrement, fiscalité internationale", level:"DCG" },
-  { id:"UE6", label:"Finance d'entreprise", short:"Finance", icon:"📈", color:"#f87171", desc:"Analyse financière, investissement, financement, valorisation", level:"DCG" },
-  { id:"UE7", label:"Management", short:"Management", icon:"◇", color:"#e2c97e", desc:"Stratégie, organisation, RH, direction, leadership", level:"DCG" },
+  { id:"UE6", label:"Finance d'entreprise", short:"Finance", icon:"📈", color:"#f87171", desc:"Analyse financière, investissement, financement, valorisation", level:"DCG", proOnly:true },
+  { id:"UE7", label:"Management", short:"Management", icon:"◇", color:"#e2c97e", desc:"Stratégie, organisation, RH, direction, leadership", level:"DCG", proOnly:true },
   { id:"UE9", label:"Comptabilité", short:"Compta", icon:"🔢", color:"#38bdf8", desc:"PCG, immobilisations, stocks, provisions, capitaux propres", level:"DCG" },
-  { id:"UE10", label:"Comptabilité approfondie", short:"Compta appro", icon:"📊", color:"#fb923c", desc:"Consolidation, fusion, comptes combinés, normes IFRS", level:"DCG" },
+  { id:"UE10", label:"Comptabilité approfondie", short:"Compta appro", icon:"📊", color:"#fb923c", desc:"Consolidation, fusion, comptes combinés, normes IFRS", level:"DCG", proOnly:true },
 ];
 const DSCG_UES = [
   { id:"DSCG1", label:"Gestion juridique, fiscale et sociale", short:"Juridique/Fiscal", icon:"⚖", color:"#60a5fa", desc:"Droit avancé des affaires, montages juridiques complexes", level:"DSCG" },
@@ -200,12 +202,64 @@ function ParticleCanvas() {
 }
 
 function OrbBg() {
-  return (
-    <div style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none", overflow: "hidden" }}>
-      <div style={{ position: "absolute", width: 600, height: 600, borderRadius: "50%", background: "radial-gradient(circle,rgba(226,201,126,.04) 0%,transparent 70%)", top: "-150px", left: "-100px", animation: "o1 18s ease-in-out infinite" }} />
-      <div style={{ position: "absolute", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle,rgba(96,165,250,.04) 0%,transparent 70%)", bottom: "-100px", right: "-80px", animation: "o2 22s ease-in-out infinite" }} />
-    </div>
-  );
+  const canvasRef = useRef(null);
+  const animRef = useRef(null);
+  useEffect(() => {
+    const canvas = canvasRef.current; if (!canvas) return;
+    const ctx = canvas.getContext("2d");
+    const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
+    resize(); window.addEventListener("resize", resize);
+    // Stars
+    const stars = Array.from({ length: 220 }, () => ({
+      x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight,
+      r: Math.random() * 1.2 + 0.2, op: Math.random() * 0.7 + 0.15,
+      phase: Math.random() * Math.PI * 2, speed: Math.random() * 0.008 + 0.003,
+      layer: Math.floor(Math.random() * 3), // 0=far,1=mid,2=near
+    }));
+    // Nebulae
+    const nebulae = [
+      { x: 0.15, y: 0.2, r: 300, c: "rgba(96,165,250,0.022)" },
+      { x: 0.85, y: 0.75, r: 260, c: "rgba(167,139,250,0.018)" },
+      { x: 0.5, y: 0.55, r: 380, c: "rgba(226,201,126,0.012)" },
+      { x: 0.1, y: 0.8, r: 200, c: "rgba(52,211,153,0.015)" },
+    ];
+    let t = 0;
+    const draw = () => {
+      t += 1;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Draw nebulae
+      nebulae.forEach(n => {
+        const grd = ctx.createRadialGradient(n.x * canvas.width, n.y * canvas.height, 0, n.x * canvas.width, n.y * canvas.height, n.r);
+        grd.addColorStop(0, n.c); grd.addColorStop(1, "transparent");
+        ctx.beginPath(); ctx.arc(n.x * canvas.width, n.y * canvas.height, n.r, 0, Math.PI * 2);
+        ctx.fillStyle = grd; ctx.fill();
+      });
+      // Draw stars
+      stars.forEach(s => {
+        const twinkle = 0.5 + 0.5 * Math.sin(s.phase + t * s.speed);
+        const op = s.op * (0.6 + 0.4 * twinkle);
+        const size = s.r * (0.85 + 0.15 * twinkle);
+        ctx.beginPath(); ctx.arc(s.x, s.y, size, 0, Math.PI * 2);
+        if (s.layer === 2) {
+          // Bright stars get a glow
+          const grd = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, size * 4);
+          grd.addColorStop(0, `rgba(255,255,255,${op * 0.5})`); grd.addColorStop(1, "transparent");
+          ctx.fillStyle = grd; ctx.arc(s.x, s.y, size * 4, 0, Math.PI * 2); ctx.fill();
+          ctx.beginPath(); ctx.arc(s.x, s.y, size, 0, Math.PI * 2);
+        }
+        ctx.fillStyle = s.layer === 0
+          ? `rgba(180,190,210,${op * 0.6})`
+          : s.layer === 1
+          ? `rgba(220,230,245,${op * 0.8})`
+          : `rgba(255,255,255,${op})`;
+        ctx.fill();
+      });
+      animRef.current = requestAnimationFrame(draw);
+    };
+    draw();
+    return () => { cancelAnimationFrame(animRef.current); window.removeEventListener("resize", resize); };
+  }, []);
+  return <canvas ref={canvasRef} style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none" }} />;
 }
 
 // ── ROOT ──────────────────────────────────────────────────────────────────────
@@ -267,7 +321,7 @@ export default function App() {
   if (screen === "dashboard")        return <Dashboard user={user} onLogout={() => { signOut(auth); setUser(null); nav("landing"); }} onNav={nav} onSelectUE={(ue) => { setSelectedUE(ue); nav("subject_hub"); }} isPro={isPro} />;
   if (screen === "subject_hub")      return <SubjectHub ue={selectedUE} user={user} onNav={nav} onBack={() => nav("dashboard")} />;
   if (screen === "qcm")              return <QCMScreen ue={selectedUE} user={user} onDone={onQCMDone} onBack={() => nav("subject_hub")} />;
-  if (screen === "flashcards")       return <FlashcardsScreen ue={selectedUE} onBack={() => nav("subject_hub")} />;
+  if (screen === "flashcards")       return <FlashcardsScreen ue={selectedUE} user={user} onBack={() => nav("subject_hub")} />;
   if (screen === "cas_pratique")     return <CasPratiqueScreen ue={selectedUE} user={user} onDone={onCasDone} onBack={() => nav("subject_hub")} />;
   if (screen === "interview_config") return <InterviewConfig user={user} onStart={(cfg) => { setInterviewCfg(cfg); nav("interview"); }} onBack={() => nav("dashboard")} />;
   if (screen === "interview")        return <InterviewScreen cfg={interviewCfg} onDone={onInterviewDone} />;
@@ -348,8 +402,8 @@ function Pricing({ onAuth, onBack }) {
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
           {[
-            { label: "Gratuit", price: "0€", hl: false, cta: "Commencer →", fn: () => onAuth("signup"), feats: ["3 QCM par matière", "1 cas pratique", "Flashcards basiques", "1 entretien simulé"] },
-            { label: "Pro", price: PRO_PRICE, hl: true, cta: "Démarrer Pro →", fn: () => window.open(STRIPE_LINK, "_blank"), feats: ["QCM illimités par UE", "Cas pratiques illimités", "Toutes les flashcards", "Entretiens illimités", "13 matières DCG + DSCG", "Historique & progression", "Streak quotidien"] },
+            { label: "Gratuit", price: "0€", hl: false, cta: "Commencer →", fn: () => onAuth("signup"), feats: ["3 QCM par matière (UE1, UE4, UE9)", "5 flashcards par matière", "1 entretien simulé", "2 matières DCG accessibles"] },
+            { label: "Pro", price: PRO_PRICE, hl: true, cta: "Démarrer Pro →", fn: () => window.open(STRIPE_LINK, "_blank"), feats: ["QCM illimités par UE", "Cas pratiques illimités", "12 flashcards par matière", "Entretiens illimités", "13 matières DCG + DSCG", "Historique & progression", "Streak quotidien"] },
           ].map(p => (
             <div key={p.label} style={{ ...S.pc, ...(p.hl ? S.phl : {}), ...(p.hl ? { animation: "glow 3s ease-in-out infinite" } : {}) }}>
               {p.hl && <div style={S.pb}>RECOMMANDÉ</div>}
@@ -476,16 +530,19 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
             <div style={{ marginBottom: 20 }}>
               <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#374151", marginBottom: 12 }}>DCG — 8 MATIÈRES</p>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8 }}>
-                {DCG_UES.map((ue, i) => (
-                  <button key={ue.id} onClick={() => onSelectUE(ue)}
-                    style={{ ...S.uecard, borderColor: `${ue.color}20`, animation: `fsu .4s ${i * .04}s both` }}
-                    onMouseEnter={e => { e.currentTarget.style.borderColor = `${ue.color}50`; e.currentTarget.style.background = `${ue.color}08`; }}
-                    onMouseLeave={e => { e.currentTarget.style.borderColor = `${ue.color}20`; e.currentTarget.style.background = "#0d1117"; }}>
-                    <span style={{ fontSize: 20, marginBottom: 6 }}>{ue.icon}</span>
-                    <span style={{ fontSize: 10, color: ue.color, fontWeight: 700, letterSpacing: ".08em" }}>{ue.id}</span>
-                    <span style={{ fontSize: 11, color: "#9ca3af", marginTop: 2, lineHeight: 1.3 }}>{ue.short}</span>
-                  </button>
-                ))}
+                {DCG_UES.map((ue, i) => {
+                  const locked = ue.proOnly && !isPro;
+                  return (
+                    <button key={ue.id} onClick={() => locked ? onNav("paywall") : onSelectUE(ue)}
+                      style={{ ...S.uecard, borderColor: `${ue.color}20`, opacity: locked ? .45 : 1, animation: `fsu .4s ${i * .04}s both` }}
+                      onMouseEnter={e => { if (!locked) { e.currentTarget.style.borderColor = `${ue.color}50`; e.currentTarget.style.background = `${ue.color}08`; } }}
+                      onMouseLeave={e => { e.currentTarget.style.borderColor = `${ue.color}20`; e.currentTarget.style.background = "#0d1117"; }}>
+                      <span style={{ fontSize: 20, marginBottom: 6 }}>{ue.icon}</span>
+                      <span style={{ fontSize: 10, color: ue.color, fontWeight: 700, letterSpacing: ".08em" }}>{ue.id}</span>
+                      <span style={{ fontSize: 11, color: "#9ca3af", marginTop: 2, lineHeight: 1.3 }}>{locked ? "🔒 Pro" : ue.short}</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
             <div>
@@ -543,7 +600,7 @@ function SubjectHub({ ue, user, onNav, onBack }) {
   const isPro = user?.isPro;
   const actions = [
     { key: "qcm", icon: "△", label: "QCM", sub: `${isPro ? "10" : FREE_QCM_PER_UE} questions générées par IA`, color: "#60a5fa", free: true },
-    { key: "flashcards", icon: "◈", label: "Flashcards", sub: "12 fiches de révision IA", color: "#4ade80", free: true },
+    { key: "flashcards", icon: "◈", label: "Flashcards", sub: `${isPro ? PRO_FLASH_PER_UE : FREE_FLASH_PER_UE} fiches de révision IA`, color: "#4ade80", free: true },
     { key: "cas_pratique", icon: "📝", label: "Cas pratique", sub: "Style épreuve examen corrigé par IA", color: "#f59e0b", free: false },
   ];
   return (
@@ -666,7 +723,9 @@ function QCMScreen({ ue, user, onDone, onBack }) {
 }
 
 // ── FLASHCARDS ────────────────────────────────────────────────────────────────
-function FlashcardsScreen({ ue, onBack }) {
+function FlashcardsScreen({ ue, user, onBack }) {
+  const isPro = user?.isPro;
+  const nCards = isPro ? PRO_FLASH_PER_UE : FREE_FLASH_PER_UE;
   const [cards, setCards] = useState(null);
   const [idx, setIdx] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -674,7 +733,7 @@ function FlashcardsScreen({ ue, onBack }) {
   const [filter, setFilter] = useState("Tous");
 
   useEffect(() => {
-    callClaudeJSON(`Tu génères des flashcards pour ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`, FLASHCARD_PROMPT(ue, 12), 2000)
+    callClaudeJSON(`Tu génères des flashcards pour ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`, FLASHCARD_PROMPT(ue, nCards), 2000)
       .then(data => { setCards(Array.isArray(data) ? data : []); setLoading(false); });
   }, []);
 
@@ -1109,7 +1168,7 @@ function Paywall({ onUpgrade, onBack }) {
           <div style={S.pb}>SIMDCG PRO</div>
           <p style={{ fontSize: 40, fontWeight: 900, color: "#e8e4d9", margin: "12px 0 4px" }}>{PRO_PRICE}<span style={{ fontSize: 14, color: "#6b7280" }}>/mois</span></p>
           <div style={{ display: "flex", flexDirection: "column", gap: 7, margin: "14px 0 20px" }}>
-            {["QCM illimités par UE", "Cas pratiques style examen", "13 matières DCG + DSCG", "Entretiens illimités", "Historique & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "#c9c3b5", margin: 0 }}>✓ {f}</p>)}
+            {["QCM illimités par UE", "Cas pratiques corrigés par IA", "13 matières DCG + DSCG", "Entretiens illimités", "12 flashcards par matière", "Historique & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "#c9c3b5", margin: 0 }}>✓ {f}</p>)}
           </div>
           <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={onUpgrade}>Passer à Pro →</button>
         </div>
