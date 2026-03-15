@@ -422,6 +422,80 @@ export default function App() {
   return null;
 }
 
+// ── COMPARISON TABLE (shared) ─────────────────────────────────────────────────
+const COMPARE_ROWS = [
+  { cat: "📚 Mode Diplôme", feature: "QCM générés par IA",              free: "3 / matière",     pro: "10 / matière",         proHl: true },
+  { cat: "📚 Mode Diplôme", feature: "Matières DCG accessibles",         free: "3 matières",      pro: "8 matières",           proHl: true },
+  { cat: "📚 Mode Diplôme", feature: "Matières DSCG",                    free: false,             pro: "5 matières",           proHl: true },
+  { cat: "📚 Mode Diplôme", feature: "Résumés de cours IA",              free: true,              pro: true,                   proHl: false },
+  { cat: "📚 Mode Diplôme", feature: "Cas pratiques style examen",       free: false,             pro: "Illimités",            proHl: true },
+  { cat: "◈ Révision",      feature: "Flashcards IA",                    free: "5 / matière",     pro: "12 / matière",         proHl: true },
+  { cat: "◈ Révision",      feature: "Révision espacée (cartes difficiles)", free: false,         pro: true,                   proHl: true },
+  { cat: "◈ Révision",      feature: "Planning de révision IA",          free: false,             pro: true,                   proHl: true },
+  { cat: "◈ Révision",      feature: "Suivi de progression par UE",      free: true,              pro: true,                   proHl: false },
+  { cat: "💼 Carrière",     feature: "Simulateur d'entretien IA",        free: "1 entretien",     pro: "Illimités",            proHl: true },
+  { cat: "💼 Carrière",     feature: "Thématiques d'entretien",          free: "1 (CdG)",         pro: "6 thématiques",        proHl: true },
+  { cat: "💼 Carrière",     feature: "Historique & progression",         free: false,             pro: true,                   proHl: true },
+];
+
+function renderCell(val) {
+  if (val === true)  return <span style={{ color: "#4ade80", fontSize: 16 }}>✓</span>;
+  if (val === false) return <span style={{ color: "#1f2937", fontSize: 16 }}>—</span>;
+  return <span style={{ fontSize: 12, color: "#c9c3b5" }}>{val}</span>;
+}
+
+function CompareTable({ onCta, ctaLabel = "Passer Pro →", compact = false }) {
+  const cats = [...new Set(COMPARE_ROWS.map(r => r.cat))];
+  return (
+    <div style={{ width: "100%", position: "relative", zIndex: 1 }}>
+      {/* Header */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 120px 140px", borderBottom: "2px solid #1f2937", paddingBottom: 10, marginBottom: 0 }}>
+        <div />
+        <div style={{ textAlign: "center" }}>
+          <p style={{ fontSize: 11, color: "#6b7280", letterSpacing: ".12em", margin: 0 }}>GRATUIT</p>
+          <p style={{ fontSize: 18, fontWeight: 900, color: "#e8e4d9", margin: "2px 0 0" }}>0€</p>
+        </div>
+        <div style={{ textAlign: "center", background: "rgba(226,201,126,.06)", border: "1px solid rgba(226,201,126,.2)", padding: "6px 0", position: "relative" }}>
+          <div style={{ position: "absolute", top: -10, left: "50%", transform: "translateX(-50%)", background: "#e2c97e", color: "#080b14", fontSize: 8, padding: "2px 10px", fontWeight: 700, letterSpacing: ".1em", whiteSpace: "nowrap" }}>RECOMMANDÉ</div>
+          <p style={{ fontSize: 11, color: "#e2c97e", letterSpacing: ".12em", margin: 0 }}>PRO</p>
+          <p style={{ fontSize: 18, fontWeight: 900, color: "#e8e4d9", margin: "2px 0 0" }}>{PRO_PRICE}<span style={{ fontSize: 10, color: "#6b7280" }}>/mois</span></p>
+        </div>
+      </div>
+
+      {/* Rows grouped by category */}
+      {cats.map((cat, ci) => {
+        const rows = COMPARE_ROWS.filter(r => r.cat === cat);
+        return (
+          <div key={cat}>
+            <div style={{ background: "#080b14", padding: compact ? "8px 0 4px" : "12px 0 6px" }}>
+              <span style={{ fontSize: 10, color: "#374151", letterSpacing: ".14em" }}>{cat.toUpperCase()}</span>
+            </div>
+            {rows.map((row, ri) => (
+              <div key={ri} style={{ display: "grid", gridTemplateColumns: "1fr 120px 140px", borderBottom: "1px solid #0d1117", padding: compact ? "8px 0" : "10px 0", alignItems: "center" }}>
+                <p style={{ fontSize: compact ? 12 : 13, color: "#9ca3af", margin: 0 }}>{row.feature}</p>
+                <div style={{ textAlign: "center" }}>{renderCell(row.free)}</div>
+                <div style={{ textAlign: "center", background: "rgba(226,201,126,.03)" }}>
+                  {row.proHl && row.pro !== true
+                    ? <span style={{ fontSize: 12, color: "#e2c97e", fontWeight: 700 }}>{row.pro}</span>
+                    : renderCell(row.pro)
+                  }
+                </div>
+              </div>
+            ))}
+          </div>
+        );
+      })}
+
+      {/* CTA row */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 120px 140px", paddingTop: 16, gap: 8 }}>
+        <div />
+        <div />
+        <button style={{ ...S.ctag, padding: "11px 0", fontSize: 13, animation: "glow 3s ease-in-out infinite" }} onClick={onCta}>{ctaLabel}</button>
+      </div>
+    </div>
+  );
+}
+
 // ── LANDING ───────────────────────────────────────────────────────────────────
 function Landing({ onAuth, onPricing }) {
   return (
@@ -435,6 +509,8 @@ function Landing({ onAuth, onPricing }) {
           <button style={{ ...S.nc, animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Essai gratuit</button>
         </div>
       </nav>
+
+      {/* Hero */}
       <div style={{ position: "relative", zIndex: 1, maxWidth: 640, margin: "0 auto", padding: "88px 24px 48px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 18 }}>
         <div style={{ ...S.badge, animation: "fsu .7s ease both" }}>◈ PRÉPARATION DCG · DSCG · ENTRETIENS</div>
         <h1 style={{ fontSize: 52, fontWeight: 900, margin: 0, lineHeight: 1.06, letterSpacing: -3, animation: "fsu .7s .1s both" }}>
@@ -451,6 +527,7 @@ function Landing({ onAuth, onPricing }) {
         <p style={{ fontSize: 11, color: "#374151", letterSpacing: ".08em", animation: "fi 1s .5s both" }}>Accès gratuit · Sans carte bancaire</p>
       </div>
 
+      {/* Mode cards */}
       <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px 40px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, position: "relative", zIndex: 1 }}>
         {[
           { icon: "🎓", label: "Mode Diplôme", color: "#60a5fa", items: ["QCM IA illimités par UE", "Résumés de cours gratuits", "Cas pratiques style examen", "13 matières DCG + DSCG"] },
@@ -465,6 +542,20 @@ function Landing({ onAuth, onPricing }) {
         ))}
       </div>
 
+      {/* Comparison table */}
+      <div style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 60px", position: "relative", zIndex: 1, animation: "fsu .7s .5s both" }}>
+        <div style={{ textAlign: "center", marginBottom: 28 }}>
+          <p style={{ fontSize: 10, letterSpacing: ".2em", color: "#374151", marginBottom: 8 }}>COMPAREZ LES PLANS</p>
+          <h2 style={{ fontSize: 26, fontWeight: 900, color: "#e8e4d9", margin: "0 0 6px" }}>Gratuit ou Pro — quelle différence ?</h2>
+          <p style={{ fontSize: 13, color: "#4b5563", margin: 0 }}>Le plan gratuit vous donne un aperçu. Le Pro vous donne tout.</p>
+        </div>
+        <div style={{ background: "#0a0d17", border: "1px solid #1a1f2e", padding: "24px 28px" }}>
+          <CompareTable onCta={() => window.open(STRIPE_LINK, "_blank")} ctaLabel={`Passer Pro — ${PRO_PRICE}/mois →`} compact />
+        </div>
+        <p style={{ textAlign: "center", fontSize: 11, color: "#374151", marginTop: 14 }}>Paiement sécurisé via Stripe · Résiliation en 1 clic</p>
+      </div>
+
+      {/* UE tags */}
       <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px 80px", position: "relative", zIndex: 1 }}>
         <p style={{ fontSize: 10, letterSpacing: ".2em", color: "#374151", marginBottom: 14, textAlign: "center" }}>13 MATIÈRES COUVERTES</p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center" }}>
@@ -484,27 +575,82 @@ function Pricing({ onAuth, onBack }) {
   return (
     <div style={S.root}><ParticleCanvas /><OrbBg />
       <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← Retour</button></nav>
-      <div style={{ maxWidth: 700, margin: "0 auto", padding: "60px 24px", position: "relative", zIndex: 1 }}>
-        <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <div style={{ ...S.badge, display: "inline-block", marginBottom: 12 }}>TARIFS</div>
-          <h2 style={{ fontSize: 34, margin: "0 0 8px", color: "#e8e4d9", fontWeight: 900 }}>Simple. Transparent.</h2>
+      <div style={{ maxWidth: 800, margin: "0 auto", padding: "60px 24px 80px", position: "relative", zIndex: 1 }}>
+
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: 44, animation: "fsu .5s ease both" }}>
+          <div style={{ ...S.badge, display: "inline-block", marginBottom: 14 }}>TARIFS</div>
+          <h2 style={{ fontSize: 36, margin: "0 0 10px", color: "#e8e4d9", fontWeight: 900 }}>Simple. Transparent.</h2>
+          <p style={{ fontSize: 14, color: "#4b5563", margin: 0 }}>Commencez gratuitement. Passez Pro quand vous êtes prêt.</p>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+
+        {/* Price cards */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 48, animation: "fsu .5s .1s ease both" }}>
+          {/* Free */}
+          <div style={{ ...S.pc, display: "flex", flexDirection: "column", gap: 0 }}>
+            <p style={{ fontSize: 11, letterSpacing: ".15em", color: "#6b7280", margin: "0 0 8px" }}>GRATUIT</p>
+            <div style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: 6 }}>
+              <span style={{ fontSize: 44, fontWeight: 900, color: "#e8e4d9" }}>0€</span>
+            </div>
+            <p style={{ fontSize: 12, color: "#374151", margin: "0 0 20px" }}>Pour découvrir la plateforme</p>
+            <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 7, marginBottom: 20 }}>
+              {["Résumés de cours — toutes matières", "3 QCM / matière (UE1, UE4, UE9)", "5 flashcards / matière", "1 entretien simulé", "Suivi de progression"].map(f => <p key={f} style={{ fontSize: 12, color: "#4b5563", margin: 0 }}>✓ {f}</p>)}
+            </div>
+            <button style={{ ...S.ctagh, width: "100%", padding: 12 }} onClick={() => onAuth("signup")}>Commencer gratuitement →</button>
+          </div>
+
+          {/* Pro */}
+          <div style={{ ...S.pc, ...S.phl, display: "flex", flexDirection: "column", gap: 0, animation: "glow 3s ease-in-out infinite" }}>
+            <div style={S.pb}>RECOMMANDÉ</div>
+            <p style={{ fontSize: 11, letterSpacing: ".15em", color: "#e2c97e", margin: "0 0 8px" }}>PRO</p>
+            <div style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: 6 }}>
+              <span style={{ fontSize: 44, fontWeight: 900, color: "#e8e4d9" }}>{PRO_PRICE}</span>
+              <span style={{ fontSize: 12, color: "#6b7280" }}>/mois</span>
+            </div>
+            <p style={{ fontSize: 12, color: "#6b7280", margin: "0 0 20px" }}>Pour décrocher le diplôme et le poste</p>
+            <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 7, marginBottom: 20 }}>
+              {[
+                "QCM illimités — 13 matières DCG + DSCG",
+                "Cas pratiques corrigés par IA",
+                "12 flashcards + révision espacée",
+                "Planning de révision IA personnalisé",
+                "Entretiens illimités (6 thématiques)",
+                "Historique complet & progression",
+                "Toutes les matières DSCG débloquées",
+              ].map(f => <p key={f} style={{ fontSize: 12, color: "#c9c3b5", margin: 0, display: "flex", gap: 8 }}>
+                <span style={{ color: "#e2c97e", flexShrink: 0 }}>✓</span>{f}
+              </p>)}
+            </div>
+            <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={() => window.open(STRIPE_LINK, "_blank")}>
+              Démarrer Pro — {PRO_PRICE}/mois →
+            </button>
+            <p style={{ fontSize: 10, color: "#374151", textAlign: "center", margin: "10px 0 0" }}>Paiement Stripe sécurisé · Résiliation en 1 clic</p>
+          </div>
+        </div>
+
+        {/* Comparison table */}
+        <div style={{ animation: "fsu .5s .2s ease both" }}>
+          <div style={{ textAlign: "center", marginBottom: 24 }}>
+            <p style={{ fontSize: 10, letterSpacing: ".2em", color: "#374151", marginBottom: 6 }}>COMPARAISON DÉTAILLÉE</p>
+            <h3 style={{ fontSize: 22, fontWeight: 900, color: "#e8e4d9", margin: "0 0 4px" }}>Ce que vous débloquez avec Pro</h3>
+            <p style={{ fontSize: 13, color: "#4b5563", margin: 0 }}>La différence est massive. Jugez par vous-même.</p>
+          </div>
+          <div style={{ background: "#0a0d17", border: "1px solid #1a1f2e", padding: "24px 28px" }}>
+            <CompareTable onCta={() => window.open(STRIPE_LINK, "_blank")} ctaLabel={`Passer Pro — ${PRO_PRICE}/mois →`} />
+          </div>
+        </div>
+
+        {/* Social proof / reassurance */}
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginTop: 40, animation: "fsu .5s .3s ease both" }}>
           {[
-            { label: "Gratuit", price: "0€", hl: false, cta: "Commencer →", fn: () => onAuth("signup"), feats: ["3 QCM par matière (UE1, UE4, UE9)", "5 flashcards par matière", "Résumés de cours IA — toutes matières", "Barres de progression par UE", "1 entretien simulé"] },
-            { label: "Pro", price: PRO_PRICE, hl: true, cta: "Démarrer Pro →", fn: () => window.open(STRIPE_LINK, "_blank"), feats: ["QCM illimités — 13 matières DCG + DSCG", "Cas pratiques illimités corrigés par IA", "12 flashcards + révision espacée", "Planning de révision IA personnalisé", "Entretiens illimités (6 thématiques)", "Historique complet & progression", "Toutes les matières DSCG"] },
-          ].map(p => (
-            <div key={p.label} style={{ ...S.pc, ...(p.hl ? S.phl : {}), ...(p.hl ? { animation: "glow 3s ease-in-out infinite" } : {}) }}>
-              {p.hl && <div style={S.pb}>RECOMMANDÉ</div>}
-              <p style={{ fontSize: 11, letterSpacing: ".15em", color: p.hl ? "#e2c97e" : "#6b7280", margin: "0 0 10px" }}>{p.label.toUpperCase()}</p>
-              <div style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: 20 }}>
-                <span style={{ fontSize: 42, fontWeight: 900, color: "#e8e4d9" }}>{p.price}</span>
-                {p.hl && <span style={{ fontSize: 12, color: "#6b7280" }}>/mois</span>}
-              </div>
-              <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8, marginBottom: 24 }}>
-                {p.feats.map(f => <p key={f} style={{ fontSize: 12, color: "#c9c3b5", margin: 0 }}>✓ {f}</p>)}
-              </div>
-              <button style={{ ...(p.hl ? S.ctag : S.ctagh), width: "100%", padding: 12 }} onClick={p.fn}>{p.cta}</button>
+            { icon: "🔒", title: "Paiement sécurisé", sub: "Via Stripe — standard bancaire" },
+            { icon: "↩", title: "Résiliation simple", sub: "En 1 clic, sans frais" },
+            { icon: "⚡", title: "Accès immédiat", sub: "Activé dès le paiement" },
+          ].map(r => (
+            <div key={r.title} style={{ background: "#0d1117", border: "1px solid #111827", padding: "16px 18px", textAlign: "center" }}>
+              <div style={{ fontSize: 22, marginBottom: 6 }}>{r.icon}</div>
+              <p style={{ fontSize: 12, fontWeight: 700, color: "#e8e4d9", margin: "0 0 3px" }}>{r.title}</p>
+              <p style={{ fontSize: 11, color: "#374151", margin: 0 }}>{r.sub}</p>
             </div>
           ))}
         </div>
