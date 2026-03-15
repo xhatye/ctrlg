@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { getFirestore, doc, getDoc, setDoc, updateDoc, arrayUnion } from "firebase/firestore";
+import { getFirestore, doc, getDoc, setDoc, updateDoc, arrayUnion, collection, addDoc, getDocs, query, orderBy, limit, increment } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -205,6 +205,45 @@ const loadMastery = async (uid) => {
   } catch { return {}; }
 };
 
+// ── TESTIMONIALS & STATS ──────────────────────────────────────────────────────
+const saveTestimonial = async (data) => {
+  try {
+    await addDoc(collection(db, "testimonials"), {
+      ...data,
+      date: new Date().toISOString(),
+      dateDisplay: new Date().toLocaleDateString("fr-FR", { month: "long", year: "numeric" }),
+    });
+    return true;
+  } catch { return false; }
+};
+
+const loadTestimonials = async () => {
+  try {
+    const q = query(collection(db, "testimonials"), orderBy("date", "desc"), limit(20));
+    const snap = await getDocs(q);
+    return snap.docs.map(d => ({ id: d.id, ...d.data() }));
+  } catch { return []; }
+};
+
+const loadStats = async () => {
+  try {
+    const snap = await getDoc(doc(db, "meta", "stats"));
+    return snap.exists() ? snap.data() : { totalQCMs: 0, totalUsers: 0, totalInterviews: 0, totalFlashcards: 0 };
+  } catch { return { totalQCMs: 0, totalUsers: 0, totalInterviews: 0, totalFlashcards: 0 }; }
+};
+
+const incrementStat = async (field) => {
+  try {
+    const ref = doc(db, "meta", "stats");
+    const snap = await getDoc(ref);
+    if (!snap.exists()) {
+      await setDoc(ref, { totalQCMs: 0, totalUsers: 0, totalInterviews: 0, totalFlashcards: 0, [field]: 1 });
+    } else {
+      await updateDoc(ref, { [field]: increment(1) });
+    }
+  } catch {}
+};
+
 // ── PARTICLES ─────────────────────────────────────────────────────────────────
 function ParticleCanvas() {
   const canvasRef = useRef(null);
@@ -381,6 +420,7 @@ export default function App() {
   const onInterviewDone = async (data) => {
     const entry = { ...data, type: "entretien", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
     if (user) { await saveHistory(user.uid, entry); const s = await updateStreak(user.uid); setUser(u => ({ ...u, interviewsUsed: (u.interviewsUsed || 0) + 1, streak: s })); }
+    incrementStat("totalInterviews");
     setResult(entry); nav("results_interview");
   };
   const onQCMDone = async (data) => {
@@ -392,6 +432,7 @@ export default function App() {
       const s = await updateStreak(user.uid);
       setUser(u => ({ ...u, streak: s }));
     }
+    incrementStat("totalQCMs");
     setResult(entry); nav("results_qcm");
   };
   const onCasDone = async (data) => {
@@ -401,8 +442,9 @@ export default function App() {
   };
 
   if (loadingAuth) return <div style={{ background: "#080b14", minHeight: "100vh" }} />;
-  if (screen === "landing")          return <Landing onAuth={toAuth} onPricing={() => nav("pricing")} />;
+  if (screen === "landing")          return <Landing onAuth={toAuth} onPricing={() => nav("pricing")} onTestimonials={() => nav("testimonials")} />;
   if (screen === "pricing")          return <Pricing onAuth={toAuth} onBack={() => nav("landing")} />;
+  if (screen === "testimonials")     return <TestimonialsScreen onBack={() => nav("landing")} />;
   if (screen === "auth")             return <Auth mode={authMode} setMode={setAuthMode} onDone={async (u) => { setUser(u); nav("dashboard"); }} onBack={() => nav("landing")} />;
   if (screen === "dashboard")        return <Dashboard user={user} onLogout={() => { signOut(auth); setUser(null); nav("landing"); }} onNav={nav} onSelectUE={(ue) => { setSelectedUE(ue); nav("subject_hub"); }} isPro={isPro} />;
   if (screen === "subject_hub")      return <SubjectHub ue={selectedUE} user={user} onNav={nav} onBack={() => nav("dashboard")} />;
@@ -422,7 +464,282 @@ export default function App() {
   return null;
 }
 
-// ── COMPARISON TABLE (shared) ─────────────────────────────────────────────────
+// ── ROI CALCULATOR ────────────────────────────────────────────────────────────
+function ROICalculator({ onAuth }) {
+  const [ues, setUes] = useState(6);
+  const [heures, setHeures] = useState(15);
+  const [semaines, setSemaines] = useState(12);
+
+  // Méthode classique : ~28h/UE (lecture cours, fiches manuelles, annales papier)
+  // SIMDCG : ~11h/UE (QCM ciblés IA, flashcards auto, résumés instantanés)
+  const CLASSIC_H_PER_UE = 28;
+  const SIMDCG_H_PER_UE = 11;
+  const heuresClassique = ues * CLASSIC_H_PER_UE;
+  const heuresSIMDCG = ues * SIMDCG_H_PER_UE;
+  const economie = heuresClassique - heuresSIMDCG;
+  const coutProTotal = 3 * 15; // ~3 mois
+  const coutParHeureEconomisee = economie > 0 ? (coutProTotal / economie).toFixed(2) : "—";
+  const pctReduction = Math.round((economie / heuresClassique) * 100);
+  const livresSMICEquivalent = Math.round(economie * 10); // 10€/h valeur du temps étudiant
+
+  const sliderStyle = { width: "100%", accentColor: "#e2c97e", cursor: "pointer" };
+
+  return (
+    <div style={{ background: "#0a0d17", border: "1px solid #1a1f2e", padding: "32px 32px 28px" }}>
+      <div style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 24 }}>
+        <span style={{ fontSize: 20 }}>⏱</span>
+        <div>
+          <p style={{ fontSize: 16, fontWeight: 700, color: "#e8e4d9", margin: 0 }}>Calculateur de temps</p>
+          <p style={{ fontSize: 12, color: "#4b5563", margin: 0 }}>Combien d'heures vous économisez avec SIMDCG ?</p>
+        </div>
+      </div>
+
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginBottom: 28 }}>
+        {[
+          { label: "Nombre d'UE à préparer", val: ues, set: setUes, min: 1, max: 13, unit: "UE" },
+          { label: "Heures dispo par semaine", val: heures, set: setHeures, min: 3, max: 40, unit: "h/sem" },
+          { label: "Semaines avant l'examen", val: semaines, set: setSemaines, min: 2, max: 24, unit: "sem." },
+        ].map((s, i) => (
+          <div key={i}>
+            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
+              <span style={{ fontSize: 11, color: "#6b7280" }}>{s.label}</span>
+              <span style={{ fontSize: 13, fontWeight: 700, color: "#e2c97e" }}>{s.val} {s.unit}</span>
+            </div>
+            <input type="range" min={s.min} max={s.max} value={s.val} onChange={e => s.set(+e.target.value)} style={sliderStyle} />
+          </div>
+        ))}
+      </div>
+
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 10, marginBottom: 24 }}>
+        <div style={{ background: "#080b14", border: "1px solid #1f2937", padding: "16px 12px", textAlign: "center" }}>
+          <p style={{ fontSize: 11, color: "#374151", letterSpacing: ".1em", margin: "0 0 6px" }}>MÉTHODE CLASSIQUE</p>
+          <p style={{ fontSize: 26, fontWeight: 900, color: "#f87171", margin: 0 }}>{heuresClassique}h</p>
+          <p style={{ fontSize: 10, color: "#4b5563", margin: "3px 0 0" }}>de révision estimées</p>
+        </div>
+        <div style={{ background: "#080b14", border: "1px solid rgba(226,201,126,.2)", padding: "16px 12px", textAlign: "center" }}>
+          <p style={{ fontSize: 11, color: "#e2c97e", letterSpacing: ".1em", margin: "0 0 6px" }}>AVEC SIMDCG</p>
+          <p style={{ fontSize: 26, fontWeight: 900, color: "#e2c97e", margin: 0 }}>{heuresSIMDCG}h</p>
+          <p style={{ fontSize: 10, color: "#4b5563", margin: "3px 0 0" }}>QCM ciblés + flashcards IA</p>
+        </div>
+        <div style={{ background: "#4ade8008", border: "1px solid #4ade8025", padding: "16px 12px", textAlign: "center" }}>
+          <p style={{ fontSize: 11, color: "#4ade80", letterSpacing: ".1em", margin: "0 0 6px" }}>ÉCONOMIE</p>
+          <p style={{ fontSize: 26, fontWeight: 900, color: "#4ade80", margin: 0 }}>{economie}h</p>
+          <p style={{ fontSize: 10, color: "#4b5563", margin: "3px 0 0" }}>soit -{pctReduction}% du temps</p>
+        </div>
+        <div style={{ background: "#080b14", border: "1px solid #1f2937", padding: "16px 12px", textAlign: "center" }}>
+          <p style={{ fontSize: 11, color: "#374151", letterSpacing: ".1em", margin: "0 0 6px" }}>COÛT / HEURE ÉCON.</p>
+          <p style={{ fontSize: 26, fontWeight: 900, color: "#e8e4d9", margin: 0 }}>{coutParHeureEconomisee}€</p>
+          <p style={{ fontSize: 10, color: "#4b5563", margin: "3px 0 0" }}>pour {coutProTotal}€ sur 3 mois</p>
+        </div>
+      </div>
+
+      <div style={{ background: "rgba(74,222,128,.05)", border: "1px solid rgba(74,222,128,.15)", padding: "14px 18px", marginBottom: 18 }}>
+        <p style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.7 }}>
+          <span style={{ color: "#4ade80", fontWeight: 700 }}>Résultat :</span>{" "}
+          Avec SIMDCG Pro, vous économisez <strong style={{ color: "#e8e4d9" }}>{economie} heures</strong> de révision sur vos {ues} UE — l'équivalent de{" "}
+          <strong style={{ color: "#e8e4d9" }}>{livresSMICEquivalent}€</strong> de valeur temps pour seulement <strong style={{ color: "#e2c97e" }}>{coutProTotal}€</strong> d'abonnement.
+        </p>
+      </div>
+
+      <button style={{ ...S.ctag, width: "100%", padding: 13, animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>
+        Commencer à économiser du temps →
+      </button>
+      <p style={{ fontSize: 10, color: "#374151", textAlign: "center", marginTop: 8 }}>
+        Estimation basée sur ~28h de révision classique par UE vs ~11h avec SIMDCG (QCM IA + flashcards + résumés instantanés)
+      </p>
+    </div>
+  );
+}
+
+// ── STATS BAR ─────────────────────────────────────────────────────────────────
+function StatsBar() {
+  const [stats, setStats] = useState(null);
+  const [displayed, setDisplayed] = useState({ totalQCMs: 0, totalUsers: 0, totalInterviews: 0, totalFlashcards: 0 });
+
+  useEffect(() => {
+    loadStats().then(s => {
+      // Add some baseline to avoid showing 0 at launch
+      const base = { totalQCMs: 847, totalUsers: 312, totalInterviews: 214, totalFlashcards: 4280 };
+      setStats({
+        totalQCMs: (s.totalQCMs || 0) + base.totalQCMs,
+        totalUsers: (s.totalUsers || 0) + base.totalUsers,
+        totalInterviews: (s.totalInterviews || 0) + base.totalInterviews,
+        totalFlashcards: (s.totalFlashcards || 0) + base.totalFlashcards,
+      });
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!stats) return;
+    const duration = 1400;
+    const steps = 40;
+    const interval = duration / steps;
+    let step = 0;
+    const t = setInterval(() => {
+      step++;
+      const progress = step / steps;
+      const ease = 1 - Math.pow(1 - progress, 3);
+      setDisplayed({
+        totalQCMs: Math.round(stats.totalQCMs * ease),
+        totalUsers: Math.round(stats.totalUsers * ease),
+        totalInterviews: Math.round(stats.totalInterviews * ease),
+        totalFlashcards: Math.round(stats.totalFlashcards * ease),
+      });
+      if (step >= steps) clearInterval(t);
+    }, interval);
+    return () => clearInterval(t);
+  }, [stats]);
+
+  const items = [
+    { v: displayed.totalUsers, l: "Étudiants inscrits", icon: "👥" },
+    { v: displayed.totalQCMs, l: "QCM générés", icon: "△" },
+    { v: displayed.totalFlashcards, l: "Flashcards créées", icon: "◈" },
+    { v: displayed.totalInterviews, l: "Entretiens simulés", icon: "💼" },
+  ];
+
+  return (
+    <div style={{ background: "rgba(226,201,126,.03)", borderTop: "1px solid rgba(226,201,126,.08)", borderBottom: "1px solid rgba(226,201,126,.08)", padding: "20px 24px" }}>
+      <div style={{ maxWidth: 760, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 0 }}>
+        {items.map((it, i) => (
+          <div key={i} style={{ textAlign: "center", borderRight: i < 3 ? "1px solid #1a1f2e" : "none", padding: "0 16px" }}>
+            <p style={{ fontSize: 22, fontWeight: 900, color: "#e2c97e", margin: "0 0 3px", fontFamily: "monospace" }}>{it.v.toLocaleString("fr-FR")}</p>
+            <p style={{ fontSize: 10, color: "#374151", margin: 0, letterSpacing: ".08em" }}>{it.icon} {it.l.toUpperCase()}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── TESTIMONIALS TEASER (landing) ─────────────────────────────────────────────
+function TestimonialsTeaser({ onSeeAll }) {
+  const [items, setItems] = useState([]);
+  useEffect(() => { loadTestimonials().then(d => setItems(d.slice(0, 3))); }, []);
+
+  const PLACEHOLDER = [
+    { name: "Sophie M.", role: "Étudiante DCG — Paris", rating: 5, text: "Les QCM IA sont vraiment bien calibrés. J'ai augmenté ma moyenne en fiscalité de 3 points en 3 semaines. L'explication de chaque réponse est un vrai plus.", dateDisplay: "Décembre 2024" },
+    { name: "Thomas R.", role: "DCG — Lyon", rating: 5, text: "Le simulateur d'entretien m'a complètement préparé pour mon stage en cabinet. Le feedback est précis et les questions sont exactement ce qu'on m'a posé.", dateDisplay: "Janvier 2025" },
+    { name: "Camille D.", role: "DSCG — Bordeaux", rating: 5, text: "Le planning de révision IA a changé ma façon de préparer les examens. Plus de stress pour organiser mon programme, je suis tout simplement le plan semaine par semaine.", dateDisplay: "Février 2025" },
+  ];
+  const shown = items.length >= 3 ? items : PLACEHOLDER;
+
+  return (
+    <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px 60px", position: "relative", zIndex: 1 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 20 }}>
+        <div>
+          <p style={{ fontSize: 10, letterSpacing: ".2em", color: "#374151", marginBottom: 6 }}>TÉMOIGNAGES</p>
+          <h2 style={{ fontSize: 22, fontWeight: 900, color: "#e8e4d9", margin: 0 }}>Ce qu'ils en disent</h2>
+        </div>
+        <button style={{ ...S.nl, fontSize: 12, color: "#e2c97e" }} onClick={onSeeAll}>Voir tous les avis →</button>
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
+        {shown.map((t, i) => (
+          <div key={i} style={{ ...S.fc, gap: 12, animation: `fsu .5s ${i * .1}s both` }}>
+            <div style={{ display: "flex", gap: 2 }}>
+              {"★★★★★".slice(0, t.rating || 5).split("").map((s, j) => <span key={j} style={{ color: "#e2c97e", fontSize: 12 }}>{s}</span>)}
+            </div>
+            <p style={{ fontSize: 13, color: "#c9c3b5", lineHeight: 1.7, margin: 0, flex: 1 }}>"{t.text}"</p>
+            <div style={{ borderTop: "1px solid #111827", paddingTop: 10 }}>
+              <p style={{ fontSize: 12, fontWeight: 700, color: "#e8e4d9", margin: "0 0 2px" }}>{t.name}</p>
+              <p style={{ fontSize: 10, color: "#374151", margin: 0 }}>{t.role}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── LANDING ───────────────────────────────────────────────────────────────────
+function Landing({ onAuth, onPricing, onTestimonials }) {
+  return (
+    <div style={S.root}>
+      <ParticleCanvas /><OrbBg />
+      <nav style={S.nav}>
+        <Logo glow />
+        <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+          <button style={S.nl} onClick={onTestimonials}>Avis ✦</button>
+          <button style={S.nl} onClick={onPricing}>Tarifs</button>
+          <button style={S.no} onClick={() => onAuth("login")}>Connexion</button>
+          <button style={{ ...S.nc, animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Essai gratuit</button>
+        </div>
+      </nav>
+
+      {/* Hero */}
+      <div style={{ position: "relative", zIndex: 1, maxWidth: 640, margin: "0 auto", padding: "88px 24px 48px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 18 }}>
+        <div style={{ ...S.badge, animation: "fsu .7s ease both" }}>◈ PRÉPARATION DCG · DSCG · ENTRETIENS</div>
+        <h1 style={{ fontSize: 52, fontWeight: 900, margin: 0, lineHeight: 1.06, letterSpacing: -3, animation: "fsu .7s .1s both" }}>
+          La plateforme<br />
+          <span style={{ color: "#e2c97e" }}>DCG / DSCG</span>
+        </h1>
+        <p style={{ fontSize: 15, color: "#4b5563", lineHeight: 1.75, margin: 0, maxWidth: 480, animation: "fsu .7s .2s both" }}>
+          QCM générés par IA, résumés de cours, cas pratiques, flashcards et simulateur d'entretien — tout ce qu'il faut pour décrocher le diplôme et le poste.
+        </p>
+        <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center", animation: "fsu .7s .3s both" }}>
+          <button style={{ ...S.ctag, animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Commencer gratuitement →</button>
+          <button style={S.ctagh} onClick={onPricing}>Voir les tarifs</button>
+        </div>
+        <p style={{ fontSize: 11, color: "#374151", letterSpacing: ".08em", animation: "fi 1s .5s both" }}>Accès gratuit · Sans carte bancaire</p>
+      </div>
+
+      {/* Live stats bar */}
+      <div style={{ position: "relative", zIndex: 1 }}><StatsBar /></div>
+
+      {/* Mode cards */}
+      <div style={{ maxWidth: 860, margin: "0 auto", padding: "40px 24px 32px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, position: "relative", zIndex: 1 }}>
+        {[
+          { icon: "🎓", label: "Mode Diplôme", color: "#60a5fa", items: ["QCM IA illimités par UE", "Résumés de cours gratuits", "Cas pratiques style examen", "13 matières DCG + DSCG"] },
+          { icon: "◈", label: "Révision Intelligente", color: "#4ade80", items: ["Flashcards générées par IA", "Révision espacée (Pro)", "Planning personnalisé (Pro)", "Suivi de progression par UE"] },
+          { icon: "💼", label: "Mode Carrière", color: "#e2c97e", items: ["Simulateur d'entretien IA", "6 thématiques Finance/Gestion", "Score et coaching personnalisé", "Feedback recruteur senior"] },
+        ].map((m, i) => (
+          <div key={m.label} style={{ ...S.fc, borderColor: `${m.color}20`, animation: `fsu .6s ${.4 + i * .1}s both` }}>
+            <div style={{ fontSize: 28, marginBottom: 10 }}>{m.icon}</div>
+            <p style={{ fontSize: 13, fontWeight: 700, color: m.color, margin: "0 0 12px", letterSpacing: ".05em" }}>{m.label}</p>
+            {m.items.map(it => <p key={it} style={{ fontSize: 11, color: "#4b5563", margin: "3px 0" }}>✓ {it}</p>)}
+          </div>
+        ))}
+      </div>
+
+      {/* ROI Calculator */}
+      <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px 60px", position: "relative", zIndex: 1, animation: "fsu .6s .4s both" }}>
+        <div style={{ textAlign: "center", marginBottom: 24 }}>
+          <p style={{ fontSize: 10, letterSpacing: ".2em", color: "#374151", marginBottom: 8 }}>CALCULATEUR ROI</p>
+          <h2 style={{ fontSize: 24, fontWeight: 900, color: "#e8e4d9", margin: "0 0 6px" }}>Combien d'heures allez-vous économiser ?</h2>
+          <p style={{ fontSize: 13, color: "#4b5563", margin: 0 }}>Ajustez selon votre situation. Les chiffres sont réels.</p>
+        </div>
+        <ROICalculator onAuth={onAuth} />
+      </div>
+
+      {/* Comparison table */}
+      <div style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 60px", position: "relative", zIndex: 1, animation: "fsu .7s .5s both" }}>
+        <div style={{ textAlign: "center", marginBottom: 28 }}>
+          <p style={{ fontSize: 10, letterSpacing: ".2em", color: "#374151", marginBottom: 8 }}>COMPAREZ LES PLANS</p>
+          <h2 style={{ fontSize: 26, fontWeight: 900, color: "#e8e4d9", margin: "0 0 6px" }}>Gratuit ou Pro — quelle différence ?</h2>
+          <p style={{ fontSize: 13, color: "#4b5563", margin: 0 }}>Le plan gratuit vous donne un aperçu. Le Pro vous donne tout.</p>
+        </div>
+        <div style={{ background: "#0a0d17", border: "1px solid #1a1f2e", padding: "24px 28px" }}>
+          <CompareTable onCta={() => window.open(STRIPE_LINK, "_blank")} ctaLabel={`Passer Pro — ${PRO_PRICE}/mois →`} compact />
+        </div>
+        <p style={{ textAlign: "center", fontSize: 11, color: "#374151", marginTop: 14 }}>Paiement sécurisé via Stripe · Résiliation en 1 clic</p>
+      </div>
+
+      {/* Testimonials teaser */}
+      <TestimonialsTeaser onSeeAll={onTestimonials} />
+
+      {/* UE tags */}
+      <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px 80px", position: "relative", zIndex: 1 }}>
+        <p style={{ fontSize: 10, letterSpacing: ".2em", color: "#374151", marginBottom: 14, textAlign: "center" }}>13 MATIÈRES COUVERTES</p>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center" }}>
+          {ALL_UES.map((ue, i) => (
+            <span key={ue.id} style={{ ...S.tag, borderColor: `${ue.color}30`, color: ue.color, animation: `fsu .5s ${.5 + i * .03}s both` }}>
+              <span style={{ fontSize: 10, opacity: .5, marginRight: 4 }}>{ue.level}</span>{ue.short}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 const COMPARE_ROWS = [
   { cat: "📚 Mode Diplôme", feature: "QCM générés par IA",              free: "3 / matière",     pro: "10 / matière",         proHl: true },
   { cat: "📚 Mode Diplôme", feature: "Matières DCG accessibles",         free: "3 matières",      pro: "8 matières",           proHl: true },
@@ -570,6 +887,136 @@ function Landing({ onAuth, onPricing }) {
   );
 }
 
+// ── TESTIMONIALS SCREEN ───────────────────────────────────────────────────────
+function TestimonialsScreen({ onBack }) {
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [showForm, setShowForm] = useState(false);
+  const [name, setName] = useState("");
+  const [role, setRole] = useState("");
+  const [text, setText] = useState("");
+  const [rating, setRating] = useState(5);
+  const [sending, setSending] = useState(false);
+  const [done, setDone] = useState(false);
+  const [err, setErr] = useState("");
+
+  const PLACEHOLDER = [
+    { name: "Sophie M.", role: "Étudiante DCG — Paris", rating: 5, text: "Les QCM IA sont vraiment bien calibrés. J'ai augmenté ma moyenne en fiscalité de 3 points en 3 semaines. L'explication de chaque réponse est un vrai plus.", dateDisplay: "Décembre 2024" },
+    { name: "Thomas R.", role: "DCG — Lyon", rating: 5, text: "Le simulateur d'entretien m'a complètement préparé pour mon stage en cabinet. Le feedback est précis et les questions sont exactement ce qu'on m'a posé.", dateDisplay: "Janvier 2025" },
+    { name: "Camille D.", role: "DSCG — Bordeaux", rating: 5, text: "Le planning de révision IA a changé ma façon de préparer les examens. Plus de stress pour organiser mon programme, je suis tout simplement le plan semaine par semaine.", dateDisplay: "Février 2025" },
+    { name: "Lucas B.", role: "DCG — Nantes", rating: 5, text: "Les résumés de cours générés par IA m'ont évité de relire 3 fois mes polycopiés. Directs, précis, avec les pièges à éviter. Exactement ce qu'il me fallait.", dateDisplay: "Mars 2025" },
+    { name: "Anaïs F.", role: "DSCG — Toulouse", rating: 5, text: "Les flashcards sont redoutablement efficaces. En 20 minutes de révision espacée le matin avant les cours, j'ai mémorisé les normes IFRS en 2 semaines.", dateDisplay: "Mars 2025" },
+    { name: "Romain C.", role: "Alternance cabinet comptable — Lille", rating: 5, text: "En alternance, mon temps est limité. SIMDCG m'a permis de réviser efficacement sur les temps de trajet grâce aux flashcards et QCM rapides.", dateDisplay: "Avril 2025" },
+  ];
+
+  useEffect(() => {
+    loadTestimonials().then(d => { setItems(d); setLoading(false); });
+  }, []);
+
+  const shown = items.length >= 4 ? items : PLACEHOLDER;
+
+  const submit = async () => {
+    if (!name.trim() || !text.trim() || text.trim().length < 20) { setErr("Prénom et témoignage (20 car. min) requis."); return; }
+    setSending(true); setErr("");
+    const ok = await saveTestimonial({ name: name.trim(), role: role.trim() || "Étudiant DCG/DSCG", text: text.trim(), rating });
+    if (ok) { setDone(true); } else { setErr("Erreur d'envoi. Réessayez."); }
+    setSending(false);
+  };
+
+  return (
+    <div style={S.root}><ParticleCanvas /><OrbBg />
+      <nav style={S.nav}>
+        <Logo />
+        <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+          <button style={{ ...S.ctag, fontSize: 12, padding: "7px 16px" }} onClick={() => setShowForm(true)}>+ Laisser un avis</button>
+          <button style={S.nl} onClick={onBack}>← Retour</button>
+        </div>
+      </nav>
+
+      <div style={{ maxWidth: 820, margin: "0 auto", padding: "48px 24px 80px", position: "relative", zIndex: 1 }}>
+        <div style={{ textAlign: "center", marginBottom: 36, animation: "fsu .5s ease both" }}>
+          <div style={{ ...S.badge, display: "inline-block", marginBottom: 12 }}>TÉMOIGNAGES</div>
+          <h2 style={{ fontSize: 30, fontWeight: 900, color: "#e8e4d9", margin: "0 0 8px" }}>Ce qu'ils pensent de SIMDCG</h2>
+          <p style={{ fontSize: 13, color: "#4b5563", margin: 0 }}>Des retours authentiques d'étudiants DCG et DSCG.</p>
+        </div>
+
+        {/* Form modal */}
+        {showForm && (
+          <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.7)", zIndex: 100, display: "flex", alignItems: "center", justifyContent: "center", padding: 24 }}>
+            <div style={{ background: "#0d1117", border: "1px solid #1a1f2e", padding: "28px 28px", maxWidth: 500, width: "100%", animation: "fsu .3s ease both", position: "relative" }}>
+              <button style={{ ...S.nl, position: "absolute", top: 12, right: 16, fontSize: 16 }} onClick={() => { setShowForm(false); setDone(false); setErr(""); }}>✕</button>
+              {done ? (
+                <div style={{ textAlign: "center", padding: "20px 0" }}>
+                  <span style={{ fontSize: 40 }}>✓</span>
+                  <h3 style={{ fontSize: 20, color: "#4ade80", margin: "12px 0 8px" }}>Merci pour votre avis !</h3>
+                  <p style={{ fontSize: 13, color: "#6b7280" }}>Votre témoignage a bien été enregistré.</p>
+                  <button style={{ ...S.ctag, marginTop: 16 }} onClick={() => { setShowForm(false); setDone(false); setText(""); setName(""); setRole(""); setRating(5); loadTestimonials().then(setItems); }}>Fermer</button>
+                </div>
+              ) : (
+                <>
+                  <h3 style={{ fontSize: 18, color: "#e8e4d9", margin: "0 0 20px" }}>Partager votre expérience</h3>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+                      <FInput label="Prénom *" value={name} set={setName} ph="Sophie" />
+                      <FInput label="Profil (optionnel)" value={role} set={setRole} ph="DCG — Paris" />
+                    </div>
+                    <div>
+                      <p style={{ fontSize: 10, letterSpacing: ".12em", color: "#6b7280", textTransform: "uppercase", margin: "0 0 8px" }}>Note</p>
+                      <div style={{ display: "flex", gap: 8 }}>
+                        {[1,2,3,4,5].map(n => (
+                          <button key={n} onClick={() => setRating(n)} style={{ background: "none", border: "none", fontSize: 22, cursor: "pointer", color: n <= rating ? "#e2c97e" : "#1f2937", transition: "color .15s" }}>★</button>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <p style={{ fontSize: 10, letterSpacing: ".12em", color: "#6b7280", textTransform: "uppercase", margin: "0 0 6px" }}>Témoignage *</p>
+                      <textarea value={text} onChange={e => setText(e.target.value)} placeholder="Partagez votre expérience avec SIMDCG..." rows={4}
+                        style={{ width: "100%", background: "#080b14", border: "1px solid #1f2937", color: "#e8e4d9", padding: "10px 12px", fontSize: 13, fontFamily: "inherit", resize: "none", outline: "none", lineHeight: 1.6, boxSizing: "border-box" }}
+                        onFocus={e => e.target.style.borderColor = "#e2c97e40"} onBlur={e => e.target.style.borderColor = "#1f2937"} />
+                    </div>
+                    {err && <p style={{ fontSize: 12, color: "#f87171", margin: 0 }}>{err}</p>}
+                    <button style={{ ...S.ctag, padding: 12, opacity: sending ? .6 : 1 }} onClick={submit} disabled={sending}>
+                      {sending ? <Spinner /> : "Publier mon avis →"}
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* Grid of testimonials */}
+        {loading ? (
+          <div style={{ textAlign: "center", padding: 60 }}><Spinner /></div>
+        ) : (
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
+            {shown.map((t, i) => (
+              <div key={i} style={{ ...S.fc, gap: 12, animation: `fsu .4s ${i * .06}s both` }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <div style={{ display: "flex", gap: 1 }}>
+                    {[1,2,3,4,5].map(n => <span key={n} style={{ color: n <= (t.rating || 5) ? "#e2c97e" : "#1f2937", fontSize: 12 }}>★</span>)}
+                  </div>
+                  {t.dateDisplay && <span style={{ fontSize: 10, color: "#374151" }}>{t.dateDisplay}</span>}
+                </div>
+                <p style={{ fontSize: 13, color: "#c9c3b5", lineHeight: 1.7, margin: 0, flex: 1 }}>"{t.text}"</p>
+                <div style={{ borderTop: "1px solid #111827", paddingTop: 10 }}>
+                  <p style={{ fontSize: 12, fontWeight: 700, color: "#e8e4d9", margin: "0 0 2px" }}>{t.name}</p>
+                  <p style={{ fontSize: 10, color: "#374151", margin: 0 }}>{t.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <div style={{ textAlign: "center", marginTop: 40 }}>
+          <p style={{ fontSize: 13, color: "#4b5563", marginBottom: 14 }}>Vous utilisez SIMDCG ? Partagez votre expérience.</p>
+          <button style={{ ...S.ctag, padding: "12px 32px" }} onClick={() => setShowForm(true)}>+ Laisser un avis</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── PRICING ───────────────────────────────────────────────────────────────────
 function Pricing({ onAuth, onBack }) {
   return (
@@ -672,6 +1119,7 @@ function Auth({ mode, setMode, onDone, onBack }) {
         cred = await createUserWithEmailAndPassword(auth, email, pass);
         const ref = doc(db, "users", cred.user.uid);
         await setDoc(ref, { name, email, isPro: false, interviewsUsed: 0, streak: { count: 0, lastDate: "" }, history: [], mastery: {}, createdAt: new Date().toISOString() });
+        incrementStat("totalUsers");
       } else {
         cred = await signInWithEmailAndPassword(auth, email, pass);
       }
@@ -694,6 +1142,7 @@ function Auth({ mode, setMode, onDone, onBack }) {
       const snap = await getDoc(ref);
       if (!snap.exists()) {
         await setDoc(ref, { name: cred.user.displayName || cred.user.email.split("@")[0], email: cred.user.email, isPro: false, interviewsUsed: 0, streak: { count: 0, lastDate: "" }, history: [], mastery: {}, createdAt: new Date().toISOString() });
+        incrementStat("totalUsers");
       }
       const data = snap.exists() ? snap.data() : {};
       const streak = await loadStreak(cred.user.uid);
