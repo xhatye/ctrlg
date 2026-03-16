@@ -363,6 +363,19 @@ body { background:#080b14; }
 ::-webkit-scrollbar { width:4px; }
 ::-webkit-scrollbar-track { background:#0d1117; }
 ::-webkit-scrollbar-thumb { background:#1f2937; border-radius:2px; }
+
+@media (max-width: 640px) {
+  .m-col1 { grid-template-columns: 1fr !important; }
+  .m-col2 { grid-template-columns: 1fr 1fr !important; }
+  .m-hero-h1 { font-size: 38px !important; letter-spacing: -1px !important; }
+  .m-hide { display: none !important; }
+  .m-pad { padding-left: 16px !important; padding-right: 16px !important; }
+  .m-overflow-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .m-min-w { min-width: 560px; }
+  .m-stack { flex-direction: column !important; }
+  .m-full { width: 100% !important; }
+  .m-font-sm { font-size: 11px !important; }
+}
 `;
 
 // ── ROOT ──────────────────────────────────────────────────────────────────────
@@ -494,7 +507,7 @@ function ROICalculator({ onAuth }) {
         </div>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginBottom: 28 }}>
+      <div className="m-col1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginBottom: 28 }}>
         {[
           { label: "Nombre d'UE à préparer", val: ues, set: setUes, min: 1, max: 13, unit: "UE" },
           { label: "Heures dispo par semaine", val: heures, set: setHeures, min: 3, max: 40, unit: "h/sem" },
@@ -510,7 +523,7 @@ function ROICalculator({ onAuth }) {
         ))}
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 10, marginBottom: 24 }}>
+      <div className="m-col2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 10, marginBottom: 24 }}>
         <div style={{ background: "#080b14", border: "1px solid #1f2937", padding: "16px 12px", textAlign: "center" }}>
           <p style={{ fontSize: 11, color: "#374151", letterSpacing: ".1em", margin: "0 0 6px" }}>MÉTHODE CLASSIQUE</p>
           <p style={{ fontSize: 26, fontWeight: 900, color: "#f87171", margin: 0 }}>{heuresClassique}h</p>
@@ -598,12 +611,12 @@ function StatsBar() {
   ];
 
   return (
-    <div style={{ background: "rgba(226,201,126,.03)", borderTop: "1px solid rgba(226,201,126,.08)", borderBottom: "1px solid rgba(226,201,126,.08)", padding: "20px 24px" }}>
-      <div style={{ maxWidth: 760, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 0 }}>
+    <div style={{ background: "rgba(226,201,126,.03)", borderTop: "1px solid rgba(226,201,126,.08)", borderBottom: "1px solid rgba(226,201,126,.08)", padding: "16px 20px" }}>
+      <div className="m-col2" style={{ maxWidth: 760, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 0 }}>
         {items.map((it, i) => (
-          <div key={i} style={{ textAlign: "center", borderRight: i < 3 ? "1px solid #1a1f2e" : "none", padding: "0 16px" }}>
-            <p style={{ fontSize: 22, fontWeight: 900, color: "#e2c97e", margin: "0 0 3px", fontFamily: "monospace" }}>{it.v.toLocaleString("fr-FR")}</p>
-            <p style={{ fontSize: 10, color: "#374151", margin: 0, letterSpacing: ".08em" }}>{it.icon} {it.l.toUpperCase()}</p>
+          <div key={i} style={{ textAlign: "center", borderRight: i < 3 ? "1px solid #1a1f2e" : "none", padding: "8px 10px" }}>
+            <p style={{ fontSize: 20, fontWeight: 900, color: "#e2c97e", margin: "0 0 3px", fontFamily: "monospace" }}>{it.v.toLocaleString("fr-FR")}</p>
+            <p style={{ fontSize: 9, color: "#374151", margin: 0, letterSpacing: ".06em" }}>{it.icon} {it.l.toUpperCase()}</p>
           </div>
         ))}
       </div>
@@ -632,7 +645,7 @@ function TestimonialsTeaser({ onSeeAll }) {
         </div>
         <button style={{ ...S.nl, fontSize: 12, color: "#e2c97e" }} onClick={onSeeAll}>Voir tous les avis →</button>
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
+      <div style={{ className="m-col1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
         {shown.map((t, i) => (
           <div key={i} style={{ ...S.fc, gap: 12, animation: `fsu .5s ${i * .1}s both` }}>
             <div style={{ display: "flex", gap: 2 }}>
@@ -657,27 +670,27 @@ function Landing({ onAuth, onPricing, onTestimonials }) {
       <ParticleCanvas /><OrbBg />
       <nav style={S.nav}>
         <Logo glow />
-        <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-          <button style={S.nl} onClick={onTestimonials}>Avis ✦</button>
-          <button style={S.nl} onClick={onPricing}>Tarifs</button>
-          <button style={S.no} onClick={() => onAuth("login")}>Connexion</button>
-          <button style={{ ...S.nc, animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Essai gratuit</button>
+        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+          <button style={{ ...S.nl, fontSize: 12 }} className="m-hide" onClick={onTestimonials}>Avis ✦</button>
+          <button style={{ ...S.nl, fontSize: 12 }} className="m-hide" onClick={onPricing}>Tarifs</button>
+          <button style={{ ...S.no, fontSize: 11, padding: "5px 10px" }} onClick={() => onAuth("login")}>Connexion</button>
+          <button style={{ ...S.nc, fontSize: 11, padding: "6px 12px", animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Essai gratuit</button>
         </div>
       </nav>
 
       {/* Hero */}
-      <div style={{ position: "relative", zIndex: 1, maxWidth: 640, margin: "0 auto", padding: "88px 24px 48px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 18 }}>
-        <div style={{ ...S.badge, animation: "fsu .7s ease both" }}>◈ PRÉPARATION DCG · DSCG · ENTRETIENS</div>
-        <h1 style={{ fontSize: 52, fontWeight: 900, margin: 0, lineHeight: 1.06, letterSpacing: -3, animation: "fsu .7s .1s both" }}>
+      <div style={{ position: "relative", zIndex: 1, maxWidth: 640, margin: "0 auto", padding: "72px 20px 40px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
+        <div style={{ ...S.badge, animation: "fsu .7s ease both", fontSize: 9 }}>◈ PRÉPARATION DCG · DSCG · ENTRETIENS</div>
+        <h1 className="m-hero-h1" style={{ fontSize: 52, fontWeight: 900, margin: 0, lineHeight: 1.06, letterSpacing: -3, animation: "fsu .7s .1s both" }}>
           La plateforme<br />
           <span style={{ color: "#e2c97e" }}>DCG / DSCG</span>
         </h1>
-        <p style={{ fontSize: 15, color: "#4b5563", lineHeight: 1.75, margin: 0, maxWidth: 480, animation: "fsu .7s .2s both" }}>
+        <p style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.75, margin: 0, maxWidth: 480, animation: "fsu .7s .2s both" }}>
           QCM générés par IA, résumés de cours, cas pratiques, flashcards et simulateur d'entretien — tout ce qu'il faut pour décrocher le diplôme et le poste.
         </p>
-        <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center", animation: "fsu .7s .3s both" }}>
+        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center", animation: "fsu .7s .3s both" }}>
           <button style={{ ...S.ctag, animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Commencer gratuitement →</button>
-          <button style={S.ctagh} onClick={onPricing}>Voir les tarifs</button>
+          <button style={{ ...S.ctagh, fontSize: 13 }} className="m-hide" onClick={onPricing}>Voir les tarifs</button>
         </div>
         <p style={{ fontSize: 11, color: "#374151", letterSpacing: ".08em", animation: "fi 1s .5s both" }}>Accès gratuit · Sans carte bancaire</p>
       </div>
@@ -686,7 +699,7 @@ function Landing({ onAuth, onPricing, onTestimonials }) {
       <div style={{ position: "relative", zIndex: 1 }}><StatsBar /></div>
 
       {/* Mode cards */}
-      <div style={{ maxWidth: 860, margin: "0 auto", padding: "40px 24px 32px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, position: "relative", zIndex: 1 }}>
+      <div className="m-col1" style={{ maxWidth: 860, margin: "0 auto", padding: "40px 16px 32px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12, position: "relative", zIndex: 1 }}>
         {[
           { icon: "🎓", label: "Mode Diplôme", color: "#60a5fa", items: ["QCM IA illimités par UE", "Résumés de cours gratuits", "Cas pratiques style examen", "13 matières DCG + DSCG"] },
           { icon: "◈", label: "Révision Intelligente", color: "#4ade80", items: ["Flashcards générées par IA", "Révision espacée (Pro)", "Planning personnalisé (Pro)", "Suivi de progression par UE"] },
@@ -717,8 +730,10 @@ function Landing({ onAuth, onPricing, onTestimonials }) {
           <h2 style={{ fontSize: 26, fontWeight: 900, color: "#e8e4d9", margin: "0 0 6px" }}>Gratuit ou Pro — quelle différence ?</h2>
           <p style={{ fontSize: 13, color: "#4b5563", margin: 0 }}>Le plan gratuit vous donne un aperçu. Le Pro vous donne tout.</p>
         </div>
-        <div style={{ background: "#0a0d17", border: "1px solid #1a1f2e", padding: "24px 28px" }}>
-          <CompareTable onCta={() => window.open(STRIPE_LINK, "_blank")} ctaLabel={`Passer Pro — ${PRO_PRICE}/mois →`} compact />
+        <div className="m-overflow-x" style={{ background: "#0a0d17", border: "1px solid #1a1f2e", padding: "24px 28px" }}>
+          <div className="m-min-w">
+            <CompareTable onCta={() => window.open(STRIPE_LINK, "_blank")} ctaLabel={`Passer Pro — ${PRO_PRICE}/mois →`} compact />
+          </div>
         </div>
         <p style={{ textAlign: "center", fontSize: 11, color: "#374151", marginTop: 14 }}>Paiement sécurisé via Stripe · Résiliation en 1 clic</p>
       </div>
@@ -915,7 +930,7 @@ function TestimonialsScreen({ onBack }) {
         {loading ? (
           <div style={{ textAlign: "center", padding: 60 }}><Spinner /></div>
         ) : (
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
+          <div className="m-col1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
             {shown.map((t, i) => (
               <div key={i} style={{ ...S.fc, gap: 12, animation: `fsu .4s ${i * .06}s both` }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -958,7 +973,7 @@ function Pricing({ onAuth, onBack }) {
         </div>
 
         {/* Price cards */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 48, animation: "fsu .5s .1s ease both" }}>
+        <div className="m-col1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 48, animation: "fsu .5s .1s ease both" }}>
           {/* Free */}
           <div style={{ ...S.pc, display: "flex", flexDirection: "column", gap: 0 }}>
             <p style={{ fontSize: 11, letterSpacing: ".15em", color: "#6b7280", margin: "0 0 8px" }}>GRATUIT</p>
@@ -1008,8 +1023,10 @@ function Pricing({ onAuth, onBack }) {
             <h3 style={{ fontSize: 22, fontWeight: 900, color: "#e8e4d9", margin: "0 0 4px" }}>Ce que vous débloquez avec Pro</h3>
             <p style={{ fontSize: 13, color: "#4b5563", margin: 0 }}>La différence est massive. Jugez par vous-même.</p>
           </div>
-          <div style={{ background: "#0a0d17", border: "1px solid #1a1f2e", padding: "24px 28px" }}>
-            <CompareTable onCta={() => window.open(STRIPE_LINK, "_blank")} ctaLabel={`Passer Pro — ${PRO_PRICE}/mois →`} />
+          <div className="m-overflow-x" style={{ background: "#0a0d17", border: "1px solid #1a1f2e", padding: "24px 28px" }}>
+            <div className="m-min-w">
+              <CompareTable onCta={() => window.open(STRIPE_LINK, "_blank")} ctaLabel={`Passer Pro — ${PRO_PRICE}/mois →`} />
+            </div>
           </div>
         </div>
 
@@ -1128,7 +1145,7 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
         </div>
       </nav>
       <div style={{ maxWidth: 800, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1 }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 10, marginBottom: 24, animation: "fsu .5s ease both" }}>
+        <div className="m-col2" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 10, marginBottom: 24, animation: "fsu .5s ease both" }}>
           <SC v={user?.streak || 0} l="🔥 Streak" />
           <SC v={isPro ? "Pro ✦" : "Gratuit"} l="Plan" hl />
           <SC v={Object.keys(mastery).length} l="UE maîtrisées" />
@@ -1147,7 +1164,7 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
           <div style={{ animation: "fsu .3s ease both" }}>
             <div style={{ marginBottom: 20 }}>
               <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#374151", marginBottom: 12 }}>DCG — 8 MATIÈRES</p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8 }}>
+              <div className="m-col2" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8 }}>
                 {DCG_UES.map((ue, i) => {
                   const locked = ue.proOnly && !isPro;
                   const m = mastery[ue.id];
@@ -1174,7 +1191,7 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
             </div>
             <div>
               <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#374151", marginBottom: 12 }}>DSCG — 5 MATIÈRES {!isPro && <span style={{ color: "#e2c97e" }}>· Pro requis</span>}</p>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 8 }}>
+              <div className="m-col2" style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 8 }}>
                 {DSCG_UES.map((ue, i) => {
                   const m = mastery[ue.id];
                   return (
@@ -1711,7 +1728,7 @@ function PlanningScreen({ user, onBack, onUpgrade }) {
               </div>
             </Sect>
             <Sect label="Durée du planning">
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8 }}>
+              <div className="m-col2" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8 }}>
                 {[2, 4, 6, 8, 10, 12].map(w => (
                   <OB key={w} active={weeks === w} color="#e2c97e" onClick={() => setWeeks(w)} main={`${w} sem.`} sub={w <= 4 ? "Sprint" : w <= 8 ? "Standard" : "Long terme"} />
                 ))}
