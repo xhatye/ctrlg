@@ -26,6 +26,38 @@ const FREE_FLASH_PER_UE = 5;
 const PRO_FLASH_PER_UE = 12;
 const FREE_AI_CALLS_PER_DAY = 10;
 
+// ── ROUTING ───────────────────────────────────────────────────────────────────
+const SCREEN_TO_URL = {
+  landing:            "/",
+  pricing:            "/tarifs",
+  testimonials:       "/avis",
+  auth:               "/connexion",
+  dashboard:          "/interface",
+  subject_hub:        "/matiere",
+  qcm:                "/qcm",
+  flashcards:         "/flashcards",
+  resume_cours:       "/resume-cours",
+  cas_pratique:       "/cas-pratique",
+  planning:           "/planning",
+  interview_config:   "/entretien/config",
+  interview:          "/entretien/simulation",
+  results_interview:  "/resultats/entretien",
+  results_qcm:        "/resultats/qcm",
+  results_cas:        "/resultats/cas",
+  paywall:            "/pro",
+  history:            "/historique",
+  progress:           "/progression",
+};
+const URL_TO_SCREEN = Object.fromEntries(Object.entries(SCREEN_TO_URL).map(([k,v]) => [v,k]));
+
+const getScreenFromPath = (path) => {
+  // Exact match first
+  if (URL_TO_SCREEN[path]) return URL_TO_SCREEN[path];
+  // Prefix match for dynamic sub-paths like /entretien/*
+  const found = Object.entries(URL_TO_SCREEN).find(([url]) => path.startsWith(url) && url !== "/");
+  return found ? found[1] : "landing";
+};
+
 // ── UES DATA ──────────────────────────────────────────────────────────────────
 const DCG_UES = [
   { id:"UE1", label:"Introduction au droit", short:"Droit général", icon:"⚖", color:"#60a5fa", desc:"Sources du droit, contrats, responsabilité civile et pénale", level:"DCG" },
@@ -381,8 +413,8 @@ body { background:#080b14; }
 // ── ROOT ──────────────────────────────────────────────────────────────────────
 export default function App() {
   const [user, setUser] = useState(null);
-  const [screen, setScreen] = useState("landing");
-  const [authMode, setAuthMode] = useState("signup");
+  const [screen, setScreen] = useState(() => getScreenFromPath(window.location.pathname));
+  const [authMode, setAuthMode] = useState(() => window.location.pathname === "/inscription" ? "signup" : "login");
   const [selectedUE, setSelectedUE] = useState(null);
   const [interviewCfg, setInterviewCfg] = useState(null);
   const [result, setResult] = useState(null);
@@ -416,19 +448,36 @@ export default function App() {
         const streak = await loadStreak(firebaseUser.uid);
         const hist = (data.history || []).filter(h => h.type === "entretien");
         setUser({ uid: firebaseUser.uid, name: data.name || firebaseUser.displayName || firebaseUser.email.split("@")[0], email: firebaseUser.email, isPro: data.isPro || false, interviewsUsed: hist.length, streak });
-        setScreen(s => s === "landing" ? "dashboard" : s);
+        if (window.location.pathname === "/" || window.location.pathname === "/connexion" || window.location.pathname === "/inscription") { window.history.pushState({}, "", "/interface"); setScreen("dashboard"); }
       } else {
         setUser(null);
-        setScreen("landing");
+        window.history.pushState({}, "", "/"); setScreen("landing");
       }
       setLoadingAuth(false);
     });
     return unsub;
   }, []);
 
+  // Sync URL -> screen on browser back/forward
+  useEffect(() => {
+    const onPop = () => {
+      const s = getScreenFromPath(window.location.pathname);
+      setScreen(s);
+      if (s === "auth") setAuthMode(window.location.pathname === "/inscription" ? "signup" : "login");
+    };
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+
+  const nav = (s, opts = {}) => {
+    let url = SCREEN_TO_URL[s] || "/";
+    if (s === "auth") url = (opts.mode === "signup") ? "/inscription" : "/connexion";
+    window.history.pushState({}, "", url);
+    setScreen(s);
+  };
+
   const isPro = user?.isPro;
-  const nav = (s) => setScreen(s);
-  const toAuth = (m) => { setAuthMode(m); nav("auth"); };
+  const toAuth = (m) => { setAuthMode(m); nav("auth", { mode: m }); };
 
   const onInterviewDone = async (data) => {
     const entry = { ...data, type: "entretien", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
