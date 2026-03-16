@@ -645,7 +645,7 @@ function TestimonialsTeaser({ onSeeAll }) {
         </div>
         <button style={{ ...S.nl, fontSize: 12, color: "#e2c97e" }} onClick={onSeeAll}>Voir tous les avis →</button>
       </div>
-      <div style={{ className="m-col1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
+      <div className="m-col1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
         {shown.map((t, i) => (
           <div key={i} style={{ ...S.fc, gap: 12, animation: `fsu .5s ${i * .1}s both` }}>
             <div style={{ display: "flex", gap: 2 }}>
