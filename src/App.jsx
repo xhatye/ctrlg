@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInWithPopup, GoogleAuthProvider, sendPasswordResetEmail } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc, updateDoc, arrayUnion, collection, addDoc, getDocs, query, orderBy, limit, increment } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -47,6 +47,9 @@ const SCREEN_TO_URL = {
   paywall:            "/pro",
   history:            "/historique",
   progress:           "/progression",
+  cgu:                "/cgu",
+  confidentialite:    "/confidentialite",
+  forgot_password:    "/mot-de-passe-oublie",
 };
 const URL_TO_SCREEN = Object.fromEntries(Object.entries(SCREEN_TO_URL).map(([k,v]) => [v,k]));
 
@@ -410,6 +413,80 @@ body { background:#080b14; }
 }
 `;
 
+
+// ── TOAST SYSTEM ─────────────────────────────────────────────────────────────
+let _toastListeners = [];
+const toast = {
+  _emit(msg) { _toastListeners.forEach(fn => fn(msg)); },
+  success(text, duration = 3000) { this._emit({ id: Date.now(), text, type: "success", duration }); },
+  error(text, duration = 4000)   { this._emit({ id: Date.now(), text, type: "error",   duration }); },
+  info(text, duration = 3000)    { this._emit({ id: Date.now(), text, type: "info",    duration }); },
+};
+
+function ToastContainer() {
+  const [toasts, setToasts] = useState([]);
+  useEffect(() => {
+    const handler = (msg) => {
+      setToasts(prev => [...prev, msg]);
+      setTimeout(() => setToasts(prev => prev.filter(t => t.id !== msg.id)), msg.duration);
+    };
+    _toastListeners.push(handler);
+    return () => { _toastListeners = _toastListeners.filter(fn => fn !== handler); };
+  }, []);
+  if (!toasts.length) return null;
+  return (
+    <div style={{ position: "fixed", bottom: 24, right: 24, zIndex: 9999, display: "flex", flexDirection: "column", gap: 10, maxWidth: 340 }}>
+      {toasts.map(t => (
+        <div key={t.id} style={{
+          background: t.type === "success" ? "rgba(74,222,128,.12)" : t.type === "error" ? "rgba(248,113,113,.12)" : "rgba(226,201,126,.1)",
+          border: `1px solid ${t.type === "success" ? "#4ade8040" : t.type === "error" ? "#f8717140" : "rgba(226,201,126,.3)"}`,
+          color: t.type === "success" ? "#4ade80" : t.type === "error" ? "#f87171" : "#e2c97e",
+          padding: "12px 16px", fontSize: 13, fontFamily: "inherit",
+          animation: "fsu .25s ease both", backdropFilter: "blur(8px)",
+          display: "flex", alignItems: "center", gap: 10,
+        }}>
+          <span>{t.type === "success" ? "✓" : t.type === "error" ? "✗" : "◈"}</span>
+          {t.text}
+        </div>
+      ))}
+    </div>
+  );
+}
+
+// ── ONBOARDING ────────────────────────────────────────────────────────────────
+const ONBOARDING_STEPS = [
+  { icon: "🎓", title: "Mode Diplôme", desc: "Choisissez une matière DCG ou DSCG et lancez un QCM, des flashcards ou un cas pratique — tout généré par IA en temps réel.", cta: "Suivant →" },
+  { icon: "◈", title: "Résumés de cours gratuits", desc: "Chaque matière dispose d'un résumé de cours IA structuré avec points clés, pièges fréquents et conseil d'examinateur — entièrement gratuit.", cta: "Suivant →" },
+  { icon: "💼", title: "Mode Carrière", desc: "Simulez un entretien d'embauche en finance/gestion avec un recruteur IA. Score, feedback détaillé et conseils personnalisés.", cta: "Suivant →" },
+  { icon: "✦", title: "Pro pour aller plus loin", desc: `Débloquez les 13 matières, QCM illimités, cas pratiques, révision espacée et planning IA pour ${PRO_PRICE}/mois. Résiliation en 1 clic.`, cta: "Commencer →" },
+];
+
+function OnboardingModal({ onClose, onUpgrade }) {
+  const [step, setStep] = useState(0);
+  const s = ONBOARDING_STEPS[step];
+  const isLast = step === ONBOARDING_STEPS.length - 1;
+  return (
+    <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.75)", zIndex: 9000, display: "flex", alignItems: "center", justifyContent: "center", padding: 24 }}>
+      <div style={{ background: "#0d1117", border: "1px solid rgba(226,201,126,.2)", padding: "32px 28px", maxWidth: 420, width: "100%", animation: "fsu .35s ease both", textAlign: "center" }}>
+        <div style={{ fontSize: 44, marginBottom: 16 }}>{s.icon}</div>
+        <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#e2c97e", margin: "0 0 8px" }}>ÉTAPE {step + 1} / {ONBOARDING_STEPS.length}</p>
+        <h2 style={{ fontSize: 20, fontWeight: 900, color: "#e8e4d9", margin: "0 0 12px" }}>{s.title}</h2>
+        <p style={{ fontSize: 13, color: "#6b7280", lineHeight: 1.75, margin: "0 0 24px" }}>{s.desc}</p>
+        <div style={{ display: "flex", gap: 8, justifyContent: "center", marginBottom: 16 }}>
+          {ONBOARDING_STEPS.map((_, i) => (
+            <div key={i} style={{ width: i === step ? 20 : 6, height: 6, background: i === step ? "#e2c97e" : "#1f2937", borderRadius: 3, transition: "all .3s" }} />
+          ))}
+        </div>
+        <button style={{ ...S.ctag, width: "100%", padding: 13 }}
+          onClick={() => { if (isLast) { onClose(); if (step === ONBOARDING_STEPS.length - 1) {} } else setStep(s => s + 1); }}>
+          {s.cta}
+        </button>
+        <button style={{ ...S.nl, fontSize: 11, marginTop: 12 }} onClick={onClose}>Passer l'introduction</button>
+      </div>
+    </div>
+  );
+}
+
 // ── ROOT ──────────────────────────────────────────────────────────────────────
 export default function App() {
   const [user, setUser] = useState(null);
@@ -419,6 +496,7 @@ export default function App() {
   const [interviewCfg, setInterviewCfg] = useState(null);
   const [result, setResult] = useState(null);
   const [loadingAuth, setLoadingAuth] = useState(true);
+  const [showOnboarding, setShowOnboarding] = useState(false);
 
   useEffect(() => {
     const style = document.createElement("style");
@@ -483,6 +561,7 @@ export default function App() {
     const entry = { ...data, type: "entretien", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
     if (user) { await saveHistory(user.uid, entry); const s = await updateStreak(user.uid); setUser(u => ({ ...u, interviewsUsed: (u.interviewsUsed || 0) + 1, streak: s })); }
     incrementStat("totalInterviews");
+    toast.success("Entretien terminé ! Résultats disponibles.");
     setResult(entry); nav("results_interview");
   };
   const onQCMDone = async (data) => {
@@ -495,20 +574,24 @@ export default function App() {
       setUser(u => ({ ...u, streak: s }));
     }
     incrementStat("totalQCMs");
+    toast.success("QCM terminé ! Voir les résultats.");
     setResult(entry); nav("results_qcm");
   };
   const onCasDone = async (data) => {
     const entry = { ...data, type: "cas", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
     if (user) { await saveHistory(user.uid, entry); const s = await updateStreak(user.uid); setUser(u => ({ ...u, streak: s })); }
+    toast.success("Cas pratique rendu ! Correction en cours…");
     setResult(entry); nav("results_cas");
   };
 
   if (loadingAuth) return <div style={{ background: "#080b14", minHeight: "100vh" }} />;
-  if (screen === "landing")          return <Landing onAuth={toAuth} onPricing={() => nav("pricing")} onTestimonials={() => nav("testimonials")} />;
+  // Global overlays always rendered
+  const overlays = <>{showOnboarding && <OnboardingModal onClose={() => setShowOnboarding(false)} onUpgrade={() => { window.open(STRIPE_LINK, "_blank"); setShowOnboarding(false); }} />}<ToastContainer /></>;
+  if (screen === "landing")          return <>{overlays}<Landing onAuth={toAuth} onPricing={() => nav("pricing")} onTestimonials={() => nav("testimonials")} onCgu={() => nav("cgu")} onConfidentialite={() => nav("confidentialite")} /></>;
   if (screen === "pricing")          return <Pricing onAuth={toAuth} onBack={() => nav("landing")} />;
   if (screen === "testimonials")     return <TestimonialsScreen onBack={() => nav("landing")} />;
-  if (screen === "auth")             return <Auth mode={authMode} setMode={setAuthMode} onDone={async (u) => { setUser(u); nav("dashboard"); }} onBack={() => nav("landing")} />;
-  if (screen === "dashboard")        return <Dashboard user={user} onLogout={() => { signOut(auth); setUser(null); nav("landing"); }} onNav={nav} onSelectUE={(ue) => { setSelectedUE(ue); nav("subject_hub"); }} isPro={isPro} />;
+  if (screen === "auth")             return <Auth mode={authMode} setMode={setAuthMode} onDone={async (u) => { setUser(u); if (u.isNew) setShowOnboarding(true); nav("dashboard"); }} onBack={() => nav("landing")} />;
+  if (screen === "dashboard")        return <>{overlays}<Dashboard user={user} onLogout={() => { signOut(auth); setUser(null); nav("landing"); toast.info("Déconnexion réussie."); }} onNav={nav} onSelectUE={(ue) => { setSelectedUE(ue); nav("subject_hub"); }} isPro={isPro} /></>;
   if (screen === "subject_hub")      return <SubjectHub ue={selectedUE} user={user} onNav={nav} onBack={() => nav("dashboard")} />;
   if (screen === "qcm")              return <QCMScreen ue={selectedUE} user={user} onDone={onQCMDone} onBack={() => nav("subject_hub")} />;
   if (screen === "flashcards")       return <FlashcardsScreen ue={selectedUE} user={user} onBack={() => nav("subject_hub")} onUpgrade={() => { window.open(STRIPE_LINK, "_blank"); }} />;
@@ -522,6 +605,9 @@ export default function App() {
   if (screen === "results_cas")      return <ResultsCas data={result} onNew={() => nav("cas_pratique")} onDash={() => nav("subject_hub")} />;
   if (screen === "paywall")          return <Paywall onUpgrade={() => { window.open(STRIPE_LINK, "_blank"); }} onBack={() => nav("dashboard")} />;
   if (screen === "history")          return <History user={user} onBack={() => nav("dashboard")} />;
+  if (screen === "cgu")              return <LegalScreen type="cgu" onBack={() => nav("landing")} />;
+  if (screen === "confidentialite")  return <LegalScreen type="confidentialite" onBack={() => nav("landing")} />;
+  if (screen === "forgot_password")  return <ForgotPasswordScreen onBack={() => nav("auth")} />;
   if (screen === "progress")         return <ProgressScreen user={user} onBack={() => nav("dashboard")} />;
   return null;
 }
@@ -713,7 +799,7 @@ function TestimonialsTeaser({ onSeeAll }) {
 }
 
 // ── LANDING ───────────────────────────────────────────────────────────────────
-function Landing({ onAuth, onPricing, onTestimonials }) {
+function Landing({ onAuth, onPricing, onTestimonials, onCgu, onConfidentialite }) {
   return (
     <div style={S.root}>
       <ParticleCanvas /><OrbBg />
@@ -791,7 +877,7 @@ function Landing({ onAuth, onPricing, onTestimonials }) {
       <TestimonialsTeaser onSeeAll={onTestimonials} />
 
       {/* UE tags */}
-      <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px 80px", position: "relative", zIndex: 1 }}>
+      <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px 60px", position: "relative", zIndex: 1 }}>
         <p style={{ fontSize: 10, letterSpacing: ".2em", color: "#374151", marginBottom: 14, textAlign: "center" }}>13 MATIÈRES COUVERTES</p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center" }}>
           {ALL_UES.map((ue, i) => (
@@ -801,6 +887,8 @@ function Landing({ onAuth, onPricing, onTestimonials }) {
           ))}
         </div>
       </div>
+
+      <Footer onCgu={onCgu} onConfidentialite={onConfidentialite} />
     </div>
   );
 }
@@ -909,7 +997,7 @@ function TestimonialsScreen({ onBack }) {
     if (!name.trim() || !text.trim() || text.trim().length < 20) { setErr("Prénom et témoignage (20 car. min) requis."); return; }
     setSending(true); setErr("");
     const ok = await saveTestimonial({ name: name.trim(), role: role.trim() || "Étudiant DCG/DSCG", text: text.trim(), rating });
-    if (ok) { setDone(true); } else { setErr("Erreur d'envoi. Réessayez."); }
+    if (ok) { setDone(true); toast.success("Merci ! Votre avis a été publié."); } else { setErr("Erreur d'envoi. Réessayez."); toast.error("Erreur d'envoi."); }
     setSending(false);
   };
 
@@ -1119,7 +1207,8 @@ function Auth({ mode, setMode, onDone, onBack }) {
       const data = snap.exists() ? snap.data() : {};
       const streak = await loadStreak(cred.user.uid);
       const hist = (data.history || []).filter(h => h.type === "entretien");
-      onDone({ uid: cred.user.uid, name: data.name || name || email.split("@")[0], email, isPro: data.isPro || false, interviewsUsed: hist.length, streak });
+      const isNew = mode === "signup";
+      onDone({ uid: cred.user.uid, name: data.name || name || email.split("@")[0], email, isPro: data.isPro || false, interviewsUsed: hist.length, streak, isNew });
     } catch (e) {
       const msgs = { "auth/email-already-in-use": "Email déjà utilisé.", "auth/user-not-found": "Compte introuvable.", "auth/wrong-password": "Mot de passe incorrect.", "auth/invalid-credential": "Email ou mot de passe incorrect." };
       setErr(msgs[e.code] || "Erreur. Réessayez.");
@@ -1132,14 +1221,15 @@ function Auth({ mode, setMode, onDone, onBack }) {
       const cred = await signInWithPopup(auth, googleProvider);
       const ref = doc(db, "users", cred.user.uid);
       const snap = await getDoc(ref);
-      if (!snap.exists()) {
+      const isNew = !snap.exists();
+      if (isNew) {
         await setDoc(ref, { name: cred.user.displayName || cred.user.email.split("@")[0], email: cred.user.email, isPro: false, interviewsUsed: 0, streak: { count: 0, lastDate: "" }, history: [], mastery: {}, createdAt: new Date().toISOString() });
         incrementStat("totalUsers");
       }
       const data = snap.exists() ? snap.data() : {};
       const streak = await loadStreak(cred.user.uid);
       const hist = (data.history || []).filter(h => h.type === "entretien");
-      onDone({ uid: cred.user.uid, name: data.name || cred.user.displayName || cred.user.email.split("@")[0], email: cred.user.email, isPro: data.isPro || false, interviewsUsed: hist.length, streak });
+      onDone({ uid: cred.user.uid, name: data.name || cred.user.displayName || cred.user.email.split("@")[0], email: cred.user.email, isPro: data.isPro || false, interviewsUsed: hist.length, streak, isNew });
     } catch (e) { setErr("Erreur Google. Réessayez."); }
     setLoading(false);
   };
@@ -1161,12 +1251,20 @@ function Auth({ mode, setMode, onDone, onBack }) {
         <button style={{ ...S.ctag, width: "100%", opacity: loading ? .6 : 1, marginTop: 4 }} onClick={submit} disabled={loading}>
           {loading ? <Spinner /> : mode === "signup" ? "Créer mon compte →" : "Se connecter →"}
         </button>
-        <p style={{ fontSize: 12, color: "#6b7280", textAlign: "center" }}>
-          {mode === "signup" ? "Déjà un compte ? " : "Pas encore ? "}
-          <span style={{ color: "#e2c97e", cursor: "pointer" }} onClick={() => { setMode(mode === "signup" ? "login" : "signup"); setErr(""); }}>
-            {mode === "signup" ? "Se connecter" : "S'inscrire"}
-          </span>
-        </p>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+          <p style={{ fontSize: 12, color: "#6b7280" }}>
+            {mode === "signup" ? "Déjà un compte ? " : "Pas encore ? "}
+            <span style={{ color: "#e2c97e", cursor: "pointer" }} onClick={() => { setMode(mode === "signup" ? "login" : "signup"); setErr(""); }}>
+              {mode === "signup" ? "Se connecter" : "S'inscrire"}
+            </span>
+          </p>
+          {mode === "login" && (
+            <a href="/mot-de-passe-oublie" onClick={e => { e.preventDefault(); window.history.pushState({}, "", "/mot-de-passe-oublie"); window.dispatchEvent(new PopStateEvent("popstate")); }}
+              style={{ fontSize: 11, color: "#374151", cursor: "pointer", textDecoration: "none" }}>
+              Mot de passe oublié ?
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -1733,6 +1831,7 @@ function PlanningScreen({ user, onBack, onUpgrade }) {
       3500
     );
     setPlanning(data);
+    if (data) toast.success("Planning généré avec succès !");
     setLoading(false);
   };
 
@@ -2264,6 +2363,121 @@ function OB({ active, color, onClick, main, sub }) {
 }
 function Spinner() {
   return <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><span style={{ width: 13, height: 13, border: "2px solid #080b14", borderTop: "2px solid transparent", borderRadius: "50%", animation: "spin .8s linear infinite" }} /> Chargement…</span>;
+}
+
+// ── FORGOT PASSWORD ───────────────────────────────────────────────────────────
+function ForgotPasswordScreen({ onBack }) {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [err, setErr] = useState("");
+  const submit = async () => {
+    if (!email) { setErr("Entrez votre adresse email."); return; }
+    setLoading(true); setErr("");
+    try {
+      await sendPasswordResetEmail(auth, email);
+      setSent(true);
+      toast.success("Email envoyé ! Vérifiez votre boîte mail.");
+    } catch (e) {
+      const msgs = { "auth/user-not-found": "Aucun compte avec cet email.", "auth/invalid-email": "Adresse email invalide." };
+      setErr(msgs[e.code] || "Erreur. Réessayez.");
+    }
+    setLoading(false);
+  };
+  return (
+    <div style={S.root}><ParticleCanvas /><OrbBg />
+      <div style={{ maxWidth: 400, margin: "0 auto", padding: "80px 24px", position: "relative", zIndex: 1, display: "flex", flexDirection: "column", gap: 14, animation: "fsu .5s ease both" }}>
+        <button style={S.back} onClick={onBack}>← Connexion</button>
+        <Logo />
+        {sent ? (
+          <div style={{ textAlign: "center", padding: "20px 0", display: "flex", flexDirection: "column", gap: 12, alignItems: "center" }}>
+            <span style={{ fontSize: 44 }}>✉</span>
+            <h2 style={{ fontSize: 20, color: "#4ade80", margin: 0 }}>Email envoyé !</h2>
+            <p style={{ fontSize: 13, color: "#6b7280", lineHeight: 1.7, margin: 0 }}>
+              Un lien de réinitialisation a été envoyé à <strong style={{ color: "#e8e4d9" }}>{email}</strong>. Vérifiez vos spams si vous ne le voyez pas.
+            </p>
+            <button style={{ ...S.ctag, marginTop: 8 }} onClick={onBack}>Retour à la connexion →</button>
+          </div>
+        ) : (
+          <>
+            <h2 style={{ fontSize: 22, margin: "12px 0 4px", color: "#e8e4d9" }}>Mot de passe oublié ?</h2>
+            <p style={{ fontSize: 13, color: "#6b7280" }}>Entrez votre email et nous vous enverrons un lien de réinitialisation.</p>
+            <FInput label="Email" value={email} set={setEmail} ph="jean@exemple.fr" type="email" />
+            {err && <p style={{ fontSize: 12, color: "#f87171" }}>{err}</p>}
+            <button style={{ ...S.ctag, width: "100%", opacity: loading ? .6 : 1 }} onClick={submit} disabled={loading}>
+              {loading ? <Spinner /> : "Envoyer le lien →"}
+            </button>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── LEGAL SCREEN (CGU + Confidentialité) ──────────────────────────────────────
+function LegalScreen({ type, onBack }) {
+  const isCgu = type === "cgu";
+  const today = new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
+  const cguContent = [
+    { title: "1. Objet", body: `Les présentes Conditions Générales d'Utilisation (CGU) régissent l'accès et l'utilisation de la plateforme SIMDCG (simdcg.com), éditée par Marcus Bonnafis, entrepreneur individuel. En accédant à SIMDCG, vous acceptez sans réserve les présentes CGU.` },
+    { title: "2. Description du service", body: `SIMDCG est une plateforme de préparation aux examens DCG (Diplôme de Comptabilité et de Gestion) et DSCG (Diplôme Supérieur de Comptabilité et de Gestion). Le service propose des QCM générés par intelligence artificielle, des flashcards, des résumés de cours, des cas pratiques corrigés et un simulateur d'entretien professionnel.` },
+    { title: "3. Accès et compte", body: `L'accès au service nécessite la création d'un compte via adresse email ou compte Google. L'utilisateur est responsable de la confidentialité de ses identifiants. Un plan gratuit avec fonctionnalités limitées est disponible sans engagement. Un plan Pro à ${PRO_PRICE}/mois offre un accès complet à l'ensemble des fonctionnalités.` },
+    { title: "4. Abonnement Pro", body: `Le plan Pro est facturé mensuellement via Stripe, prestataire de paiement sécurisé. L'abonnement est sans engagement et résiliable à tout moment depuis votre espace client Stripe. Aucun remboursement ne sera effectué pour la période en cours au moment de la résiliation.` },
+    { title: "5. Propriété intellectuelle", body: `Le contenu généré par l'IA (questions, corrections, résumés) est fourni à titre de support pédagogique. SIMDCG ne garantit pas l'exactitude absolue des contenus générés. L'interface, le logo et les éléments visuels sont la propriété exclusive de Marcus Bonnafis.` },
+    { title: "6. Limitation de responsabilité", body: `SIMDCG est un outil de préparation et ne constitue pas un engagement de réussite aux examens. Les contenus sont générés par IA à titre indicatif. SIMDCG ne saurait être tenu responsable des décisions prises sur la base des informations fournies.` },
+    { title: "7. Modification et résiliation", body: `SIMDCG se réserve le droit de modifier les CGU à tout moment avec préavis de 30 jours. Les comptes inactifs depuis plus de 24 mois peuvent être supprimés après notification. Tout manquement aux présentes CGU peut entraîner la suspension du compte.` },
+    { title: "8. Droit applicable", body: `Les présentes CGU sont régies par le droit français. Tout litige relève de la compétence exclusive des tribunaux français. Pour toute réclamation : contact@simdcg.com` },
+  ];
+  const confidentialiteContent = [
+    { title: "1. Responsable du traitement", body: `Marcus Bonnafis (simdcg.com) est responsable du traitement de vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679).` },
+    { title: "2. Données collectées", body: `Lors de l'inscription : prénom, adresse email, date d'inscription. Lors de l'utilisation : historique des sessions (QCM, entretiens, cas pratiques), scores obtenus, matières étudiées, streak quotidien. Données techniques : adresse IP, type de navigateur (via Firebase Analytics).` },
+    { title: "3. Finalités du traitement", body: `Vos données sont utilisées pour : (a) la gestion de votre compte et authentification, (b) la personnalisation de votre expérience de révision, (c) le suivi de votre progression, (d) la facturation via Stripe pour les abonnés Pro, (e) l'amélioration du service.` },
+    { title: "4. Base légale", body: `Le traitement de vos données repose sur votre consentement (art. 6.1.a RGPD) lors de la création de compte, et sur l'exécution du contrat (art. 6.1.b RGPD) pour les fonctionnalités du service.` },
+    { title: "5. Sous-traitants", body: `SIMDCG utilise les prestataires suivants : Firebase (Google LLC) pour l'authentification et la base de données — serveurs en Europe, Stripe Inc. pour le traitement des paiements — conforme PCI-DSS, Anthropic PBC pour la génération de contenu IA — données non stockées.` },
+    { title: "6. Conservation des données", body: `Vos données sont conservées pendant la durée de vie de votre compte. En cas de suppression de compte, vos données personnelles sont effacées sous 30 jours. Les données de facturation sont conservées 10 ans conformément aux obligations comptables légales.` },
+    { title: "7. Vos droits", body: `Conformément au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, de portabilité et d'opposition au traitement de vos données. Pour exercer ces droits : contact@simdcg.com. Vous pouvez également introduire une réclamation auprès de la CNIL (cnil.fr).` },
+    { title: "8. Cookies", body: `SIMDCG utilise uniquement les cookies techniques nécessaires au fonctionnement du service (authentification, session). Aucun cookie publicitaire ou de tracking tiers n'est utilisé.` },
+  ];
+  const content = isCgu ? cguContent : confidentialiteContent;
+  return (
+    <div style={S.root}><OrbBg />
+      <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← Retour</button></nav>
+      <div style={{ maxWidth: 720, margin: "0 auto", padding: "48px 24px 80px", position: "relative", zIndex: 1 }}>
+        <div style={{ marginBottom: 32, animation: "fsu .4s ease both" }}>
+          <div style={{ ...S.badge, display: "inline-block", marginBottom: 12 }}>{isCgu ? "CGU" : "CONFIDENTIALITÉ"}</div>
+          <h1 style={{ fontSize: 26, fontWeight: 900, color: "#e8e4d9", margin: "0 0 6px" }}>
+            {isCgu ? "Conditions Générales d'Utilisation" : "Politique de Confidentialité"}
+          </h1>
+          <p style={{ fontSize: 12, color: "#374151", margin: 0 }}>Dernière mise à jour : {today}</p>
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+          {content.map((sec, i) => (
+            <div key={i} style={{ ...S.card, animation: `fsu .4s ${i * .05}s both` }}>
+              <p style={{ fontSize: 12, fontWeight: 700, color: "#e2c97e", letterSpacing: ".08em", margin: "0 0 10px" }}>{sec.title}</p>
+              <p style={{ fontSize: 13, color: "#9ca3af", lineHeight: 1.75, margin: 0 }}>{sec.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── FOOTER ────────────────────────────────────────────────────────────────────
+function Footer({ onCgu, onConfidentialite }) {
+  return (
+    <div style={{ borderTop: "1px solid #0d1117", padding: "28px 24px", position: "relative", zIndex: 1 }}>
+      <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
+        <Logo />
+        <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
+          <button style={{ ...S.nl, fontSize: 11, color: "#374151" }} onClick={onCgu}>Conditions d'utilisation</button>
+          <button style={{ ...S.nl, fontSize: 11, color: "#374151" }} onClick={onConfidentialite}>Confidentialité</button>
+          <a href="mailto:contact@simdcg.com" style={{ fontSize: 11, color: "#374151", textDecoration: "none", fontFamily: "inherit" }}>contact@simdcg.com</a>
+        </div>
+        <p style={{ fontSize: 10, color: "#1f2937", margin: 0 }}>© {new Date().getFullYear()} SIMDCG — Tous droits réservés</p>
+      </div>
+    </div>
+  );
 }
 
 // ── STYLES ────────────────────────────────────────────────────────────────────
