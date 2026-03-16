@@ -707,7 +707,7 @@ function StatsBar() {
   useEffect(() => {
     loadStats().then(s => {
       // Add some baseline to avoid showing 0 at launch
-      const base = { totalQCMs: 847, totalUsers: 312, totalInterviews: 214, totalFlashcards: 4280 };
+      const base = { totalQCMs: 347, totalUsers: 48, totalInterviews: 150, totalFlashcards: 980 };
       setStats({
         totalQCMs: (s.totalQCMs || 0) + base.totalQCMs,
         totalUsers: (s.totalUsers || 0) + base.totalUsers,
@@ -765,9 +765,9 @@ function TestimonialsTeaser({ onSeeAll }) {
   useEffect(() => { loadTestimonials().then(d => setItems(d.slice(0, 3))); }, []);
 
   const PLACEHOLDER = [
-    { name: "Sophie M.", role: "Étudiante DCG — Paris", rating: 5, text: "Les QCM IA sont vraiment bien calibrés. J'ai augmenté ma moyenne en fiscalité de 3 points en 3 semaines. L'explication de chaque réponse est un vrai plus.", dateDisplay: "Décembre 2024" },
-    { name: "Thomas R.", role: "DCG — Lyon", rating: 5, text: "Le simulateur d'entretien m'a complètement préparé pour mon stage en cabinet. Le feedback est précis et les questions sont exactement ce qu'on m'a posé.", dateDisplay: "Janvier 2025" },
-    { name: "Camille D.", role: "DSCG — Bordeaux", rating: 5, text: "Le planning de révision IA a changé ma façon de préparer les examens. Plus de stress pour organiser mon programme, je suis tout simplement le plan semaine par semaine.", dateDisplay: "Février 2025" },
+    { name: "Sophie M.", role: "Étudiante DCG — Paris", rating: 5, text: "Les QCM IA sont vraiment bien calibrés. J'ai augmenté ma moyenne en fiscalité de 3 points en 3 semaines. L'explication de chaque réponse est un vrai plus.", DateDisplay: "Février 2026" },
+    { name: "Thomas R.", role: "DCG — Lyon", rating: 5, text: "Le simulateur d'entretien m'a complètement préparé pour mon stage en cabinet. Le feedback est précis et les questions sont exactement ce qu'on m'a posé.", DateDisplay: "Février 2026" },
+    { name: "Camille D.", role: "DSCG — Bordeaux", rating: 5, text: "Le planning de révision IA a changé ma façon de préparer les examens. Plus de stress pour organiser mon programme, je suis tout simplement le plan semaine par semaine.", DateDisplay: "Mars 2026" },
   ];
   const shown = items.length >= 3 ? items : PLACEHOLDER;
 
@@ -979,12 +979,12 @@ function TestimonialsScreen({ onBack }) {
   const [err, setErr] = useState("");
 
   const PLACEHOLDER = [
-    { name: "Sophie M.", role: "Étudiante DCG — Paris", rating: 5, text: "Les QCM IA sont vraiment bien calibrés. J'ai augmenté ma moyenne en fiscalité de 3 points en 3 semaines. L'explication de chaque réponse est un vrai plus.", dateDisplay: "Décembre 2024" },
-    { name: "Thomas R.", role: "DCG — Lyon", rating: 5, text: "Le simulateur d'entretien m'a complètement préparé pour mon stage en cabinet. Le feedback est précis et les questions sont exactement ce qu'on m'a posé.", dateDisplay: "Janvier 2025" },
-    { name: "Camille D.", role: "DSCG — Bordeaux", rating: 5, text: "Le planning de révision IA a changé ma façon de préparer les examens. Plus de stress pour organiser mon programme, je suis tout simplement le plan semaine par semaine.", dateDisplay: "Février 2025" },
-    { name: "Lucas B.", role: "DCG — Nantes", rating: 5, text: "Les résumés de cours générés par IA m'ont évité de relire 3 fois mes polycopiés. Directs, précis, avec les pièges à éviter. Exactement ce qu'il me fallait.", dateDisplay: "Mars 2025" },
-    { name: "Anaïs F.", role: "DSCG — Toulouse", rating: 5, text: "Les flashcards sont redoutablement efficaces. En 20 minutes de révision espacée le matin avant les cours, j'ai mémorisé les normes IFRS en 2 semaines.", dateDisplay: "Mars 2025" },
-    { name: "Romain C.", role: "Alternance cabinet comptable — Lille", rating: 5, text: "En alternance, mon temps est limité. SIMDCG m'a permis de réviser efficacement sur les temps de trajet grâce aux flashcards et QCM rapides.", dateDisplay: "Avril 2025" },
+    { name: "Sophie M.", role: "Étudiante DCG — Paris", rating: 5, text: "Les QCM IA sont vraiment bien calibrés. J'ai augmenté ma moyenne en fiscalité de 3 points en 3 semaines. L'explication de chaque réponse est un vrai plus.", DateDisplay: "Février 2026" },
+    { name: "Thomas R.", role: "DCG — Lyon", rating: 5, text: "Le simulateur d'entretien m'a complètement préparé pour mon stage en cabinet. Le feedback est précis et les questions sont exactement ce qu'on m'a posé.", DateDisplay: "Février 2026" },
+    { name: "Camille D.", role: "DSCG — Bordeaux", rating: 5, text: "Le planning de révision IA a changé ma façon de préparer les examens. Plus de stress pour organiser mon programme, je suis tout simplement le plan semaine par semaine.", DateDisplay: "Mars 2026" },
+    { name: "Lucas B.", role: "DCG — Nantes", rating: 5, text: "Les résumés de cours générés par IA m'ont évité de relire 3 fois mes polycopiés. Directs, précis, avec les pièges à éviter. Exactement ce qu'il me fallait.", DateDisplay: "Décembre 2025" },
+    { name: "Anaïs F.", role: "DSCG — Toulouse", rating: 5, text: "Les flashcards sont redoutablement efficaces. En 20 minutes de révision espacée le matin avant les cours, j'ai mémorisé les normes IFRS en 2 semaines.", DateDisplay: "Décembre 2025" },
+    { name: "Romain C.", role: "Alternance cabinet comptable — Lille", rating: 5, text: "En alternance, mon temps est limité. SIMDCG m'a permis de réviser efficacement sur les temps de trajet grâce aux flashcards et QCM rapides.", DateDisplay: "Novembre 2025" },
   ];
 
   useEffect(() => {
@@ -2347,7 +2347,16 @@ function Paywall({ onUpgrade, onBack }) {
 
 // ── ATOMS ─────────────────────────────────────────────────────────────────────
 function Logo({ glow }) {
-  return <span style={{ fontSize: 20, fontWeight: 900, fontFamily: "monospace", letterSpacing: -1, color: "#e8e4d9" }}>SIM<span style={{ color: "#e2c97e", filter: glow ? "drop-shadow(0 0 8px rgba(226,201,126,.6))" : "none" }}>DCG</span></span>;
+  return (
+    <img
+      src="/logo.png"
+      alt="SIMDCG"
+      style={{
+        height: 36,
+        filter: glow ? "drop-shadow(0 0 8px rgba(226,201,126,.5))" : "none",
+      }}
+    />
+  );
 }
 function SC({ v, l, hl }) {
   return <div style={{ background: "#0d1117", border: `1px solid ${hl ? "rgba(226,201,126,.2)" : "#1a1f2e"}`, padding: "14px 10px", textAlign: "center" }}><p style={{ fontSize: 20, fontWeight: 900, margin: "0 0 3px", color: hl ? "#e2c97e" : "#e8e4d9" }}>{v}</p><p style={{ fontSize: 9, color: "#374151", margin: 0, letterSpacing: ".1em" }}>{l.toUpperCase()}</p></div>;
