@@ -760,33 +760,56 @@ function ExamCountdown() {
   const dscg = useCountdown("2026-10-20T08:00:00");
 
   const Sep = ({ color }) => (
-    <span style={{ fontSize: 18, fontWeight: 900, color, opacity: .4, alignSelf: "flex-start", marginTop: 2 }}>:</span>
+    <span style={{ fontSize: 16, fontWeight: 900, color, opacity: .4, marginBottom: 8 }}>:</span>
   );
 
-  const Block = ({ label, badge, color, t }) => (
-    <div style={{ display: "flex", alignItems: "center", gap: 12, flex: 1, minWidth: 0 }}>
-      <div style={{ flexShrink: 0 }}>
-        <p style={{ fontSize: 9, letterSpacing: ".12em", color, margin: "0 0 3px", fontWeight: 700 }}>{badge}</p>
-        <p style={{ fontSize: 11, color: "#6b7280", margin: 0, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{label}</p>
+  const Block = ({ badge, label, color, t }) => (
+    <div style={{ display: "flex", alignItems: "center", gap: 10, flex: 1, minWidth: 0 }}>
+      {/* Label */}
+      <div style={{ flexShrink: 0, minWidth: 0 }}>
+        <p style={{ fontSize: 9, letterSpacing: ".1em", color, margin: "0 0 2px", fontWeight: 700, whiteSpace: "nowrap" }}>{badge}</p>
+        <p style={{ fontSize: 10, color: "#6b7280", margin: 0, whiteSpace: "nowrap" }}>{label}</p>
       </div>
-      <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
-        <CountdownUnit v={t.j} l="JOURS" color={color} />
-        <Sep color={color} />
-        <CountdownUnit v={t.h} l="HRS" color={color} />
-        <Sep color={color} />
-        <CountdownUnit v={t.m} l="MIN" color={color} />
-        <Sep color={color} />
-        <CountdownUnit v={t.s} l="SEC" color={color} />
+      {/* Numbers */}
+      <div style={{ display: "flex", alignItems: "center", gap: 3, flexShrink: 0 }}>
+        {[
+          { v: t.j, l: "J" },
+          { sep: true },
+          { v: t.h, l: "H" },
+          { sep: true },
+          { v: t.m, l: "M" },
+          { sep: true },
+          { v: t.s, l: "S" },
+        ].map((item, i) =>
+          item.sep
+            ? <Sep key={i} color={color} />
+            : (
+              <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: 28 }}>
+                <span style={{ fontSize: 18, fontWeight: 900, color, fontFamily: "monospace", lineHeight: 1 }}>
+                  {String(item.v).padStart(2, "0")}
+                </span>
+                <span style={{ fontSize: 7, color: "#374151", letterSpacing: ".06em" }}>{item.l}</span>
+              </div>
+            )
+        )}
       </div>
     </div>
   );
 
   return (
-    <div style={{ position: "relative", zIndex: 1, background: "rgba(8,11,20,.7)", borderBottom: "1px solid #111827", borderTop: "1px solid #111827", backdropFilter: "blur(8px)", animation: "fi 1s .3s both" }}>
-      <div style={{ maxWidth: 860, margin: "0 auto", padding: "10px 20px", display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
-        <Block label="Épreuves écrites DCG" badge="🎓 DCG" color="#60a5fa" t={dcg} />
-        <div style={{ width: 1, height: 32, background: "#1f2937", flexShrink: 0 }} className="m-hide" />
-        <Block label="Épreuves écrites DSCG" badge="◈ DSCG" color="#a78bfa" t={dscg} />
+    <div style={{ position: "relative", zIndex: 1, background: "rgba(8,11,20,.8)", borderBottom: "1px solid #111827", borderTop: "1px solid #111827", backdropFilter: "blur(8px)", animation: "fi 1s .3s both" }}>
+      <div style={{ maxWidth: 860, margin: "0 auto", padding: "8px 16px" }}>
+        {/* Desktop: one row. Mobile: two rows via flexWrap */}
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "6px 0", alignItems: "stretch" }}>
+          {/* DCG row */}
+          <div style={{ flex: "1 1 280px", padding: "4px 12px 4px 0", borderRight: "1px solid #1f2937", marginRight: 12 }}>
+            <Block badge="🎓 DCG" label="Épreuves écrites" color="#60a5fa" t={dcg} />
+          </div>
+          {/* DSCG row */}
+          <div style={{ flex: "1 1 280px", padding: "4px 0" }}>
+            <Block badge="◈ DSCG" label="Épreuves écrites" color="#a78bfa" t={dscg} />
+          </div>
+        </div>
       </div>
     </div>
   );
