@@ -152,13 +152,19 @@ const resolveIsPro = (data) => {
 
 // ── API ───────────────────────────────────────────────────────────────────────
 async function callClaude(system, messages, maxTokens = 1200, user = null) {
-  const r = await fetch("/api/chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ model: "claude-sonnet-4-20250514", max_tokens: maxTokens, system, messages }),
-  });
-  const d = await r.json();
-  return d.content?.[0]?.text || "";
+  try {
+    const r = await fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ model: "claude-sonnet-4-20250514", max_tokens: maxTokens, system, messages }),
+    });
+    if (!r.ok) throw new Error(`API ${r.status}`);
+    const d = await r.json();
+    return d.content?.[0]?.text || "";
+  } catch (e) {
+    console.error("callClaude error:", e);
+    return "";
+  }
 }
 
 async function callClaudeJSON(system, prompt, maxTokens = 2500, user = null) {
@@ -1574,10 +1580,11 @@ function QCMScreen({ ue, user, onDone, onBack }) {
   useEffect(() => {
     const gen = async () => {
       setLoading(true);
-      const data = await callClaudeJSON(`Tu génères des QCM pour l'examen ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`, QCM_PROMPT(ue, nQuestions), 2500);
-      if (Array.isArray(data) && data.length > 0) { setQuestions(data); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000); }
-      else setError(true);
-      setLoading(false);
+      try {
+        const data = await callClaudeJSON(`Tu génères des QCM pour l'examen ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`, QCM_PROMPT(ue, nQuestions), 2500);
+        if (Array.isArray(data) && data.length > 0) { setQuestions(data); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000); }
+        else setError(true);
+      } catch { setError(true); } finally { setLoading(false); }
     };
     gen();
     return () => clearInterval(timerRef.current);
@@ -1798,13 +1805,14 @@ function ResumeCoursScreen({ ue, user, onBack }) {
   useEffect(() => {
     const gen = async () => {
       setLoading(true);
-      const data = await callClaudeJSON(
-        `Tu es un professeur expert en ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`,
-        RESUME_PROMPT(ue),
-        3000
-      );
-      setResume(data);
-      setLoading(false);
+      try {
+        const data = await callClaudeJSON(
+          `Tu es un professeur expert en ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`,
+          RESUME_PROMPT(ue),
+          3000
+        );
+        setResume(data);
+      } catch { setResume(null); } finally { setLoading(false); }
     };
     gen();
   }, []);
@@ -2064,9 +2072,10 @@ function CasPratiqueScreen({ ue, user, onDone, onBack }) {
 
   useEffect(() => {
     const gen = async () => {
-      const data = await callClaudeJSON(`Tu génères des cas pratiques style examen DCG/DSCG. Réponds UNIQUEMENT en JSON valide.`, CAS_PROMPT(ue), 1500);
-      if (data) { setCas({ ...data, ue: ue.id, ueName: ue.label, level: ue.level }); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000); }
-      setLoading(false);
+      try {
+        const data = await callClaudeJSON(`Tu génères des cas pratiques style examen DCG/DSCG. Réponds UNIQUEMENT en JSON valide.`, CAS_PROMPT(ue), 1500);
+        if (data) { setCas({ ...data, ue: ue.id, ueName: ue.label, level: ue.level }); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000); }
+      } catch {} finally { setLoading(false); }
     };
     gen();
     return () => clearInterval(timerRef.current);
