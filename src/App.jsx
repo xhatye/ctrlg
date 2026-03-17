@@ -19,7 +19,9 @@ const googleProvider = new GoogleAuthProvider();
 
 // ── CONFIG ────────────────────────────────────────────────────────────────────
 const STRIPE_LINK = "https://buy.stripe.com/3cI4gz9FpbrWfYJ4JH6wE02";
+const STRIPE_PACK_EXAMEN = "https://buy.stripe.com/28E6oH9Fp2Vq27Tfol6wE03";
 const PRO_PRICE = "15€";
+const PACK_EXAMEN_PRICE = "29€";
 const FREE_INTERVIEWS = 1;
 const FREE_QCM_PER_UE = 3;
 const FREE_FLASH_PER_UE = 5;
@@ -139,6 +141,13 @@ const fmt = (s) => `${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).p
 const scoreColor = (s) => s >= 80 ? "#4ade80" : s >= 60 ? "#f59e0b" : "#f87171";
 const noteColor = (n) => n >= 14 ? "#4ade80" : n >= 10 ? "#f59e0b" : "#f87171";
 const today = () => new Date().toISOString().split("T")[0];
+
+// Checks isPro AND proExpiresAt — returns true only if access is active
+const resolveIsPro = (data) => {
+  if (!data?.isPro) return false;
+  if (!data?.proExpiresAt) return true; // subscription, no expiry
+  return new Date(data.proExpiresAt) > new Date(); // pack examen — check expiry
+};
 
 // ── API ───────────────────────────────────────────────────────────────────────
 async function callClaude(system, messages, maxTokens = 1200, user = null) {
@@ -525,7 +534,14 @@ export default function App() {
         const data = snap.exists() ? snap.data() : {};
         const streak = await loadStreak(firebaseUser.uid);
         const hist = (data.history || []).filter(h => h.type === "entretien");
-        setUser({ uid: firebaseUser.uid, name: data.name || firebaseUser.displayName || firebaseUser.email.split("@")[0], email: firebaseUser.email, isPro: data.isPro || false, interviewsUsed: hist.length, streak });
+        // Auto-expire Pack Examen if past expiry date
+        const activePro = resolveIsPro(data);
+        if (data.isPro && !activePro) {
+          // Expired — revoke in Firestore silently
+          try { await updateDoc(doc(db, "users", firebaseUser.uid), { isPro: false, proType: null, proExpiresAt: null }); } catch {}
+        }
+        const proExpiresAt = data.proExpiresAt || null;
+        setUser({ uid: firebaseUser.uid, name: data.name || firebaseUser.displayName || firebaseUser.email.split("@")[0], email: firebaseUser.email, isPro: activePro, proType: data.proType || null, proExpiresAt, interviewsUsed: hist.length, streak });
         if (window.location.pathname === "/" || window.location.pathname === "/connexion" || window.location.pathname === "/inscription") { window.history.pushState({}, "", "/interface"); setScreen("dashboard"); }
       } else {
         setUser(null);
@@ -1110,18 +1126,46 @@ function Pricing({ onAuth, onBack }) {
         </div>
 
         {/* Price cards */}
-        <div className="m-col1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16, marginBottom: 48, animation: "fsu .5s .1s ease both" }}>
-          {/* Free */}
+        <div className="m-col1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 48, animation: "fsu .5s .1s ease both" }}>
+
+          {/* Gratuit */}
           <div style={{ ...S.pc, display: "flex", flexDirection: "column", gap: 0 }}>
             <p style={{ fontSize: 11, letterSpacing: ".15em", color: "#6b7280", margin: "0 0 8px" }}>GRATUIT</p>
             <div style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: 6 }}>
-              <span style={{ fontSize: 44, fontWeight: 900, color: "#e8e4d9" }}>0€</span>
+              <span style={{ fontSize: 40, fontWeight: 900, color: "#e8e4d9" }}>0€</span>
             </div>
-            <p style={{ fontSize: 12, color: "#374151", margin: "0 0 20px" }}>Pour découvrir la plateforme</p>
+            <p style={{ fontSize: 12, color: "#374151", margin: "0 0 16px" }}>Pour découvrir la plateforme</p>
             <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 7, marginBottom: 20 }}>
-              {["Résumés de cours — toutes matières", "3 QCM / matière (UE1, UE4, UE9)", "5 flashcards / matière", "1 entretien simulé", "Suivi de progression"].map(f => <p key={f} style={{ fontSize: 12, color: "#4b5563", margin: 0 }}>✓ {f}</p>)}
+              {["Résumés de cours — toutes matières", "3 QCM / matière (UE1, UE4, UE9)", "5 flashcards / matière", "1 entretien simulé", "Suivi de progression"].map(f => <p key={f} style={{ fontSize: 11, color: "#4b5563", margin: 0 }}>✓ {f}</p>)}
             </div>
-            <button style={{ ...S.ctagh, width: "100%", padding: 12 }} onClick={() => onAuth("signup")}>Commencer gratuitement →</button>
+            <button style={{ ...S.ctagh, width: "100%", padding: 11, fontSize: 13 }} onClick={() => onAuth("signup")}>Commencer →</button>
+          </div>
+
+          {/* Pack Examen */}
+          <div style={{ ...S.pc, display: "flex", flexDirection: "column", gap: 0, border: "1px solid rgba(96,165,250,.35)", background: "rgba(96,165,250,.04)" }}>
+            <div style={{ position: "absolute", top: -10, left: "50%", transform: "translateX(-50%)", background: "#60a5fa", color: "#080b14", fontSize: 9, padding: "3px 12px", fontWeight: 700, letterSpacing: ".12em", whiteSpace: "nowrap" }}>IDÉAL SESSION MAI</div>
+            <p style={{ fontSize: 11, letterSpacing: ".15em", color: "#60a5fa", margin: "0 0 8px" }}>PACK EXAMEN</p>
+            <div style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: 2 }}>
+              <span style={{ fontSize: 40, fontWeight: 900, color: "#e8e4d9" }}>{PACK_EXAMEN_PRICE}</span>
+              <span style={{ fontSize: 12, color: "#6b7280" }}>/ 3 mois</span>
+            </div>
+            <p style={{ fontSize: 11, color: "#60a5fa", margin: "0 0 4px", fontWeight: 700 }}>Paiement unique — sans abonnement</p>
+            <p style={{ fontSize: 11, color: "#374151", margin: "0 0 16px" }}>Tout le Pro pendant 3 mois</p>
+            <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 7, marginBottom: 20 }}>
+              {[
+                "QCM illimités — 13 matières DCG + DSCG",
+                "Cas pratiques corrigés par IA",
+                "Révision espacée + planning IA",
+                "Entretiens illimités (6 thématiques)",
+                "Pas de renouvellement automatique",
+              ].map(f => <p key={f} style={{ fontSize: 11, color: "#c9c3b5", margin: 0, display: "flex", gap: 8 }}>
+                <span style={{ color: "#60a5fa", flexShrink: 0 }}>✓</span>{f}
+              </p>)}
+            </div>
+            <button style={{ ...S.ctag, width: "100%", padding: 11, fontSize: 13, background: "#60a5fa", letterSpacing: ".02em" }} onClick={() => window.open(STRIPE_PACK_EXAMEN, "_blank")}>
+              Obtenir le Pack Examen →
+            </button>
+            <p style={{ fontSize: 10, color: "#374151", textAlign: "center", margin: "8px 0 0" }}>Paiement unique · Accès immédiat · Stripe sécurisé</p>
           </div>
 
           {/* Pro */}
@@ -1129,10 +1173,10 @@ function Pricing({ onAuth, onBack }) {
             <div style={S.pb}>RECOMMANDÉ</div>
             <p style={{ fontSize: 11, letterSpacing: ".15em", color: "#e2c97e", margin: "0 0 8px" }}>PRO</p>
             <div style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: 6 }}>
-              <span style={{ fontSize: 44, fontWeight: 900, color: "#e8e4d9" }}>{PRO_PRICE}</span>
+              <span style={{ fontSize: 40, fontWeight: 900, color: "#e8e4d9" }}>{PRO_PRICE}</span>
               <span style={{ fontSize: 12, color: "#6b7280" }}>/mois</span>
             </div>
-            <p style={{ fontSize: 12, color: "#6b7280", margin: "0 0 20px" }}>Pour décrocher le diplôme et le poste</p>
+            <p style={{ fontSize: 12, color: "#6b7280", margin: "0 0 16px" }}>Pour décrocher le diplôme et le poste</p>
             <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 7, marginBottom: 20 }}>
               {[
                 "QCM illimités — 13 matières DCG + DSCG",
@@ -1142,14 +1186,14 @@ function Pricing({ onAuth, onBack }) {
                 "Entretiens illimités (6 thématiques)",
                 "Historique complet & progression",
                 "Toutes les matières DSCG débloquées",
-              ].map(f => <p key={f} style={{ fontSize: 12, color: "#c9c3b5", margin: 0, display: "flex", gap: 8 }}>
+              ].map(f => <p key={f} style={{ fontSize: 11, color: "#c9c3b5", margin: 0, display: "flex", gap: 8 }}>
                 <span style={{ color: "#e2c97e", flexShrink: 0 }}>✓</span>{f}
               </p>)}
             </div>
-            <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={() => window.open(STRIPE_LINK, "_blank")}>
+            <button style={{ ...S.ctag, width: "100%", padding: 11, fontSize: 13 }} onClick={() => window.open(STRIPE_LINK, "_blank")}>
               Démarrer Pro — {PRO_PRICE}/mois →
             </button>
-            <p style={{ fontSize: 10, color: "#374151", textAlign: "center", margin: "10px 0 0" }}>Paiement Stripe sécurisé · Résiliation en 1 clic</p>
+            <p style={{ fontSize: 10, color: "#374151", textAlign: "center", margin: "8px 0 0" }}>Paiement Stripe sécurisé · Résiliation en 1 clic</p>
           </div>
         </div>
 
@@ -1208,7 +1252,7 @@ function Auth({ mode, setMode, onDone, onBack }) {
       const streak = await loadStreak(cred.user.uid);
       const hist = (data.history || []).filter(h => h.type === "entretien");
       const isNew = mode === "signup";
-      onDone({ uid: cred.user.uid, name: data.name || name || email.split("@")[0], email, isPro: data.isPro || false, interviewsUsed: hist.length, streak, isNew });
+      onDone({ uid: cred.user.uid, name: data.name || name || email.split("@")[0], email, isPro: resolveIsPro(data), proType: data.proType || null, proExpiresAt: data.proExpiresAt || null, interviewsUsed: hist.length, streak, isNew });
     } catch (e) {
       const msgs = { "auth/email-already-in-use": "Email déjà utilisé.", "auth/user-not-found": "Compte introuvable.", "auth/wrong-password": "Mot de passe incorrect.", "auth/invalid-credential": "Email ou mot de passe incorrect." };
       setErr(msgs[e.code] || "Erreur. Réessayez.");
@@ -1229,7 +1273,7 @@ function Auth({ mode, setMode, onDone, onBack }) {
       const data = snap.exists() ? snap.data() : {};
       const streak = await loadStreak(cred.user.uid);
       const hist = (data.history || []).filter(h => h.type === "entretien");
-      onDone({ uid: cred.user.uid, name: data.name || cred.user.displayName || cred.user.email.split("@")[0], email: cred.user.email, isPro: data.isPro || false, interviewsUsed: hist.length, streak, isNew });
+      onDone({ uid: cred.user.uid, name: data.name || cred.user.displayName || cred.user.email.split("@")[0], email: cred.user.email, isPro: resolveIsPro(data), proType: data.proType || null, proExpiresAt: data.proExpiresAt || null, interviewsUsed: hist.length, streak, isNew });
     } catch (e) { setErr("Erreur Google. Réessayez."); }
     setLoading(false);
   };
@@ -1294,10 +1338,18 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
       <div style={{ maxWidth: 800, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1 }}>
         <div className="m-col2" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 10, marginBottom: 24, animation: "fsu .5s ease both" }}>
           <SC v={user?.streak || 0} l="🔥 Streak" />
-          <SC v={isPro ? "Pro ✦" : "Gratuit"} l="Plan" hl />
+          <SC v={isPro ? (user?.proType === "pack_examen" ? "Pack ✦" : "Pro ✦") : "Gratuit"} l="Plan" hl />
           <SC v={Object.keys(mastery).length} l="UE maîtrisées" />
           <SC v={isPro ? "∞" : Math.max(0, FREE_INTERVIEWS - interviewsUsed)} l="Entretiens restants" />
         </div>
+        {isPro && user?.proType === "pack_examen" && user?.proExpiresAt && (
+          <div style={{ background: "rgba(96,165,250,.06)", border: "1px solid rgba(96,165,250,.2)", padding: "10px 16px", marginBottom: 16, display: "flex", justifyContent: "space-between", alignItems: "center", animation: "fsu .4s ease both" }}>
+            <p style={{ fontSize: 12, color: "#60a5fa", margin: 0 }}>◈ Pack Examen actif</p>
+            <p style={{ fontSize: 11, color: "#374151", margin: 0 }}>
+              Expire le {new Date(user.proExpiresAt).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}
+            </p>
+          </div>
+        )}
 
         <div style={{ display: "flex", gap: 0, marginBottom: 24, borderBottom: "1px solid #111827" }}>
           {[{ id: "diplome", label: "🎓 Mode Diplôme", sub: "DCG / DSCG" }, { id: "carriere", label: "💼 Mode Carrière", sub: "Entretiens" }].map(t => (
