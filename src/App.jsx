@@ -128,9 +128,9 @@ const CAS_EVAL_PROMPT = (cas, reponse) =>
 {"note":<0-20>,"appreciation":"<TB|B|AB|P|I>","correction_par_question":[{"num":1,"note":<0-4>,"commentaire":"...","elements_attendus":"..."},{"num":2,"note":<0-6>,"commentaire":"...","elements_attendus":"..."},{"num":3,"note":<0-10>,"commentaire":"...","elements_attendus":"..."}],"conseil":"conseil pour progresser"}`;
 
 const RESUME_PROMPT = (ue) =>
-  `Expert ${ue.label} (${ue.level}). Génère un résumé de cours complet et structuré pour révision examen. JSON strict sans markdown :
-{"sections":[{"titre":"...","points":["...","...","...","..."]}],"points_cles":["...","...","...","...","..."],"pieges_frequents":["...","...","..."],"conseil_exam":"..."}
-Génère 4 à 6 sections couvrant l'ensemble du programme, chaque section avec 4 points précis et actionnables.`;
+  `Expert ${ue.label} (${ue.level}). Résumé de révision examen. JSON strict sans markdown, sois concis :
+{"sections":[{"titre":"...","points":["...","...","..."]}],"points_cles":["...","...","...","..."],"pieges_frequents":["...","..."],"conseil_exam":"..."}
+Génère 3 sections maximum, 3 points par section, 4 points clés, 2 pièges. Réponse courte et précise.`;
 
 const PLANNING_PROMPT = (weeks, level, subjects) =>
   `Tu es un coach DCG/DSCG expert. Planning de révision sur ${weeks} semaines pour ${level} (matières : ${subjects}). JSON strict sans markdown :
@@ -152,18 +152,24 @@ const resolveIsPro = (data) => {
 
 // ── API ───────────────────────────────────────────────────────────────────────
 async function callClaude(system, messages, maxTokens = 1200, user = null) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 30000); // 30s hard timeout
   try {
     const r = await fetch("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ model: "claude-sonnet-4-20250514", max_tokens: maxTokens, system, messages }),
+      signal: controller.signal,
     });
     if (!r.ok) throw new Error(`API ${r.status}`);
     const d = await r.json();
     return d.content?.[0]?.text || "";
   } catch (e) {
-    console.error("callClaude error:", e);
+    if (e.name === "AbortError") console.error("callClaude timeout after 30s");
+    else console.error("callClaude error:", e);
     return "";
+  } finally {
+    clearTimeout(timeout);
   }
 }
 
@@ -1807,9 +1813,9 @@ function ResumeCoursScreen({ ue, user, onBack }) {
       setLoading(true);
       try {
         const data = await callClaudeJSON(
-          `Tu es un professeur expert en ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`,
+          `Tu es un professeur expert en ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide, sois bref.`,
           RESUME_PROMPT(ue),
-          3000
+          1800
         );
         setResume(data);
       } catch { setResume(null); } finally { setLoading(false); }
