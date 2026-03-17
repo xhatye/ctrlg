@@ -715,7 +715,84 @@ function ROICalculator({ onAuth }) {
   );
 }
 
-// ── STATS BAR ─────────────────────────────────────────────────────────────────
+// ── EXAM COUNTDOWN ────────────────────────────────────────────────────────────
+function useCountdown(targetDate) {
+  const getNext = () => {
+    const now = new Date();
+    let target = new Date(targetDate);
+    // If date has passed, advance to next year
+    while (target <= now) {
+      target.setFullYear(target.getFullYear() + 1);
+    }
+    return target;
+  };
+  const calc = () => {
+    const target = getNext();
+    const diff = target - new Date();
+    if (diff <= 0) return { j: 0, h: 0, m: 0, s: 0 };
+    const j = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    return { j, h, m, s };
+  };
+  const [time, setTime] = useState(calc);
+  useEffect(() => {
+    const id = setInterval(() => setTime(calc()), 1000);
+    return () => clearInterval(id);
+  }, []);
+  return time;
+}
+
+function CountdownUnit({ v, l, color }) {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: 36 }}>
+      <span style={{ fontSize: 20, fontWeight: 900, color, fontFamily: "monospace", lineHeight: 1 }}>
+        {String(v).padStart(2, "0")}
+      </span>
+      <span style={{ fontSize: 8, color: "#374151", letterSpacing: ".08em", marginTop: 2 }}>{l}</span>
+    </div>
+  );
+}
+
+function ExamCountdown() {
+  const dcg  = useCountdown("2026-05-28T08:00:00");
+  const dscg = useCountdown("2026-10-20T08:00:00");
+
+  const Sep = ({ color }) => (
+    <span style={{ fontSize: 18, fontWeight: 900, color, opacity: .4, alignSelf: "flex-start", marginTop: 2 }}>:</span>
+  );
+
+  const Block = ({ label, badge, color, t }) => (
+    <div style={{ display: "flex", alignItems: "center", gap: 12, flex: 1, minWidth: 0 }}>
+      <div style={{ flexShrink: 0 }}>
+        <p style={{ fontSize: 9, letterSpacing: ".12em", color, margin: "0 0 3px", fontWeight: 700 }}>{badge}</p>
+        <p style={{ fontSize: 11, color: "#6b7280", margin: 0, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{label}</p>
+      </div>
+      <div style={{ display: "flex", alignItems: "center", gap: 4 }}>
+        <CountdownUnit v={t.j} l="JOURS" color={color} />
+        <Sep color={color} />
+        <CountdownUnit v={t.h} l="HRS" color={color} />
+        <Sep color={color} />
+        <CountdownUnit v={t.m} l="MIN" color={color} />
+        <Sep color={color} />
+        <CountdownUnit v={t.s} l="SEC" color={color} />
+      </div>
+    </div>
+  );
+
+  return (
+    <div style={{ position: "relative", zIndex: 1, background: "rgba(8,11,20,.7)", borderBottom: "1px solid #111827", borderTop: "1px solid #111827", backdropFilter: "blur(8px)", animation: "fi 1s .3s both" }}>
+      <div style={{ maxWidth: 860, margin: "0 auto", padding: "10px 20px", display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
+        <Block label="Épreuves écrites DCG" badge="🎓 DCG" color="#60a5fa" t={dcg} />
+        <div style={{ width: 1, height: 32, background: "#1f2937", flexShrink: 0 }} className="m-hide" />
+        <Block label="Épreuves écrites DSCG" badge="◈ DSCG" color="#a78bfa" t={dscg} />
+      </div>
+    </div>
+  );
+}
+
+
 function StatsBar() {
   const [stats, setStats] = useState(null);
   const [displayed, setDisplayed] = useState({ totalQCMs: 0, totalUsers: 0, totalInterviews: 0, totalFlashcards: 0 });
@@ -829,8 +906,10 @@ function Landing({ onAuth, onPricing, onTestimonials, onCgu, onConfidentialite }
         </div>
       </nav>
 
+      <ExamCountdown />
+
       {/* Hero */}
-      <div style={{ position: "relative", zIndex: 1, maxWidth: 640, margin: "0 auto", padding: "72px 20px 40px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
+      <div style={{ position: "relative", zIndex: 1, maxWidth: 640, margin: "0 auto", padding: "52px 20px 40px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
         <div style={{ ...S.badge, animation: "fsu .7s ease both", fontSize: 9 }}>◈ PRÉPARATION DCG · DSCG · ENTRETIENS</div>
         <h1 className="m-hero-h1" style={{ fontSize: 52, fontWeight: 900, margin: 0, lineHeight: 1.06, letterSpacing: -3, animation: "fsu .7s .1s both" }}>
           La plateforme<br />
