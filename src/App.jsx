@@ -22,11 +22,12 @@ const STRIPE_LINK = "https://buy.stripe.com/3cI4gz9FpbrWfYJ4JH6wE02";
 const STRIPE_PACK_EXAMEN = "https://buy.stripe.com/28E6oH9Fp2Vq27Tfol6wE03";
 const PRO_PRICE = "15€";
 const PACK_EXAMEN_PRICE = "29€";
-const FREE_INTERVIEWS = 1;
-const FREE_QCM_PER_UE = 3;
-const FREE_FLASH_PER_UE = 5;
+const FREE_INTERVIEWS = 0; // No free tier
+const FREE_QCM_PER_UE = 0;
+const FREE_FLASH_PER_UE = 0;
 const PRO_FLASH_PER_UE = 12;
-const FREE_AI_CALLS_PER_DAY = 10;
+const FREE_AI_CALLS_PER_DAY = 0;
+const PRO_PRICE_ORIGINAL = "25€"; // Crossed-out original price
 
 // ── ROUTING ───────────────────────────────────────────────────────────────────
 const SCREEN_TO_URL = {
@@ -759,57 +760,43 @@ function ExamCountdown() {
   const dcg  = useCountdown("2026-05-28T08:00:00");
   const dscg = useCountdown("2026-10-20T08:00:00");
 
-  const Sep = ({ color }) => (
-    <span style={{ fontSize: 16, fontWeight: 900, color, opacity: .4, marginBottom: 8 }}>:</span>
+  const Num = ({ v, l, color }) => (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 32 }}>
+      <span style={{ fontSize: 20, fontWeight: 900, color, fontFamily: "monospace", lineHeight: 1 }}>
+        {String(v).padStart(2, "0")}
+      </span>
+      <span style={{ fontSize: 7, color: "#374151", letterSpacing: ".06em", marginTop: 1 }}>{l}</span>
+    </div>
+  );
+
+  const Colon = ({ color }) => (
+    <span style={{ fontSize: 16, fontWeight: 900, color, opacity: .35, paddingBottom: 8 }}>:</span>
   );
 
   const Block = ({ badge, label, color, t }) => (
-    <div style={{ display: "flex", alignItems: "center", gap: 10, flex: 1, minWidth: 0 }}>
-      {/* Label */}
-      <div style={{ flexShrink: 0, minWidth: 0 }}>
-        <p style={{ fontSize: 9, letterSpacing: ".1em", color, margin: "0 0 2px", fontWeight: 700, whiteSpace: "nowrap" }}>{badge}</p>
-        <p style={{ fontSize: 10, color: "#6b7280", margin: 0, whiteSpace: "nowrap" }}>{label}</p>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, flex: "1 1 260px" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+        <span style={{ fontSize: 10, fontWeight: 700, color, letterSpacing: ".1em" }}>{badge}</span>
+        <span style={{ fontSize: 10, color: "#6b7280" }}>{label}</span>
       </div>
-      {/* Numbers */}
-      <div style={{ display: "flex", alignItems: "center", gap: 3, flexShrink: 0 }}>
-        {[
-          { v: t.j, l: "J" },
-          { sep: true },
-          { v: t.h, l: "H" },
-          { sep: true },
-          { v: t.m, l: "M" },
-          { sep: true },
-          { v: t.s, l: "S" },
-        ].map((item, i) =>
-          item.sep
-            ? <Sep key={i} color={color} />
-            : (
-              <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: 28 }}>
-                <span style={{ fontSize: 18, fontWeight: 900, color, fontFamily: "monospace", lineHeight: 1 }}>
-                  {String(item.v).padStart(2, "0")}
-                </span>
-                <span style={{ fontSize: 7, color: "#374151", letterSpacing: ".06em" }}>{item.l}</span>
-              </div>
-            )
-        )}
+      <div style={{ display: "flex", alignItems: "center", gap: 3 }}>
+        <Num v={t.j} l="JOURS" color={color} />
+        <Colon color={color} />
+        <Num v={t.h} l="HRS" color={color} />
+        <Colon color={color} />
+        <Num v={t.m} l="MIN" color={color} />
+        <Colon color={color} />
+        <Num v={t.s} l="SEC" color={color} />
       </div>
     </div>
   );
 
   return (
-    <div style={{ position: "relative", zIndex: 1, background: "rgba(8,11,20,.8)", borderBottom: "1px solid #111827", borderTop: "1px solid #111827", backdropFilter: "blur(8px)", animation: "fi 1s .3s both" }}>
-      <div style={{ maxWidth: 860, margin: "0 auto", padding: "8px 16px" }}>
-        {/* Desktop: one row. Mobile: two rows via flexWrap */}
-        <div style={{ display: "flex", flexWrap: "wrap", gap: "6px 0", alignItems: "stretch" }}>
-          {/* DCG row */}
-          <div style={{ flex: "1 1 280px", padding: "4px 12px 4px 0", borderRight: "1px solid #1f2937", marginRight: 12 }}>
-            <Block badge="🎓 DCG" label="Épreuves écrites" color="#60a5fa" t={dcg} />
-          </div>
-          {/* DSCG row */}
-          <div style={{ flex: "1 1 280px", padding: "4px 0" }}>
-            <Block badge="◈ DSCG" label="Épreuves écrites" color="#a78bfa" t={dscg} />
-          </div>
-        </div>
+    <div style={{ position: "relative", zIndex: 1, background: "rgba(8,11,20,.85)", borderBottom: "1px solid #111827", borderTop: "1px solid #111827", backdropFilter: "blur(10px)" }}>
+      <div style={{ maxWidth: 760, margin: "0 auto", padding: "12px 20px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "10px 24px" }}>
+        <Block badge="🎓 DCG" label="Épreuves écrites — 28 mai 2026" color="#60a5fa" t={dcg} />
+        <div style={{ width: 1, height: 40, background: "#1f2937", flexShrink: 0, alignSelf: "center" }} className="m-hide" />
+        <Block badge="◈ DSCG" label="Épreuves écrites — 20 oct. 2026" color="#a78bfa" t={dscg} />
       </div>
     </div>
   );
@@ -925,7 +912,7 @@ function Landing({ onAuth, onPricing, onTestimonials, onCgu, onConfidentialite }
           <button style={{ ...S.nl, fontSize: 12 }} className="m-hide" onClick={onTestimonials}>Avis ✦</button>
           <button style={{ ...S.nl, fontSize: 12 }} className="m-hide" onClick={onPricing}>Tarifs</button>
           <button style={{ ...S.no, fontSize: 11, padding: "5px 10px" }} onClick={() => onAuth("login")}>Connexion</button>
-          <button style={{ ...S.nc, fontSize: 11, padding: "6px 12px", animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Essai gratuit</button>
+          <button style={{ ...S.nc, fontSize: 11, padding: "6px 12px", animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>S'inscrire</button>
         </div>
       </nav>
 
@@ -942,10 +929,10 @@ function Landing({ onAuth, onPricing, onTestimonials, onCgu, onConfidentialite }
           QCM générés par IA, résumés de cours, cas pratiques, flashcards et simulateur d'entretien — tout ce qu'il faut pour décrocher le diplôme et le poste.
         </p>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center", animation: "fsu .7s .3s both" }}>
-          <button style={{ ...S.ctag, animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Commencer gratuitement →</button>
+          <button style={{ ...S.ctag, animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Commencer — c'est gratuit →</button>
           <button style={{ ...S.ctagh, fontSize: 13 }} className="m-hide" onClick={onPricing}>Voir les tarifs</button>
         </div>
-        <p style={{ fontSize: 11, color: "#374151", letterSpacing: ".08em", animation: "fi 1s .5s both" }}>Accès gratuit · Sans carte bancaire</p>
+        <p style={{ fontSize: 11, color: "#374151", letterSpacing: ".08em", animation: "fi 1s .5s both" }}>Accès à toutes les fonctionnalités · Sans engagement</p>
       </div>
 
       {/* Live stats bar */}
@@ -974,21 +961,6 @@ function Landing({ onAuth, onPricing, onTestimonials, onCgu, onConfidentialite }
           <p style={{ fontSize: 13, color: "#4b5563", margin: 0 }}>Ajustez selon votre situation. Les chiffres sont réels.</p>
         </div>
         <ROICalculator onAuth={onAuth} />
-      </div>
-
-      {/* Comparison table */}
-      <div style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 60px", position: "relative", zIndex: 1, animation: "fsu .7s .5s both" }}>
-        <div style={{ textAlign: "center", marginBottom: 28 }}>
-          <p style={{ fontSize: 10, letterSpacing: ".2em", color: "#374151", marginBottom: 8 }}>COMPAREZ LES PLANS</p>
-          <h2 style={{ fontSize: 26, fontWeight: 900, color: "#e8e4d9", margin: "0 0 6px" }}>Gratuit ou Pro — quelle différence ?</h2>
-          <p style={{ fontSize: 13, color: "#4b5563", margin: 0 }}>Le plan gratuit vous donne un aperçu. Le Pro vous donne tout.</p>
-        </div>
-        <div className="m-overflow-x" style={{ background: "#0a0d17", border: "1px solid #1a1f2e", padding: "24px 28px" }}>
-          <div className="m-min-w">
-            <CompareTable onCta={() => window.open(STRIPE_LINK, "_blank")} ctaLabel={`Passer Pro — ${PRO_PRICE}/mois →`} compact />
-          </div>
-        </div>
-        <p style={{ textAlign: "center", fontSize: 11, color: "#374151", marginTop: 14 }}>Paiement sécurisé via Stripe · Résiliation en 1 clic</p>
       </div>
 
       {/* Testimonials teaser */}
@@ -1223,63 +1195,55 @@ function Pricing({ onAuth, onBack }) {
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: 44, animation: "fsu .5s ease both" }}>
           <div style={{ ...S.badge, display: "inline-block", marginBottom: 14 }}>TARIFS</div>
-          <h2 style={{ fontSize: 36, margin: "0 0 10px", color: "#e8e4d9", fontWeight: 900 }}>Simple. Transparent.</h2>
-          <p style={{ fontSize: 14, color: "#4b5563", margin: 0 }}>Commencez gratuitement. Passez Pro quand vous êtes prêt.</p>
+          <h2 style={{ fontSize: 36, margin: "0 0 10px", color: "#e8e4d9", fontWeight: 900 }}>Choisissez votre formule.</h2>
+          <p style={{ fontSize: 14, color: "#4b5563", margin: 0 }}>Accès complet à toutes les fonctionnalités dès le premier jour.</p>
         </div>
 
-        {/* Price cards */}
-        <div className="m-col1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginBottom: 48, animation: "fsu .5s .1s ease both" }}>
-
-          {/* Gratuit */}
-          <div style={{ ...S.pc, display: "flex", flexDirection: "column", gap: 0 }}>
-            <p style={{ fontSize: 11, letterSpacing: ".15em", color: "#6b7280", margin: "0 0 8px" }}>GRATUIT</p>
-            <div style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: 6 }}>
-              <span style={{ fontSize: 40, fontWeight: 900, color: "#e8e4d9" }}>0€</span>
-            </div>
-            <p style={{ fontSize: 12, color: "#374151", margin: "0 0 16px" }}>Pour découvrir la plateforme</p>
-            <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 7, marginBottom: 20 }}>
-              {["Résumés de cours — toutes matières", "3 QCM / matière (UE1, UE4, UE9)", "5 flashcards / matière", "1 entretien simulé", "Suivi de progression"].map(f => <p key={f} style={{ fontSize: 11, color: "#4b5563", margin: 0 }}>✓ {f}</p>)}
-            </div>
-            <button style={{ ...S.ctagh, width: "100%", padding: 11, fontSize: 13 }} onClick={() => onAuth("signup")}>Commencer →</button>
-          </div>
+        {/* Price cards — 2 plans only */}
+        <div className="m-col1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 48, animation: "fsu .5s .1s ease both" }}>
 
           {/* Pack Examen */}
           <div style={{ ...S.pc, display: "flex", flexDirection: "column", gap: 0, border: "1px solid rgba(96,165,250,.35)", background: "rgba(96,165,250,.04)" }}>
             <div style={{ position: "absolute", top: -10, left: "50%", transform: "translateX(-50%)", background: "#60a5fa", color: "#080b14", fontSize: 9, padding: "3px 12px", fontWeight: 700, letterSpacing: ".12em", whiteSpace: "nowrap" }}>IDÉAL SESSION MAI</div>
             <p style={{ fontSize: 11, letterSpacing: ".15em", color: "#60a5fa", margin: "0 0 8px" }}>PACK EXAMEN</p>
-            <div style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: 2 }}>
-              <span style={{ fontSize: 40, fontWeight: 900, color: "#e8e4d9" }}>{PACK_EXAMEN_PRICE}</span>
-              <span style={{ fontSize: 12, color: "#6b7280" }}>/ 3 mois</span>
+            <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 2 }}>
+              <span style={{ fontSize: 44, fontWeight: 900, color: "#e8e4d9" }}>{PACK_EXAMEN_PRICE}</span>
+              <span style={{ fontSize: 13, color: "#6b7280" }}>/ 3 mois</span>
             </div>
-            <p style={{ fontSize: 11, color: "#60a5fa", margin: "0 0 4px", fontWeight: 700 }}>Paiement unique — sans abonnement</p>
-            <p style={{ fontSize: 11, color: "#374151", margin: "0 0 16px" }}>Tout le Pro pendant 3 mois</p>
-            <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 7, marginBottom: 20 }}>
+            <p style={{ fontSize: 12, color: "#60a5fa", margin: "0 0 4px", fontWeight: 700 }}>Paiement unique — sans abonnement</p>
+            <p style={{ fontSize: 12, color: "#374151", margin: "0 0 20px" }}>Accès complet pendant 3 mois</p>
+            <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8, marginBottom: 24 }}>
               {[
                 "QCM illimités — 13 matières DCG + DSCG",
                 "Cas pratiques corrigés par IA",
                 "Révision espacée + planning IA",
                 "Entretiens illimités (6 thématiques)",
                 "Pas de renouvellement automatique",
-              ].map(f => <p key={f} style={{ fontSize: 11, color: "#c9c3b5", margin: 0, display: "flex", gap: 8 }}>
+              ].map(f => <p key={f} style={{ fontSize: 12, color: "#c9c3b5", margin: 0, display: "flex", gap: 8 }}>
                 <span style={{ color: "#60a5fa", flexShrink: 0 }}>✓</span>{f}
               </p>)}
             </div>
-            <button style={{ ...S.ctag, width: "100%", padding: 11, fontSize: 13, background: "#60a5fa", letterSpacing: ".02em" }} onClick={() => window.open(STRIPE_PACK_EXAMEN, "_blank")}>
+            <button style={{ ...S.ctag, width: "100%", padding: 13, background: "#60a5fa" }} onClick={() => window.open(STRIPE_PACK_EXAMEN, "_blank")}>
               Obtenir le Pack Examen →
             </button>
-            <p style={{ fontSize: 10, color: "#374151", textAlign: "center", margin: "8px 0 0" }}>Paiement unique · Accès immédiat · Stripe sécurisé</p>
+            <p style={{ fontSize: 10, color: "#374151", textAlign: "center", margin: "10px 0 0" }}>Paiement unique · Accès immédiat · Stripe sécurisé</p>
           </div>
 
-          {/* Pro */}
+          {/* Pro mensuel */}
           <div style={{ ...S.pc, ...S.phl, display: "flex", flexDirection: "column", gap: 0, animation: "glow 3s ease-in-out infinite" }}>
             <div style={S.pb}>RECOMMANDÉ</div>
             <p style={{ fontSize: 11, letterSpacing: ".15em", color: "#e2c97e", margin: "0 0 8px" }}>PRO</p>
-            <div style={{ display: "flex", alignItems: "baseline", gap: 4, marginBottom: 6 }}>
-              <span style={{ fontSize: 40, fontWeight: 900, color: "#e8e4d9" }}>{PRO_PRICE}</span>
-              <span style={{ fontSize: 12, color: "#6b7280" }}>/mois</span>
+            {/* Promo price */}
+            <div style={{ display: "flex", alignItems: "baseline", gap: 8, marginBottom: 2 }}>
+              <span style={{ fontSize: 44, fontWeight: 900, color: "#e8e4d9" }}>{PRO_PRICE}</span>
+              <span style={{ fontSize: 13, color: "#6b7280" }}>/mois</span>
+              <span style={{ fontSize: 20, color: "#374151", textDecoration: "line-through", marginLeft: 4 }}>{PRO_PRICE_ORIGINAL}</span>
             </div>
-            <p style={{ fontSize: 12, color: "#6b7280", margin: "0 0 16px" }}>Pour décrocher le diplôme et le poste</p>
-            <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 7, marginBottom: 20 }}>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(74,222,128,.1)", border: "1px solid rgba(74,222,128,.25)", padding: "3px 10px", marginBottom: 4, alignSelf: "flex-start" }}>
+              <span style={{ fontSize: 10, color: "#4ade80", fontWeight: 700 }}>-40% PROMO LANCEMENT</span>
+            </div>
+            <p style={{ fontSize: 12, color: "#6b7280", margin: "0 0 20px" }}>Pour décrocher le diplôme et le poste</p>
+            <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8, marginBottom: 24 }}>
               {[
                 "QCM illimités — 13 matières DCG + DSCG",
                 "Cas pratiques corrigés par IA",
@@ -1288,28 +1252,14 @@ function Pricing({ onAuth, onBack }) {
                 "Entretiens illimités (6 thématiques)",
                 "Historique complet & progression",
                 "Toutes les matières DSCG débloquées",
-              ].map(f => <p key={f} style={{ fontSize: 11, color: "#c9c3b5", margin: 0, display: "flex", gap: 8 }}>
+              ].map(f => <p key={f} style={{ fontSize: 12, color: "#c9c3b5", margin: 0, display: "flex", gap: 8 }}>
                 <span style={{ color: "#e2c97e", flexShrink: 0 }}>✓</span>{f}
               </p>)}
             </div>
-            <button style={{ ...S.ctag, width: "100%", padding: 11, fontSize: 13 }} onClick={() => window.open(STRIPE_LINK, "_blank")}>
+            <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={() => window.open(STRIPE_LINK, "_blank")}>
               Démarrer Pro — {PRO_PRICE}/mois →
             </button>
-            <p style={{ fontSize: 10, color: "#374151", textAlign: "center", margin: "8px 0 0" }}>Paiement Stripe sécurisé · Résiliation en 1 clic</p>
-          </div>
-        </div>
-
-        {/* Comparison table */}
-        <div style={{ animation: "fsu .5s .2s ease both" }}>
-          <div style={{ textAlign: "center", marginBottom: 24 }}>
-            <p style={{ fontSize: 10, letterSpacing: ".2em", color: "#374151", marginBottom: 6 }}>COMPARAISON DÉTAILLÉE</p>
-            <h3 style={{ fontSize: 22, fontWeight: 900, color: "#e8e4d9", margin: "0 0 4px" }}>Ce que vous débloquez avec Pro</h3>
-            <p style={{ fontSize: 13, color: "#4b5563", margin: 0 }}>La différence est massive. Jugez par vous-même.</p>
-          </div>
-          <div className="m-overflow-x" style={{ background: "#0a0d17", border: "1px solid #1a1f2e", padding: "24px 28px" }}>
-            <div className="m-min-w">
-              <CompareTable onCta={() => window.open(STRIPE_LINK, "_blank")} ctaLabel={`Passer Pro — ${PRO_PRICE}/mois →`} />
-            </div>
+            <p style={{ fontSize: 10, color: "#374151", textAlign: "center", margin: "10px 0 0" }}>Paiement Stripe sécurisé · Résiliation en 1 clic</p>
           </div>
         </div>
 
@@ -1385,7 +1335,7 @@ function Auth({ mode, setMode, onDone, onBack }) {
         <button style={S.back} onClick={onBack}>← Accueil</button>
         <Logo />
         <h2 style={{ fontSize: 22, margin: "12px 0 4px", color: "#e8e4d9" }}>{mode === "signup" ? "Créer un compte" : "Se connecter"}</h2>
-        <p style={{ fontSize: 13, color: "#6b7280", marginBottom: 12 }}>{mode === "signup" ? "Accès gratuit inclus. Aucune carte requise." : "Bon retour."}</p>
+        <p style={{ fontSize: 13, color: "#6b7280", marginBottom: 12 }}>{mode === "signup" ? "Créez votre compte pour accéder à SIMDCG." : "Bon retour."}</p>
         <button style={{ background: "#0d1117", border: "1px solid #1f2937", color: "#e8e4d9", padding: "11px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit", display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }} onClick={googleSignIn} disabled={loading}>
           <span style={{ fontSize: 16 }}>G</span> Continuer avec Google
         </button>
@@ -1432,7 +1382,7 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
       <nav style={S.nav}>
         <Logo />
         <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-          {!isPro && <button style={{ ...S.no, borderColor: "rgba(226,201,126,.3)", color: "#e2c97e" }} onClick={() => onNav("pricing")}>✦ Pro — {PRO_PRICE}/mois</button>}
+          {!isPro && <button style={{ ...S.no, borderColor: "rgba(226,201,126,.3)", color: "#e2c97e" }} onClick={() => onNav("pricing")}>✦ Passer Pro</button>}
           <span style={{ fontSize: 12, color: "#374151" }}>{user?.name}</span>
           <button style={S.no} onClick={onLogout}>Déconnexion</button>
         </div>
