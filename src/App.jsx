@@ -66,13 +66,13 @@ const getScreenFromPath = (path) => {
 
 // ── UES DATA ──────────────────────────────────────────────────────────────────
 const DCG_UES = [
-  { id:"UE1", label:"Introduction au droit", short:"Droit général", icon:"⚖", color:"#60a5fa", desc:"Sources du droit, contrats, responsabilité civile et pénale", level:"DCG" },
+  { id:"UE1", label:"Introduction au droit", short:"Droit général", icon:"⚖", color:"#60a5fa", desc:"Sources du droit, contrats, responsabilité civile et pénale", level:"DCG", proOnly:true },
   { id:"UE2", label:"Droit des sociétés", short:"Droit sociétés", icon:"🏛", color:"#a78bfa", desc:"SARL, SAS, SA, droit commun des sociétés, liquidation", level:"DCG", proOnly:true },
   { id:"UE3", label:"Droit social", short:"Droit social", icon:"🤝", color:"#34d399", desc:"Contrat de travail, conventions collectives, licenciement", level:"DCG", proOnly:true },
-  { id:"UE4", label:"Fiscalité", short:"Fiscalité", icon:"📋", color:"#fbbf24", desc:"IS, IR, TVA, droits d'enregistrement, fiscalité internationale", level:"DCG" },
+  { id:"UE4", label:"Fiscalité", short:"Fiscalité", icon:"📋", color:"#fbbf24", desc:"IS, IR, TVA, droits d'enregistrement, fiscalité internationale", level:"DCG", proOnly:true },
   { id:"UE6", label:"Finance d'entreprise", short:"Finance", icon:"📈", color:"#f87171", desc:"Analyse financière, investissement, financement, valorisation", level:"DCG", proOnly:true },
   { id:"UE7", label:"Management", short:"Management", icon:"◇", color:"#e2c97e", desc:"Stratégie, organisation, RH, direction, leadership", level:"DCG", proOnly:true },
-  { id:"UE9", label:"Comptabilité", short:"Compta", icon:"🔢", color:"#38bdf8", desc:"PCG, immobilisations, stocks, provisions, capitaux propres", level:"DCG" },
+  { id:"UE9", label:"Comptabilité", short:"Compta", icon:"🔢", color:"#38bdf8", desc:"PCG, immobilisations, stocks, provisions, capitaux propres", level:"DCG", proOnly:true },
   { id:"UE10", label:"Comptabilité approfondie", short:"Compta appro", icon:"📊", color:"#fb923c", desc:"Consolidation, fusion, comptes combinés, normes IFRS", level:"DCG", proOnly:true },
 ];
 const DSCG_UES = [
@@ -86,7 +86,7 @@ const ALL_UES = [...DCG_UES, ...DSCG_UES];
 
 // ── INTERVIEW TOPICS ──────────────────────────────────────────────────────────
 const INTERVIEW_TOPICS = [
-  { id:"Contrôle de gestion", icon:"◎", desc:"Tableau de bord, écarts, ABC", free:true },
+  { id:"Contrôle de gestion", icon:"◎", desc:"Tableau de bord, écarts, ABC", free:false },
   { id:"Finance d'entreprise", icon:"📈", desc:"Analyse financière, ratios", free:false },
   { id:"Comptabilité", icon:"🔢", desc:"Clôtures, provisions, PCG", free:false },
   { id:"Management", icon:"◇", desc:"Leadership, organisation, stratégie", free:false },
@@ -152,10 +152,6 @@ const resolveIsPro = (data) => {
 
 // ── API ───────────────────────────────────────────────────────────────────────
 async function callClaude(system, messages, maxTokens = 1200, user = null) {
-  if (user && !user.isPro) {
-    const allowed = await checkAndIncrementQuota(user.uid);
-    if (!allowed) throw new Error("QUOTA_EXCEEDED");
-  }
   const r = await fetch("/api/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -912,7 +908,7 @@ function Landing({ onAuth, onPricing, onTestimonials, onCgu, onConfidentialite }
           <button style={{ ...S.nl, fontSize: 12 }} className="m-hide" onClick={onTestimonials}>Avis ✦</button>
           <button style={{ ...S.nl, fontSize: 12 }} className="m-hide" onClick={onPricing}>Tarifs</button>
           <button style={{ ...S.no, fontSize: 11, padding: "5px 10px" }} onClick={() => onAuth("login")}>Connexion</button>
-          <button style={{ ...S.nc, fontSize: 11, padding: "6px 12px", animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>S'inscrire</button>
+          <button style={{ ...S.nc, fontSize: 11, padding: "6px 12px", animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Commencer →</button>
         </div>
       </nav>
 
@@ -929,10 +925,10 @@ function Landing({ onAuth, onPricing, onTestimonials, onCgu, onConfidentialite }
           QCM générés par IA, résumés de cours, cas pratiques, flashcards et simulateur d'entretien — tout ce qu'il faut pour décrocher le diplôme et le poste.
         </p>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center", animation: "fsu .7s .3s both" }}>
-          <button style={{ ...S.ctag, animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Commencer — c'est gratuit →</button>
+          <button style={{ ...S.ctag, animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Accès Pro à -40% — Je commence →</button>
           <button style={{ ...S.ctagh, fontSize: 13 }} className="m-hide" onClick={onPricing}>Voir les tarifs</button>
         </div>
-        <p style={{ fontSize: 11, color: "#374151", letterSpacing: ".08em", animation: "fi 1s .5s both" }}>Accès à toutes les fonctionnalités · Sans engagement</p>
+        <p style={{ fontSize: 11, color: "#374151", letterSpacing: ".08em", animation: "fi 1s .5s both" }}>Offre de lancement · Résiliation en 1 clic</p>
       </div>
 
       {/* Live stats bar */}
@@ -1335,7 +1331,7 @@ function Auth({ mode, setMode, onDone, onBack }) {
         <button style={S.back} onClick={onBack}>← Accueil</button>
         <Logo />
         <h2 style={{ fontSize: 22, margin: "12px 0 4px", color: "#e8e4d9" }}>{mode === "signup" ? "Créer un compte" : "Se connecter"}</h2>
-        <p style={{ fontSize: 13, color: "#6b7280", marginBottom: 12 }}>{mode === "signup" ? "Créez votre compte pour accéder à SIMDCG." : "Bon retour."}</p>
+        <p style={{ fontSize: 13, color: "#6b7280", marginBottom: 12 }}>{mode === "signup" ? "Créez votre compte. Choisissez votre plan après." : "Bon retour."}</p>
         <button style={{ background: "#0d1117", border: "1px solid #1f2937", color: "#e8e4d9", padding: "11px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit", display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }} onClick={googleSignIn} disabled={loading}>
           <span style={{ fontSize: 16 }}>G</span> Continuer avec Google
         </button>
@@ -1371,7 +1367,7 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
   const [activeTab, setActiveTab] = useState("diplome");
   const [mastery, setMastery] = useState({});
   const interviewsUsed = user?.interviewsUsed || 0;
-  const canInterview = isPro || interviewsUsed < FREE_INTERVIEWS;
+  const canInterview = isPro;
 
   useEffect(() => {
     if (user?.uid) loadMastery(user.uid).then(setMastery);
@@ -1392,7 +1388,7 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
           <SC v={user?.streak || 0} l="🔥 Streak" />
           <SC v={isPro ? (user?.proType === "pack_examen" ? "Pack ✦" : "Pro ✦") : "Gratuit"} l="Plan" hl />
           <SC v={Object.keys(mastery).length} l="UE maîtrisées" />
-          <SC v={isPro ? "∞" : Math.max(0, FREE_INTERVIEWS - interviewsUsed)} l="Entretiens restants" />
+          <SC v={isPro ? "∞" : "—"} l="Entretiens" />
         </div>
         {isPro && user?.proType === "pack_examen" && user?.proExpiresAt && (
           <div style={{ background: "rgba(96,165,250,.06)", border: "1px solid rgba(96,165,250,.2)", padding: "10px 16px", marginBottom: 16, display: "flex", justifyContent: "space-between", alignItems: "center", animation: "fsu .4s ease both" }}>
@@ -1417,7 +1413,7 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
               <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#374151", marginBottom: 12 }}>DCG — 8 MATIÈRES</p>
               <div className="m-col2" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8 }}>
                 {DCG_UES.map((ue, i) => {
-                  const locked = ue.proOnly && !isPro;
+                  const locked = !isPro;
                   const m = mastery[ue.id];
                   return (
                     <button key={ue.id} onClick={() => locked ? onNav("paywall") : onSelectUE(ue)}
@@ -1481,7 +1477,7 @@ function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
               onClick={() => canInterview ? onNav("interview_config") : onNav("paywall")}>
               + Lancer un simulateur d'entretien
             </button>
-            {!isPro && <p style={{ fontSize: 12, color: "#374151", textAlign: "center" }}>{interviewsUsed}/{FREE_INTERVIEWS} entretien gratuit utilisé</p>}
+            
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: 8 }}>
               {[{ icon: "▦", label: "Historique", key: "history" }, { icon: "◎", label: "Progression", key: "progress" }].map(m => (
                 <button key={m.key} onClick={() => !isPro ? onNav("paywall") : onNav(m.key)} style={{ ...S.mb, opacity: !isPro ? .4 : 1 }}>
@@ -1514,9 +1510,9 @@ function SubjectHub({ ue, user, onNav, onBack }) {
   const isPro = user?.isPro;
   const isLockedSubject = ue.proOnly && !isPro;
   const actions = [
-    { key: "resume_cours", icon: "📖", label: "Résumé de cours", sub: "Sections, points clés, pièges d'examen", color: "#a78bfa", free: true, alwaysFree: true },
-    { key: "qcm", icon: "△", label: "QCM", sub: `${isPro ? "10" : FREE_QCM_PER_UE} questions générées par IA`, color: "#60a5fa", free: !isLockedSubject },
-    { key: "flashcards", icon: "◈", label: "Flashcards", sub: `${isPro ? `${PRO_FLASH_PER_UE} fiches + révision espacée` : `${FREE_FLASH_PER_UE} fiches de révision`}`, color: "#4ade80", free: !isLockedSubject },
+    { key: "resume_cours", icon: "📖", label: "Résumé de cours", sub: "Sections, points clés, pièges d'examen", color: "#a78bfa", free: false },
+    { key: "qcm", icon: "△", label: "QCM", sub: "10 questions générées par IA", color: "#60a5fa", free: false },
+    { key: "flashcards", icon: "◈", label: "Flashcards", sub: `${PRO_FLASH_PER_UE} fiches + révision espacée`, color: "#4ade80", free: false },
     { key: "cas_pratique", icon: "📝", label: "Cas pratique", sub: "Style épreuve examen corrigé par IA", color: "#f59e0b", free: false },
   ];
   return (
@@ -1529,7 +1525,7 @@ function SubjectHub({ ue, user, onNav, onBack }) {
             <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 4 }}>
               <span style={{ ...S.badge, fontSize: 9, padding: "2px 8px" }}>{ue.level}</span>
               <span style={{ fontSize: 12, color: ue.color, fontWeight: 700 }}>{ue.id}</span>
-              {isLockedSubject && <span style={{ fontSize: 9, background: "rgba(226,201,126,.08)", border: "1px solid rgba(226,201,126,.2)", color: "#e2c97e", padding: "2px 8px" }}>RÉSUMÉ GRATUIT</span>}
+              
             </div>
             <h2 style={{ fontSize: 20, margin: 0, color: "#e8e4d9" }}>{ue.label}</h2>
             <p style={{ fontSize: 12, color: "#4b5563", margin: "4px 0 0" }}>{ue.desc}</p>
@@ -1547,7 +1543,7 @@ function SubjectHub({ ue, user, onNav, onBack }) {
                 <div style={{ flex: 1 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 2 }}>
                     <p style={{ fontSize: 14, fontWeight: 700, color: locked ? "#374151" : a.color, margin: 0 }}>{a.label}</p>
-                    {a.alwaysFree && <span style={{ fontSize: 9, color: "#4ade80", border: "1px solid #4ade8030", padding: "1px 6px" }}>GRATUIT</span>}
+                    
                   </div>
                   <p style={{ fontSize: 12, color: "#4b5563", margin: 0 }}>{locked ? "🔒 Réservé Pro" : a.sub}</p>
                 </div>
@@ -1564,7 +1560,7 @@ function SubjectHub({ ue, user, onNav, onBack }) {
 // ── QCM SCREEN ────────────────────────────────────────────────────────────────
 function QCMScreen({ ue, user, onDone, onBack }) {
   const isPro = user?.isPro;
-  const nQuestions = isPro ? 10 : FREE_QCM_PER_UE;
+  const nQuestions = 10;
   const [questions, setQuestions] = useState(null);
   const [qi, setQi] = useState(0);
   const [sel, setSel] = useState(null);
@@ -1645,7 +1641,7 @@ function QCMScreen({ ue, user, onDone, onBack }) {
 // ── FLASHCARDS ────────────────────────────────────────────────────────────────
 function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
   const isPro = user?.isPro;
-  const nCards = isPro ? PRO_FLASH_PER_UE : FREE_FLASH_PER_UE;
+  const nCards = PRO_FLASH_PER_UE;
   const [cards, setCards] = useState(null);
   const [idx, setIdx] = useState(0);
   const [flipped, setFlipped] = useState(false);
