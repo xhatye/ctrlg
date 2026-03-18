@@ -3,78 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- ── PRIMARY SEO ── -->
     <title>SIMDCG — Préparation DCG & DSCG par IA | QCM, Flashcards, Entretiens</title>
-    <meta name="description" content="La plateforme IA pour réussir le DCG et le DSCG. QCM générés par IA, résumés de cours, cas pratiques corrigés, flashcards et simulateur d'entretien finance/gestion. Accès gratuit." />
-    <meta name="keywords" content="DCG, DSCG, révision DCG, QCM DCG, préparation DCG, comptabilité, fiscalité, droit des sociétés, simulateur entretien finance, flashcards DCG" />
+    <meta name="description" content="La plateforme IA pour réussir le DCG et le DSCG. QCM générés par IA, résumés de cours, cas pratiques corrigés, flashcards et simulateur d'entretien finance/gestion." />
+    <meta name="keywords" content="DCG, DSCG, révision DCG, QCM DCG, préparation DCG, comptabilité, fiscalité, simulateur entretien finance, flashcards DCG" />
     <meta name="author" content="SIMDCG" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://simdcg.com/" />
-
-    <!-- ── OPEN GRAPH (Facebook, LinkedIn, WhatsApp) ── -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://simdcg.com/" />
     <meta property="og:title" content="SIMDCG — Préparation DCG & DSCG par IA" />
-    <meta property="og:description" content="QCM générés par IA, résumés de cours, cas pratiques corrigés et simulateur d'entretien. Tout ce qu'il faut pour décrocher le DCG, le DSCG et le poste." />
+    <meta property="og:description" content="QCM générés par IA, résumés de cours, cas pratiques corrigés et simulateur d'entretien. Tout ce qu'il faut pour décrocher le DCG et le DSCG." />
     <meta property="og:image" content="https://simdcg.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:site_name" content="SIMDCG" />
-
-    <!-- ── TWITTER CARD ── -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://simdcg.com/" />
     <meta name="twitter:title" content="SIMDCG — Préparation DCG & DSCG par IA" />
     <meta name="twitter:description" content="QCM générés par IA, résumés de cours, cas pratiques corrigés et simulateur d'entretien pour le DCG et le DSCG." />
     <meta name="twitter:image" content="https://simdcg.com/og-image.png" />
-
-    <!-- ── FAVICON ── -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-    <!-- ── THEME ── -->
     <meta name="theme-color" content="#080b14" />
     <meta name="color-scheme" content="dark" />
-
-    <!-- ── STRUCTURED DATA (JSON-LD) ── -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "SIMDCG",
-      "url": "https://simdcg.com",
-      "description": "Plateforme de préparation aux examens DCG et DSCG par intelligence artificielle. QCM, flashcards, cas pratiques et simulateur d'entretien.",
-      "applicationCategory": "EducationalApplication",
-      "operatingSystem": "Web",
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Plan Gratuit",
-          "price": "0",
-          "priceCurrency": "EUR"
-        },
-        {
-          "@type": "Offer",
-          "name": "Plan Pro",
-          "price": "15",
-          "priceCurrency": "EUR",
-          "billingDuration": "P1M"
-        }
-      ],
-      "inLanguage": "fr",
-      "audience": {
-        "@type": "EducationalAudience",
-        "educationalRole": "student"
-      }
-    }
-    </script>
-
-    <!-- ── PERFORMANCE ── -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://firestore.googleapis.com" />
+    <link rel="preconnect" href="https://firestore.googleapis.com" />
+    <link rel="preconnect" href="https://identitytoolkit.googleapis.com" />
     <link rel="dns-prefetch" href="https://api.anthropic.com" />
+    <link rel="dns-prefetch" href="https://buy.stripe.com" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body { background: #080b14; color: #e8e4d9; font-family: 'DM Mono','Courier New',monospace; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+      #root { min-height: 100vh; }
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-track { background: #0d1117; }
+      ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 2px; }
+      @keyframes fsu { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+      @keyframes fi  { from { opacity:0; } to { opacity:1; } }
+      @keyframes spin { to { transform:rotate(360deg); } }
+      @keyframes glow { 0%,100% { box-shadow:0 0 18px rgba(226,201,126,.18); } 50% { box-shadow:0 0 36px rgba(226,201,126,.38); } }
+      @keyframes puls { 0%,100% { opacity:.2; transform:scale(.8); } 50% { opacity:1; transform:scale(1.1); } }
+      @keyframes slide-in { from { opacity:0; transform:translateX(20px); } to { opacity:1; transform:translateX(0); } }
+      @media (max-width:640px) {
+        .m-col1 { grid-template-columns:1fr !important; }
+        .m-col2 { grid-template-columns:1fr 1fr !important; }
+        .m-hero-h1 { font-size:38px !important; letter-spacing:-1px !important; }
+        .m-hide { display:none !important; }
+        .m-overflow-x { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+        .m-min-w { min-width:560px; }
+        .m-stack { flex-direction:column !important; }
+        .m-full { width:100% !important; }
+        .m-font-sm { font-size:11px !important; }
+      }
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SIMDCG","url":"https://simdcg.com","description":"Plateforme de préparation aux examens DCG et DSCG par intelligence artificielle.","applicationCategory":"EducationalApplication","operatingSystem":"Web","offers":[{"@type":"Offer","name":"Pack Examen","price":"29","priceCurrency":"EUR"},{"@type":"Offer","name":"Plan Pro","price":"15","priceCurrency":"EUR","billingDuration":"P1M"}],"inLanguage":"fr","audience":{"@type":"EducationalAudience","educationalRole":"student"}}</script>
   </head>
   <body>
     <div id="root"></div>

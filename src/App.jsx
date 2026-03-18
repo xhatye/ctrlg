@@ -298,52 +298,66 @@ const incrementStat = async (field) => {
 };
 
 // ── PARTICLES ─────────────────────────────────────────────────────────────────
+// Disabled on mobile (< 768px) to protect TBT / Lighthouse score
+const IS_MOBILE = typeof window !== "undefined" && window.innerWidth < 768;
+
 function ParticleCanvas() {
   const canvasRef = useRef(null);
   const animRef = useRef(null);
   const stateRef = useRef({ particles: [], mouse: { x: -9999, y: -9999 } });
   const TERMS = ["DCG","DSCG","UE4","IS","TVA","PCG","IFRS","SAS","SA","SARL","ROI","EVA","ABC","WACC","KPI","BFR","EBE","CAF","TIR","VAN"];
+
   useEffect(() => {
-    const canvas = canvasRef.current; if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
-    resize(); window.addEventListener("resize", resize);
-    const N = Math.min(50, Math.floor(window.innerWidth / 26));
-    stateRef.current.particles = Array.from({ length: N }, () => ({
-      x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight,
-      vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3,
-      r: Math.random() * 1.4 + 0.4, label: Math.random() > .6 ? TERMS[Math.floor(Math.random() * TERMS.length)] : null,
-      opacity: Math.random() * .4 + .1, pulse: Math.random() * Math.PI * 2,
-    }));
-    const onMouse = (e) => { stateRef.current.mouse = { x: e.clientX, y: e.clientY }; };
-    window.addEventListener("mousemove", onMouse);
-    const draw = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const { particles, mouse } = stateRef.current;
-      particles.forEach(p => {
-        p.x += p.vx; p.y += p.vy; p.pulse += .018;
-        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-        const dx = p.x - mouse.x, dy = p.y - mouse.y, dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 110 && dist > 0) { const f = (110 - dist) / 110 * .35; p.vx += (dx / dist) * f; p.vy += (dy / dist) * f; const spd = Math.sqrt(p.vx * p.vx + p.vy * p.vy); if (spd > 1.8) { p.vx = p.vx / spd * 1.8; p.vy = p.vy / spd * 1.8; } }
-      });
-      for (let i = 0; i < particles.length; i++) for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y, d = Math.sqrt(dx * dx + dy * dy);
-        if (d < 130) { ctx.beginPath(); ctx.strokeStyle = `rgba(226,201,126,${(1 - d / 130) * .1})`; ctx.lineWidth = .5; ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.stroke(); }
-      }
-      particles.forEach(p => {
-        const gs = Math.max(0.1, p.r + Math.sin(p.pulse) * 1.1);
-        const grd = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, gs * 5);
-        grd.addColorStop(0, `rgba(226,201,126,${p.opacity * .35})`); grd.addColorStop(1, "rgba(226,201,126,0)");
-        ctx.beginPath(); ctx.arc(p.x, p.y, gs * 5, 0, Math.PI * 2); ctx.fillStyle = grd; ctx.fill();
-        ctx.beginPath(); ctx.arc(p.x, p.y, gs, 0, Math.PI * 2); ctx.fillStyle = `rgba(226,201,126,${p.opacity * .85})`; ctx.fill();
-        if (p.label) { ctx.font = "9px 'Courier New'"; ctx.fillStyle = `rgba(226,201,126,${p.opacity * .55})`; ctx.fillText(p.label, p.x + 6, p.y - 4); }
-      });
-      animRef.current = requestAnimationFrame(draw);
-    };
-    draw();
-    return () => { cancelAnimationFrame(animRef.current); window.removeEventListener("resize", resize); window.removeEventListener("mousemove", onMouse); };
+    // Skip on mobile — saves ~40ms TBT
+    if (IS_MOBILE) return;
+    // Defer until browser is idle — doesn't block first render
+    const idle = window.requestIdleCallback || ((cb) => setTimeout(cb, 200));
+    let started = false;
+    const handle = idle(() => {
+      started = true;
+      const canvas = canvasRef.current; if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
+      resize(); window.addEventListener("resize", resize);
+      const N = Math.min(35, Math.floor(window.innerWidth / 32));
+      stateRef.current.particles = Array.from({ length: N }, () => ({
+        x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight,
+        vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3,
+        r: Math.random() * 1.4 + 0.4, label: Math.random() > .6 ? TERMS[Math.floor(Math.random() * TERMS.length)] : null,
+        opacity: Math.random() * .4 + .1, pulse: Math.random() * Math.PI * 2,
+      }));
+      const onMouse = (e) => { stateRef.current.mouse = { x: e.clientX, y: e.clientY }; };
+      window.addEventListener("mousemove", onMouse);
+      const draw = () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const { particles, mouse } = stateRef.current;
+        particles.forEach(p => {
+          p.x += p.vx; p.y += p.vy; p.pulse += .018;
+          if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+          if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+          const dx = p.x - mouse.x, dy = p.y - mouse.y, dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 110 && dist > 0) { const f = (110 - dist) / 110 * .35; p.vx += (dx / dist) * f; p.vy += (dy / dist) * f; const spd = Math.sqrt(p.vx * p.vx + p.vy * p.vy); if (spd > 1.8) { p.vx = p.vx / spd * 1.8; p.vy = p.vy / spd * 1.8; } }
+        });
+        for (let i = 0; i < particles.length; i++) for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y, d = Math.sqrt(dx * dx + dy * dy);
+          if (d < 130) { ctx.beginPath(); ctx.strokeStyle = `rgba(226,201,126,${(1 - d / 130) * .1})`; ctx.lineWidth = .5; ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.stroke(); }
+        }
+        particles.forEach(p => {
+          const gs = Math.max(0.1, p.r + Math.sin(p.pulse) * 1.1);
+          const grd = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, gs * 5);
+          grd.addColorStop(0, `rgba(226,201,126,${p.opacity * .35})`); grd.addColorStop(1, "rgba(226,201,126,0)");
+          ctx.beginPath(); ctx.arc(p.x, p.y, gs * 5, 0, Math.PI * 2); ctx.fillStyle = grd; ctx.fill();
+          ctx.beginPath(); ctx.arc(p.x, p.y, gs, 0, Math.PI * 2); ctx.fillStyle = `rgba(226,201,126,${p.opacity * .85})`; ctx.fill();
+          if (p.label) { ctx.font = "9px 'Courier New'"; ctx.fillStyle = `rgba(226,201,126,${p.opacity * .55})`; ctx.fillText(p.label, p.x + 6, p.y - 4); }
+        });
+        animRef.current = requestAnimationFrame(draw);
+      };
+      draw();
+      return () => { cancelAnimationFrame(animRef.current); window.removeEventListener("resize", resize); window.removeEventListener("mousemove", onMouse); };
+    });
+    return () => { if (!started && handle && window.cancelIdleCallback) window.cancelIdleCallback(handle); if (animRef.current) cancelAnimationFrame(animRef.current); };
   }, []);
+  if (IS_MOBILE) return null;
   return <canvas ref={canvasRef} style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none" }} />;
 }
 
@@ -351,85 +365,63 @@ function OrbBg() {
   const canvasRef = useRef(null);
   const animRef = useRef(null);
   useEffect(() => {
-    const canvas = canvasRef.current; if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
-    resize(); window.addEventListener("resize", resize);
-    const stars = Array.from({ length: 220 }, () => ({
-      x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight,
-      r: Math.random() * 1.2 + 0.2, op: Math.random() * 0.7 + 0.15,
-      phase: Math.random() * Math.PI * 2, speed: Math.random() * 0.008 + 0.003,
-      layer: Math.floor(Math.random() * 3),
-    }));
-    const nebulae = [
-      { x: 0.15, y: 0.2, r: 300, c: "rgba(96,165,250,0.022)" },
-      { x: 0.85, y: 0.75, r: 260, c: "rgba(167,139,250,0.018)" },
-      { x: 0.5, y: 0.55, r: 380, c: "rgba(226,201,126,0.012)" },
-      { x: 0.1, y: 0.8, r: 200, c: "rgba(52,211,153,0.015)" },
-    ];
-    let t = 0;
-    const draw = () => {
-      t += 1;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      nebulae.forEach(n => {
-        const grd = ctx.createRadialGradient(n.x * canvas.width, n.y * canvas.height, 0, n.x * canvas.width, n.y * canvas.height, n.r);
-        grd.addColorStop(0, n.c); grd.addColorStop(1, "transparent");
-        ctx.beginPath(); ctx.arc(n.x * canvas.width, n.y * canvas.height, n.r, 0, Math.PI * 2);
-        ctx.fillStyle = grd; ctx.fill();
-      });
-      stars.forEach(s => {
-        const twinkle = 0.5 + 0.5 * Math.sin(s.phase + t * s.speed);
-        const op = s.op * (0.6 + 0.4 * twinkle);
-        const size = s.r * (0.85 + 0.15 * twinkle);
-        ctx.beginPath(); ctx.arc(s.x, s.y, size, 0, Math.PI * 2);
-        if (s.layer === 2) {
-          const grd = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, size * 4);
-          grd.addColorStop(0, `rgba(255,255,255,${op * 0.5})`); grd.addColorStop(1, "transparent");
-          ctx.fillStyle = grd; ctx.arc(s.x, s.y, size * 4, 0, Math.PI * 2); ctx.fill();
+    const idle = window.requestIdleCallback || ((cb) => setTimeout(cb, 100));
+    const handle = idle(() => {
+      const canvas = canvasRef.current; if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
+      resize(); window.addEventListener("resize", resize);
+      // Fewer stars on mobile to reduce GPU work
+      const starCount = IS_MOBILE ? 60 : 220;
+      const stars = Array.from({ length: starCount }, () => ({
+        x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight,
+        r: Math.random() * 1.2 + 0.2, op: Math.random() * 0.7 + 0.15,
+        phase: Math.random() * Math.PI * 2, speed: Math.random() * 0.008 + 0.003,
+        layer: Math.floor(Math.random() * 3),
+      }));
+      const nebulae = [
+        { x: 0.15, y: 0.2, r: 300, c: "rgba(96,165,250,0.022)" },
+        { x: 0.85, y: 0.75, r: 260, c: "rgba(167,139,250,0.018)" },
+        { x: 0.5, y: 0.55, r: 380, c: "rgba(226,201,126,0.012)" },
+        { x: 0.1, y: 0.8, r: 200, c: "rgba(52,211,153,0.015)" },
+      ];
+      let t = 0;
+      // Pause animation when tab not visible (saves battery + CPU)
+      const draw = () => {
+        if (document.hidden) { animRef.current = requestAnimationFrame(draw); return; }
+        t += 1;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        nebulae.forEach(n => {
+          const grd = ctx.createRadialGradient(n.x * canvas.width, n.y * canvas.height, 0, n.x * canvas.width, n.y * canvas.height, n.r);
+          grd.addColorStop(0, n.c); grd.addColorStop(1, "transparent");
+          ctx.beginPath(); ctx.arc(n.x * canvas.width, n.y * canvas.height, n.r, 0, Math.PI * 2);
+          ctx.fillStyle = grd; ctx.fill();
+        });
+        stars.forEach(s => {
+          const twinkle = 0.5 + 0.5 * Math.sin(s.phase + t * s.speed);
+          const op = s.op * (0.6 + 0.4 * twinkle);
+          const size = s.r * (0.85 + 0.15 * twinkle);
           ctx.beginPath(); ctx.arc(s.x, s.y, size, 0, Math.PI * 2);
-        }
-        ctx.fillStyle = s.layer === 0
-          ? `rgba(180,190,210,${op * 0.6})`
-          : s.layer === 1
-          ? `rgba(220,230,245,${op * 0.8})`
-          : `rgba(255,255,255,${op})`;
-        ctx.fill();
-      });
-      animRef.current = requestAnimationFrame(draw);
-    };
-    draw();
-    return () => { cancelAnimationFrame(animRef.current); window.removeEventListener("resize", resize); };
+          if (s.layer === 2 && !IS_MOBILE) {
+            const grd = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, size * 4);
+            grd.addColorStop(0, `rgba(255,255,255,${op * 0.5})`); grd.addColorStop(1, "transparent");
+            ctx.fillStyle = grd; ctx.arc(s.x, s.y, size * 4, 0, Math.PI * 2); ctx.fill();
+            ctx.beginPath(); ctx.arc(s.x, s.y, size, 0, Math.PI * 2);
+          }
+          ctx.fillStyle = s.layer === 0 ? `rgba(180,190,210,${op * 0.6})` : s.layer === 1 ? `rgba(220,230,245,${op * 0.8})` : `rgba(255,255,255,${op})`;
+          ctx.fill();
+        });
+        animRef.current = requestAnimationFrame(draw);
+      };
+      draw();
+      return () => { cancelAnimationFrame(animRef.current); window.removeEventListener("resize", resize); };
+    });
+    return () => { if (handle && window.cancelIdleCallback) window.cancelIdleCallback(handle); if (animRef.current) cancelAnimationFrame(animRef.current); };
   }, []);
   return <canvas ref={canvasRef} style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none" }} />;
 }
 
-// ── CSS ANIMATIONS ────────────────────────────────────────────────────────────
-const CSS = `
-@keyframes fsu { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
-@keyframes fi  { from { opacity:0; } to { opacity:1; } }
-@keyframes spin { to { transform:rotate(360deg); } }
-@keyframes glow { 0%,100% { box-shadow:0 0 18px rgba(226,201,126,.18); } 50% { box-shadow:0 0 36px rgba(226,201,126,.38); } }
-@keyframes puls { 0%,100% { opacity:.2; transform:scale(.8); } 50% { opacity:1; transform:scale(1.1); } }
-@keyframes slide-in { from { opacity:0; transform:translateX(20px); } to { opacity:1; transform:translateX(0); } }
-* { box-sizing:border-box; margin:0; padding:0; }
-body { background:#080b14; }
-::-webkit-scrollbar { width:4px; }
-::-webkit-scrollbar-track { background:#0d1117; }
-::-webkit-scrollbar-thumb { background:#1f2937; border-radius:2px; }
-
-@media (max-width: 640px) {
-  .m-col1 { grid-template-columns: 1fr !important; }
-  .m-col2 { grid-template-columns: 1fr 1fr !important; }
-  .m-hero-h1 { font-size: 38px !important; letter-spacing: -1px !important; }
-  .m-hide { display: none !important; }
-  .m-pad { padding-left: 16px !important; padding-right: 16px !important; }
-  .m-overflow-x { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  .m-min-w { min-width: 560px; }
-  .m-stack { flex-direction: column !important; }
-  .m-full { width: 100% !important; }
-  .m-font-sm { font-size: 11px !important; }
-}
-`;
+// ── CSS now in index.html (critical CSS inline for LCP) ──────────────────────
 
 
 // ── TOAST SYSTEM ─────────────────────────────────────────────────────────────
@@ -515,13 +507,6 @@ export default function App() {
   const [result, setResult] = useState(null);
   const [loadingAuth, setLoadingAuth] = useState(true);
   const [showOnboarding, setShowOnboarding] = useState(false);
-
-  useEffect(() => {
-    const style = document.createElement("style");
-    style.textContent = CSS;
-    document.head.appendChild(style);
-    return () => document.head.removeChild(style);
-  }, []);
 
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (firebaseUser) => {
