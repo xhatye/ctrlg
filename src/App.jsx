@@ -2535,7 +2535,7 @@ function LegalScreen({ type, onBack }) {
     { title: "5. Propriété intellectuelle", body: `Le contenu généré par l'IA (questions, corrections, résumés) est fourni à titre de support pédagogique. SIMDCG ne garantit pas l'exactitude absolue des contenus générés. L'interface, le logo et les éléments visuels sont la propriété exclusive de Marcus Bonnafis.` },
     { title: "6. Limitation de responsabilité", body: `SIMDCG est un outil de préparation et ne constitue pas un engagement de réussite aux examens. Les contenus sont générés par IA à titre indicatif. SIMDCG ne saurait être tenu responsable des décisions prises sur la base des informations fournies.` },
     { title: "7. Modification et résiliation", body: `SIMDCG se réserve le droit de modifier les CGU à tout moment avec préavis de 30 jours. Les comptes inactifs depuis plus de 24 mois peuvent être supprimés après notification. Tout manquement aux présentes CGU peut entraîner la suspension du compte.` },
-    { title: "8. Droit applicable", body: `Les présentes CGU sont régies par le droit français. Tout litige relève de la compétence exclusive des tribunaux français. Pour toute réclamation : contact@simdcg.com` },
+    { title: "8. Droit applicable", body: `Les présentes CGU sont régies par le droit français. Tout litige relève de la compétence exclusive des tribunaux français. Pour toute réclamation : contact.simdcg@gmail.com` },
   ];
   const confidentialiteContent = [
     { title: "1. Responsable du traitement", body: `Marcus Bonnafis (simdcg.com) est responsable du traitement de vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679).` },
@@ -2544,7 +2544,7 @@ function LegalScreen({ type, onBack }) {
     { title: "4. Base légale", body: `Le traitement de vos données repose sur votre consentement (art. 6.1.a RGPD) lors de la création de compte, et sur l'exécution du contrat (art. 6.1.b RGPD) pour les fonctionnalités du service.` },
     { title: "5. Sous-traitants", body: `SIMDCG utilise les prestataires suivants : Firebase (Google LLC) pour l'authentification et la base de données — serveurs en Europe, Stripe Inc. pour le traitement des paiements — conforme PCI-DSS, Anthropic PBC pour la génération de contenu IA — données non stockées.` },
     { title: "6. Conservation des données", body: `Vos données sont conservées pendant la durée de vie de votre compte. En cas de suppression de compte, vos données personnelles sont effacées sous 30 jours. Les données de facturation sont conservées 10 ans conformément aux obligations comptables légales.` },
-    { title: "7. Vos droits", body: `Conformément au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, de portabilité et d'opposition au traitement de vos données. Pour exercer ces droits : contact@simdcg.com. Vous pouvez également introduire une réclamation auprès de la CNIL (cnil.fr).` },
+    { title: "7. Vos droits", body: `Conformément au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, de portabilité et d'opposition au traitement de vos données. Pour exercer ces droits : contact.simdcg@gmail.com. Vous pouvez également introduire une réclamation auprès de la CNIL (cnil.fr).` },
     { title: "8. Cookies", body: `SIMDCG utilise uniquement les cookies techniques nécessaires au fonctionnement du service (authentification, session). Aucun cookie publicitaire ou de tracking tiers n'est utilisé.` },
   ];
   const content = isCgu ? cguContent : confidentialiteContent;
@@ -2581,7 +2581,7 @@ function Footer({ onCgu, onConfidentialite }) {
         <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
           <button style={{ ...S.nl, fontSize: 11, color: "#374151" }} onClick={onCgu}>Conditions d'utilisation</button>
           <button style={{ ...S.nl, fontSize: 11, color: "#374151" }} onClick={onConfidentialite}>Confidentialité</button>
-          <a href="mailto:contact@simdcg.com" style={{ fontSize: 11, color: "#374151", textDecoration: "none", fontFamily: "inherit" }}>contact@simdcg.com</a>
+          <a href="mailto:contact.simdcg@gmail.com" style={{ fontSize: 11, color: "#374151", textDecoration: "none", fontFamily: "inherit" }}>contact.simdcg@gmail.com</a>
         </div>
         <p style={{ fontSize: 10, color: "#1f2937", margin: 0 }}>© {new Date().getFullYear()} SIMDCG — Tous droits réservés</p>
       </div>
