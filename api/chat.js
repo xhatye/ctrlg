@@ -1,30 +1,76 @@
-const RATE_LIMIT = 30;
-const rateLimitMap = new Map();
-
 export const config = { runtime: "edge" };
 
 export default async function handler(req) {
-  if (req.method !== "POST") return new Response("Method not allowed", { status: 405 });
+  if (req.method !== "POST") {
+    return new Response("Method not allowed", { status: 405 });
+  }
 
-  const ip = req.headers.get("x-forwarded-for") || "unknown";
-  const now = Date.now();
-  const dayMs = 86400000;
-  const entry = rateLimitMap.get(ip) || { count: 0, reset: now + dayMs };
-  if (now > entry.reset) { entry.count = 0; entry.reset = now + dayMs; }
-  entry.count++;
-  rateLimitMap.set(ip, entry);
-  if (entry.count > RATE_LIMIT) return new Response(JSON.stringify({ error: "Rate limit atteint. Revenez demain." }), { status: 429 });
+  const { messages, system } = await req.json();
 
-  const body = await req.json();
-  const res = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": process.env.ANTHROPIC_API_KEY,
-      "anthropic-version": "2023-06-01"
-    },
-    body: JSON.stringify(body),
-  });
-  const data = await res.json();
-  return new Response(JSON.stringify(data), { status: res.status, headers: { "Content-Type": "application/json" } });
+  const GROQ_API_KEY = process.env.GROQ_API_KEY;
+  if (!GROQ_API_KEY) {
+    return new Response(JSON.stringify({ error: "Missing GROQ_API_KEY" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
+
+  // Build messages array for Groq (OpenAI-compatible format)
+  const groqMessages = [];
+
+  if (system) {
+    groqMessages.push({ role: "system", content: system });
+  }
+
+  if (messages && messages.length > 0) {
+    for (const m of messages) {
+      groqMessages.push({
+        role: m.role === "assistant" ? "assistant" : "user",
+        content: typeof m.content === "string"
+          ? m.content
+          : m.content?.map(c => c.text || "").join("") || "",
+      });
+    }
+  }
+
+  try {
+    const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${GROQ_API_KEY}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "llama-3.3-70b-versatile",
+        max_tokens: 1024,
+        temperature: 0.7,
+        messages: groqMessages,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      return new Response(JSON.stringify({ error: data.error?.message || "Groq error" }), {
+        status: res.status,
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
+    const text = data.choices?.[0]?.message?.content || "";
+
+    // Return in Anthropic-compatible format so frontend doesn't need changes
+    return new Response(
+      JSON.stringify({
+        content: [{ type: "text", text }],
+        role: "assistant",
+      }),
+      { status: 200, headers: { "Content-Type": "application/json" } }
+    );
+  } catch (err) {
+    return new Response(JSON.stringify({ error: err.message }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
 }
