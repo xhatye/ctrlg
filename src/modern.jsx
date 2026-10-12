@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { sendEmailVerification } from "firebase/auth";
 import { auth } from "./firebase";
+import ExamCountdown from "./ExamCountdown";
 
 const paths = {
   home: "M3 10 12 3l9 7v10H3z M9 20v-7h6v7",
@@ -37,9 +38,7 @@ export function Brand({ onClick }) {
   const Tag = onClick ? "button" : "div";
   return (
     <Tag className="brand" onClick={onClick} aria-label="SIMDCG">
-      <span className="brand-mark">
-        S<span>✦</span>
-      </span>
+      <img className="brand-mark" src="/favicon.svg?v=2" alt="" width="42" height="42" />
       <span>
         SIM<span className="brand-light">DCG</span>
         <small>UN PEU CHAQUE JOUR. UN PAS PLUS LOIN.</small>
@@ -201,7 +200,7 @@ function PreviewCard() {
       aria-label="Aperçu illustratif du tableau de bord"
     >
       <div className="preview-top">
-        <span className="brand-mark">S</span>
+        <img className="brand-mark" src="/favicon.svg?v=2" alt="" width="28" height="28" />
         <span>
           Mon espace de révision<small>Aperçu illustratif</small>
         </span>
@@ -302,6 +301,7 @@ export function Marketing({ onAuth, onNav, ues }) {
           </div>
           <PreviewCard />
         </section>
+        <div className="container exam-home"><ExamCountdown /></div>
         <div className="subject-strip">
           <div className="container">
             <span>PENSÉ POUR VOS MATIÈRES</span>
@@ -579,7 +579,7 @@ function UECard({ ue, mastery, onClick }) {
       <div className="ue-card-top">
         <span
           className="icon-tile"
-          style={{ background: `${ue.color}18`, color: "#334364" }}
+          style={{ background: `${ue.color}18`, color: "var(--ink)" }}
         >
           <Icon name="book" />
         </span>
@@ -683,6 +683,7 @@ export function StudentHome({ user, ues, onNav, onSelect }) {
           </button>
         </section>
       </div>
+      <ExamCountdown defaultLevel={next.level} />
       <div className="metric-grid">
         {[
           [

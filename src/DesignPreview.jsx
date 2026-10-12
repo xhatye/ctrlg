@@ -1,5 +1,6 @@
 // Development-only route. No real user account, payment or Firestore write.
 import { useState } from "react";
+import { OralPractice, OralSummary } from "./study";
 import {
   Marketing,
   StudentHome,
@@ -20,7 +21,7 @@ import {
   PlanningScreen,
   ResumeCoursScreen,
   CasPratiqueScreen,
-  Auth,
+  Auth, ResultsQCM, History, LegalScreen, ForgotPasswordScreen, OnboardingModal,
   InterviewConfig,
 } from "./App";
 const ues = [...DCG_UES, ...DSCG_UES];
@@ -50,6 +51,13 @@ export default function DesignPreview() {
     nav("subject_hub");
   };
   const content =
+    page === "results_qcm" ? <ResultsQCM data={{score:1,total:2,duration:55,ue:'UE9',ueName:'Comptabilité',answers:[{correct:true,q:'Une écriture équilibrée',expl:'Le débit égale le crédit.'},{correct:false,q:'Une charge est-elle un actif ?',right:'Non',expl:'Une charge affecte le résultat.'}]}} onNew={()=>nav('qcm')} onDash={()=>nav('dashboard')} /> :
+    page === "history" ? <History user={student} onBack={()=>nav('dashboard')} /> :
+    page === "onboarding" ? <><StudentHome user={student} ues={ues} onNav={nav} onSelect={select} /><OnboardingModal onClose={()=>nav('dashboard')} onUpgrade={()=>nav('pricing')} /></> :
+    page === "interview" ? <OralPractice cfg={{topic:'Comptabilité',difficulty:'Débutant'}} onBack={()=>nav('interview_config')} onDone={()=>nav('oral_summary')} /> :
+    page === "oral_summary" ? <OralSummary data={{topic:'Comptabilité',answers:[],duration:55}} onBack={()=>nav('dashboard')} /> :
+    page === "forgot_password" ? <ForgotPasswordScreen onBack={()=>nav('auth')} /> :
+    ["cgu","confidentialite"].includes(page) ? <LegalScreen type={page} onBack={()=>nav('landing')} /> :
     page === "landing" ? (
       <Marketing onAuth={() => nav("auth")} onNav={nav} ues={ues} />
     ) : page === "pricing" ? (
@@ -143,7 +151,7 @@ export default function DesignPreview() {
     "dcg",
     "dscg",
     "resources",
-    "support",
+    "support", "cgu", "confidentialite", "forgot_password",
   ].includes(page);
   return (
     <>

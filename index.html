@@ -22,10 +22,19 @@
     <meta name="twitter:title" content="SIMDCG — Révisions DCG & DSCG" />
     <meta name="twitter:description" content="Fiches, QCM, flashcards et cas de départ disponibles sans IA. Essayez la comptabilité gratuitement." />
     <meta name="twitter:image" content="https://simdcg.com/logo.png" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/logo.png" />
-    <meta name="theme-color" content="#f7f8fc" />
-    <meta name="color-scheme" content="light" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
+    <meta name="theme-color" content="#101827" />
+    <meta name="color-scheme" content="dark light" />
+    <script>
+      (() => {
+        let theme = 'dark';
+        try { if (localStorage.getItem('simdcg-theme') === 'light') theme = 'light'; } catch {}
+        document.documentElement.dataset.theme = theme;
+        document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#101827' : '#f7f8fc';
+      })();
+    </script>
     <link rel="preconnect" href="https://firestore.googleapis.com" />
     <link rel="preconnect" href="https://identitytoolkit.googleapis.com" />
 
@@ -34,6 +43,7 @@
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       body { background: #f7f8fc; color: #18233e; font-family: system-ui,sans-serif; min-height: 100vh; -webkit-font-smoothing: antialiased; }
       #root { min-height: 100vh; }
+      html[data-theme="dark"] body {background:#101827;color:#edf2fc;}
       ::-webkit-scrollbar { width: 4px; }
       ::-webkit-scrollbar-track { background: #0d1117; }
       ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 2px; }

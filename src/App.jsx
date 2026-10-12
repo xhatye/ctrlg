@@ -83,8 +83,8 @@ const ALL_UES = [...DCG_UES, ...DSCG_UES];
 
 // ── HELPERS ───────────────────────────────────────────────────────────────────
 const fmt = (s) => `${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`;
-const scoreColor = (s) => s >= 80 ? "#2c8061" : s >= 60 ? "#996724" : "#b84646";
-const noteColor = (n) => n >= 14 ? "#2c8061" : n >= 10 ? "#996724" : "#b84646";
+const scoreColor = (s) => s >= 80 ? "var(--success)" : s >= 60 ? "var(--gold-text)" : "var(--danger)";
+const noteColor = (n) => n >= 14 ? "var(--success)" : n >= 10 ? "var(--gold-text)" : "var(--danger)";
 const today = () => new Date().toISOString().split("T")[0];
 
 // Checks isPro AND proExpiresAt — returns true only if access is active
@@ -253,9 +253,9 @@ function ToastContainer() {
     <div style={{ position: "fixed", bottom: 24, right: 24, zIndex: 9999, display: "flex", flexDirection: "column", gap: 10, maxWidth: 340 }}>
       {toasts.map(t => (
         <div key={t.id} style={{
-          background: t.type === "success" ? "rgba(74,222,128,.12)" : t.type === "error" ? "rgba(248,113,113,.12)" : "rgba(226,201,126,.1)",
-          border: `1px solid ${t.type === "success" ? "#2c806140" : t.type === "error" ? "#b8464640" : "rgba(226,201,126,.3)"}`,
-          color: t.type === "success" ? "#2c8061" : t.type === "error" ? "#b84646" : "#a47b2e",
+          background: t.type === "success" ? "var(--success-soft)" : t.type === "error" ? "var(--danger-soft)" : "var(--gold-soft)",
+          border: `1px solid ${t.type === "success" ? "color-mix(in srgb, var(--success) 25%, transparent)" : t.type === "error" ? "color-mix(in srgb, var(--danger) 25%, transparent)" : "rgba(226,201,126,.3)"}`,
+          color: t.type === "success" ? "var(--success)" : t.type === "error" ? "var(--danger)" : "var(--gold-text)",
           padding: "12px 16px", fontSize: 13, fontFamily: "inherit",
           animation: "fsu .25s ease both", backdropFilter: "blur(8px)",
           display: "flex", alignItems: "center", gap: 10,
@@ -282,14 +282,14 @@ function OnboardingModal({ onClose, onUpgrade }) {
   const isLast = step === ONBOARDING_STEPS.length - 1;
   return (
     <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.75)", zIndex: 9000, display: "flex", alignItems: "center", justifyContent: "center", padding: 24 }}>
-      <div style={{ background: "#ffffff", border: "1px solid rgba(226,201,126,.2)", padding: "32px 28px", maxWidth: 420, width: "100%", animation: "fsu .35s ease both", textAlign: "center" }}>
+      <div style={{ background: "var(--surface)", border: "1px solid rgba(226,201,126,.2)", padding: "32px 28px", maxWidth: 420, width: "100%", animation: "fsu .35s ease both", textAlign: "center" }}>
         <div style={{ fontSize: 44, marginBottom: 16 }}>{s.icon}</div>
-        <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#a47b2e", margin: "0 0 8px" }}>ÉTAPE {step + 1} / {ONBOARDING_STEPS.length}</p>
-        <h2 style={{ fontSize: 20, fontWeight: 900, color: "#18233e", margin: "0 0 12px" }}>{s.title}</h2>
-        <p style={{ fontSize: 13, color: "#64718b", lineHeight: 1.75, margin: "0 0 24px" }}>{s.desc}</p>
+        <p style={{ fontSize: 10, letterSpacing: ".15em", color: "var(--gold-text)", margin: "0 0 8px" }}>ÉTAPE {step + 1} / {ONBOARDING_STEPS.length}</p>
+        <h2 style={{ fontSize: 20, fontWeight: 900, color: "var(--ink)", margin: "0 0 12px" }}>{s.title}</h2>
+        <p style={{ fontSize: 13, color: "var(--muted)", lineHeight: 1.75, margin: "0 0 24px" }}>{s.desc}</p>
         <div style={{ display: "flex", gap: 8, justifyContent: "center", marginBottom: 16 }}>
           {ONBOARDING_STEPS.map((_, i) => (
-            <div key={i} style={{ width: i === step ? 20 : 6, height: 6, background: i === step ? "#a47b2e" : "#d9e0ec", borderRadius: 3, transition: "all .3s" }} />
+            <div key={i} style={{ width: i === step ? 20 : 6, height: 6, background: i === step ? "var(--gold-text)" : "var(--line)", borderRadius: 3, transition: "all .3s" }} />
           ))}
         </div>
         <button style={{ ...S.ctag, width: "100%", padding: 13 }}
@@ -494,29 +494,29 @@ function Auth({ mode, setMode, onDone, onBack }) {
       <div style={{ maxWidth: 400, margin: "0 auto", padding: "60px 24px", position: "relative", zIndex: 1, display: "flex", flexDirection: "column", gap: 12, animation: "fsu .5s ease both" }}>
         <button style={S.back} onClick={onBack}>← Accueil</button>
         <Logo />
-        <h2 style={{ fontSize: 22, margin: "12px 0 4px", color: "#18233e" }}>{mode === "signup" ? "Créer un compte" : "Se connecter"}</h2>
-        <p style={{ fontSize: 13, color: "#64718b", marginBottom: 12 }}>{mode === "signup" ? "Créez votre compte. Choisissez votre plan après." : "Bon retour."}</p>
-        <button style={{ background: "#ffffff", border: "1px solid #d9e0ec", color: "#18233e", padding: "11px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit", display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }} onClick={googleSignIn} disabled={loading}>
+        <h2 style={{ fontSize: 22, margin: "12px 0 4px", color: "var(--ink)" }}>{mode === "signup" ? "Créer un compte" : "Se connecter"}</h2>
+        <p style={{ fontSize: 13, color: "var(--muted)", marginBottom: 12 }}>{mode === "signup" ? "Créez votre compte. Choisissez votre plan après." : "Bon retour."}</p>
+        <button style={{ background: "var(--surface)", border: "1px solid var(--line)", color: "var(--ink)", padding: "11px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit", display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }} onClick={googleSignIn} disabled={loading}>
           <span style={{ fontSize: 16 }}>G</span> Continuer avec Google
         </button>
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}><div style={{ flex: 1, height: 1, background: "#d9e0ec" }} /><span style={{ fontSize: 10, color: "#64718b" }}>ou</span><div style={{ flex: 1, height: 1, background: "#d9e0ec" }} /></div>
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}><div style={{ flex: 1, height: 1, background: "var(--line)" }} /><span style={{ fontSize: 10, color: "var(--muted)" }}>ou</span><div style={{ flex: 1, height: 1, background: "var(--line)" }} /></div>
         {mode === "signup" && <FInput label="Prénom" value={name} set={setName} ph="Jean-Baptiste" />}
         <FInput label="Email" value={email} set={setEmail} ph="jean@exemple.fr" type="email" />
         <FInput label="Mot de passe" value={pass} set={setPass} ph="••••••••" type="password" />
-        {err && <p style={{ fontSize: 12, color: "#b84646" }}>{err}</p>}
+        {err && <p style={{ fontSize: 12, color: "var(--danger)" }}>{err}</p>}
         <button style={{ ...S.ctag, width: "100%", opacity: loading ? .6 : 1, marginTop: 4 }} onClick={submit} disabled={loading}>
           {loading ? <Spinner /> : mode === "signup" ? "Créer mon compte →" : "Se connecter →"}
         </button>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <p style={{ fontSize: 12, color: "#64718b" }}>
+          <p style={{ fontSize: 12, color: "var(--muted)" }}>
             {mode === "signup" ? "Déjà un compte ? " : "Pas encore ? "}
-            <span style={{ color: "#a47b2e", cursor: "pointer" }} onClick={() => { setMode(mode === "signup" ? "login" : "signup"); setErr(""); }}>
+            <span style={{ color: "var(--gold-text)", cursor: "pointer" }} onClick={() => { setMode(mode === "signup" ? "login" : "signup"); setErr(""); }}>
               {mode === "signup" ? "Se connecter" : "S'inscrire"}
             </span>
           </p>
           {mode === "login" && (
             <a href="/mot-de-passe-oublie" onClick={e => { e.preventDefault(); window.history.pushState({}, "", "/mot-de-passe-oublie"); window.dispatchEvent(new PopStateEvent("popstate")); }}
-              style={{ fontSize: 11, color: "#64718b", cursor: "pointer", textDecoration: "none" }}>
+              style={{ fontSize: 11, color: "var(--muted)", cursor: "pointer", textDecoration: "none" }}>
               Mot de passe oublié ?
             </a>
           )}
@@ -572,35 +572,35 @@ function QCMScreen({ ue, user, onDone, onBack }) {
       <StudyNotice /><nav style={S.nav}>
         <Logo />
         <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-          <span style={{ fontSize: 11, color: ue.color, border: `1px solid ${ue.color}30`, padding: "3px 8px" }}>{ue.id}</span>
-          {questions && <span style={{ fontSize: 12, color: "#a47b2e", fontVariantNumeric: "tabular-nums" }}>{fmt(timer)}</span>}
-          {questions && <span style={{ fontSize: 11, color: "#64718b" }}>{qi + 1}/{questions.length}</span>}
+          <span style={{ fontSize: 11, color: "var(--ink)", border: `1px solid ${ue.color}30`, padding: "3px 8px" }}>{ue.id}</span>
+          {questions && <span style={{ fontSize: 12, color: "var(--gold-text)", fontVariantNumeric: "tabular-nums" }}>{fmt(timer)}</span>}
+          {questions && <span style={{ fontSize: 11, color: "var(--muted)" }}>{qi + 1}/{questions.length}</span>}
           <button style={S.nl} onClick={onBack}>Quitter</button>
         </div>
       </nav>
 
-      {questions && <div style={{ height: 2, background: "#ffffff" }}><div style={{ height: "100%", width: `${((qi + (sel !== null ? 1 : 0)) / questions.length) * 100}%`, background: `linear-gradient(90deg,${ue.color},#a47b2e)`, transition: "width .3s" }} /></div>}
+      {questions && <div style={{ height: 2, background: "var(--surface)" }}><div style={{ height: "100%", width: `${((qi + (sel !== null ? 1 : 0)) / questions.length) * 100}%`, background: `linear-gradient(90deg,${ue.color},var(--gold-text))`, transition: "width .3s" }} /></div>}
 
       <div style={{ maxWidth: 580, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1 }}>
-        {loading && <div style={{ textAlign: "center", padding: "80px 24px" }}><div style={{ width: 40, height: 40, border: "3px solid #d9e0ec", borderTop: `3px solid ${ue.color}`, borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 20px" }} /><p style={{ color: "#64718b", fontSize: 13 }}>Chargement du QCM…</p></div>}
-        {error && <div style={{ textAlign: "center", padding: 40 }}><p style={{ color: "#b84646" }}>Le QCM ne peut pas être chargé.</p><button style={S.ctag} onClick={onBack}>Retour</button></div>}
+        {loading && <div style={{ textAlign: "center", padding: "80px 24px" }}><div style={{ width: 40, height: 40, border: "3px solid var(--line)", borderTop: `3px solid ${ue.color}`, borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 20px" }} /><p style={{ color: "var(--muted)", fontSize: 13 }}>Chargement du QCM…</p></div>}
+        {error && <div style={{ textAlign: "center", padding: 40 }}><p style={{ color: "var(--danger)" }}>Le QCM ne peut pas être chargé.</p><button style={S.ctag} onClick={onBack}>Retour</button></div>}
         {!loading && !error && q && (
           <div style={{ animation: "fsu .3s ease both" }}>
             <div style={{ ...S.card, marginBottom: 14, borderColor: `${ue.color}15` }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
-                <p style={{ fontSize: 10, color: ue.color, letterSpacing: ".1em", margin: 0 }}>QUESTION {qi + 1}</p>
-                {q.difficulte && <span style={{ fontSize: 9, padding: "2px 8px", border: `1px solid ${q.difficulte === "Difficile" ? "#b84646" : q.difficulte === "Moyen" ? "#996724" : "#2c8061"}40`, color: q.difficulte === "Difficile" ? "#b84646" : q.difficulte === "Moyen" ? "#996724" : "#2c8061" }}>{q.difficulte}</span>}
+                <p style={{ fontSize: 10, color: "var(--link)", letterSpacing: ".1em", margin: 0 }}>QUESTION {qi + 1}</p>
+                {q.difficulte && <span style={{ fontSize: 9, padding: "2px 8px", border: `1px solid ${q.difficulte === "Difficile" ? "var(--danger)" : q.difficulte === "Moyen" ? "var(--gold-text)" : "var(--success)"}`, color: q.difficulte === "Difficile" ? "var(--danger)" : q.difficulte === "Moyen" ? "var(--gold-text)" : "var(--success)" }}>{q.difficulte}</span>}
               </div>
-              <p style={{ fontSize: 15, color: "#18233e", lineHeight: 1.6, margin: 0, fontWeight: 600 }}>{q.q}</p>
+              <p style={{ fontSize: 15, color: "var(--ink)", lineHeight: 1.6, margin: 0, fontWeight: 600 }}>{q.q}</p>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 14 }}>
               {q.options?.map((opt, i) => {
-                let bg = "#ffffff", border = "#e4e8f1", color = "#63728c";
-                if (sel !== null) { if (i === q.answer) { bg = `${ue.color}10`; border = ue.color; color = ue.color; } else if (i === sel && i !== q.answer) { bg = "#b8464610"; border = "#b84646"; color = "#b84646"; } }
+                let bg = "var(--surface)", border = "var(--line)", color = "var(--muted)";
+                if (sel !== null) { if (i === q.answer) { bg = `${ue.color}10`; border = ue.color; color = "var(--success)"; } else if (i === sel && i !== q.answer) { bg = "color-mix(in srgb, var(--danger) 6%, transparent)"; border = "var(--danger)"; color = "var(--danger)"; } }
                 return <button key={i} onClick={() => pick(i)} style={{ background: bg, border: `1px solid ${border}`, color, padding: "12px 16px", textAlign: "left", cursor: sel === null ? "pointer" : "default", fontSize: 13, transition: "all .2s", fontFamily: "inherit" }}>{String.fromCharCode(65 + i)}. {opt}</button>;
               })}
             </div>
-            {sel !== null && <div style={{ background: "#ffffff", border: "1px solid #d9e0ec", padding: "12px 16px", marginBottom: 14 }}><p style={{ fontSize: 10, color: "#64718b", margin: "0 0 4px", letterSpacing: ".1em" }}>EXPLICATION</p><p style={{ fontSize: 13, color: "#36425b", margin: 0, lineHeight: 1.6 }}>{q.expl}</p></div>}
+            {sel !== null && <div style={{ background: "var(--surface)", border: "1px solid var(--line)", padding: "12px 16px", marginBottom: 14 }}><p style={{ fontSize: 10, color: "var(--muted)", margin: "0 0 4px", letterSpacing: ".1em" }}>EXPLICATION</p><p style={{ fontSize: 13, color: "var(--ink)", margin: 0, lineHeight: 1.6 }}>{q.expl}</p></div>}
             {sel !== null && <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={next}>{qi + 1 >= questions.length ? "Voir les résultats →" : "Question suivante →"}</button>}
           </div>
         )}
@@ -653,19 +653,19 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
         <StudyNotice /><nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← {ue.id}</button></nav>
         <div style={{ maxWidth: 580, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1, animation: "fsu .4s ease both" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
-            <h2 style={{ fontSize: 18, margin: 0, color: "#b84646" }}>◈ Révision des cartes difficiles</h2>
-            <span style={{ fontSize: 12, color: "#64718b" }}>{reviewIdx + 1} / {difficult.length}</span>
+            <h2 style={{ fontSize: 18, margin: 0, color: "var(--danger)" }}>◈ Révision des cartes difficiles</h2>
+            <span style={{ fontSize: 12, color: "var(--muted)" }}>{reviewIdx + 1} / {difficult.length}</span>
           </div>
           <div style={{ perspective: 1200, marginBottom: 20, cursor: "pointer" }} role="button" tabIndex={0} aria-label="Retourner la flashcard" onKeyDown={e => { if (["Enter", " "].includes(e.key)) { e.preventDefault(); setReviewFlipped(f => !f); } }} onClick={() => setReviewFlipped(f => !f)}>
             <div style={{ position: "relative", transformStyle: "preserve-3d", transition: "transform .55s cubic-bezier(.4,0,.2,1)", transform: reviewFlipped ? "rotateY(180deg)" : "rotateY(0)", height: 220 }}>
-              <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "center", borderColor: "#b8464625" }}>
-                <p style={{ fontSize: 10, color: "#b84646", letterSpacing: ".12em", margin: "0 0 14px" }}>{rCard?.tag || ue.short} · À REVOIR</p>
-                <p style={{ fontSize: 15, color: "#18233e", lineHeight: 1.6, margin: "0 0 16px", fontWeight: 600 }}>{rCard?.q}</p>
-                <p style={{ fontSize: 11, color: "#64718b" }}>Cliquer pour révéler →</p>
+              <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "center", borderColor: "color-mix(in srgb, var(--danger) 15%, transparent)" }}>
+                <p style={{ fontSize: 10, color: "var(--danger)", letterSpacing: ".12em", margin: "0 0 14px" }}>{rCard?.tag || ue.short} · À REVOIR</p>
+                <p style={{ fontSize: 15, color: "var(--ink)", lineHeight: 1.6, margin: "0 0 16px", fontWeight: 600 }}>{rCard?.q}</p>
+                <p style={{ fontSize: 11, color: "var(--muted)" }}>Cliquer pour révéler →</p>
               </div>
-              <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, transform: "rotateY(180deg)", borderColor: "#2c806130", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                <p style={{ fontSize: 10, color: "#2c8061", letterSpacing: ".12em", margin: "0 0 14px" }}>RÉPONSE</p>
-                <p style={{ fontSize: 13, color: "#36425b", lineHeight: 1.7, margin: 0 }}>{rCard?.a}</p>
+              <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, transform: "rotateY(180deg)", borderColor: "color-mix(in srgb, var(--success) 19%, transparent)", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                <p style={{ fontSize: 10, color: "var(--success)", letterSpacing: ".12em", margin: "0 0 14px" }}>RÉPONSE</p>
+                <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.7, margin: 0 }}>{rCard?.a}</p>
               </div>
             </div>
           </div>
@@ -688,8 +688,8 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
         <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← {ue.id}</button></nav>
         <div style={{ maxWidth: 500, margin: "0 auto", padding: "80px 24px", textAlign: "center", position: "relative", zIndex: 1, animation: "fsu .5s ease both", display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
           <span style={{ fontSize: 40 }}>◈</span>
-          <h2 style={{ fontSize: 22, color: "#18233e" }}>Session terminée</h2>
-          <p style={{ fontSize: 14, color: "#64718b" }}>{filtered.length} cartes révisées · {difficult.length} marquées difficiles</p>
+          <h2 style={{ fontSize: 22, color: "var(--ink)" }}>Session terminée</h2>
+          <p style={{ fontSize: 14, color: "var(--muted)" }}>{filtered.length} cartes révisées · {difficult.length} marquées difficiles</p>
           {difficult.length > 0 && (
             isPro ? (
               <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={() => { setReviewMode(true); setReviewIdx(0); }}>
@@ -697,8 +697,8 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
               </button>
             ) : (
               <div style={{ background: "rgba(226,201,126,.04)", border: "1px solid rgba(226,201,126,.2)", padding: "16px 20px", width: "100%" }}>
-                <p style={{ fontSize: 13, color: "#18233e", margin: "0 0 8px", fontWeight: 700 }}>✦ Cartes difficiles — Pro</p>
-                <p style={{ fontSize: 12, color: "#64718b", margin: "0 0 12px" }}>Passez Pro pour revoir automatiquement vos {difficult.length} cartes difficiles et consolider votre mémoire.</p>
+                <p style={{ fontSize: 13, color: "var(--ink)", margin: "0 0 8px", fontWeight: 700 }}>✦ Cartes difficiles — Pro</p>
+                <p style={{ fontSize: 12, color: "var(--muted)", margin: "0 0 12px" }}>Passez Pro pour revoir automatiquement vos {difficult.length} cartes difficiles et consolider votre mémoire.</p>
                 <button style={{ ...S.ctag, width: "100%", padding: 10, fontSize: 12 }} onClick={onUpgrade}>Passer Pro — {PRO_PRICE}/mois →</button>
               </div>
             )
@@ -714,12 +714,12 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
       <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← {ue.id}</button></nav>
       <div style={{ maxWidth: 580, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1, animation: "fsu .4s ease both" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
-          <h2 style={{ fontSize: 18, margin: 0, color: "#18233e" }}>◈ Flashcards — {ue.short}</h2>
-          {cards && <span style={{ fontSize: 12, color: "#64718b" }}>{idx + 1} / {filtered.length}</span>}
+          <h2 style={{ fontSize: 18, margin: 0, color: "var(--ink)" }}>◈ Flashcards — {ue.short}</h2>
+          {cards && <span style={{ fontSize: 12, color: "var(--muted)" }}>{idx + 1} / {filtered.length}</span>}
         </div>
         {!loading && cards?.length === 0 && <div role="alert"><p>Les flashcards n’ont pas pu être chargées.</p><button style={S.ctag} onClick={onBack}>Retour à la matière</button></div>}
         {loading ? (
-          <div style={{ textAlign: "center", padding: 60 }}><div style={{ width: 36, height: 36, border: "3px solid #d9e0ec", borderTop: `3px solid ${ue.color}`, borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 16px" }} /><p style={{ color: "#64718b", fontSize: 13 }}>Chargement des flashcards…</p></div>
+          <div style={{ textAlign: "center", padding: 60 }}><div style={{ width: 36, height: 36, border: "3px solid var(--line)", borderTop: `3px solid ${ue.color}`, borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 16px" }} /><p style={{ color: "var(--muted)", fontSize: 13 }}>Chargement des flashcards…</p></div>
         ) : (
           <>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
@@ -730,20 +730,20 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
                 <div style={{ perspective: 1200, marginBottom: 16, cursor: "pointer" }} role="button" tabIndex={0} aria-label="Retourner la flashcard" onKeyDown={e => { if (["Enter", " "].includes(e.key)) { e.preventDefault(); setFlipped(f => !f); } }} onClick={() => setFlipped(f => !f)}>
                   <div style={{ position: "relative", transformStyle: "preserve-3d", transition: "transform .55s cubic-bezier(.4,0,.2,1)", transform: flipped ? "rotateY(180deg)" : "rotateY(0)", height: 220 }}>
                     <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "center", borderColor: `${ue.color}15` }}>
-                      <p style={{ fontSize: 10, color: ue.color, letterSpacing: ".12em", margin: "0 0 14px" }}>{card.tag || ue.short}</p>
-                      <p style={{ fontSize: 15, color: "#18233e", lineHeight: 1.6, margin: "0 0 16px", fontWeight: 600 }}>{card.q}</p>
-                      <p style={{ fontSize: 11, color: "#64718b" }}>Cliquer pour révéler →</p>
+                      <p style={{ fontSize: 10, color: "var(--link)", letterSpacing: ".12em", margin: "0 0 14px" }}>{card.tag || ue.short}</p>
+                      <p style={{ fontSize: 15, color: "var(--ink)", lineHeight: 1.6, margin: "0 0 16px", fontWeight: 600 }}>{card.q}</p>
+                      <p style={{ fontSize: 11, color: "var(--muted)" }}>Cliquer pour révéler →</p>
                     </div>
-                    <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, transform: "rotateY(180deg)", borderColor: "#2c806130", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                      <p style={{ fontSize: 10, color: "#2c8061", letterSpacing: ".12em", margin: "0 0 14px" }}>RÉPONSE</p>
-                      <p style={{ fontSize: 13, color: "#36425b", lineHeight: 1.7, margin: 0 }}>{card.a}</p>
+                    <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, transform: "rotateY(180deg)", borderColor: "color-mix(in srgb, var(--success) 19%, transparent)", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                      <p style={{ fontSize: 10, color: "var(--success)", letterSpacing: ".12em", margin: "0 0 14px" }}>RÉPONSE</p>
+                      <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.7, margin: 0 }}>{card.a}</p>
                     </div>
                   </div>
                 </div>
                 {flipped ? (
                   <div style={{ display: "flex", gap: 10, marginBottom: 12 }}>
-                    <button style={{ flex: 1, background: "#b8464612", border: "1px solid #b8464640", color: "#b84646", padding: "12px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit" }} onClick={markDifficult}>✗ À revoir</button>
-                    <button style={{ flex: 1, background: "#2c806112", border: "1px solid #2c806140", color: "#2c8061", padding: "12px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit" }} onClick={markKnown}>✓ Je savais</button>
+                    <button style={{ flex: 1, background: "color-mix(in srgb, var(--danger) 7%, transparent)", border: "1px solid color-mix(in srgb, var(--danger) 25%, transparent)", color: "var(--danger)", padding: "12px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit" }} onClick={markDifficult}>✗ À revoir</button>
+                    <button style={{ flex: 1, background: "color-mix(in srgb, var(--success) 7%, transparent)", border: "1px solid color-mix(in srgb, var(--success) 25%, transparent)", color: "var(--success)", padding: "12px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit" }} onClick={markKnown}>✓ Je savais</button>
                   </div>
                 ) : (
                   <div style={{ display: "flex", gap: 10 }}>
@@ -751,7 +751,7 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
                     <button style={{ ...S.ctag, flex: 1 }} onClick={next}>Suivante →</button>
                   </div>
                 )}
-                {isPro && difficult.length > 0 && <p style={{ fontSize: 11, color: "#b84646", textAlign: "center" }}>{difficult.length} carte{difficult.length > 1 ? "s" : ""} marquée{difficult.length > 1 ? "s" : ""} difficile{difficult.length > 1 ? "s" : ""}</p>}
+                {isPro && difficult.length > 0 && <p style={{ fontSize: 11, color: "var(--danger)", textAlign: "center" }}>{difficult.length} carte{difficult.length > 1 ? "s" : ""} marquée{difficult.length > 1 ? "s" : ""} difficile{difficult.length > 1 ? "s" : ""}</p>}
               </>
             )}
           </>
@@ -773,21 +773,21 @@ function ResultsInterview({ data, onNew, onDash }) {
       <div style={{ maxWidth: 600, margin: "0 auto", padding: "36px 24px 60px", display: "flex", flexDirection: "column", alignItems: "center", gap: 20, position: "relative", zIndex: 1 }}>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 12, animation: "fsu .5s ease both" }}>
           <svg width="140" height="140" viewBox="0 0 120 120">
-            <circle cx="60" cy="60" r="52" fill="none" stroke="#e9edf5" strokeWidth="8" />
+            <circle cx="60" cy="60" r="52" fill="none" stroke="var(--surface-soft)" strokeWidth="8" />
             <circle cx="60" cy="60" r="52" fill="none" stroke={sc} strokeWidth="8" strokeDasharray={`${(anim / 100) * circ} ${circ}`} strokeLinecap="round" transform="rotate(-90 60 60)" style={{ filter: `drop-shadow(0 0 6px ${sc})` }} />
-            <text x="60" y="54" textAnchor="middle" fill="white" fontSize="28" fontWeight="900" fontFamily="monospace">{anim}</text>
-            <text x="60" y="70" textAnchor="middle" fill="#64718b" fontSize="10" fontFamily="monospace">/100</text>
+            <text x="60" y="54" textAnchor="middle" fill="var(--ink)" fontSize="28" fontWeight="900" fontFamily="monospace">{anim}</text>
+            <text x="60" y="70" textAnchor="middle" fill="var(--muted)" fontSize="10" fontFamily="monospace">/100</text>
           </svg>
-          <p style={{ fontSize: 14, color: "#64718b", margin: 0 }}>{topic} · {fmt(duration)}</p>
-          <span style={{ fontSize: 11, letterSpacing: ".15em", color: sc, border: `1px solid ${sc}50`, padding: "4px 16px", fontWeight: 700 }}>{ev.niveau}</span>
+          <p style={{ fontSize: 14, color: "var(--muted)", margin: 0 }}>{topic} · {fmt(duration)}</p>
+          <span style={{ fontSize: 11, letterSpacing: ".15em", color: sc, border: `1px solid color-mix(in srgb, ${sc} 31%, transparent)`, padding: "4px 16px", fontWeight: 700 }}>{ev.niveau}</span>
         </div>
-        <div style={{ background: "#ffffff", border: "1px solid #e4e8f1", padding: "20px 24px", width: "100%", textAlign: "center" }}>
-          <p style={{ fontSize: 14, color: "#36425b", lineHeight: 1.7, margin: "0 0 14px" }}>{ev.verdict}</p>
-          {ev.conseil_prioritaire && <div style={{ background: "#a47b2e08", border: "1px solid #a47b2e25", padding: "10px 16px" }}><p style={{ fontSize: 10, color: "#a47b2e", margin: "0 0 4px", letterSpacing: ".1em" }}>✦ CONSEIL PRIORITAIRE</p><p style={{ fontSize: 13, color: "#36425b", margin: 0, lineHeight: 1.6 }}>{ev.conseil_prioritaire}</p></div>}
+        <div style={{ background: "var(--surface)", border: "1px solid var(--line)", padding: "20px 24px", width: "100%", textAlign: "center" }}>
+          <p style={{ fontSize: 14, color: "var(--ink)", lineHeight: 1.7, margin: "0 0 14px" }}>{ev.verdict}</p>
+          {ev.conseil_prioritaire && <div style={{ background: "color-mix(in srgb, var(--gold-text) 3%, transparent)", border: "1px solid color-mix(in srgb, var(--gold-text) 15%, transparent)", padding: "10px 16px" }}><p style={{ fontSize: 10, color: "var(--gold-text)", margin: "0 0 4px", letterSpacing: ".1em" }}>✦ CONSEIL PRIORITAIRE</p><p style={{ fontSize: 13, color: "var(--ink)", margin: 0, lineHeight: 1.6 }}>{ev.conseil_prioritaire}</p></div>}
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, width: "100%" }}>
-          <div style={S.ec}><p style={{ ...S.et, color: "#2c8061" }}>✦ POINTS FORTS</p>{ev.points_forts?.map((p, i) => <p key={i} style={S.ei}>— {p}</p>)}</div>
-          <div style={S.ec}><p style={{ ...S.et, color: "#996724" }}>↗ À AMÉLIORER</p>{ev.axes_amelioration?.map((a, i) => <p key={i} style={S.ei}>— {a}</p>)}</div>
+          <div style={S.ec}><p style={{ ...S.et, color: "var(--success)" }}>✦ POINTS FORTS</p>{ev.points_forts?.map((p, i) => <p key={i} style={S.ei}>— {p}</p>)}</div>
+          <div style={S.ec}><p style={{ ...S.et, color: "var(--gold-text)" }}>↗ À AMÉLIORER</p>{ev.axes_amelioration?.map((a, i) => <p key={i} style={S.ei}>— {a}</p>)}</div>
         </div>
         <div style={{ display: "flex", gap: 10, width: "100%" }}>
           <button style={{ ...S.ctagh, flex: 1, fontSize: 12 }} onClick={() => { navigator.clipboard.writeText(transcript?.map(m => `[${m.role === "user" ? "VOUS" : "RECRUTEUR"}]\n${m.content}`).join("\n\n---\n\n") || "").then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }); }}>
@@ -809,18 +809,18 @@ function ResultsQCM({ data, onNew, onDash }) {
     <div style={S.root}><OrbBg />
       <nav style={S.nav}><Logo /><button style={S.nl} onClick={onDash}>← {data.ue}</button></nav>
       <div style={{ maxWidth: 560, margin: "0 auto", padding: "36px 24px 60px", display: "flex", flexDirection: "column", gap: 16, position: "relative", zIndex: 1, animation: "fsu .5s ease both" }}>
-        <div style={{ ...S.card, textAlign: "center", borderColor: `${sc}30` }}>
+        <div style={{ ...S.card, textAlign: "center", borderColor: `color-mix(in srgb, ${sc} 19%, transparent)` }}>
           <p style={{ fontSize: 52, fontWeight: 900, color: sc, margin: "0 0 4px", filter: `drop-shadow(0 0 12px ${sc})` }}>{score}/{total}</p>
-          <p style={{ fontSize: 14, color: "#18233e", fontWeight: 700, margin: "0 0 4px" }}>{pct}% de réussite</p>
-          <p style={{ fontSize: 12, color: "#64718b", margin: 0 }}>{ueName} · {fmt(duration)}</p>
+          <p style={{ fontSize: 14, color: "var(--ink)", fontWeight: 700, margin: "0 0 4px" }}>{pct}% de réussite</p>
+          <p style={{ fontSize: 12, color: "var(--muted)", margin: 0 }}>{ueName} · {fmt(duration)}</p>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 8, maxHeight: 320, overflowY: "auto" }}>
           {answers?.map((a, i) => (
-            <div key={i} style={{ background: "#ffffff", border: `1px solid ${a.correct ? "#2c806125" : "#b8464625"}`, padding: "10px 14px" }}>
-              <p style={{ fontSize: 11, color: a.correct ? "#2c8061" : "#b84646", margin: "0 0 4px" }}>{a.correct ? "✓ Correct" : "✗ Incorrect"} {a.difficulte && `· ${a.difficulte}`}</p>
-              <p style={{ fontSize: 12, color: "#64718b", margin: 0 }}>{a.q}</p>
-              {!a.correct && <p style={{ fontSize: 11, color: "#64718b", margin: "4px 0 0" }}>Réponse : {a.right}</p>}
-              {a.expl && <p style={{ fontSize: 11, color: "#64718b", margin: "4px 0 0", fontStyle: "italic" }}>{a.expl}</p>}
+            <div key={i} style={{ background: "var(--surface)", border: `1px solid ${a.correct ? "color-mix(in srgb, var(--success) 15%, transparent)" : "color-mix(in srgb, var(--danger) 15%, transparent)"}`, padding: "10px 14px" }}>
+              <p style={{ fontSize: 11, color: a.correct ? "var(--success)" : "var(--danger)", margin: "0 0 4px" }}>{a.correct ? "✓ Correct" : "✗ Incorrect"} {a.difficulte && `· ${a.difficulte}`}</p>
+              <p style={{ fontSize: 12, color: "var(--muted)", margin: 0 }}>{a.q}</p>
+              {!a.correct && <p style={{ fontSize: 11, color: "var(--muted)", margin: "4px 0 0" }}>Réponse : {a.right}</p>}
+              {a.expl && <p style={{ fontSize: 11, color: "var(--muted)", margin: "4px 0 0", fontStyle: "italic" }}>{a.expl}</p>}
             </div>
           ))}
         </div>
@@ -836,33 +836,33 @@ function ResultsQCM({ data, onNew, onDash }) {
 // ── RESULTS CAS ───────────────────────────────────────────────────────────────
 function ResultsCas({ data, onNew, onDash }) {
   const { cas, evaluation: ev, duration, ueName } = data;
-  if (!ev) return <div style={S.root}><OrbBg /><div style={{ maxWidth: 500, margin: "80px auto", padding: 24, textAlign: "center" }}><p style={{ color: "#b84646" }}>Erreur d'évaluation.</p><button style={S.ctag} onClick={onDash}>Retour</button></div></div>;
+  if (!ev) return <div style={S.root}><OrbBg /><div style={{ maxWidth: 500, margin: "80px auto", padding: 24, textAlign: "center" }}><p style={{ color: "var(--danger)" }}>Erreur d'évaluation.</p><button style={S.ctag} onClick={onDash}>Retour</button></div></div>;
   const nc = noteColor(ev.note);
   return (
     <div style={S.root}><OrbBg />
       <nav style={S.nav}><Logo /><button style={S.nl} onClick={onDash}>← {data.ue}</button></nav>
       <div style={{ maxWidth: 620, margin: "0 auto", padding: "36px 24px 60px", display: "flex", flexDirection: "column", gap: 16, position: "relative", zIndex: 1, animation: "fsu .5s ease both" }}>
-        <div style={{ ...S.card, textAlign: "center", borderColor: `${nc}30` }}>
+        <div style={{ ...S.card, textAlign: "center", borderColor: `color-mix(in srgb, ${nc} 19%, transparent)` }}>
           <p style={{ fontSize: 54, fontWeight: 900, color: nc, margin: "0 0 4px", filter: `drop-shadow(0 0 12px ${nc})` }}>{ev.note}<span style={{ fontSize: 22 }}>/20</span></p>
-          <p style={{ fontSize: 14, color: "#18233e", fontWeight: 700, margin: "0 0 4px" }}>{ev.appreciation} · {cas?.titre}</p>
-          <p style={{ fontSize: 12, color: "#64718b", margin: 0 }}>{ueName} · {fmt(duration)}</p>
+          <p style={{ fontSize: 14, color: "var(--ink)", fontWeight: 700, margin: "0 0 4px" }}>{ev.appreciation} · {cas?.titre}</p>
+          <p style={{ fontSize: 12, color: "var(--muted)", margin: 0 }}>{ueName} · {fmt(duration)}</p>
         </div>
         {ev.correction_par_question && (
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#64718b" }}>CORRECTION PAR QUESTION</p>
+            <p style={{ fontSize: 10, letterSpacing: ".15em", color: "var(--muted)" }}>CORRECTION PAR QUESTION</p>
             {ev.correction_par_question.map(q => (
               <div key={q.num} style={S.card}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
-                  <span style={{ fontSize: 12, fontWeight: 700, color: "#18233e" }}>Question {q.num}</span>
+                  <span style={{ fontSize: 12, fontWeight: 700, color: "var(--ink)" }}>Question {q.num}</span>
                   <span style={{ fontSize: 13, fontWeight: 700, color: noteColor(q.note / (cas?.questions?.[q.num - 1]?.points || 10) * 20) }}>{q.note}/{cas?.questions?.[q.num - 1]?.points || "?"} pts</span>
                 </div>
-                <p style={{ fontSize: 13, color: "#36425b", margin: "0 0 8px", lineHeight: 1.6 }}>{q.commentaire}</p>
-                {q.elements_attendus && <div style={{ background: "#060810", border: "1px solid #e9edf5", padding: "8px 12px" }}><p style={{ fontSize: 10, color: "#64718b", margin: "0 0 4px", letterSpacing: ".1em" }}>ÉLÉMENTS ATTENDUS</p><p style={{ fontSize: 12, color: "#64718b", margin: 0, lineHeight: 1.6 }}>{q.elements_attendus}</p></div>}
+                <p style={{ fontSize: 13, color: "var(--ink)", margin: "0 0 8px", lineHeight: 1.6 }}>{q.commentaire}</p>
+                {q.elements_attendus && <div style={{ background: "var(--surface-soft)", border: "1px solid var(--surface-soft)", padding: "8px 12px" }}><p style={{ fontSize: 10, color: "var(--muted)", margin: "0 0 4px", letterSpacing: ".1em" }}>ÉLÉMENTS ATTENDUS</p><p style={{ fontSize: 12, color: "var(--muted)", margin: 0, lineHeight: 1.6 }}>{q.elements_attendus}</p></div>}
               </div>
             ))}
           </div>
         )}
-        {ev.conseil && <div style={{ background: "#a47b2e08", border: "1px solid #a47b2e25", padding: "14px 18px" }}><p style={{ fontSize: 10, color: "#a47b2e", margin: "0 0 6px", letterSpacing: ".1em" }}>✦ CONSEIL</p><p style={{ fontSize: 13, color: "#36425b", margin: 0, lineHeight: 1.6 }}>{ev.conseil}</p></div>}
+        {ev.conseil && <div style={{ background: "color-mix(in srgb, var(--gold-text) 3%, transparent)", border: "1px solid color-mix(in srgb, var(--gold-text) 15%, transparent)", padding: "14px 18px" }}><p style={{ fontSize: 10, color: "var(--gold-text)", margin: "0 0 6px", letterSpacing: ".1em" }}>✦ CONSEIL</p><p style={{ fontSize: 13, color: "var(--ink)", margin: 0, lineHeight: 1.6 }}>{ev.conseil}</p></div>}
         <div style={{ display: "flex", gap: 10 }}>
           <button style={{ ...S.ctagh, flex: 1 }} onClick={onDash}>← Matière</button>
           <button style={{ ...S.ctag, flex: 1 }} onClick={onNew}>Nouveau cas</button>
@@ -876,30 +876,30 @@ function ResultsCas({ data, onNew, onDash }) {
 function History({ user, onBack }) {
   const [history, setHistory] = useState([]); const [loading, setLoading] = useState(true);
   useEffect(() => { loadHistory(user.uid).then(h => { setHistory(h); setLoading(false); }); }, []);
-  const typeColor = (t) => t === "entretien" ? "#a47b2e" : t === "cas" ? "#996724" : "#376cac";
+  const typeColor = (t) => t === "entretien" ? "var(--gold-text)" : t === "cas" ? "var(--gold-text)" : "var(--link)";
   const typeIcon = (t) => t === "entretien" ? "💼" : t === "cas" ? "📝" : "△";
   return (
     <div style={S.root}><OrbBg />
       <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← Dashboard</button></nav>
       <div style={{ maxWidth: 620, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1 }}>
-        <h2 style={{ fontSize: 20, margin: "0 0 20px", color: "#18233e" }}>▦ Historique</h2>
-        {loading ? <p style={{ color: "#64718b" }}>Chargement…</p> : history.length === 0 ? <p style={{ color: "#64718b", fontSize: 13 }}>Aucune activité pour le moment.</p> : (
+        <h2 style={{ fontSize: 20, margin: "0 0 20px", color: "var(--ink)" }}>▦ Historique</h2>
+        {loading ? <p style={{ color: "var(--muted)" }}>Chargement…</p> : history.length === 0 ? <p style={{ color: "var(--muted)", fontSize: 13 }}>Aucune activité pour le moment.</p> : (
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {history.map((h, i) => {
               const s = h.evaluation?.score || h.evaluation?.note || 0;
               const isNote = h.type === "cas"; const val = h.mode === "self-review" ? "Comparé" : h.type === "qcm" ? `${h.score}/${h.total}` : isNote ? `${s}/20` : `${s}/100`;
               const col = isNote ? noteColor(s) : scoreColor(s);
               return (
-                <div key={i} style={{ background: "#ffffff", border: "1px solid #e4e8f1", padding: "14px 18px", display: "flex", justifyContent: "space-between", alignItems: "center", animation: `fsu .3s ${i * .04}s both` }}>
+                <div key={i} style={{ background: "var(--surface)", border: "1px solid var(--line)", padding: "14px 18px", display: "flex", justifyContent: "space-between", alignItems: "center", animation: `fsu .3s ${i * .04}s both` }}>
                   <div>
                     <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 4 }}>
                       <span style={{ fontSize: 14 }}>{typeIcon(h.type)}</span>
-                      <span style={{ fontSize: 11, color: typeColor(h.type), border: `1px solid ${typeColor(h.type)}30`, padding: "1px 6px" }}>{h.type?.toUpperCase()}</span>
-                      <span style={{ fontSize: 11, color: "#64718b" }}>{h.ueName || h.topic || "—"}</span>
+                      <span style={{ fontSize: 11, color: typeColor(h.type), border: `1px solid color-mix(in srgb, ${typeColor(h.type)} 19%, transparent)`, padding: "1px 6px" }}>{h.type?.toUpperCase()}</span>
+                      <span style={{ fontSize: 11, color: "var(--muted)" }}>{h.ueName || h.topic || "—"}</span>
                     </div>
-                    <p style={{ fontSize: 12, color: "#64718b", margin: 0 }}>{h.date}</p>
+                    <p style={{ fontSize: 12, color: "var(--muted)", margin: 0 }}>{h.date}</p>
                   </div>
-                  <p style={{ fontSize: 24, fontWeight: 900, margin: 0, color: col, filter: `drop-shadow(0 0 6px ${col}60)` }}>{val}</p>
+                  <p style={{ fontSize: 24, fontWeight: 900, margin: 0, color: col, filter: `drop-shadow(0 0 6px color-mix(in srgb, ${col} 38%, transparent))` }}>{val}</p>
                 </div>
               );
             })}
@@ -917,13 +917,13 @@ function Paywall({ onUpgrade, onBack }) {
     <div style={S.root}><ParticleCanvas /><OrbBg />
       <div style={{ maxWidth: 460, margin: "0 auto", padding: "80px 24px", display: "flex", flexDirection: "column", alignItems: "center", gap: 20, textAlign: "center", position: "relative", zIndex: 1, animation: "fsu .5s ease both" }}>
         <span style={{ fontSize: 40 }}>◈</span>
-        <h2 style={{ fontSize: 26, margin: 0, color: "#18233e" }}>Passez à Pro</h2>
-        <p style={{ fontSize: 14, color: "#64718b", lineHeight: 1.7, margin: 0 }}>Cette fonctionnalité est réservée aux membres Pro.</p>
+        <h2 style={{ fontSize: 26, margin: 0, color: "var(--ink)" }}>Passez à Pro</h2>
+        <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.7, margin: 0 }}>Cette fonctionnalité est réservée aux membres Pro.</p>
         <div style={{ ...S.pc, ...S.phl, width: "100%", animation: "glow 3s ease-in-out infinite" }}>
           <div style={S.pb}>SIMDCG PRO</div>
-          <p style={{ fontSize: 40, fontWeight: 900, color: "#18233e", margin: "12px 0 4px" }}>{PRO_PRICE}<span style={{ fontSize: 14, color: "#64718b" }}>/mois</span></p>
+          <p style={{ fontSize: 40, fontWeight: 900, color: "var(--ink)", margin: "12px 0 4px" }}>{PRO_PRICE}<span style={{ fontSize: 14, color: "var(--muted)" }}>/mois</span></p>
           <div style={{ display: "flex", flexDirection: "column", gap: 7, margin: "14px 0 20px" }}>
-            {["Banque de départ — 8 matières DCG + 5 DSCG", "Cas pratiques avec corrigés à comparer soi-même", "Flashcards enregistrées et reprise des cartes difficiles", "Planning de révision sans IA", "Préparation orale autonome et tuteur IA limité", "Historique complet & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "#36425b", margin: 0 }}>✓ {f}</p>)}
+            {["Banque de départ — 8 matières DCG + 5 DSCG", "Cas pratiques avec corrigés à comparer soi-même", "Flashcards enregistrées et reprise des cartes difficiles", "Planning de révision sans IA", "Préparation orale autonome et tuteur IA limité", "Historique complet & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "var(--ink)", margin: 0 }}>✓ {f}</p>)}
           </div>
           <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={onUpgrade}>Passer à Pro →</button>
         </div>
@@ -936,19 +936,19 @@ function Paywall({ onUpgrade, onBack }) {
 // ── ATOMS ─────────────────────────────────────────────────────────────────────
 function Logo() { return <Brand />; }
 function SC({ v, l, hl }) {
-  return <div style={{ background: "#ffffff", border: `1px solid ${hl ? "rgba(226,201,126,.2)" : "#e4e8f1"}`, padding: "14px 10px", textAlign: "center" }}><p style={{ fontSize: 20, fontWeight: 900, margin: "0 0 3px", color: hl ? "#a47b2e" : "#18233e" }}>{v}</p><p style={{ fontSize: 9, color: "#64718b", margin: 0, letterSpacing: ".1em" }}>{l.toUpperCase()}</p></div>;
+  return <div style={{ background: "var(--surface)", border: `1px solid ${hl ? "rgba(226,201,126,.2)" : "var(--line)"}`, padding: "14px 10px", textAlign: "center" }}><p style={{ fontSize: 20, fontWeight: 900, margin: "0 0 3px", color: hl ? "var(--gold-text)" : "var(--ink)" }}>{v}</p><p style={{ fontSize: 9, color: "var(--muted)", margin: 0, letterSpacing: ".1em" }}>{l.toUpperCase()}</p></div>;
 }
 function FInput({ label, value, set, ph, type = "text" }) {
-  return <div style={{ display: "flex", flexDirection: "column", gap: 5 }}><label style={{ fontSize: 10, letterSpacing: ".12em", color: "#64718b", textTransform: "uppercase" }}>{label}</label><input aria-label={label} style={{ background: "#ffffff", border: "1px solid #d9e0ec", color: "#18233e", padding: "10px 12px", fontSize: 13, fontFamily: "inherit", outline: "none", transition: "border-color .2s" }} type={type} value={value} onChange={e => set(e.target.value)} placeholder={ph} onFocus={e => e.target.style.borderColor = "#a47b2e40"} onBlur={e => e.target.style.borderColor = "#d9e0ec"} /></div>;
+  return <div style={{ display: "flex", flexDirection: "column", gap: 5 }}><label style={{ fontSize: 10, letterSpacing: ".12em", color: "var(--muted)", textTransform: "uppercase" }}>{label}</label><input aria-label={label} style={{ background: "var(--surface)", border: "1px solid var(--line)", color: "var(--ink)", padding: "10px 12px", fontSize: 13, fontFamily: "inherit", outline: "none", transition: "border-color .2s" }} type={type} value={value} onChange={e => set(e.target.value)} placeholder={ph} onFocus={e => e.target.style.borderColor = "color-mix(in srgb, var(--gold-text) 25%, transparent)"} onBlur={e => e.target.style.borderColor = "var(--line)"} /></div>;
 }
 function Sect({ label, children }) {
-  return <div><p style={{ fontSize: 10, letterSpacing: ".15em", color: "#64718b", margin: "0 0 10px", textTransform: "uppercase" }}>{label}</p>{children}</div>;
+  return <div><p style={{ fontSize: 10, letterSpacing: ".15em", color: "var(--muted)", margin: "0 0 10px", textTransform: "uppercase" }}>{label}</p>{children}</div>;
 }
 function OB({ active, color, onClick, main, sub }) {
-  return <button onClick={onClick} style={{ flex: 1, background: active ? `${color}12` : "#ffffff", border: `2px solid ${active ? color : "#d9e0ec"}`, color: active ? color : "#64718b", padding: "12px 8px", fontSize: 13, display: "flex", flexDirection: "column", alignItems: "center", gap: 3, transition: "all .15s", boxShadow: active ? `0 0 16px ${color}20` : "none", fontFamily: "inherit" }}><strong>{main}</strong><span style={{ fontSize: 10, opacity: .6 }}>{sub}</span></button>;
+  return <button onClick={onClick} style={{ flex: 1, background: active ? `color-mix(in srgb, ${color} 7%, transparent)` : "var(--surface)", border: `2px solid ${active ? color : "var(--line)"}`, color: active ? color : "var(--muted)", padding: "12px 8px", fontSize: 13, display: "flex", flexDirection: "column", alignItems: "center", gap: 3, transition: "all .15s", boxShadow: active ? `0 0 16px color-mix(in srgb, ${color} 13%, transparent)` : "none", fontFamily: "inherit" }}><strong>{main}</strong><span style={{ fontSize: 10, opacity: .6 }}>{sub}</span></button>;
 }
 function Spinner() {
-  return <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><span style={{ width: 13, height: 13, border: "2px solid #f7f8fc", borderTop: "2px solid transparent", borderRadius: "50%", animation: "spin .8s linear infinite" }} /> Chargement…</span>;
+  return <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><span style={{ width: 13, height: 13, border: "2px solid var(--paper)", borderTop: "2px solid transparent", borderRadius: "50%", animation: "spin .8s linear infinite" }} /> Chargement…</span>;
 }
 
 // ── FORGOT PASSWORD ───────────────────────────────────────────────────────────
@@ -978,18 +978,18 @@ function ForgotPasswordScreen({ onBack }) {
         {sent ? (
           <div style={{ textAlign: "center", padding: "20px 0", display: "flex", flexDirection: "column", gap: 12, alignItems: "center" }}>
             <span style={{ fontSize: 44 }}>✉</span>
-            <h2 style={{ fontSize: 20, color: "#2c8061", margin: 0 }}>Email envoyé !</h2>
-            <p style={{ fontSize: 13, color: "#64718b", lineHeight: 1.7, margin: 0 }}>
-              Un lien de réinitialisation a été envoyé à <strong style={{ color: "#18233e" }}>{email}</strong>. Vérifiez vos spams si vous ne le voyez pas.
+            <h2 style={{ fontSize: 20, color: "var(--success)", margin: 0 }}>Email envoyé !</h2>
+            <p style={{ fontSize: 13, color: "var(--muted)", lineHeight: 1.7, margin: 0 }}>
+              Un lien de réinitialisation a été envoyé à <strong style={{ color: "var(--ink)" }}>{email}</strong>. Vérifiez vos spams si vous ne le voyez pas.
             </p>
             <button style={{ ...S.ctag, marginTop: 8 }} onClick={onBack}>Retour à la connexion →</button>
           </div>
         ) : (
           <>
-            <h2 style={{ fontSize: 22, margin: "12px 0 4px", color: "#18233e" }}>Mot de passe oublié ?</h2>
-            <p style={{ fontSize: 13, color: "#64718b" }}>Entrez votre email et nous vous enverrons un lien de réinitialisation.</p>
+            <h2 style={{ fontSize: 22, margin: "12px 0 4px", color: "var(--ink)" }}>Mot de passe oublié ?</h2>
+            <p style={{ fontSize: 13, color: "var(--muted)" }}>Entrez votre email et nous vous enverrons un lien de réinitialisation.</p>
             <FInput label="Email" value={email} set={setEmail} ph="jean@exemple.fr" type="email" />
-            {err && <p style={{ fontSize: 12, color: "#b84646" }}>{err}</p>}
+            {err && <p style={{ fontSize: 12, color: "var(--danger)" }}>{err}</p>}
             <button style={{ ...S.ctag, width: "100%", opacity: loading ? .6 : 1 }} onClick={submit} disabled={loading}>
               {loading ? <Spinner /> : "Envoyer le lien →"}
             </button>
@@ -1031,16 +1031,16 @@ function LegalScreen({ type, onBack }) {
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "48px 24px 80px", position: "relative", zIndex: 1 }}>
         <div style={{ marginBottom: 32, animation: "fsu .4s ease both" }}>
           <div style={{ ...S.badge, display: "inline-block", marginBottom: 12 }}>{isCgu ? "CGU" : "CONFIDENTIALITÉ"}</div>
-          <h1 style={{ fontSize: 26, fontWeight: 900, color: "#18233e", margin: "0 0 6px" }}>
+          <h1 style={{ fontSize: 26, fontWeight: 900, color: "var(--ink)", margin: "0 0 6px" }}>
             {isCgu ? "Conditions Générales d'Utilisation" : "Politique de Confidentialité"}
           </h1>
-          <p style={{ fontSize: 12, color: "#64718b", margin: 0 }}>Dernière mise à jour : {today}</p>
+          <p style={{ fontSize: 12, color: "var(--muted)", margin: 0 }}>Dernière mise à jour : {today}</p>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           {content.map((sec, i) => (
             <div key={i} style={{ ...S.card, animation: `fsu .4s ${i * .05}s both` }}>
-              <p style={{ fontSize: 12, fontWeight: 700, color: "#a47b2e", letterSpacing: ".08em", margin: "0 0 10px" }}>{sec.title}</p>
-              <p style={{ fontSize: 13, color: "#63728c", lineHeight: 1.75, margin: 0 }}>{sec.body}</p>
+              <p style={{ fontSize: 12, fontWeight: 700, color: "var(--gold-text)", letterSpacing: ".08em", margin: "0 0 10px" }}>{sec.title}</p>
+              <p style={{ fontSize: 13, color: "var(--muted)", lineHeight: 1.75, margin: 0 }}>{sec.body}</p>
             </div>
           ))}
         </div>
@@ -1052,15 +1052,15 @@ function LegalScreen({ type, onBack }) {
 // ── FOOTER ────────────────────────────────────────────────────────────────────
 function Footer({ onCgu, onConfidentialite }) {
   return (
-    <div style={{ borderTop: "1px solid #ffffff", padding: "28px 24px", position: "relative", zIndex: 1 }}>
+    <div style={{ borderTop: "1px solid var(--surface)", padding: "28px 24px", position: "relative", zIndex: 1 }}>
       <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
         <Logo />
         <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
-          <button style={{ ...S.nl, fontSize: 11, color: "#64718b" }} onClick={onCgu}>Conditions d'utilisation</button>
-          <button style={{ ...S.nl, fontSize: 11, color: "#64718b" }} onClick={onConfidentialite}>Confidentialité</button>
-          <a href="mailto:contact.simdcg@gmail.com" style={{ fontSize: 11, color: "#64718b", textDecoration: "none", fontFamily: "inherit" }}>contact.simdcg@gmail.com</a>
+          <button style={{ ...S.nl, fontSize: 11, color: "var(--muted)" }} onClick={onCgu}>Conditions d'utilisation</button>
+          <button style={{ ...S.nl, fontSize: 11, color: "var(--muted)" }} onClick={onConfidentialite}>Confidentialité</button>
+          <a href="mailto:contact.simdcg@gmail.com" style={{ fontSize: 11, color: "var(--muted)", textDecoration: "none", fontFamily: "inherit" }}>contact.simdcg@gmail.com</a>
         </div>
-        <p style={{ fontSize: 10, color: "#d9e0ec", margin: 0 }}>© {new Date().getFullYear()} SIMDCG — Tous droits réservés</p>
+        <p style={{ fontSize: 10, color: "var(--line)", margin: 0 }}>© {new Date().getFullYear()} SIMDCG — Tous droits réservés</p>
       </div>
     </div>
   );
@@ -1068,33 +1068,33 @@ function Footer({ onCgu, onConfidentialite }) {
 
 // ── STYLES ────────────────────────────────────────────────────────────────────
 const S = {
-  root: { minHeight: "100vh", background: "#f7f8fc", color: "#18233e", fontFamily: "'Inter',system-ui,sans-serif", position: "relative", overflow: "hidden" },
-  nav: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 24px", borderBottom: "1px solid #ffffff", background: "rgba(8,11,20,.88)", backdropFilter: "blur(12px)", position: "relative", zIndex: 2 },
-  nl: { background: "none", border: "none", color: "#64718b", fontSize: 13, cursor: "pointer", fontFamily: "inherit" },
-  no: { borderRadius: 14, background: "none", border: "1px solid #d9e0ec", color: "#63728c", fontSize: 12, padding: "6px 14px", cursor: "pointer", fontFamily: "inherit" },
-  nc: { borderRadius: 14, background: "#182d52", border: "none", color: "#ffffff", fontSize: 12, padding: "7px 16px", cursor: "pointer", fontWeight: 700, fontFamily: "inherit" },
-  badge: { borderRadius: 14, fontSize: 10, letterSpacing: ".18em", color: "#a47b2e", border: "1px solid rgba(226,201,126,.2)", padding: "5px 16px", background: "rgba(226,201,126,.04)" },
-  ctag: { borderRadius: 14, background: "#182d52", border: "none", color: "#ffffff", fontSize: 14, fontWeight: 700, padding: "13px 28px", cursor: "pointer", letterSpacing: ".04em", fontFamily: "inherit" },
-  ctagh: { borderRadius: 14, background: "none", border: "1px solid #d9e0ec", color: "#63728c", fontSize: 14, padding: "13px 28px", cursor: "pointer", fontFamily: "inherit" },
-  tag: { borderRadius: 14, fontSize: 11, border: "1px solid #0f1520", padding: "5px 12px", background: "rgba(13,17,23,.5)" },
-  fc: { borderRadius: 14, background: "#ffffff", border: "1px solid #e9edf5", padding: "22px 18px", display: "flex", flexDirection: "column" },
-  pc: { borderRadius: 14, background: "#ffffff", border: "1px solid #e4e8f1", padding: "24px 20px", position: "relative", display: "flex", flexDirection: "column" },
+  root: { minHeight: "100vh", background: "var(--paper)", color: "var(--ink)", fontFamily: "'Inter',system-ui,sans-serif", position: "relative", overflow: "hidden" },
+  nav: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 24px", borderBottom: "1px solid var(--surface)", background: "var(--surface-translucent)", backdropFilter: "blur(12px)", position: "relative", zIndex: 2 },
+  nl: { background: "none", border: "none", color: "var(--muted)", fontSize: 13, cursor: "pointer", fontFamily: "inherit" },
+  no: { borderRadius: 14, background: "none", border: "1px solid var(--line)", color: "var(--muted)", fontSize: 12, padding: "6px 14px", cursor: "pointer", fontFamily: "inherit" },
+  nc: { borderRadius: 14, background: "#182d52", border: "none", color: "var(--on-accent)", fontSize: 12, padding: "7px 16px", cursor: "pointer", fontWeight: 700, fontFamily: "inherit" },
+  badge: { borderRadius: 14, fontSize: 10, letterSpacing: ".18em", color: "var(--gold-text)", border: "1px solid rgba(226,201,126,.2)", padding: "5px 16px", background: "rgba(226,201,126,.04)" },
+  ctag: { borderRadius: 14, background: "#182d52", border: "none", color: "var(--on-accent)", fontSize: 14, fontWeight: 700, padding: "13px 28px", cursor: "pointer", letterSpacing: ".04em", fontFamily: "inherit" },
+  ctagh: { borderRadius: 14, background: "none", border: "1px solid var(--line)", color: "var(--muted)", fontSize: 14, padding: "13px 28px", cursor: "pointer", fontFamily: "inherit" },
+  tag: { borderRadius: 14, fontSize: 11, border: "1px solid var(--line)", padding: "5px 12px", background: "var(--surface-soft)" },
+  fc: { borderRadius: 14, background: "var(--surface)", border: "1px solid var(--surface-soft)", padding: "22px 18px", display: "flex", flexDirection: "column" },
+  pc: { borderRadius: 14, background: "var(--surface)", border: "1px solid var(--line)", padding: "24px 20px", position: "relative", display: "flex", flexDirection: "column" },
   phl: { border: "1px solid rgba(226,201,126,.25)", background: "rgba(226,201,126,.03)" },
-  pb: { position: "absolute", top: -10, left: "50%", transform: "translateX(-50%)", background: "#a47b2e", color: "#f7f8fc", fontSize: 9, padding: "3px 12px", fontWeight: 700, letterSpacing: ".12em", whiteSpace: "nowrap" },
-  back: { background: "none", border: "none", color: "#64718b", fontSize: 12, cursor: "pointer", padding: 0, alignSelf: "flex-start", fontFamily: "inherit" },
-  mb: { borderRadius: 14, background: "#ffffff", border: "1px solid #e9edf5", padding: "16px 10px", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: 4, fontFamily: "inherit" },
-  uecard: { borderRadius: 14, background: "#ffffff", border: "1px solid #e9edf5", padding: "14px 8px", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: 2, fontFamily: "inherit", transition: "all .15s" },
-  fb: { borderRadius: 14, background: "none", border: "1px solid #d9e0ec", color: "#64718b", padding: "5px 12px", fontSize: 11, cursor: "pointer", transition: "all .15s", fontFamily: "inherit" },
-  fa: { border: "1px solid rgba(226,201,126,.35)", color: "#a47b2e", background: "rgba(226,201,126,.06)" },
-  card: { borderRadius: 14, background: "#ffffff", border: "1px solid #e4e8f1", padding: "20px 22px" },
-  ava: { width: 30, height: 30, background: "#e9edf5", border: "1px solid #d9e0ec", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, color: "#64718b", flexShrink: 0 },
-  buba: { background: "#ffffff", border: "1px solid #e4e8f1", color: "#36425b", borderRadius: "0 8px 8px 8px" },
-  bubu: { background: "rgba(226,201,126,.07)", border: "1px solid rgba(226,201,126,.18)", color: "#18233e", borderRadius: "8px 0 8px 8px" },
-  ta: { borderRadius: 14, flex: 1, background: "#ffffff", border: "1px solid #d9e0ec", color: "#18233e", padding: "12px 14px", fontSize: 13, fontFamily: "inherit", resize: "none", outline: "none", lineHeight: 1.6 },
-  sb: { borderRadius: 14, background: "#182d52", border: "none", color: "#ffffff", width: 44, height: 44, fontSize: 18, cursor: "pointer", fontWeight: 700, flexShrink: 0, alignSelf: "flex-end" },
-  ec: { borderRadius: 14, background: "#ffffff", border: "1px solid #e4e8f1", padding: "14px 16px" },
+  pb: { position: "absolute", top: -10, left: "50%", transform: "translateX(-50%)", background: "var(--gold-text)", color: "var(--paper)", fontSize: 9, padding: "3px 12px", fontWeight: 700, letterSpacing: ".12em", whiteSpace: "nowrap" },
+  back: { background: "none", border: "none", color: "var(--muted)", fontSize: 12, cursor: "pointer", padding: 0, alignSelf: "flex-start", fontFamily: "inherit" },
+  mb: { borderRadius: 14, background: "var(--surface)", border: "1px solid var(--surface-soft)", padding: "16px 10px", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: 4, fontFamily: "inherit" },
+  uecard: { borderRadius: 14, background: "var(--surface)", border: "1px solid var(--surface-soft)", padding: "14px 8px", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: 2, fontFamily: "inherit", transition: "all .15s" },
+  fb: { borderRadius: 14, background: "none", border: "1px solid var(--line)", color: "var(--muted)", padding: "5px 12px", fontSize: 11, cursor: "pointer", transition: "all .15s", fontFamily: "inherit" },
+  fa: { border: "1px solid rgba(226,201,126,.35)", color: "var(--gold-text)", background: "rgba(226,201,126,.06)" },
+  card: { borderRadius: 14, background: "var(--surface)", border: "1px solid var(--line)", padding: "20px 22px" },
+  ava: { width: 30, height: 30, background: "var(--surface-soft)", border: "1px solid var(--line)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, color: "var(--muted)", flexShrink: 0 },
+  buba: { background: "var(--surface)", border: "1px solid var(--line)", color: "var(--ink)", borderRadius: "0 8px 8px 8px" },
+  bubu: { background: "rgba(226,201,126,.07)", border: "1px solid rgba(226,201,126,.18)", color: "var(--ink)", borderRadius: "8px 0 8px 8px" },
+  ta: { borderRadius: 14, flex: 1, background: "var(--surface)", border: "1px solid var(--line)", color: "var(--ink)", padding: "12px 14px", fontSize: 13, fontFamily: "inherit", resize: "none", outline: "none", lineHeight: 1.6 },
+  sb: { borderRadius: 14, background: "#182d52", border: "none", color: "var(--on-accent)", width: 44, height: 44, fontSize: 18, cursor: "pointer", fontWeight: 700, flexShrink: 0, alignSelf: "flex-end" },
+  ec: { borderRadius: 14, background: "var(--surface)", border: "1px solid var(--line)", padding: "14px 16px" },
   et: { fontSize: 9, letterSpacing: ".12em", margin: "0 0 10px" },
-  ei: { fontSize: 12, color: "#64718b", margin: "4px 0", lineHeight: 1.55 },
+  ei: { fontSize: 12, color: "var(--muted)", margin: "4px 0", lineHeight: 1.55 },
 };
 
-export { DCG_UES, DSCG_UES, QCMScreen, FlashcardsScreen, StudyPlanner as PlanningScreen, SavedLesson as ResumeCoursScreen, CasePractice as CasPratiqueScreen, Auth, InterviewConfig };
+export { ResultsQCM, History, LegalScreen, ForgotPasswordScreen, OnboardingModal, DCG_UES, DSCG_UES, QCMScreen, FlashcardsScreen, StudyPlanner as PlanningScreen, SavedLesson as ResumeCoursScreen, CasePractice as CasPratiqueScreen, Auth, InterviewConfig };
