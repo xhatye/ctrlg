@@ -55,7 +55,7 @@ Une récupération échoue si l’email de paiement est réellement différent d
 
 ## Vérifications réalisées
 
-29 tests automatisés locaux : normalisation d’email, contrôle des prix et de l’app, paiement non réglé, doublons, droits cumulés, expiration, abonnement annulé, propriété d’un achat, quota et taille des conversations, signature Stripe sur corps UTF-8, altération de signature, échec avec réponse 500, activation d’un utilisateur simulé et nouvelle tentative après un échec de transaction.
+32 tests automatisés locaux : normalisation d’email, contrôle des prix et de l’app, paiement non réglé, doublons, droits cumulés, expiration, abonnement annulé, propriété d’un achat, quota et taille des conversations, signature Stripe sur corps UTF-8, altération de signature, échec avec réponse 500, activation d’un utilisateur simulé et nouvelle tentative après un échec de transaction.
 
 Compilation de production réussie. 38 vues visuelles contrôlées aux largeurs 1440 et 390 pixels, sans erreur JavaScript ni débordement horizontal détecté. Interactions contrôlées : filtrage des matières, QCM jusqu’au résultat, discussion avec un tuteur simulé. Les données d’aperçu, les réponses IA et les services de paiement/base de données de ces tests sont simulés.
 
@@ -67,3 +67,5 @@ Non vérifié en conditions réelles : les variables Vercel, les règles Firebas
 - [Stripe — paramètres de Payment Links](https://docs.stripe.com/payment-links/url-parameters)
 - [Vercel — Node.js et Web Request handlers](https://vercel.com/docs/functions/runtimes/node-js)
 - [Vercel — corps original d’une requête](https://vercel.com/kb/guide/how-do-i-get-the-raw-body-of-a-serverless-function)
+
+Le contrôle GET /api/health vérifie en lecture seule la correspondance des projets Firebase, l’accès à la base et les deux offres Stripe. Il ne crée aucun achat et ne modifie aucun utilisateur.
