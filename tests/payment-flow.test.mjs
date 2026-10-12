@@ -14,10 +14,10 @@ function fixture({
 } = {}) {
   const saved = new Map([
     [
-      "users/zaid",
+      "users/student",
       {
-        name: "Zaid",
-        email: "zlhab baz@gmail.com".replace(" ", ""),
+        name: "Élève",
+        email: "ele ve@example.fr".replace(" ", ""),
         isPro: false,
         history: [{ type: "qcm" }],
       },
@@ -58,12 +58,12 @@ function fixture({
     db,
     auth: {
       getUserByEmail: async (email) => {
-        assert.equal(email, "zlhab baz@gmail.com".replace(" ", ""));
+        assert.equal(email, "ele ve@example.fr".replace(" ", ""));
         if (missingUser)
           throw Object.assign(new Error("No user"), {
             code: "auth/internal-error",
           });
-        return { uid: "zaid", email };
+        return { uid: "student", email };
       },
     },
     stripe: {
@@ -87,7 +87,7 @@ function fixture({
             payment_status: "paid",
             mode: "subscription",
             subscription: "sub_one",
-            customer_details: { email: "ZLHABBAZ@GMAIL.COM" },
+            customer_details: { email: "ELEVE@EXAMPLE.FR" },
           }),
           listLineItems: async () => ({
             data: [
@@ -108,7 +108,7 @@ function fixture({
           items: { data: [{ price: "price_simdcg", quantity: 1 }] },
         }),
       },
-      customers: { retrieve: async () => ({ email: "ZLHABBAZ@GMAIL.COM" }) },
+      customers: { retrieve: async () => ({ email: "ELEVE@EXAMPLE.FR" }) },
     },
   };
   const event = {
@@ -135,8 +135,8 @@ function fixture({
 test("signed uppercase legacy payment activates the matching account and preserves its learning history", async () => {
   const f = fixture();
   assert.equal((await f.handler(f.request())).status, 200);
-  assert.equal(f.saved.get("users/zaid").isPro, true);
-  assert.equal(f.saved.get("users/zaid").history.length, 1);
+  assert.equal(f.saved.get("users/student").isPro, true);
+  assert.equal(f.saved.get("users/student").history.length, 1);
   const second = await f.handler(f.request());
   assert.equal((await second.json()).duplicate, true);
 });
@@ -145,26 +145,26 @@ test('legacy invoice.payment_succeeded and invoice.paid both renew from the cano
     const f=fixture({eventType});
     const response=await f.handler(f.request());
     assert.equal(response.status,200);
-    assert.equal(f.saved.get('users/zaid').isPro,true);
-    assert.equal(f.saved.get('users/zaid').history.length,1);
+    assert.equal(f.saved.get('users/student').isPro,true);
+    assert.equal(f.saved.get('users/student').history.length,1);
   }
 });
 test("foreign purchase returns ignored without changing SIMDCG access", async () => {
   const f = fixture({ foreign: true });
   assert.equal((await f.handler(f.request())).status, 200);
-  assert.equal(f.saved.get("users/zaid").isPro, false);
+  assert.equal(f.saved.get("users/student").isPro, false);
   assert.equal(f.saved.has("stripeEvents/evt_payment"), false);
 });
 test("database failure commits neither access nor receipt, and retry succeeds", async () => {
   const f = fixture({ writeFailure: true });
   assert.equal((await f.handler(f.request())).status, 500);
-  assert.equal(f.saved.get("users/zaid").isPro, false);
+  assert.equal(f.saved.get("users/student").isPro, false);
   assert.equal(f.saved.has("stripeEvents/evt_payment"), false);
   assert.equal((await f.handler(f.request())).status, 200);
-  assert.equal(f.saved.get("users/zaid").isPro, true);
+  assert.equal(f.saved.get("users/student").isPro, true);
 });
 test("unresolvable account is never acknowledged as fulfilled", async () => {
   const f = fixture({ missingUser: true });
   assert.equal((await f.handler(f.request())).status, 500);
-  assert.equal(f.saved.get("users/zaid").isPro, false);
+  assert.equal(f.saved.get("users/student").isPro, false);
 });

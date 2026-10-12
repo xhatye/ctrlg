@@ -50,15 +50,15 @@ test("legacy uppercase payment email is normalized before Firebase Auth lookup",
       auth: {
         getUserByEmail: async (value) => {
           email = value;
-          return { uid: "zaid", email: value };
+          return { uid: "student", email: value };
         },
       },
     },
     null,
-    " ZLHABBAZ@GMAIL.COM ",
+    " ELEVE@EXAMPLE.FR ",
   );
-  assert.equal(email, "zlhab baz@gmail.com".replace(" ", ""));
-  assert.equal(user.uid, "zaid");
+  assert.equal(email, "ele ve@example.fr".replace(" ", ""));
+  assert.equal(user.uid, "student");
 });
 test("email normalization is stable", () =>
   assert.equal(normalizeEmail(" USER@GMAIL.COM "), "user@gmail.com"));
