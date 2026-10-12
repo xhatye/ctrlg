@@ -1,25 +1,16 @@
 import { useState, useRef, useEffect } from "react";
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
-import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInWithPopup, GoogleAuthProvider, sendPasswordResetEmail } from "firebase/auth";
-import { getFirestore, doc, getDoc, setDoc, updateDoc, arrayUnion, collection, addDoc, getDocs, query, orderBy, limit, increment } from "firebase/firestore";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInWithPopup, sendPasswordResetEmail } from "firebase/auth";
+import { onSnapshot, doc, getDoc, setDoc, updateDoc, arrayUnion, collection, addDoc, getDocs, query, orderBy, limit, increment } from "firebase/firestore";
 
-const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-};
-const firebaseApp = initializeApp(firebaseConfig);
-const auth = getAuth(firebaseApp);
-const db = getFirestore(firebaseApp);
-const googleProvider = new GoogleAuthProvider();
+import { auth, db, googleProvider } from './firebase';
+import { ensureProfile } from './profile';
+import { launchCheckout, billingRequest } from './billing-client';
+import { Brand, Marketing, StudentHome, OfferPage, CourseHome, ProductShell, AccountPage, TutorPage, LibraryPage, LearningProgress, PublicInfo, StudentReviews } from './modern';
+import './design.css';
+
+const upgrade = (plan = 'subscription') => launchCheckout(plan).catch(error => toast.error(error.message));
 
 // ── CONFIG ────────────────────────────────────────────────────────────────────
-const STRIPE_LINK = "https://buy.stripe.com/3cI4gz9FpbrWfYJ4JH6wE02";
-const STRIPE_PACK_EXAMEN = "https://buy.stripe.com/28E6oH9Fp2Vq27Tfol6wE03";
 const PRO_PRICE = "15€";
 const PACK_EXAMEN_PRICE = "29€";
 const FREE_INTERVIEWS = 0; // No free tier
@@ -27,7 +18,6 @@ const FREE_QCM_PER_UE = 0;
 const FREE_FLASH_PER_UE = 0;
 const PRO_FLASH_PER_UE = 12;
 const FREE_AI_CALLS_PER_DAY = 0;
-const PRO_PRICE_ORIGINAL = "25€"; // Crossed-out original price
 
 // ── ROUTING ───────────────────────────────────────────────────────────────────
 const SCREEN_TO_URL = {
@@ -48,6 +38,14 @@ const SCREEN_TO_URL = {
   results_qcm:        "/resultats/qcm",
   results_cas:        "/resultats/cas",
   paywall:            "/pro",
+  account: "/compte",
+  tutor: "/tuteur",
+  library: "/matieres",
+  features: "/fonctionnalites",
+  dcg: "/dcg",
+  dscg: "/dscg",
+  resources: "/ressources",
+  support: "/contact",
   history:            "/historique",
   progress:           "/progression",
   cgu:                "/cgu",
@@ -58,6 +56,7 @@ const URL_TO_SCREEN = Object.fromEntries(Object.entries(SCREEN_TO_URL).map(([k,v
 
 const getScreenFromPath = (path) => {
   // Exact match first
+  if (path === "/inscription") return "auth";
   if (URL_TO_SCREEN[path]) return URL_TO_SCREEN[path];
   // Prefix match for dynamic sub-paths like /entretien/*
   const found = Object.entries(URL_TO_SCREEN).find(([url]) => path.startsWith(url) && url !== "/");
@@ -66,21 +65,21 @@ const getScreenFromPath = (path) => {
 
 // ── UES DATA ──────────────────────────────────────────────────────────────────
 const DCG_UES = [
-  { id:"UE1", label:"Introduction au droit", short:"Droit général", icon:"⚖", color:"#60a5fa", desc:"Sources du droit, contrats, responsabilité civile et pénale", level:"DCG", proOnly:true },
-  { id:"UE2", label:"Droit des sociétés", short:"Droit sociétés", icon:"🏛", color:"#a78bfa", desc:"SARL, SAS, SA, droit commun des sociétés, liquidation", level:"DCG", proOnly:true },
-  { id:"UE3", label:"Droit social", short:"Droit social", icon:"🤝", color:"#34d399", desc:"Contrat de travail, conventions collectives, licenciement", level:"DCG", proOnly:true },
-  { id:"UE4", label:"Fiscalité", short:"Fiscalité", icon:"📋", color:"#fbbf24", desc:"IS, IR, TVA, droits d'enregistrement, fiscalité internationale", level:"DCG", proOnly:true },
-  { id:"UE6", label:"Finance d'entreprise", short:"Finance", icon:"📈", color:"#f87171", desc:"Analyse financière, investissement, financement, valorisation", level:"DCG", proOnly:true },
-  { id:"UE7", label:"Management", short:"Management", icon:"◇", color:"#e2c97e", desc:"Stratégie, organisation, RH, direction, leadership", level:"DCG", proOnly:true },
-  { id:"UE9", label:"Comptabilité", short:"Compta", icon:"🔢", color:"#38bdf8", desc:"PCG, immobilisations, stocks, provisions, capitaux propres", level:"DCG", proOnly:true },
-  { id:"UE10", label:"Comptabilité approfondie", short:"Compta appro", icon:"📊", color:"#fb923c", desc:"Consolidation, fusion, comptes combinés, normes IFRS", level:"DCG", proOnly:true },
+  { id:"UE1", label:"Introduction au droit", short:"Droit général", icon:"⚖", color:"#376cac", desc:"Sources du droit, contrats, responsabilité civile et pénale", level:"DCG", proOnly:true },
+  { id:"UE2", label:"Droit des sociétés", short:"Droit sociétés", icon:"🏛", color:"#7658a9", desc:"SARL, SAS, SA, droit commun des sociétés, liquidation", level:"DCG", proOnly:true },
+  { id:"UE3", label:"Droit social", short:"Droit social", icon:"🤝", color:"#258262", desc:"Contrat de travail, conventions collectives, licenciement", level:"DCG", proOnly:true },
+  { id:"UE4", label:"Fiscalité", short:"Fiscalité", icon:"📋", color:"#a47b2e", desc:"IS, IR, TVA, droits d'enregistrement, fiscalité internationale", level:"DCG", proOnly:true },
+  { id:"UE6", label:"Finance d'entreprise", short:"Finance", icon:"📈", color:"#b84646", desc:"Analyse financière, investissement, financement, valorisation", level:"DCG", proOnly:true },
+  { id:"UE7", label:"Management", short:"Management", icon:"◇", color:"#a47b2e", desc:"Stratégie, organisation, RH, direction, leadership", level:"DCG", proOnly:true },
+  { id:"UE9", label:"Comptabilité", short:"Compta", icon:"🔢", color:"#257b9f", desc:"PCG, immobilisations, stocks, provisions, capitaux propres", level:"DCG", proOnly:true },
+  { id:"UE10", label:"Comptabilité approfondie", short:"Compta appro", icon:"📊", color:"#ab682e", desc:"Consolidation, fusion, comptes combinés, normes IFRS", level:"DCG", proOnly:true },
 ];
 const DSCG_UES = [
-  { id:"DSCG1", label:"Gestion juridique, fiscale et sociale", short:"Juridique/Fiscal", icon:"⚖", color:"#60a5fa", desc:"Droit avancé des affaires, montages juridiques complexes", level:"DSCG" },
-  { id:"DSCG2", label:"Finance", short:"Finance avancée", icon:"📈", color:"#f87171", desc:"Marchés financiers, ingénierie financière, gestion de risques", level:"DSCG" },
-  { id:"DSCG3", label:"Management et contrôle de gestion", short:"Management/CdG", icon:"◎", color:"#e2c97e", desc:"Stratégie avancée, contrôle de gestion, pilotage de la performance", level:"DSCG" },
-  { id:"DSCG4", label:"Comptabilité et audit", short:"Compta/Audit", icon:"🔍", color:"#38bdf8", desc:"Normes IFRS, consolidation avancée, commissariat aux comptes", level:"DSCG" },
-  { id:"DSCG5", label:"Systèmes d'information", short:"SI", icon:"💻", color:"#a78bfa", desc:"Architecture SI, sécurité, urbanisation, ERP", level:"DSCG" },
+  { id:"DSCG1", label:"Gestion juridique, fiscale et sociale", short:"Juridique/Fiscal", icon:"⚖", color:"#376cac", desc:"Droit avancé des affaires, montages juridiques complexes", level:"DSCG" },
+  { id:"DSCG2", label:"Finance", short:"Finance avancée", icon:"📈", color:"#b84646", desc:"Marchés financiers, ingénierie financière, gestion de risques", level:"DSCG" },
+  { id:"DSCG3", label:"Management et contrôle de gestion", short:"Management/CdG", icon:"◎", color:"#a47b2e", desc:"Stratégie avancée, contrôle de gestion, pilotage de la performance", level:"DSCG" },
+  { id:"DSCG4", label:"Comptabilité et audit", short:"Compta/Audit", icon:"🔍", color:"#257b9f", desc:"Normes IFRS, consolidation avancée, commissariat aux comptes", level:"DSCG" },
+  { id:"DSCG5", label:"Systèmes d'information", short:"SI", icon:"💻", color:"#7658a9", desc:"Architecture SI, sécurité, urbanisation, ERP", level:"DSCG" },
 ];
 const ALL_UES = [...DCG_UES, ...DSCG_UES];
 
@@ -94,9 +93,9 @@ const INTERVIEW_TOPICS = [
   { id:"Général DCG/DSCG", icon:"◈", desc:"Toutes matières confondues", free:false },
 ];
 const ROLES = [
-  { id:"Junior (0-2 ans)", label:"Junior", sub:"0–2 ans", color:"#4ade80" },
-  { id:"Confirmé (3-5 ans)", label:"Confirmé", sub:"3–5 ans", color:"#60a5fa" },
-  { id:"Senior (5+ ans)", label:"Senior", sub:"5+ ans", color:"#f59e0b" },
+  { id:"Junior (0-2 ans)", label:"Junior", sub:"0–2 ans", color:"#2c8061" },
+  { id:"Confirmé (3-5 ans)", label:"Confirmé", sub:"3–5 ans", color:"#376cac" },
+  { id:"Senior (5+ ans)", label:"Senior", sub:"5+ ans", color:"#996724" },
 ];
 const DURATIONS = [
   { id:"flash", label:"Flash", sub:"~4 questions", q:4 },
@@ -139,8 +138,8 @@ Génère exactement ${weeks} semaines avec une progression logique du général 
 
 // ── HELPERS ───────────────────────────────────────────────────────────────────
 const fmt = (s) => `${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`;
-const scoreColor = (s) => s >= 80 ? "#4ade80" : s >= 60 ? "#f59e0b" : "#f87171";
-const noteColor = (n) => n >= 14 ? "#4ade80" : n >= 10 ? "#f59e0b" : "#f87171";
+const scoreColor = (s) => s >= 80 ? "#2c8061" : s >= 60 ? "#996724" : "#b84646";
+const noteColor = (n) => n >= 14 ? "#2c8061" : n >= 10 ? "#996724" : "#b84646";
 const today = () => new Date().toISOString().split("T")[0];
 
 // Checks isPro AND proExpiresAt — returns true only if access is active
@@ -157,26 +156,27 @@ async function callClaude(system, messages, maxTokens = 1200, user = null) {
   try {
     const r = await fetch("/api/chat", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${await auth.currentUser?.getIdToken() || ""}` },
       body: JSON.stringify({ model: "claude-sonnet-4-20250514", max_tokens: maxTokens, system, messages }),
       signal: controller.signal,
     });
-    if (!r.ok) throw new Error(`API ${r.status}`);
+    if (!r.ok) { const error = await r.json().catch(() => ({})); throw new Error(error.error || `API ${r.status}`); }
     const d = await r.json();
     return d.content?.[0]?.text || "";
   } catch (e) {
     if (e.name === "AbortError") console.error("callClaude timeout after 30s");
     else console.error("callClaude error:", e);
-    return "";
+    throw new Error(e.name === "AbortError" ? "La réponse prend trop de temps. Réessayez." : e.message);
   } finally {
     clearTimeout(timeout);
   }
 }
 
 async function callClaudeJSON(system, prompt, maxTokens = 2500, user = null) {
-  const raw = await callClaude(system, [{ role: "user", content: prompt }], maxTokens, user);
-  try { return JSON.parse(raw.replace(/```json|```/g, "").trim()); }
-  catch { return null; }
+  try {
+    const raw = await callClaude(system, [{ role: 'user', content: prompt }], maxTokens, user);
+    return JSON.parse(raw.replace(/```json|```/g, '').trim());
+  } catch (error) { toast.error(error.message || 'Le contenu n’a pas pu être généré. Réessayez.'); return null; }
 }
 
 // ── STORAGE (Firestore) ───────────────────────────────────────────────────────
@@ -218,22 +218,6 @@ const loadStreak = async (uid) => {
     if (s.lastDate !== today() && s.lastDate !== y.toISOString().split("T")[0]) return 0;
     return s.count;
   } catch { return 0; }
-};
-
-const checkAndIncrementQuota = async (uid) => {
-  try {
-    const snap = await getDoc(getUserDoc(uid));
-    const data = snap.exists() ? snap.data() : {};
-    const t = today();
-    const quota = data.aiQuota || { count: 0, date: "" };
-    if (quota.date !== t) {
-      await updateDoc(getUserDoc(uid), { aiQuota: { count: 1, date: t } });
-      return true;
-    }
-    if (quota.count >= FREE_AI_CALLS_PER_DAY) return false;
-    await updateDoc(getUserDoc(uid), { aiQuota: { count: quota.count + 1, date: t } });
-    return true;
-  } catch { return true; }
 };
 
 const saveMastery = async (uid, ueId, pct) => {
@@ -301,125 +285,8 @@ const incrementStat = async (field) => {
 // Disabled on mobile (< 768px) to protect TBT / Lighthouse score
 const IS_MOBILE = typeof window !== "undefined" && window.innerWidth < 768;
 
-function ParticleCanvas() {
-  const canvasRef = useRef(null);
-  const animRef = useRef(null);
-  const stateRef = useRef({ particles: [], mouse: { x: -9999, y: -9999 } });
-  const TERMS = ["DCG","DSCG","UE4","IS","TVA","PCG","IFRS","SAS","SA","SARL","ROI","EVA","ABC","WACC","KPI","BFR","EBE","CAF","TIR","VAN"];
-
-  useEffect(() => {
-    // Skip on mobile — saves ~40ms TBT
-    if (IS_MOBILE) return;
-    // Defer until browser is idle — doesn't block first render
-    const idle = window.requestIdleCallback || ((cb) => setTimeout(cb, 200));
-    let started = false;
-    const handle = idle(() => {
-      started = true;
-      const canvas = canvasRef.current; if (!canvas) return;
-      const ctx = canvas.getContext("2d");
-      const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
-      resize(); window.addEventListener("resize", resize);
-      const N = Math.min(35, Math.floor(window.innerWidth / 32));
-      stateRef.current.particles = Array.from({ length: N }, () => ({
-        x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight,
-        vx: (Math.random() - .5) * .3, vy: (Math.random() - .5) * .3,
-        r: Math.random() * 1.4 + 0.4, label: Math.random() > .6 ? TERMS[Math.floor(Math.random() * TERMS.length)] : null,
-        opacity: Math.random() * .4 + .1, pulse: Math.random() * Math.PI * 2,
-      }));
-      const onMouse = (e) => { stateRef.current.mouse = { x: e.clientX, y: e.clientY }; };
-      window.addEventListener("mousemove", onMouse);
-      const draw = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        const { particles, mouse } = stateRef.current;
-        particles.forEach(p => {
-          p.x += p.vx; p.y += p.vy; p.pulse += .018;
-          if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-          if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-          const dx = p.x - mouse.x, dy = p.y - mouse.y, dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 110 && dist > 0) { const f = (110 - dist) / 110 * .35; p.vx += (dx / dist) * f; p.vy += (dy / dist) * f; const spd = Math.sqrt(p.vx * p.vx + p.vy * p.vy); if (spd > 1.8) { p.vx = p.vx / spd * 1.8; p.vy = p.vy / spd * 1.8; } }
-        });
-        for (let i = 0; i < particles.length; i++) for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y, d = Math.sqrt(dx * dx + dy * dy);
-          if (d < 130) { ctx.beginPath(); ctx.strokeStyle = `rgba(226,201,126,${(1 - d / 130) * .1})`; ctx.lineWidth = .5; ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y); ctx.stroke(); }
-        }
-        particles.forEach(p => {
-          const gs = Math.max(0.1, p.r + Math.sin(p.pulse) * 1.1);
-          const grd = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, gs * 5);
-          grd.addColorStop(0, `rgba(226,201,126,${p.opacity * .35})`); grd.addColorStop(1, "rgba(226,201,126,0)");
-          ctx.beginPath(); ctx.arc(p.x, p.y, gs * 5, 0, Math.PI * 2); ctx.fillStyle = grd; ctx.fill();
-          ctx.beginPath(); ctx.arc(p.x, p.y, gs, 0, Math.PI * 2); ctx.fillStyle = `rgba(226,201,126,${p.opacity * .85})`; ctx.fill();
-          if (p.label) { ctx.font = "9px 'Courier New'"; ctx.fillStyle = `rgba(226,201,126,${p.opacity * .55})`; ctx.fillText(p.label, p.x + 6, p.y - 4); }
-        });
-        animRef.current = requestAnimationFrame(draw);
-      };
-      draw();
-      return () => { cancelAnimationFrame(animRef.current); window.removeEventListener("resize", resize); window.removeEventListener("mousemove", onMouse); };
-    });
-    return () => { if (!started && handle && window.cancelIdleCallback) window.cancelIdleCallback(handle); if (animRef.current) cancelAnimationFrame(animRef.current); };
-  }, []);
-  if (IS_MOBILE) return null;
-  return <canvas ref={canvasRef} style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none" }} />;
-}
-
-function OrbBg() {
-  const canvasRef = useRef(null);
-  const animRef = useRef(null);
-  useEffect(() => {
-    const idle = window.requestIdleCallback || ((cb) => setTimeout(cb, 100));
-    const handle = idle(() => {
-      const canvas = canvasRef.current; if (!canvas) return;
-      const ctx = canvas.getContext("2d");
-      const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
-      resize(); window.addEventListener("resize", resize);
-      // Fewer stars on mobile to reduce GPU work
-      const starCount = IS_MOBILE ? 60 : 220;
-      const stars = Array.from({ length: starCount }, () => ({
-        x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight,
-        r: Math.random() * 1.2 + 0.2, op: Math.random() * 0.7 + 0.15,
-        phase: Math.random() * Math.PI * 2, speed: Math.random() * 0.008 + 0.003,
-        layer: Math.floor(Math.random() * 3),
-      }));
-      const nebulae = [
-        { x: 0.15, y: 0.2, r: 300, c: "rgba(96,165,250,0.022)" },
-        { x: 0.85, y: 0.75, r: 260, c: "rgba(167,139,250,0.018)" },
-        { x: 0.5, y: 0.55, r: 380, c: "rgba(226,201,126,0.012)" },
-        { x: 0.1, y: 0.8, r: 200, c: "rgba(52,211,153,0.015)" },
-      ];
-      let t = 0;
-      // Pause animation when tab not visible (saves battery + CPU)
-      const draw = () => {
-        if (document.hidden) { animRef.current = requestAnimationFrame(draw); return; }
-        t += 1;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        nebulae.forEach(n => {
-          const grd = ctx.createRadialGradient(n.x * canvas.width, n.y * canvas.height, 0, n.x * canvas.width, n.y * canvas.height, n.r);
-          grd.addColorStop(0, n.c); grd.addColorStop(1, "transparent");
-          ctx.beginPath(); ctx.arc(n.x * canvas.width, n.y * canvas.height, n.r, 0, Math.PI * 2);
-          ctx.fillStyle = grd; ctx.fill();
-        });
-        stars.forEach(s => {
-          const twinkle = 0.5 + 0.5 * Math.sin(s.phase + t * s.speed);
-          const op = s.op * (0.6 + 0.4 * twinkle);
-          const size = s.r * (0.85 + 0.15 * twinkle);
-          ctx.beginPath(); ctx.arc(s.x, s.y, size, 0, Math.PI * 2);
-          if (s.layer === 2 && !IS_MOBILE) {
-            const grd = ctx.createRadialGradient(s.x, s.y, 0, s.x, s.y, size * 4);
-            grd.addColorStop(0, `rgba(255,255,255,${op * 0.5})`); grd.addColorStop(1, "transparent");
-            ctx.fillStyle = grd; ctx.arc(s.x, s.y, size * 4, 0, Math.PI * 2); ctx.fill();
-            ctx.beginPath(); ctx.arc(s.x, s.y, size, 0, Math.PI * 2);
-          }
-          ctx.fillStyle = s.layer === 0 ? `rgba(180,190,210,${op * 0.6})` : s.layer === 1 ? `rgba(220,230,245,${op * 0.8})` : `rgba(255,255,255,${op})`;
-          ctx.fill();
-        });
-        animRef.current = requestAnimationFrame(draw);
-      };
-      draw();
-      return () => { cancelAnimationFrame(animRef.current); window.removeEventListener("resize", resize); };
-    });
-    return () => { if (handle && window.cancelIdleCallback) window.cancelIdleCallback(handle); if (animRef.current) cancelAnimationFrame(animRef.current); };
-  }, []);
-  return <canvas ref={canvasRef} style={{ position: "fixed", inset: 0, zIndex: 0, pointerEvents: "none" }} />;
-}
+function ParticleCanvas() { return null; }
+function OrbBg() { return <div className="study-ambient" aria-hidden="true" />; }
 
 // ── CSS now in index.html (critical CSS inline for LCP) ──────────────────────
 
@@ -449,8 +316,8 @@ function ToastContainer() {
       {toasts.map(t => (
         <div key={t.id} style={{
           background: t.type === "success" ? "rgba(74,222,128,.12)" : t.type === "error" ? "rgba(248,113,113,.12)" : "rgba(226,201,126,.1)",
-          border: `1px solid ${t.type === "success" ? "#4ade8040" : t.type === "error" ? "#f8717140" : "rgba(226,201,126,.3)"}`,
-          color: t.type === "success" ? "#4ade80" : t.type === "error" ? "#f87171" : "#e2c97e",
+          border: `1px solid ${t.type === "success" ? "#2c806140" : t.type === "error" ? "#b8464640" : "rgba(226,201,126,.3)"}`,
+          color: t.type === "success" ? "#2c8061" : t.type === "error" ? "#b84646" : "#a47b2e",
           padding: "12px 16px", fontSize: 13, fontFamily: "inherit",
           animation: "fsu .25s ease both", backdropFilter: "blur(8px)",
           display: "flex", alignItems: "center", gap: 10,
@@ -466,9 +333,9 @@ function ToastContainer() {
 // ── ONBOARDING ────────────────────────────────────────────────────────────────
 const ONBOARDING_STEPS = [
   { icon: "🎓", title: "Mode Diplôme", desc: "Choisissez une matière DCG ou DSCG et lancez un QCM, des flashcards ou un cas pratique — tout généré par IA en temps réel.", cta: "Suivant →" },
-  { icon: "◈", title: "Résumés de cours gratuits", desc: "Chaque matière dispose d'un résumé de cours IA structuré avec points clés, pièges fréquents et conseil d'examinateur — entièrement gratuit.", cta: "Suivant →" },
+  { icon: "◈", title: "Vos fiches de révision", desc: "Chaque matière dispose d'un résumé de cours IA structuré avec points clés, pièges fréquents et conseil d'examinateur — inclus avec Pro.", cta: "Suivant →" },
   { icon: "💼", title: "Mode Carrière", desc: "Simulez un entretien d'embauche en finance/gestion avec un recruteur IA. Score, feedback détaillé et conseils personnalisés.", cta: "Suivant →" },
-  { icon: "✦", title: "Pro pour aller plus loin", desc: `Débloquez les 13 matières, QCM illimités, cas pratiques, révision espacée et planning IA pour ${PRO_PRICE}/mois. Résiliation en 1 clic.`, cta: "Commencer →" },
+  { icon: "✦", title: "Pro pour aller plus loin", desc: `Débloquez les 13 matières, QCM illimités, cas pratiques, reprise des cartes difficiles et planning IA pour ${PRO_PRICE}/mois. Résiliation en 1 clic.`, cta: "Commencer →" },
 ];
 
 function OnboardingModal({ onClose, onUpgrade }) {
@@ -477,14 +344,14 @@ function OnboardingModal({ onClose, onUpgrade }) {
   const isLast = step === ONBOARDING_STEPS.length - 1;
   return (
     <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.75)", zIndex: 9000, display: "flex", alignItems: "center", justifyContent: "center", padding: 24 }}>
-      <div style={{ background: "#0d1117", border: "1px solid rgba(226,201,126,.2)", padding: "32px 28px", maxWidth: 420, width: "100%", animation: "fsu .35s ease both", textAlign: "center" }}>
+      <div style={{ background: "#ffffff", border: "1px solid rgba(226,201,126,.2)", padding: "32px 28px", maxWidth: 420, width: "100%", animation: "fsu .35s ease both", textAlign: "center" }}>
         <div style={{ fontSize: 44, marginBottom: 16 }}>{s.icon}</div>
-        <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#e2c97e", margin: "0 0 8px" }}>ÉTAPE {step + 1} / {ONBOARDING_STEPS.length}</p>
-        <h2 style={{ fontSize: 20, fontWeight: 900, color: "#e8e4d9", margin: "0 0 12px" }}>{s.title}</h2>
-        <p style={{ fontSize: 13, color: "#6b7280", lineHeight: 1.75, margin: "0 0 24px" }}>{s.desc}</p>
+        <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#a47b2e", margin: "0 0 8px" }}>ÉTAPE {step + 1} / {ONBOARDING_STEPS.length}</p>
+        <h2 style={{ fontSize: 20, fontWeight: 900, color: "#18233e", margin: "0 0 12px" }}>{s.title}</h2>
+        <p style={{ fontSize: 13, color: "#64718b", lineHeight: 1.75, margin: "0 0 24px" }}>{s.desc}</p>
         <div style={{ display: "flex", gap: 8, justifyContent: "center", marginBottom: 16 }}>
           {ONBOARDING_STEPS.map((_, i) => (
-            <div key={i} style={{ width: i === step ? 20 : 6, height: 6, background: i === step ? "#e2c97e" : "#1f2937", borderRadius: 3, transition: "all .3s" }} />
+            <div key={i} style={{ width: i === step ? 20 : 6, height: 6, background: i === step ? "#a47b2e" : "#d9e0ec", borderRadius: 3, transition: "all .3s" }} />
           ))}
         </div>
         <button style={{ ...S.ctag, width: "100%", padding: 13 }}
@@ -502,54 +369,45 @@ export default function App() {
   const [user, setUser] = useState(null);
   const [screen, setScreen] = useState(() => getScreenFromPath(window.location.pathname));
   const [authMode, setAuthMode] = useState(() => window.location.pathname === "/inscription" ? "signup" : "login");
-  const [selectedUE, setSelectedUE] = useState(null);
+  const [selectedUE, setSelectedUE] = useState(() => ALL_UES.find(ue => ue.id === new URLSearchParams(window.location.search).get("ue")) || null);
   const [interviewCfg, setInterviewCfg] = useState(null);
   const [result, setResult] = useState(null);
   const [loadingAuth, setLoadingAuth] = useState(true);
   const [showOnboarding, setShowOnboarding] = useState(false);
 
   useEffect(() => {
-    const unsub = onAuthStateChanged(auth, async (firebaseUser) => {
-      if (firebaseUser) {
-        const ref = doc(db, "users", firebaseUser.uid);
-        const snap = await getDoc(ref);
-        if (!snap.exists()) {
-          await setDoc(ref, {
-            name: firebaseUser.displayName || firebaseUser.email.split("@")[0],
-            email: firebaseUser.email,
-            isPro: false,
-            interviewsUsed: 0,
-            streak: { count: 0, lastDate: "" },
-            history: [],
-            mastery: {},
-            createdAt: new Date().toISOString()
-          });
-        }
-        const data = snap.exists() ? snap.data() : {};
-        const streak = await loadStreak(firebaseUser.uid);
-        const hist = (data.history || []).filter(h => h.type === "entretien");
-        // Auto-expire Pack Examen if past expiry date
-        const activePro = resolveIsPro(data);
-        if (data.isPro && !activePro) {
-          // Expired — revoke in Firestore silently
-          try { await updateDoc(doc(db, "users", firebaseUser.uid), { isPro: false, proType: null, proExpiresAt: null }); } catch {}
-        }
-        const proExpiresAt = data.proExpiresAt || null;
-        setUser({ uid: firebaseUser.uid, name: data.name || firebaseUser.displayName || firebaseUser.email.split("@")[0], email: firebaseUser.email, isPro: activePro, proType: data.proType || null, proExpiresAt, interviewsUsed: hist.length, streak });
-        if (window.location.pathname === "/" || window.location.pathname === "/connexion" || window.location.pathname === "/inscription") { window.history.pushState({}, "", "/interface"); setScreen("dashboard"); }
-      } else {
-        setUser(null);
-        window.history.pushState({}, "", "/"); setScreen("landing");
+    let stopProfile = () => {}, generation = 0;
+    const unsub = onAuthStateChanged(auth, async firebaseUser => {
+      const current = ++generation;
+      stopProfile();
+      if (!firebaseUser) {
+        setUser(null); setLoadingAuth(false);
+        return;
       }
-      setLoadingAuth(false);
+      try {
+        const ref = await ensureProfile(firebaseUser);
+        if (current !== generation) return;
+        stopProfile = onSnapshot(ref, snapshot => {
+          const data = snapshot.data() || {};
+          setUser({ ...data, uid: firebaseUser.uid, name: data.name || firebaseUser.displayName || 'Étudiant', email: firebaseUser.email, isPro: resolveIsPro(data), interviewsUsed: (data.history || []).filter(h => h.type === 'entretien').length, streak: data.streak?.count || 0 });
+          setLoadingAuth(false);
+        }, () => { setLoadingAuth(false); toast.error('Impossible de charger les droits du compte. Réessayez.'); });
+        if (['/', '/connexion', '/inscription'].includes(window.location.pathname)) { window.history.replaceState({}, '', '/interface'); setScreen('dashboard'); }
+      } catch { setLoadingAuth(false); toast.error('Impossible de charger votre compte.'); }
     });
-    return unsub;
+    return () => { generation++; stopProfile(); unsub(); };
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => setUser(u => u ? { ...u, isPro: resolveIsPro(u) } : u), 60000);
+    return () => clearInterval(timer);
   }, []);
 
   // Sync URL -> screen on browser back/forward
   useEffect(() => {
     const onPop = () => {
       const s = getScreenFromPath(window.location.pathname);
+      setSelectedUE(ALL_UES.find(ue => ue.id === new URLSearchParams(window.location.search).get("ue")) || null);
       setScreen(s);
       if (s === "auth") setAuthMode(window.location.pathname === "/inscription" ? "signup" : "login");
     };
@@ -560,6 +418,7 @@ export default function App() {
   const nav = (s, opts = {}) => {
     let url = SCREEN_TO_URL[s] || "/";
     if (s === "auth") url = (opts.mode === "signup") ? "/inscription" : "/connexion";
+    if (["subject_hub", "qcm", "flashcards", "resume_cours", "cas_pratique"].includes(s) && selectedUE) url += `?ue=${selectedUE.id}`;
     window.history.pushState({}, "", url);
     setScreen(s);
   };
@@ -594,685 +453,45 @@ export default function App() {
     setResult(entry); nav("results_cas");
   };
 
-  if (loadingAuth) return <div style={{ background: "#080b14", minHeight: "100vh" }} />;
-  // Global overlays always rendered
-  const overlays = <>{showOnboarding && <OnboardingModal onClose={() => setShowOnboarding(false)} onUpgrade={() => { window.open(STRIPE_LINK, "_blank"); setShowOnboarding(false); }} />}<ToastContainer /></>;
-  if (screen === "landing")          return <>{overlays}<Landing onAuth={toAuth} onPricing={() => nav("pricing")} onTestimonials={() => nav("testimonials")} onCgu={() => nav("cgu")} onConfidentialite={() => nav("confidentialite")} /></>;
-  if (screen === "pricing")          return <Pricing onAuth={toAuth} onBack={() => nav("landing")} />;
-  if (screen === "testimonials")     return <TestimonialsScreen onBack={() => nav("landing")} />;
-  if (screen === "auth")             return <Auth mode={authMode} setMode={setAuthMode} onDone={async (u) => { setUser(u); if (u.isNew) setShowOnboarding(true); nav("dashboard"); }} onBack={() => nav("landing")} />;
-  if (screen === "dashboard")        return <>{overlays}<Dashboard user={user} onLogout={() => { signOut(auth); setUser(null); nav("landing"); toast.info("Déconnexion réussie."); }} onNav={nav} onSelectUE={(ue) => { setSelectedUE(ue); nav("subject_hub"); }} isPro={isPro} /></>;
-  if (screen === "subject_hub")      return <SubjectHub ue={selectedUE} user={user} onNav={nav} onBack={() => nav("dashboard")} />;
-  if (screen === "qcm")              return <QCMScreen ue={selectedUE} user={user} onDone={onQCMDone} onBack={() => nav("subject_hub")} />;
-  if (screen === "flashcards")       return <FlashcardsScreen ue={selectedUE} user={user} onBack={() => nav("subject_hub")} onUpgrade={() => { window.open(STRIPE_LINK, "_blank"); }} />;
-  if (screen === "resume_cours")     return <ResumeCoursScreen ue={selectedUE} user={user} onBack={() => nav("subject_hub")} />;
-  if (screen === "cas_pratique")     return <CasPratiqueScreen ue={selectedUE} user={user} onDone={onCasDone} onBack={() => nav("subject_hub")} />;
-  if (screen === "planning")         return <PlanningScreen user={user} onBack={() => nav("dashboard")} onUpgrade={() => { window.open(STRIPE_LINK, "_blank"); }} />;
-  if (screen === "interview_config") return <InterviewConfig user={user} onStart={(cfg) => { setInterviewCfg(cfg); nav("interview"); }} onBack={() => nav("dashboard")} />;
-  if (screen === "interview")        return <InterviewScreen cfg={interviewCfg} onDone={onInterviewDone} />;
-  if (screen === "results_interview")return <ResultsInterview data={result} onNew={() => nav("interview_config")} onDash={() => nav("dashboard")} />;
-  if (screen === "results_qcm")      return <ResultsQCM data={result} onNew={() => nav("qcm")} onDash={() => nav("subject_hub")} />;
-  if (screen === "results_cas")      return <ResultsCas data={result} onNew={() => nav("cas_pratique")} onDash={() => nav("subject_hub")} />;
-  if (screen === "paywall")          return <Paywall onUpgrade={() => { window.open(STRIPE_LINK, "_blank"); }} onBack={() => nav("dashboard")} />;
-  if (screen === "history")          return <History user={user} onBack={() => nav("dashboard")} />;
-  if (screen === "cgu")              return <LegalScreen type="cgu" onBack={() => nav("landing")} />;
-  if (screen === "confidentialite")  return <LegalScreen type="confidentialite" onBack={() => nav("landing")} />;
-  if (screen === "forgot_password")  return <ForgotPasswordScreen onBack={() => nav("auth")} />;
-  if (screen === "progress")         return <ProgressScreen user={user} onBack={() => nav("dashboard")} />;
-  return null;
-}
-
-// ── ROI CALCULATOR ────────────────────────────────────────────────────────────
-function ROICalculator({ onAuth }) {
-  const [ues, setUes] = useState(6);
-  const [heures, setHeures] = useState(15);
-  const [semaines, setSemaines] = useState(12);
-
-  // Méthode classique : ~28h/UE (lecture cours, fiches manuelles, annales papier)
-  // SIMDCG : ~11h/UE (QCM ciblés IA, flashcards auto, résumés instantanés)
-  const CLASSIC_H_PER_UE = 28;
-  const SIMDCG_H_PER_UE = 11;
-  const heuresClassique = ues * CLASSIC_H_PER_UE;
-  const heuresSIMDCG = ues * SIMDCG_H_PER_UE;
-  const economie = heuresClassique - heuresSIMDCG;
-  const coutProTotal = 3 * 15; // ~3 mois
-  const coutParHeureEconomisee = economie > 0 ? (coutProTotal / economie).toFixed(2) : "—";
-  const pctReduction = Math.round((economie / heuresClassique) * 100);
-  const livresSMICEquivalent = Math.round(economie * 10); // 10€/h valeur du temps étudiant
-
-  const sliderStyle = { width: "100%", accentColor: "#e2c97e", cursor: "pointer" };
-
-  return (
-    <div style={{ background: "#0a0d17", border: "1px solid #1a1f2e", padding: "32px 32px 28px" }}>
-      <div style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 24 }}>
-        <span style={{ fontSize: 20 }}>⏱</span>
-        <div>
-          <p style={{ fontSize: 16, fontWeight: 700, color: "#e8e4d9", margin: 0 }}>Calculateur de temps</p>
-          <p style={{ fontSize: 12, color: "#4b5563", margin: 0 }}>Combien d'heures vous économisez avec SIMDCG ?</p>
-        </div>
-      </div>
-
-      <div className="m-col1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginBottom: 28 }}>
-        {[
-          { label: "Nombre d'UE à préparer", val: ues, set: setUes, min: 1, max: 13, unit: "UE" },
-          { label: "Heures dispo par semaine", val: heures, set: setHeures, min: 3, max: 40, unit: "h/sem" },
-          { label: "Semaines avant l'examen", val: semaines, set: setSemaines, min: 2, max: 24, unit: "sem." },
-        ].map((s, i) => (
-          <div key={i}>
-            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
-              <span style={{ fontSize: 11, color: "#6b7280" }}>{s.label}</span>
-              <span style={{ fontSize: 13, fontWeight: 700, color: "#e2c97e" }}>{s.val} {s.unit}</span>
-            </div>
-            <input type="range" min={s.min} max={s.max} value={s.val} onChange={e => s.set(+e.target.value)} style={sliderStyle} />
-          </div>
-        ))}
-      </div>
-
-      <div className="m-col2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr", gap: 10, marginBottom: 24 }}>
-        <div style={{ background: "#080b14", border: "1px solid #1f2937", padding: "16px 12px", textAlign: "center" }}>
-          <p style={{ fontSize: 11, color: "#374151", letterSpacing: ".1em", margin: "0 0 6px" }}>MÉTHODE CLASSIQUE</p>
-          <p style={{ fontSize: 26, fontWeight: 900, color: "#f87171", margin: 0 }}>{heuresClassique}h</p>
-          <p style={{ fontSize: 10, color: "#4b5563", margin: "3px 0 0" }}>de révision estimées</p>
-        </div>
-        <div style={{ background: "#080b14", border: "1px solid rgba(226,201,126,.2)", padding: "16px 12px", textAlign: "center" }}>
-          <p style={{ fontSize: 11, color: "#e2c97e", letterSpacing: ".1em", margin: "0 0 6px" }}>AVEC SIMDCG</p>
-          <p style={{ fontSize: 26, fontWeight: 900, color: "#e2c97e", margin: 0 }}>{heuresSIMDCG}h</p>
-          <p style={{ fontSize: 10, color: "#4b5563", margin: "3px 0 0" }}>QCM ciblés + flashcards IA</p>
-        </div>
-        <div style={{ background: "#4ade8008", border: "1px solid #4ade8025", padding: "16px 12px", textAlign: "center" }}>
-          <p style={{ fontSize: 11, color: "#4ade80", letterSpacing: ".1em", margin: "0 0 6px" }}>ÉCONOMIE</p>
-          <p style={{ fontSize: 26, fontWeight: 900, color: "#4ade80", margin: 0 }}>{economie}h</p>
-          <p style={{ fontSize: 10, color: "#4b5563", margin: "3px 0 0" }}>soit -{pctReduction}% du temps</p>
-        </div>
-        <div style={{ background: "#080b14", border: "1px solid #1f2937", padding: "16px 12px", textAlign: "center" }}>
-          <p style={{ fontSize: 11, color: "#374151", letterSpacing: ".1em", margin: "0 0 6px" }}>COÛT / HEURE ÉCON.</p>
-          <p style={{ fontSize: 26, fontWeight: 900, color: "#e8e4d9", margin: 0 }}>{coutParHeureEconomisee}€</p>
-          <p style={{ fontSize: 10, color: "#4b5563", margin: "3px 0 0" }}>pour {coutProTotal}€ sur 3 mois</p>
-        </div>
-      </div>
-
-      <div style={{ background: "rgba(74,222,128,.05)", border: "1px solid rgba(74,222,128,.15)", padding: "14px 18px", marginBottom: 18 }}>
-        <p style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.7 }}>
-          <span style={{ color: "#4ade80", fontWeight: 700 }}>Résultat :</span>{" "}
-          Avec SIMDCG Pro, vous économisez <strong style={{ color: "#e8e4d9" }}>{economie} heures</strong> de révision sur vos {ues} UE — l'équivalent de{" "}
-          <strong style={{ color: "#e8e4d9" }}>{livresSMICEquivalent}€</strong> de valeur temps pour seulement <strong style={{ color: "#e2c97e" }}>{coutProTotal}€</strong> d'abonnement.
-        </p>
-      </div>
-
-      <button style={{ ...S.ctag, width: "100%", padding: 13, animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>
-        Commencer à économiser du temps →
-      </button>
-      <p style={{ fontSize: 10, color: "#374151", textAlign: "center", marginTop: 8 }}>
-        Estimation basée sur ~28h de révision classique par UE vs ~11h avec SIMDCG (QCM IA + flashcards + résumés instantanés)
-      </p>
-    </div>
-  );
-}
-
-// ── EXAM COUNTDOWN ────────────────────────────────────────────────────────────
-function useCountdown(targetDate) {
-  const getNext = () => {
-    const now = new Date();
-    let target = new Date(targetDate);
-    // If date has passed, advance to next year
-    while (target <= now) {
-      target.setFullYear(target.getFullYear() + 1);
-    }
-    return target;
+  if (loadingAuth) return <div className="app-loading"><span className="brand-mark">S</span><p>Préparation de votre espace…</p></div>;
+  const publicScreens = ['landing', 'pricing', 'testimonials', 'auth', 'cgu', 'confidentialite', 'forgot_password', 'features', 'dcg', 'dscg', 'resources', 'support'];
+  const privateScreen = !publicScreens.includes(screen);
+  const selectUE = ue => { setSelectedUE(ue); window.history.pushState({}, '', `/matiere?ue=${ue.id}`); setScreen('subject_hub'); };
+  const logout = () => { signOut(auth); setUser(null); nav('landing'); };
+  const renderScreen = () => {
+    if (privateScreen && !user) return <Auth mode="login" setMode={setAuthMode} onDone={u => { setUser(u); nav(screen); }} onBack={() => nav('landing')} />;
+    if (['subject_hub', 'qcm', 'flashcards', 'resume_cours', 'cas_pratique'].includes(screen) && !selectedUE) return <LibraryPage ues={ALL_UES} user={user} onSelect={selectUE} />;
+    if (['qcm', 'flashcards', 'resume_cours', 'cas_pratique', 'interview', 'interview_config', 'tutor'].includes(screen) && !isPro) return <Paywall onUpgrade={() => upgrade()} onBack={() => nav('dashboard')} />;
+    if (screen === 'interview' && !interviewCfg) return <InterviewConfig user={user} onStart={cfg => { setInterviewCfg(cfg); nav('interview'); }} onBack={() => nav('dashboard')} />;
+    if (screen.startsWith('results_') && !result) return <History user={user} onBack={() => nav('dashboard')} />;
+    if (screen === 'landing') return <Marketing onAuth={toAuth} onNav={nav} ues={ALL_UES} />;
+    if (screen === 'pricing') return <OfferPage user={user} onCheckout={upgrade} onNav={nav} />;
+    if (['features', 'dcg', 'dscg', 'resources', 'support'].includes(screen)) return <PublicInfo page={screen} onNav={nav} onAuth={toAuth} ues={ALL_UES} />;
+    if (screen === 'testimonials') return <StudentReviews load={loadTestimonials} onNav={nav} />;
+    if (screen === 'auth') return <Auth mode={authMode} setMode={setAuthMode} onDone={u => { setUser(u); if (u.isNew) setShowOnboarding(true); const plan = sessionStorage.getItem('simdcg-plan'); sessionStorage.removeItem('simdcg-plan'); nav('dashboard'); if (plan) upgrade(plan); }} onBack={() => nav('landing')} />;
+    if (screen === 'dashboard') return <StudentHome user={user} ues={ALL_UES} onNav={nav} onSelect={selectUE} />;
+    if (screen === 'library') return <LibraryPage ues={ALL_UES} user={user} onSelect={selectUE} />;
+    if (screen === 'subject_hub') return <CourseHome ue={selectedUE} user={user} onNav={nav} />;
+    if (screen === 'account') return <AccountPage user={user} onNav={nav} onCheckout={upgrade} request={billingRequest} />;
+    if (screen === 'tutor') return <TutorPage ues={ALL_UES} call={callClaude} user={user} />;
+    if (screen === 'qcm') return <QCMScreen ue={selectedUE} user={user} onDone={onQCMDone} onBack={() => nav('subject_hub')} />;
+    if (screen === 'flashcards') return <FlashcardsScreen ue={selectedUE} user={user} onBack={() => nav('subject_hub')} onUpgrade={() => upgrade()} />;
+    if (screen === 'resume_cours') return <ResumeCoursScreen ue={selectedUE} user={user} onBack={() => nav('subject_hub')} />;
+    if (screen === 'cas_pratique') return <CasPratiqueScreen ue={selectedUE} user={user} onDone={onCasDone} onBack={() => nav('subject_hub')} />;
+    if (screen === 'planning') return <PlanningScreen user={user} onBack={() => nav('dashboard')} onUpgrade={() => upgrade()} />;
+    if (screen === 'interview_config') return <InterviewConfig user={user} onStart={cfg => { setInterviewCfg(cfg); nav('interview'); }} onBack={() => nav('dashboard')} />;
+    if (screen === 'interview') return <InterviewScreen cfg={interviewCfg} onDone={onInterviewDone} />;
+    if (screen === 'results_interview') return <ResultsInterview data={result} onNew={() => nav('interview_config')} onDash={() => nav('dashboard')} />;
+    if (screen === 'results_qcm') return <ResultsQCM data={result} onNew={() => nav('qcm')} onDash={() => nav('subject_hub')} />;
+    if (screen === 'results_cas') return <ResultsCas data={result} onNew={() => nav('cas_pratique')} onDash={() => nav('subject_hub')} />;
+    if (screen === 'paywall') return <Paywall onUpgrade={() => upgrade()} onBack={() => nav('dashboard')} />;
+    if (screen === 'history') return <History user={user} onBack={() => nav('dashboard')} />;
+    if (screen === 'progress') return <LearningProgress user={user} ues={ALL_UES} onNav={nav} />;
+    if (screen === 'forgot_password') return <ForgotPasswordScreen onBack={() => toAuth('login')} />;
+    if (screen === 'cgu' || screen === 'confidentialite') return <LegalScreen type={screen} onBack={() => nav('landing')} />;
+    return null;
   };
-  const calc = () => {
-    const target = getNext();
-    const diff = target - new Date();
-    if (diff <= 0) return { j: 0, h: 0, m: 0, s: 0 };
-    const j = Math.floor(diff / 86400000);
-    const h = Math.floor((diff % 86400000) / 3600000);
-    const m = Math.floor((diff % 3600000) / 60000);
-    const s = Math.floor((diff % 60000) / 1000);
-    return { j, h, m, s };
-  };
-  const [time, setTime] = useState(calc);
-  useEffect(() => {
-    const id = setInterval(() => setTime(calc()), 1000);
-    return () => clearInterval(id);
-  }, []);
-  return time;
-}
-
-function CountdownUnit({ v, l, color }) {
-  return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", minWidth: 36 }}>
-      <span style={{ fontSize: 20, fontWeight: 900, color, fontFamily: "monospace", lineHeight: 1 }}>
-        {String(v).padStart(2, "0")}
-      </span>
-      <span style={{ fontSize: 8, color: "#374151", letterSpacing: ".08em", marginTop: 2 }}>{l}</span>
-    </div>
-  );
-}
-
-function ExamCountdown() {
-  const dcg  = useCountdown("2026-05-28T08:00:00");
-  const dscg = useCountdown("2026-10-20T08:00:00");
-
-  const Num = ({ v, l, color }) => (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 32 }}>
-      <span style={{ fontSize: 20, fontWeight: 900, color, fontFamily: "monospace", lineHeight: 1 }}>
-        {String(v).padStart(2, "0")}
-      </span>
-      <span style={{ fontSize: 7, color: "#374151", letterSpacing: ".06em", marginTop: 1 }}>{l}</span>
-    </div>
-  );
-
-  const Colon = ({ color }) => (
-    <span style={{ fontSize: 16, fontWeight: 900, color, opacity: .35, paddingBottom: 8 }}>:</span>
-  );
-
-  const Block = ({ badge, label, color, t }) => (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, flex: "1 1 260px" }}>
-      <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-        <span style={{ fontSize: 10, fontWeight: 700, color, letterSpacing: ".1em" }}>{badge}</span>
-        <span style={{ fontSize: 10, color: "#6b7280" }}>{label}</span>
-      </div>
-      <div style={{ display: "flex", alignItems: "center", gap: 3 }}>
-        <Num v={t.j} l="JOURS" color={color} />
-        <Colon color={color} />
-        <Num v={t.h} l="HRS" color={color} />
-        <Colon color={color} />
-        <Num v={t.m} l="MIN" color={color} />
-        <Colon color={color} />
-        <Num v={t.s} l="SEC" color={color} />
-      </div>
-    </div>
-  );
-
-  return (
-    <div style={{ position: "relative", zIndex: 1, background: "rgba(8,11,20,.85)", borderBottom: "1px solid #111827", borderTop: "1px solid #111827", backdropFilter: "blur(10px)" }}>
-      <div style={{ maxWidth: 760, margin: "0 auto", padding: "12px 20px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "10px 24px" }}>
-        <Block badge="🎓 DCG" label="Épreuves écrites — 28 mai 2026" color="#60a5fa" t={dcg} />
-        <div style={{ width: 1, height: 40, background: "#1f2937", flexShrink: 0, alignSelf: "center" }} className="m-hide" />
-        <Block badge="◈ DSCG" label="Épreuves écrites — 20 oct. 2026" color="#a78bfa" t={dscg} />
-      </div>
-    </div>
-  );
-}
-
-
-function StatsBar() {
-  const [stats, setStats] = useState(null);
-  const [displayed, setDisplayed] = useState({ totalQCMs: 0, totalUsers: 0, totalInterviews: 0, totalFlashcards: 0 });
-
-  useEffect(() => {
-    loadStats().then(s => {
-      // Add some baseline to avoid showing 0 at launch
-      const base = { totalQCMs: 347, totalUsers: 48, totalInterviews: 150, totalFlashcards: 980 };
-      setStats({
-        totalQCMs: (s.totalQCMs || 0) + base.totalQCMs,
-        totalUsers: (s.totalUsers || 0) + base.totalUsers,
-        totalInterviews: (s.totalInterviews || 0) + base.totalInterviews,
-        totalFlashcards: (s.totalFlashcards || 0) + base.totalFlashcards,
-      });
-    });
-  }, []);
-
-  useEffect(() => {
-    if (!stats) return;
-    const duration = 1400;
-    const steps = 40;
-    const interval = duration / steps;
-    let step = 0;
-    const t = setInterval(() => {
-      step++;
-      const progress = step / steps;
-      const ease = 1 - Math.pow(1 - progress, 3);
-      setDisplayed({
-        totalQCMs: Math.round(stats.totalQCMs * ease),
-        totalUsers: Math.round(stats.totalUsers * ease),
-        totalInterviews: Math.round(stats.totalInterviews * ease),
-        totalFlashcards: Math.round(stats.totalFlashcards * ease),
-      });
-      if (step >= steps) clearInterval(t);
-    }, interval);
-    return () => clearInterval(t);
-  }, [stats]);
-
-  const items = [
-    { v: displayed.totalUsers, l: "Étudiants inscrits", icon: "👥" },
-    { v: displayed.totalQCMs, l: "QCM générés", icon: "△" },
-    { v: displayed.totalFlashcards, l: "Flashcards créées", icon: "◈" },
-    { v: displayed.totalInterviews, l: "Entretiens simulés", icon: "💼" },
-  ];
-
-  return (
-    <div style={{ background: "rgba(226,201,126,.03)", borderTop: "1px solid rgba(226,201,126,.08)", borderBottom: "1px solid rgba(226,201,126,.08)", padding: "16px 20px" }}>
-      <div className="m-col2" style={{ maxWidth: 760, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 0 }}>
-        {items.map((it, i) => (
-          <div key={i} style={{ textAlign: "center", borderRight: i < 3 ? "1px solid #1a1f2e" : "none", padding: "8px 10px" }}>
-            <p style={{ fontSize: 20, fontWeight: 900, color: "#e2c97e", margin: "0 0 3px", fontFamily: "monospace" }}>{it.v.toLocaleString("fr-FR")}</p>
-            <p style={{ fontSize: 9, color: "#374151", margin: 0, letterSpacing: ".06em" }}>{it.icon} {it.l.toUpperCase()}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-// ── TESTIMONIALS TEASER (landing) ─────────────────────────────────────────────
-function TestimonialsTeaser({ onSeeAll }) {
-  const [items, setItems] = useState([]);
-  useEffect(() => { loadTestimonials().then(d => setItems(d.slice(0, 3))); }, []);
-
-  const PLACEHOLDER = [
-    { name: "Sophie M.", role: "Étudiante DCG — Paris", rating: 5, text: "Les QCM IA sont vraiment bien calibrés. J'ai augmenté ma moyenne en fiscalité de 3 points en 3 semaines. L'explication de chaque réponse est un vrai plus.", DateDisplay: "Février 2026" },
-    { name: "Thomas R.", role: "DCG — Lyon", rating: 5, text: "Le simulateur d'entretien m'a complètement préparé pour mon stage en cabinet. Le feedback est précis et les questions sont exactement ce qu'on m'a posé.", DateDisplay: "Février 2026" },
-    { name: "Camille D.", role: "DSCG — Bordeaux", rating: 5, text: "Le planning de révision IA a changé ma façon de préparer les examens. Plus de stress pour organiser mon programme, je suis tout simplement le plan semaine par semaine.", DateDisplay: "Mars 2026" },
-  ];
-  const shown = items.length >= 3 ? items : PLACEHOLDER;
-
-  return (
-    <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px 60px", position: "relative", zIndex: 1 }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 20 }}>
-        <div>
-          <p style={{ fontSize: 10, letterSpacing: ".2em", color: "#374151", marginBottom: 6 }}>TÉMOIGNAGES</p>
-          <h2 style={{ fontSize: 22, fontWeight: 900, color: "#e8e4d9", margin: 0 }}>Ce qu'ils en disent</h2>
-        </div>
-        <button style={{ ...S.nl, fontSize: 12, color: "#e2c97e" }} onClick={onSeeAll}>Voir tous les avis →</button>
-      </div>
-      <div className="m-col1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
-        {shown.map((t, i) => (
-          <div key={i} style={{ ...S.fc, gap: 12, animation: `fsu .5s ${i * .1}s both` }}>
-            <div style={{ display: "flex", gap: 2 }}>
-              {"★★★★★".slice(0, t.rating || 5).split("").map((s, j) => <span key={j} style={{ color: "#e2c97e", fontSize: 12 }}>{s}</span>)}
-            </div>
-            <p style={{ fontSize: 13, color: "#c9c3b5", lineHeight: 1.7, margin: 0, flex: 1 }}>"{t.text}"</p>
-            <div style={{ borderTop: "1px solid #111827", paddingTop: 10 }}>
-              <p style={{ fontSize: 12, fontWeight: 700, color: "#e8e4d9", margin: "0 0 2px" }}>{t.name}</p>
-              <p style={{ fontSize: 10, color: "#374151", margin: 0 }}>{t.role}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-// ── LANDING ───────────────────────────────────────────────────────────────────
-function Landing({ onAuth, onPricing, onTestimonials, onCgu, onConfidentialite }) {
-  return (
-    <div style={S.root}>
-      <ParticleCanvas /><OrbBg />
-      <nav style={S.nav}>
-        <Logo glow />
-        <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-          <button style={{ ...S.nl, fontSize: 12 }} className="m-hide" onClick={onTestimonials}>Avis ✦</button>
-          <button style={{ ...S.nl, fontSize: 12 }} className="m-hide" onClick={onPricing}>Tarifs</button>
-          <button style={{ ...S.no, fontSize: 11, padding: "5px 10px" }} onClick={() => onAuth("login")}>Connexion</button>
-          <button style={{ ...S.nc, fontSize: 11, padding: "6px 12px", animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Commencer →</button>
-        </div>
-      </nav>
-
-      <ExamCountdown />
-
-      {/* Hero */}
-      <div style={{ position: "relative", zIndex: 1, maxWidth: 640, margin: "0 auto", padding: "52px 20px 40px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
-        <div style={{ ...S.badge, animation: "fsu .7s ease both", fontSize: 9 }}>◈ PRÉPARATION DCG · DSCG · ENTRETIENS</div>
-        <h1 className="m-hero-h1" style={{ fontSize: 52, fontWeight: 900, margin: 0, lineHeight: 1.06, letterSpacing: -3, animation: "fsu .7s .1s both" }}>
-          La plateforme<br />
-          <span style={{ color: "#e2c97e" }}>DCG / DSCG</span>
-        </h1>
-        <p style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.75, margin: 0, maxWidth: 480, animation: "fsu .7s .2s both" }}>
-          QCM générés par IA, résumés de cours, cas pratiques, flashcards et simulateur d'entretien — tout ce qu'il faut pour décrocher le diplôme et le poste.
-        </p>
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", justifyContent: "center", animation: "fsu .7s .3s both" }}>
-          <button style={{ ...S.ctag, animation: "glow 3s ease-in-out infinite" }} onClick={() => onAuth("signup")}>Accès Pro à -40% — Je commence →</button>
-          <button style={{ ...S.ctagh, fontSize: 13 }} className="m-hide" onClick={onPricing}>Voir les tarifs</button>
-        </div>
-        <p style={{ fontSize: 11, color: "#374151", letterSpacing: ".08em", animation: "fi 1s .5s both" }}>Offre de lancement · Résiliation en 1 clic</p>
-      </div>
-
-      {/* Live stats bar */}
-      <div style={{ position: "relative", zIndex: 1 }}><StatsBar /></div>
-
-      {/* Mode cards */}
-      <div className="m-col1" style={{ maxWidth: 860, margin: "0 auto", padding: "40px 16px 32px", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12, position: "relative", zIndex: 1 }}>
-        {[
-          { icon: "🎓", label: "Mode Diplôme", color: "#60a5fa", items: ["QCM IA illimités par UE", "Résumés de cours gratuits", "Cas pratiques style examen", "13 matières DCG + DSCG"] },
-          { icon: "◈", label: "Révision Intelligente", color: "#4ade80", items: ["Flashcards générées par IA", "Révision espacée (Pro)", "Planning personnalisé (Pro)", "Suivi de progression par UE"] },
-          { icon: "💼", label: "Mode Carrière", color: "#e2c97e", items: ["Simulateur d'entretien IA", "6 thématiques Finance/Gestion", "Score et coaching personnalisé", "Feedback recruteur senior"] },
-        ].map((m, i) => (
-          <div key={m.label} style={{ ...S.fc, borderColor: `${m.color}20`, animation: `fsu .6s ${.4 + i * .1}s both` }}>
-            <div style={{ fontSize: 28, marginBottom: 10 }}>{m.icon}</div>
-            <p style={{ fontSize: 13, fontWeight: 700, color: m.color, margin: "0 0 12px", letterSpacing: ".05em" }}>{m.label}</p>
-            {m.items.map(it => <p key={it} style={{ fontSize: 11, color: "#4b5563", margin: "3px 0" }}>✓ {it}</p>)}
-          </div>
-        ))}
-      </div>
-
-      {/* ROI Calculator */}
-      <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px 60px", position: "relative", zIndex: 1, animation: "fsu .6s .4s both" }}>
-        <div style={{ textAlign: "center", marginBottom: 24 }}>
-          <p style={{ fontSize: 10, letterSpacing: ".2em", color: "#374151", marginBottom: 8 }}>CALCULATEUR ROI</p>
-          <h2 style={{ fontSize: 24, fontWeight: 900, color: "#e8e4d9", margin: "0 0 6px" }}>Combien d'heures allez-vous économiser ?</h2>
-          <p style={{ fontSize: 13, color: "#4b5563", margin: 0 }}>Ajustez selon votre situation. Les chiffres sont réels.</p>
-        </div>
-        <ROICalculator onAuth={onAuth} />
-      </div>
-
-      {/* Testimonials teaser */}
-      <TestimonialsTeaser onSeeAll={onTestimonials} />
-
-      {/* UE tags */}
-      <div style={{ maxWidth: 860, margin: "0 auto", padding: "0 24px 60px", position: "relative", zIndex: 1 }}>
-        <p style={{ fontSize: 10, letterSpacing: ".2em", color: "#374151", marginBottom: 14, textAlign: "center" }}>13 MATIÈRES COUVERTES</p>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center" }}>
-          {ALL_UES.map((ue, i) => (
-            <span key={ue.id} style={{ ...S.tag, borderColor: `${ue.color}30`, color: ue.color, animation: `fsu .5s ${.5 + i * .03}s both` }}>
-              <span style={{ fontSize: 10, opacity: .5, marginRight: 4 }}>{ue.level}</span>{ue.short}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <Footer onCgu={onCgu} onConfidentialite={onConfidentialite} />
-    </div>
-  );
-}
-const COMPARE_ROWS = [
-  { cat: "📚 Mode Diplôme", feature: "QCM générés par IA",              free: "3 / matière",     pro: "10 / matière",         proHl: true },
-  { cat: "📚 Mode Diplôme", feature: "Matières DCG accessibles",         free: "3 matières",      pro: "8 matières",           proHl: true },
-  { cat: "📚 Mode Diplôme", feature: "Matières DSCG",                    free: false,             pro: "5 matières",           proHl: true },
-  { cat: "📚 Mode Diplôme", feature: "Résumés de cours IA",              free: true,              pro: true,                   proHl: false },
-  { cat: "📚 Mode Diplôme", feature: "Cas pratiques style examen",       free: false,             pro: "Illimités",            proHl: true },
-  { cat: "◈ Révision",      feature: "Flashcards IA",                    free: "5 / matière",     pro: "12 / matière",         proHl: true },
-  { cat: "◈ Révision",      feature: "Révision espacée (cartes difficiles)", free: false,         pro: true,                   proHl: true },
-  { cat: "◈ Révision",      feature: "Planning de révision IA",          free: false,             pro: true,                   proHl: true },
-  { cat: "◈ Révision",      feature: "Suivi de progression par UE",      free: true,              pro: true,                   proHl: false },
-  { cat: "💼 Carrière",     feature: "Simulateur d'entretien IA",        free: "1 entretien",     pro: "Illimités",            proHl: true },
-  { cat: "💼 Carrière",     feature: "Thématiques d'entretien",          free: "1 (CdG)",         pro: "6 thématiques",        proHl: true },
-  { cat: "💼 Carrière",     feature: "Historique & progression",         free: false,             pro: true,                   proHl: true },
-];
-
-function renderCell(val) {
-  if (val === true)  return <span style={{ color: "#4ade80", fontSize: 16 }}>✓</span>;
-  if (val === false) return <span style={{ color: "#1f2937", fontSize: 16 }}>—</span>;
-  return <span style={{ fontSize: 12, color: "#c9c3b5" }}>{val}</span>;
-}
-
-function CompareTable({ onCta, ctaLabel = "Passer Pro →", compact = false }) {
-  const cats = [...new Set(COMPARE_ROWS.map(r => r.cat))];
-  return (
-    <div style={{ width: "100%", position: "relative", zIndex: 1 }}>
-      {/* Header */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 120px 140px", borderBottom: "2px solid #1f2937", paddingBottom: 10, marginBottom: 0 }}>
-        <div />
-        <div style={{ textAlign: "center" }}>
-          <p style={{ fontSize: 11, color: "#6b7280", letterSpacing: ".12em", margin: 0 }}>GRATUIT</p>
-          <p style={{ fontSize: 18, fontWeight: 900, color: "#e8e4d9", margin: "2px 0 0" }}>0€</p>
-        </div>
-        <div style={{ textAlign: "center", background: "rgba(226,201,126,.06)", border: "1px solid rgba(226,201,126,.2)", padding: "6px 0", position: "relative" }}>
-          <div style={{ position: "absolute", top: -10, left: "50%", transform: "translateX(-50%)", background: "#e2c97e", color: "#080b14", fontSize: 8, padding: "2px 10px", fontWeight: 700, letterSpacing: ".1em", whiteSpace: "nowrap" }}>RECOMMANDÉ</div>
-          <p style={{ fontSize: 11, color: "#e2c97e", letterSpacing: ".12em", margin: 0 }}>PRO</p>
-          <p style={{ fontSize: 18, fontWeight: 900, color: "#e8e4d9", margin: "2px 0 0" }}>{PRO_PRICE}<span style={{ fontSize: 10, color: "#6b7280" }}>/mois</span></p>
-        </div>
-      </div>
-
-      {/* Rows grouped by category */}
-      {cats.map((cat, ci) => {
-        const rows = COMPARE_ROWS.filter(r => r.cat === cat);
-        return (
-          <div key={cat}>
-            <div style={{ background: "#080b14", padding: compact ? "8px 0 4px" : "12px 0 6px" }}>
-              <span style={{ fontSize: 10, color: "#374151", letterSpacing: ".14em" }}>{cat.toUpperCase()}</span>
-            </div>
-            {rows.map((row, ri) => (
-              <div key={ri} style={{ display: "grid", gridTemplateColumns: "1fr 120px 140px", borderBottom: "1px solid #0d1117", padding: compact ? "8px 0" : "10px 0", alignItems: "center" }}>
-                <p style={{ fontSize: compact ? 12 : 13, color: "#9ca3af", margin: 0 }}>{row.feature}</p>
-                <div style={{ textAlign: "center" }}>{renderCell(row.free)}</div>
-                <div style={{ textAlign: "center", background: "rgba(226,201,126,.03)" }}>
-                  {row.proHl && row.pro !== true
-                    ? <span style={{ fontSize: 12, color: "#e2c97e", fontWeight: 700 }}>{row.pro}</span>
-                    : renderCell(row.pro)
-                  }
-                </div>
-              </div>
-            ))}
-          </div>
-        );
-      })}
-
-      {/* CTA row */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 120px 140px", paddingTop: 16, gap: 8 }}>
-        <div />
-        <div />
-        <button style={{ ...S.ctag, padding: "11px 0", fontSize: 13, animation: "glow 3s ease-in-out infinite" }} onClick={onCta}>{ctaLabel}</button>
-      </div>
-    </div>
-  );
-}
-
-// ── TESTIMONIALS SCREEN ───────────────────────────────────────────────────────
-function TestimonialsScreen({ onBack }) {
-  const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [showForm, setShowForm] = useState(false);
-  const [name, setName] = useState("");
-  const [role, setRole] = useState("");
-  const [text, setText] = useState("");
-  const [rating, setRating] = useState(5);
-  const [sending, setSending] = useState(false);
-  const [done, setDone] = useState(false);
-  const [err, setErr] = useState("");
-
-  const PLACEHOLDER = [
-    { name: "Sophie M.", role: "Étudiante DCG — Paris", rating: 5, text: "Les QCM IA sont vraiment bien calibrés. J'ai augmenté ma moyenne en fiscalité de 3 points en 3 semaines. L'explication de chaque réponse est un vrai plus.", DateDisplay: "Février 2026" },
-    { name: "Thomas R.", role: "DCG — Lyon", rating: 5, text: "Le simulateur d'entretien m'a complètement préparé pour mon stage en cabinet. Le feedback est précis et les questions sont exactement ce qu'on m'a posé.", DateDisplay: "Février 2026" },
-    { name: "Camille D.", role: "DSCG — Bordeaux", rating: 5, text: "Le planning de révision IA a changé ma façon de préparer les examens. Plus de stress pour organiser mon programme, je suis tout simplement le plan semaine par semaine.", DateDisplay: "Mars 2026" },
-    { name: "Lucas B.", role: "DCG — Nantes", rating: 5, text: "Les résumés de cours générés par IA m'ont évité de relire 3 fois mes polycopiés. Directs, précis, avec les pièges à éviter. Exactement ce qu'il me fallait.", DateDisplay: "Décembre 2025" },
-    { name: "Anaïs F.", role: "DSCG — Toulouse", rating: 5, text: "Les flashcards sont redoutablement efficaces. En 20 minutes de révision espacée le matin avant les cours, j'ai mémorisé les normes IFRS en 2 semaines.", DateDisplay: "Décembre 2025" },
-    { name: "Romain C.", role: "Alternance cabinet comptable — Lille", rating: 5, text: "En alternance, mon temps est limité. SIMDCG m'a permis de réviser efficacement sur les temps de trajet grâce aux flashcards et QCM rapides.", DateDisplay: "Novembre 2025" },
-  ];
-
-  useEffect(() => {
-    loadTestimonials().then(d => { setItems(d); setLoading(false); });
-  }, []);
-
-  const shown = items.length >= 4 ? items : PLACEHOLDER;
-
-  const submit = async () => {
-    if (!name.trim() || !text.trim() || text.trim().length < 20) { setErr("Prénom et témoignage (20 car. min) requis."); return; }
-    setSending(true); setErr("");
-    const ok = await saveTestimonial({ name: name.trim(), role: role.trim() || "Étudiant DCG/DSCG", text: text.trim(), rating });
-    if (ok) { setDone(true); toast.success("Merci ! Votre avis a été publié."); } else { setErr("Erreur d'envoi. Réessayez."); toast.error("Erreur d'envoi."); }
-    setSending(false);
-  };
-
-  return (
-    <div style={S.root}><ParticleCanvas /><OrbBg />
-      <nav style={S.nav}>
-        <Logo />
-        <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-          <button style={{ ...S.ctag, fontSize: 12, padding: "7px 16px" }} onClick={() => setShowForm(true)}>+ Laisser un avis</button>
-          <button style={S.nl} onClick={onBack}>← Retour</button>
-        </div>
-      </nav>
-
-      <div style={{ maxWidth: 820, margin: "0 auto", padding: "48px 24px 80px", position: "relative", zIndex: 1 }}>
-        <div style={{ textAlign: "center", marginBottom: 36, animation: "fsu .5s ease both" }}>
-          <div style={{ ...S.badge, display: "inline-block", marginBottom: 12 }}>TÉMOIGNAGES</div>
-          <h2 style={{ fontSize: 30, fontWeight: 900, color: "#e8e4d9", margin: "0 0 8px" }}>Ce qu'ils pensent de SIMDCG</h2>
-          <p style={{ fontSize: 13, color: "#4b5563", margin: 0 }}>Des retours authentiques d'étudiants DCG et DSCG.</p>
-        </div>
-
-        {/* Form modal */}
-        {showForm && (
-          <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.7)", zIndex: 100, display: "flex", alignItems: "center", justifyContent: "center", padding: 24 }}>
-            <div style={{ background: "#0d1117", border: "1px solid #1a1f2e", padding: "28px 28px", maxWidth: 500, width: "100%", animation: "fsu .3s ease both", position: "relative" }}>
-              <button style={{ ...S.nl, position: "absolute", top: 12, right: 16, fontSize: 16 }} onClick={() => { setShowForm(false); setDone(false); setErr(""); }}>✕</button>
-              {done ? (
-                <div style={{ textAlign: "center", padding: "20px 0" }}>
-                  <span style={{ fontSize: 40 }}>✓</span>
-                  <h3 style={{ fontSize: 20, color: "#4ade80", margin: "12px 0 8px" }}>Merci pour votre avis !</h3>
-                  <p style={{ fontSize: 13, color: "#6b7280" }}>Votre témoignage a bien été enregistré.</p>
-                  <button style={{ ...S.ctag, marginTop: 16 }} onClick={() => { setShowForm(false); setDone(false); setText(""); setName(""); setRole(""); setRating(5); loadTestimonials().then(setItems); }}>Fermer</button>
-                </div>
-              ) : (
-                <>
-                  <h3 style={{ fontSize: 18, color: "#e8e4d9", margin: "0 0 20px" }}>Partager votre expérience</h3>
-                  <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-                      <FInput label="Prénom *" value={name} set={setName} ph="Sophie" />
-                      <FInput label="Profil (optionnel)" value={role} set={setRole} ph="DCG — Paris" />
-                    </div>
-                    <div>
-                      <p style={{ fontSize: 10, letterSpacing: ".12em", color: "#6b7280", textTransform: "uppercase", margin: "0 0 8px" }}>Note</p>
-                      <div style={{ display: "flex", gap: 8 }}>
-                        {[1,2,3,4,5].map(n => (
-                          <button key={n} onClick={() => setRating(n)} style={{ background: "none", border: "none", fontSize: 22, cursor: "pointer", color: n <= rating ? "#e2c97e" : "#1f2937", transition: "color .15s" }}>★</button>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <p style={{ fontSize: 10, letterSpacing: ".12em", color: "#6b7280", textTransform: "uppercase", margin: "0 0 6px" }}>Témoignage *</p>
-                      <textarea value={text} onChange={e => setText(e.target.value)} placeholder="Partagez votre expérience avec SIMDCG..." rows={4}
-                        style={{ width: "100%", background: "#080b14", border: "1px solid #1f2937", color: "#e8e4d9", padding: "10px 12px", fontSize: 13, fontFamily: "inherit", resize: "none", outline: "none", lineHeight: 1.6, boxSizing: "border-box" }}
-                        onFocus={e => e.target.style.borderColor = "#e2c97e40"} onBlur={e => e.target.style.borderColor = "#1f2937"} />
-                    </div>
-                    {err && <p style={{ fontSize: 12, color: "#f87171", margin: 0 }}>{err}</p>}
-                    <button style={{ ...S.ctag, padding: 12, opacity: sending ? .6 : 1 }} onClick={submit} disabled={sending}>
-                      {sending ? <Spinner /> : "Publier mon avis →"}
-                    </button>
-                  </div>
-                </>
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Grid of testimonials */}
-        {loading ? (
-          <div style={{ textAlign: "center", padding: 60 }}><Spinner /></div>
-        ) : (
-          <div className="m-col1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 12 }}>
-            {shown.map((t, i) => (
-              <div key={i} style={{ ...S.fc, gap: 12, animation: `fsu .4s ${i * .06}s both` }}>
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                  <div style={{ display: "flex", gap: 1 }}>
-                    {[1,2,3,4,5].map(n => <span key={n} style={{ color: n <= (t.rating || 5) ? "#e2c97e" : "#1f2937", fontSize: 12 }}>★</span>)}
-                  </div>
-                  {t.dateDisplay && <span style={{ fontSize: 10, color: "#374151" }}>{t.dateDisplay}</span>}
-                </div>
-                <p style={{ fontSize: 13, color: "#c9c3b5", lineHeight: 1.7, margin: 0, flex: 1 }}>"{t.text}"</p>
-                <div style={{ borderTop: "1px solid #111827", paddingTop: 10 }}>
-                  <p style={{ fontSize: 12, fontWeight: 700, color: "#e8e4d9", margin: "0 0 2px" }}>{t.name}</p>
-                  <p style={{ fontSize: 10, color: "#374151", margin: 0 }}>{t.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        <div style={{ textAlign: "center", marginTop: 40 }}>
-          <p style={{ fontSize: 13, color: "#4b5563", marginBottom: 14 }}>Vous utilisez SIMDCG ? Partagez votre expérience.</p>
-          <button style={{ ...S.ctag, padding: "12px 32px" }} onClick={() => setShowForm(true)}>+ Laisser un avis</button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// ── PRICING ───────────────────────────────────────────────────────────────────
-function Pricing({ onAuth, onBack }) {
-  return (
-    <div style={S.root}><ParticleCanvas /><OrbBg />
-      <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← Retour</button></nav>
-      <div style={{ maxWidth: 800, margin: "0 auto", padding: "60px 24px 80px", position: "relative", zIndex: 1 }}>
-
-        {/* Header */}
-        <div style={{ textAlign: "center", marginBottom: 44, animation: "fsu .5s ease both" }}>
-          <div style={{ ...S.badge, display: "inline-block", marginBottom: 14 }}>TARIFS</div>
-          <h2 style={{ fontSize: 36, margin: "0 0 10px", color: "#e8e4d9", fontWeight: 900 }}>Choisissez votre formule.</h2>
-          <p style={{ fontSize: 14, color: "#4b5563", margin: 0 }}>Accès complet à toutes les fonctionnalités dès le premier jour.</p>
-        </div>
-
-        {/* Price cards — 2 plans only */}
-        <div className="m-col1" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginBottom: 48, animation: "fsu .5s .1s ease both" }}>
-
-          {/* Pack Examen */}
-          <div style={{ ...S.pc, display: "flex", flexDirection: "column", gap: 0, border: "1px solid rgba(96,165,250,.35)", background: "rgba(96,165,250,.04)" }}>
-            <div style={{ position: "absolute", top: -10, left: "50%", transform: "translateX(-50%)", background: "#60a5fa", color: "#080b14", fontSize: 9, padding: "3px 12px", fontWeight: 700, letterSpacing: ".12em", whiteSpace: "nowrap" }}>IDÉAL SESSION MAI</div>
-            <p style={{ fontSize: 11, letterSpacing: ".15em", color: "#60a5fa", margin: "0 0 8px" }}>PACK EXAMEN</p>
-            <div style={{ display: "flex", alignItems: "baseline", gap: 6, marginBottom: 2 }}>
-              <span style={{ fontSize: 44, fontWeight: 900, color: "#e8e4d9" }}>{PACK_EXAMEN_PRICE}</span>
-              <span style={{ fontSize: 13, color: "#6b7280" }}>/ 3 mois</span>
-            </div>
-            <p style={{ fontSize: 12, color: "#60a5fa", margin: "0 0 4px", fontWeight: 700 }}>Paiement unique — sans abonnement</p>
-            <p style={{ fontSize: 12, color: "#374151", margin: "0 0 20px" }}>Accès complet pendant 3 mois</p>
-            <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8, marginBottom: 24 }}>
-              {[
-                "QCM illimités — 13 matières DCG + DSCG",
-                "Cas pratiques corrigés par IA",
-                "Révision espacée + planning IA",
-                "Entretiens illimités (6 thématiques)",
-                "Pas de renouvellement automatique",
-              ].map(f => <p key={f} style={{ fontSize: 12, color: "#c9c3b5", margin: 0, display: "flex", gap: 8 }}>
-                <span style={{ color: "#60a5fa", flexShrink: 0 }}>✓</span>{f}
-              </p>)}
-            </div>
-            <button style={{ ...S.ctag, width: "100%", padding: 13, background: "#60a5fa" }} onClick={() => window.open(STRIPE_PACK_EXAMEN, "_blank")}>
-              Obtenir le Pack Examen →
-            </button>
-            <p style={{ fontSize: 10, color: "#374151", textAlign: "center", margin: "10px 0 0" }}>Paiement unique · Accès immédiat · Stripe sécurisé</p>
-          </div>
-
-          {/* Pro mensuel */}
-          <div style={{ ...S.pc, ...S.phl, display: "flex", flexDirection: "column", gap: 0, animation: "glow 3s ease-in-out infinite" }}>
-            <div style={S.pb}>RECOMMANDÉ</div>
-            <p style={{ fontSize: 11, letterSpacing: ".15em", color: "#e2c97e", margin: "0 0 8px" }}>PRO</p>
-            {/* Promo price */}
-            <div style={{ display: "flex", alignItems: "baseline", gap: 8, marginBottom: 2 }}>
-              <span style={{ fontSize: 44, fontWeight: 900, color: "#e8e4d9" }}>{PRO_PRICE}</span>
-              <span style={{ fontSize: 13, color: "#6b7280" }}>/mois</span>
-              <span style={{ fontSize: 20, color: "#374151", textDecoration: "line-through", marginLeft: 4 }}>{PRO_PRICE_ORIGINAL}</span>
-            </div>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "rgba(74,222,128,.1)", border: "1px solid rgba(74,222,128,.25)", padding: "3px 10px", marginBottom: 4, alignSelf: "flex-start" }}>
-              <span style={{ fontSize: 10, color: "#4ade80", fontWeight: 700 }}>-40% PROMO LANCEMENT</span>
-            </div>
-            <p style={{ fontSize: 12, color: "#6b7280", margin: "0 0 20px" }}>Pour décrocher le diplôme et le poste</p>
-            <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 8, marginBottom: 24 }}>
-              {[
-                "QCM illimités — 13 matières DCG + DSCG",
-                "Cas pratiques corrigés par IA",
-                "12 flashcards + révision espacée",
-                "Planning de révision IA personnalisé",
-                "Entretiens illimités (6 thématiques)",
-                "Historique complet & progression",
-                "Toutes les matières DSCG débloquées",
-              ].map(f => <p key={f} style={{ fontSize: 12, color: "#c9c3b5", margin: 0, display: "flex", gap: 8 }}>
-                <span style={{ color: "#e2c97e", flexShrink: 0 }}>✓</span>{f}
-              </p>)}
-            </div>
-            <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={() => window.open(STRIPE_LINK, "_blank")}>
-              Démarrer Pro — {PRO_PRICE}/mois →
-            </button>
-            <p style={{ fontSize: 10, color: "#374151", textAlign: "center", margin: "10px 0 0" }}>Paiement Stripe sécurisé · Résiliation en 1 clic</p>
-          </div>
-        </div>
-
-        {/* Social proof / reassurance */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 14, marginTop: 40, animation: "fsu .5s .3s ease both" }}>
-          {[
-            { icon: "🔒", title: "Paiement sécurisé", sub: "Via Stripe — standard bancaire" },
-            { icon: "↩", title: "Résiliation simple", sub: "En 1 clic, sans frais" },
-            { icon: "⚡", title: "Accès immédiat", sub: "Activé dès le paiement" },
-          ].map(r => (
-            <div key={r.title} style={{ background: "#0d1117", border: "1px solid #111827", padding: "16px 18px", textAlign: "center" }}>
-              <div style={{ fontSize: 22, marginBottom: 6 }}>{r.icon}</div>
-              <p style={{ fontSize: 12, fontWeight: 700, color: "#e8e4d9", margin: "0 0 3px" }}>{r.title}</p>
-              <p style={{ fontSize: 11, color: "#374151", margin: 0 }}>{r.sub}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+  return <><ToastContainer />{showOnboarding && <OnboardingModal onClose={() => setShowOnboarding(false)} onUpgrade={() => upgrade()} />}{privateScreen && user ? <ProductShell screen={screen} user={user} onNav={nav} onLogout={logout}>{renderScreen()}</ProductShell> : renderScreen()}</>;
 }
 
 // ── AUTH ──────────────────────────────────────────────────────────────────────
@@ -1285,9 +504,9 @@ function Auth({ mode, setMode, onDone, onBack }) {
     try {
       let cred;
       if (mode === "signup") {
-        cred = await createUserWithEmailAndPassword(auth, email, pass);
+        cred = await createUserWithEmailAndPassword(auth, email.trim().toLowerCase(), pass);
         const ref = doc(db, "users", cred.user.uid);
-        await setDoc(ref, { name, email, isPro: false, interviewsUsed: 0, streak: { count: 0, lastDate: "" }, history: [], mastery: {}, createdAt: new Date().toISOString() });
+        await ensureProfile(cred.user, name);
         incrementStat("totalUsers");
       } else {
         cred = await signInWithEmailAndPassword(auth, email, pass);
@@ -1312,7 +531,7 @@ function Auth({ mode, setMode, onDone, onBack }) {
       const snap = await getDoc(ref);
       const isNew = !snap.exists();
       if (isNew) {
-        await setDoc(ref, { name: cred.user.displayName || cred.user.email.split("@")[0], email: cred.user.email, isPro: false, interviewsUsed: 0, streak: { count: 0, lastDate: "" }, history: [], mastery: {}, createdAt: new Date().toISOString() });
+        await ensureProfile(cred.user);
         incrementStat("totalUsers");
       }
       const data = snap.exists() ? snap.data() : {};
@@ -1323,234 +542,39 @@ function Auth({ mode, setMode, onDone, onBack }) {
     setLoading(false);
   };
   return (
-    <div style={S.root}><ParticleCanvas /><OrbBg />
+    <div className="auth-layout"><aside className="auth-story"><Brand /><span className="eyebrow">VOTRE PROCHAIN DÉCLIC COMMENCE ICI</span><h1>Un espace clair.<br /><span>Un cap pour vos révisions.</span></h1><p>Comptabilité, droit, finance : retrouvez vos matières et avancez une notion à la fois.</p><small>QCM · Flashcards · Fiches · Tuteur IA</small></aside><section className="auth-form-panel">
       <div style={{ maxWidth: 400, margin: "0 auto", padding: "60px 24px", position: "relative", zIndex: 1, display: "flex", flexDirection: "column", gap: 12, animation: "fsu .5s ease both" }}>
         <button style={S.back} onClick={onBack}>← Accueil</button>
         <Logo />
-        <h2 style={{ fontSize: 22, margin: "12px 0 4px", color: "#e8e4d9" }}>{mode === "signup" ? "Créer un compte" : "Se connecter"}</h2>
-        <p style={{ fontSize: 13, color: "#6b7280", marginBottom: 12 }}>{mode === "signup" ? "Créez votre compte. Choisissez votre plan après." : "Bon retour."}</p>
-        <button style={{ background: "#0d1117", border: "1px solid #1f2937", color: "#e8e4d9", padding: "11px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit", display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }} onClick={googleSignIn} disabled={loading}>
+        <h2 style={{ fontSize: 22, margin: "12px 0 4px", color: "#18233e" }}>{mode === "signup" ? "Créer un compte" : "Se connecter"}</h2>
+        <p style={{ fontSize: 13, color: "#64718b", marginBottom: 12 }}>{mode === "signup" ? "Créez votre compte. Choisissez votre plan après." : "Bon retour."}</p>
+        <button style={{ background: "#ffffff", border: "1px solid #d9e0ec", color: "#18233e", padding: "11px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit", display: "flex", alignItems: "center", justifyContent: "center", gap: 10 }} onClick={googleSignIn} disabled={loading}>
           <span style={{ fontSize: 16 }}>G</span> Continuer avec Google
         </button>
-        <div style={{ display: "flex", alignItems: "center", gap: 10 }}><div style={{ flex: 1, height: 1, background: "#1f2937" }} /><span style={{ fontSize: 10, color: "#374151" }}>ou</span><div style={{ flex: 1, height: 1, background: "#1f2937" }} /></div>
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}><div style={{ flex: 1, height: 1, background: "#d9e0ec" }} /><span style={{ fontSize: 10, color: "#64718b" }}>ou</span><div style={{ flex: 1, height: 1, background: "#d9e0ec" }} /></div>
         {mode === "signup" && <FInput label="Prénom" value={name} set={setName} ph="Jean-Baptiste" />}
         <FInput label="Email" value={email} set={setEmail} ph="jean@exemple.fr" type="email" />
         <FInput label="Mot de passe" value={pass} set={setPass} ph="••••••••" type="password" />
-        {err && <p style={{ fontSize: 12, color: "#f87171" }}>{err}</p>}
+        {err && <p style={{ fontSize: 12, color: "#b84646" }}>{err}</p>}
         <button style={{ ...S.ctag, width: "100%", opacity: loading ? .6 : 1, marginTop: 4 }} onClick={submit} disabled={loading}>
           {loading ? <Spinner /> : mode === "signup" ? "Créer mon compte →" : "Se connecter →"}
         </button>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <p style={{ fontSize: 12, color: "#6b7280" }}>
+          <p style={{ fontSize: 12, color: "#64718b" }}>
             {mode === "signup" ? "Déjà un compte ? " : "Pas encore ? "}
-            <span style={{ color: "#e2c97e", cursor: "pointer" }} onClick={() => { setMode(mode === "signup" ? "login" : "signup"); setErr(""); }}>
+            <span style={{ color: "#a47b2e", cursor: "pointer" }} onClick={() => { setMode(mode === "signup" ? "login" : "signup"); setErr(""); }}>
               {mode === "signup" ? "Se connecter" : "S'inscrire"}
             </span>
           </p>
           {mode === "login" && (
             <a href="/mot-de-passe-oublie" onClick={e => { e.preventDefault(); window.history.pushState({}, "", "/mot-de-passe-oublie"); window.dispatchEvent(new PopStateEvent("popstate")); }}
-              style={{ fontSize: 11, color: "#374151", cursor: "pointer", textDecoration: "none" }}>
+              style={{ fontSize: 11, color: "#64718b", cursor: "pointer", textDecoration: "none" }}>
               Mot de passe oublié ?
             </a>
           )}
         </div>
       </div>
-    </div>
-  );
-}
-
-// ── DASHBOARD ─────────────────────────────────────────────────────────────────
-function Dashboard({ user, onLogout, onNav, onSelectUE, isPro }) {
-  const [activeTab, setActiveTab] = useState("diplome");
-  const [mastery, setMastery] = useState({});
-  const interviewsUsed = user?.interviewsUsed || 0;
-  const canInterview = isPro;
-
-  useEffect(() => {
-    if (user?.uid) loadMastery(user.uid).then(setMastery);
-  }, [user?.uid]);
-
-  return (
-    <div style={S.root}><OrbBg />
-      <nav style={S.nav}>
-        <Logo />
-        <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-          {!isPro && <button style={{ ...S.no, borderColor: "rgba(226,201,126,.3)", color: "#e2c97e" }} onClick={() => onNav("pricing")}>✦ Passer Pro</button>}
-          <span style={{ fontSize: 12, color: "#374151" }}>{user?.name}</span>
-          <button style={S.no} onClick={onLogout}>Déconnexion</button>
-        </div>
-      </nav>
-      <div style={{ maxWidth: 800, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1 }}>
-        <div className="m-col2" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 10, marginBottom: 24, animation: "fsu .5s ease both" }}>
-          <SC v={user?.streak || 0} l="🔥 Streak" />
-          <SC v={isPro ? (user?.proType === "pack_examen" ? "Pack ✦" : "Pro ✦") : "Gratuit"} l="Plan" hl />
-          <SC v={Object.keys(mastery).length} l="UE maîtrisées" />
-          <SC v={isPro ? "∞" : "—"} l="Entretiens" />
-        </div>
-        {isPro && user?.proType === "pack_examen" && user?.proExpiresAt && (
-          <div style={{ background: "rgba(96,165,250,.06)", border: "1px solid rgba(96,165,250,.2)", padding: "10px 16px", marginBottom: 16, display: "flex", justifyContent: "space-between", alignItems: "center", animation: "fsu .4s ease both" }}>
-            <p style={{ fontSize: 12, color: "#60a5fa", margin: 0 }}>◈ Pack Examen actif</p>
-            <p style={{ fontSize: 11, color: "#374151", margin: 0 }}>
-              Expire le {new Date(user.proExpiresAt).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}
-            </p>
-          </div>
-        )}
-
-        <div style={{ display: "flex", gap: 0, marginBottom: 24, borderBottom: "1px solid #111827" }}>
-          {[{ id: "diplome", label: "🎓 Mode Diplôme", sub: "DCG / DSCG" }, { id: "carriere", label: "💼 Mode Carrière", sub: "Entretiens" }].map(t => (
-            <button key={t.id} onClick={() => setActiveTab(t.id)} style={{ background: "none", border: "none", borderBottom: `2px solid ${activeTab === t.id ? "#e2c97e" : "transparent"}`, color: activeTab === t.id ? "#e2c97e" : "#6b7280", padding: "12px 24px", cursor: "pointer", fontSize: 14, fontWeight: activeTab === t.id ? 700 : 400, transition: "all .2s", fontFamily: "inherit" }}>
-              {t.label} <span style={{ fontSize: 10, opacity: .6, display: "block" }}>{t.sub}</span>
-            </button>
-          ))}
-        </div>
-
-        {activeTab === "diplome" && (
-          <div style={{ animation: "fsu .3s ease both" }}>
-            <div style={{ marginBottom: 20 }}>
-              <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#374151", marginBottom: 12 }}>DCG — 8 MATIÈRES</p>
-              <div className="m-col2" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8 }}>
-                {DCG_UES.map((ue, i) => {
-                  const locked = !isPro;
-                  const m = mastery[ue.id];
-                  return (
-                    <button key={ue.id} onClick={() => locked ? onNav("paywall") : onSelectUE(ue)}
-                      style={{ ...S.uecard, borderColor: `${ue.color}20`, opacity: locked ? .55 : 1, animation: `fsu .4s ${i * .04}s both`, position: "relative" }}
-                      onMouseEnter={e => { if (!locked) { e.currentTarget.style.borderColor = `${ue.color}50`; e.currentTarget.style.background = `${ue.color}08`; } }}
-                      onMouseLeave={e => { e.currentTarget.style.borderColor = m ? `${ue.color}30` : `${ue.color}20`; e.currentTarget.style.background = "#0d1117"; }}>
-                      <span style={{ fontSize: 20, marginBottom: 4 }}>{ue.icon}</span>
-                      <span style={{ fontSize: 10, color: ue.color, fontWeight: 700, letterSpacing: ".08em" }}>{ue.id}</span>
-                      <span style={{ fontSize: 10, color: "#9ca3af", marginTop: 1, lineHeight: 1.3 }}>{locked ? "🔒 Pro" : ue.short}</span>
-                      {m && !locked && (
-                        <div style={{ width: "100%", marginTop: 6 }}>
-                          <div style={{ height: 2, background: "#111827", borderRadius: 1 }}>
-                            <div style={{ height: "100%", width: `${m.best}%`, background: m.best >= 80 ? "#4ade80" : m.best >= 60 ? "#f59e0b" : "#f87171", borderRadius: 1, transition: "width .5s" }} />
-                          </div>
-                          <span style={{ fontSize: 8, color: m.best >= 80 ? "#4ade80" : m.best >= 60 ? "#f59e0b" : "#f87171", marginTop: 2, display: "block" }}>{m.best}%</span>
-                        </div>
-                      )}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-            <div>
-              <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#374151", marginBottom: 12 }}>DSCG — 5 MATIÈRES {!isPro && <span style={{ color: "#e2c97e" }}>· Pro requis</span>}</p>
-              <div className="m-col2" style={{ display: "grid", gridTemplateColumns: "repeat(5,1fr)", gap: 8 }}>
-                {DSCG_UES.map((ue, i) => {
-                  const m = mastery[ue.id];
-                  return (
-                    <button key={ue.id} onClick={() => isPro ? onSelectUE(ue) : onNav("paywall")}
-                      style={{ ...S.uecard, borderColor: `${ue.color}20`, opacity: isPro ? 1 : .4, animation: `fsu .4s ${.3 + i * .04}s both` }}>
-                      <span style={{ fontSize: 20, marginBottom: 4 }}>{ue.icon}</span>
-                      <span style={{ fontSize: 10, color: ue.color, fontWeight: 700, letterSpacing: ".08em" }}>{ue.id.replace("DSCG", "D")}</span>
-                      <span style={{ fontSize: 10, color: "#9ca3af", marginTop: 1, lineHeight: 1.3 }}>{isPro ? ue.short : "🔒 Pro"}</span>
-                      {m && isPro && (
-                        <div style={{ width: "100%", marginTop: 6 }}>
-                          <div style={{ height: 2, background: "#111827" }}>
-                            <div style={{ height: "100%", width: `${m.best}%`, background: m.best >= 80 ? "#4ade80" : m.best >= 60 ? "#f59e0b" : "#f87171" }} />
-                          </div>
-                          <span style={{ fontSize: 8, color: "#6b7280", marginTop: 2, display: "block" }}>{m.best}%</span>
-                        </div>
-                      )}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-            {isPro && (
-              <div style={{ marginTop: 16 }}>
-                <button onClick={() => onNav("planning")} style={{ width: "100%", background: "rgba(226,201,126,.04)", border: "1px solid rgba(226,201,126,.2)", color: "#e2c97e", padding: "14px 20px", cursor: "pointer", fontSize: 13, fontFamily: "inherit", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                  <span>◈ Planning de révision IA personnalisé</span>
-                  <span style={{ fontSize: 11, color: "#6b7280" }}>Générer →</span>
-                </button>
-              </div>
-            )}
-          </div>
-        )}
-
-        {activeTab === "carriere" && (
-          <div style={{ animation: "fsu .3s ease both", display: "flex", flexDirection: "column", gap: 12 }}>
-            <button style={{ ...S.ctag, padding: 16, fontSize: 15, animation: "glow 3s ease-in-out infinite", width: "100%" }}
-              onClick={() => canInterview ? onNav("interview_config") : onNav("paywall")}>
-              + Lancer un simulateur d'entretien
-            </button>
-            
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginTop: 8 }}>
-              {[{ icon: "▦", label: "Historique", key: "history" }, { icon: "◎", label: "Progression", key: "progress" }].map(m => (
-                <button key={m.key} onClick={() => !isPro ? onNav("paywall") : onNav(m.key)} style={{ ...S.mb, opacity: !isPro ? .4 : 1 }}>
-                  <span style={{ fontSize: 22 }}>{m.icon}</span>
-                  <span style={{ fontSize: 13, fontWeight: 700, color: "#e8e4d9" }}>{m.label}</span>
-                  <span style={{ fontSize: 10, color: "#374151" }}>{!isPro ? "🔒 Pro" : "Voir →"}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {!isPro && (
-          <div style={{ marginTop: 24, display: "flex", alignItems: "center", justifyContent: "space-between", background: "rgba(226,201,126,.03)", border: "1px solid rgba(226,201,126,.15)", padding: "14px 18px", gap: 12 }}>
-            <div>
-              <p style={{ fontSize: 13, fontWeight: 700, color: "#e8e4d9", margin: "0 0 3px" }}>Passez Pro — {PRO_PRICE}/mois</p>
-              <p style={{ fontSize: 11, color: "#6b7280", margin: 0 }}>QCM illimités, cas pratiques, DSCG, planning IA, historique.</p>
-            </div>
-            <button style={{ ...S.ctag, whiteSpace: "nowrap", fontSize: 12 }} onClick={() => onNav("pricing")}>Voir →</button>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
-// ── SUBJECT HUB ───────────────────────────────────────────────────────────────
-function SubjectHub({ ue, user, onNav, onBack }) {
-  if (!ue) return null;
-  const isPro = user?.isPro;
-  const isLockedSubject = ue.proOnly && !isPro;
-  const actions = [
-    { key: "resume_cours", icon: "📖", label: "Résumé de cours", sub: "Sections, points clés, pièges d'examen", color: "#a78bfa", free: false },
-    { key: "qcm", icon: "△", label: "QCM", sub: "10 questions générées par IA", color: "#60a5fa", free: false },
-    { key: "flashcards", icon: "◈", label: "Flashcards", sub: `${PRO_FLASH_PER_UE} fiches + révision espacée`, color: "#4ade80", free: false },
-    { key: "cas_pratique", icon: "📝", label: "Cas pratique", sub: "Style épreuve examen corrigé par IA", color: "#f59e0b", free: false },
-  ];
-  return (
-    <div style={S.root}><OrbBg />
-      <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← Toutes les matières</button></nav>
-      <div style={{ maxWidth: 600, margin: "0 auto", padding: "40px 24px", position: "relative", zIndex: 1, animation: "fsu .4s ease both" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 32 }}>
-          <div style={{ width: 56, height: 56, background: `${ue.color}15`, border: `1px solid ${ue.color}30`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 24, flexShrink: 0 }}>{ue.icon}</div>
-          <div>
-            <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 4 }}>
-              <span style={{ ...S.badge, fontSize: 9, padding: "2px 8px" }}>{ue.level}</span>
-              <span style={{ fontSize: 12, color: ue.color, fontWeight: 700 }}>{ue.id}</span>
-              
-            </div>
-            <h2 style={{ fontSize: 20, margin: 0, color: "#e8e4d9" }}>{ue.label}</h2>
-            <p style={{ fontSize: 12, color: "#4b5563", margin: "4px 0 0" }}>{ue.desc}</p>
-          </div>
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          {actions.map((a, i) => {
-            const locked = !a.free && !isPro;
-            return (
-              <button key={a.key} onClick={() => locked ? onNav("paywall") : onNav(a.key)}
-                style={{ background: "#0d1117", border: `1px solid ${locked ? "#1a1f2e" : `${a.color}25`}`, padding: "16px 20px", display: "flex", alignItems: "center", gap: 16, cursor: locked ? "default" : "pointer", opacity: locked ? .5 : 1, transition: "all .2s", textAlign: "left", animation: `fsu .4s ${i * .07}s both`, fontFamily: "inherit" }}
-                onMouseEnter={e => { if (!locked) e.currentTarget.style.borderColor = `${a.color}50`; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = locked ? "#1a1f2e" : `${a.color}25`; }}>
-                <span style={{ fontSize: 26, width: 36, textAlign: "center" }}>{a.icon}</span>
-                <div style={{ flex: 1 }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 2 }}>
-                    <p style={{ fontSize: 14, fontWeight: 700, color: locked ? "#374151" : a.color, margin: 0 }}>{a.label}</p>
-                    
-                  </div>
-                  <p style={{ fontSize: 12, color: "#4b5563", margin: 0 }}>{locked ? "🔒 Réservé Pro" : a.sub}</p>
-                </div>
-                <span style={{ fontSize: 18, color: locked ? "#1f2937" : a.color }}>→</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-    </div>
+    </section></div>
   );
 }
 
@@ -1569,16 +593,18 @@ function QCMScreen({ ue, user, onDone, onBack }) {
   const timerRef = useRef(null);
 
   useEffect(() => {
+    let cancelled = false;
     const gen = async () => {
       setLoading(true);
       try {
         const data = await callClaudeJSON(`Tu génères des QCM pour l'examen ${ue.label} (${ue.level}). Réponds UNIQUEMENT en JSON valide.`, QCM_PROMPT(ue, nQuestions), 2500);
-        if (Array.isArray(data) && data.length > 0) { setQuestions(data); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000); }
+        if (cancelled) return;
+        if (Array.isArray(data) && data.length > 0 && data.every(q => typeof q.q === "string" && Array.isArray(q.options) && Number.isInteger(q.answer) && q.answer >= 0 && q.answer < q.options.length)) { setQuestions(data); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000); }
         else setError(true);
       } catch { setError(true); } finally { setLoading(false); }
     };
     gen();
-    return () => clearInterval(timerRef.current);
+    return () => { cancelled = true; clearInterval(timerRef.current); };
   }, []);
 
   if (!ue) return null;
@@ -1600,34 +626,34 @@ function QCMScreen({ ue, user, onDone, onBack }) {
         <Logo />
         <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
           <span style={{ fontSize: 11, color: ue.color, border: `1px solid ${ue.color}30`, padding: "3px 8px" }}>{ue.id}</span>
-          {questions && <span style={{ fontSize: 12, color: "#e2c97e", fontFamily: "monospace" }}>{fmt(timer)}</span>}
-          {questions && <span style={{ fontSize: 11, color: "#6b7280" }}>{qi + 1}/{questions.length}</span>}
+          {questions && <span style={{ fontSize: 12, color: "#a47b2e", fontVariantNumeric: "tabular-nums" }}>{fmt(timer)}</span>}
+          {questions && <span style={{ fontSize: 11, color: "#64718b" }}>{qi + 1}/{questions.length}</span>}
           <button style={S.nl} onClick={onBack}>Quitter</button>
         </div>
       </nav>
 
-      {questions && <div style={{ height: 2, background: "#0d1117" }}><div style={{ height: "100%", width: `${((qi + (sel !== null ? 1 : 0)) / questions.length) * 100}%`, background: `linear-gradient(90deg,${ue.color},#e2c97e)`, transition: "width .3s" }} /></div>}
+      {questions && <div style={{ height: 2, background: "#ffffff" }}><div style={{ height: "100%", width: `${((qi + (sel !== null ? 1 : 0)) / questions.length) * 100}%`, background: `linear-gradient(90deg,${ue.color},#a47b2e)`, transition: "width .3s" }} /></div>}
 
       <div style={{ maxWidth: 580, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1 }}>
-        {loading && <div style={{ textAlign: "center", padding: "80px 24px" }}><div style={{ width: 40, height: 40, border: "3px solid #1f2937", borderTop: `3px solid ${ue.color}`, borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 20px" }} /><p style={{ color: "#6b7280", fontSize: 13 }}>Génération des questions par IA…</p></div>}
-        {error && <div style={{ textAlign: "center", padding: 40 }}><p style={{ color: "#f87171" }}>Erreur lors de la génération.</p><button style={S.ctag} onClick={onBack}>Retour</button></div>}
+        {loading && <div style={{ textAlign: "center", padding: "80px 24px" }}><div style={{ width: 40, height: 40, border: "3px solid #d9e0ec", borderTop: `3px solid ${ue.color}`, borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 20px" }} /><p style={{ color: "#64718b", fontSize: 13 }}>Génération des questions par IA…</p></div>}
+        {error && <div style={{ textAlign: "center", padding: 40 }}><p style={{ color: "#b84646" }}>Erreur lors de la génération.</p><button style={S.ctag} onClick={onBack}>Retour</button></div>}
         {!loading && !error && q && (
           <div style={{ animation: "fsu .3s ease both" }}>
             <div style={{ ...S.card, marginBottom: 14, borderColor: `${ue.color}15` }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
                 <p style={{ fontSize: 10, color: ue.color, letterSpacing: ".1em", margin: 0 }}>QUESTION {qi + 1}</p>
-                {q.difficulte && <span style={{ fontSize: 9, padding: "2px 8px", border: `1px solid ${q.difficulte === "Difficile" ? "#f87171" : q.difficulte === "Moyen" ? "#f59e0b" : "#4ade80"}40`, color: q.difficulte === "Difficile" ? "#f87171" : q.difficulte === "Moyen" ? "#f59e0b" : "#4ade80" }}>{q.difficulte}</span>}
+                {q.difficulte && <span style={{ fontSize: 9, padding: "2px 8px", border: `1px solid ${q.difficulte === "Difficile" ? "#b84646" : q.difficulte === "Moyen" ? "#996724" : "#2c8061"}40`, color: q.difficulte === "Difficile" ? "#b84646" : q.difficulte === "Moyen" ? "#996724" : "#2c8061" }}>{q.difficulte}</span>}
               </div>
-              <p style={{ fontSize: 15, color: "#e8e4d9", lineHeight: 1.6, margin: 0, fontWeight: 600 }}>{q.q}</p>
+              <p style={{ fontSize: 15, color: "#18233e", lineHeight: 1.6, margin: 0, fontWeight: 600 }}>{q.q}</p>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 14 }}>
               {q.options?.map((opt, i) => {
-                let bg = "#0d1117", border = "#1a1f2e", color = "#9ca3af";
-                if (sel !== null) { if (i === q.answer) { bg = `${ue.color}10`; border = ue.color; color = ue.color; } else if (i === sel && i !== q.answer) { bg = "#f8717110"; border = "#f87171"; color = "#f87171"; } }
+                let bg = "#ffffff", border = "#e4e8f1", color = "#63728c";
+                if (sel !== null) { if (i === q.answer) { bg = `${ue.color}10`; border = ue.color; color = ue.color; } else if (i === sel && i !== q.answer) { bg = "#b8464610"; border = "#b84646"; color = "#b84646"; } }
                 return <button key={i} onClick={() => pick(i)} style={{ background: bg, border: `1px solid ${border}`, color, padding: "12px 16px", textAlign: "left", cursor: sel === null ? "pointer" : "default", fontSize: 13, transition: "all .2s", fontFamily: "inherit" }}>{String.fromCharCode(65 + i)}. {opt}</button>;
               })}
             </div>
-            {sel !== null && <div style={{ background: "#0d1117", border: "1px solid #1f2937", padding: "12px 16px", marginBottom: 14 }}><p style={{ fontSize: 10, color: "#6b7280", margin: "0 0 4px", letterSpacing: ".1em" }}>EXPLICATION</p><p style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.6 }}>{q.expl}</p></div>}
+            {sel !== null && <div style={{ background: "#ffffff", border: "1px solid #d9e0ec", padding: "12px 16px", marginBottom: 14 }}><p style={{ fontSize: 10, color: "#64718b", margin: "0 0 4px", letterSpacing: ".1em" }}>EXPLICATION</p><p style={{ fontSize: 13, color: "#36425b", margin: 0, lineHeight: 1.6 }}>{q.expl}</p></div>}
             {sel !== null && <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={next}>{qi + 1 >= questions.length ? "Voir les résultats →" : "Question suivante →"}</button>}
           </div>
         )}
@@ -1680,19 +706,19 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
         <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← {ue.id}</button></nav>
         <div style={{ maxWidth: 580, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1, animation: "fsu .4s ease both" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
-            <h2 style={{ fontSize: 18, margin: 0, color: "#f87171" }}>◈ Révision des cartes difficiles</h2>
-            <span style={{ fontSize: 12, color: "#4b5563" }}>{reviewIdx + 1} / {difficult.length}</span>
+            <h2 style={{ fontSize: 18, margin: 0, color: "#b84646" }}>◈ Révision des cartes difficiles</h2>
+            <span style={{ fontSize: 12, color: "#64718b" }}>{reviewIdx + 1} / {difficult.length}</span>
           </div>
-          <div style={{ perspective: 1200, marginBottom: 20, cursor: "pointer" }} onClick={() => setReviewFlipped(f => !f)}>
+          <div style={{ perspective: 1200, marginBottom: 20, cursor: "pointer" }} role="button" tabIndex={0} aria-label="Retourner la flashcard" onKeyDown={e => { if (["Enter", " "].includes(e.key)) { e.preventDefault(); setReviewFlipped(f => !f); } }} onClick={() => setReviewFlipped(f => !f)}>
             <div style={{ position: "relative", transformStyle: "preserve-3d", transition: "transform .55s cubic-bezier(.4,0,.2,1)", transform: reviewFlipped ? "rotateY(180deg)" : "rotateY(0)", height: 220 }}>
-              <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "center", borderColor: "#f8717125" }}>
-                <p style={{ fontSize: 10, color: "#f87171", letterSpacing: ".12em", margin: "0 0 14px" }}>{rCard?.tag || ue.short} · À REVOIR</p>
-                <p style={{ fontSize: 15, color: "#e8e4d9", lineHeight: 1.6, margin: "0 0 16px", fontWeight: 600 }}>{rCard?.q}</p>
-                <p style={{ fontSize: 11, color: "#374151" }}>Cliquer pour révéler →</p>
+              <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "center", borderColor: "#b8464625" }}>
+                <p style={{ fontSize: 10, color: "#b84646", letterSpacing: ".12em", margin: "0 0 14px" }}>{rCard?.tag || ue.short} · À REVOIR</p>
+                <p style={{ fontSize: 15, color: "#18233e", lineHeight: 1.6, margin: "0 0 16px", fontWeight: 600 }}>{rCard?.q}</p>
+                <p style={{ fontSize: 11, color: "#64718b" }}>Cliquer pour révéler →</p>
               </div>
-              <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, transform: "rotateY(180deg)", borderColor: "#4ade8030", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                <p style={{ fontSize: 10, color: "#4ade80", letterSpacing: ".12em", margin: "0 0 14px" }}>RÉPONSE</p>
-                <p style={{ fontSize: 13, color: "#c9c3b5", lineHeight: 1.7, margin: 0 }}>{rCard?.a}</p>
+              <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, transform: "rotateY(180deg)", borderColor: "#2c806130", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                <p style={{ fontSize: 10, color: "#2c8061", letterSpacing: ".12em", margin: "0 0 14px" }}>RÉPONSE</p>
+                <p style={{ fontSize: 13, color: "#36425b", lineHeight: 1.7, margin: 0 }}>{rCard?.a}</p>
               </div>
             </div>
           </div>
@@ -1715,8 +741,8 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
         <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← {ue.id}</button></nav>
         <div style={{ maxWidth: 500, margin: "0 auto", padding: "80px 24px", textAlign: "center", position: "relative", zIndex: 1, animation: "fsu .5s ease both", display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
           <span style={{ fontSize: 40 }}>◈</span>
-          <h2 style={{ fontSize: 22, color: "#e8e4d9" }}>Session terminée</h2>
-          <p style={{ fontSize: 14, color: "#6b7280" }}>{filtered.length} cartes révisées · {difficult.length} marquées difficiles</p>
+          <h2 style={{ fontSize: 22, color: "#18233e" }}>Session terminée</h2>
+          <p style={{ fontSize: 14, color: "#64718b" }}>{filtered.length} cartes révisées · {difficult.length} marquées difficiles</p>
           {difficult.length > 0 && (
             isPro ? (
               <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={() => { setReviewMode(true); setReviewIdx(0); }}>
@@ -1724,8 +750,8 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
               </button>
             ) : (
               <div style={{ background: "rgba(226,201,126,.04)", border: "1px solid rgba(226,201,126,.2)", padding: "16px 20px", width: "100%" }}>
-                <p style={{ fontSize: 13, color: "#e8e4d9", margin: "0 0 8px", fontWeight: 700 }}>✦ Révision espacée — Pro</p>
-                <p style={{ fontSize: 12, color: "#6b7280", margin: "0 0 12px" }}>Passez Pro pour revoir automatiquement vos {difficult.length} cartes difficiles et consolider votre mémoire.</p>
+                <p style={{ fontSize: 13, color: "#18233e", margin: "0 0 8px", fontWeight: 700 }}>✦ Cartes difficiles — Pro</p>
+                <p style={{ fontSize: 12, color: "#64718b", margin: "0 0 12px" }}>Passez Pro pour revoir automatiquement vos {difficult.length} cartes difficiles et consolider votre mémoire.</p>
                 <button style={{ ...S.ctag, width: "100%", padding: 10, fontSize: 12 }} onClick={onUpgrade}>Passer Pro — {PRO_PRICE}/mois →</button>
               </div>
             )
@@ -1741,11 +767,11 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
       <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← {ue.id}</button></nav>
       <div style={{ maxWidth: 580, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1, animation: "fsu .4s ease both" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
-          <h2 style={{ fontSize: 18, margin: 0, color: "#e8e4d9" }}>◈ Flashcards — {ue.short}</h2>
-          {cards && <span style={{ fontSize: 12, color: "#4b5563" }}>{idx + 1} / {filtered.length}</span>}
+          <h2 style={{ fontSize: 18, margin: 0, color: "#18233e" }}>◈ Flashcards — {ue.short}</h2>
+          {cards && <span style={{ fontSize: 12, color: "#64718b" }}>{idx + 1} / {filtered.length}</span>}
         </div>
         {loading ? (
-          <div style={{ textAlign: "center", padding: 60 }}><div style={{ width: 36, height: 36, border: "3px solid #1f2937", borderTop: `3px solid ${ue.color}`, borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 16px" }} /><p style={{ color: "#6b7280", fontSize: 13 }}>Génération des flashcards…</p></div>
+          <div style={{ textAlign: "center", padding: 60 }}><div style={{ width: 36, height: 36, border: "3px solid #d9e0ec", borderTop: `3px solid ${ue.color}`, borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 16px" }} /><p style={{ color: "#64718b", fontSize: 13 }}>Génération des flashcards…</p></div>
         ) : (
           <>
             <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
@@ -1753,23 +779,23 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
             </div>
             {card && (
               <>
-                <div style={{ perspective: 1200, marginBottom: 16, cursor: "pointer" }} onClick={() => setFlipped(f => !f)}>
+                <div style={{ perspective: 1200, marginBottom: 16, cursor: "pointer" }} role="button" tabIndex={0} aria-label="Retourner la flashcard" onKeyDown={e => { if (["Enter", " "].includes(e.key)) { e.preventDefault(); setFlipped(f => !f); } }} onClick={() => setFlipped(f => !f)}>
                   <div style={{ position: "relative", transformStyle: "preserve-3d", transition: "transform .55s cubic-bezier(.4,0,.2,1)", transform: flipped ? "rotateY(180deg)" : "rotateY(0)", height: 220 }}>
                     <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "center", borderColor: `${ue.color}15` }}>
                       <p style={{ fontSize: 10, color: ue.color, letterSpacing: ".12em", margin: "0 0 14px" }}>{card.tag || ue.short}</p>
-                      <p style={{ fontSize: 15, color: "#e8e4d9", lineHeight: 1.6, margin: "0 0 16px", fontWeight: 600 }}>{card.q}</p>
-                      <p style={{ fontSize: 11, color: "#374151" }}>Cliquer pour révéler →</p>
+                      <p style={{ fontSize: 15, color: "#18233e", lineHeight: 1.6, margin: "0 0 16px", fontWeight: 600 }}>{card.q}</p>
+                      <p style={{ fontSize: 11, color: "#64718b" }}>Cliquer pour révéler →</p>
                     </div>
-                    <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, transform: "rotateY(180deg)", borderColor: "#4ade8030", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                      <p style={{ fontSize: 10, color: "#4ade80", letterSpacing: ".12em", margin: "0 0 14px" }}>RÉPONSE</p>
-                      <p style={{ fontSize: 13, color: "#c9c3b5", lineHeight: 1.7, margin: 0 }}>{card.a}</p>
+                    <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, transform: "rotateY(180deg)", borderColor: "#2c806130", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                      <p style={{ fontSize: 10, color: "#2c8061", letterSpacing: ".12em", margin: "0 0 14px" }}>RÉPONSE</p>
+                      <p style={{ fontSize: 13, color: "#36425b", lineHeight: 1.7, margin: 0 }}>{card.a}</p>
                     </div>
                   </div>
                 </div>
                 {flipped ? (
                   <div style={{ display: "flex", gap: 10, marginBottom: 12 }}>
-                    <button style={{ flex: 1, background: "#f8717112", border: "1px solid #f8717140", color: "#f87171", padding: "12px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit" }} onClick={markDifficult}>✗ À revoir</button>
-                    <button style={{ flex: 1, background: "#4ade8012", border: "1px solid #4ade8040", color: "#4ade80", padding: "12px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit" }} onClick={markKnown}>✓ Je savais</button>
+                    <button style={{ flex: 1, background: "#b8464612", border: "1px solid #b8464640", color: "#b84646", padding: "12px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit" }} onClick={markDifficult}>✗ À revoir</button>
+                    <button style={{ flex: 1, background: "#2c806112", border: "1px solid #2c806140", color: "#2c8061", padding: "12px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit" }} onClick={markKnown}>✓ Je savais</button>
                   </div>
                 ) : (
                   <div style={{ display: "flex", gap: 10 }}>
@@ -1777,7 +803,7 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
                     <button style={{ ...S.ctag, flex: 1 }} onClick={next}>Suivante →</button>
                   </div>
                 )}
-                {isPro && difficult.length > 0 && <p style={{ fontSize: 11, color: "#f87171", textAlign: "center" }}>{difficult.length} carte{difficult.length > 1 ? "s" : ""} marquée{difficult.length > 1 ? "s" : ""} difficile{difficult.length > 1 ? "s" : ""}</p>}
+                {isPro && difficult.length > 0 && <p style={{ fontSize: 11, color: "#b84646", textAlign: "center" }}>{difficult.length} carte{difficult.length > 1 ? "s" : ""} marquée{difficult.length > 1 ? "s" : ""} difficile{difficult.length > 1 ? "s" : ""}</p>}
               </>
             )}
           </>
@@ -1813,7 +839,7 @@ function ResumeCoursScreen({ ue, user, onBack }) {
       <nav style={S.nav}>
         <Logo />
         <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-          <span style={{ fontSize: 11, color: "#a78bfa", border: "1px solid #a78bfa30", padding: "3px 8px" }}>📖 RÉSUMÉ</span>
+          <span style={{ fontSize: 11, color: "#7658a9", border: "1px solid #7658a930", padding: "3px 8px" }}>📖 RÉSUMÉ</span>
           <button style={S.nl} onClick={onBack}>← {ue.id}</button>
         </div>
       </nav>
@@ -1824,16 +850,16 @@ function ResumeCoursScreen({ ue, user, onBack }) {
           <div>
             <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 2 }}>
               <span style={{ ...S.badge, fontSize: 9, padding: "2px 8px" }}>{ue.level}</span>
-              <span style={{ fontSize: 10, color: "#4ade80", border: "1px solid #4ade8030", padding: "2px 8px" }}>GRATUIT</span>
+              <span style={{ fontSize: 10, color: "#2c8061", border: "1px solid #2c806130", padding: "2px 8px" }}>PRO</span>
             </div>
-            <h2 style={{ fontSize: 19, margin: 0, color: "#e8e4d9" }}>{ue.label}</h2>
+            <h2 style={{ fontSize: 19, margin: 0, color: "#18233e" }}>{ue.label}</h2>
           </div>
         </div>
 
         {loading && (
           <div style={{ textAlign: "center", padding: "80px 24px" }}>
-            <div style={{ width: 40, height: 40, border: "3px solid #1f2937", borderTop: "3px solid #a78bfa", borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 20px" }} />
-            <p style={{ color: "#6b7280", fontSize: 13 }}>Génération du résumé par IA…</p>
+            <div style={{ width: 40, height: 40, border: "3px solid #d9e0ec", borderTop: "3px solid #7658a9", borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 20px" }} />
+            <p style={{ color: "#64718b", fontSize: 13 }}>Génération du résumé par IA…</p>
           </div>
         )}
 
@@ -1841,16 +867,16 @@ function ResumeCoursScreen({ ue, user, onBack }) {
           <div style={{ display: "flex", flexDirection: "column", gap: 12, animation: "fsu .4s ease both" }}>
             {/* Sections accordion */}
             {resume.sections?.map((sec, i) => (
-              <div key={i} style={{ background: "#0d1117", border: `1px solid ${openSection === i ? "#a78bfa30" : "#111827"}`, transition: "border-color .2s" }}>
+              <div key={i} style={{ background: "#ffffff", border: `1px solid ${openSection === i ? "#7658a930" : "#e9edf5"}`, transition: "border-color .2s" }}>
                 <button onClick={() => setOpenSection(openSection === i ? -1 : i)}
                   style={{ width: "100%", background: "none", border: "none", padding: "14px 18px", display: "flex", justifyContent: "space-between", alignItems: "center", cursor: "pointer", fontFamily: "inherit" }}>
-                  <span style={{ fontSize: 13, fontWeight: 700, color: openSection === i ? "#a78bfa" : "#e8e4d9" }}>{sec.titre}</span>
-                  <span style={{ color: "#374151", fontSize: 12 }}>{openSection === i ? "▲" : "▼"}</span>
+                  <span style={{ fontSize: 13, fontWeight: 700, color: openSection === i ? "#7658a9" : "#18233e" }}>{sec.titre}</span>
+                  <span style={{ color: "#64718b", fontSize: 12 }}>{openSection === i ? "▲" : "▼"}</span>
                 </button>
                 {openSection === i && (
                   <div style={{ padding: "0 18px 16px", display: "flex", flexDirection: "column", gap: 7, animation: "fsu .2s ease both" }}>
                     {sec.points?.map((pt, j) => (
-                      <p key={j} style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.65, paddingLeft: 12, borderLeft: "2px solid #a78bfa30" }}>
+                      <p key={j} style={{ fontSize: 13, color: "#36425b", margin: 0, lineHeight: 1.65, paddingLeft: 12, borderLeft: "2px solid #7658a930" }}>
                         {pt}
                       </p>
                     ))}
@@ -1862,11 +888,11 @@ function ResumeCoursScreen({ ue, user, onBack }) {
             {/* Points clés */}
             {resume.points_cles && (
               <div style={{ background: "rgba(96,165,250,.04)", border: "1px solid rgba(96,165,250,.15)", padding: "18px 20px" }}>
-                <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#60a5fa", margin: "0 0 12px" }}>✦ POINTS CLÉS À RETENIR</p>
+                <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#376cac", margin: "0 0 12px" }}>✦ POINTS CLÉS À RETENIR</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                   {resume.points_cles.map((pt, i) => (
-                    <p key={i} style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.6, display: "flex", gap: 10 }}>
-                      <span style={{ color: "#60a5fa", flexShrink: 0 }}>→</span>{pt}
+                    <p key={i} style={{ fontSize: 13, color: "#36425b", margin: 0, lineHeight: 1.6, display: "flex", gap: 10 }}>
+                      <span style={{ color: "#376cac", flexShrink: 0 }}>→</span>{pt}
                     </p>
                   ))}
                 </div>
@@ -1876,11 +902,11 @@ function ResumeCoursScreen({ ue, user, onBack }) {
             {/* Pièges fréquents */}
             {resume.pieges_frequents && (
               <div style={{ background: "rgba(248,113,113,.04)", border: "1px solid rgba(248,113,113,.15)", padding: "18px 20px" }}>
-                <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#f87171", margin: "0 0 12px" }}>⚠ PIÈGES FRÉQUENTS À L'EXAMEN</p>
+                <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#b84646", margin: "0 0 12px" }}>⚠ PIÈGES FRÉQUENTS À L'EXAMEN</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                   {resume.pieges_frequents.map((p, i) => (
-                    <p key={i} style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.6, display: "flex", gap: 10 }}>
-                      <span style={{ color: "#f87171", flexShrink: 0 }}>✗</span>{p}
+                    <p key={i} style={{ fontSize: 13, color: "#36425b", margin: 0, lineHeight: 1.6, display: "flex", gap: 10 }}>
+                      <span style={{ color: "#b84646", flexShrink: 0 }}>✗</span>{p}
                     </p>
                   ))}
                 </div>
@@ -1890,8 +916,8 @@ function ResumeCoursScreen({ ue, user, onBack }) {
             {/* Conseil examen */}
             {resume.conseil_exam && (
               <div style={{ background: "rgba(226,201,126,.04)", border: "1px solid rgba(226,201,126,.2)", padding: "16px 20px" }}>
-                <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#e2c97e", margin: "0 0 8px" }}>◈ CONSEIL EXAMINATEUR</p>
-                <p style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.7, fontStyle: "italic" }}>{resume.conseil_exam}</p>
+                <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#a47b2e", margin: "0 0 8px" }}>◈ CONSEIL EXAMINATEUR</p>
+                <p style={{ fontSize: 13, color: "#36425b", margin: 0, lineHeight: 1.7, fontStyle: "italic" }}>{resume.conseil_exam}</p>
               </div>
             )}
 
@@ -1901,7 +927,7 @@ function ResumeCoursScreen({ ue, user, onBack }) {
 
         {!loading && !resume && (
           <div style={{ textAlign: "center", padding: 40 }}>
-            <p style={{ color: "#f87171" }}>Erreur de génération.</p>
+            <p style={{ color: "#b84646" }}>Erreur de génération.</p>
             <button style={S.ctag} onClick={onBack}>Retour</button>
           </div>
         )}
@@ -1940,12 +966,12 @@ function PlanningScreen({ user, onBack, onUpgrade }) {
         <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← Dashboard</button></nav>
         <div style={{ maxWidth: 460, margin: "0 auto", padding: "80px 24px", display: "flex", flexDirection: "column", alignItems: "center", gap: 20, textAlign: "center", position: "relative", zIndex: 1, animation: "fsu .5s ease both" }}>
           <span style={{ fontSize: 40 }}>◈</span>
-          <h2 style={{ fontSize: 22, margin: 0, color: "#e8e4d9" }}>Planning de révision IA</h2>
-          <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.7 }}>Générez un planning personnalisé sur 2 à 12 semaines, avec objectifs hebdomadaires et conseils adaptés à votre niveau.</p>
+          <h2 style={{ fontSize: 22, margin: 0, color: "#18233e" }}>Planning de révision IA</h2>
+          <p style={{ fontSize: 14, color: "#64718b", lineHeight: 1.7 }}>Générez un planning personnalisé sur 2 à 12 semaines, avec objectifs hebdomadaires et conseils adaptés à votre niveau.</p>
           <div style={{ ...S.pc, ...S.phl, width: "100%" }}>
             <div style={S.pb}>PRO REQUIS</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 7, margin: "20px 0" }}>
-              {["Planning sur 2 à 12 semaines", "Objectifs hebdomadaires précis", "Répartition intelligente par UE", "Conseils personnalisés semaine par semaine"].map(f => <p key={f} style={{ fontSize: 12, color: "#c9c3b5", margin: 0 }}>✓ {f}</p>)}
+              {["Planning sur 2 à 12 semaines", "Objectifs hebdomadaires précis", "Répartition intelligente par UE", "Conseils personnalisés semaine par semaine"].map(f => <p key={f} style={{ fontSize: 12, color: "#36425b", margin: 0 }}>✓ {f}</p>)}
             </div>
             <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={onUpgrade}>Passer Pro — {PRO_PRICE}/mois →</button>
           </div>
@@ -1961,8 +987,8 @@ function PlanningScreen({ user, onBack, onUpgrade }) {
       <div style={{ maxWidth: 680, margin: "0 auto", padding: "36px 24px 60px", position: "relative", zIndex: 1 }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 28, animation: "fsu .4s ease both" }}>
           <div>
-            <h2 style={{ fontSize: 20, margin: "0 0 4px", color: "#e8e4d9" }}>◈ Planning de révision IA</h2>
-            <p style={{ fontSize: 13, color: "#6b7280", margin: 0 }}>Générez un programme sur-mesure pour votre préparation.</p>
+            <h2 style={{ fontSize: 20, margin: "0 0 4px", color: "#18233e" }}>◈ Planning de révision IA</h2>
+            <p style={{ fontSize: 13, color: "#64718b", margin: 0 }}>Générez un programme sur-mesure pour votre préparation.</p>
           </div>
         </div>
 
@@ -1970,14 +996,14 @@ function PlanningScreen({ user, onBack, onUpgrade }) {
           <div style={{ display: "flex", flexDirection: "column", gap: 20, animation: "fsu .4s ease both" }}>
             <Sect label="Niveau de préparation">
               <div style={{ display: "flex", gap: 10 }}>
-                <OB active={level === "DCG"} color="#60a5fa" onClick={() => setLevel("DCG")} main="DCG" sub="8 matières" />
-                <OB active={level === "DCG+DSCG"} color="#a78bfa" onClick={() => setLevel("DCG+DSCG")} main="DCG + DSCG" sub="13 matières" />
+                <OB active={level === "DCG"} color="#376cac" onClick={() => setLevel("DCG")} main="DCG" sub="8 matières" />
+                <OB active={level === "DCG+DSCG"} color="#7658a9" onClick={() => setLevel("DCG+DSCG")} main="DCG + DSCG" sub="13 matières" />
               </div>
             </Sect>
             <Sect label="Durée du planning">
               <div className="m-col2" style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8 }}>
                 {[2, 4, 6, 8, 10, 12].map(w => (
-                  <OB key={w} active={weeks === w} color="#e2c97e" onClick={() => setWeeks(w)} main={`${w} sem.`} sub={w <= 4 ? "Sprint" : w <= 8 ? "Standard" : "Long terme"} />
+                  <OB key={w} active={weeks === w} color="#a47b2e" onClick={() => setWeeks(w)} main={`${w} sem.`} sub={w <= 4 ? "Sprint" : w <= 8 ? "Standard" : "Long terme"} />
                 ))}
               </div>
             </Sect>
@@ -1989,49 +1015,49 @@ function PlanningScreen({ user, onBack, onUpgrade }) {
 
         {loading && (
           <div style={{ textAlign: "center", padding: "80px 24px" }}>
-            <div style={{ width: 40, height: 40, border: "3px solid #1f2937", borderTop: "3px solid #e2c97e", borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 20px" }} />
-            <p style={{ color: "#6b7280", fontSize: 13 }}>Génération du planning en cours…</p>
+            <div style={{ width: 40, height: 40, border: "3px solid #d9e0ec", borderTop: "3px solid #a47b2e", borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 20px" }} />
+            <p style={{ color: "#64718b", fontSize: 13 }}>Génération du planning en cours…</p>
           </div>
         )}
 
         {planning && !loading && (
           <div style={{ display: "flex", flexDirection: "column", gap: 14, animation: "fsu .4s ease both" }}>
             <div style={{ display: "flex", gap: 10, marginBottom: 6 }}>
-              {planning.rythme_conseille && <span style={{ fontSize: 11, color: "#e2c97e", border: "1px solid rgba(226,201,126,.2)", padding: "4px 12px" }}>⏱ {planning.rythme_conseille}</span>}
-              <span style={{ fontSize: 11, color: "#60a5fa", border: "1px solid rgba(96,165,250,.2)", padding: "4px 12px" }}>{level} · {weeks} semaines</span>
+              {planning.rythme_conseille && <span style={{ fontSize: 11, color: "#a47b2e", border: "1px solid rgba(226,201,126,.2)", padding: "4px 12px" }}>⏱ {planning.rythme_conseille}</span>}
+              <span style={{ fontSize: 11, color: "#376cac", border: "1px solid rgba(96,165,250,.2)", padding: "4px 12px" }}>{level} · {weeks} semaines</span>
             </div>
 
             {planning.conseil_global && (
               <div style={{ background: "rgba(226,201,126,.04)", border: "1px solid rgba(226,201,126,.15)", padding: "14px 18px" }}>
-                <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#e2c97e", margin: "0 0 6px" }}>◈ STRATÉGIE GLOBALE</p>
-                <p style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.7 }}>{planning.conseil_global}</p>
+                <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#a47b2e", margin: "0 0 6px" }}>◈ STRATÉGIE GLOBALE</p>
+                <p style={{ fontSize: 13, color: "#36425b", margin: 0, lineHeight: 1.7 }}>{planning.conseil_global}</p>
               </div>
             )}
 
             <div style={{ position: "relative" }}>
               {/* Ligne verticale */}
-              <div style={{ position: "absolute", left: 18, top: 0, bottom: 0, width: 1, background: "#1f2937", zIndex: 0 }} />
+              <div style={{ position: "absolute", left: 18, top: 0, bottom: 0, width: 1, background: "#d9e0ec", zIndex: 0 }} />
               <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
                 {planning.semaines?.map((sem, i) => (
                   <div key={i} style={{ display: "flex", gap: 0, animation: `fsu .3s ${i * .06}s both` }}>
                     <div style={{ width: 37, flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "center", paddingTop: 18 }}>
-                      <div style={{ width: 12, height: 12, borderRadius: "50%", background: "#e2c97e", border: "2px solid #080b14", zIndex: 1, flexShrink: 0 }} />
+                      <div style={{ width: 12, height: 12, borderRadius: "50%", background: "#a47b2e", border: "2px solid #f7f8fc", zIndex: 1, flexShrink: 0 }} />
                     </div>
-                    <div style={{ flex: 1, background: "#0d1117", border: "1px solid #111827", padding: "14px 16px", marginBottom: 8, marginLeft: 0 }}>
+                    <div style={{ flex: 1, background: "#ffffff", border: "1px solid #e9edf5", padding: "14px 16px", marginBottom: 8, marginLeft: 0 }}>
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
-                        <span style={{ fontSize: 11, fontWeight: 700, color: "#e2c97e" }}>Semaine {sem.num}</span>
-                        <span style={{ fontSize: 10, color: "#374151", background: "#111827", padding: "2px 8px" }}>{sem.ues?.join(", ")}</span>
+                        <span style={{ fontSize: 11, fontWeight: 700, color: "#a47b2e" }}>Semaine {sem.num}</span>
+                        <span style={{ fontSize: 10, color: "#64718b", background: "#e9edf5", padding: "2px 8px" }}>{sem.ues?.join(", ")}</span>
                       </div>
-                      <p style={{ fontSize: 13, color: "#e8e4d9", fontWeight: 700, margin: "0 0 8px" }}>{sem.focus}</p>
+                      <p style={{ fontSize: 13, color: "#18233e", fontWeight: 700, margin: "0 0 8px" }}>{sem.focus}</p>
                       <div style={{ display: "flex", flexDirection: "column", gap: 4, marginBottom: sem.conseil ? 10 : 0 }}>
                         {sem.objectifs?.map((obj, j) => (
-                          <p key={j} style={{ fontSize: 12, color: "#6b7280", margin: 0, display: "flex", gap: 8 }}>
-                            <span style={{ color: "#4ade80", flexShrink: 0 }}>→</span>{obj}
+                          <p key={j} style={{ fontSize: 12, color: "#64718b", margin: 0, display: "flex", gap: 8 }}>
+                            <span style={{ color: "#2c8061", flexShrink: 0 }}>→</span>{obj}
                           </p>
                         ))}
                       </div>
                       {sem.conseil && (
-                        <p style={{ fontSize: 11, color: "#4b5563", margin: 0, paddingTop: 8, borderTop: "1px solid #111827", fontStyle: "italic" }}>
+                        <p style={{ fontSize: 11, color: "#64718b", margin: 0, paddingTop: 8, borderTop: "1px solid #e9edf5", fontStyle: "italic" }}>
                           💡 {sem.conseil}
                         </p>
                       )}
@@ -2084,48 +1110,48 @@ function CasPratiqueScreen({ ue, user, onDone, onBack }) {
       <nav style={S.nav}>
         <Logo />
         <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
-          {cas && <span style={{ fontSize: 12, color: "#e2c97e", fontFamily: "monospace" }}>{fmt(timer)}</span>}
+          {cas && <span style={{ fontSize: 12, color: "#a47b2e", fontVariantNumeric: "tabular-nums" }}>{fmt(timer)}</span>}
           <button style={S.nl} onClick={onBack}>Quitter</button>
         </div>
       </nav>
       <div style={{ maxWidth: 700, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1, flex: 1 }}>
         {loading ? (
-          <div style={{ textAlign: "center", padding: 80 }}><div style={{ width: 40, height: 40, border: "3px solid #1f2937", borderTop: `3px solid ${ue.color}`, borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 20px" }} /><p style={{ color: "#6b7280", fontSize: 13 }}>Génération du cas pratique…</p></div>
+          <div style={{ textAlign: "center", padding: 80 }}><div style={{ width: 40, height: 40, border: "3px solid #d9e0ec", borderTop: `3px solid ${ue.color}`, borderRadius: "50%", animation: "spin .8s linear infinite", margin: "0 auto 20px" }} /><p style={{ color: "#64718b", fontSize: 13 }}>Génération du cas pratique…</p></div>
         ) : cas ? (
           <div style={{ animation: "fsu .4s ease both" }}>
             <div style={{ display: "flex", gap: 12, alignItems: "center", marginBottom: 20 }}>
               <span style={{ ...S.badge, fontSize: 9 }}>{ue.level} · {ue.id}</span>
-              <span style={{ fontSize: 11, color: "#6b7280" }}>{cas.duree_estimee}</span>
-              <span style={{ fontSize: 11, padding: "2px 8px", border: "1px solid #f59e0b40", color: "#f59e0b" }}>{cas.difficulte}</span>
+              <span style={{ fontSize: 11, color: "#64718b" }}>{cas.duree_estimee}</span>
+              <span style={{ fontSize: 11, padding: "2px 8px", border: "1px solid #99672440", color: "#996724" }}>{cas.difficulte}</span>
             </div>
-            <h2 style={{ fontSize: 18, color: "#e8e4d9", margin: "0 0 16px" }}>{cas.titre}</h2>
+            <h2 style={{ fontSize: 18, color: "#18233e", margin: "0 0 16px" }}>{cas.titre}</h2>
             <div style={{ ...S.card, marginBottom: 20, borderColor: `${ue.color}15` }}>
               <p style={{ fontSize: 10, color: ue.color, letterSpacing: ".1em", margin: "0 0 10px" }}>CONTEXTE</p>
-              <p style={{ fontSize: 13, color: "#c9c3b5", lineHeight: 1.7, margin: 0 }}>{cas.contexte}</p>
+              <p style={{ fontSize: 13, color: "#36425b", lineHeight: 1.7, margin: 0 }}>{cas.contexte}</p>
             </div>
             <div style={{ ...S.card, marginBottom: 20 }}>
-              <p style={{ fontSize: 10, color: "#e2c97e", letterSpacing: ".1em", margin: "0 0 14px" }}>QUESTIONS ({cas.questions?.reduce((s, q) => s + q.points, 0)} points)</p>
+              <p style={{ fontSize: 10, color: "#a47b2e", letterSpacing: ".1em", margin: "0 0 14px" }}>QUESTIONS ({cas.questions?.reduce((s, q) => s + q.points, 0)} points)</p>
               {cas.questions?.map(q => (
-                <div key={q.num} style={{ marginBottom: 14, paddingBottom: 14, borderBottom: "1px solid #111827" }}>
+                <div key={q.num} style={{ marginBottom: 14, paddingBottom: 14, borderBottom: "1px solid #e9edf5" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
-                    <span style={{ fontSize: 11, color: "#e2c97e", fontWeight: 700 }}>Question {q.num}</span>
-                    <span style={{ fontSize: 10, color: "#6b7280" }}>{q.points} pts</span>
+                    <span style={{ fontSize: 11, color: "#a47b2e", fontWeight: 700 }}>Question {q.num}</span>
+                    <span style={{ fontSize: 10, color: "#64718b" }}>{q.points} pts</span>
                   </div>
-                  <p style={{ fontSize: 13, color: "#e8e4d9", margin: 0, lineHeight: 1.6 }}>{q.enonce}</p>
+                  <p style={{ fontSize: 13, color: "#18233e", margin: 0, lineHeight: 1.6 }}>{q.enonce}</p>
                 </div>
               ))}
             </div>
             <div style={{ marginBottom: 16 }}>
-              <p style={{ fontSize: 11, color: "#6b7280", marginBottom: 8, letterSpacing: ".1em" }}>VOTRE RÉPONSE</p>
+              <p style={{ fontSize: 11, color: "#64718b", marginBottom: 8, letterSpacing: ".1em" }}>VOTRE RÉPONSE</p>
               <textarea value={reponse} onChange={e => setReponse(e.target.value)} placeholder="Répondez aux questions. Structurez votre réponse par numéro de question…" rows={12}
-                style={{ width: "100%", background: "#0d1117", border: "1px solid #1f2937", color: "#e8e4d9", padding: "14px", fontSize: 13, fontFamily: "inherit", resize: "vertical", outline: "none", lineHeight: 1.65, boxSizing: "border-box" }}
-                onFocus={e => e.target.style.borderColor = "#e2c97e40"} onBlur={e => e.target.style.borderColor = "#1f2937"} />
+                style={{ width: "100%", background: "#ffffff", border: "1px solid #d9e0ec", color: "#18233e", padding: "14px", fontSize: 13, fontFamily: "inherit", resize: "vertical", outline: "none", lineHeight: 1.65, boxSizing: "border-box" }}
+                onFocus={e => e.target.style.borderColor = "#a47b2e40"} onBlur={e => e.target.style.borderColor = "#d9e0ec"} />
             </div>
             <button style={{ ...S.ctag, width: "100%", padding: 15, opacity: !reponse.trim() || evaluating ? .5 : 1 }} onClick={submit} disabled={!reponse.trim() || evaluating}>
               {evaluating ? <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><Spinner />Correction en cours…</span> : "Rendre la copie →"}
             </button>
           </div>
-        ) : <div style={{ textAlign: "center", padding: 40 }}><p style={{ color: "#f87171" }}>Erreur de génération.</p><button style={S.ctag} onClick={onBack}>Retour</button></div>}
+        ) : <div style={{ textAlign: "center", padding: 40 }}><p style={{ color: "#b84646" }}>Erreur de génération.</p><button style={S.ctag} onClick={onBack}>Retour</button></div>}
       </div>
     </div>
   );
@@ -2141,7 +1167,7 @@ function InterviewConfig({ user, onStart, onBack }) {
     <div style={S.root}><OrbBg />
       <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← Dashboard</button></nav>
       <div style={{ maxWidth: 580, margin: "0 auto", padding: "40px 24px", position: "relative", zIndex: 1, display: "flex", flexDirection: "column", gap: 24, animation: "fsu .4s ease both" }}>
-        <h2 style={{ fontSize: 22, margin: 0, color: "#e8e4d9" }}>Configurer l'entretien</h2>
+        <h2 style={{ fontSize: 22, margin: 0, color: "#18233e" }}>Configurer l'entretien</h2>
         <Sect label="Niveau du poste">
           <div style={{ display: "flex", gap: 10 }}>
             {ROLES.map(r => <OB key={r.id} active={role === r.id} color={r.color} onClick={() => setRole(r.id)} main={r.label} sub={r.sub} />)}
@@ -2153,10 +1179,10 @@ function InterviewConfig({ user, onStart, onBack }) {
               const locked = !t.free && !isPro;
               return (
                 <button key={t.id} onClick={() => !locked && setTopic(t.id)}
-                  style={{ background: "#0d1117", border: `1px solid ${topic === t.id ? "rgba(226,201,126,.3)" : "#111827"}`, padding: "10px 14px", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 3, opacity: locked ? .4 : 1, cursor: locked ? "default" : "pointer", transition: "all .15s", fontFamily: "inherit" }}>
+                  style={{ background: "#ffffff", border: `1px solid ${topic === t.id ? "rgba(226,201,126,.3)" : "#e9edf5"}`, padding: "10px 14px", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 3, opacity: locked ? .4 : 1, cursor: locked ? "default" : "pointer", transition: "all .15s", fontFamily: "inherit" }}>
                   <span style={{ fontSize: 14 }}>{t.icon}</span>
-                  <span style={{ fontSize: 12, fontWeight: 700, color: topic === t.id ? "#e2c97e" : locked ? "#374151" : "#9ca3af" }}>{t.id}</span>
-                  <span style={{ fontSize: 10, color: "#374151" }}>{locked ? "🔒 Pro" : t.desc}</span>
+                  <span style={{ fontSize: 12, fontWeight: 700, color: topic === t.id ? "#a47b2e" : locked ? "#64718b" : "#63728c" }}>{t.id}</span>
+                  <span style={{ fontSize: 10, color: "#64718b" }}>{locked ? "🔒 Pro" : t.desc}</span>
                 </button>
               );
             })}
@@ -2164,7 +1190,7 @@ function InterviewConfig({ user, onStart, onBack }) {
         </Sect>
         <Sect label="Durée">
           <div style={{ display: "flex", gap: 10 }}>
-            {DURATIONS.map(d => <OB key={d.id} active={dur === d.id} color="#e2c97e" onClick={() => setDur(d.id)} main={d.label} sub={d.sub} />)}
+            {DURATIONS.map(d => <OB key={d.id} active={dur === d.id} color="#a47b2e" onClick={() => setDur(d.id)} main={d.label} sub={d.sub} />)}
           </div>
         </Sect>
         <button style={{ ...S.ctag, padding: 14, animation: "glow 3s ease-in-out infinite" }} onClick={() => onStart({ role, topic, dur, maxQ: DURATIONS.find(d => d.id === dur).q })}>
@@ -2185,7 +1211,7 @@ function InterviewScreen({ cfg, onDone }) {
   const boot = async () => {
     setLoading(true);
     const init = [{ role: "user", content: "Bonjour, je suis prêt pour l'entretien." }];
-    const r = await callClaude(INTERVIEW_SYSTEM(cfg.role, cfg.topic), init);
+    let r; try { r = await callClaude(INTERVIEW_SYSTEM(cfg.role, cfg.topic), init); } catch (e) { toast.error(e.message); setLoading(false); return; }
     setMsgs([...init, { role: "assistant", content: r }]); setQCount(1); setLoading(false);
   };
   const send = async () => {
@@ -2193,15 +1219,15 @@ function InterviewScreen({ cfg, onDone }) {
     const next = [...msgs, { role: "user", content: input }];
     setMsgs(next); setInput(""); setQCount(q => q + 1); setLoading(true);
     if (qCount + 1 > cfg.maxQ) { await finish(next); return; }
-    const r = await callClaude(INTERVIEW_SYSTEM(cfg.role, cfg.topic), next);
+    let r; try { r = await callClaude(INTERVIEW_SYSTEM(cfg.role, cfg.topic), next); } catch (e) { toast.error(e.message); setLoading(false); return; }
     setMsgs([...next, { role: "assistant", content: r }]); setLoading(false);
   };
   const finish = async (m) => {
     clearInterval(timerRef.current);
     const t = m || msgs;
     const transcript = t.map(x => `${x.role === "user" ? "Candidat" : "Recruteur"}: ${x.content}`).join("\n\n");
-    const raw = await callClaude(INTERVIEW_EVAL, [{ role: "user", content: `Transcription:\n\n${transcript}\n\nJSON.` }]);
-    let ev; try { ev = JSON.parse(raw.replace(/```json|```/g, "").trim()); } catch { ev = { score: 55, niveau: "Intermédiaire", points_forts: ["Participation"], axes_amelioration: ["Structurer"], verdict: "Performance correcte.", conseil_prioritaire: "Approfondissez.", pret_pour_poste: false }; }
+    let raw; try { raw = await callClaude(INTERVIEW_EVAL, [{ role: "user", content: `Transcription:\n\n${transcript}\n\nJSON.` }]); } catch (e) { toast.error(e.message); setLoading(false); return; }
+    let ev; try { ev = JSON.parse(raw.replace(/```json|```/g, "").trim()); } catch { toast.error("L’évaluation a échoué. Réessayez ; aucun score n’a été attribué."); setLoading(false); return; }
     onDone({ evaluation: ev, duration: timer, topic: cfg.topic, role: cfg.role, transcript: t });
   };
   const pct = Math.round((Math.min(qCount, cfg.maxQ) / cfg.maxQ) * 100);
@@ -2210,13 +1236,13 @@ function InterviewScreen({ cfg, onDone }) {
       <div style={{ ...S.nav, zIndex: 2 }}>
         <Logo />
         <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
-          <span style={{ fontSize: 11, color: "#374151", border: "1px solid #1f2937", padding: "3px 8px" }}>{cfg.topic}</span>
-          <span style={{ fontSize: 12, color: "#e2c97e", fontFamily: "monospace" }}>{fmt(timer)}</span>
-          <span style={{ fontSize: 11, color: "#6b7280" }}>{Math.min(qCount, cfg.maxQ)}/{cfg.maxQ}</span>
-          <button style={{ ...S.no, color: "#f87171", borderColor: "#f8717140" }} onClick={() => finish(msgs)}>Terminer</button>
+          <span style={{ fontSize: 11, color: "#64718b", border: "1px solid #d9e0ec", padding: "3px 8px" }}>{cfg.topic}</span>
+          <span style={{ fontSize: 12, color: "#a47b2e", fontVariantNumeric: "tabular-nums" }}>{fmt(timer)}</span>
+          <span style={{ fontSize: 11, color: "#64718b" }}>{Math.min(qCount, cfg.maxQ)}/{cfg.maxQ}</span>
+          <button style={{ ...S.no, color: "#b84646", borderColor: "#b8464640" }} onClick={() => finish(msgs)}>Terminer</button>
         </div>
       </div>
-      <div style={{ height: 2, background: "#0d1117" }}><div style={{ height: "100%", width: `${pct}%`, background: "linear-gradient(90deg,#e2c97e,#f5e4a0)", transition: "width .5s" }} /></div>
+      <div style={{ height: 2, background: "#ffffff" }}><div style={{ height: "100%", width: `${pct}%`, background: "linear-gradient(90deg,#a47b2e,#f5e4a0)", transition: "width .5s" }} /></div>
       <div style={{ flex: 1, overflowY: "auto", padding: "20px", display: "flex", flexDirection: "column", gap: 14, scrollbarWidth: "none", position: "relative", zIndex: 1 }}>
         {msgs.map((m, i) => (
           <div key={i} style={{ display: "flex", gap: 10, justifyContent: m.role === "user" ? "flex-end" : "flex-start", alignItems: "flex-end", animation: "fsu .3s ease both" }}>
@@ -2224,10 +1250,10 @@ function InterviewScreen({ cfg, onDone }) {
             <div style={{ maxWidth: "76%", padding: "12px 15px", fontSize: 13, lineHeight: 1.65, whiteSpace: "pre-wrap", ...(m.role === "user" ? S.bubu : S.buba) }}>{m.content}</div>
           </div>
         ))}
-        {loading && <div style={{ display: "flex", gap: 10 }}><div style={S.ava}>RH</div><div style={{ ...S.buba, padding: "14px 18px", display: "flex", gap: 5, alignItems: "center" }}>{[0, 1, 2].map(i => <span key={i} style={{ width: 6, height: 6, borderRadius: "50%", background: "#e2c97e", animation: `puls 1.2s ${i * .25}s infinite` }} />)}</div></div>}
+        {loading && <div style={{ display: "flex", gap: 10 }}><div style={S.ava}>RH</div><div style={{ ...S.buba, padding: "14px 18px", display: "flex", gap: 5, alignItems: "center" }}>{[0, 1, 2].map(i => <span key={i} style={{ width: 6, height: 6, borderRadius: "50%", background: "#a47b2e", animation: `puls 1.2s ${i * .25}s infinite` }} />)}</div></div>}
         <div ref={endRef} />
       </div>
-      <div style={{ padding: "12px 20px 20px", borderTop: "1px solid #0d1117", display: "flex", gap: 10, background: "#080b14", position: "relative", zIndex: 1 }}>
+      <div style={{ padding: "12px 20px 20px", borderTop: "1px solid #ffffff", display: "flex", gap: 10, background: "#f7f8fc", position: "relative", zIndex: 1 }}>
         <textarea style={S.ta} value={input} onChange={e => setInput(e.target.value)}
           onKeyDown={e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); send(); } }}
           placeholder="Votre réponse… (Entrée pour envoyer)" disabled={loading} rows={3} />
@@ -2249,21 +1275,21 @@ function ResultsInterview({ data, onNew, onDash }) {
       <div style={{ maxWidth: 600, margin: "0 auto", padding: "36px 24px 60px", display: "flex", flexDirection: "column", alignItems: "center", gap: 20, position: "relative", zIndex: 1 }}>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 12, animation: "fsu .5s ease both" }}>
           <svg width="140" height="140" viewBox="0 0 120 120">
-            <circle cx="60" cy="60" r="52" fill="none" stroke="#111827" strokeWidth="8" />
+            <circle cx="60" cy="60" r="52" fill="none" stroke="#e9edf5" strokeWidth="8" />
             <circle cx="60" cy="60" r="52" fill="none" stroke={sc} strokeWidth="8" strokeDasharray={`${(anim / 100) * circ} ${circ}`} strokeLinecap="round" transform="rotate(-90 60 60)" style={{ filter: `drop-shadow(0 0 6px ${sc})` }} />
             <text x="60" y="54" textAnchor="middle" fill="white" fontSize="28" fontWeight="900" fontFamily="monospace">{anim}</text>
-            <text x="60" y="70" textAnchor="middle" fill="#374151" fontSize="10" fontFamily="monospace">/100</text>
+            <text x="60" y="70" textAnchor="middle" fill="#64718b" fontSize="10" fontFamily="monospace">/100</text>
           </svg>
-          <p style={{ fontSize: 14, color: "#6b7280", margin: 0 }}>{topic} · {fmt(duration)}</p>
+          <p style={{ fontSize: 14, color: "#64718b", margin: 0 }}>{topic} · {fmt(duration)}</p>
           <span style={{ fontSize: 11, letterSpacing: ".15em", color: sc, border: `1px solid ${sc}50`, padding: "4px 16px", fontWeight: 700 }}>{ev.niveau}</span>
         </div>
-        <div style={{ background: "#0d1117", border: "1px solid #1a1f2e", padding: "20px 24px", width: "100%", textAlign: "center" }}>
-          <p style={{ fontSize: 14, color: "#c9c3b5", lineHeight: 1.7, margin: "0 0 14px" }}>{ev.verdict}</p>
-          {ev.conseil_prioritaire && <div style={{ background: "#e2c97e08", border: "1px solid #e2c97e25", padding: "10px 16px" }}><p style={{ fontSize: 10, color: "#e2c97e", margin: "0 0 4px", letterSpacing: ".1em" }}>✦ CONSEIL PRIORITAIRE</p><p style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.6 }}>{ev.conseil_prioritaire}</p></div>}
+        <div style={{ background: "#ffffff", border: "1px solid #e4e8f1", padding: "20px 24px", width: "100%", textAlign: "center" }}>
+          <p style={{ fontSize: 14, color: "#36425b", lineHeight: 1.7, margin: "0 0 14px" }}>{ev.verdict}</p>
+          {ev.conseil_prioritaire && <div style={{ background: "#a47b2e08", border: "1px solid #a47b2e25", padding: "10px 16px" }}><p style={{ fontSize: 10, color: "#a47b2e", margin: "0 0 4px", letterSpacing: ".1em" }}>✦ CONSEIL PRIORITAIRE</p><p style={{ fontSize: 13, color: "#36425b", margin: 0, lineHeight: 1.6 }}>{ev.conseil_prioritaire}</p></div>}
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, width: "100%" }}>
-          <div style={S.ec}><p style={{ ...S.et, color: "#4ade80" }}>✦ POINTS FORTS</p>{ev.points_forts?.map((p, i) => <p key={i} style={S.ei}>— {p}</p>)}</div>
-          <div style={S.ec}><p style={{ ...S.et, color: "#f59e0b" }}>↗ À AMÉLIORER</p>{ev.axes_amelioration?.map((a, i) => <p key={i} style={S.ei}>— {a}</p>)}</div>
+          <div style={S.ec}><p style={{ ...S.et, color: "#2c8061" }}>✦ POINTS FORTS</p>{ev.points_forts?.map((p, i) => <p key={i} style={S.ei}>— {p}</p>)}</div>
+          <div style={S.ec}><p style={{ ...S.et, color: "#996724" }}>↗ À AMÉLIORER</p>{ev.axes_amelioration?.map((a, i) => <p key={i} style={S.ei}>— {a}</p>)}</div>
         </div>
         <div style={{ display: "flex", gap: 10, width: "100%" }}>
           <button style={{ ...S.ctagh, flex: 1, fontSize: 12 }} onClick={() => { navigator.clipboard.writeText(transcript?.map(m => `[${m.role === "user" ? "VOUS" : "RECRUTEUR"}]\n${m.content}`).join("\n\n---\n\n") || "").then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }); }}>
@@ -2287,16 +1313,16 @@ function ResultsQCM({ data, onNew, onDash }) {
       <div style={{ maxWidth: 560, margin: "0 auto", padding: "36px 24px 60px", display: "flex", flexDirection: "column", gap: 16, position: "relative", zIndex: 1, animation: "fsu .5s ease both" }}>
         <div style={{ ...S.card, textAlign: "center", borderColor: `${sc}30` }}>
           <p style={{ fontSize: 52, fontWeight: 900, color: sc, margin: "0 0 4px", filter: `drop-shadow(0 0 12px ${sc})` }}>{score}/{total}</p>
-          <p style={{ fontSize: 14, color: "#e8e4d9", fontWeight: 700, margin: "0 0 4px" }}>{pct}% de réussite</p>
-          <p style={{ fontSize: 12, color: "#6b7280", margin: 0 }}>{ueName} · {fmt(duration)}</p>
+          <p style={{ fontSize: 14, color: "#18233e", fontWeight: 700, margin: "0 0 4px" }}>{pct}% de réussite</p>
+          <p style={{ fontSize: 12, color: "#64718b", margin: 0 }}>{ueName} · {fmt(duration)}</p>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 8, maxHeight: 320, overflowY: "auto" }}>
           {answers?.map((a, i) => (
-            <div key={i} style={{ background: "#0d1117", border: `1px solid ${a.correct ? "#4ade8025" : "#f8717125"}`, padding: "10px 14px" }}>
-              <p style={{ fontSize: 11, color: a.correct ? "#4ade80" : "#f87171", margin: "0 0 4px" }}>{a.correct ? "✓ Correct" : "✗ Incorrect"} {a.difficulte && `· ${a.difficulte}`}</p>
-              <p style={{ fontSize: 12, color: "#6b7280", margin: 0 }}>{a.q}</p>
-              {!a.correct && <p style={{ fontSize: 11, color: "#4b5563", margin: "4px 0 0" }}>Réponse : {a.right}</p>}
-              {a.expl && <p style={{ fontSize: 11, color: "#374151", margin: "4px 0 0", fontStyle: "italic" }}>{a.expl}</p>}
+            <div key={i} style={{ background: "#ffffff", border: `1px solid ${a.correct ? "#2c806125" : "#b8464625"}`, padding: "10px 14px" }}>
+              <p style={{ fontSize: 11, color: a.correct ? "#2c8061" : "#b84646", margin: "0 0 4px" }}>{a.correct ? "✓ Correct" : "✗ Incorrect"} {a.difficulte && `· ${a.difficulte}`}</p>
+              <p style={{ fontSize: 12, color: "#64718b", margin: 0 }}>{a.q}</p>
+              {!a.correct && <p style={{ fontSize: 11, color: "#64718b", margin: "4px 0 0" }}>Réponse : {a.right}</p>}
+              {a.expl && <p style={{ fontSize: 11, color: "#64718b", margin: "4px 0 0", fontStyle: "italic" }}>{a.expl}</p>}
             </div>
           ))}
         </div>
@@ -2312,7 +1338,7 @@ function ResultsQCM({ data, onNew, onDash }) {
 // ── RESULTS CAS ───────────────────────────────────────────────────────────────
 function ResultsCas({ data, onNew, onDash }) {
   const { cas, evaluation: ev, duration, ueName } = data;
-  if (!ev) return <div style={S.root}><OrbBg /><div style={{ maxWidth: 500, margin: "80px auto", padding: 24, textAlign: "center" }}><p style={{ color: "#f87171" }}>Erreur d'évaluation.</p><button style={S.ctag} onClick={onDash}>Retour</button></div></div>;
+  if (!ev) return <div style={S.root}><OrbBg /><div style={{ maxWidth: 500, margin: "80px auto", padding: 24, textAlign: "center" }}><p style={{ color: "#b84646" }}>Erreur d'évaluation.</p><button style={S.ctag} onClick={onDash}>Retour</button></div></div>;
   const nc = noteColor(ev.note);
   return (
     <div style={S.root}><OrbBg />
@@ -2320,25 +1346,25 @@ function ResultsCas({ data, onNew, onDash }) {
       <div style={{ maxWidth: 620, margin: "0 auto", padding: "36px 24px 60px", display: "flex", flexDirection: "column", gap: 16, position: "relative", zIndex: 1, animation: "fsu .5s ease both" }}>
         <div style={{ ...S.card, textAlign: "center", borderColor: `${nc}30` }}>
           <p style={{ fontSize: 54, fontWeight: 900, color: nc, margin: "0 0 4px", filter: `drop-shadow(0 0 12px ${nc})` }}>{ev.note}<span style={{ fontSize: 22 }}>/20</span></p>
-          <p style={{ fontSize: 14, color: "#e8e4d9", fontWeight: 700, margin: "0 0 4px" }}>{ev.appreciation} · {cas?.titre}</p>
-          <p style={{ fontSize: 12, color: "#6b7280", margin: 0 }}>{ueName} · {fmt(duration)}</p>
+          <p style={{ fontSize: 14, color: "#18233e", fontWeight: 700, margin: "0 0 4px" }}>{ev.appreciation} · {cas?.titre}</p>
+          <p style={{ fontSize: 12, color: "#64718b", margin: 0 }}>{ueName} · {fmt(duration)}</p>
         </div>
         {ev.correction_par_question && (
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#374151" }}>CORRECTION PAR QUESTION</p>
+            <p style={{ fontSize: 10, letterSpacing: ".15em", color: "#64718b" }}>CORRECTION PAR QUESTION</p>
             {ev.correction_par_question.map(q => (
               <div key={q.num} style={S.card}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
-                  <span style={{ fontSize: 12, fontWeight: 700, color: "#e8e4d9" }}>Question {q.num}</span>
+                  <span style={{ fontSize: 12, fontWeight: 700, color: "#18233e" }}>Question {q.num}</span>
                   <span style={{ fontSize: 13, fontWeight: 700, color: noteColor(q.note / (cas?.questions?.[q.num - 1]?.points || 10) * 20) }}>{q.note}/{cas?.questions?.[q.num - 1]?.points || "?"} pts</span>
                 </div>
-                <p style={{ fontSize: 13, color: "#c9c3b5", margin: "0 0 8px", lineHeight: 1.6 }}>{q.commentaire}</p>
-                {q.elements_attendus && <div style={{ background: "#060810", border: "1px solid #111827", padding: "8px 12px" }}><p style={{ fontSize: 10, color: "#374151", margin: "0 0 4px", letterSpacing: ".1em" }}>ÉLÉMENTS ATTENDUS</p><p style={{ fontSize: 12, color: "#4b5563", margin: 0, lineHeight: 1.6 }}>{q.elements_attendus}</p></div>}
+                <p style={{ fontSize: 13, color: "#36425b", margin: "0 0 8px", lineHeight: 1.6 }}>{q.commentaire}</p>
+                {q.elements_attendus && <div style={{ background: "#060810", border: "1px solid #e9edf5", padding: "8px 12px" }}><p style={{ fontSize: 10, color: "#64718b", margin: "0 0 4px", letterSpacing: ".1em" }}>ÉLÉMENTS ATTENDUS</p><p style={{ fontSize: 12, color: "#64718b", margin: 0, lineHeight: 1.6 }}>{q.elements_attendus}</p></div>}
               </div>
             ))}
           </div>
         )}
-        {ev.conseil && <div style={{ background: "#e2c97e08", border: "1px solid #e2c97e25", padding: "14px 18px" }}><p style={{ fontSize: 10, color: "#e2c97e", margin: "0 0 6px", letterSpacing: ".1em" }}>✦ CONSEIL</p><p style={{ fontSize: 13, color: "#c9c3b5", margin: 0, lineHeight: 1.6 }}>{ev.conseil}</p></div>}
+        {ev.conseil && <div style={{ background: "#a47b2e08", border: "1px solid #a47b2e25", padding: "14px 18px" }}><p style={{ fontSize: 10, color: "#a47b2e", margin: "0 0 6px", letterSpacing: ".1em" }}>✦ CONSEIL</p><p style={{ fontSize: 13, color: "#36425b", margin: 0, lineHeight: 1.6 }}>{ev.conseil}</p></div>}
         <div style={{ display: "flex", gap: 10 }}>
           <button style={{ ...S.ctagh, flex: 1 }} onClick={onDash}>← Matière</button>
           <button style={{ ...S.ctag, flex: 1 }} onClick={onNew}>Nouveau cas</button>
@@ -2352,28 +1378,28 @@ function ResultsCas({ data, onNew, onDash }) {
 function History({ user, onBack }) {
   const [history, setHistory] = useState([]); const [loading, setLoading] = useState(true);
   useEffect(() => { loadHistory(user.uid).then(h => { setHistory(h); setLoading(false); }); }, []);
-  const typeColor = (t) => t === "entretien" ? "#e2c97e" : t === "cas" ? "#f59e0b" : "#60a5fa";
+  const typeColor = (t) => t === "entretien" ? "#a47b2e" : t === "cas" ? "#996724" : "#376cac";
   const typeIcon = (t) => t === "entretien" ? "💼" : t === "cas" ? "📝" : "△";
   return (
     <div style={S.root}><OrbBg />
       <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← Dashboard</button></nav>
       <div style={{ maxWidth: 620, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1 }}>
-        <h2 style={{ fontSize: 20, margin: "0 0 20px", color: "#e8e4d9" }}>▦ Historique</h2>
-        {loading ? <p style={{ color: "#374151" }}>Chargement…</p> : history.length === 0 ? <p style={{ color: "#374151", fontSize: 13 }}>Aucune activité pour le moment.</p> : (
+        <h2 style={{ fontSize: 20, margin: "0 0 20px", color: "#18233e" }}>▦ Historique</h2>
+        {loading ? <p style={{ color: "#64718b" }}>Chargement…</p> : history.length === 0 ? <p style={{ color: "#64718b", fontSize: 13 }}>Aucune activité pour le moment.</p> : (
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {history.map((h, i) => {
               const s = h.evaluation?.score || h.evaluation?.note || 0;
               const isNote = h.type === "cas"; const val = isNote ? `${s}/20` : s > 0 ? `${s}/100` : "—";
               const col = isNote ? noteColor(s) : scoreColor(s);
               return (
-                <div key={i} style={{ background: "#0d1117", border: "1px solid #1a1f2e", padding: "14px 18px", display: "flex", justifyContent: "space-between", alignItems: "center", animation: `fsu .3s ${i * .04}s both` }}>
+                <div key={i} style={{ background: "#ffffff", border: "1px solid #e4e8f1", padding: "14px 18px", display: "flex", justifyContent: "space-between", alignItems: "center", animation: `fsu .3s ${i * .04}s both` }}>
                   <div>
                     <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 4 }}>
                       <span style={{ fontSize: 14 }}>{typeIcon(h.type)}</span>
                       <span style={{ fontSize: 11, color: typeColor(h.type), border: `1px solid ${typeColor(h.type)}30`, padding: "1px 6px" }}>{h.type?.toUpperCase()}</span>
-                      <span style={{ fontSize: 11, color: "#4b5563" }}>{h.ueName || h.topic || "—"}</span>
+                      <span style={{ fontSize: 11, color: "#64718b" }}>{h.ueName || h.topic || "—"}</span>
                     </div>
-                    <p style={{ fontSize: 12, color: "#374151", margin: 0 }}>{h.date}</p>
+                    <p style={{ fontSize: 12, color: "#64718b", margin: 0 }}>{h.date}</p>
                   </div>
                   <p style={{ fontSize: 24, fontWeight: 900, margin: 0, color: col, filter: `drop-shadow(0 0 6px ${col}60)` }}>{val}</p>
                 </div>
@@ -2387,55 +1413,19 @@ function History({ user, onBack }) {
 }
 
 // ── PROGRESS ──────────────────────────────────────────────────────────────────
-function ProgressScreen({ user, onBack }) {
-  const [history, setHistory] = useState([]); const [loading, setLoading] = useState(true);
-  useEffect(() => { loadHistory(user.uid).then(h => { setHistory(h.slice(0, 30).reverse()); setLoading(false); }); }, []);
-  const interviews = history.filter(h => h.type === "entretien");
-  const qcms = history.filter(h => h.type === "qcm");
-  const cas = history.filter(h => h.type === "cas");
-  const chartData = interviews.map((h, i) => ({ n: i + 1, score: h.evaluation?.score || 0 }));
-  const avg = interviews.length ? Math.round(interviews.reduce((s, h) => s + (h.evaluation?.score || 0), 0) / interviews.length) : 0;
-  return (
-    <div style={S.root}><OrbBg />
-      <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← Dashboard</button></nav>
-      <div style={{ maxWidth: 680, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1, animation: "fsu .4s ease both" }}>
-        <h2 style={{ fontSize: 20, margin: "0 0 20px", color: "#e8e4d9" }}>◎ Progression</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 10, marginBottom: 24 }}>
-          <SC v={interviews.length} l="Entretiens" /><SC v={qcms.length} l="QCM sessions" /><SC v={cas.length} l="Cas pratiques" /><SC v={avg || "—"} l="Score moyen" hl />
-        </div>
-        {loading ? <p style={{ color: "#374151" }}>Chargement…</p> : interviews.length < 2 ? (
-          <div style={{ ...S.card, textAlign: "center" }}><p style={{ color: "#374151", fontSize: 13, margin: 0 }}>Faites 2+ entretiens pour voir votre évolution.</p></div>
-        ) : (
-          <div style={{ background: "#0d1117", border: "1px solid #1a1f2e", padding: "20px 8px 12px" }}>
-            <ResponsiveContainer width="100%" height={200}>
-              <LineChart data={chartData} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
-                <CartesianGrid stroke="#111827" strokeDasharray="3 3" />
-                <XAxis dataKey="n" stroke="#1f2937" tick={{ fontSize: 10, fill: "#374151" }} />
-                <YAxis domain={[0, 100]} stroke="#1f2937" tick={{ fontSize: 10, fill: "#374151" }} />
-                <Tooltip contentStyle={{ background: "#0d1117", border: "1px solid #1a1f2e", fontSize: 12 }} itemStyle={{ color: "#e2c97e" }} formatter={v => [`${v}/100`, "Score"]} />
-                <Line type="monotone" dataKey="score" stroke="#e2c97e" strokeWidth={2} dot={{ fill: "#e2c97e", r: 4 }} />
-              </LineChart>
-            </ResponsiveContainer>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
 // ── PAYWALL ───────────────────────────────────────────────────────────────────
 function Paywall({ onUpgrade, onBack }) {
   return (
     <div style={S.root}><ParticleCanvas /><OrbBg />
       <div style={{ maxWidth: 460, margin: "0 auto", padding: "80px 24px", display: "flex", flexDirection: "column", alignItems: "center", gap: 20, textAlign: "center", position: "relative", zIndex: 1, animation: "fsu .5s ease both" }}>
         <span style={{ fontSize: 40 }}>◈</span>
-        <h2 style={{ fontSize: 26, margin: 0, color: "#e8e4d9" }}>Passez à Pro</h2>
-        <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.7, margin: 0 }}>Cette fonctionnalité est réservée aux membres Pro.</p>
+        <h2 style={{ fontSize: 26, margin: 0, color: "#18233e" }}>Passez à Pro</h2>
+        <p style={{ fontSize: 14, color: "#64718b", lineHeight: 1.7, margin: 0 }}>Cette fonctionnalité est réservée aux membres Pro.</p>
         <div style={{ ...S.pc, ...S.phl, width: "100%", animation: "glow 3s ease-in-out infinite" }}>
           <div style={S.pb}>SIMDCG PRO</div>
-          <p style={{ fontSize: 40, fontWeight: 900, color: "#e8e4d9", margin: "12px 0 4px" }}>{PRO_PRICE}<span style={{ fontSize: 14, color: "#6b7280" }}>/mois</span></p>
+          <p style={{ fontSize: 40, fontWeight: 900, color: "#18233e", margin: "12px 0 4px" }}>{PRO_PRICE}<span style={{ fontSize: 14, color: "#64718b" }}>/mois</span></p>
           <div style={{ display: "flex", flexDirection: "column", gap: 7, margin: "14px 0 20px" }}>
-            {["QCM illimités — 13 matières DCG + DSCG", "Cas pratiques illimités corrigés par IA", "Flashcards 12/UE + révision espacée", "Planning de révision IA personnalisé", "Entretiens illimités (6 thématiques)", "Historique complet & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "#c9c3b5", margin: 0 }}>✓ {f}</p>)}
+            {["QCM illimités — 13 matières DCG + DSCG", "Cas pratiques illimités corrigés par IA", "Flashcards 12/UE + reprise des cartes difficiles", "Planning de révision IA personnalisé", "Entretiens illimités (6 thématiques)", "Historique complet & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "#36425b", margin: 0 }}>✓ {f}</p>)}
           </div>
           <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={onUpgrade}>Passer à Pro →</button>
         </div>
@@ -2446,32 +1436,21 @@ function Paywall({ onUpgrade, onBack }) {
 }
 
 // ── ATOMS ─────────────────────────────────────────────────────────────────────
-function Logo({ glow }) {
-  return (
-    <img
-      src="/logo.png"
-      alt="SIMDCG"
-      style={{
-        height: 36,
-        filter: glow ? "drop-shadow(0 0 8px rgba(226,201,126,.5))" : "none",
-      }}
-    />
-  );
-}
+function Logo() { return <Brand />; }
 function SC({ v, l, hl }) {
-  return <div style={{ background: "#0d1117", border: `1px solid ${hl ? "rgba(226,201,126,.2)" : "#1a1f2e"}`, padding: "14px 10px", textAlign: "center" }}><p style={{ fontSize: 20, fontWeight: 900, margin: "0 0 3px", color: hl ? "#e2c97e" : "#e8e4d9" }}>{v}</p><p style={{ fontSize: 9, color: "#374151", margin: 0, letterSpacing: ".1em" }}>{l.toUpperCase()}</p></div>;
+  return <div style={{ background: "#ffffff", border: `1px solid ${hl ? "rgba(226,201,126,.2)" : "#e4e8f1"}`, padding: "14px 10px", textAlign: "center" }}><p style={{ fontSize: 20, fontWeight: 900, margin: "0 0 3px", color: hl ? "#a47b2e" : "#18233e" }}>{v}</p><p style={{ fontSize: 9, color: "#64718b", margin: 0, letterSpacing: ".1em" }}>{l.toUpperCase()}</p></div>;
 }
 function FInput({ label, value, set, ph, type = "text" }) {
-  return <div style={{ display: "flex", flexDirection: "column", gap: 5 }}><label style={{ fontSize: 10, letterSpacing: ".12em", color: "#6b7280", textTransform: "uppercase" }}>{label}</label><input style={{ background: "#0d1117", border: "1px solid #1f2937", color: "#e8e4d9", padding: "10px 12px", fontSize: 13, fontFamily: "inherit", outline: "none", transition: "border-color .2s" }} type={type} value={value} onChange={e => set(e.target.value)} placeholder={ph} onFocus={e => e.target.style.borderColor = "#e2c97e40"} onBlur={e => e.target.style.borderColor = "#1f2937"} /></div>;
+  return <div style={{ display: "flex", flexDirection: "column", gap: 5 }}><label style={{ fontSize: 10, letterSpacing: ".12em", color: "#64718b", textTransform: "uppercase" }}>{label}</label><input aria-label={label} style={{ background: "#ffffff", border: "1px solid #d9e0ec", color: "#18233e", padding: "10px 12px", fontSize: 13, fontFamily: "inherit", outline: "none", transition: "border-color .2s" }} type={type} value={value} onChange={e => set(e.target.value)} placeholder={ph} onFocus={e => e.target.style.borderColor = "#a47b2e40"} onBlur={e => e.target.style.borderColor = "#d9e0ec"} /></div>;
 }
 function Sect({ label, children }) {
-  return <div><p style={{ fontSize: 10, letterSpacing: ".15em", color: "#6b7280", margin: "0 0 10px", textTransform: "uppercase" }}>{label}</p>{children}</div>;
+  return <div><p style={{ fontSize: 10, letterSpacing: ".15em", color: "#64718b", margin: "0 0 10px", textTransform: "uppercase" }}>{label}</p>{children}</div>;
 }
 function OB({ active, color, onClick, main, sub }) {
-  return <button onClick={onClick} style={{ flex: 1, background: active ? `${color}12` : "#0d1117", border: `2px solid ${active ? color : "#1f2937"}`, color: active ? color : "#6b7280", padding: "12px 8px", fontSize: 13, display: "flex", flexDirection: "column", alignItems: "center", gap: 3, transition: "all .15s", boxShadow: active ? `0 0 16px ${color}20` : "none", fontFamily: "inherit" }}><strong>{main}</strong><span style={{ fontSize: 10, opacity: .6 }}>{sub}</span></button>;
+  return <button onClick={onClick} style={{ flex: 1, background: active ? `${color}12` : "#ffffff", border: `2px solid ${active ? color : "#d9e0ec"}`, color: active ? color : "#64718b", padding: "12px 8px", fontSize: 13, display: "flex", flexDirection: "column", alignItems: "center", gap: 3, transition: "all .15s", boxShadow: active ? `0 0 16px ${color}20` : "none", fontFamily: "inherit" }}><strong>{main}</strong><span style={{ fontSize: 10, opacity: .6 }}>{sub}</span></button>;
 }
 function Spinner() {
-  return <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><span style={{ width: 13, height: 13, border: "2px solid #080b14", borderTop: "2px solid transparent", borderRadius: "50%", animation: "spin .8s linear infinite" }} /> Chargement…</span>;
+  return <span style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8 }}><span style={{ width: 13, height: 13, border: "2px solid #f7f8fc", borderTop: "2px solid transparent", borderRadius: "50%", animation: "spin .8s linear infinite" }} /> Chargement…</span>;
 }
 
 // ── FORGOT PASSWORD ───────────────────────────────────────────────────────────
@@ -2501,18 +1480,18 @@ function ForgotPasswordScreen({ onBack }) {
         {sent ? (
           <div style={{ textAlign: "center", padding: "20px 0", display: "flex", flexDirection: "column", gap: 12, alignItems: "center" }}>
             <span style={{ fontSize: 44 }}>✉</span>
-            <h2 style={{ fontSize: 20, color: "#4ade80", margin: 0 }}>Email envoyé !</h2>
-            <p style={{ fontSize: 13, color: "#6b7280", lineHeight: 1.7, margin: 0 }}>
-              Un lien de réinitialisation a été envoyé à <strong style={{ color: "#e8e4d9" }}>{email}</strong>. Vérifiez vos spams si vous ne le voyez pas.
+            <h2 style={{ fontSize: 20, color: "#2c8061", margin: 0 }}>Email envoyé !</h2>
+            <p style={{ fontSize: 13, color: "#64718b", lineHeight: 1.7, margin: 0 }}>
+              Un lien de réinitialisation a été envoyé à <strong style={{ color: "#18233e" }}>{email}</strong>. Vérifiez vos spams si vous ne le voyez pas.
             </p>
             <button style={{ ...S.ctag, marginTop: 8 }} onClick={onBack}>Retour à la connexion →</button>
           </div>
         ) : (
           <>
-            <h2 style={{ fontSize: 22, margin: "12px 0 4px", color: "#e8e4d9" }}>Mot de passe oublié ?</h2>
-            <p style={{ fontSize: 13, color: "#6b7280" }}>Entrez votre email et nous vous enverrons un lien de réinitialisation.</p>
+            <h2 style={{ fontSize: 22, margin: "12px 0 4px", color: "#18233e" }}>Mot de passe oublié ?</h2>
+            <p style={{ fontSize: 13, color: "#64718b" }}>Entrez votre email et nous vous enverrons un lien de réinitialisation.</p>
             <FInput label="Email" value={email} set={setEmail} ph="jean@exemple.fr" type="email" />
-            {err && <p style={{ fontSize: 12, color: "#f87171" }}>{err}</p>}
+            {err && <p style={{ fontSize: 12, color: "#b84646" }}>{err}</p>}
             <button style={{ ...S.ctag, width: "100%", opacity: loading ? .6 : 1 }} onClick={submit} disabled={loading}>
               {loading ? <Spinner /> : "Envoyer le lien →"}
             </button>
@@ -2554,16 +1533,16 @@ function LegalScreen({ type, onBack }) {
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "48px 24px 80px", position: "relative", zIndex: 1 }}>
         <div style={{ marginBottom: 32, animation: "fsu .4s ease both" }}>
           <div style={{ ...S.badge, display: "inline-block", marginBottom: 12 }}>{isCgu ? "CGU" : "CONFIDENTIALITÉ"}</div>
-          <h1 style={{ fontSize: 26, fontWeight: 900, color: "#e8e4d9", margin: "0 0 6px" }}>
+          <h1 style={{ fontSize: 26, fontWeight: 900, color: "#18233e", margin: "0 0 6px" }}>
             {isCgu ? "Conditions Générales d'Utilisation" : "Politique de Confidentialité"}
           </h1>
-          <p style={{ fontSize: 12, color: "#374151", margin: 0 }}>Dernière mise à jour : {today}</p>
+          <p style={{ fontSize: 12, color: "#64718b", margin: 0 }}>Dernière mise à jour : {today}</p>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           {content.map((sec, i) => (
             <div key={i} style={{ ...S.card, animation: `fsu .4s ${i * .05}s both` }}>
-              <p style={{ fontSize: 12, fontWeight: 700, color: "#e2c97e", letterSpacing: ".08em", margin: "0 0 10px" }}>{sec.title}</p>
-              <p style={{ fontSize: 13, color: "#9ca3af", lineHeight: 1.75, margin: 0 }}>{sec.body}</p>
+              <p style={{ fontSize: 12, fontWeight: 700, color: "#a47b2e", letterSpacing: ".08em", margin: "0 0 10px" }}>{sec.title}</p>
+              <p style={{ fontSize: 13, color: "#63728c", lineHeight: 1.75, margin: 0 }}>{sec.body}</p>
             </div>
           ))}
         </div>
@@ -2575,15 +1554,15 @@ function LegalScreen({ type, onBack }) {
 // ── FOOTER ────────────────────────────────────────────────────────────────────
 function Footer({ onCgu, onConfidentialite }) {
   return (
-    <div style={{ borderTop: "1px solid #0d1117", padding: "28px 24px", position: "relative", zIndex: 1 }}>
+    <div style={{ borderTop: "1px solid #ffffff", padding: "28px 24px", position: "relative", zIndex: 1 }}>
       <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: 12 }}>
         <Logo />
         <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
-          <button style={{ ...S.nl, fontSize: 11, color: "#374151" }} onClick={onCgu}>Conditions d'utilisation</button>
-          <button style={{ ...S.nl, fontSize: 11, color: "#374151" }} onClick={onConfidentialite}>Confidentialité</button>
-          <a href="mailto:contact.simdcg@gmail.com" style={{ fontSize: 11, color: "#374151", textDecoration: "none", fontFamily: "inherit" }}>contact.simdcg@gmail.com</a>
+          <button style={{ ...S.nl, fontSize: 11, color: "#64718b" }} onClick={onCgu}>Conditions d'utilisation</button>
+          <button style={{ ...S.nl, fontSize: 11, color: "#64718b" }} onClick={onConfidentialite}>Confidentialité</button>
+          <a href="mailto:contact.simdcg@gmail.com" style={{ fontSize: 11, color: "#64718b", textDecoration: "none", fontFamily: "inherit" }}>contact.simdcg@gmail.com</a>
         </div>
-        <p style={{ fontSize: 10, color: "#1f2937", margin: 0 }}>© {new Date().getFullYear()} SIMDCG — Tous droits réservés</p>
+        <p style={{ fontSize: 10, color: "#d9e0ec", margin: 0 }}>© {new Date().getFullYear()} SIMDCG — Tous droits réservés</p>
       </div>
     </div>
   );
@@ -2591,31 +1570,33 @@ function Footer({ onCgu, onConfidentialite }) {
 
 // ── STYLES ────────────────────────────────────────────────────────────────────
 const S = {
-  root: { minHeight: "100vh", background: "#080b14", color: "#e8e4d9", fontFamily: "'DM Mono','Courier New',monospace", position: "relative", overflow: "hidden" },
-  nav: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 24px", borderBottom: "1px solid #0d1117", background: "rgba(8,11,20,.88)", backdropFilter: "blur(12px)", position: "relative", zIndex: 2 },
-  nl: { background: "none", border: "none", color: "#6b7280", fontSize: 13, cursor: "pointer", fontFamily: "inherit" },
-  no: { background: "none", border: "1px solid #1f2937", color: "#9ca3af", fontSize: 12, padding: "6px 14px", cursor: "pointer", fontFamily: "inherit" },
-  nc: { background: "#e2c97e", border: "none", color: "#080b14", fontSize: 12, padding: "7px 16px", cursor: "pointer", fontWeight: 700, fontFamily: "inherit" },
-  badge: { fontSize: 10, letterSpacing: ".18em", color: "#e2c97e", border: "1px solid rgba(226,201,126,.2)", padding: "5px 16px", background: "rgba(226,201,126,.04)" },
-  ctag: { background: "#e2c97e", border: "none", color: "#080b14", fontSize: 14, fontWeight: 700, padding: "13px 28px", cursor: "pointer", letterSpacing: ".04em", fontFamily: "inherit" },
-  ctagh: { background: "none", border: "1px solid #1f2937", color: "#9ca3af", fontSize: 14, padding: "13px 28px", cursor: "pointer", fontFamily: "inherit" },
-  tag: { fontSize: 11, border: "1px solid #0f1520", padding: "5px 12px", background: "rgba(13,17,23,.5)" },
-  fc: { background: "rgba(13,17,23,.8)", border: "1px solid #111827", padding: "22px 18px", display: "flex", flexDirection: "column" },
-  pc: { background: "#0d1117", border: "1px solid #1a1f2e", padding: "24px 20px", position: "relative", display: "flex", flexDirection: "column" },
+  root: { minHeight: "100vh", background: "#f7f8fc", color: "#18233e", fontFamily: "'Inter',system-ui,sans-serif", position: "relative", overflow: "hidden" },
+  nav: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 24px", borderBottom: "1px solid #ffffff", background: "rgba(8,11,20,.88)", backdropFilter: "blur(12px)", position: "relative", zIndex: 2 },
+  nl: { background: "none", border: "none", color: "#64718b", fontSize: 13, cursor: "pointer", fontFamily: "inherit" },
+  no: { borderRadius: 14, background: "none", border: "1px solid #d9e0ec", color: "#63728c", fontSize: 12, padding: "6px 14px", cursor: "pointer", fontFamily: "inherit" },
+  nc: { borderRadius: 14, background: "#182d52", border: "none", color: "#ffffff", fontSize: 12, padding: "7px 16px", cursor: "pointer", fontWeight: 700, fontFamily: "inherit" },
+  badge: { borderRadius: 14, fontSize: 10, letterSpacing: ".18em", color: "#a47b2e", border: "1px solid rgba(226,201,126,.2)", padding: "5px 16px", background: "rgba(226,201,126,.04)" },
+  ctag: { borderRadius: 14, background: "#182d52", border: "none", color: "#ffffff", fontSize: 14, fontWeight: 700, padding: "13px 28px", cursor: "pointer", letterSpacing: ".04em", fontFamily: "inherit" },
+  ctagh: { borderRadius: 14, background: "none", border: "1px solid #d9e0ec", color: "#63728c", fontSize: 14, padding: "13px 28px", cursor: "pointer", fontFamily: "inherit" },
+  tag: { borderRadius: 14, fontSize: 11, border: "1px solid #0f1520", padding: "5px 12px", background: "rgba(13,17,23,.5)" },
+  fc: { borderRadius: 14, background: "#ffffff", border: "1px solid #e9edf5", padding: "22px 18px", display: "flex", flexDirection: "column" },
+  pc: { borderRadius: 14, background: "#ffffff", border: "1px solid #e4e8f1", padding: "24px 20px", position: "relative", display: "flex", flexDirection: "column" },
   phl: { border: "1px solid rgba(226,201,126,.25)", background: "rgba(226,201,126,.03)" },
-  pb: { position: "absolute", top: -10, left: "50%", transform: "translateX(-50%)", background: "#e2c97e", color: "#080b14", fontSize: 9, padding: "3px 12px", fontWeight: 700, letterSpacing: ".12em", whiteSpace: "nowrap" },
-  back: { background: "none", border: "none", color: "#6b7280", fontSize: 12, cursor: "pointer", padding: 0, alignSelf: "flex-start", fontFamily: "inherit" },
-  mb: { background: "#0d1117", border: "1px solid #111827", padding: "16px 10px", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: 4, fontFamily: "inherit" },
-  uecard: { background: "#0d1117", border: "1px solid #111827", padding: "14px 8px", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: 2, fontFamily: "inherit", transition: "all .15s" },
-  fb: { background: "none", border: "1px solid #1f2937", color: "#374151", padding: "5px 12px", fontSize: 11, cursor: "pointer", transition: "all .15s", fontFamily: "inherit" },
-  fa: { border: "1px solid rgba(226,201,126,.35)", color: "#e2c97e", background: "rgba(226,201,126,.06)" },
-  card: { background: "#0d1117", border: "1px solid #1a1f2e", padding: "20px 22px" },
-  ava: { width: 30, height: 30, background: "#111827", border: "1px solid #1f2937", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, color: "#6b7280", flexShrink: 0 },
-  buba: { background: "rgba(13,17,23,.9)", border: "1px solid #1a1f2e", color: "#c9c3b5", borderRadius: "0 8px 8px 8px" },
-  bubu: { background: "rgba(226,201,126,.07)", border: "1px solid rgba(226,201,126,.18)", color: "#e8e4d9", borderRadius: "8px 0 8px 8px" },
-  ta: { flex: 1, background: "#0d1117", border: "1px solid #1f2937", color: "#e8e4d9", padding: "12px 14px", fontSize: 13, fontFamily: "inherit", resize: "none", outline: "none", lineHeight: 1.6 },
-  sb: { background: "#e2c97e", border: "none", color: "#080b14", width: 44, height: 44, fontSize: 18, cursor: "pointer", fontWeight: 700, flexShrink: 0, alignSelf: "flex-end" },
-  ec: { background: "#0d1117", border: "1px solid #1a1f2e", padding: "14px 16px" },
+  pb: { position: "absolute", top: -10, left: "50%", transform: "translateX(-50%)", background: "#a47b2e", color: "#f7f8fc", fontSize: 9, padding: "3px 12px", fontWeight: 700, letterSpacing: ".12em", whiteSpace: "nowrap" },
+  back: { background: "none", border: "none", color: "#64718b", fontSize: 12, cursor: "pointer", padding: 0, alignSelf: "flex-start", fontFamily: "inherit" },
+  mb: { borderRadius: 14, background: "#ffffff", border: "1px solid #e9edf5", padding: "16px 10px", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: 4, fontFamily: "inherit" },
+  uecard: { borderRadius: 14, background: "#ffffff", border: "1px solid #e9edf5", padding: "14px 8px", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: 2, fontFamily: "inherit", transition: "all .15s" },
+  fb: { borderRadius: 14, background: "none", border: "1px solid #d9e0ec", color: "#64718b", padding: "5px 12px", fontSize: 11, cursor: "pointer", transition: "all .15s", fontFamily: "inherit" },
+  fa: { border: "1px solid rgba(226,201,126,.35)", color: "#a47b2e", background: "rgba(226,201,126,.06)" },
+  card: { borderRadius: 14, background: "#ffffff", border: "1px solid #e4e8f1", padding: "20px 22px" },
+  ava: { width: 30, height: 30, background: "#e9edf5", border: "1px solid #d9e0ec", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, color: "#64718b", flexShrink: 0 },
+  buba: { background: "#ffffff", border: "1px solid #e4e8f1", color: "#36425b", borderRadius: "0 8px 8px 8px" },
+  bubu: { background: "rgba(226,201,126,.07)", border: "1px solid rgba(226,201,126,.18)", color: "#18233e", borderRadius: "8px 0 8px 8px" },
+  ta: { borderRadius: 14, flex: 1, background: "#ffffff", border: "1px solid #d9e0ec", color: "#18233e", padding: "12px 14px", fontSize: 13, fontFamily: "inherit", resize: "none", outline: "none", lineHeight: 1.6 },
+  sb: { borderRadius: 14, background: "#182d52", border: "none", color: "#ffffff", width: 44, height: 44, fontSize: 18, cursor: "pointer", fontWeight: 700, flexShrink: 0, alignSelf: "flex-end" },
+  ec: { borderRadius: 14, background: "#ffffff", border: "1px solid #e4e8f1", padding: "14px 16px" },
   et: { fontSize: 9, letterSpacing: ".12em", margin: "0 0 10px" },
-  ei: { fontSize: 12, color: "#4b5563", margin: "4px 0", lineHeight: 1.55 },
+  ei: { fontSize: 12, color: "#64718b", margin: "4px 0", lineHeight: 1.55 },
 };
+
+export { DCG_UES, DSCG_UES, QCMScreen, FlashcardsScreen, PlanningScreen, ResumeCoursScreen, CasPratiqueScreen, Auth, InterviewConfig };

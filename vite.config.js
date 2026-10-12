@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     target: "es2015",
-    // Code splitting — recharts only loaded when needed
+    // Keep the Firebase client separate from the learning UI.
     rollupOptions: {
       output: {
         manualChunks: {
@@ -15,8 +15,6 @@ export default defineConfig({
             "firebase/auth",
             "firebase/firestore",
           ],
-          // Recharts — only used in ProgressScreen
-          charts: ["recharts"],
         },
       },
     },

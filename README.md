@@ -1,73 +1,38 @@
-# CTRL·G — Simulateur d'entretien Contrôle de Gestion
+# SIMDCG — version corrigée et refonte
 
-Simulateur IA pour préparer les entretiens CdG (DCG, DSCG, Bac+5 finance).
+Préparation DCG/DSCG, React + Vite, Firebase Authentication et Firestore, Stripe, Groq, fonctions Vercel.
 
-## Déploiement en 3 étapes (5 minutes)
+Cette archive contient les sources corrigées. Elle ne contient ni secrets, ni comptes clients, ni dépendances installées, ni build prêt à déployer avec une configuration de production.
 
-### Prérequis
-- [Node.js](https://nodejs.org) installé
-- [Git](https://git-scm.com) installé
-- Compte [GitHub](https://github.com) (gratuit)
-- Compte [Vercel](https://vercel.com) (gratuit)
-- Clé API [Anthropic](https://console.anthropic.com) (pay-as-you-go, ~0.10€/entretien)
+## Installation
 
----
+1. Utiliser Node.js 22 ou 24.
+2. Exécuter `npm ci`.
+3. Créer `.env.local` à partir de `.env.example`, avec la configuration SIMDCG.
+4. Exécuter `npm test`, puis `npm run build`.
+5. `npm run dev` permet d’ouvrir l’interface. Les fonctions API doivent être testées avec Vercel.
 
-### Étape 1 — Installer et tester en local
+## Documents à lire
 
-```bash
-npm install
-npm run dev
-```
-Ouvrir http://localhost:5173 — l'app tourne en local.
+- `docs/DEPLOIEMENT.md` : correction de paiement, variables, événements Stripe, règles Firebase à examiner, tests et limites de vérification.
+- `docs/DESIGN.md` : spécification complète en 18 parties, pages, composants, mobile et fonctionnalités futures distinctes de celles livrées.
+- `docs/firestore.rules.candidate` : proposition de protection des champs d’abonnement. Examiner l’édition de la base et les règles actuelles avant toute publication.
 
-### Étape 2 — Pousser sur GitHub
+## Fichiers principaux
 
-```bash
-git init
-git add .
-git commit -m "init ctrlg"
-git branch -M main
-git remote add origin https://github.com/VOTRE_USERNAME/ctrlg.git
-git push -u origin main
-```
+- `src/App.jsx` : routage, compte en direct et outils de révision.
+- `src/modern.jsx`, `src/design.css` : refonte publique et espace étudiant.
+- `src/profile.js` : création transactionnelle du profil sans écraser des droits.
+- `src/billing-client.js` : paiement et récupération authentifiés.
+- `api/stripe-checkout.js`, `api/stripe-webhook.js`, `api/stripe-reconcile.js`, `api/stripe-subscription.js` : parcours d’achat et gestion ciblée de SIMDCG.
+- `lib/billing.mjs`, `lib/webhook.mjs` : validation des offres, droits et signatures.
+- `api/chat.js`, `lib/ai-access.mjs` : IA avec authentification et quota côté serveur.
+- `tests/` : 29 tests locaux, comprenant un parcours webhook signé avec une base simulée.
 
-### Étape 3 — Déployer sur Vercel
+## Aperçu du design
 
-1. Aller sur [vercel.com](https://vercel.com) → "Add New Project"
-2. Importer le repo GitHub `ctrlg`
-3. Dans **Environment Variables**, ajouter :
-   - `VITE_ANTHROPIC_API_KEY` = votre clé `sk-ant-...`
-4. Cliquer **Deploy** → votre app est live sur `ctrlg.vercel.app` en 60 secondes
+En développement seulement, `/?design=landing` et `/?design=dashboard` affichent des données illustratives avec un bandeau explicite. Les paiements y sont désactivés. Une configuration Firebase publique factice non secrète peut être utilisée uniquement pour cet aperçu : les appels IA doivent être simulés pour les écrans pédagogiques. Le code d’aperçu est exclu du build de production.
 
----
+## État de livraison
 
-## Configuration post-déploiement
-
-### Stripe (paiement)
-1. Créer un produit sur [stripe.com](https://stripe.com) → "9€/mois, abonnement"
-2. Copier le Payment Link
-3. Dans `src/App.jsx` ligne 8, remplacer `https://buy.stripe.com/YOUR_LINK_HERE` par votre vrai lien
-
-### Domaine personnalisé
-Dans Vercel → Settings → Domains → ajouter `ctrlg.fr` ou votre domaine.
-
----
-
-## Stack technique
-- **Frontend** : React + Vite
-- **IA** : Claude Sonnet (Anthropic API)
-- **Graphiques** : Recharts
-- **Déploiement** : Vercel (CDN global)
-- **Paiement** : Stripe (Payment Links)
-
-## Structure
-```
-ctrlg/
-├── src/
-│   ├── App.jsx      # Application complète
-│   └── main.jsx     # Entry point React
-├── index.html       # Template HTML + meta SEO
-├── vite.config.js   # Config Vite
-└── package.json
-```
+Compilation et tests locaux vérifiés. Cette archive n’a pas été mise en ligne et ne prouve pas l’activation des abonnés existants. La vérification Stripe → Firebase en environnement réel reste nécessaire, avec les règles et variables de SIMDCG. L’archive ne modifie pas le service Evidstack.

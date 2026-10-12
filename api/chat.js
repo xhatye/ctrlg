@@ -1,76 +1,66 @@
-export const config = { runtime: "edge" };
-
-export default async function handler(req) {
-  if (req.method !== "POST") {
-    return new Response("Method not allowed", { status: 405 });
-  }
-
-  const { messages, system } = await req.json();
-
-  const GROQ_API_KEY = process.env.GROQ_API_KEY;
-  if (!GROQ_API_KEY) {
-    return new Response(JSON.stringify({ error: "Missing GROQ_API_KEY" }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
-    });
-  }
-
-  // Build messages array for Groq (OpenAI-compatible format)
-  const groqMessages = [];
-
-  if (system) {
-    groqMessages.push({ role: "system", content: system });
-  }
-
-  if (messages && messages.length > 0) {
-    for (const m of messages) {
-      groqMessages.push({
-        role: m.role === "assistant" ? "assistant" : "user",
-        content: typeof m.content === "string"
-          ? m.content
-          : m.content?.map(c => c.text || "").join("") || "",
-      });
-    }
-  }
-
+import { services, authenticated, fail } from "../lib/admin.mjs";
+import { hasPro, validateChat } from "../lib/ai-access.mjs";
+export default async function handler(req, res) {
+  res.setHeader("Cache-Control", "no-store");
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method Not Allowed" });
   try {
-    const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${GROQ_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "llama-3.3-70b-versatile",
-        max_tokens: 1024,
-        temperature: 0.7,
-        messages: groqMessages,
-      }),
-    });
-
-    const data = await res.json();
-
-    if (!res.ok) {
-      return new Response(JSON.stringify({ error: data.error?.message || "Groq error" }), {
-        status: res.status,
-        headers: { "Content-Type": "application/json" },
-      });
-    }
-
-    const text = data.choices?.[0]?.message?.content || "";
-
-    // Return in Anthropic-compatible format so frontend doesn't need changes
-    return new Response(
-      JSON.stringify({
-        content: [{ type: "text", text }],
-        role: "assistant",
-      }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
+    const deps = services(),
+      user = await authenticated(req, deps.auth);
+    const data = validateChat(
+      typeof req.body === "string" ? JSON.parse(req.body) : req.body,
     );
-  } catch (err) {
-    return new Response(JSON.stringify({ error: err.message }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" },
+    const date = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Paris" })
+      .format(new Date())
+      .replaceAll("/", "-");
+    const usage = deps.db.collection("aiUsage").doc(`${user.uid}_${date}`);
+    await deps.db.runTransaction(async (tx) => {
+      const [profile, daily] = await Promise.all([
+        tx.get(deps.db.collection("users").doc(user.uid)),
+        tx.get(usage),
+      ]);
+      if (!hasPro(profile.data()))
+        throw Object.assign(
+          new Error(
+            "Un accès Pro actif est nécessaire pour utiliser cet outil.",
+          ),
+          { status: 403 },
+        );
+      if ((daily.data()?.count || 0) >= 150)
+        throw Object.assign(
+          new Error("Votre limite quotidienne est atteinte. Reprenez demain."),
+          { status: 429 },
+        );
+      tx.set(usage, {
+        count: (daily.data()?.count || 0) + 1,
+        updatedAt: new Date().toISOString(),
+      });
     });
+    if (!process.env.GROQ_API_KEY) throw new Error("Missing AI configuration");
+    const response = await fetch(
+      "https://api.groq.com/openai/v1/chat/completions",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "llama-3.3-70b-versatile",
+          temperature: 0.7,
+          ...data,
+        }),
+        signal: AbortSignal.timeout(25000),
+      },
+    );
+    const result = await response.json();
+    if (!response.ok) throw new Error("AI provider unavailable");
+    const text = result.choices?.[0]?.message?.content;
+    if (!text) throw new Error("Empty AI response");
+    return res
+      .status(200)
+      .json({ content: [{ type: "text", text }], role: "assistant" });
+  } catch (error) {
+    return fail(res, error);
   }
 }
