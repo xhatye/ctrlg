@@ -1,6 +1,6 @@
 # SIMDCG — correction et mise en ligne
 
-Cette version est préparée à partir de `ctrlg-main.zip`. Aucun paiement réel, compte client ou déploiement public n’a été modifié pendant le travail.
+Cette version est préparée à partir de `ctrlg-main.zip`, puis du dépôt `xhatye/ctrlg`. Le 12 octobre 2026, la première version corrigée a été publiée avec l’autorisation de l’utilisateur. Un événement Checkout réel signé a ensuite été renvoyé depuis Stripe : HTTP 200, `received: true`, `isPro: true`. Aucun nouveau débit n’a été créé. Voir `REVISION-SANS-IA.md` pour les contenus enregistrés et le budget du tuteur.
 
 ## Ce qui a changé
 
@@ -11,7 +11,7 @@ Cette version est préparée à partir de `ctrlg-main.zip`. Aucun paiement réel
 - Les Packs Examen sont suivis séparément des abonnements. L’annulation de l’un ne supprime pas un autre accès encore valide. Rejouer un ancien achat ne redémarre pas sa période de 90 jours. Les remboursements et litiges des packs sont pris en compte.
 - Le navigateur écoute les droits Firestore en direct. L’inscription ne remplace plus un document utilisateur qui aurait déjà été créé par le webhook.
 - « Mon compte » permet de rechercher un paiement existant. La récupération par email exige un email vérifié ; un retour Checkout utilise la référence de session et vérifie que l’achat appartient au compte connecté.
-- La génération IA exige un compte authentifié et un accès Pro actif. Le quota est réservé par transaction côté serveur : 150 demandes par jour, fuseau Europe/Paris. Le contenu entrant et le budget de réponse sont limités. Une erreur de génération n’est plus remplacée par un score d’entretien inventé.
+- La génération IA exige un compte authentifié et un accès Pro actif. Le quota du tuteur optionnel est réservé par transaction côté serveur : 20 demandes par jour, fuseau Europe/Paris, 300 par mois, avec réservations de coût limitées. Les révisions enregistrées, le planning et la préparation orale fonctionnent sans IA. Le contenu entrant et le budget de réponse sont limités. Une erreur de génération n’est plus remplacée par un score d’entretien inventé.
 - L’arrêt du renouvellement agit sur les abonnements SIMDCG enregistrés pour le compte connecté, sans passer par un portail générique pouvant afficher les abonnements Evidstack du même client.
 
 ## Installation locale
@@ -41,7 +41,7 @@ Le mode test doit utiliser des prix de test et son propre secret de webhook. Les
 
 ## Événements à écouter sur `/api/stripe-webhook`
 
-`checkout.session.completed`, `checkout.session.async_payment_succeeded`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`, `customer.subscription.paused`, `customer.subscription.resumed`, `invoice.paid`, `invoice.payment_failed`, `charge.refunded`, `charge.dispute.created`, `charge.dispute.closed`.
+`checkout.session.completed`, `checkout.session.async_payment_succeeded`, `customer.subscription.created`, `customer.subscription.updated`, `customer.subscription.deleted`, `customer.subscription.paused`, `customer.subscription.resumed`, `invoice.paid`, `invoice.payment_succeeded`, `invoice.payment_failed`, `charge.refunded`, `charge.dispute.created`, `charge.dispute.closed`.
 
 Un événement d’une autre offre est ignoré après contrôle du prix. Le compte Stripe peut rester partagé, mais les endpoints et secrets de webhook doivent être identifiés séparément. Un échec de paiement relit le statut courant de l’abonnement : il ne retire pas arbitrairement un autre achat valide.
 
@@ -55,11 +55,11 @@ Une récupération échoue si l’email de paiement est réellement différent d
 
 ## Vérifications réalisées
 
-32 tests automatisés locaux : normalisation d’email, contrôle des prix et de l’app, paiement non réglé, doublons, droits cumulés, expiration, abonnement annulé, propriété d’un achat, quota et taille des conversations, signature Stripe sur corps UTF-8, altération de signature, échec avec réponse 500, activation d’un utilisateur simulé et nouvelle tentative après un échec de transaction.
+44 tests automatisés locaux : normalisation d’email, contrôle des prix et de l’app, paiement non réglé, doublons, droits cumulés, expiration, abonnement annulé, propriété d’un achat, quota et taille des conversations, signature Stripe sur corps UTF-8, altération de signature, échec avec réponse 500, activation d’un utilisateur simulé et nouvelle tentative après un échec de transaction.
 
-Compilation de production réussie. 38 vues visuelles contrôlées aux largeurs 1440 et 390 pixels, sans erreur JavaScript ni débordement horizontal détecté. Interactions contrôlées : filtrage des matières, QCM jusqu’au résultat, discussion avec un tuteur simulé. Les données d’aperçu, les réponses IA et les services de paiement/base de données de ces tests sont simulés.
+Compilation de production réussie. 40 vues visuelles contrôlées aux largeurs 1440 et 390 pixels, sans erreur JavaScript ni débordement horizontal détecté. Interactions contrôlées : filtrage des matières, QCM jusqu’au résultat, discussion avec un tuteur simulé. Les données d’aperçu, les réponses IA et les services de paiement/base de données de ces tests sont simulés.
 
-Non vérifié en conditions réelles : les variables Vercel, les règles Firebase actuellement publiées, un achat réel ou de test Stripe connecté à Firebase, les abonnements de Zaid et du client de juin, les logs et l’état du site de production. Ces points doivent être validés avant de considérer l’incident client comme résolu.
+Vérifié en production le 12 octobre : lecture Firestore, correspondance des projets, lecture des offres Stripe et traitement d’un événement Checkout réel signé avec `isPro: true`. Le parcours d’un nouvel achat complet et une génération réelle du tuteur après changement de modèle restent à vérifier. Les captures de règles publiées proviennent de l’utilisateur ; aucune règle supplémentaire n’est nécessaire pour la nouvelle collection de compteurs, qui reste `aiUsage`.
 
 ## Sources techniques
 

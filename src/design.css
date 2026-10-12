@@ -2641,3 +2641,28 @@ button:hover:not(:disabled) {
     scroll-behavior: auto !important;
   }
 }
+/* Saved study content: available independently of the optional tutor. */
+.saved-study .page-title{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
+.saved-study h1{font-size:clamp(24px,3vw,34px);letter-spacing:-.04em;line-height:1.15;margin:8px 0}
+.saved-study h2{font-size:20px;line-height:1.35;overflow-wrap:anywhere}
+.saved-study h3{font-size:16px}
+.saved-study .panel{padding:24px;margin:16px 0;min-width:0}
+.saved-study p{line-height:1.7;overflow-wrap:anywhere}
+.saved-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.saved-grid .panel{margin:0}
+.study-notice{padding:12px 16px;background:#edf2f8;color:#4e607b;border-radius:12px;font-size:12px;line-height:1.6;margin:16px 0}
+.study-sources{display:flex;flex-direction:column;gap:10px;padding:20px 0;font-size:13px}
+.study-sources a{color:#376cac;overflow-wrap:anywhere}
+.study-answer{display:flex;flex-direction:column;gap:10px;margin:20px 0;font-weight:600}
+.study-answer textarea{box-sizing:border-box;width:100%;padding:16px;border:1px solid #d9e0ec;background:#fff;color:#18233e;border-radius:12px;font:inherit;font-weight:400;line-height:1.6;resize:vertical}
+.plan-settings{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.plan-settings label{display:flex;flex-direction:column;gap:8px;font-size:13px}
+.plan-settings select,.study-answer select{background:#fff;color:#18233e;padding:12px;border:1px solid #d9e0ec;border-radius:8px;font:inherit}
+.preserve-lines{white-space:pre-wrap}
+@media(max-width:650px){.saved-grid{grid-template-columns:1fr}.saved-study .page-title{align-items:flex-start;flex-direction:column}.saved-study .panel{padding:18px}.plan-settings label,.plan-settings .btn{width:100%}}
+.public-demo{padding:24px 0 60px;background:#f7f8fc;min-height:100vh}
+.demo-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:36px}
+.demo-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.public-demo .page{padding:24px 0}
+.demo-link{margin-bottom:28px}
+@media(max-width:650px){.demo-nav .btn{padding:10px;font-size:12px}.public-demo h1{font-size:28px}.demo-tabs .btn{padding:10px 14px}}

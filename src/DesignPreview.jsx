@@ -80,6 +80,7 @@ export default function DesignPreview() {
       />
     ) : page === "planning" ? (
       <PlanningScreen
+        ues={ues}
         user={student}
         onBack={() => nav("dashboard")}
         onUpgrade={() => nav("pricing")}

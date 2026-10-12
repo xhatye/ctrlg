@@ -16,6 +16,7 @@ Cette archive contient les sources corrigées. Elle ne contient ni secrets, ni c
 
 - `docs/DEPLOIEMENT.md` : correction de paiement, variables, événements Stripe, règles Firebase à examiner, tests et limites de vérification.
 - `docs/DESIGN.md` : spécification complète en 18 parties, pages, composants, mobile et fonctionnalités futures distinctes de celles livrées.
+- `docs/REVISION-SANS-IA.md` : banque de départ, limites de couverture, planning autonome et budgets du tuteur optionnel.
 - `docs/firestore.rules.candidate` : proposition de protection des champs d’abonnement. Examiner l’édition de la base et les règles actuelles avant toute publication.
 
 ## Fichiers principaux
@@ -26,8 +27,9 @@ Cette archive contient les sources corrigées. Elle ne contient ni secrets, ni c
 - `src/billing-client.js` : paiement et récupération authentifiés.
 - `api/stripe-checkout.js`, `api/stripe-webhook.js`, `api/stripe-reconcile.js`, `api/stripe-subscription.js` : parcours d’achat et gestion ciblée de SIMDCG.
 - `lib/billing.mjs`, `lib/webhook.mjs` : validation des offres, droits et signatures.
-- `api/chat.js`, `lib/ai-access.mjs` : IA avec authentification et quota côté serveur.
-- `tests/` : 29 tests locaux, comprenant un parcours webhook signé avec une base simulée.
+- `lib/study-content.mjs`, `api/study.js`, `src/study.jsx` : 13 modules, 56 QCM, 56 cartes et 13 cas originaux servis sans IA, avec contrôle Pro côté serveur.
+- `api/chat.js`, `lib/ai-budget.mjs` : tuteur optionnel avec authentification et réservations de budget transactionnelles.
+- `tests/` : 44 tests locaux, comprenant un parcours webhook signé avec une base simulée et les limites de budget.
 
 ## Aperçu du design
 
@@ -35,4 +37,4 @@ En développement seulement, `/?design=landing` et `/?design=dashboard` affichen
 
 ## État de livraison
 
-Compilation et tests locaux vérifiés. Cette archive n’a pas été mise en ligne et ne prouve pas l’activation des abonnés existants. La vérification Stripe → Firebase en environnement réel reste nécessaire, avec les règles et variables de SIMDCG. L’archive ne modifie pas le service Evidstack.
+Compilation, 44 tests locaux et 40 vues ordinateur/mobile vérifiés. Le 12 octobre 2026, le renvoi d’un événement Checkout réel signé a reçu une réponse HTTP 200 avec `isPro: true` sur le site de production. Cela confirme le traitement de cet achat existant ; aucun nouveau paiement n’a été créé. La banque de révision couvre partiellement les matières et devra être enrichie et relue pédagogiquement. Le service Evidstack conserve son propre endpoint et ses déploiements.

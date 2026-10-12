@@ -15,11 +15,11 @@ test("AI prompt length and roles are bounded", () => {
     validateChat({ messages: [{ role: "user", content: "x".repeat(15001) }] }),
   );
 });
-test("long academic generations retain a bounded output budget", () =>
+test("tutor output cannot exceed its cost-controlled token budget", () =>
   assert.equal(
     validateChat({
       messages: [{ role: "user", content: "QCM" }],
       max_tokens: 2500,
     }).max_tokens,
-    2500,
+    2048,
   ));

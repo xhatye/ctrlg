@@ -10,6 +10,7 @@ function fixture({
   foreign = false,
   missingUser = false,
   writeFailure = false,
+  eventType = 'checkout.session.completed',
 } = {}) {
   const saved = new Map([
     [
@@ -113,8 +114,8 @@ function fixture({
   const event = {
     id: "evt_payment",
     created: 1,
-    type: "checkout.session.completed",
-    data: { object: { id: "cs_paid" } },
+    type: eventType,
+    data: { object: { id: "cs_paid", subscription: 'sub_one' } },
   };
   const request = () => {
     const payload = JSON.stringify(event);
@@ -138,6 +139,15 @@ test("signed uppercase legacy payment activates the matching account and preserv
   assert.equal(f.saved.get("users/zaid").history.length, 1);
   const second = await f.handler(f.request());
   assert.equal((await second.json()).duplicate, true);
+});
+test('legacy invoice.payment_succeeded and invoice.paid both renew from the canonical subscription', async()=>{
+  for(const eventType of ['invoice.payment_succeeded','invoice.paid']){
+    const f=fixture({eventType});
+    const response=await f.handler(f.request());
+    assert.equal(response.status,200);
+    assert.equal(f.saved.get('users/zaid').isPro,true);
+    assert.equal(f.saved.get('users/zaid').history.length,1);
+  }
 });
 test("foreign purchase returns ignored without changing SIMDCG access", async () => {
   const f = fixture({ foreign: true });

@@ -137,24 +137,24 @@ const features = [
   [
     "check",
     "S’entraîner pour progresser.",
-    "Des QCM expliqués et des cas pratiques générés par IA, matière par matière.",
+    "Des QCM expliqués et des cas avec corrigés enregistrés, disponibles sans IA.",
     "QCM & cas pratiques",
   ],
   [
     "spark",
     "Débloquer une notion.",
-    "Posez votre question au tuteur IA et demandez un exemple, une explication ou un exercice.",
+    "Un tuteur IA en complément, avec une limite de 20 demandes par jour et 300 par mois.",
     "Tuteur IA",
   ],
 ];
 const faq = [
   [
     "Que puis-je faire avec un compte gratuit ?",
-    "Vous pouvez découvrir les matières et votre espace de révision. Les outils de génération IA de cette version sont inclus dans les offres payantes.",
+    "Vous pouvez utiliser le parcours de départ en comptabilité (UE9) : fiche, 8 QCM, 8 flashcards et un cas avec corrigé. Le planning est aussi disponible. Les autres parcours et le tuteur sont réservés à Pro.",
   ],
   [
     "Les exercices sont-ils des annales officielles ?",
-    "Les QCM, fiches et cas pratiques sont générés par IA. Ce ne sont pas des annales officielles ni des corrections validées par un jury. Vérifiez les points de droit et de fiscalité avec vos cours à jour.",
+    "Non. Ce sont des exercices originaux enregistrés, portant sur des fondamentaux. Ils couvrent partiellement chaque matière et complètent vos cours et annales de votre session.",
   ],
   [
     "Quelles matières sont couvertes ?",
@@ -849,8 +849,8 @@ export function CourseHome({ ue, user, onNav }) {
           Terminez par vous tester.
         </h2>
         <p>
-          Les outils sont générés par IA. Utilisez vos cours à jour pour
-          vérifier les règles et les références.
+          Un parcours de départ sur les fondamentaux, disponible sans IA. Il
+          complète vos cours et ne couvre pas tout le programme.
         </p>
       </section>
       <div className="course-tools">
@@ -869,7 +869,7 @@ export function CourseHome({ ue, user, onNav }) {
             "02",
             "Pratiquer",
             "QCM expliqué",
-            "10 questions, retour après chaque réponse",
+            "4 à 8 questions, explication après chaque réponse",
           ],
           [
             "flashcards",
@@ -877,7 +877,7 @@ export function CourseHome({ ue, user, onNav }) {
             "03",
             "Retenir",
             "Flashcards",
-            "12 cartes et reprise des cartes difficiles",
+            "4 à 8 cartes et reprise des cartes difficiles",
           ],
           [
             "cas_pratique",
@@ -885,13 +885,15 @@ export function CourseHome({ ue, user, onNav }) {
             "04",
             "Vous tester",
             "Cas pratique",
-            "Une mise en situation et une correction IA",
+            "Une mise en situation et un corrigé à comparer",
           ],
         ].map(([key, icon, n, tag, title, desc]) => (
           <button
             className="course-tool"
             key={key}
-            onClick={() => onNav(user.isPro ? key : "paywall")}
+            onClick={() =>
+              onNav(user.isPro || ue.id === "UE9" ? key : "paywall")
+            }
           >
             <span className="icon-tile">
               <Icon name={icon} />
@@ -902,8 +904,11 @@ export function CourseHome({ ue, user, onNav }) {
             <h3>{title}</h3>
             <p>{desc}</p>
             <span className="tool-link">
-              {user.isPro ? "Commencer" : "Découvrir Pro"}
-              <Icon name={user.isPro ? "arrow" : "lock"} size={18} />
+              {user.isPro || ue.id === "UE9" ? "Commencer" : "Découvrir Pro"}
+              <Icon
+                name={user.isPro || ue.id === "UE9" ? "arrow" : "lock"}
+                size={18}
+              />
             </span>
           </button>
         ))}
@@ -921,6 +926,14 @@ export function OfferPage({ user, onCheckout, onNav }) {
           title="Un cap clair. Un prix clair."
           desc="Les mêmes outils de révision, deux façons d’y accéder."
         />
+        <div className="demo-link">
+          <Button secondary onClick={() => onNav("demo")}>
+            Essayer la comptabilité gratuitement <Icon name="arrow" />
+          </Button>
+          <p className="helper">
+            Un parcours de départ en UE9, sans carte bancaire.
+          </p>
+        </div>
         <div className="pricing-grid">
           <article className="pricing-card">
             <span className="card-tag">POUR UN OBJECTIF PRÉCIS</span>
@@ -936,8 +949,9 @@ export function OfferPage({ user, onCheckout, onNav }) {
               {[
                 "8 matières DCG + 5 matières DSCG",
                 "QCM, fiches et flashcards",
-                "Cas pratiques et correction IA",
-                "Tuteur, planning et préparation orale",
+                "Cas pratiques et corrigés enregistrés",
+                "Planning et préparation orale sans IA",
+                "Tuteur IA : 20 demandes/jour, 300/mois",
                 "Accès pendant 90 jours",
               ].map((x) => (
                 <li key={x}>
@@ -968,7 +982,8 @@ export function OfferPage({ user, onCheckout, onNav }) {
             <ul>
               {[
                 "8 matières DCG + 5 matières DSCG",
-                "Tous les outils du Pack Examen",
+                "Parcours enregistrés, sans dépendre de l’IA",
+                "Tuteur IA : 20 demandes/jour, 300/mois",
                 "Suivi de vos scores par matière",
                 "Reprise des flashcards difficiles",
                 "Accès tant que l’abonnement est actif",
@@ -990,9 +1005,11 @@ export function OfferPage({ user, onCheckout, onNav }) {
           </article>
         </div>
         <p className="pricing-footnote">
-          Les exercices sont générés par IA et ne constituent pas des annales
-          officielles. Les appels IA sont soumis à une limite d’usage de 150
-          demandes par jour pour protéger la disponibilité du service.
+          Banque de départ : 56 QCM, 56 flashcards, 13 fiches et 13 cas
+          originaux. Couverture partielle du programme ; ces contenus ne sont
+          pas des annales officielles. Le tuteur est optionnel, soumis aux
+          quotas et à un budget de génération. Une panne du tuteur ne bloque pas
+          les révisions.
         </p>
         <div className="recovery-link">
           <Icon name="lock" />
@@ -1172,14 +1189,37 @@ export function AccountPage({ user, onNav, onCheckout, request }) {
     </div>
   );
 }
-export function TutorPage({ ues, call, user }) {
+export function TutorPage({ ues, call, user, onNav }) {
   const [ue, setUE] = useState(ues[0]),
     [input, setInput] = useState(""),
     [messages, setMessages] = useState([]),
     [busy, setBusy] = useState(false),
-    [error, setError] = useState("");
+    [error, setError] = useState(""),
+    [available, setAvailable] = useState(null),
+    [remaining, setRemaining] = useState(null);
+  useEffect(() => {
+    let alive = true;
+    if (
+      import.meta.env.DEV &&
+      new URLSearchParams(location.search).has("design")
+    ) {
+      setAvailable(true);
+      return;
+    }
+    fetch("/api/tutor-status")
+      .then((r) => r.json())
+      .then((d) => {
+        if (alive) setAvailable(d.available === true);
+      })
+      .catch(() => {
+        if (alive) setAvailable(false);
+      });
+    return () => {
+      alive = false;
+    };
+  }, []);
   const send = async (text) => {
-    if (!text.trim() || busy) return;
+    if (!text.trim() || busy || available !== true) return;
     const next = [...messages, { role: "user", content: text }];
     setMessages(next);
     setInput("");
@@ -1188,13 +1228,22 @@ export function TutorPage({ ues, call, user }) {
     try {
       const reply = await call(
         `Vous êtes un tuteur pour ${ue.level}, ${ue.label}. Répondez en français, avec des exemples concrets. Signalez les incertitudes et les règles qui doivent être vérifiées dans un cours à jour. Ne prétendez pas fournir une correction officielle.`,
-        next,
-        1400,
+        next.slice(-10),
+        2048,
         user,
       );
-      setMessages([...next, { role: "assistant", content: reply }]);
+      setMessages([
+        ...next,
+        {
+          role: "assistant",
+          content: typeof reply === "string" ? reply : reply.text,
+        },
+      ]);
+      if (typeof reply === "object") setRemaining(reply);
     } catch (e) {
       setError(e.message);
+      setMessages(messages);
+      setInput(text);
     } finally {
       setBusy(false);
     }
@@ -1206,6 +1255,30 @@ export function TutorPage({ ues, call, user }) {
         title="Le déclic commence par une question."
         desc="Une explication, un exemple, un raisonnement pas à pas."
       />
+      <p className="study-notice">
+        Complément optionnel · 20 demandes par jour · 300 par mois · budget de
+        génération limité. Les fiches et exercices fonctionnent sans ce tuteur.
+      </p>
+      {remaining && (
+        <p role="status">
+          {remaining.dailyRemaining} demandes restantes aujourd’hui ·{" "}
+          {remaining.monthlyRemaining} ce mois-ci.
+        </p>
+      )}
+      {available !== true && (
+        <div className="panel" role="status">
+          <p>
+            {available === null
+              ? "Vérification de la disponibilité du tuteur…"
+              : "Le tuteur est en pause. Vous pouvez continuer vos révisions."}
+          </p>
+          {onNav && (
+            <Button secondary onClick={() => onNav("library")}>
+              Ouvrir mes matières
+            </Button>
+          )}
+        </div>
+      )}
       <div className="tutor-toolbar">
         <label>
           Matière
@@ -1246,7 +1319,11 @@ export function TutorPage({ ues, call, user }) {
                 "Donnez-moi un exemple concret avec des chiffres.",
                 "Posez-moi une question pour vérifier ma compréhension.",
               ].map((x) => (
-                <button key={x} onClick={() => send(x)}>
+                <button
+                  key={x}
+                  disabled={busy || available !== true}
+                  onClick={() => send(x)}
+                >
                   {x}
                   <Icon name="arrow" size={16} />
                 </button>
@@ -1281,10 +1358,15 @@ export function TutorPage({ ues, call, user }) {
           <textarea
             aria-label="Votre question"
             value={input}
+            maxLength={4000}
+            disabled={busy || available !== true}
             placeholder={`Votre question en ${ue.short.toLowerCase()}…`}
             onChange={(e) => setInput(e.target.value)}
           />
-          <Button disabled={busy || !input.trim()} type="submit">
+          <Button
+            disabled={busy || !input.trim() || available !== true}
+            type="submit"
+          >
             <Icon name="arrow" />
           </Button>
         </form>
