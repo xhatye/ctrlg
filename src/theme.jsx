@@ -7,7 +7,7 @@ export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => document.documentElement.dataset.theme === 'light' ? 'light' : 'dark');
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
-    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#101827' : '#f7f8fc');
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', theme === 'dark' ? '#000000' : '#f7f8fc');
     try { localStorage.setItem(STORAGE_KEY, theme); } catch { /* Private browsing may disable storage. */ }
   }, [theme]);
   useEffect(() => {

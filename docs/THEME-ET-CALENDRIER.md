@@ -1,6 +1,6 @@
 # Thèmes et calendrier des examens
 
-Le site utilise un thème sombre par défaut. Le bouton soleil/lune reste disponible sur les pages publiques, dans l’espace étudiant et dans les exercices. La préférence est enregistrée localement, synchronisée entre les onglets et appliquée avant le chargement de React pour éviter un écran blanc au démarrage. Le mode clair reste disponible. Si le stockage du navigateur est bloqué, le bouton fonctionne pendant la visite.
+Le site utilise un thème sombre par défaut : fond noir, surfaces gris neutre et accents dorés. Le bouton soleil/lune reste disponible sur les pages publiques, dans l’espace étudiant et dans les exercices. La préférence est enregistrée localement, synchronisée entre les onglets et appliquée avant le chargement de React pour éviter un écran blanc au démarrage. Le mode clair reste disponible. Si le stockage du navigateur est bloqué, le bouton fonctionne pendant la visite.
 
 Les couleurs partagées de `src/design.css` définissent les surfaces, textes, bordures, liens et états de réussite/erreur dans les deux thèmes. Les anciennes vues utilisant des styles intégrés suivent les mêmes variables. Les champs de réponse et les résultats doivent rester lisibles dans les deux thèmes.
 

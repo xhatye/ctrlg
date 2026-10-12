@@ -25,14 +25,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=2" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
-    <meta name="theme-color" content="#101827" />
+    <meta name="theme-color" content="#000000" />
     <meta name="color-scheme" content="dark light" />
     <script>
       (() => {
         let theme = 'dark';
         try { if (localStorage.getItem('simdcg-theme') === 'light') theme = 'light'; } catch {}
         document.documentElement.dataset.theme = theme;
-        document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#101827' : '#f7f8fc';
+        document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#000000' : '#f7f8fc';
       })();
     </script>
     <link rel="preconnect" href="https://firestore.googleapis.com" />
@@ -43,10 +43,10 @@
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       body { background: #f7f8fc; color: #18233e; font-family: system-ui,sans-serif; min-height: 100vh; -webkit-font-smoothing: antialiased; }
       #root { min-height: 100vh; }
-      html[data-theme="dark"] body {background:#101827;color:#edf2fc;}
+      html[data-theme="dark"] body {background:#000000;color:#f4f4f5;}
       ::-webkit-scrollbar { width: 4px; }
-      ::-webkit-scrollbar-track { background: #0d1117; }
-      ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 2px; }
+      ::-webkit-scrollbar-track { background: var(--paper, #000000); }
+      ::-webkit-scrollbar-thumb { background: var(--line, #353535); border-radius: 2px; }
       @keyframes fsu { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
       @keyframes fi  { from { opacity:0; } to { opacity:1; } }
       @keyframes spin { to { transform:rotate(360deg); } }

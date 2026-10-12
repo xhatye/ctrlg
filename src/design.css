@@ -600,7 +600,7 @@ button:hover:not(:disabled) {
   margin-block: 15px 20px;
 }
 .roadmap p {
-  color: #c2cde0;
+  color: var(--on-accent-muted);
   font-size: 14px;
   line-height: 1.8;
 }
@@ -1011,7 +1011,7 @@ button:hover:not(:disabled) {
 }
 .next-session p {
   font-size: 12px;
-  color: #c7d2e4;
+  color: var(--on-accent-muted);
   line-height: 1.9;
   margin-top: 14px;
 }
@@ -1034,7 +1034,7 @@ button:hover:not(:disabled) {
 }
 .next-session > div > span {
   font-size: 9px;
-  color: #c7d2e4;
+  color: var(--on-accent-muted);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -1843,13 +1843,13 @@ button:hover:not(:disabled) {
   color: var(--gold);
 }
 .auth-story > p {
-  color: #c7d2e4;
+  color: var(--on-accent-muted);
   font-size: 14px;
   margin-top: 25px;
   max-width: 420px;
 }
 .auth-story > small {
-  color: #c7d2e4;
+  color: var(--on-accent-muted);
   font-size: 10px;
   margin-top: 45px;
 }
@@ -2682,22 +2682,23 @@ button:hover:not(:disabled) {
   --success-line: #8ebba8;
   --danger-line: #d89494;
   --violet: #7658a9;
+  --on-accent-muted: #c7d2e4;
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --navy: #263e65;
-  --navy-deep: #182b48;
-  --ink: #edf2fc;
-  --muted: #afbdd3;
-  --paper: #101827;
-  --surface: #182337;
-  --surface-soft: #1e2d44;
-  --surface-translucent: rgba(24,35,55,.96);
-  --line: #34445d;
+  --navy: #292929;
+  --navy-deep: #111111;
+  --ink: #f4f4f5;
+  --muted: #b7b7b7;
+  --paper: #000000;
+  --surface: #141414;
+  --surface-soft: #202020;
+  --surface-translucent: rgba(20,20,20,.96);
+  --line: #353535;
   --gold-text: #e2c97e;
   --gold-soft: #302e27;
   --gold-line: #665a3c;
-  --link: #b4ccef;
+  --link: #e2c97e;
   --success: #86d9b5;
   --success-soft: #193c32;
   --success-line: #397b62;
@@ -2706,6 +2707,7 @@ button:hover:not(:disabled) {
   --danger-line: #9b5761;
   --violet: #cab4f1;
   --shadow: 0 8px 32px rgba(0,0,0,.16);
+  --on-accent-muted: #c4c4c4;
 }
 a {color:var(--link)}
 .marketing {background:var(--paper)}
@@ -2718,6 +2720,12 @@ a {color:var(--link)}
 .card-number {color:var(--line)}
 .ue-arrow {color:var(--muted)}
 .design-preview-banner, .design-preview-banner button {color:#674f20}
+:root[data-theme="dark"] .roadmap .btn,
+:root[data-theme="dark"] .next-session .btn {color:#141414}
+:root[data-theme="dark"] .study-ambient {
+  background:radial-gradient(ellipse at 15% 10%,rgba(255,255,255,.06),transparent 45%),radial-gradient(ellipse at 85% 65%,rgba(226,201,126,.06),transparent 40%);
+}
+:root[data-theme="dark"] :focus-visible {outline-color:var(--gold)}
 input::placeholder, textarea::placeholder {color:var(--muted);opacity:.85}
 input, select, textarea {accent-color:var(--gold-text)}
 .theme-toggle {
