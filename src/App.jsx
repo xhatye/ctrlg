@@ -121,7 +121,7 @@ async function callClaude(system, messages, maxTokens = 1200, user = null) {
 const getUserDoc = (uid) => doc(db, "users", uid);
 
 const saveHistory = async (uid, entry) => {
-  try { await updateDoc(getUserDoc(uid), { history: arrayUnion(entry) }); } catch {}
+  await updateDoc(getUserDoc(uid), { history: arrayUnion(entry) });
 };
 
 const loadHistory = async (uid) => {
@@ -366,7 +366,8 @@ export default function App() {
 
   const onInterviewDone = async (data) => {
     const entry = { ...data, type: "entretien", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
-    if (user) { await saveHistory(user.uid, entry); const s = await updateStreak(user.uid); setUser(u => ({ ...u, interviewsUsed: (u.interviewsUsed || 0) + 1, streak: s })); }
+    try { if (user) { await saveHistory(user.uid, entry); const s = await updateStreak(user.uid); setUser(u => ({ ...u, interviewsUsed: (u.interviewsUsed || 0) + 1, streak: s })); } }
+    catch { toast.error('Vos notes restent affichées. L’enregistrement a échoué ; réessayez.'); return; }
     incrementStat("totalInterviews");
     toast.success("Entretien terminé ! Résultats disponibles.");
     setResult(entry); nav("results_interview");
@@ -374,14 +375,16 @@ export default function App() {
   const onQCMDone = async (data) => {
     const pct = Math.round(data.score / data.total * 100);
     const entry = { ...data, type: "qcm", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
-    if (user) {
+    let saved = true;
+    try { if (user) {
       await saveHistory(user.uid, entry);
       await saveMastery(user.uid, data.ue, pct);
       const s = await updateStreak(user.uid);
       setUser(u => ({ ...u, streak: s }));
-    }
+    } } catch { saved=false; }
     incrementStat("totalQCMs");
-    toast.success("QCM terminé ! Voir les résultats.");
+    if(saved) toast.success("QCM terminé ! Voir les résultats.");
+    else toast.error('Le résultat est affiché, mais l’enregistrement dans votre historique a échoué.');
     setResult(entry); nav("results_qcm");
   };
   const onCasDone = async (data) => {
