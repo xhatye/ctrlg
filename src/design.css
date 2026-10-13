@@ -3020,3 +3020,92 @@ input, select, textarea {accent-color:var(--gold-text)}
 .chart-current { stroke:var(--surface); stroke-width:2; }
 .lesson-chart svg text { font-size:14px; }
 @media(max-width:760px) { .chart-canvas svg { min-width:620px; } }
+/* Exam papers, spaced review and factual product previews. */
+.exam-catalogue,.proof-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+.exam-catalogue h2 { font-size:24px; }
+.exam-page .session-controls label { display:grid; gap:8px; color:var(--ink); }
+.exam-page select,.feedback-page select,.feedback-page input:not([type=checkbox]),.feedback-page textarea { padding:13px 16px; border:1px solid var(--line); border-radius:12px; background:var(--surface); color:var(--ink); min-height:48px; }
+.exam-toolbar { position:sticky; top:0; z-index:8; background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:18px 24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin:22px 0; box-shadow:var(--shadow); }
+.exam-toolbar>div { display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
+.exam-toolbar output { font-size:28px; font-weight:750; font-variant-numeric:tabular-nums; color:var(--gold-text); }
+.exam-toolbar p { font-size:13px; margin:0; max-width:44ch; }
+.exam-instructions summary { font-weight:700; cursor:pointer; }
+.exam-instructions p,.exam-document p,.exam-expected p,.exam-own-answer p { line-height:1.85; white-space:pre-line; overflow-wrap:anywhere; }
+.exam-dossier-nav { display:flex; flex-wrap:wrap; gap:12px; margin:24px 0; }
+.exam-dossier-nav button[aria-pressed=true] { border-color:var(--gold-text); background:color-mix(in srgb,var(--gold) 13%,var(--surface)); }
+.exam-documents { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin:24px 0; }
+.exam-document { border:1px solid var(--line); border-radius:16px; padding:24px; background:color-mix(in srgb,var(--ink) 2%,var(--surface)); min-width:0; }
+.exam-document h3 { font-size:19px; line-height:1.5; }
+.exam-document p { font-size:14px; }
+.exam-document .lesson-data-table th,.exam-document .lesson-data-table td { padding:12px; min-width:80px; }
+.exam-questions { display:grid; gap:30px; margin-top:28px; }
+.exam-questions .study-answer { display:grid; gap:16px; font-weight:400; line-height:1.8; }
+.exam-questions textarea { width:100%; resize:vertical; min-height:190px; }
+.exam-history>div { display:grid; gap:10px; padding:20px 0; border-top:1px solid var(--line); }
+.exam-history span { font-size:14px; color:var(--muted); }
+.exam-history button { justify-self:start; }
+.exam-submit button { margin:8px 12px 8px 0; }
+.exam-correction>article { border-top:1px solid var(--line); margin-top:30px; padding-top:28px; }
+.exam-correction>article>h3 { line-height:1.6; }
+.exam-own-answer { padding:20px; border-radius:14px; background:color-mix(in srgb,var(--ink) 4%,var(--surface)); }
+.exam-expected { padding:20px; margin:18px 0; border-left:3px solid var(--gold-text); }
+.exam-personal-score { display:block; margin:22px 0; font-size:28px; color:var(--gold-text); }
+.case-rubric { border-top:1px solid var(--line); padding:22px 0 0; margin-top:22px; }
+.case-rubric>p { font-size:14px; }
+.rubric-criteria { display:grid; gap:12px; }
+.rubric-criteria label { display:flex; align-items:flex-start; gap:14px; padding:18px; border:1px solid var(--line); border-radius:12px; line-height:1.7; cursor:pointer; }
+.rubric-criteria input { flex:0 0 auto; width:20px; height:20px; margin-top:4px; accent-color:var(--gold-text); }
+.rubric-criteria label>span>span { display:block; margin-top:8px; white-space:pre-line; font-size:14px; color:var(--muted); }
+.rubric-score { font-weight:750; color:var(--gold-text); }
+.case-rubric summary { cursor:pointer; padding:10px 0; }
+.review-counts { display:flex; flex-wrap:wrap; gap:16px; padding:18px 0; }
+.review-item-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; margin:24px 0; }
+.review-item-list h3 { font-size:18px; line-height:1.6; white-space:pre-line; }
+.review-item-list p { font-size:13px; }
+.review-session h2 { font-size:25px; line-height:1.7; white-space:pre-line; }
+.review-session>.btn { margin:14px 0; }
+.review-options { display:grid; gap:12px; }
+.review-options button { min-height:56px; padding:18px; text-align:left; border:1px solid var(--line); border-radius:12px; background:var(--surface); color:var(--ink); line-height:1.65; }
+.review-options button[aria-pressed=true] { border-color:var(--gold-text); }
+.review-options button:disabled { opacity:1; cursor:default; }
+.review-explanation { border-left:3px solid var(--gold-text); padding:20px; margin:20px 0; white-space:pre-line; }
+.weak-chapters { display:grid; gap:18px; }
+.weak-chapters article { display:grid; gap:12px; padding:20px 0; border-top:1px solid var(--line); }
+.weak-chapters article>span { color:var(--muted); font-size:14px; }
+.weak-chapters button { margin:6px 10px 6px 0; }
+.feedback-page form { display:grid; gap:18px; max-width:760px; }
+.feedback-page form>label:not(.feedback-consent) { display:grid; gap:8px; }
+.feedback-consent { display:flex; align-items:flex-start; gap:14px; font-size:14px; line-height:1.7; }
+.feedback-consent input { width:20px; height:20px; margin-top:4px; flex-shrink:0; accent-color:var(--gold-text); }
+.proof-gallery .section-heading>p { max-width:38ch; }
+.proof-grid .panel { padding:20px; }
+.proof-grid h3 { font-size:22px; line-height:1.4; }
+.proof-image { display:block; width:100%; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--surface); color:var(--ink); padding:0; }
+.proof-image img { display:block; width:100%; height:250px; object-fit:cover; object-position:top; }
+.proof-image>span { display:block; padding:12px; font-size:13px; color:var(--gold-text); }
+.proof-gallery>.btn { margin-top:26px; }
+.proof-dialog { max-width:min(1000px,94vw); max-height:90vh; border:1px solid var(--line); border-radius:20px; padding:26px; background:var(--surface); color:var(--ink); }
+.proof-dialog::backdrop { background:rgba(0,0,0,.75); }
+.proof-dialog h2 { margin-top:22px; }
+.proof-dialog>.btn { position:sticky; top:0; z-index:1; background:var(--surface); }
+.proof-full-image { overflow:auto; max-height:65vh; }
+.proof-full-image img { display:block; width:100%; min-width:720px; height:auto; }
+@media(max-width:1000px) { .exam-catalogue,.proof-grid { grid-template-columns:1fr; } .exam-documents { grid-template-columns:1fr; } .proof-image img { height:330px; } }
+@media(max-width:600px) { .review-item-list { grid-template-columns:1fr; } .exam-toolbar { position:relative; padding:16px; } .exam-document { padding:18px; } .exam-personal-score { font-size:23px; } .rubric-criteria label { padding:14px; } .proof-dialog { padding:16px; } }
+@media print {
+ .sidebar,.workspace-header,.mobile-bottom-nav,.theme-toggle,.exam-toolbar,.exam-submit,.exam-dossier-nav,.exam-page button,.exam-page .study-sources,.exam-page .rubric-criteria input { display:none!important; }
+ .workspace-column { margin:0!important; width:100%!important; }
+ .exam-page { max-width:none; padding:0; color:#000; }
+ .exam-page .panel,.exam-document { background:#fff!important; color:#000!important; box-shadow:none; border-color:#ccc!important; }
+ .exam-page p,.exam-page span { color:#000!important; }
+ .exam-documents { grid-template-columns:1fr; }
+ .exam-correction>article { break-inside:avoid-page; }
+ .exam-own-answer p,.exam-expected p { white-space:pre-wrap; }
+}
+@media print { html,body { background:#fff!important; color:#000!important; } .workspace { display:block!important; } .workspace-column { margin-left:0!important; } }
+.feedback-fields { display:grid; gap:18px; border:0; padding:0; margin:0; min-width:0; }
+.feedback-fields legend { font-weight:700; margin-bottom:18px; }
+.feedback-fields>label:not(.feedback-consent) { display:grid; gap:8px; }
+.proof-full-image img { min-width:1000px; }
+.exam-topics { padding-left:20px; color:var(--muted); font-size:14px; line-height:1.7; }
+@media print { .exam-page h1,.exam-page h2,.exam-page h3,.exam-page h4,.exam-page strong,.exam-page label { color:#000!important; } }

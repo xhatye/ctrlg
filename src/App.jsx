@@ -12,6 +12,10 @@ import { curriculumFor } from '../lib/curriculum.mjs';
 import { StudySession } from './chapter-navigation';
 import Flashcard from './Flashcard';
 import {learningRequest} from './learning-client';
+import {trainingRequest} from './training-client';
+import ExamPage from './ExamPage';
+import ReviewToday from './ReviewToday';
+import FeedbackForm from './FeedbackForm';
 import {StudyNotice, SavedLesson, CasePractice, StudyPlanner, OralPractice, OralSummary, OralSetup as InterviewConfig} from './study';
 
 const upgrade = (plan = 'subscription') => launchCheckout(plan).catch(error => toast.error(error.message));
@@ -49,6 +53,9 @@ const SCREEN_TO_URL = {
   support: "/contact",
   history:            "/historique",
   progress:           "/progression",
+  exams: "/examens",
+  review_today: "/a-revoir",
+  feedback: "/mon-retour",
   cgu:                "/cgu",
   confidentialite:    "/confidentialite",
   forgot_password:    "/mot-de-passe-oublie",
@@ -182,11 +189,7 @@ const saveTestimonial = async (data) => {
 };
 
 const loadTestimonials = async () => {
-  try {
-    const q = query(collection(db, "testimonials"), orderBy("date", "desc"), limit(20));
-    const snap = await getDocs(q);
-    return snap.docs.map(d => ({ id: d.id, ...d.data() }));
-  } catch { return []; }
+  return (await trainingRequest('feedback')).items;
 };
 
 const loadStats = async () => {
@@ -379,6 +382,8 @@ export default function App() {
     const entry = { ...data, type: "qcm", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
     const groups={};for(const answer of data.answers){if(!answer.chapter)continue;const group=groups[answer.chapter] ||= {total:0,correct:0};group.total++;if(answer.correct)group.correct++;}
     const events=Object.entries(groups).map(([chapter,g],i)=>({id:data.sessionId+'_'+i,module:data.ue,chapter,type:'quiz',...g}));
+    const reviews=data.answers.filter(a=>a.itemId&&a.selected!==undefined).map((a,i)=>({receipt:data.sessionId+'_review_'+i,kind:'quiz',itemId:a.itemId,selected:a.selected}));
+    if(reviews.length)try{await trainingRequest('review',{events:reviews});}catch{entry.pendingReviews=reviews;}
     if(events.length)try{await onLearning(events);}catch{entry.pendingLearning=events;}
     let saved = true;
     try { if (user) {
@@ -406,13 +411,16 @@ export default function App() {
   const renderScreen = () => {
     if (privateScreen && !user) return <Auth mode="login" setMode={setAuthMode} onDone={u => { setUser(u); nav(screen); }} onBack={() => nav('landing')} />;
     if (['subject_hub', 'qcm', 'flashcards', 'resume_cours', 'cas_pratique'].includes(screen) && !selectedUE) return <LibraryPage ues={ALL_UES} user={user} onSelect={selectUE} />;
-    if (['interview', 'interview_config', 'tutor', 'qcm', 'flashcards', 'resume_cours', 'cas_pratique'].includes(screen) && !isPro) return <Paywall onUpgrade={() => upgrade()} onBack={() => nav('dashboard')} />;
+    if (['interview', 'interview_config', 'tutor', 'qcm', 'flashcards', 'resume_cours', 'cas_pratique','exams','review_today'].includes(screen) && !isPro) return <Paywall onUpgrade={() => upgrade()} onBack={() => nav('dashboard')} />;
     if (screen === 'interview' && !interviewCfg) return <InterviewConfig user={user} onStart={cfg => { setInterviewCfg(cfg); nav('interview'); }} onBack={() => nav('dashboard')} />;
     if (screen.startsWith('results_') && !result) return <History user={user} onBack={() => nav('dashboard')} />;
     if (screen === 'landing') return <Marketing onAuth={toAuth} onNav={nav} ues={ALL_UES} />;
     if (screen === 'pricing') return <OfferPage user={user} onCheckout={upgrade} onNav={nav} />;
     if (['features', 'dcg', 'dscg', 'resources', 'support'].includes(screen)) return <PublicInfo page={screen} onNav={nav} onAuth={toAuth} ues={ALL_UES} />;
     if (screen === 'testimonials') return <StudentReviews load={loadTestimonials} onNav={nav} />;
+    if (screen === 'exams') return <ExamPage key={user.uid} user={user} ues={ALL_UES} onOpen={(module,chapter,target)=>openLearning(ALL_UES.find(u=>u.id===module),chapter,target)}/>;
+    if (screen === 'review_today') return <ReviewToday key={user.uid} onExams={()=>nav('exams')} onOpen={(module,chapter,target)=>openLearning(ALL_UES.find(u=>u.id===module),chapter,target)}/>;
+    if (screen === 'feedback') return <FeedbackForm key={user.uid}/>;
     if (screen === 'auth') return <Auth mode={authMode} setMode={setAuthMode} onDone={u => { setUser(u); if (u.isNew) setShowOnboarding(true); const plan = sessionStorage.getItem('simdcg-plan'); sessionStorage.removeItem('simdcg-plan'); nav('dashboard'); if (plan) upgrade(plan); }} onBack={() => nav('landing')} />;
     if (screen === 'dashboard') return <StudentHome user={user} ues={ALL_UES} onNav={nav} onSelect={selectUE} />;
     if (screen === 'library') return <LibraryPage ues={ALL_UES} user={user} onSelect={selectUE} />;
@@ -428,7 +436,7 @@ export default function App() {
     if (screen === 'interview') return <OralPractice cfg={interviewCfg} onDone={onInterviewDone} onBack={() => nav('interview_config')} />;
     if (screen === 'results_interview' && result.mode === 'self-review') return <OralSummary data={result} onBack={() => nav('interview_config')} />;
     if (screen === 'results_interview') return <ResultsInterview data={result} onNew={() => nav('interview_config')} onDash={() => nav('dashboard')} />;
-    if (screen === 'results_qcm') return <><ResultsQCM data={result} onNew={() => nav('qcm')} onDash={() => nav('subject_hub')} />{result.pendingLearning&&<p className="message error" role="alert">Le résultat est affiché ; le suivi par chapitre reste à enregistrer. <button className="text-button" onClick={()=>onLearning(result.pendingLearning).then(()=>setResult(r=>({...r,pendingLearning:undefined}))).catch(()=>toast.error('Enregistrement encore indisponible.'))}>Réessayer la progression</button></p>}</>;
+    if (screen === 'results_qcm') return <><ResultsQCM data={result} onNew={() => nav('qcm')} onDash={() => nav('subject_hub')} />{result.pendingLearning&&<p className="message error" role="alert">Le résultat est affiché ; le suivi par chapitre reste à enregistrer. <button className="text-button" onClick={()=>onLearning(result.pendingLearning).then(()=>setResult(r=>({...r,pendingLearning:undefined}))).catch(()=>toast.error('Enregistrement encore indisponible.'))}>Réessayer la progression</button></p>}{result.pendingReviews&&<p className="message error" role="alert">Les rappels personnalisés restent à enregistrer. <button className="text-button" onClick={()=>trainingRequest('review',{events:result.pendingReviews}).then(()=>setResult(r=>({...r,pendingReviews:undefined}))).catch(()=>toast.error('Les rappels restent en attente.'))}>Réessayer les rappels</button></p>}<div className="page"><button className="btn btn-secondary" onClick={()=>nav('review_today')}>Retrouver mes notions à revoir</button></div></>;
     if (screen === 'results_cas') return <ResultsCas data={result} onNew={() => nav('cas_pratique')} onDash={() => nav('subject_hub')} />;
     if (screen === 'paywall') return <Paywall onUpgrade={() => upgrade()} onBack={() => nav('dashboard')} />;
     if (screen === 'history') return <History user={user} onBack={() => nav('dashboard')} />;
@@ -563,7 +571,7 @@ function QCMSession({ ue, user, onDone, onBack }) {
     if (sel !== null) return;
     setSel(i);
     if (i === q.answer) setScore(s => s + 1);
-    setAnswers(a => [...a, { q: q.q, correct: i === q.answer, right: q.options[q.answer], expl: q.expl, difficulte: q.difficulte,chapter:q.chapter }]);
+    setAnswers(a => [...a, { q: q.q, correct: i === q.answer, right: q.options[q.answer], expl: q.expl, difficulte: q.difficulte,chapter:q.chapter,itemId:q.id,selected:q.options[i] }]);
   };
   const next = async () => {
     if(finishingRef.current)return;
@@ -629,8 +637,8 @@ function FlashcardsSession({ ue, user, onBack, onUpgrade, onLearning }) {
   const [reviewIdx, setReviewIdx] = useState(0);
   const [reviewFlipped, setReviewFlipped] = useState(false);
   const [sessionDone, setSessionDone] = useState(false);
-  const [progressStatus,setProgressStatus]=useState(''),receipt=useRef(crypto.randomUUID()),outcomes=useRef({}),marked=useRef(new Set());
-  const saveCardProgress=async()=>{if(!onLearning)return;setProgressStatus('saving');try{await onLearning(Object.entries(outcomes.current).map(([chapter,g],i)=>({id:receipt.current+'_'+i,type:'cards',module:ue.id,chapter,...g})));setProgressStatus('done');}catch{setProgressStatus('error');}};
+  const [progressStatus,setProgressStatus]=useState(''),receipt=useRef(crypto.randomUUID()),outcomes=useRef({}),marked=useRef(new Set()),reviewEvents=useRef([]);
+  const saveCardProgress=async()=>{if(!onLearning)return;setProgressStatus('saving');try{await onLearning(Object.entries(outcomes.current).map(([chapter,g],i)=>({id:receipt.current+'_'+i,type:'cards',module:ue.id,chapter,...g})));await trainingRequest('review',{events:reviewEvents.current});setProgressStatus('done');}catch{setProgressStatus('error');}};
 
   useEffect(() => {
     let alive=true;
@@ -644,7 +652,7 @@ function FlashcardsSession({ ue, user, onBack, onUpgrade, onLearning }) {
   const card = filtered[idx % Math.max(filtered.length, 1)];
   const isLast = idx >= filtered.length - 1;
 
-  const recordCard=known=>{if(marked.current.has(card.id))return;marked.current.add(card.id);const key=card.chapter,entry=outcomes.current[key] ||= {reviewed:0,known:0};entry.reviewed++;if(known)entry.known++;};
+  const recordCard=known=>{if(marked.current.has(card.id))return;marked.current.add(card.id);reviewEvents.current.push({receipt:receipt.current+'_card_'+reviewEvents.current.length,kind:'card',itemId:card.id,known});const key=card.chapter,entry=outcomes.current[key] ||= {reviewed:0,known:0};entry.reviewed++;if(known)entry.known++;};
   const markKnown = () => {recordCard(true);setFlipped(false); if (isLast) { setSessionDone(true);saveCardProgress(); } else { setTimeout(() => setIdx(i => i + 1), 150); } };
   const markDifficult = () => {
     recordCard(false);
@@ -1006,9 +1014,9 @@ function LegalScreen({ type, onBack }) {
   ];
   const confidentialiteContent = [
     { title: "1. Responsable du traitement", body: `Marcus Bonnafis (simdcg.com) est responsable du traitement de vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD · Règlement UE 2016/679).` },
-    { title: "2. Données collectées", body: `Lors de l'inscription : prénom, adresse email, date d'inscription. Lors de l'utilisation : historique des sessions (QCM, entretiens, cas pratiques), scores obtenus, matières étudiées, streak quotidien. Données techniques : adresse IP, type de navigateur (via Firebase Analytics).` },
+    { title: "2. Données collectées", body: `Lors de l'inscription : prénom, adresse email, date d'inscription. Lors de l'utilisation : historique des sessions, résultats des QCM, matières étudiées et progression. Le mode examen conserve vos réponses, les dates de session et votre comparaison personnelle au barème. Les révisions conservent les réponses choisies ou la difficulté déclarée pour une carte, ainsi que la prochaine date de rappel. Un brouillon d'examen peut être conservé dans le navigateur pour récupérer une modification non encore enregistrée sur le serveur. Le formulaire de retour conserve votre pseudonyme, diplôme, appréciation, texte et choix de publication. Ces nouvelles fonctionnalités n'ajoutent pas de traceur marketing tiers.` },
     { title: "3. Finalités du traitement", body: `Vos données sont utilisées pour : (a) la gestion de votre compte et authentification, (b) la personnalisation de votre expérience de révision, (c) le suivi de votre progression, (d) la facturation via Stripe pour les abonnés Pro, (e) l'amélioration du service.` },
-    { title: "4. Base légale", body: `Le traitement de vos données repose sur votre consentement (art. 6.1.a RGPD) lors de la création de compte, et sur l'exécution du contrat (art. 6.1.b RGPD) pour les fonctionnalités du service.` },
+    { title: "4. Base légale", body: `La gestion du compte et les fonctionnalités de révision sont nécessaires à la fourniture du service demandé et reposent sur l'exécution du contrat. La publication d'un retour d'étudiant repose sur un accord distinct et facultatif, non coché par défaut. Vous pouvez transmettre un retour privé sans accepter sa publication et demander le retrait d'un avis publié à contact.simdcg@gmail.com.` },
     { title: "5. Sous-traitants", body: `SIMDCG utilise les prestataires suivants : Firebase (Google) pour l’authentification et la base de données, Stripe pour les paiements et Groq pour le tuteur IA et le retour optionnel sur les cas écrits. Lorsque vous demandez une analyse de cas, votre réponse et le corrigé de référence sont transmis à Groq. Lorsque vous utilisez le tuteur, le texte de votre question et le contexte récent de la conversation sont transmis à Groq. Le traitement par chaque prestataire suit ses conditions et sa politique de confidentialité.` },
     { title: "6. Conservation des données", body: `Vos données sont conservées pendant la durée de vie de votre compte. En cas de suppression de compte, vos données personnelles sont effacées sous 30 jours. Les données de facturation sont conservées 10 ans conformément aux obligations comptables légales.` },
     { title: "7. Vos droits", body: `Conformément au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, de portabilité et d'opposition au traitement de vos données. Pour exercer ces droits : contact.simdcg@gmail.com. Vous pouvez également introduire une réclamation auprès de la CNIL (cnil.fr).` },

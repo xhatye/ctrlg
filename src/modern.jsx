@@ -9,6 +9,7 @@ import catalogue from './catalogue.json';
 import { HeroAtmosphere } from './interactions';
 import ProgressJourney from './ProgressJourney';
 import HomeStudyPath from './HomeStudyPath';
+import PreviewGallery from './PreviewGallery';
 
 const paths = {
   home: "M3 10 12 3l9 7v10H3z M9 20v-7h6v7",
@@ -323,6 +324,7 @@ export function Marketing({ onAuth, onNav, ues }) {
             ))}
           </div>
         </div>
+        <PreviewGallery onSubscribe={()=>onNav('pricing')}/>
         <section id="methode" className="container section">
           <div className="section-heading">
             <div>
@@ -457,6 +459,8 @@ export function ProductShell({ children, screen, user, onNav, onLogout }) {
   const links = [
     ["dashboard", "home", "Mon espace"],
     ["library", "book", "Mes matières"],
+    ["review_today", "clock", "À revoir aujourd’hui"],
+    ["exams", "check", "Mes examens"],
     ["planning", "calendar", "Mon planning"],
     ["tutor", "spark", "Tuteur IA"],
     ["interview_config", "user", "Préparer l’oral par écrit"],
@@ -510,6 +514,7 @@ export function ProductShell({ children, screen, user, onNav, onLogout }) {
               Découvrir Pro <Icon name="arrow" size={16} />
             </Button>
           )}
+          <button className="logout" onClick={()=>onNav('feedback')}>Partager mon retour</button>
           <button className="logout" onClick={onLogout}>
             Se déconnecter
           </button>
@@ -681,9 +686,8 @@ export function StudentHome({ user, ues, onNav, onSelect }) {
               <span>3</span>Vos cartes difficiles à revoir
             </li>
           </ol>
-          <button className="text-button" onClick={() => onNav("planning")}>
-            Préparer mon planning <Icon name="arrow" size={16} />
-          </button>
+          <button className="text-button" onClick={() => onNav("review_today")}>À revoir aujourd’hui <Icon name="arrow" size={16} /></button>
+          <button className="text-button" onClick={() => onNav("exams")}>Travailler un sujet d’examen <Icon name="arrow" size={16} /></button>
         </section>
       </div>
       <ExamCountdown defaultLevel={next.level} />
@@ -1568,16 +1572,16 @@ export function PublicInfo({ page, onNav, onAuth, ues }) {
   );
 }
 export function StudentReviews({ load, onNav }) {
-  const [reviews, setReviews] = useState(null);
+  const [reviews, setReviews] = useState(null),[error,setError]=useState(''),[retry,setRetry]=useState(0);
   useEffect(() => {
     let active = true;
-    load().then((data) => {
+    setError('');load().then((data) => {
       if (active) setReviews(data);
-    });
+    }).catch(()=>{if(active)setError('Les retours ne peuvent pas être chargés pour le moment.');});
     return () => {
       active = false;
     };
-  }, [load]);
+  }, [load,retry]);
   return (
     <div className="marketing">
       <PublicNav onNav={onNav} />
@@ -1586,14 +1590,15 @@ export function StudentReviews({ load, onNav }) {
           eyebrow="RETOURS D’ÉTUDIANTS"
           title="Vos retours nous font avancer."
         />
-        {reviews === null ? (
+        <p>Ces retours proviennent de comptes ayant utilisé la plateforme et sont publiés après vérification, avec l’accord de leur auteur. Aucun témoignage de démonstration n’est ajouté.</p>
+        {error?<div role="alert"><p>{error}</p><button className="btn" onClick={()=>setRetry(n=>n+1)}>Réessayer</button></div>:reviews === null ? (
           <p>Chargement…</p>
         ) : reviews.length ? (
           <div className="resource-grid">
             {reviews.map((r, i) => (
               <article className="panel" key={r.id || i}>
                 <p>{r.text || r.message}</p>
-                <strong>{r.name || "Étudiant"}</strong>
+                <strong>{r.alias}</strong><p>{r.level} · {r.rating}/5</p>
               </article>
             ))}
           </div>

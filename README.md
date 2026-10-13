@@ -42,3 +42,7 @@ En développement seulement, `/?design=landing` et `/?design=dashboard` affichen
 ## État de livraison
 
 Compilation, 76 tests locaux et 44 vues d’aperçu ordinateur/mobile vérifiés. Le 12 octobre 2026, le renvoi d’un événement Checkout réel signé a reçu une réponse HTTP 200 avec `isPro: true` sur le site de production. Cela confirme le traitement de cet achat existant ; aucun nouveau paiement n’a été créé. La banque de révision couvre partiellement les matières et devra être enrichie et relue pédagogiquement. Le service Evidstack conserve son propre endpoint et ses déploiements.
+
+## Examens et révisions personnalisées
+
+Les pages /examens, /a-revoir et /mon-retour complètent le parcours Pro. Le mode examen propose 60 compositions avec annexes et barème, la copie est sauvegardée et le corrigé reste protégé jusqu’à la remise ou l’expiration. Les nouvelles réponses de QCM et de cartes alimentent les rappels espacés. La page publique affiche trois captures statiques agrandissables. Les avis sont soumis à accord et vérification avant publication. Voir docs/TRAINING.md pour les limites, les données privées et la procédure de modération.

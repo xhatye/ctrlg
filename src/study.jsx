@@ -4,6 +4,7 @@ import {reviewCase} from "./case-client";
 import {checkCaseStep} from "../lib/case-checks.mjs";
 import { ChapterSelect } from './chapter-navigation';
 import LessonVisuals from './LessonVisuals';
+import CaseRubric from './CaseRubric';
 
 export function StudyNotice() {
   return (
@@ -173,13 +174,13 @@ export function CasePractice({ ue, user, onDone, onBack, onLearning }) {
           <span className="eyebrow">ÉTAPE {q.num}</span><h2>{q.enonce}</h2>
           {q.guide?.type==='number'?<label className="study-answer">Votre résultat ({q.guide.unit || 'sans unité'})<input inputMode="decimal" aria-label={'Résultat de l’étape '+q.num} value={responses[q.num]??''} onChange={e=>change(q.num,e.target.value)} placeholder="Exemple : 1 250,50"/></label>:q.guide?.type==='choice'?<fieldset className="case-choices"><legend>Choisissez le raisonnement adapté au dossier.</legend>{q.guide.options.map((option,i)=><label key={i}><input type="radio" name={'case-step-'+q.num} checked={responses[q.num]===String(i)} onChange={()=>change(q.num,String(i))}/><span>{option}</span></label>)}</fieldset>:<p>Préparez les faits utiles et votre conclusion, puis ouvrez les éléments attendus pour vérifier vos étapes.</p>}
           <button className="btn btn-secondary" onClick={()=>check(q)}>{q.guide?'Vérifier cette étape':'Étudier le corrigé de cette étape'}</button>
-          {result&&<div className={'case-feedback '+(result.correct===false?'needs-review':'')} role="status"><strong>{result.message}</strong>{result.valid&&<><h3>Raisonnement attendu</h3><p>{q.answer}</p></>}</div>}
+          {result&&<div className={'case-feedback '+(result.correct===false?'needs-review':'')} role="status"><strong>{result.message}</strong>{result.valid&&<><h3>Raisonnement attendu</h3><p>{q.answer}</p><CaseRubric key={state.data.chapter+'/'+variant+'/'+q.num} question={q}/></>}</div>}
         </article>})}</div>
         <button className="btn" disabled={completed!==questions.length||saving||saved} onClick={record}>{saved?'Cas enregistré dans votre parcours':saving?'Enregistrement…':'Terminer et enregistrer ce cas'}</button>
       </>:<>
         <section className="panel"><h2>Votre raisonnement, question par question</h2><ol>{questions.map(q=><li key={q.num}>{q.enonce}</li>)}</ol><p className="helper">Le retour IA compare votre réponse au corrigé du dossier. Vérifiez ses remarques ; il ne remplace pas une correction par un enseignant. Votre réponse est envoyée à Groq pour cette analyse. Elle utilise aussi votre quota et budget de tuteur.</p><label className="study-answer">Votre réponse<textarea aria-label="Votre réponse" rows={9} maxLength={6000} disabled={busy} value={answer} onChange={e=>{setAnswer(e.target.value);setFeedback(null);setSaved(false);}} placeholder="Question 1 : faits utiles, méthode, application et conclusion…"/></label><div className="written-case-actions"><button className="btn" disabled={busy||answer.trim().length<40||remaining===0} onClick={analyse}>{busy?'Analyse de votre réponse…':'Obtenir un retour IA'}</button><button className="btn btn-secondary" onClick={()=>setShown(true)}>Voir le corrigé sans IA</button></div><p className="helper">{answer.length}/6 000 caractères · minimum 40 pour l’analyse.{remaining!==null?' '+remaining+' analyse(s) encore disponibles aujourd’hui.':''}</p>{aiError&&<p role="alert" className="message error">{aiError}</p>}</section>
         {feedback&&<section className="panel written-case-feedback" aria-live="polite"><h2>Retour sur votre réponse écrite</h2>{[['strengths','Ce qui est étayé'],['improvements','Ce qui est à reprendre'],['nextSteps','Votre prochaine étape']].map(([key,title])=><div key={key}><h3>{title}</h3><ul>{feedback[key].map((item,i)=><li key={i}>{item}</li>)}</ul></div>)}<button className="btn" disabled={saving||saved} onClick={record}>{saved?'Cas enregistré':saving?'Enregistrement…':'Enregistrer ce travail'}</button></section>}
-        {shown&&<section className="panel"><h2>Corrigé du dossier</h2>{questions.map(q=><div key={q.num}><h3>Question {q.num}</h3><p>{q.answer}</p></div>)}<button className="btn" disabled={saving||saved||!answer.trim()} onClick={record}>{saved?'Cas enregistré':saving?'Enregistrement…':'Enregistrer ce travail'}</button></section>}
+        {shown&&<section className="panel"><h2>Corrigé du dossier</h2>{questions.map(q=><div key={q.num}><h3>Question {q.num}</h3><p>{q.answer}</p><CaseRubric question={q}/></div>)}<button className="btn" disabled={saving||saved||!answer.trim()} onClick={record}>{saved?'Cas enregistré':saving?'Enregistrement…':'Enregistrer ce travail'}</button></section>}
       </>}
       {saveError&&<p role="alert" className="message error">{saveError}</p>}
       <SourceLinks sources={state.data.sources}/>

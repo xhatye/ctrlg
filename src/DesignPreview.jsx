@@ -2,6 +2,9 @@
 import { useState } from "react";
 import {applyLearningEvent} from '../lib/learning-progress.mjs';
 import { OralPractice, OralSummary } from "./study";
+import ExamPage from './ExamPage';
+import ReviewToday from './ReviewToday';
+import FeedbackForm from './FeedbackForm';
 import {
   Marketing,
   StudentHome,
@@ -27,6 +30,7 @@ import {
 } from "./App";
 const ues = [...DCG_UES, ...DSCG_UES];
 const student = {
+  uid:'design-preview',
   name: "Camille Martin",
   email: "apercu@example.fr",
   isPro: true,
@@ -56,6 +60,9 @@ export default function DesignPreview() {
   };
   const content =
     page === "results_qcm" ? <ResultsQCM data={{score:1,total:2,duration:55,ue:'UE9',ueName:'Comptabilité',answers:[{correct:true,q:'Une écriture équilibrée',expl:'Le débit égale le crédit.'},{correct:false,q:'Une charge est-elle un actif ?',right:'Non',expl:'Une charge affecte le résultat.'}]}} onNew={()=>nav('qcm')} onDash={()=>nav('dashboard')} /> :
+    page === "exams" ? <ExamPage user={student} ues={ues} onOpen={(module,chapter,target)=>{setUE({...ues.find(u=>u.id===module),chapter});nav(target);}}/> :
+    page === "review_today" ? <ReviewToday onExams={()=>nav('exams')} onOpen={(module,chapter,target)=>{setUE({...ues.find(u=>u.id===module),chapter});nav(target);}}/> :
+    page === "feedback" ? <FeedbackForm/> :
     page === "history" ? <History user={student} onBack={()=>nav('dashboard')} /> :
     page === "onboarding" ? <><StudentHome user={student} ues={ues} onNav={nav} onSelect={select} /><OnboardingModal onClose={()=>nav('dashboard')} onUpgrade={()=>nav('pricing')} /></> :
     page === "interview" ? <OralPractice cfg={{topic:'Comptabilité',difficulty:'Débutant'}} onBack={()=>nav('interview_config')} onDone={()=>nav('oral_summary')} /> :
