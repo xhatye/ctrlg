@@ -6,6 +6,8 @@ import { ChapterLibrary } from './chapter-navigation';
 import { curriculumFor } from '../lib/curriculum.mjs';
 import catalogue from './catalogue.json';
 import { HeroAtmosphere } from './interactions';
+import ProgressJourney from './ProgressJourney';
+import HomeStudyPath from './HomeStudyPath';
 
 const paths = {
   home: "M3 10 12 3l9 7v10H3z M9 20v-7h6v7",
@@ -304,7 +306,7 @@ export function Marketing({ onAuth, onNav, ues }) {
               </span>
             </div>
           </div>
-          <PreviewCard />
+          <HomeStudyPath ues={ues} onNav={onNav}/>
         </section>
         <section className="container library-numbers" aria-label="Contenu de la bibliothèque">{[[catalogue.totals.subjects,'matières DCG et DSCG'],[catalogue.totals.chapters,'chapitres de cours'],[catalogue.totals.questions,'QCM expliqués'],[catalogue.totals.cards,'flashcards'],[catalogue.totals.cases,'cas corrigés']].map(([count,label])=><div key={label}><strong>{count.toLocaleString('fr-FR')}</strong><span>{label}</span></div>)}<p>{catalogue.totals.concepts} repères de cours ; les exercices incluent {catalogue.totals.applications.toLocaleString('fr-FR')} applications chiffrées réparties en variantes. Contenus originaux, couverture partielle des programmes.</p></section>
         <div className="container exam-home"><ExamCountdown /></div>
@@ -844,7 +846,7 @@ export function LibraryPage({ ues, user, onSelect }) {
     </div>
   );
 }
-export function CourseHome({ ue, user, onNav }) {
+export function CourseHome({ ue, user, onNav, learning }) {
   return (
     <div className="page course-page">
       <Title eyebrow={`${ue.level} · ${ue.id}`} title={ue.label} desc={ue.desc}>
@@ -924,7 +926,7 @@ export function CourseHome({ ue, user, onNav }) {
           </button>
         ))}
       </div>
-      <ChapterLibrary ue={ue} onOpen={(screen,chapter)=>onNav(user.isPro?screen:'paywall',{chapter})}/>
+      <ChapterLibrary ue={ue} learning={learning} onOpen={(screen,chapter)=>onNav(user.isPro?screen:'paywall',{chapter})}/>
     </div>
   );
 }
@@ -1387,7 +1389,7 @@ export function TutorPage({ ues, call, user, onNav }) {
     </div>
   );
 }
-export function LearningProgress({ user, ues, onNav }) {
+export function LearningProgress({ user, ues, onNav, learning={},learningError,onRetry,onOpen }) {
   const history = user.history || [],
     qcms = history.filter((x) => x.type === "qcm"),
     mastery = user.mastery || {};
@@ -1398,6 +1400,8 @@ export function LearningProgress({ user, ues, onNav }) {
         title="Votre progression, concrètement."
         desc="Vos résultats enregistrés, sans score de réussite à l’examen inventé."
       />
+      {learningError&&<p className="message error" role="alert">Impossible de charger le suivi par chapitre. <button className="text-button" onClick={onRetry}>Réessayer</button></p>}
+      <ProgressJourney ues={ues} learning={learning} onOpen={onOpen}/>
       <div className="metric-grid">
         <article className="metric">
           <strong>{qcms.length}</strong>

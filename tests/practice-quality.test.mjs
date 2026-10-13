@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { MODULES, studyModule, moduleCatalogue } from '../lib/study-content.mjs';
 import { readStudy } from '../lib/study-access.mjs';
+import {PRACTICE_VARIANTS} from '../lib/practice-engine.mjs';
 const near=(a,b)=>assert.ok(Math.abs(a-b)<=Math.max(1,Math.abs(b))*1e-10,`${a} differs from ${b}`);
 const families=Object.values(MODULES).flatMap(m=>m.chapters.filter(c=>c.practice));
 // Independently worked starting dossiers: expectations are fixed, not calls to
@@ -74,12 +75,14 @@ test('all sixty numeric families match independent worked starting dossiers',()=
  for(const c of families){const expected=fixtures[c.id];assert.ok(expected,c.id);c.practice.slice(0,4).forEach((q,i)=>near(q.calculation.result,expected[i]));}
 });
 
-test('all 1500 variants conserve balances and have unique data and unambiguous answers',()=>{
+test('all 159000 variants conserve balances and have unique data and unambiguous answers',()=>{
  let count=0;
  for(const c of families){
   assert.equal(c.cases.length,25);assert.equal(new Set(c.cases.map(v=>v.contexte)).size,25);
-  for(let k=0;k<25;k++){
-   const items=c.practice.slice(k*4,k*4+4),d=items[0].calculation.inputs,r=items.map(q=>q.calculation.result);
+  const seen=new Set();
+  for(let k=0;k<PRACTICE_VARIANTS;k++){
+   const variant=c.variantAt(k);assert.ok(!seen.has(variant.contexte),'Duplicate dossier '+c.id+'/'+k);seen.add(variant.contexte);
+   const items=variant.notions,d=items[0].calculation.inputs,r=items.map(q=>q.calculation.result);
    count++;
    for(const q of items){assert.ok(Number.isFinite(q.calculation.result));assert.equal(q.variant,k);assert.equal(new Set([q.correct,...q.wrong]).size,4);assert.ok(q.body.includes(q.correct));}
    switch(c.id){
@@ -147,18 +150,18 @@ test('all 1500 variants conserve balances and have unique data and unambiguous a
    }
   }
  }
- assert.equal(count,1500);
+ assert.equal(count,159000);
 });
 
-test('twentyfold practice is labelled, addressable and bounded per request',()=>{
+test('hundredfold practice is labelled, addressable and bounded per request',()=>{
  const totals=Object.keys(MODULES).map(moduleCatalogue);
- assert.ok(totals.reduce((n,m)=>n+m.questionCount,0)>=296*20);
- assert.ok(totals.reduce((n,m)=>n+m.caseCount,0)>=73*20);
+ assert.ok(totals.reduce((n,m)=>n+m.questionCount,0)>=6344*100);
+ assert.ok(totals.reduce((n,m)=>n+m.caseCount,0)>=1585*100);
  const m=MODULES.UE9,c=m.chapters.find(c=>c.id==='cmp-periodique');
  const first=studyModule('UE9','case',Math.random,{chapter:c.id,variant:0});
- const last=studyModule('UE9','case',Math.random,{chapter:c.id,variant:24});
- assert.notEqual(first.contexte,last.contexte);assert.equal(last.caseVariants.length,25);
- assert.throws(()=>studyModule('UE9','case',Math.random,{chapter:c.id,variant:25}),{status:404});
+ const last=studyModule('UE9','case',Math.random,{chapter:c.id,variant:2649});
+ assert.notEqual(first.contexte,last.contexte);assert.equal(last.variantCount,2650);
+ assert.throws(()=>studyModule('UE9','case',Math.random,{chapter:c.id,variant:2650}),{status:404});
  assert.throws(()=>studyModule('UE9','case',Math.random,{variant:-1}),{status:404});
  const cards=studyModule('UE9','cards',Math.random,{chapter:c.id,count:100});assert.equal(cards.items.length,100);assert.equal(new Set(cards.items.map(i=>i.id)).size,100);
  assert.equal(studyModule('UE9','cards',Math.random,{chapter:c.id,count:20}).items.length,20);

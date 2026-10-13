@@ -11,6 +11,7 @@ import {loadStudy} from './study-client';
 import { curriculumFor } from '../lib/curriculum.mjs';
 import { StudySession } from './chapter-navigation';
 import Flashcard from './Flashcard';
+import {learningRequest} from './learning-client';
 import {StudyNotice, SavedLesson, CasePractice, StudyPlanner, OralPractice, OralSummary, OralSetup as InterviewConfig} from './study';
 
 const upgrade = (plan = 'subscription') => launchCheckout(plan).catch(error => toast.error(error.message));
@@ -300,6 +301,17 @@ export default function App() {
   const [result, setResult] = useState(null);
   const [loadingAuth, setLoadingAuth] = useState(true);
   const [showOnboarding, setShowOnboarding] = useState(false);
+  const [learning,setLearning]=useState({chapters:{}}),[learningError,setLearningError]=useState(false);
+  useEffect(()=>{
+    let alive=true;setLearning({chapters:{}});setLearningError(false);
+    if(user?.uid)learningRequest().then(data=>{if(alive&&auth.currentUser?.uid===user.uid)setLearning(previous=>previous.updatedAt&&previous.updatedAt>data.updatedAt?previous:data);}).catch(()=>{if(alive&&auth.currentUser?.uid===user.uid)setLearningError(true);});
+    return()=>{alive=false;};
+  },[user?.uid]);
+  const onLearning=async events=>{const uid=auth.currentUser?.uid,data=await learningRequest(events);if(uid&&auth.currentUser?.uid===uid){setLearning(data);setLearningError(false);}return data;};
+  const reloadLearning=()=>{const uid=auth.currentUser?.uid;return learningRequest().then(data=>{if(uid&&auth.currentUser?.uid===uid){setLearning(data);setLearningError(false);}}).catch(()=>{if(uid&&auth.currentUser?.uid===uid)setLearningError(true);});};
+  const openLearning=(ue,chapter,target)=>{
+    setSelectedUE({...ue,chapter});window.history.pushState({},'',SCREEN_TO_URL[target]+'?ue='+ue.id+'&chapter='+encodeURIComponent(chapter));setScreen(target);
+  };
 
   useEffect(() => {
     let stopProfile = () => {}, generation = 0;
@@ -365,6 +377,9 @@ export default function App() {
   const onQCMDone = async (data) => {
     const pct = Math.round(data.score / data.total * 100);
     const entry = { ...data, type: "qcm", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
+    const groups={};for(const answer of data.answers){if(!answer.chapter)continue;const group=groups[answer.chapter] ||= {total:0,correct:0};group.total++;if(answer.correct)group.correct++;}
+    const events=Object.entries(groups).map(([chapter,g],i)=>({id:data.sessionId+'_'+i,module:data.ue,chapter,type:'quiz',...g}));
+    if(events.length)try{await onLearning(events);}catch{entry.pendingLearning=events;}
     let saved = true;
     try { if (user) {
       await saveHistory(user.uid, entry);
@@ -378,7 +393,7 @@ export default function App() {
     setResult(entry); nav("results_qcm");
   };
   const onCasDone = async (data) => {
-    const entry = { ...data, type: "cas", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
+    const entry = { ...data, cas:{titre:data.cas.titre,contexte:data.cas.contexte,questions:data.cas.questions},type: "cas", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
     if (user) { await saveHistory(user.uid, entry); const s = await updateStreak(user.uid); setUser(u => ({ ...u, streak: s })); }
     toast.success("Votre réponse et le corrigé sont enregistrés.");
   };
@@ -401,23 +416,23 @@ export default function App() {
     if (screen === 'auth') return <Auth mode={authMode} setMode={setAuthMode} onDone={u => { setUser(u); if (u.isNew) setShowOnboarding(true); const plan = sessionStorage.getItem('simdcg-plan'); sessionStorage.removeItem('simdcg-plan'); nav('dashboard'); if (plan) upgrade(plan); }} onBack={() => nav('landing')} />;
     if (screen === 'dashboard') return <StudentHome user={user} ues={ALL_UES} onNav={nav} onSelect={selectUE} />;
     if (screen === 'library') return <LibraryPage ues={ALL_UES} user={user} onSelect={selectUE} />;
-    if (screen === 'subject_hub') return <CourseHome ue={selectedUE} user={user} onNav={nav} />;
+    if (screen === 'subject_hub') return <CourseHome ue={selectedUE} user={user} onNav={nav} learning={learning} />;
     if (screen === 'account') return <AccountPage user={user} onNav={nav} onCheckout={upgrade} request={billingRequest} />;
     if (screen === 'tutor') return <TutorPage ues={ALL_UES} call={callClaude} user={user} onNav={nav} />;
     if (screen === 'qcm') return <QCMScreen key={selectedUE.id} ue={selectedUE} user={user} onDone={onQCMDone} onBack={() => nav('subject_hub')} />;
-    if (screen === 'flashcards') return <FlashcardsScreen key={selectedUE.id} ue={selectedUE} user={user} onBack={() => nav('subject_hub')} onUpgrade={() => upgrade()} />;
-    if (screen === 'resume_cours') return <SavedLesson key={selectedUE.id} ue={selectedUE} user={user} onBack={() => nav('subject_hub')} />;
-    if (screen === 'cas_pratique') return <CasePractice key={selectedUE.id} ue={selectedUE} user={user} onDone={onCasDone} onBack={() => nav('subject_hub')} />;
+    if (screen === 'flashcards') return <FlashcardsScreen key={selectedUE.id} ue={selectedUE} user={user} onLearning={onLearning} onBack={() => nav('subject_hub')} onUpgrade={() => upgrade()} />;
+    if (screen === 'resume_cours') return <SavedLesson key={selectedUE.id} ue={selectedUE} user={user} onLearning={onLearning} learning={learning} onBack={() => nav('subject_hub')} />;
+    if (screen === 'cas_pratique') return <CasePractice key={selectedUE.id} ue={selectedUE} user={user} onLearning={onLearning} onDone={onCasDone} onBack={() => nav('subject_hub')} />;
     if (screen === 'planning') return <StudyPlanner ues={ALL_UES} user={user} onBack={() => nav('dashboard')} onUpgrade={() => upgrade()} />;
     if (screen === 'interview_config') return <InterviewConfig user={user} onStart={cfg => { setInterviewCfg(cfg); nav('interview'); }} onBack={() => nav('dashboard')} />;
     if (screen === 'interview') return <OralPractice cfg={interviewCfg} onDone={onInterviewDone} onBack={() => nav('interview_config')} />;
     if (screen === 'results_interview' && result.mode === 'self-review') return <OralSummary data={result} onBack={() => nav('interview_config')} />;
     if (screen === 'results_interview') return <ResultsInterview data={result} onNew={() => nav('interview_config')} onDash={() => nav('dashboard')} />;
-    if (screen === 'results_qcm') return <ResultsQCM data={result} onNew={() => nav('qcm')} onDash={() => nav('subject_hub')} />;
+    if (screen === 'results_qcm') return <><ResultsQCM data={result} onNew={() => nav('qcm')} onDash={() => nav('subject_hub')} />{result.pendingLearning&&<p className="message error" role="alert">Le résultat est affiché ; le suivi par chapitre reste à enregistrer. <button className="text-button" onClick={()=>onLearning(result.pendingLearning).then(()=>setResult(r=>({...r,pendingLearning:undefined}))).catch(()=>toast.error('Enregistrement encore indisponible.'))}>Réessayer la progression</button></p>}</>;
     if (screen === 'results_cas') return <ResultsCas data={result} onNew={() => nav('cas_pratique')} onDash={() => nav('subject_hub')} />;
     if (screen === 'paywall') return <Paywall onUpgrade={() => upgrade()} onBack={() => nav('dashboard')} />;
     if (screen === 'history') return <History user={user} onBack={() => nav('dashboard')} />;
-    if (screen === 'progress') return <LearningProgress user={user} ues={ALL_UES} onNav={nav} />;
+    if (screen === 'progress') return <LearningProgress user={user} ues={ALL_UES} onNav={nav} learning={learning} learningError={learningError} onRetry={reloadLearning} onOpen={openLearning} />;
     if (screen === 'forgot_password') return <ForgotPasswordScreen onBack={() => toAuth('login')} />;
     if (screen === 'cgu' || screen === 'confidentialite') return <LegalScreen type={screen} onBack={() => nav('landing')} />;
     return null;
@@ -524,13 +539,15 @@ function QCMSession({ ue, user, onDone, onBack }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const timerRef = useRef(null);
+  const sessionId=useRef(crypto.randomUUID());
+  const [finishing,setFinishing]=useState(false),finishingRef=useRef(false);
 
   useEffect(() => {
     let cancelled = false;
     const gen = async () => {
       setLoading(true);
       try {
-        const {items:data} = await loadStudy(ue.id, 'qcm', {chapter:ue.chapter,count:ue.count});
+        const {items:data} = await loadStudy(ue.id, 'qcm', {chapter:ue.chapter,count:ue.count,focus:ue.focus});
         if (cancelled) return;
         if (Array.isArray(data) && data.length > 0 && data.every(q => typeof q.q === "string" && Array.isArray(q.options) && Number.isInteger(q.answer) && q.answer >= 0 && q.answer < q.options.length)) { setQuestions(data); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000); }
         else setError(true);
@@ -546,10 +563,11 @@ function QCMSession({ ue, user, onDone, onBack }) {
     if (sel !== null) return;
     setSel(i);
     if (i === q.answer) setScore(s => s + 1);
-    setAnswers(a => [...a, { q: q.q, correct: i === q.answer, right: q.options[q.answer], expl: q.expl, difficulte: q.difficulte }]);
+    setAnswers(a => [...a, { q: q.q, correct: i === q.answer, right: q.options[q.answer], expl: q.expl, difficulte: q.difficulte,chapter:q.chapter }]);
   };
-  const next = () => {
-    if (qi + 1 >= questions.length) { clearInterval(timerRef.current); onDone({ ue: ue.id, ueName: ue.label, score, total: questions.length, duration: timer, answers }); }
+  const next = async () => {
+    if(finishingRef.current)return;
+    if (qi + 1 >= questions.length) {finishingRef.current=true;setFinishing(true);clearInterval(timerRef.current);try{await onDone({ ue: ue.id, ueName: ue.label, score, total: questions.length, duration: timer, answers,sessionId:sessionId.current });}catch{finishingRef.current=false;setFinishing(false);toast.error('Le résultat reste affiché. Réessayez l’enregistrement.');} }
     else { setQi(i => i + 1); setSel(null); }
   };
 
@@ -587,7 +605,7 @@ function QCMSession({ ue, user, onDone, onBack }) {
               })}
             </div>
             {sel !== null && <div style={{ background: "var(--surface)", border: "1px solid var(--line)", padding: "12px 16px", marginBottom: 14 }}><p style={{ fontSize: 10, color: "var(--muted)", margin: "0 0 4px", letterSpacing: ".1em" }}>EXPLICATION</p><p style={{ fontSize: 13, color: "var(--ink)", margin: 0, lineHeight: 1.6 }}>{q.expl}</p></div>}
-            {sel !== null && <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={next}>{qi + 1 >= questions.length ? "Voir les résultats →" : "Question suivante →"}</button>}
+            {sel !== null && <button disabled={finishing} style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={next}>{finishing?'Enregistrement…':qi + 1 >= questions.length ? "Voir les résultats →" : "Question suivante →"}</button>}
           </div>
         )}
       </div>
@@ -599,7 +617,7 @@ function QCMSession({ ue, user, onDone, onBack }) {
 function FlashcardsScreen(props) {
   return <StudySession ue={props.ue} kind="cards">{ue=><FlashcardsSession {...props} ue={ue}/>}</StudySession>;
 }
-function FlashcardsSession({ ue, user, onBack, onUpgrade }) {
+function FlashcardsSession({ ue, user, onBack, onUpgrade, onLearning }) {
   const isPro = user?.isPro;
   const [cards, setCards] = useState(null);
   const [idx, setIdx] = useState(0);
@@ -611,10 +629,12 @@ function FlashcardsSession({ ue, user, onBack, onUpgrade }) {
   const [reviewIdx, setReviewIdx] = useState(0);
   const [reviewFlipped, setReviewFlipped] = useState(false);
   const [sessionDone, setSessionDone] = useState(false);
+  const [progressStatus,setProgressStatus]=useState(''),receipt=useRef(crypto.randomUUID()),outcomes=useRef({}),marked=useRef(new Set());
+  const saveCardProgress=async()=>{if(!onLearning)return;setProgressStatus('saving');try{await onLearning(Object.entries(outcomes.current).map(([chapter,g],i)=>({id:receipt.current+'_'+i,type:'cards',module:ue.id,chapter,...g})));setProgressStatus('done');}catch{setProgressStatus('error');}};
 
   useEffect(() => {
     let alive=true;
-    loadStudy(ue.id,'cards',{chapter:ue.chapter,count:ue.count}).then(({items}) => { if(alive){setCards(items);setLoading(false);} }).catch(error => {if(alive){toast.error(error.message);setCards([]);setLoading(false);}});
+    loadStudy(ue.id,'cards',{chapter:ue.chapter,count:ue.count,focus:ue.focus}).then(({items}) => { if(alive){setCards(items);setLoading(false);} }).catch(error => {if(alive){toast.error(error.message);setCards([]);setLoading(false);}});
     return()=>{alive=false;};
   }, []);
 
@@ -624,11 +644,13 @@ function FlashcardsSession({ ue, user, onBack, onUpgrade }) {
   const card = filtered[idx % Math.max(filtered.length, 1)];
   const isLast = idx >= filtered.length - 1;
 
-  const markKnown = () => { setFlipped(false); if (isLast) { setSessionDone(true); } else { setTimeout(() => setIdx(i => i + 1), 150); } };
+  const recordCard=known=>{if(marked.current.has(card.id))return;marked.current.add(card.id);const key=card.chapter,entry=outcomes.current[key] ||= {reviewed:0,known:0};entry.reviewed++;if(known)entry.known++;};
+  const markKnown = () => {recordCard(true);setFlipped(false); if (isLast) { setSessionDone(true);saveCardProgress(); } else { setTimeout(() => setIdx(i => i + 1), 150); } };
   const markDifficult = () => {
-    setDifficult(d => [...d, card]);
+    recordCard(false);
+    setDifficult(d => d.some(c=>c.id===card.id)?d:[...d, card]);
     setFlipped(false);
-    if (isLast) { setSessionDone(true); }
+    if (isLast) { setSessionDone(true);saveCardProgress(); }
     else { setTimeout(() => setIdx(i => i + 1), 150); }
   };
   const next = () => { setFlipped(false); setTimeout(() => setIdx(i => (i + 1) % filtered.length), 150); };
@@ -666,7 +688,10 @@ function FlashcardsSession({ ue, user, onBack, onUpgrade }) {
         <div style={{ maxWidth: 500, margin: "0 auto", padding: "80px 24px", textAlign: "center", position: "relative", zIndex: 1, animation: "fsu .5s ease both", display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
           <span style={{ fontSize: 40 }}>◈</span>
           <h2 style={{ fontSize: 22, color: "var(--ink)" }}>Session terminée</h2>
-          <p style={{ fontSize: 14, color: "var(--muted)" }}>{filtered.length} cartes révisées · {difficult.length} marquées difficiles</p>
+          <p style={{ fontSize: 14, color: "var(--muted)" }}>{marked.current.size} cartes évaluées sur {filtered.length} · {difficult.length} marquées difficiles</p>
+          {progressStatus==='done'&&<p role="status">Progression des cartes enregistrée.</p>}
+          {progressStatus==='saving'&&<p role="status">Enregistrement de la progression…</p>}
+          {progressStatus==='error'&&<p role="alert">La progression n’a pas été enregistrée. <button className="text-button" onClick={saveCardProgress}>Réessayer</button></p>}
           {difficult.length > 0 && (
             isPro ? (
               <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={() => { setReviewMode(true); setReviewIdx(0); }}>

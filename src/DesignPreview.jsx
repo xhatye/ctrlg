@@ -1,5 +1,6 @@
 // Development-only route. No real user account, payment or Firestore write.
 import { useState } from "react";
+import {applyLearningEvent} from '../lib/learning-progress.mjs';
 import { OralPractice, OralSummary } from "./study";
 import {
   Marketing,
@@ -38,6 +39,8 @@ const student = {
   mastery: { UE9: { best: 70, attempts: 2 }, UE4: { best: 80, attempts: 3 } },
 };
 export default function DesignPreview() {
+  const [learning,setLearning]=useState({chapters:{}});
+  const onLearning=async events=>setLearning(old=>events.reduce((p,e)=>applyLearningEvent(p,e,Date.now()),old));
   const [page, setPage] = useState(
       new URLSearchParams(location.search).get("design") || "landing",
     ),
@@ -66,7 +69,7 @@ export default function DesignPreview() {
     ) : page === "library" ? (
       <LibraryPage ues={ues} user={student} onSelect={select} />
     ) : page === "subject_hub" ? (
-      <CourseHome ue={ue} user={student} onNav={nav} />
+      <CourseHome ue={ue} user={student} onNav={nav} learning={learning}/>
     ) : page === "account" ? (
       <AccountPage
         user={student}
@@ -78,7 +81,7 @@ export default function DesignPreview() {
         })}
       />
     ) : page === "progress" ? (
-      <LearningProgress user={student} ues={ues} onNav={nav} />
+      <LearningProgress user={student} ues={ues} onNav={nav} learning={learning} onOpen={(ue,chapter,target)=>{setUE({...ue,chapter});nav(target);}} />
     ) : page === "tutor" ? (
       <TutorPage
         ues={ues}
@@ -104,13 +107,14 @@ export default function DesignPreview() {
       <QCMScreen
         ue={ue}
         user={student}
-        onDone={() => nav("progress")}
+        onDone={async data=>{const groups={};for(const a of data.answers){const g=groups[a.chapter] ||= {total:0,correct:0};g.total++;if(a.correct)g.correct++;}await onLearning(Object.entries(groups).map(([chapter,g])=>({type:'quiz',module:ue.id,chapter,...g})));nav("progress");}}
         onBack={() => nav("subject_hub")}
       />
     ) : page === "flashcards" ? (
       <FlashcardsScreen
         ue={ue}
         user={student}
+        onLearning={onLearning}
         onBack={() => nav("subject_hub")}
         onUpgrade={() => nav("pricing")}
       />
@@ -118,12 +122,15 @@ export default function DesignPreview() {
       <ResumeCoursScreen
         ue={ue}
         user={student}
+        onLearning={onLearning}
+        learning={learning}
         onBack={() => nav("subject_hub")}
       />
     ) : page === "cas_pratique" ? (
       <CasPratiqueScreen
         ue={ue}
         user={student}
+        onLearning={onLearning}
         onDone={() => nav("progress")}
         onBack={() => nav("subject_hub")}
       />

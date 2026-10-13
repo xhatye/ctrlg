@@ -6,6 +6,8 @@ import { readStudy } from '../lib/study-access.mjs';
 import { curriculumFor } from '../lib/curriculum.mjs';
 import { retrieveLessons } from '../lib/study-retrieval.mjs';
 import { reserveCost } from '../lib/ai-budget.mjs';
+import {chapterQuestionCount} from '../lib/question-pool.mjs';
+import {sourceQuestion} from './question-source.mjs';
 
 test('every chapter provides original prose, a complete correction, provenance and unique options',()=>{
   const questions=new Set();let chapters=0;
@@ -19,14 +21,14 @@ test('every chapter provides original prose, a complete correction, provenance a
       for(const q of c.cas.questions)assert.ok(q.enonce&&q.answer);
       const quiz=studyModule(id,'qcm',()=>.37,{chapter:c.id,count:20});
       const pool=c.practice || c.notions;
-      assert.equal(quiz.items.length,Math.min(20,pool.length));
+      assert.equal(quiz.items.length,Math.min(20,chapterQuestionCount(c)));
       for(const n of pool){assert.ok(n.body.length>60);assert.equal(n.wrong.length,3);assert.equal(new Set([n.correct,...n.wrong]).size,4);assert.ok(!questions.has(n.q),'Duplicate question: '+n.q);questions.add(n.q);}
-      for(const q of quiz.items){assert.equal(q.chapter,c.id);const n=m.notions[Number(q.id.split('-')[1])];assert.equal(q.options[q.answer],n.correct);}
-      assert.equal(studyModule(id,'cards',Math.random,{chapter:c.id}).items.length,Math.min(40,pool.length));
+      for(const q of quiz.items){assert.equal(q.chapter,c.id);const n=sourceQuestion(q);assert.equal(q.q,n.q);assert.equal(q.options[q.answer],n.correct);}
+      assert.equal(studyModule(id,'cards',Math.random,{chapter:c.id}).items.length,Math.min(40,chapterQuestionCount(c)));
       assert.equal(studyModule(id,'summary',Math.random,{chapter:c.id}).example.contexte,c.cas.contexte);
     }
   }
-  assert.equal(chapters,145);assert.equal(questions.size,6344);
+  assert.equal(chapters,185);assert.equal(questions.size,6504);
 });
 test('public catalogue contains counts and titles, never premium answers or lesson bodies',async()=>{
   const published=JSON.parse(readFileSync(new URL('../src/catalogue.json',import.meta.url),'utf8'));
@@ -35,7 +37,7 @@ test('public catalogue contains counts and titles, never premium answers or less
     assert.deepEqual(meta,published.modules[id]);
     const json=JSON.stringify(meta);for(const n of m.notions){assert.ok(!json.includes(n.q));assert.ok(!json.includes(n.body));}
   }
-  assert.deepEqual(published.totals,{subjects:20,chapters:145,questions:6344,cards:6344,cases:1585,concepts:584,applications:6000});
+  assert.deepEqual(published.totals,{subjects:20,chapters:185,questions:636504,cards:636504,cases:159125,concepts:744,applications:636000});
 });
 test('new premium chapters remain protected, and invalid chapters never read user data',async()=>{
   const noAuth={authenticate:async()=>{throw Object.assign(new Error('Connexion requise'),{status:401})}};

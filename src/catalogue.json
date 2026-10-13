@@ -2,12 +2,12 @@
   "version": "2026-10-13",
   "totals": {
     "subjects": 20,
-    "chapters": 145,
-    "questions": 6344,
-    "cards": 6344,
-    "cases": 1585,
-    "concepts": 584,
-    "applications": 6000
+    "chapters": 185,
+    "questions": 636504,
+    "cards": 636504,
+    "cases": 159125,
+    "concepts": 744,
+    "applications": 636000
   },
   "modules": {
     "UE1": {
@@ -15,17 +15,19 @@
       "title": "Fondamentaux du droit",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 24,
-      "cardCount": 24,
-      "caseCount": 6,
-      "conceptCount": 24,
+      "questionCount": 32,
+      "cardCount": 32,
+      "caseCount": 8,
+      "conceptCount": 32,
       "applicationCount": 0,
+      "comprehensionCount": 32,
       "chapters": [
         {
           "id": "reperes",
           "title": "Contrat et responsabilité",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -34,6 +36,7 @@
           "title": "Trouver la règle et établir les faits",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -42,6 +45,7 @@
           "title": "Former et exécuter un contrat",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -50,6 +54,7 @@
           "title": "Réparer un dommage : construire le raisonnement",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -58,6 +63,7 @@
           "title": "Formation du contrat : offre et acceptation",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -66,8 +72,27 @@
           "title": "Prouver une obligation et son paiement",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
+        },
+        {
+          "id": "personnes-patrimoine",
+          "title": "Personnes, personnalité juridique et patrimoine",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "biens-droits",
+          "title": "Biens, propriété et droits de créance",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -76,17 +101,19 @@
       "title": "Droit des affaires",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 116,
-      "cardCount": 116,
-      "caseCount": 29,
-      "conceptCount": 20,
-      "applicationCount": 100,
+      "questionCount": 10624,
+      "cardCount": 10624,
+      "caseCount": 2656,
+      "conceptCount": 28,
+      "applicationCount": 10600,
+      "comprehensionCount": 24,
       "chapters": [
         {
           "id": "reperes",
           "title": "Société et gouvernance",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -95,6 +122,7 @@
           "title": "Choisir et comprendre une forme sociale",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -103,6 +131,7 @@
           "title": "Pouvoirs et décisions dans la société",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -111,16 +140,36 @@
           "title": "Capital, compte courant et distribution",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
         {
           "id": "capital-votes-clauses",
           "title": "Capital et votes : appliquer une clause fournie",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
+        },
+        {
+          "id": "associe-dirigeant",
+          "title": "Associés et dirigeants : droits, pouvoirs et risques",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "transmission-titres",
+          "title": "Transmission des titres : agrément et formalités",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -129,17 +178,19 @@
       "title": "Droit social",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 24,
-      "cardCount": 24,
-      "caseCount": 6,
-      "conceptCount": 24,
+      "questionCount": 32,
+      "cardCount": 32,
+      "caseCount": 8,
+      "conceptCount": 32,
       "applicationCount": 0,
+      "comprehensionCount": 32,
       "chapters": [
         {
           "id": "reperes",
           "title": "Relation de travail",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -148,6 +199,7 @@
           "title": "Qualifier et former la relation de travail",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -156,6 +208,7 @@
           "title": "Exécuter et modifier le contrat de travail",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -164,6 +217,7 @@
           "title": "Relations collectives et règlement d’un litige",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -172,6 +226,7 @@
           "title": "Modification de la rémunération contractuelle",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -180,8 +235,27 @@
           "title": "Litige individuel : organiser un dossier prud’homal",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
+        },
+        {
+          "id": "qualification-salarie",
+          "title": "Salarié ou indépendant : examiner la relation réelle",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "collectif-negociation",
+          "title": "Relations collectives : acteurs et articulation des règles",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -190,17 +264,19 @@
       "title": "Droit fiscal",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 316,
-      "cardCount": 316,
-      "caseCount": 79,
-      "conceptCount": 28,
-      "applicationCount": 300,
+      "questionCount": 31824,
+      "cardCount": 31824,
+      "caseCount": 7956,
+      "conceptCount": 36,
+      "applicationCount": 31800,
+      "comprehensionCount": 24,
       "chapters": [
         {
           "id": "reperes",
           "title": "Calculs de TVA",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -209,6 +285,7 @@
           "title": "Passer du prix à la TVA",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -217,6 +294,7 @@
           "title": "Du résultat comptable au résultat fiscal",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -225,32 +303,54 @@
           "title": "Justifier une position fiscale",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
         {
           "id": "tva-credit-report",
           "title": "TVA : crédit antérieur et solde de période",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "is-taux-fourni",
           "title": "Impôt sur les sociétés : base et taux fournis",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "reintegration-amort",
           "title": "Amortissement comptable et limite fiscale fournie",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
+        },
+        {
+          "id": "mecanismes-imposition",
+          "title": "Assiette, fait générateur, exigibilité et liquidation",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 11
+        },
+        {
+          "id": "deficit-retraitement",
+          "title": "Résultat fiscal : corrections et interprétation d’un déficit",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -259,17 +359,19 @@
       "title": "Économie contemporaine",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 412,
-      "cardCount": 412,
-      "caseCount": 103,
-      "conceptCount": 28,
-      "applicationCount": 400,
+      "questionCount": 42420,
+      "cardCount": 42420,
+      "caseCount": 10605,
+      "conceptCount": 36,
+      "applicationCount": 42400,
+      "comprehensionCount": 20,
       "chapters": [
         {
           "id": "production",
           "title": "Production, valeur ajoutée et croissance",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -278,6 +380,7 @@
           "title": "Marchés, incitations et externalités",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -286,40 +389,63 @@
           "title": "Inflation et politiques économiques",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
         {
           "id": "croissance-reelle",
           "title": "Croissance nominale, prix et volume",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "indices-pouvoir-achat",
           "title": "Pouvoir d’achat : revenu et indice des prix",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "marche-travail-ratios",
           "title": "Marché du travail : activité et chômage",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "multiplicateur-simple",
           "title": "Modèle keynésien simple : multiplicateur",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
+        },
+        {
+          "id": "commerce-specialisation",
+          "title": "Commerce international : spécialisation et interdépendance",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "monnaie-credit",
+          "title": "Monnaie, crédit et transmission monétaire",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -328,17 +454,19 @@
       "title": "Finance d’entreprise",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 816,
-      "cardCount": 816,
-      "caseCount": 204,
-      "conceptCount": 48,
-      "applicationCount": 800,
+      "questionCount": 84824,
+      "cardCount": 84824,
+      "caseCount": 21206,
+      "conceptCount": 56,
+      "applicationCount": 84800,
+      "comprehensionCount": 24,
       "chapters": [
         {
           "id": "reperes",
           "title": "Équilibre financier et investissement",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -347,6 +475,7 @@
           "title": "Fonds de roulement, BFR et trésorerie",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -355,6 +484,7 @@
           "title": "Comparer des flux d’investissement",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -363,72 +493,99 @@
           "title": "Emprunt et plan de financement",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
         {
           "id": "diagnostic-fonctionnel",
           "title": "Bilan fonctionnel : financement et cycle",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "delais-rotation",
           "title": "Délais clients, fournisseurs et stocks",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "caf-additive",
           "title": "Capacité d’autofinancement : approche additive",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "rentabilite-levier",
           "title": "Rentabilité économique et effet de levier",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "van-deux-periodes",
           "title": "Investissement : VAN sur deux périodes",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "investissement-bfr",
           "title": "Projet : BFR initial et récupération finale",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "emprunt-constant",
           "title": "Emprunt : amortissement constant du capital",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "emprunt-annuite",
           "title": "Emprunt : annuités constantes",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
+        },
+        {
+          "id": "diagnostic-comparaison",
+          "title": "Diagnostic financier : ratios, comparaisons et limites",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "flux-activite",
+          "title": "Flux de trésorerie : activité, investissement et financement",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -437,17 +594,19 @@
       "title": "Management",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 216,
-      "cardCount": 216,
-      "caseCount": 54,
-      "conceptCount": 24,
-      "applicationCount": 200,
+      "questionCount": 21224,
+      "cardCount": 21224,
+      "caseCount": 5306,
+      "conceptCount": 32,
+      "applicationCount": 21200,
+      "comprehensionCount": 24,
       "chapters": [
         {
           "id": "reperes",
           "title": "Diagnostic et décisions",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -456,6 +615,7 @@
           "title": "Organisation et coordination",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -464,6 +624,7 @@
           "title": "Diagnostic interne et externe",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -472,24 +633,45 @@
           "title": "Décision, motivation et changement",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
         {
           "id": "productivite-organisation",
           "title": "Productivité : activité, heures et capacité",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "pilotage-commercial",
           "title": "Pilotage commercial : conversion et panier",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
+        },
+        {
+          "id": "structures-contingence",
+          "title": "Structures organisationnelles et contingence",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "motivation-travail",
+          "title": "Motivation, reconnaissance et conditions de travail",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -498,17 +680,19 @@
       "title": "Systèmes d’information de gestion",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 212,
-      "cardCount": 212,
-      "caseCount": 53,
-      "conceptCount": 20,
-      "applicationCount": 200,
+      "questionCount": 21220,
+      "cardCount": 21220,
+      "caseCount": 5305,
+      "conceptCount": 28,
+      "applicationCount": 21200,
+      "comprehensionCount": 20,
       "chapters": [
         {
           "id": "donnees",
           "title": "Structurer une base de données",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -517,6 +701,7 @@
           "title": "Interroger et contrôler les données",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -525,24 +710,45 @@
           "title": "Sécuriser les usages et les données",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
         {
           "id": "tableur-aggregation",
           "title": "Tableur : agrégats, moyennes et contrôle",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "sql-jointure-cardinalite",
           "title": "Données relationnelles : jointure et cardinalité",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
+        },
+        {
+          "id": "normalisation-donnees",
+          "title": "Modèle relationnel : dépendances et normalisation",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "sql-null-filtres",
+          "title": "SQL : filtres, valeurs NULL et agrégations",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -551,17 +757,19 @@
       "title": "Comptabilité",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 820,
-      "cardCount": 820,
-      "caseCount": 204,
-      "conceptCount": 52,
-      "applicationCount": 800,
+      "questionCount": 84828,
+      "cardCount": 84828,
+      "caseCount": 21206,
+      "conceptCount": 60,
+      "applicationCount": 84800,
+      "comprehensionCount": 28,
       "chapters": [
         {
           "id": "reperes",
           "title": "Premiers mécanismes comptables",
           "questionCount": 8,
           "caseCount": 1,
+          "comprehensionCount": 8,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 10
         },
@@ -570,6 +778,7 @@
           "title": "Enregistrer achats, ventes et règlements",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -578,6 +787,7 @@
           "title": "Stocks et rattachement à l’exercice",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -586,72 +796,99 @@
           "title": "Immobilisations et dépréciations",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
         {
           "id": "facture-remises",
           "title": "Facture : remises successives et TVA",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "escompte-reglement",
           "title": "Escompte de règlement et dette TTC",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "cmp-periodique",
           "title": "Stock : coût moyen pondéré périodique",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "fifo-deux-lots",
           "title": "Stock : premier entré, premier sorti",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "amortissement-prorata",
           "title": "Amortissement linéaire et prorata temporis",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "rapprochement-banque",
           "title": "Rapprochement bancaire : opérations en circulation",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "charges-constatees-avance",
           "title": "Assurance et charges constatées d’avance",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "creance-douteuse",
           "title": "Créance douteuse et dépréciation HT",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
+        },
+        {
+          "id": "chaine-comptable",
+          "title": "De la pièce au bilan : chaîne comptable et contrôles",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "inventaire-cutoff",
+          "title": "Inventaire : charges et produits à rattacher",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -660,17 +897,19 @@
       "title": "Comptabilité approfondie",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 416,
-      "cardCount": 416,
-      "caseCount": 104,
-      "conceptCount": 32,
-      "applicationCount": 400,
+      "questionCount": 42424,
+      "cardCount": 42424,
+      "caseCount": 10606,
+      "conceptCount": 40,
+      "applicationCount": 42400,
+      "comprehensionCount": 24,
       "chapters": [
         {
           "id": "reperes",
           "title": "Estimation et dépréciation",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -679,6 +918,7 @@
           "title": "Évaluer et documenter un actif",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -687,6 +927,7 @@
           "title": "Dettes, provisions et événements",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -695,40 +936,63 @@
           "title": "Capitaux propres et affectation du résultat",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
         {
           "id": "composants-machines",
           "title": "Immobilisation : amortissement par composants",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "cession-immobilisation",
           "title": "Cession d’un actif : VNC et résultat",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "augmentation-capital",
           "title": "Augmentation de capital : nominal et prime",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "provision-evolution",
           "title": "Provision : dotation, reprise et solde",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
+        },
+        {
+          "id": "cout-entree-actif",
+          "title": "Coût d’entrée : acquisition, entretien et estimation",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "estimations-evenements",
+          "title": "Estimations comptables et événements après clôture",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -737,17 +1001,19 @@
       "title": "Contrôle de gestion",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 1012,
-      "cardCount": 1012,
-      "caseCount": 253,
-      "conceptCount": 52,
-      "applicationCount": 1000,
+      "questionCount": 106020,
+      "cardCount": 106020,
+      "caseCount": 26505,
+      "conceptCount": 60,
+      "applicationCount": 106000,
+      "comprehensionCount": 20,
       "chapters": [
         {
           "id": "couts",
           "title": "Coûts directs et indirects",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -756,6 +1022,7 @@
           "title": "Marge et seuil de rentabilité",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -764,88 +1031,117 @@
           "title": "Budgets et analyse des écarts",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
         {
           "id": "cout-complet-centre",
           "title": "Centre d’analyse : unité d’œuvre et imputation",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "abc-deux-activites",
           "title": "Coût ABC : inducteurs d’activités",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "cout-variable-seuil",
           "title": "Coûts variables et seuil de rentabilité",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "securite-point-mort",
           "title": "Marge de sécurité et point mort",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "commande-supplementaire",
           "title": "Commande supplémentaire : coût pertinent",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "contrainte-goulot",
           "title": "Goulot de production : marge par heure rare",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "ecart-matiere",
           "title": "Matière : écarts sur prix et quantité",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "budget-ventes",
           "title": "Budget des ventes et encaissements",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "budget-production",
           "title": "Budget de production et stock cible",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "wilson-stocks",
           "title": "Gestion des stocks : modèle de Wilson",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
+        },
+        {
+          "id": "couts-incorporation",
+          "title": "Coûts : charges incorporées et périmètre de calcul",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "ecarts-action",
+          "title": "Analyse des écarts : du constat à l’action",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -854,17 +1150,19 @@
       "title": "Anglais des affaires",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 20,
-      "cardCount": 20,
-      "caseCount": 5,
-      "conceptCount": 20,
+      "questionCount": 28,
+      "cardCount": 28,
+      "caseCount": 7,
+      "conceptCount": 28,
       "applicationCount": 0,
+      "comprehensionCount": 28,
       "chapters": [
         {
           "id": "vocabulaire",
           "title": "Lire les chiffres d’une entreprise en anglais",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -873,6 +1171,7 @@
           "title": "Écrire un message professionnel clair",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -881,6 +1180,7 @@
           "title": "Décrire une évolution sans déformer les chiffres",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -889,6 +1189,7 @@
           "title": "Business English : décrire les variations",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -897,8 +1198,27 @@
           "title": "Business English : résultat, bilan et trésorerie",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
+        },
+        {
+          "id": "anglais-email",
+          "title": "Anglais : demander, préciser et relancer professionnellement",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "anglais-entreprise",
+          "title": "Anglais : présenter une activité, ses moyens et ses résultats",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -907,17 +1227,19 @@
       "title": "Communication professionnelle",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 20,
-      "cardCount": 20,
-      "caseCount": 5,
-      "conceptCount": 20,
+      "questionCount": 28,
+      "cardCount": 28,
+      "caseCount": 7,
+      "conceptCount": 28,
       "applicationCount": 0,
+      "comprehensionCount": 28,
       "chapters": [
         {
           "id": "experience",
           "title": "Analyser une expérience professionnelle",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -926,6 +1248,7 @@
           "title": "Structurer un rapport et ses références",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -934,6 +1257,7 @@
           "title": "Préparer une soutenance professionnelle",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -942,6 +1266,7 @@
           "title": "Rapport professionnel : décrire et analyser une mission",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -950,8 +1275,27 @@
           "title": "Soutenance : argumenter une réponse précise",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
+        },
+        {
+          "id": "communication-destinataire",
+          "title": "Communication professionnelle : adapter le message au lecteur",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "rapport-references",
+          "title": "Rapport : citations, sources et travail personnel",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -960,17 +1304,19 @@
       "title": "Gestion juridique, fiscale et sociale",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 116,
-      "cardCount": 116,
-      "caseCount": 29,
-      "conceptCount": 20,
-      "applicationCount": 100,
+      "questionCount": 10624,
+      "cardCount": 10624,
+      "caseCount": 2656,
+      "conceptCount": 28,
+      "applicationCount": 10600,
+      "comprehensionCount": 24,
       "chapters": [
         {
           "id": "reperes",
           "title": "Analyse d’un dossier transversal",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -979,6 +1325,7 @@
           "title": "Construire un diagnostic juridique transversal",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -987,6 +1334,7 @@
           "title": "Restructuration : qualifier avant de chiffrer",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -995,16 +1343,36 @@
           "title": "Gouvernance, financement et vigilance",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
         {
           "id": "cession-dette-prix",
           "title": "Cession de titres : dette nette et ajustement convenu",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
+        },
+        {
+          "id": "negociation-risques",
+          "title": "Négociation contractuelle : confidentialité et risques",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "restructuration-dossier",
+          "title": "Restructuration : opérations, continuité et vérifications",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -1013,17 +1381,19 @@
       "title": "Finance",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 816,
-      "cardCount": 816,
-      "caseCount": 204,
-      "conceptCount": 48,
-      "applicationCount": 800,
+      "questionCount": 84824,
+      "cardCount": 84824,
+      "caseCount": 21206,
+      "conceptCount": 56,
+      "applicationCount": 84800,
+      "comprehensionCount": 24,
       "chapters": [
         {
           "id": "reperes",
           "title": "Actualisation et coût du capital",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 10
         },
@@ -1032,6 +1402,7 @@
           "title": "Valoriser des flux et choisir un taux",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1040,6 +1411,7 @@
           "title": "Rendement, risque et diversification",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1048,72 +1420,99 @@
           "title": "Taux, change et financement",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
         {
           "id": "cmpp-ponderation",
           "title": "Coût moyen pondéré du capital",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "medaf-beta",
           "title": "MEDAF : bêta et rendement exigé",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "dcf-croissance",
           "title": "DCF : valeur terminale à croissance constante",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "valeur-actions",
           "title": "De la valeur d’entreprise à la valeur par action",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "obligation-coupon",
           "title": "Obligation : coupon et prix actualisé",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "portefeuille-deux-actifs",
           "title": "Portefeuille : rendement et variance",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "change-devises",
           "title": "Change : cotation et couverture à terme",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "options-intrinseque",
           "title": "Options : valeur intrinsèque et résultat à l’échéance",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
+        },
+        {
+          "id": "evaluation-multiples",
+          "title": "Évaluation par multiples : comparables et périmètres",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "information-marches",
+          "title": "Marchés : information, prix et limites du raisonnement",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -1122,17 +1521,19 @@
       "title": "Contrôle de gestion et stratégie",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 416,
-      "cardCount": 416,
-      "caseCount": 104,
-      "conceptCount": 32,
-      "applicationCount": 400,
+      "questionCount": 42424,
+      "cardCount": 42424,
+      "caseCount": 10606,
+      "conceptCount": 40,
+      "applicationCount": 42400,
+      "comprehensionCount": 24,
       "chapters": [
         {
           "id": "reperes",
           "title": "Marges, seuil et pilotage",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1141,6 +1542,7 @@
           "title": "Performance et tableaux de bord",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1149,6 +1551,7 @@
           "title": "Activités et décisions de gestion",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1157,40 +1560,63 @@
           "title": "Stratégie, responsabilités et changement",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
         {
           "id": "prix-transfert-division",
           "title": "Prix de transfert : résultats des divisions",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "cout-cible",
           "title": "Coût cible et effort de réduction",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "tableau-bord-qualite",
           "title": "Tableau de bord : qualité et coût de non-qualité",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "choix-sous-traitance",
           "title": "Faire ou sous-traiter : coûts évitables",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
+        },
+        {
+          "id": "responsabilites-incitations",
+          "title": "Centres de responsabilité : mesures et comportements",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "strategie-mise-en-oeuvre",
+          "title": "Stratégie : traduire les choix en actions et indicateurs",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -1199,17 +1625,19 @@
       "title": "Comptabilité et audit",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 316,
-      "cardCount": 316,
-      "caseCount": 79,
-      "conceptCount": 28,
-      "applicationCount": 300,
+      "questionCount": 31824,
+      "cardCount": 31824,
+      "caseCount": 7956,
+      "conceptCount": 36,
+      "applicationCount": 31800,
+      "comprehensionCount": 24,
       "chapters": [
         {
           "id": "reperes",
           "title": "Audit et valeur recouvrable",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1218,6 +1646,7 @@
           "title": "Périmètre et logique de consolidation",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1226,6 +1655,7 @@
           "title": "Assertions et éléments probants",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1234,32 +1664,54 @@
           "title": "Comparer les cadres et tester une perte de valeur",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
         {
           "id": "elimination-intragroupe",
           "title": "Consolidation : marge interne sur stocks",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "ecart-acquisition-donne",
           "title": "Acquisition : goodwill avec conventions fournies",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "test-depreciation-ias",
           "title": "IAS 36 : valeur recouvrable et perte de valeur",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
+        },
+        {
+          "id": "consol-controle",
+          "title": "Consolidation : contrôle, influence et mesure des intérêts",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "audit-planification",
+          "title": "Audit : risques, planification et jugement",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -1268,17 +1720,19 @@
       "title": "Management des systèmes d’information",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 216,
-      "cardCount": 216,
-      "caseCount": 54,
-      "conceptCount": 24,
-      "applicationCount": 200,
+      "questionCount": 21224,
+      "cardCount": 21224,
+      "caseCount": 5306,
+      "conceptCount": 32,
+      "applicationCount": 21200,
+      "comprehensionCount": 24,
       "chapters": [
         {
           "id": "reperes",
           "title": "Contrôle et sécurité du SI",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1287,6 +1741,7 @@
           "title": "Gouvernance et alignement du SI",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1295,6 +1750,7 @@
           "title": "Piloter un projet numérique",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1303,24 +1759,45 @@
           "title": "Risques, continuité et qualité des données",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
         {
           "id": "projet-si-budget",
           "title": "Projet SI : budget, marge et aléas",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
         },
         {
           "id": "disponibilite-si",
           "title": "Disponibilité : taux et indisponibilité mesurée",
-          "questionCount": 100,
-          "caseCount": 25,
+          "questionCount": 10600,
+          "caseCount": 2650,
+          "comprehensionCount": 0,
           "practiceKind": "Variantes chiffrées de quatre tâches, avec hypothèses explicites",
           "minutes": 11
+        },
+        {
+          "id": "si-sourcing",
+          "title": "SI externalisé : contrat, dépendance et réversibilité",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "si-controles-donnees",
+          "title": "SI : qualité des données, traçabilité et contrôles",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -1329,17 +1806,19 @@
       "title": "Anglais des affaires",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 20,
-      "cardCount": 20,
-      "caseCount": 5,
-      "conceptCount": 20,
+      "questionCount": 28,
+      "cardCount": 28,
+      "caseCount": 7,
+      "conceptCount": 28,
       "applicationCount": 0,
+      "comprehensionCount": 28,
       "chapters": [
         {
           "id": "presenter",
           "title": "Présenter une analyse en anglais",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1348,6 +1827,7 @@
           "title": "Argumenter et répondre aux questions",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1356,6 +1836,7 @@
           "title": "Analyser un document économique en anglais",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1364,6 +1845,7 @@
           "title": "Anglais oral : construire une argumentation",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1372,8 +1854,27 @@
           "title": "Anglais : synthétiser une note financière",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
+        },
+        {
+          "id": "anglais-debat",
+          "title": "Anglais oral : discuter une décision et une objection",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "anglais-risques",
+          "title": "Anglais oral : présenter risques et recommandations",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     },
@@ -1382,17 +1883,19 @@
       "title": "Mémoire professionnel",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 20,
-      "cardCount": 20,
-      "caseCount": 5,
-      "conceptCount": 20,
+      "questionCount": 28,
+      "cardCount": 28,
+      "caseCount": 7,
+      "conceptCount": 28,
       "applicationCount": 0,
+      "comprehensionCount": 28,
       "chapters": [
         {
           "id": "problematique",
           "title": "Construire une problématique de mémoire",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1401,6 +1904,7 @@
           "title": "Choisir une méthode et protéger le terrain",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1409,6 +1913,7 @@
           "title": "Interpréter, référencer et défendre le mémoire",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1417,6 +1922,7 @@
           "title": "Mémoire : construire une problématique analysable",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
         },
@@ -1425,8 +1931,27 @@
           "title": "Mémoire : entretiens, codage et triangulation",
           "questionCount": 4,
           "caseCount": 1,
+          "comprehensionCount": 4,
           "practiceKind": "Questions de compréhension et cas original",
           "minutes": 9
+        },
+        {
+          "id": "memoire-validite",
+          "title": "Mémoire : validité, biais et portée des résultats",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
+        },
+        {
+          "id": "memoire-plan-analyse",
+          "title": "Mémoire : organiser démonstration, résultats et discussion",
+          "questionCount": 4,
+          "caseCount": 1,
+          "comprehensionCount": 4,
+          "practiceKind": "Questions de compréhension et cas original",
+          "minutes": 10
         }
       ]
     }

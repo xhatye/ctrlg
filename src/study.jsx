@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { loadStudy } from "./study-client";
 import { ChapterSelect } from './chapter-navigation';
 
@@ -75,17 +75,22 @@ function LoadState({ loading, error, retry }) {
     </div>
   ) : null;
 }
-export function SavedLesson({ ue, onBack }) {
+export function SavedLesson({ ue, onBack, onLearning, learning={} }) {
   const [chapter,setChapter]=useState(ue.chapter || '');
   useEffect(()=>setChapter(ue.chapter || ''),[ue.id,ue.chapter]);
   const state = useModule(ue.id, "summary", chapter);
+  const [saved,setSaved]=useState(''),receipt=useRef(crypto.randomUUID());
+  useEffect(()=>{setSaved('');receipt.current=crypto.randomUUID();},[ue.id,chapter]);
+  const markRead=async()=>{setSaved('saving');try{await onLearning?.([{id:receipt.current,module:ue.id,chapter:state.data.chapter,type:'lesson'}]);setSaved('done');}catch{setSaved('error');}};
+  const read=learning.chapters?.[ue.id+'/'+state.data?.chapter]?.lessonRead;
   return (
     <Frame title={state.data?.title || ue.label} ue={ue} onBack={onBack}>
-      <ChapterSelect id={ue.id} value={chapter} onChange={setChapter} />
+      <ChapterSelect id={ue.id} value={chapter} onChange={setChapter} disabled={saved==='saving'} />
       <LoadState {...state} />
       {state.data && (
         <>
           <article className="lesson-intro panel"><span className="eyebrow">LE POINT DE DÉPART</span><p>{state.data.intro}</p><h3>Comment travailler ce chapitre</h3><p>{state.data.method}</p></article>
+          <section className="panel lesson-objectives"><h2>Ce que vous allez travailler</h2><ul>{state.data.learningGoals.map(g=><li key={g}>{g}</li>)}</ul><p className="helper">Prérequis : {state.data.prerequisites.join(' ')}</p></section>
           <div className="saved-grid">
             {state.data.sections.map((s, i) => (
               <article className="panel" key={s.titre}>
@@ -109,15 +114,18 @@ export function SavedLesson({ ue, onBack }) {
             <p>{state.data.conseil_exam}</p>
           </div>
           <SourceLinks sources={state.data.sources} />
-          <p className="helper">Références consultées le {state.data.verifiedAt}. Texte et exercices originaux SIMDCG.</p>
+          <p className="helper">Texte et exercices originaux SIMDCG.</p>
+          {onLearning&&<section className="panel learning-check"><h2>Votre étape de lecture</h2><p>Marquez le chapitre après l’avoir lu et reformulé. Cette étape est déclarative ; les exercices vous permettent ensuite de vérifier votre compréhension.</p><button className="btn" disabled={saved==='saving'||saved==='done'||read} onClick={markRead}>{read||saved==='done'?'Chapitre marqué comme lu':saved==='saving'?'Enregistrement…':'Marquer ce chapitre comme lu'}</button>{saved==='error'&&<p role="alert">La progression n’a pas été enregistrée. Vous pouvez réessayer.</p>}</section>}
         </>
       )}
     </Frame>
   );
 }
-export function CasePractice({ ue, user, onDone, onBack }) {
+export function CasePractice({ ue, user, onDone, onBack, onLearning }) {
   const [chapter,setChapter]=useState(ue.chapter || '');
   const [variant,setVariant]=useState(0);
+  const [variantDraft,setVariantDraft]=useState('1');
+  useEffect(()=>setVariantDraft(String(variant+1)),[variant]);
   useEffect(()=>{setChapter(ue.chapter || '');setVariant(0);},[ue.id,ue.chapter]);
   const state = useModule(ue.id, "case", chapter, variant),
     [answer, setAnswer] = useState(""),
@@ -125,12 +133,15 @@ export function CasePractice({ ue, user, onDone, onBack }) {
     [saving, setSaving] = useState(false),
     [saved, setSaved] = useState(false),
     [saveError, setSaveError] = useState("");
+  const [progressStatus,setProgressStatus]=useState(''),receipt=useRef(crypto.randomUUID());
   useEffect(() => {
     setAnswer("");
     setShown(false);
     setSaved(false);
     setSaveError('');
+    setProgressStatus('');receipt.current=crypto.randomUUID();
   }, [ue.id, chapter, variant]);
+  const compare=async()=>{setShown(true);if(!onLearning||progressStatus==='done'||progressStatus==='saving')return;setProgressStatus('saving');try{await onLearning([{id:receipt.current,type:'case',module:ue.id,chapter:state.data.chapter,variant}]);setProgressStatus('done');}catch{setProgressStatus('error');}};
   const record = async () => {
     if (saving || saved) return;
     setSaving(true);
@@ -154,11 +165,11 @@ export function CasePractice({ ue, user, onDone, onBack }) {
   };
   return (
     <Frame title={state.data?.titre || "Cas pratique"} ue={ue} onBack={onBack}>
-      <ChapterSelect id={ue.id} value={chapter} onChange={value=>{setChapter(value);setVariant(0);}} disabled={saving} />
+      <ChapterSelect id={ue.id} value={chapter} onChange={value=>{setChapter(value);setVariant(0);}} disabled={saving||progressStatus==='saving'} />
       <LoadState {...state} />
       {state.data && (
         <>
-          {state.data.caseVariants.length>1&&<div className="session-controls"><label className="chapter-select">Dossier d’entraînement<select aria-label="Dossier d’entraînement" disabled={saving} value={variant} onChange={e=>setVariant(Number(e.target.value))}>{state.data.caseVariants.map(v=><option key={v.id} value={v.id}>{v.title}</option>)}</select></label><p className="helper">{state.data.practiceKind}. Changer de dossier réinitialise votre réponse et le corrigé.</p></div>}
+          {state.data.variantCount>1&&<div className="session-controls"><label className="chapter-select">Dossier d’entraînement<input aria-label="Dossier d’entraînement" type="number" min="1" max={state.data.variantCount} disabled={saving||progressStatus==='saving'} value={variantDraft} onChange={e=>setVariantDraft(e.target.value)} /></label><span className="helper">sur {state.data.variantCount.toLocaleString('fr-FR')} variantes. Choisissez un numéro puis ouvrez le dossier ; votre réponse est remise à zéro.</span><button className="btn" disabled={saving||progressStatus==='saving'||!Number.isInteger(Number(variantDraft))||Number(variantDraft)<1||Number(variantDraft)>state.data.variantCount} onClick={()=>setVariant(Number(variantDraft)-1)}>Ouvrir le dossier</button><button className="btn btn-secondary" disabled={variant===0||saving||progressStatus==='saving'} onClick={()=>setVariant(v=>v-1)}>Précédent</button><button className="btn btn-secondary" disabled={variant+1>=state.data.variantCount||saving||progressStatus==='saving'} onClick={()=>setVariant(v=>v+1)}>Suivant</button></div>}
           <article className="panel">
             <span className="eyebrow">
               EXERCICE ORIGINAL · {state.data.duree_estimee}
@@ -183,7 +194,7 @@ export function CasePractice({ ue, user, onDone, onBack }) {
           </label>
           <button
             className="btn"
-            onClick={() => setShown(true)}
+            onClick={compare}
             disabled={!answer.trim()}
           >
             Comparer avec le corrigé
@@ -194,6 +205,8 @@ export function CasePractice({ ue, user, onDone, onBack }) {
               <p>
                 Aucune note automatique : vérifiez vos étapes et vos calculs.
               </p>
+              {progressStatus==='done'&&<p role="status">Étape « cas travaillé » enregistrée.</p>}
+              {progressStatus==='error'&&<p role="alert">Le corrigé reste visible. <button className="text-button" onClick={compare}>Réessayer l’enregistrement de la progression</button></p>}
               {state.data.questions.map((q) => (
                 <div key={q.num}>
                   <h3>Question {q.num}</h3>
