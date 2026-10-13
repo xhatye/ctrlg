@@ -2,11 +2,9 @@
 
 ## Contenus publiés
 
-20 matières obligatoires : 13 DCG et 7 DSCG. La banque comprend 185 chapitres de cours, 636 504 questions à choix multiples expliquées, 636 504 flashcards et 159 125 cas avec trois questions corrigées chacun. Ces volumes comprennent explicitement des variantes chiffrées d’entraînement.
+20 matières obligatoires : 13 DCG et 7 DSCG. La banque comprend 185 chapitres, 1 863 QCM de notions et d’application à un dossier, 1 609 cartes de rappel indépendantes et 185 modèles de cas. Chaque cours contient des explications, une méthode, des termes à revoir et un exemple corrigé. Les cours qualitatifs relient les notions à une méthode disciplinaire et à un atelier commenté ; les cours numériques détaillent relations, unités, hypothèses et applications. Les anciens identifiants et la progression sont conservés.
 
-L’extension ajoute 40 cours originaux, deux par matière, avec objectifs, prérequis, repères, erreurs fréquentes et cas corrigé. Les 744 repères de cours sont distingués des volumes d’exercices. Il existe 504 questions de compréhension ; elles se sélectionnent séparément des applications chiffrées.
-
-La banque numérique comprend 60 familles de calcul, chacune avec quatre tâches et 2 650 jeux de données distincts. Cela représente 636 000 questions et cartes d’application, et 159 000 variantes de dossiers. Les autres 125 cas sont des dossiers originaux de compréhension. Les variantes ne sont pas des cours ou concepts indépendants. Par rapport à la version précédente (6 344 questions et 1 585 cas), les volumes d’exercices dépassent ×100 ; le nombre de chapitres passe de 145 à 185.
+Les 60 familles de calcul disposent chacune de quatre tâches et de 2 650 jeux de données. Cela représente 636 000 questions numériques et 159 000 variantes de dossiers, présentées séparément des volumes de notions et des modèles de cas. Les 125 autres dossiers sont accompagnés d’une reprise guidée et d’un atelier de révision, sans prétendre que ce sont deux scénarios indépendants. Les flashcards de rappel ne sont plus comptées à partir de la banque de QCM.
 
 Les variantes sont préparées à la demande à partir de données originales et contraintes. Les séries ne chargent que les éléments demandés. Les choix sont mélangés et les corrections calculées sans appel IA. Un contrôle hors ligne repère les collisions de contextes ; 220 corrections de graines déterministes sont enregistrées dans une table sparse. Les premières 25 variantes sont conservées.
 

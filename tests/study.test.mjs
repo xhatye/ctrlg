@@ -1,9 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { MODULES, studyModule } from "../lib/study-content.mjs";
+import { MODULES, studyModule, moduleCatalogue } from "../lib/study-content.mjs";
 import { readStudy } from "../lib/study-access.mjs";
 import {sourceQuestion} from './question-source.mjs';
-test("all advertised modules have unambiguous quizzes and matching cards", () => {
+test("all advertised modules have unambiguous quizzes and separate recall cards", () => {
   assert.equal(Object.keys(MODULES).length, 20);
   let total = 0;
   for (const [id, m] of Object.entries(MODULES)) {
@@ -21,7 +21,7 @@ test("all advertised modules have unambiguous quizzes and matching cards", () =>
         assert.equal(item.options[item.answer], sourceQuestion(item).correct);
       }
     }
-    assert.equal(studyModule(id, "cards").items.length, Math.min(40,m.notions.length));
+    assert.equal(studyModule(id, "cards").items.length, Math.min(40,moduleCatalogue(id).cardCount));
     assert.equal(studyModule(id, "case").questions.length, 3);
     total += m.notions.length;
   }

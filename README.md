@@ -27,9 +27,10 @@ Cette archive contient les sources corrigées. Elle ne contient ni secrets, ni c
 - `src/billing-client.js` : paiement et récupération authentifiés.
 - `api/stripe-checkout.js`, `api/stripe-webhook.js`, `api/stripe-reconcile.js`, `api/stripe-subscription.js` : parcours d’achat et gestion ciblée de SIMDCG.
 - `lib/billing.mjs`, `lib/webhook.mjs` : validation des offres, droits et signatures.
-- `lib/study-content.mjs`, `api/study.js`, `src/study.jsx` : 13 modules, 56 QCM, 56 cartes et 13 cas originaux servis sans IA, avec contrôle Pro côté serveur.
+- `lib/study-content.mjs`, `api/study.js`, `src/study.jsx` : 20 matières, 185 chapitres, 1 863 QCM de notions, 1 609 cartes de rappel et 185 modèles de cas servis sans IA, avec contrôle Pro côté serveur.
+- `api/case-review.js`, `lib/case-review.mjs`, `lib/case-checks.mjs` : vérification locale des étapes et retour IA écrit facultatif, limité à 5 demandes par jour et 60 par mois dans le budget du tuteur.
 - `api/chat.js`, `lib/ai-budget.mjs` : tuteur optionnel avec authentification et réservations de budget transactionnelles.
-- `tests/` : 44 tests locaux, comprenant un parcours webhook signé avec une base simulée et les limites de budget.
+- `tests/` : 73 tests locaux, comprenant un parcours webhook signé avec une base simulée et les limites de budget.
 
 ## Aperçu du design
 
@@ -37,4 +38,4 @@ En développement seulement, `/?design=landing` et `/?design=dashboard` affichen
 
 ## État de livraison
 
-Compilation, 44 tests locaux et 40 vues ordinateur/mobile vérifiés. Le 12 octobre 2026, le renvoi d’un événement Checkout réel signé a reçu une réponse HTTP 200 avec `isPro: true` sur le site de production. Cela confirme le traitement de cet achat existant ; aucun nouveau paiement n’a été créé. La banque de révision couvre partiellement les matières et devra être enrichie et relue pédagogiquement. Le service Evidstack conserve son propre endpoint et ses déploiements.
+Compilation, 73 tests locaux et 40 vues ordinateur/mobile vérifiés. Le 12 octobre 2026, le renvoi d’un événement Checkout réel signé a reçu une réponse HTTP 200 avec `isPro: true` sur le site de production. Cela confirme le traitement de cet achat existant ; aucun nouveau paiement n’a été créé. La banque de révision couvre partiellement les matières et devra être enrichie et relue pédagogiquement. Le service Evidstack conserve son propre endpoint et ses déploiements.

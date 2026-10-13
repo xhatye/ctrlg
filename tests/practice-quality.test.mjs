@@ -163,9 +163,9 @@ test('hundredfold practice is labelled, addressable and bounded per request',()=
  assert.notEqual(first.contexte,last.contexte);assert.equal(last.variantCount,2650);
  assert.throws(()=>studyModule('UE9','case',Math.random,{chapter:c.id,variant:2650}),{status:404});
  assert.throws(()=>studyModule('UE9','case',Math.random,{variant:-1}),{status:404});
- const cards=studyModule('UE9','cards',Math.random,{chapter:c.id,count:100});assert.equal(cards.items.length,100);assert.equal(new Set(cards.items.map(i=>i.id)).size,100);
- assert.equal(studyModule('UE9','cards',Math.random,{chapter:c.id,count:20}).items.length,20);
- assert.ok(cards.items.every(i=>i.kind==='Application chiffrée'));
+ const cards=studyModule('UE9','cards',Math.random,{chapter:c.id,count:100,focus:'application'});assert.equal(cards.items.length,100);assert.equal(new Set(cards.items.map(i=>i.id)).size,100);
+ assert.equal(studyModule('UE9','cards',Math.random,{chapter:c.id,count:20,focus:'application'}).items.length,20);
+ assert.ok(cards.items.every(i=>i.kind==='Exercice de calcul'));
 });
 
 test('no anonymous or unpaid account can read any of the 20 subjects',async()=>{

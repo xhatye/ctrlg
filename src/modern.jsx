@@ -308,7 +308,7 @@ export function Marketing({ onAuth, onNav, ues }) {
           </div>
           <HomeStudyPath ues={ues} onNav={onNav}/>
         </section>
-        <section className="container library-numbers" aria-label="Contenu de la bibliothèque">{[[catalogue.totals.subjects,'matières DCG et DSCG'],[catalogue.totals.chapters,'chapitres de cours'],[catalogue.totals.questions,'QCM expliqués'],[catalogue.totals.cards,'flashcards'],[catalogue.totals.cases,'cas corrigés']].map(([count,label])=><div key={label}><strong>{count.toLocaleString('fr-FR')}</strong><span>{label}</span></div>)}<p>{catalogue.totals.concepts} repères de cours ; les exercices incluent {catalogue.totals.applications.toLocaleString('fr-FR')} applications chiffrées réparties en variantes. Contenus originaux, couverture partielle des programmes.</p></section>
+        <section className="container library-numbers" aria-label="Contenu de la bibliothèque">{[[catalogue.totals.subjects,'matières DCG et DSCG'],[catalogue.totals.chapters,'chapitres de cours'],[catalogue.totals.curatedQuestions,'QCM de notions expliqués'],[catalogue.totals.cards,'flashcards'],[catalogue.totals.curatedCases,'modèles de cas corrigés']].map(([count,label])=><div key={label}><strong>{count.toLocaleString('fr-FR')}</strong><span>{label}</span></div>)}<p>Cours, questions de raisonnement et cartes de rappel forment des banques distinctes. Les calculs proposent aussi des variantes chiffrées, affichées séparément dans les chapitres concernés.</p></section>
         <div className="container exam-home"><ExamCountdown /></div>
         <div className="subject-strip">
           <div className="container">
@@ -460,7 +460,7 @@ export function ProductShell({ children, screen, user, onNav, onLogout }) {
     ["library", "book", "Mes matières"],
     ["planning", "calendar", "Mon planning"],
     ["tutor", "spark", "Tuteur IA"],
-    ["interview_config", "user", "Préparation orale"],
+    ["interview_config", "user", "Préparer l’oral par écrit"],
     ["progress", "chart", "Ma progression"],
     ["history", "clock", "Historique"],
     ["account", "user", "Mon compte"],
@@ -599,7 +599,7 @@ function UECard({ ue, mastery, onClick }) {
       </div>
       <h3>{ue.label}</h3>
       <p>{ue.desc}</p>
-      <span className="ue-content-count">{catalogue.modules[ue.id]?.chapters.length} cours · {catalogue.modules[ue.id]?.questionCount} QCM</span>
+      <span className="ue-content-count">{catalogue.modules[ue.id]?.chapters.length} cours · {catalogue.modules[ue.id]?.curatedQuestionCount} QCM de notions</span>
       <div className="ue-mastery">
         <span>
           {mastery?.attempts
@@ -957,7 +957,7 @@ export function OfferPage({ user, onCheckout, onNav }) {
                 "13 matières DCG + 7 matières DSCG",
                 "QCM, fiches et flashcards",
                 "Cas pratiques et corrigés enregistrés",
-                "Planning et préparation orale sans IA",
+                "Planning et préparation écrite à l’oral sans IA",
                 "Tuteur IA : 20 demandes/jour, 300/mois",
                 "Accès pendant 90 jours",
               ].map((x) => (
@@ -1012,8 +1012,8 @@ export function OfferPage({ user, onCheckout, onNav }) {
           </article>
         </div>
         <p className="pricing-footnote">
-          Bibliothèque : {catalogue.totals.questions.toLocaleString('fr-FR')} QCM, {catalogue.totals.cards.toLocaleString('fr-FR')} flashcards, {catalogue.totals.chapters} chapitres de cours et {catalogue.totals.cases.toLocaleString('fr-FR')} cas
-          corrigés, variantes chiffrées comprises. Couverture partielle du programme ; ces contenus ne sont
+          Bibliothèque : {catalogue.totals.curatedQuestions.toLocaleString('fr-FR')} QCM, {catalogue.totals.cards.toLocaleString('fr-FR')} flashcards, {catalogue.totals.chapters} chapitres de cours et {catalogue.totals.curatedCases.toLocaleString('fr-FR')} modèles
+          de cas corrigés, complétés par des variantes de calcul. Couverture partielle du programme ; ces contenus ne sont
           pas des annales officielles. Le tuteur est optionnel, soumis aux
           quotas et à un budget de génération. Une panne du tuteur ne bloque pas
           les révisions.
@@ -1505,7 +1505,7 @@ export function PublicInfo({ page, onNav, onAuth, ues }) {
                     <span className="ue-code">{ue.id}</span>
                     <h3>{ue.label}</h3>
                     <p>{ue.desc}</p>
-                    <details className="programme-chapters"><summary>Voir les {catalogue.modules[ue.id]?.chapters.length} chapitres et les volumes</summary><p className="helper">{catalogue.modules[ue.id]?.questionCount} QCM · {catalogue.modules[ue.id]?.cardCount} cartes · {catalogue.modules[ue.id]?.caseCount} cas, variantes comprises. Accès aux contenus réservé à Pro.</p><ul>{catalogue.modules[ue.id]?.chapters.map(c=><li key={c.id}><strong>{c.title}</strong><span>{c.questionCount} questions · {c.caseCount} cas</span></li>)}</ul></details>
+                    <details className="programme-chapters"><summary>Voir les {catalogue.modules[ue.id]?.chapters.length} chapitres et les volumes</summary><p className="helper">{catalogue.modules[ue.id]?.curatedQuestionCount} QCM · {catalogue.modules[ue.id]?.cardCount} cartes · {catalogue.modules[ue.id]?.curatedCaseCount} modèles de cas, hors variantes. Accès aux contenus réservé à Pro.</p><ul>{catalogue.modules[ue.id]?.chapters.map(c=><li key={c.id}><strong>{c.title}</strong><span>{c.curatedQuestionCount} questions de notions · {c.curatedCaseCount} cas et modèles</span></li>)}</ul></details>
                   </article>
                 ))}
             </div>

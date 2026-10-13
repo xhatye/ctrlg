@@ -28,7 +28,7 @@ test('learning steps distinguish activity, sufficient quiz score and self-review
 });
 test('invalid learning events cannot write arbitrary chapters, scores or receipts',()=>{
  for(const module of [null,['UE9'],{id:'UE9'}])assert.throws(()=>normalizeEvents([event('lesson',{module})],catalogue),{status:400});
- for(const e of [event('unknown'),event('lesson',{chapter:'__proto__'}),event('quiz',{total:0,correct:0}),event('quiz',{total:4,correct:5}),event('cards',{reviewed:101,known:1}),event('case',{variant:1}),event('lesson',{id:'a/b'})])assert.throws(()=>normalizeEvents([e],catalogue),{status:400});
+ for(const e of [event('unknown'),event('lesson',{chapter:'__proto__'}),event('quiz',{total:0,correct:0}),event('quiz',{total:4,correct:5}),event('cards',{reviewed:101,known:1}),event('case',{variant:catalogue.UE9.chapters.find(c=>c.id==='reperes').caseCount}),event('lesson',{id:'a/b'})])assert.throws(()=>normalizeEvents([e],catalogue),{status:400});
  assert.throws(()=>normalizeEvents([event('lesson'),event('lesson')],catalogue),{status:400});
  assert.throws(()=>normalizeEvents(Array.from({length:21},(_,i)=>event('lesson',{id:'abcdefgh'+i})),catalogue),{status:400});
  const clean=normalizeEvents([event('lesson',{uid:'other',isPro:true})],catalogue)[0];assert.equal(clean.uid,undefined);assert.equal(clean.isPro,undefined);
@@ -74,5 +74,5 @@ test('knowledge and application sessions sample unique questions without materia
  const knowledge=studyModule('UE9','qcm',Math.random,{focus:'knowledge',count:20});
  assert.ok(knowledge.items.every(i=>i.difficulte==='Compréhension'));assert.equal(new Set(knowledge.items.map(i=>i.id)).size,20);
  const application=studyModule('UE9','cards',Math.random,{focus:'application',count:100});
- assert.equal(new Set(application.items.map(i=>i.id)).size,100);assert.ok(application.items.every(i=>i.kind==='Application chiffrée'));
+ assert.equal(new Set(application.items.map(i=>i.id)).size,100);assert.ok(application.items.every(i=>i.kind==='Exercice de calcul'));
 });

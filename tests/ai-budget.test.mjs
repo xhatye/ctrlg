@@ -98,3 +98,20 @@ test("rapid repeat requests are rejected without incrementing counters", async (
   );
   assert.equal(db.store.get("aiUsage/u_2026-10-12").count, 1);
 });
+
+test('case feedback has its own atomic daily and monthly ceilings within the shared AI budget',async()=>{
+ const caseData={...data,purpose:'case-review'};
+ for(const override of [{'aiUsage/u_case_2026-10-12':{count:5}},{'aiUsage/u_case_month_2026-10':{count:60}}]){
+  const db=database(override),before=JSON.stringify([...db.store]);await assert.rejects(reserveTutor(db,'u',caseData,now),{status:429});assert.equal(JSON.stringify([...db.store]),before);
+ }
+ const db=database({'aiUsage/u_case_2026-10-12':{count:4}});
+ const results=await Promise.allSettled([reserveTutor(db,'u',caseData,now),reserveTutor(db,'u',caseData,now)]);
+ assert.equal(results.filter(r=>r.status==='fulfilled').length,1);
+ assert.equal(db.store.get('aiUsage/u_case_2026-10-12').count,5);
+ assert.equal(db.store.get('aiUsage/u_case_month_2026-10').count,1);
+ assert.equal(db.store.get('aiUsage/u_2026-10-12').count,1);
+ assert.equal(db.store.get('aiUsage/u_month_2026-10').count,1);
+ assert.ok(db.store.get('aiUsage/global_2026-10').reservedMicros>0);
+ const shared=database({'aiUsage/u_month_2026-10':{count:300}}),before=JSON.stringify([...shared.store]);
+ await assert.rejects(reserveTutor(shared,'u',caseData,now),{status:429});assert.equal(JSON.stringify([...shared.store]),before);
+});

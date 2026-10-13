@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { loadStudy } from "./study-client";
+import {reviewCase} from "./case-client";
+import {checkCaseStep} from "../lib/case-checks.mjs";
 import { ChapterSelect } from './chapter-navigation';
 
 export function StudyNotice() {
@@ -91,19 +93,26 @@ export function SavedLesson({ ue, onBack, onLearning, learning={} }) {
         <>
           <article className="lesson-intro panel"><span className="eyebrow">LE POINT DE DÉPART</span><p>{state.data.intro}</p><h3>Comment travailler ce chapitre</h3><p>{state.data.method}</p></article>
           <section className="panel lesson-objectives"><h2>Ce que vous allez travailler</h2><ul>{state.data.learningGoals.map(g=><li key={g}>{g}</li>)}</ul><p className="helper">Prérequis : {state.data.prerequisites.join(' ')}</p></section>
-          <div className="saved-grid">
+          <div className="lesson-reading-layout">
+            <details className="lesson-toc" open><summary>Plan du chapitre</summary><nav aria-label="Sections du cours">{state.data.sections.map((s,i)=><a key={s.titre} href={'#lesson-section-'+(i+1)}><span>{String(i+1).padStart(2,'0')}</span>{s.titre}</a>)}</nav></details>
+          <div className="lesson-sections">
             {state.data.sections.map((s, i) => (
-              <article className="panel" key={s.titre}>
+              <article className="panel lesson-section" id={'lesson-section-'+(i+1)} key={s.titre}>
                 <span className="eyebrow">REPÈRE {i + 1}</span>
                 <h2>{s.titre}</h2>
                 {s.points.map((p) => (
                   <p key={p}>{p}</p>
                 ))}
+                {s.example&&<div className="lesson-worked-example"><span className="eyebrow">EXEMPLE COMMENTÉ</span><p>{s.example.context}</p><ol>{s.example.analysis.map((point,j)=><li key={j}>{point}</li>)}</ol></div>}
               </article>
             ))}
           </div>
-          <section className="panel lesson-example"><span className="eyebrow">EXEMPLE À TRAVAILLER</span><h2>{state.data.example.titre}</h2><p>{state.data.example.contexte}</p>{state.data.example.questions.map(q=><details key={q.num}><summary>{q.enonce}</summary><p>{q.answer}</p></details>)}</section>
+          </div>
+          <section className="panel lesson-method"><h2>Résoudre un dossier sur ce chapitre</h2><ol>{state.data.methodSteps.map((step,i)=><li key={i}>{step}</li>)}</ol></section>
+          {state.data.glossary.length>0&&<section className="panel lesson-glossary"><h2>Les termes à savoir expliquer</h2><dl>{state.data.glossary.map(g=><div key={g.term}><dt>{g.term}</dt><dd>{g.definition}</dd></div>)}</dl></section>}
+
           <section className="panel lesson-pitfalls"><h2>Les erreurs à éviter</h2><ul>{state.data.pieges_frequents.map(p=><li key={p}>{p}</li>)}</ul></section>
+          <section className="panel lesson-checklist"><h2>Avant de rendre votre copie</h2><ul>{state.data.checklist.map((check,i)=><li key={i}>{check}</li>)}</ul></section>
           <div className="panel">
             <h2>Votre méthode</h2>
             <p>
@@ -122,118 +131,57 @@ export function SavedLesson({ ue, onBack, onLearning, learning={} }) {
   );
 }
 export function CasePractice({ ue, user, onDone, onBack, onLearning }) {
-  const [chapter,setChapter]=useState(ue.chapter || '');
-  const [variant,setVariant]=useState(0);
-  const [variantDraft,setVariantDraft]=useState('1');
-  useEffect(()=>setVariantDraft(String(variant+1)),[variant]);
+  const [chapter,setChapter]=useState(ue.chapter || ''),[variant,setVariant]=useState(0),[variantDraft,setVariantDraft]=useState('1');
+  const [dossierOpen,setDossierOpen]=useState(false);
+  const [mode,setMode]=useState('guided'),[responses,setResponses]=useState({}),[checked,setChecked]=useState({}),[answer,setAnswer]=useState(''),[shown,setShown]=useState(false);
+  const [busy,setBusy]=useState(false),[feedback,setFeedback]=useState(null),[aiError,setAiError]=useState(''),[remaining,setRemaining]=useState(null);
+  const [saving,setSaving]=useState(false),[saved,setSaved]=useState(false),[saveError,setSaveError]=useState(''),receipt=useRef(crypto.randomUUID());
   useEffect(()=>{setChapter(ue.chapter || '');setVariant(0);},[ue.id,ue.chapter]);
-  const state = useModule(ue.id, "case", chapter, variant),
-    [answer, setAnswer] = useState(""),
-    [shown, setShown] = useState(false),
-    [saving, setSaving] = useState(false),
-    [saved, setSaved] = useState(false),
-    [saveError, setSaveError] = useState("");
-  const [progressStatus,setProgressStatus]=useState(''),receipt=useRef(crypto.randomUUID());
-  useEffect(() => {
-    setAnswer("");
-    setShown(false);
-    setSaved(false);
-    setSaveError('');
-    setProgressStatus('');receipt.current=crypto.randomUUID();
-  }, [ue.id, chapter, variant]);
-  const compare=async()=>{setShown(true);if(!onLearning||progressStatus==='done'||progressStatus==='saving')return;setProgressStatus('saving');try{await onLearning([{id:receipt.current,type:'case',module:ue.id,chapter:state.data.chapter,variant}]);setProgressStatus('done');}catch{setProgressStatus('error');}};
-  const record = async () => {
-    if (saving || saved) return;
-    setSaving(true);
-    setSaveError("");
-    try {
-      await onDone({
-        ue: ue.id,
-        ueName: ue.label,
-        cas: state.data,
-        reponse: answer,
-        mode: "self-review",
-      });
-      setSaved(true);
-    } catch {
-      setSaveError(
-        "Votre réponse reste affichée. L’enregistrement a échoué, réessayez.",
-      );
-    } finally {
-      setSaving(false);
-    }
+  const state=useModule(ue.id,'case',chapter,variant);
+  useEffect(()=>{setVariantDraft(String(variant+1));setResponses({});setChecked({});setAnswer('');setShown(false);setFeedback(null);setAiError('');setSaved(false);setSaveError('');receipt.current=crypto.randomUUID();},[ue.id,chapter,variant]);
+  const questions=state.data?.questions || [],completed=questions.filter(q=>checked[q.num]?.valid).length;
+  const change=(num,value)=>{setResponses(old=>({...old,[num]:value}));setChecked(old=>{const next={...old};delete next[num];return next;});setSaved(false);};
+  const check=q=>setChecked(old=>({...old,[q.num]:q.guide?checkCaseStep(q,responses[q.num]??''):{valid:true,correct:null,message:'Comparez les éléments attendus à votre raisonnement.'}}));
+  const analyse=async()=>{
+    setBusy(true);setAiError('');setFeedback(null);
+    try{const data=await reviewCase({module:ue.id,chapter:state.data.chapter,variant,answer});setFeedback(data.feedback);setRemaining(data.caseDailyRemaining);}
+    catch(error){setAiError(error.name==='TimeoutError'?'L’analyse prend trop de temps. Votre réponse est conservée ; le corrigé reste accessible.':error.message);}
+    finally{setBusy(false);}
   };
-  return (
-    <Frame title={state.data?.titre || "Cas pratique"} ue={ue} onBack={onBack}>
-      <ChapterSelect id={ue.id} value={chapter} onChange={value=>{setChapter(value);setVariant(0);}} disabled={saving||progressStatus==='saving'} />
-      <LoadState {...state} />
-      {state.data && (
-        <>
-          {state.data.variantCount>1&&<div className="session-controls"><label className="chapter-select">Dossier d’entraînement<input aria-label="Dossier d’entraînement" type="number" min="1" max={state.data.variantCount} disabled={saving||progressStatus==='saving'} value={variantDraft} onChange={e=>setVariantDraft(e.target.value)} /></label><span className="helper">sur {state.data.variantCount.toLocaleString('fr-FR')} variantes. Choisissez un numéro puis ouvrez le dossier ; votre réponse est remise à zéro.</span><button className="btn" disabled={saving||progressStatus==='saving'||!Number.isInteger(Number(variantDraft))||Number(variantDraft)<1||Number(variantDraft)>state.data.variantCount} onClick={()=>setVariant(Number(variantDraft)-1)}>Ouvrir le dossier</button><button className="btn btn-secondary" disabled={variant===0||saving||progressStatus==='saving'} onClick={()=>setVariant(v=>v-1)}>Précédent</button><button className="btn btn-secondary" disabled={variant+1>=state.data.variantCount||saving||progressStatus==='saving'} onClick={()=>setVariant(v=>v+1)}>Suivant</button></div>}
-          <article className="panel">
-            <span className="eyebrow">
-              EXERCICE ORIGINAL · {state.data.duree_estimee}
-            </span>
-            <p>{state.data.contexte}</p>
-            {state.data.questions.map((q) => (
-              <p key={q.num}>
-                <strong>{q.num}. </strong>
-                {q.enonce}
-              </p>
-            ))}
-          </article>
-          <label className="study-answer">
-            Votre réponse
-            <textarea
-              value={answer}
-              onChange={(e) => setAnswer(e.target.value)}
-              rows={9}
-              maxLength={12000}
-              placeholder="Posez les hypothèses, détaillez le raisonnement puis concluez."
-            />
-          </label>
-          <button
-            className="btn"
-            onClick={compare}
-            disabled={!answer.trim()}
-          >
-            Comparer avec le corrigé
-          </button>
-          {shown && (
-            <section className="panel" aria-live="polite">
-              <h2>Corrigé à comparer avec votre réponse</h2>
-              <p>
-                Aucune note automatique : vérifiez vos étapes et vos calculs.
-              </p>
-              {progressStatus==='done'&&<p role="status">Étape « cas travaillé » enregistrée.</p>}
-              {progressStatus==='error'&&<p role="alert">Le corrigé reste visible. <button className="text-button" onClick={compare}>Réessayer l’enregistrement de la progression</button></p>}
-              {state.data.questions.map((q) => (
-                <div key={q.num}>
-                  <h3>Question {q.num}</h3>
-                  <p>{q.answer}</p>
-                </div>
-              ))}
-              {onDone && (
-                <button
-                  className="btn"
-                  disabled={saving || saved}
-                  onClick={record}
-                >
-                  {saved
-                    ? "Réponse enregistrée"
-                    : saving
-                      ? "Enregistrement…"
-                      : "Enregistrer dans mon historique"}
-                </button>
-              )}
-              {saveError && <p role="alert">{saveError}</p>}
-            </section>
-          )}
-          <SourceLinks sources={state.data.sources} />
-        </>
-      )}
-    </Frame>
-  );
+  const record=async()=>{
+    if(saving||saved)return;setSaving(true);setSaveError('');
+    try{
+      await onLearning?.([{id:receipt.current,type:'case',module:ue.id,chapter:state.data.chapter,variant}]);
+      await onDone?.({ue:ue.id,ueName:ue.label,cas:state.data,reponse:mode==='written'?answer:questions.map(q=>q.num+'. '+(q.guide?.type==='choice'?q.guide.options[Number(responses[q.num])]:responses[q.num]??'Corrigé étudié')).join('\n'),mode:mode==='written'?'written-review':'guided-review',...(feedback?{feedback}:{})});
+      setSaved(true);
+    }catch{setSaveError('La progression n’a pas pu être enregistrée. Votre travail reste affiché. Réessayez.');}
+    finally{setSaving(false);}
+  };
+  return <Frame title={state.data?.titre || 'Cas pratique'} ue={ue} onBack={onBack}>
+    <ChapterSelect id={ue.id} value={chapter} disabled={saving||busy} onChange={value=>{setChapter(value);setVariant(0);setDossierOpen(false);}}/>
+    <LoadState {...state}/>
+    {state.data&&<>
+      {state.data.variantCount>1&&<details className="panel case-dossier" open={dossierOpen} onToggle={e=>setDossierOpen(e.currentTarget.open)}><summary>Choisir un autre dossier · {variant+1} sur {state.data.variantCount.toLocaleString('fr-FR')}</summary><div className="session-controls"><label className="chapter-select">Numéro du dossier<input aria-label="Dossier d’entraînement" type="number" min="1" max={state.data.variantCount} value={variantDraft} disabled={busy||saving} onChange={e=>setVariantDraft(e.target.value)}/></label><button className="btn" disabled={busy||saving||!Number.isInteger(Number(variantDraft))||Number(variantDraft)<1||Number(variantDraft)>state.data.variantCount} onClick={()=>setVariant(Number(variantDraft)-1)}>Ouvrir le dossier</button><button className="btn btn-secondary" disabled={busy||saving||variant===0} onClick={()=>setVariant(v=>v-1)}>Précédent</button><button className="btn btn-secondary" disabled={busy||saving||variant+1>=state.data.variantCount} onClick={()=>setVariant(v=>v+1)}>Suivant</button><p className="helper">Un nouveau dossier remet vos réponses à zéro.</p></div></details>}
+      <div className="case-modes" role="group" aria-label="Mode du cas"><button aria-pressed={mode==='guided'} disabled={busy||saving} onClick={()=>setMode('guided')}>Exercice guidé<span>Une question, une vérification, une explication.</span></button><button aria-pressed={mode==='written'} disabled={busy||saving} onClick={()=>setMode('written')}>Réponse écrite + retour IA<span>Facultatif · jusqu’à 5 demandes/jour · 60/mois.</span></button></div>
+      <article className="panel case-context"><span className="eyebrow">LE DOSSIER · {state.data.duree_estimee}</span><p>{state.data.contexte}</p></article>
+      {mode==='guided'?<>
+        <div className="case-step-progress"><strong>{completed}/{questions.length} étapes travaillées</strong><div className="progress-track"><i style={{width:(completed/questions.length*100)+'%'}}/></div><span className="helper">Le suivi enregistre votre travail. Il ne constitue pas une note d’examen.</span></div>
+        <div className="case-steps">{questions.map(q=>{const result=checked[q.num];return <article className="panel case-step" key={q.num}>
+          <span className="eyebrow">ÉTAPE {q.num}</span><h2>{q.enonce}</h2>
+          {q.guide?.type==='number'?<label className="study-answer">Votre résultat ({q.guide.unit || 'sans unité'})<input inputMode="decimal" aria-label={'Résultat de l’étape '+q.num} value={responses[q.num]??''} onChange={e=>change(q.num,e.target.value)} placeholder="Exemple : 1 250,50"/></label>:q.guide?.type==='choice'?<fieldset className="case-choices"><legend>Choisissez le raisonnement adapté au dossier.</legend>{q.guide.options.map((option,i)=><label key={i}><input type="radio" name={'case-step-'+q.num} checked={responses[q.num]===String(i)} onChange={()=>change(q.num,String(i))}/><span>{option}</span></label>)}</fieldset>:<p>Préparez les faits utiles et votre conclusion, puis ouvrez les éléments attendus pour vérifier vos étapes.</p>}
+          <button className="btn btn-secondary" onClick={()=>check(q)}>{q.guide?'Vérifier cette étape':'Étudier le corrigé de cette étape'}</button>
+          {result&&<div className={'case-feedback '+(result.correct===false?'needs-review':'')} role="status"><strong>{result.message}</strong>{result.valid&&<><h3>Raisonnement attendu</h3><p>{q.answer}</p></>}</div>}
+        </article>})}</div>
+        <button className="btn" disabled={completed!==questions.length||saving||saved} onClick={record}>{saved?'Cas enregistré dans votre parcours':saving?'Enregistrement…':'Terminer et enregistrer ce cas'}</button>
+      </>:<>
+        <section className="panel"><h2>Votre raisonnement, question par question</h2><ol>{questions.map(q=><li key={q.num}>{q.enonce}</li>)}</ol><p className="helper">Le retour IA compare votre réponse au corrigé du dossier. Vérifiez ses remarques ; il ne remplace pas une correction par un enseignant. Votre réponse est envoyée à Groq pour cette analyse. Elle utilise aussi votre quota et budget de tuteur.</p><label className="study-answer">Votre réponse<textarea aria-label="Votre réponse" rows={9} maxLength={6000} disabled={busy} value={answer} onChange={e=>{setAnswer(e.target.value);setFeedback(null);setSaved(false);}} placeholder="Question 1 : faits utiles, méthode, application et conclusion…"/></label><div className="written-case-actions"><button className="btn" disabled={busy||answer.trim().length<40||remaining===0} onClick={analyse}>{busy?'Analyse de votre réponse…':'Obtenir un retour IA'}</button><button className="btn btn-secondary" onClick={()=>setShown(true)}>Voir le corrigé sans IA</button></div><p className="helper">{answer.length}/6 000 caractères · minimum 40 pour l’analyse.{remaining!==null?' '+remaining+' analyse(s) encore disponibles aujourd’hui.':''}</p>{aiError&&<p role="alert" className="message error">{aiError}</p>}</section>
+        {feedback&&<section className="panel written-case-feedback" aria-live="polite"><h2>Retour sur votre réponse écrite</h2>{[['strengths','Ce qui est étayé'],['improvements','Ce qui est à reprendre'],['nextSteps','Votre prochaine étape']].map(([key,title])=><div key={key}><h3>{title}</h3><ul>{feedback[key].map((item,i)=><li key={i}>{item}</li>)}</ul></div>)}<button className="btn" disabled={saving||saved} onClick={record}>{saved?'Cas enregistré':saving?'Enregistrement…':'Enregistrer ce travail'}</button></section>}
+        {shown&&<section className="panel"><h2>Corrigé du dossier</h2>{questions.map(q=><div key={q.num}><h3>Question {q.num}</h3><p>{q.answer}</p></div>)}<button className="btn" disabled={saving||saved||!answer.trim()} onClick={record}>{saved?'Cas enregistré':saving?'Enregistrement…':'Enregistrer ce travail'}</button></section>}
+      </>}
+      {saveError&&<p role="alert" className="message error">{saveError}</p>}
+      <SourceLinks sources={state.data.sources}/>
+    </>}
+  </Frame>;
 }
 
 export function buildPlan(ues, weeks, level, hours) {
@@ -367,7 +315,7 @@ export function StudyPlanner({ ues, user, onBack }) {
 export function OralSetup({ onStart, onBack }) {
   const [topic, setTopic] = useState("Comptabilité");
   return (
-    <Frame title="Préparer un raisonnement à l’oral" onBack={onBack}>
+    <Frame title="Préparer l’oral par écrit" onBack={onBack}>
       <section className="panel">
         <p>
           Un exercice de départ, trois questions et des éléments de réponse pour
@@ -404,10 +352,10 @@ export function OralPractice({ cfg, onDone, onBack }) {
     [answer, setAnswer] = useState(""),
     [revealed, setRevealed] = useState(false);
   return (
-    <Frame title="Préparer une réponse à l’oral" onBack={onBack}>
+    <Frame title="Préparer sa réponse par écrit" onBack={onBack}>
       <p>
-        Entraînement autonome : exposez votre raisonnement à voix haute ou par
-        écrit, puis comparez avec les éléments attendus. Aucune notation IA.
+        Entraînement par écrit : préparez votre raisonnement par
+        écrit, puis comparez avec les éléments attendus. Aucun micro ni analyse de votre voix.
       </p>
       <LoadState {...state} />
       {state.data && (
@@ -474,7 +422,7 @@ export function OralPractice({ cfg, onDone, onBack }) {
 }
 export function OralSummary({ data, onBack }) {
   return (
-    <Frame title="Votre entraînement oral" onBack={onBack}>
+    <Frame title="Votre entraînement écrit" onBack={onBack}>
       <section className="panel">
         <h2>{data.topic}</h2>
         <p>Aucun score n’a été attribué à cette comparaison autonome.</p>

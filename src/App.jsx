@@ -261,7 +261,7 @@ function ToastContainer() {
 const ONBOARDING_STEPS = [
   { icon: "🎓", title: "Mode Diplôme", desc: "Choisissez une matière DCG ou DSCG et lancez un QCM, des flashcards ou un cas pratique, disponibles sans génération IA.", cta: "Suivant →" },
   { icon: "◈", title: "Vos fiches de révision", desc: "Chaque matière dispose d'un cours original avec exemples, méthodes et pièges fréquents, accessible avec Pro.", cta: "Suivant →" },
-  { icon: "💼", title: "Préparation orale", desc: "Entraînez-vous à structurer une réponse, puis comparez-la aux éléments attendus. Cet entraînement autonome ne dépend pas du tuteur IA.", cta: "Suivant →" },
+  { icon: "💼", title: "Préparer l’oral par écrit", desc: "Entraînez-vous à structurer une réponse, puis comparez-la aux éléments attendus. Cet entraînement autonome ne dépend pas du tuteur IA.", cta: "Suivant →" },
   { icon: "✦", title: "Pro pour aller plus loin", desc: `Débloquez les 20 matières, cours par chapitre et QCM expliqués, cas avec corrigés, reprise des cartes difficiles et planning sans IA pour ${PRO_PRICE}/mois. Résiliation en 1 clic.`, cta: "Commencer →" },
 ];
 
@@ -395,7 +395,7 @@ export default function App() {
   const onCasDone = async (data) => {
     const entry = { ...data, cas:{titre:data.cas.titre,contexte:data.cas.contexte,questions:data.cas.questions},type: "cas", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
     if (user) { await saveHistory(user.uid, entry); const s = await updateStreak(user.uid); setUser(u => ({ ...u, streak: s })); }
-    toast.success("Votre réponse et le corrigé sont enregistrés.");
+    toast.success("Votre travail et le corrigé sont enregistrés.");
   };
 
   if (loadingAuth) return <div className="app-loading"><span className="brand-mark">S</span><p>Préparation de votre espace…</p></div>;
@@ -877,8 +877,8 @@ function History({ user, onBack }) {
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
             {history.map((h, i) => {
               const s = h.evaluation?.score || h.evaluation?.note || 0;
-              const isNote = h.type === "cas"; const val = h.mode === "self-review" ? "Comparé" : h.type === "qcm" ? `${h.score}/${h.total}` : isNote ? `${s}/20` : `${s}/100`;
-              const col = isNote ? noteColor(s) : scoreColor(s);
+              const isNote = h.type === "cas"; const val = ["self-review","guided-review","written-review"].includes(h.mode) ? (h.mode === "guided-review" ? "Guidé" : "Comparé") : h.type === "qcm" ? `${h.score}/${h.total}` : isNote ? `${s}/20` : `${s}/100`;
+              const col = ["self-review","guided-review","written-review"].includes(h.mode) ? "var(--gold-text)" : isNote ? noteColor(s) : scoreColor(s);
               return (
                 <div key={i} style={{ background: "var(--surface)", border: "1px solid var(--line)", padding: "14px 18px", display: "flex", justifyContent: "space-between", alignItems: "center", animation: `fsu .3s ${i * .04}s both` }}>
                   <div>
@@ -913,7 +913,7 @@ function Paywall({ onUpgrade, onBack }) {
           <div style={S.pb}>SIMDCG PRO</div>
           <p style={{ fontSize: 40, fontWeight: 900, color: "var(--ink)", margin: "12px 0 4px" }}>{PRO_PRICE}<span style={{ fontSize: 14, color: "var(--muted)" }}>/mois</span></p>
           <div style={{ display: "flex", flexDirection: "column", gap: 7, margin: "14px 0 20px" }}>
-            {["13 matières DCG + 7 matières DSCG", "Cas pratiques avec corrigés à comparer soi-même", "Flashcards enregistrées et reprise des cartes difficiles", "Planning de révision sans IA", "Préparation orale autonome et tuteur IA limité", "Historique complet & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "var(--ink)", margin: 0 }}>✓ {f}</p>)}
+            {["13 matières DCG + 7 matières DSCG", "Cas pratiques avec corrigés à comparer soi-même", "Flashcards enregistrées et reprise des cartes difficiles", "Planning de révision sans IA", "Préparer l’oral par écrit autonome et tuteur IA limité", "Historique complet & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "var(--ink)", margin: 0 }}>✓ {f}</p>)}
           </div>
           <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={onUpgrade}>Passer à Pro →</button>
         </div>
@@ -996,7 +996,7 @@ function LegalScreen({ type, onBack }) {
   const today = new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
   const cguContent = [
     { title: "1. Objet", body: `Les présentes Conditions Générales d'Utilisation (CGU) régissent l'accès et l'utilisation de la plateforme SIMDCG (simdcg.com), éditée par Marcus Bonnafis, entrepreneur individuel. En accédant à SIMDCG, vous acceptez sans réserve les présentes CGU.` },
-    { title: "2. Description du service", body: `SIMDCG est une plateforme de préparation aux examens DCG (Diplôme de Comptabilité et de Gestion) et DSCG (Diplôme Supérieur de Comptabilité et de Gestion). Le service propose une bibliothèque de cours par chapitre, QCM, flashcards et cas originaux avec corrigés, un planning et une préparation orale autonomes. Le contenu couvre partiellement les matières affichées. Un tuteur IA optionnel est soumis à des limites : 20 demandes par jour et 300 par mois, ainsi qu’un budget de génération et aux disponibilités du fournisseur.` },
+    { title: "2. Description du service", body: `SIMDCG est une plateforme de préparation aux examens DCG (Diplôme de Comptabilité et de Gestion) et DSCG (Diplôme Supérieur de Comptabilité et de Gestion). Le service propose une bibliothèque de cours par chapitre, QCM, flashcards et cas originaux avec corrigés, un planning et une préparation écrite à l’oral autonomes. Le contenu couvre partiellement les matières affichées. Un tuteur IA optionnel est soumis à des limites : 20 demandes par jour et 300 par mois, ainsi qu’un budget de génération et aux disponibilités du fournisseur.` },
     { title: "3. Accès et compte", body: `L'accès au service nécessite la création d'un compte via adresse email ou compte Google. L'utilisateur est responsable de la confidentialité de ses identifiants. Les titres et volumes de la bibliothèque sont consultables avant l'achat. Les cours et exercices nécessitent un accès payant actif, sans essai gratuit. Le plan Pro à ${PRO_PRICE}/mois donne accès aux contenus effectivement disponibles, au planning et au tuteur dans les limites indiquées. Le Pack Examen donne accès pendant 90 jours, sans renouvellement.` },
     { title: "4. Abonnement Pro", body: `Le plan Pro est facturé mensuellement via Stripe, prestataire de paiement sécurisé. L'abonnement est sans engagement et résiliable à tout moment depuis votre espace client Stripe. Aucun remboursement ne sera effectué pour la période en cours au moment de la résiliation.` },
     { title: "5. Propriété intellectuelle", body: `Les fiches et exercices originaux sont des supports de révision complémentaires. Les réponses du tuteur IA peuvent contenir des erreurs et doivent être comparées aux références applicables à votre session. L'interface, le logo et les éléments visuels sont la propriété exclusive de Marcus Bonnafis.` },
@@ -1009,7 +1009,7 @@ function LegalScreen({ type, onBack }) {
     { title: "2. Données collectées", body: `Lors de l'inscription : prénom, adresse email, date d'inscription. Lors de l'utilisation : historique des sessions (QCM, entretiens, cas pratiques), scores obtenus, matières étudiées, streak quotidien. Données techniques : adresse IP, type de navigateur (via Firebase Analytics).` },
     { title: "3. Finalités du traitement", body: `Vos données sont utilisées pour : (a) la gestion de votre compte et authentification, (b) la personnalisation de votre expérience de révision, (c) le suivi de votre progression, (d) la facturation via Stripe pour les abonnés Pro, (e) l'amélioration du service.` },
     { title: "4. Base légale", body: `Le traitement de vos données repose sur votre consentement (art. 6.1.a RGPD) lors de la création de compte, et sur l'exécution du contrat (art. 6.1.b RGPD) pour les fonctionnalités du service.` },
-    { title: "5. Sous-traitants", body: `SIMDCG utilise les prestataires suivants : Firebase (Google) pour l’authentification et la base de données, Stripe pour les paiements et Groq pour le tuteur IA optionnel. Lorsque vous utilisez le tuteur, le texte de votre question et le contexte récent de la conversation sont transmis à Groq. Le traitement par chaque prestataire suit ses conditions et sa politique de confidentialité.` },
+    { title: "5. Sous-traitants", body: `SIMDCG utilise les prestataires suivants : Firebase (Google) pour l’authentification et la base de données, Stripe pour les paiements et Groq pour le tuteur IA et le retour optionnel sur les cas écrits. Lorsque vous demandez une analyse de cas, votre réponse et le corrigé de référence sont transmis à Groq. Lorsque vous utilisez le tuteur, le texte de votre question et le contexte récent de la conversation sont transmis à Groq. Le traitement par chaque prestataire suit ses conditions et sa politique de confidentialité.` },
     { title: "6. Conservation des données", body: `Vos données sont conservées pendant la durée de vie de votre compte. En cas de suppression de compte, vos données personnelles sont effacées sous 30 jours. Les données de facturation sont conservées 10 ans conformément aux obligations comptables légales.` },
     { title: "7. Vos droits", body: `Conformément au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, de portabilité et d'opposition au traitement de vos données. Pour exercer ces droits : contact.simdcg@gmail.com. Vous pouvez également introduire une réclamation auprès de la CNIL (cnil.fr).` },
     { title: "8. Cookies", body: `SIMDCG utilise uniquement les cookies techniques nécessaires au fonctionnement du service (authentification, session). Aucun cookie publicitaire ou de tracking tiers n'est utilisé.` },
