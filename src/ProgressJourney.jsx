@@ -8,7 +8,7 @@ export default function ProgressJourney({ues,learning={},onOpen}){
  const options=ues.filter(ue=>ue.level===level),ue=options.find(ue=>ue.id===id)||options[0];
  const chapters=catalogue.modules[ue.id].chapters.map(c=>({...c,progress:learning.chapters?.[chapterKey(ue.id,c.id)]||{}}));
  const totalDone=chapters.reduce((n,c)=>n+learningSteps(c.progress).done,0),possible=chapters.length*4;
- const shown=chapters.filter(c=>{const done=learningSteps(c.progress).done;return filter==='all'||filter==='started'&&done>0&&done<4||filter==='finished'&&done===4||filter==='new'&&done===0;});
+ const shown=chapters.filter(c=>{const {done,started}=learningSteps(c.progress);return filter==='all'||filter==='started'&&started&&done<4||filter==='finished'&&done===4||filter==='new'&&!started;});
  return <section className="progress-journey">
   <div className="section-heading compact"><div><span className="eyebrow">VOTRE PARCOURS PAR CHAPITRE</span><h2>Comprendre, pratiquer, retenir.</h2></div><strong className="journey-total">{totalDone}/{possible} étapes en {ue.id}</strong></div>
   <p className="helper">Ce suivi décrit vos activités, pas une estimation de réussite à l’examen. La lecture est déclarative ; le cas est relu par comparaison au corrigé.</p>

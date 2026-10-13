@@ -15,6 +15,9 @@ function memory(profile={isPro:true}){
  return {db,records};
 }
 test('learning steps distinguish activity, sufficient quiz score and self-review',()=>{
+ assert.equal(learningSteps().started,false);
+ const attempted=applyLearningEvent({chapters:{}},event('quiz',{total:4,correct:1}),0).chapters['UE9/reperes'];
+ assert.equal(learningSteps(attempted).done,0);assert.equal(learningSteps(attempted).started,true);
  let progress={chapters:{}};
  for(const e of [event('lesson'),event('quiz',{total:1,correct:1}),event('cards',{reviewed:3,known:0}),event('case',{variant:0})])progress=applyLearningEvent(progress,e,0);
  assert.equal(learningSteps(progress.chapters['UE9/reperes']).done,2);
