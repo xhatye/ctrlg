@@ -10,6 +10,7 @@ import './design.css';
 import {loadStudy} from './study-client';
 import { curriculumFor } from '../lib/curriculum.mjs';
 import { StudySession } from './chapter-navigation';
+import Flashcard from './Flashcard';
 import {StudyNotice, SavedLesson, CasePractice, StudyPlanner, OralPractice, OralSummary, OralSetup as InterviewConfig} from './study';
 
 const upgrade = (plan = 'subscription') => launchCheckout(plan).catch(error => toast.error(error.message));
@@ -21,7 +22,6 @@ const PACK_EXAMEN_PRICE = "29€";
 // ── ROUTING ───────────────────────────────────────────────────────────────────
 const SCREEN_TO_URL = {
   landing:            "/",
-  demo: "/decouverte",
   pricing:            "/tarifs",
   testimonials:       "/avis",
   auth:               "/connexion",
@@ -56,6 +56,7 @@ const URL_TO_SCREEN = Object.fromEntries(Object.entries(SCREEN_TO_URL).map(([k,v
 
 const getScreenFromPath = (path) => {
   // Exact match first
+  if (path === "/decouverte") return "pricing";
   if (path === "/inscription") return "auth";
   if (URL_TO_SCREEN[path]) return URL_TO_SCREEN[path];
   // Prefix match for dynamic sub-paths like /entretien/*
@@ -383,18 +384,17 @@ export default function App() {
   };
 
   if (loadingAuth) return <div className="app-loading"><span className="brand-mark">S</span><p>Préparation de votre espace…</p></div>;
-  const publicScreens = ['landing', 'demo', 'pricing', 'testimonials', 'auth', 'cgu', 'confidentialite', 'forgot_password', 'features', 'dcg', 'dscg', 'resources', 'support'];
+  const publicScreens = ['landing', 'pricing', 'testimonials', 'auth', 'cgu', 'confidentialite', 'forgot_password', 'features', 'dcg', 'dscg', 'resources', 'support'];
   const privateScreen = !publicScreens.includes(screen);
   const selectUE = ue => { setSelectedUE(ue); window.history.pushState({}, '', `/matiere?ue=${ue.id}`); setScreen('subject_hub'); };
   const logout = () => { signOut(auth); setUser(null); nav('landing'); };
   const renderScreen = () => {
     if (privateScreen && !user) return <Auth mode="login" setMode={setAuthMode} onDone={u => { setUser(u); nav(screen); }} onBack={() => nav('landing')} />;
     if (['subject_hub', 'qcm', 'flashcards', 'resume_cours', 'cas_pratique'].includes(screen) && !selectedUE) return <LibraryPage ues={ALL_UES} user={user} onSelect={selectUE} />;
-    if ((['interview', 'interview_config', 'tutor'].includes(screen) || (['qcm', 'flashcards', 'resume_cours', 'cas_pratique'].includes(screen) && selectedUE?.id !== 'UE9')) && !isPro) return <Paywall onUpgrade={() => upgrade()} onBack={() => nav('dashboard')} />;
+    if (['interview', 'interview_config', 'tutor', 'qcm', 'flashcards', 'resume_cours', 'cas_pratique'].includes(screen) && !isPro) return <Paywall onUpgrade={() => upgrade()} onBack={() => nav('dashboard')} />;
     if (screen === 'interview' && !interviewCfg) return <InterviewConfig user={user} onStart={cfg => { setInterviewCfg(cfg); nav('interview'); }} onBack={() => nav('dashboard')} />;
     if (screen.startsWith('results_') && !result) return <History user={user} onBack={() => nav('dashboard')} />;
     if (screen === 'landing') return <Marketing onAuth={toAuth} onNav={nav} ues={ALL_UES} />;
-    if (screen === 'demo') return <PublicDemo onBack={() => nav('landing')} onAuth={toAuth} />;
     if (screen === 'pricing') return <OfferPage user={user} onCheckout={upgrade} onNav={nav} />;
     if (['features', 'dcg', 'dscg', 'resources', 'support'].includes(screen)) return <PublicInfo page={screen} onNav={nav} onAuth={toAuth} ues={ALL_UES} />;
     if (screen === 'testimonials') return <StudentReviews load={loadTestimonials} onNav={nav} />;
@@ -426,12 +426,6 @@ export default function App() {
 }
 
 // ── AUTH ──────────────────────────────────────────────────────────────────────
-function PublicDemo({onBack,onAuth}) {
-  const [tool,setTool]=useState('summary'),[result,setResult]=useState(null);
-  const ue=DCG_UES.find(x=>x.id==='UE9');
-  const choose=(key)=>{setTool(key);setResult(null);};
-  return <div className="public-demo"><nav className="demo-nav container"><Brand onClick={onBack}/><button className="btn" onClick={()=>onAuth('signup')}>Créer mon compte gratuit</button></nav><main className="container"><h1>Essayez la comptabilité, gratuitement.</h1><p>4 chapitres, 20 questions expliquées, 20 cartes et 4 cas pratiques. Aucun compte ni tuteur IA nécessaire pour cet essai.</p><div className="demo-tabs" role="group" aria-label="Outils gratuits">{[['summary','Fiche'],['qcm','QCM'],['cards','Flashcards'],['case','Cas pratique']].map(([key,label])=><button className={`btn ${tool===key?'':'btn-secondary'}`} key={key} onClick={()=>choose(key)}>{label}</button>)}</div>{result ? <ResultsQCM data={result} onNew={()=>choose('qcm')} onDash={()=>choose('summary')}/> : tool==='summary'?<SavedLesson ue={ue} onBack={onBack}/>:tool==='qcm'?<QCMScreen ue={ue} user={{isPro:false}} onDone={setResult} onBack={onBack}/>:tool==='cards'?<FlashcardsScreen ue={ue} user={{isPro:false}} onBack={onBack} onUpgrade={()=>onAuth('signup')}/>:<CasePractice ue={ue} user={null} onBack={onBack}/>}</main></div>;
-}
 function Auth({ mode, setMode, onDone, onBack }) {
   const [name, setName] = useState(""); const [email, setEmail] = useState(""); const [pass, setPass] = useState(""); const [err, setErr] = useState(""); const [loading, setLoading] = useState(false);
   const submit = async () => {
@@ -620,7 +614,7 @@ function FlashcardsSession({ ue, user, onBack, onUpgrade }) {
 
   useEffect(() => {
     let alive=true;
-    loadStudy(ue.id,'cards',{chapter:ue.chapter}).then(({items}) => { if(alive){setCards(items);setLoading(false);} }).catch(error => {if(alive){toast.error(error.message);setCards([]);setLoading(false);}});
+    loadStudy(ue.id,'cards',{chapter:ue.chapter,count:ue.count}).then(({items}) => { if(alive){setCards(items);setLoading(false);} }).catch(error => {if(alive){toast.error(error.message);setCards([]);setLoading(false);}});
     return()=>{alive=false;};
   }, []);
 
@@ -651,19 +645,7 @@ function FlashcardsSession({ ue, user, onBack, onUpgrade }) {
             <h2 style={{ fontSize: 18, margin: 0, color: "var(--danger)" }}>◈ Révision des cartes difficiles</h2>
             <span style={{ fontSize: 12, color: "var(--muted)" }}>{reviewIdx + 1} / {difficult.length}</span>
           </div>
-          <div style={{ perspective: 1200, marginBottom: 20, cursor: "pointer" }} role="button" tabIndex={0} aria-label="Retourner la flashcard" onKeyDown={e => { if (["Enter", " "].includes(e.key)) { e.preventDefault(); setReviewFlipped(f => !f); } }} onClick={() => setReviewFlipped(f => !f)}>
-            <div style={{ position: "relative", transformStyle: "preserve-3d", transition: "transform .55s cubic-bezier(.4,0,.2,1)", transform: reviewFlipped ? "rotateY(180deg)" : "rotateY(0)", height: 220 }}>
-              <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "center", borderColor: "color-mix(in srgb, var(--danger) 15%, transparent)" }}>
-                <p style={{ fontSize: 10, color: "var(--danger)", letterSpacing: ".12em", margin: "0 0 14px" }}>{rCard?.tag || ue.short} · À REVOIR</p>
-                <p style={{ fontSize: 15, color: "var(--ink)", lineHeight: 1.6, margin: "0 0 16px", fontWeight: 600 }}>{rCard?.q}</p>
-                <p style={{ fontSize: 11, color: "var(--muted)" }}>Cliquer pour révéler →</p>
-              </div>
-              <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, transform: "rotateY(180deg)", borderColor: "color-mix(in srgb, var(--success) 19%, transparent)", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                <p style={{ fontSize: 10, color: "var(--success)", letterSpacing: ".12em", margin: "0 0 14px" }}>RÉPONSE</p>
-                <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.7, margin: 0 }}>{rCard?.a}</p>
-              </div>
-            </div>
-          </div>
+          <Flashcard card={rCard} flipped={reviewFlipped} onFlip={()=>setReviewFlipped(f=>!f)} review />
           <div style={{ display: "flex", gap: 10 }}>
             {reviewIdx > 0 && <button style={{ ...S.ctagh, flex: 1 }} onClick={() => { setReviewFlipped(false); setReviewIdx(i => i - 1); }}>← Précédente</button>}
             {reviewIdx < difficult.length - 1
@@ -722,19 +704,7 @@ function FlashcardsSession({ ue, user, onBack, onUpgrade }) {
             </div>
             {card && (
               <>
-                <div style={{ perspective: 1200, marginBottom: 16, cursor: "pointer" }} role="button" tabIndex={0} aria-label="Retourner la flashcard" onKeyDown={e => { if (["Enter", " "].includes(e.key)) { e.preventDefault(); setFlipped(f => !f); } }} onClick={() => setFlipped(f => !f)}>
-                  <div style={{ position: "relative", transformStyle: "preserve-3d", transition: "transform .55s cubic-bezier(.4,0,.2,1)", transform: flipped ? "rotateY(180deg)" : "rotateY(0)", height: 220 }}>
-                    <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "center", borderColor: `${ue.color}15` }}>
-                      <p style={{ fontSize: 10, color: "var(--link)", letterSpacing: ".12em", margin: "0 0 14px" }}>{card.tag || ue.short}</p>
-                      <p style={{ fontSize: 15, color: "var(--ink)", lineHeight: 1.6, margin: "0 0 16px", fontWeight: 600 }}>{card.q}</p>
-                      <p style={{ fontSize: 11, color: "var(--muted)" }}>Cliquer pour révéler →</p>
-                    </div>
-                    <div style={{ ...S.card, backfaceVisibility: "hidden", position: "absolute", inset: 0, transform: "rotateY(180deg)", borderColor: "color-mix(in srgb, var(--success) 19%, transparent)", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-                      <p style={{ fontSize: 10, color: "var(--success)", letterSpacing: ".12em", margin: "0 0 14px" }}>RÉPONSE</p>
-                      <p style={{ fontSize: 13, color: "var(--ink)", lineHeight: 1.7, margin: 0 }}>{card.a}</p>
-                    </div>
-                  </div>
-                </div>
+                <Flashcard card={card} flipped={flipped} onFlip={()=>setFlipped(f=>!f)} />
                 {flipped ? (
                   <div style={{ display: "flex", gap: 10, marginBottom: 12 }}>
                     <button style={{ flex: 1, background: "color-mix(in srgb, var(--danger) 7%, transparent)", border: "1px solid color-mix(in srgb, var(--danger) 25%, transparent)", color: "var(--danger)", padding: "12px 16px", fontSize: 13, cursor: "pointer", fontFamily: "inherit" }} onClick={markDifficult}>✗ À revoir</button>
@@ -1002,7 +972,7 @@ function LegalScreen({ type, onBack }) {
   const cguContent = [
     { title: "1. Objet", body: `Les présentes Conditions Générales d'Utilisation (CGU) régissent l'accès et l'utilisation de la plateforme SIMDCG (simdcg.com), éditée par Marcus Bonnafis, entrepreneur individuel. En accédant à SIMDCG, vous acceptez sans réserve les présentes CGU.` },
     { title: "2. Description du service", body: `SIMDCG est une plateforme de préparation aux examens DCG (Diplôme de Comptabilité et de Gestion) et DSCG (Diplôme Supérieur de Comptabilité et de Gestion). Le service propose une bibliothèque de cours par chapitre, QCM, flashcards et cas originaux avec corrigés, un planning et une préparation orale autonomes. Le contenu couvre partiellement les matières affichées. Un tuteur IA optionnel est soumis à des limites : 20 demandes par jour et 300 par mois, ainsi qu’un budget de génération et aux disponibilités du fournisseur.` },
-    { title: "3. Accès et compte", body: `L'accès au service nécessite la création d'un compte via adresse email ou compte Google. L'utilisateur est responsable de la confidentialité de ses identifiants. Un plan gratuit avec fonctionnalités limitées est disponible sans engagement. Un plan Pro à ${PRO_PRICE}/mois offre un accès complet à l'ensemble des fonctionnalités.` },
+    { title: "3. Accès et compte", body: `L'accès au service nécessite la création d'un compte via adresse email ou compte Google. L'utilisateur est responsable de la confidentialité de ses identifiants. Les titres et volumes de la bibliothèque sont consultables avant l'achat. Les cours et exercices nécessitent un accès payant actif, sans essai gratuit. Le plan Pro à ${PRO_PRICE}/mois donne accès aux contenus effectivement disponibles, au planning et au tuteur dans les limites indiquées. Le Pack Examen donne accès pendant 90 jours, sans renouvellement.` },
     { title: "4. Abonnement Pro", body: `Le plan Pro est facturé mensuellement via Stripe, prestataire de paiement sécurisé. L'abonnement est sans engagement et résiliable à tout moment depuis votre espace client Stripe. Aucun remboursement ne sera effectué pour la période en cours au moment de la résiliation.` },
     { title: "5. Propriété intellectuelle", body: `Les fiches et exercices originaux sont des supports de révision complémentaires. Les réponses du tuteur IA peuvent contenir des erreurs et doivent être comparées aux références applicables à votre session. L'interface, le logo et les éléments visuels sont la propriété exclusive de Marcus Bonnafis.` },
     { title: "6. Limitation de responsabilité", body: `SIMDCG est un outil de préparation et ne constitue pas un engagement de réussite aux examens. Les parcours couvrent partiellement les programmes et complètent les cours et annales de votre formation. SIMDCG ne saurait être tenu responsable des décisions prises sur la base des informations fournies.` },

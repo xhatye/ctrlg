@@ -12,13 +12,13 @@ export function ChapterSelect({id,value,onChange,all=false,disabled=false}) {
 }
 
 export function StudySession({ue,kind,children}) {
-  const [chapter,setChapter]=useState(ue.chapter || 'all'),[count,setCount]=useState(8);
+  const [chapter,setChapter]=useState(ue.chapter || 'all'),[count,setCount]=useState(kind==='cards'?40:8);
   useEffect(()=>setChapter(ue.chapter || 'all'),[ue.id,ue.chapter]);
   const stats=catalogue.modules[ue.id];
   return <div className="chapter-session">
     <div className="session-controls">
       <ChapterSelect id={ue.id} value={chapter} onChange={setChapter} all />
-      {kind==='qcm'&&<label className="chapter-select">Longueur de la série<select aria-label="Longueur de la série" value={count} onChange={e=>setCount(Number(e.target.value))}>{[4,8,12,20].map(n=><option key={n} value={n}>{n} questions maximum</option>)}</select></label>}
+      <label className="chapter-select">Longueur de la série<select aria-label="Longueur de la série" value={count} onChange={e=>setCount(Number(e.target.value))}>{(kind==='cards'?[20,40,60,100]:[4,8,12,20]).map(n=><option key={n} value={n}>{n} {kind==='cards'?'cartes':'questions'} maximum</option>)}</select></label>
       <span className="helper">{stats?.questionCount} questions · {stats?.chapters.length} chapitres. Changer le choix relance la série.</span>
     </div>
     <div key={`${ue.id}-${chapter}-${count}`}>{children({...ue,chapter,count})}</div>
@@ -30,10 +30,10 @@ export function ChapterLibrary({ue,onOpen}) {
   const stats=catalogue.modules[ue.id];
   const chapters=stats?.chapters.filter(c=>c.title.toLocaleLowerCase('fr').includes(query.toLocaleLowerCase('fr'))) || [];
   return <section className="chapter-library">
-    <div className="section-heading compact"><div><span className="eyebrow">À VOTRE RYTHME</span><h2>Les chapitres de cette matière</h2></div><span className="helper">{stats?.chapters.length} cours · {stats?.questionCount} QCM · {stats?.cardCount} cartes</span></div>
+    <div className="section-heading compact"><div><span className="eyebrow">À VOTRE RYTHME</span><h2>Les chapitres de cette matière</h2></div><span className="helper">{stats?.chapters.length} cours · {stats?.questionCount} QCM · {stats?.cardCount} cartes · {stats?.caseCount} cas</span></div>
     <label className="search-input"><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Trouver un chapitre" aria-label="Rechercher un chapitre" /></label>
     <div className="chapter-grid">{chapters.map((c,i)=><article className="chapter-card" key={c.id}>
-      <span className="chapter-number">{String(i+1).padStart(2,'0')}</span><h3>{c.title}</h3><p>{c.minutes} min de lecture et révision · {c.questionCount} questions</p>
+      <span className="chapter-number">{String(i+1).padStart(2,'0')}</span><h3>{c.title}</h3><p>{c.minutes} min de lecture et révision · {c.questionCount} questions · {c.caseCount} cas</p><p className="helper">{c.practiceKind}</p>
       <div>{[['resume_cours','Cours'],['qcm','QCM'],['flashcards','Cartes'],['cas_pratique','Cas']].map(([key,label])=><button key={key} onClick={()=>onOpen(key,c.id)}>{label}<span aria-hidden="true">↗</span></button>)}</div>
     </article>)}</div>
     {!chapters.length&&<p className="empty-state">Aucun chapitre ne correspond à cette recherche.</p>}

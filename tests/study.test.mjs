@@ -21,11 +21,11 @@ test("all advertised modules have unambiguous quizzes and matching cards", () =>
         assert.equal(item.options[item.answer], m.notions[i].correct);
       }
     }
-    assert.equal(studyModule(id, "cards").items.length, m.notions.length);
+    assert.equal(studyModule(id, "cards").items.length, Math.min(40,m.notions.length));
     assert.equal(studyModule(id, "case").questions.length, 3);
     total += m.notions.length;
   }
-  assert.equal(total, 296);
+  assert.equal(total, 6344);
 });
 test("numeric starter corrections agree with independent calculations", () => {
   assert.equal(
@@ -51,9 +51,10 @@ const deps = (profile) => ({
     }),
   },
 });
-test("free accounting demo does not depend on Firebase, Stripe or Groq", async () => {
-  const data = await readStudy("UE9", "qcm", undefined, {});
-  assert.equal(data.items.length, 8);
+test("accounting requires Pro just like every other subject", async () => {
+  await assert.rejects(readStudy('UE9','qcm',undefined,{authenticate:async()=>{throw Object.assign(new Error('auth'),{status:401});}}),{status:401});
+  await assert.rejects(readStudy('UE9','qcm','token',deps({isPro:false})),{status:403});
+  assert.equal((await readStudy('UE9','qcm','token',deps({isPro:true}))).items.length,8);
 });
 test("premium contents require authentication and active server-side entitlement", async () => {
   await assert.rejects(

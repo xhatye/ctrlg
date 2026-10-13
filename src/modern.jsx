@@ -45,7 +45,7 @@ export function Brand({ onClick }) {
       <img className="brand-mark" src="/favicon.svg?v=2" alt="" width="42" height="42" />
       <span>
         SIM<span className="brand-light">DCG</span>
-        <small>UN PEU CHAQUE JOUR. UN PAS PLUS LOIN.</small>
+        <small>LES RÉVISIONS DCG ET DSCG</small>
       </span>
     </Tag>
   );
@@ -152,8 +152,8 @@ const features = [
 ];
 const faq = [
   [
-    "Que puis-je faire avec un compte gratuit ?",
-    "Vous pouvez utiliser gratuitement la comptabilité (UE9) : 4 chapitres, 20 QCM, 20 flashcards et 4 cas avec corrigés. Le planning est aussi disponible. Les autres parcours et le tuteur sont réservés à Pro.",
+    "Peut-on essayer les exercices avant de s’abonner ?",
+    "Il n’y a pas d’essai gratuit. Les titres des chapitres et les volumes de la bibliothèque sont consultables avant l’achat. Les cours, QCM, flashcards, cas corrigés et le tuteur nécessitent un accès Pro actif ou un Pack Examen.",
   ],
   [
     "Les exercices sont-ils des annales officielles ?",
@@ -270,18 +270,19 @@ export function Marketing({ onAuth, onNav, ues }) {
               <i /> VOTRE COMPAGNON DE RÉVISION DCG / DSCG
             </span>
             <h1>
-              Moins de flou.
+              Votre DCG.
               <br />
-              Plus de <span>déclics.</span>
+              Votre DSCG.
+              <br /><span>Vos révisions.</span>
             </h1>
             <p>
-              Vos matières, un plan clair et les bons outils pour avancer.
-              Un chapitre pour comprendre, quelques questions pour vérifier,
-              des cartes pour retenir. Faites un peu, puis revenez demain.
+              Une plateforme consacrée aux diplômes de comptabilité et de gestion.
+              Retrouvez vos 13 UE de DCG et vos 7 UE de DSCG : cours par chapitre,
+              QCM expliqués, flashcards et cas corrigés pour travailler les raisonnements de vos épreuves.
             </p>
             <div className="hero-actions">
-              <Button onClick={() => onAuth("signup")}>
-                Créer mon espace <Icon name="arrow" size={18} />
+              <Button onClick={() => onNav("pricing")}>
+                Accéder aux révisions <Icon name="arrow" size={18} />
               </Button>
               <Button
                 secondary
@@ -291,25 +292,25 @@ export function Marketing({ onAuth, onNav, ues }) {
                     .scrollIntoView({ behavior: "smooth" })
                 }
               >
-                Découvrir la méthode
+                Voir la méthode DCG / DSCG
               </Button>
             </div>
             <div className="hero-reassurance">
               <span>
-                <Icon name="check" size={15} /> Compte gratuit
+                <Icon name="check" size={15} /> 13 UE DCG · 7 UE DSCG
               </span>
               <span>
-                <Icon name="check" size={15} /> Sans carte bancaire
+                <Icon name="check" size={15} /> Pro à 15 € / mois
               </span>
             </div>
           </div>
           <PreviewCard />
         </section>
-        <section className="container library-numbers" aria-label="Contenu de la bibliothèque">{[[catalogue.totals.subjects,'matières DCG et DSCG'],[catalogue.totals.chapters,'chapitres de cours'],[catalogue.totals.questions,'QCM expliqués'],[catalogue.totals.cards,'flashcards']].map(([count,label])=><div key={label}><strong>{count}</strong><span>{label}</span></div>)}<p>Exercices originaux, couverture partielle des programmes.</p></section>
+        <section className="container library-numbers" aria-label="Contenu de la bibliothèque">{[[catalogue.totals.subjects,'matières DCG et DSCG'],[catalogue.totals.chapters,'chapitres de cours'],[catalogue.totals.questions,'QCM expliqués'],[catalogue.totals.cards,'flashcards'],[catalogue.totals.cases,'cas corrigés']].map(([count,label])=><div key={label}><strong>{count.toLocaleString('fr-FR')}</strong><span>{label}</span></div>)}<p>{catalogue.totals.concepts} repères de cours ; les exercices incluent {catalogue.totals.applications.toLocaleString('fr-FR')} applications chiffrées réparties en variantes. Contenus originaux, couverture partielle des programmes.</p></section>
         <div className="container exam-home"><ExamCountdown /></div>
         <div className="subject-strip">
           <div className="container">
-            <span>PENSÉ POUR VOS MATIÈRES</span>
+            <span>VOS ÉPREUVES DCG / DSCG</span>
             {[
               "Comptabilité",
               "Droit",
@@ -327,7 +328,7 @@ export function Marketing({ onAuth, onNav, ues }) {
               <span className="eyebrow">
                 UNE MÉTHODE, PAS UN MILLIER D’ONGLETS
               </span>
-              <h2>Tout pour votre prochain déclic.</h2>
+              <h2>Comprendre vos UE. Préparer vos épreuves.</h2>
             </div>
             <p>
               Apprendre. Pratiquer. Retenir.
@@ -538,7 +539,7 @@ export function ProductShell({ children, screen, user, onNav, onLogout }) {
               <span>Rechercher une matière</span>
             </button>
             <button className="plan-pill" onClick={() => onNav("account")}>
-              {user.isPro ? "✦ Pro" : "Découverte"}
+              {user.isPro ? "✦ Pro" : "Sans abonnement"}
             </button>
             <button
               className="avatar"
@@ -887,7 +888,7 @@ export function CourseHome({ ue, user, onNav }) {
             "03",
             "Retenir",
             "Flashcards",
-            "Cartes par chapitre et reprise des cartes difficiles",
+            "Séries de 20 à 100 cartes, notions et applications chiffrées",
           ],
           [
             "cas_pratique",
@@ -895,14 +896,14 @@ export function CourseHome({ ue, user, onNav }) {
             "04",
             "Vous tester",
             "Cas pratique",
-            "Un cas par chapitre avec raisonnement détaillé",
+            "Cas originaux et variantes chiffrées à choisir, avec raisonnement expliqué",
           ],
         ].map(([key, icon, n, tag, title, desc]) => (
           <button
             className="course-tool"
             key={key}
             onClick={() =>
-              onNav(user.isPro || ue.id === "UE9" ? key : "paywall")
+              onNav(user.isPro ? key : "paywall")
             }
           >
             <span className="icon-tile">
@@ -914,16 +915,16 @@ export function CourseHome({ ue, user, onNav }) {
             <h3>{title}</h3>
             <p>{desc}</p>
             <span className="tool-link">
-              {user.isPro || ue.id === "UE9" ? "Commencer" : "Découvrir Pro"}
+              {user.isPro ? "Commencer" : "Accéder avec Pro"}
               <Icon
-                name={user.isPro || ue.id === "UE9" ? "arrow" : "lock"}
+                name={user.isPro ? "arrow" : "lock"}
                 size={18}
               />
             </span>
           </button>
         ))}
       </div>
-      <ChapterLibrary ue={ue} onOpen={(screen,chapter)=>onNav(user.isPro || ue.id==='UE9'?screen:'paywall',{chapter})}/>
+      <ChapterLibrary ue={ue} onOpen={(screen,chapter)=>onNav(user.isPro?screen:'paywall',{chapter})}/>
     </div>
   );
 }
@@ -937,14 +938,7 @@ export function OfferPage({ user, onCheckout, onNav }) {
           title="Un cap clair. Un prix clair."
           desc="Les mêmes outils de révision, deux façons d’y accéder."
         />
-        <div className="demo-link">
-          <Button secondary onClick={() => onNav("demo")}>
-            Essayer la comptabilité gratuitement <Icon name="arrow" />
-          </Button>
-          <p className="helper">
-            La comptabilité en libre accès, sans carte bancaire.
-          </p>
-        </div>
+        <p className="helper">Consultez les chapitres DCG et DSCG avant de choisir votre accès. Les exercices sont réservés aux abonnés, sans essai gratuit.</p>
         <div className="pricing-grid">
           <article className="pricing-card">
             <span className="card-tag">POUR UN OBJECTIF PRÉCIS</span>
@@ -1016,8 +1010,8 @@ export function OfferPage({ user, onCheckout, onNav }) {
           </article>
         </div>
         <p className="pricing-footnote">
-          Bibliothèque : 296 QCM, 296 flashcards, 73 chapitres de cours et 73 cas
-          originaux. Couverture partielle du programme ; ces contenus ne sont
+          Bibliothèque : {catalogue.totals.questions.toLocaleString('fr-FR')} QCM, {catalogue.totals.cards.toLocaleString('fr-FR')} flashcards, {catalogue.totals.chapters} chapitres de cours et {catalogue.totals.cases.toLocaleString('fr-FR')} cas
+          corrigés, variantes chiffrées comprises. Couverture partielle du programme ; ces contenus ne sont
           pas des annales officielles. Le tuteur est optionnel, soumis aux
           quotas et à un budget de génération. Une panne du tuteur ne bloque pas
           les révisions.
@@ -1095,7 +1089,7 @@ export function AccountPage({ user, onNav, onCheckout, request }) {
           <p>{user.email}</p>
         </div>
         <span className="plan-pill">
-          {user.isPro ? "✦ Pro actif" : "Compte découverte"}
+          {user.isPro ? "✦ Pro actif" : "Compte sans abonnement"}
         </span>
       </section>
       <div className="account-grid">
@@ -1507,6 +1501,7 @@ export function PublicInfo({ page, onNav, onAuth, ues }) {
                     <span className="ue-code">{ue.id}</span>
                     <h3>{ue.label}</h3>
                     <p>{ue.desc}</p>
+                    <details className="programme-chapters"><summary>Voir les {catalogue.modules[ue.id]?.chapters.length} chapitres et les volumes</summary><p className="helper">{catalogue.modules[ue.id]?.questionCount} QCM · {catalogue.modules[ue.id]?.cardCount} cartes · {catalogue.modules[ue.id]?.caseCount} cas, variantes comprises. Accès aux contenus réservé à Pro.</p><ul>{catalogue.modules[ue.id]?.chapters.map(c=><li key={c.id}><strong>{c.title}</strong><span>{c.questionCount} questions · {c.caseCount} cas</span></li>)}</ul></details>
                   </article>
                 ))}
             </div>

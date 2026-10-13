@@ -24,13 +24,13 @@ function SourceLinks({ sources = [] }) {
     )
   );
 }
-function useModule(id, tool, chapter) {
+function useModule(id, tool, chapter, variant) {
   const [state, setState] = useState({ loading: true, data: null, error: "" }),
     [retry, setRetry] = useState(0);
   useEffect(() => {
     let alive = true;
     setState({ loading: true, data: null, error: "" });
-    loadStudy(id, tool, {chapter})
+    loadStudy(id, tool, {chapter,variant})
       .then((data) => {
         if (alive) setState({ loading: false, data, error: "" });
       })
@@ -41,7 +41,7 @@ function useModule(id, tool, chapter) {
     return () => {
       alive = false;
     };
-  }, [id, tool, chapter, retry]);
+  }, [id, tool, chapter, variant, retry]);
   return { ...state, retry: () => setRetry((x) => x + 1) };
 }
 function Frame({ title, ue, onBack, children }) {
@@ -117,8 +117,9 @@ export function SavedLesson({ ue, onBack }) {
 }
 export function CasePractice({ ue, user, onDone, onBack }) {
   const [chapter,setChapter]=useState(ue.chapter || '');
-  useEffect(()=>setChapter(ue.chapter || ''),[ue.id,ue.chapter]);
-  const state = useModule(ue.id, "case", chapter),
+  const [variant,setVariant]=useState(0);
+  useEffect(()=>{setChapter(ue.chapter || '');setVariant(0);},[ue.id,ue.chapter]);
+  const state = useModule(ue.id, "case", chapter, variant),
     [answer, setAnswer] = useState(""),
     [shown, setShown] = useState(false),
     [saving, setSaving] = useState(false),
@@ -129,7 +130,7 @@ export function CasePractice({ ue, user, onDone, onBack }) {
     setShown(false);
     setSaved(false);
     setSaveError('');
-  }, [ue.id, chapter]);
+  }, [ue.id, chapter, variant]);
   const record = async () => {
     if (saving || saved) return;
     setSaving(true);
@@ -153,10 +154,11 @@ export function CasePractice({ ue, user, onDone, onBack }) {
   };
   return (
     <Frame title={state.data?.titre || "Cas pratique"} ue={ue} onBack={onBack}>
-      <ChapterSelect id={ue.id} value={chapter} onChange={setChapter} disabled={saving} />
+      <ChapterSelect id={ue.id} value={chapter} onChange={value=>{setChapter(value);setVariant(0);}} disabled={saving} />
       <LoadState {...state} />
       {state.data && (
         <>
+          {state.data.caseVariants.length>1&&<div className="session-controls"><label className="chapter-select">Dossier d’entraînement<select aria-label="Dossier d’entraînement" disabled={saving} value={variant} onChange={e=>setVariant(Number(e.target.value))}>{state.data.caseVariants.map(v=><option key={v.id} value={v.id}>{v.title}</option>)}</select></label><p className="helper">{state.data.practiceKind}. Changer de dossier réinitialise votre réponse et le corrigé.</p></div>}
           <article className="panel">
             <span className="eyebrow">
               EXERCICE ORIGINAL · {state.data.duree_estimee}

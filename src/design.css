@@ -2782,11 +2782,25 @@ input, select, textarea {accent-color:var(--gold-text)}
 .orbit-dots circle {animation:study-breathe 6s ease-in-out infinite}
 .orbit-notes {fill:currentColor;opacity:.16;font:11px 'Segoe UI',sans-serif;letter-spacing:1px}
 @keyframes study-breathe {50% {opacity:.3}}
-.library-numbers {display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:24px 0 42px;border-top:1px solid var(--line)}
+.library-numbers {display:grid;grid-template-columns:repeat(5,1fr);gap:24px;padding:24px 0 42px;border-top:1px solid var(--line)}
 .library-numbers>div {display:flex;flex-direction:column;gap:5px}
 .library-numbers strong {font-size:32px;letter-spacing:-1px;font-variant-numeric:tabular-nums;color:var(--ink)}
 .library-numbers span {font-size:12px;color:var(--muted)}
 .library-numbers p {grid-column:1/-1;font-size:11px}
+.programme-chapters {margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.programme-chapters summary {cursor:pointer;color:var(--gold-text);font-size:13px;font-weight:600;line-height:1.6}
+.programme-chapters ul {list-style:none;padding:0;display:grid;gap:12px;margin-top:14px}
+.programme-chapters li {display:flex;flex-direction:column;gap:4px;font-size:13px;line-height:1.5}
+.programme-chapters li span {color:var(--muted);font-size:12px}
+.flashcard {perspective:1200px;cursor:pointer;margin-bottom:20px}
+.flashcard-inner {display:grid;transform-style:preserve-3d;transition:transform .45s ease}
+.flashcard-inner.is-flipped {transform:rotateY(180deg)}
+.flashcard-face {grid-area:1/1;min-width:0;min-height:240px;display:flex;flex-direction:column;justify-content:center;gap:18px;padding:24px;border:1px solid var(--gold-line);border-radius:16px;background:var(--surface);backface-visibility:hidden;overflow-wrap:anywhere}
+.flashcard-face p {color:var(--ink);font-size:13px;line-height:1.75}
+.flashcard-face .flashcard-question {font-size:14px;font-weight:600}
+.flashcard-answer {transform:rotateY(180deg);border-color:color-mix(in srgb,var(--success) 35%,var(--line))}
+.flashcard-answer .eyebrow {color:var(--success)}
+@media(prefers-reduced-motion:reduce) {.flashcard-inner {transition:none}}
 .ue-content-count {display:block;font-size:10px;color:var(--gold-text);margin-bottom:16px}
 .chapter-select {display:flex;flex-direction:column;gap:7px;font-size:11px;color:var(--muted);max-width:560px;margin-bottom:18px}
 .chapter-select select {width:100%;padding:12px 36px 12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);font-size:13px;min-height:46px}

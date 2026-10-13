@@ -18,14 +18,15 @@ test('every chapter provides original prose, a complete correction, provenance a
       assert.equal(c.cas.questions.length,3);assert.ok(c.cas.contexte);
       for(const q of c.cas.questions)assert.ok(q.enonce&&q.answer);
       const quiz=studyModule(id,'qcm',()=>.37,{chapter:c.id,count:20});
-      assert.equal(quiz.items.length,c.notions.length);
-      for(const n of c.notions){assert.ok(n.body.length>60);assert.equal(n.wrong.length,3);assert.equal(new Set([n.correct,...n.wrong]).size,4);assert.ok(!questions.has(n.q),'Duplicate question: '+n.q);questions.add(n.q);}
+      const pool=c.practice || c.notions;
+      assert.equal(quiz.items.length,Math.min(20,pool.length));
+      for(const n of pool){assert.ok(n.body.length>60);assert.equal(n.wrong.length,3);assert.equal(new Set([n.correct,...n.wrong]).size,4);assert.ok(!questions.has(n.q),'Duplicate question: '+n.q);questions.add(n.q);}
       for(const q of quiz.items){assert.equal(q.chapter,c.id);const n=m.notions[Number(q.id.split('-')[1])];assert.equal(q.options[q.answer],n.correct);}
-      assert.equal(studyModule(id,'cards',Math.random,{chapter:c.id}).items.length,c.notions.length);
+      assert.equal(studyModule(id,'cards',Math.random,{chapter:c.id}).items.length,Math.min(40,pool.length));
       assert.equal(studyModule(id,'summary',Math.random,{chapter:c.id}).example.contexte,c.cas.contexte);
     }
   }
-  assert.equal(chapters,73);assert.equal(questions.size,296);
+  assert.equal(chapters,145);assert.equal(questions.size,6344);
 });
 test('public catalogue contains counts and titles, never premium answers or lesson bodies',async()=>{
   const published=JSON.parse(readFileSync(new URL('../src/catalogue.json',import.meta.url),'utf8'));
@@ -34,13 +35,13 @@ test('public catalogue contains counts and titles, never premium answers or less
     assert.deepEqual(meta,published.modules[id]);
     const json=JSON.stringify(meta);for(const n of m.notions){assert.ok(!json.includes(n.q));assert.ok(!json.includes(n.body));}
   }
-  assert.deepEqual(published.totals,{subjects:20,chapters:73,questions:296,cards:296});
+  assert.deepEqual(published.totals,{subjects:20,chapters:145,questions:6344,cards:6344,cases:1585,concepts:584,applications:6000});
 });
 test('new premium chapters remain protected, and invalid chapters never read user data',async()=>{
   const noAuth={authenticate:async()=>{throw Object.assign(new Error('Connexion requise'),{status:401})}};
   for(const id of ['UE5','UE8','UE11','UE12','UE13','DSCG6','DSCG7'])await assert.rejects(readStudy(id,'summary',undefined,noAuth),{status:401});
   await assert.rejects(readStudy('UE2','summary',undefined,{}, {chapter:'__proto__'}),{status:404});
-  const free=await readStudy('UE9','summary',undefined,{}, {chapter:'stocks'});assert.equal(free.chapter,'stocks');
+  await assert.rejects(readStudy('UE9','summary',undefined,noAuth,{chapter:'stocks'}),{status:401});
   for(const count of [0,21,-1,3.2,NaN])assert.throws(()=>studyModule('UE9','qcm',Math.random,{count}),{status:400});
 });
 test('session labels distinguish the 2026 and 2027 programmes',()=>{

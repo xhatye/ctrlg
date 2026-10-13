@@ -2,9 +2,11 @@
 
 ## Contenus publiés
 
-20 matières obligatoires : 13 DCG et 7 DSCG. La banque comprend 73 chapitres de cours, 296 questions à choix multiples expliquées, 296 flashcards et 73 cas originaux avec trois questions corrigées chacun. Les textes de cours, méthodes, mises en situation et corrections représentent environ 15 450 mots hors questions et distracteurs.
+20 matières obligatoires : 13 DCG et 7 DSCG. La banque comprend 145 chapitres de cours, 6 344 questions à choix multiples expliquées, 6 344 flashcards et 1 585 cas avec trois questions corrigées chacun. Ces volumes comprennent explicitement des variantes chiffrées d’entraînement.
 
-Les sept matières ajoutées sont DCG UE5, UE8, UE11, UE12, UE13 et DSCG UE6, UE7. Les matières déjà présentes reçoivent chacune trois chapitres supplémentaires. Les anciens repères sont conservés dans un chapitre distinct.
+La première extension proposait 73 chapitres, 296 QCM et cartes, et 73 cas. La deuxième ajoute 60 chapitres d’application chiffrée, 12 chapitres de droit, anglais et méthodologie professionnelle, ainsi que 1 500 variantes de dossiers et 6 000 questions d’application. Les anciens repères sont conservés. Les QCM, cartes et cas dépassent vingt fois les volumes de la première extension. Le nombre de matières reste conforme aux deux diplômes ; les variantes ne sont pas présentées comme des chapitres supplémentaires.
+
+Les 584 repères de cours sont distingués des volumes d’exercices. Une famille d’application comporte quatre tâches de calcul et 25 jeux de données, avec hypothèses, méthode, erreurs à éviter et interprétation. Les cartes d’application reprennent un exercice de rappel ou de calcul : les 6 344 cartes ne correspondent pas à 6 344 concepts théoriques distincts. Les choix chiffrés sont mélangés et les corrections calculées sans appel IA.
 
 Les cours portent sur les fondamentaux et quelques applications. Ils ne constituent pas une couverture intégrale des programmes ni des annales officielles. Les intitulés 2026 et 2027 sont disponibles dans le catalogue. Cela ne signifie pas que deux cours exhaustifs distincts sont proposés. Les principes communs sont conservés et les références de chaque session restent accessibles.
 
@@ -22,6 +24,8 @@ La relecture éditoriale, les tests de structure, l’unicité des choix et des 
 
 - `lib/content-*.mjs` : cours et exercices par domaine, conservés côté serveur.
 - `lib/content-authoring.mjs` : structure, références, date et origine.
+- `lib/content-deepening.mjs` : approfondissements droit, anglais, rapport et mémoire.
+- `lib/practice-*.mjs` : 60 familles de calcul et moteur déterministe de 25 variantes chacune. Les données et corrections restent côté serveur.
 - `lib/curriculum.mjs` : matières et intitulés selon la session.
 - `lib/study-content.mjs` : assemblage et sélection par chapitre.
 - `src/catalogue.json` : titres et volumes publics, générés avant chaque build ; aucun texte de cours ni correction Pro.
@@ -31,9 +35,11 @@ Pour ajouter un chapitre, rédiger les textes, quatre questions avec un seul bon
 
 ## Consultation et tuteur
 
-La comptabilité UE9 est accessible gratuitement : quatre chapitres, vingt QCM, vingt cartes et quatre cas. Les autres matières demandent un accès Pro actif vérifié côté serveur. Le catalogue des titres est public ; il ne contient pas les réponses.
+Toutes les matières, y compris UE9, demandent un accès Pro actif vérifié côté serveur. Aucun essai gratuit n’est proposé. L’ancien chemin `/decouverte` redirige vers les offres. Le catalogue des titres et volumes est public ; il ne contient pas les réponses. Les comptes sans abonnement peuvent consulter ce catalogue et préparer leur accès ; ils ne peuvent pas charger les leçons ou exercices.
 
-Une série de QCM peut mélanger les chapitres ou cibler un chapitre, avec quatre à vingt questions maximum. Le nombre réel dépend du nombre de questions disponibles. Changer le choix relance la série. Les flashcards se filtrent par chapitre et les cas réinitialisent la réponse et l’affichage du corrigé lors d’un changement de chapitre.
+Une série de QCM peut mélanger les chapitres ou cibler un chapitre, avec quatre à vingt questions maximum. Les flashcards sont proposées en séries de 20 à 100 cartes maximum, pour éviter de charger toute une matière. Le nombre réel dépend de la banque disponible. Changer le choix relance la série. Un sélecteur permet de choisir chaque variante de cas ; changer le chapitre ou la variante réinitialise la réponse et le corrigé. Les paramètres hors limites sont refusés.
+
+Les 60 dossiers initiaux ont été recalculés indépendamment, soit 240 résultats de référence. Des identités de bilan, de ventilation et de financement sont contrôlées sur les 1 500 variantes. Cela vérifie la cohérence arithmétique des hypothèses, sans certifier une couverture de programme ni une validation indépendante par enseignant.
 
 Le tuteur recherche jusqu’à trois extraits pertinents de la banque originale, au sein de la matière choisie. Ces extraits sont des données, pas des instructions. Les chapitres associés sont liés dans la réponse. Le contexte est limité à 5 000 caractères et son coût est inclus dans la réservation avant l’appel Groq. Les limites journalières, mensuelles et financières existantes restent actives. Cette recherche locale ne requiert ni abonnement supplémentaire, ni service d’embeddings, ni base vectorielle. Elle ne garantit pas l’exactitude des réponses du modèle.
 
@@ -41,4 +47,4 @@ Le tuteur recherche jusqu’à trois extraits pertinents de la banque originale,
 
 Le fond d’accueil utilise une carte graphique discrète en noir et doré, avec lignes, points et formules. Les mouvements de souris produisent un léger déplacement du décor et un éclairage local des cartes et boutons. Les contrôles restent utilisables au clavier. Les effets de mouvement sont désactivés lorsque la préférence de réduction des animations est active.
 
-La navigation par chapitre, la recherche, les exemples dépliables, les deux thèmes et le parcours gratuit sont vérifiés sur ordinateur et mobile avant publication.
+L’accueil affiche explicitement DCG et DSCG, leurs UE et les outils dédiés. Les pages de diplômes présentent les titres et volumes des chapitres avant achat, sans exercice public. La navigation, la recherche, les exemples dépliables, les variantes et les deux thèmes sont vérifiés sur ordinateur et mobile avant publication.
