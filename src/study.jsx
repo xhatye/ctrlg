@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { loadStudy } from "./study-client";
+import { ChapterSelect } from './chapter-navigation';
 
 export function StudyNotice() {
   return (
     <p className="study-notice">
-      Parcours de départ · exercices originaux · couverture partielle du
-      programme. Aucun appel IA pour ces révisions.
+      Cours et exercices originaux · couverture partielle du programme.
+      Vérifiez les règles de votre session dans les références proposées.
     </p>
   );
 }
@@ -23,13 +24,13 @@ function SourceLinks({ sources = [] }) {
     )
   );
 }
-function useModule(id, tool) {
+function useModule(id, tool, chapter) {
   const [state, setState] = useState({ loading: true, data: null, error: "" }),
     [retry, setRetry] = useState(0);
   useEffect(() => {
     let alive = true;
     setState({ loading: true, data: null, error: "" });
-    loadStudy(id, tool)
+    loadStudy(id, tool, {chapter})
       .then((data) => {
         if (alive) setState({ loading: false, data, error: "" });
       })
@@ -40,7 +41,7 @@ function useModule(id, tool) {
     return () => {
       alive = false;
     };
-  }, [id, tool, retry]);
+  }, [id, tool, chapter, retry]);
   return { ...state, retry: () => setRetry((x) => x + 1) };
 }
 function Frame({ title, ue, onBack, children }) {
@@ -75,12 +76,16 @@ function LoadState({ loading, error, retry }) {
   ) : null;
 }
 export function SavedLesson({ ue, onBack }) {
-  const state = useModule(ue.id, "summary");
+  const [chapter,setChapter]=useState(ue.chapter || '');
+  useEffect(()=>setChapter(ue.chapter || ''),[ue.id,ue.chapter]);
+  const state = useModule(ue.id, "summary", chapter);
   return (
     <Frame title={state.data?.title || ue.label} ue={ue} onBack={onBack}>
+      <ChapterSelect id={ue.id} value={chapter} onChange={setChapter} />
       <LoadState {...state} />
       {state.data && (
         <>
+          <article className="lesson-intro panel"><span className="eyebrow">LE POINT DE DÉPART</span><p>{state.data.intro}</p><h3>Comment travailler ce chapitre</h3><p>{state.data.method}</p></article>
           <div className="saved-grid">
             {state.data.sections.map((s, i) => (
               <article className="panel" key={s.titre}>
@@ -92,6 +97,8 @@ export function SavedLesson({ ue, onBack }) {
               </article>
             ))}
           </div>
+          <section className="panel lesson-example"><span className="eyebrow">EXEMPLE À TRAVAILLER</span><h2>{state.data.example.titre}</h2><p>{state.data.example.contexte}</p>{state.data.example.questions.map(q=><details key={q.num}><summary>{q.enonce}</summary><p>{q.answer}</p></details>)}</section>
+          <section className="panel lesson-pitfalls"><h2>Les erreurs à éviter</h2><ul>{state.data.pieges_frequents.map(p=><li key={p}>{p}</li>)}</ul></section>
           <div className="panel">
             <h2>Votre méthode</h2>
             <p>
@@ -102,13 +109,16 @@ export function SavedLesson({ ue, onBack }) {
             <p>{state.data.conseil_exam}</p>
           </div>
           <SourceLinks sources={state.data.sources} />
+          <p className="helper">Références consultées le {state.data.verifiedAt}. Texte et exercices originaux SIMDCG.</p>
         </>
       )}
     </Frame>
   );
 }
 export function CasePractice({ ue, user, onDone, onBack }) {
-  const state = useModule(ue.id, "case"),
+  const [chapter,setChapter]=useState(ue.chapter || '');
+  useEffect(()=>setChapter(ue.chapter || ''),[ue.id,ue.chapter]);
+  const state = useModule(ue.id, "case", chapter),
     [answer, setAnswer] = useState(""),
     [shown, setShown] = useState(false),
     [saving, setSaving] = useState(false),
@@ -118,7 +128,8 @@ export function CasePractice({ ue, user, onDone, onBack }) {
     setAnswer("");
     setShown(false);
     setSaved(false);
-  }, [ue.id]);
+    setSaveError('');
+  }, [ue.id, chapter]);
   const record = async () => {
     if (saving || saved) return;
     setSaving(true);
@@ -142,6 +153,7 @@ export function CasePractice({ ue, user, onDone, onBack }) {
   };
   return (
     <Frame title={state.data?.titre || "Cas pratique"} ue={ue} onBack={onBack}>
+      <ChapterSelect id={ue.id} value={chapter} onChange={setChapter} disabled={saving} />
       <LoadState {...state} />
       {state.data && (
         <>

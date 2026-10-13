@@ -42,7 +42,8 @@ export default function DesignPreview() {
       new URLSearchParams(location.search).get("design") || "landing",
     ),
     [ue, setUE] = useState(ues.find((x) => x.id === "UE9"));
-  const nav = (key) => {
+  const nav = (key,opts={}) => {
+    if(opts.chapter)setUE(ue=>({...ue,chapter:opts.chapter}));
     setPage(key);
     history.replaceState({}, "", `/?design=${key}`);
   };

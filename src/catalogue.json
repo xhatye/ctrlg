@@ -1,0 +1,649 @@
+{
+  "version": "2026-10-13",
+  "totals": {
+    "subjects": 20,
+    "chapters": 73,
+    "questions": 296,
+    "cards": 296
+  },
+  "modules": {
+    "UE1": {
+      "module": "UE1",
+      "title": "Fondamentaux du droit",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 16,
+      "cardCount": 16,
+      "chapters": [
+        {
+          "id": "reperes",
+          "title": "Contrat et responsabilité",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "sources",
+          "title": "Trouver la règle et établir les faits",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "contrats",
+          "title": "Former et exécuter un contrat",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "responsabilite",
+          "title": "Réparer un dommage : construire le raisonnement",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "UE2": {
+      "module": "UE2",
+      "title": "Droit des affaires",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 16,
+      "cardCount": 16,
+      "chapters": [
+        {
+          "id": "reperes",
+          "title": "Société et gouvernance",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "formes",
+          "title": "Choisir et comprendre une forme sociale",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "decisions",
+          "title": "Pouvoirs et décisions dans la société",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "financement",
+          "title": "Capital, compte courant et distribution",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "UE3": {
+      "module": "UE3",
+      "title": "Droit social",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 16,
+      "cardCount": 16,
+      "chapters": [
+        {
+          "id": "reperes",
+          "title": "Relation de travail",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "travail",
+          "title": "Qualifier et former la relation de travail",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "execution",
+          "title": "Exécuter et modifier le contrat de travail",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "relations",
+          "title": "Relations collectives et règlement d’un litige",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "UE4": {
+      "module": "UE4",
+      "title": "Droit fiscal",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 16,
+      "cardCount": 16,
+      "chapters": [
+        {
+          "id": "reperes",
+          "title": "Calculs de TVA",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "tva",
+          "title": "Passer du prix à la TVA",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "resultat-fiscal",
+          "title": "Du résultat comptable au résultat fiscal",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "dossier-fiscal",
+          "title": "Justifier une position fiscale",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "UE5": {
+      "module": "UE5",
+      "title": "Économie contemporaine",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 12,
+      "cardCount": 12,
+      "chapters": [
+        {
+          "id": "production",
+          "title": "Production, valeur ajoutée et croissance",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "marches",
+          "title": "Marchés, incitations et externalités",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "politiques",
+          "title": "Inflation et politiques économiques",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "UE6": {
+      "module": "UE6",
+      "title": "Finance d’entreprise",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 16,
+      "cardCount": 16,
+      "chapters": [
+        {
+          "id": "reperes",
+          "title": "Équilibre financier et investissement",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "equilibre",
+          "title": "Fonds de roulement, BFR et trésorerie",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "investissement",
+          "title": "Comparer des flux d’investissement",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "financement",
+          "title": "Emprunt et plan de financement",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "UE7": {
+      "module": "UE7",
+      "title": "Management",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 16,
+      "cardCount": 16,
+      "chapters": [
+        {
+          "id": "reperes",
+          "title": "Diagnostic et décisions",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "organisation",
+          "title": "Organisation et coordination",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "diagnostic-strategique",
+          "title": "Diagnostic interne et externe",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "decision",
+          "title": "Décision, motivation et changement",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "UE8": {
+      "module": "UE8",
+      "title": "Systèmes d’information de gestion",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 12,
+      "cardCount": 12,
+      "chapters": [
+        {
+          "id": "donnees",
+          "title": "Structurer une base de données",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "requetes",
+          "title": "Interroger et contrôler les données",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "securite",
+          "title": "Sécuriser les usages et les données",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "UE9": {
+      "module": "UE9",
+      "title": "Comptabilité",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 20,
+      "cardCount": 20,
+      "chapters": [
+        {
+          "id": "reperes",
+          "title": "Premiers mécanismes comptables",
+          "questionCount": 8,
+          "minutes": 10
+        },
+        {
+          "id": "operations",
+          "title": "Enregistrer achats, ventes et règlements",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "stocks",
+          "title": "Stocks et rattachement à l’exercice",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "actifs",
+          "title": "Immobilisations et dépréciations",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "UE10": {
+      "module": "UE10",
+      "title": "Comptabilité approfondie",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 16,
+      "cardCount": 16,
+      "chapters": [
+        {
+          "id": "reperes",
+          "title": "Estimation et dépréciation",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "evaluation",
+          "title": "Évaluer et documenter un actif",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "passifs",
+          "title": "Dettes, provisions et événements",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "capitaux",
+          "title": "Capitaux propres et affectation du résultat",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "UE11": {
+      "module": "UE11",
+      "title": "Contrôle de gestion",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 12,
+      "cardCount": 12,
+      "chapters": [
+        {
+          "id": "couts",
+          "title": "Coûts directs et indirects",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "rentabilite",
+          "title": "Marge et seuil de rentabilité",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "budgets",
+          "title": "Budgets et analyse des écarts",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "UE12": {
+      "module": "UE12",
+      "title": "Anglais des affaires",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 12,
+      "cardCount": 12,
+      "chapters": [
+        {
+          "id": "vocabulaire",
+          "title": "Lire les chiffres d’une entreprise en anglais",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "redaction",
+          "title": "Écrire un message professionnel clair",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "donnees",
+          "title": "Décrire une évolution sans déformer les chiffres",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "UE13": {
+      "module": "UE13",
+      "title": "Communication professionnelle",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 12,
+      "cardCount": 12,
+      "chapters": [
+        {
+          "id": "experience",
+          "title": "Analyser une expérience professionnelle",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "rapport",
+          "title": "Structurer un rapport et ses références",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "soutenance",
+          "title": "Préparer une soutenance professionnelle",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "DSCG1": {
+      "module": "DSCG1",
+      "title": "Gestion juridique, fiscale et sociale",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 16,
+      "cardCount": 16,
+      "chapters": [
+        {
+          "id": "reperes",
+          "title": "Analyse d’un dossier transversal",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "diagnostic",
+          "title": "Construire un diagnostic juridique transversal",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "operations",
+          "title": "Restructuration : qualifier avant de chiffrer",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "gouvernance",
+          "title": "Gouvernance, financement et vigilance",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "DSCG2": {
+      "module": "DSCG2",
+      "title": "Finance",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 16,
+      "cardCount": 16,
+      "chapters": [
+        {
+          "id": "reperes",
+          "title": "Actualisation et coût du capital",
+          "questionCount": 4,
+          "minutes": 10
+        },
+        {
+          "id": "valorisation",
+          "title": "Valoriser des flux et choisir un taux",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "portefeuille",
+          "title": "Rendement, risque et diversification",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "risques",
+          "title": "Taux, change et financement",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "DSCG3": {
+      "module": "DSCG3",
+      "title": "Contrôle de gestion et stratégie",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 16,
+      "cardCount": 16,
+      "chapters": [
+        {
+          "id": "reperes",
+          "title": "Marges, seuil et pilotage",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "pilotage",
+          "title": "Performance et tableaux de bord",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "couts-activites",
+          "title": "Activités et décisions de gestion",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "strategie-changement",
+          "title": "Stratégie, responsabilités et changement",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "DSCG4": {
+      "module": "DSCG4",
+      "title": "Comptabilité et audit",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 16,
+      "cardCount": 16,
+      "chapters": [
+        {
+          "id": "reperes",
+          "title": "Audit et valeur recouvrable",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "consolidation",
+          "title": "Périmètre et logique de consolidation",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "audit",
+          "title": "Assertions et éléments probants",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "normes",
+          "title": "Comparer les cadres et tester une perte de valeur",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "DSCG5": {
+      "module": "DSCG5",
+      "title": "Management des systèmes d’information",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 16,
+      "cardCount": 16,
+      "chapters": [
+        {
+          "id": "reperes",
+          "title": "Contrôle et sécurité du SI",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "gouvernance-si",
+          "title": "Gouvernance et alignement du SI",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "projets",
+          "title": "Piloter un projet numérique",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "risques-donnees",
+          "title": "Risques, continuité et qualité des données",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "DSCG6": {
+      "module": "DSCG6",
+      "title": "Anglais des affaires",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 12,
+      "cardCount": 12,
+      "chapters": [
+        {
+          "id": "presenter",
+          "title": "Présenter une analyse en anglais",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "argumenter",
+          "title": "Argumenter et répondre aux questions",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "documents",
+          "title": "Analyser un document économique en anglais",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    },
+    "DSCG7": {
+      "module": "DSCG7",
+      "title": "Mémoire professionnel",
+      "version": "2026-10-13",
+      "scope": "Contenus originaux, couverture partielle du programme",
+      "questionCount": 12,
+      "cardCount": 12,
+      "chapters": [
+        {
+          "id": "problematique",
+          "title": "Construire une problématique de mémoire",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "enquete",
+          "title": "Choisir une méthode et protéger le terrain",
+          "questionCount": 4,
+          "minutes": 9
+        },
+        {
+          "id": "restitution",
+          "title": "Interpréter, référencer et défendre le mémoire",
+          "questionCount": 4,
+          "minutes": 9
+        }
+      ]
+    }
+  }
+}

@@ -2,6 +2,10 @@ import { useState, useEffect, useRef } from "react";
 import { sendEmailVerification } from "firebase/auth";
 import { auth } from "./firebase";
 import ExamCountdown from "./ExamCountdown";
+import { ChapterLibrary } from './chapter-navigation';
+import { curriculumFor } from '../lib/curriculum.mjs';
+import catalogue from './catalogue.json';
+import { HeroAtmosphere } from './interactions';
 
 const paths = {
   home: "M3 10 12 3l9 7v10H3z M9 20v-7h6v7",
@@ -149,7 +153,7 @@ const features = [
 const faq = [
   [
     "Que puis-je faire avec un compte gratuit ?",
-    "Vous pouvez utiliser le parcours de départ en comptabilité (UE9) : fiche, 8 QCM, 8 flashcards et un cas avec corrigé. Le planning est aussi disponible. Les autres parcours et le tuteur sont réservés à Pro.",
+    "Vous pouvez utiliser gratuitement la comptabilité (UE9) : 4 chapitres, 20 QCM, 20 flashcards et 4 cas avec corrigés. Le planning est aussi disponible. Les autres parcours et le tuteur sont réservés à Pro.",
   ],
   [
     "Les exercices sont-ils des annales officielles ?",
@@ -157,7 +161,7 @@ const faq = [
   ],
   [
     "Quelles matières sont couvertes ?",
-    "Cette version propose 8 matières DCG et 5 matières DSCG. La liste détaillée est consultable avant l’achat ; toutes les unités du diplôme ne sont pas encore couvertes.",
+    "La bibliothèque propose des contenus dans les 13 matières obligatoires du DCG et les 7 du DSCG. Les chapitres restent une couverture partielle des programmes, avec une liste consultable avant l’achat.",
   ],
   [
     "Que faire si j’ai payé mais que mon compte reste gratuit ?",
@@ -260,7 +264,7 @@ export function Marketing({ onAuth, onNav, ues }) {
     <div className="marketing">
       <PublicNav onNav={onNav} onAuth={onAuth} />
       <main>
-        <section className="container hero">
+        <section className="container hero"><HeroAtmosphere />
           <div className="hero-copy">
             <span className="pill">
               <i /> VOTRE COMPAGNON DE RÉVISION DCG / DSCG
@@ -272,8 +276,8 @@ export function Marketing({ onAuth, onNav, ues }) {
             </h1>
             <p>
               Vos matières, un plan clair et les bons outils pour avancer.
-              Révisez avec des QCM expliqués, des flashcards et un tuteur IA qui
-              prend le temps.
+              Un chapitre pour comprendre, quelques questions pour vérifier,
+              des cartes pour retenir. Faites un peu, puis revenez demain.
             </p>
             <div className="hero-actions">
               <Button onClick={() => onAuth("signup")}>
@@ -301,6 +305,7 @@ export function Marketing({ onAuth, onNav, ues }) {
           </div>
           <PreviewCard />
         </section>
+        <section className="container library-numbers" aria-label="Contenu de la bibliothèque">{[[catalogue.totals.subjects,'matières DCG et DSCG'],[catalogue.totals.chapters,'chapitres de cours'],[catalogue.totals.questions,'QCM expliqués'],[catalogue.totals.cards,'flashcards']].map(([count,label])=><div key={label}><strong>{count}</strong><span>{label}</span></div>)}<p>Exercices originaux, couverture partielle des programmes.</p></section>
         <div className="container exam-home"><ExamCountdown /></div>
         <div className="subject-strip">
           <div className="container">
@@ -591,6 +596,7 @@ function UECard({ ue, mastery, onClick }) {
       </div>
       <h3>{ue.label}</h3>
       <p>{ue.desc}</p>
+      <span className="ue-content-count">{catalogue.modules[ue.id]?.chapters.length} cours · {catalogue.modules[ue.id]?.questionCount} QCM</span>
       <div className="ue-mastery">
         <span>
           {mastery?.attempts
@@ -694,7 +700,7 @@ export function StudentHome({ user, ues, onNav, onSelect }) {
           ],
           [
             "chart",
-            avg === null ? "—" : `${avg}%`,
+            avg === null ? "·" : `${avg}%`,
             "Moyenne des QCM",
             qcms.length
               ? "Sur vos résultats enregistrés"
@@ -772,6 +778,8 @@ export function StudentHome({ user, ues, onNav, onSelect }) {
   );
 }
 export function LibraryPage({ ues, user, onSelect }) {
+  const [programme,setProgramme]=useState('2027');
+  ues=curriculumFor(programme);
   const [query, setQuery] = useState(""),
     [level, setLevel] = useState("DCG");
   const visible = ues.filter(
@@ -788,6 +796,7 @@ export function LibraryPage({ ues, user, onSelect }) {
         title="Une matière. Tous vos outils."
         desc="Choisissez votre matière pour retrouver fiches, QCM, flashcards et cas pratiques."
       />
+      <label className="chapter-select programme-select">Programme<select aria-label="Programme" value={programme} onChange={e=>setProgramme(e.target.value)}><option value="2027">Session 2027, nouveaux intitulés</option><option value="2026">Session 2026</option></select></label>
       <div className="library-toolbar">
         <div className="tabs">
           {["DCG", "DSCG"].map((x) => (
@@ -829,7 +838,7 @@ export function LibraryPage({ ues, user, onSelect }) {
       )}
       <p className="helper">
         {ues.filter((ue) => ue.level === level).length} matières disponibles en{" "}
-        {level}. Les autres unités du diplôme ne sont pas encore proposées.
+        {level}. Les chapitres couvrent une partie du programme.
       </p>
     </div>
   );
@@ -850,7 +859,7 @@ export function CourseHome({ ue, user, onNav }) {
           Terminez par vous tester.
         </h2>
         <p>
-          Un parcours de départ sur les fondamentaux, disponible sans IA. Il
+          Des cours par chapitre et des exercices sur les fondamentaux. Ce parcours
           complète vos cours et ne couvre pas tout le programme.
         </p>
       </section>
@@ -861,7 +870,7 @@ export function CourseHome({ ue, user, onNav }) {
             "book",
             "01",
             "Comprendre",
-            "Fiche de cours",
+            "Cours et exemples",
             "Points clés et pièges fréquents",
           ],
           [
@@ -870,7 +879,7 @@ export function CourseHome({ ue, user, onNav }) {
             "02",
             "Pratiquer",
             "QCM expliqué",
-            "4 à 8 questions, explication après chaque réponse",
+            "Séries de 4 à 20 questions, par chapitre ou en mélange",
           ],
           [
             "flashcards",
@@ -878,7 +887,7 @@ export function CourseHome({ ue, user, onNav }) {
             "03",
             "Retenir",
             "Flashcards",
-            "4 à 8 cartes et reprise des cartes difficiles",
+            "Cartes par chapitre et reprise des cartes difficiles",
           ],
           [
             "cas_pratique",
@@ -886,7 +895,7 @@ export function CourseHome({ ue, user, onNav }) {
             "04",
             "Vous tester",
             "Cas pratique",
-            "Une mise en situation et un corrigé à comparer",
+            "Un cas par chapitre avec raisonnement détaillé",
           ],
         ].map(([key, icon, n, tag, title, desc]) => (
           <button
@@ -914,6 +923,7 @@ export function CourseHome({ ue, user, onNav }) {
           </button>
         ))}
       </div>
+      <ChapterLibrary ue={ue} onOpen={(screen,chapter)=>onNav(user.isPro || ue.id==='UE9'?screen:'paywall',{chapter})}/>
     </div>
   );
 }
@@ -932,7 +942,7 @@ export function OfferPage({ user, onCheckout, onNav }) {
             Essayer la comptabilité gratuitement <Icon name="arrow" />
           </Button>
           <p className="helper">
-            Un parcours de départ en UE9, sans carte bancaire.
+            La comptabilité en libre accès, sans carte bancaire.
           </p>
         </div>
         <div className="pricing-grid">
@@ -948,7 +958,7 @@ export function OfferPage({ user, onCheckout, onNav }) {
             </span>
             <ul>
               {[
-                "8 matières DCG + 5 matières DSCG",
+                "13 matières DCG + 7 matières DSCG",
                 "QCM, fiches et flashcards",
                 "Cas pratiques et corrigés enregistrés",
                 "Planning et préparation orale sans IA",
@@ -982,7 +992,7 @@ export function OfferPage({ user, onCheckout, onNav }) {
             </span>
             <ul>
               {[
-                "8 matières DCG + 5 matières DSCG",
+                "13 matières DCG + 7 matières DSCG",
                 "Parcours enregistrés, sans dépendre de l’IA",
                 "Tuteur IA : 20 demandes/jour, 300/mois",
                 "Suivi de vos scores par matière",
@@ -1006,7 +1016,7 @@ export function OfferPage({ user, onCheckout, onNav }) {
           </article>
         </div>
         <p className="pricing-footnote">
-          Banque de départ : 56 QCM, 56 flashcards, 13 fiches et 13 cas
+          Bibliothèque : 296 QCM, 296 flashcards, 73 chapitres de cours et 73 cas
           originaux. Couverture partielle du programme ; ces contenus ne sont
           pas des annales officielles. Le tuteur est optionnel, soumis aux
           quotas et à un budget de génération. Une panne du tuteur ne bloque pas
@@ -1232,12 +1242,14 @@ export function TutorPage({ ues, call, user, onNav }) {
         next.slice(-10),
         2048,
         user,
+        ue.id,
       );
       setMessages([
         ...next,
         {
           role: "assistant",
           content: typeof reply === "string" ? reply : reply.text,
+          references:typeof reply === 'object'?reply.references:[],
         },
       ]);
       if (typeof reply === "object") setRemaining(reply);
@@ -1339,6 +1351,7 @@ export function TutorPage({ ues, call, user, onNav }) {
                   {m.role === "user" ? "Vous" : "SIMDCG · Tuteur IA"}
                 </strong>
                 <p>{m.content}</p>
+                {!!m.references?.length&&<div className="source-chips" aria-label="Chapitres associés">{m.references.map(ref=><a key={ref.url} href={ref.url}>{ref.title} ↗</a>)}</div>}
               </article>
             ))}
             {busy && <p>Le tuteur prépare son explication…</p>}
@@ -1459,6 +1472,8 @@ export function LearningProgress({ user, ues, onNav }) {
   );
 }
 export function PublicInfo({ page, onNav, onAuth, ues }) {
+  const [programme,setProgramme]=useState('2027');
+  ues=curriculumFor(programme);
   const isDiploma = ["dcg", "dscg"].includes(page),
     level = page.toUpperCase();
   const title = isDiploma
@@ -1483,6 +1498,7 @@ export function PublicInfo({ page, onNav, onAuth, ues }) {
         />
         {isDiploma ? (
           <>
+            <label className="chapter-select programme-select">Programme<select aria-label="Programme" value={programme} onChange={e=>setProgramme(e.target.value)}><option value="2027">Session 2027, nouveaux intitulés</option><option value="2026">Session 2026</option></select></label>
             <div className="marketing-subjects">
               {ues
                 .filter((x) => x.level === level)
@@ -1496,8 +1512,7 @@ export function PublicInfo({ page, onNav, onAuth, ues }) {
             </div>
             <p className="helper">
               {ues.filter((x) => x.level === level).length} matières
-              disponibles. Les autres unités du diplôme ne sont pas proposées
-              pour le moment.
+              disponibles. Les chapitres couvrent une partie du programme.
             </p>
             <Button onClick={() => onAuth("signup")}>
               Créer mon espace <Icon name="arrow" />

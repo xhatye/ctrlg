@@ -2,8 +2,8 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { MODULES, studyModule } from "../lib/study-content.mjs";
 import { readStudy } from "../lib/study-access.mjs";
-test("all advertised starter modules have unambiguous quizzes and matching cards", () => {
-  assert.equal(Object.keys(MODULES).length, 13);
+test("all advertised modules have unambiguous quizzes and matching cards", () => {
+  assert.equal(Object.keys(MODULES).length, 20);
   let total = 0;
   for (const [id, m] of Object.entries(MODULES)) {
     for (const concept of m.notions)
@@ -14,7 +14,7 @@ test("all advertised starter modules have unambiguous quizzes and matching cards
       );
     for (let seed = 0; seed < 8; seed++) {
       const q = studyModule(id, "qcm", () => seed / 8);
-      assert.equal(q.items.length, m.notions.length);
+      assert.equal(q.items.length, Math.min(8,m.notions.length));
       for (const item of q.items) {
         assert.ok(item.answer >= 0 && item.answer < 4);
         const i = Number(item.id.split("-")[1]);
@@ -25,7 +25,7 @@ test("all advertised starter modules have unambiguous quizzes and matching cards
     assert.equal(studyModule(id, "case").questions.length, 3);
     total += m.notions.length;
   }
-  assert.equal(total, 56);
+  assert.equal(total, 296);
 });
 test("numeric starter corrections agree with independent calculations", () => {
   assert.equal(

@@ -8,6 +8,8 @@ import { launchCheckout, billingRequest } from './billing-client';
 import { Brand, Marketing, StudentHome, OfferPage, CourseHome, ProductShell, AccountPage, TutorPage, LibraryPage, LearningProgress, PublicInfo, StudentReviews } from './modern';
 import './design.css';
 import {loadStudy} from './study-client';
+import { curriculumFor } from '../lib/curriculum.mjs';
+import { StudySession } from './chapter-navigation';
 import {StudyNotice, SavedLesson, CasePractice, StudyPlanner, OralPractice, OralSummary, OralSetup as InterviewConfig} from './study';
 
 const upgrade = (plan = 'subscription') => launchCheckout(plan).catch(error => toast.error(error.message));
@@ -62,24 +64,9 @@ const getScreenFromPath = (path) => {
 };
 
 // ── UES DATA ──────────────────────────────────────────────────────────────────
-const DCG_UES = [
-  { id:"UE1", label:"Introduction au droit", short:"Droit général", icon:"⚖", color:"#376cac", desc:"Sources du droit, contrats, responsabilité civile et pénale", level:"DCG", proOnly:true },
-  { id:"UE2", label:"Droit des sociétés", short:"Droit sociétés", icon:"🏛", color:"#7658a9", desc:"SARL, SAS, SA, droit commun des sociétés, liquidation", level:"DCG", proOnly:true },
-  { id:"UE3", label:"Droit social", short:"Droit social", icon:"🤝", color:"#258262", desc:"Contrat de travail, conventions collectives, licenciement", level:"DCG", proOnly:true },
-  { id:"UE4", label:"Fiscalité", short:"Fiscalité", icon:"📋", color:"#a47b2e", desc:"IS, IR, TVA, droits d'enregistrement, fiscalité internationale", level:"DCG", proOnly:true },
-  { id:"UE6", label:"Finance d'entreprise", short:"Finance", icon:"📈", color:"#b84646", desc:"Analyse financière, investissement, financement, valorisation", level:"DCG", proOnly:true },
-  { id:"UE7", label:"Management", short:"Management", icon:"◇", color:"#a47b2e", desc:"Stratégie, organisation, RH, direction, leadership", level:"DCG", proOnly:true },
-  { id:"UE9", label:"Comptabilité", short:"Compta", icon:"🔢", color:"#257b9f", desc:"PCG, immobilisations, stocks, provisions, capitaux propres", level:"DCG", proOnly:false },
-  { id:"UE10", label:"Comptabilité approfondie", short:"Compta appro", icon:"📊", color:"#ab682e", desc:"Consolidation, fusion, comptes combinés, normes IFRS", level:"DCG", proOnly:true },
-];
-const DSCG_UES = [
-  { id:"DSCG1", label:"Gestion juridique, fiscale et sociale", short:"Juridique/Fiscal", icon:"⚖", color:"#376cac", desc:"Droit avancé des affaires, montages juridiques complexes", level:"DSCG" },
-  { id:"DSCG2", label:"Finance", short:"Finance avancée", icon:"📈", color:"#b84646", desc:"Marchés financiers, ingénierie financière, gestion de risques", level:"DSCG" },
-  { id:"DSCG3", label:"Management et contrôle de gestion", short:"Management/CdG", icon:"◎", color:"#a47b2e", desc:"Stratégie avancée, contrôle de gestion, pilotage de la performance", level:"DSCG" },
-  { id:"DSCG4", label:"Comptabilité et audit", short:"Compta/Audit", icon:"🔍", color:"#257b9f", desc:"Normes IFRS, consolidation avancée, commissariat aux comptes", level:"DSCG" },
-  { id:"DSCG5", label:"Systèmes d'information", short:"SI", icon:"💻", color:"#7658a9", desc:"Architecture SI, sécurité, urbanisation, ERP", level:"DSCG" },
-];
-const ALL_UES = [...DCG_UES, ...DSCG_UES];
+const ALL_UES = curriculumFor('2027');
+const DCG_UES = ALL_UES.filter(ue=>ue.level==='DCG');
+const DSCG_UES = ALL_UES.filter(ue=>ue.level==='DSCG');
 
 // ── HELPERS ───────────────────────────────────────────────────────────────────
 const fmt = (s) => `${String(Math.floor(s/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`;
@@ -87,27 +74,27 @@ const scoreColor = (s) => s >= 80 ? "var(--success)" : s >= 60 ? "var(--gold-tex
 const noteColor = (n) => n >= 14 ? "var(--success)" : n >= 10 ? "var(--gold-text)" : "var(--danger)";
 const today = () => new Date().toISOString().split("T")[0];
 
-// Checks isPro AND proExpiresAt — returns true only if access is active
+// Checks isPro AND proExpiresAt · returns true only if access is active
 const resolveIsPro = (data) => {
   if (!data?.isPro) return false;
   if (!data?.proExpiresAt) return true; // subscription, no expiry
-  return new Date(data.proExpiresAt) > new Date(); // pack examen — check expiry
+  return new Date(data.proExpiresAt) > new Date(); // pack examen · check expiry
 };
 
 // ── API ───────────────────────────────────────────────────────────────────────
-async function callClaude(system, messages, maxTokens = 1200, user = null) {
+async function callClaude(system, messages, maxTokens = 1200, user = null, module = undefined) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 30000); // 30s hard timeout
   try {
     const r = await fetch("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${await auth.currentUser?.getIdToken() || ""}` },
-      body: JSON.stringify({ max_tokens: maxTokens, system, messages }),
+      body: JSON.stringify({ max_tokens: maxTokens, system, messages, module }),
       signal: controller.signal,
     });
     if (!r.ok) { const error = await r.json().catch(() => ({})); throw new Error(error.error || `API ${r.status}`); }
     const d = await r.json();
-    return {text:d.content?.[0]?.text || '',dailyRemaining:d.dailyRemaining,monthlyRemaining:d.monthlyRemaining};
+    return {text:d.content?.[0]?.text || '',dailyRemaining:d.dailyRemaining,monthlyRemaining:d.monthlyRemaining,references:d.references || []};
   } catch (e) {
     if (e.name === "AbortError") console.error("callClaude timeout after 30s");
     else console.error("callClaude error:", e);
@@ -270,10 +257,10 @@ function ToastContainer() {
 
 // ── ONBOARDING ────────────────────────────────────────────────────────────────
 const ONBOARDING_STEPS = [
-  { icon: "🎓", title: "Mode Diplôme", desc: "Choisissez une matière DCG ou DSCG et lancez un QCM, des flashcards ou un cas pratique — disponibles sans génération IA.", cta: "Suivant →" },
-  { icon: "◈", title: "Vos fiches de révision", desc: "Chaque matière dispose d'un résumé de cours IA structuré avec points clés, pièges fréquents et conseil d'examinateur — inclus avec Pro.", cta: "Suivant →" },
+  { icon: "🎓", title: "Mode Diplôme", desc: "Choisissez une matière DCG ou DSCG et lancez un QCM, des flashcards ou un cas pratique, disponibles sans génération IA.", cta: "Suivant →" },
+  { icon: "◈", title: "Vos fiches de révision", desc: "Chaque matière dispose d'un cours original avec exemples, méthodes et pièges fréquents, accessible avec Pro.", cta: "Suivant →" },
   { icon: "💼", title: "Préparation orale", desc: "Entraînez-vous à structurer une réponse, puis comparez-la aux éléments attendus. Cet entraînement autonome ne dépend pas du tuteur IA.", cta: "Suivant →" },
-  { icon: "✦", title: "Pro pour aller plus loin", desc: `Débloquez les 13 matières, QCM de la banque de départ, cas avec corrigés, reprise des cartes difficiles et planning sans IA pour ${PRO_PRICE}/mois. Résiliation en 1 clic.`, cta: "Commencer →" },
+  { icon: "✦", title: "Pro pour aller plus loin", desc: `Débloquez les 20 matières, cours par chapitre et QCM expliqués, cas avec corrigés, reprise des cartes difficiles et planning sans IA pour ${PRO_PRICE}/mois. Résiliation en 1 clic.`, cta: "Commencer →" },
 ];
 
 function OnboardingModal({ onClose, onUpgrade }) {
@@ -307,7 +294,7 @@ export default function App() {
   const [user, setUser] = useState(null);
   const [screen, setScreen] = useState(() => getScreenFromPath(window.location.pathname));
   const [authMode, setAuthMode] = useState(() => window.location.pathname === "/inscription" ? "signup" : "login");
-  const [selectedUE, setSelectedUE] = useState(() => ALL_UES.find(ue => ue.id === new URLSearchParams(window.location.search).get("ue")) || null);
+  const [selectedUE, setSelectedUE] = useState(() => (() => {const params=new URLSearchParams(window.location.search), ue=ALL_UES.find(ue=>ue.id===params.get('ue'));return ue?{...ue,chapter:params.get('chapter') || undefined}:null;})());
   const [interviewCfg, setInterviewCfg] = useState(null);
   const [result, setResult] = useState(null);
   const [loadingAuth, setLoadingAuth] = useState(true);
@@ -345,7 +332,7 @@ export default function App() {
   useEffect(() => {
     const onPop = () => {
       const s = getScreenFromPath(window.location.pathname);
-      setSelectedUE(ALL_UES.find(ue => ue.id === new URLSearchParams(window.location.search).get("ue")) || null);
+      setSelectedUE((() => {const params=new URLSearchParams(window.location.search), ue=ALL_UES.find(ue=>ue.id===params.get('ue'));return ue?{...ue,chapter:params.get('chapter') || undefined}:null;})());
       setScreen(s);
       if (s === "auth") setAuthMode(window.location.pathname === "/inscription" ? "signup" : "login");
     };
@@ -354,9 +341,11 @@ export default function App() {
   }, []);
 
   const nav = (s, opts = {}) => {
+    const chapter = opts.chapter || selectedUE?.chapter;
+    if(opts.chapter)setSelectedUE(ue=>({...ue,chapter:opts.chapter}));
     let url = SCREEN_TO_URL[s] || "/";
     if (s === "auth") url = (opts.mode === "signup") ? "/inscription" : "/connexion";
-    if (["subject_hub", "qcm", "flashcards", "resume_cours", "cas_pratique"].includes(s) && selectedUE) url += `?ue=${selectedUE.id}`;
+    if (["subject_hub", "qcm", "flashcards", "resume_cours", "cas_pratique"].includes(s) && selectedUE) url += `?ue=${selectedUE.id}${chapter?"&chapter="+encodeURIComponent(chapter):""}`;
     window.history.pushState({}, "", url);
     setScreen(s);
   };
@@ -441,7 +430,7 @@ function PublicDemo({onBack,onAuth}) {
   const [tool,setTool]=useState('summary'),[result,setResult]=useState(null);
   const ue=DCG_UES.find(x=>x.id==='UE9');
   const choose=(key)=>{setTool(key);setResult(null);};
-  return <div className="public-demo"><nav className="demo-nav container"><Brand onClick={onBack}/><button className="btn" onClick={()=>onAuth('signup')}>Créer mon compte gratuit</button></nav><main className="container"><h1>Essayez la comptabilité, gratuitement.</h1><p>8 notions, un QCM, des cartes et un cas de départ. Aucun compte ni tuteur IA nécessaire pour cet essai.</p><div className="demo-tabs" role="group" aria-label="Outils gratuits">{[['summary','Fiche'],['qcm','QCM'],['cards','Flashcards'],['case','Cas pratique']].map(([key,label])=><button className={`btn ${tool===key?'':'btn-secondary'}`} key={key} onClick={()=>choose(key)}>{label}</button>)}</div>{result ? <ResultsQCM data={result} onNew={()=>choose('qcm')} onDash={()=>choose('summary')}/> : tool==='summary'?<SavedLesson ue={ue} onBack={onBack}/>:tool==='qcm'?<QCMScreen ue={ue} user={{isPro:false}} onDone={setResult} onBack={onBack}/>:tool==='cards'?<FlashcardsScreen ue={ue} user={{isPro:false}} onBack={onBack} onUpgrade={()=>onAuth('signup')}/>:<CasePractice ue={ue} user={null} onBack={onBack}/>}</main></div>;
+  return <div className="public-demo"><nav className="demo-nav container"><Brand onClick={onBack}/><button className="btn" onClick={()=>onAuth('signup')}>Créer mon compte gratuit</button></nav><main className="container"><h1>Essayez la comptabilité, gratuitement.</h1><p>4 chapitres, 20 questions expliquées, 20 cartes et 4 cas pratiques. Aucun compte ni tuteur IA nécessaire pour cet essai.</p><div className="demo-tabs" role="group" aria-label="Outils gratuits">{[['summary','Fiche'],['qcm','QCM'],['cards','Flashcards'],['case','Cas pratique']].map(([key,label])=><button className={`btn ${tool===key?'':'btn-secondary'}`} key={key} onClick={()=>choose(key)}>{label}</button>)}</div>{result ? <ResultsQCM data={result} onNew={()=>choose('qcm')} onDash={()=>choose('summary')}/> : tool==='summary'?<SavedLesson ue={ue} onBack={onBack}/>:tool==='qcm'?<QCMScreen ue={ue} user={{isPro:false}} onDone={setResult} onBack={onBack}/>:tool==='cards'?<FlashcardsScreen ue={ue} user={{isPro:false}} onBack={onBack} onUpgrade={()=>onAuth('signup')}/>:<CasePractice ue={ue} user={null} onBack={onBack}/>}</main></div>;
 }
 function Auth({ mode, setMode, onDone, onBack }) {
   const [name, setName] = useState(""); const [email, setEmail] = useState(""); const [pass, setPass] = useState(""); const [err, setErr] = useState(""); const [loading, setLoading] = useState(false);
@@ -527,7 +516,10 @@ function Auth({ mode, setMode, onDone, onBack }) {
 }
 
 // ── QCM SCREEN ────────────────────────────────────────────────────────────────
-function QCMScreen({ ue, user, onDone, onBack }) {
+function QCMScreen(props) {
+  return <StudySession ue={props.ue} kind="qcm">{ue=><QCMSession {...props} ue={ue}/>}</StudySession>;
+}
+function QCMSession({ ue, user, onDone, onBack }) {
   const isPro = user?.isPro;
   const [questions, setQuestions] = useState(null);
   const [qi, setQi] = useState(0);
@@ -544,7 +536,7 @@ function QCMScreen({ ue, user, onDone, onBack }) {
     const gen = async () => {
       setLoading(true);
       try {
-        const {items:data} = await loadStudy(ue.id, 'qcm');
+        const {items:data} = await loadStudy(ue.id, 'qcm', {chapter:ue.chapter,count:ue.count});
         if (cancelled) return;
         if (Array.isArray(data) && data.length > 0 && data.every(q => typeof q.q === "string" && Array.isArray(q.options) && Number.isInteger(q.answer) && q.answer >= 0 && q.answer < q.options.length)) { setQuestions(data); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000); }
         else setError(true);
@@ -597,7 +589,7 @@ function QCMScreen({ ue, user, onDone, onBack }) {
               {q.options?.map((opt, i) => {
                 let bg = "var(--surface)", border = "var(--line)", color = "var(--muted)";
                 if (sel !== null) { if (i === q.answer) { bg = `${ue.color}10`; border = ue.color; color = "var(--success)"; } else if (i === sel && i !== q.answer) { bg = "color-mix(in srgb, var(--danger) 6%, transparent)"; border = "var(--danger)"; color = "var(--danger)"; } }
-                return <button key={i} onClick={() => pick(i)} style={{ background: bg, border: `1px solid ${border}`, color, padding: "12px 16px", textAlign: "left", cursor: sel === null ? "pointer" : "default", fontSize: 13, transition: "all .2s", fontFamily: "inherit" }}>{String.fromCharCode(65 + i)}. {opt}</button>;
+                return <button key={i} onClick={() => pick(i)} className="answer-option" style={{ background: bg, border: `1px solid ${border}`, color, padding: "12px 16px", textAlign: "left", cursor: sel === null ? "pointer" : "default", fontSize: 13, transition: "all .2s", fontFamily: "inherit" }}>{String.fromCharCode(65 + i)}. {opt}</button>;
               })}
             </div>
             {sel !== null && <div style={{ background: "var(--surface)", border: "1px solid var(--line)", padding: "12px 16px", marginBottom: 14 }}><p style={{ fontSize: 10, color: "var(--muted)", margin: "0 0 4px", letterSpacing: ".1em" }}>EXPLICATION</p><p style={{ fontSize: 13, color: "var(--ink)", margin: 0, lineHeight: 1.6 }}>{q.expl}</p></div>}
@@ -610,7 +602,10 @@ function QCMScreen({ ue, user, onDone, onBack }) {
 }
 
 // ── FLASHCARDS ────────────────────────────────────────────────────────────────
-function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
+function FlashcardsScreen(props) {
+  return <StudySession ue={props.ue} kind="cards">{ue=><FlashcardsSession {...props} ue={ue}/>}</StudySession>;
+}
+function FlashcardsSession({ ue, user, onBack, onUpgrade }) {
   const isPro = user?.isPro;
   const [cards, setCards] = useState(null);
   const [idx, setIdx] = useState(0);
@@ -625,7 +620,7 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
 
   useEffect(() => {
     let alive=true;
-    loadStudy(ue.id,'cards').then(({items}) => { if(alive){setCards(items);setLoading(false);} }).catch(error => {if(alive){toast.error(error.message);setCards([]);setLoading(false);}});
+    loadStudy(ue.id,'cards',{chapter:ue.chapter}).then(({items}) => { if(alive){setCards(items);setLoading(false);} }).catch(error => {if(alive){toast.error(error.message);setCards([]);setLoading(false);}});
     return()=>{alive=false;};
   }, []);
 
@@ -697,9 +692,9 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
               </button>
             ) : (
               <div style={{ background: "rgba(226,201,126,.04)", border: "1px solid rgba(226,201,126,.2)", padding: "16px 20px", width: "100%" }}>
-                <p style={{ fontSize: 13, color: "var(--ink)", margin: "0 0 8px", fontWeight: 700 }}>✦ Cartes difficiles — Pro</p>
+                <p style={{ fontSize: 13, color: "var(--ink)", margin: "0 0 8px", fontWeight: 700 }}>✦ Cartes difficiles · Pro</p>
                 <p style={{ fontSize: 12, color: "var(--muted)", margin: "0 0 12px" }}>Passez Pro pour revoir automatiquement vos {difficult.length} cartes difficiles et consolider votre mémoire.</p>
-                <button style={{ ...S.ctag, width: "100%", padding: 10, fontSize: 12 }} onClick={onUpgrade}>Passer Pro — {PRO_PRICE}/mois →</button>
+                <button style={{ ...S.ctag, width: "100%", padding: 10, fontSize: 12 }} onClick={onUpgrade}>Passer Pro · {PRO_PRICE}/mois →</button>
               </div>
             )
           )}
@@ -714,7 +709,7 @@ function FlashcardsScreen({ ue, user, onBack, onUpgrade }) {
       <nav style={S.nav}><Logo /><button style={S.nl} onClick={onBack}>← {ue.id}</button></nav>
       <div style={{ maxWidth: 580, margin: "0 auto", padding: "36px 24px", position: "relative", zIndex: 1, animation: "fsu .4s ease both" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 20 }}>
-          <h2 style={{ fontSize: 18, margin: 0, color: "var(--ink)" }}>◈ Flashcards — {ue.short}</h2>
+          <h2 style={{ fontSize: 18, margin: 0, color: "var(--ink)" }}>◈ Flashcards · {ue.short}</h2>
           {cards && <span style={{ fontSize: 12, color: "var(--muted)" }}>{idx + 1} / {filtered.length}</span>}
         </div>
         {!loading && cards?.length === 0 && <div role="alert"><p>Les flashcards n’ont pas pu être chargées.</p><button style={S.ctag} onClick={onBack}>Retour à la matière</button></div>}
@@ -786,8 +781,8 @@ function ResultsInterview({ data, onNew, onDash }) {
           {ev.conseil_prioritaire && <div style={{ background: "color-mix(in srgb, var(--gold-text) 3%, transparent)", border: "1px solid color-mix(in srgb, var(--gold-text) 15%, transparent)", padding: "10px 16px" }}><p style={{ fontSize: 10, color: "var(--gold-text)", margin: "0 0 4px", letterSpacing: ".1em" }}>✦ CONSEIL PRIORITAIRE</p><p style={{ fontSize: 13, color: "var(--ink)", margin: 0, lineHeight: 1.6 }}>{ev.conseil_prioritaire}</p></div>}
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, width: "100%" }}>
-          <div style={S.ec}><p style={{ ...S.et, color: "var(--success)" }}>✦ POINTS FORTS</p>{ev.points_forts?.map((p, i) => <p key={i} style={S.ei}>— {p}</p>)}</div>
-          <div style={S.ec}><p style={{ ...S.et, color: "var(--gold-text)" }}>↗ À AMÉLIORER</p>{ev.axes_amelioration?.map((a, i) => <p key={i} style={S.ei}>— {a}</p>)}</div>
+          <div style={S.ec}><p style={{ ...S.et, color: "var(--success)" }}>✦ POINTS FORTS</p>{ev.points_forts?.map((p, i) => <p key={i} style={S.ei}>· {p}</p>)}</div>
+          <div style={S.ec}><p style={{ ...S.et, color: "var(--gold-text)" }}>↗ À AMÉLIORER</p>{ev.axes_amelioration?.map((a, i) => <p key={i} style={S.ei}>· {a}</p>)}</div>
         </div>
         <div style={{ display: "flex", gap: 10, width: "100%" }}>
           <button style={{ ...S.ctagh, flex: 1, fontSize: 12 }} onClick={() => { navigator.clipboard.writeText(transcript?.map(m => `[${m.role === "user" ? "VOUS" : "RECRUTEUR"}]\n${m.content}`).join("\n\n---\n\n") || "").then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }); }}>
@@ -895,7 +890,7 @@ function History({ user, onBack }) {
                     <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 4 }}>
                       <span style={{ fontSize: 14 }}>{typeIcon(h.type)}</span>
                       <span style={{ fontSize: 11, color: typeColor(h.type), border: `1px solid color-mix(in srgb, ${typeColor(h.type)} 19%, transparent)`, padding: "1px 6px" }}>{h.type?.toUpperCase()}</span>
-                      <span style={{ fontSize: 11, color: "var(--muted)" }}>{h.ueName || h.topic || "—"}</span>
+                      <span style={{ fontSize: 11, color: "var(--muted)" }}>{h.ueName || h.topic || "·"}</span>
                     </div>
                     <p style={{ fontSize: 12, color: "var(--muted)", margin: 0 }}>{h.date}</p>
                   </div>
@@ -923,7 +918,7 @@ function Paywall({ onUpgrade, onBack }) {
           <div style={S.pb}>SIMDCG PRO</div>
           <p style={{ fontSize: 40, fontWeight: 900, color: "var(--ink)", margin: "12px 0 4px" }}>{PRO_PRICE}<span style={{ fontSize: 14, color: "var(--muted)" }}>/mois</span></p>
           <div style={{ display: "flex", flexDirection: "column", gap: 7, margin: "14px 0 20px" }}>
-            {["Banque de départ — 8 matières DCG + 5 DSCG", "Cas pratiques avec corrigés à comparer soi-même", "Flashcards enregistrées et reprise des cartes difficiles", "Planning de révision sans IA", "Préparation orale autonome et tuteur IA limité", "Historique complet & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "var(--ink)", margin: 0 }}>✓ {f}</p>)}
+            {["13 matières DCG + 7 matières DSCG", "Cas pratiques avec corrigés à comparer soi-même", "Flashcards enregistrées et reprise des cartes difficiles", "Planning de révision sans IA", "Préparation orale autonome et tuteur IA limité", "Historique complet & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "var(--ink)", margin: 0 }}>✓ {f}</p>)}
           </div>
           <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={onUpgrade}>Passer à Pro →</button>
         </div>
@@ -1006,7 +1001,7 @@ function LegalScreen({ type, onBack }) {
   const today = new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" });
   const cguContent = [
     { title: "1. Objet", body: `Les présentes Conditions Générales d'Utilisation (CGU) régissent l'accès et l'utilisation de la plateforme SIMDCG (simdcg.com), éditée par Marcus Bonnafis, entrepreneur individuel. En accédant à SIMDCG, vous acceptez sans réserve les présentes CGU.` },
-    { title: "2. Description du service", body: `SIMDCG est une plateforme de préparation aux examens DCG (Diplôme de Comptabilité et de Gestion) et DSCG (Diplôme Supérieur de Comptabilité et de Gestion). Le service propose une banque de départ de QCM, flashcards, fiches et cas originaux avec corrigés, un planning et une préparation orale autonomes. Le contenu couvre partiellement les matières affichées. Un tuteur IA optionnel est soumis à des limites : 20 demandes par jour et 300 par mois, ainsi qu’un budget de génération et aux disponibilités du fournisseur.` },
+    { title: "2. Description du service", body: `SIMDCG est une plateforme de préparation aux examens DCG (Diplôme de Comptabilité et de Gestion) et DSCG (Diplôme Supérieur de Comptabilité et de Gestion). Le service propose une bibliothèque de cours par chapitre, QCM, flashcards et cas originaux avec corrigés, un planning et une préparation orale autonomes. Le contenu couvre partiellement les matières affichées. Un tuteur IA optionnel est soumis à des limites : 20 demandes par jour et 300 par mois, ainsi qu’un budget de génération et aux disponibilités du fournisseur.` },
     { title: "3. Accès et compte", body: `L'accès au service nécessite la création d'un compte via adresse email ou compte Google. L'utilisateur est responsable de la confidentialité de ses identifiants. Un plan gratuit avec fonctionnalités limitées est disponible sans engagement. Un plan Pro à ${PRO_PRICE}/mois offre un accès complet à l'ensemble des fonctionnalités.` },
     { title: "4. Abonnement Pro", body: `Le plan Pro est facturé mensuellement via Stripe, prestataire de paiement sécurisé. L'abonnement est sans engagement et résiliable à tout moment depuis votre espace client Stripe. Aucun remboursement ne sera effectué pour la période en cours au moment de la résiliation.` },
     { title: "5. Propriété intellectuelle", body: `Les fiches et exercices originaux sont des supports de révision complémentaires. Les réponses du tuteur IA peuvent contenir des erreurs et doivent être comparées aux références applicables à votre session. L'interface, le logo et les éléments visuels sont la propriété exclusive de Marcus Bonnafis.` },
@@ -1015,7 +1010,7 @@ function LegalScreen({ type, onBack }) {
     { title: "8. Droit applicable", body: `Les présentes CGU sont régies par le droit français. Tout litige relève de la compétence exclusive des tribunaux français. Pour toute réclamation : contact.simdcg@gmail.com` },
   ];
   const confidentialiteContent = [
-    { title: "1. Responsable du traitement", body: `Marcus Bonnafis (simdcg.com) est responsable du traitement de vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679).` },
+    { title: "1. Responsable du traitement", body: `Marcus Bonnafis (simdcg.com) est responsable du traitement de vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD · Règlement UE 2016/679).` },
     { title: "2. Données collectées", body: `Lors de l'inscription : prénom, adresse email, date d'inscription. Lors de l'utilisation : historique des sessions (QCM, entretiens, cas pratiques), scores obtenus, matières étudiées, streak quotidien. Données techniques : adresse IP, type de navigateur (via Firebase Analytics).` },
     { title: "3. Finalités du traitement", body: `Vos données sont utilisées pour : (a) la gestion de votre compte et authentification, (b) la personnalisation de votre expérience de révision, (c) le suivi de votre progression, (d) la facturation via Stripe pour les abonnés Pro, (e) l'amélioration du service.` },
     { title: "4. Base légale", body: `Le traitement de vos données repose sur votre consentement (art. 6.1.a RGPD) lors de la création de compte, et sur l'exécution du contrat (art. 6.1.b RGPD) pour les fonctionnalités du service.` },
@@ -1060,7 +1055,7 @@ function Footer({ onCgu, onConfidentialite }) {
           <button style={{ ...S.nl, fontSize: 11, color: "var(--muted)" }} onClick={onConfidentialite}>Confidentialité</button>
           <a href="mailto:contact.simdcg@gmail.com" style={{ fontSize: 11, color: "var(--muted)", textDecoration: "none", fontFamily: "inherit" }}>contact.simdcg@gmail.com</a>
         </div>
-        <p style={{ fontSize: 10, color: "var(--line)", margin: 0 }}>© {new Date().getFullYear()} SIMDCG — Tous droits réservés</p>
+        <p style={{ fontSize: 10, color: "var(--line)", margin: 0 }}>© {new Date().getFullYear()} SIMDCG · Tous droits réservés</p>
       </div>
     </div>
   );

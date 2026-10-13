@@ -1,15 +1,15 @@
 import { auth } from "./firebase";
-export async function loadStudy(id, tool) {
+export async function loadStudy(id, tool, settings = {}) {
   if (
     import.meta.env.DEV &&
     new URLSearchParams(location.search).has("design")
   ) {
     const { studyModule } = await import("../lib/study-content.mjs");
-    return studyModule(id, tool);
+    return studyModule(id, tool, Math.random, settings);
   }
   const token = auth.currentUser ? await auth.currentUser.getIdToken() : null;
   const response = await fetch(
-    `/api/study?ue=${encodeURIComponent(id)}&tool=${encodeURIComponent(tool)}`,
+    `/api/study?ue=${encodeURIComponent(id)}&tool=${encodeURIComponent(tool)}${settings.chapter?'&chapter='+encodeURIComponent(settings.chapter):''}${settings.count?'&count='+settings.count:''}`,
     { headers: token ? { Authorization: `Bearer ${token}` } : {} },
   );
   const data = await response.json();
