@@ -1,4 +1,4 @@
-/* SIMDCG design system: navy, warm gold, calm study surfaces. */
+/* SIMDCG design system: warm gold, neutral dark mode, calm study surfaces. */
 :root {
   --navy: #182d52;
   --navy-deep: #142544;
@@ -2932,3 +2932,91 @@ input, select, textarea {accent-color:var(--gold-text)}
 .lesson-self-check details {margin-top:14px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}.lesson-self-check summary {cursor:pointer;padding:18px;font-size:14px;font-weight:650;line-height:1.6}.lesson-self-check details>div {padding:0 18px 18px}.lesson-self-check details>div>strong {font-size:13px;line-height:1.7;color:var(--gold-text)}.lesson-self-check details p {line-height:1.9;font-size:13px;margin-top:12px}
 
 .hero-campus .hero-actions>.btn:first-child,.marketing .public-links>.btn {background:var(--gold);border-color:var(--gold);color:#151515;box-shadow:0 6px 24px rgba(215,187,104,.12)}
+/* Lesson visuals: semantic HTML, code-native charts and keyboard exploration. */
+.lesson-visuals { display:grid; gap:24px; margin-bottom:28px; min-width:0; scroll-margin-top:100px; }
+.lesson-visual-overview, .lesson-lab { min-width:0; }
+.lesson-visual-overview>h2,.lesson-lab>h2 { max-width:26ch; }
+.lesson-visual-tabs { display:flex; flex-wrap:wrap; gap:8px; margin:24px 0; padding-bottom:16px; border-bottom:1px solid var(--line); }
+.lesson-visual-tabs button { border:1px solid var(--line); background:var(--surface); color:var(--ink); padding:12px 18px; border-radius:12px; min-height:48px; }
+.lesson-visual-tabs button[aria-selected=true] { background:var(--gold); border-color:var(--gold); color:#151515; font-weight:700; }
+.lesson-visuals [role=tabpanel]:focus-visible,.lesson-table-scroll:focus-visible { outline:3px solid var(--gold-text); outline-offset:4px; }
+.lesson-mind-map { display:grid; grid-template-columns:minmax(170px,.65fr) minmax(0,1.65fr); align-items:center; gap:36px; padding:20px 0 26px; }
+.mind-map-root { position:relative; display:grid; gap:12px; background:color-mix(in srgb,var(--gold) 13%,var(--surface)); border:1px solid var(--gold-text); padding:24px; border-radius:22px; }
+.mind-map-root>span { font-size:11px; letter-spacing:.12em; color:var(--gold-text); }
+.mind-map-root>strong { font-size:21px; line-height:1.35; }
+.mind-map-root::after { content:''; position:absolute; width:36px; height:1px; background:var(--gold-text); left:100%; top:50%; }
+.mind-map-branches { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; position:relative; }
+.mind-map-branches::before { content:''; position:absolute; top:15%; bottom:15%; left:-18px; width:1px; background:var(--line); }
+.mind-map-branches button { position:relative; min-height:110px; display:grid; grid-template-columns:22px 1fr 12px; gap:8px; align-items:center; text-align:left; border:1px solid var(--line); border-radius:16px; padding:18px 14px; background:var(--surface); color:var(--ink); transition:transform .15s ease,border-color .15s ease; }
+.mind-map-branches button>span { color:var(--gold-text); font-size:12px; }
+.mind-map-branches button>strong { font-size:15px; line-height:1.5; overflow-wrap:anywhere; }
+.mind-map-branches button[aria-pressed=true],.lesson-reasoning-path button[aria-pressed=true] { border-color:var(--gold-text); background:color-mix(in srgb,var(--gold) 10%,var(--surface)); }
+@media (hover:hover) { .mind-map-branches button:hover { transform:translateY(-3px); border-color:var(--gold-text); } }
+.mind-map-detail { border-left:3px solid var(--gold-text); padding:8px 0 8px 24px; max-width:80ch; }
+.mind-map-detail h3 { font-size:22px; margin:0 0 14px; }
+.mind-map-detail>strong { line-height:1.6; display:block; }
+.mind-map-detail p { line-height:1.8; white-space:pre-line; }
+.lesson-table-scroll { overflow-x:auto; max-width:100%; margin:22px 0; border:1px solid var(--line); border-radius:14px; }
+.lesson-data-table { width:100%; border-collapse:collapse; text-align:left; font-size:15px; }
+.lesson-data-table caption { text-align:left; padding:18px; color:var(--ink); font-weight:750; background:color-mix(in srgb,var(--gold) 7%,var(--surface)); }
+.lesson-data-table th,.lesson-data-table td { padding:15px 18px; vertical-align:top; border-top:1px solid var(--line); line-height:1.7; }
+.lesson-data-table thead th { color:var(--gold-text); font-size:13px; }
+.lesson-data-table tbody th { min-width:145px; width:28%; font-weight:650; }
+.lesson-data-table td { color:var(--muted); min-width:160px; }
+.lesson-data-table tr:nth-child(even) { background:color-mix(in srgb,var(--ink) 3%,var(--surface)); }
+.visual-dataset-label { display:flex; align-items:center; gap:16px; flex-wrap:wrap; font-weight:650; }
+.visual-dataset-label select { padding:12px 16px; border:1px solid var(--line); border-radius:12px; background:var(--surface); color:var(--ink); min-height:48px; }
+.visual-assumptions { border:1px solid var(--line); border-radius:12px; padding:16px 20px; line-height:1.7; font-size:14px; }
+.lesson-reasoning-path { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; padding:0; list-style:none; margin:26px 0; }
+.lesson-reasoning-path button { height:100%; width:100%; text-align:left; display:grid; gap:12px; padding:20px; background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:14px; line-height:1.6; }
+.lesson-reasoning-path button span { color:var(--gold-text); font-size:11px; letter-spacing:.1em; }
+.lab-control { border:1px solid var(--line); border-radius:16px; padding:24px; margin:24px 0; }
+.lab-control label { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-weight:650; }
+.lab-control output { font-size:22px; color:var(--gold-text); font-variant-numeric:tabular-nums; }
+.lab-control input[type=range] { width:100%; height:36px; margin:12px 0 0; accent-color:var(--gold-text); cursor:pointer; }
+.lab-control-limits { display:flex; justify-content:space-between; font-size:12px; color:var(--muted); margin-bottom:16px; }
+.lab-results { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; }
+.lab-results>div { display:grid; gap:10px; padding:20px; border-radius:14px; background:color-mix(in srgb,var(--gold) 8%,var(--surface)); border:1px solid var(--line); }
+.lab-results span { font-size:13px; line-height:1.6; color:var(--muted); }
+.lab-results strong { font-size:24px; font-variant-numeric:tabular-nums; }
+.lesson-chart { margin:30px 0 0; }
+.lesson-chart figcaption { font-weight:750; font-size:18px; margin:0 0 20px; }
+.lesson-chart svg { display:block; width:100%; height:auto; overflow:visible; }
+.lesson-chart svg text { fill:var(--muted); font-size:12px; }
+.chart-grid { stroke:var(--line); stroke-width:1; }
+.chart-zero { stroke:var(--muted); stroke-width:1; }
+.chart-series-0 { color:var(--gold-text); stroke:var(--gold-text); fill:var(--gold-text); }
+.chart-series-1 { color:var(--ink); stroke:var(--ink); fill:var(--ink); }
+.chart-series-2 { color:var(--success); stroke:var(--success); fill:var(--success); }
+.chart-legend { display:flex; flex-wrap:wrap; padding:0; list-style:none; gap:10px 20px; font-size:13px; }
+.chart-legend li { display:flex; gap:8px; align-items:center; }
+.chart-key { font-size:26px; line-height:1; }
+.lesson-chart p { font-size:14px; line-height:1.8; }
+.chart-values { border-top:1px solid var(--line); padding:18px 0 0; margin-top:20px; }
+.chart-values summary { cursor:pointer; font-weight:600; min-height:32px; }
+@media(max-width:760px) {
+ .lesson-mind-map { grid-template-columns:1fr; gap:24px; }
+ .mind-map-root { padding:20px; }
+ .mind-map-root::after { left:50%; top:100%; width:1px; height:24px; }
+ .mind-map-branches::before { display:none; }
+ .mind-map-branches button { padding:14px 10px; grid-template-columns:18px 1fr; min-height:108px; }
+ .mind-map-branches button>span:last-child { display:none; }
+ .mind-map-branches button>strong { font-size:14px; }
+ .lesson-visual-tabs button { flex:1 1 120px; padding:12px 10px; font-size:13px; }
+ .lesson-reasoning-path { grid-template-columns:1fr; gap:10px; }
+ .lesson-reasoning-path button { padding:16px; }
+ .lab-control { padding:18px; }
+ .lab-results { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .lab-results>div { padding:14px; }
+ .lab-results strong { font-size:19px; overflow-wrap:anywhere; }
+ .lesson-data-table th,.lesson-data-table td { padding:12px; font-size:14px; }
+ .mind-map-detail { padding-left:16px; }
+ .lesson-chart { overflow:hidden; }
+}
+@media(prefers-reduced-motion:reduce) { .mind-map-branches button { transition:none; } .mind-map-branches button:hover { transform:none; } }
+.chart-canvas { overflow-x:auto; max-width:100%; padding:5px; }
+.chart-canvas:focus-visible { outline:3px solid var(--gold-text); outline-offset:2px; }
+.chart-focus { stroke:var(--muted); stroke-dasharray:4 6; opacity:.55; }
+.chart-current { stroke:var(--surface); stroke-width:2; }
+.lesson-chart svg text { font-size:14px; }
+@media(max-width:760px) { .chart-canvas svg { min-width:620px; } }

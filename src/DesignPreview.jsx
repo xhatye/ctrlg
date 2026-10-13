@@ -44,7 +44,7 @@ export default function DesignPreview() {
   const [page, setPage] = useState(
       new URLSearchParams(location.search).get("design") || "landing",
     ),
-    [ue, setUE] = useState(ues.find((x) => x.id === "UE9"));
+    [ue, setUE] = useState(()=>{const params=new URLSearchParams(location.search);return {...(ues.find(x=>x.id===params.get('ue')) || ues.find(x=>x.id==='UE9')),chapter:params.get('chapter') || undefined};});
   const nav = (key,opts={}) => {
     if(opts.chapter)setUE(ue=>({...ue,chapter:opts.chapter}));
     setPage(key);

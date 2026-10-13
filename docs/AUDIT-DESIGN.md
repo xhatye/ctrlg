@@ -31,3 +31,12 @@ Les deux articles Ferrstudio ont été relus. Les recommandations sont des princ
 | Contacts et support | Accès au support et adresse visible | Aucun email envoyé à des élèves dans cette intervention |
 
 L’accueil conserve l’accès payant aux leçons et exercices. La vitrine présente les matières et le fonctionnement du parcours ; elle ne simule ni témoignages clients ni résultats personnels.
+## Illustrations pédagogiques des cours
+
+Les 205 chapitres disposent d’une carte mentale interactive et d’un tableau de repères construits à partir des notions du cours. Les dossiers argumentés présentent leur contexte et trois étapes de raisonnement. Les 60 chapitres à variantes numériques proposent trois dossiers comparables, avec données, unités, relations et résultats calculés côté serveur.
+
+Huit chapitres possèdent une exploration graphique : équilibre fonctionnel, VAN, prorata d’amortissement, amortissement par composants, seuil de rentabilité, écarts de matière, Wilson et portefeuille de deux actifs. Un seul paramètre varie à la fois. Les hypothèses constantes, le domaine et les unités sont affichés. Les points sélectionnés sont calculés exactement ; les courbes ne servent pas à interpoler les réponses. Les valeurs négatives restent visibles.
+
+Les courbes ont des traits distincts, des légendes et un tableau de valeurs. Les contrôles fonctionnent au clavier ; les cartes, onglets et tableaux disposent de noms accessibles. Sur téléphone, le graphique et les tableaux peuvent défiler dans leur propre zone, sans élargir la page. Les animations respectent la préférence de mouvement réduit. Ces vérifications ne constituent pas un audit exhaustif de conformité WCAG.
+
+Aucune génération IA, aucun nouveau fournisseur ni aucun coût d’API n’est nécessaire pour ces illustrations. Les données restent dans les réponses de cours protégées ; le catalogue public ne contient pas les explications ou corrigés. La consultation des illustrations ne valide pas automatiquement une étape de progression. Les volumes de cours et d’exercices ne sont pas gonflés par ces représentations des mêmes notions.

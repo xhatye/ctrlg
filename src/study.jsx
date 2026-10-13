@@ -3,6 +3,7 @@ import { loadStudy } from "./study-client";
 import {reviewCase} from "./case-client";
 import {checkCaseStep} from "../lib/case-checks.mjs";
 import { ChapterSelect } from './chapter-navigation';
+import LessonVisuals from './LessonVisuals';
 
 export function StudyNotice() {
   return (
@@ -93,6 +94,7 @@ export function SavedLesson({ ue, onBack, onLearning, learning={} }) {
         <>
           <article className="lesson-intro panel"><span className="eyebrow">LE POINT DE DÉPART</span><p>{state.data.intro}</p><h3>Comment travailler ce chapitre</h3><p>{state.data.method}</p></article>
           <section className="panel lesson-objectives"><h2>Ce que vous allez travailler</h2><ul>{state.data.learningGoals.map(g=><li key={g}>{g}</li>)}</ul><p className="helper">Prérequis : {state.data.prerequisites.join(' ')}</p></section>
+          <LessonVisuals key={ue.id+'/'+state.data.chapter} visuals={state.data.visuals}/>
           <div className="lesson-reading-layout">
             <details className="lesson-toc" open><summary>Plan du chapitre</summary><nav aria-label="Sections du cours">{state.data.sections.map((s,i)=><a key={s.titre} href={'#lesson-section-'+(i+1)}><span>{String(i+1).padStart(2,'0')}</span>{s.titre}</a>)}</nav></details>
           <div className="lesson-sections">
