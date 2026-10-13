@@ -1499,7 +1499,7 @@ export function PublicInfo({ page, onNav, onAuth, ues }) {
                     <div className="programme-identity"><SubjectIcon id={ue.id} size={54}/><span className="ue-code">{ue.id}</span></div>
                     <h3>{ue.label}</h3>
                     <p>{ue.desc}</p>
-                    <details className="programme-chapters"><summary>Voir les {catalogue.modules[ue.id]?.chapters.length} chapitres et les volumes</summary><p className="helper">{catalogue.modules[ue.id]?.curatedQuestionCount} QCM · {catalogue.modules[ue.id]?.cardCount} cartes · {catalogue.modules[ue.id]?.curatedCaseCount} modèles de cas, hors variantes. Accès aux contenus réservé à Pro.</p><ul>{catalogue.modules[ue.id]?.chapters.map(c=><li key={c.id}><strong>{c.title}</strong><span>{c.curatedQuestionCount} questions de notions · {c.curatedCaseCount} cas et modèles</span></li>)}</ul></details>
+                    <details className="programme-chapters"><summary>Voir les {catalogue.modules[ue.id]?.chapters.length} chapitres et les volumes</summary><p className="helper">{catalogue.modules[ue.id]?.curatedQuestionCount} QCM · {catalogue.modules[ue.id]?.cardCount} cartes · {catalogue.modules[ue.id]?.curatedCaseCount} modèles de cas, hors variantes. Accès aux contenus réservé à Pro.</p><ul>{catalogue.modules[ue.id]?.chapters.map(c=><li key={c.id}><strong>{c.title}</strong><span>{c.curatedQuestionCount} questions de notions · {c.curatedCaseCount} modèle{c.curatedCaseCount>1?"s":""} de cas</span></li>)}</ul></details>
                   </article>
                 ))}
             </div>
