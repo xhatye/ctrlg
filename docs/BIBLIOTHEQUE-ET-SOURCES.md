@@ -2,9 +2,9 @@
 
 ## Contenus publiés
 
-20 matières obligatoires : 13 DCG et 7 DSCG. La banque comprend 185 chapitres, 1 863 QCM de notions et d’application à un dossier, 1 609 cartes de rappel indépendantes et 185 modèles de cas. Chaque cours contient des explications, une méthode, des termes à revoir et un exemple corrigé. Les cours qualitatifs relient les notions à une méthode disciplinaire et à un atelier commenté ; les cours numériques détaillent relations, unités, hypothèses et applications. Les anciens identifiants et la progression sont conservés.
+20 matières obligatoires : 13 DCG et 7 DSCG. La banque comprend 205 chapitres, 2 083 QCM de notions et d’application à un dossier, 1 789 cartes de rappel indépendantes et 205 modèles de cas. Chaque cours contient des explications, une méthode, des termes à revoir et un exemple corrigé. Les cours qualitatifs relient les notions à une méthode disciplinaire et à un atelier commenté ; les cours numériques détaillent relations, unités, hypothèses et applications. Les anciens identifiants et la progression sont conservés.
 
-Les 60 familles de calcul disposent chacune de quatre tâches et de 2 650 jeux de données. Cela représente 636 000 questions numériques et 159 000 variantes de dossiers, présentées séparément des volumes de notions et des modèles de cas. Les 125 autres dossiers sont accompagnés d’une reprise guidée et d’un atelier de révision, sans prétendre que ce sont deux scénarios indépendants. Les flashcards de rappel ne sont plus comptées à partir de la banque de QCM.
+Les 60 familles de calcul disposent chacune de quatre tâches et de 2 650 jeux de données. Cela représente 636 000 questions numériques et 159 000 variantes de dossiers, présentées séparément des volumes de notions et des modèles de cas. Les 145 autres dossiers sont accompagnés d’une reprise guidée et d’un atelier de révision, sans prétendre que ce sont deux scénarios indépendants. Les flashcards de rappel ne sont plus comptées à partir de la banque de QCM.
 
 Les variantes sont préparées à la demande à partir de données originales et contraintes. Les séries ne chargent que les éléments demandés. Les choix sont mélangés et les corrections calculées sans appel IA. Un contrôle hors ligne repère les collisions de contextes ; 220 corrections de graines déterministes sont enregistrées dans une table sparse. Les premières 25 variantes sont conservées.
 
@@ -61,3 +61,7 @@ Les écritures utilisent uniquement l’UID du jeton Firebase vérifié et relis
 Le client ne lit ni n’écrit directement cette collection. Les règles déjà publiées comportent un refus par défaut : aucun changement de règles n’est nécessaire. Le SDK serveur utilise ses autorisations d’administration. Les résultats restent affichés en cas d’échec d’enregistrement avec une action pour réessayer. Le suivi est relu après connexion et changement de compte.
 
 L’accueil permet de choisir diplôme, matière et étape au clavier ou à la souris. Il expose les titres et le fonctionnement du parcours, sans donner de leçon ou de réponse Pro.
+
+## Dossiers de synthèse et lecture active
+
+Une synthèse originale par matière ajoute 20 cours, 80 repères, 220 QCM et 180 flashcards. Les scénarios sont rédigés pour le site et les montants sont recalculés à partir des hypothèses données. Les 60 cours numériques proposent un second exemple travaillé avec un autre jeu de données. Tous les cours proposent des questions d’auto-explication dépliables ; elles sont reprises des repères et ne sont pas comptées comme une banque supplémentaire de nouveaux QCM.

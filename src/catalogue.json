@@ -2,13 +2,13 @@
   "version": "2026-10-13",
   "totals": {
     "subjects": 20,
-    "chapters": 185,
-    "questions": 637863,
-    "curatedQuestions": 1863,
-    "cards": 1609,
-    "cases": 159250,
-    "curatedCases": 185,
-    "concepts": 744,
+    "chapters": 205,
+    "questions": 638083,
+    "curatedQuestions": 2083,
+    "cards": 1789,
+    "cases": 159290,
+    "curatedCases": 205,
+    "concepts": 824,
     "applications": 636000
   },
   "modules": {
@@ -17,14 +17,14 @@
       "title": "Fondamentaux du droit",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 88,
-      "cardCount": 72,
-      "curatedQuestionCount": 88,
-      "curatedCaseCount": 8,
-      "caseCount": 16,
-      "conceptCount": 32,
+      "questionCount": 99,
+      "cardCount": 81,
+      "curatedQuestionCount": 99,
+      "curatedCaseCount": 9,
+      "caseCount": 18,
+      "conceptCount": 36,
       "applicationCount": 0,
-      "comprehensionCount": 88,
+      "comprehensionCount": 99,
       "chapters": [
         {
           "id": "reperes",
@@ -137,6 +137,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 728,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : validité, inexécution et réparation",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 890,
+          "minutes": 14
         }
       ]
     },
@@ -145,14 +159,14 @@
       "title": "Droit des affaires",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 10674,
-      "cardCount": 62,
-      "curatedQuestionCount": 74,
-      "curatedCaseCount": 7,
-      "caseCount": 2662,
-      "conceptCount": 28,
+      "questionCount": 10685,
+      "cardCount": 71,
+      "curatedQuestionCount": 85,
+      "curatedCaseCount": 8,
+      "caseCount": 2664,
+      "conceptCount": 32,
       "applicationCount": 10600,
-      "comprehensionCount": 74,
+      "comprehensionCount": 85,
       "chapters": [
         {
           "id": "reperes",
@@ -221,8 +235,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1436,
-          "minutes": 17
+          "words": 1673,
+          "minutes": 19
         },
         {
           "id": "associe-dirigeant",
@@ -251,6 +265,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 701,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : financement et engagements personnels",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 870,
+          "minutes": 14
         }
       ]
     },
@@ -259,14 +287,14 @@
       "title": "Droit social",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 88,
-      "cardCount": 72,
-      "curatedQuestionCount": 88,
-      "curatedCaseCount": 8,
-      "caseCount": 16,
-      "conceptCount": 32,
+      "questionCount": 99,
+      "cardCount": 81,
+      "curatedQuestionCount": 99,
+      "curatedCaseCount": 9,
+      "caseCount": 18,
+      "conceptCount": 36,
       "applicationCount": 0,
-      "comprehensionCount": 88,
+      "comprehensionCount": 99,
       "chapters": [
         {
           "id": "reperes",
@@ -379,6 +407,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 710,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : reconstruire une chronologie sociale",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 837,
+          "minutes": 14
         }
       ]
     },
@@ -387,14 +429,14 @@
       "title": "Droit fiscal",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 31890,
-      "cardCount": 78,
-      "curatedQuestionCount": 90,
-      "curatedCaseCount": 9,
-      "caseCount": 7962,
-      "conceptCount": 36,
+      "questionCount": 31901,
+      "cardCount": 87,
+      "curatedQuestionCount": 101,
+      "curatedCaseCount": 10,
+      "caseCount": 7964,
+      "conceptCount": 40,
       "applicationCount": 31800,
-      "comprehensionCount": 90,
+      "comprehensionCount": 101,
       "chapters": [
         {
           "id": "reperes",
@@ -463,8 +505,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1360,
-          "minutes": 17
+          "words": 1588,
+          "minutes": 18
         },
         {
           "id": "is-taux-fourni",
@@ -477,8 +519,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1352,
-          "minutes": 17
+          "words": 1574,
+          "minutes": 18
         },
         {
           "id": "reintegration-amort",
@@ -491,8 +533,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1318,
-          "minutes": 17
+          "words": 1543,
+          "minutes": 18
         },
         {
           "id": "mecanismes-imposition",
@@ -521,6 +563,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 723,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : lire un avoir et contrôler la TVA",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 897,
+          "minutes": 14
         }
       ]
     },
@@ -529,14 +585,14 @@
       "title": "Économie contemporaine",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 42487,
-      "cardCount": 77,
-      "curatedQuestionCount": 87,
-      "curatedCaseCount": 9,
-      "caseCount": 10610,
-      "conceptCount": 36,
+      "questionCount": 42498,
+      "cardCount": 86,
+      "curatedQuestionCount": 98,
+      "curatedCaseCount": 10,
+      "caseCount": 10612,
+      "conceptCount": 40,
       "applicationCount": 42400,
-      "comprehensionCount": 87,
+      "comprehensionCount": 98,
       "chapters": [
         {
           "id": "production",
@@ -591,8 +647,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1374,
-          "minutes": 17
+          "words": 1609,
+          "minutes": 19
         },
         {
           "id": "indices-pouvoir-achat",
@@ -605,8 +661,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1292,
-          "minutes": 17
+          "words": 1518,
+          "minutes": 18
         },
         {
           "id": "marche-travail-ratios",
@@ -619,8 +675,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1290,
-          "minutes": 17
+          "words": 1492,
+          "minutes": 18
         },
         {
           "id": "multiplicateur-simple",
@@ -633,8 +689,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1326,
-          "minutes": 17
+          "words": 1548,
+          "minutes": 18
         },
         {
           "id": "commerce-specialisation",
@@ -663,6 +719,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 725,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : productivité et portée des comparaisons",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 836,
+          "minutes": 14
         }
       ]
     },
@@ -671,14 +741,14 @@
       "title": "Finance d’entreprise",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 84930,
-      "cardCount": 118,
-      "curatedQuestionCount": 130,
-      "curatedCaseCount": 14,
-      "caseCount": 21212,
-      "conceptCount": 56,
+      "questionCount": 84941,
+      "cardCount": 127,
+      "curatedQuestionCount": 141,
+      "curatedCaseCount": 15,
+      "caseCount": 21214,
+      "conceptCount": 60,
       "applicationCount": 84800,
-      "comprehensionCount": 130,
+      "comprehensionCount": 141,
       "chapters": [
         {
           "id": "reperes",
@@ -747,8 +817,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1270,
-          "minutes": 16
+          "words": 1492,
+          "minutes": 18
         },
         {
           "id": "delais-rotation",
@@ -761,8 +831,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1381,
-          "minutes": 17
+          "words": 1619,
+          "minutes": 19
         },
         {
           "id": "caf-additive",
@@ -775,8 +845,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1329,
-          "minutes": 17
+          "words": 1559,
+          "minutes": 18
         },
         {
           "id": "rentabilite-levier",
@@ -789,8 +859,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1374,
-          "minutes": 17
+          "words": 1602,
+          "minutes": 19
         },
         {
           "id": "van-deux-periodes",
@@ -803,8 +873,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1354,
-          "minutes": 17
+          "words": 1584,
+          "minutes": 18
         },
         {
           "id": "investissement-bfr",
@@ -817,8 +887,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1302,
-          "minutes": 17
+          "words": 1532,
+          "minutes": 18
         },
         {
           "id": "emprunt-constant",
@@ -831,8 +901,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1297,
-          "minutes": 17
+          "words": 1524,
+          "minutes": 18
         },
         {
           "id": "emprunt-annuite",
@@ -845,8 +915,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1351,
-          "minutes": 17
+          "words": 1574,
+          "minutes": 18
         },
         {
           "id": "diagnostic-comparaison",
@@ -875,6 +945,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 716,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : croissance et tensions de trésorerie",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 891,
+          "minutes": 14
         }
       ]
     },
@@ -883,14 +967,14 @@
       "title": "Management",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 21282,
-      "cardCount": 70,
-      "curatedQuestionCount": 82,
-      "curatedCaseCount": 8,
-      "caseCount": 5312,
-      "conceptCount": 32,
+      "questionCount": 21293,
+      "cardCount": 79,
+      "curatedQuestionCount": 93,
+      "curatedCaseCount": 9,
+      "caseCount": 5314,
+      "conceptCount": 36,
       "applicationCount": 21200,
-      "comprehensionCount": 82,
+      "comprehensionCount": 93,
       "chapters": [
         {
           "id": "reperes",
@@ -959,8 +1043,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1273,
-          "minutes": 16
+          "words": 1491,
+          "minutes": 18
         },
         {
           "id": "pilotage-commercial",
@@ -973,8 +1057,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1277,
-          "minutes": 16
+          "words": 1496,
+          "minutes": 18
         },
         {
           "id": "structures-contingence",
@@ -1003,6 +1087,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 697,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : arbitrer entre parties prenantes",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 827,
+          "minutes": 14
         }
       ]
     },
@@ -1011,14 +1109,14 @@
       "title": "Systèmes d’information de gestion",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 21271,
-      "cardCount": 61,
-      "curatedQuestionCount": 71,
-      "curatedCaseCount": 7,
-      "caseCount": 5310,
-      "conceptCount": 28,
+      "questionCount": 21282,
+      "cardCount": 70,
+      "curatedQuestionCount": 82,
+      "curatedCaseCount": 8,
+      "caseCount": 5312,
+      "conceptCount": 32,
       "applicationCount": 21200,
-      "comprehensionCount": 71,
+      "comprehensionCount": 82,
       "chapters": [
         {
           "id": "donnees",
@@ -1073,8 +1171,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1252,
-          "minutes": 16
+          "words": 1470,
+          "minutes": 18
         },
         {
           "id": "sql-jointure-cardinalite",
@@ -1087,8 +1185,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1374,
-          "minutes": 17
+          "words": 1601,
+          "minutes": 19
         },
         {
           "id": "normalisation-donnees",
@@ -1117,6 +1215,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 717,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : tester une requête avant son utilisation",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 871,
+          "minutes": 14
         }
       ]
     },
@@ -1125,14 +1237,14 @@
       "title": "Comptabilité",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 84938,
-      "cardCount": 122,
-      "curatedQuestionCount": 138,
-      "curatedCaseCount": 14,
-      "caseCount": 21212,
-      "conceptCount": 60,
+      "questionCount": 84949,
+      "cardCount": 131,
+      "curatedQuestionCount": 149,
+      "curatedCaseCount": 15,
+      "caseCount": 21214,
+      "conceptCount": 64,
       "applicationCount": 84800,
-      "comprehensionCount": 138,
+      "comprehensionCount": 149,
       "chapters": [
         {
           "id": "reperes",
@@ -1201,8 +1313,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1400,
-          "minutes": 17
+          "words": 1632,
+          "minutes": 19
         },
         {
           "id": "escompte-reglement",
@@ -1215,8 +1327,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1231,
-          "minutes": 16
+          "words": 1436,
+          "minutes": 17
         },
         {
           "id": "cmp-periodique",
@@ -1229,8 +1341,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1333,
-          "minutes": 17
+          "words": 1555,
+          "minutes": 18
         },
         {
           "id": "fifo-deux-lots",
@@ -1243,8 +1355,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1426,
-          "minutes": 17
+          "words": 1680,
+          "minutes": 19
         },
         {
           "id": "amortissement-prorata",
@@ -1257,8 +1369,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1243,
-          "minutes": 16
+          "words": 1453,
+          "minutes": 18
         },
         {
           "id": "rapprochement-banque",
@@ -1271,8 +1383,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1395,
-          "minutes": 17
+          "words": 1636,
+          "minutes": 19
         },
         {
           "id": "charges-constatees-avance",
@@ -1285,8 +1397,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1241,
-          "minutes": 16
+          "words": 1442,
+          "minutes": 18
         },
         {
           "id": "creance-douteuse",
@@ -1299,8 +1411,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1400,
-          "minutes": 17
+          "words": 1629,
+          "minutes": 19
         },
         {
           "id": "chaine-comptable",
@@ -1329,6 +1441,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 764,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : passer d’une pièce aux états financiers",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 873,
+          "minutes": 14
         }
       ]
     },
@@ -1337,14 +1463,14 @@
       "title": "Comptabilité approfondie",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 42498,
-      "cardCount": 86,
-      "curatedQuestionCount": 98,
-      "curatedCaseCount": 10,
-      "caseCount": 10612,
-      "conceptCount": 40,
+      "questionCount": 42509,
+      "cardCount": 95,
+      "curatedQuestionCount": 109,
+      "curatedCaseCount": 11,
+      "caseCount": 10614,
+      "conceptCount": 44,
       "applicationCount": 42400,
-      "comprehensionCount": 98,
+      "comprehensionCount": 109,
       "chapters": [
         {
           "id": "reperes",
@@ -1413,8 +1539,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1321,
-          "minutes": 17
+          "words": 1542,
+          "minutes": 18
         },
         {
           "id": "cession-immobilisation",
@@ -1427,8 +1553,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1333,
-          "minutes": 17
+          "words": 1563,
+          "minutes": 18
         },
         {
           "id": "augmentation-capital",
@@ -1441,8 +1567,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1170,
-          "minutes": 16
+          "words": 1372,
+          "minutes": 17
         },
         {
           "id": "provision-evolution",
@@ -1455,8 +1581,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1323,
-          "minutes": 17
+          "words": 1554,
+          "minutes": 18
         },
         {
           "id": "cout-entree-actif",
@@ -1485,6 +1611,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 722,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : justifier une estimation comptable",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 852,
+          "minutes": 14
         }
       ]
     },
@@ -1493,14 +1633,14 @@
       "title": "Contrôle de gestion",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 106135,
-      "cardCount": 125,
-      "curatedQuestionCount": 135,
-      "curatedCaseCount": 15,
-      "caseCount": 26510,
-      "conceptCount": 60,
+      "questionCount": 106146,
+      "cardCount": 134,
+      "curatedQuestionCount": 146,
+      "curatedCaseCount": 16,
+      "caseCount": 26512,
+      "conceptCount": 64,
       "applicationCount": 106000,
-      "comprehensionCount": 135,
+      "comprehensionCount": 146,
       "chapters": [
         {
           "id": "couts",
@@ -1555,8 +1695,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1333,
-          "minutes": 17
+          "words": 1564,
+          "minutes": 18
         },
         {
           "id": "abc-deux-activites",
@@ -1569,8 +1709,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1378,
-          "minutes": 17
+          "words": 1621,
+          "minutes": 19
         },
         {
           "id": "cout-variable-seuil",
@@ -1583,8 +1723,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1254,
-          "minutes": 16
+          "words": 1465,
+          "minutes": 18
         },
         {
           "id": "securite-point-mort",
@@ -1597,8 +1737,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1365,
-          "minutes": 17
+          "words": 1594,
+          "minutes": 18
         },
         {
           "id": "commande-supplementaire",
@@ -1611,8 +1751,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1334,
-          "minutes": 17
+          "words": 1556,
+          "minutes": 18
         },
         {
           "id": "contrainte-goulot",
@@ -1625,8 +1765,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1454,
-          "minutes": 18
+          "words": 1691,
+          "minutes": 19
         },
         {
           "id": "ecart-matiere",
@@ -1639,8 +1779,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1352,
-          "minutes": 17
+          "words": 1576,
+          "minutes": 18
         },
         {
           "id": "budget-ventes",
@@ -1653,8 +1793,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1330,
-          "minutes": 17
+          "words": 1563,
+          "minutes": 18
         },
         {
           "id": "budget-production",
@@ -1667,8 +1807,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1319,
-          "minutes": 17
+          "words": 1550,
+          "minutes": 18
         },
         {
           "id": "wilson-stocks",
@@ -1681,8 +1821,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1326,
-          "minutes": 17
+          "words": 1553,
+          "minutes": 18
         },
         {
           "id": "couts-incorporation",
@@ -1711,6 +1851,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 709,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : mesurer la qualité sans perdre le sens",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 847,
+          "minutes": 14
         }
       ]
     },
@@ -1719,14 +1873,14 @@
       "title": "Anglais des affaires",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 77,
-      "cardCount": 63,
-      "curatedQuestionCount": 77,
-      "curatedCaseCount": 7,
-      "caseCount": 14,
-      "conceptCount": 28,
+      "questionCount": 88,
+      "cardCount": 72,
+      "curatedQuestionCount": 88,
+      "curatedCaseCount": 8,
+      "caseCount": 16,
+      "conceptCount": 32,
       "applicationCount": 0,
-      "comprehensionCount": 77,
+      "comprehensionCount": 88,
       "chapters": [
         {
           "id": "vocabulaire",
@@ -1825,6 +1979,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 678,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Business English : distinguer constat, prévision et engagement",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 839,
+          "minutes": 14
         }
       ]
     },
@@ -1833,14 +2001,14 @@
       "title": "Communication professionnelle",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 77,
-      "cardCount": 63,
-      "curatedQuestionCount": 77,
-      "curatedCaseCount": 7,
-      "caseCount": 14,
-      "conceptCount": 28,
+      "questionCount": 88,
+      "cardCount": 72,
+      "curatedQuestionCount": 88,
+      "curatedCaseCount": 8,
+      "caseCount": 16,
+      "conceptCount": 32,
       "applicationCount": 0,
-      "comprehensionCount": 77,
+      "comprehensionCount": 88,
       "chapters": [
         {
           "id": "experience",
@@ -1939,6 +2107,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 730,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : justifier une amélioration dans un rapport",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 866,
+          "minutes": 14
         }
       ]
     },
@@ -1947,14 +2129,14 @@
       "title": "Gestion juridique, fiscale et sociale",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 10674,
-      "cardCount": 62,
-      "curatedQuestionCount": 74,
-      "curatedCaseCount": 7,
-      "caseCount": 2662,
-      "conceptCount": 28,
+      "questionCount": 10685,
+      "cardCount": 71,
+      "curatedQuestionCount": 85,
+      "curatedCaseCount": 8,
+      "caseCount": 2664,
+      "conceptCount": 32,
       "applicationCount": 10600,
-      "comprehensionCount": 74,
+      "comprehensionCount": 85,
       "chapters": [
         {
           "id": "reperes",
@@ -2023,8 +2205,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1462,
-          "minutes": 18
+          "words": 1716,
+          "minutes": 19
         },
         {
           "id": "negociation-risques",
@@ -2053,6 +2235,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 703,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : organiser une revue documentaire d’acquisition",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 832,
+          "minutes": 14
         }
       ]
     },
@@ -2061,14 +2257,14 @@
       "title": "Finance",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 84930,
-      "cardCount": 118,
-      "curatedQuestionCount": 130,
-      "curatedCaseCount": 14,
-      "caseCount": 21212,
-      "conceptCount": 56,
+      "questionCount": 84941,
+      "cardCount": 127,
+      "curatedQuestionCount": 141,
+      "curatedCaseCount": 15,
+      "caseCount": 21214,
+      "conceptCount": 60,
       "applicationCount": 84800,
-      "comprehensionCount": 130,
+      "comprehensionCount": 141,
       "chapters": [
         {
           "id": "reperes",
@@ -2137,8 +2333,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1458,
-          "minutes": 18
+          "words": 1717,
+          "minutes": 19
         },
         {
           "id": "medaf-beta",
@@ -2151,8 +2347,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1272,
-          "minutes": 16
+          "words": 1493,
+          "minutes": 18
         },
         {
           "id": "dcf-croissance",
@@ -2165,8 +2361,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1388,
-          "minutes": 17
+          "words": 1620,
+          "minutes": 19
         },
         {
           "id": "valeur-actions",
@@ -2179,8 +2375,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1330,
-          "minutes": 17
+          "words": 1559,
+          "minutes": 18
         },
         {
           "id": "obligation-coupon",
@@ -2193,8 +2389,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1320,
-          "minutes": 17
+          "words": 1529,
+          "minutes": 18
         },
         {
           "id": "portefeuille-deux-actifs",
@@ -2207,8 +2403,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1433,
-          "minutes": 17
+          "words": 1674,
+          "minutes": 19
         },
         {
           "id": "change-devises",
@@ -2221,8 +2417,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1476,
-          "minutes": 18
+          "words": 1722,
+          "minutes": 19
         },
         {
           "id": "options-intrinseque",
@@ -2235,8 +2431,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1312,
-          "minutes": 17
+          "words": 1538,
+          "minutes": 18
         },
         {
           "id": "evaluation-multiples",
@@ -2265,6 +2461,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 714,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : raisonner avec des scénarios financiers",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 849,
+          "minutes": 14
         }
       ]
     },
@@ -2273,14 +2483,14 @@
       "title": "Contrôle de gestion et stratégie",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 42498,
-      "cardCount": 86,
-      "curatedQuestionCount": 98,
-      "curatedCaseCount": 10,
-      "caseCount": 10612,
-      "conceptCount": 40,
+      "questionCount": 42509,
+      "cardCount": 95,
+      "curatedQuestionCount": 109,
+      "curatedCaseCount": 11,
+      "caseCount": 10614,
+      "conceptCount": 44,
       "applicationCount": 42400,
-      "comprehensionCount": 98,
+      "comprehensionCount": 109,
       "chapters": [
         {
           "id": "reperes",
@@ -2349,8 +2559,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1394,
-          "minutes": 17
+          "words": 1629,
+          "minutes": 19
         },
         {
           "id": "cout-cible",
@@ -2363,8 +2573,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1290,
-          "minutes": 17
+          "words": 1507,
+          "minutes": 18
         },
         {
           "id": "tableau-bord-qualite",
@@ -2377,8 +2587,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1300,
-          "minutes": 17
+          "words": 1527,
+          "minutes": 18
         },
         {
           "id": "choix-sous-traitance",
@@ -2391,8 +2601,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1338,
-          "minutes": 17
+          "words": 1571,
+          "minutes": 18
         },
         {
           "id": "responsabilites-incitations",
@@ -2421,6 +2631,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 718,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : relier indicateurs et comportements",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 857,
+          "minutes": 14
         }
       ]
     },
@@ -2429,14 +2653,14 @@
       "title": "Comptabilité et audit",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 31890,
-      "cardCount": 78,
-      "curatedQuestionCount": 90,
-      "curatedCaseCount": 9,
-      "caseCount": 7962,
-      "conceptCount": 36,
+      "questionCount": 31901,
+      "cardCount": 87,
+      "curatedQuestionCount": 101,
+      "curatedCaseCount": 10,
+      "caseCount": 7964,
+      "conceptCount": 40,
       "applicationCount": 31800,
-      "comprehensionCount": 90,
+      "comprehensionCount": 101,
       "chapters": [
         {
           "id": "reperes",
@@ -2505,8 +2729,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1424,
-          "minutes": 17
+          "words": 1659,
+          "minutes": 19
         },
         {
           "id": "ecart-acquisition-donne",
@@ -2519,8 +2743,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1432,
-          "minutes": 17
+          "words": 1676,
+          "minutes": 19
         },
         {
           "id": "test-depreciation-ias",
@@ -2533,8 +2757,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1369,
-          "minutes": 17
+          "words": 1603,
+          "minutes": 19
         },
         {
           "id": "consol-controle",
@@ -2563,6 +2787,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 736,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : tester les assertions sur un stock",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 868,
+          "minutes": 14
         }
       ]
     },
@@ -2571,14 +2809,14 @@
       "title": "Management des systèmes d’information",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 21282,
-      "cardCount": 70,
-      "curatedQuestionCount": 82,
-      "curatedCaseCount": 8,
-      "caseCount": 5312,
-      "conceptCount": 32,
+      "questionCount": 21293,
+      "cardCount": 79,
+      "curatedQuestionCount": 93,
+      "curatedCaseCount": 9,
+      "caseCount": 5314,
+      "conceptCount": 36,
       "applicationCount": 21200,
-      "comprehensionCount": 82,
+      "comprehensionCount": 93,
       "chapters": [
         {
           "id": "reperes",
@@ -2647,8 +2885,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1371,
-          "minutes": 17
+          "words": 1590,
+          "minutes": 18
         },
         {
           "id": "disponibilite-si",
@@ -2661,8 +2899,8 @@
           "applicationCount": 10600,
           "comprehensionCount": 8,
           "practiceKind": "Notions, relations et calculs à variantes",
-          "words": 1275,
-          "minutes": 16
+          "words": 1483,
+          "minutes": 18
         },
         {
           "id": "si-sourcing",
@@ -2691,6 +2929,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 699,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : tester un plan de reprise",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 865,
+          "minutes": 14
         }
       ]
     },
@@ -2699,14 +2951,14 @@
       "title": "Anglais des affaires",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 77,
-      "cardCount": 63,
-      "curatedQuestionCount": 77,
-      "curatedCaseCount": 7,
-      "caseCount": 14,
-      "conceptCount": 28,
+      "questionCount": 88,
+      "cardCount": 72,
+      "curatedQuestionCount": 88,
+      "curatedCaseCount": 8,
+      "caseCount": 16,
+      "conceptCount": 32,
       "applicationCount": 0,
-      "comprehensionCount": 77,
+      "comprehensionCount": 88,
       "chapters": [
         {
           "id": "presenter",
@@ -2805,6 +3057,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 672,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Business English : discuss an ethical dilemma in writing",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 834,
+          "minutes": 14
         }
       ]
     },
@@ -2813,14 +3079,14 @@
       "title": "Mémoire professionnel",
       "version": "2026-10-13",
       "scope": "Contenus originaux, couverture partielle du programme",
-      "questionCount": 77,
-      "cardCount": 63,
-      "curatedQuestionCount": 77,
-      "curatedCaseCount": 7,
-      "caseCount": 14,
-      "conceptCount": 28,
+      "questionCount": 88,
+      "cardCount": 72,
+      "curatedQuestionCount": 88,
+      "curatedCaseCount": 8,
+      "caseCount": 16,
+      "conceptCount": 32,
       "applicationCount": 0,
-      "comprehensionCount": 77,
+      "comprehensionCount": 88,
       "chapters": [
         {
           "id": "problematique",
@@ -2919,6 +3185,20 @@
           "practiceKind": "Notions, mises en situation et cas argumentés",
           "words": 698,
           "minutes": 13
+        },
+        {
+          "id": "dossier-synthese",
+          "title": "Dossier de synthèse : trianguler des observations de terrain",
+          "questionCount": 11,
+          "curatedQuestionCount": 11,
+          "cardCount": 9,
+          "caseCount": 2,
+          "curatedCaseCount": 1,
+          "applicationCount": 0,
+          "comprehensionCount": 11,
+          "practiceKind": "Notions, mises en situation et cas argumentés",
+          "words": 854,
+          "minutes": 14
         }
       ]
     }

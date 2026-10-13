@@ -1,3 +1,4 @@
+import SubjectIcon from './SubjectIcon';
 import { useState, useEffect, useRef } from "react";
 import { sendEmailVerification } from "firebase/auth";
 import { auth } from "./firebase";
@@ -266,16 +267,14 @@ export function Marketing({ onAuth, onNav, ues }) {
     <div className="marketing">
       <PublicNav onNav={onNav} onAuth={onAuth} />
       <main>
-        <section className="container hero"><HeroAtmosphere />
+        <section className="container hero hero-campus"><HeroAtmosphere /><div className="hero-subject-orbit" aria-hidden="true">{["UE1","UE6","UE9","UE11","DSCG4","DSCG7"].map((id,i)=><span className={"orbit-item orbit-"+i} key={id}><SubjectIcon id={id} size={68}/><small>{id.replace("DSCG","UE")} · {id.startsWith("DSCG")?"DSCG":"DCG"}</small></span>)}</div>
           <div className="hero-copy">
             <span className="pill">
-              <i /> VOTRE COMPAGNON DE RÉVISION DCG / DSCG
+              <i /> LES RÉVISIONS DES ÉTUDIANTS EN COMPTABILITÉ
             </span>
             <h1>
-              Votre DCG.
-              <br />
-              Votre DSCG.
-              <br /><span>Vos révisions.</span>
+              Votre DCG. Votre DSCG.
+              <br /><span>Un chapitre à la fois.</span>
             </h1>
             <p>
               Une plateforme consacrée aux diplômes de comptabilité et de gestion.
@@ -419,7 +418,7 @@ export function Marketing({ onAuth, onNav, ues }) {
                 key={ue.id}
                 onClick={() => onNav(ue.level === "DCG" ? "dcg" : "dscg")}
               >
-                <span className="ue-code">{ue.id}</span>
+                <div className="programme-identity"><SubjectIcon id={ue.id} size={54}/><span className="ue-code">{ue.id}</span></div>
                 <h3>{ue.label}</h3>
                 <span>
                   {ue.short}
@@ -585,12 +584,7 @@ function UECard({ ue, mastery, onClick }) {
   return (
     <button className="ue-card" onClick={onClick}>
       <div className="ue-card-top">
-        <span
-          className="icon-tile"
-          style={{ background: `${ue.color}18`, color: "var(--ink)" }}
-        >
-          <Icon name="book" />
-        </span>
+        <SubjectIcon id={ue.id} size={60}/>
         <span className="ue-code">
           {ue.id.replace("DSCG", "UE")}
           <small>{ue.level}</small>
@@ -851,7 +845,7 @@ export function CourseHome({ ue, user, onNav, learning }) {
     <div className="page course-page">
       <Title eyebrow={`${ue.level} · ${ue.id}`} title={ue.label} desc={ue.desc}>
         <span className="icon-tile large">
-          <Icon name="book" size={32} />
+          <SubjectIcon id={ue.id} size={72}/>
         </span>
       </Title>
       <section className="course-intro panel">
@@ -1454,7 +1448,7 @@ export function LearningProgress({ user, ues, onNav, learning={},learningError,o
               .filter((x) => mastery[x.id])
               .map((ue) => (
                 <div className="panel" key={ue.id}>
-                  <span className="ue-code">{ue.id}</span>
+                  <div className="programme-identity"><SubjectIcon id={ue.id} size={54}/><span className="ue-code">{ue.id}</span></div>
                   <h3>{ue.label}</h3>
                   <strong>{mastery[ue.id].best}%</strong>
                   <p>Meilleur QCM · {mastery[ue.id].attempts} session(s)</p>
@@ -1502,7 +1496,7 @@ export function PublicInfo({ page, onNav, onAuth, ues }) {
                 .filter((x) => x.level === level)
                 .map((ue) => (
                   <article className="panel" key={ue.id}>
-                    <span className="ue-code">{ue.id}</span>
+                    <div className="programme-identity"><SubjectIcon id={ue.id} size={54}/><span className="ue-code">{ue.id}</span></div>
                     <h3>{ue.label}</h3>
                     <p>{ue.desc}</p>
                     <details className="programme-chapters"><summary>Voir les {catalogue.modules[ue.id]?.chapters.length} chapitres et les volumes</summary><p className="helper">{catalogue.modules[ue.id]?.curatedQuestionCount} QCM · {catalogue.modules[ue.id]?.cardCount} cartes · {catalogue.modules[ue.id]?.curatedCaseCount} modèles de cas, hors variantes. Accès aux contenus réservé à Pro.</p><ul>{catalogue.modules[ue.id]?.chapters.map(c=><li key={c.id}><strong>{c.title}</strong><span>{c.curatedQuestionCount} questions de notions · {c.curatedCaseCount} cas et modèles</span></li>)}</ul></details>

@@ -108,6 +108,7 @@ export function SavedLesson({ ue, onBack, onLearning, learning={} }) {
             ))}
           </div>
           </div>
+          {state.data.selfChecks?.length>0&&<section className="panel lesson-self-check"><span className="eyebrow">SANS REGARDER LE COURS</span><h2>Vérifiez ce que vous pouvez expliquer</h2><p>Formulez votre réponse, puis ouvrez l’explication. Ces repères de lecture ne remplacent pas votre série de QCM.</p>{state.data.selfChecks.map((check,i)=><details key={i}><summary>{check.question}</summary><div><strong>{check.answer}</strong><p>{check.explanation}</p></div></details>)}</section>}
           <section className="panel lesson-method"><h2>Résoudre un dossier sur ce chapitre</h2><ol>{state.data.methodSteps.map((step,i)=><li key={i}>{step}</li>)}</ol></section>
           {state.data.glossary.length>0&&<section className="panel lesson-glossary"><h2>Les termes à savoir expliquer</h2><dl>{state.data.glossary.map(g=><div key={g.term}><dt>{g.term}</dt><dd>{g.definition}</dd></div>)}</dl></section>}
 
