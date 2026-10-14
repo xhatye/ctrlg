@@ -1,5 +1,6 @@
 // Development-only route. No real user account, payment or Firestore write.
 import { useState } from "react";
+import AppLoading from './AppLoading';
 import catalogue from "./catalogue.json";
 import {applyLearningEvent} from '../lib/learning-progress.mjs';
 import { OralPractice, OralSummary } from "./study";
@@ -56,6 +57,7 @@ export default function DesignPreview() {
       new URLSearchParams(location.search).get("design") || "landing",
     ),
     [ue, setUE] = useState(()=>{const params=new URLSearchParams(location.search);return {...(ues.find(x=>x.id===params.get('ue')) || ues.find(x=>x.id==='UE9')),chapter:params.get('chapter') || undefined};});
+  if (page === 'loading') return <AppLoading />;
   const nav = (key,opts={}) => {
     if (["login","signup"].includes(opts.authMode)) setAuthMode(opts.authMode);
     if(opts.chapter)setUE(ue=>({...ue,chapter:opts.chapter}));

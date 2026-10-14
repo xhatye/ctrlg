@@ -1,0 +1,55 @@
+.app-loading {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  background: var(--paper);
+}
+
+.app-loading-logo {
+  display: block;
+  width: 84px;
+  height: 84px;
+  border-radius: 27px;
+  filter: drop-shadow(0 8px 24px #7c3aed26);
+  animation: app-loading-glow 3s ease-in-out infinite;
+}
+
+.app-loading-name {
+  color: var(--ink);
+  font-size: clamp(28px, 6vw, 36px);
+  font-weight: 850;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .app-loading-name {
+    background-image: linear-gradient(110deg, var(--ink) 35%, #a78bfa 47%, #ddd0ff 50%, #a78bfa 53%, var(--ink) 65%);
+    background-size: 300% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: app-loading-shine 3s ease-in-out infinite;
+  }
+}
+
+@keyframes app-loading-shine {
+  0%, 15% { background-position: 100% 0; }
+  85%, 100% { background-position: 0% 0; }
+}
+
+@keyframes app-loading-glow {
+  0%, 100% { filter: drop-shadow(0 8px 24px #7c3aed26); }
+  50% { filter: drop-shadow(0 8px 30px #7c3aed4d); }
+}
+
+@media (prefers-reduced-motion: reduce), (forced-colors: active) {
+  .app-loading-logo, .app-loading-name { animation: none; }
+  .app-loading-logo { filter: none; }
+  .app-loading-name { background: none; color: var(--ink); }
+}

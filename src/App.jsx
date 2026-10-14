@@ -11,6 +11,7 @@ import {loadStudy} from './study-client';
 import { curriculumFor } from '../lib/curriculum.mjs';
 import { StudySession } from './chapter-navigation';
 import Flashcard from './Flashcard';
+import AppLoading from './AppLoading';
 import {learningRequest} from './learning-client';
 import {trainingRequest} from './training-client';
 import ExamPage from './ExamPage';
@@ -404,7 +405,7 @@ export default function App() {
     toast.success("Votre travail et le corrigé sont enregistrés.");
   };
 
-  if (loadingAuth) return <div className="app-loading"><span className="brand-mark">S</span><p>Préparation de votre espace…</p></div>;
+  if (loadingAuth) return <AppLoading />;
   const publicScreens = ['landing', 'pricing', 'testimonials', 'auth', 'cgu', 'confidentialite', 'forgot_password', 'features', 'dcg', 'dscg', 'resources', 'support'];
   const privateScreen = !publicScreens.includes(screen);
   const selectUE = ue => { setSelectedUE(ue); window.history.pushState({}, '', `/matiere?ue=${ue.id}`); setScreen('subject_hub'); };

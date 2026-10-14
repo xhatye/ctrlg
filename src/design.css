@@ -1756,17 +1756,6 @@ button:hover:not(:disabled) {
   display: block;
   margin-top: 25px;
 }
-.app-loading {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
-}
-.app-loading p {
-  font-size: 12px;
-}
 .study-ambient {
   position: absolute;
   inset: 0;
