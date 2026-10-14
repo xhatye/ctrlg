@@ -99,10 +99,10 @@ function PublicNav({ onNav, onAuth }) {
               {label}
             </button>
           ))}
-          <button onClick={() => (onAuth ? onAuth("login") : onNav("auth"))}>
+          <button onClick={() => (onAuth ? onAuth("login") : onNav("auth", {authMode:"login"}))}>
             Connexion
           </button>
-          <Button onClick={() => (onAuth ? onAuth("signup") : onNav("auth"))}>
+          <Button onClick={() => (onAuth ? onAuth("signup") : onNav("auth", {authMode:"signup"}))}>
             Créer mon compte <Icon name="arrow" size={16} />
           </Button>
         </nav>

@@ -57,6 +57,7 @@ export default function DesignPreview() {
     ),
     [ue, setUE] = useState(()=>{const params=new URLSearchParams(location.search);return {...(ues.find(x=>x.id===params.get('ue')) || ues.find(x=>x.id==='UE9')),chapter:params.get('chapter') || undefined};});
   const nav = (key,opts={}) => {
+    if (["login","signup"].includes(opts.authMode)) setAuthMode(opts.authMode);
     if(opts.chapter)setUE(ue=>({...ue,chapter:opts.chapter}));
     setPage(key);
     history.replaceState({}, "", `/?design=${key}`);
@@ -80,7 +81,7 @@ export default function DesignPreview() {
     page === "forgot_password" ? <ForgotPasswordScreen onBack={()=>nav('auth')} /> :
     ["cgu","confidentialite"].includes(page) ? <LegalScreen type={page} onBack={()=>nav('landing')} /> :
     page === "landing" ? (
-      <Marketing onAuth={() => nav("auth")} onNav={nav} ues={ues} />
+      <Marketing onAuth={mode=>{setAuthMode(mode || "login");nav("auth");}} onNav={nav} ues={ues} />
     ) : page === "pricing" ? (
       <OfferPage user={student} onCheckout={() => nav("account")} onNav={nav} />
     ) : page === "library" ? (
@@ -163,7 +164,7 @@ export default function DesignPreview() {
       <PublicInfo
         page={page}
         onNav={nav}
-        onAuth={() => nav("auth")}
+        onAuth={mode=>{setAuthMode(mode || "login");nav("auth");}}
         ues={ues}
       />
     ) : (

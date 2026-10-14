@@ -357,6 +357,7 @@ export default function App() {
   }, []);
 
   const nav = (s, opts = {}) => {
+    if (["login","signup"].includes(opts.authMode)) setAuthMode(opts.authMode);
     const chapter = opts.chapter || selectedUE?.chapter;
     if(opts.chapter)setSelectedUE(ue=>({...ue,chapter:opts.chapter}));
     let url = SCREEN_TO_URL[s] || "/";
