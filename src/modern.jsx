@@ -14,6 +14,8 @@ import HomeStudyPath from './HomeStudyPath';
 import PreviewGallery from './PreviewGallery';
 import {useLandingMotion} from './landing-motion';
 import './landing-motion.css';
+import { PublicEvidence } from './PublicStudySite';
+import { publicSubjectPath } from '../lib/public-study-pages.mjs';
 
 const paths = {
   home: "M3 10 12 3l9 7v10H3z M9 20v-7h6v7",
@@ -72,7 +74,7 @@ function PublicNav({ onNav, onAuth }) {
   return (
     <header className="public-nav">
       <div className="container nav-row">
-        <Brand onClick={() => onNav("landing")} />
+        <a className="public-brand-home" href="/" aria-label="SIMDCG, accueil"><Brand /></a>
         <button
           className="menu-button"
           aria-expanded={open}
@@ -91,15 +93,12 @@ function PublicNav({ onNav, onAuth }) {
             ["dscg", "DSCG"],
             ["pricing", "Tarifs"],
           ].map(([key, label]) => (
-            <button
+            <a
               key={key}
-              onClick={() => {
-                onNav(key);
-                setOpen(false);
-              }}
+              href={{features:'/fonctionnalites',dcg:'/dcg',dscg:'/dscg',pricing:'/tarifs'}[key]}
             >
               {label}
-            </button>
+            </a>
           ))}
           <button onClick={() => (onAuth ? onAuth("login") : onNav("auth", {authMode:"login"}))}>
             Connexion
@@ -117,15 +116,16 @@ function PublicFooter({ onNav }) {
     <footer className="public-footer container">
       <Brand onClick={() => onNav("landing")} />
       <div>
+        <a href="/sources">Sources officielles</a><a href="/annales">Annales</a><a href="/guides">Guides de révision</a>
         {[
           ["resources", "Ressources"],
           ["support", "Contact"],
           ["cgu", "Conditions"],
           ["confidentialite", "Confidentialité"],
         ].map(([key, label]) => (
-          <button key={key} onClick={() => onNav(key)}>
+          <a key={key} href={{resources:'/ressources',support:'/contact',cgu:'/cgu',confidentialite:'/confidentialite'}[key]}>
             {label}
-          </button>
+          </a>
         ))}
       </div>
       <small>© {new Date().getFullYear()} SIMDCG</small>
@@ -339,6 +339,7 @@ export function Marketing({ onAuth, onNav, ues }) {
           </div>
         </div>
         <PreviewGallery onSubscribe={()=>onNav('pricing')}/>
+        <PublicEvidence />
         <section id="methode" className="container section">
           <div className="section-heading">
             <div>
@@ -430,9 +431,9 @@ export function Marketing({ onAuth, onNav, ues }) {
           </div>
           <div className="marketing-subjects">
             {ues.slice(0, 6).map((ue) => (
-              <button
+              <a
                 key={ue.id}
-                onClick={() => onNav(ue.level === "DCG" ? "dcg" : "dscg")}
+                href={publicSubjectPath(ue.id)}
               >
                 <div className="programme-identity"><SubjectIcon id={ue.id} size={54}/><span className="ue-code">{ue.id}</span></div>
                 <h3>{ue.label}</h3>
@@ -440,7 +441,7 @@ export function Marketing({ onAuth, onNav, ues }) {
                   {ue.short}
                   <Icon name="arrow" size={17} />
                 </span>
-              </button>
+              </a>
             ))}
           </div>
         </section>
@@ -955,7 +956,7 @@ export function OfferPage({ user, onCheckout, onNav }) {
           title="Un cap clair. Un prix clair."
           desc="Les mêmes outils de révision, deux façons d’y accéder."
         />
-        <p className="helper">Consultez les chapitres DCG et DSCG avant de choisir votre accès. Les exercices sont réservés aux abonnés, sans essai gratuit.</p>
+        <p className="helper">Consultez les chapitres <a href="/dcg">DCG</a> et <a href="/dscg">DSCG</a> avant de choisir votre accès. Les exercices sont réservés aux abonnés, sans essai gratuit.</p>
         <div className="pricing-grid">
           <article className="pricing-card">
             <span className="card-tag">POUR UN OBJECTIF PRÉCIS</span>
@@ -972,6 +973,7 @@ export function OfferPage({ user, onCheckout, onNav }) {
                 "13 matières DCG + 7 matières DSCG",
                 "QCM, fiches et flashcards",
                 "Cas pratiques et corrigés enregistrés",
+                "Mode examen : dossiers, chronomètre et barème",
                 "Planning et préparation écrite à l’oral sans IA",
                 "Tuteur IA : 20 demandes/jour, 300/mois",
                 "Accès pendant 90 jours",
@@ -1005,6 +1007,7 @@ export function OfferPage({ user, onCheckout, onNav }) {
               {[
                 "13 matières DCG + 7 matières DSCG",
                 "Parcours enregistrés, sans dépendre de l’IA",
+                "Mode examen et rappels À revoir aujourd’hui",
                 "Tuteur IA : 20 demandes/jour, 300/mois",
                 "Suivi de vos scores par matière",
                 "Reprise des flashcards difficiles",

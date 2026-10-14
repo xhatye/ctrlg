@@ -4,8 +4,22 @@ import { ThemeProvider } from './theme';
 import { InteractionEffects } from './interactions';
 import './design.css';
 import './gizmo-pages.css';
+import { findPublicPage } from '../lib/public-study-pages.mjs';
+import { applyPageMetadata } from '../lib/public-seo.mjs';
+import { Analytics } from '@vercel/analytics/react';
+import { publicAnalyticsEvent } from '../lib/public-analytics.mjs';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const preview = import.meta.env.DEV && new URLSearchParams(window.location.search).has('design');
-(preview ? import('./DesignPreview.jsx') : import('./App.jsx')).then(({ default: App }) => {
-  root.render(<React.StrictMode><ThemeProvider><InteractionEffects/><App /></ThemeProvider></React.StrictMode>);
+const publicPage = !preview && findPublicPage(window.location.pathname);
+if (!preview) applyPageMetadata(window.location.pathname);
+async function loadPage() {
+  if (preview) return import('./DesignPreview.jsx');
+  if (publicPage) {
+    const {default:Page} = await import('./PublicStudySite.jsx');
+    return {default:Page};
+  }
+  return import('./App.jsx');
+}
+loadPage().then(({ default: App }) => {
+  root.render(<React.StrictMode><ThemeProvider><InteractionEffects/><App {...(publicPage?{page:publicPage}:{})}/></ThemeProvider>{import.meta.env.PROD&&<Analytics beforeSend={publicAnalyticsEvent}/>}</React.StrictMode>);
 });

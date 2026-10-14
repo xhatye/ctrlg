@@ -1,32 +1,308 @@
 {
-  "redirects": [{ "source": "/decouverte", "destination": "/tarifs", "permanent": true }],
-  "rewrites": [{ "source": "/((?!api/).*)", "destination": "/index.html" }],
+  "redirects": [
+    {
+      "source": "/decouverte",
+      "destination": "/tarifs",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/dcg",
+      "destination": "/public-pages/dcg.html"
+    },
+    {
+      "source": "/dscg",
+      "destination": "/public-pages/dscg.html"
+    },
+    {
+      "source": "/dcg/ue-1-fondamentaux-du-droit",
+      "destination": "/public-pages/dcg__ue-1-fondamentaux-du-droit.html"
+    },
+    {
+      "source": "/dcg/ue-2-droit-des-affaires",
+      "destination": "/public-pages/dcg__ue-2-droit-des-affaires.html"
+    },
+    {
+      "source": "/dcg/ue-3-droit-social",
+      "destination": "/public-pages/dcg__ue-3-droit-social.html"
+    },
+    {
+      "source": "/dcg/ue-4-droit-fiscal",
+      "destination": "/public-pages/dcg__ue-4-droit-fiscal.html"
+    },
+    {
+      "source": "/dcg/ue-5-economie-contemporaine",
+      "destination": "/public-pages/dcg__ue-5-economie-contemporaine.html"
+    },
+    {
+      "source": "/dcg/ue-6-finance-entreprise",
+      "destination": "/public-pages/dcg__ue-6-finance-entreprise.html"
+    },
+    {
+      "source": "/dcg/ue-7-management",
+      "destination": "/public-pages/dcg__ue-7-management.html"
+    },
+    {
+      "source": "/dcg/ue-8-systemes-information-gestion",
+      "destination": "/public-pages/dcg__ue-8-systemes-information-gestion.html"
+    },
+    {
+      "source": "/dcg/ue-9-comptabilite",
+      "destination": "/public-pages/dcg__ue-9-comptabilite.html"
+    },
+    {
+      "source": "/dcg/ue-10-comptabilite-approfondie",
+      "destination": "/public-pages/dcg__ue-10-comptabilite-approfondie.html"
+    },
+    {
+      "source": "/dcg/ue-11-controle-gestion",
+      "destination": "/public-pages/dcg__ue-11-controle-gestion.html"
+    },
+    {
+      "source": "/dcg/ue-12-anglais-des-affaires",
+      "destination": "/public-pages/dcg__ue-12-anglais-des-affaires.html"
+    },
+    {
+      "source": "/dcg/ue-13-communication-professionnelle",
+      "destination": "/public-pages/dcg__ue-13-communication-professionnelle.html"
+    },
+    {
+      "source": "/dscg/ue-1-gestion-juridique-fiscale-sociale",
+      "destination": "/public-pages/dscg__ue-1-gestion-juridique-fiscale-sociale.html"
+    },
+    {
+      "source": "/dscg/ue-2-finance",
+      "destination": "/public-pages/dscg__ue-2-finance.html"
+    },
+    {
+      "source": "/dscg/ue-3-controle-gestion-strategie",
+      "destination": "/public-pages/dscg__ue-3-controle-gestion-strategie.html"
+    },
+    {
+      "source": "/dscg/ue-4-comptabilite-audit",
+      "destination": "/public-pages/dscg__ue-4-comptabilite-audit.html"
+    },
+    {
+      "source": "/dscg/ue-5-management-systemes-information",
+      "destination": "/public-pages/dscg__ue-5-management-systemes-information.html"
+    },
+    {
+      "source": "/dscg/ue-6-anglais-des-affaires",
+      "destination": "/public-pages/dscg__ue-6-anglais-des-affaires.html"
+    },
+    {
+      "source": "/dscg/ue-7-memoire-professionnel",
+      "destination": "/public-pages/dscg__ue-7-memoire-professionnel.html"
+    },
+    {
+      "source": "/ressources",
+      "destination": "/public-pages/ressources.html"
+    },
+    {
+      "source": "/sources",
+      "destination": "/public-pages/sources.html"
+    },
+    {
+      "source": "/annales",
+      "destination": "/public-pages/annales.html"
+    },
+    {
+      "source": "/guides",
+      "destination": "/public-pages/guides.html"
+    },
+    {
+      "source": "/guides/organiser-revisions-dcg-dscg",
+      "destination": "/public-pages/guides__organiser-revisions-dcg-dscg.html"
+    },
+    {
+      "source": "/guides/utiliser-annales-dcg-dscg",
+      "destination": "/public-pages/guides__utiliser-annales-dcg-dscg.html"
+    },
+    {
+      "source": "/guides/reviser-comptabilite-dcg-ue9-ue10",
+      "destination": "/public-pages/guides__reviser-comptabilite-dcg-ue9-ue10.html"
+    },
+    {
+      "source": "/guides/reussir-dossier-juridique-fiscal",
+      "destination": "/public-pages/guides__reussir-dossier-juridique-fiscal.html"
+    },
+    {
+      "source": "/guides/reviser-dscg-comptabilite-audit",
+      "destination": "/public-pages/guides__reviser-dscg-comptabilite-audit.html"
+    },
+    {
+      "source": "/guides/flashcards-qcm-revisions-utiles",
+      "destination": "/public-pages/guides__flashcards-qcm-revisions-utiles.html"
+    },
+    {
+      "source": "/tarifs",
+      "destination": "/public-pages/tarifs.html"
+    },
+    {
+      "source": "/fonctionnalites",
+      "destination": "/public-pages/fonctionnalites.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/public-pages/contact.html"
+    },
+    {
+      "source": "/avis",
+      "destination": "/public-pages/avis.html"
+    },
+    {
+      "source": "/cgu",
+      "destination": "/public-pages/cgu.html"
+    },
+    {
+      "source": "/confidentialite",
+      "destination": "/public-pages/confidentialite.html"
+    },
+    {
+      "source": "/connexion",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/inscription",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/interface",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/matiere",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/matieres",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/qcm",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/flashcards",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/resume-cours",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/cas-pratique",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/planning",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/entretien/config",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/entretien/simulation",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/resultats/entretien",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/resultats/qcm",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/resultats/cas",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/pro",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/compte",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/tuteur",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/historique",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/progression",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/examens",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/a-revoir",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/mon-retour",
+      "destination": "/app.html"
+    },
+    {
+      "source": "/mot-de-passe-oublie",
+      "destination": "/app.html"
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/favicon.svg",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
       ]
     },
     {
       "source": "/logo.png",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
       ]
     },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "no-referrer" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:;" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data: blob:;"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
       ]
     }
   ]

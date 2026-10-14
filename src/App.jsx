@@ -12,6 +12,7 @@ import { curriculumFor } from '../lib/curriculum.mjs';
 import { StudySession } from './chapter-navigation';
 import Flashcard from './Flashcard';
 import AppLoading from './AppLoading';
+import { applyPageMetadata } from '../lib/public-seo.mjs';
 import {learningRequest} from './learning-client';
 import {trainingRequest} from './training-client';
 import ExamPage from './ExamPage';
@@ -305,6 +306,7 @@ export default function App() {
   const [result, setResult] = useState(null);
   const [loadingAuth, setLoadingAuth] = useState(true);
   const [showOnboarding, setShowOnboarding] = useState(false);
+  useEffect(()=>{applyPageMetadata(window.location.pathname);},[screen]);
   const [learning,setLearning]=useState({chapters:{}}),[learningError,setLearningError]=useState(false),[learningLoading,setLearningLoading]=useState(false);
   useEffect(()=>{
     let alive=true;setLearning({chapters:{}});setLearningError(false);setLearningLoading(Boolean(user?.uid));
@@ -362,6 +364,7 @@ export default function App() {
     const chapter = opts.chapter || selectedUE?.chapter;
     if(opts.chapter)setSelectedUE(ue=>({...ue,chapter:opts.chapter}));
     let url = SCREEN_TO_URL[s] || "/";
+    if (['dcg','dscg','resources'].includes(s)) { window.location.assign(url); return; }
     if (s === "auth") url = (opts.mode === "signup") ? "/inscription" : "/connexion";
     if (["subject_hub", "qcm", "flashcards", "resume_cours", "cas_pratique"].includes(s) && selectedUE) url += `?ue=${selectedUE.id}${chapter?"&chapter="+encodeURIComponent(chapter):""}`;
     window.history.pushState({}, "", url);
@@ -1016,7 +1019,7 @@ function LegalScreen({ type, onBack }) {
   ];
   const confidentialiteContent = [
     { title: "1. Responsable du traitement", body: `Marcus Bonnafis (simdcg.com) est responsable du traitement de vos données personnelles conformément au Règlement Général sur la Protection des Données (RGPD · Règlement UE 2016/679).` },
-    { title: "2. Données collectées", body: `Lors de l'inscription : prénom, adresse email, date d'inscription. Lors de l'utilisation : historique des sessions, résultats des QCM, matières étudiées et progression. Le mode examen conserve vos réponses, les dates de session et votre comparaison personnelle au barème. Les révisions conservent les réponses choisies ou la difficulté déclarée pour une carte, ainsi que la prochaine date de rappel. Un brouillon d'examen peut être conservé dans le navigateur pour récupérer une modification non encore enregistrée sur le serveur. Le formulaire de retour conserve votre pseudonyme, diplôme, appréciation, texte et choix de publication. Ces nouvelles fonctionnalités n'ajoutent pas de traceur marketing tiers.` },
+    { title: "2. Données collectées", body: `Lors de l'inscription : prénom, adresse email, date d'inscription. Lors de l'utilisation : historique des sessions, résultats des QCM, matières étudiées et progression. Le mode examen conserve vos réponses, les dates de session et votre comparaison personnelle au barème. Les révisions conservent les réponses choisies ou la difficulté déclarée pour une carte, ainsi que la prochaine date de rappel. Un brouillon d'examen peut être conservé dans le navigateur pour récupérer une modification non encore enregistrée sur le serveur. Le formulaire de retour conserve votre pseudonyme, diplôme, appréciation, texte et choix de publication. La mesure d’audience Vercel Web Analytics porte sur les pages publiques et les pages d’entrée du compte. Les paramètres des adresses et les fragments sont retirés avant envoi. Les pages de révision privées, vos réponses et vos identifiants de paiement sont exclus de cette mesure. Vercel décrit ce service comme une mesure sans cookies. Il sert à comprendre la fréquentation et les sources de visite, sans ajout de pixels publicitaires.` },
     { title: "3. Finalités du traitement", body: `Vos données sont utilisées pour : (a) la gestion de votre compte et authentification, (b) la personnalisation de votre expérience de révision, (c) le suivi de votre progression, (d) la facturation via Stripe pour les abonnés Pro, (e) l'amélioration du service.` },
     { title: "4. Base légale", body: `La gestion du compte et les fonctionnalités de révision sont nécessaires à la fourniture du service demandé et reposent sur l'exécution du contrat. La publication d'un retour d'étudiant repose sur un accord distinct et facultatif, non coché par défaut. Vous pouvez transmettre un retour privé sans accepter sa publication et demander le retrait d'un avis publié à contact.simdcg@gmail.com.` },
     { title: "5. Sous-traitants", body: `SIMDCG utilise les prestataires suivants : Firebase (Google) pour l’authentification et la base de données, Stripe pour les paiements et Groq pour le tuteur IA et le retour optionnel sur les cas écrits. Lorsque vous demandez une analyse de cas, votre réponse et le corrigé de référence sont transmis à Groq. Lorsque vous utilisez le tuteur, le texte de votre question et le contexte récent de la conversation sont transmis à Groq. Le traitement par chaque prestataire suit ses conditions et sa politique de confidentialité.` },

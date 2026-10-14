@@ -9,7 +9,7 @@ export function useLandingMotion() {
     const motion=matchMedia('(prefers-reduced-motion: no-preference)');
     const pointer=matchMedia('(hover: hover) and (pointer: fine)');
     const hero=page.querySelector('.hero-campus');
-    const targets=[...page.querySelectorAll('.library-numbers>div,.section-heading,.feature-card,.proof-grid>article,.marketing-subjects>button,.roadmap>div,.roadmap li,.cta-band,.faq')];
+    const targets=[...page.querySelectorAll('.library-numbers>div,.section-heading,.feature-card,.proof-grid>article,.marketing-subjects>a,.roadmap>div,.roadmap li,.cta-band,.faq')];
     let observer,frame=0,active=null;
     const resetCard=()=>{
       active?.classList.remove('landing-pointer-active');

@@ -4,6 +4,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
+    manifest: true,
     target: "es2015",
     // Keep the Firebase client separate from the learning UI.
     rollupOptions: {
