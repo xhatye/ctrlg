@@ -276,16 +276,15 @@ export function Marketing({ onAuth, onNav, ues }) {
         <section className="container hero hero-campus"><HeroAtmosphere />
           <div className="hero-copy">
             <span className="pill">
-              <i /> LES RÉVISIONS DES ÉTUDIANTS EN COMPTABILITÉ
+              <i /> VOS RÉVISIONS DCG & DSCG
             </span>
             <h1>
               Réviser le DCG et le DSCG,
               <br /><span>ça s’apprend aussi.</span>
             </h1>
             <p>
-              Une plateforme consacrée aux diplômes de comptabilité et de gestion.
-              Retrouvez vos 13 UE de DCG et vos 7 UE de DSCG : cours par chapitre,
-              QCM expliqués, flashcards et cas corrigés pour travailler les raisonnements de vos épreuves.
+              Cours, QCM expliqués, flashcards et cas corrigés.
+              Préparez les UE que vous présentez, à votre rythme.
             </p>
             <div className="hero-actions">
               <Button onClick={() => onNav("pricing")}>
@@ -299,7 +298,7 @@ export function Marketing({ onAuth, onNav, ues }) {
                     .scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? "auto" : "smooth" })
                 }
               >
-                Voir la méthode DCG / DSCG
+                Voir la méthode
               </Button>
             </div>
             <div className="hero-reassurance">
@@ -322,7 +321,8 @@ export function Marketing({ onAuth, onNav, ues }) {
             <span className="landing-float landing-float-bottom" aria-hidden="true"><Icon name="check" size={17}/> Comprendre. Pratiquer. Retenir.</span>
           </div>
         </section>
-        <section className="container library-numbers" aria-label="Contenu de la bibliothèque">{[[catalogue.totals.subjects,'matières DCG et DSCG'],[catalogue.totals.chapters,'chapitres de cours'],[catalogue.totals.curatedQuestions,'QCM de notions expliqués'],[catalogue.totals.cards,'flashcards'],[catalogue.totals.curatedCases,'modèles de cas corrigés']].map(([count,label])=><div key={label}><strong>{count.toLocaleString('fr-FR')}</strong><span>{label}</span></div>)}<p>Cours, questions de raisonnement et cartes de rappel forment des banques distinctes. Les calculs proposent aussi des variantes chiffrées, affichées séparément dans les chapitres concernés.</p></section>
+        <PublicEvidence />
+        <section className="container library-numbers" aria-label="Contenu de la bibliothèque">{[[catalogue.totals.subjects,'matières DCG et DSCG'],[catalogue.totals.chapters,'chapitres de cours'],[catalogue.totals.curatedQuestions,'QCM expliqués'],[catalogue.totals.cards,'flashcards'],[catalogue.totals.curatedCases,'modèles de cas corrigés']].map(([count,label])=><div key={label}><strong>{count.toLocaleString('fr-FR')}</strong><span>{label}</span></div>)}<p>Contenus originaux. Variantes chiffrées comptées séparément.</p></section>
         <div className="container exam-home"><ExamCountdown /></div>
         <div className="subject-strip">
           <div className="container">
@@ -339,20 +339,14 @@ export function Marketing({ onAuth, onNav, ues }) {
           </div>
         </div>
         <PreviewGallery onSubscribe={()=>onNav('pricing')}/>
-        <PublicEvidence />
         <section id="methode" className="container section">
           <div className="section-heading">
             <div>
               <span className="eyebrow">
-                UNE MÉTHODE, PAS UN MILLIER D’ONGLETS
+                VOTRE MÉTHODE DE RÉVISION
               </span>
-              <h2>Comprendre vos UE. Préparer vos épreuves.</h2>
+              <h2>Comprendre. Pratiquer. Retenir.</h2>
             </div>
-            <p>
-              Apprendre. Pratiquer. Retenir.
-              <br />
-              Et recommencer, à votre rythme.
-            </p>
           </div>
           <div className="feature-grid">
             {features.map(([icon, title, desc, tag], i) => (
@@ -362,57 +356,15 @@ export function Marketing({ onAuth, onNav, ues }) {
                 </div>
                 <span className="card-tag">{tag}</span>
                 <h3>{title}</h3>
-                <p>{desc}</p>
+                <p>{[
+                  'Cours illustrés, méthodes et applications.',
+                  'Cartes de rappel et révisions espacées.',
+                  'Questions expliquées et corrigés détaillés.',
+                  'Un coup de pouce facultatif, à usage limité.',
+                ][i]}</p>
                 <span className="card-number">0{i + 1}</span>
               </article>
             ))}
-          </div>
-        </section>
-        <section className="section navy-section">
-          <div className="container roadmap">
-            <div>
-              <span className="eyebrow">
-                DES RÉVISIONS QUI ONT UN FIL CONDUCTEUR
-              </span>
-              <h2>
-                Une matière.
-                <br />
-                Trois façons
-                <br />
-                de la maîtriser.
-              </h2>
-              <p>
-                Du premier « je ne comprends pas » au plaisir de répondre sans
-                hésiter.
-              </p>
-              <Button onClick={() => onAuth("signup")}>
-                Trouver ma matière <Icon name="arrow" />
-              </Button>
-            </div>
-            <ol>
-              {[
-                [
-                  "Choisissez votre matière",
-                  "DCG ou DSCG : retrouvez les outils au même endroit.",
-                ],
-                [
-                  "Travaillez une notion",
-                  "Une fiche pour comprendre, un QCM pour tester, une explication pour progresser.",
-                ],
-                [
-                  "Consolidez votre acquis",
-                  "Reprenez vos cartes difficiles et consultez vos résultats pour choisir la suite.",
-                ],
-              ].map(([title, desc], i) => (
-                <li key={title}>
-                  <span>{i + 1}</span>
-                  <div>
-                    <h3>{title}</h3>
-                    <p>{desc}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
           </div>
         </section>
         <section className="container section">
@@ -420,17 +372,13 @@ export function Marketing({ onAuth, onNav, ues }) {
             <div>
               <span className="eyebrow">VOTRE DIPLÔME, VOTRE PARCOURS</span>
               <h2>
-                Du droit à la compta.
-                <br />
-                Chaque matière a sa place.
+                Choisissez vos UE.
               </h2>
             </div>
-            <Button secondary onClick={() => onNav("dcg")}>
-              Voir les matières <Icon name="arrow" />
-            </Button>
+            <div className="landing-diploma-links"><a className="btn btn-secondary" href="/dcg">13 UE DCG <Icon name="arrow" /></a><a className="btn btn-secondary" href="/dscg">7 UE DSCG <Icon name="arrow" /></a></div>
           </div>
           <div className="marketing-subjects">
-            {ues.slice(0, 6).map((ue) => (
+            {[...ues.filter(ue=>!ue.id.startsWith('DSCG')).slice(0,3),...ues.filter(ue=>ue.id.startsWith('DSCG')).slice(0,3)].map((ue) => (
               <a
                 key={ue.id}
                 href={publicSubjectPath(ue.id)}
@@ -438,7 +386,7 @@ export function Marketing({ onAuth, onNav, ues }) {
                 <div className="programme-identity"><SubjectIcon id={ue.id} size={54}/><span className="ue-code">{ue.id}</span></div>
                 <h3>{ue.label}</h3>
                 <span>
-                  {ue.short}
+                  Voir les chapitres
                   <Icon name="arrow" size={17} />
                 </span>
               </a>
@@ -450,11 +398,9 @@ export function Marketing({ onAuth, onNav, ues }) {
             <Icon name="spark" size={30} />
           </span>
           <div>
-            <span className="eyebrow">LE PLUS DUR, C’EST DE COMMENCER.</span>
+            <span className="eyebrow">VOTRE ACCÈS AUX RÉVISIONS</span>
             <h2>
-              Votre prochaine révision
-              <br />
-              peut être plus simple.
+              Préparez votre prochaine UE.
             </h2>
             <p>Pro à 15 € / mois ou Pack Examen à 29 € pour 90 jours.</p>
           </div>
