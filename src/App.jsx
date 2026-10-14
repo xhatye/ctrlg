@@ -304,10 +304,10 @@ export default function App() {
   const [result, setResult] = useState(null);
   const [loadingAuth, setLoadingAuth] = useState(true);
   const [showOnboarding, setShowOnboarding] = useState(false);
-  const [learning,setLearning]=useState({chapters:{}}),[learningError,setLearningError]=useState(false);
+  const [learning,setLearning]=useState({chapters:{}}),[learningError,setLearningError]=useState(false),[learningLoading,setLearningLoading]=useState(false);
   useEffect(()=>{
-    let alive=true;setLearning({chapters:{}});setLearningError(false);
-    if(user?.uid)learningRequest().then(data=>{if(alive&&auth.currentUser?.uid===user.uid)setLearning(previous=>previous.updatedAt&&previous.updatedAt>data.updatedAt?previous:data);}).catch(()=>{if(alive&&auth.currentUser?.uid===user.uid)setLearningError(true);});
+    let alive=true;setLearning({chapters:{}});setLearningError(false);setLearningLoading(Boolean(user?.uid));
+    if(user?.uid)learningRequest().then(data=>{if(alive&&auth.currentUser?.uid===user.uid)setLearning(previous=>previous.updatedAt&&previous.updatedAt>data.updatedAt?previous:data);}).catch(()=>{if(alive&&auth.currentUser?.uid===user.uid)setLearningError(true);}).finally(()=>{if(alive)setLearningLoading(false);});
     return()=>{alive=false;};
   },[user?.uid]);
   const onLearning=async events=>{const uid=auth.currentUser?.uid,data=await learningRequest(events);if(uid&&auth.currentUser?.uid===uid){setLearning(data);setLearningError(false);}return data;};
@@ -422,7 +422,7 @@ export default function App() {
     if (screen === 'review_today') return <ReviewToday key={user.uid} onExams={()=>nav('exams')} onOpen={(module,chapter,target)=>openLearning(ALL_UES.find(u=>u.id===module),chapter,target)}/>;
     if (screen === 'feedback') return <FeedbackForm key={user.uid}/>;
     if (screen === 'auth') return <Auth mode={authMode} setMode={setAuthMode} onDone={u => { setUser(u); if (u.isNew) setShowOnboarding(true); const plan = sessionStorage.getItem('simdcg-plan'); sessionStorage.removeItem('simdcg-plan'); nav('dashboard'); if (plan) upgrade(plan); }} onBack={() => nav('landing')} />;
-    if (screen === 'dashboard') return <StudentHome user={user} ues={ALL_UES} onNav={nav} onSelect={selectUE} />;
+    if (screen === 'dashboard') return <StudentHome user={user} ues={ALL_UES} onNav={nav} onSelect={selectUE} onOpen={openLearning} learning={learning} learningError={learningError} learningLoading={learningLoading} onRetry={reloadLearning} />;
     if (screen === 'library') return <LibraryPage ues={ALL_UES} user={user} onSelect={selectUE} />;
     if (screen === 'subject_hub') return <CourseHome ue={selectedUE} user={user} onNav={nav} learning={learning} />;
     if (screen === 'account') return <AccountPage user={user} onNav={nav} onCheckout={upgrade} request={billingRequest} />;
@@ -445,7 +445,7 @@ export default function App() {
     if (screen === 'cgu' || screen === 'confidentialite') return <LegalScreen type={screen} onBack={() => nav('landing')} />;
     return null;
   };
-  return <><ToastContainer />{showOnboarding && <OnboardingModal onClose={() => setShowOnboarding(false)} onUpgrade={() => upgrade()} />}{privateScreen && user ? <ProductShell screen={screen} user={user} onNav={nav} onLogout={logout}>{renderScreen()}</ProductShell> : renderScreen()}</>;
+  return <><ToastContainer />{showOnboarding && <OnboardingModal onClose={() => setShowOnboarding(false)} onUpgrade={() => upgrade()} />}{privateScreen && user ? <ProductShell variant={screen === 'dashboard' ? 'gizmo' : undefined} screen={screen} user={user} onNav={nav} onLogout={logout}>{renderScreen()}</ProductShell> : renderScreen()}</>;
 }
 
 // ── AUTH ──────────────────────────────────────────────────────────────────────

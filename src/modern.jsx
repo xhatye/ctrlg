@@ -1,3 +1,5 @@
+import GizmoDashboard from './GizmoDashboard';
+import { GizmoShell } from './gizmo-ui';
 import SubjectIcon from './SubjectIcon';
 import { useState, useEffect, useRef } from "react";
 import { sendEmailVerification } from "firebase/auth";
@@ -454,8 +456,9 @@ export function Marketing({ onAuth, onNav, ues }) {
   );
 }
 
-export function ProductShell({ children, screen, user, onNav, onLogout }) {
+export function ProductShell({ children, screen, user, onNav, onLogout, variant }) {
   const [open, setOpen] = useState(false);
+  if (variant === "gizmo") return <GizmoShell screen={screen} user={user} onNav={onNav} onLogout={onLogout}>{children}</GizmoShell>;
   const links = [
     ["dashboard", "home", "Mon espace"],
     ["library", "book", "Mes matières"],
@@ -613,7 +616,8 @@ function UECard({ ue, mastery, onClick }) {
     </button>
   );
 }
-export function StudentHome({ user, ues, onNav, onSelect }) {
+export function StudentHome(props) { return <GizmoDashboard {...props}/>; }
+export function LegacyStudentHome({ user, ues, onNav, onSelect }) {
   const [level, setLevel] = useState("DCG");
   const history = user.history || [],
     mastery = user.mastery || {};

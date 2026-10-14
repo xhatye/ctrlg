@@ -1,5 +1,6 @@
 // Development-only route. No real user account, payment or Firestore write.
 import { useState } from "react";
+import catalogue from "./catalogue.json";
 import {applyLearningEvent} from '../lib/learning-progress.mjs';
 import { OralPractice, OralSummary } from "./study";
 import ExamPage from './ExamPage';
@@ -29,7 +30,7 @@ import {
   InterviewConfig,
 } from "./App";
 const ues = [...DCG_UES, ...DSCG_UES];
-const student = {
+const demoStudent = {
   uid:'design-preview',
   name: "Camille Martin",
   email: "apercu@example.fr",
@@ -37,13 +38,16 @@ const student = {
   proType: "subscription",
   streak: 4,
   history: [
-    { type: "qcm", ue: "UE9", score: 7, total: 10, duration: 310 },
-    { type: "qcm", ue: "UE4", score: 8, total: 10, duration: 400 },
+    { type: "qcm", ue: "UE9", score: 7, total: 10, duration: 310, dateISO:new Date().toISOString() },
+    { type: "qcm", ue: "UE4", score: 8, total: 10, duration: 400, dateISO:new Date(Date.now()-86400000).toISOString() },
   ],
   mastery: { UE9: { best: 70, attempts: 2 }, UE4: { best: 80, attempts: 3 } },
 };
 export default function DesignPreview() {
-  const [learning,setLearning]=useState({chapters:{}});
+  const previewState = new URLSearchParams(location.search).get('state');
+  const [student,setStudent] = useState(()=>previewState==='empty'?{...demoStudent,history:[],mastery:{},streak:0}:demoStudent);
+  const [learningError,setLearningError] = useState(previewState==='error');
+  const [learning,setLearning]=useState(()=>previewState==='empty'?{chapters:{}}:({chapters:{['UE9/'+catalogue.modules.UE9.chapters[0].id]:{lessonRead:true,quizBest:70,qualifyingQuizBest:70,quizAttempts:1,lastActivityAt:new Date().toISOString()}}}));
   const onLearning=async events=>setLearning(old=>events.reduce((p,e)=>applyLearningEvent(p,e,Date.now()),old));
   const [page, setPage] = useState(
       new URLSearchParams(location.search).get("design") || "landing",
@@ -64,7 +68,7 @@ export default function DesignPreview() {
     page === "review_today" ? <ReviewToday onExams={()=>nav('exams')} onOpen={(module,chapter,target)=>{setUE({...ues.find(u=>u.id===module),chapter});nav(target);}}/> :
     page === "feedback" ? <FeedbackForm/> :
     page === "history" ? <History user={student} onBack={()=>nav('dashboard')} /> :
-    page === "onboarding" ? <><StudentHome user={student} ues={ues} onNav={nav} onSelect={select} /><OnboardingModal onClose={()=>nav('dashboard')} onUpgrade={()=>nav('pricing')} /></> :
+    page === "onboarding" ? <><StudentHome user={student} ues={ues} onNav={nav} onSelect={select} learning={learning} learningError={learningError} learningLoading={previewState==='loading'} onRetry={()=>setLearningError(false)} onOpen={(ue,chapter,target)=>{setUE({...ue,chapter});nav(target);}} /><OnboardingModal onClose={()=>nav('dashboard')} onUpgrade={()=>nav('pricing')} /></> :
     page === "interview" ? <OralPractice cfg={{topic:'Comptabilité',difficulty:'Débutant'}} onBack={()=>nav('interview_config')} onDone={()=>nav('oral_summary')} /> :
     page === "oral_summary" ? <OralSummary data={{topic:'Comptabilité',answers:[],duration:55}} onBack={()=>nav('dashboard')} /> :
     page === "forgot_password" ? <ForgotPasswordScreen onBack={()=>nav('auth')} /> :
@@ -88,7 +92,7 @@ export default function DesignPreview() {
         })}
       />
     ) : page === "progress" ? (
-      <LearningProgress user={student} ues={ues} onNav={nav} learning={learning} onOpen={(ue,chapter,target)=>{setUE({...ue,chapter});nav(target);}} />
+      <LearningProgress user={student} ues={ues} onNav={nav} learning={learning} learningError={learningError} learningLoading={previewState==='loading'} onRetry={()=>setLearningError(false)} onOpen={(ue,chapter,target)=>{setUE({...ue,chapter});nav(target);}} />
     ) : page === "tutor" ? (
       <TutorPage
         ues={ues}
@@ -114,7 +118,7 @@ export default function DesignPreview() {
       <QCMScreen
         ue={ue}
         user={student}
-        onDone={async data=>{const groups={};for(const a of data.answers){const g=groups[a.chapter] ||= {total:0,correct:0};g.total++;if(a.correct)g.correct++;}await onLearning(Object.entries(groups).map(([chapter,g])=>({type:'quiz',module:ue.id,chapter,...g})));nav("progress");}}
+        onDone={async data=>{setStudent(old=>({...old,history:[...old.history,{type:"qcm",ue:ue.id,score:data.score,total:data.total,duration:data.duration,dateISO:new Date().toISOString()}]}));const groups={};for(const a of data.answers){const g=groups[a.chapter] ||= {total:0,correct:0};g.total++;if(a.correct)g.correct++;}await onLearning(Object.entries(groups).map(([chapter,g])=>({type:'quiz',module:ue.id,chapter,...g})));nav("progress");}}
         onBack={() => nav("subject_hub")}
       />
     ) : page === "flashcards" ? (
@@ -156,7 +160,7 @@ export default function DesignPreview() {
         ues={ues}
       />
     ) : (
-      <StudentHome user={student} ues={ues} onNav={nav} onSelect={select} />
+      <StudentHome user={student} ues={ues} onNav={nav} onSelect={select} learning={learning} learningError={learningError} learningLoading={previewState==='loading'} onRetry={()=>setLearningError(false)} onOpen={(ue,chapter,target)=>{setUE({...ue,chapter});nav(target);}} />
     );
   const isPublic = [
     "landing",
@@ -179,6 +183,7 @@ export default function DesignPreview() {
         content
       ) : (
         <ProductShell
+          variant={page === 'dashboard' ? 'gizmo' : undefined}
           user={student}
           screen={page}
           onNav={nav}
