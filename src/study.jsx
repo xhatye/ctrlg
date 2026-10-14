@@ -5,6 +5,7 @@ import {checkCaseStep} from "../lib/case-checks.mjs";
 import { ChapterSelect } from './chapter-navigation';
 import LessonVisuals from './LessonVisuals';
 import CaseRubric from './CaseRubric';
+import {SubjectLessonGuide,ReasoningDossier,LessonWorkshop} from './SubjectLesson';
 
 export function StudyNotice() {
   return (
@@ -84,24 +85,29 @@ export function SavedLesson({ ue, onBack, onLearning, learning={} }) {
   useEffect(()=>setChapter(ue.chapter || ''),[ue.id,ue.chapter]);
   const state = useModule(ue.id, "summary", chapter);
   const [saved,setSaved]=useState(''),receipt=useRef(crypto.randomUUID());
-  useEffect(()=>{setSaved('');receipt.current=crypto.randomUUID();},[ue.id,chapter]);
+  const [visualsOpen,setVisualsOpen]=useState(false);
+  useEffect(()=>{setSaved('');setVisualsOpen(false);receipt.current=crypto.randomUUID();},[ue.id,chapter]);
   const markRead=async()=>{setSaved('saving');try{await onLearning?.([{id:receipt.current,module:ue.id,chapter:state.data.chapter,type:'lesson'}]);setSaved('done');}catch{setSaved('error');}};
   const read=learning.chapters?.[ue.id+'/'+state.data?.chapter]?.lessonRead;
+  const profile=state.data?.pedagogy;
+  const sections=(state.data?.sections||[]).filter(s=>!(profile?.caseFirst&&!state.data.workshop&&s.titre.startsWith('Atelier commenté :')));
+  const application=state.data?.workshop?<LessonWorkshop key={ue.id+'/'+state.data.chapter} workshop={state.data.workshop} profile={profile}/>:profile?.caseFirst?<ReasoningDossier data={state.data.example} profile={profile}/>:null;
   return (
     <Frame title={state.data?.title || ue.label} ue={ue} onBack={onBack}>
       <ChapterSelect id={ue.id} value={chapter} onChange={setChapter} disabled={saved==='saving'} />
       <LoadState {...state} />
       {state.data && (
-        <>
+        <div className={'discipline-course lesson-discipline-'+(profile?.family||'general')}>
           <article className="lesson-intro panel"><span className="eyebrow">LE POINT DE DÉPART</span><p>{state.data.intro}</p><h3>Comment travailler ce chapitre</h3><p>{state.data.method}</p></article>
+          <SubjectLessonGuide profile={profile}/>
           <section className="panel lesson-objectives"><h2>Ce que vous allez travailler</h2><ul>{state.data.learningGoals.map(g=><li key={g}>{g}</li>)}</ul><p className="helper">Prérequis : {state.data.prerequisites.join(' ')}</p></section>
-          <LessonVisuals key={ue.id+'/'+state.data.chapter} visuals={state.data.visuals}/>
+          {profile?.caseFirst?application:<LessonVisuals key={ue.id+'/'+state.data.chapter} visuals={state.data.visuals}/>}
           <div className="lesson-reading-layout">
-            <details className="lesson-toc" open><summary>Plan du chapitre</summary><nav aria-label="Sections du cours">{state.data.sections.map((s,i)=><a key={s.titre} href={'#lesson-section-'+(i+1)}><span>{String(i+1).padStart(2,'0')}</span>{s.titre}</a>)}</nav></details>
+            <details className="lesson-toc" open><summary>Plan du chapitre</summary><nav aria-label="Sections du cours">{application&&<a href="#lesson-application">{state.data.workshop?'Atelier commenté':'Situation à analyser'}</a>}{sections.map((s,i)=><a key={s.titre} href={'#lesson-section-'+(i+1)}><span>{String(i+1).padStart(2,'0')}</span>{s.titre}</a>)}</nav></details>
           <div className="lesson-sections">
-            {state.data.sections.map((s, i) => (
+            {sections.map((s, i) => (
               <article className="panel lesson-section" id={'lesson-section-'+(i+1)} key={s.titre}>
-                <span className="eyebrow">REPÈRE {i + 1}</span>
+                <span className="eyebrow">{profile?.sectionLabel||'REPÈRE'} {i + 1}</span>
                 <h2>{s.titre}</h2>
                 {s.points.map((p) => (
                   <p key={p}>{p}</p>
@@ -111,9 +117,11 @@ export function SavedLesson({ ue, onBack, onLearning, learning={} }) {
             ))}
           </div>
           </div>
+          {!profile?.caseFirst&&application}
+          {profile?.caseFirst&&<details className="lesson-visual-supplement" open={visualsOpen} onToggle={e=>setVisualsOpen(e.currentTarget.open)}><summary>Carte de raisonnement et repères visuels</summary>{visualsOpen&&<LessonVisuals key={ue.id+'/'+state.data.chapter} visuals={state.data.visuals}/>}</details>}
           {state.data.selfChecks?.length>0&&<section className="panel lesson-self-check"><span className="eyebrow">SANS REGARDER LE COURS</span><h2>Vérifiez ce que vous pouvez expliquer</h2><p>Formulez votre réponse, puis ouvrez l’explication. Ces repères de lecture ne remplacent pas votre série de QCM.</p>{state.data.selfChecks.map((check,i)=><details key={i}><summary>{check.question}</summary><div><strong>{check.answer}</strong><p>{check.explanation}</p></div></details>)}</section>}
-          <section className="panel lesson-method"><h2>Résoudre un dossier sur ce chapitre</h2><ol>{state.data.methodSteps.map((step,i)=><li key={i}>{step}</li>)}</ol></section>
-          {state.data.glossary.length>0&&<section className="panel lesson-glossary"><h2>Les termes à savoir expliquer</h2><dl>{state.data.glossary.map(g=><div key={g.term}><dt>{g.term}</dt><dd>{g.definition}</dd></div>)}</dl></section>}
+          <section className="panel lesson-method"><h2>{profile?.methodTitle||'Résoudre un dossier sur ce chapitre'}</h2><ol>{state.data.methodSteps.map((step,i)=><li key={i}>{step}</li>)}</ol></section>
+          {state.data.glossary.length>0&&<section className="panel lesson-glossary"><h2>{profile?.recallTitle||'Les termes à savoir expliquer'}</h2><dl>{state.data.glossary.map(g=><div key={g.term}><dt>{g.term}</dt><dd>{g.definition}</dd></div>)}</dl></section>}
 
           <section className="panel lesson-pitfalls"><h2>Les erreurs à éviter</h2><ul>{state.data.pieges_frequents.map(p=><li key={p}>{p}</li>)}</ul></section>
           <section className="panel lesson-checklist"><h2>Avant de rendre votre copie</h2><ul>{state.data.checklist.map((check,i)=><li key={i}>{check}</li>)}</ul></section>
@@ -129,7 +137,7 @@ export function SavedLesson({ ue, onBack, onLearning, learning={} }) {
           <SourceLinks sources={state.data.sources} />
           <p className="helper">Texte et exercices originaux SIMDCG.</p>
           {onLearning&&<section className="panel learning-check"><h2>Votre étape de lecture</h2><p>Marquez le chapitre après l’avoir lu et reformulé. Cette étape est déclarative ; les exercices vous permettent ensuite de vérifier votre compréhension.</p><button className="btn" disabled={saved==='saving'||saved==='done'||read} onClick={markRead}>{read||saved==='done'?'Chapitre marqué comme lu':saved==='saving'?'Enregistrement…':'Marquer ce chapitre comme lu'}</button>{saved==='error'&&<p role="alert">La progression n’a pas été enregistrée. Vous pouvez réessayer.</p>}</section>}
-        </>
+        </div>
       )}
     </Frame>
   );
