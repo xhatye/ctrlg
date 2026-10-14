@@ -12,6 +12,8 @@ import { HeroAtmosphere } from './interactions';
 import ProgressJourney from './ProgressJourney';
 import HomeStudyPath from './HomeStudyPath';
 import PreviewGallery from './PreviewGallery';
+import {useLandingMotion} from './landing-motion';
+import './landing-motion.css';
 
 const paths = {
   home: "M3 10 12 3l9 7v10H3z M9 20v-7h6v7",
@@ -266,11 +268,12 @@ function PreviewCard() {
   );
 }
 export function Marketing({ onAuth, onNav, ues }) {
+  const landingRef=useLandingMotion();
   return (
-    <div className="marketing">
+    <div className="marketing landing-motion" ref={landingRef}>
       <PublicNav onNav={onNav} onAuth={onAuth} />
       <main>
-        <section className="container hero hero-campus"><HeroAtmosphere /><div className="hero-subject-orbit" aria-hidden="true">{["UE1","UE6","UE9","UE11","DSCG4","DSCG7"].map((id,i)=><span className={"orbit-item orbit-"+i} key={id}><SubjectIcon id={id} size={68}/><small>{id.replace("DSCG","UE")} · {id.startsWith("DSCG")?"DSCG":"DCG"}</small></span>)}</div>
+        <section className="container hero hero-campus"><HeroAtmosphere />
           <div className="hero-copy">
             <span className="pill">
               <i /> LES RÉVISIONS DES ÉTUDIANTS EN COMPTABILITÉ
@@ -293,7 +296,7 @@ export function Marketing({ onAuth, onNav, ues }) {
                 onClick={() =>
                   document
                     .getElementById("methode")
-                    .scrollIntoView({ behavior: "smooth" })
+                    .scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? "auto" : "smooth" })
                 }
               >
                 Voir la méthode DCG / DSCG
@@ -307,8 +310,17 @@ export function Marketing({ onAuth, onNav, ues }) {
                 <Icon name="check" size={15} /> Pro à 15 € / mois
               </span>
             </div>
+            <figure className="landing-people">
+              <img src="/landing/study-people-v5.webp" alt="Trois adultes dessinés en tenue élégante révisent ensemble : un homme en costume croisé rayé et deux femmes." width="1536" height="1024" decoding="async" />
+              <figcaption><strong>Vos UE.<br/>Votre rythme.</strong><span>Un espace pour garder le cap.</span><small>Visuel illustratif généré.</small></figcaption>
+            </figure>
           </div>
-          <HomeStudyPath ues={ues} onNav={onNav}/>
+          <div className="landing-stage">
+            <div className="landing-stage-halo" aria-hidden="true"/>
+            <span className="landing-float landing-float-top" aria-hidden="true"><span>✦</span> Un peu chaque jour.</span>
+            <HomeStudyPath ues={ues} onNav={onNav}/>
+            <span className="landing-float landing-float-bottom" aria-hidden="true"><Icon name="check" size={17}/> Comprendre. Pratiquer. Retenir.</span>
+          </div>
         </section>
         <section className="container library-numbers" aria-label="Contenu de la bibliothèque">{[[catalogue.totals.subjects,'matières DCG et DSCG'],[catalogue.totals.chapters,'chapitres de cours'],[catalogue.totals.curatedQuestions,'QCM de notions expliqués'],[catalogue.totals.cards,'flashcards'],[catalogue.totals.curatedCases,'modèles de cas corrigés']].map(([count,label])=><div key={label}><strong>{count.toLocaleString('fr-FR')}</strong><span>{label}</span></div>)}<p>Cours, questions de raisonnement et cartes de rappel forment des banques distinctes. Les calculs proposent aussi des variantes chiffrées, affichées séparément dans les chapitres concernés.</p></section>
         <div className="container exam-home"><ExamCountdown /></div>
