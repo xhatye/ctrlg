@@ -312,7 +312,7 @@ export function Marketing({ onAuth, onNav, ues }) {
             </div>
             <figure className="landing-people">
               <img src="/landing/study-people-v5.webp" alt="Trois adultes dessinés en tenue élégante révisent ensemble : un homme en costume croisé rayé et deux femmes." width="1536" height="1024" decoding="async" />
-              <figcaption><strong>Vos UE.<br/>Votre rythme.</strong><span>Un espace pour garder le cap.</span><small>Visuel illustratif généré.</small></figcaption>
+              <figcaption><strong>Vos UE.<br/>Votre rythme.</strong><span>Un espace pour garder le cap.</span></figcaption>
             </figure>
           </div>
           <div className="landing-stage">
