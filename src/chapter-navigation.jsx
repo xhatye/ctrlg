@@ -33,6 +33,7 @@ export function ChapterSelect({id,value,onChange,all=false,disabled=false}) {
 }
 
 export function StudySession({ue,kind,children}) {
+  const [settingsOpen,setSettingsOpen]=useState(()=>window.innerWidth>760);
   const [chapter,setChapter]=useState(ue.chapter || 'all'),[count,setCount]=useState(kind==='cards'?40:8),[focus,setFocus]=useState('knowledge');
   useEffect(()=>setChapter(ue.chapter || 'all'),[ue.id,ue.chapter]);
   const stats=catalogue.modules[ue.id];
@@ -41,12 +42,14 @@ export function StudySession({ue,kind,children}) {
   const applications=(selected?selected.applicationCount:stats?.applicationCount)>0;
   const effectiveFocus=focus==='knowledge'&&!knowledge?'application':focus==='application'&&!applications?'knowledge':focus;
   return <div className="chapter-session">
+    <details className="session-settings" open={settingsOpen} onToggle={e=>setSettingsOpen(e.currentTarget.open)}>
+      <summary>Réglages de la série <span>{ue.id.replace('DSCG','UE')} · {count} {kind==='cards'?'cartes':'questions'} maximum</span></summary>
     <div className="session-controls">
       <ChapterSelect id={ue.id} value={chapter} onChange={setChapter} all />
       <label className="chapter-select">Objectif de la série<select aria-label="Objectif de la série" value={effectiveFocus} onChange={e=>setFocus(e.target.value)}><option value="knowledge" disabled={!knowledge}>Comprendre les notions</option><option value="application" disabled={!applications}>Appliquer les calculs</option><option value="all">Mixer les deux</option></select></label>
       <label className="chapter-select">Longueur de la série<select aria-label="Longueur de la série" value={count} onChange={e=>setCount(Number(e.target.value))}>{(kind==='cards'?[4,20,40,60,100]:[4,8,12,20]).map(n=><option key={n} value={n}>{n} {kind==='cards'?'cartes':'questions'} maximum</option>)}</select></label>
       <span className="helper">Séries de notions et exercices de calcul sont séparés. Changer le choix relance la série.</span>
-    </div>
+    </div></details>
     <div key={[ue.id,chapter,count,effectiveFocus].join('-')}>{children({...ue,chapter,count,focus:effectiveFocus})}</div>
   </div>;
 }

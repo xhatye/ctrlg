@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { ThemeProvider } from './theme';
 import { InteractionEffects } from './interactions';
 import './design.css';
+import './gizmo-pages.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const preview = import.meta.env.DEV && new URLSearchParams(window.location.search).has('design');
 (preview ? import('./DesignPreview.jsx') : import('./App.jsx')).then(({ default: App }) => {

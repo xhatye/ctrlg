@@ -31,7 +31,7 @@ Object.assign(process.env,{VITE_FIREBASE_API_KEY:'local-preview-no-real-key',VIT
 const server=await createServer({root:fileURLToPath(new URL('../',import.meta.url)),server:{host:'127.0.0.1',port:5175,strictPort:true},plugins:[{
   name:'simdcg-local-isolated-preview',configureServer(vite){vite.middlewares.use(async(req,res,next)=>{
     // Prevent imported legacy controls from ever reaching cloud services in this preview.
-    res.setHeader('Content-Security-Policy',"connect-src 'self' ws://127.0.0.1:5175; object-src 'none'");
+    res.setHeader('Content-Security-Policy',"connect-src 'self' ws://127.0.0.1:5175; img-src 'self' data:; frame-src 'none'; object-src 'none'");
     if(!req.url.startsWith('/api/'))return next();
     res.setHeader('Content-Type','application/json');res.setHeader('Cache-Control','no-store');
     try {

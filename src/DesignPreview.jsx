@@ -6,6 +6,8 @@ import { OralPractice, OralSummary } from "./study";
 import ExamPage from './ExamPage';
 import ReviewToday from './ReviewToday';
 import FeedbackForm from './FeedbackForm';
+import {trainingRequest} from './training-client';
+const previewReviews=()=>trainingRequest('feedback').then(data=>data.items);
 import {
   Marketing,
   StudentHome,
@@ -16,7 +18,7 @@ import {
   TutorPage,
   LibraryPage,
   LearningProgress,
-  PublicInfo,
+  PublicInfo, StudentReviews,
 } from "./modern";
 import {
   DCG_UES,
@@ -26,7 +28,7 @@ import {
   PlanningScreen,
   ResumeCoursScreen,
   CasPratiqueScreen,
-  Auth, ResultsQCM, History, LegalScreen, ForgotPasswordScreen, OnboardingModal,
+  Auth, ResultsQCM, ResultsCas, Paywall, History, LegalScreen, ForgotPasswordScreen, OnboardingModal,
   InterviewConfig,
 } from "./App";
 const ues = [...DCG_UES, ...DSCG_UES];
@@ -45,6 +47,7 @@ const demoStudent = {
 };
 export default function DesignPreview() {
   const previewState = new URLSearchParams(location.search).get('state');
+  const [authMode,setAuthMode] = useState(new URLSearchParams(location.search).get('mode') || 'login');
   const [student,setStudent] = useState(()=>previewState==='empty'?{...demoStudent,history:[],mastery:{},streak:0}:demoStudent);
   const [learningError,setLearningError] = useState(previewState==='error');
   const [learning,setLearning]=useState(()=>previewState==='empty'?{chapters:{}}:({chapters:{['UE9/'+catalogue.modules.UE9.chapters[0].id]:{lessonRead:true,quizBest:70,qualifyingQuizBest:70,quizAttempts:1,lastActivityAt:new Date().toISOString()}}}));
@@ -63,6 +66,9 @@ export default function DesignPreview() {
     nav("subject_hub");
   };
   const content =
+    page === "testimonials" ? <StudentReviews load={previewReviews} onNav={nav}/> :
+    page === "paywall" ? <Paywall onUpgrade={()=>nav('pricing')} onBack={()=>nav('dashboard')}/> :
+    page === "results_cas" ? <ResultsCas data={{ue:'UE9',duration:0,evaluation:null}} onDash={()=>nav('history')}/> :
     page === "results_qcm" ? <ResultsQCM data={{score:1,total:2,duration:55,ue:'UE9',ueName:'Comptabilité',answers:[{correct:true,q:'Une écriture équilibrée',expl:'Le débit égale le crédit.'},{correct:false,q:'Une charge est-elle un actif ?',right:'Non',expl:'Une charge affecte le résultat.'}]}} onNew={()=>nav('qcm')} onDash={()=>nav('dashboard')} /> :
     page === "exams" ? <ExamPage user={student} ues={ues} onOpen={(module,chapter,target)=>{setUE({...ues.find(u=>u.id===module),chapter});nav(target);}}/> :
     page === "review_today" ? <ReviewToday onExams={()=>nav('exams')} onOpen={(module,chapter,target)=>{setUE({...ues.find(u=>u.id===module),chapter});nav(target);}}/> :
@@ -147,8 +153,9 @@ export default function DesignPreview() {
       />
     ) : page === "auth" ? (
       <Auth
-        mode="login"
-        setMode={() => {}}
+        onForgot={()=>nav("forgot_password")}
+        mode={authMode}
+        setMode={setAuthMode}
         onDone={() => nav("dashboard")}
         onBack={() => nav("landing")}
       />
@@ -170,7 +177,7 @@ export default function DesignPreview() {
     "dcg",
     "dscg",
     "resources",
-    "support", "cgu", "confidentialite", "forgot_password",
+    "support", "testimonials", "cgu", "confidentialite", "forgot_password",
   ].includes(page);
   return (
     <>

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import './gizmo-design.css';
+import { useTheme } from './theme';
 
 const paths = {
   home:'M3 11 12 3l9 8v10h-7v-7h-4v7H3z', book:'M12 5v16M3 4h5a4 4 0 0 1 4 2 4 4 0 0 1 4-2h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3z',
@@ -37,6 +38,7 @@ const links = [
   ['history','clock','Historique'], ['tutor','spark','Tuteur IA'], ['interview_config','user','Préparer l’oral par écrit'], ['account','user','Mon compte'],
 ];
 export function GizmoShell({children,screen,user,onNav,onLogout}) {
+  const { theme, toggle } = useTheme();
   const [open,setOpen] = useState(false);
   const closeRef = useRef(null),menuRef = useRef(null);
   const go = key => { setOpen(false); onNav(key); };
@@ -51,15 +53,15 @@ export function GizmoShell({children,screen,user,onNav,onLogout}) {
     return () => { document.body.style.overflow=old; document.removeEventListener('keydown',escape); };
   },[open]);
   const streak=Number.isInteger(user.streak)?user.streak: user.streak?.count || 0;
-  return <div className="g-workspace">
+  return <div className={'g-workspace'+(['qcm','flashcards'].includes(screen)?' g-focus-mode':'')}>
     <a className="g-skip" href="#g-main">Aller au contenu</a>
     {open&&<button className="g-menu-scrim" aria-label="Fermer le menu" onClick={()=>setOpen(false)}/>}
     <aside className={'g-sidebar'+(open?' g-sidebar-open':'')} role={open?'dialog':undefined} aria-modal={open?true:undefined} aria-label="Navigation étudiant">
       <div className="g-sidebar-brand"><StudyBrand onClick={()=>go('dashboard')}/><button className="g-close-menu" ref={closeRef} onClick={()=>{setOpen(false);menuRef.current?.focus();}} aria-label="Fermer la navigation"><StudyIcon name="close"/></button></div>
       <div className="g-sidebar-label">MON PARCOURS</div>
-      <nav aria-label="Navigation de l’espace étudiant">{links.map(([key,icon,label],i)=><button key={key} className={(screen===key?'active ':'')+'g-nav-'+i} aria-current={screen===key?'page':undefined} onClick={()=>go(key)}>
+      <nav aria-label="Navigation de l’espace étudiant">{links.map(([key,icon,label],i)=>{const active=screen===key||key==='library'&&['subject_hub','qcm','flashcards','resume_cours','cas_pratique'].includes(screen);return <button key={key} className={(active?'active ':'')+'g-nav-'+i} aria-current={active?'page':undefined} onClick={()=>go(key)}>
         <span className="g-nav-icon"><StudyIcon name={icon}/></span><span>{label}</span>{key==='tutor'&&<small>IA</small>}
-      </button>)}</nav>
+      </button>;})}</nav>
       <div className="g-sidebar-footer"><div className="g-sidebar-note"><span>✧</span><strong>Un petit pas aujourd’hui.</strong><p>Une notion mieux comprise pour avancer demain.</p></div>
         <button onClick={()=>go('feedback')}>Partager mon retour <StudyIcon name="arrow" size={16}/></button>
         <button onClick={onLogout}><StudyIcon name="logout" size={16}/>Se déconnecter</button>
@@ -69,11 +71,11 @@ export function GizmoShell({children,screen,user,onNav,onLogout}) {
       <header className="g-topbar">
         <button className="g-menu-button" ref={menuRef} aria-label="Ouvrir le menu" aria-expanded={open} onClick={()=>setOpen(true)}><StudyIcon name="menu"/></button>
         <button className="g-search-shortcut" onClick={()=>go('library')}><StudyIcon name="search" size={18}/><span>Une UE, un chapitre, une notion…</span><span className="g-key-hint" aria-hidden="true">↗</span></button>
-        <div className="g-topbar-right"><span className="g-streak"><StudyIcon name="spark" size={17}/>{streak} <span>jour{streak>1?'s':''}</span></span>
+        <div className="g-topbar-right"><button className="g-theme-control" onClick={toggle} aria-label={`Passer en mode ${theme==='light'?'sombre':'clair'}`}><StudyIcon name={theme==='light'?'spark':'home'} size={18}/></button><span className="g-streak"><StudyIcon name="spark" size={17}/>{streak} <span>jour{streak>1?'s':''}</span></span>
           <button className="g-plan-pill" onClick={()=>go(user.isPro?'account':'pricing')}>{user.isPro?'Pro':'Voir les offres'}</button>
           <button className="g-avatar" aria-label="Mon compte" onClick={()=>go('account')}>{user.name?.slice(0,2).toUpperCase() || 'S'}</button></div>
       </header>
-      <main id="g-main" tabIndex={-1}>{children}</main>
+      <main id="g-main" className="workspace-main" tabIndex={-1}>{children}</main>
       <nav className="g-mobile-nav" aria-label="Accès rapides">{links.slice(0,4).map(([key,icon,label])=><button key={key} className={screen===key?'active':''} aria-current={screen===key?'page':undefined} onClick={()=>go(key)}><StudyIcon name={icon}/><span>{key==='review_today'?'À revoir':label}</span></button>)}</nav>
     </div>
   </div>;

@@ -48,7 +48,7 @@ export function Brand({ onClick }) {
   const Tag = onClick ? "button" : "div";
   return (
     <Tag className="brand" onClick={onClick} aria-label="SIMDCG">
-      <img className="brand-mark" src="/favicon.svg?v=2" alt="" width="42" height="42" />
+      <img className="brand-mark" src="/brand-mark.svg?v=3" alt="" width="42" height="42" />
       <span>
         SIM<span className="brand-light">DCG</span>
         <small>LES RÉVISIONS DCG ET DSCG</small>
@@ -210,7 +210,7 @@ function PreviewCard() {
       aria-label="Aperçu illustratif du tableau de bord"
     >
       <div className="preview-top">
-        <img className="brand-mark" src="/favicon.svg?v=2" alt="" width="28" height="28" />
+        <img className="brand-mark" src="/brand-mark.svg?v=3" alt="" width="28" height="28" />
         <span>
           Mon espace de révision<small>Aperçu illustratif</small>
         </span>
@@ -276,8 +276,8 @@ export function Marketing({ onAuth, onNav, ues }) {
               <i /> LES RÉVISIONS DES ÉTUDIANTS EN COMPTABILITÉ
             </span>
             <h1>
-              Votre DCG. Votre DSCG.
-              <br /><span>Un chapitre à la fois.</span>
+              Réviser le DCG et le DSCG,
+              <br /><span>ça s’apprend aussi.</span>
             </h1>
             <p>
               Une plateforme consacrée aux diplômes de comptabilité et de gestion.
@@ -456,7 +456,8 @@ export function Marketing({ onAuth, onNav, ues }) {
   );
 }
 
-export function ProductShell({ children, screen, user, onNav, onLogout, variant }) {
+export function ProductShell(props) { return <GizmoShell {...props}/>; }
+export function LegacyProductShell({ children, screen, user, onNav, onLogout, variant }) {
   const [open, setOpen] = useState(false);
   if (variant === "gizmo") return <GizmoShell screen={screen} user={user} onNav={onNav} onLogout={onLogout}>{children}</GizmoShell>;
   const links = [

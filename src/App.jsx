@@ -409,7 +409,7 @@ export default function App() {
   const selectUE = ue => { setSelectedUE(ue); window.history.pushState({}, '', `/matiere?ue=${ue.id}`); setScreen('subject_hub'); };
   const logout = () => { signOut(auth); setUser(null); nav('landing'); };
   const renderScreen = () => {
-    if (privateScreen && !user) return <Auth mode="login" setMode={setAuthMode} onDone={u => { setUser(u); nav(screen); }} onBack={() => nav('landing')} />;
+    if (privateScreen && !user) return <Auth onForgot={()=>nav('forgot_password')} mode="login" setMode={setAuthMode} onDone={u => { setUser(u); nav(screen); }} onBack={() => nav('landing')} />;
     if (['subject_hub', 'qcm', 'flashcards', 'resume_cours', 'cas_pratique'].includes(screen) && !selectedUE) return <LibraryPage ues={ALL_UES} user={user} onSelect={selectUE} />;
     if (['interview', 'interview_config', 'tutor', 'qcm', 'flashcards', 'resume_cours', 'cas_pratique','exams','review_today'].includes(screen) && !isPro) return <Paywall onUpgrade={() => upgrade()} onBack={() => nav('dashboard')} />;
     if (screen === 'interview' && !interviewCfg) return <InterviewConfig user={user} onStart={cfg => { setInterviewCfg(cfg); nav('interview'); }} onBack={() => nav('dashboard')} />;
@@ -421,7 +421,7 @@ export default function App() {
     if (screen === 'exams') return <ExamPage key={user.uid} user={user} ues={ALL_UES} onOpen={(module,chapter,target)=>openLearning(ALL_UES.find(u=>u.id===module),chapter,target)}/>;
     if (screen === 'review_today') return <ReviewToday key={user.uid} onExams={()=>nav('exams')} onOpen={(module,chapter,target)=>openLearning(ALL_UES.find(u=>u.id===module),chapter,target)}/>;
     if (screen === 'feedback') return <FeedbackForm key={user.uid}/>;
-    if (screen === 'auth') return <Auth mode={authMode} setMode={setAuthMode} onDone={u => { setUser(u); if (u.isNew) setShowOnboarding(true); const plan = sessionStorage.getItem('simdcg-plan'); sessionStorage.removeItem('simdcg-plan'); nav('dashboard'); if (plan) upgrade(plan); }} onBack={() => nav('landing')} />;
+    if (screen === 'auth') return <Auth onForgot={()=>nav('forgot_password')} mode={authMode} setMode={setAuthMode} onDone={u => { setUser(u); if (u.isNew) setShowOnboarding(true); const plan = sessionStorage.getItem('simdcg-plan'); sessionStorage.removeItem('simdcg-plan'); nav('dashboard'); if (plan) upgrade(plan); }} onBack={() => nav('landing')} />;
     if (screen === 'dashboard') return <StudentHome user={user} ues={ALL_UES} onNav={nav} onSelect={selectUE} onOpen={openLearning} learning={learning} learningError={learningError} learningLoading={learningLoading} onRetry={reloadLearning} />;
     if (screen === 'library') return <LibraryPage ues={ALL_UES} user={user} onSelect={selectUE} />;
     if (screen === 'subject_hub') return <CourseHome ue={selectedUE} user={user} onNav={nav} learning={learning} />;
@@ -449,7 +449,7 @@ export default function App() {
 }
 
 // ── AUTH ──────────────────────────────────────────────────────────────────────
-function Auth({ mode, setMode, onDone, onBack }) {
+function Auth({ mode, setMode, onDone, onBack, onForgot }) {
   const [name, setName] = useState(""); const [email, setEmail] = useState(""); const [pass, setPass] = useState(""); const [err, setErr] = useState(""); const [loading, setLoading] = useState(false);
   const submit = async () => {
     if (!email || !pass || (mode === "signup" && !name)) { setErr("Tous les champs sont requis."); return; }
@@ -516,12 +516,12 @@ function Auth({ mode, setMode, onDone, onBack }) {
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <p style={{ fontSize: 12, color: "var(--muted)" }}>
             {mode === "signup" ? "Déjà un compte ? " : "Pas encore ? "}
-            <span style={{ color: "var(--gold-text)", cursor: "pointer" }} onClick={() => { setMode(mode === "signup" ? "login" : "signup"); setErr(""); }}>
+            <button type="button" className="text-button" style={{ color: "var(--gold-text)", cursor: "pointer" }} onClick={() => { setMode(mode === "signup" ? "login" : "signup"); setErr(""); }}>
               {mode === "signup" ? "Se connecter" : "S'inscrire"}
-            </span>
+            </button>
           </p>
           {mode === "login" && (
-            <a href="/mot-de-passe-oublie" onClick={e => { e.preventDefault(); window.history.pushState({}, "", "/mot-de-passe-oublie"); window.dispatchEvent(new PopStateEvent("popstate")); }}
+            <a href="/mot-de-passe-oublie" onClick={e => { e.preventDefault(); if(onForgot)onForgot();else {window.history.pushState({}, "", "/mot-de-passe-oublie"); window.dispatchEvent(new PopStateEvent("popstate"));} }}
               style={{ fontSize: 11, color: "var(--muted)", cursor: "pointer", textDecoration: "none" }}>
               Mot de passe oublié ?
             </a>
@@ -609,10 +609,10 @@ function QCMSession({ ue, user, onDone, onBack }) {
               {q.options?.map((opt, i) => {
                 let bg = "var(--surface)", border = "var(--line)", color = "var(--muted)";
                 if (sel !== null) { if (i === q.answer) { bg = `${ue.color}10`; border = ue.color; color = "var(--success)"; } else if (i === sel && i !== q.answer) { bg = "color-mix(in srgb, var(--danger) 6%, transparent)"; border = "var(--danger)"; color = "var(--danger)"; } }
-                return <button key={i} onClick={() => pick(i)} className="answer-option" style={{ background: bg, border: `1px solid ${border}`, color, padding: "12px 16px", textAlign: "left", cursor: sel === null ? "pointer" : "default", fontSize: 13, transition: "all .2s", fontFamily: "inherit" }}>{String.fromCharCode(65 + i)}. {opt}</button>;
+                return <button key={i} onClick={() => pick(i)} className={`answer-option${sel!==null?(i===q.answer?" answer-correct":i===sel?" answer-incorrect":""):""}`} disabled={sel!==null} aria-pressed={sel===i} style={{ background: bg, border: `1px solid ${border}`, color, padding: "12px 16px", textAlign: "left", cursor: sel === null ? "pointer" : "default", fontSize: 13, transition: "all .2s", fontFamily: "inherit" }}>{String.fromCharCode(65 + i)}. {opt}</button>;
               })}
             </div>
-            {sel !== null && <div style={{ background: "var(--surface)", border: "1px solid var(--line)", padding: "12px 16px", marginBottom: 14 }}><p style={{ fontSize: 10, color: "var(--muted)", margin: "0 0 4px", letterSpacing: ".1em" }}>EXPLICATION</p><p style={{ fontSize: 13, color: "var(--ink)", margin: 0, lineHeight: 1.6 }}>{q.expl}</p></div>}
+            {sel !== null && <div className="qcm-explanation" role="status" style={{ background: "var(--surface)", border: "1px solid var(--line)", padding: "12px 16px", marginBottom: 14 }}><strong>{sel===q.answer?"Bonne réponse !":"Une notion à revoir."}</strong><p style={{ fontSize: 10, color: "var(--muted)", margin: "0 0 4px", letterSpacing: ".1em" }}>EXPLICATION</p><p style={{ fontSize: 13, color: "var(--ink)", margin: 0, lineHeight: 1.6 }}>{q.expl}</p></div>}
             {sel !== null && <button disabled={finishing} style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={next}>{finishing?'Enregistrement…':qi + 1 >= questions.length ? "Voir les résultats →" : "Question suivante →"}</button>}
           </div>
         )}
@@ -1095,4 +1095,4 @@ const S = {
   ei: { fontSize: 12, color: "var(--muted)", margin: "4px 0", lineHeight: 1.55 },
 };
 
-export { ResultsQCM, History, LegalScreen, ForgotPasswordScreen, OnboardingModal, DCG_UES, DSCG_UES, QCMScreen, FlashcardsScreen, StudyPlanner as PlanningScreen, SavedLesson as ResumeCoursScreen, CasePractice as CasPratiqueScreen, Auth, InterviewConfig };
+export { ResultsQCM, ResultsCas, Paywall, History, LegalScreen, ForgotPasswordScreen, OnboardingModal, DCG_UES, DSCG_UES, QCMScreen, FlashcardsScreen, StudyPlanner as PlanningScreen, SavedLesson as ResumeCoursScreen, CasePractice as CasPratiqueScreen, Auth, InterviewConfig };

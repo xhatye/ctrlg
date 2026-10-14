@@ -1,8 +1,8 @@
 import {useEffect,useRef,useState} from 'react';
 const samples=[
- {title:'Un cours que l’on peut explorer',text:'Carte mentale, tableau de données et application expliquée : un extrait du chapitre sur l’amortissement.',src:'/previews/course.png',alt:'Capture réelle d’un cours SIMDCG avec données de départ, formules et résultats d’amortissement.'},
- {title:'Un dossier à résoudre par écrit',text:'Documents, questions, barème et temps imparti : une capture d’un sujet original de comptabilité.',src:'/previews/exam.png',alt:'Capture réelle d’un dossier original SIMDCG avec annexes et réponse rédigée en mode examen.'},
- {title:'Un corrigé qui montre les attentes',text:'Votre réponse à côté du corrigé, les éléments du barème et les erreurs fréquentes à vérifier.',src:'/previews/correction.png',alt:'Capture réelle du corrigé SIMDCG et de ses critères de comparaison personnelle.'}
+ {title:'Un cours que l’on peut explorer',text:'Carte mentale, tableau de données et application expliquée : un extrait du chapitre sur l’amortissement.',src:'/previews-v3/course.png',alt:'Capture réelle d’un cours SIMDCG avec données de départ, formules et résultats d’amortissement.'},
+ {title:'Un dossier à résoudre par écrit',text:'Documents, questions, barème et temps imparti : une capture d’un sujet original de comptabilité.',src:'/previews-v3/exam.png',alt:'Capture réelle d’un dossier original SIMDCG avec annexes et réponse rédigée en mode examen.'},
+ {title:'Un corrigé qui montre les attentes',text:'Votre réponse à côté du corrigé, les éléments du barème et les erreurs fréquentes à vérifier.',src:'/previews-v3/correction.png',alt:'Capture réelle du corrigé SIMDCG et de ses critères de comparaison personnelle.'}
 ];
 export default function PreviewGallery({onSubscribe}){
  const [selected,setSelected]=useState(null),dialog=useRef(null);

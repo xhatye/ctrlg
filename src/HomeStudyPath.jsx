@@ -6,7 +6,7 @@ export default function HomeStudyPath({ues,onNav}){
  const [level,setLevel]=useState('DCG'),[id,setId]=useState('UE9'),[step,setStep]=useState(0);
  const subjects=ues.filter(u=>u.level===level),ue=subjects.find(u=>u.id===id)||subjects[0],data=catalogue.modules[ue.id];
  return <section className="home-study-path" aria-label="Explorer les parcours DCG et DSCG">
-  <div className="path-header"><span className="path-window-dots" aria-hidden="true"><i/><i/><i/></span><img src="/favicon.svg?v=2" width="32" height="32" alt=""/><div><strong>Votre diplôme, vos UE.</strong><span>Cours, entraînement et suivi par chapitre.</span></div></div>
+  <div className="path-header"><span className="path-window-dots" aria-hidden="true"><i/><i/><i/></span><img src="/brand-mark.svg?v=3" width="32" height="32" alt=""/><div><strong>Votre diplôme, vos UE.</strong><span>Cours, entraînement et suivi par chapitre.</span></div></div>
   <div className="path-diplomas" role="group" aria-label="Diplôme à explorer">{['DCG','DSCG'].map(d=><button key={d} aria-pressed={level===d} className={level===d?'active':''} onClick={()=>{setLevel(d);setStep(0);}}>{d}<span>{d==='DCG'?13:7} UE</span></button>)}</div>
   <div className="path-ue-shelf" role="group" aria-label={"Matières du "+level}>{subjects.map(s=><button key={s.id} aria-pressed={ue.id===s.id} aria-label={s.id+" · "+s.label} onClick={()=>setId(s.id)}><SubjectIcon id={s.id} size={48}/><span>{s.id.replace("DSCG","UE")}</span></button>)}</div>
   <label className="chapter-select">Choisissez votre matière<select aria-label="Matière à explorer" value={ue.id} onChange={e=>setId(e.target.value)}>{subjects.map(s=><option key={s.id} value={s.id}>{s.id} · {s.label}</option>)}</select></label>
