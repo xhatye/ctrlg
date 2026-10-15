@@ -71,19 +71,37 @@ const Button = ({ children, onClick, secondary, ...rest }) => (
 );
 function PublicNav({ onNav, onAuth }) {
   const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
+  useEffect(() => {
+    if (!open) return;
+    const dismiss = event => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+        menuRef.current?.querySelector('.menu-button')?.focus();
+      } else if (event.type === 'pointerdown' && !menuRef.current?.contains(event.target)) setOpen(false);
+    };
+    document.addEventListener('keydown', dismiss);
+    document.addEventListener('pointerdown', dismiss);
+    return () => {
+      document.removeEventListener('keydown', dismiss);
+      document.removeEventListener('pointerdown', dismiss);
+    };
+  }, [open]);
   return (
-    <header className="public-nav">
+    <header className="public-nav" ref={menuRef}>
       <div className="container nav-row">
         <a className="public-brand-home" href="/" aria-label="SIMDCG, accueil"><Brand /></a>
         <button
           className="menu-button"
           aria-expanded={open}
-          aria-label="Ouvrir la navigation"
+          aria-controls="public-navigation"
+          aria-label={open ? "Fermer la navigation" : "Ouvrir la navigation"}
           onClick={() => setOpen(!open)}
         >
           ☰
         </button>
         <nav
+          id="public-navigation"
           className={open ? "public-links is-open" : "public-links"}
           aria-label="Navigation principale"
         >
