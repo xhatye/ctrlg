@@ -1,5 +1,8 @@
 /* One compact header for the home page and all public information pages. */
 .marketing { --public-nav-height:68px; }
+/* Keep decorative clipping on the content, away from the sticky header. */
+.marketing.landing-motion { overflow:visible; }
+.landing-motion > main { overflow:clip; }
 .marketing > .public-nav {
   position:sticky;
   top:0;
