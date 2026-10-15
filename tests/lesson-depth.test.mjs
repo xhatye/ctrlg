@@ -20,7 +20,7 @@ test('every chapter has a developed lesson, separate recall cards, and usable gu
    for(const q of cas.questions){assert.ok(q.guide);const response=q.guide.type==='number'?String(parseStudyNumber(new Intl.NumberFormat('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2}).format(q.guide.expected))):String(q.guide.answer);assert.equal(checkCaseStep(q,response).correct,true);}
   }
  }
- assert.equal(quizzes,2163);assert.equal(cards,1869);
+ assert.equal(quizzes,4635);assert.equal(cards,3945);
  assert.notEqual(quizzes,cards);
 });
 test('theory-only mixed card series fill their requested length without duplicates',()=>{
@@ -28,7 +28,7 @@ test('theory-only mixed card series fill their requested length without duplicat
   const result=studyModule('UE1','cards',()=>seed,{count:40,focus:'all'});
   assert.equal(result.items.length,40);assert.equal(new Set(result.items.map(i=>i.id)).size,40);
  }
- for(const id of Object.keys(MODULES)){const meta=moduleCatalogue(id);assert.ok(meta.curatedQuestionCount>=55);assert.ok(meta.cardCount>=45);assert.equal(meta.curatedCaseCount,meta.chapters.length);}
+ for(const id of Object.keys(MODULES)){const meta=moduleCatalogue(id);assert.ok(meta.curatedQuestionCount>=55);assert.ok(meta.cardCount>=45);assert.equal(meta.curatedCaseCount,meta.chapters.length*2);}
 });
 test('guided numbers accept French decimals and round like the displayed correction',()=>{
  assert.equal(parseStudyNumber(' −1\u202f250,50 '),-1250.5);

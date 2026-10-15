@@ -34,7 +34,7 @@ test('all 205 chapters receive a discipline approach, and all 20 UEs have an aut
 test('new explained alternatives survive shuffling and enriched cards survive mixed sampling and review',()=>{
  for(const [id,w]of Object.entries(SUBJECT_WORKSHOPS)){
   const c=MODULES[id].chapters.find(c=>c.id===w.chapter);
-  assert.equal(c.quiz.length,baseline[id][c.id].quizLength+4);assert.equal(c.cards.length,baseline[id][c.id].cardLength+4);
+  assert.deepEqual(c.quiz.slice(baseline[id][c.id].quizLength,baseline[id][c.id].quizLength+4).map(n=>n.q),w.quiz.map(n=>n.q));assert.deepEqual(c.cards.slice(baseline[id][c.id].cardLength,baseline[id][c.id].cardLength+4).map(n=>n.q),w.cards.map(n=>n.q));
   for(const seed of [.02,.41,.93]){
    const q=studyModule(id,'qcm',()=>seed,{chapter:c.id,count:20,focus:'knowledge'});
    for(const item of q.items.filter(i=>i.optionExplanations)){

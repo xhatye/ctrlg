@@ -4,5 +4,5 @@ import { MODULES, moduleCatalogue } from '../lib/study-content.mjs';
 const modules=Object.fromEntries(Object.keys(MODULES).map(id=>[id,moduleCatalogue(id)]));
 const total=key=>Object.values(modules).reduce((n,m)=>n+m[key],0);
 const totals={subjects:Object.keys(modules).length,chapters:Object.values(modules).reduce((n,m)=>n+m.chapters.length,0),questions:total('questionCount'),curatedQuestions:total('curatedQuestionCount'),cards:total('cardCount'),cases:total('caseCount'),curatedCases:total('curatedCaseCount'),concepts:total('conceptCount'),applications:total('applicationCount')};
-writeFileSync(new URL('../src/catalogue.json',import.meta.url),JSON.stringify({version:'2026-10-13',totals,modules},null,2)+'\n');
+writeFileSync(new URL('../src/catalogue.json',import.meta.url),JSON.stringify({version:'2026-10-15',totals,modules},null,2)+'\n');
 console.log(JSON.stringify(totals));

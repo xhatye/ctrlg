@@ -1,3 +1,4 @@
+import AnnalsPreview from './AnnalsPreview';
 // Development-only route. No real user account, payment or Firestore write.
 import { useState } from "react";
 import AppLoading from './AppLoading';
@@ -60,7 +61,8 @@ export default function DesignPreview() {
   if (page === 'loading') return <AppLoading />;
   const nav = (key,opts={}) => {
     if (["login","signup"].includes(opts.authMode)) setAuthMode(opts.authMode);
-    if(opts.chapter)setUE(ue=>({...ue,chapter:opts.chapter}));
+    if(opts.module)setUE({...ues.find(u=>u.id===opts.module),chapter:opts.chapter});
+    else if(opts.chapter)setUE(ue=>({...ue,chapter:opts.chapter}));
     setPage(key);
     history.replaceState({}, "", `/?design=${key}`);
   };
@@ -69,6 +71,7 @@ export default function DesignPreview() {
     nav("subject_hub");
   };
   const content =
+    page === "annals" ? <AnnalsPreview onNav={nav}/> :
     page === "testimonials" ? <StudentReviews load={previewReviews} onNav={nav}/> :
     page === "paywall" ? <Paywall onUpgrade={()=>nav('pricing')} onBack={()=>nav('dashboard')}/> :
     page === "results_cas" ? <ResultsCas data={{ue:'UE9',duration:0,evaluation:null}} onDash={()=>nav('history')}/> :

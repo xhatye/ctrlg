@@ -160,8 +160,8 @@ test('hundredfold practice is labelled, addressable and bounded per request',()=
  const m=MODULES.UE9,c=m.chapters.find(c=>c.id==='cmp-periodique');
  const first=studyModule('UE9','case',Math.random,{chapter:c.id,variant:0});
  const last=studyModule('UE9','case',Math.random,{chapter:c.id,variant:2649});
- assert.notEqual(first.contexte,last.contexte);assert.equal(last.variantCount,2650);
- assert.throws(()=>studyModule('UE9','case',Math.random,{chapter:c.id,variant:2650}),{status:404});
+ assert.notEqual(first.contexte,last.contexte);assert.equal(last.variantCount,2651);
+ assert.throws(()=>studyModule('UE9','case',Math.random,{chapter:c.id,variant:2651}),{status:404});
  assert.throws(()=>studyModule('UE9','case',Math.random,{variant:-1}),{status:404});
  const cards=studyModule('UE9','cards',Math.random,{chapter:c.id,count:100,focus:'application'});assert.equal(cards.items.length,100);assert.equal(new Set(cards.items.map(i=>i.id)).size,100);
  assert.equal(studyModule('UE9','cards',Math.random,{chapter:c.id,count:20,focus:'application'}).items.length,20);

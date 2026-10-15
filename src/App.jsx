@@ -1,3 +1,4 @@
+import AnnalsPreview from './AnnalsPreview';
 import { useState, useRef, useEffect } from "react";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInWithPopup, sendPasswordResetEmail } from "firebase/auth";
 import { onSnapshot, doc, getDoc, setDoc, updateDoc, arrayUnion, collection, addDoc, getDocs, query, orderBy, limit, increment } from "firebase/firestore";
@@ -28,6 +29,7 @@ const PACK_EXAMEN_PRICE = "29€";
 
 // ── ROUTING ───────────────────────────────────────────────────────────────────
 const SCREEN_TO_URL = {
+  annals:             "/mes-annales",
   landing:            "/",
   pricing:            "/tarifs",
   testimonials:       "/avis",
@@ -361,12 +363,14 @@ export default function App() {
 
   const nav = (s, opts = {}) => {
     if (["login","signup"].includes(opts.authMode)) setAuthMode(opts.authMode);
-    const chapter = opts.chapter || selectedUE?.chapter;
+    const nextUE = opts.module ? ALL_UES.find(ue=>ue.id===opts.module) : selectedUE;
+    const chapter = opts.module ? opts.chapter : opts.chapter || selectedUE?.chapter;
+    if(opts.module && nextUE)setSelectedUE({...nextUE,chapter});
     if(opts.chapter)setSelectedUE(ue=>({...ue,chapter:opts.chapter}));
     let url = SCREEN_TO_URL[s] || "/";
     if (['dcg','dscg','resources'].includes(s)) { window.location.assign(url); return; }
     if (s === "auth") url = (opts.mode === "signup") ? "/inscription" : "/connexion";
-    if (["subject_hub", "qcm", "flashcards", "resume_cours", "cas_pratique"].includes(s) && selectedUE) url += `?ue=${selectedUE.id}${chapter?"&chapter="+encodeURIComponent(chapter):""}`;
+    if (["subject_hub", "qcm", "flashcards", "resume_cours", "cas_pratique"].includes(s) && nextUE) url += `?ue=${nextUE.id}${chapter?"&chapter="+encodeURIComponent(chapter):""}`;
     window.history.pushState({}, "", url);
     setScreen(s);
   };
@@ -425,6 +429,7 @@ export default function App() {
     if (screen === 'testimonials') return <StudentReviews load={loadTestimonials} onNav={nav} />;
     if (screen === 'exams') return <ExamPage key={user.uid} user={user} ues={ALL_UES} onOpen={(module,chapter,target)=>openLearning(ALL_UES.find(u=>u.id===module),chapter,target)}/>;
     if (screen === 'review_today') return <ReviewToday key={user.uid} onExams={()=>nav('exams')} onOpen={(module,chapter,target)=>openLearning(ALL_UES.find(u=>u.id===module),chapter,target)}/>;
+    if (screen === 'annals') return <AnnalsPreview onNav={nav}/>;
     if (screen === 'feedback') return <FeedbackForm key={user.uid}/>;
     if (screen === 'auth') return <Auth onForgot={()=>nav('forgot_password')} mode={authMode} setMode={setAuthMode} onDone={u => { setUser(u); if (u.isNew) setShowOnboarding(true); const plan = sessionStorage.getItem('simdcg-plan'); sessionStorage.removeItem('simdcg-plan'); nav('dashboard'); if (plan) upgrade(plan); }} onBack={() => nav('landing')} />;
     if (screen === 'dashboard') return <StudentHome user={user} ues={ALL_UES} onNav={nav} onSelect={selectUE} onOpen={openLearning} learning={learning} learningError={learningError} learningLoading={learningLoading} onRetry={reloadLearning} />;

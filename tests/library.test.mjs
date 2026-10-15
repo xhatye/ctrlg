@@ -37,7 +37,7 @@ test('public catalogue contains counts and titles, never premium answers or less
     assert.deepEqual(meta,published.modules[id]);
     const json=JSON.stringify(meta);for(const n of m.notions){assert.ok(!json.includes(n.q));assert.ok(!json.includes(n.body));}
   }
-  assert.equal(published.totals.subjects,20);assert.equal(published.totals.chapters,205);assert.equal(published.totals.applications,636000);assert.equal(published.totals.concepts,824);assert.equal(published.totals.curatedCases,205);assert.equal(published.totals.questions,published.totals.curatedQuestions+published.totals.applications);assert.notEqual(published.totals.curatedQuestions,published.totals.cards);
+  assert.equal(published.totals.subjects,20);assert.equal(published.totals.chapters,205);assert.equal(published.totals.applications,636000);assert.equal(published.totals.concepts,824);assert.equal(published.totals.curatedCases,410);assert.equal(published.totals.questions,published.totals.curatedQuestions+published.totals.applications);assert.notEqual(published.totals.curatedQuestions,published.totals.cards);
 });
 test('new premium chapters remain protected, and invalid chapters never read user data',async()=>{
   const noAuth={authenticate:async()=>{throw Object.assign(new Error('Connexion requise'),{status:401})}};

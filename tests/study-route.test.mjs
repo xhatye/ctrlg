@@ -13,7 +13,7 @@ test('study route rejects invalid chapter, size and tool before Firebase initial
   for(const url of ['/api/study?ue=UE2&tool=summary&chapter=missing','/api/study?ue=UE2&tool=all','/api/study?ue=constructor&tool=qcm'])assert.equal((await request(url)).status,404);
   assert.equal((await request('/api/study?ue=UE2&tool=qcm&count=21')).status,400);
   assert.equal((await request('/api/study?ue=UE9&tool=cards&count=101')).status,400);
-  assert.equal((await request('/api/study?ue=UE9&tool=case&chapter=cmp-periodique&variant=2650')).status,404);
+  assert.equal((await request('/api/study?ue=UE9&tool=case&chapter=cmp-periodique&variant=2651')).status,404);
   assert.equal((await request('/api/study?ue=UE9&tool=qcm&focus=bad')).status,400);
   assert.equal((await request('/api/study?ue=UE9&tool=case&variant=-1')).status,404);
 });
