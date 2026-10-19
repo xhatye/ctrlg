@@ -3,6 +3,8 @@ import './gizmo-design.css';
 import './workspace-refresh.css';
 import { useTheme } from './theme';
 import StudySearch from './StudySearch';
+import NavigationArt from './NavigationArt';
+import './study-motion.css';
 const SearchContext = createContext(() => {});
 export const useStudySearch = () => useContext(SearchContext);
 
@@ -74,7 +76,7 @@ export function GizmoShell({children,screen,user,onNav,onLogout}) {
     <aside className={'g-sidebar'+(open?' g-sidebar-open':'')} role={open?'dialog':undefined} aria-modal={open?true:undefined} aria-label="Navigation étudiant">
       <div className="g-sidebar-brand"><StudyBrand onClick={()=>go('dashboard')}/><button className="g-close-menu" ref={closeRef} onClick={()=>{setOpen(false);menuRef.current?.focus();}} aria-label="Fermer la navigation"><StudyIcon name="close"/></button></div>
       <nav aria-label="Navigation de l’espace étudiant">{links.filter(([key])=>!secondaryKeys.includes(key)).map(([key,icon,label])=>{const i=links.findIndex(link=>link[0]===key);const active=screen===key||key==='library'&&['subject_hub','qcm','flashcards','resume_cours','cas_pratique'].includes(screen);return <button key={key} className={(active?'active ':'')+'g-nav-'+i} aria-current={active?'page':undefined} onClick={()=>go(key)}>
-        <span className="g-nav-icon"><StudyIcon name={icon}/></span><span>{label}</span>
+        <span className="g-nav-icon g-nav-icon-art"><NavigationArt screen={key}/></span><span>{label}</span>
       </button>;})}
       <details className="g-more-tools" open={moreOpen} onToggle={e=>setMoreOpen(e.currentTarget.open)}><summary>Autres outils <span aria-hidden="true">⌄</span></summary><div>{links.filter(([key])=>secondaryKeys.includes(key)).map(([key,icon,label])=><button key={key} aria-current={screen===key?'page':undefined} className={screen===key?'active':''} onClick={()=>go(key)}><span className="g-nav-icon"><StudyIcon name={icon}/></span><span>{label}</span></button>)}</div></details>
       </nav>
@@ -93,7 +95,7 @@ export function GizmoShell({children,screen,user,onNav,onLogout}) {
       </header>
       <main id="g-main" className="workspace-main" tabIndex={-1}><SearchContext.Provider value={()=>setSearchOpen(true)}>{children}</SearchContext.Provider></main>
       <StudySearch open={searchOpen} onClose={()=>setSearchOpen(false)} onSelect={item=>onNav(item.kind==='subject'?'subject_hub':'resume_cours',{module:item.module,chapter:item.chapter})}/>
-      <nav className="g-mobile-nav" aria-label="Accès rapides">{links.slice(0,4).map(([key,icon,label])=><button key={key} className={screen===key?'active':''} aria-current={screen===key?'page':undefined} onClick={()=>go(key)}><StudyIcon name={icon}/><span>{key==='review_today'?'À revoir':label}</span></button>)}</nav>
+      <nav className="g-mobile-nav" aria-label="Accès rapides">{links.slice(0,4).map(([key,icon,label])=><button key={key} className={screen===key?'active':''} aria-current={screen===key?'page':undefined} onClick={()=>go(key)}><NavigationArt screen={key}/><span>{key==='review_today'?'À revoir':label}</span></button>)}</nav>
     </div>
   </div>;
 }

@@ -5,6 +5,7 @@ import catalogue from './catalogue.json';
 import SubjectIcon from './SubjectIcon';
 import ExamCountdown from './ExamCountdown';
 import { StudyIcon, useStudySearch } from './gizmo-ui';
+import PlayfulHeading from './PlayfulHeading';
 
 function savedPlan(ues,uid) {
   try { const raw=localStorage.getItem('simdcg-plan-'+uid);return raw?restorePlan(ues,JSON.parse(raw)).config:null; } catch { return null; }
@@ -33,9 +34,9 @@ function Dashboard({user,ues,onNav,onSelect,onOpen,learning={},learningError,lea
   const changeGoal = value => {setGoal(value);try{localStorage.setItem('simdcg-daily-goal-'+user.uid,String(value));setGoalMessage('Objectif enregistré.');}catch{setGoalMessage('Objectif ajusté pour cette visite. La sauvegarde locale est indisponible.');}};
 
   return <div className="g-dashboard g-dashboard-refresh">
-    <div className="g-home-heading"><h1>Accueil</h1><span>Bonjour {user.name?.split(' ')[0] || 'à vous'}</span></div>
+    <div className="g-home-heading"><PlayfulHeading as="h1" text="Accueil"/><span>Bonjour {user.name?.split(' ')[0] || 'à vous'}</span></div>
     <section className="g-study-start" aria-labelledby="g-start-title">
-      <div className="g-study-prompt"><img src="/illustrations/study-companion-v1.webp" alt="" width="184" height="184" fetchpriority="high"/><div><p>Votre DCG. Votre DSCG.</p><h2 id="g-start-title">On révise quoi<br/>aujourd’hui ?</h2></div></div>
+      <div className="g-study-prompt"><img className="g-floating-companion" src="/illustrations/study-companion-v1.webp" alt="" width="184" height="184" fetchpriority="high"/><div><p>Votre DCG. Votre DSCG.</p><PlayfulHeading id="g-start-title" lines={['On révise quoi','aujourd’hui ?']}/></div></div>
       <button className="g-study-search" onClick={search}><StudyIcon name="search" size={23}/><span>Une UE, un chapitre, une notion…</span><StudyIcon name="arrow" size={21}/></button>
       <div className="g-start-actions" aria-label="Choisir un entraînement">{[
         ['book','Cours','resume_cours'],['check','QCM','qcm'],['cards','Flashcards','flashcards'],['calendar','Cas pratique','cas_pratique'],

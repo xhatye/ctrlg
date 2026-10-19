@@ -1,4 +1,5 @@
 import GizmoDashboard from './GizmoDashboard';
+import PlayfulHeading from './PlayfulHeading';
 import { GizmoShell } from './gizmo-ui';
 import SubjectIcon from './SubjectIcon';
 import { useState, useEffect, useRef } from "react";
@@ -554,21 +555,21 @@ export function LegacyProductShell({ children, screen, user, onNav, onLogout, va
     </div>
   );
 }
-function Title({ eyebrow, title, desc, children }) {
+function Title({ eyebrow, title, desc, children, playful=false }) {
   return (
     <div className="page-title">
       <div>
         {eyebrow && <span className="eyebrow">{eyebrow}</span>}
-        <h1>{title}</h1>
+        {playful?<PlayfulHeading key={title} as="h1" text={title}/>:<h1>{title}</h1>}
         {desc && <p>{desc}</p>}
       </div>
       {children}
     </div>
   );
 }
-function UECard({ ue, mastery, onClick }) {
+function UECard({ ue, mastery, onClick, reveal=false, order=0 }) {
   return (
-    <button className="ue-card" onClick={onClick}>
+    <button className="ue-card" onClick={onClick} style={reveal?{'--heading-delay':Math.min(order,5)*35+'ms'}:undefined}>
       <div className="ue-card-top">
         <SubjectIcon id={ue.id} size={60}/>
         <span className="ue-code">
@@ -577,7 +578,7 @@ function UECard({ ue, mastery, onClick }) {
         </span>
         <span className="ue-arrow">↗</span>
       </div>
-      <h3>{ue.label}</h3>
+      {reveal?<PlayfulHeading as="h3" text={ue.label}/>:<h3>{ue.label}</h3>}
       <p>{ue.desc}</p>
       <span className="ue-content-count">{catalogue.modules[ue.id]?.chapters.length} cours · {catalogue.modules[ue.id]?.curatedQuestionCount} QCM de notions</span>
       {mastery?.attempts > 0 && <div className="ue-mastery">
@@ -774,7 +775,7 @@ export function LibraryPage({ ues, user, onSelect }) {
   );
   return (
     <div className="page library-page">
-      <Title title="Mes UE" desc="Choisissez la matière que vous préparez." />
+      <Title playful title="Mes UE" desc="Choisissez la matière que vous préparez." />
       <label className="chapter-select programme-select">Programme<select aria-label="Programme" value={programme} onChange={e=>setProgramme(e.target.value)}><option value="2027">Session 2027, nouveaux intitulés</option><option value="2026">Session 2026</option></select></label>
       <div className="library-toolbar">
         <div className="tabs">
@@ -799,10 +800,11 @@ export function LibraryPage({ ues, user, onSelect }) {
         </label>
       </div>
       <div className="ue-grid">
-        {visible.map((ue) => (
+        {visible.map((ue,index) => (
           <UECard
             key={ue.id}
             ue={ue}
+            reveal order={index}
             mastery={user?.mastery?.[ue.id]}
             onClick={() => onSelect(ue)}
           />
@@ -825,7 +827,7 @@ export function LibraryPage({ ues, user, onSelect }) {
 export function CourseHome({ ue, user, onNav, learning }) {
   return (
     <div className="page course-page">
-      <Title eyebrow={`${ue.level} · ${ue.id}`} title={ue.label} desc={ue.desc}>
+      <Title playful eyebrow={`${ue.level} · ${ue.id}`} title={ue.label} desc={ue.desc}>
         <span className="icon-tile large">
           <SubjectIcon id={ue.id} size={72}/>
         </span>

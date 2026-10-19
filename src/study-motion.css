@@ -1,0 +1,31 @@
+/* Motion is decorative: labels, layout and actions are available immediately. */
+.playful-heading-line{display:block}
+.playful-word{display:inline-block;transform-origin:50% 85%}
+.g-workspace.g-workspace .g-nav-icon.g-nav-icon-art{width:38px;height:38px;border-radius:0;background:transparent;box-shadow:none}
+.g-workspace.g-workspace .g-nav-art{display:block;width:38px;height:38px;flex-shrink:0;object-fit:contain;filter:drop-shadow(0 2px 2px #2618470b);transition:transform 200ms cubic-bezier(.2,.8,.25,1)}
+.g-workspace.g-workspace .g-sidebar nav button{gap:12px;padding-block:7px}
+.g-workspace.g-workspace .g-sidebar nav button:hover .g-nav-art{transform:translateY(-2px) rotate(-5deg) scale(1.08)}
+.g-workspace.g-workspace .g-sidebar nav button:active .g-nav-art{transform:translateY(1px) scale(.96)}
+.g-workspace.g-workspace .g-mobile-nav .g-nav-art{width:28px;height:28px;filter:none}
+@media(prefers-reduced-motion:no-preference){
+ .g-workspace .playful-word{animation:study-word-arrive 580ms both;animation-delay:calc(var(--heading-delay,0ms) + var(--word-order,0)*45ms)}
+ .g-workspace .g-floating-companion{animation:study-companion-float 5s ease-in-out infinite;transform-origin:50% 65%}
+ @keyframes study-word-arrive{
+  0%{opacity:0;transform:translateY(16px) scale(.9) rotate(-2deg)}
+  48%{opacity:1;transform:translateY(-4px) scale(1.035) rotate(.5deg)}
+  72%{transform:translateY(1px) scale(.995) rotate(-.2deg)}
+  100%{opacity:1;transform:translateY(0) scale(1) rotate(0)}
+ }
+ @keyframes study-companion-float{
+  0%,100%{transform:translateY(3px) rotate(-1deg)}
+  50%{transform:translateY(-8px) rotate(1deg)}
+ }
+}
+@media(max-width:760px){
+ .g-workspace.g-workspace .g-nav-icon.g-nav-icon-art,.g-workspace.g-workspace .g-sidebar .g-nav-art{width:36px;height:36px}
+ .g-workspace.g-workspace .g-sidebar nav button{padding-block:8px}
+}
+@media(prefers-reduced-motion:reduce){
+ .g-workspace .playful-word,.g-workspace .g-floating-companion{animation:none;transform:none;opacity:1}
+ .g-workspace.g-workspace .g-sidebar nav button:is(:hover,:active) .g-nav-art{transform:none;transition:none}
+}
