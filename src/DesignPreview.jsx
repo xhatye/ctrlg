@@ -1,4 +1,4 @@
-import AnnalsPreview from './AnnalsPreview';
+import AnnalsPreview from './AnnalsLibrary';
 // Development-only route. No real user account, payment or Firestore write.
 import { useState } from "react";
 import AppLoading from './AppLoading';
@@ -50,7 +50,7 @@ const demoStudent = {
 export default function DesignPreview() {
   const previewState = new URLSearchParams(location.search).get('state');
   const [authMode,setAuthMode] = useState(new URLSearchParams(location.search).get('mode') || 'login');
-  const [student,setStudent] = useState(()=>previewState==='empty'?{...demoStudent,history:[],mastery:{},streak:0}:demoStudent);
+  const [student,setStudent] = useState(()=>previewState==='empty'?{...demoStudent,history:[],mastery:{},streak:0}:{...demoStudent,isPro:previewState!=='free'});
   const [learningError,setLearningError] = useState(previewState==='error');
   const [learning,setLearning]=useState(()=>previewState==='empty'?{chapters:{}}:({chapters:{['UE9/'+catalogue.modules.UE9.chapters[0].id]:{lessonRead:true,quizBest:70,qualifyingQuizBest:70,quizAttempts:1,lastActivityAt:new Date().toISOString()}}}));
   const onLearning=async events=>setLearning(old=>events.reduce((p,e)=>applyLearningEvent(p,e,Date.now()),old));
@@ -71,7 +71,7 @@ export default function DesignPreview() {
     nav("subject_hub");
   };
   const content =
-    page === "annals" ? <AnnalsPreview onNav={nav}/> :
+    page === "annals" ? <AnnalsPreview user={student} onNav={nav}/> :
     page === "testimonials" ? <StudentReviews load={previewReviews} onNav={nav}/> :
     page === "paywall" ? <Paywall onUpgrade={()=>nav('pricing')} onBack={()=>nav('dashboard')}/> :
     page === "results_cas" ? <ResultsCas data={{ue:'UE9',duration:0,evaluation:null}} onDash={()=>nav('history')}/> :

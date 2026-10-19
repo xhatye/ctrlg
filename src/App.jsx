@@ -1,4 +1,4 @@
-import AnnalsPreview from './AnnalsPreview';
+import AnnalsPreview from './AnnalsLibrary';
 import { useState, useRef, useEffect } from "react";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInWithPopup, sendPasswordResetEmail } from "firebase/auth";
 import { onSnapshot, doc, getDoc, setDoc, updateDoc, arrayUnion, collection, addDoc, getDocs, query, orderBy, limit, increment } from "firebase/firestore";
@@ -373,6 +373,7 @@ export default function App() {
     if (["subject_hub", "qcm", "flashcards", "resume_cours", "cas_pratique"].includes(s) && nextUE) url += `?ue=${nextUE.id}${chapter?"&chapter="+encodeURIComponent(chapter):""}`;
     window.history.pushState({}, "", url);
     setScreen(s);
+    if(s === "annals") window.dispatchEvent(new PopStateEvent("popstate"));
   };
 
   const isPro = user?.isPro;
@@ -429,7 +430,7 @@ export default function App() {
     if (screen === 'testimonials') return <StudentReviews load={loadTestimonials} onNav={nav} />;
     if (screen === 'exams') return <ExamPage key={user.uid} user={user} ues={ALL_UES} onOpen={(module,chapter,target)=>openLearning(ALL_UES.find(u=>u.id===module),chapter,target)}/>;
     if (screen === 'review_today') return <ReviewToday key={user.uid} onExams={()=>nav('exams')} onOpen={(module,chapter,target)=>openLearning(ALL_UES.find(u=>u.id===module),chapter,target)}/>;
-    if (screen === 'annals') return <AnnalsPreview onNav={nav}/>;
+    if (screen === 'annals') return <AnnalsPreview key={user?.uid} user={user} onNav={nav}/>;
     if (screen === 'feedback') return <FeedbackForm key={user.uid}/>;
     if (screen === 'auth') return <Auth onForgot={()=>nav('forgot_password')} mode={authMode} setMode={setAuthMode} onDone={u => { setUser(u); if (u.isNew) setShowOnboarding(true); const plan = sessionStorage.getItem('simdcg-plan'); sessionStorage.removeItem('simdcg-plan'); nav('dashboard'); if (plan) upgrade(plan); }} onBack={() => nav('landing')} />;
     if (screen === 'dashboard') return <StudentHome user={user} ues={ALL_UES} onNav={nav} onSelect={selectUE} onOpen={openLearning} learning={learning} learningError={learningError} learningLoading={learningLoading} onRetry={reloadLearning} />;

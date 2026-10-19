@@ -1,3 +1,4 @@
+import LandingReviews from './LandingReviews';
 import GizmoDashboard from './GizmoDashboard';
 import PlayfulHeading from './PlayfulHeading';
 import { GizmoShell } from './gizmo-ui';
@@ -184,7 +185,7 @@ const faq = [
   ],
   [
     "Les exercices sont-ils des annales officielles ?",
-    "Non. Ce sont des exercices originaux enregistrés, portant sur des fondamentaux. Ils couvrent partiellement chaque matière et complètent vos cours et annales de votre session.",
+    "Les QCM et cas SIMDCG sont originaux. L’espace Annales propose séparément des PDF de sujets d’examen de l’État, avec leur source et un chronomètre. Il ne fournit pas de corrigés réservés aux enseignants.",
   ],
   [
     "Quelles matières sont couvertes ?",
@@ -192,7 +193,7 @@ const faq = [
   ],
   [
     "Que faire si j’ai payé mais que mon compte reste gratuit ?",
-    "Connectez-vous au compte utilisé lors de l’achat, puis ouvrez Mon compte et cliquez sur « J’ai déjà payé ». Si la recherche échoue, contactez contact.simdcg@gmail.com avec votre référence de paiement.",
+    "Connectez-vous au compte utilisé lors de l’achat, puis ouvrez Mon compte et cliquez sur « Retrouver mon achat ». Si la recherche échoue, contactez contact.simdcg@gmail.com avec votre référence de paiement.",
   ],
 ];
 function FAQ() {
@@ -297,10 +298,7 @@ export function Marketing({ onAuth, onNav, ues }) {
             <span className="pill">
               <i /> VOS RÉVISIONS DCG & DSCG
             </span>
-            <h1>
-              Réviser le DCG et le DSCG,
-              <br /><span>ça s’apprend aussi.</span>
-            </h1>
+            <PlayfulHeading as="h1" lines={['DCG & DSCG.', 'Vos UE, votre rythme.']} />
             <p>
               Cours, QCM expliqués, flashcards et cas corrigés.
               Préparez les UE que vous présentez, à votre rythme.
@@ -328,18 +326,22 @@ export function Marketing({ onAuth, onNav, ues }) {
                 <Icon name="check" size={15} /> Pro à 15 € / mois
               </span>
             </div>
-            <figure className="landing-people">
-              <img src="/landing/study-people-v5.webp" alt="Trois adultes dessinés en tenue élégante révisent ensemble : un homme en costume croisé rayé et deux femmes." width="1536" height="1024" decoding="async" />
-              <figcaption><strong>Vos UE.<br/>Votre rythme.</strong><span>Un espace pour garder le cap.</span></figcaption>
-            </figure>
+
           </div>
           <div className="landing-stage">
+            <img className="landing-companion" src="/illustrations/study-companion-v1.webp" alt="" width="220" height="220" decoding="async" />
+            <img className="landing-object landing-object-book" src="/navigation-3d-v1/library.webp" alt="" width="76" height="76" />
+            <img className="landing-object landing-object-calendar" src="/navigation-3d-v1/planning.webp" alt="" width="76" height="76" />
             <div className="landing-stage-halo" aria-hidden="true"/>
             <span className="landing-float landing-float-top" aria-hidden="true"><span>✦</span> Un peu chaque jour.</span>
             <HomeStudyPath ues={ues} onNav={onNav}/>
             <span className="landing-float landing-float-bottom" aria-hidden="true"><Icon name="check" size={17}/> Comprendre. Pratiquer. Retenir.</span>
           </div>
         </section>
+        <section className="container landing-annal-promo"><div><span className="eyebrow">LES VRAIES ÉPREUVES</span><h2>Le sujet sous les yeux.<br/>Le temps entre vos mains.</h2><p>139 PDF DCG et DSCG, un chronomètre par UE et votre brouillon.</p><a className="btn btn-secondary" href="/annales">Découvrir les annales →</a></div>            <figure className="landing-people">
+              <img src="/landing/study-people-v5.webp" alt="Trois adultes dessinés en tenue élégante révisent ensemble : un homme en costume croisé rayé et deux femmes." width="1536" height="1024" decoding="async" />
+              <figcaption><strong>Vos UE.<br/>Votre rythme.</strong><span>Un espace pour garder le cap.</span></figcaption>
+            </figure></section>
         <PublicEvidence />
         <section className="container library-numbers" aria-label="Contenu de la bibliothèque">{[[catalogue.totals.subjects,'matières DCG et DSCG'],[catalogue.totals.chapters,'chapitres de cours'],[catalogue.totals.curatedQuestions,'QCM expliqués'],[catalogue.totals.cards,'flashcards'],[catalogue.totals.curatedCases,'cas et ateliers corrigés']].map(([count,label])=><div key={label}><strong>{count.toLocaleString('fr-FR')}</strong><span>{label}</span></div>)}<p>Contenus originaux. Variantes chiffrées comptées séparément.</p></section>
         <div className="container exam-home"><ExamCountdown /></div>
@@ -412,6 +414,7 @@ export function Marketing({ onAuth, onNav, ues }) {
             ))}
           </div>
         </section>
+        <LandingReviews />
         <section className="container cta-band">
           <span className="icon-tile">
             <Icon name="spark" size={30} />

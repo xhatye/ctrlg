@@ -41,7 +41,7 @@ export function useLandingMotion() {
     };
     const move=e=>{
       if(!motion.matches||!pointer.matches||e.pointerType==='touch')return;
-      const card=e.target.closest?.('.landing-stage,.landing-people,.feature-card,.marketing-subjects>button,.proof-grid>article,.cta-band');
+      const card=e.target.closest?.('.landing-stage,.landing-people,.feature-card,.marketing-subjects>a,.proof-grid>article,.cta-band');
       if(card!==active){resetCard();active=card;}
       const heroActive=hero?.contains(e.target),x=e.clientX,y=e.clientY;
       cancelAnimationFrame(frame);
