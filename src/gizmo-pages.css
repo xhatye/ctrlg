@@ -15,7 +15,7 @@
   --success:#87dfba;--success-soft:#173c30;--success-line:#448768;--danger:#ffacbe;--danger-soft:#442332;--danger-line:#ad607c;
   --on-accent:#fff;--on-accent-muted:#ede9fe;--shadow:0 6px 28px #0003;
 }
-body { font-family:'Segoe UI',system-ui,sans-serif!important; }
+body { font-family:'Nunito Sans',system-ui,sans-serif!important; }
 .btn { border-radius:14px;min-height:46px;background:#7c3aed;border-color:#7c3aed;color:#fff;box-shadow:0 3px 0 #5b21b6;font-weight:700;transition:transform 150ms,background 150ms,box-shadow 150ms; }
 .btn:hover { background:#6d28d9;color:#fff;transform:translateY(-2px); }.btn:active { transform:translateY(1px);box-shadow:none; }
 .btn-secondary { background:var(--surface);color:var(--ink);border-color:var(--line);box-shadow:none; }.btn-secondary:hover { background:var(--gold-soft);color:var(--gold-text); }

@@ -1,7 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { createContext, useContext, useEffect, useRef, useState } from 'react';
 import './gizmo-design.css';
+import './workspace-refresh.css';
 import { useTheme } from './theme';
 import StudySearch from './StudySearch';
+const SearchContext = createContext(() => {});
+export const useStudySearch = () => useContext(SearchContext);
 
 const paths = {
   home:'M3 11 12 3l9 8v10h-7v-7h-4v7H3z', book:'M12 5v16M3 4h5a4 4 0 0 1 4 2 4 4 0 0 1 4-2h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3z',
@@ -18,7 +21,7 @@ export function StudyIcon({name='spark',size=22}) {
 }
 export function StudyBrand({onClick}) {
   return <button className="g-brand" onClick={onClick} aria-label="SIMDCG, mon espace">
-    <span className="g-brand-mark" aria-hidden="true">S<span>✦</span></span><span>SIMDCG<small>Votre réussite, UE par UE.</small></span>
+    <span className="g-brand-mark" aria-hidden="true">S<span>✦</span></span><span>SIMDCG</span>
   </button>;
 }
 export function StudyArt() {
@@ -36,7 +39,7 @@ export function StudyArt() {
   </svg>;
 }
 const links = [
-  ['dashboard','home','Mon espace'], ['library','book','Mes UE'], ['review_today','cards','À revoir aujourd’hui'],
+  ['dashboard','home','Accueil'], ['library','book','Mes UE'], ['review_today','cards','À revoir aujourd’hui'],
   ['exams','check','Mode examen'], ['annals','book','Annales'], ['planning','calendar','Mon planning'], ['progress','chart','Ma progression'],
   ['history','clock','Historique'], ['tutor','spark','Tuteur IA'], ['interview_config','user','Préparer l’oral par écrit'], ['account','user','Mon compte'],
 ];
@@ -44,6 +47,9 @@ export function GizmoShell({children,screen,user,onNav,onLogout}) {
   const { theme, toggle } = useTheme();
   const [open,setOpen] = useState(false);
   const [searchOpen,setSearchOpen] = useState(false);
+  const secondaryKeys = ['history','tutor','interview_config'];
+  const [moreOpen,setMoreOpen] = useState(secondaryKeys.includes(screen));
+  useEffect(()=>{if(['history','tutor','interview_config'].includes(screen))setMoreOpen(true);},[screen]);
   const shortcut=/Mac|iPhone|iPad/.test(globalThis.navigator?.platform || '')?'⌘ K':'Ctrl K';
   useEffect(()=>{
     const search=e=>{if((e.metaKey||e.ctrlKey)&&!e.altKey&&!e.shiftKey&&e.key.toLowerCase()==='k'){e.preventDefault();if(!e.repeat){setOpen(false);setSearchOpen(v=>!v);}}};
@@ -56,7 +62,7 @@ export function GizmoShell({children,screen,user,onNav,onLogout}) {
     const old = document.body.style.overflow;
     document.body.style.overflow='hidden'; closeRef.current?.focus();
     const escape = e => { if (e.key==='Escape') { setOpen(false); menuRef.current?.focus(); }
-      if(e.key==='Tab') { const controls=[...document.querySelectorAll('.g-sidebar button')]; const first=controls[0],last=controls.at(-1);
+      if(e.key==='Tab') { const controls=[...document.querySelectorAll('.g-sidebar button,.g-sidebar summary')].filter(el=>el.getClientRects().length); const first=controls[0],last=controls.at(-1);
         if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();} } };
     document.addEventListener('keydown',escape);
     return () => { document.body.style.overflow=old; document.removeEventListener('keydown',escape); };
@@ -67,11 +73,12 @@ export function GizmoShell({children,screen,user,onNav,onLogout}) {
     {open&&<button className="g-menu-scrim" aria-label="Fermer le menu" onClick={()=>setOpen(false)}/>}
     <aside className={'g-sidebar'+(open?' g-sidebar-open':'')} role={open?'dialog':undefined} aria-modal={open?true:undefined} aria-label="Navigation étudiant">
       <div className="g-sidebar-brand"><StudyBrand onClick={()=>go('dashboard')}/><button className="g-close-menu" ref={closeRef} onClick={()=>{setOpen(false);menuRef.current?.focus();}} aria-label="Fermer la navigation"><StudyIcon name="close"/></button></div>
-      <div className="g-sidebar-label">MON PARCOURS</div>
-      <nav aria-label="Navigation de l’espace étudiant">{links.map(([key,icon,label],i)=>{const active=screen===key||key==='library'&&['subject_hub','qcm','flashcards','resume_cours','cas_pratique'].includes(screen);return <button key={key} className={(active?'active ':'')+'g-nav-'+i} aria-current={active?'page':undefined} onClick={()=>go(key)}>
-        <span className="g-nav-icon"><StudyIcon name={icon}/></span><span>{label}</span>{key==='tutor'&&<small>IA</small>}
-      </button>;})}</nav>
-      <div className="g-sidebar-footer"><div className="g-sidebar-note"><span>✧</span><strong>Un petit pas aujourd’hui.</strong><p>Une notion mieux comprise pour avancer demain.</p></div>
+      <nav aria-label="Navigation de l’espace étudiant">{links.filter(([key])=>!secondaryKeys.includes(key)).map(([key,icon,label])=>{const i=links.findIndex(link=>link[0]===key);const active=screen===key||key==='library'&&['subject_hub','qcm','flashcards','resume_cours','cas_pratique'].includes(screen);return <button key={key} className={(active?'active ':'')+'g-nav-'+i} aria-current={active?'page':undefined} onClick={()=>go(key)}>
+        <span className="g-nav-icon"><StudyIcon name={icon}/></span><span>{label}</span>
+      </button>;})}
+      <details className="g-more-tools" open={moreOpen} onToggle={e=>setMoreOpen(e.currentTarget.open)}><summary>Autres outils <span aria-hidden="true">⌄</span></summary><div>{links.filter(([key])=>secondaryKeys.includes(key)).map(([key,icon,label])=><button key={key} aria-current={screen===key?'page':undefined} className={screen===key?'active':''} onClick={()=>go(key)}><span className="g-nav-icon"><StudyIcon name={icon}/></span><span>{label}</span></button>)}</div></details>
+      </nav>
+      <div className="g-sidebar-footer">
         <button onClick={()=>go('feedback')}>Partager mon retour <StudyIcon name="arrow" size={16}/></button>
         <button onClick={onLogout}><StudyIcon name="logout" size={16}/>Se déconnecter</button>
       </div>
@@ -84,7 +91,7 @@ export function GizmoShell({children,screen,user,onNav,onLogout}) {
           <button className="g-plan-pill" onClick={()=>go(user.isPro?'account':'pricing')}>{user.isPro?'Pro':'Voir les offres'}</button>
           <button className="g-avatar" aria-label="Mon compte" onClick={()=>go('account')}>{user.name?.slice(0,2).toUpperCase() || 'S'}</button></div>
       </header>
-      <main id="g-main" className="workspace-main" tabIndex={-1}>{children}</main>
+      <main id="g-main" className="workspace-main" tabIndex={-1}><SearchContext.Provider value={()=>setSearchOpen(true)}>{children}</SearchContext.Provider></main>
       <StudySearch open={searchOpen} onClose={()=>setSearchOpen(false)} onSelect={item=>onNav(item.kind==='subject'?'subject_hub':'resume_cours',{module:item.module,chapter:item.chapter})}/>
       <nav className="g-mobile-nav" aria-label="Accès rapides">{links.slice(0,4).map(([key,icon,label])=><button key={key} className={screen===key?'active':''} aria-current={screen===key?'page':undefined} onClick={()=>go(key)}><StudyIcon name={icon}/><span>{key==='review_today'?'À revoir':label}</span></button>)}</nav>
     </div>

@@ -4,7 +4,7 @@
   --g-paper:#f8f9fc; --g-surface:#fff; --g-line:#e9eaf1; --g-lavender:#f0ebff;
   --g-mint:#e9f8f1; --g-peach:#fff0e6; --g-radius:24px; --g-shadow:0 6px 24px rgba(30,35,60,.035);
   display:grid; grid-template-columns:238px minmax(0,1fr); min-height:100vh;
-  background:var(--g-paper);color:var(--g-ink);font-family:'Segoe UI',system-ui,sans-serif;
+  background:var(--g-paper);color:var(--g-ink);font-family:'Nunito Sans',system-ui,sans-serif;
   color-scheme:light;
 }
 body:has(.g-workspace) { background:#f8f9fc!important; color:#172033!important; }

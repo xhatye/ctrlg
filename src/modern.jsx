@@ -558,7 +558,7 @@ function Title({ eyebrow, title, desc, children }) {
   return (
     <div className="page-title">
       <div>
-        <span className="eyebrow">{eyebrow}</span>
+        {eyebrow && <span className="eyebrow">{eyebrow}</span>}
         <h1>{title}</h1>
         {desc && <p>{desc}</p>}
       </div>
@@ -580,17 +580,17 @@ function UECard({ ue, mastery, onClick }) {
       <h3>{ue.label}</h3>
       <p>{ue.desc}</p>
       <span className="ue-content-count">{catalogue.modules[ue.id]?.chapters.length} cours · {catalogue.modules[ue.id]?.curatedQuestionCount} QCM de notions</span>
-      <div className="ue-mastery">
+      {mastery?.attempts > 0 && <div className="ue-mastery">
         <span>
           {mastery?.attempts
             ? `${mastery.attempts} session${mastery.attempts > 1 ? "s" : ""} · meilleur QCM`
             : "Votre prochain déclic vous attend"}
         </span>
         {mastery?.attempts && <strong>{mastery.best}%</strong>}
-      </div>
-      <div className="progress-track">
+      </div>}
+      {mastery?.attempts > 0 && <div className="progress-track">
         <i style={{ width: `${mastery?.best || 0}%`, background: ue.color }} />
-      </div>
+      </div>}
     </button>
   );
 }
@@ -773,12 +773,8 @@ export function LibraryPage({ ues, user, onSelect }) {
         .includes(query.toLocaleLowerCase("fr")),
   );
   return (
-    <div className="page">
-      <Title
-        eyebrow="VOTRE BIBLIOTHÈQUE DE RÉVISION"
-        title="Une matière. Tous vos outils."
-        desc="Choisissez votre matière pour retrouver fiches, QCM, flashcards et cas pratiques."
-      />
+    <div className="page library-page">
+      <Title title="Mes UE" desc="Choisissez la matière que vous préparez." />
       <label className="chapter-select programme-select">Programme<select aria-label="Programme" value={programme} onChange={e=>setProgramme(e.target.value)}><option value="2027">Session 2027, nouveaux intitulés</option><option value="2026">Session 2026</option></select></label>
       <div className="library-toolbar">
         <div className="tabs">
@@ -834,18 +830,7 @@ export function CourseHome({ ue, user, onNav, learning }) {
           <SubjectIcon id={ue.id} size={72}/>
         </span>
       </Title>
-      <section className="course-intro panel">
-        <span className="pill">VOTRE PARCOURS DANS CETTE MATIÈRE</span>
-        <h2>
-          Commencez par comprendre.
-          <br />
-          Terminez par vous tester.
-        </h2>
-        <p>
-          Des cours par chapitre et des exercices sur les fondamentaux. Ce parcours
-          complète vos cours et ne couvre pas tout le programme.
-        </p>
-      </section>
+      <p className="course-coverage">Cours, entraînements et suivi par chapitre. Un complément à vos cours, avec une couverture partielle du programme.</p>
       <div className="course-tools">
         {[
           [
@@ -1059,11 +1044,7 @@ export function AccountPage({ user, onNav, onCheckout, request }) {
   };
   return (
     <div className="page account-page">
-      <Title
-        eyebrow="VOTRE COMPTE"
-        title="Tout est ici."
-        desc="Votre profil, votre accès et une aide si vous en avez besoin."
-      />
+      <Title title="Mon compte" />
       <section className="panel profile-card">
         <span className="avatar large">
           {user.name?.slice(0, 2).toUpperCase()}
@@ -1078,20 +1059,20 @@ export function AccountPage({ user, onNav, onCheckout, request }) {
       </section>
       <div className="account-grid">
         <section className="panel">
-          <span className="eyebrow">VOTRE ACCÈS</span>
+          <span className="eyebrow">Abonnement</span>
           <h2>
             {user.isPro
               ? user.proType === "pack_examen"
                 ? "Pack Examen"
                 : "SIMDCG Pro"
-              : "Découvrez votre espace"}
+              : "Choisir mon accès"}
           </h2>
           <p>
             {user.isPro
               ? user.proExpiresAt
                 ? `Accès jusqu’au ${new Date(user.proExpiresAt).toLocaleDateString("fr-FR")}.`
-                : "Votre abonnement est actif. Les outils de révision sont débloqués."
-              : "Choisissez une offre pour utiliser les outils de révision IA."}
+                : "Votre accès Pro est actif."
+              : "Cours, QCM, cartes et dossiers DCG et DSCG."}
           </p>
           <Button onClick={() => onNav(user.isPro ? "library" : "pricing")}>
             {user.isPro ? "Reprendre mes révisions" : "Voir les offres"}
@@ -1121,16 +1102,13 @@ export function AccountPage({ user, onNav, onCheckout, request }) {
           )}
         </section>
         <section className="panel recovery-panel">
-          <span className="icon-tile gold">
-            <Icon name="check" />
-          </span>
-          <h2>Vous avez déjà payé ?</h2>
+          <span className="eyebrow">Un achat à retrouver</span>
+          <h2>Déjà abonné ?</h2>
           <p>
-            Vérifiez vos achats pour retrouver votre accès. Les anciens
-            paiements sont recherchés avec l’adresse de ce compte.
+            Retrouvez vos achats avec l’adresse email de ce compte.
           </p>
           <Button secondary disabled={busy} onClick={() => recover()}>
-            {busy ? "Vérification en cours…" : "J’ai déjà payé"}
+            {busy ? "Vérification en cours…" : "Retrouver mon achat"}
             <Icon name="arrow" />
           </Button>
           {!auth.currentUser?.emailVerified && (
@@ -1152,8 +1130,7 @@ export function AccountPage({ user, onNav, onCheckout, request }) {
             </button>
           )}
           <p className="helper">
-            Un autre email utilisé au paiement ? Contactez le support avec votre
-            référence.
+            Un autre email au paiement ? Le support peut vous aider.
           </p>
         </section>
       </div>
@@ -1165,10 +1142,9 @@ export function AccountPage({ user, onNav, onCheckout, request }) {
       <section className="bottom-note">
         <Icon name="user" />
         <div>
-          <strong>Besoin d’un coup de main ?</strong>
+          <strong>Une question ?</strong>
           <p>
-            Écrivez-nous avec l’adresse de votre compte et votre référence de
-            paiement.
+            Notre support vous répond par email.
           </p>
         </div>
         <a className="btn btn-secondary" href="mailto:contact.simdcg@gmail.com">

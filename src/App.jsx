@@ -1076,7 +1076,7 @@ function Footer({ onCgu, onConfidentialite }) {
 
 // ── STYLES ────────────────────────────────────────────────────────────────────
 const S = {
-  root: { minHeight: "100vh", background: "var(--paper)", color: "var(--ink)", fontFamily: "'Inter',system-ui,sans-serif", position: "relative", overflow: "hidden" },
+  root: { minHeight: "100vh", background: "var(--paper)", color: "var(--ink)", fontFamily: "'Nunito Sans',system-ui,sans-serif", position: "relative", overflow: "hidden" },
   nav: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "14px 24px", borderBottom: "1px solid var(--surface)", background: "var(--surface-translucent)", backdropFilter: "blur(12px)", position: "relative", zIndex: 2 },
   nl: { background: "none", border: "none", color: "var(--muted)", fontSize: 13, cursor: "pointer", fontFamily: "inherit" },
   no: { borderRadius: 14, background: "none", border: "1px solid var(--line)", color: "var(--muted)", fontSize: 12, padding: "6px 14px", cursor: "pointer", fontFamily: "inherit" },
