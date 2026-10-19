@@ -35,7 +35,7 @@ function Dashboard({user,ues,onNav,onSelect,onOpen,learning={},learningError,lea
   return <div className="g-dashboard g-dashboard-refresh">
     <div className="g-home-heading"><h1>Accueil</h1><span>Bonjour {user.name?.split(' ')[0] || 'à vous'}</span></div>
     <section className="g-study-start" aria-labelledby="g-start-title">
-      <div className="g-study-prompt"><img src="/illustrations/study-companion-v1.webp" alt="" width="184" height="184" fetchPriority="high"/><div><p>Votre DCG. Votre DSCG.</p><h2 id="g-start-title">On révise quoi<br/>aujourd’hui ?</h2></div></div>
+      <div className="g-study-prompt"><img src="/illustrations/study-companion-v1.webp" alt="" width="184" height="184" fetchpriority="high"/><div><p>Votre DCG. Votre DSCG.</p><h2 id="g-start-title">On révise quoi<br/>aujourd’hui ?</h2></div></div>
       <button className="g-study-search" onClick={search}><StudyIcon name="search" size={23}/><span>Une UE, un chapitre, une notion…</span><StudyIcon name="arrow" size={21}/></button>
       <div className="g-start-actions" aria-label="Choisir un entraînement">{[
         ['book','Cours','resume_cours'],['check','QCM','qcm'],['cards','Flashcards','flashcards'],['calendar','Cas pratique','cas_pratique'],
