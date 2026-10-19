@@ -9,8 +9,8 @@ const baseline=JSON.parse(readFileSync(new URL('./fixtures/activity-baseline-202
 const hash=value=>createHash('sha256').update(JSON.stringify(value)).digest('hex');
 test('new retrieval tasks preserve every old quiz/card prefix and numeric variant boundary',()=>{
  let oldQuiz=0,oldCards=0,newQuiz=0,newCards=0,cases=0;
- for(const [id,m]of Object.entries(MODULES))for(const c of m.chapters){
-  const old=baseline.chapters[id+'/'+c.id];assert.ok(old);oldQuiz+=old.quizCount;oldCards+=old.cardCount;newQuiz+=c.quiz.length;newCards+=c.cards.length;
+ for(const [key,old]of Object.entries(baseline.chapters)){
+  const [id,chapter]=key.split('/'),c=MODULES[id]?.chapters.find(c=>c.id===chapter);assert.ok(c,'Legacy chapter must remain addressable: '+key);oldQuiz+=old.quizCount;oldCards+=old.cardCount;newQuiz+=c.quiz.length;newCards+=c.cards.length;
   assert.equal(hash(c.quiz.slice(0,old.quizCount)),old.quizHash,id+'/'+c.id+' quiz IDs must retain their meaning');
   assert.equal(hash(c.cards.slice(0,old.cardCount)),old.cardHash,id+'/'+c.id+' card IDs must retain their meaning');
   for(const item of c.quiz.slice(old.quizCount)){assert.equal(item.wrongReasons.length,3);assert.equal(new Set([item.correct,...item.wrong]).size,4);assert.ok(item.body.length>40);}

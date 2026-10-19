@@ -25,7 +25,7 @@ test("all advertised modules have unambiguous quizzes and separate recall cards"
     assert.equal(studyModule(id, "case").questions.length, 3);
     total += m.notions.length;
   }
-  assert.equal(total, 6584);
+  assert.equal(total, 6664);
 });
 test("numeric starter corrections agree with independent calculations", () => {
   assert.equal(

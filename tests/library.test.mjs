@@ -15,7 +15,7 @@ test('every chapter provides original prose, a complete correction, provenance a
     assert.equal(new Set(m.chapters.map(c=>c.id)).size,m.chapters.length);
     for(const c of m.chapters){
       chapters++;assert.ok(c.intro&&c.method&&c.pitfalls.length);
-      assert.equal(c.verifiedAt,'2026-10-13');assert.ok(c.rights.includes('originaux'));
+      assert.equal(c.verifiedAt,c.editorial&&!['chaine-comptable','offre-acceptation','audit-planification'].includes(c.id)?'2026-10-19':'2026-10-13');assert.ok(c.rights.includes('originaux'));
       assert.ok(c.sources.length);for(const [label,url]of c.sources){assert.ok(label);assert.equal(new URL(url).protocol,'https:');}
       assert.equal(c.cas.questions.length,3);assert.ok(c.cas.contexte);
       for(const q of c.cas.questions)assert.ok(q.enonce&&q.answer);
@@ -28,7 +28,7 @@ test('every chapter provides original prose, a complete correction, provenance a
       assert.equal(studyModule(id,'summary',Math.random,{chapter:c.id}).example.contexte,c.cas.contexte);
     }
   }
-  assert.equal(chapters,205);assert.equal(questions.size,6584);
+  assert.equal(chapters,225);assert.equal(questions.size,6664);
 });
 test('public catalogue contains counts and titles, never premium answers or lesson bodies',async()=>{
   const published=JSON.parse(readFileSync(new URL('../src/catalogue.json',import.meta.url),'utf8'));
@@ -37,7 +37,7 @@ test('public catalogue contains counts and titles, never premium answers or less
     assert.deepEqual(meta,published.modules[id]);
     const json=JSON.stringify(meta);for(const n of m.notions){assert.ok(!json.includes(n.q));assert.ok(!json.includes(n.body));}
   }
-  assert.equal(published.totals.subjects,20);assert.equal(published.totals.chapters,205);assert.equal(published.totals.applications,636000);assert.equal(published.totals.concepts,824);assert.equal(published.totals.curatedCases,410);assert.equal(published.totals.questions,published.totals.curatedQuestions+published.totals.applications);assert.notEqual(published.totals.curatedQuestions,published.totals.cards);
+  assert.equal(published.totals.subjects,20);assert.equal(published.totals.chapters,225);assert.equal(published.totals.applications,636000);assert.equal(published.totals.concepts,904);assert.equal(published.totals.curatedCases,450);assert.equal(published.totals.questions,published.totals.curatedQuestions+published.totals.applications);assert.notEqual(published.totals.curatedQuestions,published.totals.cards);
 });
 test('new premium chapters remain protected, and invalid chapters never read user data',async()=>{
   const noAuth={authenticate:async()=>{throw Object.assign(new Error('Connexion requise'),{status:401})}};

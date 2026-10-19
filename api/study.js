@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     const url = new URL(req.url, "https://simdcg.com");
     const id = url.searchParams.get("ue"),
       tool = url.searchParams.get("tool") || "summary";
-    if(!Object.hasOwn(MODULES,id)||!['summary','qcm','cards','case','catalog'].includes(tool))throw Object.assign(new Error('Contenu introuvable.'),{status:404});
+    if(!Object.hasOwn(MODULES,id)||!['summary','qcm','cards','case','catalog','reading','sheet','cloze','visuals'].includes(tool))throw Object.assign(new Error('Contenu introuvable.'),{status:404});
     const settings={chapter:url.searchParams.get('chapter') || undefined,count:url.searchParams.has('count')?Number(url.searchParams.get('count')):undefined,variant:url.searchParams.has('variant')?Number(url.searchParams.get('variant')):undefined,focus:url.searchParams.get('focus') || 'all'};
     if(!['all','knowledge','application'].includes(settings.focus))throw Object.assign(new Error('Type de série invalide.'),{status:400});
     const chapter=selectedChapter(id,settings.chapter) || MODULES[id].chapters[0];

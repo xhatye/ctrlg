@@ -25,7 +25,7 @@ test('205 lesson maps and tables use canonical course concepts, and private visu
       assert.doesNotThrow(()=>JSON.stringify(v));
     }
   }
-  assert.equal(chapters,205);assert.equal(numeric,60);assert.equal(models,8);
+  assert.equal(chapters,225);assert.equal(numeric,60);assert.equal(models,8);
 });
 
 test('eight visual models match independently derived reference results',()=>{

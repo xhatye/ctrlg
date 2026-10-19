@@ -7,7 +7,7 @@ const request=async url=>{
 };
 test('all lessons require sign-in; only titles and volumes remain public',async()=>{
   for(const ue of ['UE9','UE1','DSCG7'])for(const tool of ['summary','qcm','cards','case'])assert.equal((await request(`/api/study?ue=${ue}&tool=${tool}`)).status,401);
-  const metadata=await request('/api/study?ue=DSCG7&tool=catalog');assert.equal(metadata.status,200);assert.equal(metadata.data.chapters.length,8);assert.equal(metadata.data.sections,undefined);
+  const metadata=await request('/api/study?ue=DSCG7&tool=catalog');assert.equal(metadata.status,200);assert.equal(metadata.data.chapters.length,9);assert.equal(metadata.data.sections,undefined);
 });
 test('study route rejects invalid chapter, size and tool before Firebase initialization',async()=>{
   for(const url of ['/api/study?ue=UE2&tool=summary&chapter=missing','/api/study?ue=UE2&tool=all','/api/study?ue=constructor&tool=qcm'])assert.equal((await request(url)).status,404);

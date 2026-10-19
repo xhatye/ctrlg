@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import catalogue from './catalogue.json';
 import {learningSteps,chapterKey} from '../lib/learning-progress.mjs';
+import {ChapterFormats} from './ChapterFormats';
 
 export function ChapterSelect({id,value,onChange,all=false,disabled=false}) {
   const chapters=catalogue.modules[id]?.chapters || [];
@@ -32,7 +33,7 @@ export function ChapterSelect({id,value,onChange,all=false,disabled=false}) {
   </div>;
 }
 
-export function StudySession({ue,kind,children}) {
+export function StudySession({ue,kind,children,onNav}) {
   const [settingsOpen,setSettingsOpen]=useState(()=>window.innerWidth>760);
   const [chapter,setChapter]=useState(ue.chapter || 'all'),[count,setCount]=useState(kind==='cards'?40:8),[focus,setFocus]=useState('knowledge');
   useEffect(()=>setChapter(ue.chapter || 'all'),[ue.id,ue.chapter]);
@@ -41,11 +42,13 @@ export function StudySession({ue,kind,children}) {
   const knowledge=(selected?selected.comprehensionCount:stats?.comprehensionCount)>0;
   const applications=(selected?selected.applicationCount:stats?.applicationCount)>0;
   const effectiveFocus=focus==='knowledge'&&!knowledge?'application':focus==='application'&&!applications?'knowledge':focus;
+  const changeChapter=c=>{setChapter(c);const u=new URL(location.href);u.searchParams.set('ue',ue.id);if(c==='all')u.searchParams.delete('chapter');else u.searchParams.set('chapter',c);history.replaceState(history.state,'',u);};
   return <div className="chapter-session">
+    {onNav&&chapter!=='all'&&<div className="page chapter-exercise-tabs"><ChapterFormats ue={{...ue,chapter}} active={kind==='cards'?'flashcards':'qcm'} onNav={onNav}/></div>}
     <details className="session-settings" open={settingsOpen} onToggle={e=>setSettingsOpen(e.currentTarget.open)}>
       <summary>Réglages de la série <span>{ue.id.replace('DSCG','UE')} · {count} {kind==='cards'?'cartes':'questions'} maximum</span></summary>
     <div className="session-controls">
-      <ChapterSelect id={ue.id} value={chapter} onChange={setChapter} all />
+      <ChapterSelect id={ue.id} value={chapter} onChange={changeChapter} all />
       <label className="chapter-select">Objectif de la série<select aria-label="Objectif de la série" value={effectiveFocus} onChange={e=>setFocus(e.target.value)}><option value="knowledge" disabled={!knowledge}>Comprendre les notions</option><option value="application" disabled={!applications}>Appliquer les calculs</option><option value="all">Mixer les deux</option></select></label>
       <label className="chapter-select">Longueur de la série<select aria-label="Longueur de la série" value={count} onChange={e=>setCount(Number(e.target.value))}>{(kind==='cards'?[4,20,40,60,100]:[4,8,12,20]).map(n=><option key={n} value={n}>{n} {kind==='cards'?'cartes':'questions'} maximum</option>)}</select></label>
       <span className="helper">Séries de notions et exercices de calcul sont séparés. Changer le choix relance la série.</span>
@@ -54,18 +57,17 @@ export function StudySession({ue,kind,children}) {
   </div>;
 }
 
-export function ChapterLibrary({ue,onOpen,learning={}}) {
-  const [query,setQuery]=useState('');
-  const stats=catalogue.modules[ue.id];
-  const chapters=stats?.chapters.filter(c=>c.title.toLocaleLowerCase('fr').includes(query.toLocaleLowerCase('fr'))) || [];
-  return <section className="chapter-library">
-    <div className="section-heading compact"><div><span className="eyebrow">À VOTRE RYTHME</span><h2>Les chapitres de cette matière</h2></div><span className="helper">{stats?.chapters.length} cours · {stats?.curatedQuestionCount ?? stats?.comprehensionCount} QCM de notions · {stats?.cardCount} cartes de rappel</span></div>
-    <label className="search-input"><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Trouver un chapitre" aria-label="Rechercher un chapitre" /></label>
-    <div className="chapter-grid">{chapters.map((c,i)=>{const status=learningSteps(learning.chapters?.[chapterKey(ue.id,c.id)]);return <article className="chapter-card" key={c.id}>
-      <span className="chapter-number">{String(stats.chapters.indexOf(c)+1).padStart(2,'0')}</span><h3>{c.title}</h3><p>{c.minutes} min de lecture et révision</p><div className="chapter-content-tags"><span>{c.curatedQuestionCount ?? c.comprehensionCount} QCM de notions</span><span>{c.cardCount ?? 0} cartes de rappel</span><span>{c.curatedCaseCount ?? 1} modèle{(c.curatedCaseCount ?? 1)>1?"s":""} de cas</span>{c.applicationCount>0&&<span>Calculs à variantes</span>}</div>
-      <span className="chapter-progress">{status.done}/4 étapes réalisées</span><div className="progress-track"><i style={{width:status.done*25+'%'}} /></div>
-      <div className="chapter-actions">{[['resume_cours','Lire le cours'],['qcm','Faire un QCM'],['flashcards','Réviser les cartes'],['cas_pratique','Travailler un cas']].map(([key,label])=><button key={key} onClick={()=>onOpen(key,c.id)}>{label}<span aria-hidden="true">↗</span></button>)}</div>
-    </article>})}</div>
-    {!chapters.length&&<p className="empty-state">Aucun chapitre ne correspond à cette recherche.</p>}
-  </section>;
+export function ChapterLibrary({ue,onOpen,learning={}}){
+ const [query,setQuery]=useState('');const stats=catalogue.modules[ue.id];
+ const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('fr');
+ const chapters=stats?.chapters.filter(c=>normalize(c.title+' '+c.searchTerms.join(' ')).includes(normalize(query)))||[];
+ const groups=[...new Map(chapters.map(c=>[c.block.id,c.block])).values()].sort((a,b)=>a.order-b.order);
+ return <section className="chapter-library"><div className="section-heading compact"><div><span className="eyebrow">À VOTRE RYTHME</span><h2>Les chapitres de cette matière</h2></div><span className="helper">{stats.chapters.length} cours et fiches · {stats.curatedQuestionCount} QCM · {stats.cardCount} cartes · {stats.clozeCount} textes à trous</span></div>
+ <label className="search-input"><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Trouver un chapitre ou une notion" aria-label="Rechercher un chapitre"/></label>
+ <nav className="library-block-links" aria-label="Blocs de la matière">{groups.map(g=><a key={g.id} href={'#library-'+g.id}>{g.title}</a>)}</nav>
+ {groups.map(g=><section className="library-topic-block" id={'library-'+g.id} key={g.id}><header><span className="eyebrow">BLOC {g.order+1}</span><h3>{g.title}</h3><p>{chapters.filter(c=>c.block.id===g.id).length} chapitres disponibles · repères éditoriaux, couverture partielle du programme</p></header><div className="chapter-grid">{chapters.filter(c=>c.block.id===g.id).map(c=>{const progress=learning.chapters?.[chapterKey(ue.id,c.id)],status=learningSteps(progress);return <article className="chapter-card" key={c.id}>
+ <span className="chapter-number">{String(stats.chapters.indexOf(c)+1).padStart(2,'0')}</span><h4>{c.title}</h4><p>{c.minutes} min de lecture et révision</p><div className="chapter-content-tags"><span>{c.curatedQuestionCount} QCM</span><span>{c.cardCount} cartes</span><span>{c.curatedCaseCount} cas ou ateliers</span>{c.clozeCount>0&&<span>{c.clozeCount} textes à trous</span>}{c.applicationCount>0&&<span>Calculs à variantes</span>}</div>
+ <span className="chapter-progress">{status.done}/4 étapes réalisées{progress?.clozeAnswered>0?` · textes à trous : dernier résultat ${progress.clozeLast} %`:''}</span><div className="progress-track"><i style={{width:status.done*25+'%'}}/></div>
+ <div className="chapter-actions">{[['resume_cours','Lire le cours','reading'],['resume_cours','La fiche','sheet'],...(c.clozeCount>0?[['resume_cours','Texte à trous','cloze']]:[]),['qcm','Faire un QCM'],['flashcards','Réviser les cartes'],['cas_pratique','Travailler un cas']].map(([key,label,format])=><button key={label} onClick={()=>onOpen(key,c.id,format)}>{label}<span aria-hidden="true">↗</span></button>)}</div></article>;})}</div></section>)}
+ {!chapters.length&&<p className="empty-state">Aucun chapitre ne correspond à cette recherche.</p>}</section>;
 }

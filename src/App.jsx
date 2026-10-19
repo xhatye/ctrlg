@@ -370,7 +370,7 @@ export default function App() {
     let url = SCREEN_TO_URL[s] || "/";
     if (['dcg','dscg','resources'].includes(s)) { window.location.assign(url); return; }
     if (s === "auth") url = (opts.mode === "signup") ? "/inscription" : "/connexion";
-    if (["subject_hub", "qcm", "flashcards", "resume_cours", "cas_pratique"].includes(s) && nextUE) url += `?ue=${nextUE.id}${chapter?"&chapter="+encodeURIComponent(chapter):""}`;
+    if (["subject_hub", "qcm", "flashcards", "resume_cours", "cas_pratique"].includes(s) && nextUE) url += `?ue=${nextUE.id}${chapter?"&chapter="+encodeURIComponent(chapter):""}${opts.format?"&format="+encodeURIComponent(opts.format):""}`;
     window.history.pushState({}, "", url);
     setScreen(s);
     if(s === "annals") window.dispatchEvent(new PopStateEvent("popstate"));
@@ -438,10 +438,10 @@ export default function App() {
     if (screen === 'subject_hub') return <CourseHome ue={selectedUE} user={user} onNav={nav} learning={learning} />;
     if (screen === 'account') return <AccountPage user={user} onNav={nav} onCheckout={upgrade} request={billingRequest} />;
     if (screen === 'tutor') return <TutorPage ues={ALL_UES} call={callClaude} user={user} onNav={nav} />;
-    if (screen === 'qcm') return <QCMScreen key={selectedUE.id} ue={selectedUE} user={user} onDone={onQCMDone} onBack={() => nav('subject_hub')} />;
-    if (screen === 'flashcards') return <FlashcardsScreen key={selectedUE.id} ue={selectedUE} user={user} onLearning={onLearning} onBack={() => nav('subject_hub')} onUpgrade={() => upgrade()} />;
-    if (screen === 'resume_cours') return <SavedLesson key={selectedUE.id} ue={selectedUE} user={user} onLearning={onLearning} learning={learning} onBack={() => nav('subject_hub')} />;
-    if (screen === 'cas_pratique') return <CasePractice key={selectedUE.id} ue={selectedUE} user={user} onLearning={onLearning} onDone={onCasDone} onBack={() => nav('subject_hub')} />;
+    if (screen === 'qcm') return <QCMScreen onNav={nav} key={selectedUE.id} ue={selectedUE} user={user} onDone={onQCMDone} onBack={() => nav('subject_hub')} />;
+    if (screen === 'flashcards') return <FlashcardsScreen onNav={nav} key={selectedUE.id} ue={selectedUE} user={user} onLearning={onLearning} onBack={() => nav('subject_hub')} onUpgrade={() => upgrade()} />;
+    if (screen === 'resume_cours') return <SavedLesson key={selectedUE.id} onReload={reloadLearning} onNav={nav} ue={selectedUE} user={user} onLearning={onLearning} learning={learning} onBack={() => nav('subject_hub')} />;
+    if (screen === 'cas_pratique') return <CasePractice onNav={nav} key={selectedUE.id} ue={selectedUE} user={user} onLearning={onLearning} onDone={onCasDone} onBack={() => nav('subject_hub')} />;
     if (screen === 'planning') return <StudyPlanner ues={ALL_UES} user={user} onBack={() => nav('dashboard')} onUpgrade={() => upgrade()} />;
     if (screen === 'interview_config') return <InterviewConfig user={user} onStart={cfg => { setInterviewCfg(cfg); nav('interview'); }} onBack={() => nav('dashboard')} />;
     if (screen === 'interview') return <OralPractice cfg={interviewCfg} onDone={onInterviewDone} onBack={() => nav('interview_config')} />;
@@ -545,7 +545,7 @@ function Auth({ mode, setMode, onDone, onBack, onForgot }) {
 
 // ── QCM SCREEN ────────────────────────────────────────────────────────────────
 function QCMScreen(props) {
-  return <StudySession ue={props.ue} kind="qcm">{ue=><QCMSession {...props} ue={ue}/>}</StudySession>;
+  return <StudySession ue={props.ue} kind="qcm" onNav={props.onNav}>{ue=><QCMSession {...props} ue={ue}/>}</StudySession>;
 }
 function QCMSession({ ue, user, onDone, onBack }) {
   const isPro = user?.isPro;
@@ -634,7 +634,7 @@ function QCMSession({ ue, user, onDone, onBack }) {
 
 // ── FLASHCARDS ────────────────────────────────────────────────────────────────
 function FlashcardsScreen(props) {
-  return <StudySession ue={props.ue} kind="cards">{ue=><FlashcardsSession {...props} ue={ue}/>}</StudySession>;
+  return <StudySession ue={props.ue} kind="cards" onNav={props.onNav}>{ue=><FlashcardsSession {...props} ue={ue}/>}</StudySession>;
 }
 function FlashcardsSession({ ue, user, onBack, onUpgrade, onLearning }) {
   const isPro = user?.isPro;

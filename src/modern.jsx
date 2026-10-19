@@ -896,7 +896,7 @@ export function CourseHome({ ue, user, onNav, learning }) {
           </button>
         ))}
       </div>
-      <ChapterLibrary ue={ue} learning={learning} onOpen={(screen,chapter)=>onNav(user.isPro?screen:'paywall',{chapter})}/>
+      <ChapterLibrary ue={ue} learning={learning} onOpen={(screen,chapter,format)=>onNav(user.isPro?screen:'paywall',{chapter,format})}/>
     </div>
   );
 }

@@ -64,7 +64,7 @@ export default function DesignPreview() {
     if(opts.module)setUE({...ues.find(u=>u.id===opts.module),chapter:opts.chapter});
     else if(opts.chapter)setUE(ue=>({...ue,chapter:opts.chapter}));
     setPage(key);
-    history.replaceState({}, "", `/?design=${key}`);
+    history.replaceState({}, "", `/?design=${key}${opts.module?"&ue="+opts.module:""}${opts.chapter?"&chapter="+encodeURIComponent(opts.chapter):""}${opts.format?"&format="+opts.format:""}`);
   };
   const select = (ue) => {
     setUE(ue);
@@ -127,14 +127,14 @@ export default function DesignPreview() {
         onBack={() => nav("dashboard")}
       />
     ) : page === "qcm" ? (
-      <QCMScreen
+      <QCMScreen onNav={nav}
         ue={ue}
         user={student}
         onDone={async data=>{setStudent(old=>({...old,history:[...old.history,{type:"qcm",ue:ue.id,score:data.score,total:data.total,duration:data.duration,dateISO:new Date().toISOString()}]}));const groups={};for(const a of data.answers){const g=groups[a.chapter] ||= {total:0,correct:0};g.total++;if(a.correct)g.correct++;}await onLearning(Object.entries(groups).map(([chapter,g])=>({type:'quiz',module:ue.id,chapter,...g})));nav("progress");}}
         onBack={() => nav("subject_hub")}
       />
     ) : page === "flashcards" ? (
-      <FlashcardsScreen
+      <FlashcardsScreen onNav={nav}
         ue={ue}
         user={student}
         onLearning={onLearning}
@@ -143,6 +143,7 @@ export default function DesignPreview() {
       />
     ) : page === "resume_cours" ? (
       <ResumeCoursScreen
+        onNav={nav}
         ue={ue}
         user={student}
         onLearning={onLearning}
@@ -150,7 +151,7 @@ export default function DesignPreview() {
         onBack={() => nav("subject_hub")}
       />
     ) : page === "cas_pratique" ? (
-      <CasPratiqueScreen
+      <CasPratiqueScreen onNav={nav}
         ue={ue}
         user={student}
         onLearning={onLearning}

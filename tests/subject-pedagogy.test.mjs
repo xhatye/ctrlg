@@ -29,7 +29,7 @@ test('all 205 chapters receive a discipline approach, and all 20 UEs have an aut
   assert.ok(w.table.rows.every(row=>row.length===w.table.headers.length));
   assert.ok(!JSON.stringify(moduleCatalogue(id)).includes(w.context));
  }
- assert.equal(chapters,205);assert.ok(families.size>=10);assert.notEqual(SUBJECT_PEDAGOGY.UE1.title,SUBJECT_PEDAGOGY.UE3.title);
+ assert.equal(chapters,225);assert.ok(families.size>=10);assert.notEqual(SUBJECT_PEDAGOGY.UE1.title,SUBJECT_PEDAGOGY.UE3.title);
 });
 test('new explained alternatives survive shuffling and enriched cards survive mixed sampling and review',()=>{
  for(const [id,w]of Object.entries(SUBJECT_WORKSHOPS)){
