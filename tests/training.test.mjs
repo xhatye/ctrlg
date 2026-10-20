@@ -146,4 +146,6 @@ test('changed or retired questions cannot produce stale weakness signals or bloc
  await recordReviews('owner',[{...event,receipt:'current_content_1234',known:true}],deps,now);assert.equal(deps.records.get(key).streak,1);
  deps.records.set('userReview/owner/items/retired',{kind:'card',itemId:'UE9:retired:card0',lastCorrect:false,dueAt:new Date(now-1000).toISOString()});
  queue=await reviewQueue('owner',deps,now);assert.equal(deps.records.get('userReview/owner/items/retired').archived,true);assert.equal(queue.mistakeItems.length,0);
+ deps.records.set('userReview/owner/items/bad_heading',{kind:'quiz',itemId:'UE1:offre-acceptation:n4',lastCorrect:false,dueAt:new Date(now-1000).toISOString()});
+ queue=await reviewQueue('owner',deps,now);assert.equal(deps.records.get('userReview/owner/items/bad_heading').archived,true);assert.ok(queue.items.every(i=>i.id!=='UE1:offre-acceptation:n4'));assert.ok(queue.weakChapters.every(c=>c.module!=='UE1'));
 });
