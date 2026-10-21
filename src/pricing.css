@@ -1,0 +1,47 @@
+.pricing-marketing {font-family:'Nunito Sans',system-ui,sans-serif;}
+.pricing-marketing .pricing-page {max-width:980px;padding-block:68px 48px;}
+.pricing-marketing .pricing-page .page-title {margin-bottom:36px;}
+.pricing-marketing .pricing-page h1 {font-size:clamp(32px,4vw,46px);line-height:1.15;letter-spacing:-1.6px;font-weight:850;}
+.pricing-marketing .pricing-page .page-title p {font-size:16px;line-height:1.6;margin-top:14px;}
+.pricing-marketing .pricing-grid {max-width:850px;gap:24px;align-items:stretch;}
+.pricing-marketing .pricing-card {padding:30px;border:1px solid var(--line);border-radius:26px;box-shadow:none;gap:0;transform:none;}
+.pricing-marketing .pricing-card-pack {border-color:var(--gold-line);background:color-mix(in srgb,var(--gold-soft) 55%,var(--surface));}
+.pricing-marketing .pricing-plan-tag {align-self:flex-start;display:inline-flex;align-items:center;min-height:28px;padding:4px 11px;border-radius:999px;background:var(--surface-soft);color:var(--muted);font-size:12px;line-height:1.5;font-weight:750;}
+.pricing-marketing .pricing-card-pack .pricing-plan-tag {background:var(--gold-soft);color:var(--gold-text);}
+.pricing-marketing .pricing-card h2 {font-size:25px;line-height:1.25;letter-spacing:-.6px;margin:18px 0 0;font-weight:850;}
+.pricing-marketing .pricing-card .pricing-description {font-size:14px;line-height:1.55;margin:8px 0 0;}
+.pricing-marketing .price {display:flex;align-items:baseline;gap:10px;margin:24px 0 0;line-height:1.1;letter-spacing:-2px;}
+.pricing-marketing .price strong {font-size:54px;font-weight:850;white-space:nowrap;}
+.pricing-marketing .price span {margin:0;font-size:15px;font-weight:600;letter-spacing:0;white-space:nowrap;}
+.pricing-marketing .pricing-card .price-detail {font-size:13px;line-height:1.55;margin:13px 0 0;min-height:41px;max-width:30ch;}
+.pricing-marketing .pricing-card ul {gap:12px;margin:22px 0 26px;padding:0;}
+.pricing-marketing .pricing-card li {font-size:14px;line-height:1.55;gap:10px;align-items:flex-start;color:var(--ink);}
+.pricing-marketing li svg {flex:0 0 auto;margin-top:2px;color:var(--success);}
+.pricing-marketing .pricing-card .btn {min-height:48px;font-size:14px;gap:10px;line-height:1.4;}
+.pricing-marketing .pricing-secure {display:flex;align-items:center;justify-content:center;gap:8px;margin:22px auto 36px;font-size:12px;color:var(--muted);text-align:center;}
+.pricing-marketing .pricing-secure svg {flex-shrink:0;}
+.pricing-marketing .pricing-included {max-width:850px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:28px;padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.pricing-marketing .pricing-included .eyebrow {font-size:10px;}
+.pricing-marketing .pricing-included h2 {font-size:23px;line-height:1.3;letter-spacing:-.6px;margin:8px 0;}
+.pricing-marketing .pricing-included p {font-size:14px;margin:0;}
+.pricing-marketing .pricing-included ul {list-style:none;display:grid;gap:12px;padding:0;margin:0;}
+.pricing-marketing .pricing-included li {display:flex;gap:10px;font-size:14px;line-height:1.5;}
+.pricing-marketing .pricing-library {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));max-width:850px;margin:28px auto;gap:16px;text-align:center;}
+.pricing-marketing .pricing-library div {display:flex;flex-direction:column;gap:3px;}
+.pricing-marketing .pricing-library strong {font-size:23px;letter-spacing:-.6px;font-weight:850;}
+.pricing-marketing .pricing-library span {font-size:12px;color:var(--muted);}
+.pricing-marketing .pricing-details {max-width:850px;margin:0 auto;border:1px solid var(--line);border-radius:16px;padding:16px 18px;font-size:13px;line-height:1.7;}
+.pricing-marketing .pricing-details summary {font-size:14px;font-weight:750;color:var(--ink);cursor:pointer;}
+.pricing-marketing .pricing-details p {margin:12px 0 0;}
+.pricing-marketing .recovery-link {flex-wrap:wrap;font-size:13px;gap:8px;padding-top:24px;}
+.pricing-marketing .recovery-link button {font-size:13px;min-height:44px;}
+@media(max-width:650px){
+ .pricing-marketing .pricing-page {width:calc(100% - 32px);padding-block:42px 30px;}
+ .pricing-marketing .pricing-grid {grid-template-columns:1fr;gap:16px;}
+ .pricing-marketing .pricing-card {padding:24px;}
+ .pricing-marketing .pricing-page .page-title {margin-bottom:26px;}
+ .pricing-marketing .pricing-page .page-title p {font-size:15px;}
+ .pricing-marketing .pricing-included {grid-template-columns:1fr;gap:20px;}
+ .pricing-marketing .pricing-library {grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 12px;}
+ .pricing-marketing .pricing-secure {font-size:11px;line-height:1.6;}
+}

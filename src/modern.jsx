@@ -16,6 +16,7 @@ import HomeStudyPath from './HomeStudyPath';
 import PreviewGallery from './PreviewGallery';
 import {useLandingMotion} from './landing-motion';
 import './landing-motion.css';
+import './pricing.css';
 import { PublicEvidence } from './PublicStudySite';
 import { publicSubjectPath } from '../lib/public-study-pages.mjs';
 
@@ -901,95 +902,46 @@ export function CourseHome({ ue, user, onNav, learning }) {
   );
 }
 export function OfferPage({ user, onCheckout, onNav }) {
+  const [pendingPlan, setPendingPlan] = useState(null);
+  const checkout = async (plan) => {
+    if (pendingPlan) return;
+    setPendingPlan(plan);
+    try { await onCheckout(plan); }
+    finally { setPendingPlan(null); }
+  };
+  const plans = [
+    {id:'subscription',name:'SIMDCG Pro',tag:'À votre rythme',price:'15',period:'/ mois',description:'Pour réviser au fil des semaines.',terms:'Renouvellement mensuel. Résiliation depuis votre compte.',benefits:['Accès pendant votre abonnement','Renouvellement automatique chaque mois'],button:'Choisir Pro'},
+    {id:'pack_examen',name:'Pack Examen',tag:'90 jours pour vous préparer',price:'29',period:'/ 90 jours',description:'Pour une période de révision intensive.',terms:'Un seul paiement. Aucun renouvellement automatique.',benefits:['90 jours d’accès dès le paiement','L’accès prend fin automatiquement'],button:'Choisir le Pack Examen'},
+  ];
   return (
-    <div className="marketing">
+    <div className="marketing pricing-marketing">
       <PublicNav onNav={onNav} />
       <main className="container pricing-page">
         <Title
-          eyebrow="CHOISISSEZ VOTRE RYTHME"
-          title="Un cap clair. Un prix clair."
-          desc="Les mêmes outils de révision, deux façons d’y accéder."
+          eyebrow="LES TARIFS SIMDCG"
+          title="Vos révisions, à votre rythme."
+          desc="Les mêmes outils pour le DCG et le DSCG. Choisissez votre durée."
         />
-        <p className="helper">Consultez les chapitres <a href="/dcg">DCG</a> et <a href="/dscg">DSCG</a> avant de choisir votre accès. Les exercices sont réservés aux abonnés, sans essai gratuit.</p>
-        <div className="pricing-grid">
-          <article className="pricing-card">
-            <span className="card-tag">POUR UN OBJECTIF PRÉCIS</span>
-            <h2>Pack Examen</h2>
-            <p>Une période de révision intensive.</p>
-            <div className="price">
-              29 €<span>/ 90 jours</span>
-            </div>
-            <span className="price-detail">
-              Paiement unique · sans renouvellement
-            </span>
-            <ul>
-              {[
-                "13 matières DCG + 7 matières DSCG",
-                "QCM, fiches et flashcards",
-                "Cas pratiques et corrigés enregistrés",
-                "Mode examen : dossiers, chronomètre et barème",
-                "Planning et préparation écrite à l’oral sans IA",
-                "Tuteur IA : 20 demandes/jour, 300/mois",
-                "Accès pendant 90 jours",
-              ].map((x) => (
-                <li key={x}>
-                  <Icon name="check" size={17} />
-                  {x}
-                </li>
-              ))}
-            </ul>
-            <Button secondary onClick={() => onCheckout("pack_examen")}>
-              Choisir le Pack Examen <Icon name="arrow" />
+        <div className="pricing-grid" aria-label="Choisir une offre">
+          {plans.map(plan=><article className={'pricing-card'+(plan.id==='pack_examen'?' pricing-card-pack':'')} key={plan.id}>
+            <span className="pricing-plan-tag">{plan.tag}</span>
+            <h2>{plan.name}</h2>
+            <p className="pricing-description">{plan.description}</p>
+            <div className="price"><strong>{plan.price} €</strong><span>{plan.period}</span></div>
+            <p className="price-detail">{plan.terms}</p>
+            <ul>{plan.benefits.map(item=><li key={item}><Icon name="check" size={18}/><span>{item}</span></li>)}</ul>
+            <Button secondary={plan.id==='subscription'} disabled={!!pendingPlan} aria-busy={pendingPlan===plan.id} onClick={()=>user?.isPro&&plan.id==='subscription'?onNav('account'):checkout(plan.id)}>
+              {pendingPlan===plan.id?'Ouverture du paiement…':user?.isPro&&plan.id==='subscription'?'Voir mon accès':plan.button}<Icon name="arrow" size={18}/>
             </Button>
-          </article>
-          <article className="pricing-card recommended">
-            <span className="recommended-label">
-              POUR AVANCER TOUTE L’ANNÉE
-            </span>
-            <span className="card-tag">VOTRE COMPAGNON AU QUOTIDIEN</span>
-            <h2>
-              SIMDCG Pro <span>✦</span>
-            </h2>
-            <p>Gardez vos outils à portée de main.</p>
-            <div className="price">
-              15 €<span>/ mois</span>
-            </div>
-            <span className="price-detail">
-              Abonnement mensuel · résiliable
-            </span>
-            <ul>
-              {[
-                "13 matières DCG + 7 matières DSCG",
-                "Parcours enregistrés, sans dépendre de l’IA",
-                "Mode examen et rappels À revoir aujourd’hui",
-                "Tuteur IA : 20 demandes/jour, 300/mois",
-                "Suivi de vos scores par matière",
-                "Reprise des flashcards difficiles",
-                "Accès tant que l’abonnement est actif",
-              ].map((x) => (
-                <li key={x}>
-                  <Icon name="check" size={17} />
-                  {x}
-                </li>
-              ))}
-            </ul>
-            <Button
-              onClick={() =>
-                user?.isPro ? onNav("account") : onCheckout("subscription")
-              }
-            >
-              {user?.isPro ? "Voir mon accès" : "Choisir Pro"}
-              <Icon name="arrow" />
-            </Button>
-          </article>
+          </article>)}
         </div>
-        <p className="pricing-footnote">
-          Bibliothèque : {catalogue.totals.curatedQuestions.toLocaleString('fr-FR')} QCM, {catalogue.totals.cards.toLocaleString('fr-FR')} flashcards, {catalogue.totals.chapters} chapitres de cours et {catalogue.totals.curatedCases.toLocaleString('fr-FR')} modèles
-          de cas corrigés, complétés par des variantes de calcul. Couverture partielle du programme ; ces contenus ne sont
-          pas des annales officielles. Le tuteur est optionnel, soumis aux
-          quotas et à un budget de génération. Une panne du tuteur ne bloque pas
-          les révisions.
-        </p>
+        <p className="pricing-secure"><Icon name="lock" size={16}/> Paiement sécurisé par Stripe · Accès lié à votre compte</p>
+        <section className="pricing-included" aria-labelledby="pricing-included-title">
+          <div><span className="eyebrow">DANS LES DEUX OFFRES</span><h2 id="pricing-included-title">Tout votre espace de révision.</h2><p>13 matières DCG et 7 matières DSCG.</p></div>
+          <ul>{['Cours, fiches et textes à trous','QCM expliqués et flashcards','Cas corrigés et mode examen','Planning et suivi de progression'].map(item=><li key={item}><Icon name="check" size={18}/><span>{item}</span></li>)}</ul>
+        </section>
+        <div className="pricing-library" aria-label="Contenus disponibles">{[[catalogue.totals.chapters,'chapitres'],[catalogue.totals.curatedQuestions,'QCM expliqués'],[catalogue.totals.cards,'flashcards'],[catalogue.totals.curatedCases,'cas corrigés']].map(([value,label])=><div key={label}><strong>{value.toLocaleString('fr-FR')}</strong><span>{label}</span></div>)}</div>
+        <details className="pricing-details"><summary>Avant de choisir votre accès</summary><p>Consultez les chapitres <a href="/dcg">DCG</a> et <a href="/dscg">DSCG</a> : la couverture du programme est partielle. Les exercices nécessitent un accès payant, sans essai gratuit. Les cas SIMDCG sont originaux et distincts des annales officielles.</p><p>Les deux offres comprennent le tuteur IA, avec un maximum de 20 demandes par jour et 300 par mois, sous réserve du budget de génération disponible. Les cours et exercices enregistrés restent accessibles sans génération IA.</p></details>
         <div className="recovery-link">
           <Icon name="lock" />
           <span>Vous avez déjà payé ?</span>
