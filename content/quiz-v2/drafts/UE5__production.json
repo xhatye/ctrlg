@@ -1,0 +1,472 @@
+{
+  "module": "UE5",
+  "chapter": "production",
+  "sourceHash": "8b4a18d36a506fe23b55c659bdc3c15c84b5b5acfd57cc80612847eb3a7a7549",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un schéma simple, comment détermine-t-on la valeur ajoutée ?",
+      "options": [
+        "Production moins consommations intermédiaires.",
+        "Production moins tous les salaires, intérêts et impôts.",
+        "Production additionnée aux consommations intermédiaires.",
+        "Chiffre d’affaires rapporté au nombre de salariés."
+      ],
+      "answer": 0,
+      "explanation": "La valeur ajoutée mesure la contribution productive après déduction des biens et services consommés dans la production. Le bénéfice net tient compte d’autres charges et produits : ce n’est pas le même solde."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Une production passe de 200 à 230 unités à périmètre identique. Quel est son taux de croissance ?",
+      "options": [
+        "30 %",
+        "13,04 %",
+        "15 %",
+        "115 %"
+      ],
+      "answer": 2,
+      "explanation": "Le taux rapporte la variation à la valeur initiale : (230 − 200) / 200 × 100 = 15 %. Trente représente la variation absolue en unités ; utiliser la valeur finale changerait la base demandée.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 230
+                    },
+                    {
+                      "value": 200
+                    }
+                  ]
+                },
+                {
+                  "value": 200
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 15,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le chiffre d’affaires augmente, les quantités vendues restent constantes et seul le prix unitaire monte. Quelle interprétation est correcte ?",
+      "options": [
+        "La production en volume augmente au même rythme que les ventes en valeur.",
+        "La hausse en valeur ne démontre pas une augmentation des quantités.",
+        "Les ventes en valeur doivent être déflatées par le seul nombre de salariés pour mesurer le volume.",
+        "Les quantités vendues diminuent nécessairement du même pourcentage que la hausse du prix."
+      ],
+      "answer": 1,
+      "explanation": "Un prix plus élevé suffit à accroître la recette en valeur à volume constant. Mesurer une croissance en volume nécessite d’isoler l’effet des prix au lieu d’assimiler toute hausse nominale à des quantités supplémentaires."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que mesure une productivité apparente du travail calculée par heure ?",
+      "options": [
+        "Une valeur ajoutée rapportée au nombre de personnes employées, quel que soit leur temps de travail.",
+        "Une masse salariale rapportée aux heures rémunérées sur la période.",
+        "Une quantité d’heures de travail rapportée au volume de production obtenu.",
+        "Une production rapportée aux heures de travail utilisées."
+      ],
+      "answer": 3,
+      "explanation": "Le ratio relie un résultat productif à une quantité de travail. Le terme « apparente » rappelle que d’autres facteurs, tels que l’équipement et l’organisation, peuvent contribuer au résultat mesuré."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une entreprise produit pour 180 000 € et utilise 70 000 € de consommations intermédiaires. Quelle valeur ajoutée obtient-on dans ce schéma simplifié ?",
+      "options": [
+        "250 000 €",
+        "110 000 €",
+        "70 000 €",
+        "180 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Valeur ajoutée = production − consommations intermédiaires = 180 000 − 70 000 = 110 000 €. Les autres charges ne sont pas déduites ici : le résultat ne doit pas être nommé bénéfice net.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 180000
+            },
+            {
+              "value": 70000
+            }
+          ]
+        },
+        "expected": 110000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste calcule un taux de croissance en divisant la variation par la valeur finale. Quelle correction respecte la formule usuelle entre deux dates ?",
+      "options": [
+        "Retenir le logarithme du rapport final/initial comme s’il s’agissait du taux usuel demandé.",
+        "Rapporter la variation à la moyenne des valeurs initiale et finale.",
+        "Rapporter la variation à la valeur initiale.",
+        "Rapporter la variation à la valeur finale en conservant la même interprétation qu’un taux de départ."
+      ],
+      "answer": 2,
+      "explanation": "Le taux mesure la variation relativement au point de départ. Diviser par la valeur finale donne une autre mesure ; le choix de la base est indispensable pour interpréter correctement le pourcentage."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Deux indices cohérents de base 100 valent 126 pour la valeur et 105 pour les prix. Quel est l’indice de volume ?",
+      "options": [
+        "120",
+        "21",
+        "131,3",
+        "83,33"
+      ],
+      "answer": 0,
+      "explanation": "L’indice de volume vaut 126 / 105 × 100 = 120. La division neutralise l’effet multiplicatif des prix ; soustraire les deux indices ne reconstitue pas l’indice de volume.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 126
+                },
+                {
+                  "value": 105
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 120,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La production reste constante tandis que les heures de travail diminuent. Que devient la production par heure, à mesure comparable ?",
+      "options": [
+        "Elle diminue car les heures sont prises pour le numérateur du ratio.",
+        "Elle reste constante puisque le volume produit est inchangé.",
+        "Elle augmente dans la même proportion exacte que la diminution des heures, quelle que soit son ampleur.",
+        "Elle augmente puisque le même volume utilise moins d’heures."
+      ],
+      "answer": 3,
+      "explanation": "Le numérateur est stable et le dénominateur diminue : le ratio augmente. Ce constat ne démontre cependant pas que la variation soit imputable au seul effort des salariés."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le PIB est dit « brut ». Un analyste veut mesurer le produit intérieur net, c’est-à-dire après prise en compte de l’usure du capital fixe pendant la période. Quel ajustement convient ?",
+      "options": [
+        "Ajouter la formation brute de capital fixe au PIB.",
+        "Retrancher la consommation de capital fixe du PIB.",
+        "Retrancher une seconde fois les consommations intermédiaires de la production déjà intégrées dans le PIB.",
+        "Retrancher la valeur entière du stock de machines encore en service."
+      ],
+      "answer": 1,
+      "explanation": "Le produit intérieur net est le PIB diminué de la consommation de capital fixe, estimation de l’usure du capital durant la période. Cette consommation n’est ni le stock total de machines ni leur acquisition annuelle. Les consommations intermédiaires ont déjà été prises en compte.",
+      "references": [
+        {
+          "title": "Insee — Produit intérieur net",
+          "url": "https://www.insee.fr/fr/metadonnees/definition/c1690"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un taux passe de 4 % à 6 %. Comment exprimer la différence directe entre ces deux taux ?",
+      "options": [
+        "Une hausse de 2 %, sans autre précision.",
+        "Une hausse de 6 points.",
+        "Une hausse de 2 points de pourcentage.",
+        "Une hausse de 10 points de pourcentage."
+      ],
+      "answer": 2,
+      "explanation": "La différence de deux taux s’exprime en points : 6 − 4 = 2 points de pourcentage. L’évolution relative en pourcentage serait un autre calcul, effectué par rapport au taux initial."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La valeur des ventes reste stable alors que l’indice des prix augmente. Dans un modèle prix-volume cohérent, quelle évolution du volume explique ce constat ?",
+      "options": [
+        "Une diminution du volume compensant la hausse des prix.",
+        "Une hausse du volume parce que des prix plus élevés augmentent la valeur de chaque unité.",
+        "Une stabilité du volume puisque le chiffre d’affaires total est inchangé.",
+        "Une diminution des prix de vente, déduite de la stabilité de leur produit avec les quantités."
+      ],
+      "answer": 0,
+      "explanation": "À valeur stable, un indice de prix plus élevé implique un indice de volume plus faible, sous les hypothèses de cohérence données. Une stabilité nominale peut donc masquer une baisse des quantités."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un atelier fabrique 1 800 pièces comparables en 300 heures. Quelle productivité horaire apparente obtient-on ?",
+      "options": [
+        "300 pièces par heure",
+        "0,1667 pièce par heure",
+        "2 100 pièces par heure",
+        "6 pièces par heure"
+      ],
+      "answer": 3,
+      "explanation": "Production / heures = 1 800 / 300 = 6 pièces par heure. Le ratio inverse décrirait des heures par pièce et ne doit pas être présenté avec l’unité d’une production horaire.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1800
+            },
+            {
+              "value": 300
+            }
+          ]
+        },
+        "expected": 6,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux entreprises ont la même production en valeur, mais l’une consomme davantage de biens et services intermédiaires. Laquelle a la plus forte valeur ajoutée dans le schéma simplifié ?",
+      "options": [
+        "Celle utilisant le plus de consommations intermédiaires, celles-ci étant ajoutées à la production.",
+        "Celle qui en utilise le moins, les autres données étant identiques.",
+        "Les deux, à égalité, parce que seule leur production en valeur entre dans ce calcul.",
+        "Celle dont les consommations intermédiaires ont la part la plus élevée dans la production."
+      ],
+      "answer": 1,
+      "explanation": "À production identique, la valeur ajoutée augmente lorsque les consommations intermédiaires diminuent. Ce raisonnement sur la contribution productive ne permet pas, à lui seul, de comparer les bénéfices nets."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un tableau donne seulement les augmentations absolues de production d’entreprises de tailles différentes. Pourquoi ne suffit-il pas pour comparer leurs taux de croissance ?",
+      "options": [
+        "Il manque la valeur finale de chaque entreprise comme dénominateur du taux de départ.",
+        "Il faut convertir les augmentations en une même unité monétaire pour les traiter directement comme des taux.",
+        "Il manque les valeurs initiales auxquelles rapporter chaque variation.",
+        "Il faut classer les entreprises par montant d’augmentation, ce classement donnant celui des taux."
+      ],
+      "answer": 2,
+      "explanation": "Une même augmentation absolue peut être proportionnellement faible ou forte selon la taille initiale. Le taux nécessite cette valeur de départ, ainsi qu’un périmètre de mesure comparable."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi corriger une évolution en valeur par un indice de prix cohérent ?",
+      "options": [
+        "Pour isoler l’évolution en volume de l’effet des prix.",
+        "Pour mesurer uniquement l’évolution des prix en neutralisant les quantités.",
+        "Pour transformer une hausse absolue en taux rapporté à la valeur finale.",
+        "Pour exprimer la valeur courante dans une autre unité monétaire sans correction du volume."
+      ],
+      "answer": 0,
+      "explanation": "La valeur combine prix et volumes. La correction vise l’évolution réelle des quantités ; elle suppose un indice de prix compatible avec la base et le périmètre de la mesure en valeur."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La production par heure augmente après l’installation d’une machine. Pourquoi cette hausse ne prouve-t-elle pas un gain dû au seul travail humain ?",
+      "options": [
+        "Le ratio horaire isole déjà l’effet causal du travail parce que les heures figurent au dénominateur.",
+        "La contribution de la machine n’intervient que dans un ratio par salarié, pas dans un ratio par heure.",
+        "Une hausse du ratio horaire démontre à elle seule que chaque salarié a augmenté son effort à équipement constant.",
+        "L’équipement peut contribuer au résultat rapporté au travail dans ce ratio apparent."
+      ],
+      "answer": 3,
+      "explanation": "Le ratio rapporte la production à un facteur sans isoler toutes ses causes. La machine ou l’organisation peut expliquer une partie de la hausse, ce que le qualificatif « apparente » invite à rappeler."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Pourquoi une valeur ajoutée positive ne suffit-elle pas à démontrer un bénéfice net positif ?",
+      "options": [
+        "La valeur ajoutée est déjà obtenue après déduction des salaires, ce qui exclut tout effet salarial sur le résultat.",
+        "Elle n’est pas calculée après déduction de tous les éléments du résultat net.",
+        "La valeur ajoutée correspond à la trésorerie disponible après le remboursement de tous les emprunts.",
+        "La valeur ajoutée positive représente déjà le montant distribuable aux propriétaires après charges et impôts."
+      ],
+      "answer": 1,
+      "explanation": "La valeur ajoutée et le résultat net n’ont pas le même périmètre de calcul. Des charges qui ne sont pas des consommations intermédiaires peuvent ensuite peser sur le bénéfice."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans une économie fictive, les valeurs ajoutées brutes au prix de base totalisent 900. Les impôts sur les produits valent 120 et les subventions sur les produits 20. Selon l’approche production, quel PIB au prix du marché obtient-on ?",
+      "options": [
+        "1 040.",
+        "800.",
+        "1 000.",
+        "900."
+      ],
+      "answer": 2,
+      "explanation": "Le PIB au prix du marché est la somme des valeurs ajoutées au prix de base, augmentée des impôts sur les produits et diminuée des subventions : 900 + 120 − 20 = 1 000. On ne confond pas ce passage de prix de base à prix du marché avec une correction de l’inflation.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 900
+                },
+                {
+                  "value": 120
+                }
+              ]
+            },
+            {
+              "value": 20
+            }
+          ]
+        },
+        "expected": 1000,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "Insee — PIB et ses composantes",
+          "url": "https://www.insee.fr/fr/statistiques/8744463"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un chiffre d’affaires local est corrigé par un indice de prix d’une autre activité sans vérifier les paniers. Quelle limite faut-il signaler ?",
+      "options": [
+        "La correction peut ne pas neutraliser les prix du périmètre réellement étudié.",
+        "L’indice le plus large représente mieux ces ventes dès lors qu’il porte sur davantage de produits.",
+        "Une base 100 commune suffit à rendre les paniers économiquement interchangeables.",
+        "La conversion des deux indices dans la même unité suffit à supprimer toute différence de structure."
+      ],
+      "answer": 0,
+      "explanation": "La méthode prix-volume requiert des indices cohérents. Un autre panier peut évoluer différemment et ne pas représenter les prix des ventes étudiées, ce qui fragilise la conclusion en volume."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux ateliers fabriquent des produits de complexités très différentes. Quelle réserve faut-il apporter à une comparaison de leurs nombres de pièces par heure ?",
+      "options": [
+        "Le comptage entier des pièces garantit la comparabilité.",
+        "Il faut remplacer les heures par les prix sans préciser le besoin.",
+        "Le ratio le plus élevé prouve une meilleure performance globale.",
+        "La mesure de production doit être comparable, notamment en nature et qualité."
+      ],
+      "answer": 3,
+      "explanation": "Un nombre de pièces peut masquer des différences de travail incorporé ou de qualité. Il faut vérifier ce qui est produit avant d’expliquer les écarts de productivité ou de classer les ateliers."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une entreprise garde le même effectif mais remplace des temps partiels par des temps pleins. Pourquoi la production par salarié et la production par heure peuvent-elles évoluer différemment ?",
+      "options": [
+        "Un effectif inchangé représente une quantité de travail stable même si les quotités de travail changent.",
+        "Un effectif stable peut masquer une hausse de la quantité d’heures utilisée.",
+        "Les deux ratios ont le même dénominateur dès lors que les personnes sont employées par la même entreprise.",
+        "Le passage à temps plein augmente le ratio par heure par le seul accroissement des heures au dénominateur."
+      ],
+      "answer": 1,
+      "explanation": "Les deux indicateurs ont des dénominateurs différents. Un effectif inchangé peut correspondre à davantage d’heures ; il faut donc préciser la quantité de travail mesurée pour interpréter l’évolution."
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Prix unitaire et quantités vendues augmentent tous deux, sans autre changement. Que décrit alors la hausse du chiffre d’affaires ?",
+      "options": [
+        "Seulement un effet de quantité.",
+        "Seulement un effet de prix.",
+        "Une combinaison d’effets de prix et de volume.",
+        "Une hausse nécessairement égale à celle du prix seul."
+      ],
+      "answer": 2,
+      "explanation": "Les recettes en valeur dépendent des prix et des quantités. Lorsque les deux augmentent, attribuer l’intégralité de la croissance nominale à un seul de ces facteurs serait incorrect."
+    },
+    {
+      "id": "q23",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une production part de zéro puis devient positive. Peut-on utiliser directement la variation divisée par la valeur initiale pour obtenir un taux usuel de croissance ?",
+      "options": [
+        "Non : une base nulle rend cette division indéfinie ; il faut décrire autrement l’évolution.",
+        "Oui : le taux est nécessairement de 100 %.",
+        "Oui : la valeur finale est directement le pourcentage.",
+        "Oui : il suffit de remplacer silencieusement zéro par un."
+      ],
+      "answer": 0,
+      "explanation": "La formule usuelle exige une base initiale non nulle. Il faut présenter le démarrage ou la variation absolue sans inventer un taux et sans modifier arbitrairement la valeur de référence."
+    }
+  ]
+}

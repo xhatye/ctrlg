@@ -1,0 +1,377 @@
+{
+  "module": "UE7",
+  "chapter": "culture-changement",
+  "sourceHash": "2570bfabe1dba6102743114c92c7bfd6e1a206f211912c1e03330b44ce56595b",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans le modèle de Schein, les locaux, tenues et cérémonies visibles constituent quel niveau d’observation de la culture ?",
+      "options": [
+        "Les hypothèses fondamentales, directement visibles sans interprétation.",
+        "Les seules valeurs explicitement formulées dans la charte.",
+        "Les artefacts observables, dont la signification doit encore être interprétée.",
+        "Les résultats économiques qui mesurent la rentabilité de chaque métier."
+      ],
+      "answer": 2,
+      "explanation": "Les artefacts sont les manifestations visibles. Leur observation ne donne pas automatiquement le sens des valeurs ou présupposés qui les sous-tendent.",
+      "references": [
+        {
+          "title": "MIT Sloan — Edgar Schein, three levels of culture",
+          "url": "https://mitsloan.mit.edu/ideas-made-to-matter/5-enduring-management-ideas-mit-sloans-edgar-schein"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le contrôle veut conserver des vérifications et le commercial réduire le délai de réponse. Que faut-il analyser avant de qualifier leurs orientations d’incompatibles ?",
+      "options": [
+        "Leurs objectifs légitimes, risques, interdépendances et règles d’arbitrage.",
+        "Retenir uniquement la priorité du service ayant le plus grand budget, sans examiner les effets sur l’autre.",
+        "Traiter la fiabilité comme une opposition personnelle au commerce sans examiner le risque contrôlé.",
+        "Supposer des objectifs identiques parce que les deux équipes appartiennent à la même entreprise."
+      ],
+      "answer": 0,
+      "explanation": "Fiabilité et réactivité peuvent être poursuivies ensemble sous certaines modalités. Il faut comprendre les responsabilités et les conséquences supportées par chaque groupe avant de réduire le désaccord à deux cultures irréconciliables."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une salariée dit « le nouvel outil ne marchera pas ». Quelle première question aide à comprendre son objection ?",
+      "options": [
+        "Quel autre logiciel souhaiteriez-vous choisir avant que nous examinions les situations de difficulté ?",
+        "Une présentation générale des avantages suffirait-elle, sans revenir sur les tâches qui vous inquiètent ?",
+        "Quel programme de formation faut-il programmer avant de préciser la difficulté rencontrée ?",
+        "Pouvez-vous décrire une tâche, un exemple de difficulté et ses conséquences ?"
+      ],
+      "answer": 3,
+      "explanation": "La même objection peut recouvrir un besoin de formation, une surcharge ou un risque réel. Demander un cas concret permet de cibler l’analyse au lieu d’imposer une cause psychologique unique."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un pilote d’outil est prévu. Quelle définition préalable rend son évaluation contrôlable ?",
+      "options": [
+        "Un bilan reposant seulement sur l’existence du lancement, sans résultats attendus ni règle de décision.",
+        "Son périmètre, sa durée, ses critères et les conditions de correction ou d’arrêt.",
+        "Une durée d’essai sans préciser les tâches ou utilisateurs couverts.",
+        "Un objectif de généralisation déjà acquis, utilisé comme résultat du pilote avant sa réalisation."
+      ],
+      "answer": 1,
+      "explanation": "Un essai doit pouvoir être confronté à des attentes explicites. Le périmètre et les critères permettent de mesurer les résultats, tandis que des règles de correction évitent une poursuite automatique malgré des difficultés."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un compte rendu écrit « trois validations sont nécessaires » puis « personne ne fait confiance à personne ». Quelle distinction faut-il conserver ?",
+      "options": [
+        "Le nombre de validations suffit à démontrer l’intention de chaque acteur sans recueillir d’autres éléments.",
+        "Une interprétation générale devient un fait du seul fait qu’elle est inscrite dans le même compte rendu.",
+        "La première décrit un fait à documenter ; la seconde est une interprétation plus générale à discuter.",
+        "Le diagnostic doit remplacer les validations observées par la conclusion générale sans garder leur statut distinct."
+      ],
+      "answer": 2,
+      "explanation": "Une règle de validation observée peut servir d’indice, mais ne prouve pas à elle seule une absence généralisée de confiance. Le diagnostic doit séparer les observations et la portée des hypothèses qui en sont tirées."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Sans programme imposé par le siège, plusieurs équipes adaptent progressivement leur manière de se transmettre les dossiers, puis la direction formalise cette pratique. Quelle trajectoire décrit le cas ?",
+      "options": [
+        "Une évolution émergente des pratiques, ensuite reconnue et formalisée.",
+        "Une réforme entièrement planifiée au siège avant toute adaptation locale.",
+        "Une règle déjà formalisée dont les équipes n’auraient modifié que le nom.",
+        "Une absence de changement au seul motif que la direction n’en était pas à l’origine."
+      ],
+      "answer": 0,
+      "explanation": "Le changement peut naître des ajustements locaux, puis être stabilisé. Son émergence se distingue d’un plan initial entièrement prescrit."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un contournement facilite une tâche mais désactive aussi un contrôle de paiement. Comment exploiter ce retour sans banaliser le risque ?",
+      "options": [
+        "Généraliser immédiatement le contournement parce qu’il est utilisé par les opérateurs.",
+        "N’étudier que le risque en refusant tout examen de la difficulté de travail révélée.",
+        "Tenir le gain local de temps pour une validation de toutes les conséquences du contournement.",
+        "Comprendre le besoin qui l’a produit et rechercher une adaptation autorisée qui préserve le contrôle nécessaire."
+      ],
+      "answer": 3,
+      "explanation": "Le contournement est une information utile sur le travail réel. Il ne devient pas pour autant une solution acceptable sans examen de ses effets et de sa maîtrise."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Les salariés peuvent commenter le projet, mais toutes les décisions sont déjà prises et aucune modification n’est recevable. Quel statut de participation faut-il éviter d’annoncer ?",
+      "options": [
+        "Une transmission d’informations sur les décisions déjà prises.",
+        "Une co-construction ouverte des choix du projet.",
+        "Une possibilité d’exprimer un avis, sans pouvoir de modifier les choix.",
+        "Un recueil de réactions sur une solution déjà arrêtée."
+      ],
+      "answer": 1,
+      "explanation": "Recueillir des réactions ne constitue pas à lui seul un partage de conception. Le degré de participation doit correspondre aux marges réellement ouvertes."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les nouveaux arrivants apprennent auprès de leurs collègues une règle de priorité qui ne figure dans aucun manuel et qu’ils finissent par appliquer spontanément. Quel mécanisme observe-t-on ?",
+      "options": [
+        "Une procédure formelle établie uniquement par une décision écrite de la direction.",
+        "Une absence de culture commune parce que la règle n’est pas rédigée.",
+        "Une socialisation par transmission d’une norme informelle du groupe.",
+        "Un comportement strictement individuel qui ne peut être appris par imitation."
+      ],
+      "answer": 2,
+      "explanation": "Des normes partagées peuvent se transmettre dans les interactions quotidiennes. L’absence d’écrit ne les prive pas d’effets sur les pratiques."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les ingénieurs valorisent l’expérimentation et les comptables la vérifiabilité, tout en partageant des engagements communs à l’entreprise. Quelle notion rend compte de cette situation ?",
+      "options": [
+        "Des sous-cultures professionnelles au sein d’un ensemble organisationnel commun.",
+        "Une culture uniforme qui exclut toute différence entre métiers.",
+        "Deux entreprises juridiquement distinctes du seul fait des pratiques différentes.",
+        "Une absence nécessaire de tout repère partagé à l’échelle de l’entreprise."
+      ],
+      "answer": 0,
+      "explanation": "Des repères propres aux groupes peuvent coexister avec des valeurs communes. Cette diversité ne signifie pas à elle seule incompatibilité ou disparition de la culture d’ensemble."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Dans l’approche de Kotter, pourquoi constituer une coalition de personnes engagées dans le changement plutôt que confier toute sa mobilisation à une annonce isolée ?",
+      "options": [
+        "Pour supprimer le besoin d’une direction et d’une vision du changement.",
+        "Pour remplacer toutes les actions par le seul nombre de membres de la coalition.",
+        "Pour tenir l’adhésion de toute l’entreprise pour acquise dès la nomination du groupe.",
+        "Pour porter, coordonner et relayer durablement l’effort de changement."
+      ],
+      "answer": 3,
+      "explanation": "La coalition soutient la conduite du changement par son engagement et sa coordination. Sa seule création ne prouve pas l’adhésion ni les résultats.",
+      "references": [
+        {
+          "title": "Kotter — The8StepsforLeadingChange",
+          "url": "https://www.kotterinc.com/methodology/8-steps/"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "L’essai vise explicitement un apprentissage progressif. Les premiers jours sont lents, puis les mêmes tâches sont réalisées plus aisément. Quelle lecture du calendrier d’évaluation est pertinente ?",
+      "options": [
+        "Présenter le seul premier jour comme preuve définitive de l’échec de tout apprentissage.",
+        "Distinguer la phase d’apprentissage du fonctionnement stabilisé, en gardant visibles les coûts de transition.",
+        "Écarter les coûts de démarrage du bilan au motif que les résultats ultérieurs sont meilleurs.",
+        "Assimiler le dernier jour à une capacité permanente garantie dans toutes les conditions."
+      ],
+      "answer": 1,
+      "explanation": "Un apprentissage rend le moment d’observation important. Il ne justifie ni l’oubli des coûts transitoires ni la garantie d’un résultat futur."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle approche est cohérente pour observer la culture organisationnelle ?",
+      "options": [
+        "Retenir la seule charte comme description complète des comportements sans observer leur mise en œuvre.",
+        "Exclure les habitudes non écrites de l’analyse parce qu’elles ne figurent pas dans les procédures.",
+        "Rapprocher discours, rituels et règles informelles de décisions et comportements observables.",
+        "Traiter chaque pratique locale comme une règle commune à toute l’entreprise sans vérifier son étendue."
+      ],
+      "answer": 2,
+      "explanation": "Plusieurs indices doivent être confrontés aux faits. Une culture ne se déduit pas mécaniquement d’un slogan ou d’une observation isolée ; les pratiques et décisions aident à examiner les repères partagés."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une personne sans rôle hiérarchique est régulièrement consultée par plusieurs équipes avant qu’elles adoptent une pratique nouvelle. Quelle ressource peut-elle représenter pour le changement ?",
+      "options": [
+        "Un relais d’influence informelle et de compréhension des pratiques entre groupes.",
+        "Une autorité hiérarchique automatiquement créée par le nombre de consultations.",
+        "Un décideur juridiquement habilité à engager tous les services sans délégation.",
+        "Un acteur sans influence possible puisque l’organigramme ne lui attribue pas de commandement."
+      ],
+      "answer": 0,
+      "explanation": "L’influence ne se limite pas au rang formel. Il faut distinguer le rôle de relais de la compétence pour prendre des décisions ou engager l’organisation."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un salarié redoute que le changement augmente les erreurs de qualité. Quelle manière d’examiner cette crainte est constructive ?",
+      "options": [
+        "Conclure dès la crainte exprimée que le risque est avéré et que le pilote doit être abandonné.",
+        "Prescrire une formation générale sans préciser les situations dans lesquelles des erreurs seraient redoutées.",
+        "Limiter le critère du pilote au temps gagné en laissant les erreurs éventuelles hors du bilan.",
+        "Demander les situations à risque et définir avec lui des conditions et critères d’essai."
+      ],
+      "answer": 3,
+      "explanation": "L’objection peut contenir une information utile sans constituer une preuve définitive. La traduire en situations et tests rend l’essai vérifiable et permet de confronter la crainte à des observations."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un changement de longue durée dispose de premiers résultats positifs vérifiables. Dans l’approche de Kotter, quel usage de ces résultats soutient la mobilisation ?",
+      "options": [
+        "Déclarer la transformation terminée dès le premier résultat positif.",
+        "Les rendre visibles comme progrès intermédiaires sans les confondre avec l’achèvement complet.",
+        "Remplacer les résultats à venir par une seule annonce de réussite définitive.",
+        "Écarter les premiers résultats du suivi au seul motif que l’objectif final n’est pas encore atteint."
+      ],
+      "answer": 1,
+      "explanation": "Les progrès intermédiaires peuvent entretenir la mobilisation. Ils ne dispensent pas de poursuivre et stabiliser le changement.",
+      "references": [
+        {
+          "title": "Kotter — The8StepsforLeadingChange",
+          "url": "https://www.kotterinc.com/methodology/8-steps/"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une équipe ajoute un contrôle pour réduire les retards, puis constate que deux règles se contredisent : traiter chaque dossier le jour même et attendre une validation disponible seulement en fin de semaine. Quelle démarche dépasse le simple ajustement du contrôle ?",
+      "options": [
+        "Renforcer indéfiniment le même contrôle sans examiner l’objectif contradictoire.",
+        "Remplacer la cible par le résultat constaté pour supprimer l’écart apparent.",
+        "Réexaminer la cohérence des règles et objectifs qui produisent le problème.",
+        "Considérer la répétition des retards comme preuve que toute règle doit rester identique."
+      ],
+      "answer": 2,
+      "explanation": "Apprendre peut conduire à examiner le cadre qui génère l’écart, pas seulement à ajuster l’exécution dans un cadre supposé correct."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le service commercial demande moins de validations mais le contrôle veut une traçabilité. Quelle option mérite d’être étudiée ?",
+      "options": [
+        "Adapter les modalités pour préserver la maîtrise du risque tout en réduisant les délais inutiles.",
+        "Choisir la vitesse comme seul critère et retirer toute trace sans examiner le risque initial.",
+        "Conserver chaque étape à l’identique en supposant qu’une procédure ancienne est nécessairement optimale.",
+        "Additionner les préférences des services sans vérifier les conséquences du scénario retenu."
+      ],
+      "answer": 0,
+      "explanation": "Il faut distinguer un objectif légitime et son mode d’exécution. Repenser les modalités peut permettre un compromis, à tester sur des faits, plutôt que considérer la procédure actuelle ou sa suppression comme seule possibilité."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une équipe accepte la finalité du changement mais conteste l’absence de consultation et la manière dont les décisions ont été imposées. Que doit distinguer le diagnostic ?",
+      "options": [
+        "L’adhésion à la finalité comme approbation de toute modalité de mise en œuvre.",
+        "Le désaccord sur le processus de conduite du changement et le désaccord sur son contenu.",
+        "La critique de la procédure comme preuve de rejet de chaque objectif.",
+        "Le nombre de réunions comme mesure suffisante de l’accord sur les décisions."
+      ],
+      "answer": 1,
+      "explanation": "Le contenu et la manière de conduire le changement peuvent être jugés différemment. Les confondre conduit à répondre à une objection que l’équipe ne formule pas."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Quelques utilisateurs adoptent très tôt une pratique nouvelle, tandis que d’autres attendent des preuves et un appui concret. Quelle approche évite de traiter ce rythme différent comme une opposition identique ?",
+      "options": [
+        "Déduire que toute adoption tardive exprime le même refus définitif de la finalité.",
+        "Déclarer la généralisation achevée dès que les premiers utilisateurs se sont engagés.",
+        "Imposer à chaque groupe exactement la même information sans examiner les conditions de son appropriation.",
+        "Adapter les preuves et l’accompagnement aux étapes d’appropriation des groupes."
+      ],
+      "answer": 3,
+      "explanation": "Les trajectoires d’adoption peuvent différer. Le diagnostic doit identifier ce qui manque à chaque étape plutôt qu’assimiler tout décalage à un refus permanent."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La consultation fait apparaître une proposition pertinente qui ne peut pas être retenue pour une contrainte explicitée. Quelle pratique entretient un processus de retour compréhensible ?",
+      "options": [
+        "Présenter toute proposition recueillie comme automatiquement promise à mise en œuvre.",
+        "Expliquer la décision, la contrainte et la manière dont la proposition a été examinée.",
+        "Ne donner aucun retour en considérant que le recueil vaut réponse à chaque participant.",
+        "Annoncer que la proposition a été appliquée alors qu’elle a été écartée."
+      ],
+      "answer": 1,
+      "explanation": "Une participation ne garantit pas l’adoption de chaque suggestion. Rendre le traitement intelligible préserve la distinction entre écoute, examen et décision."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une pratique nouvelle réussit pendant le projet mais les procédures d’accueil et les routines de suivi continuent d’enseigner l’ancienne méthode. Quel enjeu d’ancrage du changement subsiste ?",
+      "options": [
+        "Tenir la fin du projet pour une preuve que les anciennes routines ont disparu.",
+        "Multiplier seulement les annonces sans modifier les mécanismes qui reproduisent l’ancienne méthode.",
+        "Intégrer la pratique dans les mécanismes ordinaires qui la transmettent et la renforcent.",
+        "Supprimer le suivi parce qu’un premier succès garantit la pérennité de la pratique."
+      ],
+      "answer": 2,
+      "explanation": "L’ancrage passe par les pratiques de fonctionnement, de transmission et de gestion. Une réussite ponctuelle n’en assure pas la pérennité.",
+      "references": [
+        {
+          "title": "Kotter — The8StepsforLeadingChange",
+          "url": "https://www.kotterinc.com/methodology/8-steps/"
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une pratique se diffuse entre sites par échanges de pairs avant qu’une consigne du siège existe. Quelle forme de diffusion est décrite ?",
+      "options": [
+        "Une cascade exclusivement descendante depuis une instruction préalable du siège.",
+        "Une absence de diffusion au seul motif qu’aucune circulaire n’a été publiée.",
+        "Une transmission limitée à l’organigramme formel, sans rôle des relations entre pairs.",
+        "Une diffusion horizontale entre unités par leurs réseaux de travail."
+      ],
+      "answer": 3,
+      "explanation": "Des pratiques peuvent circuler par des réseaux de pairs. La formalisation centrale et la diffusion effective ne se confondent pas."
+    }
+  ]
+}

@@ -1,0 +1,368 @@
+{
+  "module": "UE1",
+  "chapter": "preuve-obligation",
+  "sourceHash": "7f53768b620229546943af69785361ac8c6c516a89c525897216bf0c4ae55c4d",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une étagère tombe accidentellement et endommage le bien d’un visiteur. Le fait dommageable n’a pas été accompli pour créer une obligation. Quelle catégorie de source d’obligations de 1100-2 doit être distinguée d’un accord contractuel ?",
+      "options": [
+        "Un fait juridique auquel la loi peut attacher des effets de droit.",
+        "Un contrat de réparation conclu au moment où le bien est endommagé.",
+        "Une promesse de remboursement formée par la seule chute.",
+        "Une remise de dette consentie au propriétaire de l’étagère."
+      ],
+      "answer": 0,
+      "explanation": "Un événement ou un agissement peut produire des effets juridiques sans être une manifestation de volonté destinée à créer ces effets. L’incident est ici un fait juridique, à distinguer d’un accord de réparation ultérieur.",
+      "references": [
+        {
+          "title": "Code civil, article 1100-2, faits juridiques",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032006710/2026-03-20"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un consultant demande un complément de prix pour une mission supplémentaire. Le client admet la mission initiale mais conteste ce supplément. Que doit étayer le consultant ?",
+      "options": [
+        "Le seul paiement de la mission initiale, tenu pour accord sur tout supplément.",
+        "L’engagement relatif au supplément et les éléments qui fondent son exigibilité.",
+        "Le seul temps qu’il estime avoir consacré à son travail.",
+        "L’absence de refus écrit du client, tenue pour accord nécessaire sur le supplément."
+      ],
+      "answer": 1,
+      "explanation": "L’accord initial ne prouve pas automatiquement une mission supplémentaire. Le consultant doit rattacher la somme réclamée à l’obligation précise dont il demande l’exécution."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un fournisseur produit une facture qu’il a lui-même établie. Le client conteste l’existence de la commande. Quelle analyse de cette pièce est appropriée ?",
+      "options": [
+        "Elle suffit à établir l’intégralité des termes contestés, même sans pièce provenant du client.",
+        "Elle inverse la charge de la preuve de la commande dès son émission par le fournisseur.",
+        "Elle doit être rapprochée des éléments établissant l’accord et la prestation invoqués.",
+        "Elle devient une reconnaissance de commande du client par sa seule réception."
+      ],
+      "answer": 2,
+      "explanation": "La facture matérialise la demande du fournisseur, sans démontrer seule tous les éléments contestés. Il faut examiner les pièces portant sur l’accord et la prestation."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie écrit : « Le client conteste la commande ; il doit donc prouver que le contrat n’a jamais existé. » Quelle correction retenir en droit commun ?",
+      "options": [
+        "La contestation vaut reconnaissance de la commande tant que le client n’a pas prouvé son annulation.",
+        "La facture oblige le client à démontrer un vice de formation avant d’en contester le fondement.",
+        "Le client doit d’abord prouver un paiement, même s’il conteste avoir commandé.",
+        "Le demandeur doit d’abord établir l’obligation dont il exige l’exécution."
+      ],
+      "answer": 3,
+      "explanation": "Le seul fait de contester ne dispense pas le demandeur de prouver l’obligation invoquée. Il faut distinguer contestation de l’existence et invocation d’un paiement libératoire."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le client reconnaît avoir commandé une installation, mais conteste que l’étape conditionnant le solde ait été réalisée. Quel point doit être documenté pour réclamer ce solde ?",
+      "options": [
+        "La réalisation de l’étape prévue et son incidence sur l’exigibilité du solde.",
+        "La commande initiale seule, en écartant la condition relative au solde.",
+        "L’émission de la facture de solde, tenue pour exécution de l’étape.",
+        "Le silence du client sur une autre facture, tenu pour réalisation de cette étape."
+      ],
+      "answer": 0,
+      "explanation": "L’existence de la commande n’épuise pas la question de l’exigibilité. Le demandeur doit relier sa demande aux conditions qui ouvrent droit au solde."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un débiteur veut prouver le paiement d’une dette civile de 3 000 €, dont l’existence est reconnue. Le juge refuse d’examiner ses témoignages au seul motif que la somme dépasse 1 500 €. Quelle règle de 1342-8 distingue preuve du paiement et preuve de l’acte ?",
+      "options": [
+        "Le paiement exige toujours un acte authentique au-delà de 1 500 €.",
+        "Le paiement se prouve par tout moyen, même si la preuve de l’acte obéit à un autre régime.",
+        "Un témoignage est irréfragable dès que le montant de la dette est reconnu.",
+        "Le paiement ne peut être démontré que par la quittance signée du créancier."
+      ],
+      "answer": 1,
+      "explanation": "1342-8 admet la preuve du paiement par tout moyen. Cette admissibilité ne rend pas chaque témoignage convaincant, mais interdit de l’écarter au seul titre du seuil applicable à la preuve de certains actes.",
+      "references": [
+        {
+          "title": "CA, 18 novembre 2024, application de l’article 1342-8",
+          "url": "https://www.courdecassation.fr/decision/export/673c39d33c84857e1cd88053/1"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un débiteur affirme avoir remis des espèces au créancier et produit seulement un retrait bancaire. Quelle conclusion tirer de cette pièce isolée ?",
+      "options": [
+        "La concordance entre retrait et dette suffit à établir la remise au créancier, même sans autre élément.",
+        "La disponibilité d’espèces vaut une reconnaissance du règlement par le créancier.",
+        "Il montre une sortie d’espèces mais ne prouve pas, à lui seul, leur remise au créancier pour cette dette.",
+        "La proximité de date entre retrait et échéance crée une présomption irréfragable de paiement."
+      ],
+      "answer": 2,
+      "explanation": "Le retrait et le paiement au créancier sont des faits distincts. La pièce ne renseigne pas seule sur le bénéficiaire, la remise et l’affectation des espèces."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un débiteur invoque une remise de dette expresse dans un échange, plutôt qu’un paiement. Dans le schéma de droit commun, quelle question probatoire examiner ?",
+      "options": [
+        "La remise est nécessairement présumée du seul défaut de relance.",
+        "Le débiteur doit démontrer uniquement qu’il souhaitait obtenir une remise.",
+        "La preuve de tout paiement passé remplace celle de la remise.",
+        "Les éléments établissant le fait libératoire précis qu’il invoque."
+      ],
+      "answer": 3,
+      "explanation": "La charge porte sur le fait invoqué pour se dire libéré. Il faut donc étudier l’échange et sa portée, sans convertir une attente ou un silence en remise établie."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une dette de prix est payable en argent. Le débiteur offre du matériel à la place, mais le créancier n’accepte pas ce remplacement. Selon 1342-4, quelle conclusion porte sur la libération ainsi invoquée ?",
+      "options": [
+        "Le matériel proposé ne suffit pas à libérer le débiteur sans acceptation de cette autre prestation.",
+        "L’équivalence de valeur estimée par le débiteur impose au créancier d’accepter.",
+        "Le refus du créancier éteint la dette puisque le débiteur a offert un bien.",
+        "La livraison unilatérale du matériel remplace automatiquement l’obligation monétaire."
+      ],
+      "answer": 0,
+      "explanation": "Le créancier peut accepter autre chose en paiement, mais la seule proposition du débiteur ne prouve pas cet accord. La libération ne peut donc pas être déduite de l’équivalence alléguée du matériel.",
+      "references": [
+        {
+          "title": "Code civil, article 1342-4, prestation reçue en paiement",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000032035243/2026-02-20"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le débiteur n’a qu’une preuve de règlement partiel alors qu’il affirme avoir tout payé. Quelle conclusion est adaptée ?",
+      "options": [
+        "Le paiement partiel prouve nécessairement le paiement de tout le solde.",
+        "La pièce doit être rattachée à son montant ; la libération du solde reste à étayer.",
+        "Le paiement partiel rend impossible toute autre preuve ultérieure.",
+        "Le créancier doit restituer l’intégralité du prix avant de demander le solde."
+      ],
+      "answer": 1,
+      "explanation": "Une pièce établissant un règlement partiel ne prouve pas son extension au solde. La conclusion doit respecter le montant et l’affectation effectivement documentés."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel rapprochement rend une pièce bancaire utile pour une dette discutée ?",
+      "options": [
+        "Le seul montant, tenu pour décisif même si plusieurs dettes identiques existent.",
+        "La date de l’opération, tenue pour suffisante même si le bénéficiaire reste inconnu.",
+        "Les parties, l’opération, le montant et la date concernés.",
+        "Le seul débit du compte, tenu pour règlement de la dette la plus ancienne dans tous les cas."
+      ],
+      "answer": 2,
+      "explanation": "Une preuve de paiement doit être rapprochée de la dette précise. Les références des parties et de l’opération évitent de confondre plusieurs règlements de même montant."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux factures du même fournisseur ont le même montant. Un virement porte seulement ce montant, sans référence. Quelle vérification est décisive avant d’affirmer que la facture litigieuse est payée ?",
+      "options": [
+        "Retenir systématiquement la facture la plus récente.",
+        "Répartir nécessairement le virement à parts égales sans autre élément.",
+        "Considérer que les deux factures sont réglées par le même virement.",
+        "Rapprocher les dates, références et échanges précisant l’affectation du versement."
+      ],
+      "answer": 3,
+      "explanation": "L’identité des montants ne suffit pas à désigner la dette réglée. Les pièces d’affectation et la chronologie doivent être examinées sans inventer leur résultat."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une preuve de virement indique un bénéficiaire autre que le créancier. Aucun lien entre ces personnes n’est documenté. Quelle analyse retenir ?",
+      "options": [
+        "Le versement est établi, mais son effet sur la dette envers le créancier ne l’est pas encore.",
+        "L’identité du montant suffit à établir la libération envers le créancier.",
+        "Tout paiement à un tiers éteint automatiquement la dette litigieuse.",
+        "Le nom du bénéficiaire est sans pertinence dès lors qu’une somme est sortie du compte."
+      ],
+      "answer": 0,
+      "explanation": "Le bénéficiaire constitue un élément central du rapprochement. En l’absence de lien documenté, le virement à un tiers ne démontre pas à lui seul l’extinction de cette dette."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un débiteur a deux dettes distinctes envers le même créancier. Lors de son paiement, il indique expressément vouloir acquitter la seconde. La preuve bancaire confirme cette référence. Quelle donnée de 1342-10 doit guider l’imputation dans le cas donné ?",
+      "options": [
+        "La dette la plus ancienne, même en présence de cette désignation expresse.",
+        "La dette désignée par le débiteur lors du paiement.",
+        "La répartition égale du paiement entre les deux dettes dans tous les cas.",
+        "La dette que le créancier désigne seul après réception, indépendamment de l’indication donnée."
+      ],
+      "answer": 1,
+      "explanation": "1342-10 permet au débiteur d’indiquer lors du paiement la dette qu’il entend acquitter. Les critères supplétifs d’ancienneté ou de proportionnalité ne remplacent pas ici la désignation documentée.",
+      "references": [
+        {
+          "title": "Code civil, article 1342-10, désignation de la dette payée",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032035255"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le fournisseur présente une facture au nom d’une autre société du même groupe. Que faut-il vérifier pour l’utiliser dans le litige ?",
+      "options": [
+        "La seule proximité des noms, tenue pour preuve d’identité des débiteurs.",
+        "La solvabilité des sociétés, pour choisir celle qui doit payer.",
+        "L’identité du cocontractant et le lien de la pièce avec l’obligation réclamée.",
+        "Le paiement d’une facture d’un autre membre du groupe, tenu pour accord sur celle-ci."
+      ],
+      "answer": 2,
+      "explanation": "L’appartenance à un même groupe ne rend pas toute pièce interchangeable. Le demandeur doit relier la facture à la personne et à l’opération qu’il invoque."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un client additionne une confirmation de virement et la ligne bancaire correspondant à la même opération pour soutenir qu’il a payé deux fois. Quelle correction proposer ?",
+      "options": [
+        "Toute confirmation de virement vaut un second paiement autonome.",
+        "La ligne bancaire annule nécessairement l’ordre initial.",
+        "Le nombre de documents suffit à compter les versements.",
+        "Rapprocher les références pour compter les opérations réelles, pas leurs justificatifs."
+      ],
+      "answer": 3,
+      "explanation": "Plusieurs pièces peuvent documenter un seul paiement. Le rapprochement des références, dates et montants permet d’éviter de compter deux fois la même opération."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle distinction faut-il faire entre charge et admissibilité de la preuve ?",
+      "options": [
+        "La charge désigne qui doit prouver ; l’admissibilité concerne les modes de preuve recevables.",
+        "La charge fixe directement la valeur de chaque pièce.",
+        "L’admissibilité désigne la partie qui a le plus de documents.",
+        "La charge rend tout document du demandeur nécessairement recevable."
+      ],
+      "answer": 0,
+      "explanation": "Désigner la personne chargée de prouver ne dit pas quels moyens sont admis. La force des pièces constitue encore une appréciation différente."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un demandeur sait qu’il doit prouver l’obligation et produit un document. Quel raisonnement compléter avant de conclure qu’il a satisfait cette charge ?",
+      "options": [
+        "La charge du demandeur suffit à donner pleine force à son document.",
+        "Examiner le mode de preuve admissible et ce que le document établit effectivement.",
+        "La présence d’un document dispense d’identifier l’opération.",
+        "Le fait que le document soit récent suffit à prouver l’obligation ancienne."
+      ],
+      "answer": 1,
+      "explanation": "La charge ne valide pas automatiquement les moyens employés. Il faut identifier le régime de preuve et apprécier la pertinence et la force du document."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie écrit : « Ce témoignage est admissible, donc il démontre nécessairement tous les termes de l’accord. » Quel amalgame corriger ?",
+      "options": [
+        "La date à laquelle le témoin a observé les faits et celle à laquelle il les relate.",
+        "L’identité de la personne qui relate les faits et celle qui a participé à l’accord.",
+        "La recevabilité d’un moyen et sa force probante concrète.",
+        "L’existence d’une obligation et son exigibilité au jour de la demande."
+      ],
+      "answer": 2,
+      "explanation": "Un moyen recevable n’est pas nécessairement décisif sur tous les faits. Son contenu et sa force doivent être appréciés par rapport aux termes réellement discutés."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier précise qu’une règle spéciale déroge au schéma habituel de charge de preuve pour l’opération examinée. Quelle démarche adopter ?",
+      "options": [
+        "Appliquer le droit commun sans lire la dérogation.",
+        "Rejeter toutes les preuves parce qu’une exception existe.",
+        "Faire peser la charge sur celui qui détient le moins de pièces, sans appliquer la règle.",
+        "Vérifier le champ de la règle spéciale puis l’appliquer aux faits concernés."
+      ],
+      "answer": 3,
+      "explanation": "Le schéma de droit commun peut être aménagé. Il faut identifier si la situation entre dans le champ de la règle spéciale, sans généraliser la dérogation à tout le dossier."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une copie fiable est produite et l’original subsiste. Le détenteur refuse sa présentation au seul motif que 1379 donne à la copie fiable la même force probante. Que prévoit pourtant le dernier alinéa de cet article ?",
+      "options": [
+        "La présentation de l’original peut toujours être exigée lorsqu’il subsiste.",
+        "L’original ne peut être demandé qu’après l’annulation préalable de la copie.",
+        "La présentation de l’original suppose que la copie ait été déclarée non fiable par une décision préalable.",
+        "La même force probante interdit toute demande de présentation de l’original."
+      ],
+      "answer": 0,
+      "explanation": "1379 distingue la force de la copie fiable du droit d’obtenir la présentation de l’original subsistant. La valeur reconnue à la copie ne supprime pas ce dernier contrôle.",
+      "references": [
+        {
+          "title": "Code civil, article 1379, copies et original",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032042394/2020-01-17"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La règle sur les modes de preuve n’est pas fournie et le dossier ne qualifie pas clairement l’acte invoqué. Quelle réponse est la plus rigoureuse ?",
+      "options": [
+        "Affirmer que tout écrit est admissible et décisif dans tous les régimes.",
+        "Qualifier l’opération et rechercher le régime avant d’attribuer une valeur décisive aux pièces.",
+        "Présumer que le défendeur doit prouver dès qu’un document existe.",
+        "Écarter systématiquement toute preuve autre qu’un acte notarié."
+      ],
+      "answer": 1,
+      "explanation": "Le choix des moyens de preuve dépend du régime. Il faut qualifier l’opération et vérifier les règles applicables plutôt que poser une solution probatoire universelle."
+    }
+  ]
+}

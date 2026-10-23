@@ -1,0 +1,248 @@
+{
+  "sourceHash": "13dc343b5f873d0c542fe27af7986d089bbcd784796911419db0803a8b247979",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "0b2f798cd4cdb7c83520241ddc0ad28a68347aef365fab3ec4df2cc3476e53b4",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les deux parts positives couvrent le portefeuille : B = 100 − 35 = 65 %."
+    },
+    {
+      "id": "q02",
+      "digest": "38403fd6f95b25920fb2e15a42ade55774249203fdc34bd7c6e8c82ff766b3a8",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Des poids totalisant 120 % contredisent le portefeuille décrit ; clarifier définition ou exposition omise."
+    },
+    {
+      "id": "q03",
+      "digest": "cf32b5d521b1247017181cd16932f5c045fbe1564c50a9ffa41d695be808edd1",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Espérance : 0,25 × −4 + 0,75 × 8 = 5 %."
+    },
+    {
+      "id": "q04",
+      "digest": "469fc87c1077ab9c52a2420e43dd730d2ddb870296ee24203823eb527fd805b2",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La covariance croisée est 2wAwBρσAσB, distincte du rendement pondéré."
+    },
+    {
+      "id": "q05",
+      "digest": "675dd414bc3f80ef42ccb1b373e2eeecc6e0fedd3f992abafda863dc3a08f367",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Variance : 0,5² × 10² + 0,5² × 20² = 25 + 100 = 125 points carrés."
+    },
+    {
+      "id": "q06",
+      "digest": "04490e1265893f82903d6dedff3e9f9f646e9ea7e4ac862c6fddc2b053f8f2f4",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Volatilité : racine de 144 = 12 points."
+    },
+    {
+      "id": "q07",
+      "digest": "7ba76e8e3cf3e16c61bae789b7d489912f39cd97d8e8b547e90843e7790c1814",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Variance en points carrés demande la racine pour revenir à dix points de volatilité."
+    },
+    {
+      "id": "q08",
+      "digest": "55c6f2a17d4705f3eade0e59798fe451f56067429b1ff623fe2bd229be94a5f7",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "À coefficients positifs fixes, une corrélation réduite diminue le terme croisé et la variance."
+    },
+    {
+      "id": "q09",
+      "digest": "44c4cf0b24e0ebd3879d524d50582e0c66f091bf1d653332167ecfb7b9adb39e",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’espérance dépend des poids et moyennes, pas de la corrélation qui intervient dans le risque."
+    },
+    {
+      "id": "q10",
+      "digest": "13cda04b46c65a9dc9961e3b886a31ed6d7dee8b6299ed6586773d29027b9c3c",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Terme croisé : 2 × 0,5 × 0,5 × 0,5 × 10 × 10 = 25 points carrés."
+    },
+    {
+      "id": "q11",
+      "digest": "fc3bf2e0c162f7554611f45cf5d87846a43c1ab8e089aba50bee9e51815aa187",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les apports exigent chronologie et convention de performance. Les ajouter aux probabilités est une alternative absurde. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q12",
+      "digest": "34f62b74d8da8dede799bc3abc71790a22aba52d8bbd67ca23c220ad3acc552e",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’écart-type est une dispersion, pas une borne certaine de la perte."
+    },
+    {
+      "id": "q13",
+      "digest": "8a845e3ebd3211a3eef3d1c0ba2c1b215cf82bf7e3cec8203fb7d0f5557eda4e",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le poids doit être au carré dans le terme individuel. Ajouter le nominal à la variance confond unités et n’est pas plausible. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q14",
+      "digest": "bdffa5d331f34271ccceea445d9c230866ec254dd7cd5e8e6119cd8e0e5dc183",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "À corrélation +1 et poids positifs, volatilité = 0,5×10 + 0,5×20 = 15 points."
+    },
+    {
+      "id": "q15",
+      "digest": "56c3c70a83cdb3be98c5fcaf02b177a7e88a530d22975cad5822b11f7543d9fb",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "À volatilités égales, poids égaux et corrélation −1, les fluctuations s’annulent exactement dans le modèle."
+    },
+    {
+      "id": "q16",
+      "digest": "2246d9a0a778d917e30d39ffb15fe47fd50294f859aec5d008f4eb9dea3a46d2",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une même espérance n’impose pas le même profil de pertes ; il faut analyser dispersion et autres risques."
+    },
+    {
+      "id": "q17",
+      "digest": "7b199a46cfad55b52b5f536453556dd35e02eadd98e8516afc655d1d452374be",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "A/B=2 donne A/(A+B)=2/3=66,67 %."
+    },
+    {
+      "id": "q18",
+      "digest": "20b762576bd7fd7a935aebdb4a3913aa262feb6b0fb3ce48f93032853f0a18c1",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une corrélation usuelle appartient à [−1,+1]. Variance rendue négative et poids au-delà de 100 % pour compenser sont absurdes. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q19",
+      "digest": "e5815f07831002db46f982f4f2f2cd5cea0db6d03a05883eaf3a605a1454203a",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Des écarts-types décimaux donnent une racine décimale ; multiplier par cent pour l’affichage %. Nombre d’actions ou euros n’a pas de sens ici. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q20",
+      "digest": "e83faa2e0d065db7453d0b7a67fc20af1d4fb64de709a9edea6cd6ce4fcc0d18",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "À ρ nul le terme croisé doit être zéro ; vérifier le facteur dans le calcul."
+    },
+    {
+      "id": "q21",
+      "digest": "4e4633cc9032e46de50ee5fb53b3c5354d148e8a4e59a679c22ac60278cc1d79",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une moyenne pondérée sans levier et à poids positifs reste entre les moyennes individuelles."
+    },
+    {
+      "id": "q22",
+      "digest": "ae8f151669b4d891ff3d0984a3e29b2ace430e2620eb4f5259b90bce9900b941",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’écart-type ne couvre pas toutes les dimensions de risque de crédit et de liquidité."
+    }
+  ]
+}

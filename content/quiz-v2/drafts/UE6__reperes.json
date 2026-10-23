@@ -1,0 +1,414 @@
+{
+  "module": "UE6",
+  "chapter": "reperes",
+  "sourceHash": "e73d416cb63997400695ee1d5141c89d0bc0c594f62c024e7d65b88f25d527a2",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que mesure le besoin en fonds de roulement dans un cycle d’exploitation simplifié ?",
+      "options": [
+        "Le financement des stocks et créances, net des dettes d’exploitation",
+        "Le bénéfice réalisé sur les ventes",
+        "Le montant de tous les emprunts",
+        "La valeur de marché des immobilisations"
+      ],
+      "answer": 0,
+      "explanation": "Le BFR mesure les décalages de financement du cycle. Il ne mesure ni une performance comptable ni la valeur des équipements."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise paie ses marchandises avant d’encaisser leur vente. Pourquoi peut-elle manquer de trésorerie malgré une marge positive ?",
+      "options": [
+        "La marge positive signifie que les clients ont déjà payé",
+        "Le décalage entre décaissement et encaissement doit être financé",
+        "Le paiement des fournisseurs supprime les créances",
+        "Les stocks constituent des liquidités immédiatement disponibles"
+      ],
+      "answer": 1,
+      "explanation": "La rentabilité d’une vente ne détermine pas sa date d’encaissement. Le cycle immobilise des ressources avant que le client ne paie."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant additionne stocks, créances clients et dettes fournisseurs pour calculer le BFR. Quelle correction faut-il apporter ?",
+      "options": [
+        "Soustraire les stocks au lieu des dettes",
+        "Remplacer les créances par le chiffre d’affaires",
+        "Soustraire les dettes fournisseurs des stocks et créances",
+        "Ajouter le bénéfice au total"
+      ],
+      "answer": 2,
+      "explanation": "Les dettes fournisseurs financent une partie du cycle et se soustraient des emplois d’exploitation constitués par les stocks et créances."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Stocks : 18 000 € ; créances clients : 27 000 € ; dettes fournisseurs : 20 000 €. Aucun autre poste d’exploitation. Quel est le BFR ?",
+      "options": [
+        "65 000 €",
+        "9 000 €",
+        "45 000 €",
+        "25 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Les emplois représentent 18 000 + 27 000 = 45 000 €. Les fournisseurs financent 20 000 €, d’où un besoin net de 25 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 18000
+                },
+                {
+                  "value": 27000
+                }
+              ]
+            },
+            {
+              "value": 20000
+            }
+          ]
+        },
+        "expected": 25000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les stocks diminuent sans variation des créances et dettes d’exploitation. Comment évolue le BFR ?",
+      "options": [
+        "Il diminue et libère du financement",
+        "Il augmente parce que les achats sont comptabilisés",
+        "Il reste inchangé par définition",
+        "Il devient nécessairement négatif"
+      ],
+      "answer": 0,
+      "explanation": "Une baisse des stocks réduit un emploi d’exploitation et donc le BFR. Elle ne suffit pas à déterminer le signe final de celui-ci."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les clients paient comptant et les dettes d’exploitation dépassent les stocks et créances. Que signifie ce BFR négatif ?",
+      "options": [
+        "L’entreprise réalise nécessairement une perte",
+        "Le cycle dégage une ressource de financement",
+        "Les signes comptables sont nécessairement inversés",
+        "Toutes les dettes sont déjà réglées"
+      ],
+      "answer": 1,
+      "explanation": "Un BFR négatif traduit un excédent des ressources d’exploitation sur les emplois du périmètre retenu ; il ne mesure pas le bénéfice."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle relation relie FRNG, BFR et trésorerie nette dans un cadre fonctionnel cohérent ?",
+      "options": [
+        "La somme du FRNG et du BFR",
+        "La différence du BFR moins le FRNG",
+        "Trésorerie nette = FRNG − BFR",
+        "Le rapport du FRNG au BFR"
+      ],
+      "answer": 2,
+      "explanation": "Le fonds de roulement finance le besoin du cycle. Le solde entre FRNG et BFR constitue la trésorerie nette."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste utilise un BFR hors trésorerie et un FRNG établi avec d’autres conventions. Que doit-il vérifier avant de commenter leur différence ?",
+      "options": [
+        "Le seul signe positif de la différence obtenue",
+        "La conformité du montant au bénéfice de l’exercice",
+        "L’égalité du BFR avec les seuls postes de trésorerie",
+        "La cohérence des périmètres et des classements"
+      ],
+      "answer": 3,
+      "explanation": "L’identité fonctionnelle ne s’applique correctement qu’à des grandeurs cohérentes. Un résultat plausible ne corrige pas un classement incompatible."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un FRNG de 42 000 € et un BFR de 50 000 € sont calculés avec les mêmes conventions. Quelle est la trésorerie nette ?",
+      "options": [
+        "−8 000 €",
+        "92 000 €",
+        "42 000 €",
+        "50 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La trésorerie nette est égale à 42 000 − 50 000 = −8 000 €. Le besoin du cycle dépasse ici la ressource durable.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 42000
+            },
+            {
+              "value": 50000
+            }
+          ]
+        },
+        "expected": -8000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "À FRNG et activité inchangés, les clients mettent plus de temps à payer ; stocks et dettes restent stables. Quel effet est le plus probable ?",
+      "options": [
+        "Baisse du BFR et hausse de la trésorerie nette",
+        "Hausse du BFR et baisse de la trésorerie nette",
+        "Hausse automatique du bénéfice",
+        "Aucun effet puisque les ventes sont facturées"
+      ],
+      "answer": 1,
+      "explanation": "Un délai client plus long augmente les créances à activité comparable. Ce besoin supplémentaire réduit la trésorerie à FRNG constant."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un dirigeant affirme : « Notre trésorerie nette est positive, nous n’avons donc aucune dette fournisseur. » Quelle rectification est correcte ?",
+      "options": [
+        "Une trésorerie positive interdit de détenir des stocks",
+        "La trésorerie nette mesure uniquement les fournisseurs",
+        "Un solde positif reste compatible avec des dettes fournisseurs",
+        "Les fournisseurs sont des emplois stables"
+      ],
+      "answer": 2,
+      "explanation": "La trésorerie nette est un solde global. Des dettes fournisseurs peuvent financer le cycle alors que ce solde demeure positif."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Comment ramener à aujourd’hui la valeur d’un encaissement futur avec un taux positif ?",
+      "options": [
+        "Multiplier le flux par (1 + taux) puissance nombre de périodes",
+        "Retrancher le taux une seule fois du montant futur, quelle que soit l’échéance",
+        "Diviser le flux par le taux multiplié par le nombre de périodes",
+        "Diviser le flux par (1 + taux) puissance nombre de périodes"
+      ],
+      "answer": 3,
+      "explanation": "L’actualisation divise le flux par (1 + taux) puissance nombre de périodes. La multiplication correspond à une capitalisation."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un encaissement de 1 210 € intervient dans deux ans. Le taux annuel fourni est de 10 %. Quelle est sa valeur actuelle ?",
+      "options": [
+        "1 000 €",
+        "1 100 €",
+        "1 464,10 €",
+        "605 €"
+      ],
+      "answer": 0,
+      "explanation": "Il faut actualiser deux périodes : 1 210 / 1,10² = 1 000 €. Une seule division par 1,10 ne couvre qu’une année.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1210
+            },
+            {
+              "op": "pow",
+              "args": [
+                {
+                  "value": 1.1
+                },
+                {
+                  "value": 2
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux créances certaines du même montant seront encaissées dans un an et dans trois ans. Avec un même taux positif, laquelle a la valeur actuelle la plus élevée ?",
+      "options": [
+        "Celle encaissée dans trois ans",
+        "Celle encaissée dans un an",
+        "Leurs valeurs actuelles sont égales puisque les montants nominaux sont identiques",
+        "Le classement est impossible sans connaître le montant nominal exact"
+      ],
+      "answer": 1,
+      "explanation": "À montant identique, plus l’échéance est lointaine, plus le flux est actualisé. La créance encaissée tôt vaut donc davantage aujourd’hui."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un flux sera reçu dans six mois, mais le calcul lui applique une période annuelle entière au taux annuel fourni. Quelle précaution manque-t-il ?",
+      "options": [
+        "Supprimer le taux pour tout flux inférieur à un an",
+        "Transformer le flux en résultat comptable",
+        "Rendre cohérentes la durée et la périodicité du taux",
+        "Retenir automatiquement six périodes annuelles"
+      ],
+      "answer": 2,
+      "explanation": "Le taux et l’échéance doivent être exprimés dans un cadre temporel cohérent. Six mois ne correspondent pas à une année entière."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le taux d’actualisation augmente tandis que le montant et la date d’un encaissement futur positif restent fixes. Comment évolue sa valeur actuelle ?",
+      "options": [
+        "Elle augmente dans la même proportion",
+        "Elle ne change pas",
+        "Elle devient obligatoirement négative",
+        "Elle diminue"
+      ],
+      "answer": 3,
+      "explanation": "L’augmentation du taux accroît le dénominateur d’actualisation. La valeur actuelle baisse sans devenir négative pour ce flux positif."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que signifie une VAN positive dans un scénario et à un taux explicitement retenus ?",
+      "options": [
+        "Les flux actualisés dépassent l’investissement initial",
+        "Le bénéfice sera positif chaque année",
+        "Les encaissements futurs sont garantis",
+        "Aucune dépense initiale n’est nécessaire"
+      ],
+      "answer": 0,
+      "explanation": "La VAN compare flux actualisés et dépense initiale. Son signe est conditionnel aux prévisions et au taux, sans garantir leur réalisation."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un projet coûte 8 000 € aujourd’hui. La somme de ses flux futurs déjà actualisés atteint 8 750 €. Quelle est sa VAN ?",
+      "options": [
+        "16 750 €",
+        "750 €",
+        "8 750 €",
+        "−8 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Les flux étant déjà actualisés, on retranche simplement la dépense initiale : 8 750 − 8 000 = 750 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 8750
+            },
+            {
+              "value": 8000
+            }
+          ]
+        },
+        "expected": 750,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant remplace les flux nets de trésorerie par les bénéfices comptables sans aucun retraitement pour calculer une VAN. Pourquoi est-ce incorrect ?",
+      "options": [
+        "Déduire seulement l’investissement initial des bénéfices suffit sans actualiser",
+        "La CAF correspond toujours au flux net disponible de chaque année",
+        "Résultat comptable et trésorerie ne mesurent pas les mêmes flux",
+        "Un résultat positif dispense d’intégrer le BFR du projet"
+      ],
+      "answer": 2,
+      "explanation": "Charges non décaissées et décalages de paiement distinguent résultat et trésorerie. La VAN nécessite des flux nets datés pertinents."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une machine a une VAN positive dans le scénario central mais les ventes prévues sont incertaines. Quelle analyse est la plus utile pour compléter la décision ?",
+      "options": [
+        "Déclarer que le signe positif élimine toute incertitude",
+        "Remplacer les prévisions par un chiffre historique sans explication",
+        "Supprimer l’investissement initial du calcul",
+        "Tester des hypothèses commerciales moins favorables"
+      ],
+      "answer": 3,
+      "explanation": "Une analyse de sensibilité mesure la dépendance de la VAN aux hypothèses. Un scénario positif ne constitue pas une assurance de succès."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux projets exclusifs comparables ont des VAN de 2 000 € et 5 000 € au même taux, sans autre contrainte. Quel choix suit le seul critère de création de valeur ?",
+      "options": [
+        "Le projet de VAN 5 000 €",
+        "Le projet de VAN 2 000 € car il dépasse moins le rendement exigé",
+        "Un choix indifférent car les deux VAN sont positives",
+        "L’absence de comparaison car deux projets exclusifs ne peuvent pas être comparés"
+      ],
+      "answer": 0,
+      "explanation": "À périmètre et hypothèses comparables, la VAN la plus élevée représente la plus forte création de valeur selon ce critère."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une VAN négative permet-elle de conclure qu’un projet ne procure aucun encaissement ?",
+      "options": [
+        "Oui : tous les flux futurs sont nécessairement nuls",
+        "Non : les flux actualisés peuvent simplement être insuffisants",
+        "Oui : seul un décaissement peut avoir une valeur actuelle",
+        "Non : il faut alors ignorer la dépense initiale"
+      ],
+      "answer": 1,
+      "explanation": "Une VAN négative peut accompagner des encaissements substantiels. Ceux-ci ne couvrent alors pas l’investissement au taux de rémunération exigé."
+    }
+  ]
+}

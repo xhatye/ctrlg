@@ -1,0 +1,476 @@
+{
+  "module": "UE6",
+  "chapter": "emprunt-annuite",
+  "sourceHash": "330fb851f6108a96e3d675cbc8b5b8cb02af06831bb3bbe83784facdda7b6516",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un prêt de 12 000 € est remboursé par deux annuités constantes de fin d’année, à 10 % annuels, sans frais. Avec A = C × i / [1 − (1 + i)^−n], quelle annuité obtient-on, arrondie au centime ?",
+      "options": [
+        "6 914,29 €",
+        "6 000 €",
+        "7 200 €",
+        "13 200 €"
+      ],
+      "answer": 0,
+      "explanation": "L’application de la formule donne 12 000 × 0,10 / [1 − 1,10^−2] = 6 914,2857… €, soit 6 914,29 € au centime.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 0.1
+                }
+              ]
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "op": "pow",
+                  "args": [
+                    {
+                      "value": 1.1
+                    },
+                    {
+                      "value": -2
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 6914.29,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un échéancier à annuités constantes hors frais, quelle somme est identique à chaque période avant éventuel ajustement final d’arrondi ?",
+      "options": [
+        "La fraction de principal seule",
+        "Le remboursement de principal augmenté des intérêts",
+        "La fraction d’intérêts seule",
+        "Le capital restant dû après paiement"
+      ],
+      "answer": 1,
+      "explanation": "Le paiement total est constant, tandis que ses deux composantes évoluent. La baisse des intérêts laisse une part croissante au principal."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La formule d’annuité est appliquée avec un taux annuel mais un nombre de mensualités. Quelle incohérence faut-il corriger ?",
+      "options": [
+        "Le capital initial doit être remplacé par une mensualité",
+        "L’exposant doit obligatoirement être positif dans cette formule",
+        "Le taux doit correspondre à la période des échéances",
+        "Le taux doit être exprimé en euros"
+      ],
+      "answer": 2,
+      "explanation": "La formule exige un taux périodique et un nombre de périodes de même unité. Mélanger taux annuel et nombre de mois fausse l’échéancier."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat est sans intérêt et prévoit quatre remboursements identiques d’un capital de 20 000 €. Comment déterminer chaque paiement sans appliquer une formule aboutissant à 0/0 ?",
+      "options": [
+        "Considérer qu’aucun remboursement n’est dû",
+        "Appliquer un taux fictif de 1 %",
+        "Prendre la totalité du capital à chaque échéance",
+        "Diviser directement le principal par les quatre remboursements"
+      ],
+      "answer": 3,
+      "explanation": "Avec un taux nul, il n’y a pas d’intérêts à répartir : chaque paiement est une fraction égale du capital. La formule générale se simplifie ainsi dans ce cas."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le contrat prévoit une annuité de fin d’année, mais la frise du calcul la place immédiatement au jour du prêt. Pourquoi faut-il corriger la date ?",
+      "options": [
+        "Un paiement immédiat n’a pas la même valeur ni la même exposition d’intérêts",
+        "La date ne concerne que la présentation graphique",
+        "Une annuité constante est nécessairement payée au début",
+        "Un paiement initial augmente systématiquement le capital emprunté"
+      ],
+      "answer": 0,
+      "explanation": "La formule et le tableau reposent sur des échéances de fin de période. Les déplacer modifie les capitaux exposés et la valeur des paiements."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "À capital et taux positif inchangés, le prêt est étalé sur davantage d’années avec annuités constantes. Quel effet sur le paiement périodique est normalement attendu ?",
+      "options": [
+        "Il augmente nécessairement parce que la durée augmente",
+        "Il diminue, mais le coût cumulé doit être examiné séparément",
+        "Il reste égal aux seuls intérêts initiaux",
+        "Il devient identique au remboursement constant de principal"
+      ],
+      "answer": 1,
+      "explanation": "L’allongement répartit les paiements sur plus de périodes. Une annuité moindre ne prouve pas un coût total moindre, car la dette reste exposée plus longtemps."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant affirme : « Puisque l’annuité est fixe, les intérêts annuels sont fixes. » Quelle donnée invalide cette conclusion pour un prêt amortissable ?",
+      "options": [
+        "Le taux contractuel change nécessairement chaque année",
+        "Le capital remboursé doit rester nul jusqu’au terme",
+        "Le capital restant dû diminue à mesure des remboursements",
+        "Les intérêts constituent la totalité de toute annuité"
+      ],
+      "answer": 2,
+      "explanation": "Les intérêts dépendent du capital encore dû, pas de la seule stabilité du paiement total. Leur baisse est compensée par davantage de principal remboursé."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Au début d’un prêt sans frais, le capital est de 12 000 €. Les intérêts de la première année entière sont de 600 €. Quel taux annuel a été appliqué ?",
+      "options": [
+        "20 %",
+        "0,05 %",
+        "6 %",
+        "5 %"
+      ],
+      "answer": 3,
+      "explanation": "Le taux est intérêts / capital : 600 / 12 000 = 0,05, soit 5 %. Il faut distinguer ce nombre décimal de l’écriture en pourcentage.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 600
+                },
+                {
+                  "value": 12000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 5,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une banque communique le montant global « intérêts et assurance » de la première année. Peut-on le diviser sans retraitement par le capital pour retrouver le seul taux d’intérêt contractuel ?",
+      "options": [
+        "Non, il faut isoler les intérêts de l’assurance",
+        "Oui, l’assurance est toujours une part du taux nominal",
+        "Oui, le résultat est nécessairement le taux contractuel",
+        "Non, il faut diviser uniquement par le nombre d’années"
+      ],
+      "answer": 0,
+      "explanation": "Un coût composé ne permet pas de retrouver un taux d’intérêt seul sans ventilation. L’assurance est un élément distinct dans l’information donnée."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau calcule les intérêts de la première année sur l’annuité au lieu du capital prêté. Quelle base doit-il employer ?",
+      "options": [
+        "Le total des annuités de toutes les années",
+        "Le principal dû pendant la première période",
+        "La seule différence entre capital et annuité",
+        "Le solde de banque après paiement"
+      ],
+      "answer": 1,
+      "explanation": "Les intérêts rémunèrent le capital exposé pendant la période. L’annuité est le paiement qui contient ces intérêts, pas leur base de calcul."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les intérêts baissent alors que le taux nominal demeure fixe. Quelle explication décrit correctement cette évolution dans un prêt à annuités constantes ?",
+      "options": [
+        "Le taux est implicitement réduit chaque année",
+        "Le contrat devient sans intérêt après le premier paiement",
+        "La base de principal encore due se réduit",
+        "La banque capitalise nécessairement tous les intérêts"
+      ],
+      "answer": 2,
+      "explanation": "Le taux est constant mais son assiette diminue. Il faut distinguer stabilité du taux et diminution du montant d’intérêts."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une annuité hors frais de 4 200 € comprend 720 € d’intérêts pour la période. Quelle fraction rembourse le principal ?",
+      "options": [
+        "4 920 €",
+        "720 €",
+        "4 200 €",
+        "3 480 €"
+      ],
+      "answer": 3,
+      "explanation": "Le principal remboursé est la différence annuité moins intérêts : 4 200 − 720 = 3 480 €. La totalité de l’annuité ne réduit pas la dette.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 4200
+            },
+            {
+              "value": 720
+            }
+          ]
+        },
+        "expected": 3480,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "D’une année à la suivante, les intérêts diminuent de 150 € et l’annuité totale reste strictement constante. Comment évolue la part de principal remboursé ?",
+      "options": [
+        "Elle augmente de 150 €",
+        "Elle diminue de 150 €",
+        "Elle reste inchangée",
+        "Elle augmente du montant total de l’annuité"
+      ],
+      "answer": 0,
+      "explanation": "Le paiement étant fixe, toute baisse de sa composante intérêts accroît d’autant sa composante principal, sans nouvelle ressource reçue."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau affiche des intérêts décroissants et une annuité constante, mais conserve une fraction de principal fixe. Quelle égalité n’est plus respectée ?",
+      "options": [
+        "Principal remboursé = annuité + intérêts",
+        "Annuité = principal remboursé + intérêts",
+        "Annuité = capital restant dû initial + intérêts",
+        "Intérêts = annuité + principal remboursé"
+      ],
+      "answer": 1,
+      "explanation": "Les deux composantes doivent reconstituer chaque paiement. Avec une annuité fixe, des intérêts qui changent impliquent une fraction de capital qui change aussi."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un paiement prévu serait inférieur aux intérêts dus de la période. Que peut-on conclure avant de parler d’un remboursement normal du capital ?",
+      "options": [
+        "Il réduit le principal du montant total du paiement, sans tenir compte des intérêts non couverts",
+        "Il constitue un remboursement positif de principal égal à intérêts moins paiement",
+        "Il ne permet pas une fraction positive de principal dans la décomposition paiement moins intérêts",
+        "Il peut être traité comme une annuité amortissante normale sans examiner le solde non payé"
+      ],
+      "answer": 2,
+      "explanation": "Dans la décomposition donnée, le paiement ne couvre même pas les intérêts. Il faut examiner le contrat et le traitement du solde non payé, sans inventer un amortissement positif."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’annuité est arrondie à l’euro dans une colonne puis utilisée pour calculer le capital remboursé, alors que l’exercice demande de conserver ses décimales. Quel défaut faut-il éviter ?",
+      "options": [
+        "Une erreur de conversion du taux annuel en taux mensuel",
+        "Un décalage entre dates de début et de fin de période",
+        "Un double comptage de frais de dossier distincts dans le paiement",
+        "Des écarts de ventilation cumulés dus aux arrondis prématurés"
+      ],
+      "answer": 3,
+      "explanation": "L’arrondi destiné à l’affichage ne doit pas modifier trop tôt les calculs internes. Les petites différences peuvent laisser un solde résiduel en fin de tableau."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le capital initial d’une période vaut 18 000 €. L’annuité est de 5 500 €, dont 900 € d’intérêts. Quel capital reste dû après ce paiement ?",
+      "options": [
+        "13 400 €",
+        "12 500 €",
+        "17 100 €",
+        "23 500 €"
+      ],
+      "answer": 0,
+      "explanation": "Le principal remboursé vaut 5 500 − 900 = 4 600 €. Le capital restant est donc 18 000 − 4 600 = 13 400 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 18000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 5500
+                },
+                {
+                  "value": 900
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 13400,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après une échéance, le capital final est négatif de quelques centimes à cause des arrondis. Quelle correction prudente est adaptée à un tableau réel ?",
+      "options": [
+        "Effacer le reliquat sans rapprocher le principal réellement remboursé",
+        "Vérifier les arrondis et ajuster la dernière échéance selon le contrat",
+        "Reporter le solde négatif tel quel comme dette de départ d’un nouvel échéancier sans examen",
+        "Compenser l’écart en modifiant rétroactivement le taux contractuel"
+      ],
+      "answer": 1,
+      "explanation": "Les arrondis peuvent provoquer un petit résiduel. Il faut contrôler la précision et le paiement final, plutôt que créer ou effacer des flux sans justification."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le capital restant dû baisse de moins que le paiement total. Est-ce nécessairement une erreur ?",
+      "options": [
+        "Oui, la totalité de toute annuité rembourse toujours le principal",
+        "Oui, si le paiement est constant",
+        "Non, une partie du paiement correspond aux intérêts",
+        "Non, mais seulement lorsque le taux d’intérêt est nul"
+      ],
+      "answer": 2,
+      "explanation": "La réduction du principal correspond au paiement diminué des intérêts. Avec un taux positif, elle est normalement inférieure à l’annuité totale."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un prêt de 10 000 € est intégralement remboursé par quatre annuités de 2 800 €, sans frais ni autre paiement. Quel est le total des intérêts versés ?",
+      "options": [
+        "11 200 €",
+        "2 800 €",
+        "800 €",
+        "1 200 €"
+      ],
+      "answer": 3,
+      "explanation": "Le total payé est 4 × 2 800 = 11 200 €. Une fois le capital de 10 000 € retiré, il reste 1 200 € d’intérêts.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 4
+                },
+                {
+                  "value": 2800
+                }
+              ]
+            },
+            {
+              "value": 10000
+            }
+          ]
+        },
+        "expected": 1200,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le capital final d’une période est de 14 300 €, mais le tableau démarre la période suivante à 15 000 €, sans tirage supplémentaire ni autre opération. Quel contrôle effectuer ?",
+      "options": [
+        "Le report du solde de principal entre les deux périodes",
+        "La somme des annuités restantes utilisée comme principal sans isoler les intérêts",
+        "L’ajout au capital final des intérêts de la période précédente pourtant déjà payés",
+        "La reprise du capital initial de l’emprunt à chaque nouvelle période malgré les remboursements"
+      ],
+      "answer": 0,
+      "explanation": "Un tableau d’emprunt doit être continu. Sans événement justifié, le capital de début doit reprendre le capital de fin de la période précédente."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client compare un prêt à annuités constantes et un prêt à capital remboursé constant. Quel élément doit-il examiner pour comprendre leurs profils de remboursement ?",
+      "options": [
+        "Uniquement le mot « constant » dans les deux intitulés",
+        "La ventilation annuelle entre intérêts, principal et capital restant dû",
+        "Le seul prix de l’actif financé, sans échéancier",
+        "L’hypothèse que tous les paiements sont identiques dans les deux contrats"
+      ],
+      "answer": 1,
+      "explanation": "Les modes ne rendent pas constante la même composante. Leur échéancier détaillé permet d’apprécier rythme de remboursement et besoins de paiement."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel contrôle final vérifie qu’un échéancier sans tirage supplémentaire a remboursé tout le principal ?",
+      "options": [
+        "Le cumul des intérêts égale le capital initial",
+        "Chaque annuité est égale au capital restant dû initial",
+        "Le cumul des fractions de principal égale le capital initial et le solde final est nul",
+        "Le dernier intérêt est nécessairement nul avant le paiement final"
+      ],
+      "answer": 2,
+      "explanation": "Le contrôle porte sur le principal remboursé et le solde de dette. Les intérêts sont un coût distinct et peuvent rester positifs durant la dernière période."
+    }
+  ]
+}

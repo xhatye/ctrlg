@@ -1,0 +1,406 @@
+{
+  "module": "DSCG4",
+  "chapter": "normes",
+  "sourceHash": "913efcc0410e608afb8e06b1330d522158e577769375a8edf41b36df278da1c9",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un test IAS 36, quels montants faut-il comparer pour déterminer la valeur recouvrable ?",
+      "options": [
+        "La valeur d’utilité et la juste valeur diminuée des coûts de sortie, en retenant la plus élevée",
+        "Le coût historique et la valeur résiduelle, en retenant leur moyenne",
+        "La valeur d’utilité et le coût historique, en retenant la plus faible",
+        "La juste valeur brute et la valeur comptable, en retenant leur somme"
+      ],
+      "answer": 0,
+      "explanation": "La valeur recouvrable compare les deux voies de récupération pertinentes : utilisation et sortie. Ni le coût historique ni une moyenne ne remplacent ce maximum."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour un actif soumis à IAS 36, la valeur d’utilité est de 73 000 € et la juste valeur diminuée des coûts de sortie de 69 000 €. Quelle valeur recouvrable retenir ?",
+      "options": [
+        "142 000 €",
+        "73 000 €",
+        "69 000 €",
+        "71 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La récupération peut être envisagée par l’utilisation ou la sortie. La mesure retenue est ici le maximum de 73 000 et 69 000 €, soit 73 000 €, sans addition des deux voies.",
+      "calculation": {
+        "expression": {
+          "op": "max",
+          "args": [
+            {
+              "value": 73000
+            },
+            {
+              "value": 69000
+            }
+          ]
+        },
+        "expected": 73000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste additionne la valeur d’utilité d’un actif et son prix de vente net, au motif que les deux sont documentés. Quelle correction apporte IAS 36 ?",
+      "options": [
+        "Retenir la plus faible des deux valeurs, par application du principe de prudence",
+        "Pondérer les deux valeurs selon la durée d’utilisation restante, puis en faire la moyenne",
+        "Comparer les deux voies alternatives de récupération plutôt que les cumuler",
+        "Retenir la valeur d’utilité diminuée du prix de vente net, celui-ci représentant la récupération finale"
+      ],
+      "answer": 2,
+      "explanation": "L’actif ne sera pas simultanément utilisé et vendu pour les mêmes avantages économiques. Le test compare des voies alternatives ; il ne cumule pas leurs valeurs."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dossier donne une juste valeur brute de 94 000 € et des coûts de sortie de 6 000 €. La valeur d’utilité est de 90 000 €. Quelle comparaison prépare correctement le test IAS 36 ?",
+      "options": [
+        "Comparer 100 000 € de sortie à 90 000 € de valeur d’utilité",
+        "Comparer directement 94 000 € bruts à 90 000 € de valeur d’utilité",
+        "Déduire les 6 000 € des deux valeurs avant toute comparaison",
+        "Comparer 88 000 € nets de sortie à 90 000 € de valeur d’utilité"
+      ],
+      "answer": 3,
+      "explanation": "La voie de sortie doit être diminuée des coûts correspondants : 94 000−6 000=88 000 €. La valeur d’utilité fournie ne se réduit pas à nouveau de ces mêmes coûts."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La direction veut vendre un actif dès que possible, mais le cas IAS 36 fournit une valeur d’utilité supérieure à la juste valeur nette de sortie, toutes deux valablement établies. Le seul souhait de vente impose-t-il de choisir la plus faible ?",
+      "options": [
+        "Non, ce souhait ne remplace pas le critère de valeur recouvrable du test fourni",
+        "Oui, toute intention de vente impose automatiquement la plus faible des deux valeurs",
+        "Oui, une estimation interne devient sans valeur dès qu’une cession est envisagée",
+        "Non, il faut toujours retenir le coût d’achat indépendamment des deux valeurs"
+      ],
+      "answer": 0,
+      "explanation": "Le problème fournit un test IAS 36 et ses mesures valides. Une préférence de gestion ne change pas à elle seule sa règle ; un éventuel autre régime doit être identifié séparément."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un test IAS 36 simplifié d’un actif isolé, la valeur comptable est de 96 000 € et la valeur recouvrable validée de 81 000 €. Sans réévaluation particulière, quelle perte de valeur constater ?",
+      "options": [
+        "177 000 €",
+        "15 000 €",
+        "81 000 €",
+        "96 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La perte est l’excès de valeur comptable sur la valeur recouvrable : 96 000−81 000=15 000 €. Ce n’est ni la nouvelle valeur de l’actif ni son coût total.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 96000
+            },
+            {
+              "value": 81000
+            }
+          ]
+        },
+        "expected": 15000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La valeur comptable d’un actif isolé est de 62 000 € et sa valeur recouvrable IAS 36 de 68 000 €. Le dossier exclut tout régime de réévaluation. Que permet le test présenté ?",
+      "options": [
+        "Relever automatiquement l’actif de 6 000 € grâce à ce seul test",
+        "Ramener l’actif à zéro puisque la valeur recouvrable est supérieure",
+        "Ne constater aucune perte de valeur sur cet actif au titre de ce test",
+        "Constater une perte de 6 000 € parce que les montants diffèrent"
+      ],
+      "answer": 2,
+      "explanation": "La valeur comptable ne dépasse pas la valeur recouvrable : le test ne révèle donc pas de perte. Il ne constitue pas à lui seul une autorisation générale de réévaluation à la hausse."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le calcul retient correctement une perte de 12 000 €, puis le tableau retire ce montant deux fois de la même valeur comptable. Quelle erreur faut-il corriger ?",
+      "options": [
+        "Une erreur dans la détermination de la perte initiale, qui devrait être divisée par deux",
+        "Une compensation incorrecte entre la perte de valeur et les amortissements futurs",
+        "Une présentation correcte si une diminution figure au bilan et l’autre dans le rapprochement de la même valeur nette",
+        "Un double effet de la même perte sur la valeur après test"
+      ],
+      "answer": 3,
+      "explanation": "La perte calculée doit réduire une fois la valeur de départ dans ce test simple. La présence d’un calcul exact ne valide pas un tableau qui reproduit deux fois son effet."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un test de perte de valeur est défavorable, mais l’entreprise n’a prévu aucun décaissement lié à ce constat. Le responsable veut donc supprimer la perte. Quelle distinction manque ?",
+      "options": [
+        "La réduction de valeur comptable et un paiement bancaire immédiat",
+        "La perte de valeur et une provision, cette dernière devant remplacer la perte en l’absence de paiement immédiat",
+        "La perte latente et la perte réalisée, seule la cession pouvant autoriser ici une charge",
+        "La charge comptable et la charge fiscalement déductible, le test devant attendre la déduction fiscale"
+      ],
+      "answer": 0,
+      "explanation": "Le test mesure une capacité de récupération et sa conséquence comptable. Un paiement immédiat n’est pas nécessaire pour qu’une valeur comptable excède le montant récupérable."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Après test IAS 36, un actif isolé dont la valeur comptable était 125 000 € est présenté à 109 000 €. Le seul mouvement est la perte issue de ce test. Quel montant de perte reconstituer ?",
+      "options": [
+        "234 000 €",
+        "16 000 €",
+        "109 000 €",
+        "125 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le rapprochement de la valeur avant et après test donne 125 000−109 000=16 000 €. Il faut vérifier le mouvement et ne pas confondre perte et valeur restante.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 125000
+            },
+            {
+              "value": 109000
+            }
+          ]
+        },
+        "expected": 16000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une valeur d’utilité repose sur des encaissements annoncés de nouveaux clients, mais aucun contrat ni perspective commerciale n’étaye ces prévisions. Quel contrôle est pertinent ?",
+      "options": [
+        "Contrôler seulement les formules d’actualisation, en considérant les volumes commerciaux comme une donnée acquise",
+        "Remplacer les encaissements annoncés par le chiffre d’affaires comptable historique sans analyser les perspectives",
+        "Examiner la justification des volumes et des probabilités d’encaissement",
+        "Retenir les prévisions dès lors que leur total reste inférieur au budget annuel approuvé"
+      ],
+      "answer": 2,
+      "explanation": "Une prévision n’est pas une observation certaine. Les hypothèses commerciales, les volumes et leur cohérence doivent être étayés ; une formule exacte ne prouve pas les flux futurs."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le modèle traite un flux reçu dans cinq ans comme s’il était reçu à la fin de la première année, au même taux positif. Quel effet faut-il examiner ?",
+      "options": [
+        "Une valeur actuelle nécessairement inchangée puisque le montant futur est identique",
+        "Une valeur actuelle sous-évaluée parce qu’une date plus proche réduit sa valeur",
+        "Une perte de valeur nécessairement égale au flux total",
+        "Une valeur actuelle surévaluée parce que le flux est actualisé sur une durée trop courte"
+      ],
+      "answer": 3,
+      "explanation": "À taux positif et montant identique, un flux plus lointain a une valeur actuelle plus faible. Avancer artificiellement sa date peut donc gonfler la valeur d’utilité."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un modèle pédagogique retient un unique flux net de 12 100 € à la fin de la deuxième année et un taux annuel de 10 %, sans autre flux ni valeur finale. Quelle est sa valeur actuelle ?",
+      "options": [
+        "10 000 €",
+        "11 000 €",
+        "12 100 €",
+        "14 641 €"
+      ],
+      "answer": 0,
+      "explanation": "Il faut diviser par deux facteurs annuels : 12 100/(1,10²)=10 000 €. Une seule division par 1,10 ignorerait la deuxième année.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 12100
+            },
+            {
+              "op": "pow",
+              "args": [
+                {
+                  "value": 1.1
+                },
+                {
+                  "value": 2
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 10000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le tableur exprime les flux futurs en milliers d’euros mais ajoute à la fin une valeur terminale exprimée en euros, sans conversion. Quel défaut menace le test ?",
+      "options": [
+        "Une incohérence de date, à résoudre en actualisant la valeur terminale une seconde fois",
+        "Une incohérence d’unité entre des composantes additionnées",
+        "Une incohérence de taux, à résoudre en divisant le taux d’actualisation par mille",
+        "Une différence de présentation sans effet sur le total si chaque colonne conserve son propre format numérique"
+      ],
+      "answer": 1,
+      "explanation": "Additionner des euros et des milliers d’euros sans conversion crée une erreur d’échelle. Il faut rendre les unités cohérentes avant de contrôler les taux ou le résultat."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le taux d’actualisation passe de 8 % à 11 % alors que tous les flux nets positifs, leurs dates et la valeur finale restent fixes. Le tableur augmente la valeur actuelle. Que faut-il vérifier ?",
+      "options": [
+        "La durée d’utilité, qui devrait être prolongée pour maintenir la valeur actuelle lorsque le taux augmente",
+        "La valeur terminale, qui devrait être augmentée du même pourcentage que le taux pour assurer la cohérence",
+        "Le sens et les formules d’actualisation, car le taux accru doit réduire cette valeur actuelle",
+        "Le montant des flux positifs, qui devrait être majoré de trois points avant application du nouveau taux"
+      ],
+      "answer": 2,
+      "explanation": "À flux futurs positifs et dates fixes, l’augmentation du taux accroît les diviseurs d’actualisation. Une hausse de la valeur actuelle appelle donc un examen de la formule."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une sensibilité fait baisser simultanément les ventes prévues et le taux d’actualisation. La valeur d’utilité varie peu. Peut-on conclure que chaque hypothèse est sans importance ?",
+      "options": [
+        "Oui, la stabilité du total valide automatiquement les deux changements",
+        "Oui, deux variations simultanées donnent toujours leur effet individuel",
+        "Non, il faut nécessairement annuler toute estimation de valeur d’utilité",
+        "Non, des effets opposés peuvent se compenser et doivent aussi être isolés"
+      ],
+      "answer": 3,
+      "explanation": "Deux changements peuvent produire des effets contraires. Le faible effet net ne démontre pas une faible sensibilité de chaque paramètre ; des tests isolés complètent l’analyse."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une machine n’engendre pas d’entrées de trésorerie largement indépendantes des autres équipements de la chaîne. Quelle question IAS 36 faut-il examiner avant le test ?",
+      "options": [
+        "Le niveau pertinent de l’unité génératrice de trésorerie",
+        "Le montant de trésorerie à lui affecter au prorata de sa valeur comptable, sans rechercher l’indépendance des entrées",
+        "Le prix de remplacement de la machine, qui suffit à remplacer l’analyse des entrées de trésorerie",
+        "La possibilité de conserver un test isolé en répartissant également les encaissements de la chaîne entre les machines"
+      ],
+      "answer": 0,
+      "explanation": "Le niveau du test dépend des flux identifiables et des règles de regroupement. L’absence de flux indépendants peut imposer l’analyse d’une unité plutôt que l’attribution d’un chiffre artificiel."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux activités génèrent des encaissements indépendants. L’analyste les regroupe uniquement pour que l’excédent de l’une masque la perte potentielle de l’autre. Quelle justification manque ?",
+      "options": [
+        "Le choix du plus grand regroupement possible dans tous les cas",
+        "Un périmètre de test conforme aux flux et aux règles, indépendant du résultat souhaité",
+        "La preuve que leurs valeurs comptables ont exactement le même montant",
+        "Une simple décision de reporter la perte jusqu’à la vente de l’activité"
+      ],
+      "answer": 1,
+      "explanation": "Le périmètre ne se choisit pas pour obtenir une absence de perte. Il faut analyser les entrées de trésorerie et le niveau de regroupement requis par le référentiel."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La valeur comptable du test comprend une machine transférée hors de l’unité, mais les flux projetés concernent seulement les actifs qui y restent. Quel rapprochement faut-il effectuer ?",
+      "options": [
+        "Ajouter les flux de l’ensemble du groupe à ceux de l’unité, sans modifier les actifs comparés",
+        "Conserver la machine dans le test jusqu’à la fin de son plan d’amortissement initial, malgré son transfert",
+        "Aligner le périmètre de valeur comptable et celui des flux utilisés",
+        "Répartir la valeur de la machine entre les unités selon leur chiffre d’affaires, sans rattacher ses flux"
+      ],
+      "answer": 2,
+      "explanation": "Le test doit comparer des mesures portant sur un périmètre cohérent. Un actif sorti du champ de flux ne doit pas rester dans la comparaison sans justification adaptée."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi identifier le référentiel avant d’utiliser un test de perte de valeur ?",
+      "options": [
+        "Tous les référentiels imposent les mêmes écritures dès que les mots valeur et perte apparaissent",
+        "Le référentiel ne sert qu’à choisir la monnaie de présentation",
+        "La règle la plus prudente en montant remplace toujours le référentiel applicable",
+        "Les définitions, champs et règles de reconnaissance ne se transposent pas automatiquement entre cadres"
+      ],
+      "answer": 3,
+      "explanation": "La similitude des termes ne garantit pas celle des règles. La réponse doit préciser le cadre et les hypothèses plutôt qu’importer mécaniquement un traitement d’un autre système."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le test fourni concerne un actif isolé et exclut réévaluation et particularités de groupe. Le rédacteur applique directement sa formule à un groupe comportant du goodwill. Quelle réserve doit-il formuler ?",
+      "options": [
+        "Les règles de périmètre et d’affectation de la perte du groupe doivent être examinées séparément",
+        "Répartir la perte entre goodwill et autres actifs au prorata de leur valeur comptable, comme pour un actif décomposé",
+        "Tester uniquement les actifs identifiables et retenir le goodwill pour son montant d’acquisition tant que l’unité est exploitée",
+        "Rattacher le goodwill à chaque actif en fonction de son coût d’origine, puis appliquer séparément la formule isolée"
+      ],
+      "answer": 0,
+      "explanation": "Une formule d’actif isolé ne résout pas automatiquement un test d’unité avec goodwill. Le changement de périmètre impose d’examiner les règles spécifiques de mesure et d’affectation."
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un rapport donne une valeur d’utilité de 150 000 €, mais aucune liste de flux, date ni hypothèse de taux n’est conservée. Que faut-il obtenir pour rendre ce montant contrôlable ?",
+      "options": [
+        "Le seul prix d’achat ancien, substitué à toute projection",
+        "La construction documentée des flux, du calendrier et du taux retenus",
+        "La seule confirmation que 150 000 € est inférieur au budget d’investissement",
+        "Une copie supplémentaire du seul montant final signée par un second responsable"
+      ],
+      "answer": 1,
+      "explanation": "Le résultat d’un modèle doit pouvoir être reconstruit. Un montant signé sans ses entrées et leur transformation ne permet pas de vérifier la valeur d’utilité ou ses hypothèses."
+    }
+  ]
+}

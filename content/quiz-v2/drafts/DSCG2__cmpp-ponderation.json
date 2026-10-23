@@ -1,0 +1,538 @@
+{
+  "module": "DSCG2",
+  "chapter": "cmpp-ponderation",
+  "sourceHash": "681147741101873442c22ab53249330a59b42acf079e07cd569416e925704ae7",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le modèle de CMPC retient 450 000 € de fonds propres et 300 000 € de dette en valeur de marché. Quel est le poids des fonds propres ?",
+      "options": [
+        "60 %",
+        "150 %",
+        "40 %",
+        "75 %"
+      ],
+      "answer": 0,
+      "explanation": "Le poids se rapporte au financement total : 450 000 / (450 000 + 300 000) = 60 %. Le rapport fonds propres/dette donne un levier, pas ce poids.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 450000
+                },
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 450000
+                    },
+                    {
+                      "value": 300000
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 60,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour pondérer deux financements, un analyste divise les fonds propres par la dette et la dette par les fonds propres. Quel problème apparaît ?",
+      "options": [
+        "Les taux exigés devraient servir de dénominateur aux valeurs",
+        "Ces rapports ne sont pas les parts d’un même total de financement",
+        "Les deux rapports mesurent correctement des poids complémentaires",
+        "Seul le premier rapport est un poids, le second étant un coût"
+      ],
+      "answer": 1,
+      "explanation": "Les poids E/(E+D) et D/(E+D) partagent le même dénominateur et totalisent un. Des rapports réciproques E/D et D/E ne le font pas."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût de dette avant impôt est de 6 %. Le taux d’impôt fourni est de 25 % et le bouclier intégralement utilisable. Quel coût net retenir dans ce modèle ?",
+      "options": [
+        "1,5 %",
+        "8 %",
+        "4,5 %",
+        "5,75 %"
+      ],
+      "answer": 2,
+      "explanation": "Le coût net vaut 6 × (1 − 0,25) = 4,5 %. Le gain fiscal de 1,5 point n’est pas le coût restant supporté.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 6
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "value": 0.25
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 4.5,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’exercice précise que l’avantage fiscal des intérêts n’est pas utilisable dans le scénario étudié. Que faire pour le coût de dette dans ce scénario ?",
+      "options": [
+        "Appliquer le taux d’impôt au coût des fonds propres à la place",
+        "Réduire la dette de la totalité du taux d’impôt",
+        "Supprimer la contribution de la dette au CMPC",
+        "Ne pas appliquer un bénéfice fiscal supposé disponible"
+      ],
+      "answer": 3,
+      "explanation": "L’hypothèse de bouclier utilisable est nécessaire à la réduction correspondante. Si le scénario l’exclut, il faut adapter le coût au lieu de conserver une économie fictive."
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un modèle retient 50 % de fonds propres à 11 % et 50 % de dette à 4 % après impôt. Quel CMPC obtient-il ?",
+      "options": [
+        "7,5 %",
+        "15 %",
+        "9 %",
+        "3,5 %"
+      ],
+      "answer": 0,
+      "explanation": "Les contributions valent 5,5 points et 2 points, soit 7,5 %. La somme brute des coûts ignore les proportions de financement.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.5
+                },
+                {
+                  "value": 11
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.5
+                },
+                {
+                  "value": 4
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 7.5,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Des fonds propres pèsent 65 % du financement et coûtent 12 %. Quelle est leur contribution au CMPC, en points de pourcentage ?",
+      "options": [
+        "12 points",
+        "7,8 points",
+        "18,46 points",
+        "4,2 points"
+      ],
+      "answer": 1,
+      "explanation": "La contribution est 12 × 0,65 = 7,8 points. Le coût de 12 % et la contribution pondérée sont deux grandeurs différentes.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 12
+            },
+            {
+              "value": 0.65
+            }
+          ]
+        },
+        "expected": 7.8,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau affiche un CMPC de 8 %, dont 6 points viennent des fonds propres. Peut-on dire que leur coût est de 6 % ?",
+      "options": [
+        "Oui, contribution et coût sont des synonymes quel que soit le poids",
+        "Non, leur coût est obtenu en ajoutant les deux contributions",
+        "Non, il faut diviser leur contribution par leur poids pour retrouver leur coût",
+        "Oui, si les fonds propres représentent une part non nulle du financement"
+      ],
+      "answer": 2,
+      "explanation": "Le coût est multiplié par le poids pour produire la contribution. Une contribution de 6 points n’est égale au coût que si le poids vaut 100 %."
+    },
+    {
+      "id": "q08",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dossier de CMPC fournit des valeurs de marché à une même date. Le préparateur mélange les fonds propres de cette date et la dette d’une autre date après refinancement. Quelle cohérence manque ?",
+      "options": [
+        "L’égalité des coûts de dette et de fonds propres",
+        "L’égalité des montants de dette et de fonds propres",
+        "L’expression des poids en euros plutôt qu’en pourcentages",
+        "La cohérence de date des valeurs utilisées dans les poids"
+      ],
+      "answer": 3,
+      "explanation": "Les parts doivent décrire une structure de financement cohérente. Mélanger les dates peut associer des valeurs qui n’ont jamais coexisté."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le taux d’impôt fourni est 30 %. Dans une formule où les taux sont saisis en décimal, l’étudiant utilise (1 − 30). Que corriger ?",
+      "options": [
+        "Convertir 30 % en 0,30 avant d’appliquer le facteur fiscal",
+        "Remplacer le facteur (1 − 30) par 30 / 100 pour ne garder que la part d’impôt",
+        "Diviser le facteur déjà calculé (1 − 30) par 100 pour convertir son résultat",
+        "Prendre la valeur absolue du facteur (1 − 30), puis diviser par 100"
+      ],
+      "answer": 0,
+      "explanation": "Une proportion de 30 % s’écrit 0,30. Une incohérence d’unité transforme le facteur 0,70 en −29 et rend le résultat économiquement incohérent."
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le coût des fonds propres et le coût net de dette sont positifs, et les poids sont positifs de somme un. Quel contrôle de vraisemblance appliquer au CMPC ?",
+      "options": [
+        "Il doit dépasser la somme des deux coûts",
+        "Il doit se situer entre les deux coûts individuels",
+        "Il doit être inférieur au plus faible des deux coûts",
+        "Il doit égaler l’écart entre les deux coûts"
+      ],
+      "answer": 1,
+      "explanation": "Une moyenne pondérée avec poids positifs reste entre les valeurs individuelles. Une valeur hors de l’intervalle demande de vérifier poids, coûts ou unités."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "À coûts inchangés de 10 % pour les fonds propres et 4 % pour la dette nette d’impôt, le poids des fonds propres passe de 70 % à 60 %. Quelle diminution du CMPC le modèle produit-il ?",
+      "options": [
+        "1 point",
+        "0,4 point",
+        "0,6 point",
+        "6 points"
+      ],
+      "answer": 2,
+      "explanation": "Dix points de financement passent du coût de 10 % à celui de 4 %. La baisse vaut 0,10 × (10 − 4) = 0,6 point, sous coûts supposés inchangés.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 0.1
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 10
+                },
+                {
+                  "value": 4
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 0.6,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant conclut qu’il faut maximiser la dette parce qu’un CMPC baisse lorsque son poids augmente, en maintenant tous les coûts constants. Quelle limite rappeler ?",
+      "options": [
+        "La formule interdit une dette moins chère que les fonds propres",
+        "Un poids de dette ne peut modifier la moyenne même si les coûts diffèrent",
+        "Le CMPC mesure directement le remboursement de principal de chaque année",
+        "Ce résultat dépend de coûts fixés par hypothèse, sans démontrer leur stabilité à tout endettement"
+      ],
+      "answer": 3,
+      "explanation": "La sensibilité locale du modèle n’est pas une preuve d’optimalité générale. Les coûts, le risque et l’utilisation du bouclier peuvent varier avec la structure financière."
+    },
+    {
+      "id": "q13",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La contribution des fonds propres est de 5,4 points pour un poids de 60 %. Quel coût des fonds propres cela implique-t-il ?",
+      "options": [
+        "9 %",
+        "3,24 %",
+        "6 %",
+        "11,11 %"
+      ],
+      "answer": 0,
+      "explanation": "Le coût se retrouve en divisant la contribution par le poids : 5,4 / 0,60 = 9 %. Multiplier à nouveau appliquerait deux fois la pondération.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 5.4
+            },
+            {
+              "value": 0.6
+            }
+          ]
+        },
+        "expected": 9,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un modèle ne retenant que dette et fonds propres, quel contrôle arithmétique porte sur leurs deux poids ?",
+      "options": [
+        "Leur produit doit être égal à un",
+        "Leur somme doit être égale à un, soit 100 %",
+        "Leur différence doit être égale à zéro",
+        "Leur somme doit être égale au taux d’impôt"
+      ],
+      "answer": 1,
+      "explanation": "Chaque financement est une part du même total. Les parts couvrent ensemble 100 %, mais ne doivent pas pour autant être égales."
+    },
+    {
+      "id": "q15",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une dette pèse 40 %, son coût avant impôt est 5 % et le taux d’impôt fourni 20 %. Sous bouclier intégral, de combien l’impôt réduit-il la contribution de cette dette au CMPC ?",
+      "options": [
+        "1 point",
+        "0,8 point",
+        "0,4 point",
+        "1,6 point"
+      ],
+      "answer": 2,
+      "explanation": "Le gain sur le coût est 5 × 0,20 = 1 point ; pondéré à 40 %, il réduit le CMPC de 0,4 point. Le coût net pondéré est une autre grandeur.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.4
+                },
+                {
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "value": 0.2
+            }
+          ]
+        },
+        "expected": 0.4,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux projets ont des risques opérationnels différents. Un analyste applique sans examen le même CMPC d’entreprise aux deux. Quelle question est prioritaire ?",
+      "options": [
+        "Le même montant investi suffit-il à justifier un coût du capital identique ?",
+        "La même part de dette suffit-elle à prouver un risque opérationnel identique ?",
+        "Le même horizon suffit-il à rendre identiques les primes de risque ?",
+        "Le taux représente-t-il le risque et le périmètre des flux de chaque projet ?"
+      ],
+      "answer": 3,
+      "explanation": "Un taux moyen d’entreprise ne représente pas automatiquement des projets de risques différents. La cohérence entre risque des flux et coût retenu reste nécessaire."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une feuille multiplie le coût des fonds propres par le poids de dette et le coût de dette par le poids des fonds propres. Quel contrôle détecte cette inversion ?",
+      "options": [
+        "Rapprocher chaque contribution de la catégorie de financement qu’elle rémunère",
+        "Vérifier seulement que la somme des deux poids vaut 100 %",
+        "Vérifier seulement que les deux coûts sont exprimés en pourcentages",
+        "Comparer la somme des coûts avant pondération à la valeur de la dette"
+      ],
+      "answer": 0,
+      "explanation": "Les totaux de poids et unités peuvent être corrects malgré une inversion des affectations. Chaque coût doit être rattaché à sa propre part de financement."
+    },
+    {
+      "id": "q18",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les fonds propres comptables sont de 100 et leur valeur de marché de 400 ; le dossier impose le marché. La dette vaut 200. Quelle base de poids faut-il retenir ?",
+      "options": [
+        "100 de fonds propres sur un total de 300",
+        "400 de fonds propres sur un total de 600",
+        "400 de fonds propres sur un total de 300",
+        "100 de fonds propres sur un total de 600"
+      ],
+      "answer": 1,
+      "explanation": "La convention imposée utilise 400 et 200, soit un total de 600. Mélanger valeurs comptables et de marché ne respecte pas les hypothèses données."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le CMPC est de 7,8 %, le coût des fonds propres de 9 % et le coût net de dette de 3 %. Quel poids des fonds propres est impliqué par ce modèle à deux financements ?",
+      "options": [
+        "20 %",
+        "60 %",
+        "80 %",
+        "86,67 %"
+      ],
+      "answer": 2,
+      "explanation": "Avec x pour les fonds propres, 9x + 3(1 − x) = 7,8. On trouve x = (7,8 − 3)/(9 − 3) = 0,80, soit 80 %.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 7.8
+                    },
+                    {
+                      "value": 3
+                    }
+                  ]
+                },
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 9
+                    },
+                    {
+                      "value": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 80,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans un scénario, les fonds propres pèsent moins mais leur coût augmente. Peut-on déduire le sens de variation de leur contribution sans calcul complémentaire ?",
+      "options": [
+        "Oui, la contribution baisse dans la même proportion que le poids",
+        "Oui, la contribution augmente dans la même proportion que le coût",
+        "Non, car une contribution ne peut être calculée lorsque le coût varie",
+        "Non, il faut comparer le produit du nouveau poids par le nouveau coût"
+      ],
+      "answer": 3,
+      "explanation": "Deux effets opposés agissent sur le produit poids × coût. Leur ampleur relative détermine la variation, pas le seul sens d’un paramètre."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi le taux d’impôt d’un exercice chiffré doit-il être donné ou justifié ?",
+      "options": [
+        "Pour expliciter le facteur fiscal retenu et les limites de son utilisation",
+        "Pour le confondre avec le taux d’intérêt contractuel de la dette",
+        "Pour le déduire du poids des fonds propres quelle que soit la situation",
+        "Pour remplacer l’analyse de l’utilisation réelle du bouclier fiscal"
+      ],
+      "answer": 0,
+      "explanation": "Le facteur fiscal fait partie des hypothèses de calcul. Un taux fourni ne démontre pas à lui seul que l’économie d’impôt est pleinement utilisable."
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les poids saisis sont 0,6 et 0,4, mais le coût de fonds propres est saisi 12 et celui de dette 0,05. Quel contrôle est essentiel ?",
+      "options": [
+        "Ramener les deux poids à des montants en euros",
+        "Uniformiser l’unité des coûts, tous en pourcentage ou tous en décimal",
+        "Ajouter le taux d’impôt aux deux valeurs de coût",
+        "Diviser le total de financement par la somme des poids"
+      ],
+      "answer": 1,
+      "explanation": "Le calcul mélange ici 12 % représenté par 12 et 5 % représenté par 0,05. Des coûts de même unité sont nécessaires avant de sommer leurs contributions."
+    }
+  ]
+}

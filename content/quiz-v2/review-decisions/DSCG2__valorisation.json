@@ -1,0 +1,248 @@
+{
+  "sourceHash": "3d374d59bbce295a00e88d914f28b2db8256da2f12113d57bf863194c3c1c4c0",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "f68adf95d2db2ac196cd59776c33b49b8d1280eb4a9183c6d77efe734769474b",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Flux disponibles pour dette et fonds propres donnent une valeur d’entreprise avant répartition entre financeurs."
+    },
+    {
+      "id": "q02",
+      "digest": "72ee62eb67443de8712ae50424041245371bd3b7c8cef6ad102c8b3176a2b534",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Dette nette = 320 000 − 90 000 = 230 000."
+    },
+    {
+      "id": "q03",
+      "digest": "f652df0b1f95428ad757a82c70443fe3ef19dab7f28d680beb2f52a4c4ad1572",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Il faut justifier la trésorerie déductible selon sa disponibilité. Déduire deux fois la trésorerie libre pour compenser le blocage est un distracteur absurde. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q04",
+      "digest": "bb1fb27219b80a3a671de3f410962407f2893b0a7c7f369defb63904f6cdbec3",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Fonds propres = 1 400 000 − 350 000 = 1 050 000."
+    },
+    {
+      "id": "q05",
+      "digest": "1e0b3cc86b38f7584df97d591d7084b1b2a97b7adb30d64b77456c417b340dcd",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La formule ajoute déjà la trésorerie via la dette nette ; une nouvelle addition la compte deux fois."
+    },
+    {
+      "id": "q06",
+      "digest": "06f10c6195aceaeb04fce17fe573e4714685ff562b7ec87dd9bda47a04166ddd",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Valeur unitaire = 840 000 / 12 000 = 70."
+    },
+    {
+      "id": "q07",
+      "digest": "9995b6ca041dfd596ffe204cec4f08ecdfdfb327c026a62479273333180c73b2",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "À VE identique, dette nette plus faible laisse une valeur actionnaire totale supérieure."
+    },
+    {
+      "id": "q08",
+      "digest": "1163a351db2f66c9bbcc5bdc71b9f825274458e4a3dc4ed0769204b757098eef",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Il faut qualifier les fournisseurs et leur prise en compte dans les flux. Actualiser une facture à l’infini et convertir toutes dettes en charges sont absurdes. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q09",
+      "digest": "ac09317c818edc0c0b33d6dc326f75bb95605c3a0d6ad653ec541b2b605caeae",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le premier flux après l’horizon est F × (1+g)."
+    },
+    {
+      "id": "q10",
+      "digest": "6a5a6e62b038f144256588d7111ca094d6a13d1b810124a18796bb377a73db13",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "r−g = 6 000/100 000 = 6 %, donc g = 10 %−6 % = 4 %."
+    },
+    {
+      "id": "q11",
+      "digest": "444edfa939090dabf5c3f819bcafcabafce1ade13ef5efdd3895183ca6e0b1de",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Flux avant financement et taux CMPC doivent être cohérents. Dette nette transformée en valeur terminale et somme de coûts sont des alternatives trop éloignées. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q12",
+      "digest": "5a961d156eee466e7a64d05c298f1404069415066efc338e7dcc626f2a78e48c",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Dette nette = 100 000−150 000 = −50 000 ; fonds propres = 600 000+50 000 = 650 000."
+    },
+    {
+      "id": "q13",
+      "digest": "904f9c3da4564172f508289a5c87e24a123260b5e83938b7ae972430761a3857",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La valeur économique reflète les droits et perspectives, distincts du montant statutaire. Multiplier nominal par dette nette est une alternative absurde. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q14",
+      "digest": "b3d0514a427644dc18af0cf615cc2cb7afe048ed92fff67e23933fda30e60427",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La même trésorerie peut apporter deux avantages si elle est déjà dans un actif valorisé séparément. Croissance terminale et coûts de financement ne sont pas des erreurs concurrentes plausibles. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q15",
+      "digest": "620f7d7a6d6ae126d40352ce3f3e9eca79019a53eb0990083c622254b518e0fa",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’écart très faible r−g rend le dénominateur très sensible aux hypothèses de croissance."
+    },
+    {
+      "id": "q16",
+      "digest": "56d16c1431e9b9556f03a7f4d21080a4e5974d411676112317666512d150d199",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La dette nette doit être rapprochée à la date de valeur. Ajouter un emprunt à la croissance ou remplacer la dette par le résultat semestriel est incohérent. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q17",
+      "digest": "fcd72996c7deef4be33e7dcd24c8c506cc66b348a2546d8a6cd6ae737b700e6a",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Cash supplémentaire retenu 40 000 réduit la dette nette de 40 000 et augmente les fonds propres de 40 000."
+    },
+    {
+      "id": "q18",
+      "digest": "eb3970d6d412ad11892845022a0896795621c00ef430745832a0aa0e6bd9248b",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les mêmes périodes sont intégrées dans explicite et rente : recouvrement à supprimer. Nominal d’actions déduit ne traite pas ce doublon de périodes. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q19",
+      "digest": "9af9256e5009b3ac566d30d8ec88e96daf78cf365be19fcb5eeb8834451ad70a",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "VE identique peut donner un prix différent avec autre dette nette, ajustements ou quantité de titres."
+    },
+    {
+      "id": "q20",
+      "digest": "627e69325dc9da351b478ffdee717a4a09a0885e421bd4e20b371848aae3d22c",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La valeur prévisionnelle demande hypothèses, date et limites. Encaissement déjà réalisé et capital social minimum sont des distracteurs hors de l’estimation. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q21",
+      "digest": "506e558c97cd237260ebc3544bb2b4b2b2dbb00efa50df26c877c84c3a5ee636",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Dette brute puis dette nette soustraites font un double comptage de dette. Croissance et coût des fonds propres dans chaque flux ne sont pas des erreurs de ce passage. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q22",
+      "digest": "fe1e6ce9bd87960dd1147ecdbbf206fc3d7b4d99a285d96e611dafa4187b6b10",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le flux durable doit inclure les investissements nécessaires ; une rente ne peut prolonger gratuitement un flux incomplet."
+    }
+  ]
+}

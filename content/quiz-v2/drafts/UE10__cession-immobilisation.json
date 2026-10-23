@@ -1,0 +1,635 @@
+{
+  "module": "UE10",
+  "chapter": "cession-immobilisation",
+  "sourceHash": "d0059f937061dc3830f746edadfc6f8976b9233c1a5cb0e00aeda56834649b32",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’actif coûte 24 000 €. Les amortissements cumulés au début de l’exercice sont de 12 000 € et la dotation jusqu’à la cession de 800 €. Aucune dépréciation. Quelle VNC retenir à la sortie ?",
+      "options": [
+        "11 200 €",
+        "12 000 €",
+        "12 800 €",
+        "36 800 €"
+      ],
+      "answer": 0,
+      "explanation": "Le cumul à la sortie est 12 000 + 800 = 12 800 €. La VNC est 24 000 − 12 800 = 11 200 €, et non le solde d’ouverture.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 24000
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 800
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 11200,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier donne les amortissements cumulés « à la date de sortie ». Le préparateur y ajoute à nouveau la dotation jusqu’à cette date. Quelle erreur faut-il éviter ?",
+      "options": [
+        "La conservation d’une valeur brute historique",
+        "Le double comptage d’une dotation déjà incluse dans le cumul",
+        "La différence entre prix HT et prix TTC",
+        "L’absence automatique de toute correction de valeur"
+      ],
+      "answer": 1,
+      "explanation": "Le périmètre du cumul doit être lu précisément. Une dotation comprise dans les amortissements à la sortie ne s’ajoute pas une seconde fois.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La vente est négociée à un prix différent de la VNC. Le préparateur veut remplacer la VNC par le prix avant de calculer le résultat. Que faut-il préserver ?",
+      "options": [
+        "L’égalité obligatoire entre VNC et prix vendu",
+        "La possibilité d’annuler le prix de vente par choix de durée",
+        "La distinction entre coût net comptable et contrepartie de vente",
+        "La nécessité d’utiliser le seul capital restant dû comme VNC"
+      ],
+      "answer": 2,
+      "explanation": "Le résultat de cession naît précisément de la comparaison entre deux grandeurs distinctes. Modifier arbitrairement la VNC pour égaler le prix effacerait le résultat réel du modèle.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La valeur brute est de 30 000 €, les amortissements cumulés à la sortie de 18 000 € et une dépréciation encore présente de 2 000 €. Quelle valeur nette ces données représentent-elles avant les écritures de sortie ?",
+      "options": [
+        "12 000 €",
+        "14 000 €",
+        "50 000 €",
+        "10 000 €"
+      ],
+      "answer": 3,
+      "explanation": "La valeur nette prend en compte les deux corrections : 30 000 − 18 000 − 2 000 = 10 000 €. Leur traitement de sortie doit rester traçable.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 30000
+                },
+                {
+                  "value": 18000
+                }
+              ]
+            },
+            {
+              "value": 2000
+            }
+          ]
+        },
+        "expected": 10000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi fixer la date de cession avant le calcul du résultat ?",
+      "options": [
+        "Pour retenir la valeur comptable et les corrections pertinentes jusqu’à la sortie",
+        "Pour rendre automatiquement le prix égal au coût brut",
+        "Pour déterminer uniquement le paiement des dividendes",
+        "Pour éviter toute comparaison avec la valeur nette"
+      ],
+      "answer": 0,
+      "explanation": "La date borne l’amortissement et les valeurs à sortir selon le cas. Un solde ancien peut ne plus être le montant comptable pertinent au jour de la vente.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le prix de cession est de 7 500 € HT et la VNC de 9 000 €, sans coût de sortie ni autre effet. Quel résultat de cession donne le modèle prix HT moins VNC ?",
+      "options": [
+        "1 500 €",
+        "−1 500 €",
+        "16 500 €",
+        "7 500 €"
+      ],
+      "answer": 1,
+      "explanation": "Le résultat vaut 7 500 − 9 000 = −1 500 €. Il s’agit d’une perte comptable dans ce modèle, même si la vente procure un encaissement.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 7500
+            },
+            {
+              "value": 9000
+            }
+          ]
+        },
+        "expected": -1500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le prix de vente HT est exactement égal à la VNC et aucun autre coût n’existe. Quel résultat de cession obtient-on ?",
+      "options": [
+        "Un bénéfice égal au prix HT",
+        "Une perte égale à la VNC",
+        "Un résultat nul",
+        "Un résultat nécessairement égal à la TVA"
+      ],
+      "answer": 2,
+      "explanation": "La différence prix HT moins valeur nette est alors zéro. Le paiement peut être positif sans qu’un gain comptable apparaisse.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le lecteur assimile le prix encaissé au bénéfice de cession. Quel élément majeur a-t-il omis dans le modèle ?",
+      "options": [
+        "Le coût brut de l’actif à retrancher sans tenir compte des amortissements",
+        "Les seuls amortissements cumulés à retrancher du prix",
+        "Le seul nominal restant du financement à retrancher pour calculer le résultat comptable",
+        "La valeur comptable de l’actif qui sort"
+      ],
+      "answer": 3,
+      "explanation": "Le produit reçu n’est pas intégralement un gain. La valeur nette retirée de l’actif intervient dans le résultat de l’opération.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le dossier impose résultat net de cession = prix HT − VNC − frais de sortie. La VNC est 6 000 € et les frais 400 €. Quel prix HT assure un résultat nul ?",
+      "options": [
+        "6 400 €",
+        "5 600 €",
+        "6 000 €",
+        "400 €"
+      ],
+      "answer": 0,
+      "explanation": "Pour couvrir VNC et frais, le prix doit être 6 000 + 400 = 6 400 €. Les frais sont explicitement ajoutés au modèle de l’exercice.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 6000
+            },
+            {
+              "value": 400
+            }
+          ]
+        },
+        "expected": 6400,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un actif entièrement amorti, de VNC nulle dans le cas, est vendu 2 000 € HT sans frais. Comment interpréter ces 2 000 € dans le modèle de cession ?",
+      "options": [
+        "Ils annulent automatiquement le chiffre d’affaires historique",
+        "Ils constituent le gain de cession hors taxe puisque la valeur nette est nulle",
+        "Ils ne peuvent jamais constituer un produit parce que l’actif est ancien",
+        "Ils doivent être retranchés une seconde fois de la VNC"
+      ],
+      "answer": 1,
+      "explanation": "La comparaison avec une VNC nulle laisse le prix HT comme gain dans le modèle. L’âge de l’actif n’empêche pas une valeur de vente positive.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Toute cession est classée automatiquement en résultat exceptionnel en PCG2026, sans analyse des faits. Quelle condition de classification doit être examinée ?",
+      "options": [
+        "Le seul fait que le prix dépasse la VNC",
+        "Le seul encaissement par virement",
+        "Le lien éventuel avec un événement majeur et inhabituel selon le PCG",
+        "L’existence obligatoire d’un gain plutôt que d’une perte"
+      ],
+      "answer": 2,
+      "explanation": "Le PCG2026 ne fait pas du simple mot cession un critère universel d’exceptionnel. Le classement doit suivre les conditions du cadre applicable.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un gain comptable est calculé correctement. Peut-on affirmer qu’il correspond exactement au montant fiscal imposable sans autre examen ?",
+      "options": [
+        "Oui, toute mesure comptable détermine automatiquement l’impôt",
+        "Oui, si la TVA a été calculée correctement",
+        "Non, tout gain comptable est toujours exonéré",
+        "Non, il faut examiner séparément les règles fiscales applicables"
+      ],
+      "answer": 3,
+      "explanation": "Le calcul comptable et le traitement fiscal sont distincts. Le dossier fiscal peut comporter des conditions et ajustements qui ne découlent pas de la seule soustraction.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La cession est imposable selon les hypothèses fournies : prix HT 8 000 € et taxe de 20 %. Quel montant de TVA calculer sur cette base ?",
+      "options": [
+        "1 600 €",
+        "9 600 €",
+        "1 333,33 €",
+        "6 400 €"
+      ],
+      "answer": 0,
+      "explanation": "Dans ce cas, la taxe vaut 8 000 × 0,20 = 1 600 €. Le montant TTC est distinct du seul montant de taxe.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 8000
+            },
+            {
+              "value": 0.2
+            }
+          ]
+        },
+        "expected": 1600,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le préparateur calcule la taxe donnée sur la plus-value plutôt que sur le prix HT de cession imposé par l’exercice. Que faut-il corriger ?",
+      "options": [
+        "Le taux de perte de valeur, qui devient automatiquement la taxe",
+        "L’assiette de taxe, distincte du résultat de cession",
+        "Le prix de vente, qui doit toujours être égal à la plus-value",
+        "Le montant des amortissements, qui doit contenir la TVA collectée"
+      ],
+      "answer": 1,
+      "explanation": "La taxe du cas porte sur le prix HT, pas sur la différence comptable avec la VNC. Confondre les bases fausse le TTC.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La taxe est collectée sur la vente et payable selon les conditions du cas. Doit-elle être ajoutée au gain comptable comme une marge supplémentaire ?",
+      "options": [
+        "Oui, tout montant facturé est une marge",
+        "Oui, si la VNC est nulle",
+        "Non, elle est distinguée du produit HT et du gain de cession",
+        "Non, mais il faut la retirer deux fois du prix HT"
+      ],
+      "answer": 2,
+      "explanation": "La taxe augmente le montant facturé mais ne constitue pas le gain propre de vente. Le modèle de résultat compare les montants hors taxe pertinents.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le prix TTC est de 12 000 € avec une taxe incluse de 20 % fournie, sans autre élément. Quelle TVA est comprise dans ce total ?",
+      "options": [
+        "2 400 €",
+        "10 000 €",
+        "600 €",
+        "2 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le HT vaut 12 000 / 1,20 = 10 000 €. La taxe incluse est 12 000 − 10 000 = 2 000 €, et non 20 % du TTC.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 12000
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 1.2
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’actif a été amorti longtemps. Le rédacteur suppose sans vérifier que toute cession d’un actif ancien est hors TVA. Quelle démarche est nécessaire ?",
+      "options": [
+        "Déterminer le traitement de taxe applicable ou suivre l’hypothèse explicite du dossier",
+        "Retenir toujours une taxe nulle après deux annuités",
+        "Utiliser le taux d’amortissement comme taux de taxe",
+        "Appliquer la taxe au seul coût d’achat historique"
+      ],
+      "answer": 0,
+      "explanation": "L’ancienneté comptable ne donne pas à elle seule toute la règle fiscale. Le calcul doit être fondé sur le cadre et les conditions effectivement applicables.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le prix HT est de 5 000 € et la taxe fournie de 1 000 €, sans frais ni acompte. Quel montant TTC est dû par l’acheteur ?",
+      "options": [
+        "4 000 €",
+        "6 000 €",
+        "5 000 €",
+        "1 000 €"
+      ],
+      "answer": 1,
+      "explanation": "L’acheteur doit le total prix plus taxe : 5 000 + 1 000 = 6 000 €. Ce total ne constitue pas à lui seul le résultat de cession.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 5000
+            },
+            {
+              "value": 1000
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La cession est comptabilisée mais l’acheteur paiera plus tard. Quel poste doit être distingué d’une trésorerie déjà encaissée ?",
+      "options": [
+        "Le prix de cession traité comme une disponibilité dès la facture",
+        "La VNC de l’actif sorti traitée comme une créance de même montant",
+        "La créance sur l’acheteur jusqu’à son règlement",
+        "Le résultat de cession traité comme le montant total encore dû par l’acheteur"
+      ],
+      "answer": 2,
+      "explanation": "Un prix dû n’est pas encore un paiement reçu. Le suivi doit distinguer la vente, la créance et son dénouement bancaire.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’encaissement est diminué du remboursement du prêt de la machine et le reliquat est présenté comme résultat de cession. Quelle confusion faut-il relever ?",
+      "options": [
+        "Le principal du prêt remplace toujours la VNC dans le résultat",
+        "Le prix HT doit être augmenté du prêt initial",
+        "La dette financière constitue nécessairement la taxe collectée",
+        "Le flux de financement du prêt est mélangé au résultat de vente de l’actif"
+      ],
+      "answer": 3,
+      "explanation": "Le financement restant est distinct du coût net de l’actif vendu. Un net de trésorerie après remboursement ne mesure pas le même objet que le gain comptable.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La vente encaissée apporte 10 800 € TTC. Le cas demande seulement le flux bancaire net après remboursement immédiat d’un principal de prêt de 4 000 €, sans autre paiement à cette date. Quel flux net obtient-on ?",
+      "options": [
+        "6 800 €",
+        "14 800 €",
+        "4 000 €",
+        "10 800 €"
+      ],
+      "answer": 0,
+      "explanation": "Le mouvement bancaire net de ces deux événements est 10 800 − 4 000 = 6 800 €. Ce calcul n’est ni le gain comptable ni le solde après paiement futur de taxe.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 10800
+            },
+            {
+              "value": 4000
+            }
+          ]
+        },
+        "expected": 6800,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après la vente, la fiche d’immobilisation conserve la même valeur brute et les mêmes amortissements comme si l’actif appartenait encore à l’entreprise. Quel contrôle manque ?",
+      "options": [
+        "La seule mise à jour du prix de vente sans sortie des valeurs de l’actif",
+        "Le suivi de sortie de l’actif et de ses corrections dans les comptes",
+        "La suppression des amortissements cumulés en conservant le coût brut",
+        "La suppression du coût brut en conservant les amortissements cumulés"
+      ],
+      "answer": 1,
+      "explanation": "La vente ne se limite pas à une facture et un paiement. Le dossier doit aussi traduire la sortie des valeurs comptables concernées, sans laisser un actif fictif.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel rapprochement complet permet de contrôler une cession ?",
+      "options": [
+        "Le seul prix TTC comparé au capital social",
+        "Le seul virement bancaire sans fiche d’actif",
+        "Date, valeur nette de sortie, prix HT, taxe éventuelle, créance et règlement",
+        "La seule estimation de prix souhaitée par le dirigeant"
+      ],
+      "answer": 2,
+      "explanation": "Les contrôles comptables et de flux se complètent. Il faut distinguer la valeur sortie, le résultat, la taxe et les fonds effectivement reçus.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, valeurs comptables et article513-5",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    }
+  ]
+}

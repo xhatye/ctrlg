@@ -1,0 +1,430 @@
+{
+  "module": "UE6",
+  "chapter": "delais-rotation",
+  "sourceHash": "8cf0fd416554e2273a1329a265cd22363434464c363cbcf115cc9ac1eae047b4",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pour estimer un délai client avec un encours TTC, quel flux annuel faut-il utiliser afin de conserver une base cohérente ?",
+      "options": [
+        "Des ventes TTC du même périmètre",
+        "Des achats TTC auprès des fournisseurs",
+        "Des ventes HT sans retraitement de TVA",
+        "Le bénéfice net annuel"
+      ],
+      "answer": 0,
+      "explanation": "L’encours client TTC doit être comparé à des ventes TTC cohérentes. Utiliser des ventes HT crée une différence de base dans le ratio."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’encours moyen clients TTC est de 36 000 € et les ventes annuelles TTC de 288 000 €. Sur la base imposée de 360 jours, quel délai client obtient-on ?",
+      "options": [
+        "8 jours",
+        "45 jours",
+        "12,5 jours",
+        "360 jours"
+      ],
+      "answer": 1,
+      "explanation": "Le ratio transforme l’encours en jours de ventes : 36 000 / 288 000 × 360 = 45 jours. Le quotient seul est une fraction d’année.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 36000
+                },
+                {
+                  "value": 288000
+                }
+              ]
+            },
+            {
+              "value": 360
+            }
+          ]
+        },
+        "expected": 45,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un délai client est calculé en divisant les ventes annuelles par l’encours client puis en multipliant par 360. Quelle erreur faut-il corriger ?",
+      "options": [
+        "Le nombre de jours doit toujours être supprimé",
+        "Il faut remplacer les clients par les fournisseurs",
+        "Le rapport est inversé : l’encours doit être rapporté au flux",
+        "Le délai client doit utiliser le bénéfice comme dénominateur"
+      ],
+      "answer": 2,
+      "explanation": "Un délai mesure combien de jours de ventes sont représentés par l’encours. Diviser le flux par l’encours mesure une rotation, pas directement un délai."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le délai client moyen calculé est de 40 jours. Peut-on en déduire que toutes les factures sont réglées exactement à 40 jours ?",
+      "options": [
+        "Oui, une moyenne s’applique nécessairement à chaque facture",
+        "Oui, si les ventes annuelles sont régulières",
+        "Non, car une moyenne ne peut jamais porter sur un encours",
+        "Non, des paiements plus rapides et plus lents peuvent produire cette moyenne"
+      ],
+      "answer": 3,
+      "explanation": "Le ratio synthétise un comportement moyen. Il ne décrit pas la dispersion des règlements ni la situation particulière de chaque facture."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’entreprise n’a pas réalisé de ventes sur la période et son encours client moyen est nul. Que faire du ratio clients / ventes ?",
+      "options": [
+        "Le déclarer non calculable et expliquer l’absence de flux",
+        "Lui attribuer automatiquement zéro jour",
+        "Retenir automatiquement 360 jours",
+        "Remplacer les ventes nulles par le capital social"
+      ],
+      "answer": 0,
+      "explanation": "Un dénominateur nul empêche ce calcul. Il faut signaler la limite plutôt que fabriquer un délai numérique sans signification."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel couple de données sert au délai fournisseur simplifié sur base annuelle ?",
+      "options": [
+        "Stock moyen et chiffre d’affaires HT",
+        "Encours fournisseurs TTC et achats annuels TTC correspondants",
+        "Encours clients et achats annuels HT",
+        "Résultat net et décaissements d’investissement"
+      ],
+      "answer": 1,
+      "explanation": "Le ratio rapproche la dette d’exploitation du flux d’achats qui l’a générée, avec des montants exprimés selon une même convention de TVA."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’encours moyen fournisseurs TTC est de 24 000 €. Les achats annuels TTC sont de 216 000 €. Quel délai fournisseur obtient-on avec 360 jours ?",
+      "options": [
+        "9 jours",
+        "90 jours",
+        "40 jours",
+        "32,4 jours"
+      ],
+      "answer": 2,
+      "explanation": "Le délai vaut 24 000 / 216 000 × 360 = 40 jours. Le ratio achats sur fournisseurs donne un nombre de rotations, pas le délai demandé.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 24000
+                },
+                {
+                  "value": 216000
+                }
+              ]
+            },
+            {
+              "value": 360
+            }
+          ]
+        },
+        "expected": 40,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "À achats comparables, les fournisseurs accordent davantage de crédit et l’encours moyen augmente. Comment interpréter le délai fournisseur ?",
+      "options": [
+        "Il se raccourcit parce que la dette est plus élevée",
+        "Il ne peut changer que si les ventes augmentent",
+        "Il devient égal au délai client par construction",
+        "Il s’allonge et finance plus longtemps une partie du cycle"
+      ],
+      "answer": 3,
+      "explanation": "Un encours plus élevé pour le même flux représente davantage de jours d’achats. L’entreprise règle alors plus tard, ce qui finance le cycle plus longtemps."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le ratio fournisseur utilise les achats de toutes les filiales mais seulement les dettes d’une seule filiale. Quel défaut faut-il corriger ?",
+      "options": [
+        "L’incohérence du périmètre entre encours et flux",
+        "La présence de TTC dans les deux données",
+        "L’utilisation d’une base annuelle imposée de 360 jours",
+        "L’existence de dettes à la clôture"
+      ],
+      "answer": 0,
+      "explanation": "Des dettes partielles rapprochées d’achats beaucoup plus larges sous-estiment le délai. Encours et flux doivent couvrir le même ensemble d’entités."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux entreprises ont le même montant de dettes fournisseurs, mais l’une réalise deux fois plus d’achats annuels. À conventions identiques, laquelle a le délai fournisseur le plus court ?",
+      "options": [
+        "Celle qui réalise le moins d’achats",
+        "Celle qui réalise le plus d’achats",
+        "Les délais sont nécessairement identiques",
+        "Le délai ne dépend que du montant de la dette"
+      ],
+      "answer": 1,
+      "explanation": "À encours égal, un flux d’achats plus élevé réduit le nombre de jours représentés par cette dette. Le montant seul ne suffit pas à comparer les délais."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pour mesurer la durée de stockage à partir d’un stock moyen valorisé au coût, quelle base annuelle convient ?",
+      "options": [
+        "Le chiffre d’affaires TTC sans ajustement",
+        "Le total des encaissements clients",
+        "La consommation annuelle valorisée au coût correspondant",
+        "Le capital restant dû des emprunts"
+      ],
+      "answer": 2,
+      "explanation": "Stock et consommation doivent être exprimés sur une base comparable au coût. Le prix de vente intègre une marge qui fausserait ce rapprochement."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le stock moyen au coût est de 15 000 € et la consommation annuelle au coût de 180 000 €. Quelle durée de stockage obtient-on sur 360 jours ?",
+      "options": [
+        "12 jours",
+        "83,33 jours",
+        "90 jours",
+        "30 jours"
+      ],
+      "answer": 3,
+      "explanation": "La durée vaut 15 000 / 180 000 × 360 = 30 jours. Le rapport inverse donne douze rotations dans l’année.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 15000
+                },
+                {
+                  "value": 180000
+                }
+              ]
+            },
+            {
+              "value": 360
+            }
+          ]
+        },
+        "expected": 30,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un distributeur utilise son stock au coût d’achat mais son chiffre d’affaires au prix de vente pour calculer les jours de stock. Quel biais de méthode identifie-t-on ?",
+      "options": [
+        "Le numérateur et le dénominateur n’ont pas la même base de valorisation",
+        "La méthode inclut deux fois le coût d’achat au numérateur",
+        "Le chiffre d’affaires doit toujours être nul pour des marchandises",
+        "Le stock moyen doit être remplacé systématiquement par les dettes"
+      ],
+      "answer": 0,
+      "explanation": "La marge comprise dans le prix de vente rend la comparaison incohérente avec un stock au coût. Il faut utiliser le coût consommé correspondant."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La durée moyenne de stockage augmente à consommation comparable. Quel point doit être examiné avant d’en conclure à une mauvaise gestion ?",
+      "options": [
+        "La seule quantité finale en stock, supposée suffire à juger tout le stockage annuel",
+        "L’existence d’une constitution saisonnière ou stratégique de stock",
+        "Le seul niveau des ventes, sans tenir compte de la consommation au coût",
+        "La comparaison brute à un secteur de saisonnalité différente sans ajustement"
+      ],
+      "answer": 1,
+      "explanation": "Un stock plus lent immobilise plus de ressources, mais sa hausse peut répondre à une saison ou à une sécurité d’approvisionnement. Le contexte éclaire le diagnostic."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une activité très saisonnière présente un stock exceptionnellement faible le jour de clôture. Quelle donnée limiterait le biais d’un délai annuel ?",
+      "options": [
+        "Le seul stock de clôture sans commentaire",
+        "Le chiffre d’affaires du mois le plus faible choisi isolément",
+        "Un stock moyen représentatif de l’activité de l’année",
+        "La valeur d’achat d’une seule livraison récente"
+      ],
+      "answer": 2,
+      "explanation": "Une photographie atypique peut masquer le stockage habituel. Un encours moyen construit de manière représentative améliore la cohérence du délai annuel."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le stockage dure 35 jours, le délai client 50 jours et le délai fournisseur 40 jours. Quel cycle de trésorerie simplifié obtient-on ?",
+      "options": [
+        "125 jours",
+        "−55 jours",
+        "85 jours",
+        "45 jours"
+      ],
+      "answer": 3,
+      "explanation": "Le cycle vaut stockage + délai client − délai fournisseur, soit 35 + 50 − 40 = 45 jours à financer dans ce modèle.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 35
+                },
+                {
+                  "value": 50
+                }
+              ]
+            },
+            {
+              "value": 40
+            }
+          ]
+        },
+        "expected": 45,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans un modèle simplifié, le crédit fournisseur dépasse la somme du délai de stockage et du délai client. Comment interpréter le cycle négatif ?",
+      "options": [
+        "Les encaissements du cycle précèdent en moyenne le règlement fournisseur",
+        "Le paiement fournisseur précède en moyenne la fin du stockage et du crédit client",
+        "Le cycle ne procure aucune ressource car le montant de chiffre d’affaires n’est pas indiqué",
+        "Le crédit fournisseur doit être ajouté aux deux autres délais pour mesurer le cycle"
+      ],
+      "answer": 0,
+      "explanation": "Un crédit fournisseur suffisamment long peut couvrir tout le stockage et le crédit client. Le cycle moyen procure alors une ressource temporelle."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau additionne stockage, délai client et délai fournisseur pour mesurer le cycle à financer. Quelle correction est nécessaire ?",
+      "options": [
+        "Soustraire le délai client au lieu du fournisseur",
+        "Soustraire le délai fournisseur, qui reporte le décaissement",
+        "Supprimer systématiquement la durée de stockage",
+        "Multiplier les trois délais entre eux"
+      ],
+      "answer": 1,
+      "explanation": "Le fournisseur accorde un financement dans le temps ; il réduit donc l’intervalle à financer, tandis que stockage et crédit client l’allongent."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le délai de stockage diminue tandis que les délais client et fournisseur restent fixes. Quel effet isolé est attendu sur le cycle ?",
+      "options": [
+        "Un allongement de l’intervalle à financer",
+        "Aucun effet sur le cycle tant que les ventes restent stables",
+        "Un raccourcissement de l’intervalle à financer",
+        "Une modification de même sens du délai fournisseur, supposée compenser le stockage"
+      ],
+      "answer": 2,
+      "explanation": "Moins de temps en stock réduit la durée avant encaissement, toutes choses égales par ailleurs. L’effet monétaire dépend des volumes et coûts."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une mesure raccourcit le délai client de dix jours, mais le fournisseur réduit aussi son crédit de dix jours. Le stockage reste stable. Quel effet sur le cycle simplifié ?",
+      "options": [
+        "Il se raccourcit de vingt jours",
+        "Il s’allonge de vingt jours",
+        "Il devient nécessairement négatif",
+        "Il reste inchangé car les deux effets se compensent"
+      ],
+      "answer": 3,
+      "explanation": "La baisse du délai client réduit le cycle, mais celle du délai fournisseur l’augmente autant. Leur compensation laisse le cycle en jours inchangé."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux entreprises ont le même cycle de 30 jours. Peut-on affirmer qu’elles ont le même BFR en euros ?",
+      "options": [
+        "Non, les volumes et les bases monétaires peuvent différer",
+        "Oui, un jour de cycle vaut le même montant dans toutes les entreprises",
+        "Oui, si elles clôturent au même jour",
+        "Non, parce que le BFR ne concerne jamais les délais"
+      ],
+      "answer": 0,
+      "explanation": "Une durée identique n’implique pas des montants identiques. L’activité, les marges et la composition des postes déterminent les encours en euros."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le cycle annuel moyen paraît satisfaisant, mais l’entreprise finance une pointe de stock avant sa saison de ventes. Quelle analyse compléterait utilement le ratio ?",
+      "options": [
+        "Une moyenne annuelle présentée comme valable à toute date",
+        "Un suivi des encours et de la trésorerie aux périodes de pointe",
+        "La suppression du stock du calcul pour neutraliser la saison",
+        "La seule comparaison du bénéfice annuel avec le cycle en jours"
+      ],
+      "answer": 1,
+      "explanation": "Un indicateur moyen peut masquer un besoin ponctuel élevé. Le suivi des pointes de cycle et de trésorerie rend visible cette contrainte."
+    }
+  ]
+}

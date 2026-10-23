@@ -1,0 +1,425 @@
+{
+  "module": "DSCG1",
+  "chapter": "gouvernance",
+  "sourceHash": "8bf52fde86804dd18592e0c0c0deeadb033830e71ad14ff26f1cd134705fbde3",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "En 2026, une SAS ayant plusieurs associés conclut une convention avec son président. Elle n’a pas de commissaire aux comptes. Hors opération courante à conditions normales, qui présente le rapport prévu par L227-10 ?",
+      "options": [
+        "Le président de la SAS.",
+        "L’expert-comptable, du seul fait qu’il établit les comptes sociaux.",
+        "Le directeur général, par substitution légale au président intéressé.",
+        "Le commissaire aux apports, désigné pour se substituer au commissaire aux comptes absent."
+      ],
+      "answer": 0,
+      "explanation": "En l’absence de commissaire aux comptes, le président présente le rapport aux associés. Il ne faut pas confondre le rédacteur du rapport et les associés qui statuent ensuite.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-10, conventions en SAS",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000034584108/2026-01-08"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une SAS invoque L227-11 pour écarter la procédure de L227-10. L’opération est habituelle, mais son prix est très supérieur aux conditions normales. Quel raisonnement répond au texte ?",
+      "options": [
+        "L’habitude de contracter dispense à elle seule de la procédure.",
+        "Les deux critères, opération courante et conditions normales, doivent être réunis.",
+        "Une opération courante conserve l’exception lorsque le prix anormal a été expressément accepté par le président.",
+        "Le prix anormal ne compte pour l’exception que s’il a déjà causé une perte à la SAS."
+      ],
+      "answer": 1,
+      "explanation": "L’exception demande deux critères cumulatifs. Une opération habituelle n’est donc pas, pour cette seule raison, une convention conclue à des conditions normales.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-11",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000024039876"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans une SAS pluripersonnelle, une convention entrant dans L227-10 n’est pas approuvée. Le rédacteur affirme qu’elle est privée d’effet de ce seul fait. Quel traitement le texte prévoit-il ?",
+      "options": [
+        "Sa résolution automatique à la date du vote.",
+        "Sa suspension jusqu’à la prochaine clôture.",
+        "Le maintien de ses effets, avec prise en charge possible des conséquences dommageables par les personnes visées.",
+        "Sa transformation en engagement personnel de tous les associés."
+      ],
+      "answer": 2,
+      "explanation": "La non-approbation ne prive pas automatiquement la convention de ses effets. L227-10 organise les conséquences dommageables pour la société, à distinguer d’une nullité automatique.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-10, conventions en SAS",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000034584108/2026-01-08"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une SAS n’a qu’un associé. Pour une convention relevant du dernier alinéa de L227-10, quelle modalité le texte substitue-t-il au rapport du premier alinéa ?",
+      "options": [
+        "Une autorisation préalable de l’associé unique accompagnée du rapport prévu pour plusieurs associés.",
+        "Une approbation des comptes annuels qui vaut à elle seule approbation de toutes les conventions concernées.",
+        "Un rapport du président adressé à lui-même, sans inscription dans le registre.",
+        "Une mention au registre des décisions."
+      ],
+      "answer": 3,
+      "explanation": "Le régime unipersonnel prévoit une mention au registre des décisions pour les conventions visées. Il ne faut pas lui appliquer mécaniquement la procédure de la SAS à plusieurs associés.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-10, conventions en SAS",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000034584108/2026-01-08"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "En SAS, une convention est conclue avec un actionnaire qui détient 12 % des droits de vote, sans être dirigeant. Hors exception de L227-11, quel rattachement à L227-10 est pertinent ?",
+      "options": [
+        "La fraction des droits de vote excède le seuil de 10 % visé.",
+        "Seuls les dirigeants peuvent être des personnes visées.",
+        "Le seuil doit être apprécié exclusivement sur la fraction du capital.",
+        "Un actionnaire minoritaire est exclu du champ quel que soit son droit de vote."
+      ],
+      "answer": 0,
+      "explanation": "Le texte vise notamment l’actionnaire disposant de plus de 10 % des droits de vote. Le critère n’est ni la majorité, ni la seule fraction du capital détenue.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-10, conventions en SAS",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000034584108/2026-01-08"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une associée verse 30 000 € à sa société en vertu d’une convention de compte courant, sans émission de titres. Quel droit résulte de cette opération ?",
+      "options": [
+        "Des droits de vote supplémentaires à hauteur de 30 000 €.",
+        "Une créance de remboursement contre la société.",
+        "Une augmentation automatique de la valeur nominale des titres.",
+        "Un droit à une quote-part fixe du bénéfice en remplacement du remboursement."
+      ],
+      "answer": 1,
+      "explanation": "Une avance en compte courant est un prêt : elle crée une créance. Sa dénomination d’« apport en compte courant » ne signifie pas souscription de capital.",
+      "references": [
+        {
+          "title": "Service Public Entreprendre, compte courant d’associé",
+          "url": "https://entreprendre.service-public.gouv.fr/vosdroits/F32966"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un bilan distingue capital et compte courant d’associé. Un analyste les fusionne parce que le même associé a fourni les deux sommes. Quelle erreur commet-il ?",
+      "options": [
+        "Il confond le capital souscrit avec les sommes déjà libérées au titre des souscriptions.",
+        "Il confond la prime d’émission avec le nominal des nouveaux titres.",
+        "Il efface la distinction entre qualité de créancier et droits sociaux.",
+        "Il confond les droits financiers de deux catégories de titres de capital."
+      ],
+      "answer": 2,
+      "explanation": "L’identité du financeur ne rend pas identiques les droits attachés aux fonds. Une dette envers l’associé conserve une logique de remboursement distincte des droits sociaux."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La convention prévoit une avance de 80 000 € remboursable dans trois ans et portant intérêt au taux fourni. Le directeur veut comptabiliser chaque remboursement de principal comme un intérêt. Quelle séparation est nécessaire ?",
+      "options": [
+        "La restitution du principal et la rémunération constituent des revenus du prêteur de même nature.",
+        "L’échéance de remboursement est le fait qui transforme le principal en intérêt.",
+        "Tout versement au prêteur constitue un intérêt tant que le compte courant conserve un solde positif.",
+        "Le remboursement de la somme prêtée et la rémunération de sa mise à disposition."
+      ],
+      "answer": 3,
+      "explanation": "Le principal éteint une partie de la dette ; l’intérêt rémunère le prêt selon la convention. Un flux bancaire peut réunir les deux, mais leurs objets restent distincts."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un associé cède ses titres et conserve expressément sa créance de compte courant dans l’accord de cession. Quel élément doit être conservé dans le tableau des financeurs après l’opération ?",
+      "options": [
+        "L’ancien associé comme créancier du compte courant conservé.",
+        "Le nouvel associé comme titulaire de la créance, par le seul transfert des titres.",
+        "La créance comme éteinte au jour où les titres changent de titulaire.",
+        "La créance comme devenue un supplément de capital souscrit par l’acquéreur."
+      ],
+      "answer": 0,
+      "explanation": "L’énoncé prévoit la conservation de la créance par le cédant. Le transfert des titres et le sort du prêt doivent donc être suivis séparément, conformément aux stipulations données."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une convention bloque expressément le remboursement d’un compte courant jusqu’au 31 décembre 2027. Le prêteur réclame un remboursement anticipé en 2026 sans accord de déblocage. Quel élément doit guider l’analyse contractuelle ?",
+      "options": [
+        "La qualité d’associé, prise comme ouvrant un droit de remboursement immédiat malgré le blocage.",
+        "La clause de blocage et les éventuelles conditions de déblocage.",
+        "La trésorerie disponible, prise comme suffisant à rendre l’avance immédiatement exigible.",
+        "Le départ éventuel de la direction, pris comme mettant fin par lui-même au blocage convenu."
+      ],
+      "answer": 1,
+      "explanation": "Le cas donne un engagement de blocage précis. La demande de l’associé doit être confrontée à cette convention ; le seul souhait de retirer les fonds ne réécrit pas le terme."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un président signe un prêt « pour la SAS, en qualité de président ». Aucun engagement personnel de caution n’est exprimé. Quelle conclusion respecte le caractère exprès du cautionnement ?",
+      "options": [
+        "La signature du président vaut caution personnelle dès lors qu’il contrôle aussi le capital.",
+        "La représentation de la SAS entraîne une garantie personnelle accessoire dans la limite du prêt signé.",
+        "La signature de représentation ne suffit pas à établir un cautionnement personnel.",
+        "La caution personnelle résulte de l’intérêt que le président retire indirectement de l’emprunt."
+      ],
+      "answer": 2,
+      "explanation": "Le cautionnement doit être exprès. Il faut distinguer l’engagement de la société représentée de celui que le dirigeant aurait personnellement souscrit.",
+      "references": [
+        {
+          "title": "Code civil, article 2294, cautionnement exprès et limites",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044071240/2026-07-16"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un cautionnement valablement conclu en 2026 vise uniquement le prêt A. Le créancier réclame aussi le solde du prêt B, distinct et non compris dans l’acte. Quel contrôle répond à l’article 2294 ?",
+      "options": [
+        "Inclure B dès lors que A et B financent la même activité de la société.",
+        "Inclure B si le plafond chiffré de la caution n’est pas dépassé par le total A et B.",
+        "Inclure B après le remboursement de A, en traitant le plafond comme une couverture disponible pour un autre prêt.",
+        "Respecter les limites de l’engagement et ne pas y ajouter le prêt B."
+      ],
+      "answer": 3,
+      "explanation": "L’acte donné ne couvre que A. Le cautionnement ne peut être étendu à un autre prêt par le seul constat que le débiteur et le créancier sont les mêmes.",
+      "references": [
+        {
+          "title": "Code civil, article 2294, cautionnement exprès et limites",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044071240/2026-07-16"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un cautionnement porte sur une dette de 40 000 € seulement, alors que le prêt total est de 100 000 €. Tous les engagements sont valables et aucune autre clause n’élargit la couverture. Selon 2296, cette limitation est-elle possible ?",
+      "options": [
+        "Oui, le cautionnement peut ne garantir qu’une partie de la dette.",
+        "Non, toute caution doit garantir la totalité de l’encours.",
+        "Non, la limitation ne peut porter que sur les intérêts.",
+        "Oui, mais elle transfère le solde de la dette au créancier."
+      ],
+      "answer": 0,
+      "explanation": "Le texte permet un cautionnement pour une partie de la dette. Une garantie partielle n’éteint pas la fraction non garantie de l’obligation du débiteur.",
+      "references": [
+        {
+          "title": "Code civil, article 2296, montant de l’obligation garantie",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044071234/2024-05-06"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La dette garantie exigible est définitivement de 18 000 €, tous accessoires compris. L’acte de cautionnement comporte un plafond de 25 000 €. Hors autre dette, quel montant maximal peut être réclamé au titre de cette obligation selon 2296 ?",
+      "options": [
+        "25 000 €, car le plafond augmente la dette.",
+        "18 000 €, car le plafond n’autorise pas à dépasser ce qui est dû.",
+        "7 000 €, correspondant à l’écart entre dette et plafond.",
+        "43 000 €, en ajoutant le plafond à la dette."
+      ],
+      "answer": 1,
+      "explanation": "Le plafond borne l’engagement, mais ne crée pas une dette supplémentaire. Le cautionnement ne peut excéder ce que doit le débiteur pour l’obligation garantie.",
+      "references": [
+        {
+          "title": "Code civil, article 2296, montant de l’obligation garantie",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044071234/2024-05-06"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "En 2026, une caution personne physique appose la mention exigée par 2297 : « vingt mille euros » en lettres mais « 30 000 € » en chiffres. Hors autre difficulté, quelle somme le texte retient-il ?",
+      "options": [
+        "30 000 €, correspondant à la somme exprimée en chiffres dans la mention.",
+        "Aucune somme, la discordance entraînant à elle seule la nullité de l’ensemble du cautionnement.",
+        "20 000 €, correspondant à la somme écrite en lettres.",
+        "La somme fixée dans le prêt principal, considérée comme remplaçant les deux indications discordantes."
+      ],
+      "answer": 2,
+      "explanation": "L’article 2297 fait prévaloir la somme exprimée en toutes lettres lorsque lettres et chiffres diffèrent. La discordance donnée ne conduit donc ni à retenir les chiffres, ni à remplacer la mention par le prêt, ni à annuler l’engagement pour ce seul motif.",
+      "references": [
+        {
+          "title": "Code civil, article 2297, mention de la caution personne physique",
+          "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000044071224/2022-01-01"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une caution personne physique signe en 2026 une clause la privant de discussion et de division, mais omet de reconnaître dans sa mention l’impossibilité d’exiger ces bénéfices. Selon le deuxième alinéa de 2297, quel effet découle de ce défaut ?",
+      "options": [
+        "La renonciation reste efficace si la clause préimprimée est signée au bas de l’acte.",
+        "La mention principale perd sa validité et entraîne la nullité du cautionnement dans son ensemble.",
+        "La caution ne conserve que le bénéfice de division, la discussion étant écartée par la seule solidarité stipulée.",
+        "Elle conserve le droit de se prévaloir de ces bénéfices."
+      ],
+      "answer": 3,
+      "explanation": "Le texte attache à ce défaut la conservation des bénéfices concernés. Il faut distinguer cette conséquence du régime de nullité attaché à la mention principale du premier alinéa.",
+      "references": [
+        {
+          "title": "Code civil, article 2297, mention de la caution personne physique",
+          "url": "https://www.legifrance.gouv.fr/codes/id/LEGIARTI000044071224/2022-01-01"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La procédure interne exige un second visa avant tout prêt intragroupe. Le dossier contient deux visas datés après le décaissement. Que permet de conclure ce contrôle chronologique ?",
+      "options": [
+        "Le contrôle préalable prescrit n’est pas établi par ces visas tardifs.",
+        "Les visas postérieurs établissent que l’autorisation précédait le paiement.",
+        "L’existence de deux signatures suffit à prouver le respect de l’ordre prévu.",
+        "La date du virement est sans portée pour un contrôle dit préalable."
+      ],
+      "answer": 0,
+      "explanation": "La conception et l’exécution du contrôle sont différentes. Des visas postérieurs prouvent un examen ultérieur, pas l’autorisation préalable exigée par la procédure fournie."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une délégation interne autorise un directeur à engager jusqu’à 50 000 € de prêts cumulés au même bénéficiaire par trimestre. Il propose deux prêts de 30 000 € au même bénéficiaire ce trimestre. Quelle lecture répond au contrôle interne donné ?",
+      "options": [
+        "Chaque prêt est inférieur au seuil, donc le visa supplémentaire est inutile.",
+        "Le cumul de 60 000 € dépasse la limite et requiert le circuit supérieur prévu.",
+        "Les intérêts futurs seuls doivent être comparés à la limite de 50 000 €.",
+        "Le seuil se renouvelle automatiquement lors de chaque nouvelle signature."
+      ],
+      "answer": 1,
+      "explanation": "Le seuil est cumulatif par bénéficiaire et trimestre. Scinder l’opération en deux contrats ne remet pas ce compteur à zéro ; le contrôle porte sur le total fourni."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un registre des conventions contient uniquement leur montant, sans cocontractant identifié. Quel risque cette lacune empêche-t-elle principalement d’examiner ?",
+      "options": [
+        "Le total arithmétique des montants inscrits.",
+        "Le rapprochement du montant avec le virement correspondant.",
+        "L’existence d’un lien entre le cocontractant et les personnes concernées par le contrôle.",
+        "L’écart entre montant engagé et montant effectivement payé."
+      ],
+      "answer": 2,
+      "explanation": "L’identité des contreparties est nécessaire au contrôle des intérêts liés. La connaissance du seul montant ne permet pas de relier la convention aux personnes dont les liens doivent être examinés."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrôle des garanties compare les seuls encours empruntés aux plafonds autorisés. Il ne recense pas les cautions déjà données à d’autres créanciers. Quelle amélioration cible l’angle mort ?",
+      "options": [
+        "Limiter le contrôle aux garanties déjà appelées, en laissant hors suivi les engagements non encore activés.",
+        "Ajouter seulement les décaissements probables à court terme, sans recenser les garanties encore en vigueur.",
+        "Assimiler chaque garantie à une dette déjà comprise dans les encours empruntés, sans vérifier les bénéficiaires.",
+        "Ajouter un inventaire des garanties, bénéficiaires, plafonds et engagements encore en cours."
+      ],
+      "answer": 3,
+      "explanation": "Les emprunts propres et les garanties données ne décrivent pas le même ensemble d’engagements. Le suivi doit inclure les engagements de garantie pour apprécier l’exposition contrôlée."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une note de contrôle affirme « tous les prêts du groupe ont été revus », mais son annexe ne couvre que les prêts de la société mère. Quel changement rend la conclusion fidèle au travail effectué ?",
+      "options": [
+        "Limiter la conclusion à la population revue et signaler les sociétés non couvertes.",
+        "Étendre la conclusion aux filiales parce qu’elles appartiennent au même groupe.",
+        "Remplacer « tous » par « principaux » sans identifier la sélection réalisée.",
+        "Déduire l’absence de prêts en filiales de leur absence dans l’annexe de la mère."
+      ],
+      "answer": 0,
+      "explanation": "La conclusion doit respecter le périmètre de ses preuves. Le contrôle d’une seule société ne documente pas celui des autres sociétés du groupe."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un test découvre trois prêts sans échéancier dans un échantillon de dix, sur cinquante prêts au total. Quelle présentation des résultats est étayée ?",
+      "options": [
+        "Trente pour cent des cinquante prêts sont prouvés sans échéancier.",
+        "Trois anomalies sont observées parmi les dix examinés ; le reste de la population reste à apprécier.",
+        "Les quarante prêts non testés sont conformes puisque seules trois anomalies ont été relevées.",
+        "Le contrôle est exhaustif parce que chaque type de prêt est représenté."
+      ],
+      "answer": 1,
+      "explanation": "Le résultat observé concerne l’échantillon. Sans méthode d’extrapolation justifiée, il ne prouve ni le taux exact d’anomalies du portefeuille, ni la conformité des éléments non testés."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le suivi d’un prêt impose une confirmation annuelle du solde par la filiale emprunteuse. Le dossier contient uniquement le grand livre du prêteur. Quelle pièce répond le mieux au contrôle prévu ?",
+      "options": [
+        "Une nouvelle extraction du même grand livre.",
+        "Le budget de financement établi à l’origine du prêt.",
+        "La confirmation du solde adressée par l’emprunteur et rapprochée des écarts éventuels.",
+        "Le procès-verbal d’approbation initiale, sans information sur les mouvements ultérieurs."
+      ],
+      "answer": 2,
+      "explanation": "La procédure prévoit une confirmation par la contrepartie. Répéter l’extraction du prêteur ne remplace pas cette source et ne traite pas les éventuels écarts entre les deux comptabilités."
+    }
+  ]
+}

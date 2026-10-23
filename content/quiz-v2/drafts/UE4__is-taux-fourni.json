@@ -1,0 +1,531 @@
+{
+  "module": "UE4",
+  "chapter": "is-taux-fourni",
+  "sourceHash": "5895bd6e500b5d3b7375f6d2f27c9bd9601cc6fd7eaa05fc813de249be62c7b6",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les corrections d’un dossier comportent 9 000 € de réintégrations et 13 000 € de déductions. Quelle correction nette faut-il ajouter algébriquement au résultat comptable ?",
+      "options": [
+        "22 000 €",
+        "4 000 €",
+        "−4 000 €",
+        "−22 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La correction nette est réintégrations−déductions : 9 000−13 000=−4 000 €. Elle diminue la base de 4 000 €. Le signe de cette variation ne suffit pas à dire si le résultat fiscal final est positif ou déficitaire.",
+      "calculation": {
+        "expected": -4000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 9000
+            },
+            {
+              "value": 13000
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau fournit déjà une correction nette signée de −2 000 €. Le calcul part d’un résultat de 30 000 € et écrit 30 000−(−2 000). Comment utiliser correctement cette donnée ?",
+      "options": [
+        "Ajouter le montant signé de −2 000 au résultat de départ.",
+        "Soustraire de nouveau le montant signé négatif pour obtenir une hausse.",
+        "Conserver 30 000 comme base, la correction négative étant seulement un stock reportable.",
+        "Appliquer la correction nette de −2 000 à l’impôt liquidé, après multiplication de 30 000 par le taux."
+      ],
+      "answer": 0,
+      "explanation": "La correction est déjà exprimée comme variation nette à ajouter au résultat. Il faut donc calculer 30 000+(−2 000), non changer une seconde fois son signe. Distinguer un montant positif de déduction et une correction nette algébrique évite cette inversion."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les corrections nettes d’un dossier sont négatives. Quel renseignement manque pour conclure que la base fiscale finale est négative ?",
+      "options": [
+        "Le résultat comptable de départ à rapprocher de cette variation.",
+        "Le seul montant des réintégrations, sans tenir compte des déductions.",
+        "La seule somme des déductions, sans le résultat de départ.",
+        "Le taux d’impôt, considéré comme déterminant le signe de la base avant liquidation."
+      ],
+      "answer": 0,
+      "explanation": "Une variation négative peut simplement réduire un bénéfice qui reste positif. Il faut l’ajouter au résultat comptable pour déterminer le signe de la base. Le signe de la correction nette n’est pas celui du résultat final dans tous les cas."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau mensuel présente des corrections nettes et un tableau annuel reprend déjà chacune d’elles dans ses lignes détaillées. Le préparateur ajoute en plus leur total mensuel à la base annuelle. Quel défaut apparaît ?",
+      "options": [
+        "Un double comptage entre les lignes détaillées et leur agrégat.",
+        "Une impossibilité d’expliquer la correction par ses lignes de détail.",
+        "Une simple variation de périodicité justifiant à elle seule le cumul des deux tableaux.",
+        "Une nécessité d’additionner tous les sous-totaux aux écritures qui les composent."
+      ],
+      "answer": 0,
+      "explanation": "Le total mensuel est un regroupement des mêmes corrections, pas un élément supplémentaire. L’ajouter après reprise des lignes détail duplique leur effet. Il faut distinguer sous-totaux de contrôle et montants effectivement inclus dans le passage annuel."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une société présente un résultat comptable avant impôt de 48 000 € et une correction nette signée de −3 500 €. Quelle base fiscale retenir avant toute imputation de déficit ou liquidation ?",
+      "options": [
+        "51 500 €",
+        "44 500 €",
+        "−3 500 €",
+        "48 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La base avant imputation est le résultat de départ augmenté de la variation signée : 48 000+(−3 500)=44 500 €. La correction négative abaisse donc le bénéfice sans créer ici de déficit. La liquidation de l’impôt constitue l’étape suivante.",
+      "calculation": {
+        "expected": 44500,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 48000
+            },
+            {
+              "value": -3500
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une augmentation de capital apporte 20 000 € en banque. Le dossier précise qu’elle ne constitue pas un produit et n’entre dans aucun retraitement fiscal. Quel effet cet apport a-t-il sur la base fiscale du résultat fourni ?",
+      "options": [
+        "Il l’augmente de 20 000 € du seul fait de l’encaissement.",
+        "Il la diminue de 20 000 € comme un remboursement d’impôt.",
+        "Il ne modifie pas cette base par lui-même.",
+        "Il remplace la base par le capital social total."
+      ],
+      "answer": 2,
+      "explanation": "L’apport est un financement, non un produit dans les faits donnés. La trésorerie reçue ne devient pas automatiquement un bénéfice imposable. Il faut conserver le périmètre du résultat et des corrections pertinents, au lieu de taxer tout encaissement bancaire."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un résultat fiscal avant imputation est de 70 000 €. Le dossier autorise et plafonne explicitement l’imputation d’un déficit antérieur à 12 000 €, sans autre mécanisme. Quelle base positive reste à liquider ?",
+      "options": [
+        "82 000 €",
+        "58 000 €",
+        "70 000 €",
+        "12 000 €"
+      ],
+      "answer": 1,
+      "explanation": "L’imputation autorisée diminue le résultat fiscal : 70 000−12 000=58 000 €. Le montant imputé et le stock total éventuel de déficit ne sont pas interchangeables. L’énoncé fournit ici la somme utilisable, sans généraliser les règles réelles de report.",
+      "calculation": {
+        "expected": 58000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 70000
+            },
+            {
+              "value": 12000
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une note confond la base après corrections avec le solde d’IS restant à payer après acomptes. Quelle opération doit rester hors du calcul de cette base ?",
+      "options": [
+        "La déduction des acomptes d’impôt versés.",
+        "La neutralisation d’une charge comptable expressément non déductible.",
+        "L’exclusion extra-comptable d’un produit expressément exonéré.",
+        "La correction nette liée aux divergences comptables et fiscales."
+      ],
+      "answer": 0,
+      "explanation": "Les acomptes sont des versements à rapprocher de l’impôt calculé, pas des déductions de son assiette. Les autres éléments cités peuvent modifier la base dans leur régime propre. Il faut donc séparer détermination du bénéfice, liquidation et paiement."
+    },
+    {
+      "id": "q09",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pour le taux réduit d’IS du b du I de l’article 219 dans sa version 2026, quelle condition concerne la libération du capital des sociétés ?",
+      "options": [
+        "La moitié du capital suffit dans tous les cas.",
+        "Le capital doit être entièrement libéré.",
+        "Le capital ne doit jamais être libéré avant la déclaration.",
+        "La libération est remplacée par le seul chiffre d’affaires inférieur au seuil."
+      ],
+      "answer": 1,
+      "explanation": "Le texte exige notamment un capital entièrement libéré. La condition de chiffre d’affaires et celle de détention s’ajoutent à cette exigence ; elles ne la remplacent pas. La question vise le régime et la version expressément identifiés.",
+      "references": [
+        {
+          "title": "CGI, article 219, version 2026, taux et conditions",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053542939/2026-05-05"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société indépendante demande le taux réduit d’IS 2026. Son chiffre d’affaires est sous le seuil et son capital est intégralement détenu par des personnes physiques, mais seulement 50 % du capital souscrit est libéré. Quel obstacle subsiste ?",
+      "options": [
+        "L’exigence de capital entièrement libéré n’est pas remplie.",
+        "La détention par des personnes physiques exclut le régime.",
+        "Un chiffre d’affaires sous le seuil interdit le taux réduit.",
+        "La libération partielle n’a jamais à être vérifiée pour ce régime."
+      ],
+      "answer": 0,
+      "explanation": "La propriété du capital et son versement effectif sont deux conditions différentes. Dans les données fournies, la détention ne compense pas la libération seulement partielle. Le taux réduit ne peut être tenu pour acquis sur la seule petite taille de l’entreprise.",
+      "references": [
+        {
+          "title": "CGI, article 219, version 2026, taux et conditions",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053542939/2026-05-05"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Au regard du seuil de détention du capital prévu par l’article 219 b, une société est détenue directement et de façon continue à 74 % par des personnes physiques. Le reste n’est détenu par aucune société permettant le relais légal ; aucune exception ne joue. Quelle conclusion tirer de ce seul critère ?",
+      "options": [
+        "Le seuil de 75 % au moins n’est pas atteint.",
+        "74 % équivaut à 75 % par arrondi automatique.",
+        "La détention au dernier jour suffit quelle que soit sa continuité.",
+        "Le seuil concerne 75 % du bénéfice et non du capital."
+      ],
+      "answer": 0,
+      "explanation": "Le texte vise une détention continue du capital à hauteur de 75 % au moins, sous les modalités et exceptions qu’il prévoit. Le cas exclut tout relais ou exception et ne donne que 74 %. Il ne faut ni arrondir librement le seuil ni le déplacer vers la répartition du bénéfice.",
+      "references": [
+        {
+          "title": "CGI, article 219, version 2026, taux et conditions",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053542939/2026-05-05"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société mère d’un groupe fiscal invoque son seul chiffre d’affaires individuel de 2 millions d’euros pour accéder au taux réduit ; le groupe réalise 18 millions. Quel contrôle est nécessaire selon la présentation de la DGFiP de 2026 ?",
+      "options": [
+        "Apprécier le chiffre d’affaires au périmètre du groupe concerné.",
+        "Limiter nécessairement le test à la seule société mère.",
+        "Remplacer le chiffre d’affaires du groupe par son bénéfice.",
+        "Répartir librement le chiffre d’affaires entre sociétés pour rester sous le seuil."
+      ],
+      "answer": 0,
+      "explanation": "La DGFiP rappelle l’appréciation du chiffre d’affaires au niveau du groupe dans la situation visée. Le seul chiffre individuel de la mère ne suffit donc pas à établir l’éligibilité. Il faut appliquer le périmètre pertinent avant de calculer l’impôt à un taux réduit.",
+      "references": [
+        {
+          "title": "DGFiP, taux réduit IS et chiffre d’affaires des groupes, avril 2026",
+          "url": "https://www.impots.gouv.fr/actualite/taux-reduit-dimpot-sur-les-societes-le-critere-du-chiffre-daffaires-revu-pour-les"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour un exercice de douze mois dont l’éligibilité est établie, le dossier impose 15 % sur les premiers 42 500 € et 25 % au-delà. La base est de 60 000 €, sans autre prélèvement ni avantage. Quel IS calculer ?",
+      "options": [
+        "9 000 €",
+        "10 750 €",
+        "15 000 €",
+        "6 375 €"
+      ],
+      "answer": 1,
+      "explanation": "La première fraction donne 42 500×15 %=6 375 €. Le surplus est 17 500 €, taxé à 25 %, soit 4 375 €. Le total est 10 750 €. Atteindre la seconde fraction ne soumet pas rétroactivement toute la base au taux de 25 %.",
+      "calculation": {
+        "expected": 10750,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 42500
+                },
+                {
+                  "value": 0.15
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 60000
+                    },
+                    {
+                      "value": 42500
+                    }
+                  ]
+                },
+                {
+                  "value": 0.25
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "CGI, article 219, version 2026, taux et conditions",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053542939/2026-05-05"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un exercice dure exactement six mois. L’éligibilité au taux réduit est établie et le cas impose un plafond annuel de 42 500 € à proratiser selon sa durée. Quelle fraction de base peut au maximum relever du taux réduit ?",
+      "options": [
+        "42 500 €",
+        "85 000 €",
+        "21 250 €",
+        "7 083,33 €"
+      ],
+      "answer": 2,
+      "explanation": "Le plafond est exprimé pour douze mois. Dans le cas de six mois, il est réduit à 42 500×6/12=21 250 €. Ce prorata porte sur le plafond de bénéfice soumis au taux réduit, et non sur la multiplication finale de tout l’impôt.",
+      "calculation": {
+        "expected": 21250,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 42500
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 6
+                },
+                {
+                  "value": 12
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "CGI, article 219, version 2026, taux et conditions",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053542939/2026-05-05"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une société éligible réalise 50 000 € de base fiscale sur douze mois. Le préparateur applique 15 % à tout le montant parce que son chiffre d’affaires est inférieur au seuil. Quelle limite a-t-il omise ?",
+      "options": [
+        "Le plafond de bénéfice pouvant relever du taux réduit.",
+        "Une limite obligeant à taxer toute la base à 15 % après dépassement du plafond.",
+        "Le remplacement de la base fiscale par le chiffre d’affaires.",
+        "Une déduction automatique de 42 500 € de la base."
+      ],
+      "answer": 0,
+      "explanation": "L’éligibilité permet l’application du taux réduit dans la limite de 42 500 € par période de douze mois dans la version visée. Elle ne transforme pas tout le bénéfice en fraction à taux réduit. Le plafond ne constitue pas non plus un abattement exonéré.",
+      "references": [
+        {
+          "title": "CGI, article 219, version 2026, taux et conditions",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053542939/2026-05-05"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société a réalisé exactement 10 millions d’euros de chiffre d’affaires, ramené à douze mois. Pour le seul seuil de chiffre d’affaires du b du I de l’article 219 applicable en 2026, comment lire la limite « n’excédant pas 10 millions » ?",
+      "options": [
+        "L’égalité au seuil est incluse.",
+        "L’égalité au seuil est exclue.",
+        "Le seuil concerne le chiffre d’affaires TTC des clients de la société.",
+        "Le seuil remplace toutes les autres conditions de capital."
+      ],
+      "answer": 0,
+      "explanation": "La formule n’excédant pas inclut l’égalité. Ce seul critère ne fait donc pas obstacle dans le cas donné ; les autres conditions restent à contrôler. Il faut distinguer un plafond inclusif d’une limite strictement inférieure.",
+      "references": [
+        {
+          "title": "CGI, article 219, version 2026, taux et conditions",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053542939/2026-05-05"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le taux applicable est déjà fourni et la base est définitive. Le dossier exclut crédits, acomptes et contributions supplémentaires. Quel calcul répond à la liquidation proportionnelle demandée ?",
+      "options": [
+        "Base fiscale multipliée par le taux fourni.",
+        "Résultat comptable avant retraitements multiplié par le taux fourni.",
+        "Base fiscale divisée par un plus le taux fourni.",
+        "Base fiscale multipliée par le taux fourni puis divisée par un plus ce taux."
+      ],
+      "answer": 0,
+      "explanation": "La liquidation proportionnelle simplifiée utilise l’assiette fiscale et le taux prévu. Les autres mécanismes étant expressément exclus, ils ne doivent pas être ajoutés au modèle. Il reste nécessaire de bien distinguer la base du résultat comptable ou de la banque."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le résultat comptable avant impôt est de 24 000 €. La base fiscale arrêtée est de 26 000 € et le taux fourni de 25 %, sans autre élément d’impôt. Quel est le résultat comptable après cet impôt ?",
+      "options": [
+        "19 500 €",
+        "17 500 €",
+        "18 000 €",
+        "26 000 €"
+      ],
+      "answer": 1,
+      "explanation": "L’impôt vaut 26 000×25 %=6 500 €. Il diminue le résultat comptable avant impôt de 24 000 €, d’où 17 500 €. Le résultat après impôt se calcule sur le résultat comptable, pas en retranchant la charge d’impôt de la base fiscale.",
+      "calculation": {
+        "expected": 17500,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 24000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 26000
+                },
+                {
+                  "value": 0.25
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau détermine correctement un impôt de 7 000 € sur une base fiscale de 28 000 €. Il présente ensuite 21 000 € comme résultat comptable après impôt, alors que le résultat comptable avant impôt est de 25 000 €. Quel montant faut-il corriger dans cette seconde étape ?",
+      "options": [
+        "Il faut partir de 25 000 € pour retrancher les 7 000 € d’impôt.",
+        "Il faut conserver 28 000 €, base fiscale et résultat comptable étant identiques par définition.",
+        "Il faut augmenter le résultat comptable des 7 000 € d’impôt.",
+        "Il faut déduire les corrections fiscales une seconde fois du taux."
+      ],
+      "answer": 0,
+      "explanation": "L’écart de 3 000 € entre base fiscale et résultat comptable provient des retraitements, pas d’un produit comptable supplémentaire. Le résultat comptable après impôt est 25 000−7 000=18 000 €. Le calcul de liquidation et la présentation comptable doivent conserver leurs grandeurs respectives."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un acompte de 4 000 € a été versé avant la clôture. L’impôt calculé de l’exercice est de 6 000 € et le dossier ne prévoit aucun autre élément d’impôt. Quelle charge réduit le résultat comptable avant impôt ?",
+      "options": [
+        "2 000 €, seul règlement complémentaire.",
+        "4 000 €, seul acompte déjà payé.",
+        "6 000 €, impôt de l’exercice.",
+        "10 000 €, somme de l’impôt et de l’acompte."
+      ],
+      "answer": 2,
+      "explanation": "Le paiement anticipé ne s’ajoute pas à la charge d’impôt et ne la remplace pas. Dans le modèle donné, la charge correspond aux 6 000 € de l’exercice ; l’acompte sert à déterminer le solde de dette ou de règlement. Le résultat et la trésorerie sont deux suivis distincts."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un résultat comptable après impôt de 31 500 € comprend une charge d’IS de 8 500 €, sans autre élément d’impôt. Quel était le résultat comptable avant cette charge ?",
+      "options": [
+        "23 000 €",
+        "40 000 €",
+        "8 500 €",
+        "31 500 €"
+      ],
+      "answer": 1,
+      "explanation": "Le passage avant/après est réversible : résultat avant impôt=31 500+8 500=40 000 €. Ajouter la charge restaure le résultat comptable initial ; cela ne suffit pas à reconstituer la base fiscale si des retraitements existent par ailleurs.",
+      "calculation": {
+        "expected": 40000,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 31500
+            },
+            {
+              "value": 8500
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une correction fiscale augmente la base sans modifier les écritures du résultat comptable avant impôt. À taux positif fixe et sans autre mécanisme, quel effet a-t-elle sur le résultat comptable après impôt ?",
+      "options": [
+        "Elle le diminue par la charge d’impôt supplémentaire.",
+        "Elle l’augmente du montant intégral de la réintégration.",
+        "Elle reste nécessairement sans effet sur l’impôt calculé.",
+        "Elle transforme la correction en encaissement imposable distinct."
+      ],
+      "answer": 0,
+      "explanation": "La correction extra-comptable ne crée pas un produit comptable. Elle peut augmenter l’impôt calculé, lequel diminue le résultat après impôt. Il faut distinguer l’effet sur la base fiscale et la conséquence ultérieure de la charge d’impôt sur le résultat net."
+    }
+  ]
+}

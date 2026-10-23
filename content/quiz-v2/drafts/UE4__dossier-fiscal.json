@@ -1,0 +1,410 @@
+{
+  "module": "UE4",
+  "chapter": "dossier-fiscal",
+  "sourceHash": "47f052ef6dc37ef83c45cb8fa709eed3dc0ae353fde2a1be0d5f7cc6199f9d38",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un texte fiscal est publié en décembre N mais précise qu’il s’applique aux opérations réalisées à compter du 1er janvier N+1. L’opération étudiée a été réalisée en novembre N. Quelle version faut-il rechercher en premier ?",
+      "options": [
+        "La version applicable à l’opération de novembre N.",
+        "La nouvelle version du seul fait qu’elle est disponible au dépôt.",
+        "La version choisie par le contribuable au taux le plus faible.",
+        "Une moyenne des anciennes et nouvelles règles."
+      ],
+      "answer": 0,
+      "explanation": "La publication et la date d’effet ne se confondent pas. Le texte fournit une entrée en application prospective au 1er janvier N+1. L’opération de novembre N doit donc être analysée dans le cadre temporel qui la régit, sous réserve des dispositions transitoires effectivement prévues."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un dossier applique une règle à « l’année 2026 », sans préciser si elle dépend de la date de l’opération, de l’ouverture ou de la clôture de l’exercice. Quelle vérification est prioritaire ?",
+      "options": [
+        "Identifier le critère temporel d’entrée en application prévu par le texte.",
+        "Appliquer la version en vigueur au jour du dépôt, quelle que soit la disposition transitoire.",
+        "Appliquer la version en vigueur à la clôture, sans rechercher le critère prévu.",
+        "Retenir la date de publication comme date d’effet dans chaque opération."
+      ],
+      "answer": 0,
+      "explanation": "Les textes n’emploient pas tous le même événement pour définir leur champ temporel. Il faut lire leurs dispositions d’application avant de rattacher le dossier. Une année commune ne démontre pas à elle seule que toutes les opérations ou exercices suivent la même version."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une disposition s’applique expressément aux exercices ouverts à compter du 1er janvier N+1. L’exercice examiné est ouvert le 1er octobre N et clos le 30 septembre N+1. Que permet le critère fourni ?",
+      "options": [
+        "L’exercice est couvert car sa clôture est postérieure au 1er janvier.",
+        "L’exercice n’est pas couvert par cette seule disposition, car son ouverture est antérieure.",
+        "L’exercice est intégralement couvert dès qu’un trimestre relève de N+1.",
+        "Le critère d’ouverture est remplacé par la date du dépôt de la liasse."
+      ],
+      "answer": 1,
+      "explanation": "L’exercice est ouvert le 1er octobre N, avant la date seuil. Le texte vise les ouvertures, non les clôtures, et l’énoncé ne prévoit pas de prorata. Il ne faut donc pas substituer un autre événement temporel à celui retenu dans la règle fournie."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dossier conserve une ancienne version d’un texte et une nouvelle version, mais aucune note sur leur entrée en vigueur respective. Quelle trace complète utilement la position fiscale ?",
+      "options": [
+        "La version retenue, son champ temporel et les dispositions transitoires vérifiées.",
+        "La date de consultation du texte, prise comme preuve suffisante de son applicabilité.",
+        "La date de publication de la nouvelle version, sans trace de l’exercice auquel elle s’applique.",
+        "La version la plus récente, appliquée aux périodes antérieures sans examen transitoire."
+      ],
+      "answer": 0,
+      "explanation": "Une référence est exploitable si elle permet de retrouver la version effectivement appliquée et sa pertinence temporelle. La date de consultation ou le caractère récent ne remplace pas cette justification. Le dossier doit expliquer pourquoi la règle régit l’opération ou l’exercice."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture de conseil est enregistrée, mais le dossier ne contient ni contrat, ni livrable, ni échange décrivant la mission. Quel ensemble de pièces est pertinent pour justifier la charge ?",
+      "options": [
+        "Les éléments prouvant la prestation et son intérêt pour l’entreprise.",
+        "Le règlement bancaire et la déclaration fiscale du fournisseur, sans description de sa mission.",
+        "La facture et son bon à payer, tenus pour une preuve suffisante de la réalisation du conseil.",
+        "La conformité de l’écriture comptable et la validation du budget, sans document sur la prestation."
+      ],
+      "answer": 0,
+      "explanation": "La facture documente une facturation ; elle ne décrit pas nécessairement la prestation réellement exécutée et sa finalité. Les conditions générales de déduction appellent une charge effective, justifiée et engagée dans l’intérêt de l’exploitation. Contrat, livrables et échanges peuvent établir ces éléments."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une dépense professionnelle mixte est admise à concurrence de son usage professionnel, selon la règle fournie. Le dossier ne contient qu’un total annuel, sans répartition d’usage. Quelle preuve faut-il rechercher ?",
+      "options": [
+        "Des éléments objectifs permettant de justifier la fraction professionnelle.",
+        "Un partage de moitié retenu dans chaque dossier par commodité.",
+        "Une déclaration selon laquelle tout paiement social est professionnel.",
+        "Le montant de bénéfice que la direction souhaite obtenir."
+      ],
+      "answer": 0,
+      "explanation": "L’enjeu est la ventilation entre usages dans le régime donné. Un total annuel ne démontre pas cette proportion. Les pièces doivent permettre une estimation justifiée du périmètre professionnel, et non une fraction arbitraire choisie pour produire un résultat fiscal souhaité."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux pièces décrivent une même prestation : une facture initiale de 5 000 € et une facture rectificative qui l’annule et la remplace par 4 600 €. Quel rapprochement est nécessaire avant de justifier le montant de charge ?",
+      "options": [
+        "Identifier le remplacement pour ne pas retenir deux prestations distinctes.",
+        "Additionner les deux factures car chacune porte un numéro.",
+        "Retenir la plus élevée parce qu’elle est la première.",
+        "Retenir la somme payée comme base fiscale sans vérifier la rectification."
+      ],
+      "answer": 0,
+      "explanation": "Une rectification peut remplacer une pièce initiale sans créer une seconde prestation. Il faut reconstituer la relation entre documents et le montant final de l’opération. Deux numéros de facture ne justifient pas, à eux seuls, deux charges distinctes."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un avis juridique sur un litige est daté du 15 janvier N+1. Il analyse des événements survenus avant la clôture du 31 décembre N. Quelle lecture documentaire est appropriée ?",
+      "options": [
+        "Distinguer la date du document de celle des faits et circonstances qu’il analyse.",
+        "Écarter toute information du document parce qu’il est postérieur à la clôture.",
+        "Considérer tous les faits comme apparus le 15 janvier, date de l’avis.",
+        "Reporter automatiquement toute la provision à N+1 sans examiner les faits."
+      ],
+      "answer": 0,
+      "explanation": "Un document postérieur peut éclairer des circonstances antérieures ; sa date matérielle ne suffit donc pas à dater le risque. L’analyse doit identifier les faits existant à la clôture et ce que l’avis permet réellement d’en établir, sans créer rétroactivement un événement nouveau.",
+      "references": [
+        {
+          "title": "BOI-BIC-PROV-20-10-40, événements en cours à la clôture",
+          "url": "https://bofip.impots.gouv.fr/bofip/6411-PGP.html/identifiant=BOI-BIC-PROV-20-10-40-20120912"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pour l’admission fiscale d’une provision de droit commun, comment distinguer un risque probable d’une simple éventualité ?",
+      "options": [
+        "Le risque probable repose sur des circonstances particulières précises.",
+        "Tout risque général propre au métier suffit à établir la probabilité.",
+        "La volonté de réduire le bénéfice démontre la probabilité.",
+        "Une probabilité exige que la charge soit déjà payée."
+      ],
+      "answer": 0,
+      "explanation": "La doctrine distingue la probabilité établie par des circonstances précises particulières et l’éventualité liée à un risque d’ordre général. Le paiement futur n’a pas à être déjà réalisé, mais une simple possibilité abstraite ne justifie pas la déduction d’une provision.",
+      "references": [
+        {
+          "title": "BOI-BIC-PROV-20-10-30, probabilité et éventualité",
+          "url": "https://bofip.impots.gouv.fr/bofip/6410-PGP.html/identifiant=BOI-BIC-PROV-20-10-30-20120912"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise provisionne chaque année « les litiges possibles » sans litige identifié ni fait particulier à la clôture. Quelle condition manque principalement ?",
+      "options": [
+        "Un risque individualisé et rendu probable par des circonstances précises.",
+        "Une simple réserve générale pour risques non individualisés, qui suffirait à prouver leur probabilité.",
+        "Une estimation fondée seulement sur le bénéfice disponible, qui suffirait à préciser le risque.",
+        "Un paiement déjà effectué, considéré à tort comme une condition nécessaire de toute provision."
+      ],
+      "answer": 0,
+      "explanation": "Un risque général de litige ne se confond pas avec une perte ou charge nettement précisée et probable. Il faut des circonstances particulières à la clôture. La provision ne peut servir à constituer une réserve fiscale générale pour tous les risques possibles du métier.",
+      "references": [
+        {
+          "title": "BOI-BIC-PROV-20-10-30, probabilité et éventualité",
+          "url": "https://bofip.impots.gouv.fr/bofip/6410-PGP.html/identifiant=BOI-BIC-PROV-20-10-30-20120912"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client a formé avant la clôture une réclamation précise pour une malfaçon déjà constatée. Le dossier contient une estimation argumentée de la charge probable. Quel élément rapproche cette situation d’une provision fiscalement justifiable, sous réserve des autres conditions ?",
+      "options": [
+        "La réclamation et les faits de l’exercice précisent le risque et son origine.",
+        "L’absence de tout élément prouvant la réalisation des travaux.",
+        "La simple volonté d’égaliser les bénéfices annuels.",
+        "Le fait que la charge ne soit liée à aucune opération passée."
+      ],
+      "answer": 0,
+      "explanation": "Les faits décrits donnent un objet précis au risque et le rattachent à une opération déjà réalisée. L’estimation doit encore être contrôlée, ainsi que la nature de la charge et les conditions de forme. La réponse ne signifie donc pas que toute réclamation ouvre automatiquement droit à déduction.",
+      "references": [
+        {
+          "title": "BOI-BIC-PROV-20-10-40, événements en cours à la clôture",
+          "url": "https://bofip.impots.gouv.fr/bofip/6411-PGP.html/identifiant=BOI-BIC-PROV-20-10-40-20120912"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une provision pour un accident survenu uniquement en février N+1 est déduite au 31 décembre N. Aucun fait ou événement en cours à cette clôture ne le rendait probable. Quelle difficulté de rattachement existe ?",
+      "options": [
+        "Le risque trouve son origine après la clôture étudiée.",
+        "Toute provision est déductible dans l’exercice précédent son paiement.",
+        "Une dépense future se rattache toujours au premier exercice bénéficiaire.",
+        "La date d’accident n’a aucun rapport avec les conditions de provision."
+      ],
+      "answer": 0,
+      "explanation": "Les provisions ne permettent pas d’anticiper n’importe quelle charge future. Le risque doit notamment trouver son origine dans des faits ou opérations pertinents existant à la clôture. Un accident entièrement nouveau après celle-ci ne se rattache pas rétroactivement à N dans les données fournies.",
+      "references": [
+        {
+          "title": "BOI-BIC-PROV-20-10-40, événements en cours à la clôture",
+          "url": "https://bofip.impots.gouv.fr/bofip/6411-PGP.html/identifiant=BOI-BIC-PROV-20-10-40-20120912"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise provisionne une amende probable sanctionnant une violation d’une obligation légale. La probabilité et le montant sont correctement documentés. Quelle analyse fiscale reste nécessaire ?",
+      "options": [
+        "L’exclusion de la charge sous-jacente peut empêcher la déduction de sa provision.",
+        "La probabilité rend toute charge fiscalement déductible.",
+        "L’écriture de provision transforme l’amende en charge commerciale ordinaire.",
+        "Le paiement anticipé de l’amende lèverait à lui seul toute exclusion."
+      ],
+      "answer": 0,
+      "explanation": "La précision et la probabilité ne suffisent pas : la nature fiscale de la perte ou charge doit être examinée. Une charge exclue ne devient pas admise simplement parce qu’elle est anticipée par provision. L’article 39 exclut les pénalités pour violation d’obligations légales.",
+      "references": [
+        {
+          "title": "CGI, article 39, provisions et charges exclues",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006307568"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Au 31 décembre, une charge est certaine dans son principe et son montant exact de 4 000 € est établi. Seul son paiement interviendra en janvier. Quelle distinction faut-il faire selon la doctrine sur les provisions ?",
+      "options": [
+        "Une dette ou charge certaine se distingue d’une charge seulement probable à provisionner.",
+        "Le paiement futur transforme nécessairement toute dette en provision.",
+        "Une charge certaine n’est jamais rattachable avant son paiement.",
+        "Le montant doit être réduit arbitrairement pour rendre le risque probable."
+      ],
+      "answer": 0,
+      "explanation": "La doctrine distingue la provision pour une perte ou charge probable d’une charge certaine dans son principe et son montant. Un simple décalage de règlement ne crée pas une incertitude de cette nature. Les règles de comptabilisation et de rattachement de la charge certaine doivent être appliquées.",
+      "references": [
+        {
+          "title": "BOI-BIC-PROV-20-10-30, probabilité et éventualité",
+          "url": "https://bofip.impots.gouv.fr/bofip/6410-PGP.html/identifiant=BOI-BIC-PROV-20-10-30-20120912"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une estimation de provision est calculée comme 10 % du bénéfice, sans rapport avec l’objet, la probabilité ou le coût du risque identifié. Quel défaut affecte cette estimation ?",
+      "options": [
+        "Le montant n’est pas justifié par les caractéristiques du risque.",
+        "Le pourcentage est admis du seul fait qu’il est appliqué chaque année de manière constante.",
+        "Le montant devient justifié si les associés approuvent la dotation comptable.",
+        "La provision est admise dès lors que l’estimation n’excède pas le bénéfice de l’exercice."
+      ],
+      "answer": 0,
+      "explanation": "Le montant doit correspondre à une évaluation suffisamment justifiée du risque ou de la charge. Le bénéfice souhaité n’est pas une méthode d’évaluation de celui-ci. Un pourcentage peut être un outil documenté dans certains cas, mais pas une clé arbitraire déconnectée du risque."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une provision de 8 000 € est comptabilisée. Les pièces justifient seulement un risque probable évalué à 5 000 €, et le dossier précise que l’excédent de 3 000 € doit être rejeté fiscalement. Quel montant corriger dans le passage ?",
+      "options": [
+        "Réintégrer l’excédent de 3 000 €.",
+        "Réintégrer les 5 000 € justifiés.",
+        "Déduire une nouvelle fois les 8 000 €.",
+        "Supprimer toute charge de 8 000 € du bilan par le seul tableau fiscal."
+      ],
+      "answer": 0,
+      "explanation": "La divergence fournie porte uniquement sur l’excédent de 3 000 €. La correction fiscale neutralise donc cette fraction déjà comptabilisée, sans rejeter les 5 000 € admis ni modifier directement les écritures comptables par un tableau extra-comptable."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un résultat comptable de 17 000 € inclut une provision de 2 000 € dont l’admission fiscale reste non résolue. Quelle présentation préserve le caractère conditionnel de l’analyse, sans autre correction ?",
+      "options": [
+        "Base de 17 000 € si elle est admise, 19 000 € si elle est totalement rejetée.",
+        "Base certaine de 15 000 €, car la provision doit toujours être déduite deux fois.",
+        "Base certaine de 19 000 €, même si toutes les conditions sont finalement établies.",
+        "Base de 2 000 € dans chaque hypothèse."
+      ],
+      "answer": 0,
+      "explanation": "Le résultat comprend déjà la charge. Si sa déduction est admise, aucune neutralisation n’est nécessaire et la base reste 17 000 €. Si elle est rejetée, l’ajout de 2 000 € conduit à 19 000 €. Les hypothèses doivent rester identifiées tant que le point n’est pas résolu."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel est l’objet d’une demande de rescrit fiscal portant sur une situation de fait ?",
+      "options": [
+        "Obtenir une prise de position formelle de l’administration au regard d’un texte fiscal.",
+        "Obtenir une remise gracieuse de l’impôt en raison des difficultés de paiement.",
+        "Obtenir un délai supplémentaire pour acquitter une dette fiscale reconnue.",
+        "Contester par une réclamation contentieuse une imposition déjà mise à la charge du demandeur."
+      ],
+      "answer": 0,
+      "explanation": "Le rescrit permet de demander à l’administration une appréciation formelle d’une situation au regard du droit fiscal. Il ne constitue pas une réduction automatique ni une certification générale de la comptabilité. Sa portée dépend de la question et des faits effectivement présentés.",
+      "references": [
+        {
+          "title": "DGFiP, rescrit général ou spécifique, mise à jour octobre 2026",
+          "url": "https://www.impots.gouv.fr/professionnel/questions/dois-je-faire-un-rescrit-general-ou-un-rescrit-specifique"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une demande de rescrit décrit seulement le traitement souhaité, mais omet les faits qui pourraient faire obstacle à ce traitement. Quelle exigence documentaire doit être rétablie ?",
+      "options": [
+        "Une présentation précise, complète et sincère de la situation de fait.",
+        "Une présentation limitée aux seuls faits favorables au demandeur.",
+        "La demande est suffisamment complète si elle mentionne uniquement la règle et le traitement souhaités.",
+        "Le seul montant d’impôt économisé peut remplacer la description des faits."
+      ],
+      "answer": 0,
+      "explanation": "La demande doit permettre à l’administration de se prononcer en connaissance de cause. La DGFiP exige notamment une présentation précise, complète et sincère des faits et l’identification du texte fiscal. Un exposé sélectif fragilise la portée de la réponse obtenue.",
+      "references": [
+        {
+          "title": "DGFiP, contenu et dépôt d’une demande de rescrit",
+          "url": "https://www.impots.gouv.fr/professionnel/questions/ou-et-comment-deposer-une-demande-de-rescrit"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contribuable a déposé une demande relevant expressément du rescrit général L80 B-1°. L’administration ne répond pas dans les trois mois. Selon la présentation de la DGFiP, quelle conclusion est correcte ?",
+      "options": [
+        "Le silence de trois mois vaut acceptation tacite comme pour certains rescrits spécifiques.",
+        "L’accord exprès requis par ce rescrit général ne résulte pas du seul silence.",
+        "Le délai expiré rend opposable la seule interprétation décrite par le contribuable.",
+        "L’accusé de réception devient une prise de position formelle à l’issue des trois mois."
+      ],
+      "answer": 1,
+      "explanation": "La DGFiP distingue les rescrits soumis à accord exprès et les procédures spéciales où le silence peut valoir acceptation. Pour le rescrit général visé, le délai de trois mois ne crée pas à lui seul un accord tacite. Il faut identifier le type de demande avant d’interpréter le silence.",
+      "references": [
+        {
+          "title": "DGFiP, absence de réponse à une demande de rescrit",
+          "url": "https://www.impots.gouv.fr/professionnel/questions/si-ladministration-ne-repond-pas-ma-demande-que-dois-je-en-conclure"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une demande de rescrit est signée par le représentant habilité et contient l’exposé requis. Quelle propriété de son mode d’envoi est importante selon les modalités de dépôt présentées par la DGFiP ?",
+      "options": [
+        "Pouvoir apporter la preuve de sa réception.",
+        "Pouvoir justifier seulement la date de signature de la demande conservée au dossier.",
+        "Pouvoir produire seulement une preuve d’expédition, sans réception documentée.",
+        "Pouvoir établir seulement que l’interlocuteur fiscal a consulté un projet non déposé."
+      ],
+      "answer": 0,
+      "explanation": "La DGFiP prévoit un envoi par un moyen permettant de prouver la réception, et présente notamment la voie de la messagerie sécurisée. La date de création du fichier ne prouve pas sa transmission au service ; il faut conserver une trace adaptée de la réception.",
+      "references": [
+        {
+          "title": "DGFiP, contenu et dépôt d’une demande de rescrit",
+          "url": "https://www.impots.gouv.fr/professionnel/questions/ou-et-comment-deposer-une-demande-de-rescrit"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un dossier conclut « traitement admis par l’administration » parce que la demande de rescrit a été envoyée, alors qu’aucune réponse n’est produite et que l’effet du silence n’a pas été examiné. Quelle séparation faut-il rétablir ?",
+      "options": [
+        "L’envoi de la demande, le type de procédure et l’existence d’une position ou d’un accord selon cette procédure.",
+        "La demande déposée et l’accusé de réception, tenu pour validation du traitement fiscal exposé.",
+        "La complétude du dossier et une réponse de fond, considérées comme équivalentes dès le dépôt.",
+        "Le délai de réponse du rescrit général et un accord tacite, appliqués sans distinguer les procédures."
+      ],
+      "answer": 0,
+      "explanation": "Une preuve de saisine n’est pas une preuve de réponse favorable. Selon la procédure, il faut rechercher une réponse expresse ou vérifier les conditions précises d’un effet tacite. La conclusion doit conserver ce contrôle au lieu de confondre demande et position obtenue.",
+      "references": [
+        {
+          "title": "DGFiP, absence de réponse à une demande de rescrit",
+          "url": "https://www.impots.gouv.fr/professionnel/questions/si-ladministration-ne-repond-pas-ma-demande-que-dois-je-en-conclure"
+        }
+      ]
+    }
+  ]
+}

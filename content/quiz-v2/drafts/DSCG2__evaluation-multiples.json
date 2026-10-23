@@ -1,0 +1,466 @@
+{
+  "module": "DSCG2",
+  "chapter": "evaluation-multiples",
+  "sourceHash": "aa42219dc19ff9df1de6d837da30e2292bc5929d88193dffe8d67f78609cfc03",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un multiple VE/EBITDA est fourni. Quel agrégat sa multiplication par l’EBITDA de la cible estime-t-elle directement ?",
+      "options": [
+        "La valeur d’entreprise avant le passage aux fonds propres",
+        "La valeur des seuls actionnaires après dette nette",
+        "Le nominal du capital social",
+        "Le montant total des dividendes à distribuer"
+      ],
+      "answer": 0,
+      "explanation": "Le numérateur du multiple détermine le périmètre de valeur obtenu. Avec VE/EBITDA, le résultat est une VE, à ajuster ensuite pour les fonds propres."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un multiple de valeur des fonds propres sur résultat net donne directement une valeur des fonds propres. L’analyste lui retranche encore la dette nette. Quel risque apparaît ?",
+      "options": [
+        "La valeur des fonds propres est surestimée parce que la dette nette n’est pas ajoutée au résultat net avant multiplication",
+        "La dette est retranchée alors que le périmètre obtenu est déjà celui des actionnaires",
+        "La valeur obtenue correspond à la valeur d’entreprise parce que le résultat net inclut le coût de la dette",
+        "La soustraction de dette nette transforme le multiple de résultat net en multiple d’EBITDA sans autre ajustement"
+      ],
+      "answer": 1,
+      "explanation": "Le passage dépend du numérateur du multiple. Une valeur déjà obtenue pour les fonds propres ne doit pas être traitée comme une VE sans justification."
+    },
+    {
+      "id": "q03",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’EBITDA normalisé fourni vaut 80 000 € et le multiple d’exercice VE/EBITDA vaut 5. Quelle VE est estimée ?",
+      "options": [
+        "16000 €",
+        "85000 €",
+        "400000 €",
+        "75000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le multiple signifie cinq fois l’EBITDA retenu : 80 000 × 5 = 400 000 €. Il faut ensuite effectuer les ajustements propres au périmètre actionnaires.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 80000
+            },
+            {
+              "value": 5
+            }
+          ]
+        },
+        "expected": 400000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une méthode par multiples estime VE à 750 000 €. La dette nette fournie est de 120 000 €, sans autre ajustement. Quelle valeur de fonds propres en résulte ?",
+      "options": [
+        "870000 €",
+        "750000 €",
+        "120000 €",
+        "630000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le passage au périmètre des actionnaires retranche la dette nette : 750 000 − 120 000 = 630 000 €. Le multiple a produit une VE, pas déjà les fonds propres.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 750000
+            },
+            {
+              "value": 120000
+            }
+          ]
+        },
+        "expected": 630000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux entreprises sont dans le même secteur, mais l’une croît fortement et l’autre perd des clients. Quelle prudence appliquer au choix des comparables ?",
+      "options": [
+        "Examiner les différences économiques avant d’appliquer leur même multiple",
+        "Considérer l’étiquette sectorielle comme suffisante",
+        "Retenir uniquement celle dont le multiple maximise la valeur cible",
+        "Appliquer la moyenne sans documenter la croissance"
+      ],
+      "answer": 0,
+      "explanation": "La comparabilité implique notamment croissance, risque et marges. Une catégorie sectorielle commune ne neutralise pas les différences de perspectives."
+    },
+    {
+      "id": "q06",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une charge de restructuration qualifiée d’exceptionnelle revient chaque année. L’analyste la retire systématiquement de l’EBITDA normalisé. Que vérifier ?",
+      "options": [
+        "Le seul signe négatif, suffisant pour autoriser son exclusion",
+        "Le caractère réellement non récurrent et la justification économique de l’ajustement",
+        "Le seul montant élevé, suffisant pour exclure toute charge",
+        "La possibilité d’augmenter le multiple pour compenser la charge conservée"
+      ],
+      "answer": 1,
+      "explanation": "La normalisation doit viser une mesure soutenable, pas éliminer chaque élément défavorable. Une charge récurrente demande un examen avant exclusion."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un EBITDA publié de 90 000 € comprend une charge unique de 10 000 € que le dossier impose de neutraliser. Quel EBITDA normalisé obtient-on ?",
+      "options": [
+        "80000 €",
+        "90000 €",
+        "100000 €",
+        "10000 €"
+      ],
+      "answer": 2,
+      "explanation": "Neutraliser une charge déjà déduite revient à l’ajouter : 90 000 + 10 000 = 100 000 €. Le retraitement est ici explicitement imposé par le cas.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 90000
+            },
+            {
+              "value": 10000
+            }
+          ]
+        },
+        "expected": 100000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un EBITDA de 120 000 € inclut un produit non récurrent de 20 000 € que le dossier impose d’exclure. Quel montant normalisé faut-il retenir ?",
+      "options": [
+        "140000 €",
+        "120000 €",
+        "20000 €",
+        "100000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le produit a accru l’indicateur publié. Le retirer réduit l’EBITDA à 120 000 − 20 000 = 100 000 €, contrairement à la neutralisation d’une charge.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 120000
+            },
+            {
+              "value": 20000
+            }
+          ]
+        },
+        "expected": 100000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les comparables justifiés conduisent à des multiples entre 5 et 7. Quel usage d’une fourchette est pertinent ?",
+      "options": [
+        "Montrer les valeurs correspondantes et les raisons de retenir une zone dans cet intervalle",
+        "Choisir 7 sans commentaire car la borne haute est toujours préférable",
+        "Présenter la moyenne comme le seul prix possible",
+        "Écarter les autres méthodes parce que deux bornes ont été calculées"
+      ],
+      "answer": 0,
+      "explanation": "Une fourchette rend visible l’incertitude. Elle demande toujours une lecture des comparables, du dossier et des autres méthodes disponibles."
+    },
+    {
+      "id": "q10",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un EBITDA normalisé est de 60 000 €. Les multiples retenus vont de 4 à 6. Quelle amplitude de VE cette plage représente-t-elle ?",
+      "options": [
+        "240000 €",
+        "120000 €",
+        "360000 €",
+        "60000 €"
+      ],
+      "answer": 1,
+      "explanation": "Les bornes sont 240 000 et 360 000 €. Leur amplitude est (6 − 4) × 60 000 = 120 000 €, distincte des deux valeurs extrêmes.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 6
+                },
+                {
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "value": 60000
+            }
+          ]
+        },
+        "expected": 120000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un groupe de comparables mélange indicateurs historiques et prévisionnels sans le préciser. Quel contrôle de cohérence manque ?",
+      "options": [
+        "La date d’encaissement des dividendes, tenue pour période de référence du résultat de chaque société",
+        "Le seul classement sectoriel sans distinction de période",
+        "La période de mesure du résultat au dénominateur de chaque multiple",
+        "La seule date du cours, sans identifier la période de résultat correspondante"
+      ],
+      "answer": 2,
+      "explanation": "Un multiple sur résultat passé n’est pas interchangeable sans examen avec un multiple sur résultat futur. Les périodes doivent être explicites et comparables."
+    },
+    {
+      "id": "q12",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi identifier les bénéficiaires économiques de l’indicateur avant de choisir un multiple ?",
+      "options": [
+        "Pour appliquer un même multiple à tous les agrégats, dès lors qu’ils sont positifs",
+        "Pour convertir un résultat après intérêts en résultat avant intérêts sans retraitement",
+        "Pour compenser un décalage de périmètre en modifiant seulement le nombre d’actions",
+        "Pour aligner le périmètre du résultat et celui de la valeur estimée"
+      ],
+      "answer": 3,
+      "explanation": "Valeur d’activité et valeur actionnaires n’ont pas le même champ. L’indicateur doit correspondre au numérateur plutôt qu’être choisi pour sa seule disponibilité."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La même charge non récurrente est ajoutée une première fois dans l’EBITDA fourni comme normalisé, puis encore par le valorisateur. Quel défaut faut-il corriger ?",
+      "options": [
+        "Le double retraitement de la même charge",
+        "L’omission du retraitement de cette charge dans les deux mesures successives",
+        "L’élimination d’un produit non récurrent plutôt que la neutralisation d’une charge",
+        "La réintégration de la charge au seul résultat net après impôt, sans effet sur l’EBITDA"
+      ],
+      "answer": 0,
+      "explanation": "Un indicateur déjà normalisé peut inclure l’ajustement. Il faut tracer le passage depuis le publié pour éviter d’augmenter deux fois le même résultat."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise comparable a un multiple très élevé à cause d’un EBITDA temporairement très faible. Quel examen précède son inclusion dans la moyenne ?",
+      "options": [
+        "Le seul niveau du cours, qui rend tout multiple élevé pertinent",
+        "La qualité du dénominateur et sa représentativité économique",
+        "L’utilisation de sa valeur comme borne obligatoire de la cible",
+        "Le remplacement du multiple par son inverse sans autre analyse"
+      ],
+      "answer": 1,
+      "explanation": "Un dénominateur anormal peut rendre le ratio extrême. Le chiffre ne doit pas être utilisé mécaniquement sans comprendre ce qu’il mesure."
+    },
+    {
+      "id": "q15",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une VE de 480 000 € correspond à un EBITDA normalisé de 80 000 €. Quel multiple VE/EBITDA est implicite ?",
+      "options": [
+        "0,1667 fois",
+        "560000 fois",
+        "6 fois",
+        "400000 fois"
+      ],
+      "answer": 2,
+      "explanation": "Le multiple est un rapport : 480 000/80 000 = 6. Son unité « fois » distingue ce coefficient d’un montant monétaire.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 480000
+            },
+            {
+              "value": 80000
+            }
+          ]
+        },
+        "expected": 6,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un analyste ajuste l’EBITDA de la cible mais conserve des comparables non ajustés pour des éléments similaires. Quel problème faut-il examiner ?",
+      "options": [
+        "Un écart de multiples qui ne peut provenir que d’un risque opérationnel différent",
+        "Une différence de périmètre qui peut être corrigée par le seul nombre d’actions de la cible",
+        "Un effet de financement qu’il suffirait d’éliminer en retranchant la dette nette à chaque EBITDA",
+        "Une normalisation asymétrique qui réduit la comparabilité"
+      ],
+      "answer": 3,
+      "explanation": "Les retraitements doivent servir la comparaison économique. Ajuster seulement un côté peut produire un ratio apparemment précis sur des bases incompatibles."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un multiple est appliqué à un résultat exprimé en milliers d’euros ; la VE obtenue est étiquetée directement en euros. Quel défaut apparaît ?",
+      "options": [
+        "Une incohérence d’échelle monétaire dans la valeur présentée",
+        "Une différence de coût du capital entre comparables",
+        "Une double soustraction de trésorerie dans le résultat",
+        "Une erreur de nombre d’actions dans le multiple sectoriel"
+      ],
+      "answer": 0,
+      "explanation": "Un multiple sans unité conserve l’unité monétaire du résultat multiplié. Une entrée en milliers produit une valeur en milliers, à convertir pour afficher des euros."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une acquisition de comparable inclut des synergies propres à l’acheteur. Le multiple de transaction est appliqué à une cible sans ces synergies. Que documenter ?",
+      "options": [
+        "La seule égalité du secteur, suffisante pour transférer les synergies",
+        "La transférabilité des synergies et la pertinence du multiple pour la cible",
+        "Le seul prix payé, qui démontre la même valeur pour toute cible",
+        "La suppression de toute dette nette pour reproduire le prix de transaction"
+      ],
+      "answer": 1,
+      "explanation": "Le prix d’un contexte particulier peut intégrer des avantages non transférables. La comparabilité demande de comprendre les conditions économiques de la transaction."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "À multiple fixé à 6, l’EBITDA normalisé est révisé à la baisse de 15 000 €, sans autre changement. De combien la VE diminue-t-elle ?",
+      "options": [
+        "15000 €",
+        "2500 €",
+        "90000 €",
+        "60000 €"
+      ],
+      "answer": 2,
+      "explanation": "L’effet à multiple constant vaut 6 × 15 000 = 90 000 €. Ce calcul isole l’effet de l’indicateur, sans modifier les autres hypothèses.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 6
+            },
+            {
+              "value": 15000
+            }
+          ]
+        },
+        "expected": 90000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel principe rend un retraitement de normalisation contrôlable ?",
+      "options": [
+        "Retirer toute charge réduisant la valeur de la cible",
+        "Conserver uniquement les produits favorables à la valorisation",
+        "Modifier les comptes des comparables pour atteindre le prix souhaité",
+        "Relier le montant, le motif et l’indicateur économique recherché"
+      ],
+      "answer": 3,
+      "explanation": "La normalisation vise une meilleure représentation économique documentée. Elle ne doit pas être utilisée comme levier arbitraire pour produire une valeur cible."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une moyenne de multiples est présentée avec quatre décimales, sans justification des comparables. Quelle réserve est fondée ?",
+      "options": [
+        "La précision du calcul ne démontre pas la qualité de la sélection économique",
+        "Une moyenne élimine l’effet des sociétés de taille différente, sans autre contrôle d’homogénéité",
+        "L’utilisation de la médiane suffirait à rendre comparables toutes les sociétés de l’échantillon",
+        "Un nombre élevé de sociétés suffirait à compenser des définitions de résultat différentes"
+      ],
+      "answer": 0,
+      "explanation": "Un calcul exact sur des données hétérogènes reste fragile. La qualité dépend des périmètres, de l’échantillon et des ajustements, pas de la précision d’affichage."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une valeur par multiples diffère fortement d’un DCF. Quelle démarche analytique est utile ?",
+      "options": [
+        "Retenir automatiquement la valeur la plus élevée",
+        "Comparer scénarios, périmètres, périodes et hypothèses avant de rapprocher les valeurs",
+        "Faire la moyenne sans examiner l’origine de l’écart",
+        "Écarter le DCF parce qu’un comparable coté existe"
+      ],
+      "answer": 1,
+      "explanation": "Les méthodes peuvent refléter des perspectives ou définitions différentes. Comprendre l’écart est plus instructif qu’une moyenne mécanique ou un choix opportuniste."
+    },
+    {
+      "id": "q23",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier fixe un multiple VE/EBITDA, mais le préparateur lui applique le résultat net après financement. Que faut-il corriger ?",
+      "options": [
+        "Soustraire encore les intérêts au résultat net avant multiplication",
+        "Retenir le résultat net puisque le prix d’acquisition sera finalement payé par les actionnaires",
+        "Employer l’indicateur cohérent avec la définition du multiple",
+        "Ajouter la dette nette au résultat net pour obtenir l’indicateur avant financement"
+      ],
+      "answer": 2,
+      "explanation": "Un multiple défini sur l’EBITDA ne s’applique pas au résultat net sans autre justification. Les périmètres avant et après financement sont différents."
+    }
+  ]
+}

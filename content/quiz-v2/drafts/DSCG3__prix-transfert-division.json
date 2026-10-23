@@ -1,0 +1,555 @@
+{
+  "module": "DSCG3",
+  "chapter": "prix-transfert-division",
+  "sourceHash": "79f3cc672b6ecb593ee674dfe8c885c1a1dd888fd8c3bdcbdf5a8800889713d6",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La division amont vend 100 unités à l’aval à 30 € chacune. Son coût variable est 20 € par unité. Sans autre coût dans ce calcul, quel résultat amont obtient-on ?",
+      "options": [
+        "5 000 €",
+        "1 000 €",
+        "3 000 €",
+        "2 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le résultat amont est 100 × (30 − 20) = 1 000 €. Le prix interne forme sa recette locale, à distinguer du prix payé par le client extérieur.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 30
+                },
+                {
+                  "value": 20
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’aval revend 100 unités à l’extérieur à 50 €. Il les achète en interne à 30 € et ajoute 5 € de coût variable par unité. Quel résultat aval calcule-t-on, sans autre coût ?",
+      "options": [
+        "2 000 €",
+        "4 500 €",
+        "1 500 €",
+        "3 500 €"
+      ],
+      "answer": 2,
+      "explanation": "La marge aval est 50 − 30 − 5 = 15 € par unité, soit 1 500 €. Le prix interne est son coût local, mais ce transfert ne constitue pas une consommation externe nouvelle pour le groupe.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 50
+                    },
+                    {
+                      "value": 30
+                    }
+                  ]
+                },
+                {
+                  "value": 5
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1500,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le groupe revend 100 unités à 50 €. Les coûts variables sont 20 € en amont et 5 € ajoutés en aval. Aucun stock, impôt ou coût fixe n’intervient. Quelle contribution globale mesure-t-on ?",
+      "options": [
+        "2 500 €",
+        "5 000 €",
+        "1 500 €",
+        "7 500 €"
+      ],
+      "answer": 0,
+      "explanation": "Le groupe conserve 100 × (50 − 20 − 5) = 2 500 €. Le prix interne n’apparaît pas dans cette marge globale, car il déplace la contribution entre divisions.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 50
+                    },
+                    {
+                      "value": 20
+                    }
+                  ]
+                },
+                {
+                  "value": 5
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2500,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Cent unités sont transférées à 30 € en interne puis toutes revendues à des clients extérieurs. Quel montant de chiffre d’affaires interne faut-il identifier pour éviter son ajout aux ventes externes du groupe ?",
+      "options": [
+        "30 €",
+        "3,33 €",
+        "100 €",
+        "3 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le CA interne est 100 × 30 = 3 000 €. Il doit être distingué des ventes à l’extérieur ; additionner les deux comme des recettes externes compterait un flux interne en plus.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "value": 30
+            }
+          ]
+        },
+        "expected": 3000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le prix interne augmente, mais volumes et coûts restent identiques. Quelle évolution locale concerne l’amont dans le modèle sans impôt ni stock ?",
+      "options": [
+        "Une baisse de résultat égale à celle de l’aval.",
+        "Une hausse du résultat amont, contrebalancée par une baisse chez l’aval.",
+        "Une hausse identique du résultat des deux divisions.",
+        "Une hausse directe du CA extérieur."
+      ],
+      "answer": 1,
+      "explanation": "La recette locale amont augmente tandis que le coût local aval augmente du même montant. La répartition change sans création de recette externe ou baisse de consommation pour le groupe dans ce modèle."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Sur 100 unités, le prix interne augmente de 2 €, sans autre changement. De combien le résultat aval diminue-t-il dans le modèle donné ?",
+      "options": [
+        "2 €",
+        "102 €",
+        "200 €",
+        "50 €"
+      ],
+      "answer": 2,
+      "explanation": "L’aval supporte 2 € supplémentaires par unité : 100 × 2 = 200 € de résultat en moins. Le gain amont correspondant n’est pas un gain global supplémentaire.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "expected": 200,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un directeur additionne la hausse du résultat amont obtenue par un prix interne plus élevé à l’ancien résultat global inchangé. Quelle erreur commet-il ?",
+      "options": [
+        "Il traite un déplacement interne de résultat comme un supplément de performance du groupe.",
+        "Il corrige correctement le total en ajoutant la seule partie positive du transfert, sans contrepartie aval.",
+        "Il mesure une économie réelle de coût amont alors qu’aucune dépense n’a changé.",
+        "Il mesure une hausse du prix externe alors que seule la facturation entre divisions est modifiée."
+      ],
+      "answer": 0,
+      "explanation": "La variation amont est compensée en aval sous les hypothèses. Ajouter son gain au total antérieur ignore la contrepartie et gonfle artificiellement la contribution du groupe."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "La division amont est à pleine capacité. Chaque unité transférée ferait perdre une vente externe à 40 €, dont le coût variable est 20 € et les frais de distribution externe évités en interne sont 5 €. Aucun autre effet n’existe. Quel prix interne minimal compense le coût variable et la contribution externe perdue ?",
+      "options": [
+        "20 €",
+        "40 €",
+        "25 €",
+        "35 €"
+      ],
+      "answer": 3,
+      "explanation": "La contribution externe perdue est 40 − 20 − 5 = 15 €. Le minimum économique vaut le coût variable interne de 20 € plus cette opportunité perdue : 35 €. Retenir le prix externe de 40 € ignorerait les 5 € de distribution économisés sur un transfert interne.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 20
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 40
+                    },
+                    {
+                      "value": 20
+                    }
+                  ]
+                },
+                {
+                  "value": 5
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 35,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "ACCA — Transfer pricing : opportunity cost, dual pricing and two-part tariffs",
+          "url": "https://www.accaglobal.com/sg/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/transfer-pricing.html"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une cible récompense uniquement le résultat amont. Son responsable veut relever le prix interne, sans amélioration de coût ni service. Quel enjeu apparaît ?",
+      "options": [
+        "Une amélioration de marge globale démontrée par le seul nouveau tarif interne, sans autre changement.",
+        "Une incitation locale qui peut déplacer le résultat plutôt qu’améliorer celui du groupe.",
+        "Une économie de coûts réels créée par la modification du montant facturé entre les divisions.",
+        "Une hausse du service rendu au client final démontrée par une hausse de revenu enregistrée en amont."
+      ],
+      "answer": 1,
+      "explanation": "Le système de mesure peut orienter des arbitrages internes. Il faut distinguer la négociation de répartition et les leviers qui augmentent effectivement la contribution globale."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "L’aval est évalué sur son résultat alors que le prix interne lui est imposé sans marge de décision. Quel examen améliore l’évaluation personnelle ?",
+      "options": [
+        "Attribuer tout écart de prix au seul responsable aval.",
+        "Ignorer tout résultat de l’aval même comme information.",
+        "Distinguer les leviers contrôlables des effets de tarification décidés ailleurs.",
+        "Remplacer le résultat par le prix interne seul."
+      ],
+      "answer": 2,
+      "explanation": "La mesure locale peut rester utile au pilotage mais sa lecture personnelle demande les responsabilités réelles. Une condition imposée ne s’attribue pas de la même façon qu’une décision que le responsable pouvait influencer."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Les résultats avant charges fixes sont 1 200 € pour l’amont et 1 800 € pour l’aval, sur tout le même volume sans stock ni autre élimination. Quelle somme retrouve la contribution du groupe dans ce modèle ?",
+      "options": [
+        "3 000 €",
+        "600 €",
+        "2 160 000 €",
+        "1,50 €"
+      ],
+      "answer": 0,
+      "explanation": "La somme est 1 200 + 1 800 = 3 000 €. Les flux internes de recette et de coût se compensent dans ce périmètre ; il faut conserver les hypothèses de volume revendu et d’absence d’autres éléments.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 1200
+            },
+            {
+              "value": 1800
+            }
+          ]
+        },
+        "expected": 3000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une partie des produits transférés reste désormais en stock, contrairement au modèle où tout est revendu. Quelle suite convient ?",
+      "options": [
+        "Traiter immédiatement toute marge interne comme réalisée à l’extérieur, même si les produits restent dans le groupe.",
+        "Conserver le calcul de revente intégrale et considérer le stock au prix interne comme une vente à un tiers.",
+        "Déduire le prix interne de tous les produits transférés une seconde fois sans distinguer les unités stockées.",
+        "Réexaminer le périmètre et les traitements nécessaires avant d’étendre le résultat simplifié."
+      ],
+      "answer": 3,
+      "explanation": "L’absence de stock faisait partie des conditions. Une modification appelle une analyse adaptée ; on ne peut pas supposer que les mêmes calculs décrivent le résultat externe réalisé."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une hausse de prix interne s’accompagne d’une baisse du coût amont. Quel élément peut améliorer la contribution globale, à volume et prix externe constants ?",
+      "options": [
+        "Le seul déplacement du prix entre les divisions.",
+        "La baisse réelle de consommation de ressources amont, si elle n’est pas compensée ailleurs.",
+        "La hausse de marge amont obtenue par un prix interne relevé sans autre changement.",
+        "Le transfert d’un coût inchangé de l’amont à l’aval."
+      ],
+      "answer": 1,
+      "explanation": "Un coût réel plus faible peut accroître la contribution globale. La tarification interne ne fait que répartir le résultat dans le modèle ; les deux effets doivent être séparés."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le coût ajouté par l’aval augmente, mais le prix interne et le prix externe ne changent pas. Quel effet le modèle prévoit-il ?",
+      "options": [
+        "Le résultat amont augmente du coût aval.",
+        "Le CA externe augmente du même montant.",
+        "Le résultat aval et celui du groupe diminuent, toutes autres données inchangées.",
+        "Le total du groupe reste identique car le coût est toujours interne."
+      ],
+      "answer": 2,
+      "explanation": "Le coût ajouté correspond à une consommation, pas seulement à un prix de transfert. Sa hausse pèse sur l’aval et sur la contribution globale, contrairement à un simple déplacement de tarification."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "L’aval propose d’acheter à un fournisseur extérieur moins cher que le prix interne. Pourquoi le prix interne seul ne suffit-il pas à conclure sur l’intérêt du groupe ?",
+      "options": [
+        "Il faut examiner les coûts et effets réellement évitables ou ajoutés pour l’ensemble.",
+        "Il suffit de comparer le prix fournisseur au coût complet interne même si les charges fixes affectées seraient maintenues.",
+        "Il suffit de comparer les résultats locaux, sans inclure les coûts externes supplémentaires de contrôle et de transport.",
+        "Il suffit de retenir l’économie de l’acheteur, sans examiner la contribution perdue ou les ressources maintenues en amont."
+      ],
+      "answer": 0,
+      "explanation": "Une facture locale ne représente pas toujours le coût différentiel global. L’alternative extérieure exige une comparaison des ressources et capacités, en distinguant coûts communs maintenus et dépenses modifiées."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le flux de vente interne est neutralisé, mais son coût correspondant reste soustrait une seconde fois au résultat global déjà calculé hors prix interne. Quel risque apparaît ?",
+      "options": [
+        "Une simple redistribution entre divisions sans effet sur le total, même si une charge est soustraite deux fois au groupe.",
+        "Une économie réelle correspondant à l’achat interne éliminé, même si cet achat était déjà absent du calcul de départ.",
+        "Une correction du coût externe aval, même si le retraitement supplémentaire porte seulement sur un flux interne.",
+        "Une élimination incohérente ou un double retraitement qui déforme le résultat."
+      ],
+      "answer": 3,
+      "explanation": "Les retraitements doivent être articulés au calcul de départ. Une contribution déjà fondée sur prix externe et coûts réels ne doit pas subir une seconde soustraction d’un flux qu’elle n’inclut pas."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Dans un système de double prix interne, le vendeur est crédité de 40 € par unité et l’acheteur débité de 30 €. Deux cents unités sont transférées et entièrement revendues. Sans impôt ni autre effet, quel ajustement central faut-il retrancher de la somme des résultats locaux pour ne pas créer de gain groupe fictif ?",
+      "options": [
+        "6 000 €",
+        "2 000 €",
+        "8 000 €",
+        "14 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le revenu interne reconnu au vendeur excède le coût interne reconnu chez l’acheteur de 10 € par unité. Sur 200 unités, les résultats locaux incorporent donc un écart de 2 000 € à neutraliser au centre. Le double prix vise les incitations locales, pas la création d’une recette externe.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 40
+                },
+                {
+                  "value": 30
+                }
+              ]
+            },
+            {
+              "value": 200
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "ACCA — Transfer pricing : opportunity cost, dual pricing and two-part tariffs",
+          "url": "https://www.accaglobal.com/sg/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/transfer-pricing.html"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Les quantités transférées utilisées en amont et en aval ne correspondent pas, alors que tout le volume doit être revendu sans stock. Quel contrôle est prioritaire ?",
+      "options": [
+        "Retenir le volume enregistré en amont sans rapprocher les dates et éventuelles annulations en aval.",
+        "Faire la moyenne des deux volumes et l’utiliser comme quantité réalisée sans rechercher les mouvements manquants.",
+        "Rapprocher les mouvements et les périmètres pour réconcilier les flux.",
+        "Répartir la différence entre les deux résultats au prorata de leurs marges, sans corriger le suivi physique."
+      ],
+      "answer": 2,
+      "explanation": "Les conclusions de compensation supposent un même volume. Une différence de quantité peut révéler une erreur ou une hypothèse violée ; elle doit être expliquée avant d’additionner les résultats."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Des effets fiscaux existent dans un cas réel mais étaient exclus du modèle simple. Quelle précision est nécessaire ?",
+      "options": [
+        "La neutralité de répartition calculée est limitée aux hypothèses et ne démontre pas l’absence de tout effet réel dans le nouveau cas.",
+        "La compensation avant impôt suffit à établir une compensation après impôt quels que soient les régimes applicables.",
+        "Le taux d’un seul établissement peut être appliqué au groupe pour conclure, sans identifier la localisation des résultats.",
+        "L’élimination du prix interne dans un suivi de gestion supprime nécessairement tout effet fiscal des opérations juridiques."
+      ],
+      "answer": 0,
+      "explanation": "Le calcul simplifié ne couvre pas les éléments qu’il exclut. Il faut traiter le nouveau périmètre avec des données et règles pertinentes plutôt qu’étendre une neutralité conditionnelle à tout contexte."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un tarif interne à deux composantes comprend 18 € par unité transférée et un forfait de 10 000 € pour la période. Ce forfait est inchangé entre 500 et 600 unités. Dans ce seul intervalle, quel coût additionnel de transfert l’acheteur enregistre-t-il pour 100 unités supplémentaires ?",
+      "options": [
+        "11 800 €",
+        "3 800 €",
+        "1 000 €",
+        "1 800 €"
+      ],
+      "answer": 3,
+      "explanation": "La composante variable augmente de 100 × 18 = 1 800 €. Le forfait ne change pas entre les deux volumes et n’est donc pas ajouté une seconde fois. Un tarif à deux composantes distingue ainsi le signal de coût marginal et le règlement périodique de charges ou de marge.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "value": 18
+            }
+          ]
+        },
+        "expected": 1800,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "ACCA — Transfer pricing : opportunity cost, dual pricing and two-part tariffs",
+          "url": "https://www.accaglobal.com/sg/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/transfer-pricing.html"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une division recherche un meilleur prix interne alors que l’objectif du groupe est de réduire les délais externes. Quel complément de pilotage est utile ?",
+      "options": [
+        "Renforcer la prime sur le résultat interne amont sans tenir compte du délai réellement subi par les clients.",
+        "Relier les cibles locales aux flux et résultats externes, avec des indicateurs de service pertinents.",
+        "Départager les responsables sur le seul tarif interne négocié, supposé résumer le service global.",
+        "Exclure du délai de service les attentes entre divisions afin de n’évaluer que leurs opérations isolées."
+      ],
+      "answer": 1,
+      "explanation": "Les mesures locales doivent servir l’objectif commun. Le prix interne peut influencer les comportements sans améliorer le service ; le suivi doit rendre les effets réels et interdépendances visibles."
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le résultat global est présenté après déduction de charges fixes alors que les résultats locaux comparés sont avant ces charges. Quel préalable manque ?",
+      "options": [
+        "Comparer les soldes sans retraitement dès lors que les montants sont exprimés dans la même monnaie.",
+        "Augmenter les résultats locaux du même montant forfaitaire, sans identifier les charges fixes effectivement exclues.",
+        "Un périmètre de résultat cohérent ou un rapprochement des éléments exclus.",
+        "Ajouter le prix interne au résultat global pour compenser tout écart de niveau de charges."
+      ],
+      "answer": 2,
+      "explanation": "On ne peut comparer directement des soldes de niveaux différents. Les conventions de charges doivent être alignées pour distinguer un écart de périmètre d’une différence de performance."
+    }
+  ]
+}

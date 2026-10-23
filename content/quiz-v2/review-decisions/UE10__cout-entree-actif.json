@@ -1,0 +1,248 @@
+{
+  "sourceHash": "af872103fd9b39c0a2b29b2a839ac8e1568c0847d2fd7304fa1787ac38c3a24c",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "d5045e33e40ffc7da66e45788ca5c8e0571833f7eec3992de7302c33fa35bd36",
+      "selected": 2,
+      "reason": "Un paiement ne démontre pas à lui seul la ressource contrôlée ni les avantages économiques nécessaires à un actif.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "8cde5e29e4ec5572dffd8ab04f3e28a8d013c6045e4e1018cb52630737cdf6ae",
+      "selected": 0,
+      "reason": "L’identité du fournisseur ne prouve pas que l’entretien courant répond aux critères d’un coût d’actif.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "599cc7e0a1b09449ece9e2f143b3964ecaf560e137760146d2049af0dd42afee",
+      "selected": 1,
+      "reason": "Équipement et assistance consommée doivent être analysés séparément selon les critères de nature.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "a7a38c318011b108fe4c52765b3420a48a232a04917eff5264401bb53cd6d68a",
+      "selected": 2,
+      "reason": "La ressource et son usage précèdent l’examen des critères et coûts admissibles.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "b0b7dea6535c2ae78f8441f46809835d18c2208ccda38d5d212c9668ec5015ca",
+      "selected": 2,
+      "reason": "26 000 + 900 + 1 600 = 28 500 euros de coût, hors publicité explicitement exclue.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "b17dfbb3fe0d5c5f2c7c4fae662ff10a1a98d4c13d1d5b99fb259a80e8273348",
+      "selected": 1,
+      "reason": "Le transport déjà inclus dans le prix livré ne doit pas être ajouté une seconde fois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "370be4389e9dbe661390524d100606c74f7df763f5dec5d05d992b75ef33b1a6",
+      "selected": 1,
+      "reason": "Une facture tardive n’exclut pas un coût nécessaire réellement réalisé ; il faut son analyse et sa preuve.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "e5853bbb1aaf4de09d5c4ec3c6e10547171abce860faecd3c2c53a7adb6ce17d",
+      "selected": 2,
+      "reason": "La mise en état admissible doit être reliée aux frais généraux au lieu d’une répartition forfaitaire sans fondement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "22e02ca75aa5f3460472ac1f3197fc619b7244b4a278d3d0bb2dbdcf246cca2d",
+      "selected": 3,
+      "reason": "Le rôle et les justificatifs des dépenses nécessaires rendent les coûts du périmètre vérifiables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "f84f2c24cc3a1b3bfb353f224451d661cae53b31d650720da00c633c38b062b9",
+      "selected": 1,
+      "reason": "Le coût comprend 10 000 HT et 500 de taxe non récupérable, soit 10 500 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "7301162387cb1d14465b345ca08aa274c765c7285eccdffb69b17bfaa00b80c7",
+      "selected": 0,
+      "reason": "Une taxe récupérable incluse dans le TTC de coût majore à tort l’actif enregistré.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "12de33bb314a74ef717c72c3999231a8534eca0a40e0f2e972b449aa2a1233e9",
+      "selected": 3,
+      "reason": "Le PCG permet sous conditions l’option coût ou charges pour ces frais externes de formation ; il faut identifier et appliquer le choix.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "0130284168abdf3ff7d7625696afa88beb14b502113ddc7c9e533ffff3eed4f1",
+      "selected": 2,
+      "reason": "L’option PCG pour les honoraires d’acquisition exige un choix documenté et cohérent, pas un traitement dicté par la date de paiement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "9ae847053647e2243580ab9237f6706a072914212be448e41a6ac2b15df6ddef",
+      "selected": 0,
+      "reason": "La présence d’un emprunt ne suffit pas : il faut vérifier les conditions et méthodes applicables à sa capitalisation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "c6e0e1afe4dc5d51c77f0019a7f1872a3524452b20d8f4b8594a4f1652ed85e7",
+      "selected": 1,
+      "reason": "13 200 de coût incluant à tort 1 200 récupérables doivent être corrigés à 12 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "b967f57fa73ea9c182c7e99918989a54c41dd2b8c53a27be182fb9682bec392b",
+      "selected": 1,
+      "reason": "La récupération d’une taxe change la fraction pouvant entrer au coût selon le cadre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "5b0e968be50a379ee1be574d2abf6634e4f55c6d528100e2745d05c01cf1c693",
+      "selected": 0,
+      "reason": "Le prix justifié par facture et la durée d’usage estimée n’ont pas la même nature de preuve.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "b886de2d416d5fd2d301a8447a26fb1c037640eeecebab3f7b736df3bebdba28",
+      "selected": 3,
+      "reason": "L’entretien payé ne prouve pas une durée supplémentaire ; une révision de l’utilisation future demande des éléments techniques étayés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "fbf283ce6ae191f8be566df4a152c5cc7eb6da41b7a7aadcb18023498899ad04",
+      "selected": 1,
+      "reason": "(21 500 − 1 500) / 5 = 4 000 euros d’annuité pleine.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "30d592f9d2b31239dfbd22534de7069d121ab9ed2461eb092480752c80e17c46",
+      "selected": 0,
+      "reason": "Une donnée initiale fausse malgré facture exacte se distingue d’une estimation revue avec information nouvelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "d2e40eb5b1fe1b36084591f79e14c8e49f687eaf447e6665304f4978c5f2a021",
+      "selected": 2,
+      "reason": "Coût d’entrée, usage estimé et corrections ultérieures ont des fonctions différentes qui ne permettent pas un remplacement arbitraire par marché.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "25fee10e546861a3e43f32e05036a2329998e3f6ead57f4c986fe4b8adab3e6a",
+      "selected": 0,
+      "reason": "Le dossier conserve coûts, éléments, usages, corrections et événements après mise en service.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

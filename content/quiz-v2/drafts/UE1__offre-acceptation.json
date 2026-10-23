@@ -1,0 +1,365 @@
+{
+  "module": "UE1",
+  "chapter": "offre-acceptation",
+  "sourceHash": "004a09d0b04675f859eb95f9da3942920ecb37f0ee32c4c61191cd01d4055c5b",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quels éléments faut-il rechercher pour distinguer une offre d’une invitation à négocier ?",
+      "options": [
+        "Les éléments essentiels et la volonté de se lier en cas d’acceptation.",
+        "La détermination du prix seulement, même si toute prestation reste à définir.",
+        "Le titre du document seulement, indépendamment de ses réserves.",
+        "La volonté du destinataire de conclure, tenue pour volonté de l’auteur."
+      ],
+      "answer": 0,
+      "explanation": "Une proposition ne devient pas une offre ferme par son titre ou le souhait du destinataire. Son contenu essentiel et l’intention de son auteur doivent être examinés."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un message indique : « Budget indicatif ; mission à définir ensemble après visite ; validation interne indispensable. » Quelle lecture est la plus solide ?",
+      "options": [
+        "Une offre ferme parce que le message contient une estimation budgétaire.",
+        "Une étape de négociation plutôt qu’un engagement ferme déjà caractérisé.",
+        "Une offre ferme dont seules les modalités d’exécution restent à préciser, malgré la mission encore indéfinie.",
+        "Une promesse de signer le contrat après visite, réputée résulter de la seule annonce d’une validation interne."
+      ],
+      "answer": 1,
+      "explanation": "Les réserves et l’objet restant à définir signalent une discussion préparatoire. Un budget ne suffit pas à établir la volonté d’être lié dès l’accord du destinataire."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un fournisseur propose un lot précisément décrit à prix déterminé et écrit qu’il s’engage si le client accepte ces termes. Quelle qualification est soutenue ?",
+      "options": [
+        "Une invitation à négocier au seul motif que le destinataire n’a pas encore répondu.",
+        "Une acceptation déjà donnée par le destinataire, même sans manifestation de sa part.",
+        "Une offre comportant contenu essentiel et volonté de se lier.",
+        "Une exécution complète de la vente, déduite de la seule description du lot."
+      ],
+      "answer": 2,
+      "explanation": "La description, le prix et l’engagement exprimé soutiennent la qualification d’offre. Ils ne démontrent pas encore que le destinataire a accepté."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux documents identiques sur le fond portent les titres « Projet » et « Devis ». Un étudiant qualifie le premier de négociation et le second d’offre sans lire leur contenu. Que doit-il changer ?",
+      "options": [
+        "Tenir les deux documents pour des offres parce qu’un prix y apparaît.",
+        "Tenir les deux documents pour des négociations parce qu’ils ne sont pas encore acceptés.",
+        "Déduire l’absence de volonté de se lier du seul titre Projet.",
+        "Examiner les termes et réserves plutôt que décider par le seul titre."
+      ],
+      "answer": 3,
+      "explanation": "La qualification résulte du contenu et des circonstances. Le titre peut fournir un indice mais ne remplace pas l’examen de la précision et de la volonté de se lier."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un message propose un prix mais réserve entièrement la quantité et la prestation à un échange ultérieur. Que manque-t-il pour conclure à une offre suffisamment déterminée ?",
+      "options": [
+        "L’identification des éléments essentiels de l’engagement envisagé.",
+        "L’acceptation du prix par le destinataire, réputée fixer aussi la prestation indéfinie.",
+        "La preuve du paiement, considérée comme condition générale de toute offre.",
+        "L’absence de refus du destinataire, réputée donner à la proposition son contenu."
+      ],
+      "answer": 0,
+      "explanation": "Un prix isolé ne détermine pas nécessairement la prestation ou la quantité. Les éléments essentiels doivent être identifiables pour qualifier utilement la proposition."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un élève conclut qu’un courriel envoyé démontre le consentement des deux parties. Quelle distinction rétablir ?",
+      "options": [
+        "Le courriel et l’écrit papier obéissent nécessairement à des qualifications opposées.",
+        "La proposition de l’auteur et la réponse du destinataire sont distinctes.",
+        "La date d’envoi de la proposition vaut nécessairement date de l’accord réciproque.",
+        "La preuve de l’envoi démontre à elle seule l’acceptation de tous les termes."
+      ],
+      "answer": 1,
+      "explanation": "L’envoi révèle un acte de son auteur, pas automatiquement l’accord du destinataire. Il faut identifier les manifestations de volonté des deux parties."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une réponse modifie un élément essentiel de l’offre reçue. Quelle analyse convient en premier lieu ?",
+      "options": [
+        "Une acceptation conforme de l’offre initiale.",
+        "Une preuve irréfragable du prix initial.",
+        "Une contre-proposition à examiner.",
+        "Une nullité automatique de toutes les négociations."
+      ],
+      "answer": 2,
+      "explanation": "Modifier un terme essentiel ne signifie pas accepter les termes proposés. La réponse peut constituer une contre-proposition, susceptible d’une acceptation ultérieure."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un vendeur propose dix unités à un prix fixé ; le destinataire répond qu’il accepte seulement six unités. La quantité est essentielle selon l’énoncé. Quelle conclusion retenir à ce stade ?",
+      "options": [
+        "La vente de dix unités est conclue parce que le message contient le mot accepte.",
+        "La vente de six unités est conclue sans rechercher l’accord du vendeur sur cette quantité.",
+        "Le vendeur est tenu de livrer dix unités au prix réduit proportionnellement à six.",
+        "La réponse modifie l’offre et appelle l’examen d’une contre-proposition."
+      ],
+      "answer": 3,
+      "explanation": "La quantité essentielle a été changée. La réponse ne vaut pas acceptation conforme des dix unités ; l’accord éventuel du vendeur sur six unités doit être recherché."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une proposition contient tous les termes essentiels. Le destinataire répond : « J’accepte ces termes, sans réserve. » Quel point est directement soutenu par cette réponse ?",
+      "options": [
+        "La conformité de l’acceptation au contenu proposé.",
+        "La preuve de l’exécution complète de la prestation.",
+        "La capacité de chaque signataire nécessairement établie.",
+        "Le paiement de tout le prix."
+      ],
+      "answer": 0,
+      "explanation": "La réponse exprime un accord sur les termes proposés. Elle ne démontre ni l’exécution ni le paiement et ne dispense pas des autres contrôles."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une mission est proposée à un prix ferme. Le client demande une remise ; le prestataire refuse, et aucun autre message n’est fourni. Quel fait manque pour retenir un accord sur le prix réduit ?",
+      "options": [
+        "La volonté du client d’obtenir une remise, tenue pour accord réciproque.",
+        "Une acceptation de ce prix réduit par le prestataire.",
+        "L’existence de la proposition initiale, tenue pour accord sur toute remise ultérieure.",
+        "L’absence d’une nouvelle proposition du prestataire, tenue pour acceptation de la remise."
+      ],
+      "answer": 1,
+      "explanation": "La demande de remise modifie le prix et le refus ne l’accepte pas. La préférence économique du client ne remplace pas une rencontre des volontés."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "En 2026, une acceptation est expédiée par courrier lundi. Sa rétractation parvient à l’offrant mardi ; l’acceptation ne lui parvient que mercredi. Selon 1118, quelle analyse de cette succession est correcte ?",
+      "options": [
+        "L’expédition du lundi rend l’acceptation immédiatement irrétractable dans tous les cas.",
+        "La rétractation est tardive parce qu’elle a été rédigée après l’acceptation.",
+        "La rétractation est parvenue avant l’acceptation et remplit cette condition du texte.",
+        "La rétractation suppose nécessairement l’accord préalable de l’offrant, même avant réception de l’acceptation."
+      ],
+      "answer": 2,
+      "explanation": "1118 permet la rétractation tant que l’acceptation n’est pas parvenue à l’offrant, si la rétractation lui parvient avant elle. Le cas distingue expressément expédition et réception des deux messages.",
+      "references": [
+        {
+          "title": "Code civil, article 1118, rétractation de l’acceptation",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032040871/2020-05-22"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise répond favorablement à une offre mais demande séparément une option qui ne conditionne pas son accord, selon les termes explicites du message. Quel élément est décisif ?",
+      "options": [
+        "Toute demande annexe transforme nécessairement la réponse en refus de l’offre.",
+        "L’option est nécessairement intégrée au contrat malgré son caractère distinct.",
+        "Toute demande d’option suspend l’accord, même si le message affirme le contraire.",
+        "Le caractère ferme de l’accord sur les termes essentiels, malgré la demande distincte."
+      ],
+      "answer": 3,
+      "explanation": "L’analyse porte sur le contenu réel de la réponse. Une demande distincte expressément non conditionnante ne doit pas être confondue avec une réserve modifiant l’accord."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi reconstruire les dates des propositions et réponses ?",
+      "options": [
+        "Pour identifier la succession des volontés et les délais pertinents.",
+        "Pour remplacer la lecture du contenu par le seul calendrier.",
+        "Pour présumer toute réponse conforme dès qu’elle est rapide.",
+        "Pour effacer les réserves figurant dans un message ancien."
+      ],
+      "answer": 0,
+      "explanation": "La chronologie permet d’ordonner offres, contre-propositions et réponses. Elle doit être combinée avec l’examen de leur contenu et des règles applicables."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Lundi, un client demande un prix réduit ; mardi, le vendeur l’accepte explicitement ; mercredi, le client relit le message. Quel échange faut-il examiner comme acceptation de la contre-proposition ?",
+      "options": [
+        "La relecture de mercredi, tenue pour nouvelle proposition adressée au vendeur.",
+        "Le message du vendeur de mardi.",
+        "La proposition initiale, appliquée sans tenir compte de la remise acceptée.",
+        "La demande de lundi, tenue pour acceptation du prix initial sans modification."
+      ],
+      "answer": 1,
+      "explanation": "La réponse du vendeur porte explicitement sur les nouveaux termes proposés par le client. Elle est donc l’échange pertinent pour examiner la rencontre des volontés sur ces termes."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une offre précise qu’une réponse doit parvenir avant une échéance donnée. Le dossier ne contient que la date de rédaction de la réponse. Quel complément est pertinent ?",
+      "options": [
+        "La date de rédaction, réputée égale à la date de réception.",
+        "La date d’envoi, tenue pour suffisante quel que soit le délai prévu.",
+        "La date de réception de la réponse et les conditions exactes du délai.",
+        "La date de l’offre initiale, tenue pour date de réception de toute réponse ultérieure."
+      ],
+      "answer": 2,
+      "explanation": "La rédaction et la réception sont deux événements différents. Pour examiner le respect d’un délai lié à la réception, il faut la pièce permettant d’établir cet événement."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie rapproche une acceptation du 4 juin avec une proposition du 6 juin, sans mentionner d’échange antérieur. Quel contrôle s’impose ?",
+      "options": [
+        "Inverser les dates pour obtenir un accord cohérent.",
+        "Considérer que toute acceptation antérieure vaut pour toute offre future.",
+        "Ignorer la contradiction car les montants sont proches.",
+        "Identifier la proposition à laquelle répond réellement le message du 4 juin."
+      ],
+      "answer": 3,
+      "explanation": "Une réponse ne se rattache pas automatiquement à un message ultérieur. L’incohérence demande de vérifier les références et les échanges, sans réécrire les faits."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le client n’a pas répondu à une proposition. Aucune exception au principe sur le silence n’est indiquée. Quel raisonnement adopter ?",
+      "options": [
+        "Ne pas déduire l’acceptation du seul silence.",
+        "Tenir toute absence de refus pour une acceptation certaine.",
+        "Déduire l’accord de la seule précision de l’offre, même sans réponse.",
+        "Déduire l’accord du seul fait que l’offre est économiquement avantageuse."
+      ],
+      "answer": 0,
+      "explanation": "Le silence ne suffit pas par principe à établir une acceptation. Il faut rechercher une manifestation de volonté ou des circonstances particulières, sans les supposer."
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier contient une facture émise après des discussions mais aucun accord du client sur les termes facturés. Quelle étape manque au raisonnement de formation ?",
+      "options": [
+        "La preuve de l’intention du fournisseur de facturer, tenue pour accord réciproque.",
+        "L’identification d’une manifestation d’acceptation correspondant à ces termes.",
+        "La preuve de réception de la facture, tenue pour acceptation automatique de son contenu.",
+        "La date de la facture, tenue pour date certaine de la rencontre des volontés."
+      ],
+      "answer": 1,
+      "explanation": "Une facture unilatérale ne démontre pas automatiquement la rencontre des volontés. Il faut la rapprocher des propositions et manifestations d’accord identifiables."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les conditions de nullité d’un contrat sont réunies, mais une partie la conteste et aucun commun accord pour la constater n’existe. Selon 1178, quelle démarche permet de la faire prononcer ?",
+      "options": [
+        "Une déclaration unilatérale de nullité qui remplace nécessairement le juge.",
+        "Une facture rectificative suffisant à constater l’accord des deux parties.",
+        "Une décision du juge, faute de constat de nullité d’un commun accord.",
+        "Le seul refus d’exécution, tenu pour jugement d’annulation."
+      ],
+      "answer": 2,
+      "explanation": "1178 prévoit que la nullité est prononcée par le juge, sauf constat d’un commun accord des parties. L’existence d’un vice ne permet pas de confondre la contestation d’une partie avec une décision d’annulation.",
+      "references": [
+        {
+          "title": "Cour de cassation, rapport reproduisant l’article 1178 du Code civil",
+          "url": "https://www.courdecassation.fr/getattacheddoc/690af40028bf9d42b6ccd029/31975b34db1af6f0cb7602eb61b5b113"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une personne répond conformément à une offre, mais sa capacité de contracter est expressément discutée dans le dossier. Quelle présentation est rigoureuse ?",
+      "options": [
+        "La conformité de la réponse établit la capacité, puisqu’elle manifeste une volonté.",
+        "Le débat sur la capacité dispense d’identifier l’accord sur les termes.",
+        "La capacité est établie par le fait que la personne a pu lire l’offre.",
+        "Constater la concordance des termes puis examiner séparément la capacité."
+      ],
+      "answer": 3,
+      "explanation": "Formation par rencontre des volontés et contrôle de capacité doivent être distingués. L’accord sur les termes ne répond pas automatiquement à la question de capacité."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant conclut que le contrat est valablement formé parce qu’il retrouve exactement le même prix dans deux messages, sans lire les autres termes. Quel défaut relever ?",
+      "options": [
+        "Il réduit l’accord au prix et néglige les autres éléments et contrôles de validité.",
+        "Il doit retenir l’acceptation si le prix correspond, même lorsque la quantité essentielle diffère.",
+        "Il doit retenir l’accord sur toute la mission si le prix correspond, même si chaque message vise une prestation différente.",
+        "Il doit traiter le second prix identique comme une nouvelle offre, même si le reste du message accepte tous les termes."
+      ],
+      "answer": 0,
+      "explanation": "L’identité du prix ne garantit pas la concordance sur les autres éléments essentiels. Elle ne prouve pas non plus les conditions de capacité, de consentement et de contenu."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le texte d’un accord est clair, mais une partie conteste avoir envoyé le message d’acceptation. Quel problème faut-il distinguer de la conformité des termes ?",
+      "options": [
+        "La seule concordance du prix, tenue pour preuve de l’identité de l’auteur.",
+        "L’authenticité et l’attribution de la manifestation d’accord.",
+        "La seule conservation du texte reçu, tenue pour identification certaine de son expéditeur.",
+        "La seule réception sur la bonne adresse, tenue pour preuve de l’identité de la personne qui l’a envoyé."
+      ],
+      "answer": 1,
+      "explanation": "Le contenu peut correspondre à l’offre tout en laissant discutée l’identité de son auteur. La preuve de l’accord et l’analyse de ses termes sont complémentaires."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux personnes s’accordent sur une prestation dont la licéité est contestée. Quelle affirmation est la plus juste ?",
+      "options": [
+        "L’acceptation supprime nécessairement la question de licéité.",
+        "Le prix ferme suffit à établir la licéité.",
+        "L’accord peut être identifié sans que tous les contrôles de validité soient clos.",
+        "Une contestation du contenu prouve l’absence de toute discussion."
+      ],
+      "answer": 2,
+      "explanation": "La concordance des volontés et la validité du contenu sont deux examens distincts. Constater l’accord ne revient pas à valider une prestation contestée."
+    }
+  ]
+}

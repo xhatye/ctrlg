@@ -1,0 +1,338 @@
+{
+  "module": "UE12",
+  "chapter": "anglais-email",
+  "sourceHash": "aa4535796dab8896b1c5b1083f51cfbb1e440bd63d7e2fba7a093ab2242107ec",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An email is marked \"For your information\" and contains no request or instruction. Which interpretation is supported by that wording alone?",
+      "options": [
+        "The message shares information without expressly asking the recipient to carry out an action.",
+        "The recipient has expressly been assigned approval of the information.",
+        "The recipient has expressly been asked to send the information to a customer.",
+        "The recipient has expressly been given a deadline to correct the document."
+      ],
+      "answer": 0,
+      "explanation": "For your information signals the informational purpose. It does not alone assign approval, forwarding or correction."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "You need a copy of a missing invoice, but your draft says “Please pay invoice INV-042”. What action does the draft incorrectly request?",
+      "options": [
+        "Cancellation of the invoice rather than transmission",
+        "Payment rather than transmission of the document",
+        "Transmission rather than payment of the document",
+        "Approval of the annual accounts rather than payment"
+      ],
+      "answer": 1,
+      "explanation": "Please pay demande un règlement. Pour obtenir une pièce manquante, il faut demander send a copy, sans créer une demande de paiement involontaire."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A payment record omits the currency. You want the sender to clarify that missing detail. Which question is appropriately targeted?",
+      "options": [
+        "Could you confirm the total number of supplier invoices?",
+        "Could you confirm that every invoice has been paid?",
+        "Could you confirm the currency of the payment?",
+        "Could you confirm that the payment was definitely in euros?"
+      ],
+      "answer": 2,
+      "explanation": "The request \"Could you specify the currency used for this amount?\" asks directly for the missing currency. It does not assume a currency or request a different piece of information."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A delivery message refers to “the revised schedule”, but two schedules are circulating. Which reply seeks clarification without inventing an agreement?",
+      "options": [
+        "Thank you for confirming that both schedules are approved.",
+        "We confirm that the earlier schedule has been cancelled.",
+        "We assume that the latest file name proves final approval.",
+        "Could you identify the version of the schedule you are referring to?"
+      ],
+      "answer": 3,
+      "explanation": "La question identifie l’ambiguïté et demande une référence de version. La circulation d’un fichier ne démontre ni son approbation ni l’annulation des autres versions."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Which sentence correctly asks someone to give advice on an invoice discrepancy?",
+      "options": [
+        "Could you advise us on the invoice discrepancy?",
+        "Could you advice us on the invoice discrepancy?",
+        "Could you an advice on the invoice discrepancy?",
+        "Could you advising us on the invoice discrepancy?"
+      ],
+      "answer": 0,
+      "explanation": "Advise est le verbe ; advice est un nom. Après could you, la base verbale advise convient pour demander un conseil ou une indication."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "In an email, the supplier says \"We will issue the invoice tomorrow\". Which action does issue mean in this context?",
+      "options": [
+        "Pay the invoice already owed by the customer.",
+        "Prepare and send the invoice as a billing document.",
+        "Cancel the invoice and release the customer from the charge.",
+        "Reconcile the customer’s bank account with its own records."
+      ],
+      "answer": 1,
+      "explanation": "To issue an invoice means to create or send it as a billing document. It differs from settling, cancelling or reconciling a payment."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An email opens \"Further to our call yesterday, I am sending the revised quotation\". What relationship does this opening establish?",
+      "options": [
+        "The email requests a new call before any quotation can be sent.",
+        "The email states that the quotation was approved during the call.",
+        "The email follows up on the earlier call.",
+        "The email cancels what was discussed in the earlier call."
+      ],
+      "answer": 2,
+      "explanation": "Further to refers back to an earlier exchange and introduces a follow-up. It does not itself establish approval, cancellation or a requirement for another call."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "An email with a customer-specific attachment is addressed to a different customer. Which check directly addresses the disclosure risk?",
+      "options": [
+        "Verify only that the file opens correctly on the sender’s computer.",
+        "Verify the file version while assuming that the address is correct.",
+        "Verify encryption while assuming that the recipient is authorised.",
+        "Verify that both the recipient and file match the intended customer."
+      ],
+      "answer": 3,
+      "explanation": "La cohérence destinataire-fichier protège la confidentialité de l’envoi. Un contrôle technique, de version ou de chiffrement ne corrige pas l’envoi au mauvais client."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A recipient says the promised attachment is missing. You verify that no file was attached. Which reply is accurate?",
+      "options": [
+        "Thank you for flagging this; I am sending the missing file with this reply.",
+        "The mention of an attachment in my previous email confirms that the file was delivered despite its absence.",
+        "Please use the previous message itself as the file, even though it did not contain the document.",
+        "The absence of the file confirms that no supporting document is needed for the requested review."
+      ],
+      "answer": 0,
+      "explanation": "La réponse reconnaît le constat vérifié et annonce une action concrète. Mentionner une pièce jointe dans le texte ne prouve pas sa transmission effective."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which subject line best describes an email whose sole purpose is to ask for a revised quotation for maintenance contract M12?",
+      "options": [
+        "Confirmation of accepted quotation — maintenance contract M12",
+        "Request for revised quotation — maintenance contract M12",
+        "Payment received — maintenance contract M12",
+        "Notice of contract cancellation — maintenance contract M12"
+      ],
+      "answer": 1,
+      "explanation": "The subject should state the requested commercial action. Asking for a revised quotation is not accepting a price, confirming a payment or cancelling the contract."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A colleague receives an updated draft and assumes it replaces an approved version without authorisation. Which email wording best prevents that mistake?",
+      "options": [
+        "The new draft supersedes the approved version solely because it was circulated more recently.",
+        "Please implement the proposed changes immediately while the draft is still awaiting approval.",
+        "This file is a draft for review; the approved version remains in force pending confirmation.",
+        "Please treat this draft for comment as the approved operative version until someone rejects it."
+      ],
+      "answer": 2,
+      "explanation": "Une date récente ne suffit pas à modifier le statut d’un document. La formulation distingue clairement la revue du brouillon et le maintien de la version approuvée."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An instruction says \"Respond within three working days of receipt\". Which event starts the stated response period?",
+      "options": [
+        "The end of the third working day after receipt.",
+        "The date on which the recipient chooses to prepare the reply.",
+        "The date on which the reply is finally approved, regardless of receipt.",
+        "Receipt of the message or document covered by the instruction."
+      ],
+      "answer": 3,
+      "explanation": "Of receipt anchors the period to receipt, rather than the start or completion of the recipient’s internal work. A specific working-day calendar may still need clarification if relevant."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A meeting is moved from Friday to Wednesday of the same week. Which phrase accurately describes the change?",
+      "options": [
+        "The meeting has been brought forward.",
+        "The meeting has been postponed.",
+        "The meeting has been extended until Friday.",
+        "The meeting has been cancelled without a replacement date."
+      ],
+      "answer": 0,
+      "explanation": "Bring forward means move to an earlier time or date. Postpone moves later; extending concerns duration and cancellation does not describe the replacement date here."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "You need the supplier to confirm the delivery date by Tuesday, but delivery itself need not take place by then. Which request expresses this correctly?",
+      "options": [
+        "Please deliver the goods by Tuesday.",
+        "Please confirm the delivery date by Tuesday.",
+        "Please confirm that the goods were delivered by Tuesday.",
+        "Please send the confirmation only when the goods are delivered on Tuesday."
+      ],
+      "answer": 1,
+      "explanation": "The deadline applies to confirming the date, not to delivery itself. The other requests require, assume or wait for delivery by or on Tuesday."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which completion correctly follows \"We would rather ___ the revised quotation before approving the purchase\"?",
+      "options": [
+        "receiving",
+        "to receive",
+        "receive",
+        "received"
+      ],
+      "answer": 2,
+      "explanation": "Would rather is followed by the bare infinitive when the same subject expresses its preference: would rather receive."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A supplier has missed a previously agreed response deadline. You need an updated schedule. Which request is most useful?",
+      "options": [
+        "Could you reconfirm the missed original date without proposing when a response can now be provided?",
+        "Could you confirm the invoice amount instead of the response timing that remains unresolved?",
+        "Could you close the request as completed because its previous deadline has passed?",
+        "Could you confirm when you can provide the response and identify any blocking issue?"
+      ],
+      "answer": 3,
+      "explanation": "Une nouvelle date et l’identification du blocage permettent de planifier la suite. La relance ne doit ni nier le retard constaté ni lui attribuer automatiquement un effet juridique."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "An assistant writes \"I am contacting you on behalf of the finance director\". What does on behalf of indicate?",
+      "options": [
+        "The assistant is communicating as a representative of the finance director.",
+        "The assistant is contacting the director rather than the recipient.",
+        "The assistant is communicating against the director’s stated position.",
+        "The assistant is merely copying the director into the email and expressly denies representing the director."
+      ],
+      "answer": 0,
+      "explanation": "On behalf of identifies the person or body represented. It does not by itself establish the details of approval authority or a financial transaction."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Your records show invoice 53 unpaid, but the customer may have paid without a matching reference. Which follow-up is factual?",
+      "options": [
+        "We confirm the invoice remains unpaid by your bank, although we have checked only our unmatched records.",
+        "Our records do not yet show payment for invoice 53; could you confirm its status?",
+        "Your message is treated as confirmation that our unmatched record is a deliberate refusal to pay.",
+        "Please make a second payment before we investigate whether your earlier transfer can be matched."
+      ],
+      "answer": 1,
+      "explanation": "La formule rapporte l’état des enregistrements et demande une confirmation. Elle évite d’attribuer une intention au client ou d’annoncer un encaissement non vérifié."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A customer disputes one line of an invoice. You need to identify the disputed item before reviewing it. Which response is appropriate?",
+      "options": [
+        "We will review only the invoice total, without identifying the line you dispute.",
+        "We will treat the unspecified line as settled because the other lines are undisputed.",
+        "Could you identify the line and explain the difference you have noted?",
+        "We will correct every line to the same amount before identifying the discrepancy you report."
+      ],
+      "answer": 2,
+      "explanation": "La demande vise les faits nécessaires à l’examen du désaccord. Elle ne transforme pas la contestation en preuve automatique, ni en acceptation intégrale."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A customer says payment was made yesterday, but your bank reconciliation cannot match it. Which request most directly provides the transaction identifiers?",
+      "options": [
+        "Could you resend the original invoice without any payment details?",
+        "Could you confirm next month’s planned invoice payment date?",
+        "Could you restate the general payment terms without transaction details?",
+        "Could you send the payment date, amount and transaction reference?"
+      ],
+      "answer": 3,
+      "explanation": "La date, le montant et la référence permettent de rapprocher le versement. L’ancienne facture, un paiement futur ou les conditions générales ne décrivent pas ce règlement précis."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A recipient replies “Thank you, we received your reminder”. Which conclusion is justified by that reply alone?",
+      "options": [
+        "The reminder was received.",
+        "The invoice has been paid.",
+        "The amount has been accepted without reservation.",
+        "The supplier’s bank details have been verified."
+      ],
+      "answer": 0,
+      "explanation": "L’accusé de réception porte sur la relance, pas sur le règlement ou l’acceptation de la dette. Il faut conserver l’objet exact de la confirmation."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "An email uses a firm professional tone. A writer describes it as a formal legal notice solely because it sounds serious. Which assessment is justified?",
+      "options": [
+        "Mentioning an overdue balance alone establishes that legal status.",
+        "Its legal status requires examination beyond tone alone.",
+        "The word urgent in the subject line alone establishes that legal status.",
+        "Attaching an invoice alone establishes that legal status."
+      ],
+      "answer": 1,
+      "explanation": "Le ton ne suffit pas à qualifier juridiquement un message. Une relance professionnelle doit être distinguée d’une démarche formelle dont les conditions demandent une analyse spécifique."
+    }
+  ]
+}

@@ -1,0 +1,433 @@
+{
+  "module": "UE3",
+  "chapter": "reperes",
+  "sourceHash": "5384a0b652b10d321bb0f3d116528fbf138d22c1b49e8443ca5c8557265584c7",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le responsable impose chaque matin l’ordre des tâches et leur méthode d’exécution. Quel aspect de la subordination ces faits illustrent-ils directement ?",
+      "options": [
+        "Le pouvoir de direction.",
+        "Le pouvoir de sanction déjà exercé.",
+        "La liberté de fixer ses propres prix.",
+        "Le seul risque économique d’un prestataire."
+      ],
+      "answer": 0,
+      "explanation": "Les consignes sur les tâches et leur réalisation illustrent la direction. Elles doivent être distinguées du contrôle de leur exécution et de la sanction des manquements."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une application permet au responsable de vérifier en temps réel l’exécution des consignes données au travailleur. Quel aspect de la relation est directement documenté ?",
+      "options": [
+        "La libre constitution d’une clientèle.",
+        "Un contrôle de l’exécution du travail.",
+        "La propriété du matériel de travail.",
+        "La détermination autonome des prix."
+      ],
+      "answer": 1,
+      "explanation": "Les données décrivent le suivi de l’exécution. Ce contrôle doit être relié aux autres éléments de la relation pour apprécier la subordination, sans être confondu avec la propriété d’un outil."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un donneur d’ordre dispose d’un dispositif de suspension d’accès présenté comme une mesure punissant les refus de consignes. Quel pouvoir faut-il examiner derrière ce dispositif ?",
+      "options": [
+        "Le pouvoir de fixer les objectifs et les consignes de la mission.",
+        "Le pouvoir de contrôler la conformité des prestations réalisées.",
+        "Le pouvoir de sanctionner les manquements.",
+        "Le pouvoir de convenir des modalités de rémunération."
+      ],
+      "answer": 2,
+      "explanation": "Le dispositif doit être étudié dans sa fonction réelle. Une suspension utilisée pour punir des refus de directives peut renseigner le pouvoir de sanction dans l’analyse d’ensemble."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier prouve des directives et un suivi, mais ne renseigne pas le pouvoir de sanction. Quelle présentation de la qualification est rigoureuse ?",
+      "options": [
+        "La seule rémunération suffit désormais à conclure définitivement.",
+        "Le contrat est nécessairement indépendant faute de sanction déjà prononcée.",
+        "Une sanction doit avoir été exécutée pour qu’un pouvoir de sanction puisse exister.",
+        "Les indices documentés sont exposés et le pouvoir de sanction restant à éclaircir est identifié."
+      ],
+      "answer": 3,
+      "explanation": "L’analyse porte sur les pouvoirs et les conditions réelles. Il faut éviter de transformer une lacune en certitude ou d’exiger qu’un pouvoir ait déjà été exercé pour l’examiner."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel ensemble est classiquement recherché pour caractériser un contrat de travail ?",
+      "options": [
+        "Une prestation de travail, une rémunération et un lien de subordination.",
+        "Un écrit commercial, un numéro de facture et un paiement.",
+        "Une clientèle unique, un outil personnel et une échéance.",
+        "Un prix forfaitaire, une assurance et un budget prévisionnel."
+      ],
+      "answer": 0,
+      "explanation": "La qualification réunit prestation, rémunération et subordination. Les indices documentaires ou commerciaux ne remplacent pas cet examen des conditions réelles.",
+      "references": [
+        {
+          "title": "Cour de cassation, chambre sociale, 12 février 2020, 17-31.722",
+          "url": "https://www.legifrance.gouv.fr/juri/id/JURITEXT000041620451"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une personne est très expérimentée et a négocié le montant de sa rémunération. Ces faits permettent-ils, à eux seuls, d’exclure tout lien de subordination ?",
+      "options": [
+        "Oui, l’expérience professionnelle exclut une relation salariée.",
+        "Non, il faut encore analyser les conditions effectives et les pouvoirs exercés.",
+        "Oui, la négociation du prix rend toute directive impossible juridiquement.",
+        "Non, car tout expert rémunéré est nécessairement salarié."
+      ],
+      "answer": 1,
+      "explanation": "L’expertise et la capacité de négocier ne tranchent pas l’autorité exercée ensuite sur le travail. Il faut revenir aux directives, contrôles et sanctions dans la relation.",
+      "references": [
+        {
+          "title": "Cour de cassation, chambre sociale, pourvoi 09-43.215",
+          "url": "https://www.courdecassation.fr/en/decision/61372797cd5801467742cc10"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat prévoit une facturation à la mission. Le travailleur soutient pourtant qu’il exécute son activité sous autorité. Quel raisonnement convient ?",
+      "options": [
+        "Le mode de facturation suffit à fermer toute discussion sur le salariat.",
+        "Le paiement à la mission démontre nécessairement une subordination.",
+        "Le mode de paiement doit être confronté aux conditions d’exercice plutôt que tenir lieu de qualification définitive.",
+        "La présence d’une facture transforme automatiquement les directives en simple conseil."
+      ],
+      "answer": 2,
+      "explanation": "Le document et le mode de règlement sont des éléments à apprécier. Ils ne remplacent pas l’examen de l’organisation effective et des pouvoirs en présence."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant qualifie une relation de salariée parce que la convention s’intitule « partenariat salarié », sans lire son exécution. Quelle faiblesse présente son analyse ?",
+      "options": [
+        "Il aurait dû retenir exclusivement le régime social déclaré par les parties.",
+        "Il aurait dû se limiter au statut fiscal des sommes versées.",
+        "Il aurait dû remplacer l’intitulé par la seule immatriculation du prestataire.",
+        "Il attribue une qualification définitive au seul intitulé donné par les parties."
+      ],
+      "answer": 3,
+      "explanation": "La qualification ne repose pas uniquement sur les mots choisis. L’examen concret reste nécessaire même lorsque le titre paraît orienter vers le salariat."
+    },
+    {
+      "id": "q09",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un exercice de paie, le brut comprend 2 300 € de base et une prime brute de 180 €. Aucun autre élément n’entre dans le brut. Quel brut total retenir ?",
+      "options": [
+        "2 480 €",
+        "2 120 €",
+        "2 300 €",
+        "180 €"
+      ],
+      "answer": 0,
+      "explanation": "Les composantes brutes fournies s’additionnent : 2 300 + 180 = 2 480 €. Les retenues éventuelles s’appliqueraient ensuite selon les seules données de l’exercice.",
+      "calculation": {
+        "digits": 0,
+        "expected": 2480,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 2300
+            },
+            {
+              "value": 180
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le brut d’un exercice est de 2 600 €. Les retenues salariales données sont de 520 €, sans autre retenue ni remboursement. Quel net avant impôt obtient-on ?",
+      "options": [
+        "3 120 €",
+        "2 080 €",
+        "520 €",
+        "2 600 €"
+      ],
+      "answer": 1,
+      "explanation": "Le net avant impôt résulte ici de 2 600 − 520 = 2 080 €. Les retenues sont fournies par l’exercice ; aucun taux habituel n’est supposé.",
+      "calculation": {
+        "digits": 0,
+        "expected": 2080,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2600
+            },
+            {
+              "value": 520
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le bulletin d’exercice indique 2 400 € bruts, 480 € de retenues salariales et 800 € de cotisations patronales. Un candidat déduit les 800 € du brut pour calculer le net. Quelle distinction manque ?",
+      "options": [
+        "Le net salarial et le coût total supporté par l’employeur sont une même base.",
+        "Le brut doit être diminué des cotisations patronales et augmenté des retenues salariales.",
+        "Les retenues salariales et les charges supplémentaires supportées par l’employeur.",
+        "Les cotisations patronales sont comprises dans les 480 € de retenues annoncées."
+      ],
+      "answer": 2,
+      "explanation": "Les cotisations patronales ne sont pas, dans ces données, des retenues salariales à soustraire du brut. Le net et le coût pour l’employeur sont des objets différents."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’exercice donne 2 000 € nets avant prélèvement d’impôt et un prélèvement de 140 €. Aucun autre mouvement n’existe. Quel montant est versé après ce prélèvement ?",
+      "options": [
+        "2 140 €",
+        "2 000 €",
+        "140 €",
+        "1 860 €"
+      ],
+      "answer": 3,
+      "explanation": "Le versement après le prélèvement est 2 000 − 140 = 1 860 €. Il faut conserver la distinction entre net avant impôt et montant effectivement versé.",
+      "calculation": {
+        "digits": 0,
+        "expected": 1860,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2000
+            },
+            {
+              "value": 140
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour un exercice simplifié, une retenue salariale unique de 18 % porte sur tout le brut de 2 500 €. Quel net avant impôt calculer ?",
+      "options": [
+        "2 050 €",
+        "450 €",
+        "2 950 €",
+        "2 482 €"
+      ],
+      "answer": 0,
+      "explanation": "La retenue vaut 2 500 × 18 % = 450 €, puis le net 2 500 − 450 = 2 050 €. Le taux est une hypothèse d’exercice et ne doit pas être généralisé.",
+      "calculation": {
+        "digits": 0,
+        "expected": 2050,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 2500
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "value": 0.18
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les données de paie donnent 2 200 € bruts et 1 760 € nets avant impôt, sans autre différence que les retenues salariales. Quel montant de retenues retrouve-t-on ?",
+      "options": [
+        "3 960 €",
+        "440 €",
+        "1 760 €",
+        "400 €"
+      ],
+      "answer": 1,
+      "explanation": "Les retenues constituent la différence entre brut et net dans cette hypothèse : 2 200 − 1 760 = 440 €. Un taux externe n’est pas nécessaire pour ce rapprochement.",
+      "calculation": {
+        "digits": 0,
+        "expected": 440,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2200
+            },
+            {
+              "value": 1760
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un relevé de versement comprend 1 900 € de net salarial et 75 € de remboursement de frais, expressément distincts selon l’exercice. Pourquoi le total versé n’est-il pas le seul salaire net indiqué ?",
+      "options": [
+        "Les frais remboursés constituent une prime brute à convertir en net.",
+        "Le remboursement doit être retranché des 1 900 € pour retrouver le net salarial.",
+        "Le virement peut regrouper des éléments de natures différentes qu’il faut rapprocher du bulletin.",
+        "Les frais doivent être ajoutés au net salarial pour corriger le montant indiqué au bulletin."
+      ],
+      "answer": 2,
+      "explanation": "La nature des éléments est fournie : salaire net et remboursement sont distingués. Le montant bancaire ne doit pas être utilisé sans rapprochement pour remplacer l’intitulé de chaque composante."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une clause annonce que le travailleur choisit ses horaires, mais les plannings révèlent une présence imposée chaque jour. Quel élément doit guider la vérification ?",
+      "options": [
+        "La seule déclaration de liberté contenue dans le titre.",
+        "La seule préférence personnelle du travailleur pour ces horaires.",
+        "La seule durée prévue de la mission.",
+        "L’organisation réellement observée et son rapport aux pouvoirs du donneur d’ordre."
+      ],
+      "answer": 3,
+      "explanation": "L’écart entre clause et pratique doit être analysé. Une liberté annoncée ne suffit pas à décrire les conditions effectivement imposées."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un dossier contient cinquante factures mais aucun élément sur les consignes et leur contrôle. Que manque-t-il surtout à une analyse de subordination ?",
+      "options": [
+        "Des faits sur l’organisation et les pouvoirs exercés dans la relation.",
+        "Un montant de facturation plus élevé, traité comme critère de subordination.",
+        "La fréquence des paiements seule, traitée comme preuve de sanction.",
+        "La seule date d’émission des factures, traitée comme mesure des pouvoirs."
+      ],
+      "answer": 0,
+      "explanation": "La multiplication des documents de facturation ne décrit pas nécessairement l’autorité sur l’exécution. Il faut rechercher des faits relatifs aux critères pertinents."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le travailleur décrit des directives quotidiennes ; le donneur d’ordre produit seulement le contrat annonçant l’indépendance. Quelle démarche permet de comparer ces positions ?",
+      "options": [
+        "Retenir le titre du contrat contre toute pratique alléguée.",
+        "Rechercher des échanges, plannings et éléments d’exécution permettant d’examiner les faits contestés.",
+        "Retenir la version de la partie ayant signé la première.",
+        "Déduire la qualification du montant mensuel seul."
+      ],
+      "answer": 1,
+      "explanation": "La contradiction appelle un examen documentaire des conditions réelles. Le titre et l’allégation doivent être confrontés aux éléments permettant d’étayer l’organisation du travail."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise exige un résultat conforme au cahier des charges et un autre dispositif contrôle chaque geste et sanctionne tout écart à ses instructions. Quelle comparaison est utile ?",
+      "options": [
+        "Le seul prix total, traité comme critère du pouvoir exercé.",
+        "L’intitulé donné au dispositif, indépendamment de sa fonction.",
+        "L’objet et l’intensité des pouvoirs exercés, plutôt que le seul mot contrôle.",
+        "La seule possibilité d’émettre une facture, traitée comme exclusion de toute autorité."
+      ],
+      "answer": 2,
+      "explanation": "Contrôler un résultat contractuel et exercer une autorité sur l’exécution ne se confondent pas. Les faits doivent être reliés aux fonctions de direction, contrôle et sanction."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une conclusion énumère des horaires imposés mais ne précise ni qui les fixe ni si la personne peut les refuser. Quelle amélioration est nécessaire ?",
+      "options": [
+        "Prendre toute contrainte horaire comme preuve définitive.",
+        "Remplacer les horaires par le total du chiffre d’affaires.",
+        "Écarter tous les plannings comme documents commerciaux.",
+        "Décrire l’auteur des contraintes, leur portée réelle et les possibilités d’organisation."
+      ],
+      "answer": 3,
+      "explanation": "Un indice doit être contextualisé pour être utile. Les horaires n’ont pas la même portée selon qu’ils sont choisis, négociés ou imposés avec un pouvoir de contrainte."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les consignes et le contrôle sont étayés, mais plusieurs éléments sur l’autonomie réelle restent discutés. Comment conclure au stade de l’exercice ?",
+      "options": [
+        "Présenter les indices concordants, la qualification envisagée et les vérifications nécessaires.",
+        "Annoncer une issue judiciaire certaine et un montant de réparation non fourni.",
+        "Retenir automatiquement l’indépendance dès qu’un indice est contesté.",
+        "Compter les indices comme des voix, chaque fait ayant toujours le même poids."
+      ],
+      "answer": 0,
+      "explanation": "La conclusion doit rendre visible le raisonnement et ses limites. Les faits ne se résument pas à un vote d’indices équivalents ni à une prédiction chiffrée sans fondement."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux documents concernent des périodes différentes : autonomie initiale puis plannings imposés après une réorganisation. Comment traiter cette évolution ?",
+      "options": [
+        "Retenir les conditions initiales comme déterminantes malgré la réorganisation.",
+        "Analyser les conditions réelles pour les périodes pertinentes et dater l’évolution.",
+        "Retenir les conditions finales comme preuve de la situation depuis l’origine.",
+        "Qualifier globalement la relation selon la période ayant duré le plus longtemps."
+      ],
+      "answer": 1,
+      "explanation": "Les conditions d’exécution peuvent évoluer. La chronologie évite de transposer indistinctement à toute la relation les faits d’une période particulière."
+    }
+  ]
+}

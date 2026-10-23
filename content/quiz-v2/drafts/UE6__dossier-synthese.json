@@ -1,0 +1,445 @@
+{
+  "module": "UE6",
+  "chapter": "dossier-synthese",
+  "sourceHash": "39478245e1560b5d702e722d2828fa323a9a7abddba0a9b31a7b8a47cff91770",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une campagne commerciale double les commandes facturées, mais les règlements sont prévus à crédit. Quelle information manque pour prévoir les encaissements du trimestre ?",
+      "options": [
+        "Les échéances et le rythme réel de paiement des factures",
+        "Le seul total des commandes signées",
+        "La seule marge comptable attendue",
+        "Le seul prix de la machine utilisée pour produire"
+      ],
+      "answer": 0,
+      "explanation": "Des commandes facturées ne déterminent pas encore le calendrier bancaire. Les échéances et le recouvrement permettent de convertir l’activité en flux attendus."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les créances clients progressent de 20 %, comme les ventes à crédit. Le rapport attribue toute la hausse à des retards. Quelle analyse compléter ?",
+      "options": [
+        "Attribuer la hausse au seul total des créances sans examiner le volume de ventes",
+        "Comparer les délais et l’ancienneté des créances à activité comparable",
+        "Déduire le retard moyen du seul taux de croissance du chiffre d’affaires",
+        "Prendre l’encours supplémentaire comme le montant intégral de clients irrécouvrables"
+      ],
+      "answer": 1,
+      "explanation": "Une croissance des ventes peut accroître normalement les encours. Les retards doivent être recherchés dans le comportement de paiement, pas dans le seul montant."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client important promet un paiement rapide mais n’a pas encore effectué le virement. Comment présenter cette somme dans un diagnostic prudent ?",
+      "options": [
+        "Comme une trésorerie déjà disponible",
+        "Comme un produit à comptabiliser une seconde fois",
+        "Comme un encaissement attendu avec une hypothèse à suivre, pas comme un paiement observé",
+        "Comme une ressource stable définitivement acquise"
+      ],
+      "answer": 2,
+      "explanation": "Le diagnostic distingue preuve disponible et prévision. Une promesse peut étayer une hypothèse mais ne remplace pas l’observation de l’encaissement."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dirigeant se félicite d’un bénéfice en hausse et refuse d’examiner les clients impayés. Quel risque ce raisonnement laisse-t-il de côté ?",
+      "options": [
+        "La trésorerie disponible considérée comme égale au bénéfice avant recouvrement",
+        "Les créances traitées comme un encaissement utilisable aux échéances déjà venues",
+        "Le besoin de financement limité aux seules ventes déjà encaissées",
+        "Le financement du décalage entre les ventes reconnues et leur règlement"
+      ],
+      "answer": 3,
+      "explanation": "Une performance comptable ne règle pas les échéances. Les créances doivent être suivies pour apprécier les ressources immobilisées et la capacité de paiement."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un dossier limité à l’exploitation, stocks 22 000 €, clients 48 000 € et fournisseurs 31 000 €. Pour viser un BFR de 30 000 € sans changer stocks ni clients, quel montant de dettes fournisseurs faudrait-il ?",
+      "options": [
+        "40 000 €",
+        "9 000 €",
+        "70 000 €",
+        "61 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le montant théorique se déduit de 22 000 + 48 000 − fournisseurs = 30 000 €, soit 40 000 €. Sa faisabilité commerciale reste à vérifier.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 22000
+                },
+                {
+                  "value": 48000
+                }
+              ]
+            },
+            {
+              "value": 30000
+            }
+          ]
+        },
+        "expected": 40000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier de BFR exclut explicitement les dettes hors exploitation. Quelle présentation protège le mieux la portée de la conclusion ?",
+      "options": [
+        "Présenter ce BFR comme la totalité certaine de tous les besoins de l’entreprise",
+        "Annoncer le périmètre et réserver le diagnostic global aux autres postes",
+        "Ajouter sans vérification toutes les dettes au poste fournisseur",
+        "Remplacer les stocks par les immobilisations pour élargir le résultat"
+      ],
+      "answer": 1,
+      "explanation": "Un modèle simplifié reste utile si son périmètre est explicite. Il ne prouve pas que les postes exclus sont nuls ou sans importance dans la situation réelle."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un remboursement d’emprunt est ajouté aux dettes fournisseurs dans le calcul stocks + clients − fournisseurs. Quelle erreur de nature faut-il corriger ?",
+      "options": [
+        "Il inclut deux fois un stock de marchandises",
+        "Il exclut à tort une créance client",
+        "Il confond financement financier et ressource du cycle d’exploitation",
+        "Il inverse nécessairement le chiffre d’affaires et le résultat"
+      ],
+      "answer": 2,
+      "explanation": "Le modèle concerne les postes d’exploitation. Le remboursement de dette financière est un autre flux qui ne doit pas être maquillé en crédit fournisseur."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux sociétés ont le même BFR, mais l’une détient surtout des créances anciennes et l’autre un stock récent rapidement vendu. Quel complément de diagnostic est pertinent ?",
+      "options": [
+        "La seule égalité de BFR, utilisée pour attribuer un niveau de liquidité identique",
+        "Le même délai de récupération déduit du montant net identique",
+        "Une analyse limitée aux dettes fournisseurs en ignorant les différences de composition",
+        "La qualité et le dénouement attendus de chaque composante"
+      ],
+      "answer": 3,
+      "explanation": "Un agrégat identique peut cacher des délais, risques et ressources mobilisables différents. Sa composition doit être analysée avant de recommander une action."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le BFR vaut 46 000 €. Une action réaliste réduit le stock de 5 000 € et les clients de 3 000 €, sans variation des fournisseurs. Quel BFR reste-t-il ?",
+      "options": [
+        "38 000 €",
+        "54 000 €",
+        "44 000 €",
+        "8 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Les deux emplois baissent d’un total de 8 000 €. Le besoin net devient 46 000 − 5 000 − 3 000 = 38 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 46000
+                },
+                {
+                  "value": 5000
+                }
+              ]
+            },
+            {
+              "value": 3000
+            }
+          ]
+        },
+        "expected": 38000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Entre deux dates, les stocks augmentent de 6 000 €, les clients de 9 000 € et les fournisseurs de 4 000 €. De combien le BFR varie-t-il dans le modèle simplifié ?",
+      "options": [
+        "19 000 €",
+        "11 000 €",
+        "−7 000 €",
+        "15 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Les emplois augmentent de 15 000 €, partiellement financés par 4 000 € de fournisseurs supplémentaires : la hausse nette est 11 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 6000
+                },
+                {
+                  "value": 9000
+                }
+              ]
+            },
+            {
+              "value": 4000
+            }
+          ]
+        },
+        "expected": 11000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le commentaire présente la hausse du crédit fournisseur comme une cause de l’augmentation du BFR, alors que stocks et clients montent plus fortement. Que faut-il préciser ?",
+      "options": [
+        "Tout crédit fournisseur supplémentaire accroît le besoin net",
+        "La hausse des clients libère des fonds qui compensent le fournisseur",
+        "Le fournisseur compense une partie de la hausse des emplois, sans la couvrir entièrement",
+        "Les variations de stock sont étrangères au besoin"
+      ],
+      "answer": 2,
+      "explanation": "Les fournisseurs sont une ressource soustraite des emplois. Leur hausse atténue donc le besoin supplémentaire, même si le BFR total augmente."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un BFR important est resté stable deux ans, tandis qu’une autre activité connaît une forte hausse récente de son besoin. Quelle distinction est utile ?",
+      "options": [
+        "La déduction de tout le BFR stable chaque année comme nouveau flux de besoin",
+        "L’assimilation de la hausse du BFR à une charge comptable de même montant",
+        "L’absence de financement du besoin stable supposée acquise sans examiner les ressources",
+        "Le financement d’un stock de besoin existant et celui d’une variation nouvelle"
+      ],
+      "answer": 3,
+      "explanation": "Le niveau du besoin indique ce qui reste immobilisé ; sa variation indique les ressources supplémentaires mobilisées pendant la période. Les deux analyses se complètent."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le BFR passe d’une ressource de 7 000 € à un besoin de 5 000 €. Quelle consommation supplémentaire de ressources correspond à cette variation ?",
+      "options": [
+        "12 000 €",
+        "−2 000 €",
+        "2 000 €",
+        "5 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La variation est 5 000 − (−7 000) = 12 000 €. Il faut financer le nouveau besoin et compenser la disparition de l’ancienne ressource.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 5000
+            },
+            {
+              "value": -7000
+            }
+          ]
+        },
+        "expected": 12000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le BFR a augmenté de 10 000 € sur un an. Un responsable multiplie cette hausse par douze pour annoncer le besoin de l’année. Pourquoi est-ce incorrect ?",
+      "options": [
+        "La hausse de BFR doit toujours être multipliée par 360",
+        "La variation annuelle est déjà mesurée sur toute la période",
+        "La variation n’est qu’un montant de ventes journalières",
+        "Une hausse de besoin n’affecte jamais le financement"
+      ],
+      "answer": 1,
+      "explanation": "La donnée compare déjà les deux dates annuelles. La multiplier sans justification transforme une variation de stock en une répétition fictive de flux."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La hausse de BFR absorbe plus de ressources que prévu alors que l’activité demeure bénéficiaire. Quelle conclusion respecte les données ?",
+      "options": [
+        "La hausse du besoin peut être couverte en assimilant le résultat prévu aux liquidités disponibles",
+        "Le financement doit être mesuré avec le seul taux de marge sans examiner les encours",
+        "La croissance demande un financement du cycle à examiner malgré le bénéfice",
+        "Le besoin du cycle peut être déduit du chiffre d’affaires sans tenir compte des dettes fournisseurs"
+      ],
+      "answer": 2,
+      "explanation": "Des profits et une immobilisation supplémentaire de ressources peuvent coexister. Il faut chiffrer ce financement plutôt que confondre besoin et charge."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le directeur propose de réduire brutalement les stocks pour améliorer le BFR. Quelle limite opérationnelle doit être examinée ?",
+      "options": [
+        "Le seul coût de détention à réduire, sans mesurer la continuité du service",
+        "La valeur de stock à diminuer en comptabilité sans modifier les quantités réellement nécessaires",
+        "La réduction du crédit client supposée compenser à elle seule le risque de rupture",
+        "Le risque de rupture et son effet sur la production ou les ventes"
+      ],
+      "answer": 3,
+      "explanation": "Une diminution du stock libère potentiellement des fonds mais peut dégrader le service ou interrompre la production. La décision doit tenir compte de ce risque."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise veut imposer un règlement plus rapide à ses clients. Quel élément complète utilement le gain de trésorerie attendu ?",
+      "options": [
+        "La faisabilité contractuelle et commerciale de la modification",
+        "Le seul gain de BFR sans examiner la réaction des clients",
+        "Le délai moyen sectoriel utilisé comme condition de paiement de chaque contrat",
+        "La baisse de créances attendue présentée comme un gain de résultat de même montant"
+      ],
+      "answer": 0,
+      "explanation": "Une mesure sur les délais doit être réalisable et acceptée dans le cadre du dossier. Le bénéfice attendu se compare aux contraintes et à l’impact sur les ventes."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un crédit fournisseur plus long est prévu dans le plan, mais aucun accord du fournisseur n’est obtenu. Comment présenter la mesure ?",
+      "options": [
+        "Comme une ressource certaine déjà disponible",
+        "Comme une hypothèse conditionnelle à négocier, avec un scénario sans accord",
+        "Comme un produit exceptionnel acquis",
+        "Comme une réduction définitive du prix de la facture"
+      ],
+      "answer": 1,
+      "explanation": "Un financement dépendant d’un tiers n’est pas une preuve acquise. Le budget doit montrer les conséquences d’un refus ou d’un accord partiel."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour accélérer un règlement, l’entreprise envisage une remise de 2 % sur une facture de 10 000 €, hypothèse purement commerciale de l’exercice. Quel encaissement resterait, hors autres taxes ou frais ?",
+      "options": [
+        "10 200 €",
+        "200 €",
+        "9 800 €",
+        "8 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La remise proposée est 10 000 × 2 % = 200 €. L’encaissement serait 10 000 − 200 = 9 800 €, à comparer au bénéfice du règlement anticipé.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 10000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 10000
+                },
+                {
+                  "value": 0.02
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 9800,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une action libère ponctuellement du BFR, mais le modèle prévoit ensuite une croissance rapide des encours. Pourquoi ne suffit-elle pas à garantir la trésorerie future ?",
+      "options": [
+        "La libération ponctuelle peut être répétée comme recette identique dans chaque période future",
+        "Le BFR après action peut être maintenu fixe sans tenir compte des prévisions de volume",
+        "L’encaissement ponctuel peut remplacer l’examen des échéances ultérieures",
+        "Le besoin peut se reconstituer avec la croissance et les délais"
+      ],
+      "answer": 3,
+      "explanation": "Une économie ponctuelle ne supprime pas les causes de variation future. Le suivi doit tester le besoin en fonction de l’activité et des comportements de paiement."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après un programme de relance clients, quel suivi permet d’en mesurer l’effet concret sur le besoin de financement ?",
+      "options": [
+        "Les encaissements, les créances échues et l’évolution du délai à activité comparable",
+        "Le seul nombre de messages de relance envoyés",
+        "Le seul résultat historique de la société",
+        "Le nombre de lignes du budget sans rapprochement bancaire"
+      ],
+      "answer": 0,
+      "explanation": "Les actions n’ont un effet financier que si elles modifient le recouvrement et les encours. Un indicateur d’effort seul ne démontre pas cet effet."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle recommandation constitue un diagnostic financier exploitable ?",
+      "options": [
+        "Un objectif de BFR nul pour toute entreprise sans analyse",
+        "Une action chiffrée avec ses hypothèses, contraintes et indicateurs de suivi",
+        "Une cause unique affirmée à partir du seul total du BFR",
+        "Une promesse de trésorerie positive sans calendrier"
+      ],
+      "answer": 1,
+      "explanation": "Une recommandation doit relier les données à une décision réalisable et contrôlable. Les limites et conditions font partie de l’analyse."
+    }
+  ]
+}

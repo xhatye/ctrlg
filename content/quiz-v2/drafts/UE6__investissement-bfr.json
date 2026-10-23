@@ -1,0 +1,460 @@
+{
+  "module": "UE6",
+  "chapter": "investissement-bfr",
+  "sourceHash": "26522c4eee6f3317d5e04b7b393bbe354f652583bb465f1f97fdc5926a53811c",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un projet d’un an exige 18 000 € de matériel et 3 000 € de BFR, tous deux engagés aujourd’hui. Quel besoin initial total faut-il financer, sans autre poste ?",
+      "options": [
+        "21 000 €",
+        "15 000 €",
+        "18 000 €",
+        "3 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le besoin initial réunit l’équipement et les ressources immobilisées dans le cycle : 18 000 + 3 000 = 21 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 18000
+            },
+            {
+              "value": 3000
+            }
+          ]
+        },
+        "expected": 21000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le budget finance la machine mais ne prévoit rien pour les stocks et créances supplémentaires du projet. Quelle erreur affecte le besoin initial ?",
+      "options": [
+        "Il est surestimé du prix du matériel",
+        "Il est sous-estimé du BFR supplémentaire nécessaire",
+        "Le BFR est déjà forcément compris dans tout prix de machine",
+        "Le BFR doit être traité comme un emprunt automatiquement reçu"
+      ],
+      "answer": 1,
+      "explanation": "Le matériel et le cycle mobilisent des ressources différentes. Le financement de la machine seul ne couvre pas un BFR initial absent du budget."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le projet démarre aujourd’hui mais sa première rentrée d’argent est prévue dans un an. Pourquoi faut-il financer le BFR avant cette rentrée ?",
+      "options": [
+        "La récupération prévue dans un an constitue déjà une ressource disponible à la date initiale",
+        "Le BFR ne nécessite un financement qu’au moment de son recouvrement final",
+        "Les ressources du cycle sont immobilisées avant les encaissements attendus",
+        "Le premier flux opérationnel futur peut être directement déduit du besoin initial sans tenir compte des dates"
+      ],
+      "answer": 2,
+      "explanation": "Le décalage de paiement crée un emploi initial. Même si sa récupération future est prévue, il faut disposer de ressources pendant l’intervalle."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans la frise financière d’un projet, quel signe donne-t-on au BFR engagé à t0 ?",
+      "options": [
+        "Un signe positif, comme encaissement client immédiat",
+        "Aucun signe, car il ne peut entrer dans une VAN",
+        "Un signe positif seulement si la machine est amortissable",
+        "Un signe négatif, comme emploi initial de trésorerie"
+      ],
+      "answer": 3,
+      "explanation": "Un engagement de BFR absorbe des ressources à son échéance. Sa récupération éventuelle est un autre flux, positif et à une date distincte."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le coût matériel et le BFR initial sont tous deux inclus dans une ligne « besoin de démarrage ». L’analyste ajoute ensuite le même BFR une seconde fois. Que faut-il corriger ?",
+      "options": [
+        "Le double comptage du BFR initial",
+        "L’absence de remboursement de la machine",
+        "La non-capitalisation des ventes",
+        "Le classement obligatoire de la totalité du BFR en produit"
+      ],
+      "answer": 0,
+      "explanation": "Le périmètre d’une ligne agrégée doit être vérifié. Un besoin déjà inclus ne doit pas être ajouté une nouvelle fois."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "À la fin du projet, le flux opérationnel de 14 000 € exclut toute récupération de BFR. Une récupération finale de 2 500 € est expressément prévue à cette même date. Quel flux final total retenir ?",
+      "options": [
+        "11 500 €",
+        "16 500 €",
+        "14 000 €",
+        "2 500 €"
+      ],
+      "answer": 1,
+      "explanation": "Les deux encaissements distincts de même date s’additionnent : 14 000 + 2 500 = 16 500 €, avant actualisation.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 14000
+            },
+            {
+              "value": 2500
+            }
+          ]
+        },
+        "expected": 16500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier prévoit la fin de production mais ne précise pas le recouvrement des clients ni la vente des stocks restants. Peut-on supposer une récupération intégrale et certaine du BFR ?",
+      "options": [
+        "Oui, la fin de production garantit tout encaissement",
+        "Oui, le prix d’achat du stock est toujours garanti",
+        "Non, elle exige une justification des montants et des dates de dénouement",
+        "Oui, dès lors que la VAN calculée devient positive"
+      ],
+      "answer": 2,
+      "explanation": "L’arrêt du projet ne garantit pas le dénouement complet et immédiat du cycle. La récupération doit être fondée sur des hypothèses vérifiables."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le flux terminal fourni inclut déjà le recouvrement des créances et le dénouement des stocks. Comment traiter une ligne supplémentaire « récupération de BFR » portant sur les mêmes postes ?",
+      "options": [
+        "L’ajouter systématiquement parce que tout projet doit récupérer son BFR",
+        "La soustraire deux fois au besoin initial",
+        "La remplacer par le bénéfice comptable de l’année",
+        "L’écarter pour éviter de compter deux fois les mêmes encaissements"
+      ],
+      "answer": 3,
+      "explanation": "Les flux agrégés doivent être analysés avant tout ajout. Si la récupération est déjà intégrée, une ligne identique surévaluerait le flux terminal."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le BFR initial est de 4 000 €. Le scénario prudent prévoit d’en récupérer seulement 75 % à la fin. Quel encaissement de récupération doit-il retenir ?",
+      "options": [
+        "3 000 €",
+        "4 000 €",
+        "1 000 €",
+        "5 333,33 €"
+      ],
+      "answer": 0,
+      "explanation": "La récupération prévue est 4 000 × 0,75 = 3 000 €. Les 1 000 € non récupérés ne sont pas un encaissement final.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 4000
+            },
+            {
+              "value": 0.75
+            }
+          ]
+        },
+        "expected": 3000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "La récupération du BFR correspond-elle nécessairement à un bénéfice comptable de même montant ?",
+      "options": [
+        "Oui, tout recouvrement client est une nouvelle vente",
+        "Non, elle libère du financement immobilisé dans le cycle",
+        "Oui, toute diminution de stock augmente le résultat de son coût",
+        "Non, car elle ne peut jamais augmenter la banque"
+      ],
+      "answer": 1,
+      "explanation": "Recouvrer des créances ou dénouer le cycle peut libérer de la trésorerie sans créer un produit nouveau. Trésorerie et résultat doivent être distingués."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le stock est vendu en fin de projet, mais les clients paieront trois mois plus tard. Où placer la récupération de la créance dans les prévisions ?",
+      "options": [
+        "À t0 puisque le stock existait déjà au départ",
+        "À la date de production, comme si le paiement était immédiat",
+        "À sa date attendue d’encaissement, au-delà de la production",
+        "Nulle part, car tous les flux cessent avec la production"
+      ],
+      "answer": 2,
+      "explanation": "La récupération suit le calendrier de trésorerie. La fin de production ne supprime pas les échéances de paiement des créances."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un flux terminal total de 22 000 €, récupération du BFR incluse, sera encaissé dans un an. Le taux annuel fourni est de 10 %. Quelle est sa valeur actuelle ?",
+      "options": [
+        "24 200 €",
+        "22 000 €",
+        "2 000 €",
+        "20 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le flux final est actualisé dans son ensemble à sa date : 22 000 / 1,10 = 20 000 €. Il ne faut pas isoler la récupération pour ignorer le temps.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 22000
+            },
+            {
+              "value": 1.1
+            }
+          ]
+        },
+        "expected": 20000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste actualise le flux opérationnel final mais ajoute la récupération du BFR final sans l’actualiser. Quel biais introduit-il avec un taux positif ?",
+      "options": [
+        "Il surestime la valeur actuelle de la récupération",
+        "Il sous-estime toujours le besoin initial matériel",
+        "Il neutralise exactement tout risque client",
+        "Il obtient le même résultat car le BFR n’est pas un flux"
+      ],
+      "answer": 0,
+      "explanation": "La récupération est un flux futur au même titre que les autres encaissements. L’ajouter à sa valeur nominale lui attribue à tort une disponibilité immédiate."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La récupération du BFR est reportée, tandis que son montant reste fixe et que le taux est positif. Quel effet isolé sur sa valeur actuelle ?",
+      "options": [
+        "Elle augmente du fait de sa durée",
+        "Elle diminue",
+        "Elle reste égale au montant nominal",
+        "Elle devient forcément négative"
+      ],
+      "answer": 1,
+      "explanation": "Un délai supplémentaire accroît l’actualisation du flux positif. La valeur actuelle se réduit sans changer nécessairement son signe."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Le taux est annuel et le flux final intervient dans un an. Quelle expression actualise correctement un montant final F dans ce cas ?",
+      "options": [
+        "F multiplié par 1 + taux annuel",
+        "F divisé uniquement par le taux annuel",
+        "F divisé par 1 + taux annuel",
+        "F diminué du BFR initial, sans facteur temporel"
+      ],
+      "answer": 2,
+      "explanation": "Pour revenir d’un an à aujourd’hui, on divise par un facteur annuel de capitalisation. La déduction du besoin initial est une étape distincte de la VAN."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le BFR engagé aujourd’hui est actualisé comme s’il était payé l’an prochain, alors que la récupération est correctement datée. Quel effet sur la VAN cela peut-il créer à taux positif ?",
+      "options": [
+        "Une sous-estimation car le BFR initial est forcément doublé",
+        "Aucun effet car seuls les encaissements sont sensibles aux dates",
+        "Une annulation automatique de la récupération finale",
+        "Une surestimation par minoration artificielle du décaissement initial"
+      ],
+      "answer": 3,
+      "explanation": "Un paiement immédiat doit garder son poids intégral. L’actualiser à tort réduit la dépense retenue et gonfle le solde net."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une machine coûte 10 000 € et nécessite 2 000 € de BFR initial. Le projet rapporte dans un an 11 200 € opérationnels plus la récupération intégrale des 2 000 €. Le taux fourni est 10 %. Quelle est la VAN ?",
+      "options": [
+        "0 €",
+        "2 000 €",
+        "1 200 €",
+        "−2 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le flux final vaut 13 200 €, soit 12 000 € actualisés. Le besoin initial vaut 12 000 € : la VAN est nulle.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 11200
+                    },
+                    {
+                      "value": 2000
+                    }
+                  ]
+                },
+                {
+                  "value": 1.1
+                }
+              ]
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 10000
+                },
+                {
+                  "value": 2000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 0,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un BFR est engagé aujourd’hui puis récupéré intégralement dans un an. À taux positif, son seul effet sur la VAN est-il nul ?",
+      "options": [
+        "Oui, toute récupération nominale intégrale annule son coût actuel",
+        "Non, son coût temporel rend sa contribution nette négative",
+        "Non, sa contribution est forcément positive",
+        "Oui, si le BFR ne constitue pas une immobilisation"
+      ],
+      "answer": 1,
+      "explanation": "Le décaissement initial est immédiat, mais la récupération vaut moins aujourd’hui. L’égalité nominale ne supprime pas le coût temporel du financement."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un BFR de 1 100 € est immobilisé à t0 puis intégralement récupéré dans un an. À 10 % par an, quelle est sa seule contribution nette à la VAN ?",
+      "options": [
+        "0 €",
+        "100 €",
+        "−100 €",
+        "1 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La récupération vaut 1 100 / 1,10 = 1 000 € aujourd’hui. Après l’engagement de 1 100 €, la contribution nette est −100 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 1100
+                },
+                {
+                  "value": 1.1
+                }
+              ]
+            },
+            {
+              "value": 1100
+            }
+          ]
+        },
+        "expected": -100,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une VAN n’est positive que si toutes les créances finales sont recouvrées, hypothèse fragile. Quelle présentation est la plus honnête ?",
+      "options": [
+        "Présenter uniquement la VAN centrale sans indiquer la condition de récupération",
+        "Tester uniquement le coût matériel et conserver la récupération intégrale dans tous les scénarios",
+        "Qualifier la créance de flux certain parce que son montant nominal est connu",
+        "Comparer le scénario intégral avec des taux de récupération moins favorables"
+      ],
+      "answer": 3,
+      "explanation": "Le résultat dépend ici d’une hypothèse sensible. Des scénarios de récupération explicitent le risque plutôt que de masquer sa présence."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un changement commercial réduit le BFR initial et la récupération finale du même montant, les flux opérationnels restant constants. À taux positif et récupération dans un an, quel effet isolé sur la VAN ?",
+      "options": [
+        "Une amélioration, car l’économie immédiate dépasse la perte de récupération actualisée",
+        "Aucun, car les deux montants nominaux sont égaux",
+        "Une baisse égale au montant du BFR économisé",
+        "Une annulation de tous les flux opérationnels"
+      ],
+      "answer": 0,
+      "explanation": "Réduire l’engagement procure un gain immédiat. La récupération abandonnée a une valeur actuelle plus faible ; la contribution temporelle s’améliore."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel principe permet de vérifier l’intégration du BFR dans un calcul d’investissement ?",
+      "options": [
+        "Déduire chaque année la totalité du BFR plutôt que ses variations",
+        "Suivre séparément son engagement, ses variations et sa récupération justifiée",
+        "Neutraliser engagement et récupération de même montant sans examiner leurs dates",
+        "Ajouter une récupération totale finale même si le dossier ne documente pas le dénouement"
+      ],
+      "answer": 1,
+      "explanation": "Le BFR doit être suivi comme un ensemble de flux datés, sans omission initiale ni récupération automatique ou doublement comptée."
+    }
+  ]
+}

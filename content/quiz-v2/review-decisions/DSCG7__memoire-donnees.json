@@ -1,0 +1,259 @@
+{
+  "sourceHash": "dedc5408a92e9ba10dd14393616ba3fae218e8234d2aad20e827211165931e99",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "3518ec7b35c66da191c785b05231517ceb98abc34db9a537ecd251b194b77f81",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le récit propre de l’opérateur et son information indirecte sur un site non connu ne constituent pas deux observations directes. Leur statut doit rester explicite."
+    },
+    {
+      "id": "q02",
+      "digest": "8f2524af39f496fdbd3c4884ad02db9b6951f84bc81fdcb9ab21aacfd4b07019",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La relance demande au répondant son usage du terme dans le cas décrit sans lui imposer seuil, catégorie de direction ni cause logicielle."
+    },
+    {
+      "id": "q03",
+      "digest": "d64f712cf759b3cad7a8d87839794c9a301fa65b69dd43d6d573d3e8210768b7",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le récit libre avant les relances évite de borner d’entrée les catégories. Lire causes attendues ou conclusion favorise un cadrage préalable."
+    },
+    {
+      "id": "q04",
+      "digest": "9f8efc49421a631b59348257209874d5e43e33d90177647626e0708df70fd262",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Un noyau commun permet la comparaison tandis que des relances adaptées respectent les responsabilités ; thèmes disjoints et réponses pour autrui ne suffisent pas."
+    },
+    {
+      "id": "q05",
+      "digest": "0703ebe124246e99df226d573d7187e7ec220b61bd4eaad8187c9124f09b2086",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le test révèle une ambiguïté instrumentale. Clarifier et tracer la version du guide rend la collecte principale interprétable sans fusion silencieuse du pilote."
+    },
+    {
+      "id": "q06",
+      "digest": "f26073df376b00ebc5e580869a6f31bcb9ed72c67f62c4b3c5e751fbff0bef1b",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Un code thématique désigne une catégorie attribuée à un segment selon une définition ; il ne se confond pas avec identifiant, note de satisfaction ou résumé non segmenté."
+    },
+    {
+      "id": "q07",
+      "digest": "9fff9bebb9c35361b19276f6f5d029a0a2ce91546fdc5916dd96c3164523a768",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Absence de formation et absence d’habilitation peuvent gêner mais n’ont pas le même mécanisme. Les règles de codage doivent expliciter cette distinction en relisant le matériau."
+    },
+    {
+      "id": "q08",
+      "digest": "b29ee112a479b23fae23724f026156c3d559ea09d616599de86091cfb46443e3",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Un segment peut recevoir les deux codes permis sans devenir deux épisodes ; le protocole et le contexte justifient le codage multiple."
+    },
+    {
+      "id": "q09",
+      "digest": "a2e834dd5277749fac2db0179eeabae547aaf3f1897d7127a43e753a7499703c",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une catégorie nouvelle peut concerner les premiers entretiens ; la règle doit être mise à jour puis réappliquée aux passages concernés."
+    },
+    {
+      "id": "q10",
+      "digest": "d82746c88c0515d2503a4ba9adc76ea13615b4059441f1765868f08e40ef5792",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Un désaccord de codage doit conduire à relire contexte et critères, puis tracer la règle ; priorité du premier code ou suppression du cas ne résout pas sa signification."
+    },
+    {
+      "id": "q11",
+      "digest": "59c0aea49f081eea24351cb012ce02c71b08ce2b3d221f766bfd1a9b8eb402b5",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La fréquence des segments doit être distinguée des personnes ; durée, service et nombre total d’entretiens ne remplacent pas le rattachement de chaque occurrence à son auteur."
+    },
+    {
+      "id": "q12",
+      "digest": "9bac74c827aba3d7a772f0719bddd08b9139c2ca2723a9c36f8eace1d5928cea",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le montant seul ne prouve pas identité d’un cas. Il faut un rapprochement fiable et autorisé par identifiants ou contexte avant jointure des matériaux."
+    },
+    {
+      "id": "q13",
+      "digest": "cac43b8cd472443ef8b708cc44ba6b8f98b60e7eae51420f9b78b8fbfcf21641",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le délai respecté et l’effort exceptionnel renseignent deux dimensions ; leur combinaison distingue performance temporelle et conditions de soutenabilité."
+    },
+    {
+      "id": "q14",
+      "digest": "fc85e3845d8db4b3201b32d0a15a4400e3ba2c62f9d5a1d14d7c4077adc11b05",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une note d’objectif décrit une intention et non l’effet effectivement mesuré ; signature et échéance passée ne modifient pas ce statut."
+    },
+    {
+      "id": "q15",
+      "digest": "b080fee3454ddb63ba792151811e9bcb4b80df2d746cacd353b386b79db724e8",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une journée sans incident peut être peu représentative des épisodes racontés. Couverture temporelle et calendrier doivent être rapprochés avant conclusion."
+    },
+    {
+      "id": "q16",
+      "digest": "5cde4f2742f4c56bd2870ae9a6b860da4be155e28639fb5b0604c9f4baa96df9",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Un cas solide qui contredit doit être intégré et analysé pour préciser les conditions ou limites de l’explication ; contradiction n’est pas motif d’exclusion."
+    },
+    {
+      "id": "q17",
+      "digest": "27fd0b24cb47a01843db05c2ac53ed548f1de4360d00d7801844c9bcd061436a",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Avant de prendre un silence pour convergence, il faut savoir si le guide ou la situation permettaient au thème d’être abordé ; non-sollicitation ne vaut pas réponse explicite."
+    },
+    {
+      "id": "q18",
+      "digest": "aeb8e445a4bf38f519a3abc7cbb85d1883403a53266c4c04d6e5d677104067be",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une transcription codée ne supprime pas la voix reconnaissable du fichier audio. Accès et identification doivent être examinés pour chaque support."
+    },
+    {
+      "id": "q19",
+      "digest": "7c82cad6a11b0369b522279fb218e67ab61cab08749cf5abda36e8a345a08408",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Limiter la clé aux personnes habilitées et la séparer du corpus évite sa diffusion générale ; masquage de colonne ou initiales ne produisent pas ce contrôle."
+    },
+    {
+      "id": "q20",
+      "digest": "e998e4e0a35e335efc867c01d9eaac8b123b776d8b9d16fa247d0bf8d5d5d373",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le texte encore recherchable sous un rectangle n’est pas retiré. La suppression doit porter sur le contenu réellement diffusé et être vérifiée par extraction, pas seulement par apparence."
+    },
+    {
+      "id": "q21",
+      "digest": "8ea87e06724090e83a6f7455903c385e7cbba44b17b921e0f2a681a269a92d0b",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les détails privés inutiles peuvent être retirés sans perdre le mécanisme analytique ; fidélité littérale n’oblige pas à publier toute donnée personnelle."
+    },
+    {
+      "id": "q22",
+      "digest": "4544cd685f9aea431f0ae5b59c80b1aa47eba012f9634167a081e148ea30b1c6",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’accord d’entretien ne vaut pas accord distinct d’enregistrement lorsque le protocole le distingue. Il faut utiliser une modalité autorisée avant recueil."
+    },
+    {
+      "id": "q23",
+      "digest": "3551e5066cd8989743b28d6e40dca9baad3227cb6a0f3768be60673edf27e1f7",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Corpus identifiant et finalité commerciale dépassent des extraits protégés destinés au mémoire ; l’autorisation et les protections doivent être réexaminées avant transmission."
+    }
+  ]
+}

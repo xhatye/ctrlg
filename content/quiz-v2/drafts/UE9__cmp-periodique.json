@@ -1,0 +1,476 @@
+{
+  "module": "UE9",
+  "chapter": "cmp-periodique",
+  "sourceHash": "e9cba3f5b65db6dc6ad6d61c2440f134e76de90ffa73872b97f57f38a2d4b874",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un stock initial de 50 unités coûte 6 € par unité. Une entrée de 150 unités coûte 10 € par unité. Sans autre coût, quelle valeur totale est disponible avant sorties ?",
+      "options": [
+        "1 800 €",
+        "1 600 €",
+        "2 000 €",
+        "800 €"
+      ],
+      "answer": 0,
+      "explanation": "La valeur combine les lots à leurs coûts respectifs : 50 × 6 + 150 × 10 = 1 800 €. Les prix ne s’additionnent pas sans quantités.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 50
+                },
+                {
+                  "value": 6
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 150
+                },
+                {
+                  "value": 10
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1800,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le calcul de valeur disponible retient les achats de la période mais oublie le stock initial. Quelle correction est nécessaire ?",
+      "options": [
+        "Ajouter uniquement le prix unitaire initial sans quantité",
+        "Inclure aussi la valeur des unités déjà présentes à l’ouverture",
+        "Ajouter les ventes au prix de marché",
+        "Supprimer toutes les sorties du fichier de stock"
+      ],
+      "answer": 1,
+      "explanation": "Le disponible comprend ce qui était présent et ce qui est entré. Omettre l’ouverture fausse la valeur et généralement le coût moyen."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les quantités sont exprimées en cartons pour le stock initial et en unités pour les entrées. Chaque carton contient dix unités. Que faut-il faire avant de pondérer les coûts ?",
+      "options": [
+        "Additionner directement cartons et unités",
+        "Faire la moyenne simple des deux prix affichés",
+        "Convertir quantités et coûts unitaires dans une unité commune",
+        "Retenir uniquement l’entrée la plus récente"
+      ],
+      "answer": 2,
+      "explanation": "La pondération exige des quantités comparables et des coûts par même unité. Un mélange d’échelles produit un coût moyen sans sens."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un lot de 100 unités à 8 € est ventilé administrativement en deux lots identiques de 50 unités. Sans autre changement, sa valeur disponible doit-elle changer ?",
+      "options": [
+        "Oui, elle double car le nombre de lots double",
+        "Oui, elle baisse de moitié car les lots sont plus petits",
+        "Non, mais le coût unitaire doit doubler",
+        "Non, la ventilation ne modifie ni quantité ni coût total"
+      ],
+      "answer": 3,
+      "explanation": "Le découpage d’un lot est une présentation administrative. La valeur totale reste la somme quantité × coût des unités réellement présentes."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Cent unités coûtent 5 € chacune et trois cents unités coûtent 9 € chacune. Quel CMP périodique unitaire obtient-on sans autre élément ?",
+      "options": [
+        "8 €",
+        "7 €",
+        "9 €",
+        "5 €"
+      ],
+      "answer": 0,
+      "explanation": "La valeur est 100 × 5 + 300 × 9 = 3 200 € pour 400 unités. Le CMP est 3 200 / 400 = 8 €, avec davantage de poids au second lot.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 100
+                    },
+                    {
+                      "value": 5
+                    }
+                  ]
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 300
+                    },
+                    {
+                      "value": 9
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 400
+            }
+          ]
+        },
+        "expected": 8,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux lots de quantités différentes sont valorisés à 4 € et 12 €. L’étudiant prend toujours 8 € comme CMP. Quel défaut doit-il corriger ?",
+      "options": [
+        "Il utilise un coût au lieu d’un prix de vente",
+        "Il fait une moyenne simple au lieu de pondérer par les quantités",
+        "Il inclut à tort le stock initial dans toute méthode",
+        "Il doit choisir obligatoirement 12 €, dernier coût"
+      ],
+      "answer": 1,
+      "explanation": "La moyenne des prix n’est correcte que dans des conditions particulières de pondération. Le CMP utilise les coûts totaux et les quantités disponibles."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Tous les coûts unitaires des lots sont compris entre 6 € et 10 €, avec des quantités positives. Où doit se situer leur CMP exact ?",
+      "options": [
+        "Toujours au-dessus de 10 €",
+        "Toujours en dessous de 6 €",
+        "Entre 6 € et 10 €, bornes incluses",
+        "Nécessairement égal à 8 € quelle que soit la répartition"
+      ],
+      "answer": 2,
+      "explanation": "Une moyenne pondérée de valeurs positives se situe dans leur intervalle. Elle dépend des quantités et n’est pas forcément le milieu des deux bornes."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La valeur disponible vaut 2 400 € pour 300 unités, mais le CMP est affiché « 8 € au total ». Quelle information d’unité manque-t-il ?",
+      "options": [
+        "Le coût de 8 € est celui de la totalité des sorties, quelle que soit leur quantité",
+        "Le coût de 8 € est la valeur totale du seul stock final",
+        "Le coût de 8 € représente la valeur globale des entrées de la période",
+        "Le coût de 8 € est par unité, pas la valeur de tout le stock"
+      ],
+      "answer": 3,
+      "explanation": "Le quotient valeur / quantité produit un coût unitaire. La valeur du disponible reste 2 400 €, distincte du coût de chacune des 300 unités."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le magasin ajoute beaucoup d’unités achetées à un coût supérieur au CMP antérieur. Sans autres mouvements, quelle direction prend le nouveau CMP ?",
+      "options": [
+        "Il augmente vers le coût des nouvelles unités",
+        "Il baisse nécessairement",
+        "Il reste fixé au premier coût historique",
+        "Il devient égal au prix de vente moyen"
+      ],
+      "answer": 0,
+      "explanation": "Les nouvelles unités plus chères accroissent la moyenne pondérée. Elles ne rendent pas le CMP supérieur à tous les coûts ni automatiquement égal au nouveau prix."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier impose un CMP de fin de période unique. Le préparateur recalcule et applique un coût différent après chaque entrée. Quelle distinction doit-il vérifier ?",
+      "options": [
+        "Le sens débit-crédit du seul compte client",
+        "La méthode périodique demandée et une méthode de moyenne mobile",
+        "L’obligation d’utiliser uniquement le premier lot",
+        "L’égalité automatique entre moyenne mobile et moyenne simple"
+      ],
+      "answer": 1,
+      "explanation": "Les méthodes de moyenne ne suivent pas toujours le même calendrier de calcul. Le cas impose ici une moyenne unique pour l’ensemble de la période."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le CMP périodique retenu est de 8 € par unité. Cent cinquante unités sortent pendant la période. À quel coût total valoriser ces sorties ?",
+      "options": [
+        "158 €",
+        "18,75 €",
+        "1 200 €",
+        "8 €"
+      ],
+      "answer": 2,
+      "explanation": "La valeur des sorties est la quantité sortie multipliée par le CMP : 150 × 8 = 1 200 €. Le coût unitaire ne se confond pas avec le total.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 150
+            },
+            {
+              "value": 8
+            }
+          ]
+        },
+        "expected": 1200,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un CMP exact est de 10,6666… €. Le fichier l’arrondit à 11 € avant de valoriser plusieurs centaines de sorties, malgré une consigne de conserver les décimales. Quel risque apparaît ?",
+      "options": [
+        "Une modification du coût total d’achat justifiée par la règle d’arrondi",
+        "Un écart limité à la seule fraction d’euro supprimée, quel que soit le volume",
+        "Une compensation exacte de l’écart sur sorties par un stock final forcément correct",
+        "Un écart de valorisation amplifié par les quantités"
+      ],
+      "answer": 3,
+      "explanation": "Un petit arrondi unitaire devient important sur beaucoup d’unités. La précision interne doit suivre la consigne, avec arrondi final adapté."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une vente a un prix de 20 € par unité alors que le CMP de la période est de 12 €. Quel coût unitaire sert aux sorties selon la méthode demandée ?",
+      "options": [
+        "12 €, le CMP",
+        "20 €, le prix de vente",
+        "8 €, la différence de prix",
+        "32 €, la somme coût et prix"
+      ],
+      "answer": 0,
+      "explanation": "La sortie de stock est valorisée au coût retenu. Le prix de vente relève du produit commercial et sert éventuellement à analyser la marge, pas à remplacer le coût."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût total de sorties de 240 unités est de 2 040 € sous un CMP unique. Quel coût unitaire cela implique-t-il ?",
+      "options": [
+        "2 280 €",
+        "8,50 €",
+        "0,12 €",
+        "204 €"
+      ],
+      "answer": 1,
+      "explanation": "Le coût unitaire s’obtient en divisant la valeur des sorties par leur quantité : 2 040 / 240 = 8,50 €.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 2040
+            },
+            {
+              "value": 240
+            }
+          ]
+        },
+        "expected": 8.5,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les sorties sont valorisées au dernier coût d’achat alors que le cas impose un CMP périodique différent. Quelle erreur est commise ?",
+      "options": [
+        "Le prix le plus récent est toujours le seul coût autorisé",
+        "Les sorties ne doivent jamais être valorisées",
+        "Le coût retenu pour les sorties ne respecte pas la méthode demandée",
+        "Un CMP peut servir uniquement aux achats, jamais aux sorties"
+      ],
+      "answer": 2,
+      "explanation": "La méthode de valorisation doit être appliquée de façon cohérente. Remplacer arbitrairement le CMP par le dernier coût change le résultat de stock."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux sorties identiques d’un article ont lieu à des dates différentes du même mois. Le dossier impose un CMP mensuel unique pour toutes les sorties. Quel coût unitaire leur appliquer ?",
+      "options": [
+        "Le coût du premier lot pour la première et du dernier pour la seconde",
+        "Le prix de vente du jour de chaque sortie",
+        "Le CMP uniquement à la sortie la plus tardive",
+        "Le même CMP mensuel"
+      ],
+      "answer": 3,
+      "explanation": "La convention imposée attribue un coût moyen unique aux sorties du mois. Elle ne suit pas séparément chaque lot à chaque date."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le disponible est de 500 unités, dont 360 sont sorties. Le CMP exact est 7,50 €. Quelle valeur de stock final reste-t-il, sans pertes ni dépréciation ?",
+      "options": [
+        "1 050 €",
+        "2 700 €",
+        "3 750 €",
+        "140 €"
+      ],
+      "answer": 0,
+      "explanation": "Le reliquat compte 500 − 360 = 140 unités. Sa valeur est 140 × 7,50 = 1 050 € au même CMP.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 500
+                },
+                {
+                  "value": 360
+                }
+              ]
+            },
+            {
+              "value": 7.5
+            }
+          ]
+        },
+        "expected": 1050,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La valeur disponible est 4 800 € et le coût total des sorties 3 600 €, sans autres mouvements ni corrections. Quelle valeur finale réconcilie le stock ?",
+      "options": [
+        "8 400 €",
+        "1 200 €",
+        "3 600 €",
+        "4 800 €"
+      ],
+      "answer": 1,
+      "explanation": "La valeur disponible se répartit entre sorties et reliquat : 4 800 − 3 600 = 1 200 €. Ce contrôle doit rester cohérent avec les quantités.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 4800
+            },
+            {
+              "value": 3600
+            }
+          ]
+        },
+        "expected": 1200,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau valorise correctement les sorties au CMP, mais le stock final au prix de vente. Quelle égalité de contrôle risque-t-il de rompre ?",
+      "options": [
+        "Sorties au coût = valeur totale disponible sans tenir compte du stock final",
+        "Stock final au prix de vente = stock final au coût dès que les quantités concordent",
+        "Sorties au coût + stock final au coût = valeur disponible",
+        "Sorties au coût + stock final au prix de vente = valeur disponible augmentée du coût des sorties"
+      ],
+      "answer": 2,
+      "explanation": "Les deux fractions du disponible doivent être valorisées sur la même base de coût. Le prix de vente introduirait une marge dans le reliquat."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les sorties déclarées dépassent les unités initiales plus les entrées du périmètre, sans possibilité de stock négatif prévue. Que faire avant de valoriser le reliquat ?",
+      "options": [
+        "Retenir un stock final négatif comme preuve de bénéfice",
+        "Augmenter automatiquement le CMP pour compenser",
+        "Supprimer les sorties excédentaires sans pièce",
+        "Rechercher une erreur ou une entrée manquante dans les quantités"
+      ],
+      "answer": 3,
+      "explanation": "Une incohérence quantitative ne se corrige pas par un prix. Il faut d’abord réconcilier les mouvements réellement observés."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La valeur des sorties et du stock final totalise bien le disponible, mais un mauvais CMP a été utilisé puis le stock final ajusté artificiellement. Pourquoi l’égalité ne suffit-elle pas ?",
+      "options": [
+        "Un ajustement compensateur peut masquer une erreur de méthode",
+        "Une égalité de total prouve forcément le coût unitaire",
+        "Un stock final ne dépend jamais du CMP",
+        "Tout écart de CMP est un changement réel de quantité"
+      ],
+      "answer": 0,
+      "explanation": "La réconciliation globale est un contrôle nécessaire, pas une validation complète. Il faut aussi vérifier le calcul du coût et son application aux quantités."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Sans pertes, coûts accessoires ni dépréciation, quels contrôles se complètent dans une fiche de CMP périodique ?",
+      "options": [
+        "Prix de vente = coût unitaire pour chaque article",
+        "Quantités disponibles = sorties + reliquat, et même rapprochement des valeurs au coût",
+        "Sorties = toutes les entrées, quelle que soit la quantité restante",
+        "Stock final = achats annuels, sans stock initial"
+      ],
+      "answer": 1,
+      "explanation": "La conservation des quantités et des valeurs vérifie les deux dimensions de la fiche. La cohérence ne se limite pas au seul coût unitaire."
+    }
+  ]
+}

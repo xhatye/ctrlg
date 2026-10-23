@@ -1,0 +1,248 @@
+{
+  "sourceHash": "cc50730c97ee78c00db85c1f6360eb1798a0b0604148908c675779e95160c0fb",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "72d6b96cbcb9a48df9e0bfb8a10c89e2d7fa0fd47446d891fbc565149e9571f4",
+      "selected": 2,
+      "reason": "3 600 / 12 = 300 euros de couverture mensuelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "37b1632c2b4c506a858951cc98b4aa39f6d12c9d1b4ca26f00c825a5ebe7d4de",
+      "selected": 2,
+      "reason": "Deux paiements ne changent pas les douze mois de service consommé à répartir.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "fa7c083da5c8c7e383dd04e76a5cf40397663a93026ea4be44527a3968d791fb",
+      "selected": 0,
+      "reason": "Une couverture non uniforme exige l’analyse du rythme réel au lieu d’un douzième systématique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "5c560aa4a88d7b5e2edceddb2a1b5d19d7b9e4640145eea023a6fc979e38e777",
+      "selected": 3,
+      "reason": "(1 200 + 2 400) / 12 = 300 euros mensuels pour les deux primes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "f3a4a9d19747b3269809c2cf2eab65685c8d7539d374cd9b3d821cc695d4ca74",
+      "selected": 2,
+      "reason": "Septembre, octobre, novembre et décembre constituent quatre mois consommés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "1f386881f062016cc84551e7400186d8eb69bdc8bd41c2d0ed5c7aff4ad483f7",
+      "selected": 3,
+      "reason": "1 800 × 5 / 12 = 750 euros de charge de la période.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "fcb46e01c1e496758a2f016ed068f41d7f2071923e1a27282159bba7a92191bc",
+      "selected": 0,
+      "reason": "La fraction déjà consommée reste en charges, même si une autre part relève de la CCA.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "f775a7ec80bb64502154f847b3b016868f81fc67a82128e2390271d1adce9f0c",
+      "selected": 0,
+      "reason": "La prestation partiellement reçue doit être rattachée, indépendamment du paiement postérieur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "9d91533cbe890c7717c530cf8d42586d20dc0a8817c74c7097e5971633dad312",
+      "selected": 0,
+      "reason": "2 400 / 12 = 200 par mois ; une charge de 600 représente trois mois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "d512f772390e2b68b6f69d7dbecbe86b577844c604ae301739723decfad751e4",
+      "selected": 3,
+      "reason": "Les dates de couverture et la fraction consommée déterminent le rattachement entre exercices.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "e415d201061290c3ab468b74ad26c3baa906e3a9f3ecca579da024c1d35ee336",
+      "selected": 1,
+      "reason": "Neuf mois restent futurs : 3 000 × 9 / 12 = 2 250 euros de CCA.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "73cf23626cca219efbc057d196dac20c98044bb1a252cbc44909bfd8d2277ee0",
+      "selected": 0,
+      "reason": "La CCA est un actif pour service futur déjà comptabilisé en charge, distinct d’un PCA, d’une dette et d’une créance de remboursement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "b722d22e41ab524e30338ddb6076fa5ec98f109f6b93cdab1984ee10b2f30159",
+      "selected": 2,
+      "reason": "Aucune consommation avant clôture signifie que la totalité enregistrée concerne le futur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "46d7c7cc90c1cce67024feb643361171c48b87a720461a2264d77873a2f974db",
+      "selected": 0,
+      "reason": "Un service intégralement consommé ne laisse aucune part future à reporter.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "d1acf059566a5e32c17685762ca83e88812c1eea6838a502be8aab674144f830",
+      "selected": 2,
+      "reason": "La répartition de charge n’annule pas un décaissement passé et ne crée pas un remboursement de l’assureur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "4d1356b47f9e035004f69a5e338207e2dfb6249e02fc3c27dc28b2433ec047c3",
+      "selected": 1,
+      "reason": "Deux suivis administratifs d’une facture unique peuvent additionner deux fois la même prestation future.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "cf1cb78acf5c754736066ccd2ff0e3d98778ad3b6ffc60504ac6eb84609c5a04",
+      "selected": 2,
+      "reason": "900 consommés plus 2 700 futurs reconstituent 3 600 euros de prime.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "408cbad0589e00ebb03146953a0612d2c856b3b8d01131fa757f330f71abc19c",
+      "selected": 0,
+      "reason": "La somme charge plus CCA doit reconstituer la prime ; un dépassement peut révéler des mois ou fractions comptés deux fois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "c0e6089eb730822759dea56cdbc3dc8a75e1a2decef11443b0c8bbb9e575ef84",
+      "selected": 2,
+      "reason": "Retirer 900 de charges augmente le résultat de 4 000 à 4 900 hors fiscalité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "8f2ce6f56e63c1b5c4e726ebb3c717b7223d665236ddb330a012eea353e46c7d",
+      "selected": 3,
+      "reason": "Le report doit être consommé dans les bonnes périodes futures sans répéter une charge déjà prise en compte.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "abbb2779a2ce309f0eed9a90491413bc9cd03a7815d43c8dd2c15824bd74d8ab",
+      "selected": 1,
+      "reason": "Un partage de bonne somme peut affecter les mauvais mois ; il faut aussi contrôler les dates.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "340f67e403f8846dfad8a7613c1cf26ed2713212d0d043f15677aa367e4eedbe",
+      "selected": 0,
+      "reason": "Facture, couverture, convention et calcul justifient le montant reporté.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

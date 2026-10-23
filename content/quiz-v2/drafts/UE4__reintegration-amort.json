@@ -1,0 +1,585 @@
+{
+  "module": "UE4",
+  "chapter": "reintegration-amort",
+  "sourceHash": "dbfd8edc0589e3c60c3fd34812be84c248d83567b37f1c82c165f84ca172e2a6",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une dotation comptable de 7 500 € a réduit le résultat. Le dossier fixe à 5 200 € la dotation fiscalement admise. Quelle fraction non déductible réintégrer ?",
+      "options": [
+        "7 500 €",
+        "5 200 €",
+        "2 300 €",
+        "12 700 €"
+      ],
+      "answer": 2,
+      "explanation": "La correction ne porte que sur l’excédent déjà passé en charge : 7 500−5 200=2 300 €. Réintégrer la dotation entière neutraliserait aussi sa part admise. La limite est donnée pour cet actif et cet exercice, sans valoir plafond universel.",
+      "calculation": {
+        "expected": 2300,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 7500
+            },
+            {
+              "value": 5200
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La dotation comptable et la dotation fiscalement admise sont identiques. Aucun autre retraitement d’amortissement ne s’applique. Quel traitement extra-comptable faut-il retenir pour cette dotation ?",
+      "options": [
+        "Réintégrer la dotation entière, comme tout amortissement.",
+        "Ne pas corriger son montant dans le passage fiscal.",
+        "Déduire une seconde fois la dotation admise.",
+        "Augmenter l’actif de la dotation par le tableau fiscal."
+      ],
+      "answer": 1,
+      "explanation": "La dotation a déjà réduit le résultat et son montant est intégralement admis. Aucun écart n’est à neutraliser dans les faits fournis. Une deuxième déduction compterait l’amortissement deux fois et une réintégration totale nierait son admission."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un actif coûte 30 000 € et s’amortit sur cinq ans en année pleine, linéairement, selon les données du cas. La base fiscale admise est limitée à 20 000 €, sur la même durée. Quelle fraction annuelle de dotation faut-il réintégrer ?",
+      "options": [
+        "10 000 €",
+        "6 000 €",
+        "4 000 €",
+        "2 000 €"
+      ],
+      "answer": 3,
+      "explanation": "La dotation comptable est 30 000/5=6 000 € et celle admise 20 000/5=4 000 €. L’écart annuel est 2 000 €. Le dépassement de base de 10 000 € n’est pas la correction annuelle ; il doit être réparti selon la durée fournie.",
+      "calculation": {
+        "expected": 2000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 30000
+                },
+                {
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 20000
+                },
+                {
+                  "value": 5
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une limite fiscale réduit la déduction d’une dotation dont le plan comptable reste justifié par la durée d’utilisation. Un préparateur veut réduire l’amortissement comptable à cette limite par la seule écriture fiscale. Quelle distinction faut-il conserver ?",
+      "options": [
+        "La correction extra-comptable ne remplace pas la justification du plan comptable.",
+        "La limite fiscale fixe toujours la consommation économique de l’actif.",
+        "La dotation comptable doit être annulée dès qu’une limite fiscale existe.",
+        "L’excédent non déductible devient nécessairement un actif supplémentaire."
+      ],
+      "answer": 0,
+      "explanation": "Le retraitement fiscal neutralise une fraction de charge pour l’assiette de l’impôt. Il ne prouve pas que la dotation économique correctement déterminée est erronée. Le plan comptable et les limites fiscales doivent être suivis séparément, avec leurs fondements respectifs."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Selon l’article 39 B du CGI, quel montant minimal faut-il contrôler à la clôture pour un élément donné ?",
+      "options": [
+        "Le cumul effectivement pratiqué depuis l’acquisition, comparé au cumul linéaire sur la durée normale d’utilisation.",
+        "La seule annuité de l’exercice, indépendamment des dotations antérieures.",
+        "Le total des amortissements de tous les actifs, sans contrôle élément par élément.",
+        "Le montant de trésorerie disponible pour financer un nouvel achat."
+      ],
+      "answer": 0,
+      "explanation": "L’article 39 B prévoit un test cumulatif pour chaque élément. Il compare les amortissements effectivement pratiqués depuis son acquisition ou sa création au cumul du linéaire sur la durée normale. Une lecture limitée à une annuité isolée ne reproduit pas ce contrôle.",
+      "references": [
+        {
+          "title": "CGI, article 39 B, amortissement minimal",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006302321/2022-05-23"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le contrôle de l’article 39 B impose un cumul minimal fourni de 12 000 € à la clôture. Le cumul effectivement pratiqué avant la dotation de cet exercice est de 8 500 €. Quelle dotation minimale permet d’atteindre ce cumul, dans ce cas ?",
+      "options": [
+        "12 000 €",
+        "3 500 €",
+        "8 500 €",
+        "20 500 €"
+      ],
+      "answer": 1,
+      "explanation": "La dotation minimale complémentaire est 12 000−8 500=3 500 €. Le test porte sur le cumul de l’actif : il ne faut ni reprendre la totalité du cumul comme une charge annuelle ni ignorer les annuités déjà pratiquées.",
+      "calculation": {
+        "expected": 3500,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 12000
+            },
+            {
+              "value": 8500
+            }
+          ]
+        },
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "CGI, article 39 B, amortissement minimal",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006302321/2022-05-23"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le non-respect de l’amortissement minimal de l’article 39 B est établi pour une fraction de dotation irrégulièrement différée. Quel effet fiscal prévoit le texte pour cette fraction ?",
+      "options": [
+        "Un report libre sur un exercice bénéficiaire ultérieur.",
+        "Une perte définitive du droit de la déduire.",
+        "Une déduction de rattrapage dès que le cumul comptable rejoint le minimum requis.",
+        "Une déduction différée jusqu’à la dernière annuité du plan, même si la fraction est irrégulièrement différée."
+      ],
+      "answer": 1,
+      "explanation": "L’article 39 B prévoit une perte définitive du droit à déduction pour la fraction ainsi différée. Le BOFiP précise qu’elle ne peut s’ajouter aux annuités normales ultérieures. Il faut distinguer ce cas d’une différence de déduction dont le régime organiserait un rattrapage permis.",
+      "references": [
+        {
+          "title": "BOI-BIC-AMT-10-50-40, amortissements irrégulièrement différés",
+          "url": "https://bofip.impots.gouv.fr/bofip/4693-PGP.html/identifiant=BOI-BIC-AMT-10-50-40-20170104"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le résultat comptable de 11 000 € est donné après une dotation de 6 000 €. La dotation fiscalement admise est de 4 500 €, sans autre correction. Quelle base fiscale retenir ?",
+      "options": [
+        "12 500 €",
+        "15 500 €",
+        "5 000 €",
+        "9 500 €"
+      ],
+      "answer": 0,
+      "explanation": "L’excédent non admis est 6 000−4 500=1 500 €. Comme la dotation entière a déjà diminué le résultat de 11 000 €, on ajoute uniquement cet excédent : 12 500 €. Déduire encore la fraction admise doublerait son effet.",
+      "calculation": {
+        "expected": 12500,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 11000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 6000
+                },
+                {
+                  "value": 4500
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un dossier donne un résultat avant toute dotation et avant impôt de 25 000 €. La dotation comptable est de 8 000 € et la dotation fiscalement admise de 6 000 €, sans autre élément. Quelle base fiscale obtenir ?",
+      "options": [
+        "27 000 €",
+        "17 000 €",
+        "19 000 €",
+        "23 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le point de départ précède l’amortissement. La base est donc 25 000−6 000=19 000 €. On peut aussi établir 17 000 € de résultat après dotation puis réintégrer 2 000 €. Ajouter directement l’excédent aux 25 000 € oublierait toute déduction d’amortissement.",
+      "calculation": {
+        "expected": 19000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 25000
+            },
+            {
+              "value": 6000
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau d’un actif réintègre l’excédent fiscal de la dotation de l’année, puis ajoute également le cumul de tous les excédents déjà réintégrés les années précédentes. Aucun texte ne demande cette reprise. Quel défaut faut-il corriger ?",
+      "options": [
+        "Le cumul historique ne constitue pas une correction nouvelle de l’exercice.",
+        "Les anciens excédents deviennent déductibles automatiquement après un an.",
+        "Toute réintégration annuelle doit être multipliée par la durée totale.",
+        "Les dotations antérieures doivent être ajoutées au chiffre d’affaires."
+      ],
+      "answer": 0,
+      "explanation": "Le suivi cumulé sert à contrôler l’historique. Il ne doit pas être ajouté chaque année à la base comme si les mêmes charges étaient de nouveau comprises dans le résultat annuel. La correction courante doit être rattachée aux éléments effectivement présents et au régime de l’exercice."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un même actif est suivi dans deux tableaux : l’un comptable, l’autre fiscal. Le comptable prétend que tout écart entre les deux démontre une erreur de comptabilisation. Quelle analyse est exacte ?",
+      "options": [
+        "Les règles d’admission fiscale peuvent produire un écart sans invalider le plan comptable.",
+        "La valeur fiscale doit toujours être identique à la valeur comptable par définition.",
+        "Un écart doit être effacé en changeant arbitrairement la durée d’utilisation.",
+        "Le tableau fiscal remplace les pièces d’acquisition et la date de mise en service."
+      ],
+      "answer": 0,
+      "explanation": "Une divergence peut résulter d’une limitation fiscale ou de règles différentes explicitement applicables. Elle appelle un rapprochement documenté, pas nécessairement une correction comptable. Il faut expliquer l’écart et identifier son caractère et son suivi dans le temps."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La dotation comptable de l’exercice n’est pas fournie. Le dossier indique seulement un plafond fiscal annuel de 4 000 €. Peut-on calculer un excédent à réintégrer ?",
+      "options": [
+        "Oui, l’excédent vaut toujours 4 000 €.",
+        "Oui, la réintégration vaut toujours zéro.",
+        "Non, il faut rapprocher le plafond de la dotation effectivement comprise dans le résultat.",
+        "Oui, le coût total de l’actif constitue l’excédent annuel."
+      ],
+      "answer": 2,
+      "explanation": "Le plafond indique une limite d’admission, non le montant déjà comptabilisé. Sans cette dotation et le résultat de départ, l’écart ne peut pas être déterminé. Il faut vérifier les données plutôt que confondre plafond fiscal et fraction non déductible."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Après correction d’amortissement, la base positive est de 36 000 €. Le taux unique fourni est de 25 %, sans autre mécanisme. Quel impôt est calculé sur cette base ?",
+      "options": [
+        "9 000 €",
+        "27 000 €",
+        "1 440 €",
+        "36 025 €"
+      ],
+      "answer": 0,
+      "explanation": "L’impôt simplifié est 36 000×25 %=9 000 €. La correction d’amortissement a servi à déterminer la base avant cette étape. Le résultat de 27 000 € correspondrait à la base diminuée de l’impôt, pas au montant de celui-ci.",
+      "calculation": {
+        "expected": 9000,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 36000
+            },
+            {
+              "value": 0.25
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La correction d’amortissement porte une base négative à une base toujours négative. Le régime fourni ne crée ni impôt courant sur une base négative ni créance remboursable automatique. Quelle conclusion est correcte ?",
+      "options": [
+        "La correction peut réduire le déficit sans créer d’impôt courant dans ce modèle.",
+        "Toute réintégration provoque immédiatement un paiement positif.",
+        "Le produit du déficit par le taux est automatiquement remboursable.",
+        "La correction n’a aucun effet possible sur le déficit."
+      ],
+      "answer": 0,
+      "explanation": "Il faut distinguer variation de base et impôt courant. Une réintégration peut seulement diminuer le déficit encore négatif. Selon les hypothèses explicites, il n’en découle ni paiement courant ni remboursement automatique ; le traitement ultérieur du déficit reste à examiner."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une base corrigée atteint une fraction soumise, selon le barème fourni, à un taux supérieur. Un étudiant multiplie toute la base par ce dernier taux. Quelle méthode doit-il appliquer ?",
+      "options": [
+        "Répartir la base entre les fractions prévues et appliquer le taux propre à chacune.",
+        "Appliquer le taux le plus élevé à tout le résultat dès son premier euro.",
+        "Taxer uniquement la réintégration et ignorer la base avant correction.",
+        "Déduire le taux supérieur de la dotation comptable."
+      ],
+      "answer": 0,
+      "explanation": "Lorsqu’un dossier fournit plusieurs fractions de taux, le calcul doit conserver leur répartition. La correction peut déplacer une partie de la base vers une autre fraction, sans rétroactivement y soumettre toute la base. La nature de la correction ne change pas cette méthode de liquidation."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’impôt après correction est calculé correctement, mais l’auteur conclut que l’actif a été davantage payé en banque à cause de la réintégration. Quelle confusion commet-il ?",
+      "options": [
+        "Il assimile un retraitement de base fiscale au prix d’acquisition payé.",
+        "Il confond une dotation admise avec une dotation comptabilisée.",
+        "Il utilise un mauvais point de départ pour la durée d’utilisation.",
+        "Il confond date d’achat et date de mise en service."
+      ],
+      "answer": 0,
+      "explanation": "La réintégration modifie la base de l’impôt, pas le prix déjà payé au fournisseur pour l’actif. Elle peut avoir un effet de trésorerie par l’impôt, ce qui est différent d’un paiement supplémentaire du bien. Les flux doivent être attribués à leur opération."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier autorise expressément un rattrapage fiscal futur d’une différence temporaire donnée. Quelle pièce de suivi est pertinente pour les prochaines liquidations ?",
+      "options": [
+        "Un tableau par actif des différences d’ouverture, de l’année et restant à reprendre.",
+        "Le seul total des dotations comptables de tous les actifs, sans historique fiscal.",
+        "Une déduction de tout l’écart à chaque clôture suivante.",
+        "La disparition du plan comptable après la première réintégration."
+      ],
+      "answer": 0,
+      "explanation": "Un suivi par actif permet de rattacher chaque reprise au régime autorisé et d’empêcher un double rattrapage. Il faut distinguer différence temporaire et exclusion définitive. L’énoncé fournit ici l’autorisation future ; elle ne se présume pas pour tout excédent."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une réintégration d’amortissement de 1 800 € accroît une base positive qui reste soumise au taux fixe fourni de 25 %, sans autre mécanisme. Quel est le surcroît d’impôt dû à cette correction seule ?",
+      "options": [
+        "1 800 €",
+        "450 €",
+        "7 200 €",
+        "2 250 €"
+      ],
+      "answer": 1,
+      "explanation": "Le surcroît est la variation de base multipliée par le taux : 1 800×25 %=450 €. Il se distingue de la réintégration de 1 800 € et du montant total d’impôt de l’exercice. Le taux fixe et la base positive sont des hypothèses essentielles.",
+      "calculation": {
+        "expected": 450,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 1800
+            },
+            {
+              "value": 0.25
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Sans la correction étudiée, la base serait de −1 000 €. Une réintégration de 2 000 € la porte à 1 000 €. Le modèle fourni impose à 25 % les seules bases positives, sans remboursement sur base négative. Quel surcroît d’impôt courant résulte de la correction ?",
+      "options": [
+        "500 €",
+        "250 €",
+        "0 €",
+        "−250 €"
+      ],
+      "answer": 1,
+      "explanation": "L’impôt initial du modèle est nul sur la base négative. Après correction, l’impôt est 1 000×25 %=250 €. Multiplier directement la réintégration de 2 000 € par 25 % donnerait 500 € et ignorerait le franchissement de zéro.",
+      "calculation": {
+        "expected": 250,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": -1000
+                },
+                {
+                  "value": 2000
+                }
+              ]
+            },
+            {
+              "value": 0.25
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une correction de 3 000 € s’ajoute à une base de 41 000 €. Le cas fixe 15 % sur les premiers 42 500 € et 25 % au-delà, sans autre mécanisme. Quel surcroît d’impôt cette correction provoque-t-elle ?",
+      "options": [
+        "450 €",
+        "750 €",
+        "600 €",
+        "3 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La première moitié de la correction, 1 500 €, complète la fraction à 15 %, soit 225 €. Les 1 500 € restants relèvent de 25 %, soit 375 €. Le surcroît total est 600 €, différent d’une application uniforme de l’un ou l’autre taux.",
+      "calculation": {
+        "expected": 600,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 1500
+                },
+                {
+                  "value": 0.15
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 1500
+                },
+                {
+                  "value": 0.25
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une correction d’amortissement est présentée comme définitive dans le régime du dossier. L’auteur la qualifie pourtant de simple report et prévoit de la déduire automatiquement l’an prochain. Quel point doit-il corriger ?",
+      "options": [
+        "Une exclusion définitive ne crée pas à elle seule un droit de rattrapage futur.",
+        "Toute réintégration est intégralement remboursée à la clôture suivante.",
+        "L’excédent doit être traité comme un acompte d’IS.",
+        "L’impôt supplémentaire supprime le caractère fiscal de la correction."
+      ],
+      "answer": 0,
+      "explanation": "La différence entre exclusion définitive et décalage temporaire conditionne le suivi. Une réintégration n’est pas par nature une somme déductible l’année suivante. Il faut un fondement au rattrapage ; le cas indique au contraire que l’exclusion est définitive."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste annonce une économie d’impôt de 25 % de la dotation totale alors que seule une partie est fiscalement admise et qu’une autre est exclue. Quelle base de raisonnement faut-il conserver ?",
+      "options": [
+        "La fraction effectivement déductible, dans les conditions et la situation fiscale données.",
+        "La totalité de la dotation comptable indépendamment de l’admission fiscale.",
+        "Le prix d’achat TTC multiplié par le nombre d’années d’usage.",
+        "Le montant de toute réintégration traité comme une déduction supplémentaire."
+      ],
+      "answer": 0,
+      "explanation": "L’effet fiscal de la dotation dépend de la fraction admise et du régime applicable, notamment de la présence d’une base imposable. La comptabilisation ne suffit pas à créer un avantage fiscal sur la totalité de la charge. Il faut séparer la consommation économique et son admission pour l’impôt."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour une année pleine, l’excédent annuel de dotation à réintégrer est fixé à 2 400 €. L’actif est utilisé pendant exactement trois mois de cet exercice ; le cas impose un prorata mensuel pour cet excédent et un taux d’IS fixe de 25 % sur une base positive. Quel surcroît d’impôt en résulte ?",
+      "options": [
+        "600 €",
+        "150 €",
+        "50 €",
+        "2 400 €"
+      ],
+      "answer": 1,
+      "explanation": "La réintégration de l’exercice est 2 400×3/12=600 €. Son effet d’impôt, dans le modèle donné, est 600×25 %=150 €. Taxer l’excédent annuel entier ignorerait le prorata expressément fourni.",
+      "calculation": {
+        "expected": 150,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 2400
+                },
+                {
+                  "op": "/",
+                  "args": [
+                    {
+                      "value": 3
+                    },
+                    {
+                      "value": 12
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 0.25
+            }
+          ]
+        },
+        "digits": 2
+      }
+    }
+  ]
+}

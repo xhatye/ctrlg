@@ -1,0 +1,259 @@
+{
+  "sourceHash": "c8fcf45356fff8aac29cbd27807784fac033d606493c7a68ea5d6908a7167c55",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "72fb02523aa4eca105056ca6cfbd9119335faee04fc041230faff7a335d7f3d6",
+      "selected": 0,
+      "reason": "200heures moins3d’arrêt donnent197heures disponibles.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "13c008c1336ff25f6af1b97e146ce90a7eabe49ea2d208407e4a224700acaefb",
+      "selected": 2,
+      "reason": "Le dimanche hors engagement ne réduit pas le taux contractuel défini.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "ff2bbf36964f3e6aacaeffb8b9fa5e7025353af6148c6b2579463bbe8bb9ff72",
+      "selected": 2,
+      "reason": "L’union des plages9–11 et10–12 couvre trois heures sans doubler10–11.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "631202d09b94a6ae3ec901d3c20bf3a5f6c4567a719990449c125a193f54c451",
+      "selected": 1,
+      "reason": "Le réseau indisponible empêche l’usage et appartient au périmètre annoncé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "94d3c93b0727f40b2c404050b070bffdb88ef7d0e23006a26b5b4bbc10152460",
+      "selected": 0,
+      "reason": "Les exclusions contractuelles et le besoin métier exigent deux mesures distinctes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "2bcd9e3fc5f8b26ec245514f5dae3faea77e2fb9c75e80a418b0de614ac7ebf5",
+      "selected": 2,
+      "reason": "495heures disponibles sur500 représentent99%.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "33087482118f12712bea83fc2074a66ccea7ed8c87279fb537c847b611ef516e",
+      "selected": 3,
+      "reason": "Une fenêtre24h inclut des heures non promises et peut diluer la panne du contrat8h.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "baebe4365f94943203cafce08a891d4e96b7dbbabb11e644c88266968b52d6b5",
+      "selected": 2,
+      "reason": "Le pourcentage ne mesure pas la criticité des échéances ni les pertes métier.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "a98e2ed4cc3bdbca7610f99a717421df476bed156bfd4f680424f5bb8d059264",
+      "selected": 2,
+      "reason": "(95+895.5)/1000*100 donne99.05, et non moyenne simple des pourcentages.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "00ee8f00d57c5e3e83a425720417d30e0d0b8c71ed0915aec48f45002a45dc0f",
+      "selected": 0,
+      "reason": "La position de la panne par rapport à la clôture complète le taux annuel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "14aa5e1b64c4f57d7a021008d158d5d8be4b06f75266676cc1f1047c6386df8a",
+      "selected": 1,
+      "reason": "Les horodatages et règles de rattachement doivent être harmonisés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "45d541688c7f859e5460542d0adc9cf9956837a614aac0e0e325efa69f8b5166",
+      "selected": 1,
+      "reason": "0,5%de400heures permettent deux heures d’arrêt.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "a930714f24b8302d7c4aadeb8087a9848956e9caee6c4b78b8c94332de72d3aa",
+      "selected": 1,
+      "reason": "À taux fixe, une fenêtre doublée double le budget de panne en heures.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "0118ab723314662870c509fa2a4960bc62bed248825e40fdfb1c44b43ee39469",
+      "selected": 3,
+      "reason": "Union4+6-2=8heures puisque deux arrêts simultanés ne comptent qu’une fois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "8fe689f1f78a62c99497c88bf6b42805d55f1b4576509cff367054c903a04fa6",
+      "selected": 0,
+      "reason": "Répéter la tolérance mensuelle chaque semaine multiplie la tolérance cumulée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "f5f522c97bb664a041fa37b2497d140bf0152e932e167d600e1e7d669525b692",
+      "selected": 3,
+      "reason": "La limite annuelle et la durée maximale d’un incident sont des contraintes distinctes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "758d2342eea0d7d2d58abf3de9ec4ee2a7bb6cc54ab5491a0c6d315ed95ec004",
+      "selected": 1,
+      "reason": "Ni budget de durée ni définition du service ne sont établis par le taux seul.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "48b328402782e779e93289d3809aedf6905019a90647bc9b6dd651258be8d88f",
+      "selected": 0,
+      "reason": "4,1moins3,6 donnent+0,5heure de dépassement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "814b94f281a4ddb181027dac17233b00ea34fc2e34bb52538a71828909440b28",
+      "selected": 2,
+      "reason": "99.8 est inférieur99.9 ; le crédit fixe10% de1000 vaut100.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "e56effe4c3942da4a42bc4b2d26a6db0dcdc212ae4bb76a0cfddfed978871c36",
+      "selected": 3,
+      "reason": "Une requalification doit être justifiée et tracée au regard des exclusions convenues.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "c5ac45f304cd5f7965eb23ff4ebb51531905557eceb53a0babf34973e87b916e",
+      "selected": 2,
+      "reason": "Le dépassement contractuel existe même si aucune perte métier n’a été observée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "2b4c2c58cebb14e4d9ec69ad5600d921640972906bdf7635ba87a2df1f752174",
+      "selected": 2,
+      "reason": "Le reliquat faible appelle prévention et arbitrage de continuité selon criticité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "bf09537d61eec603c9d6dd12804d4211efacd1926038e62ae4ca445899ba2bf0",
+      "selected": 2,
+      "reason": "La pondération dépend du sens recherché, notamment total des heures exposées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

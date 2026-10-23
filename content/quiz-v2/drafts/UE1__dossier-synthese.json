@@ -1,0 +1,377 @@
+{
+  "module": "UE1",
+  "chapter": "dossier-synthese",
+  "sourceHash": "5400bb20fca19660e4107753e031d538d2f7380c6a119cd86fe1f2c3d5e70846",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "À quelle difficulté répond la nullité d’un contrat ?",
+      "options": [
+        "Un défaut affectant une condition de validité de l’accord.",
+        "Un manquement d’exécution, même si la formation n’est pas contestée.",
+        "Une simple déception économique après une prestation conforme.",
+        "Un retard de paiement qui efface nécessairement le consentement initial."
+      ],
+      "answer": 0,
+      "explanation": "La nullité se rattache à la validité du contrat. Les manquements dans l’exécution appellent un autre examen, même si les termes sont parfois confondus dans la demande."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une cause de nullité affecte une clause particulière. Il est établi que cette clause n’a déterminé l’engagement d’aucune des parties. En application du principe de l’article 1184, cette cause suffit-elle à annuler le contrat entier ?",
+      "options": [
+        "Oui, car l’indivisibilité de tout contrat étend le vice d’une clause à l’acte entier.",
+        "Non : l’extension au contrat entier suppose que la clause ait été déterminante pour l’engagement d’au moins une partie.",
+        "Oui, dès lors que la clause figure dans le document signé, même sans influence sur l’engagement.",
+        "Non, car une clause particulière ne peut jamais affecter la validité du contrat entier."
+      ],
+      "answer": 1,
+      "explanation": "L’article 1184 distingue la nullité d’une clause de celle de l’acte entier. L’extension suppose que la clause ait constitué un élément déterminant de l’engagement des parties ou de l’une d’elles. Les faits excluent ici ce caractère déterminant.",
+      "references": [
+        {
+          "title": "Code civil, article 1184, nullité partielle",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032041210/2019-09-16"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une partie invoque un défaut de consentement au jour de la conclusion, tandis que l’autre répond que la livraison est conforme. Quel point reste à examiner ?",
+      "options": [
+        "La valeur de marché du bien après livraison.",
+        "Le seul montant du prix payé.",
+        "Le défaut de formation allégué, que la conformité matérielle ne résout pas à elle seule.",
+        "Le retard de livraison, bien qu’aucun retard ne soit allégué."
+      ],
+      "answer": 2,
+      "explanation": "La conformité de la prestation répond à une question d’exécution. Elle ne permet pas à elle seule de trancher un défaut de consentement allégué lors de la formation."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant écrit que la demande de nullité adressée par une seule partie suffit à établir une nullité déjà constatée d’un commun accord. Quelle erreur commet-il ?",
+      "options": [
+        "Il confond la demande adressée à l’autre partie avec une décision judiciaire ayant déjà prononcé la nullité.",
+        "Il confond la contestation d’un contrat et sa disparition par l’arrivée du terme convenu.",
+        "Il confond une proposition de modifier le contrat et l’exécution de sa version initiale.",
+        "Il confond une prétention unilatérale et l’accord commun qu’il affirme."
+      ],
+      "answer": 3,
+      "explanation": "La demande d’une partie exprime une prétention. Elle n’établit pas le consentement de l’autre à constater la nullité ; la voie et les conditions pertinentes doivent être examinées."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier indique qu’une nullité a été prononcée, mais ne précise pas les prestations déjà échangées. Que faut-il documenter avant d’évaluer les conséquences financières ?",
+      "options": [
+        "Les prestations effectivement reçues et les règles pertinentes sur leurs conséquences.",
+        "Le prix contractuel total, retenu comme somme à restituer même si seule une partie a été versée.",
+        "Le seul solde encore impayé, retenu comme mesure des restitutions des deux parties.",
+        "Le gain attendu du contrat, retenu à la place de la valeur des prestations reçues."
+      ],
+      "answer": 0,
+      "explanation": "Le terme nullité ne fournit pas un montant de restitution. Les prestations échangées et les effets applicables doivent être examinés séparément."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une partie découvre un vice lui ouvrant une action en nullité relative. Elle exécute ensuite volontairement le contrat en connaissance de ce vice ; aucune violence n’est en cause. Quel effet l’article 1182 attache-t-il à cette exécution ?",
+      "options": [
+        "Elle vaut confirmation, avec renonciation à invoquer cette cause de nullité, sous réserve des droits des tiers.",
+        "Elle suspend seulement l’action en nullité jusqu’à l’achèvement de toutes les prestations.",
+        "Elle crée une obligation de renégocier le contrat avant toute demande de nullité.",
+        "Elle vaut confirmation uniquement si une décision judiciaire autorise préalablement cette renonciation."
+      ],
+      "answer": 0,
+      "explanation": "L’exécution volontaire du contrat en connaissance de la cause de nullité vaut confirmation au sens de l’article 1182. Elle emporte renonciation aux moyens et exceptions concernés, sans préjudice des droits des tiers. Une autorisation judiciaire préalable n’est pas exigée par ce mécanisme.",
+      "references": [
+        {
+          "title": "Cour de cassation, rapport annuel 2024, article 1182 et confirmation",
+          "url": "https://www.vie-publique.fr/files/rapport/pdf/299813.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel énoncé distingue correctement résolution et nullité ?",
+      "options": [
+        "La résolution traite toujours un défaut de capacité ; la nullité, le retard.",
+        "La résolution et la nullité sont deux noms du même mécanisme.",
+        "La résolution concerne l’inexécution selon ses conditions ; la nullité, la validité.",
+        "La résolution porte uniquement sur le calcul des dommages-intérêts."
+      ],
+      "answer": 2,
+      "explanation": "Les mécanismes répondent à des problèmes distincts. Il faut examiner la demande, son fondement et les conditions propres plutôt qu’utiliser les termes comme synonymes."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une partie invoque une clause résolutoire figurant dans le contrat. Quel ensemble doit être examiné ?",
+      "options": [
+        "La seule présence du mot résolution dans la réclamation.",
+        "L’existence d’une faute pénale, quel que soit le contenu de la clause.",
+        "Le prix du contrat, utilisé comme seuil unique de gravité.",
+        "La clause, le manquement invoqué et les conditions de sa mise en œuvre."
+      ],
+      "answer": 3,
+      "explanation": "La présence d’une clause ne démontre pas sa mise en œuvre régulière. Il faut lire son contenu et rapprocher ses conditions du manquement et des démarches documentées."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le client envisage une résolution par notification pour inexécution suffisamment grave, voie expressément mentionnée dans le dossier. Quelle question est centrale ?",
+      "options": [
+        "Les faits caractérisent-ils la gravité et les conditions de cette voie dans la situation donnée ?",
+        "Le défaut de formation invoqué constitue-t-il à lui seul le manquement d’exécution nécessaire ?",
+        "Le montant réclamé suffit-il à remplacer la preuve du manquement ?",
+        "La déception du client à l’égard du résultat suffit-elle à établir cette voie ?"
+      ],
+      "answer": 0,
+      "explanation": "La voie envisagée exige un examen de l’inexécution et de ses conditions propres. Le vocabulaire utilisé ou la situation financière générale ne remplace pas ce contrôle."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie affirme qu’un client peut considérer tout contrat résolu dès qu’une prestation lui déplaît. Quel correctif apporter ?",
+      "options": [
+        "Une résolution suppose exclusivement un défaut de capacité.",
+        "La déception ne dispense pas de qualifier le manquement et de vérifier la voie de résolution.",
+        "La résolution se mesure uniquement à la différence entre prix et valeur de revente.",
+        "La mention du mécontentement vaut accord de toutes les parties sur la résolution."
+      ],
+      "answer": 1,
+      "explanation": "Une appréciation subjective de la prestation ne démontre pas les conditions de résolution. Il faut identifier le manquement, la voie utilisée et les vérifications correspondantes."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le contrat est valable, une inexécution est alléguée, mais le dossier ne précise ni clause ni notification ni décision. Quelle conclusion sur la résolution est soutenable ?",
+      "options": [
+        "Elle est acquise parce qu’une réclamation a été envoyée.",
+        "Elle est impossible parce que le contrat était valable.",
+        "La voie et ses conditions doivent être établies avant de la tenir pour acquise.",
+        "Elle se déduit de l’existence d’une facture impayée, quel qu’en soit le motif."
+      ],
+      "answer": 2,
+      "explanation": "La validité n’exclut pas la résolution, mais une inexécution alléguée ne suffit pas à établir toutes ses conditions. La voie pertinente doit être identifiée."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une partie a saisi le juge pour obtenir une résolution. Le dossier comporte uniquement sa requête. Quelle portée attribuer à cette pièce ?",
+      "options": [
+        "Elle équivaut à la décision judiciaire demandée.",
+        "Elle établit que le défendeur reconnaît le manquement.",
+        "Elle prouve un défaut de formation initial du contrat.",
+        "Elle documente la demande, sans prouver que le juge l’a accueillie."
+      ],
+      "answer": 3,
+      "explanation": "La saisine et la décision sont des événements différents. La requête établit une démarche et une prétention, pas le résultat de l’examen judiciaire."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans une demande de dommages-intérêts, comment distinguer montant réclamé et préjudice démontré ?",
+      "options": [
+        "Le premier exprime une prétention ; le second demande des éléments et un raisonnement probatoire.",
+        "Le premier constitue le plafond nécessaire du dommage réel et sa preuve suffisante.",
+        "Les deux sont identiques dès qu’une facture est jointe au dossier.",
+        "Le préjudice se déduit de la solvabilité de la partie visée."
+      ],
+      "answer": 0,
+      "explanation": "Une demande chiffrée n’est pas sa propre preuve. Le dommage, son évaluation et le rattachement au régime pertinent doivent être examinés."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une clause pénale fixe à 30 000 € la réparation d’une inexécution. Le débiteur soutient que cette pénalité est manifestement excessive. Quel pouvoir l’article 1231-5 du Code civil reconnaît-il au juge ?",
+      "options": [
+        "Ramener la pénalité à la somme que le débiteur estime équitable, sans appréciation de l’excès.",
+        "Modérer la pénalité, même d’office, si son caractère manifestement excessif est établi.",
+        "Substituer systématiquement le préjudice prouvé au forfait, même si la pénalité reste proportionnée.",
+        "Appliquer le montant signé, son caractère forfaitaire excluant tout contrôle de l’excès."
+      ],
+      "answer": 1,
+      "explanation": "Le forfait ne supprime pas le contrôle judiciaire prévu à l’article 1231-5 : le juge peut modérer une pénalité manifestement excessive, même d’office. Il ne s’agit ni d’une réduction au seul souhait du débiteur ni d’un remplacement systématique du forfait par les dommages constatés.",
+      "references": [
+        {
+          "title": "Code civil, article 1231-5, texte reproduit par INERIS",
+          "url": "https://aida.ineris.fr/sites/aida/files/2021-10/Code_Civil_20220126.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une obligation civile de somme d’argent est échue et le débiteur a été mis en demeure. Aucune stipulation spéciale n’est en cause. Pour réclamer l’intérêt moratoire légal selon l’article 1231-6, le créancier doit-il prouver une perte particulière causée par le retard ?",
+      "options": [
+        "Oui, en justifiant un emprunt de remplacement au moins égal à la dette.",
+        "Oui, car la mise en demeure prouve seulement la date, jamais le droit aux intérêts.",
+        "Non : ces intérêts sont dus à compter de la mise en demeure sans justification d’une perte.",
+        "Non, mais seulement s’il prouve la mauvaise foi du débiteur en plus du retard."
+      ],
+      "answer": 2,
+      "explanation": "L’article 1231-6 prévoit l’intérêt au taux légal à compter de la mise en demeure et dispense le créancier de justifier une perte pour cet intérêt moratoire. La mauvaise foi et un préjudice indépendant concernent la demande de dommages et intérêts distincts, pas cet intérêt de retard.",
+      "references": [
+        {
+          "title": "Code civil, article 1231-6, intérêt moratoire",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032010133/2022-08-13"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une dépense est prouvée, mais elle concerne un autre contrat et une autre période que le retard reproché. Quel contrôle est insuffisant ?",
+      "options": [
+        "Le contrôle de l’existence matérielle de la facture.",
+        "Le contrôle du montant écrit sur la facture.",
+        "Le contrôle de la présence d’un paiement à sa date.",
+        "Le rattachement de la dépense au manquement invoqué."
+      ],
+      "answer": 3,
+      "explanation": "La dépense peut exister sans constituer un dommage de ce litige. L’opération, les dates et le lien avec le manquement doivent être rapprochés."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise additionne prix du contrat, frais de remplacement et perte d’activité pour sa réparation. Quelle méthode est adaptée ?",
+      "options": [
+        "Identifier le fondement et l’objet de chaque somme, puis contrôler les chevauchements.",
+        "Additionner les sommes parce que leurs intitulés diffèrent.",
+        "Retenir le prix seul, car une dépense distincte ne peut jamais être discutée.",
+        "Remplacer le total par une somme arrondie correspondant au mécontentement."
+      ],
+      "answer": 0,
+      "explanation": "Les demandes peuvent avoir des objets différents et se recouper. Il faut vérifier fondements et préjudices, sans cumul mécanique ni exclusion générale."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Qu’est-ce qu’une réserve utile dans la conclusion d’un cas pratique ?",
+      "options": [
+        "Une formule générale indiquant que tout dépend du juge.",
+        "L’identification de l’élément manquant et de son incidence sur la solution.",
+        "L’absence de conclusion pour éviter toute difficulté.",
+        "Une hypothèse favorable ajoutée au dossier pour conclure."
+      ],
+      "answer": 1,
+      "explanation": "Une conclusion conditionnelle doit préciser le contrôle restant et sa raison. Elle rend explicite la portée des faits disponibles plutôt que d’éluder la réponse."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une clause de résolution est évoquée dans un courriel mais le contrat complet n’est pas fourni. Quelle réserve est utile ?",
+      "options": [
+        "La clause doit être tenue pour inexistante dans tous les cas.",
+        "La demande est nécessairement une demande de nullité.",
+        "Son texte et ses conditions de mise en œuvre doivent être obtenus avant d’évaluer cette voie.",
+        "Le montant demandé permet de reconstituer le texte de la clause."
+      ],
+      "answer": 2,
+      "explanation": "Une référence à une clause ne suffit pas à en connaître le champ. La pièce manquante est identifiée et son incidence sur la résolution doit être expliquée."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant conclut « annulation et indemnisation de tout le prix » à partir d’un seul retard établi, sans distinguer les demandes. Quel raisonnement doit remplacer ce cumul ?",
+      "options": [
+        "Traiter la restitution du prix comme des dommages et intérêts, puis ajouter le même prix comme seconde réparation.",
+        "Déduire du retard une nullité de formation, avant de discuter seulement le montant à restituer.",
+        "Appliquer la résolution comme conséquence acquise de tout retard, puis retenir le prix comme dommage forfaitaire.",
+        "Séparer validité, traitement de l’inexécution et réparation, puis vérifier chaque fondement."
+      ],
+      "answer": 3,
+      "explanation": "Un retard établi n’emporte pas toutes les sanctions et tous les montants. Chaque demande a ses conditions, ses effets et ses preuves à examiner."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les faits permettent d’établir un retard mais ne permettent pas d’évaluer la perte d’activité alléguée. Quelle conclusion reflète cette situation ?",
+      "options": [
+        "Le retard est documenté ; la perte d’activité et son évaluation restent à étayer.",
+        "La perte d’activité égale nécessairement le prix du contrat.",
+        "L’absence de chiffrage détruit la preuve du retard.",
+        "Le dommage est démontré dès lors que la réclamation est écrite."
+      ],
+      "answer": 0,
+      "explanation": "Des faits différents peuvent avoir des niveaux de preuve différents. La conclusion doit conserver le retard établi tout en précisant les lacunes relatives au préjudice."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le demandeur veut la livraison de la prestation ; le corrigé propose d’emblée la disparition du contrat. Quel contrôle faut-il effectuer ?",
+      "options": [
+        "L’existence d’un préjudice, traitée comme fondement unique de toute demande.",
+        "La demande réellement formulée et le mécanisme compatible avec son objet.",
+        "Le montant du prix, traité comme critère unique entre exécution et disparition du contrat.",
+        "La validité initiale, tenue pour obstacle à toute demande d’exécution ultérieure."
+      ],
+      "answer": 1,
+      "explanation": "La solution doit répondre à la prétention analysée. Demander l’exécution et chercher la disparition du contrat ne sont pas des objectifs interchangeables."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un défaut de formation est allégué et un retard est aussi documenté dans le même dossier. Comment structurer la réponse ?",
+      "options": [
+        "Traiter le retard comme preuve du défaut initial.",
+        "Choisir le fait le plus récent et écarter l’autre.",
+        "Examiner séparément chaque difficulté puis articuler les demandes et effets pertinents.",
+        "Additionner les sanctions dès que deux difficultés sont mentionnées."
+      ],
+      "answer": 2,
+      "explanation": "Un même dossier peut soulever plusieurs questions. Les séparer permet d’identifier leurs conditions et d’articuler leurs effets sans assimilation ni cumul automatique."
+    }
+  ]
+}

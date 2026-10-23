@@ -1,0 +1,248 @@
+{
+  "sourceHash": "18a7c93142f531bed9aa52266b0b2ae57f97d6988c83fac5a3ca02f8edb288a4",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "89d12456ad24f0fc78365b9bb5d09851e1ce2690511c01a1d82482bebc3d9083",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Lots et factures ne sont pas des unités identiques. Le lien de regroupement doit être établi avant d’interpréter les nombres comme deux mesures du même volume."
+    },
+    {
+      "id": "q02",
+      "digest": "c2928bc92fd15627b8b332d2a863d99327a95d7866382ab3dad25c3594f64079",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les entrées et clôtures d’un mois concernent des flux distincts ; le stock ouvert initial et final permet leur rapprochement."
+    },
+    {
+      "id": "q03",
+      "digest": "a5420cbd6ee779157ffbaa6a06b73065e3d13d349ca28c9b327fa11cda62d787",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le stock final est 12 + 35 − 38 = 9 dossiers. Les clôtures retirent des dossiers ouverts, sans être additionnées aux entrées."
+    },
+    {
+      "id": "q04",
+      "digest": "d5044f3cb20f196395b55bbbf086afe13fa9659aa33db5d141b10a42f21d0bc5",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La décision et l’exposition effective au contrôle sont deux événements ; la chronologie doit conserver cette distinction plutôt que substituer une réunion aux usages."
+    },
+    {
+      "id": "q05",
+      "digest": "b805ec5d8a5303db56e3f2bc35759c10fe1e167c749ec45e64067878af5ff8f1",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le journal atteste l’usage enregistré ; les entretiens donnent les motifs déclarés. Ces apports peuvent être articulés sans les présenter comme données de même nature."
+    },
+    {
+      "id": "q06",
+      "digest": "c40cb65b0ae46270fa230adb6b37e57e294789e0b59e5c132d67f2eb0c40db52",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les statuts de pièce et de demande ne portent pas sur le même objet ; comparaison directe, date récente et désaccord supposé ne suffisent pas."
+    },
+    {
+      "id": "q07",
+      "digest": "59044f7198c798d15d6a07ab5b1520edd83d1d7f3de06abe52fbe69c24bcfae9",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’export peut être récent et son solde ancien ; date de lecture, date de génération et date des faits doivent rester distinguées."
+    },
+    {
+      "id": "q08",
+      "digest": "71f2c4750e4c4abca2628b5c7041800002b83800be8931a678e849ddaaea5132",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Un écart non départagé doit rester visible avec les interprétations compatibles et la vérification manquante ; il ne devient pas accord par défaut."
+    },
+    {
+      "id": "q09",
+      "digest": "6a1121d6fe6730e4c3ddf354e78af7c36590b5d92b9e681fb8f63590443bc1e7",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une association entre moyennes de services n’établit pas le classement individuel formés/non-formés dans chaque service. C’est une inférence écologique distincte de la non-indépendance de sources ou du changement de composition des agrégats."
+    },
+    {
+      "id": "q10",
+      "digest": "a607f4c31f2bdedfccdb5e15ebc8977a28a7d3bcffe5e33e56614518a746af4a",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’inversion agrégé/stratifié demande les poids des dossiers faciles/difficiles et leurs taux propres ; moyenne simple, somme de taux et catégorie majoritaire ignorent la composition."
+    },
+    {
+      "id": "q11",
+      "digest": "ade446bdf59e550149099aef8a0f9e237420b21f17e80b570316b19c8c248e21",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La règle A et B exige les deux conditions. A seule ne suffit pas, quel que soit son ordre de contrôle ou sa fréquence."
+    },
+    {
+      "id": "q12",
+      "digest": "15d993025fc355338d0968c5fc7f1148a2d5140874e9da4330062af4f8c656f4",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le classement dépend de la convention des incomplets ; montrer cette sensibilité rend les hypothèses visibles sans sélectionner silencieusement le classement souhaité."
+    },
+    {
+      "id": "q13",
+      "digest": "bc71e67dfc341a25a3ba1b159255c7d19f3e4de6ea7340b3f19327f149fe9168",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Annexer sans discuter les réserves peut favoriser artificiellement la conclusion ; leur emplacement n’est ni pondération ni critère de pertinence probante."
+    },
+    {
+      "id": "q14",
+      "digest": "4d2bfc42cf0f6da81bb7899748b5c67650e6140d727b1ca33ea99a18a7359cd3",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Un changement de critère principal après résultat doit être justifié et laisser visible le résultat défavorable initial ; un autre indicateur favorable ne confirme pas l’ancienne hypothèse."
+    },
+    {
+      "id": "q15",
+      "digest": "7c64ad3d173cbfedee30e62013c609cd240aa57d3fb0925d54810fb9b90e0533",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Contrôler plus fortement les cas défavorables crée une exigence de preuve asymétrique. Une simple diversité de méthodes ne corrige pas cette asymétrie."
+    },
+    {
+      "id": "q16",
+      "digest": "3a555733a9927694f373ed172876811d74d01d4c544a801a49fc3d7af2865748",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une observation où les prédictions divergent a plus de pouvoir discriminant entre deux explications qu’un cas où elles prédisent la même chose."
+    },
+    {
+      "id": "q17",
+      "digest": "ddfd81b77b68659e6f6c1391c0b86da934b106de73f43e78e58e18b0d95b9a64",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les transformations doivent être décrites pour rendre le calcul reproductible. Données brutes, logiciel nommé ou résultat conforme à l’attente ne reconstituent pas les opérations."
+    },
+    {
+      "id": "q18",
+      "digest": "09df317ba996534cf5639dfe5574bfadebbe0731c78f5bbd1a34bdcd7fe79057",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La réversibilité et les coûts d’une issue défavorable importent quand les bénéfices moyens proches sont incertains ; engagement irréversible et coût de sortie ne sont pas neutralisés par la moyenne."
+    },
+    {
+      "id": "q19",
+      "digest": "ada811dde7a3c37233b88819e9e0cf6fe6715867c1018817786164ecb530b7e9",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le résultat dépend de la présence du référent ; la continuité et les absences doivent être testées plutôt qu’effacées dans une prévision moyenne."
+    },
+    {
+      "id": "q20",
+      "digest": "a5bc19242b2c143aa19554ad6ec9e0f2f5d8e41b05619d466ffcaa2e84d7bc6a",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le seuil de rentabilité est une condition et non une prévision d’adoption. L’enquête ne tranchant pas autour de ce seuil, il faut présenter les scénarios et conséquences."
+    },
+    {
+      "id": "q21",
+      "digest": "c6681eea1d42a72d5704497b0d97638a587765f80b7a28b2dcc60220bb57de1c",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une décision sous incertitude doit présenter options, conséquences conditionnelles et incertitudes déterminantes ; demande de fermeté ne constitue pas une preuve."
+    },
+    {
+      "id": "q22",
+      "digest": "664a889e03cf7f76646727d41bd960fdf70363400d38ccc2d44943dcd3cdc6c8",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La collecte doit prioriser l’incertitude susceptible de modifier l’arbitrage, sous contrainte de coût ; précision monétaire ou facilité de mesure n’est pas automatiquement valeur décisionnelle."
+    }
+  ]
+}

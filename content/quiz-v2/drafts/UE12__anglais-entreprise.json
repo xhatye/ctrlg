@@ -1,0 +1,338 @@
+{
+  "module": "UE12",
+  "chapter": "anglais-entreprise",
+  "sourceHash": "45a9995d74cf53e4f2585b940096729e97c7100048487e7613e63d90a2ac791b",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Which sentence describes a business that produces physical goods rather than providing advice?",
+      "options": [
+        "The company manufactures industrial components.",
+        "The company advises clients on financial planning.",
+        "The company provides bookkeeping services.",
+        "The company offers legal consulting services."
+      ],
+      "answer": 0,
+      "explanation": "Manufactures désigne une production de biens. Advises, provides bookkeeping services et consulting décrivent ici des prestations de service."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A firm provides accounting services but does not develop software. Which description stays faithful to those facts?",
+      "options": [
+        "The firm sells only equipment used by accounting departments.",
+        "The firm provides accounting services to its clients.",
+        "The firm manufactures accounting software for sale.",
+        "The firm develops software and provides all related hardware."
+      ],
+      "answer": 1,
+      "explanation": "Le verbe et son complément doivent décrire l’activité réelle. Utiliser un logiciel pour travailler ne signifie pas que l’entreprise le fabrique ou le commercialise."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A company profile says the business “distributes” equipment. A translation says it “manufactures” the equipment. What distinction has been lost?",
+      "options": [
+        "Paying wages versus borrowing from a bank",
+        "Recognising revenue versus measuring a profit margin",
+        "Reselling or supplying goods versus producing them",
+        "Selling goods versus collecting trade receivables"
+      ],
+      "answer": 2,
+      "explanation": "Distributes ne démontre pas la production des biens. Le profil doit distinguer le rôle commercial de distribution et l’activité de fabrication."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A business has one office in France. The source gives no information about foreign operations. Which opening avoids adding unsupported scope?",
+      "options": [
+        "The business serves only French customers because its reported office is in France.",
+        "The business has no foreign activity because no foreign office is mentioned.",
+        "The business’s French office is its registered headquarters, although the source does not identify its legal seat.",
+        "The business operates from an office in France."
+      ],
+      "answer": 3,
+      "explanation": "Une localisation établie peut être rapportée directement. Elle ne permet pas d’inventer une présence internationale ni un rang concurrentiel."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A firm “outsources payroll processing” to another company. Which summary accurately describes that arrangement?",
+      "options": [
+        "An external provider processes payroll for the firm.",
+        "The firm brings payroll processing back into its own internal department.",
+        "The firm relocates payroll to another office it owns, without using an external provider.",
+        "The firm purchases payroll software while continuing to process payroll entirely with its own staff."
+      ],
+      "answer": 0,
+      "explanation": "Outsources indique le recours à un prestataire externe pour la tâche. Cette relation ne prouve ni une production de logiciel ni une acquisition du prestataire."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A supplier both designs machines and provides maintenance. Which profile preserves both activities?",
+      "options": [
+        "It purchases machine designs solely for its own maintenance needs.",
+        "It designs machines and provides maintenance services.",
+        "It resells machines but provides no maintenance services.",
+        "It provides maintenance but performs no machine design."
+      ],
+      "answer": 1,
+      "explanation": "Une présentation doit conserver les deux activités annoncées : conception et maintenance. Les autres descriptions retirent une activité ou inversent le rôle de fournisseur."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Which stakeholder purchases goods or services from the company in the transaction being described?",
+      "options": [
+        "An employee",
+        "A lender",
+        "A customer",
+        "A supplier"
+      ],
+      "answer": 2,
+      "explanation": "Customer désigne l’acheteur dans la relation considérée. Supplier fournit un bien ou service, employee travaille pour l’entreprise et lender lui prête des fonds."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A bank lends funds to a business to finance equipment. Which role does the bank occupy in that financing relationship?",
+      "options": [
+        "Customer of the equipment",
+        "Employee of the borrower",
+        "Supplier of the manufactured goods",
+        "Lender"
+      ],
+      "answer": 3,
+      "explanation": "Le rôle décrit est celui d’un prêteur : la banque met des fonds à disposition. Elle n’est pas, pour cette opération, l’acheteur du matériel ou un salarié."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A presentation labels the people employed by a company “suppliers” simply because they contribute to production. Which term should identify their employment role?",
+      "options": [
+        "Employees",
+        "Customers",
+        "Shareholders",
+        "Lenders"
+      ],
+      "answer": 0,
+      "explanation": "Le statut décrit est celui de personnes employées par l’entreprise. Contribuer à la production ne suffit pas à faire d’elles des fournisseurs indépendants."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An investor owns shares, while a bank holds a loan receivable against the same company. Which distinction should the profile preserve?",
+      "options": [
+        "The investor and bank both hold ownership shares solely because they provide finance.",
+        "The investor is a shareholder and the bank is a lender.",
+        "The bank is a shareholder, while the investor holds the loan receivable.",
+        "The investor and bank are both lenders, with no ownership interest arising from the shares."
+      ],
+      "answer": 1,
+      "explanation": "Shareholder décrit une détention de titres de capital ; lender une relation de prêt. Financer la même entreprise n’efface pas cette différence de rôle."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Company A buys maintenance from B and sells office equipment to B. How should their roles be described?",
+      "options": [
+        "A remains only a supplier, even in the maintenance transaction in which it buys from B.",
+        "B remains only a customer, even when it provides the maintenance to A.",
+        "Their customer and supplier roles depend on the transaction.",
+        "Their roles are fixed by which company first entered the commercial relationship."
+      ],
+      "answer": 2,
+      "explanation": "Une même organisation peut être cliente dans une opération et fournisseur dans une autre. Le commentaire doit préciser le sens de la relation décrite."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A company profile says the new branch \"broke even\" in its first year. In this report, the phrase refers to revenue matching total expenses. What result is described?",
+      "options": [
+        "A profit equal to the branch’s total revenue.",
+        "A cash balance necessarily equal to zero at year-end.",
+        "Revenue equal only to the branch’s variable expenses, regardless of fixed expenses.",
+        "Neither a profit nor a loss under that definition."
+      ],
+      "answer": 3,
+      "explanation": "Break even refers here to a zero accounting result under the given definition. It does not state the cash balance or ignore fixed expenses."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A staffing note counts each of 20 employees once in \"headcount\", including 10 who work half-time. It also reports full-time equivalents. Which distinction should the profile preserve?",
+      "options": [
+        "Headcount counts people; full-time equivalents adjust the stated working time to a full-time basis.",
+        "Headcount and full-time equivalents both necessarily equal 20 because each employee is counted once.",
+        "Headcount counts only full-time employees, while full-time equivalents count all people without adjustment.",
+        "Headcount adjusts for hours, while full-time equivalents ignore whether employees work part-time."
+      ],
+      "answer": 0,
+      "explanation": "The note defines headcount as people counted once. On the stated schedules, full-time equivalents would be 10 + 10 × 0.5 = 15, while headcount is 20."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A source reports a profit margin rather than a total profit amount. Which summary respects the type of measure?",
+      "options": [
+        "It reports the total profit amount in currency units without a denominator.",
+        "It reports profitability as a ratio under the stated definition.",
+        "It reports cash receipts as a proportion of outstanding customer invoices, without regard to the stated margin definition.",
+        "It reports the increase in sales between periods rather than the profit ratio defined by the source."
+      ],
+      "answer": 1,
+      "explanation": "Une marge exprime un rapport défini, et non directement une quantité vendue, un total d’actifs ou une somme d’encaissements. Le périmètre du ratio doit rester explicite."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A report defines \"organic growth\" as growth excluding acquisitions and disposals. Total revenue includes a newly acquired subsidiary. What should a profile avoid?",
+      "options": [
+        "Distinguishing organic growth from the total reported revenue change.",
+        "Identifying which acquisition effects the organic-growth measure excludes.",
+        "Describing the total revenue increase as organic growth without applying the stated exclusions.",
+        "Keeping the report’s definition when labelling the organic-growth figure."
+      ],
+      "answer": 2,
+      "explanation": "The stated measure excludes changes of scope. Total growth can include the subsidiary, so its label cannot be changed to organic growth without the required adjustment."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report defines gross profit as revenue minus cost of sales, and operating profit after additional operating expenses. Which item can explain why operating profit is lower than gross profit?",
+      "options": [
+        "A second deduction of all revenue after calculating gross profit.",
+        "The customer receipts collected after the reporting date, treated as an operating expense.",
+        "The share capital issued by the company, treated as part of cost of sales.",
+        "Additional operating expenses deducted after the gross-profit subtotal."
+      ],
+      "answer": 3,
+      "explanation": "The two subtotals differ by the additional operating expenses specified in the definition. Neither cash collection timing nor share issuance is that deduction."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A profile calls a division \"loss-making\" but gives no market-share figures. Which statement preserves the meaning of that description?",
+      "options": [
+        "The division reports a loss; the wording alone does not establish a loss of market share.",
+        "The division necessarily sold fewer units than every competitor.",
+        "The division necessarily lost market share despite making a positive profit.",
+        "The division necessarily had no revenue during the period."
+      ],
+      "answer": 0,
+      "explanation": "Loss-making describes a negative result, not directly a change in market share, relative sales volume or absence of sales."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The figures suggest stronger demand, but the source gives only one month of sales. Which conclusion is proportionate?",
+      "options": [
+        "The single month establishes the same growth rate for the full year without further observations.",
+        "The month may indicate stronger demand, but a longer series is needed.",
+        "The monthly rise rules out seasonal variation without a comparable seasonal series.",
+        "The monthly figure establishes a permanent demand increase without distinguishing temporary orders."
+      ],
+      "answer": 1,
+      "explanation": "Un mois peut soutenir une interprétation prudente, pas une certitude durable ou une conclusion sur tous les concurrents. La limite temporelle doit être conservée."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A company description calls a service “the cheapest in the market” without any competitor price comparison. What evidence is missing?",
+      "options": [
+        "The company’s own previous price, without prices for the competing services covered by the claim.",
+        "A comparison of customer satisfaction that does not compare prices.",
+        "A relevant comparison supporting the market-wide price claim",
+        "The lowest price among the company’s own packages, without checking the rest of the relevant market."
+      ],
+      "answer": 2,
+      "explanation": "Un superlatif concurrentiel demande une comparaison pertinente du marché. Décrire sa propre offre ou avoir un client ne démontre pas un classement de prix."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A cost-reduction initiative is documented, but no service-quality measure is available. Which summary avoids overclaiming?",
+      "options": [
+        "The saving establishes improved service quality without a separate quality measure.",
+        "The initiative’s stated intention to protect service quality counts as an observed quality result.",
+        "Customer satisfaction can be inferred from the cost reduction alone without customer or service evidence.",
+        "Costs decreased; the effect on service quality is not established."
+      ],
+      "answer": 3,
+      "explanation": "Le résultat sur les coûts est établi, celui sur la qualité ne l’est pas. Une bonne synthèse sépare ces deux dimensions au lieu de déduire l’une de l’autre."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Company A owns all the shares in B. A profile describes B as a \"wholly owned subsidiary\". Which ownership statement does this expression convey?",
+      "options": [
+        "A holds the entire ownership interest described in B.",
+        "A holds a minority interest in B while unrelated shareholders hold the majority.",
+        "B merely buys services from A without any ownership relationship.",
+        "A lends to B but holds none of its shares."
+      ],
+      "answer": 0,
+      "explanation": "Wholly owned describes complete ownership in the relationship given. A minority stake, service contract and loan alone do not express that ownership."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A profile says “the figures suggest a need to review capacity”. A rewrite says “the figures prove that expansion will succeed”. What changed?",
+      "options": [
+        "An interpretation about capacity became a report that expansion had already succeeded in the past.",
+        "A qualified interpretation became a guarantee of a future outcome.",
+        "A guaranteed expansion outcome became only a proposal to investigate capacity.",
+        "The rewrite preserves exactly the original strength of evidence and the same proposed action."
+      ],
+      "answer": 1,
+      "explanation": "Suggest marque une interprétation prudente ; prove et will succeed renforcent à tort la certitude et ajoutent une promesse de succès futur."
+    }
+  ]
+}

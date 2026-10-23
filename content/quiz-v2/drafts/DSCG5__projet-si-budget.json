@@ -1,0 +1,506 @@
+{
+  "module": "DSCG5",
+  "chapter": "projet-si-budget",
+  "sourceHash": "74266e0a7f37c6788e0cb4b253442c68a1bea5a0e5f92bb638b21f47acda7c2f",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Un projet prévoit 65 jours-personnes au coût de 700 € par jour-personne. Quel coût humain prévisionnel obtient-on ?",
+      "options": [
+        "45 500 €.",
+        "9 285,71 €.",
+        "765 €.",
+        "39 000 €."
+      ],
+      "answer": 0,
+      "explanation": "Le coût humain est 65 × 700 = 45 500 €. Les jours-personnes représentent une charge de travail, distincte du calendrier.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 65
+            },
+            {
+              "value": 700
+            }
+          ]
+        },
+        "expected": 45500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un projet requiert60jours-personnes. Quelle proposition explique correctement le lien entre cette charge et son délai calendaire ?",
+      "options": [
+        "Le délai vaut toujours la charge divisée par l’effectif total du service, quelle que soit la disponibilité des personnes.",
+        "La charge exprime un volume de travail ; le délai dépend aussi des ressources disponibles, des dépendances et du calendrier.",
+        "Chaque jour-personne représente nécessairement un jour calendaire de projet, indépendamment du travail possible en parallèle.",
+        "La charge divisée par les ressources théoriques fournit toujours le délai exact, sans examiner les dépendances et leurs calendriers."
+      ],
+      "answer": 1,
+      "explanation": "La charge additionne le travail des personnes. Sa répartition dans le temps dépend de l’organisation et des contraintes des tâches."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un lot prévoit 20 jours d’analyste à 800 € et 30 jours de développeur à 600 €, tous les coûts étant donnés par jour-personne. Quel coût humain total ?",
+      "options": [
+        "30 000 €.",
+        "35 000 €.",
+        "34 000 €.",
+        "50 000 €."
+      ],
+      "answer": 2,
+      "explanation": "Le coût vaut 20 × 800 + 30 × 600 = 34 000 €. Une moyenne non pondérée des tarifs ne respecte pas la répartition des charges.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 20
+                },
+                {
+                  "value": 800
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 30
+                },
+                {
+                  "value": 600
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 34000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’estimation compte les jours de programmation mais omet les ateliers métier et les tests nécessaires. Quel défaut présente le coût humain ?",
+      "options": [
+        "Les ateliers et tests n’ont pas à figurer dans la charge humaine parce qu’ils ne produisent pas de code.",
+        "Le temps des métiers est compris dans le tarif des développeurs même lorsqu’il est assuré par d’autres personnes.",
+        "La réserve d’aléas peut remplacer l’estimation de ces activités déjà identifiées comme nécessaires.",
+        "Il ne couvre pas toutes les charges de travail prévues au périmètre du projet."
+      ],
+      "answer": 3,
+      "explanation": "Les tâches nécessaires doivent être estimées, même si elles ne produisent pas de code. Leur omission sous-évalue la base avant toute analyse d’aléas."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le tarif passe de500€à550€par jour-personne et l’effort estimé de80à72jours-personnes. Quelle variation du coût humain obtient-on, selon la convention nouveau coût moins ancien coût ?",
+      "options": [
+        "−400 €.",
+        "4 000 €.",
+        "−4 000 €.",
+        "400 €."
+      ],
+      "answer": 0,
+      "explanation": "Ancien coût :80 × 500 = 40000€. Nouveau coût :72 × 550 = 39600€. La variation combinée vaut39600 − 40000 = −400€, et non l’effet du seul tarif ou de la seule charge.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 72
+                },
+                {
+                  "value": 550
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 80
+                },
+                {
+                  "value": 500
+                }
+              ]
+            }
+          ]
+        },
+        "expected": -400,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le fournisseur réduit les jours-personnes en transférant les tests aux salariés du client. Comment apprécier l’économie affichée ?",
+      "options": [
+        "Retenir la baisse de facture externe comme économie totale sans valoriser les tests repris par le client.",
+        "Examiner la charge interne ajoutée et les conséquences de qualité dans un périmètre cohérent.",
+        "Classer tous les tests internes hors périmètre du projet au seul motif qu’ils changent d’exécutant.",
+        "Déduire les jours fournisseur sans ajouter la charge correspondante dans les ressources internes du scénario comparé."
+      ],
+      "answer": 1,
+      "explanation": "Le travail transféré ne disparaît pas. La comparaison doit indiquer les ressources incluses et vérifier les effets sur le projet."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Le coût humain prévu est de 52 000 € et les licences initiales de 13 000 €. Ces deux éléments constituent toute la base avant réserve. Quelle est cette base ?",
+      "options": [
+        "39 000 €.",
+        "52 000 €.",
+        "65 000 €.",
+        "78 000 €."
+      ],
+      "answer": 2,
+      "explanation": "Le budget de base est 52 000 + 13 000 = 65 000 €. La réserve est calculée ensuite selon les hypothèses données.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 52000
+            },
+            {
+              "value": 13000
+            }
+          ]
+        },
+        "expected": 65000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un coût humain de 30 000 € et des licences de 10 000 € sont présentés avec une réserve de 4 000 € comme une « base de 44 000 € avant réserve ». Quel défaut faut-il corriger ?",
+      "options": [
+        "La base doit rester44000€et recevoir une seconde réserve4000€pour présenter la première réserve comme hors budget.",
+        "Les4000€doivent être intégrés aux licences puis une autre réserve calculée sur le total sans distinguer les deux enveloppes.",
+        "Renommer le total44000€en base hors réserve suffit sans corriger le double comptage ultérieur de l’enveloppe.",
+        "La réserve est déjà incluse dans une base annoncée comme hors réserve."
+      ],
+      "answer": 3,
+      "explanation": "La base définie vaut 40 000 €. Inclure la réserve avant de lui appliquer de nouveau un taux créerait un double comptage."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A inclut la migration et B la facture en option, mais leurs devis de base sont comparés directement. Quelle démarche est correcte ?",
+      "options": [
+        "Reconstituer un périmètre comparable incluant les travaux indispensables.",
+        "Retenir le devis de base le plus bas sans examiner les options.",
+        "Ajouter le même montant arbitraire aux deux offres.",
+        "Exclure la migration des deux budgets parce qu’elle n’est pas récurrente."
+      ],
+      "answer": 0,
+      "explanation": "Une différence de périmètre peut expliquer un prix bas. La comparaison doit couvrir les ressources nécessaires au même résultat."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le projet exclut explicitement les abonnements de production après mise en service. Comment présenter le budget ?",
+      "options": [
+        "Comme le coût complet du service sur sa vie prévue, en supposant les abonnements inclus malgré leur exclusion explicite.",
+        "Comme le budget du périmètre projet, avec l’exclusion des dépenses récurrentes clairement indiquée.",
+        "Comme un total comparable à une autre offre incluant l’exploitation, sans retraitement des dépenses récurrentes.",
+        "Comme une économie sur l’exploitation, alors que ces dépenses sont simplement hors périmètre de l’estimation."
+      ],
+      "answer": 1,
+      "explanation": "Le périmètre peut être limité, mais il doit être explicite. Le budget du projet ne représente pas nécessairement le coût total de possession."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Les licences sont chiffrées pour 100 utilisateurs mais le projet en prévoit 150. Quel contrôle manque avant le calcul de réserve ?",
+      "options": [
+        "La disponibilité de la réserve, supposée compenser tout utilisateur supplémentaire.",
+        "Le prix initial pour cent utilisateurs, supposé constant quel que soit le nombre final.",
+        "La cohérence des quantités et hypothèses de la base avec le besoin.",
+        "La date de paiement des licences, sans vérifier leur nombre."
+      ],
+      "answer": 2,
+      "explanation": "Une réserve d’aléas ne corrige pas une base manifestement incohérente. Les quantités et le périmètre doivent d’abord être vérifiés."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Une base de projet de 90 000 € reçoit une réserve de 8 %, calculée sur toute cette base. Quel montant de réserve ?",
+      "options": [
+        "720 €.",
+        "11 250 €.",
+        "97 200 €.",
+        "7 200 €."
+      ],
+      "answer": 3,
+      "explanation": "La réserve vaut 90 000 × 8 / 100 = 7 200 €. Le budget total serait 97 200 €, mais ce n’est pas le montant demandé.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 90000
+            },
+            {
+              "value": 0.08
+            }
+          ]
+        },
+        "expected": 7200,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une réserve d’aléas doit être comprise comme :",
+      "options": [
+        "Une enveloppe encadrée pour les incertitudes, qui ne remplace pas leur analyse.",
+        "Une enveloppe dispensant d’estimer les risques individuellement dès lors que son pourcentage est approuvé.",
+        "Un budget de fonctionnalités facultatives utilisable sans procédure de changement.",
+        "Une ligne permettant de reporter l’estimation des tâches déjà connues au moment où elles seront exécutées."
+      ],
+      "answer": 0,
+      "explanation": "La réserve traite les aléas dans un cadre défini. Une tâche certaine appartient à la base, et un risque doit être analysé pour préparer la réponse."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une migration connue et obligatoire est oubliée du devis. Le chef de projet propose de la couvrir discrètement par la réserve. Quelle action est préférable ?",
+      "options": [
+        "Conserver la base pour ne pas modifier les engagements publiés.",
+        "Corriger et expliquer le périmètre de base, puis réexaminer la réserve disponible pour les véritables aléas.",
+        "Utiliser toute la réserve comme si la migration était un événement imprévisible.",
+        "Retirer la migration du projet pour préserver le montant initial."
+      ],
+      "answer": 1,
+      "explanation": "Un oubli de tâche connue n’est pas un aléa nouveau. La transparence sur la base évite d’épuiser une réserve censée couvrir les incertitudes."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une base passe de 50 000 € à 60 000 € et le taux de réserve reste à 10 % sur la base révisée. De combien la réserve augmente-t-elle ?",
+      "options": [
+        "10 000 €.",
+        "6 000 €.",
+        "1 000 €.",
+        "5 000 €."
+      ],
+      "answer": 2,
+      "explanation": "La réserve passe de 5 000 à 6 000 €, soit +1 000 €. La hausse de la base n’est pas la hausse de la réserve.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 60000
+                },
+                {
+                  "value": 0.1
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 50000
+                },
+                {
+                  "value": 0.1
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une réserve reste intégralement disponible alors qu’un risque majeur vient de se réaliser. Pourquoi ce constat n’est-il pas une preuve de bonne maîtrise ?",
+      "options": [
+        "L’absence de consommation comptable démontre que le risque réalisé n’a pas d’effet sur le coût final.",
+        "Le solde de la réserve suffit à déterminer le reste à faire sans réévaluer les engagements créés par le risque.",
+        "Le montant dépensé à ce jour est l’estimation du coût final, même si les interventions correctives sont encore à engager.",
+        "L’impact et les engagements peuvent ne pas être encore intégrés à l’estimation à terminaison."
+      ],
+      "answer": 3,
+      "explanation": "Le solde non consommé ne suffit pas. Les conséquences du risque doivent être estimées et rapprochées des ressources encore disponibles."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Le budget de base est de 75 000 € et la réserve autorisée de 12 % de cette base. Quel budget total obtient-on ?",
+      "options": [
+        "84 000 €.",
+        "9 000 €.",
+        "87 000 €.",
+        "75 900 €."
+      ],
+      "answer": 0,
+      "explanation": "Le budget total vaut 75 000 × 1,12 = 84 000 €, dont 9 000 € de réserve. Le pourcentage porte sur la base donnée.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 75000
+            },
+            {
+              "value": 1.12
+            }
+          ]
+        },
+        "expected": 84000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un total de 55 000 € comprend une base et une réserve de 10 % de cette base. Quelle est la base ?",
+      "options": [
+        "49 500 €.",
+        "50 000 €.",
+        "60 500 €.",
+        "5 000 €."
+      ],
+      "answer": 1,
+      "explanation": "Le total est égal à la base × 1,10. La base vaut donc 55 000 / 1,10 = 50 000 €, et non 90 % du total.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 55000
+            },
+            {
+              "value": 1.1
+            }
+          ]
+        },
+        "expected": 50000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le budget autorisé est de 66 000 €, réserve incluse. L’estimation actualisée du coût final est de 70 000 €. Que faut-il annoncer ?",
+      "options": [
+        "Un budget tenu tant que les dépenses payées restent inférieures à 66 000 €.",
+        "Une réserve supplémentaire acquise automatiquement de 4 000 €.",
+        "Un risque de dépassement de 4 000 €, avec les actions et arbitrages à instruire.",
+        "Une réduction automatique du périmètre sans validation."
+      ],
+      "answer": 2,
+      "explanation": "Le coût final prévu doit être comparé à l’autorisation complète. Les dépenses non encore payées ne doivent pas masquer le dépassement anticipé."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le chef de projet ajoute 10 % au total déjà composé d’une base de 100 et d’une réserve de 10 %. Quel résultat conceptuellement indésirable produit-il ?",
+      "options": [
+        "Il peut présenter le second supplément comme simple ventilation de la première réserve sans recalculer les postes.",
+        "Il obtient le même total qu’une majoration unique de10%sur la base initiale.",
+        "Il doit qualifier le second supplément de coût certain du périmètre de base même si aucune tâche nouvelle ne le justifie.",
+        "Il applique une réserve supplémentaire sur un montant qui en comporte déjà une."
+      ],
+      "answer": 3,
+      "explanation": "La seconde application augmente le budget au-delà de la réserve initialement définie. Il faut identifier la base et éviter les majorations redondantes."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une réserve approuvée existe. Un responsable veut l’utiliser sans justification pour une fonction nouvelle. Quelle réponse est adaptée ?",
+      "options": [
+        "Examiner la demande de changement et son autorisation plutôt que considérer la réserve comme libre d’usage.",
+        "L’approbation de la réserve vaut approbation préalable de chaque fonctionnalité nouvelle finançable par son solde.",
+        "La demande peut être traitée comme un aléa de l’ancien périmètre sans réexaminer son besoin ni son autorisation.",
+        "La disponibilité financière suffit à valider le changement sans analyser ses conséquences sur délai et tests."
+      ],
+      "answer": 0,
+      "explanation": "Une réserve ne supprime pas la gouvernance du périmètre. Une fonction nouvelle demande une analyse de coût, de délai, de risque et une décision appropriée."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le budget est respecté parce que les tests de sécurité prévus ont été supprimés sans réévaluation du risque. Quelle conclusion est justifiée ?",
+      "options": [
+        "La suppression des tests ne change pas le périmètre à évaluer puisqu’aucune dépense supplémentaire n’est constatée.",
+        "Le respect du montant ne suffit pas si le périmètre et le niveau de risque ont été dégradés.",
+        "Le budget tenu suffit à démontrer que le risque résiduel reste au niveau initialement accepté.",
+        "Les tests non réalisés peuvent être comptés comme une économie nette sans réévaluer les exigences de sécurité."
+      ],
+      "answer": 1,
+      "explanation": "Une comparaison budgétaire doit être rapprochée du périmètre réellement livré. Supprimer un contrôle change les risques et peut rendre le gain apparent trompeur."
+    }
+  ]
+}

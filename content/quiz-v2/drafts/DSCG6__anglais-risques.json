@@ -1,0 +1,353 @@
+{
+  "module": "DSCG6",
+  "chapter": "anglais-risques",
+  "sourceHash": "e8218f6aef01922d29441bb6adad017ab8772d0ec8bd1b6b1f9c58356955aa83",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report says, “A loss of network access could lead to delayed customer shipments.” Which description preserves the causal possibility expressed?",
+      "options": [
+        "Loss of access is identified as a possible cause of shipment delays.",
+        "The report records that every shipment was delayed by a network failure.",
+        "The report states that shipment delays caused the network failure.",
+        "The report rules out a connection between network access and shipments."
+      ],
+      "answer": 0,
+      "explanation": "Could lead to exprime une conséquence possible et sa direction causale. La phrase ne rapporte pas un incident réalisé, n’inverse pas cause et conséquence et n’exclut pas le lien."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A risk note describes an outage as “rare” but gives no frequency estimate. Which statement avoids inventing quantitative precision?",
+      "options": [
+        "The note states that the outage cannot occur during the next year.",
+        "The note describes low frequency without specifying a numerical probability.",
+        "The note establishes a one-per-cent annual probability.",
+        "The note records exactly one outage in the past year."
+      ],
+      "answer": 1,
+      "explanation": "Rare donne une appréciation qualitative. Sans définition ou données supplémentaires, elle ne peut être transformée en pourcentage, en nombre d’événements observés ou en impossibilité future."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A manager describes a supplier failure as “unlikely.” Which interpretation is accurate?",
+      "options": [
+        "The manager confirms that it has already occurred.",
+        "The manager guarantees that it cannot occur.",
+        "The manager considers it improbable, not impossible.",
+        "The manager considers it more probable than not."
+      ],
+      "answer": 2,
+      "explanation": "Unlikely signifie peu probable ; le risque n’est pas nul pour autant. Le terme ne décrit ni une majorité de chances, ni un événement passé, ni une garantie de non-réalisation."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Complete the risk assessment: “The equipment is susceptible ___ voltage fluctuations.”",
+      "options": [
+        "for",
+        "with",
+        "at",
+        "to"
+      ],
+      "answer": 3,
+      "explanation": "L’adjectif susceptible se construit avec to pour indiquer une sensibilité à un facteur. Les autres prépositions ne forment pas cette construction dans la phrase."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A faulty instruction almost caused a wrong payment, but a final check prevented the payment. The incident log calls this a “near miss”. What does the term mean?",
+      "options": [
+        "An event that came close to causing harm but did not produce that harmful outcome.",
+        "A payment error that was completed but involved only a small amount.",
+        "A prediction of an event that has not yet begun to occur.",
+        "A confirmed loss that was later reimbursed by the bank."
+      ],
+      "answer": 0,
+      "explanation": "Near miss désigne un incident ayant failli entraîner un dommage. Ici, le paiement erroné a été empêché ; ce n’est ni une perte remboursée ni une simple prévision."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A risk register has separate columns for likelihood and impact. Which entry belongs in the impact column for a payment-system outage?",
+      "options": [
+        "The event has not been observed in the last twelve months.",
+        "Customers may be unable to pay, delaying sales receipts.",
+        "The outage is estimated to occur once in five years.",
+        "The team considers the event less likely after the update."
+      ],
+      "answer": 1,
+      "explanation": "Impact décrit ce qui arriverait aux opérations ou aux finances, ici l’impossibilité de payer. Fréquence estimée, probabilité modifiée et historique renseignent d’autres dimensions du risque."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A rare outage would prevent a hospital supplier from receiving urgent orders. Another, frequent outage affects only a nonessential internal display. What does this comparison show?",
+      "options": [
+        "The rare event can be treated as having no material consequence.",
+        "The two events have equal impact because both are labelled outages.",
+        "Frequency and consequence severity need separate assessment.",
+        "The frequent event necessarily has the greater operational impact."
+      ],
+      "answer": 2,
+      "explanation": "La fréquence ne détermine pas à elle seule la gravité. Les effets sur une activité urgente et sur un affichage non essentiel peuvent être très différents, même sous le même terme d’interruption."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report distinguishes data loss from temporary service unavailability. Which statement keeps those consequences separate?",
+      "options": [
+        "Temporary unavailability establishes permanent loss of every stored record.",
+        "Data loss means only that users briefly cannot log in.",
+        "Restoring network access necessarily reconstructs any deleted records.",
+        "A service can be unavailable temporarily even if stored data remains intact."
+      ],
+      "answer": 3,
+      "explanation": "Disponibilité du service et intégrité des données sont distinctes. Un accès peut être interrompu sans perte, tandis que rétablir le réseau ne recrée pas à lui seul des informations supprimées."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "For a simplified exercise, an outage has a 2% annual probability and a loss of £500,000 if it occurs. Ignoring all other outcomes, what is the expected annual loss?",
+      "options": [
+        "£10 000.",
+        "£500 000.",
+        "£250 000.",
+        "£25 000 000."
+      ],
+      "answer": 0,
+      "explanation": "La perte annuelle espérée de ce modèle est 0,02 × 500 000 = 10 000 £. Elle ne signifie pas que chaque année coûtera ce montant : l’issue donnée est une perte de 500 000 £ avec la probabilité indiquée.",
+      "calculation": {
+        "digits": 0,
+        "expected": 10000,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 0.02
+            },
+            {
+              "value": 500000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An outage lasted one hour, but recovering the backlog took a further two working days. Which summary captures the stated impact?",
+      "options": [
+        "The system remained technically unavailable for the entire two-day recovery period.",
+        "Service downtime was one hour, while operational disruption extended into backlog recovery.",
+        "Total operational disruption ended after one hour because the system was available again.",
+        "The backlog recovery period measures the probability of another outage."
+      ],
+      "answer": 1,
+      "explanation": "Le rétablissement technique et le retour à une activité normale ne coïncident pas nécessairement. Les deux jours concernent ici le travail accumulé, pas une indisponibilité technique ni une probabilité."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The system returned online quickly, but some customers lost confidence after repeated delays. Which effect does the loss of confidence describe?",
+      "options": [
+        "The cost of replacing the failed network component only.",
+        "Evidence that the initial interruption lasted longer than recorded.",
+        "A reputational or relationship consequence in addition to the immediate technical interruption.",
+        "The numerical likelihood of the original system failure."
+      ],
+      "answer": 2,
+      "explanation": "La confiance des clients est un effet sur la relation ou la réputation. Ce n’est ni une fréquence, ni uniquement une dépense de matériel, ni une preuve que la durée technique enregistrée était fausse."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A control is described as mitigating outage risk. Which interpretation is appropriate without additional evidence of complete elimination?",
+      "options": [
+        "It establishes that the risk no longer requires monitoring.",
+        "It proves that future outages have been made impossible.",
+        "It replaces the need to identify what the control actually changes.",
+        "It reduces the risk or its consequences, while some exposure may remain."
+      ],
+      "answer": 3,
+      "explanation": "Mitigate signifie réduire ou atténuer. Le mot seul n’établit pas une suppression totale et ne dispense pas de préciser le mécanisme, les résultats et le risque résiduel."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A monitoring tool sends an alert after a server stops responding. Which role does the alert perform most directly?",
+      "options": [
+        "Detection of an interruption that may need a response.",
+        "Prevention of the server failure before it occurs.",
+        "Restoration of the lost service without any further action.",
+        "Transfer of the financial loss to an insurer."
+      ],
+      "answer": 0,
+      "explanation": "Une alerte signale un événement détecté. Sans autre fonction indiquée, elle ne prévient pas la panne, ne rétablit pas le service et ne transfère pas les pertes à un tiers."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Backups are created daily, but no one has tried restoring them. Which action most directly tests whether the stored copies can support recovery?",
+      "options": [
+        "Replace the recovery objective with the number of files copied each day.",
+        "Perform a restoration exercise and check that the required data and service can be recovered.",
+        "Count successful backup creation messages as equivalent to a restoration result.",
+        "Increase backup frequency without testing whether any copy can be restored."
+      ],
+      "answer": 1,
+      "explanation": "La création de copies et la restauration effective sont deux opérations différentes. Un exercice de restauration teste l’usage des sauvegardes ; plus de copies ou de messages ne démontre pas à lui seul cette capacité."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The primary server and its backup depend on the same power supply. A power failure would stop both. Which response addresses that shared dependency?",
+      "options": [
+        "Move the backup to a different server room that still uses the same unprotected power source.",
+        "Add storage copies but keep every recovery device on the same power circuit.",
+        "Provide and test an independent power arrangement for the recovery capability.",
+        "Test restoration while mains power is available and treat that alone as a test of a mains failure."
+      ],
+      "answer": 2,
+      "explanation": "La panne commune peut arrêter production et secours. Une autre pièce ou plus de copies sur la même alimentation ne la supprime pas ; un essai avec le courant disponible ne teste pas à lui seul sa perte."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An insurance policy covers specified outage losses subject to a deductible and limit. Which statement describes what insurance does here?",
+      "options": [
+        "It prevents the outage from occurring once the premium is paid.",
+        "It guarantees payment of every loss regardless of the deductible and limit.",
+        "It demonstrates that the technical recovery procedure has been tested.",
+        "It may transfer part of the financial consequence within the policy terms, without restoring the service itself."
+      ],
+      "answer": 3,
+      "explanation": "L’assurance peut couvrir une partie du coût selon ses clauses. Elle ne prouve ni prévention technique ni restauration ; franchise et plafond interdisent de présumer une indemnisation intégrale."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The agreed recovery objective is to restore customer ordering within four hours. Which recommendation is tied directly to that objective?",
+      "options": [
+        "Test restoration of customer ordering and measure elapsed time against the four-hour objective.",
+        "Time the restoration of the database files alone and treat it as complete restoration of customer ordering.",
+        "Measure only the time from the last server restart, excluding earlier recovery work after the interruption.",
+        "Check that a recovery supplier promises four hours and report that promise as the service time achieved."
+      ],
+      "answer": 0,
+      "explanation": "L’objectif porte sur la reprise de la prise de commandes. Il faut mesurer ce service de bout en bout ; fichiers restaurés, intervalle raccourci et promesse contractuelle ne prouvent pas sa reprise dans le délai."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The team suspended a release “on the grounds that the recovery test had failed”. What does on the grounds that introduce?",
+      "options": [
+        "A condition under which the release must instead proceed immediately.",
+        "The reason given for suspending the release.",
+        "The location where the test took place.",
+        "A consequence caused by suspending the release."
+      ],
+      "answer": 1,
+      "explanation": "On the grounds that introduit le motif avancé pour une décision. L’échec du test justifie ici la suspension ; ce n’est ni un lieu ni une conséquence de cette suspension."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A machine is described as “fail-safe”: if its control signal is lost, it automatically moves to the specified safe state. What does fail-safe mean in this description?",
+      "options": [
+        "Guaranteed never to experience any component failure.",
+        "Designed to continue maximum production regardless of the lost control signal.",
+        "Designed to move into a safe condition when the specified failure occurs.",
+        "Guaranteed to restart at full capacity immediately after any interruption."
+      ],
+      "answer": 2,
+      "explanation": "La description donne le sens de fail-safe : un état sûr est prévu en cas de défaillance spécifiée. Cela ne garantit ni l’absence de panne ni une production maximale ou une reprise instantanée."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A security lead says, “We had better isolate the affected device before it reconnects.” What does had better express here?",
+      "options": [
+        "A report that isolation was completed successfully in the past.",
+        "A comparison showing that an earlier isolation method was technically superior.",
+        "Permission to reconnect without isolating the affected device.",
+        "Strong advice about what should be done in the present situation."
+      ],
+      "answer": 3,
+      "explanation": "Had better suivi de la base verbale exprime un conseil appuyé dans la situation présente, souvent avec un risque si on ne le suit pas. Had ne situe pas ici l’action comme déjà accomplie."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A recovery exercise fails to restore customer ordering within the agreed time. Which reporting action best supports a decision on readiness?",
+      "options": [
+        "Record the failure against the criterion, identify corrective actions and arrange a retest.",
+        "Declare readiness from the recovery of the database while excluding customer ordering from the recorded criterion.",
+        "Extend the target retrospectively to match the measured time and report that as compliance with the original objective.",
+        "Report the planned test date as the only success measure and omit the failed service-restoration result."
+      ],
+      "answer": 0,
+      "explanation": "L’essai doit être évalué contre son critère initial. Rétablir une partie technique ou modifier la cible après observation ne démontre pas la reprise du service demandée ; corriger puis retester permet de réévaluer la préparation."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "After a tested recovery improvement, a residual dependency remains outside the project’s scope. Which recommendation communicates the remaining decision clearly?",
+      "options": [
+        "Omit the remaining exposure because it was not part of the test scope.",
+        "State the remaining exposure and ask the authorised decision-maker whether to treat it further or accept it within defined limits.",
+        "Describe the residual dependency as removed because a different control passed its test.",
+        "Treat completion of the project as proof that every dependency has been addressed."
+      ],
+      "answer": 1,
+      "explanation": "Un risque résiduel doit être identifié et soumis à une décision appropriée, selon ses limites et l’autorité compétente. Un succès dans un autre champ ou la clôture du projet ne démontre pas sa disparition."
+    }
+  ]
+}

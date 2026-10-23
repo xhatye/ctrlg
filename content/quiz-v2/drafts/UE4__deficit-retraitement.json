@@ -1,0 +1,511 @@
+{
+  "module": "UE4",
+  "chapter": "deficit-retraitement",
+  "sourceHash": "ed286a69317e133b2448945db29cc3d45f86fd723a923e2a396b8cf7b2725cdf",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise en perte a comptabilisé une charge expressément non déductible de 1 500 €. Un préparateur omet la réintégration au motif qu’aucun IS courant ne sera dû. Quelle démarche est correcte ?",
+      "options": [
+        "Réintégrer la charge pour déterminer correctement le déficit fiscal.",
+        "Omettre les corrections dès que le résultat comptable est négatif.",
+        "Déduire une deuxième fois la charge afin de préserver la perte.",
+        "Reporter toute charge comptable sans vérifier son admission fiscale."
+      ],
+      "answer": 0,
+      "explanation": "Le déficit fiscal doit être déterminé avec les règles d’admission comme un résultat positif. Une réintégration peut en réduire le montant même sans impôt courant immédiat. L’omission gonflerait les droits éventuels à report et ne se justifie donc pas par l’absence de paiement cette année."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une charge de 2 000 € a diminué une perte comptable de départ de −8 000 €. Le tableau ajoute par erreur −2 000 € pour la réintégrer. Quel sens de correction faut-il rétablir ?",
+      "options": [
+        "Ajouter +2 000 €, ce qui réduit la perte fiscale.",
+        "Déduire −2 000 €, car une réintégration change de sens en déficit.",
+        "Remplacer le résultat de départ par +8 000 €.",
+        "Annuler la totalité des charges de l’exercice."
+      ],
+      "answer": 0,
+      "explanation": "La réintégration augmente algébriquement le résultat, que celui-ci soit positif ou négatif. Il faut ajouter 2 000 € : la base devient −6 000 €. Utiliser un montant négatif accentuerait la perte au lieu de neutraliser la charge non admise."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une charge non déductible a déjà été neutralisée dans le résultat fiscal intermédiaire de −4 000 € remis à l’analyste. Il veut la réintégrer encore avant d’arrêter le déficit. Quel contrôle faut-il effectuer ?",
+      "options": [
+        "Identifier les corrections déjà comprises dans le résultat de départ.",
+        "Réintégrer chaque charge autant de fois qu’elle apparaît dans les pièces.",
+        "Considérer le signe négatif comme preuve qu’aucune correction n’a été faite.",
+        "Substituer à la base le total des décaissements de l’exercice."
+      ],
+      "answer": 0,
+      "explanation": "Le libellé résultat intermédiaire ne dit pas à lui seul quelles étapes restent à faire. Il faut documenter le passage déjà effectué. Une correction présente dans cette base ne doit pas être reproduite sous prétexte que l’on établit ensuite le tableau final du déficit."
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une déduction extra-comptable de 700 € est expressément autorisée par le régime du dossier, même en situation déficitaire. Le résultat avant cette déduction est de −3 000 €. Quel est son effet ?",
+      "options": [
+        "Elle augmente le déficit fiscal de 700 €.",
+        "Elle réduit le déficit de 700 €.",
+        "Elle crée immédiatement un remboursement de 700 €.",
+        "Elle n’existe fiscalement que si la base de départ est positive."
+      ],
+      "answer": 0,
+      "explanation": "Dans les hypothèses données, une déduction diminue encore algébriquement le résultat : la base passe à −3 700 €. Elle augmente donc le déficit. Ce montant de base négative ne constitue pas, par lui-même, une créance remboursable de 700 €."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un produit exonéré de 1 000 € est présent dans un résultat comptable déficitaire. Le régime impose de le neutraliser. L’auteur refuse toute déduction parce qu’elle « aggraverait une perte ». Quel point doit-il corriger ?",
+      "options": [
+        "Le traitement du produit s’applique selon son régime, pas selon l’objectif de rendre le résultat positif.",
+        "Une exonération devient une taxation dès que l’entreprise est en perte.",
+        "Le produit doit être réintégré pour réduire le déficit, malgré le régime d’exonération fourni.",
+        "Une exonération ne doit jamais modifier un déficit déjà constaté comptablement."
+      ],
+      "answer": 0,
+      "explanation": "La détermination du déficit suit également les retraitements autorisés ou requis. Neutraliser un produit déjà inclus peut accroître la perte fiscale ; cela ne rend pas le traitement illégitime. Il faut justifier le régime et l’absence de double comptage, non rechercher un résultat arbitraire."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier envisage une déduction nouvelle mais sa condition d’éligibilité n’est pas établie. Pour arrêter le déficit reportable, quelle méthode est rigoureuse ?",
+      "options": [
+        "Vérifier le droit avant d’inclure cette déduction dans le déficit déclaré.",
+        "Inclure d’office la déduction la plus élevée pour maximiser le report.",
+        "Retenir la déduction parce que sa seule inscription au tableur la justifie.",
+        "Compenser l’incertitude en appliquant deux fois une réintégration sans rapport."
+      ],
+      "answer": 0,
+      "explanation": "Le stock reportable dépend de la base fiscale justifiée, non de toutes les hypothèses favorables envisagées. Une déduction conditionnelle doit être validée ou présentée comme telle dans l’analyse. Le souhait de disposer d’un déficit plus élevé ne constitue pas une condition d’admission."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que peut-on déduire de la seule constatation d’un déficit fiscal de −20 000 € au taux théorique de 25 % ?",
+      "options": [
+        "L’État doit automatiquement verser 5 000 € immédiatement.",
+        "Le déficit doit être traité selon les règles de report ; il n’établit pas seul une créance remboursable.",
+        "L’entreprise doit verser un impôt de −5 000 €.",
+        "Le déficit correspond nécessairement à 20 000 € de crédit de TVA."
+      ],
+      "answer": 1,
+      "explanation": "Un déficit est une base négative, distincte d’un crédit fiscal et d’une dette. Les règles d’imputation et les éventuelles options déterminent ses effets futurs ou la création d’une créance spécifique. La multiplication d’une base négative par un taux ne suffit pas à établir un remboursement."
+    },
+    {
+      "id": "q08",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans le report en avant de droit commun à l’IS visé par l’article 209, quelle limite d’imputation s’applique à un bénéfice supérieur à 1 million d’euros, hors dispositif particulier ?",
+      "options": [
+        "1 million d’euros augmenté de 50 % de la fraction du bénéfice dépassant ce million.",
+        "50 % de la totalité du bénéfice, sans franchise de 1 million.",
+        "1 million augmenté de 50 % du stock total de déficits.",
+        "La totalité du bénéfice, quel que soit son montant."
+      ],
+      "answer": 0,
+      "explanation": "L’article 209 applique le plafond au bénéfice de l’exercice : 1 million plus 50 % de son excédent sur ce premier montant. Il ne calcule pas 50 % du stock de pertes. Le reliquat non imputé demeure à suivre selon les conditions du régime.",
+      "references": [
+        {
+          "title": "CGI, article 209, report en avant",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000048847486/2024-02-14"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une société dispose d’un stock de déficits de 3 000 000 € et d’un bénéfice avant imputation de 1 800 000 €. Le plafond fourni est 1 000 000 € plus 50 % de la fraction du bénéfice au-delà de ce million. Sans exception, quel déficit peut être imputé au maximum ?",
+      "options": [
+        "1 800 000 €",
+        "900 000 €",
+        "1 400 000 €",
+        "3 000 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le plafond est 1 000 000+50 %×800 000=1 400 000 €. Le stock de 3 millions est suffisant, donc cette limite s’applique. Le bénéfice restant est de 400 000 € ; la fraction de déficit non utilisée ne disparaît pas du seul fait du plafonnement.",
+      "calculation": {
+        "expected": 1400000,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 1000000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 1800000
+                    },
+                    {
+                      "value": 1000000
+                    }
+                  ]
+                },
+                {
+                  "value": 0.5
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "CGI, article 209, report en avant",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000048847486/2024-02-14"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société dispose de 300 000 € de déficits utilisables et réalise 800 000 € de bénéfice avant imputation. Le plafond du régime ne limite pas l’imputation dans ce cas. Peut-elle déduire 800 000 € ?",
+      "options": [
+        "Oui, le bénéfice devient lui-même un stock de déficit.",
+        "Non, l’imputation ne peut dépasser les 300 000 € de déficit effectivement disponibles.",
+        "Oui, tout bénéfice inférieur au million est exonéré même sans pertes.",
+        "Non, aucun déficit ne s’impute avant d’avoir produit un bénéfice de plus d’un million."
+      ],
+      "answer": 1,
+      "explanation": "Un plafond légal autorise une imputation maximale ; il ne crée pas un déficit absent du stock. Ici, seules les pertes disponibles de 300 000 € peuvent être employées. La base reste 500 000 €. Le seuil de plafonnement n’est pas un abattement fiscal automatique.",
+      "references": [
+        {
+          "title": "CGI, article 209, report en avant",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000048847486/2024-02-14"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le plafond annuel empêche l’imputation de toute une fraction d’un déficit reportable. Hors autre cause de perte du droit, quel est le sort de cette fraction selon l’article 209 ?",
+      "options": [
+        "Elle est perdue définitivement à cause du seul plafond.",
+        "Elle peut être reportée sur les exercices suivants dans les mêmes conditions.",
+        "Elle devient imputable sans plafond dès l’exercice suivant.",
+        "Elle devient automatiquement reportée en arrière sur le bénéfice antérieur."
+      ],
+      "answer": 1,
+      "explanation": "L’article 209 prévoit le report de la fraction non déduite, qu’elle le soit du fait d’un bénéfice insuffisant ou du plafond. Le suivi doit conserver ce reliquat. Le plafonnement de l’utilisation annuelle ne se confond pas avec l’extinction du stock.",
+      "references": [
+        {
+          "title": "CGI, article 209, report en avant",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000048847486/2024-02-14"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Le report en arrière ordinaire du déficit à l’IS ouvre-t-il de lui-même un droit sur tous les exercices bénéficiaires passés ?",
+      "options": [
+        "Oui, sur tous les exercices depuis la création.",
+        "Non, il vise, sur option, le seul exercice précédent dans les limites applicables.",
+        "Oui, au choix sur les cinq exercices les plus bénéficiaires.",
+        "Non, il vise seulement les bénéfices futurs."
+      ],
+      "answer": 1,
+      "explanation": "La présentation de la DGFiP rattache le report en arrière au seul bénéfice de l’exercice précédent, avec une option et un plafond. Ce mécanisme ne se confond ni avec une libre révision de toutes les années passées ni avec le report en avant.",
+      "references": [
+        {
+          "title": "DGFiP, report en arrière de déficit, octobre 2026",
+          "url": "https://www.impots.gouv.fr/professionnel/questions/comment-obtenir-le-paiement-du-credit-dis-issu-du-report-en-arriere-de"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le déficit de l’exercice est de 900 000 € et le bénéfice précédent éligible au report en arrière de 600 000 €. Le plafond applicable est 1 000 000 € ; toutes les autres conditions sont remplies. Quel montant maximal de déficit peut être reporté en arrière ?",
+      "options": [
+        "900 000 €",
+        "1 000 000 €",
+        "600 000 €",
+        "300 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le report ne dépasse ni le déficit de l’exercice, ni le bénéfice précédent éligible, ni le plafond. Le minimum de 900 000, 600 000 et 1 000 000 est 600 000 €. Le déficit restant relève d’un autre suivi, et le montant reporté ne constitue pas lui-même le montant de la créance.",
+      "calculation": {
+        "expected": 600000,
+        "expression": {
+          "op": "min",
+          "args": [
+            {
+              "value": 900000
+            },
+            {
+              "op": "min",
+              "args": [
+                {
+                  "value": 600000
+                },
+                {
+                  "value": 1000000
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "DGFiP, report en arrière de déficit, octobre 2026",
+          "url": "https://www.impots.gouv.fr/professionnel/questions/comment-obtenir-le-paiement-du-credit-dis-issu-du-report-en-arriere-de"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’entreprise souhaite opter pour le report en arrière d’un déficit courant. Selon la présentation de la DGFiP d’octobre 2026, quand cette option doit-elle normalement être exercée ?",
+      "options": [
+        "Dans le délai de dépôt de la déclaration de résultats de l’exercice déficitaire.",
+        "À n’importe quelle date pendant cinq ans sans condition.",
+        "Seulement après le remboursement effectif de la créance.",
+        "Avant de commencer l’activité, pour tous les déficits futurs."
+      ],
+      "answer": 0,
+      "explanation": "La DGFiP précise l’exercice de l’option au titre de l’exercice où le déficit est constaté, dans le délai de dépôt de sa déclaration de résultats. Des situations contentieuses particulières exigeraient une analyse distincte ; elles ne transforment pas l’option ordinaire en droit discrétionnaire sans échéance.",
+      "references": [
+        {
+          "title": "DGFiP, report en arrière de déficit, octobre 2026",
+          "url": "https://www.impots.gouv.fr/professionnel/questions/comment-obtenir-le-paiement-du-credit-dis-issu-du-report-en-arriere-de"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une créance de report en arrière est valablement constituée. Dans le régime ordinaire décrit par la DGFiP, peut-elle être assimilée à un virement immédiatement reçu dès l’option ?",
+      "options": [
+        "Oui, sa comptabilisation prouve le virement.",
+        "Non, il faut distinguer naissance de la créance, utilisation pour l’IS et remboursement selon les conditions de délai.",
+        "Oui, le délai de cinq ans concerne seulement le report en avant.",
+        "Non, une créance de report en arrière ne peut jamais être utilisée ni remboursée."
+      ],
+      "answer": 1,
+      "explanation": "La DGFiP distingue la créance, son imputation sur l’IS des exercices visés pendant la période de cinq ans et le remboursement de la fraction non utilisée à l’issue, avec des cas de remboursement anticipé. Son existence ne prouve donc pas une entrée immédiate de banque.",
+      "references": [
+        {
+          "title": "DGFiP, report en arrière de déficit, octobre 2026",
+          "url": "https://www.impots.gouv.fr/professionnel/questions/comment-obtenir-le-paiement-du-credit-dis-issu-du-report-en-arriere-de"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le résultat comptable est de −9 000 €. Les corrections validées sont une réintégration de 2 000 € et une déduction de 500 €, sans autre mécanisme. Quel résultat fiscal signé porte le tableau ?",
+      "options": [
+        "−11 500 €",
+        "−6 500 €",
+        "−7 500 €",
+        "7 500 €"
+      ],
+      "answer": 2,
+      "explanation": "Le passage conserve les signes : −9 000+2 000−500=−7 500 €. Le déficit est de 7 500 € en montant positif, mais la base signée vaut −7 500 €. Le calcul ne décide pas à lui seul des modalités de son report.",
+      "calculation": {
+        "expected": -7500,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": -9000
+                },
+                {
+                  "value": 2000
+                }
+              ]
+            },
+            {
+              "value": 500
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un stock de déficits reportables de 900 000 € est utilisé à hauteur de 250 000 € sur le bénéfice courant, dans les conditions validées du dossier. Un nouveau déficit indépendant n’intervient pas. Quel stock de clôture suivre ?",
+      "options": [
+        "1 150 000 €",
+        "650 000 €",
+        "250 000 €",
+        "900 000 €"
+      ],
+      "answer": 1,
+      "explanation": "L’imputation consomme une partie du stock : 900 000−250 000=650 000 €. Le stock d’ouverture ne doit pas être reconduit intact après son utilisation. La base courante et le reliquat de droits à report sont deux rubriques différentes du tableau.",
+      "calculation": {
+        "expected": 650000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 900000
+            },
+            {
+              "value": 250000
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Sur un déficit de 800 000 €, une société a valablement reporté en arrière 300 000 €. Le tableau conserve pourtant 800 000 € en report en avant. Quel suivi doit être corrigé ?",
+      "options": [
+        "Retirer du stock en avant la fraction déjà utilisée en arrière.",
+        "Retirer du stock en avant seulement la créance d’impôt issue du report en arrière.",
+        "Conserver en avant la fraction utilisée en arrière jusqu’au remboursement effectif de la créance.",
+        "Retirer du stock en avant la totalité du déficit, dès lors qu’une option partielle en arrière a été exercée."
+      ],
+      "answer": 0,
+      "explanation": "Le déficit utilisé en arrière cesse d’être reportable sur les résultats futurs selon le régime. Il faut donc ventiler la perte entre les utilisations et ne pas conserver deux fois les 300 000 €. Dans le cas donné, le reliquat en avant est de 500 000 €.",
+      "references": [
+        {
+          "title": "BOI-IS-DEF-20-10, report en arrière, août 2026",
+          "url": "https://bofip.impots.gouv.fr/bofip/5645-PGP.html/identifiant=BOI-IS-DEF-20-10-20260812"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un report en arrière validé porte sur 200 000 € de déficit. Le dossier indique que tout le bénéfice correspondant avait effectivement supporté l’IS au taux de 25 %, sans crédit ni réduction. Quel montant de créance découle de l’économie d’impôt ?",
+      "options": [
+        "200 000 €",
+        "50 000 €",
+        "800 000 €",
+        "150 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La créance correspond à l’économie d’IS produite par l’imputation, non au montant du déficit lui-même. Dans les hypothèses données : 200 000×25 %=50 000 €. Le montant et les conditions d’utilisation ou de remboursement doivent rester suivis séparément.",
+      "calculation": {
+        "expected": 50000,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 200000
+            },
+            {
+              "value": 0.25
+            }
+          ]
+        },
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "DGFiP, report en arrière de déficit, octobre 2026",
+          "url": "https://www.impots.gouv.fr/professionnel/questions/comment-obtenir-le-paiement-du-credit-dis-issu-du-report-en-arriere-de"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau d’un report en arrière applique le taux actuel au bénéfice de l’exercice précédent, alors que ce bénéfice avait été imposé à un autre taux. Quelle donnée doit être vérifiée pour calculer la créance ?",
+      "options": [
+        "Le taux ayant effectivement servi à imposer le bénéfice d’imputation, selon les règles du dispositif.",
+        "Le taux de l’exercice déficitaire, retenu à la place de celui qui avait imposé le bénéfice précédent.",
+        "Le taux moyen prévu pour les bénéfices des cinq exercices futurs.",
+        "Un taux standard appliqué à toute créance, indépendamment de l’imposition initiale."
+      ],
+      "answer": 0,
+      "explanation": "La DGFiP rattache la créance à l’économie d’impôt sur le bénéfice précédent effectivement imposé, dans les limites du régime. Le taux courant ne remplace donc pas automatiquement celui du bénéfice d’imputation. Il faut conserver la traçabilité de l’ancienne liquidation.",
+      "references": [
+        {
+          "title": "DGFiP, report en arrière de déficit, octobre 2026",
+          "url": "https://www.impots.gouv.fr/professionnel/questions/comment-obtenir-le-paiement-du-credit-dis-issu-du-report-en-arriere-de"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société a une perte comptable de 60 000 €, mais le tableau fiscal validé ne constate qu’un déficit fiscal de 42 000 €. Quel montant sert de point de départ au stock fiscal de cette perte, avant ses utilisations ?",
+      "options": [
+        "60 000 €, parce qu’il figure dans le compte de résultat.",
+        "42 000 €, déficit fiscal justifié.",
+        "18 000 €, seule différence entre les deux résultats.",
+        "Le plus élevé des deux résultats, au choix de la société."
+      ],
+      "answer": 1,
+      "explanation": "Le stock de déficits utilisable fiscalement repose sur le déficit fiscal, après retraitements. Une perte comptable peut être plus élevée en raison de charges non admises notamment. Le tableau doit donc justifier le passage et suivre 42 000 €, non conserver par défaut la perte comptable."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un stock de déficits est repris dans le tableau sans origine par exercice ni trace des imputations passées. Quelle information faut-il reconstituer pour justifier les droits disponibles ?",
+      "options": [
+        "L’origine fiscale des déficits et leurs utilisations, annulations ou reliquats successifs.",
+        "La seule somme des pertes comptables, sans analyse fiscale des exercices d’origine.",
+        "Le stock historique avant imputation, sans retracer les utilisations déjà effectuées.",
+        "La somme de toutes les pertes comptables, sans retraitement ni consommation."
+      ],
+      "answer": 0,
+      "explanation": "Le montant disponible est un stock de droits à justifier, pas une estimation indépendante de l’historique. Il faut reconstituer les déficits fiscaux d’origine et les mouvements qui les ont affectés. Cela permet d’éviter la reprise de pertes déjà imputées ou ne relevant pas du régime."
+    }
+  ]
+}

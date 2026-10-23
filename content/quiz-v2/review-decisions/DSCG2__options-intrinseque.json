@@ -1,0 +1,248 @@
+{
+  "sourceHash": "410154d7da508a873afc0fd2dd30472f22ba6089708a7340dc12d54420477f1f",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "d4cf279e533d262f0da82e39f89658560acf600422813438d3d1dc8ef9ca445f",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Call à échéance : max(0,125−110) = 15 par unité."
+    },
+    {
+      "id": "q02",
+      "digest": "1145910763b82a9200cc74395a9e74b2060e34cea247b3a0fbfa13a709232b14",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "À 90 sous K=100, le droit d’acheter n’apporte aucun gain d’exercice : intrinsèque zéro."
+    },
+    {
+      "id": "q03",
+      "digest": "f6c83df16c1bea64a1771894952dbf86d4aa40973e0c49081e82ac6537f9b892",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Résultat net = valeur 12 − prime 5 = 7."
+    },
+    {
+      "id": "q04",
+      "digest": "20f122c3a3c5d33d8f6b43c7c9c5a0488d105a86bb33b68e9773365a9f0c28d9",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La valeur brute de quatre ne couvre pas la prime de six : perte nette de deux."
+    },
+    {
+      "id": "q05",
+      "digest": "3af05829cae3f619a9742af257cc2b0425c50575305c138965236bc5a20d9cfc",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "−3 par unité × 200 = −600 au total."
+    },
+    {
+      "id": "q06",
+      "digest": "3421e841eda69495a6d200ca2e83e5aecfb22a9eb6659b00bdf72c1f47314023",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Seuil acheteur = K 80 + prime 7 = cours 87."
+    },
+    {
+      "id": "q07",
+      "digest": "2ffa89995d9675be0832fa64de4c9fd2c1458dd83557cf1d0a9eda7c62978ebb",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "S=K donne intrinsèque zéro ; l’acheteur perd la prime déjà payée."
+    },
+    {
+      "id": "q08",
+      "digest": "ff60f57b5e790e821073b6d357a0cdee3fd260504432e2943359da97e8e2251a",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le min retient des valeurs négatives hors monnaie et zéro dans la monnaie. Nominal constant et prix d’exercice ajouté dans tous les cas sont trop éloignés. Révision résolue de nouveau : le résultat retenu reste cohérent avec les unités et clauses explicites ; les erreurs proposées portent sur les conversions, les échéances ou les formules."
+    },
+    {
+      "id": "q09",
+      "digest": "04ea14d403739d5ef751626b8c0d79e042cc623a696b08a15fc77150183bb552",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Coût prime = 4 × 3 × 100 = 1 200."
+    },
+    {
+      "id": "q10",
+      "digest": "94c09fed9556b8966af563bef270fbfbcb85108c52f94c39f9d0d1b6b4eab049",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’intrinsèque nulle laisse une perte limitée à la prime dans ce seul modèle."
+    },
+    {
+      "id": "q11",
+      "digest": "1663afb68e79428d87a458b9c5c71d73a4207d1caa3284dc0d4af8ddc0380b93",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La prime propre à chaque call intervient dans K+prime ; un même K ne garantit pas même seuil."
+    },
+    {
+      "id": "q12",
+      "digest": "7229305f63ee4ba2134f0bdbaa0cd064e29ebea1b382ff92352a1331ae353b70",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La prime est exclue de l’intrinsèque, puis retranchée au résultat net."
+    },
+    {
+      "id": "q13",
+      "digest": "bd1e55049d5b889c861ef3e3477ff99cd6ed4d8b0b3388d4c95dc26594e47324",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Résultat net unitaire = 900/150 = 6."
+    },
+    {
+      "id": "q14",
+      "digest": "91876c092686403331f6a2f8d12e6f531f76252f2bc92c9b767f47b874a6ee6e",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Seuil frais inclus = K 100 + prime 5 + frais 1 = 106."
+    },
+    {
+      "id": "q15",
+      "digest": "ef5fea9badfe0acef473a3075b9d6f0faf77f1973313a96f900e1b3ff9c3fea8",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Entre K et K+prime, le call apporte une valeur positive mais une perte nette à l’acheteur."
+    },
+    {
+      "id": "q16",
+      "digest": "34941cfb4a88b092b89f49315555bf941e7b8c2fd130d1f5455da6fe5a152fea",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La valeur d’échéance n’est pas un modèle complet de prix avant échéance. Prix d’exercice remplacé par cours futur certain et prime nécessairement nulle sont faibles. Révision résolue de nouveau : le résultat retenu reste cohérent avec les unités et clauses explicites ; les erreurs proposées portent sur les conversions, les échéances ou les formules."
+    },
+    {
+      "id": "q17",
+      "digest": "76c930807afc8c7e54959df6f7fdfe3c482691fb466a922215fd8002371cf459",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le calcul a déjà utilisé perte unitaire et nombre de contrats ; il manque cent unités par contrat. Les quatre choix sont maintenant des informations comparables du calcul."
+    },
+    {
+      "id": "q18",
+      "digest": "bc443e64e2fb59caead3798a2a44fb9dd1b16628f905da2fcadbcb4d2d239e4e",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "À coûts unitaires identiques, la quantité change le résultat total mais pas le cours de seuil par unité."
+    },
+    {
+      "id": "q19",
+      "digest": "afa6d851649e14e4747bc0866a86a7a9c2fbb801b2c6f987e61cc1536e0e82cc",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Intrinsèque 58−50=8, net 8−3=5 ; rendement de prime 5/3 = 166,67 %."
+    },
+    {
+      "id": "q20",
+      "digest": "140ffae6b683571dee62ae2c61c803f5c82f092013bddb95cc8b6074e6708be4",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Sous K, l’intrinsèque du call reste zéro même si S baisse davantage."
+    },
+    {
+      "id": "q21",
+      "digest": "a02277d334ea98e4ca35138042a95e979c9b87a1ac0b358e6b440dde3fc8bd48",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La prime déjà retranchée au résultat unitaire ne doit pas être retranchée de nouveau au total."
+    },
+    {
+      "id": "q22",
+      "digest": "3ec37c94bdde5db242c9ba1acb6f7c2abf07a945c4e655a9f7ab9a25bf402cca",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Au seuil, le gain brut couvre exactement le coût de prime, à l’échéance et selon les hypothèses."
+    }
+  ]
+}

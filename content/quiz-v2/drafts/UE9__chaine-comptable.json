@@ -1,0 +1,391 @@
+{
+  "module": "UE9",
+  "chapter": "chaine-comptable",
+  "sourceHash": "696d174d7e1334d47b855d34050fa1bd7b77659e0824b0b6ca1bb4c358482f97",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture existe dans le dossier mais son objet ne correspond pas au compte débité. Quel contrôle manque après la vérification de présence de la pièce ?",
+      "options": [
+        "L’analyse de la nature économique et de l’imputation",
+        "La preuve que tout paiement est une charge nouvelle",
+        "L’ajout d’une seconde écriture pour conserver la facture",
+        "Le remplacement du montant facturé par le résultat souhaité"
+      ],
+      "answer": 0,
+      "explanation": "Une pièce présente ne valide pas tous les traitements. Il faut rapprocher son objet, les faits et le compte utilisé pour traduire l’opération."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux factures du même montant sont repérées. Le contrôleur supprime l’une sans comparer leurs références ou prestations. Quelle précaution manque-t-il ?",
+      "options": [
+        "Supprimer toujours les deux parce que les montants sont identiques",
+        "Vérifier s’il s’agit d’un doublon ou de deux opérations réelles distinctes",
+        "Créer un nouveau fournisseur pour masquer l’égalité",
+        "Conserver toujours les deux sans contrôle"
+      ],
+      "answer": 1,
+      "explanation": "Un montant identique ne prouve pas un doublon. Les références, dates, parties et prestations permettent d’établir la réalité des opérations."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un relevé bancaire indique un virement fournisseur. Avant de le traiter comme une charge, quelle recherche est prioritaire ?",
+      "options": [
+        "Constater une charge du montant du virement sans rechercher l’écriture initiale",
+        "Rapprocher seulement le total des achats de la période avec le virement",
+        "Identifier la facture ou la dette que ce virement règle",
+        "Utiliser le libellé bancaire comme preuve suffisante de la période de charge"
+      ],
+      "answer": 2,
+      "explanation": "Le paiement peut dénouer une dette déjà comptabilisée. Le rapprochement évite une seconde charge et justifie la contrepartie utilisée."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un solde fournisseur est justifié par un tableau interne sans référence aux factures ni aux règlements. Quelle limite faut-il signaler ?",
+      "options": [
+        "Un tableau interne remplace automatiquement toute preuve d’opération",
+        "Le solde doit être nul parce qu’aucune référence n’est indiquée",
+        "Le fournisseur doit être traité comme un produit financier",
+        "La traçabilité vers les pièces et les événements est insuffisante"
+      ],
+      "answer": 3,
+      "explanation": "Un total peut être plausible sans être justifié. La chaîne de contrôle doit permettre de revenir aux pièces et mouvements qui le composent."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une correction est apportée à une écriture après une erreur documentée. Quel suivi aide à comprendre la correction lors d’un contrôle ultérieur ?",
+      "options": [
+        "Conserver le lien entre l’opération, l’erreur identifiée et sa correction justifiée",
+        "Remplacer l’objet par un texte générique sans référence",
+        "Effacer la justification dès que la balance est égale",
+        "Créer une vente du même montant pour équilibrer les états"
+      ],
+      "answer": 0,
+      "explanation": "La traçabilité rend la correction intelligible et contrôlable. Un équilibrage formel sans référence ne permet pas de vérifier le traitement retenu."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle vue comptable regroupe les mouvements par compte plutôt que dans la seule chronologie des écritures ?",
+      "options": [
+        "Le seul journal chronologique",
+        "Le grand-livre",
+        "Le relevé bancaire de la banque",
+        "La liste des commandes non reçues"
+      ],
+      "answer": 1,
+      "explanation": "Le grand-livre permet d’analyser chaque compte et son solde. Le journal apporte une vue chronologique complémentaire du même système."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un compte fournisseur a une dette d’ouverture de 2 000 €. Des factures à crédit ajoutent 1 200 € et des règlements la réduisent de 900 €, sans autre mouvement. Quelle dette reste due ?",
+      "options": [
+        "4 100 €",
+        "1 700 €",
+        "2 300 €",
+        "300 €"
+      ],
+      "answer": 2,
+      "explanation": "Le solde de dette est 2 000 + 1 200 − 900 = 2 300 €. Il faut intégrer ouverture et mouvements, pas seulement les opérations nouvelles.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 2000
+                },
+                {
+                  "value": 1200
+                }
+              ]
+            },
+            {
+              "value": 900
+            }
+          ]
+        },
+        "expected": 2300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une écriture est dans le bon ordre chronologique, mais un achat durable est traité comme une consommation courante sans analyse. La chronologie suffit-elle à valider le compte ?",
+      "options": [
+        "Oui, toute écriture chronologique a forcément le bon compte",
+        "Oui, si les débits et crédits sont égaux",
+        "Non, il faut remplacer la date par la date de paiement uniquement",
+        "Non, la nature de l’opération doit aussi être qualifiée"
+      ],
+      "answer": 3,
+      "explanation": "La date et l’imputation sont deux dimensions différentes. Une bonne chronologie n’établit pas que l’actif ou la charge a été correctement identifié."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture est déjà saisie dans le journal et apparaît automatiquement au grand-livre et à la balance. Faut-il la saisir de nouveau dans chacun de ces documents ?",
+      "options": [
+        "Non, ce sont des vues du même enregistrement",
+        "Oui, chaque document doit créer une opération nouvelle",
+        "Oui, mais seulement dans le compte fournisseur",
+        "Non, il faut supprimer sa présence au journal"
+      ],
+      "answer": 0,
+      "explanation": "Les documents présentent le même système à différents niveaux de détail. Une nouvelle saisie indépendante pourrait multiplier l’opération réelle."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi le mot « débit » ne signifie-t-il pas universellement « perte d’argent » en comptabilité ?",
+      "options": [
+        "Tout débit représente obligatoirement une sortie bancaire",
+        "Son sens dépend du compte ; un débit bancaire de l’entreprise peut augmenter un actif",
+        "Débit et crédit sont deux mots interchangeables sans effet",
+        "Un débit ne peut jamais concerner une charge"
+      ],
+      "answer": 1,
+      "explanation": "Le sens du mouvement se comprend par rapport à la catégorie du compte. Une entrée en banque dans les comptes de l’entreprise se place au débit."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un solde client paraît anormal. Quelle démarche utilise le grand-livre de manière pertinente ?",
+      "options": [
+        "Retenir seulement le total annuel des ventes de tous les clients",
+        "Remplacer le solde par zéro sans suivre les mouvements",
+        "Examiner les factures, paiements et corrections qui composent ce compte",
+        "Lettrer le compte avec une pièce d’un autre client du même montant"
+      ],
+      "answer": 2,
+      "explanation": "Le détail par compte permet de comprendre le solde. Il doit ensuite être rapproché des pièces correspondantes plutôt qu’effacé ou remplacé arbitrairement."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Qu’établit directement l’égalité des totaux débit et crédit d’une balance ?",
+      "options": [
+        "L’exactitude de chaque imputation et de chaque date",
+        "L’exhaustivité de toutes les factures reçues",
+        "L’absence de tout doublon économique",
+        "Un équilibre formel de la partie double sur les données retenues"
+      ],
+      "answer": 3,
+      "explanation": "L’équilibre est un contrôle arithmétique nécessaire. Des omissions complètes, doublons ou erreurs de comptes peuvent le préserver."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture réelle de 1 000 € est enregistrée pour 100 € aux deux côtés de l’écriture. Pourquoi la balance peut-elle rester égale ?",
+      "options": [
+        "L’erreur de montant est symétrique au débit et au crédit",
+        "La balance ignore obligatoirement tous les achats",
+        "L’égalité transforme automatiquement 100 € en 1 000 €",
+        "Le fournisseur ne doit alors plus rien réclamer"
+      ],
+      "answer": 0,
+      "explanation": "L’équilibre ne compare pas automatiquement le montant à la pièce. Une erreur identique des deux côtés peut rester invisible dans les seuls totaux."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le contrôleur part de toutes les factures présentes dans un dossier et vérifie leur trace dans le journal. Quel risque cette direction de contrôle vise-t-elle surtout ?",
+      "options": [
+        "Des écritures sans justificatif recherchées uniquement en partant du journal",
+        "Des pièces non enregistrées ou mal rapprochées",
+        "Des erreurs d’addition de la balance recherchées sans consulter le journal",
+        "Des erreurs de lettrage entre règlements et factures, contrôlées uniquement par le solde bancaire"
+      ],
+      "answer": 1,
+      "explanation": "Partir des pièces vers les écritures aide à vérifier qu’elles ont été prises en compte. Le parcours inverse aide aussi à justifier les écritures existantes."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une écriture présente 1 450 € de débits et 1 300 € de crédits. Quel montant d’écart doit être recherché avant validation ?",
+      "options": [
+        "2 750 €",
+        "1 300 €",
+        "150 €",
+        "0 €"
+      ],
+      "answer": 2,
+      "explanation": "La différence arithmétique est 1 450 − 1 300 = 150 €. La cause doit être identifiée sur les comptes et pièces, sans montant de bouclage inventé.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 1450
+            },
+            {
+              "value": 1300
+            }
+          ]
+        },
+        "expected": 150,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un paiement est enregistré deux fois avec le bon sens et des écritures équilibrées. Quelle incidence possible la balance égale ne suffit-elle pas à exclure ?",
+      "options": [
+        "Une preuve certaine que deux paiements réels ont eu lieu",
+        "Une hausse obligatoire du chiffre d’affaires",
+        "Une égalité garantie de tous les comptes individuels",
+        "Une banque et une dette faussées par un second règlement fictif"
+      ],
+      "answer": 3,
+      "explanation": "Le doublon d’une opération réelle peut conserver l’équilibre global. Les mouvements bancaires et pièces doivent confirmer le nombre de règlements effectifs."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux comptes présentent des anomalies de même montant mais de sens opposé. Quel contrôle complète l’égalité de la balance ?",
+      "options": [
+        "Justifier chaque solde et rechercher les compensations d’erreurs",
+        "Compenser les anomalies sans examiner leur nature",
+        "Supprimer les comptes concernés pour rendre le total plus court",
+        "Conclure que l’égalité des montants rend les opérations identiques"
+      ],
+      "answer": 0,
+      "explanation": "Une compensation arithmétique ne prouve pas une compensation économique correcte. Les comptes doivent représenter séparément leurs opérations justifiées."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une vente à crédit est correctement reconnue sans encaissement immédiat, et l’exercice ignore les coûts et taxes. Quel ensemble d’effets est cohérent ?",
+      "options": [
+        "Produit et banque augmentent, sans créance",
+        "Produit et créance augmentent, sans hausse bancaire immédiate",
+        "Créance et emprunt diminuent, sans produit",
+        "Banque et charges diminuent du montant vendu"
+      ],
+      "answer": 1,
+      "explanation": "L’opération contribue au résultat et laisse un droit à encaisser au bilan. Le mouvement bancaire ne surviendra qu’au règlement."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un emprunt est encaissé puis sera remboursé plus tard. Quel ensemble d’effets décrit le versement initial, hors frais ?",
+      "options": [
+        "Banque et capitaux propres augmentent comme pour un apport des associés",
+        "Banque et produits financiers augmentent comme pour des intérêts reçus",
+        "Banque et dette financière augmentent, sans produit de vente",
+        "Banque augmente et la dette financière diminue comme lors d’un remboursement reçu"
+      ],
+      "answer": 2,
+      "explanation": "Le financement reçu change les actifs et les dettes. Il n’est pas une vente et ne crée pas un produit d’exploitation du seul fait de l’encaissement."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le bilan est produit sans écritures d’inventaire malgré des services reçus non facturés et des couvertures futures déjà payées. Quelle étape manque-t-il ?",
+      "options": [
+        "Une copie du solde bancaire comme résultat de l’année",
+        "La suppression de toutes les dettes sans facture reçue",
+        "La répartition automatique du résultat entre les comptes de ventes",
+        "Les régularisations de rattachement et d’évaluation avant synthèse"
+      ],
+      "answer": 3,
+      "explanation": "Les états dépendent de soldes correctement arrêtés. Produire les documents n’effectue pas à lui seul les ajustements économiques nécessaires."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle fonction de l’annexe complète la lecture du bilan et du compte de résultat selon le cadre applicable ?",
+      "options": [
+        "Apporter les explications nécessaires à la compréhension des comptes",
+        "Présenter uniquement une nouvelle liste des soldes sans les expliquer",
+        "Se substituer à la justification des estimations par des pièces et hypothèses",
+        "Corriger les montants erronés du bilan par un commentaire sans modifier les comptes"
+      ],
+      "answer": 0,
+      "explanation": "Les états chiffrés demandent des explications sur leur élaboration et leur contenu. L’annexe ne remplace ni les pièces ni les flux réels."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dirigeant juge la performance à partir du seul solde bancaire final. Quelle comparaison illustre le mieux la limite de cette approche ?",
+      "options": [
+        "Un débit et un crédit doivent être égaux dans toute écriture",
+        "Un prêt peut augmenter la banque sans créer un résultat de vente",
+        "Un journal classe les écritures chronologiquement",
+        "Une pièce doit indiquer un montant"
+      ],
+      "answer": 1,
+      "explanation": "Les financements, investissements et décalages de paiement modifient la trésorerie différemment du résultat. Le solde bancaire n’est donc pas une mesure unique de performance."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une charge de réparation de 1 500 € a été doublée lors du paiement alors que la dette initiale est restée ouverte. Quelle explication d’erreur est la plus précise ?",
+      "options": [
+        "La balance est forcément déséquilibrée de 1 500 €",
+        "Le chiffre d’affaires doit être augmenté de 1 500 €",
+        "La charge est surévaluée et le compte fournisseur n’a pas été correctement soldé",
+        "Le paiement a nécessairement créé une nouvelle réparation"
+      ],
+      "answer": 2,
+      "explanation": "Nommer les comptes et leurs effets décrit le défaut économique. Un équilibre débit-crédit peut subsister malgré ce double achat et cette dette non dénouée."
+    }
+  ]
+}

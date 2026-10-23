@@ -1,0 +1,545 @@
+{
+  "module": "UE10",
+  "chapter": "evaluation",
+  "sourceHash": "7d17399947aae4a70234df152df68f234b48f35cc6654498030fa919f1127afd",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier porte sur des comptes individuels français établis selon le PCG. Une solution est reprise d’un exemple IFRS sans vérifier ses conditions. Quelle démarche manque avant son application ?",
+      "options": [
+        "Vérifier le traitement dans le référentiel applicable aux comptes étudiés",
+        "Appliquer automatiquement toute règle IFRS à tous les comptes français",
+        "Choisir le traitement qui augmente le plus les actifs",
+        "Retenir la méthode utilisée par le plus grand concurrent sans autre contrôle"
+      ],
+      "answer": 0,
+      "explanation": "La pertinence d’une norme dépend du cadre des comptes concernés. Un exemple externe ne remplace pas l’identification des règles applicables.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un groupe publie un chiffre d’actif consolidé et une filiale un chiffre individuel. Le rapport explique leur écart comme une erreur de la filiale. Quelle vérification est nécessaire ?",
+      "options": [
+        "Supposer que deux états doivent contenir les mêmes valeurs dans tous les cas",
+        "Comparer périmètres et référentiels avant d’attribuer l’écart à une erreur",
+        "Modifier les comptes individuels pour atteindre le total consolidé",
+        "Retenir le plus grand montant comme seule valeur correcte"
+      ],
+      "answer": 1,
+      "explanation": "Des comptes de périmètre ou de règles différents ne sont pas directement interchangeables. L’écart peut refléter leur objet, pas un simple calcul faux.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle information doit accompagner la référence d’une règle utilisée pour valoriser un actif ?",
+      "options": [
+        "Uniquement l’intitulé du texte sans vérifier sa version",
+        "Le seul pays du fournisseur sans qualifier les comptes étudiés",
+        "Le cadre des comptes et la version applicable de la règle",
+        "La seule date de paiement sans connaître la nature de l’opération"
+      ],
+      "answer": 2,
+      "explanation": "Le traitement doit être rattaché à un référentiel et à son état applicable. La traçabilité de la source permet d’en contrôler la portée.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux traitements semblent possibles dans deux textes de champs différents. Quelle question doit être résolue avant de comparer leur résultat chiffré ?",
+      "options": [
+        "La taille de l’entreprise supposée suffisante à elle seule pour choisir toute règle",
+        "Le prix de l’actif supposé suffisant pour déterminer le référentiel",
+        "Le choix automatique du montant le plus faible",
+        "Le champ d’application pertinent pour l’entité et les comptes"
+      ],
+      "answer": 3,
+      "explanation": "Le champ d’application précède la mesure. Le montant calculé ne décide pas, à lui seul, du texte que l’on doit appliquer.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La note indique seulement « selon la norme » sans préciser les comptes, la source ni les hypothèses. Quel élément de qualité manque-t-il ?",
+      "options": [
+        "Un raisonnement traçable et vérifiable dans un cadre défini",
+        "La seule concordance du montant final avec celui d’un autre actif",
+        "Le seul choix du montant le plus prudent sans explicitation du référentiel",
+        "Le seul contrôle de l’équilibre débit-crédit de l’écriture finale"
+      ],
+      "answer": 0,
+      "explanation": "Une conclusion doit pouvoir être reliée à ses conditions et à une règle identifiable. Un intitulé vague ne permet pas de vérifier l’évaluation.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un équipement comprend une structure durable et un module significatif remplacé beaucoup plus souvent. Quelle analyse du plan est pertinente selon le PCG ?",
+      "options": [
+        "Utiliser la durée de la structure pour l’ensemble sans analyser le rythme du module",
+        "Examiner un suivi séparé des éléments ayant des utilisations différentes",
+        "Utiliser la durée courte du module pour toute la structure sans analyser sa consommation",
+        "Répartir le coût total sur la moyenne simple des deux durées sans affecter les coûts aux éléments"
+      ],
+      "answer": 1,
+      "explanation": "Les éléments principaux ayant des rythmes d’utilisation distincts peuvent demander des plans propres. L’analyse doit refléter la consommation de chacun.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une structure de 30 000 € est amortie sur dix ans et un module de 8 000 € sur quatre ans. Les bases sont sans valeur résiduelle, linéaires et sur une année pleine. Quelle annuité totale obtient-on ?",
+      "options": [
+        "3 800 €",
+        "7 000 €",
+        "5 000 €",
+        "2 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La structure donne 30 000 / 10 = 3 000 € et le module 8 000 / 4 = 2 000 €. Leur somme est 5 000 €.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 30000
+                },
+                {
+                  "value": 10
+                }
+              ]
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 8000
+                },
+                {
+                  "value": 4
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 5000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le matériel est ventilé en deux composants, mais les coûts affectés dépassent le coût total retenu. Quel rapprochement faut-il effectuer ?",
+      "options": [
+        "Augmenter le prix d’achat jusqu’à égaler la ventilation sans justificatif",
+        "Supprimer le composant le moins cher sans analyse",
+        "Conserver l’écart comme un produit de vente",
+        "Vérifier que la ventilation ne crée ni coût supplémentaire ni double affectation"
+      ],
+      "answer": 3,
+      "explanation": "La décomposition répartit un coût et ne le multiplie pas. Les bases des composants doivent être rapprochées du total et de leur justification.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux pièces d’un actif sont exploitées de façon indissociable avec le même rythme d’utilisation, sans élément principal différent identifié. La seule existence de deux références techniques impose-t-elle toujours deux plans ?",
+      "options": [
+        "Non, il faut analyser les utilisations plutôt que le seul nombre de références",
+        "Oui, chaque référence impose toujours une durée nouvelle",
+        "Oui, mais il faut doubler le coût total",
+        "Non, parce qu’aucun actif ne peut comporter de composant"
+      ],
+      "answer": 0,
+      "explanation": "Le PCG relie la séparation aux caractéristiques d’utilisation des éléments concernés. Un découpage purement administratif ne suffit pas à imposer des rythmes différents.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une durée moyenne unique donne la bonne annuité totale la première année mais pas le suivi des remplacements ultérieurs. Pourquoi ne suffit-elle pas nécessairement ?",
+      "options": [
+        "Une même annuité initiale prouve toujours des usages identiques",
+        "Elle peut masquer des consommations et des renouvellements différents",
+        "La première annuité doit être le seul objectif du plan",
+        "Les remplacements n’ont jamais d’incidence sur les actifs"
+      ],
+      "answer": 1,
+      "explanation": "Une égalité ponctuelle de total ne décrit pas le profil de chaque élément. Le suivi doit rester adapté à leur utilisation sur plusieurs périodes.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La facture ne donne qu’un prix global pour un actif comportant des éléments à usages distincts. Quel travail est nécessaire pour une décomposition justifiée ?",
+      "options": [
+        "Diviser systématiquement le prix par le nombre de lignes techniques",
+        "Affecter la totalité du coût à chacun des composants",
+        "Étayer l’allocation du coût aux éléments par des données techniques ou économiques pertinentes",
+        "Retenir des montants destinés uniquement à lisser le résultat"
+      ],
+      "answer": 2,
+      "explanation": "La ventilation doit être fondée sur des éléments probants. L’absence de prix détaillé ne justifie ni une double affectation ni une répartition arbitraire.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le vendeur annonce une durée technique maximale, mais l’entreprise prévoit un usage beaucoup plus intensif. Quelle donnée doit orienter l’estimation de durée comptable ?",
+      "options": [
+        "La seule durée publicitaire maximale du vendeur",
+        "Le nombre d’échéances de paiement sans lien avec l’usage",
+        "Le taux de TVA figurant sur la facture",
+        "Les conditions d’utilisation attendues par l’entité, avec leurs limites pertinentes"
+      ],
+      "answer": 3,
+      "explanation": "La durée doit refléter l’usage et les contraintes applicables à l’entité. Une possibilité technique maximale n’est pas toujours son horizon réel d’utilisation.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans le PCG, quand une valeur résiduelle intervient-elle dans la base amortissable ?",
+      "options": [
+        "Lorsqu’elle est significative et mesurable selon les conditions prévues",
+        "Dès qu’un chiffre arbitraire permet de réduire les dotations",
+        "Uniquement si elle égale le capital restant dû",
+        "Toujours pour la moitié du prix d’achat"
+      ],
+      "answer": 0,
+      "explanation": "La valeur résiduelle doit satisfaire les conditions du cadre. Une simple cible de résultat ne constitue pas une estimation valable de cession nette finale.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La valeur résiduelle est maintenue à l’identique alors qu’une information fiable modifie fortement le marché attendu à la fin d’usage. Quelle démarche est appropriée ?",
+      "options": [
+        "Ignorer toute information nouvelle pour conserver les dotations anciennes",
+        "Réexaminer l’estimation et ses conséquences selon le cadre",
+        "Reprendre automatiquement tous les amortissements passés",
+        "Transformer la baisse de valeur résiduelle en encaissement"
+      ],
+      "answer": 1,
+      "explanation": "Une estimation repose sur les informations pertinentes disponibles. Une évolution significative demande un examen et un traitement cohérent, sans réécriture automatique du passé.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Après révision, une valeur nette de 18 000 € doit être répartie sur trois années restantes avec une valeur résiduelle de 3 000 €, en linéaire. Quelle dotation pleine future correspond à ces hypothèses ?",
+      "options": [
+        "6 000 €",
+        "7 000 €",
+        "5 000 €",
+        "1 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La base restante à consommer est 18 000 − 3 000 = 15 000 €. Sur trois années, la dotation est 5 000 €.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 18000
+                },
+                {
+                  "value": 3000
+                }
+              ]
+            },
+            {
+              "value": 3
+            }
+          ]
+        },
+        "expected": 5000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une expertise indépendante fournit une estimation, mais son scénario d’usage ne correspond pas à celui de l’entité. Peut-on reprendre son montant sans examen ?",
+      "options": [
+        "Oui, le statut de l’expert rend toutes les hypothèses indifférentes",
+        "Oui, si le montant est inférieur au prix payé",
+        "Non, il faut utiliser uniquement les hypothèses donnant la plus petite charge",
+        "Non, il faut vérifier la pertinence des hypothèses de l’expertise pour le cas"
+      ],
+      "answer": 3,
+      "explanation": "La qualité d’une source n’élimine pas la nécessité d’une cohérence de périmètre et d’usage. L’estimation doit correspondre aux faits du dossier.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une information nouvelle est utilisée pour reprocher automatiquement à l’ancienne estimation de ne pas l’avoir intégrée. Quelle limite faut-il rappeler ?",
+      "options": [
+        "L’ancienne estimation s’apprécie au regard des informations disponibles à l’époque",
+        "Tout résultat ultérieur différent prouve une erreur initiale",
+        "Une estimation devient toujours une règle permanente",
+        "La nouvelle information doit être ignorée dans tous les cas"
+      ],
+      "answer": 0,
+      "explanation": "Le recul ne rend pas nécessairement l’estimation passée fautive. Il faut distinguer donnée nouvelle et erreur sur un élément alors déjà disponible.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une intervention ultérieure remet seulement un équipement dans son état courant ; le cas précise qu’elle ne remplit pas les conditions de comptabilisation d’un nouvel actif. Quel traitement est cohérent ?",
+      "options": [
+        "La capitaliser automatiquement car elle concerne une machine",
+        "La traiter en charge selon sa consommation",
+        "L’ajouter toujours à la valeur résiduelle",
+        "La présenter comme un nouvel emprunt"
+      ],
+      "answer": 1,
+      "explanation": "La nature et les critères du cas déterminent le traitement. Une dépense liée à une immobilisation n’est pas automatiquement immobilisable.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le seul argument donné pour capitaliser une réparation est son montant élevé. Quel examen manque-t-il ?",
+      "options": [
+        "Le seul étalement du paiement fournisseur sur plusieurs exercices",
+        "La seule importance du montant par rapport au budget annuel d’entretien",
+        "Les critères d’actif, la nature de l’intervention et ses avantages attendus",
+        "La seule volonté de répartir la charge pour stabiliser le résultat annuel"
+      ],
+      "answer": 2,
+      "explanation": "Le montant peut être important sans rendre la dépense éligible à l’actif. Les conditions de reconnaissance et le service rendu doivent être analysés.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un élément principal à durée propre est remplacé et le dossier demande de le suivre comme composant. Quel document facilite ce suivi ?",
+      "options": [
+        "Le seul relevé du paiement global sans identification",
+        "Le seul total de l’actif historique sans détail",
+        "Une ventilation choisie après coup pour éviter toute charge",
+        "Une fiche identifiant le composant, son coût et son plan d’utilisation"
+      ],
+      "answer": 3,
+      "explanation": "Le suivi distinct doit permettre d’identifier les éléments remplacés et nouveaux. Une dépense globale seule ne documente pas la consommation du composant.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La dépense ultérieure est payée à crédit. Le préparateur conclut qu’elle doit nécessairement être immobilisée parce que le règlement est étalé. Quelle confusion faut-il corriger ?",
+      "options": [
+        "Le financement de la dépense ne décide pas de sa nature d’actif ou de charge",
+        "Le paiement à crédit supprime l’existence de tout actif",
+        "La durée de crédit remplace toujours la durée d’utilisation",
+        "Toute dette fournisseur constitue une valeur résiduelle"
+      ],
+      "answer": 0,
+      "explanation": "Les modalités de paiement décrivent le financement. Les critères de l’actif et la consommation économique gouvernent la qualification.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une même facture regroupe une prestation d’entretien consommée et une installation nouvelle que le dossier reconnaît comme actif. Quelle démarche convient ?",
+      "options": [
+        "Passer tout en actif parce qu’une ligne est capitalisable",
+        "Ventiler les éléments justifiés selon leur nature au lieu d’un traitement uniforme automatique",
+        "Passer tout en charge parce qu’une ligne est consommée",
+        "Créer deux factures fictives du montant total chacune"
+      ],
+      "answer": 1,
+      "explanation": "Des éléments de natures différentes peuvent coexister sur une pièce. Leur répartition doit éviter qu’une seule ligne impose son traitement à toutes les autres.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel enchaînement rend une évaluation d’actif contrôlable ?",
+      "options": [
+        "Montant payé, résultat cible et durée choisie pour l’atteindre",
+        "Un prix global sans usage ni hypothèse",
+        "Référentiel, qualification, coût justifié, usage des éléments et suivi des estimations",
+        "Le calendrier de prêt utilisé comme règle universelle d’actif"
+      ],
+      "answer": 2,
+      "explanation": "Le dossier doit relier règles et faits aux montants enregistrés. Les hypothèses d’utilisation et de valeur restent une partie du contrôle, pas une annexe facultative au calcul.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles213-8,214-4,214-9 et214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    }
+  ]
+}

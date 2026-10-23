@@ -1,0 +1,490 @@
+{
+  "module": "UE2",
+  "chapter": "capital-votes-clauses",
+  "sourceHash": "3d117168317c866489c19f3ae72614f5c3b4a8e94ab5909f70f65b6a76b26a9f",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un tableau de capital recense 800 titres de nominal 25 €. Quel capital nominal résulte de ces données ?",
+      "options": [
+        "20 000 €",
+        "825 €",
+        "32 €",
+        "2 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le capital nominal se calcule par le nombre total de titres multiplié par le nominal : 800 × 25 = 20 000 €. Ce résultat ne renseigne pas sur la banque ni la valeur de marché.",
+      "calculation": {
+        "digits": 0,
+        "expected": 20000,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 800
+            },
+            {
+              "value": 25
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour une émission, le tableau distingue 10 € de nominal et 16 € de prix payé par titre. Quelle donnée entre dans le calcul du capital nominal ?",
+      "options": [
+        "Le prix payé de 16 €.",
+        "Le nominal de 10 €.",
+        "La différence de 6 € seule.",
+        "La somme de 26 € par titre."
+      ],
+      "answer": 1,
+      "explanation": "Le calcul du capital nominal utilise le nominal, pas le prix total payé pour obtenir le titre. La différence doit être distinguée au lieu d’être intégrée au nominal."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une opération est expressément décrite comme une réduction de capital pour absorber des pertes, sans versement aux associés. Une copie classe la diminution du nominal comme une sortie de trésorerie. Quelle distinction manque ?",
+      "options": [
+        "La différence entre valeur nominale et prix de cession des titres.",
+        "La différence entre nombre de titres émis et nombre de titres représentés à une assemblée.",
+        "La différence entre une modification du capital absorbant des pertes et un remboursement effectivement payé aux associés.",
+        "La différence entre montant souscrit et montant encore à libérer lors de la constitution."
+      ],
+      "answer": 2,
+      "explanation": "L’opération donnée ne comporte aucun paiement : elle absorbe des pertes par modification du capital. Diminuer le nominal et rembourser une somme aux associés sont deux mécanismes différents ; une sortie bancaire ne doit pas être ajoutée aux hypothèses."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie multiplie le nombre des seuls titres présents à la réunion par le nominal et appelle ce résultat le capital total. Quelle erreur commet-elle ?",
+      "options": [
+        "Elle utilise le nominal au lieu de la valeur de marché pour mesurer le capital total.",
+        "Elle inclut à tort les titres représentés par mandataire dans une valeur de capital.",
+        "Elle confond le montant restant à libérer et le montant souscrit par les associés.",
+        "Elle limite à la présence le nombre de titres qui composent le capital."
+      ],
+      "answer": 3,
+      "explanation": "Le capital total prend les titres totaux. La présence sert à un autre rapport, généralement le contrôle du quorum ou des droits représentés selon la clause fournie."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un projet admet valablement un apport en industrie et en estime la valeur économique à 15 000 €. Un tableau ajoute cette valeur au capital social. Quel traitement résulte de l’article 1843-2 ?",
+      "options": [
+        "L’apport en industrie ne concourt pas à la formation du capital, même s’il ouvre les droits prévus par le texte.",
+        "L’apport en industrie entre au capital dès qu’une valeur économique lui est attribuée.",
+        "L’apport en industrie entre au capital progressivement à mesure que l’activité promise est réalisée.",
+        "L’apport en industrie doit être traité comme du numéraire dès que la société utilise le savoir-faire fourni."
+      ],
+      "answer": 0,
+      "explanation": "1843-2 distingue les apports en industrie du capital social : ils ne concourent pas à sa formation mais donnent lieu à des parts ouvrant droit notamment au partage des bénéfices et de l’actif net, à charge de contribuer aux pertes. Leur évaluation économique ne les transforme pas en capital.",
+      "references": [
+        {
+          "title": "Code civil, article 1843-2, texte reproduit par INERIS",
+          "url": "https://aida.ineris.fr/sites/aida/files/2021-10/Code_Civil_20220126.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une société compte 1 000 titres, tous dotés des mêmes droits pour cet exercice. Les associés présents en détiennent 420 et les mandataires valides représentent 180 autres titres. Aucun titre n’est compté deux fois. Quel pourcentage est représenté ?",
+      "options": [
+        "42 %",
+        "60 %",
+        "18 %",
+        "70 %"
+      ],
+      "answer": 1,
+      "explanation": "Les titres représentés sont 420 + 180 = 600 sur 1 000, soit 60 %. Les mandats valides s’ajoutent aux présences ; on ne compte pas seulement les personnes dans la salle.",
+      "calculation": {
+        "digits": 0,
+        "expected": 60,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 420
+                    },
+                    {
+                      "value": 180
+                    }
+                  ]
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La clause fournie mesure la présence par les titres représentés sur les titres totaux. Une copie divise le nombre de personnes présentes par le nombre d’associés. Quel contrôle faut-il rétablir ?",
+      "options": [
+        "Calculer le rapport des voix favorables sur les voix exprimées, même si la clause mesure seulement la présence.",
+        "Compter les seuls associés présents physiquement en excluant les titres valablement représentés par mandat.",
+        "Utiliser les unités et le dénominateur prévus par la clause.",
+        "Rapporter les seuls titres présents au nombre d’associés total, en mélangeant titres et personnes."
+      ],
+      "answer": 2,
+      "explanation": "Personnes, titres et voix ne sont pas nécessairement équivalents. Le calcul doit respecter l’unité de la clause et son ensemble de référence."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un associé est physiquement présent et figure aussi sur un mandat révoqué dont les titres ont déjà été ajoutés à la feuille. Quelle vérification est nécessaire avant le taux de présence ?",
+      "options": [
+        "Ajouter ses titres deux fois parce que deux pièces le mentionnent.",
+        "Supprimer tous ses titres du fait de la révocation du mandat.",
+        "Remplacer ses titres par le nombre de signatures produites.",
+        "Établir la représentation effective et éviter de compter deux fois les mêmes titres."
+      ],
+      "answer": 3,
+      "explanation": "La présence effective et les mandats doivent être rapprochés. Plusieurs pièces relatives aux mêmes titres ne créent pas plusieurs lots de droits représentés."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une clause fictive fournie exige « au moins 50 % des titres représentés pour ouvrir la séance ». Le taux exact est de 50 %. Que conclure sur ce seul seuil ?",
+      "options": [
+        "Il est atteint, car l’égalité est comprise dans au moins.",
+        "Il n’est pas atteint, car au moins imposerait un dépassement strict du taux.",
+        "Il ne peut être atteint qu’après le vote, le taux favorable déterminant aussi le quorum.",
+        "Il faut exclure les titres représentés par mandat du taux constaté, même si la clause les inclut."
+      ],
+      "answer": 0,
+      "explanation": "La formulation inclut l’égalité. Ce contrôle arithmétique ne valide pas à lui seul la convocation, les pouvoirs ou la conformité juridique de la clause fictive."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour un exercice, une clause mesure le quorum en droits de vote représentés. Le tableau des présents est donné seulement en nombre de titres de catégories à votes différents. Que manque-t-il ?",
+      "options": [
+        "La répartition des seuls suffrages exprimés entre pour et contre, utilisée comme quorum préalable.",
+        "La conversion des titres représentés en droits de vote selon chaque catégorie.",
+        "Le seul nombre d’associés présents, retenu à la place des droits de vote de leurs titres.",
+        "La valeur nominale des titres, retenue comme nombre de voix sans lecture des catégories."
+      ],
+      "answer": 1,
+      "explanation": "Le quorum décrit ici porte sur les droits de vote et non sur le nombre de titres. Il faut appliquer les droits de chaque catégorie avant de construire le rapport."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour un exercice, une clause de présence exclut 100 titres privés du droit de participer. Il existe 1 000 titres au total ; 540 titres admissibles sont représentés. Quel taux obtient-on sur les titres admis à participer ?",
+      "options": [
+        "54 %",
+        "50 %",
+        "60 %",
+        "66,67 %"
+      ],
+      "answer": 2,
+      "explanation": "La base prévue est 1 000 − 100 = 900 titres admissibles. Le taux est 540 / 900 × 100 = 60 %. L’exclusion est une hypothèse fournie, pas une règle générale.",
+      "calculation": {
+        "digits": 0,
+        "expected": 60,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 540
+                },
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 1000
+                    },
+                    {
+                      "value": 100
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une clause d’exercice calcule l’approbation comme « voix favorables / voix représentées ». Quel est son dénominateur ?",
+      "options": [
+        "Les voix favorables et elles seules.",
+        "Les titres totaux, quelle que soit la représentation.",
+        "Le nombre d’associés présents physiquement.",
+        "Les voix représentées telles que définies par la clause."
+      ],
+      "answer": 3,
+      "explanation": "Le dénominateur est donné par la règle de l’exercice. Il ne faut pas lui substituer les seuls suffrages favorables ni une autre unité comme le nombre de personnes."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour un exercice, la majorité se calcule sur 200 voix représentées, abstentions incluses. Le vote donne 110 pour, 70 contre et 20 abstentions. Quel taux favorable appliquer à cette clause ?",
+      "options": [
+        "55 %",
+        "61,11 %",
+        "35 %",
+        "65 %"
+      ],
+      "answer": 0,
+      "explanation": "La base fournie comprend les abstentions : 110 / 200 × 100 = 55 %. Les retirer du dénominateur reviendrait à appliquer une autre règle de majorité.",
+      "calculation": {
+        "digits": 0,
+        "expected": 55,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 110
+                },
+                {
+                  "value": 200
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une autre clause d’exercice retient les seuls suffrages exprimés et exclut explicitement les abstentions. Sur 300 voix représentées, il y a 120 pour, 80 contre et 100 abstentions. Quel taux favorable obtient-on ?",
+      "options": [
+        "40 %",
+        "60 %",
+        "66,67 %",
+        "33,33 %"
+      ],
+      "answer": 1,
+      "explanation": "Les suffrages retenus sont 120 + 80 = 200, les abstentions étant exclues par l’hypothèse. Le taux est 120 / 200 × 100 = 60 % ; la base n’est donc pas 300.",
+      "calculation": {
+        "digits": 0,
+        "expected": 60,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 120
+                },
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 120
+                    },
+                    {
+                      "value": 80
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le relevé contient 80 titres favorables, dont certains donnent deux voix. Une copie calcule le résultat en utilisant 80 voix favorables. Quelle information doit être intégrée ?",
+      "options": [
+        "Le prix payé pour acheter les titres.",
+        "Le montant du capital libéré seulement.",
+        "Le nombre de voix attachées à chaque titre favorable.",
+        "La durée de détention des titres, supposée identique au nombre de voix."
+      ],
+      "answer": 2,
+      "explanation": "Quand les droits diffèrent, un titre ne représente pas nécessairement une voix. Il faut totaliser les droits attachés aux titres avant le calcul du taux."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une clause fictive prévoit « plus de la moitié des voix représentées ». Le vote atteint exactement la moitié. Quelle conclusion arithmétique retenir ?",
+      "options": [
+        "Le seuil est atteint parce que la moitié serait comprise dans plus de la moitié.",
+        "Le calcul doit être refait sur les seuls suffrages exprimés, même si la clause retient les voix représentées.",
+        "Les abstentions doivent être converties en voix favorables pour dépasser la moitié, sans disposition le prévoyant.",
+        "La condition plus de la moitié n’est pas satisfaite par l’égalité."
+      ],
+      "answer": 3,
+      "explanation": "Le libellé impose un dépassement strict. Il faut distinguer plus de et au moins, sans remplacer la clause par un seuil supposé habituel."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux résolutions sont soumises à des clauses distinctes : l’une sur les voix représentées, l’autre sur toutes les voix. Comment établir leurs taux ?",
+      "options": [
+        "Appliquer à chacune son dénominateur au lieu de mutualiser le calcul.",
+        "Utiliser les voix représentées pour les deux parce que la séance est unique.",
+        "Utiliser toutes les voix pour les deux parce que le capital est identique.",
+        "Faire une moyenne des deux dénominateurs."
+      ],
+      "answer": 0,
+      "explanation": "La même réunion peut traiter plusieurs règles d’exercice. Le résultat doit suivre la clause de chaque résolution, pas un dénominateur commun choisi par commodité."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un taux favorable exact de 68 % est comparé à un seuil fourni de 60 %. Quel est l’écart exprimé en points de pourcentage ?",
+      "options": [
+        "13,33 points",
+        "8 points",
+        "128 points",
+        "0,08 point"
+      ],
+      "answer": 1,
+      "explanation": "L’écart en points est la différence des taux : 68 − 60 = 8 points. Le rapport 8 / 60 mesure une variation relative différente.",
+      "calculation": {
+        "digits": 0,
+        "expected": 8,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 68
+            },
+            {
+              "value": 60
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour l’exercice, un seuil exige au moins 70 %. Le résultat exact est 69,96 %, affiché 70,0 % après arrondi à une décimale. Quel taux doit servir à comparer au seuil ?",
+      "options": [
+        "Le taux affiché, car l’arrondi transforme l’écart en égalité.",
+        "Le taux calculé après arrondi des nombres de voix, avant de former le rapport.",
+        "Le taux exact, qui reste inférieur au seuil dans ces données.",
+        "Le taux exact majoré d’une tolérance d’affichage supposée, non prévue dans l’exercice."
+      ],
+      "answer": 2,
+      "explanation": "Un arrondi d’affichage ne doit pas masquer le résultat exact. Ici, 69,96 % reste inférieur à 70 % ; les hypothèses de comparaison ne prévoient pas de tolérance d’arrondi."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le taux favorable est inférieur de quatre points au seuil fourni. Que signifie le signe négatif de l’écart « taux favorable − seuil » ?",
+      "options": [
+        "Le taux favorable est inférieur au seuil de quatre pour cent de la valeur de ce seuil.",
+        "Le taux favorable est supérieur au seuil de quatre points, le signe étant lu comme seuil moins taux.",
+        "Le nombre de voix favorables est inférieur de quatre voix au minimum requis, quelle que soit la base.",
+        "Le taux favorable n’atteint pas le seuil de quatre points."
+      ],
+      "answer": 3,
+      "explanation": "Le signe s’interprète dans la différence de taux. Il exprime un déficit en points par rapport au seuil, pas un nombre de titres ni une irrégularité de procédure."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie obtient un taux supérieur au seuil d’approbation et conclut que la convocation et tous les mandats sont réguliers. Quelle limite doit-elle reconnaître ?",
+      "options": [
+        "L’atteinte arithmétique du seuil ne valide pas les autres conditions de la décision.",
+        "Le dépassement du seuil vaut ratification des mandats manquants, même sans contrôle de leur existence.",
+        "Le résultat favorable prouve l’envoi régulier des convocations à tous les associés admis à participer.",
+        "La publication du résultat favorable permet de considérer toute irrégularité préparatoire comme régularisée."
+      ],
+      "answer": 0,
+      "explanation": "Le calcul traite une condition déterminée. Compétence, clause applicable, convocation et représentation demandent des vérifications distinctes."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une résolution dépasse son seuil de deux points ; une autre manque le sien de trois points. Un étudiant compense les écarts et annonce un échec commun d’un point. Quel raisonnement faut-il adopter ?",
+      "options": [
+        "Regrouper les voix des deux votes puis comparer ce total à un seuil commun supposé.",
+        "Comparer séparément chaque résultat à son seuil.",
+        "Calculer une moyenne des deux écarts et appliquer ce résultat aux deux résolutions.",
+        "Appliquer le seuil le plus faible aux deux résolutions parce qu’elles sont votées lors de la même séance."
+      ],
+      "answer": 1,
+      "explanation": "Chaque résolution a son objet et sa comparaison au seuil. Les excédents et déficits de taux ne se compensent pas pour fabriquer un résultat global."
+    }
+  ]
+}

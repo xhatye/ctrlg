@@ -1,0 +1,248 @@
+{
+  "sourceHash": "26397656ed1dda7070d48524049446967848f77e16a9696ec73e741e747a9485",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "38a03de2976990ddc09461a4feec532f8e66f0d88ac67919b8c4b82f081e371c",
+      "selected": 3,
+      "reason": "48 000 / 6 = 8 000 euros de principal amorti annuellement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "b401cc1109b2bb0cb52cc5cdf2e82caf6aed81044181d037970edeb023c01a85",
+      "selected": 0,
+      "reason": "L’amortissement constant désigne la fraction de principal, et non le paiement total incluant les intérêts.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "2339d98a493b8dd8df014f92e7f27ddfc21fd7d206864b48cd6d7708b44d7f9e",
+      "selected": 2,
+      "reason": "36 000 / 9 000 = quatre échéances de capital.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "79bc3663067dd0f5733c8088f875b2e94885a0cc78dc7607ec43318046315f6d",
+      "selected": 3,
+      "reason": "Des fractions de capital croissantes ne respectent pas l’amortissement constant annoncé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "3d4a9b07559a15e7a9bddf4f41613ab28dcf19081e7fedfc9d24405f0c6c079f",
+      "selected": 2,
+      "reason": "Une même dette divisée par davantage de périodes donne une fraction de principal annuelle plus petite.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "223be068297ae735cbc2e41c9e7addfbd76b31a44a0e5307cb6e795d53169b2a",
+      "selected": 0,
+      "reason": "50 000 × 6 % = 3 000 euros pour la première année entière.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "2854feaba20e93b915aa0ee771342575dd4f734bf4680f04c591529903aa9596",
+      "selected": 1,
+      "reason": "Le capital n’est remboursé qu’en fin d’année ; il demeure prêté toute cette période.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "caf4fe2bb192e641ce5652b9ffc022d4c80b4d1a256eb0ba6e446c1946d1e0d2",
+      "selected": 0,
+      "reason": "Avant le premier remboursement, mêmes montant, taux et durée d’exposition donnent les mêmes intérêts.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "f759bdfc1bed976081ffc9b0687ff5efdddbd610d28ac90f6742c660ec172d45",
+      "selected": 0,
+      "reason": "4 % s’écrit 0,04 en multiplicateur ; utiliser 4 multiplie à tort les intérêts par cent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "bea8887e1cb89f704fa50d602980e97fdada37574dc181ffc2ead187bf882ed1",
+      "selected": 3,
+      "reason": "Les frais distincts payés à la signature ne sont pas les intérêts de période calculés sur l’encours de principal.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "319da153a602890df8695db267c014887c9c142f3188bc9b09dbf6b008477bc3",
+      "selected": 1,
+      "reason": "Au début de la deuxième année restent 20 000 ; intérêts 1 000 et principal 10 000 donnent 11 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "f07796fdaaac4f19b912f048f2304717294013616405213e8016f69b4973a085",
+      "selected": 3,
+      "reason": "Le principal constant et les intérêts décroissants produisent une échéance totale décroissante.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "ddf88c2c63dc7b48df45da08c13b43b3a78350a00ac6d43f273bc3b9dc3b92d1",
+      "selected": 2,
+      "reason": "La baisse annuelle de la base est 6 000, donnant 6 000 × 4 % = 240 euros d’intérêts en moins.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "79a89b7e3586ea861311e4b040a9e6962510ede1ead63be21505f222e01b92c5",
+      "selected": 2,
+      "reason": "Retirer les intérêts du principal minore la dette restante puis les intérêts suivants.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "dd9f66eeb358528b585c3117eb74cd9314675f3bd7831adf8e3c17d961c3b4db",
+      "selected": 1,
+      "reason": "Le dernier principal dû est 12 000, ses intérêts sont 360 : paiement total 12 360 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "051a0d368e78146027d9216123ecc0f418aa9a0a7c54806106963e19aab83800",
+      "selected": 2,
+      "reason": "Le cumul insuffisant du principal remboursé laisse une dette résiduelle ; les intérêts ne la compensent pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "c27e48fdbd3c250766357e5e9d6d4e189f7d85b0075299b7edeb6a38a5b57071",
+      "selected": 1,
+      "reason": "Les bases sont 60 000, 40 000 puis 20 000 ; à 5 %, les intérêts totalisent 3 000 + 2 000 + 1 000 = 6 000.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "843510a3d284a2a8751342471312730473751ecd6656d61303860ba76637df11",
+      "selected": 0,
+      "reason": "L’encours diminue chaque année ; multiplier la première charge maintient une base trop élevée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "c556120449e064469634cf7771403f072995d250f532b72afb7f7cfd5b34775d",
+      "selected": 1,
+      "reason": "Le total des échéances rembourse le capital initial et paie les intérêts cumulés, hors frais.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "7571e089d7ea0837107cc8acbb1dd1ac3d4a0ca91f4e1875c88084be340a8e11",
+      "selected": 0,
+      "reason": "À amortissement constant et taux positif, une durée accrue maintient le capital plus longtemps et accroît les intérêts totaux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "f6d11451d06838b86430306dc72e466c5a5282c9c6f8c169e19daee0837675ed",
+      "selected": 1,
+      "reason": "Comparer seulement le premier paiement ignore la suite de l’échéancier et son coût total.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "af301b6ef72cbbd9833b26ed9e374df5166aea111cc4a74bc9b1059d6db71110",
+      "selected": 1,
+      "reason": "Rembourser en début de période modifie la dette exposée aux intérêts pendant cette période.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

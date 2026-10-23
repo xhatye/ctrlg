@@ -1,0 +1,414 @@
+{
+  "module": "UE6",
+  "chapter": "caf-additive",
+  "sourceHash": "41118120f83a8ba18f37bce6ccc53c6ff876c0fb1b7d0b7dc22e574eff9b81c0",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi ajoute-t-on au résultat les dotations non monétaires dans l’approche additive simplifiée de la CAF ?",
+      "options": [
+        "Elles ont réduit le résultat sans décaissement correspondant",
+        "Elles représentent un nouvel encaissement bancaire",
+        "Elles constituent un remboursement de capital",
+        "Elles ont déjà augmenté le résultat net"
+      ],
+      "answer": 0,
+      "explanation": "La dotation est une charge calculée sans paiement correspondant au moment de sa constatation. L’ajouter neutralise son effet sur le résultat de départ."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour calculer la correction non monétaire nette, un étudiant additionne dotations et reprises. Quel signe faut-il corriger ?",
+      "options": [
+        "Les dotations doivent toutes être retranchées",
+        "Les reprises doivent être retranchées",
+        "Les deux montants doivent être divisés par le résultat",
+        "Le résultat doit être ajouté aux reprises seulement"
+      ],
+      "answer": 1,
+      "explanation": "Les dotations ont diminué le résultat et sont ajoutées ; les reprises l’ont augmenté et sont retranchées. Leur correction nette est une différence."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le résultat comprend 9 000 € de dotations non monétaires et 2 500 € de reprises non monétaires. Quelle correction nette de ces seuls éléments faut-il ajouter ?",
+      "options": [
+        "11 500 €",
+        "9 000 €",
+        "6 500 €",
+        "2 500 €"
+      ],
+      "answer": 2,
+      "explanation": "La correction nette est 9 000 − 2 500 = 6 500 €. Ajouter les reprises au lieu de les soustraire surestimerait cette correction.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 9000
+            },
+            {
+              "value": 2500
+            }
+          ]
+        },
+        "expected": 6500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une dotation non monétaire augmente, sans changement des autres éléments et sans effet fiscal dans l’exercice. Quel est son effet isolé sur la CAF additive ?",
+      "options": [
+        "La CAF augmente du montant de la dotation sans autre effet",
+        "La CAF diminue deux fois du montant de la dotation",
+        "La CAF devient égale au montant de la dotation",
+        "Aucun : la baisse du résultat est compensée par la réintégration de la dotation"
+      ],
+      "answer": 3,
+      "explanation": "L’effet négatif de la dotation sur le résultat est neutralisé par son ajout. L’absence d’effet fiscal est précisée pour isoler ce mécanisme."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un remboursement de capital d’emprunt est présenté comme une dotation non monétaire à ajouter au résultat pour obtenir la CAF. Pourquoi faut-il corriger ce classement ?",
+      "options": [
+        "C’est un décaissement de financement, pas une charge calculée du résultat",
+        "C’est un produit non monétaire à retrancher",
+        "C’est une reprise de provision à ajouter",
+        "C’est un gain de cession à neutraliser"
+      ],
+      "answer": 0,
+      "explanation": "Le remboursement du principal se traite dans les flux de financement. Il n’a pas la nature d’une dotation non monétaire déjà déduite du résultat."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un schéma simplifié sans autres retraitements, comment le gain de cession inclus dans le résultat est-il traité dans la CAF additive ?",
+      "options": [
+        "Il est ajouté car toute vente d’actif augmente la CAF",
+        "Il est retranché pour neutraliser le résultat de cession",
+        "Il remplace le total des dotations",
+        "Il est multiplié par le taux d’endettement"
+      ],
+      "answer": 1,
+      "explanation": "Le résultat de cession est neutralisé dans ce schéma. Le prix effectivement encaissé à la vente de l’actif est un flux distinct."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans le schéma CAF = résultat net + dotations − reprises − gain de cession, on donne respectivement 18 000 €, 6 000 €, 1 000 € et 2 000 €. Quel est le montant de CAF ?",
+      "options": [
+        "27 000 €",
+        "23 000 €",
+        "21 000 €",
+        "15 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La CAF simplifiée est 18 000 + 6 000 − 1 000 − 2 000 = 21 000 €. Le gain de cession et les reprises ne doivent pas être ajoutés.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 18000
+                    },
+                    {
+                      "value": 6000
+                    }
+                  ]
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "value": 2000
+            }
+          ]
+        },
+        "expected": 21000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une cession procure un prix de 10 000 € et un gain net de 2 000 € déjà compris dans le résultat. Le modèle fourni demande de retrancher le gain de cession. Quel montant neutraliser ?",
+      "options": [
+        "Le prix de vente de 10 000 €",
+        "La somme de 12 000 €",
+        "La différence de 8 000 €",
+        "Le gain net de 2 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le modèle mentionne le gain net inclus dans le résultat, non le prix encaissé. Confondre ces montants retirerait une correction de nature différente."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise affiche une CAF positive mais ses clients n’ont pas encore réglé une part importante des ventes. Pourquoi peut-elle manquer de liquidités ?",
+      "options": [
+        "La CAF est une ressource potentielle qui ne corrige pas le décalage du BFR",
+        "La CAF peut être utilisée comme solde bancaire sans retraitement des créances",
+        "Les créances non encaissées doivent être ajoutées à la CAF pour retrouver les encaissements",
+        "La CAF a déjà retranché tous les investissements et remboursements de principal"
+      ],
+      "answer": 0,
+      "explanation": "Le résultat et les corrections non monétaires ne décrivent pas la date de tous les paiements. Un besoin de cycle peut absorber la ressource potentielle."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant déduit l’achat d’une machine de la CAF additive, alors que le schéma demandé ne comprend que résultat et corrections calculées. Quelle confusion fait-il ?",
+      "options": [
+        "Il oublie que la machine constitue un produit financier",
+        "Il mélange la ressource potentielle de l’activité avec un emploi d’investissement",
+        "Il assimile tout investissement à une reprise de provision",
+        "Il surestime le gain de cession sans connaître le prix"
+      ],
+      "answer": 1,
+      "explanation": "La dépense d’investissement est un emploi distinct à financer. La soustraire à la CAF change l’indicateur demandé et mélange des étapes de l’analyse."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un emprunt nouveau augmente fortement les disponibilités. Quel effet son encaissement a-t-il directement sur la CAF additive ?",
+      "options": [
+        "Une hausse identique au capital reçu",
+        "Une baisse correspondant aux futurs intérêts non encore courus",
+        "Aucun, car ce financement ne constitue pas un produit du résultat",
+        "Une hausse de la totalité des échéances futures"
+      ],
+      "answer": 2,
+      "explanation": "La CAF part du résultat et de corrections identifiées. Le capital emprunté apporte une liquidité de financement sans créer un produit de l’activité."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau présente la CAF comme « le montant disponible immédiatement sur le compte bancaire ». Quel libellé serait plus exact ?",
+      "options": [
+        "Le total de tous les encaissements de l’année",
+        "Le solde des ventes et des nouveaux emprunts",
+        "La différence entre tous les actifs et toutes les dettes",
+        "Une ressource potentielle avant variation du BFR et emplois distincts"
+      ],
+      "answer": 3,
+      "explanation": "La CAF n’est pas un relevé bancaire. La variation de BFR et les mouvements d’investissement, de financement et de distribution expliquent d’autres écarts."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle relation définit l’autofinancement après distribution dans le modèle simplifié fourni ?",
+      "options": [
+        "CAF diminuée des dividendes distribués",
+        "CAF augmentée des dividendes distribués",
+        "Résultat net diminué de toutes les immobilisations",
+        "Dividendes diminués du capital emprunté"
+      ],
+      "answer": 0,
+      "explanation": "La part distribuée quitte la ressource conservée. L’autofinancement correspond donc à la CAF moins les dividendes dans ce modèle."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La CAF est de 38 000 € et les dividendes distribués de 11 000 €. Quel autofinancement après distribution obtient-on ?",
+      "options": [
+        "49 000 €",
+        "27 000 €",
+        "38 000 €",
+        "11 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Les dividendes réduisent la part conservée par l’entreprise : 38 000 − 11 000 = 27 000 € d’autofinancement.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 38000
+            },
+            {
+              "value": 11000
+            }
+          ]
+        },
+        "expected": 27000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La CAF reste stable et les dividendes distribués augmentent. Quel effet isolé attendre sur l’autofinancement après distribution ?",
+      "options": [
+        "Il augmente puisqu’une distribution prouve un bénéfice",
+        "Il reste forcément égal à la CAF",
+        "Il diminue",
+        "Il devient le nouveau solde bancaire"
+      ],
+      "answer": 2,
+      "explanation": "À CAF identique, une part distribuée plus grande laisse moins de ressources conservées. Le montant bancaire dépend encore des autres flux."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le calcul de CAF est correct. Pour obtenir l’autofinancement, le responsable retranche les dividendes puis soustrait une seconde fois les mêmes dividendes comme charges. Quelle erreur commet-il ?",
+      "options": [
+        "Il ajoute à tort les reprises non monétaires",
+        "Il omet le financement du capital prêté",
+        "Il transforme un gain de cession en amortissement",
+        "Il double compte la distribution dans le passage à l’autofinancement"
+      ],
+      "answer": 3,
+      "explanation": "La distribution doit être retranchée une seule fois de la CAF pour le calcul demandé. Un second retrait minore artificiellement l’autofinancement."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société ne distribue aucun dividende et réalise une CAF positive. Quelle égalité vaut dans le modèle « autofinancement = CAF − dividendes » ?",
+      "options": [
+        "L’autofinancement est égal à la CAF",
+        "L’autofinancement est égal à la CAF diminuée de la variation de BFR",
+        "L’autofinancement est égal à la CAF diminuée des investissements nets",
+        "L’autofinancement est égal à la CAF diminuée des remboursements de principal"
+      ],
+      "answer": 0,
+      "explanation": "Avec une distribution nulle, le passage de la CAF à l’autofinancement ne modifie pas le montant. Cela ne garantit pas un encaissement bancaire identique."
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les dividendes distribués excèdent la CAF de l’année. Quel commentaire respecte le modèle sans conclure trop vite sur la situation ?",
+      "options": [
+        "Le calcul doit plafonner les dividendes à la CAF même si la distribution réelle est supérieure",
+        "L’autofinancement calculé est négatif ; il faut examiner les autres ressources mobilisées",
+        "L’autofinancement se limite au montant de CAF avant distribution et ignore le dépassement",
+        "Le financement effectif de la distribution prouve que la CAF égale le montant distribué"
+      ],
+      "answer": 1,
+      "explanation": "Une distribution supérieure à la CAF produit un autofinancement négatif dans ce modèle. Le financement effectif exige l’examen des disponibilités et autres ressources."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quels éléments expliquent l’écart entre CAF et résultat net dans le schéma simplifié « résultat + dotations − reprises − gain de cession » ?",
+      "options": [
+        "Les seuls dividendes distribués",
+        "Le montant de tous les nouveaux emprunts",
+        "Les dotations diminuées des reprises et du gain de cession",
+        "Les seuls achats d’immobilisations payés"
+      ],
+      "answer": 2,
+      "explanation": "Soustraire le résultat de la formule laisse les corrections non monétaires et la neutralisation du gain de cession, et non les flux de financement."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les reprises et le gain de cession excèdent les dotations dans le schéma simplifié. Comment la CAF se situe-t-elle par rapport au résultat net ?",
+      "options": [
+        "Elle lui est toujours supérieure",
+        "Elle lui est obligatoirement égale",
+        "Elle ne peut pas être calculée si le gain est positif",
+        "Elle lui est inférieure"
+      ],
+      "answer": 3,
+      "explanation": "L’écart CAF moins résultat est alors négatif. Une CAF n’est donc pas systématiquement supérieure au résultat comptable."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La CAF vaut 25 000 € et le résultat net 19 000 €. Dans le modèle simplifié, quel est le montant net total des corrections qui séparent ces deux grandeurs ?",
+      "options": [
+        "6 000 €",
+        "44 000 €",
+        "19 000 €",
+        "25 000 €"
+      ],
+      "answer": 0,
+      "explanation": "L’écart net des corrections vaut CAF − résultat, soit 25 000 − 19 000 = 6 000 €. Il n’est pas nécessaire de connaître chaque correction pour trouver ce solde.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 25000
+            },
+            {
+              "value": 19000
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une CAF calculée est égale au résultat net. Peut-on conclure qu’aucune dotation, reprise ou cession n’a été enregistrée ?",
+      "options": [
+        "Oui, l’égalité prouve l’absence de toute correction",
+        "Non, leurs corrections peuvent se compenser",
+        "Oui, dès que le résultat est positif",
+        "Non, car la CAF est toujours strictement supérieure au résultat"
+      ],
+      "answer": 1,
+      "explanation": "L’égalité signifie seulement que les corrections nettes valent zéro. Des montants non nuls peuvent avoir des effets opposés et se compenser."
+    }
+  ]
+}

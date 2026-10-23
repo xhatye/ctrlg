@@ -1,0 +1,430 @@
+{
+  "module": "UE6",
+  "chapter": "financement",
+  "sourceHash": "f4a9a6dbd2c0320810b67cd324ef8775c36911a7b3f2f9ef7fe18cbaea647fcd",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un emprunt simple sans frais, sur quelle base calcule-t-on les intérêts d’une période ?",
+      "options": [
+        "Le capital restant dû au début de cette période",
+        "Le seul capital remboursé à la fin de la période",
+        "Le cumul de toutes les échéances déjà versées",
+        "La valeur initiale diminuée de tous les intérêts payés"
+      ],
+      "answer": 0,
+      "explanation": "Les intérêts rémunèrent le capital encore prêté pendant la période. Ils sont calculés sur le capital dû avant le remboursement de fin de période."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un capital de 24 000 € est dû au début d’une année. Le taux annuel fourni est 5 %, sans frais. Quels intérêts sont dus pour cette année entière ?",
+      "options": [
+        "4 800 €",
+        "1 200 €",
+        "25 200 €",
+        "120 €"
+      ],
+      "answer": 1,
+      "explanation": "Les intérêts de l’année valent 24 000 × 0,05 = 1 200 €. Le capital remboursé en fin d’année se traite séparément.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 24000
+            },
+            {
+              "value": 0.05
+            }
+          ]
+        },
+        "expected": 1200,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après un remboursement partiel du capital en fin d’année, un tableur continue de calculer tous les intérêts annuels sur le capital initial. Quel défaut présente-t-il ?",
+      "options": [
+        "Il réduit trop fortement les intérêts futurs",
+        "Il confond nécessairement taux fixe et taux variable",
+        "Il ignore la réduction du capital restant dû pour les années suivantes",
+        "Il exclut à tort les échéances déjà réglées des intérêts à venir"
+      ],
+      "answer": 2,
+      "explanation": "Après le remboursement, le capital encore prêté est plus faible. Maintenir la base initiale surestime les intérêts futurs d’un emprunt amortissable simple."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un prêt porte un taux annuel fixe et son capital est progressivement remboursé en fin de période. Sans frais ni incident, pourquoi les intérêts diminuent-ils ?",
+      "options": [
+        "Le taux fixe devient automatiquement dégressif",
+        "Les remboursements de capital sont comptabilisés comme des intérêts négatifs",
+        "Chaque échéance est intégralement déduite du taux annuel",
+        "Le capital restant dû qui sert de base diminue"
+      ],
+      "answer": 3,
+      "explanation": "C’est la base de calcul qui baisse, même si le taux reste fixe. Taux et montant d’intérêts sont deux notions différentes."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le taux fourni est mensuel, mais l’échéance étudiée couvre une année entière. Pourquoi faut-il préciser une convention de conversion ?",
+      "options": [
+        "Pour ne pas appliquer un taux d’un mois à une période d’un an",
+        "Parce qu’un taux mensuel doit toujours être multiplié par cent",
+        "Parce qu’un taux annuel interdit tout remboursement de capital",
+        "Pour calculer les intérêts exclusivement sur l’annuité"
+      ],
+      "answer": 0,
+      "explanation": "La durée des intérêts et la périodicité du taux doivent être cohérentes. Une convention explicite évite de traiter une année comme un seul mois."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Hors frais, quelles composantes forment une échéance de remboursement d’emprunt ?",
+      "options": [
+        "Le capital restant dû après paiement et les intérêts de la période",
+        "Un remboursement de capital et des intérêts",
+        "Le remboursement de capital diminué des intérêts",
+        "Le seul remboursement du capital, les intérêts étant exclus du paiement"
+      ],
+      "answer": 1,
+      "explanation": "L’échéance distingue restitution du principal et rémunération du prêt. Un différé ou un remboursement in fine peut modifier leur calendrier, qu’il faut préciser."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une échéance annuelle hors frais est de 7 300 €. Elle comprend 900 € d’intérêts. Quel montant de capital est remboursé ?",
+      "options": [
+        "8 200 €",
+        "7 300 €",
+        "6 400 €",
+        "900 €"
+      ],
+      "answer": 2,
+      "explanation": "La part de capital se déduit de l’échéance totale : 7 300 − 900 = 6 400 €. Les intérêts ne remboursent pas le principal.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 7300
+            },
+            {
+              "value": 900
+            }
+          ]
+        },
+        "expected": 6400,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une échéance hors frais comprend 4 000 € de capital et 300 € d’intérêts. Un étudiant inscrit une échéance de 4 000 €. Quel élément a-t-il omis ?",
+      "options": [
+        "Le capital déjà remboursé lors de l’échéance précédente",
+        "Le capital restant dû après tous les remboursements",
+        "La totalité du montant initial emprunté",
+        "Le décaissement correspondant aux intérêts"
+      ],
+      "answer": 3,
+      "explanation": "Le paiement total comprend capital et intérêts, soit 4 300 €. Ne retenir que le capital sous-estime la sortie de trésorerie."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat prévoit un capital remboursé par fractions égales et un taux fixe sur le capital dû. Comment évoluent normalement les échéances hors frais ?",
+      "options": [
+        "Elles diminuent parce que les intérêts diminuent",
+        "Elles sont constantes car la fraction de capital est constante",
+        "Elles augmentent avec le cumul du capital remboursé",
+        "Elles deviennent égales aux seuls intérêts"
+      ],
+      "answer": 0,
+      "explanation": "À amortissement constant du principal, la part de capital reste fixe et les intérêts baissent. Leur somme, l’échéance, est donc dégressive."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une banque annonce une échéance « tout compris », incluant une assurance distincte. Quelle décomposition permet de contrôler le tableau d’emprunt ?",
+      "options": [
+        "Assimiler assurance et remboursement de capital",
+        "Séparer capital, intérêts et assurance selon les données contractuelles",
+        "Déduire l’assurance du capital initial sans autre information",
+        "Traiter l’ensemble du paiement comme des intérêts"
+      ],
+      "answer": 1,
+      "explanation": "Le modèle simple capital plus intérêts s’entend hors autres frais. Un paiement comprenant une assurance exige d’isoler cette composante pour contrôler le principal."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel paiement réduit directement le capital restant dû d’un emprunt ?",
+      "options": [
+        "Le paiement des seuls intérêts",
+        "Le paiement d’une assurance liée au prêt",
+        "Le remboursement du principal",
+        "Le règlement de frais bancaires distincts"
+      ],
+      "answer": 2,
+      "explanation": "Le capital restant dû diminue des remboursements du principal. Intérêts, assurance et frais rémunèrent d’autres prestations sans restituer le capital."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le capital dû avant échéance est de 32 000 €. L’entreprise verse 8 600 €, dont 1 600 € d’intérêts, sans frais. Quel capital reste dû après paiement ?",
+      "options": [
+        "23 400 €",
+        "30 400 €",
+        "40 600 €",
+        "25 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le remboursement de principal vaut 8 600 − 1 600 = 7 000 €. Le nouveau capital dû est donc 32 000 − 7 000 = 25 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 32000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 8600
+                },
+                {
+                  "value": 1600
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 25000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un différé contractuel prévoit pendant un an le paiement des seuls intérêts, sans capitalisation ni frais. Que devient le capital dû à la fin de cette année ?",
+      "options": [
+        "Il reste identique",
+        "Il diminue du montant des intérêts versés",
+        "Il augmente automatiquement des intérêts payés",
+        "Il devient nul puisque l’échéance a été réglée"
+      ],
+      "answer": 0,
+      "explanation": "Le paiement des intérêts rémunère le prêt mais ne rembourse pas le principal. En l’absence de capitalisation, le capital demeure inchangé."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans un tableau, le capital final d’une période ne correspond pas au capital initial de la période suivante, sans nouveau tirage ni ajustement. Que faut-il contrôler ?",
+      "options": [
+        "Le report de la totalité de l’annuité comme capital initial de la période suivante",
+        "La continuité des soldes de principal entre les périodes",
+        "Le report du cumul des intérêts comme capital déjà remboursé",
+        "Le maintien systématique du capital initial malgré les remboursements effectués"
+      ],
+      "answer": 1,
+      "explanation": "Le capital final devient normalement la base de départ de la période suivante. Une rupture non expliquée révèle une erreur de report ou un flux omis."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise rembourse par anticipation une fraction du principal, opération supposée sans frais. Quel effet attendu sur les intérêts futurs doit-on tester avec le contrat ?",
+      "options": [
+        "Une hausse automatique du taux fixe",
+        "Une suppression de tout remboursement de capital restant",
+        "Une réduction de la base de capital sur laquelle ils sont calculés",
+        "Une augmentation du montant initial prêté"
+      ],
+      "answer": 2,
+      "explanation": "Un remboursement anticipé réduit le capital encore dû. Le nouveau calendrier et le calcul effectif des intérêts doivent néanmoins être rapprochés du contrat."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel est l’objectif principal d’un plan de financement prévisionnel ?",
+      "options": [
+        "Déterminer uniquement le bénéfice imposable",
+        "Remplacer le suivi des échéances par la somme du chiffre d’affaires",
+        "Prouver qu’un emprunt constitue un produit d’exploitation",
+        "Vérifier la couverture des besoins par des ressources aux périodes concernées"
+      ],
+      "answer": 3,
+      "explanation": "Le plan rapproche besoins et ressources datés. L’équilibre de financement ne se confond ni avec le résultat ni avec l’encaissement des ventes."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un projet exige 60 000 € d’équipement, 8 000 € de BFR initial et une réserve de trésorerie de 5 000 €. Les apports sont de 25 000 € et l’emprunt obtenu de 40 000 €. Quel financement supplémentaire manque ?",
+      "options": [
+        "8 000 €",
+        "3 000 €",
+        "13 000 €",
+        "73 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Les besoins totalisent 73 000 € contre 65 000 € de ressources. L’écart de 8 000 € doit être couvert ou les besoins adaptés.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 60000
+                    },
+                    {
+                      "value": 8000
+                    }
+                  ]
+                },
+                {
+                  "value": 5000
+                }
+              ]
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 25000
+                },
+                {
+                  "value": 40000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 8000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les ressources prévues dépassent les besoins sur l’année, mais l’emprunt sera versé après la livraison payable immédiatement. Quel risque subsiste ?",
+      "options": [
+        "Un excédent disponible dès la livraison, déduit du seul total annuel",
+        "Un manque de liquidités à la date de paiement malgré l’équilibre annuel",
+        "Une couverture du besoin initial par une ressource non encore encaissée",
+        "Un besoin durable égal à la totalité du prêt, sans tenir compte du décalage temporaire"
+      ],
+      "answer": 1,
+      "explanation": "Une ressource disponible trop tard ne règle pas le besoin initial. Le calendrier des flux doit être rapproché, au besoin avec un financement relais."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un plan couvre l’achat de la machine mais omet le stock initial et les créances à financer. Quel besoin important risque-t-il de sous-estimer ?",
+      "options": [
+        "Le montant nominal déjà emprunté",
+        "Les seuls intérêts historiques du dirigeant",
+        "Le BFR de démarrage de l’activité",
+        "L’amortissement comptable déjà enregistré"
+      ],
+      "answer": 2,
+      "explanation": "La mise en exploitation peut nécessiter des fonds avant les encaissements clients. Financer l’immobilisation ne couvre pas automatiquement ce besoin du cycle."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un emprunt est encaissé aujourd’hui. Quel traitement décrit correctement son rôle financier et évite une confusion avec la performance ?",
+      "options": [
+        "Il augmente directement la CAF du montant de capital versé",
+        "Il diminue le coût de l’investissement à hauteur du prêt reçu",
+        "Il augmente le résultat d’exploitation à hauteur de l’encaissement",
+        "Il apporte une ressource remboursable et ne constitue pas une vente"
+      ],
+      "answer": 3,
+      "explanation": "L’emprunt procure des liquidités contre une dette. Il ne résulte pas d’une vente et son encaissement ne constitue pas un produit d’exploitation."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un plan de financement inclut la totalité des annuités comme remboursements de capital puis ajoute à nouveau tous les intérêts. Quel problème cela pose-t-il ?",
+      "options": [
+        "Les intérêts sont comptés deux fois dans les décaissements",
+        "Le principal n’est jamais pris en compte",
+        "Les intérêts sont systématiquement sous-estimés",
+        "Le capital restant dû augmente du fait de ce seul classement"
+      ],
+      "answer": 0,
+      "explanation": "Si une annuité comprend déjà capital et intérêts, ajouter une seconde fois les intérêts double compte leur paiement et surestime le besoin de trésorerie."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un financement couvre exactement l’investissement et le BFR prévus, sans marge. Quelle hypothèse doit être testée avant de juger le plan robuste ?",
+      "options": [
+        "La seule égalité des besoins et ressources dans le scénario central",
+        "La capacité à absorber un retard d’encaissement ou un besoin supérieur aux prévisions",
+        "Le coût de financement seul, sans modifier les dates d’encaissement du scénario central",
+        "Le montant initial de BFR seul, sans examiner sa sensibilité à l’activité"
+      ],
+      "answer": 1,
+      "explanation": "Une couverture exacte laisse peu de marge face aux aléas. Un scénario de retard client ou de hausse du besoin vérifie la résistance du plan."
+    }
+  ]
+}

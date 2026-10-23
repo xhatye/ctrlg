@@ -1,0 +1,368 @@
+{
+  "module": "DSCG6",
+  "chapter": "argumenter",
+  "sourceHash": "7f604afcb3ccbd5ea0273f094998e0c65f159dd794dbb33783529edf04ef285c",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An examiner asks, “How would outsourcing affect our exposure?” The discussion has covered both cybersecurity and exchange rates. Which response best clarifies the question before you answer?",
+      "options": [
+        "Do you mean exposure to cybersecurity incidents or to exchange-rate movements?",
+        "Would you like me to explain why cybersecurity is the more important exposure?",
+        "Shall I describe the outsourcing proposal before considering either exposure?",
+        "May I assume you are referring to exchange rates and begin with currency hedging?"
+      ],
+      "answer": 0,
+      "explanation": "La question est ambiguë entre deux risques évoqués. La bonne réponse demande directement lequel est visé ; les autres choisissent une interprétation ou déplacent l’échange avant d’avoir clarifié le sens."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "During a cost question, you do not hear the figure the examiner gives. Which reply asks politely for the missing information without replacing it with your own assumption?",
+      "options": [
+        "Shall I answer using the figure I quoted in my presentation?",
+        "Could you repeat the cost figure, please?",
+        "Would you agree that the original cost estimate is the relevant one?",
+        "Could we use the forecast figure instead of the one just mentioned?"
+      ],
+      "answer": 1,
+      "explanation": "La difficulté porte sur un chiffre non entendu : demander sa répétition cible ce manque. Négocier un autre chiffre ou reprendre une donnée antérieure modifierait la question posée."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "You have kept the in-house option open. The examiner asks, “Why have you ruled out keeping IT in-house?” Which opening corrects the question’s premise before addressing the comparison?",
+      "options": [
+        "I ruled it out because the question treats the outsourcing choice as already settled.",
+        "The reason for rejecting it matters less than defending the rejection consistently.",
+        "I have not ruled it out; I can explain the conditions under which I would prefer either option.",
+        "I will compare the providers on the assumption that keeping IT in-house has been excluded."
+      ],
+      "answer": 2,
+      "explanation": "La question présuppose une exclusion qui n’a pas eu lieu. La réponse rectifie ce point puis revient à la comparaison ; les autres acceptent ou défendent à tort cette prémisse."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "You are asked, “What is the main benefit, and what would make you reject the offer?” Which opening shows that you will answer both parts rather than just discuss benefits?",
+      "options": [
+        "I will identify the benefits first, then describe the provider’s experience.",
+        "I will begin with the rejection condition and leave the benefit for a written follow-up.",
+        "I will describe the offer’s strengths and then give another example of those strengths.",
+        "I will identify the main benefit first, then explain the condition that would lead me to reject the offer."
+      ],
+      "answer": 3,
+      "explanation": "La question a deux composantes, avantage principal et condition de refus. Le bon début annonce les deux ; l’expérience du prestataire ou un second avantage ne répond pas à la deuxième partie."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The examiner asks for a migration fee that is not in your documents. Which answer best acknowledges the precise information gap while keeping the discussion useful?",
+      "options": [
+        "I do not have the migration quote; I would need it before completing the total-cost comparison.",
+        "The migration fee should be close to the annual licence charge, so I would use that figure.",
+        "The fee is probably included, because outsourcing contracts commonly bundle services.",
+        "I would use last year’s internal support budget as an estimate of the migration fee."
+      ],
+      "answer": 0,
+      "explanation": "La bonne réponse identifie la donnée absente et son rôle dans l’analyse. Les autres substituent un coût d’une autre nature ou supposent une inclusion contractuelle sans élément fourni."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A speaker says, “I support outsourcing because it is the option I prefer.” Which addition would turn this circular reason into a relevant argument?",
+      "options": [
+        "My recommendation reflects the option I would personally choose.",
+        "The proposed service covers overnight incidents that our present team cannot cover within its schedule.",
+        "My preference for the option is the reason I would select it.",
+        "I regard outsourcing as preferable to keeping the service in-house."
+      ],
+      "answer": 1,
+      "explanation": "Une raison doit apporter un élément distinct de la préférence. La couverture d’incidents hors horaires explique un avantage ; les autres formulations répètent l’opinion sans la justifier."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An internal team already meets the required response time. An outsourcing bidder promises a still faster response but charges more. Which reason specifically supports paying the premium?",
+      "options": [
+        "The premium equals the value of the faster response because it is the price charged for that improvement.",
+        "The percentage improvement in response time can be applied directly as the same percentage saving on all company expenditure.",
+        "Shorter interruptions would avoid losses whose estimated value exceeds the additional charge.",
+        "All losses from interruptions can be treated as eliminated when valuing the faster response."
+      ],
+      "answer": 2,
+      "explanation": "Le bénéfice pertinent est la valeur estimée des pertes évitées, à comparer au supplément facturé. Le prix demandé ne prouve pas cette valeur ; une amélioration de temps ne s’applique pas automatiquement à toutes les dépenses et ne supprime pas toutes les pertes."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Your recommendation assumes that a provider will accept the company’s required data-return format. The examiner points out that no agreement on that format has been reached. Which answer deals with the objection?",
+      "options": [
+        "The recommendation concerns price, so the return format can be decided after the contract is accepted.",
+        "The provider’s technical experience makes a written agreement on the format unnecessary.",
+        "The return format is mentioned in our request, which establishes the provider’s acceptance of it.",
+        "That is a condition of my recommendation; I would confirm the return format before accepting the offer."
+      ],
+      "answer": 3,
+      "explanation": "L’objection vise une hypothèse non confirmée. Le bon choix en fait une condition à vérifier ; la compétence technique du prestataire ou la demande du client ne prouve pas un accord sur le format."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An outsourcing fee is below the current internal payroll. Which treatment is justified when assessing whether first-year outsourcing costs would actually be lower?",
+      "options": [
+        "Include transition costs and any retained internal costs alongside the provider’s charges on a common first-year scope.",
+        "Exclude transition charges from the first-year comparison because they will not recur every month.",
+        "Treat the entire current payroll as avoidable when estimating the outsourcing saving.",
+        "Charge all shared infrastructure to the internal option while excluding infrastructure retained after outsourcing."
+      ],
+      "answer": 0,
+      "explanation": "Le premier exercice comprend transition, forfait et coûts internes conservés. Le caractère ponctuel d’un coût ne le retire pas du premier exercice ; la suppression de toute la paie ou l’allocation asymétrique des coûts doit être étayée."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A manager rejects outsourcing solely because “we have always done IT internally.” Which response most directly tests whether that reason remains relevant?",
+      "options": [
+        "Would retaining the familiar arrangement reduce the need to discuss alternatives?",
+        "Which current requirements are better met internally, and what evidence supports that advantage?",
+        "How many years has the company used its current internal arrangement?",
+        "Which manager originally approved the internal arrangement?"
+      ],
+      "answer": 1,
+      "explanation": "La durée d’une pratique n’établit pas son adéquation actuelle. La réponse utile recherche les exigences et l’avantage démontré aujourd’hui, plutôt que des précisions historiques qui laissent le raisonnement inchangé."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A comparison states, “Provider A is no less expensive than provider B.” Which interpretation follows from no less expensive?",
+      "options": [
+        "A costs at most as much as B; equality is not excluded.",
+        "A must cost strictly more than B, so equality is excluded.",
+        "A costs at least as much as B; equality is not excluded.",
+        "A and B must have exactly the same cost."
+      ],
+      "answer": 2,
+      "explanation": "No less expensive exclut un coût inférieur, mais pas l’égalité : A est au moins aussi cher. At most inverse la borne ; strictly more et exactly the same ajoutent chacun une restriction absente."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Offer A includes hosting only; offer B includes hosting, support and backup recovery. Which comparison would avoid mistaking a narrower service for a cheaper equivalent?",
+      "options": [
+        "Compare only the hosting fee in each offer and treat the remaining services as free.",
+        "Compare the full price of B with the hosting-only price of A as equivalent packages.",
+        "Exclude support and recovery from the decision because they are not priced separately in B.",
+        "Add the cost of equivalent support and recovery to A, then compare aligned service packages."
+      ],
+      "answer": 3,
+      "explanation": "La comparaison exige des prestations équivalentes. Reconstituer les services manquants de A permet d’éviter de confondre prix inférieur et périmètre plus étroit ; des services inclus ne sont pas nécessairement gratuits ou sans intérêt."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Two plans have equal monthly fees, but include 200 and 500 tickets respectively. Expected demand is 450 tickets. Which calculation compares their expected monthly costs on the stated demand?",
+      "options": [
+        "Add the applicable charge for 250 excess tickets to the 200-ticket plan’s fee and compare it with the other plan’s fee.",
+        "Divide each fixed fee by its included allowance and compare those two full-capacity unit prices alone.",
+        "Divide both fixed fees by 450 and treat the equal quotients as the complete cost per expected ticket.",
+        "Average the two included allowances and use that common allowance to cost each plan."
+      ],
+      "answer": 0,
+      "explanation": "Le besoin excède de 250 tickets le petit forfait et reste dans le grand. Il faut connaître le prix de dépassement ; comparer les seuls forfaits ou leurs prix unitaires à pleine capacité ne chiffre pas le besoin prévu."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An internal budget is in euros and a provider’s quote is in dollars. Both cover one year and identical services. Which comparison is methodologically appropriate?",
+      "options": [
+        "Compare only the percentage difference between the quoted numbers without aligning currencies.",
+        "Convert one amount using an explicit exchange-rate assumption and examine sensitivity to that rate.",
+        "Compare the numbers as quoted because both contracts cover the same year.",
+        "Treat the dollar quote as a euro amount because both are annual service prices."
+      ],
+      "answer": 1,
+      "explanation": "La monnaie est une unité de comparaison à harmoniser, même si période et services coïncident. Une hypothèse de change explicite permet le calcul et l’examen du risque ; comparer des valeurs nominales dans deux monnaies ne suffit pas."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Provider A reports 99.9% availability during business hours. Provider B reports 99.7% availability over every hour of the week. What prevents a direct conclusion that A offers less downtime?",
+      "options": [
+        "The higher percentage determines less total downtime regardless of the hours covered.",
+        "Business hours and weekly hours differ only in presentation, not in the exposure measured.",
+        "The availability percentages use different service windows.",
+        "A percentage below 100% cannot be compared with another percentage."
+      ],
+      "answer": 2,
+      "explanation": "Le dénominateur temporel diffère. Un meilleur taux sur les seules heures ouvrées ne détermine pas directement l’indisponibilité sur toute la semaine ; la fenêtre de service doit être alignée."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Offer A has lower annual fees but higher exit charges; offer B has higher annual fees and no exit charge. The company may change providers after two years. Which comparison addresses this decision?",
+      "options": [
+        "Rank the offers only by the first annual fee because exit is a later decision.",
+        "Rank the offers only by the exit charge, disregarding the service fees incurred before exit.",
+        "Average the annual fee and exit charge without accounting for how often each is paid.",
+        "Compare expected two-year service and exit costs under the same exit scenario."
+      ],
+      "answer": 3,
+      "explanation": "Le scénario de sortie rend pertinents les coûts de service sur deux ans et les frais de sortie. Ne regarder qu’un poste ou moyenner des montants de fréquences différentes ne mesure pas ce scénario."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A purchasing instruction says, “You need not renew the support contract.” Which meaning does need not convey here?",
+      "options": [
+        "The instruction imposes no obligation to renew.",
+        "The instruction prohibits renewal.",
+        "The instruction requires renewal if the provider does not object.",
+        "The instruction says renewal has already occurred."
+      ],
+      "answer": 0,
+      "explanation": "Need not indique une absence de nécessité, pas une interdiction. Il ne faut pas le confondre avec must not ; la phrase ne décrit ni renouvellement déjà réalisé ni condition de silence du prestataire.",
+      "references": [
+        {
+          "title": "Cambridge English Grammar Today — Need",
+          "url": "https://dictionary.cambridge.org/grammar/british-grammar/need"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "After a migration, a reviewer says, “The access check should have been completed before launch, but it was not.” What does should have been completed express in this context?",
+      "options": [
+        "An action expected to be completed for the first time after the review.",
+        "A past requirement or advisable action that was not fulfilled.",
+        "A deduction that the check was certainly completed before launch.",
+        "Permission to omit the check before launch."
+      ],
+      "answer": 1,
+      "explanation": "Avec la précision but it was not, should have been completed renvoie à une action qui aurait dû être accomplie avant le lancement. Ce n’est ni une déduction de réalisation ni une autorisation de l’omettre.",
+      "references": [
+        {
+          "title": "Cambridge English Grammar Today — Should",
+          "url": "https://dictionary.cambridge.org/us/grammar/british-grammar/Should"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A consultant writes, “A full rollout would be cost-prohibitive for this firm.” Which interpretation best captures cost-prohibitive?",
+      "options": [
+        "The rollout would be affordable because the costs are already covered by recurring savings.",
+        "The rollout would be impossible to price until every supplier has submitted a binding quote.",
+        "The expense would be so high that it would prevent the firm from undertaking the rollout.",
+        "The rollout would be subject to a legal ban on charging implementation fees."
+      ],
+      "answer": 2,
+      "explanation": "Cost-prohibitive qualifie un coût assez élevé pour empêcher une opération. Le terme porte sur l’obstacle économique ; il ne signifie ni interdiction juridique, ni absence de devis, ni financement déjà assuré.",
+      "references": [
+        {
+          "title": "Cambridge Dictionary — Prohibitive",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/prohibitive"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "After a difficult migration, an analyst says, “Earlier training might have reduced the disruption.” What does the analyst mean?",
+      "options": [
+        "Earlier training is confirmed as the cause of the actual reduction observed.",
+        "Earlier training is a firm commitment scheduled for the next migration.",
+        "Earlier training is known to have occurred before the disruption.",
+        "Earlier training is suggested as a possible way the past disruption could have been smaller."
+      ],
+      "answer": 3,
+      "explanation": "Might have suivi du participe passé vise une possibilité relative au passé, ici contrefactuelle ou non établie. La phrase n’affirme ni que la formation a eu lieu ni qu’un résultat a été démontré ou programmé."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Compare “The provider is liable for the loss” with “The provider is liable to lose the data.” Which distinction between liable for and liable to is intended here?",
+      "options": [
+        "The first concerns responsibility for a loss; the second concerns a risk that a loss will occur.",
+        "The first predicts a loss; the second assigns responsibility for a loss already incurred.",
+        "Both expressions mean that a loss has already been reimbursed.",
+        "Both expressions describe an identical contractual allocation of liability."
+      ],
+      "answer": 0,
+      "explanation": "Liable for exprime ici une responsabilité, tandis que liable to suivi de l’infinitif exprime un risque ou une probabilité défavorable. L’exercice porte sur le sens des expressions et ne détermine aucune responsabilité juridique réelle.",
+      "references": [
+        {
+          "title": "Portail linguistique du Canada — Liable for, liable to",
+          "url": "https://our-languages.canada.ca/en/writing-tips-plus/liable-for-liable-to"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A reviewer cannot find a schedule in the main file and says, “The contractor must have submitted it separately.” What does must have submitted express here?",
+      "options": [
+        "A past contractual duty to submit the schedule in a separate file.",
+        "A strong inference that the submission occurred separately in the past.",
+        "A new requirement that the contractor submit the schedule separately next week.",
+        "A past recommendation to submit separately that the contractor failed to follow."
+      ],
+      "answer": 1,
+      "explanation": "Must have suivi du participe exprime une forte déduction sur un fait passé. Une obligation passée serait exprimée par had to ; une recommandation passée non suivie par should have. La phrase ne fixe pas ici une nouvelle échéance.",
+      "references": [
+        {
+          "title": "Cambridge English Grammar Today — Must",
+          "url": "https://dictionary.cambridge.org/uk/grammar/british-grammar/must"
+        }
+      ]
+    }
+  ]
+}

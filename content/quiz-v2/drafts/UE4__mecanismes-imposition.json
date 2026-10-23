@@ -1,0 +1,473 @@
+{
+  "module": "UE4",
+  "chapter": "mecanismes-imposition",
+  "sourceHash": "91dfeac11923e3599ca479f004bd41bc929ccff7de4f91ea62750017150a0560",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un mécanisme d’imposition, que désigne l’assiette ?",
+      "options": [
+        "Le montant servant de base au calcul selon les règles du prélèvement.",
+        "La somme nécessairement déjà versée au Trésor.",
+        "Le seul jour où l’administration envoie un avis.",
+        "Le taux appliqué à tous les prélèvements."
+      ],
+      "answer": 0,
+      "explanation": "L’assiette est la grandeur à laquelle le mécanisme de calcul s’applique. Elle doit être déterminée selon le prélèvement étudié, avec ses inclusions et exclusions. Elle ne se confond ni avec le taux, ni avec la dette liquidée, ni avec son paiement."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un prélèvement fictif est fixé à 3 € par kilogramme admissible. Le dossier compte 800 kg dont 150 kg expressément exclus. Quel montant est liquidé ?",
+      "options": [
+        "2 400 €",
+        "1 950 €",
+        "650 €",
+        "450 €"
+      ],
+      "answer": 1,
+      "explanation": "L’assiette est ici une quantité, et non un prix : 800−150=650 kg admissibles. Le prélèvement vaut 650×3=1 950 €. Ce cas rappelle qu’une assiette n’est pas nécessairement monétaire ; le mécanisme fourni détermine l’unité à utiliser.",
+      "calculation": {
+        "expected": 1950,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 800
+                },
+                {
+                  "value": 150
+                }
+              ]
+            },
+            {
+              "value": 3
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une taxe autre que la TVA entre dans le prix d’une livraison taxable. Aucune exception particulière n’est applicable. Selon l’article 267 I-1° du CGI en 2026, cette taxe autre que la TVA est-elle, en principe, incluse dans la base TVA ?",
+      "options": [
+        "Non, tous les impôts sont exclus de la base.",
+        "Oui, contrairement à la TVA elle-même, expressément exclue.",
+        "Seulement si elle est appelée acompte.",
+        "Non, dès lors qu’elle figure sur une ligne séparée."
+      ],
+      "answer": 1,
+      "explanation": "L’article 267 inclut dans la base les impôts, taxes, droits et prélèvements de toute nature, à l’exception de la TVA elle-même. Le fait de détailler une somme sur la facture ne suffit pas à l’exclure de l’assiette ; il faut rechercher les exclusions applicables.",
+      "references": [
+        {
+          "title": "CGI, article 267, éléments de base, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042910064/2025-04-01"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un calcul de TVA retient le solde de banque comme assiette alors qu’il comprend prix de vente, emprunt et apport en capital. Quelle opération doit précéder l’application du taux ?",
+      "options": [
+        "Qualifier les flux pour isoler les bases des opérations taxables.",
+        "Taxer tous les encaissements au même taux parce qu’ils sont en banque.",
+        "Déduire la taxe collectée du capital pour définir l’assiette.",
+        "Retenir le seul solde final sans examiner les opérations."
+      ],
+      "answer": 0,
+      "explanation": "Un solde bancaire agrège des opérations de nature différente et des soldes d’ouverture éventuels. Il ne représente pas automatiquement une base imposable. Il faut identifier les opérations relevant du prélèvement et leurs montants selon les règles applicables."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel rôle joue le fait générateur dans un mécanisme fiscal ?",
+      "options": [
+        "Il correspond à l’événement auquel la règle rattache la naissance de l’obligation fiscale.",
+        "Il constitue nécessairement le dernier jour de paiement accordé au contribuable.",
+        "Il désigne le calcul numérique de la taxe.",
+        "Il correspond toujours à la date d’impression d’une facture."
+      ],
+      "answer": 0,
+      "explanation": "Le fait générateur est un événement défini par la règle propre au prélèvement. La liquidation, l’exigibilité et le paiement sont d’autres étapes. Certaines dates peuvent coïncider, mais cette coïncidence ne permet pas d’en confondre les notions."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une livraison intérieure ordinaire de biens est effectuée le 28 juin 2026. La facture est éditée le 2 juillet et le paiement a lieu le 20 juillet ; aucun acompte ni régime spécial. Selon l’article 269, quelle date correspond au fait générateur ?",
+      "options": [
+        "Le 28 juin, date de livraison.",
+        "Le 2 juillet, date d’édition de la facture.",
+        "Le 20 juillet, date de règlement.",
+        "Le dernier jour du mois du paiement."
+      ],
+      "answer": 0,
+      "explanation": "Pour cette livraison ordinaire, le fait générateur intervient quand la livraison est effectuée. Les dates ultérieures de facturation ou de paiement ne déplacent pas cet événement dans le cas fourni. L’absence d’acompte et de régime particulier délimite le raisonnement.",
+      "references": [
+        {
+          "title": "CGI, article 269, fait générateur et exigibilité, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069577/LEGISCTA000006163045/2026-05-31/?anchor=LEGIARTI000044983827"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une prestation intérieure ordinaire est réalisée le 10 avril 2026, facturée le 12 avril et encaissée le 5 mai, sans acompte ni option pour les débits. Quel couple de dates correspond au fait générateur et à l’exigibilité ?",
+      "options": [
+        "10 avril pour le fait générateur, 5 mai pour l’exigibilité.",
+        "12 avril pour le fait générateur, 12 avril pour l’exigibilité.",
+        "5 mai pour les deux notions.",
+        "10 avril pour l’exigibilité, 5 mai pour le fait générateur."
+      ],
+      "answer": 0,
+      "explanation": "Le fait générateur de la prestation ordinaire est son exécution, tandis que l’exigibilité intervient à l’encaissement dans le régime sans option décrit. La facture n’est pas ici le critère unique des deux dates. Le cas montre pourquoi il faut conserver deux rubriques distinctes.",
+      "references": [
+        {
+          "title": "CGI, article 269, fait générateur et exigibilité, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069577/LEGISCTA000006163045/2026-05-31/?anchor=LEGIARTI000044983827"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une prestation relevant du régime ordinaire donne lieu à des décomptes successifs correspondant à des périodes mensuelles. Selon l’article 269 1-a bis applicable en 2026, quel événement sert au fait générateur ?",
+      "options": [
+        "L’expiration des périodes auxquelles les décomptes se rapportent.",
+        "La seule date du premier contrat pour toute sa durée.",
+        "Le paiement de la dernière facture, pour toutes les périodes antérieures.",
+        "Le dépôt du premier bilan après la fin du contrat."
+      ],
+      "answer": 0,
+      "explanation": "Le texte prévoit un fait générateur à l’expiration des périodes concernées pour les prestations donnant lieu à des décomptes ou encaissements successifs. Il ne faut donc pas remplacer toutes les périodes par une seule date de signature ou de fin de contrat.",
+      "references": [
+        {
+          "title": "CGI, article 269, fait générateur et exigibilité, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069577/LEGISCTA000006163045/2026-05-31/?anchor=LEGIARTI000044983827"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une prestation intérieure ordinaire est terminée et facturée en août 2026. Le prestataire n’a pas opté pour les débits et n’a reçu aucun acompte. Le client ne paie qu’en octobre. Quel événement déclenche l’exigibilité dans ce régime ?",
+      "options": [
+        "L’encaissement d’octobre.",
+        "La fin de prestation d’août, au titre du fait générateur.",
+        "L’émission de la facture d’août, même en l’absence d’option pour les débits.",
+        "L’échéance de paiement portée sur la facture, même si le client ne paie pas à cette date."
+      ],
+      "answer": 0,
+      "explanation": "Pour les prestations ordinaires visées par le 2-c de l’article 269, l’exigibilité intervient à l’encaissement, sauf option pour les débits. La réalisation fixe le fait générateur, mais ne déclenche pas automatiquement l’exigibilité dans le régime décrit.",
+      "references": [
+        {
+          "title": "CGI, article 269, fait générateur et exigibilité, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069577/LEGISCTA000006163045/2026-05-31/?anchor=LEGIARTI000044983827"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un prestataire soumis à la TVA sur les débits inscrit régulièrement le débit du compte client le 3 juin 2026, après réalisation de la prestation. Le règlement intervient le 20 juillet ; aucun acompte. Quelle date d’exigibilité retenir selon l’option décrite ?",
+      "options": [
+        "Le 3 juin, au débit.",
+        "Le 20 juillet, quel que soit le régime.",
+        "La date de signature du devis, retenue à la place du débit comptable.",
+        "La date de clôture comptable, substituée au débit du compte client."
+      ],
+      "answer": 0,
+      "explanation": "L’option pour les débits modifie le critère d’exigibilité des prestations concernées. Dans les faits fournis, le débit a lieu le 3 juin et aucun acompte antérieur n’intervient. Le délai de paiement accordé au client ne reporte donc pas cette exigibilité au règlement de juillet.",
+      "references": [
+        {
+          "title": "CGI, article 269, fait générateur et exigibilité, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069577/LEGISCTA000006163045/2026-05-31/?anchor=LEGIARTI000044983827"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "En 2026, un vendeur reçoit un acompte avant la livraison intérieure ordinaire de biens déterminés. Toutes les conditions de taxation de cet acompte sont remplies. Quelle exigibilité prévoit l’article 269 2-a ?",
+      "options": [
+        "À l’encaissement de l’acompte, à concurrence de son montant.",
+        "Seulement à la livraison, aucun acompte de biens ne pouvant rendre de TVA exigible.",
+        "À la commande pour l’intégralité du prix, même non encaissé.",
+        "À la clôture annuelle pour tous les acomptes cumulés."
+      ],
+      "answer": 0,
+      "explanation": "Depuis l’entrée en application prévue au 1er janvier 2023, l’article 269 prévoit l’exigibilité sur les acomptes encaissés avant la livraison, à concurrence du montant reçu. Le cas précise que les conditions propres à l’acompte sont réunies ; il ne faut pas taxer immédiatement toute la vente.",
+      "references": [
+        {
+          "title": "CGI, article 269, fait générateur et exigibilité, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069577/LEGISCTA000006163045/2026-05-31/?anchor=LEGIARTI000044983827"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une prestation intérieure au régime des encaissements est facturée 6 000 € TTC au taux fourni de 20 %. Le client verse seulement 2 400 € TTC en mai ; aucun autre versement ni option. Quelle TVA devient exigible en mai sur ce règlement ?",
+      "options": [
+        "1 000 €",
+        "480 €",
+        "400 €",
+        "2 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le règlement TTC contient 2 400/1,20=2 000 € de base et donc 400 € de TVA. Dans ce régime, l’exigibilité porte ici sur le montant encaissé, pas sur l’intégralité des 6 000 € facturés. Appliquer 20 % au TTC du règlement donnerait à tort 480 €.",
+      "calculation": {
+        "expected": 400,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2400
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 2400
+                },
+                {
+                  "value": 1.2
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "CGI, article 269, fait générateur et exigibilité, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069577/LEGISCTA000006163045/2026-05-31/?anchor=LEGIARTI000044983827"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une livraison intérieure ordinaire de marchandises est achevée en septembre 2026, sans acompte ni régime spécial. Le vendeur accorde un paiement en novembre. Ce délai contractuel reporte-t-il à lui seul l’exigibilité de la TVA ?",
+      "options": [
+        "Oui, toute TVA suit obligatoirement le paiement final.",
+        "Non, dans ce régime l’exigibilité intervient au fait générateur de la livraison.",
+        "Oui, le vendeur peut choisir librement chaque mois d’exigibilité après livraison.",
+        "Non, parce que toute taxe devient exigible dès le devis."
+      ],
+      "answer": 1,
+      "explanation": "Pour la livraison ordinaire décrite, l’article 269 rattache l’exigibilité au fait générateur, soit la livraison, en l’absence de particularité donnée. Un délai commercial de règlement n’est pas une option fiscale générale pour les encaissements.",
+      "references": [
+        {
+          "title": "CGI, article 269, fait générateur et exigibilité, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069577/LEGISCTA000006163045/2026-05-31/?anchor=LEGIARTI000044983827"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une acquisition intracommunautaire de biens est effectuée le 22 mars 2026. Aucune facture autre qu’une éventuelle facture d’acompte n’est délivrée avant le 15 avril. Selon l’article 269 2-d, quelle date limite d’exigibilité ordinaire retenir ?",
+      "options": [
+        "Le 15 avril.",
+        "Le 22 mai.",
+        "La date du paiement final, même six mois plus tard.",
+        "Le 31 décembre dans tous les cas."
+      ],
+      "answer": 0,
+      "explanation": "Le 2-d prévoit l’exigibilité le 15 du mois suivant le fait générateur, sauf délivrance antérieure d’une facture répondant aux conditions du texte, autre qu’une facture d’acompte. Le cas exclut cette facture anticipatrice ; la date retenue est donc le 15 avril.",
+      "references": [
+        {
+          "title": "CGI, article 269, fait générateur et exigibilité, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069577/LEGISCTA000006163045/2026-05-31/?anchor=LEGIARTI000044983827"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une acquisition intracommunautaire de biens est effectuée le 20 mars 2026. Une facture définitive, non d’acompte, est délivrée le 28 mars avant l’échéance du 15 avril. Quel événement peut anticiper l’exigibilité selon l’article 269 2-d ?",
+      "options": [
+        "La délivrance de cette facture définitive le 28 mars.",
+        "La seule date d’une facture d’acompte antérieure.",
+        "La date de réception du devis, sans facture définitive.",
+        "La seule échéance commerciale de règlement, même postérieure au 15 avril."
+      ],
+      "answer": 0,
+      "explanation": "Le texte permet l’exigibilité lors de la délivrance de la facture si elle précède le 15 du mois suivant et ne constitue pas une facture d’acompte. Ce critère particulier ne doit pas être étendu à tout devis ou à toute date commerciale figurant dans le dossier.",
+      "references": [
+        {
+          "title": "CGI, article 269, fait générateur et exigibilité, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006069577/LEGISCTA000006163045/2026-05-31/?anchor=LEGIARTI000044983827"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une déclaration a été déposée le 18 juillet pour des taxes devenues exigibles en juin. L’auteur assimile le 18 juillet à leur date d’exigibilité. Quelle distinction manque ?",
+      "options": [
+        "La naissance de l’exigibilité et l’échéance de l’obligation déclarative.",
+        "Le dépôt et le fait générateur, qui seraient nécessairement identiques dans tous les régimes.",
+        "L’exigibilité et l’encaissement, qui coïncideraient toujours quelle que soit l’opération.",
+        "Le report du mois d’exigibilité au jour du virement dans tous les cas."
+      ],
+      "answer": 0,
+      "explanation": "La déclaration porte sur une période fiscale déterminée ; sa date de dépôt ne redéfinit pas l’événement qui a rendu la taxe exigible. Le calendrier de déclaration et de paiement doit être vérifié après le rattachement des opérations à leur période."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle opération correspond à la liquidation d’un impôt ?",
+      "options": [
+        "Déterminer son montant à partir de l’assiette et du mécanisme applicable.",
+        "Constater uniquement la réalisation matérielle d’une livraison.",
+        "Choisir une date d’envoi de facture.",
+        "Vérifier seulement si le virement bancaire a abouti."
+      ],
+      "answer": 0,
+      "explanation": "La liquidation calcule le montant selon la base, les taux ou barèmes et les mécanismes prévus. Le fait générateur, l’exigibilité, les obligations déclaratives et le paiement sont des questions différentes. Un calcul exact ne suffit pas à valider les autres étapes."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un mécanisme fictif fournit une base de 18 000 €, un prélèvement proportionnel de 8 % et un crédit expressément imputable de 250 €. Aucun autre élément. Quel montant net est liquidé après ce crédit ?",
+      "options": [
+        "1 440 €",
+        "1 190 €",
+        "17 750 €",
+        "1 690 €"
+      ],
+      "answer": 1,
+      "explanation": "L’impôt brut est 18 000×8 %=1 440 €, puis le crédit de 250 € s’impute sur cet impôt : 1 190 €. Déduire 250 € de la base avant multiplication confond un crédit d’impôt et une déduction d’assiette.",
+      "calculation": {
+        "expected": 1190,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 18000
+                },
+                {
+                  "value": 0.08
+                }
+              ]
+            },
+            {
+              "value": 250
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le barème fourni est progressif par tranches. Le préparateur applique à toute la base le taux de la tranche la plus haute atteinte. Quelle erreur de liquidation commet-il ?",
+      "options": [
+        "Il confond un barème progressif avec l’application d’un taux unique à toute la base.",
+        "Il traite à tort le taux le plus haut comme un événement générateur.",
+        "Il a correctement appliqué toute règle progressive.",
+        "Il aurait dû additionner tous les taux sans répartir la base."
+      ],
+      "answer": 0,
+      "explanation": "Dans une progression par tranches, chaque taux s’applique à la fraction correspondante. Atteindre une tranche haute ne transforme pas les fractions précédentes en base au même taux. Il faut distinguer la structure du barème d’un prélèvement proportionnel uniforme."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le montant conditionnel d’une taxe est correctement calculé à partir d’une base et d’un taux fournis. La nature de l’opération et les options d’exigibilité restent inconnues. Quelle conclusion est justifiée ?",
+      "options": [
+        "Le montant est calculé sous hypothèses, mais la période de déclaration reste à établir.",
+        "L’exactitude du montant prouve nécessairement l’exigibilité sur le mois choisi.",
+        "Le taux permet de déduire la nature juridique de l’opération dans tous les cas.",
+        "Une base chiffrée exclut tout contrôle du fait générateur."
+      ],
+      "answer": 0,
+      "explanation": "Le calcul et le rattachement temporel sont deux vérifications distinctes. Une multiplication correcte peut fournir un montant sous hypothèses sans justifier le mois de déclaration. Il faut qualifier l’opération et son régime pour résoudre la date d’exigibilité."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contribuable règle exactement la somme calculée dans un tableur, mais la base omet une opération taxable. Que permet de conclure la preuve du paiement ?",
+      "options": [
+        "Le montant payé est établi, sans prouver que la liquidation était complète.",
+        "Tout paiement exact au regard du tableur valide nécessairement son assiette.",
+        "Le paiement annule toute opération taxable omise.",
+        "L’opération omise est automatiquement transférée à l’exercice suivant."
+      ],
+      "answer": 0,
+      "explanation": "Une preuve bancaire établit le règlement effectué. Elle ne vérifie pas les opérations et règles ayant servi au calcul. Le rapprochement du paiement avec le tableur ne remplace donc pas le contrôle de complétude de l’assiette."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dossier comporte une base déclarée, un taux appliqué, des acomptes versés et un solde bancaire payé. Quelle démarche distingue les contrôles successifs ?",
+      "options": [
+        "Vérifier la base, liquider l’impôt, puis rapprocher les versements et le solde.",
+        "Utiliser le solde payé pour tenir la base et le taux pour nécessairement exacts.",
+        "Déduire d’abord tous les acomptes de la base, puis appliquer le taux.",
+        "Additionner l’impôt calculé et les acomptes pour définir le montant annuel dû."
+      ],
+      "answer": 0,
+      "explanation": "Le contrôle doit conserver l’ordre et la nature des grandeurs. L’assiette et le mécanisme déterminent l’impôt ; les acomptes et le paiement se rapprochent ensuite de cette dette. Inverser cet ordre peut masquer une erreur d’assiette ou compter les versements comme de l’impôt supplémentaire."
+    }
+  ]
+}

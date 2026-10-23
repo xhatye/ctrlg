@@ -1,0 +1,248 @@
+{
+  "sourceHash": "fd92d1d4951b375ada33138ecf4ad3cdfcc102e424b70202d49157174e003469",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "ca193338a2067013a0165006d27335b1bae7e7c1ca8159f51e7d2c96bdd48d38",
+      "selected": 1,
+      "reason": "Stock initial 8 000 + achats 35 000 − stock final 11 000 = 32 000 consommés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "a682cf6f8d306b6b798fa1fd0eb14d7efaea6b8f37c5e2296474ce6113e00efb",
+      "selected": 0,
+      "reason": "Le stock final encore présent n’a pas été consommé et se retranche des ressources disponibles.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "39cc8a8d08a42f8df921662216f0b17d70a888ffdae789edb61768d1524dcce9",
+      "selected": 1,
+      "reason": "À approvisionnement identique, un stock final supérieur laisse moins de consommation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "1fe9523ecf78a4f573d6ba7b0b14df9fdeaa512b98b2d8098b7696420769948c",
+      "selected": 3,
+      "reason": "6 000 + 24 000 − 22 000 = 8 000 euros de stock final.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "bef3d367875a061e82a3876e1c7a21b45291318f3a87e2bc05fdc3d3a01a4d59",
+      "selected": 3,
+      "reason": "Les deux stocks doivent être valorisés selon des bases de coût cohérentes, pas coût puis prix de vente.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "67eb610ed843e07e8a15d9c2eddc780408200d9ca7ae4d00fce2ed4f92a0edeb",
+      "selected": 3,
+      "reason": "Une dépense enregistrée couvrant une prestation future appelle une charge constatée d’avance à la clôture.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "447bda966abaf643622b05b0dac2912d1733564a404f20ddcefea771cd592cd2",
+      "selected": 3,
+      "reason": "Deux mois consommés sur douze donnent 2 400 × 2 / 12 = 400 euros pour l’exercice.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "e6dfdbf31c3d990b31540a4654d0498c7c4207761beaf3de87840c7c3d6fb338",
+      "selected": 1,
+      "reason": "La date de paiement ne fixe pas l’exercice de consommation d’un service.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "bd8a4ee711da1cc8edc90670cd89d149a4e9da852a7b06fc204540a4693c5a4f",
+      "selected": 0,
+      "reason": "À la clôture aucune prestation future ne subsiste ; le paiement initialement anticipé ne suffit pas à créer une CCA.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "527598967f37d2205bec35af68f86ab29d92a30fa1e6ed41b04beacce8d225ab",
+      "selected": 0,
+      "reason": "Deux tiers de 1 800 valent 1 200 euros à reporter sur la période future.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "f9813f920d1fd0cf7361a53441835b784c072e1dc5f5ed8ed80ad90b198f91c8",
+      "selected": 2,
+      "reason": "Une prestation déjà reçue crée une charge et une dette à rattacher malgré l’absence de facture.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "353dfaa832697041998392d035a25bfb27d8fc7acc134dc9bf2acbfddc321217",
+      "selected": 0,
+      "reason": "La période réelle de prestation détermine son rattachement, au-delà de la date du document.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "4fb117ae7c4503ca31d46bd58bd503b2e55d2fc64c2290c1a0f1d9f8f96a8189",
+      "selected": 1,
+      "reason": "La seule commande n’atteste pas un service reçu avant clôture ; pas de charge consommée dans ce cas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "5c8e2d7f834a371d374e1a8ad774fc807c56e7177ce9a43505774da37fa56a82",
+      "selected": 1,
+      "reason": "Omettre une prestation reçue minore la charge et la dette à constater.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "67e4bb1399bd94bb256322e3b2ba4d2f25c43297c412098618fb6584615dd2f4",
+      "selected": 3,
+      "reason": "Le service réalisé doit être attesté et chiffré avec un document correspondant à l’intervention réelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "42d6dea03e0e76cf8c625c0c283eee9baaff869ceee0fd925a3c1a25a5c4aafe",
+      "selected": 1,
+      "reason": "La facture reçue doit être rapprochée de la charge estimée pour éviter de la comptabiliser deux fois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "72430b4c5b717bbbf0b531147d2884a6b3ea5d6231e18863e04718c10f1953a6",
+      "selected": 2,
+      "reason": "Le rapprochement physique-fichier teste les quantités et révèle leurs écarts, sans valider seul les coûts unitaires.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "02a8c22807d94ce889d3f6763aa8d542579c768eb2034c306c8ecc65af871ce3",
+      "selected": 2,
+      "reason": "(100 − 92) × 15 = 120 euros de marchandises manquantes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "507a59929a69b534de054cf3b8a367e905fb9e7cbee5d173f5542a7a850eaff7",
+      "selected": 2,
+      "reason": "Un écart appelle recomptage et recherche de mouvements ou erreurs avant une accusation de vol.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "f0b30abfdd1495f65d944eb759f90b7cbb85fe783b8fdc2b05a7394a7722fce7",
+      "selected": 1,
+      "reason": "Les quantités exactes ne valident pas la valeur d’articles abîmés ; l’évaluation doit être examinée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "473643445638fe655cbf87540f6cb875706d561e49dd670e4bef80fd99eac6b7",
+      "selected": 1,
+      "reason": "Les bons de réception et dates de saisie permettent de relier une entrée physique au mouvement manquant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "c45132910058e907891519f28bd25b795989f5f83fa7e605f22f8b8f8de0e1cb",
+      "selected": 2,
+      "reason": "Les biens de tiers explicitement exclus ne doivent pas être valorisés dans le stock propre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

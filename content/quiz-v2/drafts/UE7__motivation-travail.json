@@ -1,0 +1,368 @@
+{
+  "module": "UE7",
+  "chapter": "motivation-travail",
+  "sourceHash": "09bdbfc447d3d720f84355a7d16948cd1e0ddf41878680fc0c7ed88f085f2299",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une comptable aime résoudre des rapprochements complexes et choisit ces tâches pour le plaisir de les comprendre, même sans récompense supplémentaire. Quel ressort est décrit ?",
+      "options": [
+        "Une motivation intrinsèque liée à l’intérêt pour l’activité elle-même.",
+        "Une motivation externe principalement orientée vers une prime promise.",
+        "Une action principalement provoquée par la peur d’une sanction.",
+        "Une absence de motivation parce qu’aucune récompense supplémentaire n’est prévue."
+      ],
+      "answer": 0,
+      "explanation": "La satisfaction est ici dans l’activité, ce qui caractérise la motivation intrinsèque. Prime et sanction renvoient à des motifs instrumentaux distincts.",
+      "references": [
+        {
+          "title": "Self-Determination Theory — motivation and basic psychological needs",
+          "url": "https://selfdeterminationtheory.org/the-theory/"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une responsable délègue une tâche complexe mais ne donne ni information, ni formation, ni accès aux ressources nécessaires. Que manque-t-il pour parler d’autonomie soutenue ?",
+      "options": [
+        "Ajouter une obligation de compte rendu détaillé sans ouvrir les accès ou organiser l’apprentissage.",
+        "Des moyens, compétences et appuis compatibles avec la responsabilité confiée.",
+        "Confier aussi une seconde tâche complexe pour accroître la variété, sans traiter les ressources manquantes.",
+        "Remplacer les ressources par un objectif de résultat plus précis en conservant les mêmes obstacles."
+      ],
+      "answer": 1,
+      "explanation": "L’autonomie ne consiste pas à demander à une personne de se débrouiller seule. Elle doit correspondre à une marge de décision réelle accompagnée de compétences, moyens et soutien adaptés."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un système de reconnaissance récompense les résultats mais ses critères restent inconnus. Quel risque faut-il examiner ?",
+      "options": [
+        "Un risque provenant uniquement du montant global des récompenses, indépendamment des règles de distribution.",
+        "Une difficulté qui serait résolue par la publication des seuls noms des bénéficiaires, sans les critères.",
+        "Un sentiment d’opacité ou d’iniquité susceptible d’altérer la coopération.",
+        "Une question de compréhension sans effet possible sur les relations entre collègues."
+      ],
+      "answer": 2,
+      "explanation": "La reconnaissance doit être compréhensible et examinée dans ses effets. Des critères opaques peuvent fragiliser la confiance et les comportements collectifs, même si le dispositif distribue des récompenses."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une équipe manque d’effectifs pour sa charge et reçoit seulement des messages d’encouragement. Quelle limite de l’action faut-il relever ?",
+      "options": [
+        "Traiter le manque d’effectifs comme une question de communication en renforçant seulement les encouragements.",
+        "Augmenter le nombre de points individuels de motivation sans examiner la répartition de la charge.",
+        "Attendre un regain d’engagement pour vérifier ensuite si les capacités disponibles couvrent la charge.",
+        "Le soutien verbal ne remplace pas le traitement d’une contrainte structurelle de moyens."
+      ],
+      "answer": 3,
+      "explanation": "La motivation doit être analysée avec les conditions réelles. Reconnaître les efforts peut compter, mais ne corrige pas mécaniquement un écart durable entre ressources disponibles et travail demandé."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Pour comprendre une baisse de participation aux réunions, quel recueil est plus informatif qu’une étiquette immédiate de désengagement ?",
+      "options": [
+        "Les contraintes de planning, la charge, le contenu des réunions et les points de vue des personnes.",
+        "Comparer les absences au montant des primes uniquement, en laissant de côté les horaires et tâches.",
+        "Utiliser seulement l’appréciation générale du responsable comme mesure des motifs des participants.",
+        "Déduire les motifs du seul taux de présence, sans distinguer contraintes d’organisation et intérêt pour le contenu."
+      ],
+      "answer": 0,
+      "explanation": "La participation dépend de conditions et d’intérêts concrets. Croiser les faits et les points de vue permet de formuler des hypothèses plutôt que déduire une motivation unique d’un indicateur."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une salariée n’aime pas la vérification documentaire, mais s’y engage parce qu’elle en reconnaît l’importance pour la fiabilité des comptes. Quel motif est principalement exprimé ?",
+      "options": [
+        "Une motivation intrinsèque fondée sur le plaisir déclaré de chaque vérification.",
+        "Une motivation liée à la valeur personnellement reconnue de l’objectif, sans plaisir nécessaire dans la tâche.",
+        "Une motivation fondée principalement sur une sanction imminente annoncée par son supérieur.",
+        "Un désengagement complet puisque la tâche n’est pas appréciée pour elle-même."
+      ],
+      "answer": 1,
+      "explanation": "La salariée s’approprie l’utilité de l’objectif : c’est une régulation identifiée, distincte du plaisir intrinsèque et d’une pression externe décrite.",
+      "references": [
+        {
+          "title": "Self-Determination Theory — motivation and basic psychological needs",
+          "url": "https://selfdeterminationtheory.org/the-theory/"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une direction veut reconnaître un effort de coopération qui a aidé d’autres équipes mais n’apparaît pas dans le nombre de ventes individuelles. Quelle dimension peut-elle examiner ?",
+      "options": [
+        "Seulement le volume de ventes personnelles, quelle que soit la contribution collective.",
+        "Uniquement les résultats les plus facilement chiffrés en euros.",
+        "La qualité et l’effort de coopération, avec des critères explicites.",
+        "Le seul temps de présence sans regarder le travail accompli."
+      ],
+      "answer": 2,
+      "explanation": "La reconnaissance peut porter sur plusieurs dimensions, dont l’effort et la qualité du travail. Les contributions collectives doivent être décrites et appréciées de manière compréhensible, pas assimilées à une absence de résultat."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans la théorie de l’autodétermination, une équipe reçoit la liberté de choisir ses méthodes mais se sent isolée et exclue des échanges. Quel besoin reste particulièrement insatisfait ?",
+      "options": [
+        "Le besoin d’autonomie, du seul fait qu’elle choisit déjà ses méthodes.",
+        "Le besoin de compétence, démontré insatisfait par le seul isolement social.",
+        "Un besoin de contrôle hiérarchique permanent, substitut des relations entre collègues.",
+        "Le besoin de relation et d’appartenance."
+      ],
+      "answer": 3,
+      "explanation": "Autonomie, compétence et relation sont distinguées. Le fait explicitement décrit est l’isolement relationnel, pas une incapacité technique.",
+      "references": [
+        {
+          "title": "Self-Determination Theory — motivation and basic psychological needs",
+          "url": "https://selfdeterminationtheory.org/the-theory/"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un retour dit « ton rapprochement est fiable parce que tu as identifié et documenté les trois écarts ». Quelle caractéristique le distingue d’un simple « tu es excellent » ?",
+      "options": [
+        "Il relie la reconnaissance à un travail précis et à des éléments que la personne peut comprendre et réutiliser.",
+        "Il évalue uniquement la personnalité de la personne sans information sur son travail.",
+        "Il récompense exclusivement la quantité de documents produits, sans référence à leur contenu.",
+        "Il remplace l’explication de la qualité par une comparaison générale avec les collègues."
+      ],
+      "answer": 0,
+      "explanation": "Le retour porte sur des actes et leur apport concret. Il aide à reconnaître ce qui a été bien fait plutôt qu’à attribuer une qualité générale à la personne."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un manager veut donner plus de sens au travail. Quelle action relie directement les tâches aux objectifs ?",
+      "options": [
+        "Annoncer une cible sans expliquer ce que les équipes y apportent.",
+        "Expliquer la finalité des activités et discuter leur contribution avec les personnes concernées.",
+        "Supprimer les informations sur les résultats pour éviter toute comparaison.",
+        "Ajouter uniquement une responsabilité sans préciser son utilité."
+      ],
+      "answer": 1,
+      "explanation": "Comprendre la contribution de son travail aux objectifs peut soutenir l’engagement. L’explication doit se relier aux tâches réelles et aux marges d’action, pas se limiter à un slogan général."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une récompense de vitesse conduit certains agents à éviter les dossiers difficiles. Quelle analyse faut-il engager ?",
+      "options": [
+        "Mesurer uniquement l’attractivité financière de la prime sans étudier la sélection des dossiers.",
+        "Augmenter la cadence cible en supposant que les agents traiteront la difficulté supplémentaire de la même façon.",
+        "Examiner les critères et les comportements qu’ils encouragent, notamment le choix des dossiers.",
+        "Évaluer les effets par le nombre total de dossiers seulement, sans distinguer leur complexité."
+      ],
+      "answer": 2,
+      "explanation": "Un système peut orienter l’attention vers ce qu’il récompense et produire des effets secondaires. Il faut vérifier les comportements possibles et la qualité de service, pas seulement le montant distribué."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un responsable remercie publiquement une personne pour une amélioration élaborée par toute l’équipe, sans mentionner les autres contributions. Quel point de reconnaissance doit être examiné ?",
+      "options": [
+        "La nécessité de remplacer toute reconnaissance collective par un classement individuel.",
+        "Le seul montant du salaire, même si l’erreur concerne l’attribution du travail.",
+        "La conformité technique de l’amélioration, comme réponse suffisante à l’oubli des contributeurs.",
+        "L’attribution de la contribution collective et la visibilité donnée aux différents participants."
+      ],
+      "answer": 3,
+      "explanation": "La reconnaissance doit rendre les contributions compréhensibles. La qualité technique du résultat ne règle pas à elle seule son attribution aux personnes qui l’ont produit."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une salariée poursuit un objectif principalement pour éviter de se sentir coupable et de perdre l’estime de son responsable. Dans la théorie de l’autodétermination, quel mécanisme est décrit ?",
+      "options": [
+        "Une motivation contrôlée par une pression intériorisée.",
+        "Une motivation intrinsèque fondée sur le plaisir de la tâche.",
+        "Une régulation identifiée explicitement fondée sur l’utilité personnellement reconnue de l’objectif.",
+        "Une absence d’intention d’agir."
+      ],
+      "answer": 0,
+      "explanation": "Culpabilité et approbation peuvent être intériorisées tout en restant contrôlantes : c’est la régulation introjectée. Elles ne décrivent pas un plaisir intrinsèque.",
+      "references": [
+        {
+          "title": "Self-Determination Theory — motivation and basic psychological needs",
+          "url": "https://selfdeterminationtheory.org/the-theory/"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une salariée choisit librement de demander l’aide d’un collègue pour un dossier difficile. Pourquoi ce recours n’est-il pas incompatible avec l’autonomie ?",
+      "options": [
+        "L’autonomie suppose que chaque dossier soit traité sans aucune interaction avec autrui.",
+        "L’autonomie concerne le caractère volontaire de l’action, pas l’obligation de travailler seule.",
+        "Demander une aide transfère nécessairement toute responsabilité au collègue consulté.",
+        "Le travail collectif exclut par définition tout choix personnel dans la manière d’agir."
+      ],
+      "answer": 1,
+      "explanation": "Agir volontairement peut inclure une coopération choisie. Autonomie et indépendance sociale ne sont pas synonymes.",
+      "references": [
+        {
+          "title": "Self-Determination Theory — motivation and basic psychological needs",
+          "url": "https://selfdeterminationtheory.org/the-theory/"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux personnes reçoivent une reconnaissance différente parce qu’elles ont apporté des contributions différentes. Que faut-il examiner avant de conclure sur l’équité du dispositif ?",
+      "options": [
+        "Vérifier uniquement que chacun reçoit le même montant, sans examiner les contributions reconnues.",
+        "Comparer le budget total avec celui de l’an dernier comme preuve suffisante de justice entre personnes.",
+        "La pertinence, la compréhension et l’application cohérente des critères retenus.",
+        "Retenir seulement l’intention du responsable, sans examiner les critères appliqués aux situations comparables."
+      ],
+      "answer": 2,
+      "explanation": "L’équité ne se juge pas uniquement à l’identité des montants. Les critères doivent être compréhensibles et appliqués avec cohérence aux contributions et situations, puis leurs effets discutés."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux salariés acceptent une différence de prime liée aux résultats, mais contestent de ne pouvoir comprendre ni discuter les règles utilisées. Quel aspect de justice est principalement en cause ?",
+      "options": [
+        "L’égalité arithmétique des montants, qui est leur seule demande explicite.",
+        "L’absence de tout résultat individuel.",
+        "La fiabilité matérielle des outils, qui suffit à expliquer la contestation de la procédure.",
+        "La justice des procédures de décision, distincte du seul montant distribué."
+      ],
+      "answer": 3,
+      "explanation": "La justice procédurale concerne notamment la manière dont une décision est prise et expliquée. Elle se distingue de la répartition finale des avantages."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une agente expérimentée ne reçoit plus que des tâches répétitives alors qu’elle souhaite utiliser plusieurs compétences maîtrisées. Quel levier répond le plus directement à cette demande ?",
+      "options": [
+        "Enrichir le contenu du travail par des tâches mobilisant davantage de ses compétences.",
+        "Augmenter uniquement le nombre de tâches répétitives identiques à réaliser.",
+        "Renforcer seulement le contrôle de présence sans modifier le contenu des missions.",
+        "Renommer le poste en conservant exactement les activités et responsabilités antérieures."
+      ],
+      "answer": 0,
+      "explanation": "L’enrichissement vise ici le contenu et l’usage des compétences. Une hausse de volume ou un changement d’intitulé ne répond pas à la demande décrite."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Un salarié réalise une étape isolée sans savoir comment elle est utilisée. Le responsable lui montre comment elle sécurise le paiement du client. Quel levier est mobilisé ?",
+      "options": [
+        "Une hausse du montant de rémunération, sans modification annoncée de celui-ci.",
+        "La compréhension de la contribution de la tâche à une finalité identifiable.",
+        "Une suppression de sa responsabilité sur la qualité de cette étape.",
+        "Un accroissement du contrôle détaillé de chacun de ses gestes."
+      ],
+      "answer": 1,
+      "explanation": "Relier le travail à son utilité aide à en comprendre le sens. La situation ne décrit ni modification de salaire ni contrôle supplémentaire."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un système récompense des résultats que les salariés ne peuvent pas influencer dans leurs tâches. Quel problème faut-il examiner ?",
+      "options": [
+        "Conserver le résultat comme unique critère en supposant que le pouvoir d’action est identique dans tous les postes.",
+        "Expliquer seulement le montant de la récompense sans examiner les facteurs sur lesquels les salariés peuvent agir.",
+        "Le lien entre critères, possibilités réelles d’action et perception de justice peut être faible.",
+        "Mesurer davantage le même résultat externe sans réexaminer son imputabilité aux actions de chacun."
+      ],
+      "answer": 2,
+      "explanation": "Les critères doivent être liés à des contributions et conditions compréhensibles. Une récompense dépendant d’éléments hors de portée peut être perçue comme opaque ou injuste et produire des effets indésirables."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une équipe propose une correction de planning après avoir documenté une surcharge. Quelle action permet de vérifier si elle améliore la situation ?",
+      "options": [
+        "Comparer uniquement les volumes avant et après, sans considérer la charge ou la qualité recherchée.",
+        "Recueillir seulement une impression générale de satisfaction, sans vérifier les effets attendus sur le planning.",
+        "Déclarer le planning efficace dès sa diffusion, avant que ses effets sur le travail puissent être observés.",
+        "Définir les effets attendus, suivre charge, délais et qualité, puis réexaminer les résultats."
+      ],
+      "answer": 3,
+      "explanation": "Une proposition doit être testée selon des objectifs et indicateurs. Le suivi permet de vérifier les effets réels et de corriger l’action, sans confondre une solution plausible avec un résultat déjà acquis."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Sur quoi une reconnaissance du travail peut-elle porter dans le cadre étudié ?",
+      "options": [
+        "L’effort, les résultats ou la qualité, selon des formes et critères explicités.",
+        "Uniquement le salaire monétaire, par définition.",
+        "Uniquement le résultat individuel chiffré le plus élevé.",
+        "Seulement l’ancienneté, indépendamment du contexte et du travail."
+      ],
+      "answer": 0,
+      "explanation": "La reconnaissance peut prendre plusieurs formes et considérer plusieurs contributions. Son sens, son équité et ses effets sur les comportements doivent être examinés plutôt que la réduire à une unique récompense universelle."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une équipe fournit un effort documenté de résolution d’incident, mais le résultat dépend encore d’un fournisseur externe. Comment reconnaître cet effort sans annoncer une réussite non acquise ?",
+      "options": [
+        "Présenter le résultat final comme réalisé afin de rendre le remerciement plus motivant.",
+        "Nommer les actions utiles et l’effort fourni, en distinguant cette reconnaissance de l’atteinte du résultat final.",
+        "Réserver toute reconnaissance à la livraison finale, sans tenir compte des contributions déjà vérifiables.",
+        "Attribuer le résultat attendu à la seule équipe sans mentionner la dépendance au fournisseur."
+      ],
+      "answer": 1,
+      "explanation": "Effort, qualité des pratiques et résultat peuvent être reconnus distinctement. Une reconnaissance précise ne nécessite pas d’inventer une issue obtenue."
+    }
+  ]
+}

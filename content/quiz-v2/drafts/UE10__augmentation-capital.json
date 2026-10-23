@@ -1,0 +1,662 @@
+{
+  "module": "UE10",
+  "chapter": "augmentation-capital",
+  "sourceHash": "7f430acef27284b46042ff71e9cd7bb8833720e612710ca17dc851613ee02fb4",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le capital nominal initial est de 25 000 €. Une augmentation réalisée crée 1 500 titres de nominal 4 €, sans autre opération sur le capital. Quel capital nominal final obtient-on ?",
+      "options": [
+        "31 000 €",
+        "6 000 €",
+        "37 500 €",
+        "25 000 €"
+      ],
+      "answer": 0,
+      "explanation": "L’augmentation nominale vaut 1 500 × 4 = 6 000 €. Elle s’ajoute au capital préexistant : 25 000 + 6 000 = 31 000 €.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 25000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 1500
+                },
+                {
+                  "value": 4
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 31000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le prix d’émission est supérieur au nominal. Le tableau calcule l’augmentation du seul capital nominal avec nombre de titres × prix d’émission. Quel montant confond-il ?",
+      "options": [
+        "La prime unitaire et la prime totale uniquement",
+        "Le financement souscrit et sa seule composante nominale",
+        "Le nombre de titres nouveaux et le nombre de titres anciens uniquement",
+        "Le capital avant émission et le capital restant non appelé uniquement"
+      ],
+      "answer": 1,
+      "explanation": "Le prix d’émission comprend nominal et prime éventuelle. Le capital nominal utilise la valeur nominale, pas l’intégralité du prix de souscription.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’augmentation nominale réalisée est de 12 000 € et le nominal de chaque titre nouveau de 6 €. Combien de titres ont été créés ?",
+      "options": [
+        "72 000 titres",
+        "6 000 titres",
+        "2 000 titres",
+        "12 000 titres"
+      ],
+      "answer": 2,
+      "explanation": "Le nombre de titres est 12 000 / 6 = 2 000. Le prix d’émission, s’il diffère du nominal, n’est pas le diviseur de ce calcul.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 12000
+            },
+            {
+              "value": 6
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le nombre total de titres après émission inclut anciens et nouveaux. Peut-on utiliser tout ce nombre pour calculer le financement reçu lors de la seule émission nouvelle ?",
+      "options": [
+        "Oui, tous les anciens titres sont automatiquement payés à nouveau",
+        "Oui, si le nominal est identique pour tous",
+        "Non, il faut ignorer tous les titres nouveaux",
+        "Non, il faut isoler les titres nouvellement souscrits dans cette opération"
+      ],
+      "answer": 3,
+      "explanation": "L’opération porte sur des titres créés ou souscrits à cette étape. Les titres anciens ne génèrent pas un nouvel apport du seul fait de leur présence au capital.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une société a 10 000 titres identiques. Un associé en détient 1 000 et ne participe pas à l’émission de 2 000 nouveaux titres identiques. Quel pourcentage du total détient-il après émission, arrondi à deux décimales ?",
+      "options": [
+        "8,33 %",
+        "10 %",
+        "12 %",
+        "50 %"
+      ],
+      "answer": 0,
+      "explanation": "Il conserve 1 000 titres sur 12 000 après émission : 1 000 / 12 000 × 100 ≈ 8,33 %. Le calcul ne suppose aucune nouvelle souscription de sa part.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 1000
+                },
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 10000
+                    },
+                    {
+                      "value": 2000
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 8.33,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une émission réalisée de 800 titres à 25 € est intégralement versée en numéraire, sans frais. Quel financement total est reçu ?",
+      "options": [
+        "800 €",
+        "20 000 €",
+        "32 €",
+        "25 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le versement total est nombre de titres × prix : 800 × 25 = 20 000 €. La ventilation entre nominal et prime intervient ensuite.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 800
+            },
+            {
+              "value": 25
+            }
+          ]
+        },
+        "expected": 20000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier annonce un apport souscrit, mais le justificatif de versement intégral manque. Quelle distinction doit être conservée avant d’annoncer les fonds disponibles ?",
+      "options": [
+        "Le montant nominal et le prix de vente des marchandises uniquement",
+        "L’apport souscrit et le chiffre d’affaires, qui sont toujours égaux",
+        "L’engagement de souscription et les fonds effectivement reçus",
+        "La prime, qui signifie nécessairement que tout est déjà payé"
+      ],
+      "answer": 2,
+      "explanation": "Un engagement et un encaissement sont deux événements distincts. Le calcul du financement disponible doit suivre les versements et conditions réels du dossier.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les souscripteurs versent 18 000 € et le cas prévoit 600 € de frais payés séparément. On demande seulement le flux bancaire net de l’opération, sans autre effet. Quel montant net entre en banque ?",
+      "options": [
+        "18 600 €",
+        "18 000 €",
+        "600 €",
+        "17 400 €"
+      ],
+      "answer": 3,
+      "explanation": "Le flux reçu est diminué du paiement des frais : 18 000 − 600 = 17 400 €. Ce net bancaire ne décide pas à lui seul de l’imputation comptable des frais.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 18000
+            },
+            {
+              "value": 600
+            }
+          ]
+        },
+        "expected": 17400,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’encaissement de l’émission est porté intégralement en ventes parce qu’il augmente la banque. Quelle nature faut-il distinguer ?",
+      "options": [
+        "L’apport en financement propre et un produit commercial",
+        "Une prime d’émission et un produit financier à reconnaître sur toute la souscription",
+        "Une augmentation du capital nominal et une charge de financement du même montant",
+        "Une créance de souscription et un abandon de créance sur les associés"
+      ],
+      "answer": 0,
+      "explanation": "Une entrée de fonds n’est pas nécessairement un chiffre d’affaires. La souscription apporte une ressource propre, à ventiler selon l’opération sur le capital.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une opération est financée en numéraire et une autre uniquement par incorporation de réserves. Les deux augmentent le capital nominal. Ont-elles nécessairement le même flux bancaire ?",
+      "options": [
+        "Oui, toute augmentation nominale encaisse le même montant",
+        "Non, l’incorporation interne ne procure pas à elle seule de nouveaux fonds",
+        "Oui, les réserves sont des virements obligatoires des anciens associés",
+        "Non, le numéraire ne peut jamais augmenter le capital"
+      ],
+      "answer": 1,
+      "explanation": "La qualification de l’opération distingue ressource nouvelle et reclassement interne. Une hausse du nominal ne suffit pas à connaître les liquidités reçues.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une opération apporte au total 36 000 € souscrits et crée 15 000 € de capital nominal. Sans autre rubrique ni frais, quelle prime totale complète la ventilation ?",
+      "options": [
+        "51 000 €",
+        "15 000 €",
+        "21 000 €",
+        "36 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le financement souscrit est capital plus prime. La prime est donc 36 000 − 15 000 = 21 000 €.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 36000
+            },
+            {
+              "value": 15000
+            }
+          ]
+        },
+        "expected": 21000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le capital nominal et la prime présentés ensemble dépassent l’apport total souscrit, sans autre composante. Quel contrôle faut-il mener ?",
+      "options": [
+        "Comparer seulement le capital nominal au nombre de titres sans contrôler la prime",
+        "Remplacer l’apport souscrit par le total des deux rubriques sans revenir aux conditions",
+        "Limiter le contrôle au montant encaissé sans comparer le nominal et la prime souscrits",
+        "Rechercher un doublon ou une erreur dans la ventilation du même apport"
+      ],
+      "answer": 3,
+      "explanation": "Les deux composantes doivent reconstituer le même financement. Un écart exige une explication, pas une modification arbitraire de l’encaissement ou des produits.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le nominal reste fixe et le prix d’émission augmente pour un même nombre de titres nouveaux. Quel effet isolé porte sur la ventilation souscrite ?",
+      "options": [
+        "La prime augmente, tandis que l’augmentation nominale reste identique",
+        "Le capital nominal augmente du même montant que le prix",
+        "La prime reste nulle quel que soit le prix",
+        "Le nombre de titres augmente automatiquement"
+      ],
+      "answer": 0,
+      "explanation": "La différence entre prix et nominal alimente la prime. Avec un nominal et un nombre de titres fixes, la seule composante qui change ici est cette différence.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La prime totale est bien calculée mais enregistrée deux fois, une fois séparément et une fois dans le montant global du capital. Quel défaut faut-il corriger ?",
+      "options": [
+        "Une absence de versement nécessairement égale au nominal",
+        "Le double comptage d’une composante du financement",
+        "Une diminution automatique du coût des actifs anciens",
+        "L’annulation des nouveaux titres"
+      ],
+      "answer": 1,
+      "explanation": "Le prix global ne s’ajoute pas à sa propre décomposition. Capital nominal et prime doivent être séparés sans additionner à nouveau leur somme.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une prime d’émission est présentée comme un montant immédiatement distribuable sans examiner les règles ou décisions applicables. Quelle limite faut-il rappeler ?",
+      "options": [
+        "Toute prime est automatiquement un dividende payé",
+        "Toute prime doit être remboursée comme une dette bancaire",
+        "Sa comptabilisation ne règle pas à elle seule les conditions d’une distribution",
+        "La prime constitue toujours une vente aux associés"
+      ],
+      "answer": 2,
+      "explanation": "La nature comptable d’une rubrique et les conditions de son utilisation sont des questions distinctes. On ne doit pas déduire un droit au paiement de son seul intitulé.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel contrôle relie directement les composantes d’une émission sans autres éléments ?",
+      "options": [
+        "Prime totale = capital initial de l’entreprise",
+        "Apport souscrit = bénéfice de l’exercice",
+        "Capital nominal créé = solde bancaire final dans tous les cas",
+        "Capital nominal créé + prime totale = apport souscrit"
+      ],
+      "answer": 3,
+      "explanation": "Le rapprochement reconstitue le financement de l’opération. Il ne confond pas les ressources déjà présentes, les résultats ou les flux étrangers à l’émission.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un titre nouveau est émis 17 € pour une valeur nominale de 5 €. Quelle est la prime par titre ?",
+      "options": [
+        "12 €",
+        "22 €",
+        "17 €",
+        "5 €"
+      ],
+      "answer": 0,
+      "explanation": "La prime unitaire correspond à 17 − 5 = 12 €. Elle ne se confond ni avec le prix complet ni avec la valeur nominale.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 17
+            },
+            {
+              "value": 5
+            }
+          ]
+        },
+        "expected": 12,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Deux tranches comportent 300 titres émis à14 € et200 à16 €, tous de nominal10 €. Quelle prime moyenne par titre obtient-on pour l’ensemble ?",
+      "options": [
+        "5 €",
+        "4,80 €",
+        "2 400 €",
+        "14,80 €"
+      ],
+      "answer": 1,
+      "explanation": "Les primes totales valent 300 × 4 + 200 × 6 = 2 400 €. Sur 500 titres, la moyenne pondérée est 2 400 / 500 = 4,80 €.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 300
+                    },
+                    {
+                      "op": "-",
+                      "args": [
+                        {
+                          "value": 14
+                        },
+                        {
+                          "value": 10
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 200
+                    },
+                    {
+                      "op": "-",
+                      "args": [
+                        {
+                          "value": 16
+                        },
+                        {
+                          "value": 10
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 300
+                },
+                {
+                  "value": 200
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 4.8,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le calcul donne une prime unitaire de 4 €, puis affiche « prime totale : 4 € » pour une émission de 1 000 titres. Quelle étape manque-t-il ?",
+      "options": [
+        "Diviser la prime par le capital ancien",
+        "Ajouter une nouvelle fois le nominal dans la prime",
+        "Multiplier la prime par le nombre de titres concernés",
+        "Transformer le prix d’émission en pourcentage de taxe"
+      ],
+      "answer": 2,
+      "explanation": "Une grandeur par titre doit être étendue au nombre de titres pour obtenir un total. L’unité est aussi importante que l’arithmétique.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux émissions ont le même nominal et la même prime par titre, mais des nombres de titres différents. Leurs primes totales sont-elles nécessairement égales ?",
+      "options": [
+        "Oui, une prime unitaire identique garantit tous les totaux",
+        "Oui, dès que les deux entreprises sont en bénéfice",
+        "Non, parce que le nominal doit être différent",
+        "Non, elles dépendent aussi du nombre de titres émis"
+      ],
+      "answer": 3,
+      "explanation": "La prime totale est un produit de prime unitaire et quantité. L’égalité d’un facteur seul ne prouve pas l’égalité du financement global.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le prix d’émission est remplacé par un cours de marché observé plus tard pour recalculer la prime historique. Quel événement manque pour justifier ce changement de la même opération ?",
+      "options": [
+        "Une opération ou correction fondée ; la variation de cours seule ne refait pas l’émission passée",
+        "La seule hausse de la capitalisation boursière, traitée comme une nouvelle souscription",
+        "La seule variation du cours, traitée comme un appel de fonds supplémentaire",
+        "La seule clôture de l’exercice, supposée imposer une mise à jour de la prime au marché"
+      ],
+      "answer": 0,
+      "explanation": "La prime de l’émission découle des conditions effectivement souscrites. Un cours ultérieur ne modifie pas à lui seul ces conditions historiques.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel dossier permet de contrôler une émission en numéraire réalisée ?",
+      "options": [
+        "Le seul cours de marché après l’opération",
+        "Titres nouveaux, nominal, prix, prime, stade de réalisation et versements rapprochés",
+        "Le total ancien des réserves sans conditions nouvelles",
+        "Le nombre total de titres anciens traité comme nouveau versement"
+      ],
+      "answer": 1,
+      "explanation": "Le contrôle doit relier les paramètres de l’émission et les événements effectivement réalisés. Les grandeurs anciennes ou de marché ne remplacent pas ces pièces.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, comptes101,104 et456 relatifs aux apports",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,468 @@
+{
+  "module": "UE6",
+  "chapter": "tresorerie-glissante",
+  "sourceHash": "9d2dd555c84d8cb3092ba3f34b2253ede2bce32a2015838e6282b8bf1b9a075c",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture est émise en mars et son règlement intégral est prévu en mai. Dans quel mois inscrire l’encaissement du budget de trésorerie, sans autre hypothèse ?",
+      "options": [
+        "En mai, à la date de paiement prévue",
+        "En mars, parce que la vente est facturée",
+        "Dans les deux mois pour suivre la vente et le règlement",
+        "En avril, par moyenne entre facturation et règlement"
+      ],
+      "answer": 0,
+      "explanation": "Le budget suit les mouvements d’argent prévus. La date de facturation ne devient pas automatiquement celle de l’encaissement."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les ventes de janvier sont de 30 000 € TTC ; 40 % seront réglés en janvier et le reste en février. Janvier reçoit aussi 5 000 € de factures anciennes. Quels encaissements clients prévoir en janvier ?",
+      "options": [
+        "35 000 €",
+        "17 000 €",
+        "12 000 €",
+        "23 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Les ventes de janvier encaissées immédiatement représentent 30 000 × 40 % = 12 000 €. Les anciens clients apportent 5 000 €, soit 17 000 € au total.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 30000
+                },
+                {
+                  "value": 0.4
+                }
+              ]
+            },
+            {
+              "value": 5000
+            }
+          ]
+        },
+        "expected": 17000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le budget utilise des règlements TTC qui comprennent déjà les taxes concernées, puis ajoute la même TVA une seconde fois à ces règlements. Quel défaut doit être corrigé ?",
+      "options": [
+        "L’absence de produit de vente supplémentaire",
+        "L’omission obligatoire du remboursement de tous les prêts",
+        "Le double comptage d’un élément déjà compris dans les flux",
+        "L’utilisation d’une date bancaire au lieu d’une date de facture"
+      ],
+      "answer": 2,
+      "explanation": "Avant un ajout, il faut vérifier le périmètre des montants fournis. Un flux TTC ne doit pas être majoré à nouveau de la même taxe."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une dotation d’amortissement est prévue ce mois-ci, sans paiement correspondant. Comment la traiter dans le budget des seuls encaissements et décaissements ?",
+      "options": [
+        "La déduire comme une mensualité versée au fournisseur",
+        "L’ajouter aux recettes bancaires du mois",
+        "La comptabiliser simultanément en recette et en paiement réels",
+        "Ne pas la transformer en paiement ; suivre séparément l’investissement effectivement réglé"
+      ],
+      "answer": 3,
+      "explanation": "Une charge calculée n’est pas par nature un flux payé. Le budget doit retenir les mouvements d’argent, notamment l’acquisition quand elle est réglée."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour rendre le budget positif, le préparateur déplace sans accord des paiements fournisseurs au mois suivant. Quel problème présente cette pratique ?",
+      "options": [
+        "Elle remplace des échéances attendues par une hypothèse non justifiée",
+        "Elle constitue automatiquement une économie de charge",
+        "Elle diminue légalement les dettes du montant reporté",
+        "Elle n’affecte que la présentation, sans effet sur le besoin"
+      ],
+      "answer": 0,
+      "explanation": "Le budget doit représenter les échéances réalistes. Un report négocié peut être un scénario, mais ne doit pas être présenté comme acquis sans fondement."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel solde devient le point de départ du mois suivant dans un budget glissant cohérent ?",
+      "options": [
+        "Le chiffre d’affaires du mois précédent",
+        "Le solde final du mois précédent",
+        "Le bénéfice comptable annuel",
+        "La somme des recettes sans les dépenses"
+      ],
+      "answer": 1,
+      "explanation": "La continuité des soldes transmet les besoins et excédents d’un mois à l’autre. Elle est nécessaire à l’analyse du cumul de trésorerie."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le mois commence avec 2 500 €. Les encaissements sont de 9 000 € et les décaissements de 13 000 €. Quel solde final apparaît avant financement nouveau ?",
+      "options": [
+        "24 500 €",
+        "1 500 €",
+        "−1 500 €",
+        "−4 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le calcul est 2 500 + 9 000 − 13 000 = −1 500 €. Le solde initial compense une partie, mais pas la totalité, du déficit mensuel.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 2500
+                },
+                {
+                  "value": 9000
+                }
+              ]
+            },
+            {
+              "value": 13000
+            }
+          ]
+        },
+        "expected": -1500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Janvier commence à 4 000 €, encaisse 10 000 € et décaisse 13 000 €. Février encaisse 11 000 € et décaisse 9 000 €, sans autre flux. Quel est le solde de fin février ?",
+      "options": [
+        "6 000 €",
+        "2 000 €",
+        "−1 000 €",
+        "3 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Janvier finit à 1 000 €. Février reprend ce solde puis ajoute 11 000 − 9 000 = 2 000 €, pour finir à 3 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "op": "+",
+                      "args": [
+                        {
+                          "value": 4000
+                        },
+                        {
+                          "value": 10000
+                        }
+                      ]
+                    },
+                    {
+                      "value": 13000
+                    }
+                  ]
+                },
+                {
+                  "value": 11000
+                }
+              ]
+            },
+            {
+              "value": 9000
+            }
+          ]
+        },
+        "expected": 3000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Chaque mois du budget repart du même solde initial annuel sans reprendre les flux antérieurs. Quel risque de contrôle cela crée-t-il ?",
+      "options": [
+        "Masquer un besoin cumulé ou réutiliser plusieurs fois les mêmes liquidités",
+        "Rendre tous les paiements plus prudents par définition",
+        "Neutraliser automatiquement les retards clients",
+        "Garantir que le solde annuel est juste"
+      ],
+      "answer": 0,
+      "explanation": "Les disponibilités initiales ne se recréent pas chaque mois. Le défaut de report peut effacer des déficits ou compter à nouveau un excédent déjà utilisé."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le budget prévoit un point bas de −6 000 € avant financement. L’objectif est de conserver au moins 2 000 € disponibles à ce point, sans frais ni autre changement. Quel financement doit être mobilisé ?",
+      "options": [
+        "6 000 €",
+        "8 000 €",
+        "4 000 €",
+        "2 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Il faut combler 6 000 € de déficit puis ajouter la réserve souhaitée de 2 000 €, soit un apport temporaire de 8 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2000
+            },
+            {
+              "value": -6000
+            }
+          ]
+        },
+        "expected": 8000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le total annuel des recettes dépasse celui des paiements, mais un mois affiche un solde négatif. Quelle conclusion convient ?",
+      "options": [
+        "Le mois négatif est impossible si le total annuel est positif",
+        "La rentabilité annuelle paie automatiquement cette échéance",
+        "Une couverture temporaire peut rester nécessaire malgré l’excédent annuel",
+        "Il suffit de supprimer le solde initial du mois concerné"
+      ],
+      "answer": 2,
+      "explanation": "Les ressources peuvent arriver après les paiements. Un résultat cumulé favorable ne supprime pas le besoin à une date intermédiaire."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un encaissement retardé est ajouté au mois d’arrivée mais reste compté dans son mois initial. Quel effet cela produit-il ?",
+      "options": [
+        "Un déficit supplémentaire égal au double du retard",
+        "Une simple modification de dates sans effet de total",
+        "Un remboursement anticipé de dette",
+        "Une recette fictivement comptée deux fois"
+      ],
+      "answer": 3,
+      "explanation": "Un report déplace le même flux : il faut le retirer du mois de départ puis l’inscrire au mois d’arrivée. L’ajout seul crée un doublon."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le solde de fin avril prévu est +2 000 €. Un client de 5 000 € paiera en mai au lieu d’avril. Sans autre effet, quel solde de fin avril révisé obtient-on ?",
+      "options": [
+        "−3 000 €",
+        "7 000 €",
+        "2 000 €",
+        "−5 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Les 5 000 € ne sont plus reçus en avril : 2 000 − 5 000 = −3 000 €. Le paiement reste attendu en mai selon l’hypothèse.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2000
+            },
+            {
+              "value": 5000
+            }
+          ]
+        },
+        "expected": -3000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une recette passe de janvier à février, sans perte, coût ni autre changement, et les soldes sont correctement liés. Quel est l’effet sur la trésorerie cumulée de fin février ?",
+      "options": [
+        "Elle augmente du montant retardé",
+        "Elle reste identique au scénario initial",
+        "Elle baisse deux fois du montant retardé",
+        "Elle devient nécessairement négative"
+      ],
+      "answer": 1,
+      "explanation": "Le flux manque en janvier puis revient en février. Sur ces deux mois, son cumul est inchangé, mais le point bas intermédiaire peut se dégrader."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après un retard de janvier à février, le préparateur ajoute la recette à février mais conserve le solde d’ouverture de février non révisé. Que manque-t-il ?",
+      "options": [
+        "La création d’une seconde recette en janvier",
+        "La suppression de tous les paiements de février",
+        "La transmission du solde de janvier diminué au début de février",
+        "L’ajout des ventes de mars au cumul"
+      ],
+      "answer": 2,
+      "explanation": "Le retard modifie à la fois la recette du mois d’arrivée et son solde initial hérité. Oublier ce second effet surestime le cumul final."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le paiement retardé est désormais jugé incertain, contrairement au scénario de simple report. Quelle adaptation du budget est la plus utile ?",
+      "options": [
+        "Conserver obligatoirement l’encaissement intégral à la date initiale",
+        "Ajouter une vente nouvelle du même montant pour compenser",
+        "Traiter la créance comme une banque déjà disponible",
+        "Prévoir un scénario de recouvrement partiel ou absent, distinct du seul décalage"
+      ],
+      "answer": 3,
+      "explanation": "Un aléa de montant diffère d’un aléa de date. Le budget doit montrer l’effet de non-recouvrement possible plutôt que garder une recette non fondée."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi un retard temporaire peut-il poser problème même si le total de fin d’année ne change pas ?",
+      "options": [
+        "Des paiements peuvent être exigibles avant l’arrivée des fonds",
+        "Un total annuel positif supprime toute échéance mensuelle",
+        "Le retard constitue toujours une nouvelle charge égale à la facture",
+        "Un encaissement retardé est forcément définitivement perdu"
+      ],
+      "answer": 0,
+      "explanation": "La capacité à régler dépend du calendrier. Un même total annuel peut recouvrir des points bas très différents pendant l’exercice."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le déficit vient d’une recette confirmée mais retardée de quelques semaines. Quel choix doit être chiffré en priorité ?",
+      "options": [
+        "Un financement durable dimensionné sur le déficit isolé sans examiner sa résorption",
+        "Une couverture temporaire avec sa date de remboursement et son coût",
+        "Le maintien du budget central sans retrancher la recette retardée du mois initial",
+        "Une réduction permanente des dépenses égale au retard sans analyse de leur caractère nécessaire"
+      ],
+      "answer": 1,
+      "explanation": "Un besoin daté et transitoire peut appeler une réponse courte. Son coût, ses conditions et son remboursement doivent être rapprochés des flux attendus."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une avance de trésorerie de 4 000 € est reçue en juin. Le principal et 80 € de coût fourni seront payés en juillet. Quel décaissement faut-il ajouter au budget de juillet ?",
+      "options": [
+        "4 000 €",
+        "80 €",
+        "4 080 €",
+        "3 920 €"
+      ],
+      "answer": 2,
+      "explanation": "Le remboursement restitue les 4 000 € et règle les 80 € de coût, soit 4 080 €. Le budget doit intégrer les deux composantes.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 4000
+            },
+            {
+              "value": 80
+            }
+          ]
+        },
+        "expected": 4080,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un déficit d’exploitation se répète chaque mois. Le responsable propose de nouveaux crédits sans analyser les causes et affirme que l’activité est rentable grâce à ces entrées. Quelle correction faut-il apporter ?",
+      "options": [
+        "Chaque crédit est un produit qui rétablit automatiquement la marge",
+        "Un déficit mensuel démontre toujours une perte fiscale identique",
+        "Le cumul des emprunts suffit à mesurer la performance commerciale",
+        "Le crédit finance le déficit mais ne crée pas de rentabilité d’exploitation"
+      ],
+      "answer": 3,
+      "explanation": "Le financement fournit des liquidités remboursables. Une tension récurrente exige une analyse de l’activité et du besoin, pas une assimilation des prêts à des ventes."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le budget suppose un report fournisseur qui n’a pas encore été accepté. Comment présenter ce levier dans la décision ?",
+      "options": [
+        "Avec un scénario conditionnel et une solution si l’accord n’est pas obtenu",
+        "Comme un paiement déjà annulé définitivement",
+        "Comme une réduction acquise du coût d’achat",
+        "Comme une ressource bancaire certaine sans date"
+      ],
+      "answer": 0,
+      "explanation": "La mesure dépend d’un tiers et ne doit pas être assimilée à un fait acquis. Un scénario de refus rend la préparation de financement plus robuste."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le budget affiche un solde positif après l’encaissement d’un crédit mais omet son remboursement et ses coûts. Quelle faiblesse majeure subsiste ?",
+      "options": [
+        "Le crédit doit obligatoirement être classé en chiffre d’affaires",
+        "La solution n’est pas testée sur toute sa durée de dénouement",
+        "Le besoin initial doit être remplacé par le capital social",
+        "Le solde positif prouve que les coûts sont déjà financés"
+      ],
+      "answer": 1,
+      "explanation": "Une couverture temporaire produit ensuite des sorties. Ne pas les prévoir peut déplacer le déficit au lieu de le résoudre durablement."
+    }
+  ]
+}

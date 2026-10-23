@@ -1,0 +1,353 @@
+{
+  "module": "UE8",
+  "chapter": "algorithme-jeux-tests",
+  "sourceHash": "5d09e46bd96185964097a28f34257a208e464f754727eeccdf302a156ca25f7d",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que doit préciser la spécification d’un calcul monétaire avant sa programmation ?",
+      "options": [
+        "Uniquement le langage qui sera utilisé.",
+        "Les entrées, unités, domaines autorisés, sorties et conventions d’arrondi.",
+        "Seulement le résultat d’un exemple favorable.",
+        "Le nom des variables sans leur signification."
+      ],
+      "answer": 1,
+      "explanation": "Une spécification définit le comportement attendu indépendamment de sa traduction technique. Les unités, cas autorisés et arrondis évitent que plusieurs interprétations conduisent à des résultats incompatibles."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "foundation",
+      "q": "La règle dit : « remise à partir de 1 000 € HT, seuil inclus ». Quel test traduit cette condition ?",
+      "options": [
+        "montant > 1000",
+        "montant < 1000",
+        "montant >= 1000",
+        "montant = 1000 seulement"
+      ],
+      "answer": 2,
+      "explanation": "Le seuil est explicitement inclus : la remise s’applique à 1 000 € et au-delà. Le signe > exclurait la frontière et l’égalité seule exclurait à tort les montants supérieurs."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour détecter une confusion entre > 1000 et >= 1000 dans une règle de remise, quelle entrée est décisive ?",
+      "options": [
+        "1 000 € exactement.",
+        "1 200 €, suffisamment au-dessus.",
+        "500 €, largement en dessous.",
+        "1 500 €, avec un montant entier."
+      ],
+      "answer": 0,
+      "explanation": "Les deux conditions diffèrent précisément pour la valeur égale au seuil. Les valeurs éloignées peuvent produire le même résultat dans les deux programmes et laisser passer cette erreur de frontière."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La spécification refuse les montants négatifs. Un programme transforme -20 € en 0 € puis poursuit le calcul sans message. Quel comportement faut-il corriger ?",
+      "options": [
+        "L’affichage du symbole monétaire uniquement.",
+        "Le choix d’utiliser une comparaison plutôt qu’une affectation.",
+        "Le fait de calculer le net après la remise.",
+        "La conversion silencieuse d’une entrée interdite au lieu de son refus explicite."
+      ],
+      "answer": 3,
+      "explanation": "L’entrée négative ne respecte pas le domaine autorisé. La remplacer silencieusement par zéro modifie le fait saisi et masque l’erreur ; le contrôle doit appliquer le refus prévu par la spécification."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un développeur stocke le taux sous la valeur 5 ; un autre attend 0,05. Les deux variables s’appellent taux. Quelle précision manque dans la spécification ?",
+      "options": [
+        "La base de calcul avant ou après remise uniquement.",
+        "La convention d’unité et de représentation du taux.",
+        "Le choix entre seuil inclus et seuil exclu uniquement.",
+        "L’étape d’arrondi du net uniquement."
+      ],
+      "answer": 1,
+      "explanation": "Un taux de 5 % peut être représenté par 5 avec division par 100 ou par 0,05. La convention doit être explicite pour éviter un facteur cent dans le calcul, indépendamment du nom de variable."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans un pseudo-code, le calcul remise ← montant × taux attribue une valeur à remise. Quelle distinction faut-il faire avec montant >= seuil ?",
+      "options": [
+        "Les deux expressions effectuent nécessairement une addition.",
+        "Les deux expressions sont seulement des commentaires.",
+        "La première est une affectation ; la seconde est une condition qui choisit une branche.",
+        "La première teste une égalité ; la seconde stocke le taux."
+      ],
+      "answer": 2,
+      "explanation": "L’affectation enregistre le résultat d’un calcul dans une variable. Une comparaison produit une condition vraie ou fausse pour diriger le traitement ; confondre ces rôles empêche de comprendre le chemin d’exécution."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les résultats attendus d’un test sont calculés en appelant la même fonction que celle qui est testée. Quelle faiblesse en résulte ?",
+      "options": [
+        "Une même erreur peut produire à la fois l’attendu et l’observé.",
+        "Les cas limites sont automatiquement tous couverts.",
+        "L’arrondi devient nécessairement exact.",
+        "Les données invalides sont nécessairement refusées."
+      ],
+      "answer": 0,
+      "explanation": "Réutiliser la fonction rend le contrôle circulaire. Un résultat attendu calculé indépendamment à partir de la règle permet de révéler un défaut commun à toutes les sorties de la fonction."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi faut-il préciser si l’arrondi se fait sur chaque ligne ou seulement sur le total ?",
+      "options": [
+        "Parce que les deux méthodes donnent toujours des montants identiques.",
+        "Parce qu’un arrondi remplace la validation du domaine des entrées.",
+        "Parce que le langage décide seul de la règle métier acceptable.",
+        "Parce que ces conventions peuvent donner des résultats différents et doivent être testées selon la règle choisie."
+      ],
+      "answer": 3,
+      "explanation": "Des fractions de centime peuvent s’accumuler différemment selon l’étape d’arrondi. Il faut choisir la convention métier, puis contrôler cette convention plutôt que considérer toute différence comme un simple détail visuel."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une règle annonce « remise de 5 sur le montant ». Quelle clarification est indispensable avant d’écrire le calcul ?",
+      "options": [
+        "Si le seuil doit être comparé avant ou après la remise seulement.",
+        "S’il s’agit de 5 euros ou de 5 %, et sur quelle base la remise porte.",
+        "Si la remise doit être stockée avant le net seulement.",
+        "Si le résultat doit être arrondi à chaque ligne seulement."
+      ],
+      "answer": 1,
+      "explanation": "Une somme fixe et un pourcentage ne constituent pas la même règle. La base HT ou TTC et l’unité doivent être définies pour qu’une formule puisse être évaluée et expliquée correctement."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une remise ne s’applique qu’au-dessus d’un seuil. Dans la branche sans remise, quelle affectation évite de réutiliser une ancienne valeur de remise ?",
+      "options": [
+        "Conserver la valeur calculée pour la facture précédente.",
+        "Ignorer la variable remise dans le calcul du net.",
+        "Affecter explicitement zéro à remise avant de calculer le net.",
+        "Affecter le montant total à remise."
+      ],
+      "answer": 2,
+      "explanation": "La branche sans remise doit produire une valeur définie : zéro. Laisser une ancienne valeur dans une variable peut appliquer à une nouvelle facture une remise qui ne lui est pas due."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour une condition incluant le seuil de 1 000 €, quel ensemble cible les deux branches et leur frontière proche ?",
+      "options": [
+        "999,99 €, 1 000 € et 1 000,01 €.",
+        "1 200 €, 1 300 € et 1 400 €.",
+        "100 €, 200 € et 300 €.",
+        "Une seule valeur de 1 200 € répétée trois fois."
+      ],
+      "answer": 0,
+      "explanation": "Les valeurs immédiatement inférieure, égale et supérieure au seuil ciblent le choix de l’opérateur et les deux branches. Un ensemble situé d’un seul côté ne peut pas vérifier correctement la transition."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un champ de montant vide est traité comme zéro alors que la règle refuse les valeurs absentes mais accepte zéro. Pourquoi faut-il distinguer les deux ?",
+      "options": [
+        "Une valeur vide est forcément un montant négatif.",
+        "Zéro doit être refusé dès qu’une entrée vide l’est.",
+        "Les deux données peuvent être fusionnées puisqu’aucune n’est positive.",
+        "Zéro est une valeur autorisée connue ; le vide ne satisfait pas le domaine défini."
+      ],
+      "answer": 3,
+      "explanation": "La validation doit respecter la distinction prévue par la spécification. Accepter une valeur numérique nulle n’implique pas d’accepter une absence de saisie en lui attribuant artificiellement le même sens."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux implémentations d’une remise utilisent les mêmes entrées mais l’une applique le taux au HT et l’autre au TTC. Quel élément manque pour arbitrer leur conformité ?",
+      "options": [
+        "Le choix entre affectation et comparaison seulement.",
+        "La base de calcul attendue dans la spécification.",
+        "Le traitement des valeurs absentes seulement.",
+        "Le sens de l’opérateur de seuil seulement."
+      ],
+      "answer": 1,
+      "explanation": "La base HT ou TTC est un choix de règle, pas un détail que le développeur peut deviner. Sans cette précision, on ne peut pas qualifier l’une des formules de conforme au besoin avec certitude."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La remise est calculée correctement, mais net reçoit remise − montant au lieu de montant − remise. Quelle partie du traitement faut-il corriger ?",
+      "options": [
+        "Le seuil d’accès à la remise.",
+        "Le domaine des entrées seulement.",
+        "L’ordre des termes dans l’affectation du montant net.",
+        "La distinction entre valeurs absentes et zéro uniquement."
+      ],
+      "answer": 2,
+      "explanation": "Le net correspond au montant initial diminué de la remise. Inverser la soustraction change le signe sans que la règle de seuil ou le calcul de la remise soient nécessairement erronés."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quels éléments faut-il conserver pour qu’un cas de test soit vérifiable ?",
+      "options": [
+        "L’entrée, le résultat attendu, le résultat observé et le statut du contrôle.",
+        "Seulement le message de succès affiché par le logiciel.",
+        "Uniquement le résultat observé, sans l’entrée utilisée.",
+        "Le nom de la fonction, sans règle ni résultat attendu."
+      ],
+      "answer": 0,
+      "explanation": "Ces éléments rendent la comparaison explicite et reproductible. Un simple statut de réussite, dépourvu des données et de l’attendu, ne permet pas de comprendre ce qui a réellement été vérifié."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La règle autorise uniquement des entrées numériques positives ou nulles. Une saisie « cent euros » arrive dans le champ. Quelle réponse respecte ce domaine ?",
+      "options": [
+        "Transformer le texte en zéro sans avertissement.",
+        "Appliquer le taux à la longueur du texte.",
+        "Réutiliser le montant de la saisie précédente.",
+        "Refuser explicitement la valeur non numérique avant le calcul."
+      ],
+      "answer": 3,
+      "explanation": "La saisie n’est pas une valeur numérique admissible. La refuser évite un résultat artificiel ; une interprétation de texte ne peut être ajoutée implicitement lorsque la spécification ne la prévoit pas."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Pourquoi la spécification doit-elle être compréhensible indépendamment du langage de programmation ?",
+      "options": [
+        "Parce qu’elle doit éviter toute règle de calcul.",
+        "Parce qu’elle décrit le résultat métier attendu, que plusieurs implémentations doivent pouvoir respecter.",
+        "Parce qu’un langage peut choisir librement une autre base de calcul.",
+        "Parce que les contrôles d’entrée ne concernent que les utilisateurs."
+      ],
+      "answer": 1,
+      "explanation": "La spécification sert de référence commune au besoin, au développement et aux tests. Elle définit ce qui doit être obtenu sans confondre ce comportement avec les choix techniques de sa réalisation."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un algorithme calcule la remise avant de vérifier si le montant est autorisé. Quel enchaînement est préférable lorsque des entrées invalides doivent être refusées ?",
+      "options": [
+        "Calculer le net puis remplacer toute erreur par zéro.",
+        "Comparer seulement le résultat final à celui de la facture précédente.",
+        "Valider l’entrée, sélectionner la branche, calculer la remise puis le net.",
+        "Appliquer la remise à toute entrée et tester ensuite le seuil."
+      ],
+      "answer": 2,
+      "explanation": "Le contrôle du domaine doit précéder le calcul pour éviter de produire une facture à partir d’une saisie invalide. La condition métier sélectionne ensuite la branche de calcul appropriée."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un test avec une facture au-dessus du seuil réussit. Le développeur conclut que les montants inférieurs et égaux au seuil sont aussi corrects. Pourquoi est-ce insuffisant ?",
+      "options": [
+        "Le test n’exerce ni l’autre branche ni nécessairement la frontière exacte.",
+        "Une réussite prouve seulement que le langage a refusé la facture.",
+        "Toutes les valeurs au-dessus du seuil suivent un autre programme.",
+        "Les frontières ne peuvent pas être testées avec des montants monétaires."
+      ],
+      "answer": 0,
+      "explanation": "Une sortie correcte sur une entrée ne couvre pas tous les chemins. Il faut tester séparément la branche sans remise et l’égalité au seuil, notamment pour détecter un opérateur de comparaison incorrect."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un test compare seulement les montants affichés sans vérifier l’étape d’arrondi imposée. Quel défaut peut lui échapper ?",
+      "options": [
+        "Une comparaison stricte utilisée à la place d’une comparaison inclusive.",
+        "Un montant négatif accepté à la place du refus prévu.",
+        "Un texte converti silencieusement en zéro.",
+        "Un calcul arrondi au total plutôt que sur les remises de chaque ligne, ou l’inverse."
+      ],
+      "answer": 3,
+      "explanation": "Un affichage peut masquer des décimales intermédiaires et rendre deux résultats proches visuellement. Le contrôle doit vérifier la convention d’arrondi choisie et les montants effectivement retenus par le traitement."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une correction remplace > par >= dans la règle d’une remise à seuil inclus. Quel test doit être conservé pour empêcher le retour de l’erreur ?",
+      "options": [
+        "Uniquement une facture très supérieure au seuil.",
+        "Un cas égal au seuil avec un attendu calculé indépendamment.",
+        "Une saisie textuelle sans relation avec le seuil.",
+        "Uniquement une facture nulle, sans autre cas."
+      ],
+      "answer": 1,
+      "explanation": "L’entrée égale au seuil est celle qui distinguait les deux versions de la condition. La conserver avec un attendu explicite fournit un test de non-régression ciblé sur l’erreur corrigée."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une règle accepte les montants nuls mais refuse les négatifs et les absences. Quel jeu complète utilement les tests ordinaires ?",
+      "options": [
+        "Trois montants positifs éloignés du seuil.",
+        "Trois copies de la même facture valide.",
+        "Zéro, un montant négatif et une entrée vide, avec les réponses prévues pour chacun.",
+        "Seulement une valeur maximale choisie sans limite définie."
+      ],
+      "answer": 2,
+      "explanation": "Ces cas vérifient le domaine d’entrée, qui ne se réduit pas à la règle de remise. Zéro doit être traité comme autorisé, tandis que négatif et absence doivent suivre les refus définis."
+    },
+    {
+      "id": "q23",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le métier veut une remise de 5 %, mais le programme soustrait toujours 5 €. Quelle erreur de traduction est commise ?",
+      "options": [
+        "Un taux proportionnel a été remplacé par une somme fixe.",
+        "Une comparaison inclusive a été remplacée par une comparaison stricte.",
+        "Une valeur absente a été transformée en montant négatif.",
+        "Un arrondi par ligne a été remplacé par un arrondi du total."
+      ],
+      "answer": 0,
+      "explanation": "Une remise proportionnelle varie avec la base, tandis qu’une réduction de cinq euros reste constante. La confusion porte sur l’unité et la formule, indépendamment du seuil d’application et de l’étape d’arrondi."
+    }
+  ]
+}

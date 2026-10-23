@@ -1,0 +1,436 @@
+{
+  "module": "DSCG4",
+  "chapter": "elimination-intragroupe",
+  "sourceHash": "c7faa1136cde3fe33cbea62bd349c304f54261d8562d66da27a4a89e515d3638",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un lot coûtant 18 000 € au groupe est vendu 24 000 € entre deux entités intégrées globalement. Sans autre coût, quelle marge interne totale contient le prix de cession ?",
+      "options": [
+        "6 000 €",
+        "18 000 €",
+        "24 000 €",
+        "42 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La marge interne est le prix de cession moins le coût du lot pour le groupe : 24 000−18 000=6 000 €. Le prix lui-même n’est pas un bénéfice.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 24000
+            },
+            {
+              "value": 18000
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un lot coûte 8 000 € et est cédé en interne pour 10 000 €. Le vendeur annonce un taux de marge sur coût de 25 %. Quel montant constitue la marge ?",
+      "options": [
+        "10 000 €",
+        "2 000 €",
+        "2 500 €",
+        "8 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La marge vaut 10 000−8 000=2 000 €, soit 25 % du coût de 8 000 €. Appliquer 25 % au prix de vente utiliserait la mauvaise base."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une vente interne dégage 3 000 € de marge. Le préparateur utilise pourtant les 13 000 € du prix de vente comme profit à éliminer. Quel défaut identifiez-vous ?",
+      "options": [
+        "Il devrait retenir le coût du vendeur comme profit non réalisé, plutôt que la différence entre prix et coût",
+        "Il devrait éliminer la moitié du prix interne à titre de marge, faute d’autre taux fourni",
+        "Il confond le prix interne avec la marge comprise dans ce prix",
+        "Il devrait conserver les 13 000 € comme profit puis les diminuer de la part détenue par les minoritaires"
+      ],
+      "answer": 2,
+      "explanation": "L’élimination du profit non réalisé porte sur la marge incorporée au stock restant. Le prix comprend aussi le coût déjà supporté par le groupe."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux sociétés contrôlées échangent un lot à son coût pour le groupe, sans autre frais. Le lot reste entièrement dans le groupe. Quel montant de marge interne de cession faut-il éliminer dans ce modèle ?",
+      "options": [
+        "Le coût entier du lot, puisqu’il est encore détenu",
+        "Le prix de vente entier, même égal au coût",
+        "La moitié du prix interne par convention de groupe",
+        "Zéro, car le prix interne ne dépasse pas le coût du groupe"
+      ],
+      "answer": 3,
+      "explanation": "Le fait que le lot soit encore détenu ne crée pas une marge absente. D’autres écritures internes peuvent être nécessaires, mais l’exercice isole la marge du stock."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi une vente entre entités intégrées globalement ne suffit-elle pas à réaliser le profit du groupe sur un stock encore détenu ?",
+      "options": [
+        "Le stock n’a pas encore été cédé à un tiers au groupe",
+        "Le profit est réalisé pour le groupe dès que le vendeur interne a transféré les risques à l’acheteur interne",
+        "L’encaissement du prix interne suffit à réaliser le profit du groupe sur les marchandises encore détenues",
+        "La clôture des comptes individuels du vendeur rend le profit interne définitif pour le groupe"
+      ],
+      "answer": 0,
+      "explanation": "Les entités peuvent réaliser des opérations dans leurs comptes individuels. La vision du groupe exclut le profit encore incorporé à un bien conservé dans son périmètre."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un lot homogène est acheté en interne pour 32 000 €. Il en reste 30 % chez l’acheteur, au même prix unitaire. Quel stock figure avant élimination de marge dans ses comptes ?",
+      "options": [
+        "1 066,67 €",
+        "9 600 €",
+        "22 400 €",
+        "32 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le stock chez l’acheteur est évalué au prix interne du lot multiplié par sa fraction restante : 32 000×0,30=9 600 €, avant l’élimination du profit.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 32000
+            },
+            {
+              "value": 0.3
+            }
+          ]
+        },
+        "expected": 9600,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le suivi indique que 65 % du lot interne a été vendu aux clients externes. Le tableau applique 65 % à la marge pour calculer le profit inclus dans le stock final. Quelle fraction manque-t-il de rechercher ?",
+      "options": [
+        "La somme des fractions, soit 100 %, à conserver dans tous les cas",
+        "La différence de 30 %, sans rapport avec le stock restant",
+        "La fraction restante de 35 % du lot",
+        "La fraction vendue de 65 %, qui est déjà la fraction de stock final"
+      ],
+      "answer": 2,
+      "explanation": "Le profit non réalisé reste dans la fraction non vendue aux tiers. Il faut distinguer taux d’écoulement et fraction encore détenue, ici 100−65=35 %."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un lot initial contient 800 pièces identiques ; 200 restent dans le stock de clôture. Aucun autre mouvement. Quelle proportion du lot reste détenue ?",
+      "options": [
+        "20 %",
+        "75 %",
+        "400 %",
+        "25 %"
+      ],
+      "answer": 3,
+      "explanation": "Le rapport se calcule sur les quantités de même lot : 200/800=25 %. Le reliquat ne se rapporte pas à la seule quantité vendue."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le pourcentage restant concerne uniquement un sous-lot à forte marge, alors que le tableau l’applique à la marge moyenne de deux produits différents. Quel contrôle est nécessaire ?",
+      "options": [
+        "Ventiler les coûts, prix et quantités des produits effectivement restants",
+        "Retenir la moyenne globale dès qu’un pourcentage de stock est fourni",
+        "Appliquer le pourcentage au chiffre d’affaires externe total",
+        "Faire disparaître la marge des produits déjà vendus du coût de tous les stocks"
+      ],
+      "answer": 0,
+      "explanation": "Le modèle proportionnel suppose un lot homogène ou une ventilation adaptée. Des produits aux marges différentes exigent de relier l’élimination au stock réellement détenu."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le préparateur ajoute au stock de l’acheteur les 40 % de lot déjà revendus à des tiers parce que ces unités figuraient dans la facture interne initiale. Quel défaut de périmètre apparaît ?",
+      "options": [
+        "La fraction du lot à éliminer doit être mesurée sur la quantité initiale facturée plutôt que sur la quantité encore détenue",
+        "Le stock final ne comprend pas les unités déjà sorties vers les tiers",
+        "Les unités vendues restent incluses dans le stock jusqu’au règlement du client externe",
+        "L’élimination de la vente interne rétablit le lot initial en stock même après les ventes externes"
+      ],
+      "answer": 1,
+      "explanation": "Une facture d’achat initiale ne décrit pas seule le stock de clôture. Les sorties effectives doivent être prises en compte pour déterminer les unités encore détenues."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La marge interne du lot complet est de 9 000 €. Le stock final en conserve 40 %, de façon homogène. Quel profit non réalisé éliminer, hors impôt et intérêts minoritaires ?",
+      "options": [
+        "9 000 €",
+        "22 500 €",
+        "3 600 €",
+        "5 400 €"
+      ],
+      "answer": 2,
+      "explanation": "Seule la marge liée à la fraction restante est encore non réalisée : 9 000×40 %=3 600 €. La marge sur les unités vendues à des tiers n’est pas dans le stock final.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 9000
+            },
+            {
+              "value": 0.4
+            }
+          ]
+        },
+        "expected": 3600,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un lot interne a été intégralement revendu à des clients extérieurs avant la clôture. Le cas isole la marge restant en stock. Quelle élimination de profit non réalisé sur ce lot reste nécessaire ?",
+      "options": [
+        "La totalité de la marge interne, quel que soit l’écoulement externe",
+        "La moitié de la marge, parce que deux sociétés sont intervenues",
+        "Le prix de vente externe entier, traité comme stock restant",
+        "Aucune sur le stock final de ce lot, puisqu’il n’y reste aucune unité"
+      ],
+      "answer": 3,
+      "explanation": "L’élimination étudiée dépend de la présence de profit dans le stock final. L’absence de stock résiduel supprime cet objet précis, sans traiter ici les autres éliminations intragroupe."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le vendeur est détenu à 70 % par la mère. Dans le cas fourni, les deux entités sont intégrées globalement et l’on demande l’élimination totale du profit interne, sans répartition entre détenteurs. Le préparateur n’en élimine que 70 %. Quelle correction est adaptée ?",
+      "options": [
+        "Éliminer la totalité du profit non réalisé avant la question distincte de son attribution",
+        "N’éliminer que 30 %, part non détenue par la mère",
+        "N’éliminer aucun profit dès qu’un minoritaire existe",
+        "Limiter le stock à 70 % de sa quantité physique"
+      ],
+      "answer": 0,
+      "explanation": "L’élimination totale du profit dans le stock et son attribution sont deux étapes distinctes. L’énoncé demande la première dans une intégration globale, pas la seule quote-part de la mère."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le stock de clôture au prix interne est de 15 000 €. La marge représente expressément 20 % de ce prix de vente interne. Quel profit inclus dans ce stock faut-il éliminer ?",
+      "options": [
+        "18 000 €",
+        "3 000 €",
+        "2 500 €",
+        "12 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La base du taux est donnée comme prix interne : 15 000×20 %=3 000 €. Diviser par 1,20 répondrait à une majoration de coût, qui n’est pas l’hypothèse ici.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 15000
+            },
+            {
+              "value": 0.2
+            }
+          ]
+        },
+        "expected": 3000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un stock interne final est de 12 000 € au prix de cession. Ce prix correspond au coût groupe majoré de 25 %, sans autre élément. Quelle marge contient ce stock ?",
+      "options": [
+        "9 600 €",
+        "15 000 €",
+        "2 400 €",
+        "3 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le coût groupe est 12 000/1,25=9 600 €, donc la marge vaut 2 400 €. Les 25 % portent sur le coût, pas directement sur les 12 000 € du prix.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 12000
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 1.25
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2400,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le lot complet a une marge interne de 4 000 €. La moitié reste en stock et le tableau élimine les 4 000 € entiers. Quel biais crée-t-il dans le modèle simple ?",
+      "options": [
+        "Il laisse 2 000 € de profit non réalisé dans le stock",
+        "Il augmente le stock final de 4 000 €",
+        "Il reste exact parce qu’une vente interne impose toujours l’élimination totale de sa marge",
+        "Il réduit trop le stock et le résultat de 2 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le profit restant est de 4 000×50 %=2 000 €. Éliminer 4 000 € retire en plus la marge correspondant à la fraction déjà vendue aux tiers."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le stock final chez l’acheteur est de 7 500 € au prix interne. Le profit non réalisé correctement déterminé est de 1 500 €. Quel montant de stock consolidé résulte de cette seule correction ?",
+      "options": [
+        "6 000 €",
+        "7 500 €",
+        "9 000 €",
+        "1 500 €"
+      ],
+      "answer": 0,
+      "explanation": "La correction ramène le stock du prix interne au coût du groupe : 7 500−1 500=6 000 €. Elle ne supprime pas le coût réellement supporté par le groupe.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 7500
+            },
+            {
+              "value": 1500
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le lot a coûté 20 000 € au groupe et a été cédé 28 000 € en interne. Un quart reste détenu, sans autre coût ni perte. Quelle expression reconstitue directement le stock au coût groupe ?",
+      "options": [
+        "28 000 − 20 000",
+        "20 000 × 25 %",
+        "28 000 × 25 %",
+        "8 000 × 25 %"
+      ],
+      "answer": 1,
+      "explanation": "La fraction restante du coût initial vaut ici le coût consolidé du stock. Le prix interne donne le montant avant correction ; la fraction de marge donne seulement l’élimination."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau diminue correctement le stock de la marge non réalisée mais ne traduit aucun effet sur le résultat du modèle simple de l’année. Que doit-il rapprocher ?",
+      "options": [
+        "La baisse du stock et une réduction égale du seul prix d’achat dans les comptes individuels",
+        "La baisse du stock et le maintien intégral de la marge interne comme profit du groupe",
+        "La baisse du stock et l’élimination du profit inclus dans le résultat",
+        "La baisse du stock et une augmentation du résultat pour compenser cette correction"
+      ],
+      "answer": 2,
+      "explanation": "La marge interne a augmenté le résultat individuel et la valeur du stock du groupe. L’élimination doit réconcilier ces effets dans le modèle sans impôt ni autres mouvements."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le stock interne comporte des articles endommagés. Après élimination du profit, l’analyste conclut qu’aucune autre perte de valeur ne peut exister. Quelle réserve manque ?",
+      "options": [
+        "L’élimination de marge garantit la vente future au coût groupe",
+        "Les articles endommagés doivent toujours être maintenus au prix interne",
+        "Toute dépréciation doit être ajoutée à la marge pour augmenter le stock",
+        "Le retour au coût groupe ne remplace pas l’examen d’une éventuelle dépréciation selon le référentiel"
+      ],
+      "answer": 3,
+      "explanation": "L’élimination supprime un profit intragroupe, pas tous les risques de valeur du bien. Son état et ses perspectives de réalisation demandent une analyse distincte."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un stock de 5 000 € a été diminué d’une marge interne de 800 €. L’analyste comptabilise ensuite une seconde diminution de 800 € pour « retrouver le coût groupe ». Quelle anomalie apparaît ?",
+      "options": [
+        "La même élimination de marge est appliquée deux fois",
+        "La seconde diminution est une correction distincte nécessaire parce que le coût groupe exclut aussi le prix interne",
+        "La première diminution corrige seulement le résultat ; la seconde est nécessaire pour corriger à nouveau le même stock",
+        "La seconde diminution représente la part non acquise du profit, même si le dossier n’indique aucune répartition"
+      ],
+      "answer": 0,
+      "explanation": "Une fois le profit retiré dans le périmètre du cas, une seconde correction identique minore à tort le stock. Le rapprochement des étapes prévient ce double traitement."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier exclut impôt différé et attribution aux minoritaires pour un exercice préparatoire. Que faut-il préciser avec le stock consolidé obtenu ?",
+      "options": [
+        "Le stock corrigé permet de calculer l’impôt différé en appliquant le taux d’IS de la mère sans examiner les bases fiscales",
+        "Le résultat est limité à l’élimination de marge et ne résout pas ces traitements exclus",
+        "La part des minoritaires peut être calculée sur le seul montant final du stock sans connaître les détentions concernées",
+        "La simplification autorise à présenter le montant comme résultat complet de consolidation sans préciser les éléments écartés"
+      ],
+      "answer": 1,
+      "explanation": "Un exercice délimité peut isoler une méthode utile. Son résultat ne doit pas être présenté comme une consolidation complète couvrant les effets expressément écartés."
+    }
+  ]
+}

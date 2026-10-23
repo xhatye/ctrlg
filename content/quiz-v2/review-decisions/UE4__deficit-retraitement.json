@@ -1,0 +1,248 @@
+{
+  "sourceHash": "ed286a69317e133b2448945db29cc3d45f86fd723a923e2a396b8cf7b2725cdf",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "00297179761e325369b8eb608c4030b7b50efe870a11d597991f9b23d0e9063d",
+      "selected": 2,
+      "reason": "L’absence d’IS courant ne dispense pas de corriger la charge pour obtenir le déficit fiscal exact.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "8b418293fdcba22d520d9cb5f75edebcbc53ef178094048c980979ef796d2649",
+      "selected": 0,
+      "reason": "La réintégration ajoute deux mille à moins huit mille, réduisant la perte fiscale à moins six mille.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "56803eb559fd392850f8156d80332a9132cdd4b67283ab630fc6086c36878e19",
+      "selected": 1,
+      "reason": "Une charge déjà neutralisée dans le point de départ ne doit pas être réintégrée une seconde fois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "fe65ad8a91e2e80c682d2ca34fdd40a71eb949c4796471abe41ecbacebdee277",
+      "selected": 0,
+      "reason": "Retirer sept cents de moins trois mille porte le déficit à moins trois mille sept cents, sans remboursement automatique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "527864e2605a153986fc04087172ee185a4d18518ade257eb22d7118f4fd9898",
+      "selected": 1,
+      "reason": "Le régime du produit exonéré s’applique même si son retrait rend le déficit plus élevé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "f2127dc6d11fc676def0d6f62fc951e2de6982b2865f20359c78665241bca3ca",
+      "selected": 3,
+      "reason": "Un droit à déduction incertain doit être établi avant d’augmenter le déficit déclaré.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "e15f5fe480c82001fb931d7c5a4fb5c90bddbffc23705e2ffe7362957a79dc73",
+      "selected": 3,
+      "reason": "Le déficit relève des conditions de report et ne prouve pas par lui-même une créance remboursable au taux théorique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "6ce8c3d32a1846ad71ebb15d8a70db15f78d5153d794a4075d878b282eb9da97",
+      "selected": 1,
+      "reason": "Le plafond ordinaire comprend un million plus la moitié du bénéfice au-delà de ce million, pas la moitié du stock.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "9616370b235a6573d40aa640e74619d49d681c93f20f8f7462703ba4ef3a6897",
+      "selected": 0,
+      "reason": "Un million plus la moitié de huit cent mille donnent un million quatre cent mille imputables avec le stock suffisant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "a198a47e46552174919cdcd1dbb2828671e445e4754936b6b976e22994268950",
+      "selected": 1,
+      "reason": "Le plafond annuel ne crée pas de pertes : seuls les trois cent mille de stock disponible sont imputables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "7c99d23b3fb95a2da7b084c0ca6b6373bb98fe17e74b156e72fd4d69b3169785",
+      "selected": 3,
+      "reason": "La fraction seulement plafonnée demeure reportable selon les conditions ; le plafond ne crée ni extinction ni option arrière automatique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "a661c766e4af375d974bc4873f88e51c5fe44a85edb9f8be29f4809975fe174e",
+      "selected": 1,
+      "reason": "Le report en arrière ordinaire est optionnel et limité au seul exercice précédent dans les plafonds applicables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "f6879944de3500aa2c848e859f0c526f32a05208829326161ec0543b6a1b4a6c",
+      "selected": 2,
+      "reason": "Le bénéfice antérieur éligible de six cent mille limite le report, inférieur au déficit de neuf cent mille et au plafond d’un million.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "1d3b373d5b3aa79f9c81a8225953b246d8c22aafab8f266b026c506674800ef2",
+      "selected": 2,
+      "reason": "L’option ordinaire s’exerce dans le délai de dépôt de la déclaration de résultats de l’exercice où le déficit est constaté.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "d680fb8066e91eca8f532f0310175e931b683041b12a4657c8c96ccbe3e52cca",
+      "selected": 0,
+      "reason": "La créance née du report n’est pas un virement ; son utilisation et son remboursement suivent leurs conditions propres.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "7759673605531ff150a754382c9337e4b467998cac64658f4ceea93cda81e3d7",
+      "selected": 2,
+      "reason": "Moins neuf mille plus deux mille moins cinq cents donnent moins sept mille cinq cents de résultat fiscal.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "32740325e55a1d279bfd8a048935acd823fccd61fabc711bd1ccda3f6e42b20c",
+      "selected": 2,
+      "reason": "Neuf cent mille d’ouverture moins deux cent cinquante mille imputés laissent six cent cinquante mille de stock.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "67fa18fec2079c8f30269c806a02a85e561e8e84ec78ffc3735ccd1e59a66f8e",
+      "selected": 1,
+      "reason": "Le déficit utilisé en arrière quitte le stock disponible en avant, pour éviter un double emploi de la même perte.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "f34fe28db72549bc83881b492ad4bca42293674f094d6135fa544221c812433c",
+      "selected": 2,
+      "reason": "Deux cent mille imputés sur un bénéfice réellement taxé à vingt-cinq pour cent donnent cinquante mille de créance selon les données.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "8d28505f3a4b5a21d1f3a8ed040d009f8c4cc12d67c32240bbeefc6d14e45b70",
+      "selected": 0,
+      "reason": "La créance représente l’économie de l’impôt antérieur : il faut le taux réellement appliqué au bénéfice d’imputation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "688eb48195cd98fd5ae9d9d7396fefd62fca356032f23d23371466c7acb70940",
+      "selected": 1,
+      "reason": "Le stock fiscal part du déficit fiscal justifié de quarante-deux mille et non de la perte comptable de soixante mille.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "d1106eccdfae4af7bb9cb5c6a40934ba2d2cde67d566aa31f9a67e5d52760513",
+      "selected": 0,
+      "reason": "Les droits disponibles se justifient par origines fiscales, utilisations et reliquats, pas la seule somme des pertes comptables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

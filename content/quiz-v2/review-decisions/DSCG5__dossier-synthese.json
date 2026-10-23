@@ -1,0 +1,248 @@
+{
+  "sourceHash": "acfcac94cf154c74d3ae2b34a0fa923429b2f78e921936c1700779896c6348e3",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "cb1088ec37f0b9983f9ca5777e14b42f2f716aef1c9ef0fe97c5948ba9d100c9",
+      "selected": 1,
+      "reason": "Reconnecter un serveur sain aux machines compromises risque de le réinfecter.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "e6fcfcf623f389f9048244b39eedaa9c61a2c1ba7ff472cd12d2ae28a7640765",
+      "selected": 1,
+      "reason": "De8h15à13h45 il y a5h30, soit1h30 au-delà de quatre heures.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "62f142fa09dcfde928b601ebb1ad0428f5893263b9aa76558f92ce712fd59384",
+      "selected": 0,
+      "reason": "Un exercice verbal teste décisions et rôles, pas récupération physique exécutée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "c8f827cd59f057689f3ccf05445e359fbf5bd07fb5f1ea9e9d9e8b035c23ea14",
+      "selected": 0,
+      "reason": "Le mode dégradé doit être réalisable avec procédures ressources et responsables testés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "1adecb693146abeebdf72eebe41bd7da5604007b9f8cd542069efe71a879e791",
+      "selected": 0,
+      "reason": "Le test avec tous experts ne garantit pas reprise en leur absence sans remplacements.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "9705d98b3f99967460c4a1a1db384a52566b92e091138f022e113ace032db901",
+      "selected": 2,
+      "reason": "Plusieursserveurs sous même droit restent effaçables ; séparation ou protection despoints traitecausecommune.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "f7859c474d3a790a44dec4737156beca489ff68b2dd7d075d4e4634cd9824e95",
+      "selected": 1,
+      "reason": "Connaître algorithme ou format ne remplace pas clé secrète détruite, ilfautmoyensdéchiffrement protégés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "158969b9ad6c1e4e731641b964e2b6fbc6b7af8b609c98637fb1a9b303a09136",
+      "selected": 0,
+      "reason": "L’horodatage récent ne prouve pas la présence cohérente de toutes transactions attendues.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "246539f9bba9be0f168daee50da39ced48fa923c81842f868b9f9c0d9c13e2f1",
+      "selected": 2,
+      "reason": "La complète suivie des incréments dans leur ordre reconstruit l’étatmercredi.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "05bdc26df66c88ee6410f8b2ee4c5394722873e840d553882c69c6bdba7324b8",
+      "selected": 0,
+      "reason": "Des bases liées récupérées à momentsdifférents peuvent manquer de cohérence transactionnelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "7e12f25cd71c309a4c90dfc97d147cc835ff92442245e3b876f2afa71a0c1c53",
+      "selected": 2,
+      "reason": "Rétention des points30jours et fraîcheur du point repris mesurent des propriétés différentes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "3265dae6476e98d21d0c800bfa00df9bcc83adb766d3ecf8ad79a3da4494bfd7",
+      "selected": 3,
+      "reason": "La reprise représentative exige toutes dépendances nécessaires données applications et accès.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "324484729acd0cdd52e5e828790c454616886444be7e8fc4d3d09c10693ff8e0",
+      "selected": 0,
+      "reason": "Des écritures concurrentes modifient état testé et demandent rapprochement si nouvelle restauration.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "3ea4b42df56d551a5151518bc19d758281e9e8adf31e2c85402199f33176780d",
+      "selected": 2,
+      "reason": "Une copie choisie comme lisible ne démontre pas fiabilité de toutes les productions ordinaires.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "29afdb3fe791f23f627924c11a0f2b5e7e39a30960f960c35e7fa01b0e1e48c0",
+      "selected": 0,
+      "reason": "Le réseau nécessaire non testé limite la preuve à son périmètre local.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "10654d8cf6753f34c850e37c6c49c43a3c9c18c50de4a3d00c9f1bc8c55715f6",
+      "selected": 1,
+      "reason": "La collecte protégée des journaux doit précéder réinstallation qui les effacerait.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "706ba78fceec8e80e6d02d043f9949d0e9b6c042fc0e6df83838282757dd4c86",
+      "selected": 0,
+      "reason": "Sans périmètre ni exclusions le succès ne peut être interprété ou reproduit.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "6202df14ad8b804998052c88b2c740a643d9258fa2371070f8836d04bc29beb6",
+      "selected": 2,
+      "reason": "Une correction pilotée comprend cause action responsable échéance et vérification.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "da90a6f8b8c6516f5a46f4cddd4ba400cd35b8c28c23df6017ac618fe29b2451",
+      "selected": 2,
+      "reason": "La cause est l’accès aux clés, qui doit être sécurisé et testé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "e0fb9932a5fe71689823abf6921c7da18bc28befaf1f72ba8b4dffdfce66f228",
+      "selected": 2,
+      "reason": "Un document rédigé ne démontre pas l’efficacité de la correction en exercice.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "6e48b1f6d1a16c4a7788ed28521c78a75cfd343aa483822e8dec2a713c09a58a",
+      "selected": 2,
+      "reason": "Le canal de crise doit rester utilisable lorsque messagerieprimaire est en panne.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "5966f66ab376964e933e1a2d11c1ad33bfbd2070ba31707874b4bc992c88a9df",
+      "selected": 0,
+      "reason": "Le progrès du délai ne neutralise pas la perte de données devenue excessive.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

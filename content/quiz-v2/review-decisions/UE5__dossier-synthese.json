@@ -1,0 +1,259 @@
+{
+  "sourceHash": "256e3172abf30fda33f5bcd5f79bddf9f899bb6d0bceb702d7f25e5cdfc6ebb3",
+  "reviewer": "codex-law-tax-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "82f34ed2c95f639cc1c1cd590cbd91b2f250e9b7545ded1eb134450ee5e720ee",
+      "selected": 3,
+      "reason": "Le ratio est apparent car rapporté à un seul facteur ; le capital, l’organisation et leur combinaison influencent aussi son niveau.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "76fb1fa08cc6293d6de778e905e679bf7a07d433fad03c36732db41077f34cc4",
+      "selected": 1,
+      "reason": "Un trimestre de production et un mois d’heures ne couvrent pas la même période ; l’unité pièces par heure ne répare pas cette discordance.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "eb5caca06d37463a83f37590a214029c60796257f1e8815ee6171d3967c677cf",
+      "selected": 3,
+      "reason": "Les heures par pièce diminuent, donc la productivité en pièces par heure augmente ; ces deux ratios sont inverses et non identiques.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "474a28175ddee0e5eae318319a97e741edd277591922b91d14dc9314c094ec88",
+      "selected": 0,
+      "reason": "Le groupe témoin donne une référence sur les évolutions possibles sans traitement ; le tirage au sort renforce la comparaison sans garantir des résultats identiques.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "e3ccae804f3928fe459cc262c4921292c57a2f9beb742b097d5fd42bc2037af4",
+      "selected": 3,
+      "reason": "Neuf cent cinquante pièces conformes sur cent heures donnent neuf virgule cinq pièces utiles par heure ; le rebut doit être exclu du numérateur défini.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "fac1132f9ab686bd6be6507c17b08a9a69c68df20762fa64a889ec9d9d5f523b",
+      "selected": 3,
+      "reason": "L’externalisation peut déplacer du travail hors heures internes tout en maintenant la production déclarée ; le champ doit être reconstitué.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "1c474b0090d8ef19deaf8e25327dd357ee9ef15ee44ac961b601d019adbc836e",
+      "selected": 0,
+      "reason": "Une pondération accrue du secteur le plus productif peut relever la moyenne sans gain interne à aucun secteur : effet de composition.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "951783f864a8b0ac194296e5d02dbf097597bc9f9890ad959299333117f8a7e8",
+      "selected": 0,
+      "reason": "Une gamme plus rapide modifie le nombre de pièces par heure sans démontrer une meilleure organisation à produit comparable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "225d5bb62149a7e46f87a5c0705a8806a76911852488a71eadc4e2e0fe711f34",
+      "selected": 1,
+      "reason": "Mille pièces à huit par heure exigent cent vingt-cinq heures ; le ratio est à inverser pour obtenir la durée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "7a48988f748258605933241ad30b56edc1bf28db1c47deb6c9cc23a709997fbc",
+      "selected": 2,
+      "reason": "Les réglages inclus ou exclus changent la ressource mesurée ; harmoniser la convention est nécessaire avant de comparer les ratios.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "79fb8c389e46fcc7e6e47028c66b4aa12f94228c59b950d3e97ae646488342e0",
+      "selected": 0,
+      "reason": "La valeur ajoutée en volume mesure la richesse créée sans confondre achats intermédiaires et ventes brutes ; le solde bancaire n’est pas une production.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "881509c16617ce48dfae4cf189d90386d793c103137e3e9474e8b37e4b227913",
+      "selected": 2,
+      "reason": "Le résidu multifactoriel peut inclure organisation, rendements et erreurs de mesure ; il ne constitue pas une observation directe du seul progrès technique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "f1e05b19ad4a063f9709b0c7b44586de9ff444a981ac7d0929febbf12d996d9b",
+      "selected": 2,
+      "reason": "Mille pièces sur soixante heures donnent seize virgule soixante-sept par heure ; moyenne simple des deux productivités ignorerait les heures différentes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "a890e0d05a64a3c0fae53cdc64ee8f15dd055eb3b77a1c358c38448dbf2fd89c",
+      "selected": 1,
+      "reason": "Une semaine haute et un mois avec fermeture ne sont pas nécessairement représentatifs du même fonctionnement ; multiplier les ratios ne corrige pas la saisonnalité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "39a8420211afbef13967b45a7572ceb5ea07406a5eac3546eb1cb9abf6e63f7e",
+      "selected": 3,
+      "reason": "À salaire horaire constant, augmenter la production horaire réduit le quotient coût horaire sur production horaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "a11b42a65b0d6741bd7990da1acd5180f598f0fbdad777ce88755b740fff7b1f",
+      "selected": 2,
+      "reason": "Une performance utile exige d’examiner qualité, rebuts, autres changements et production conforme, au-delà du volume brut ou des primes versées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "5c414eba882b7fff03152b2d35ca5b8e0bc655cd903601e76ec3263e031e0ef6",
+      "selected": 2,
+      "reason": "Production par personne égale production par heure multipliée par heures par personne ; moins d’heures peut donc la réduire sans baisse horaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "688813f8e55420af2ae14a116ab7e0554f97134005a55d0d11be6ec039276f24",
+      "selected": 3,
+      "reason": "Une rupture de convention de mesure peut produire une rupture graphique ; il faut tester cet effet et reconstruire un périmètre comparable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "9992417ef07b367e3d976a7388b367aa033227bb2712193f84c07e4529ba4f76",
+      "selected": 0,
+      "reason": "Produire davantage et trouver des acheteurs sont distincts ; la capacité supplémentaire ne crée pas automatiquement la demande.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "8e3126d77c314915edb79a4268086dfbd25e70329f2cbc795276f11c2ba5a0c2",
+      "selected": 0,
+      "reason": "La mesure présente ne décrit pas le renouvellement, entretien et capacité future ; l’égalité actuelle ne prouve pas leur soutenabilité identique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "e1066b94c19b0b4e1a1ea06bd5d4de2c0e18d2447ca332ba6485f58962921ed1",
+      "selected": 2,
+      "reason": "Neuf mille minutes valent cent cinquante heures, donc trois mille sur cent cinquante donnent vingt pièces par heure ; conversion nécessaire avant quotient.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "6ee78829579c918014387a4e641389d860e062c1c65d2db008d3e59f296cb762",
+      "selected": 2,
+      "reason": "Le champ de production et le travail associé au service doivent être documentés pour comparer des contenus effectivement semblables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "4c82b05489ae358e7cafaa34cc4800446bf5b5201233e3318dd2b7edba8618dd",
+      "selected": 3,
+      "reason": "Plusieurs cycles ordinaires permettent d’évaluer la persistance du gain ; ils ne rendent pas toute réalisation future certaine.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

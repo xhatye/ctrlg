@@ -1,0 +1,248 @@
+{
+  "sourceHash": "c0940f688300b00044177cc97659054fc221d8a03ba5c207ab8120e910436c7d",
+  "reviewer": "codex-law-tax-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "45bff4a47791f6749da876e9d8c0a5fb1575b3f8d109074632d04a306f6b2a8e",
+      "selected": 3,
+      "reason": "Revenue est le produit des ventes avant déduction des charges ; profit et retained earnings ne désignent pas le chiffre des ventes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "84f5aaac6187439516b2dff65f68601ba617590b5c9a7a14573b97f33bf1d33e",
+      "selected": 2,
+      "reason": "Avec P=R−E, une baisse de P impose ΔE>ΔR. Les variations absolues sont désormais explicites ; une comparaison de pourcentages ne suffit pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "83353e61d58c8d8bc52ad64a1d3ad6ba667e4f9d5fc1ed000168d00dc6340ca9",
+      "selected": 3,
+      "reason": "Dans ce contexte commercial, traduire revenue par bénéfice confond les ventes avec le résultat après charges.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "dcb50389b3876fbbf42d0710e9c031fea1ef6415c9b5fe5d562b740b9c9bb623",
+      "selected": 0,
+      "reason": "Staff turnover renvoie à la rotation du personnel dans un rapport RH ; le contexte exclut le sens chiffre d’affaires.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "5e6be8a4e669314fd2b51b93880e05abb7a5bfc84f1a28ca627ca34246a0e2cd",
+      "selected": 1,
+      "reason": "Le fournisseur interroge explicitement le volume annuel des ventes : annual sales est la réponse adaptée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "250ddd1f4acdb5b2a4276c8c458ab0a853e124bff5d18fd2a261d80331f60ef8",
+      "selected": 2,
+      "reason": "Operating profit et net profit ne couvrent pas nécessairement les mêmes catégories de charges ; leur substitution change le niveau de résultat décrit.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "9f92f3afcebbddfa5982cabb45027e1c9bc36b14ee5542e1fd6a28c2fb9f4e8a",
+      "selected": 2,
+      "reason": "Expenses désigne les charges du compte de résultat ; receipts, borrowings et equity appartiennent à des catégories différentes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "b778711cf2290b6d42cfa31d7c7f83e3bc4294d6ff2b3c86b8e26391c0f0dac5",
+      "selected": 1,
+      "reason": "La facture peut être reconnue en charge avant son règlement ; le fait donné distingue rattachement comptable et flux bancaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "26df5ae41a1b4a0c6ff167654b0e8e4b5e67717e25a4aff15e553509cab335ac",
+      "selected": 2,
+      "reason": "Un décaissement de principal réduit la dette ; les charges ne recouvrent ni tous les décaissements ni les seules factures payées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "e7d7725488a16c7ca931f165422d6396b53729ab2655db3b1321015159cef79a",
+      "selected": 1,
+      "reason": "La phrase atteste seulement la diminution du coût de voyage, sans information sur les autres charges ni les dettes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "4c5877b980742495c413f24e9620b5c91d934b10cbfcb1cd4e8c0784399c6394",
+      "selected": 0,
+      "reason": "Incurred in March et paid in April distinguent la période de charge du moment du règlement ; la traduction correcte conserve cette chronologie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "da43a85e04c148a33a62890ab37cd3873fb9fce74aa788d7269f9ccb5b3c0939",
+      "selected": 0,
+      "reason": "Assets désigne les ressources reconnues comme appartenant ou étant contrôlées par l’entreprise, et non les obligations ou les produits.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "54fa631f7ce26d41a48eac8afac955261971b825f990e59da42d47a93b7c941e",
+      "selected": 1,
+      "reason": "La créance client représente un montant dû par le client à l’entreprise, ce qui se distingue du fournisseur à payer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "2a2df6ec34df1d77192238e50d2689c53dc7214ce62cb22837b4110e847e1feb",
+      "selected": 1,
+      "reason": "La catégorie liabilities indique une obligation envers le prêteur ; elle ne signifie ni vente ni transfert de tous les équipements.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "61fb75b7e2f58e94539f89a3b03c5d97c541b36e5dea1daa486f625ae82acda8",
+      "selected": 3,
+      "reason": "Equity correspond à l’intérêt résiduel des apporteurs et liabilities aux obligations envers les autres parties.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "c42e7ad02c44055d07ce1ac8df215a4940933270fddcba14f9fcd541b37e7400",
+      "selected": 0,
+      "reason": "Le matériel acquis pour servir plusieurs années relève ici des actifs ; sa dette de financement éventuelle est un élément différent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "f7221cc5e0ad1692ac53bbd485250e636f91a4cfca74bfaae872768344e28350",
+      "selected": 2,
+      "reason": "Trade payables désigne les dettes envers les fournisseurs, à distinguer des créances clients.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "9bf699f3f2114e7eb89198eea63120e07447e7cdfb149161c3e35a818f89bbe9",
+      "selected": 0,
+      "reason": "Cash flow décrit les mouvements de trésorerie et ne se confond ni avec un résultat ni avec une valeur totale d’entreprise.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "cdeb4e794ee76c9c7c086228bd7b5ccf0cf053a6f814385023009a137ea529b7",
+      "selected": 1,
+      "reason": "Des ventes non encaissées peuvent produire un résultat sans liquidités correspondantes ; le bénéfice seul ne prouve donc pas la disponibilité de cash.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "dd2d246541f668bc0d741764d23992069a2ccab22488210cafcbde6500214b81",
+      "selected": 0,
+      "reason": "Un nouvel emprunt encaissé est une entrée de trésorerie de financement et non une vente génératrice de revenue.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "a4943779b960c93188e21ef0bfa3544309c832c160d6cd38c559cb15c7ca0111",
+      "selected": 3,
+      "reason": "Le rapprochement porte sur le calendrier des règlements opérationnels et les éléments sans flux ; financements et investissements répondent à un autre périmètre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "fc3bdd97afe2f50b0344fc0109d4e66df71122dbe8a2ac1482abf366a7ee587c",
+      "selected": 0,
+      "reason": "L’encaissement du prix de cession atteste une entrée de cash ; le bénéfice dépend notamment de la valeur comptable et ne découle pas du seul encaissement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "module": "UE1",
+  "chapter": "contrats",
+  "sourceHash": "65369f66a6189b522e3824ef1886bded3cadf2f074129e6dc15447b79eaa833d",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel ensemble correspond aux conditions générales de validité d’un contrat ?",
+      "options": [
+        "Consentement, capacité et contenu licite et certain.",
+        "Consentement, rentabilité et exécution complète.",
+        "Signature, paiement et absence de toute contestation.",
+        "Capacité, facture et livraison conforme."
+      ],
+      "answer": 0,
+      "explanation": "Le contrôle de validité porte sur le consentement, la capacité et le contenu licite et certain. Une signature ou une facture ne remplace pas ces vérifications."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat signé prévoit une activité dont l’énoncé précise qu’elle est interdite par une règle impérative. Quel contrôle est directement en cause ?",
+      "options": [
+        "La conformité de l’exécution à la date prévue.",
+        "Le caractère licite du contenu.",
+        "La preuve du paiement du prix convenu.",
+        "La preuve de l’acceptation d’une modification ultérieure."
+      ],
+      "answer": 1,
+      "explanation": "La signature ne rend pas licite une prestation interdite. Le contenu du contrat doit être examiné au regard de la limite impérative indiquée dans les faits."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant conclut : « Les deux signatures rendent inutile toute question sur le consentement. » Quelle erreur faut-il corriger ?",
+      "options": [
+        "La signature rend irréfragable la liberté du consentement exprimé.",
+        "La signature exclut un vice du consentement lorsque chaque partie détient une copie.",
+        "Un accord signé peut encore demander un contrôle du consentement.",
+        "La signature ne prouve aucun accord tant que le contrat n’a pas été enregistré auprès d’une autorité."
+      ],
+      "answer": 2,
+      "explanation": "La signature contribue à matérialiser un accord, mais ne suffit pas à clore l’examen de sa validité. Les circonstances du consentement restent pertinentes."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La règle violée lors de la formation d’un contrat a pour seul objet de protéger l’intérêt privé d’une partie. Selon 1179, quelle qualification de nullité correspond à ce critère ?",
+      "options": [
+        "Une nullité absolue parce que le texte protecteur est une loi.",
+        "Une nullité absolue parce que l’autre partie conteste le vice.",
+        "Une résolution pour inexécution, indépendamment de la formation.",
+        "Une nullité relative, au regard de l’intérêt privé protégé."
+      ],
+      "answer": 3,
+      "explanation": "1179 distingue la nullité selon l’intérêt protégé par la règle violée. La protection du seul intérêt privé conduit à une nullité relative ; le fait que la règle figure dans une loi ne la rend pas absolue.",
+      "references": [
+        {
+          "title": "Code civil, article 1179, nature de l’intérêt protégé",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032041238/2026-05-12"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les parties sont d’accord pour une « mission future », mais son objet n’est pas déterminé dans le dossier. Quelle question approfondir ?",
+      "options": [
+        "Le caractère suffisamment certain du contenu de l’engagement.",
+        "La capacité des parties à contracter, déduite ici de la seule indétermination de la mission.",
+        "La licéité d’un objet tenu pour interdit du seul fait qu’il reste à définir.",
+        "La réalité d’une erreur sur une prestation déjà convenue, présumée à partir de cette seule indétermination."
+      ],
+      "answer": 0,
+      "explanation": "La difficulté concerne le contenu encore indéterminé de la mission. Un accord affiché ne suffit pas si l’on ne peut identifier l’engagement ; les modalités de paiement et de révision sont des questions distinctes."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle limite encadre la liberté de fixer le contenu d’un contrat ?",
+      "options": [
+        "La seule acceptation réciproque de la clause, indépendamment de son contenu.",
+        "La loi et l’ordre public.",
+        "La règle choisie librement par le rédacteur, même contraire à une limite impérative.",
+        "L’avantage économique attendu, réputé justifier toute clause."
+      ],
+      "answer": 1,
+      "explanation": "La liberté contractuelle ne permet pas de contourner la loi et l’ordre public. L’accord des parties ne suffit donc pas à rendre valable n’importe quelle clause."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux professionnels choisissent entre deux calendriers de livraison autorisés. Aucun texte impératif ne tranche ce choix dans l’énoncé. Quel principe explique leur marge de décision ?",
+      "options": [
+        "La force obligatoire d’un accord supposé déjà conclu avant leur choix.",
+        "La faculté unilatérale du fournisseur de choisir pour les deux parties.",
+        "La liberté contractuelle dans les limites applicables.",
+        "L’obligation de retenir le calendrier le moins coûteux, même non choisi."
+      ],
+      "answer": 2,
+      "explanation": "Les parties peuvent en principe organiser leurs engagements dans les limites légales. Choisir un calendrier n’efface pas la force des obligations ainsi convenues."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une clause est présentée comme licite uniquement parce que les deux parties la trouvent avantageuse, malgré une interdiction impérative fournie dans l’énoncé. Quelle proposition rectifie l’analyse ?",
+      "options": [
+        "Le bénéfice économique partagé permet d’écarter une limite impérative.",
+        "L’accord des deux parties transforme une règle impérative en règle supplétive.",
+        "L’interdiction ne s’applique que si l’une des parties conteste après signature.",
+        "L’intérêt partagé ne permet pas d’écarter la limite impérative indiquée."
+      ],
+      "answer": 3,
+      "explanation": "La liberté de négocier ne supprime pas les limites de la loi et de l’ordre public. Le caractère avantageux d’une clause ne tranche pas sa licéité."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise négocie un contrat sans avoir encore accepté la proposition reçue. Quel point vérifier avant d’affirmer qu’elle doit signer ?",
+      "options": [
+        "L’existence d’un engagement déjà pris, plutôt que la seule réception d’une proposition.",
+        "La preuve que l’auteur de la proposition a intérêt à la conclusion.",
+        "La preuve que la proposition comporte une date de rédaction.",
+        "L’absence de réponse immédiate, tenue pour engagement définitif de signer."
+      ],
+      "answer": 0,
+      "explanation": "La réception d’une proposition et son intérêt pour l’auteur ne démontrent pas l’engagement de son destinataire. Il faut rechercher une manifestation d’accord ou un engagement déjà pris."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un modèle de contrat laisse un choix de prestation, mais impose le respect d’une règle impérative précisée. Comment analyser la liberté des parties ?",
+      "options": [
+        "Comme entièrement supprimée dès qu’une règle impérative touche le contrat.",
+        "Comme exercée dans l’espace laissé par la règle impérative.",
+        "Comme permettant d’écarter la règle si le modèle est accepté.",
+        "Comme dispensant de vérifier la règle lorsque les parties sont professionnelles."
+      ],
+      "answer": 1,
+      "explanation": "Une limite impérative n’efface pas nécessairement toute marge contractuelle. Il faut identifier les éléments libres et ceux que les parties ne peuvent écarter."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "À quels moments la bonne foi doit-elle être prise en compte dans la relation contractuelle étudiée ?",
+      "options": [
+        "Uniquement à l’exécution, puisque les négociations ne créent aucune prestation promise.",
+        "Uniquement à la formation, puisque les obligations sont ensuite fixées.",
+        "Lors de la négociation, de la formation et de l’exécution.",
+        "Uniquement après l’apparition d’une inexécution alléguée."
+      ],
+      "answer": 2,
+      "explanation": "La bonne foi accompagne les étapes de la relation contractuelle. Elle ne se réduit pas au paiement ni à l’apparition d’un litige."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un vendeur dissimule volontairement une information décisive pendant les discussions. Avant même d’étudier le paiement, quel principe faut-il examiner ?",
+      "options": [
+        "La seule force obligatoire d’un contrat final, sans examiner les discussions.",
+        "La preuve du paiement d’une prestation qui n’a pas encore été convenue.",
+        "La modification du prix après l’exécution, indépendamment des informations dissimulées.",
+        "La bonne foi dans la négociation et la formation."
+      ],
+      "answer": 3,
+      "explanation": "Le comportement pendant les échanges peut relever de la bonne foi. Il faut analyser les faits et leurs effets sans attendre l’étape d’exécution financière."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un client affirme agir de bonne foi et décide donc de supprimer seul une partie du prix convenu. Quelle analyse est correcte ?",
+      "options": [
+        "La bonne foi ne lui donne pas un pouvoir général d’effacer une obligation.",
+        "La bonne foi remplace l’accord du créancier sur la remise de prix.",
+        "La bonne foi suspend le prix dès qu’elle est invoquée par le débiteur.",
+        "Le prix devient révisable unilatéralement parce que le client explique sa décision."
+      ],
+      "answer": 0,
+      "explanation": "La bonne foi encadre les comportements ; elle ne constitue pas une faculté générale de réécrire le contrat. Un fondement précis doit soutenir la modification invoquée."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour vérifier un reproche de déloyauté dans l’exécution, quelle donnée est la plus pertinente ?",
+      "options": [
+        "Le prix finalement payé, réputé suffire à prouver toute la loyauté de l’exécution.",
+        "Les échanges montrant comment les parties ont coopéré à la prestation convenue.",
+        "La date de signature seulement, sans examiner les comportements postérieurs.",
+        "La satisfaction initiale du client, tenue pour validation de toute l’exécution future."
+      ],
+      "answer": 1,
+      "explanation": "La bonne foi se confronte à des comportements concrets liés à l’exécution. Les échanges de coopération ou d’obstruction sont plus pertinents que des caractéristiques générales."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une réponse utilise la bonne foi comme unique justification d’une indemnité, sans préciser comportement, dommage ou fondement. Quel défaut présente-t-elle ?",
+      "options": [
+        "Elle a vérifié l’intention des parties alors que seule leur signature compte.",
+        "Elle cherche à distinguer préjudice et manquement alors qu’ils se confondent.",
+        "Elle transforme un principe en solution automatique sans application circonstanciée.",
+        "Elle retient une obligation de paiement alors que la bonne foi la supprime par principe."
+      ],
+      "answer": 2,
+      "explanation": "Un principe doit être appliqué aux faits et rattaché au mécanisme invoqué. La seule expression « bonne foi » ne démontre ni une faute précise ni le montant d’une réparation."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle recherche doit accompagner l’annonce d’un changement de prix contractuel ?",
+      "options": [
+        "Le prix d’une opération similaire avec un autre client, réputé s’imposer ici.",
+        "La hausse des coûts du fournisseur, réputée modifier d’elle-même le contrat.",
+        "La seule émission d’une nouvelle facture au montant réclamé.",
+        "L’accord des parties et les mécanismes légaux ou contractuels applicables."
+      ],
+      "answer": 3,
+      "explanation": "Une modification ne se présume pas. Elle doit être rattachée à l’accord pertinent ou à un mécanisme applicable, dont les conditions doivent être examinées."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat valable fixe une prestation à prix ferme. Le prestataire adresse une facture plus élevée, sans autre échange ni mécanisme invoqué. Que prouve cette facture à elle seule ?",
+      "options": [
+        "Le montant qu’il réclame, sans établir l’accord du client sur la hausse.",
+        "La modification du prix par accord des parties, dès l’envoi de la facture.",
+        "L’existence d’une clause de révision, même si aucun texte contractuel ne l’indique.",
+        "L’inexécution du client, déduite de son refus de payer la hausse non justifiée."
+      ],
+      "answer": 0,
+      "explanation": "Une facture exprime une demande, mais ne démontre pas à elle seule une modification acceptée. Le contrat et les échanges doivent être rapprochés."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une clause autorise une révision lorsque deux conditions précises sont remplies. Le fournisseur n’en justifie qu’une. Quel contrôle manque ?",
+      "options": [
+        "L’acceptation initiale du contrat, tenue pour réalisation des deux conditions de révision.",
+        "La réalisation de l’autre condition prévue par la clause.",
+        "La seule volonté du fournisseur de procéder à la révision.",
+        "L’intérêt économique du fournisseur, tenu pour remplacement de la condition manquante."
+      ],
+      "answer": 1,
+      "explanation": "Une clause de révision doit être appliquée selon ses conditions. L’existence de la clause ne démontre pas que toutes les conditions de sa mise en œuvre sont remplies."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un avenant signé modifie une quantité sans mentionner le prix. Comment déterminer son effet sur le montant dû ?",
+      "options": [
+        "Une modification de quantité établit nécessairement un doublement du prix.",
+        "Un avenant ne peut avoir d’effet sur aucun élément du contrat initial.",
+        "L’incidence sur le prix doit être établie à partir de l’accord complet et de ses modalités.",
+        "Le silence de l’avenant sur le prix impose nécessairement une gratuité de la quantité ajoutée."
+      ],
+      "answer": 2,
+      "explanation": "L’avenant établit la modification de quantité. Son incidence financière demande la lecture de l’accord complet et des modalités de prix, sans présumer un doublement ou une gratuité."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un candidat applique une clause de révision alors que le contrat du dossier ne la contient pas ; il l’a vue dans un modèle en ligne. Quel est le problème ?",
+      "options": [
+        "Il considère le modèle comme un usage professionnel établi sans en démontrer l’existence.",
+        "Il suppose que toute clause de révision est imposée par une règle impérative générale.",
+        "Il confond une nouvelle proposition de révision avec un avenant déjà accepté.",
+        "Il attribue aux parties une stipulation absente de leur accord."
+      ],
+      "answer": 3,
+      "explanation": "Un modèle externe ne prouve pas le contenu du contrat litigieux. Il faut vérifier les documents réellement acceptés et les règles éventuellement applicables."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une partie affirme que le prix a changé lors d’un appel téléphonique ; l’autre le conteste. Quelle question distinguer du contenu du changement allégué ?",
+      "options": [
+        "La preuve de l’accord sur cette modification.",
+        "La conformité du service livré, réputée prouver tout accord oral sur le prix.",
+        "L’existence de l’appel, tenue pour preuve suffisante de son contenu accepté.",
+        "La preuve du prix initial, tenue pour obstacle à toute modification ultérieure."
+      ],
+      "answer": 0,
+      "explanation": "La modification alléguée pose une question de contenu et une question de preuve. L’affirmation d’un échange ne démontre pas automatiquement l’accord des deux parties."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le client a accepté par écrit une remise limitée à une commande. Le fournisseur la généralise aux commandes futures. Quelle analyse est la plus solide ?",
+      "options": [
+        "Étendre la remise à toutes les commandes parce que les parties restent les mêmes.",
+        "Examiner le champ de l’accord sans étendre la remise au-delà des termes acceptés.",
+        "Tenir la remise pour définitivement acquise aux commandes futures tant qu’elle n’est pas retirée.",
+        "Appliquer la remise à tout le chiffre d’affaires annuel parce qu’elle porte sur un prix."
+      ],
+      "answer": 1,
+      "explanation": "La portée d’un accord modificatif dépend de ses termes. Une remise limitée à une commande ne permet pas de présumer une modification générale de relations futures."
+    }
+  ]
+}

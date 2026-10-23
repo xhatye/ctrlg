@@ -1,0 +1,410 @@
+{
+  "module": "UE2",
+  "chapter": "fonds-commerce-perimetre",
+  "sourceHash": "d96fb5a29fec77e0e6719a64c7b8644d54c3d368b51b7ca67dd81013e07db84e",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel énoncé distingue l’achat d’un fonds de commerce de l’achat des titres de la société exploitante ?",
+      "options": [
+        "Le fonds porte sur des éléments d’exploitation ; les titres sont des droits dans la société.",
+        "Le fonds transfère la personne morale exploitante tandis que les titres ne transmettent que la clientèle.",
+        "Les titres et le fonds transfèrent directement les mêmes actifs, seule la méthode de prix différant.",
+        "Le fonds donne une participation dans le capital tandis que les titres attribuent la propriété de chaque élément exploité."
+      ],
+      "answer": 0,
+      "explanation": "Les deux opérations n’ont pas le même objet. Le fonds rassemble des éléments d’exploitation ; la détention de titres concerne la participation dans une personne morale."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une exploitante loue ses locaux et veut vendre son fonds avec le droit au bail pertinent. Quel élément n’est pas établi comme objet de cette vente par ces seuls faits ?",
+      "options": [
+        "L’existence d’éléments affectés à l’exploitation.",
+        "La propriété des murs occupés par le commerce.",
+        "Le droit au bail envisagé dans le périmètre.",
+        "L’activité commerciale exploitée dans les locaux."
+      ],
+      "answer": 1,
+      "explanation": "Le droit au bail et la propriété de l’immeuble sont distincts. La vente du fonds avec le droit au bail ne décrit pas une acquisition des murs appartenant au bailleur."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un acheteur acquiert les actions de la société propriétaire d’un fonds. Après l’opération, qui reste titulaire du fonds dans les données fournies ?",
+      "options": [
+        "L’acheteur des titres directement, la société ne conservant qu’un droit d’exploitation du fonds.",
+        "Le vendeur des titres, la société n’ayant plus de patrimoine après la cession de ses actions.",
+        "La société, dont les titres ont changé de propriétaire.",
+        "Le dirigeant en exercice, considéré comme titulaire du fonds en raison de son pouvoir de gestion."
+      ],
+      "answer": 2,
+      "explanation": "La cession des actions change la détention des droits sociaux. Elle ne transfère pas directement le fonds du patrimoine de la société vers celui de l’acquéreur des actions."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel élément joue un rôle essentiel dans l’identification d’un fonds de commerce ?",
+      "options": [
+        "Les seuls locaux commerciaux, même sans activité ni clientèle attachée.",
+        "Le seul matériel utilisé, même sans clientèle autonome.",
+        "Le seul droit au bail, même sans clientèle attachée à l’exploitation.",
+        "La clientèle attachée à l’activité commerciale."
+      ],
+      "answer": 3,
+      "explanation": "La clientèle est un élément essentiel du fonds. Elle doit être distinguée des titres de l’exploitant et du patrimoine du propriétaire des locaux."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un acte désigne le fonds comme une personne distincte qui « empruntera en son nom » après la cession. Quel point faut-il corriger ?",
+      "options": [
+        "Le fonds n’a pas à lui seul la personnalité juridique de l’exploitant ; il faut identifier l’emprunteur.",
+        "Le fonds constitue une personne morale dès qu’il possède une clientèle identifiable.",
+        "Le fonds acquiert la personnalité juridique par la signature de l’acte de cession.",
+        "Le fonds devient une personne distincte si le financement lui est comptablement affecté."
+      ],
+      "answer": 0,
+      "explanation": "Un ensemble d’éléments d’exploitation n’est pas, par cette seule qualité, un sujet de droit. Le contrat de financement doit identifier la personne qui s’engage."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’inventaire d’un fonds comprend une machine achetée et une machine seulement louée. Comment préparer le périmètre de vente ?",
+      "options": [
+        "Traiter l’affectation des deux machines au fonds comme suffisante pour en transférer la propriété.",
+        "Distinguer la propriété de la première et les droits contractuels concernant la seconde.",
+        "Traiter la machine louée comme acquise si les loyers déjà payés dépassent sa valeur actuelle.",
+        "Considérer le prix global du fonds comme preuve du rachat préalable de la machine louée."
+      ],
+      "answer": 1,
+      "explanation": "L’affectation à l’activité ne prouve pas la propriété. La vente doit distinguer les actifs détenus et les droits d’usage ou contrats à examiner."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le projet mentionne « tous les actifs numériques », dont un nom de domaine et une licence logicielle qui exige un consentement de transfert selon le contrat fourni. Quel contrôle est nécessaire ?",
+      "options": [
+        "Traiter la désignation globale comme un accord du donneur de licence au transfert de celle-ci.",
+        "Considérer la remise des accès comme équivalente au consentement contractuellement requis.",
+        "L’identification de chaque droit et les conditions particulières de son transfert.",
+        "Appliquer au logiciel les seules modalités du nom de domaine, parce qu’ils sont regroupés comme actifs numériques."
+      ],
+      "answer": 2,
+      "explanation": "L’expression globale ne rend pas les droits interchangeables. Il faut identifier les éléments numériques et appliquer les conditions de transfert documentées pour chacun."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les stocks sont évalués séparément du fonds. L’inventaire constate 120 unités à 15 € et 40 unités détériorées valorisées contractuellement à 3 € ; aucun autre stock n’est inclus. Quelle valeur de stock est retenue ?",
+      "options": [
+        "2 400 €",
+        "1 800 €",
+        "2 040 €",
+        "1 920 €"
+      ],
+      "answer": 3,
+      "explanation": "Les données donnent 120 × 15 + 40 × 3 = 1 920 €. Les unités détériorées n’ont pas la même valeur unitaire ; le prix du fonds reste distinct de cette estimation.",
+      "calculation": {
+        "digits": 0,
+        "expected": 1920,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 120
+                },
+                {
+                  "value": 15
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 40
+                },
+                {
+                  "value": 3
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’inventaire compte deux fois le même nom de domaine, une fois dans « site web » et une fois dans « marketing numérique ». Quel contrôle faut-il faire ?",
+      "options": [
+        "Identifier les droits uniques et supprimer le double compte dans le périmètre et la valorisation.",
+        "Conserver deux valeurs distinctes parce que le même domaine sert deux usages commerciaux.",
+        "Conserver une ligne en actif et l’autre en complément de prix, même si elles rémunèrent le même droit.",
+        "Conserver la valorisation globale puis ajouter les deux lignes pour détailler le même droit dans le financement."
+      ],
+      "answer": 0,
+      "explanation": "Deux rubriques peuvent désigner le même droit. L’identification concrète évite de valoriser ou promettre deux fois le même élément."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les stocks ont été comptés deux mois avant la date prévue de cession alors que l’activité continue. Quelle modalité doit être prévue pour leur valorisation ?",
+      "options": [
+        "La reprise de la quantité ancienne avec un prix actualisé, en laissant de côté les entrées et sorties ultérieures.",
+        "Une date d’inventaire pertinente et les règles de prise en compte des quantités et de leur état.",
+        "La reprise des achats depuis le comptage, sans déduire les ventes intervenues sur la même période.",
+        "La déduction des seules sorties depuis le comptage, sans intégrer les réapprovisionnements effectués."
+      ],
+      "answer": 1,
+      "explanation": "Les stocks varient avec l’activité. La quantité, l’état et la date de référence doivent être définis pour que l’évaluation corresponde au périmètre réellement repris."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle affirmation sur les dettes est correcte pour l’examen d’une vente de fonds ?",
+      "options": [
+        "Elle transmet toutes les dettes liées à l’activité dès que les actifs nécessaires sont repris.",
+        "Elle transmet les dettes professionnelles et éteint la dette correspondante chez le vendeur par le seul accord d’achat.",
+        "Elle ne transmet pas à elle seule indistinctement toutes les dettes du vendeur.",
+        "Elle transmet les dettes à hauteur du prix payé, cette limite remplaçant l’examen de leur régime."
+      ],
+      "answer": 2,
+      "explanation": "Le périmètre des actifs et celui des dettes ne se confondent pas. Les engagements et règles spécifiques doivent être examinés au lieu de présumer un transfert universel."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Vendeur et acquéreur conviennent entre eux que l’acquéreur paiera une dette. Aucun accord du créancier libérant le vendeur n’est produit. Quelle conclusion est prudente ?",
+      "options": [
+        "Le vendeur est libéré dès que l’acquéreur s’engage à le rembourser pour cette dette.",
+        "La seule mention de la dette dans l’inventaire vaut acceptation de la libération par le créancier.",
+        "Le prix convenu compense la dette envers le créancier, même si celui-ci n’est pas partie à cet accord.",
+        "La convention entre les parties ne prouve pas, seule, la libération du débiteur envers le créancier."
+      ],
+      "answer": 3,
+      "explanation": "La prise en charge entre vendeur et acquéreur et ses effets envers le créancier sont des plans distincts. L’accord interne ne démontre pas que le créancier a libéré le vendeur."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un contrat commercial relève du droit commun de la cession de contrat, sans régime spécial indiqué. Le cédant veut transférer sa qualité de partie. Quel accord exige l’article 1216 ?",
+      "options": [
+        "L’accord du cocontractant cédé, éventuellement donné par avance.",
+        "Le seul accord entre cédant et cessionnaire, la transmission s’imposant au cédé par le prix du fonds.",
+        "Une simple information du cédé, suffisante même si celui-ci n’a donné aucun accord.",
+        "L’accord du financeur de la reprise, considéré comme substitué à celui du cédé."
+      ],
+      "answer": 0,
+      "explanation": "Dans le régime de droit commun visé, l’accord du cocontractant cédé est requis. Un accord peut être donné par avance, selon les conditions du texte.",
+      "references": [
+        {
+          "title": "Code civil, article 1216",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032041419"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un contrat commercial comporte un accord anticipé du cocontractant à sa cession. Selon l’article 1216, quand la cession produit-elle effet envers ce cocontractant ?",
+      "options": [
+        "Lors de la signature entre cédant et cessionnaire, sans notification ni prise d’acte par le cédé.",
+        "Lorsque la cession lui est notifiée ou lorsqu’il en prend acte.",
+        "À la date de l’accord anticipé, même si la cession n’a pas encore été conclue.",
+        "Lors du premier paiement du cessionnaire au cédant, sans information du cocontractant cédé."
+      ],
+      "answer": 1,
+      "explanation": "L’accord anticipé ne se confond pas avec l’effet de la cession envers le cédé. Le texte prévoit sa notification ou la prise d’acte du contrat conclu.",
+      "references": [
+        {
+          "title": "Code civil, article 1216",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032041419"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les faits établissent que les conditions du transfert légal de L1224-1 sont réunies lors de la reprise. Que deviennent les contrats de travail en cours concernés ?",
+      "options": [
+        "Leur poursuite exige un nouvel accord individuel, même si les conditions de L1224-1 sont remplies.",
+        "Ils sont suspendus jusqu’à la signature de nouveaux contrats avec le repreneur.",
+        "Ils subsistent entre le nouvel employeur et le personnel concerné.",
+        "Leur poursuite dépend du seul choix des contrats que le repreneur souhaite reprendre dans l’acte de cession."
+      ],
+      "answer": 2,
+      "explanation": "Sous l’hypothèse d’application expressément posée, L1224-1 prévoit la continuation des contrats en cours. Il faut distinguer ce régime particulier de celui de tous les contrats commerciaux.",
+      "references": [
+        {
+          "title": "Code du travail, article L1224-1",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900875"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie applique une même règle de transfert à une licence, à un contrat de travail et à un contrat d’entretien, sans les distinguer. Quel outil méthodologique est adapté ?",
+      "options": [
+        "Une matrice classant les seuls contrats par coût, en déduisant le régime de transfert du montant annuel.",
+        "Une procédure commune fondée sur l’accord du vendeur, tenue pour suffisante pour chaque cocontractant.",
+        "Un calendrier global de remise des accès, considéré comme preuve du transfert de chaque contrat.",
+        "Une matrice par contrat : parties, objet, régime, durée, clause et consentements requis."
+      ],
+      "answer": 3,
+      "explanation": "Les contrats peuvent relever de mécanismes différents. La matrice permet de distinguer les règles spéciales et les accords à obtenir pour la continuité de chaque relation."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le plan de reprise prévoit 90 000 € pour le fonds, 8 000 € de stocks valorisés séparément et 6 000 € pour un équipement indispensable exclu de la vente. Hors frais et taxes, quel besoin total ces éléments représentent-ils ?",
+      "options": [
+        "104 000 €",
+        "98 000 €",
+        "96 000 €",
+        "90 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le besoin inclut le prix du fonds, les stocks et l’équipement à acquérir séparément : 90 000 + 8 000 + 6 000 = 104 000 €. Le périmètre contractuel explique le complément de financement.",
+      "calculation": {
+        "digits": 0,
+        "expected": 104000,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 90000
+                },
+                {
+                  "value": 8000
+                }
+              ]
+            },
+            {
+              "value": 6000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une licence indispensable n’est pas transférable dans les conditions actuelles ; le prix du fonds a été négocié sans solution de remplacement. Quel risque concret faut-il intégrer ?",
+      "options": [
+        "Un simple écart de valeur comptable, considéré comme sans effet sur la possibilité d’exploiter.",
+        "Un besoin de solution et de financement complémentaire pouvant affecter la continuité.",
+        "Un transfert réputé réalisé dès que le prix du fonds comprend une ligne de valorisation de la licence.",
+        "Une continuité réputée assurée par les seuls accès techniques, sans droit d’usage transférable."
+      ],
+      "answer": 1,
+      "explanation": "Le périmètre et les conditions d’exploitation se répondent. Une ressource indispensable non disponible peut rendre le plan incomplet, au-delà du prix affiché du fonds."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux offres ont le même prix : la première inclut le matériel, la seconde l’exclut et impose son achat séparé. Quelle comparaison est utile ?",
+      "options": [
+        "Comparer le seul prix payé au vendeur, en reportant hors comparaison les achats nécessaires mais exclus.",
+        "Comparer seulement la valeur comptable du matériel inclus, sans chiffrer l’acquisition requise dans l’autre offre.",
+        "Comparer le prix au périmètre transmis et au besoin complet de reprise.",
+        "Traiter les offres comme financièrement identiques parce que leur prix facial est égal."
+      ],
+      "answer": 2,
+      "explanation": "Un prix ne se lit qu’avec ce qu’il comprend. L’acquisition séparée de ressources nécessaires peut modifier le coût et la faisabilité de l’offre."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le vendeur souhaite signer immédiatement alors que l’accès aux locaux après cession n’est pas documenté. Quel élément doit apparaître dans le calendrier de reprise ?",
+      "options": [
+        "La remise des clés à la signature, tenue pour preuve suffisante d’un droit d’occuper durablement les locaux.",
+        "Le paiement du fonds, tenu pour valant accord du propriétaire des locaux à la poursuite de l’occupation.",
+        "La date d’entrée en activité, choisie en supposant les droits d’occupation acquis par la seule continuité matérielle.",
+        "La sécurisation des locaux et des conditions permettant d’y poursuivre l’activité."
+      ],
+      "answer": 3,
+      "explanation": "Les éléments d’exploitation doivent rester utilisables après la cession. La disponibilité des locaux et les droits pertinents font partie de la continuité à organiser."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un acquéreur finance le prix du fonds mais omet les stocks valorisés à part dans les documents. Quelle faiblesse son plan présente-t-il ?",
+      "options": [
+        "Il ne couvre pas tout le périmètre financier de la reprise prévu par les documents.",
+        "Il couvre les stocks dès lors que le prix du fonds a été financé, malgré leur valorisation séparée.",
+        "Il peut différer le besoin de financement en considérant le stock repris comme immédiatement vendu au même prix.",
+        "Il peut assimiler la valeur des stocks à une ligne déjà incluse dans le fonds sans rapprocher les deux valorisations."
+      ],
+      "answer": 0,
+      "explanation": "La séparation de valorisation a un effet concret sur le financement. Les stocks ne doivent pas être considérés implicitement inclus si le dossier les prévoit à part."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le plan liste matériel, personnel et contrats nécessaires, mais aucune personne n’est chargée de vérifier les consentements avant la reprise. Quelle amélioration est utile ?",
+      "options": [
+        "Retenir une échéance unique de signature, considérée comme suffisante sans pièces intermédiaires attendues.",
+        "Attribuer à chaque vérification une échéance, une pièce attendue et un responsable.",
+        "Confier globalement le suivi au vendeur sans définir les éléments prouvant les consentements obtenus.",
+        "Retenir les dates d’expiration des contrats sans déterminer qui doit obtenir leur poursuite ou leur transfert."
+      ],
+      "answer": 1,
+      "explanation": "La continuité dépend de démarches effectives, pas seulement d’une liste. Des responsabilités, dates et preuves attendues rendent le calendrier de reprise opérationnel."
+    }
+  ]
+}

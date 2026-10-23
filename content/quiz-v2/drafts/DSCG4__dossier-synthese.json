@@ -1,0 +1,476 @@
+{
+  "module": "DSCG4",
+  "chapter": "dossier-synthese",
+  "sourceHash": "7fa1c2c4421847bc12a88279b664f6e13d0faf0779bfa36ab7958a51de09bb8a",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pendant un inventaire, une palette déjà comptée est déplacée dans une zone restant à compter. Quel contrôle des mouvements permet le mieux de prévenir son double comptage ?",
+      "options": [
+        "Identifier le lot transféré et rapprocher sa trace de mouvement des feuilles des deux zones pour conserver un seul comptage.",
+        "Conserver les deux comptages si chacun est signé par une équipe différente, sans rapprocher les transferts.",
+        "Ne rapprocher que le total des entrées et sorties de l’entrepôt, sans suivre les déplacements entre zones.",
+        "Répartir la quantité de la palette à parts égales entre les zones, sans la relier aux feuilles de comptage."
+      ],
+      "answer": 0,
+      "explanation": "La traçabilité du transfert permet de relier les deux passages du même lot et de conserver une quantité unique. Deux signatures, un total global ou une répartition théorique ne remplacent pas ce rapprochement."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une ligne de stock comporte 120 pièces au coût validé de 25 € chacune. Le recomptage fiable n’en retrouve que 108 ; le dossier établit l’absence réelle des 12 autres, sans autre ajustement. Quelle surévaluation quantitative en valeur corriger ?",
+      "options": [
+        "12 €",
+        "300 €",
+        "3 000 €",
+        "2 700 €"
+      ],
+      "answer": 1,
+      "explanation": "L’écart établi est 120−108=12 pièces. Au coût validé de 25 €, il représente 12×25=300 € de stock comptabilisé sans quantité correspondante.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 120
+                },
+                {
+                  "value": 108
+                }
+              ]
+            },
+            {
+              "value": 25
+            }
+          ]
+        },
+        "expected": 300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une ligne indique « 80 cartons de 12 unités ». Le contrôleur trouve 80 unités isolées et coche « quantité conforme » sans conversion. Que doit-il vérifier ?",
+      "options": [
+        "La concordance des deux nombres 80, suffisante si la référence de produit est identique.",
+        "Le maintien de 80 dans le récapitulatif et l’application du prix de la pièce, sans convertir les cartons en pièces.",
+        "L’unité de mesure, car 80 cartons ne correspondent pas à 80 pièces",
+        "La comparaison des nombres 80, le facteur de conditionnement devant être appliqué seulement au prix et non à la quantité."
+      ],
+      "answer": 2,
+      "explanation": "Le rapprochement exige une même unité : 80 cartons de 12 représentent 960 pièces. Confondre emballage et unité peut masquer un écart d’existence important."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les stocks sont significatifs et répartis sur trois sites. L’auditeur choisit le site le plus proche de son cabinet sans considérer les risques des autres sites. Quel critère NEP 501 a-t-il omis ?",
+      "options": [
+        "Le nombre de sites, qui impose une répartition strictement égale du temps de présence même si leurs risques diffèrent",
+        "Le chiffre d’affaires de chaque site, utilisé comme critère suffisant indépendamment des caractéristiques de ses stocks",
+        "Le montant global des stocks, utilisé pour justifier le choix d’un site représentatif sans analyse des autres implantations",
+        "Les risques d’anomalies significatives au niveau des stocks de chaque site"
+      ],
+      "answer": 3,
+      "explanation": "La localisation des travaux doit tenir compte des risques attachés aux stocks des sites. La commodité du déplacement ne suffit pas à justifier les lieux où la présence est nécessaire.",
+      "references": [
+        {
+          "title": "H2A, NEP 501 : inventaire physique",
+          "url": "https://h2a-france.org/normes/caractere-probant-des-elements-collectes-applications-specifiques/"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’inventaire porte sur des stocks dangereux situés dans un lieu où la présence de l’auditeur est impossible. Quelle démarche la NEP 501 prévoit-elle ?",
+      "options": [
+        "Déterminer si des procédures alternatives peuvent apporter des éléments probants équivalents",
+        "Conclure dès cette impossibilité à une limitation imposant une réserve, sans rechercher d’autres éléments probants",
+        "S’appuyer uniquement sur une attestation signée de la direction pour remplacer les travaux sur les stocks",
+        "Reporter la présence à l’exercice suivant et considérer les quantités de clôture comme validées jusque-là"
+      ],
+      "answer": 0,
+      "explanation": "L’impossibilité de présence conduit à examiner des procédures alternatives appropriées. Elle ne valide pas les quantités et ne détermine pas, à elle seule, une valeur comptable nulle.",
+      "references": [
+        {
+          "title": "H2A, NEP 501 : inventaire physique",
+          "url": "https://h2a-france.org/normes/caractere-probant-des-elements-collectes-applications-specifiques/"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le responsable remet à l’auditeur seulement les feuilles d’inventaire déjà remplies. Des numéros de feuilles prévues sont absents et aucune annulation n’est expliquée. Quel risque documentaire rechercher ?",
+      "options": [
+        "Un risque limité au classement des feuilles, sans incidence sur l’exhaustivité si les seules feuilles reçues sont signées.",
+        "Des zones ou lots comptés sur des feuilles manquantes peuvent être omis du récapitulatif",
+        "Un doublon à éliminer dans les feuilles reçues avant de rechercher le sort des numéros absents.",
+        "Une omission à chiffrer en appliquant aux numéros absents la quantité moyenne des feuilles reçues, sans rechercher ces feuilles."
+      ],
+      "answer": 1,
+      "explanation": "Le suivi des feuilles permet de rapprocher les comptages du récapitulatif. Une rupture inexpliquée de la séquence appelle une recherche ; elle ne suffit pas à quantifier ni à qualifier une anomalie."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une zone d’entrepôt contient des produits encore utilisables mais est exclue de l’inventaire parce qu’elle est fermée le jour du comptage. Quel risque le périmètre crée-t-il ?",
+      "options": [
+        "Une dépréciation à calculer sur la totalité de la zone, la fermeture remplaçant l’analyse de l’état des produits",
+        "Un défaut de rattachement des ventes, les produits de la zone fermée devant être considérés comme déjà livrés",
+        "Une omission des quantités de cette zone dans le recensement",
+        "Une quantité réputée conforme aux fiches de stock, l’absence de mouvement le jour du comptage suffisant à la valider"
+      ],
+      "answer": 2,
+      "explanation": "L’accès difficile ne fait pas disparaître les biens du périmètre pertinent. Il faut traiter la zone et ses preuves, sans transformer l’absence de comptage en conclusion sur sa valeur ou ses droits."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Au 28 décembre, un comptage fiable recense 540 unités. Du 29 au 31, les entrées justifiées sont de 80 unités et les sorties de 110, sans autre mouvement. Quelle quantité reconstituer à la clôture ?",
+      "options": [
+        "730 unités",
+        "570 unités",
+        "350 unités",
+        "510 unités"
+      ],
+      "answer": 3,
+      "explanation": "Le rapprochement des dates s’effectue avec les mouvements intercalaires : 540+80−110=510 unités. Les entrées augmentent la quantité et les sorties la diminuent.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 540
+                },
+                {
+                  "value": 80
+                }
+              ]
+            },
+            {
+              "value": 110
+            }
+          ]
+        },
+        "expected": 510,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise possède des stocks confiés à un logisticien externe. Sa liste d’inventaire ne couvre que son entrepôt propre. Quelle recherche répond à ce défaut de périmètre ?",
+      "options": [
+        "Recenser les biens détenus pour elle par le logisticien et obtenir des preuves adaptées",
+        "Retenir les seuls biens visibles dans son propre entrepôt",
+        "Ajouter tous les biens du logisticien, quels qu’en soient les propriétaires",
+        "Comptabiliser seulement le montant des frais de transport comme stock"
+      ],
+      "answer": 0,
+      "explanation": "Les biens de l’entreprise peuvent se trouver chez un tiers. Leur localisation ne suffit pas à les exclure ; inversement, elle ne permet pas d’intégrer les biens d’autres propriétaires."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le récapitulatif d’inventaire omet une feuille contenant 35 unités mais comporte ailleurs une ligne de 35 unités sans référence de lot. Le préparateur conclut que les deux se compensent. Quelle preuve manque ?",
+      "options": [
+        "La concordance du total général en nombre d’unités, suffisante même lorsque les références de produits diffèrent",
+        "Un rapprochement des références pour établir qu’il s’agit effectivement du même lot",
+        "La signature du responsable sur le récapitulatif, suffisante pour attribuer les deux lignes au même lot",
+        "L’égalité du coût moyen des unités, suffisante pour compenser les lignes sans identifier les marchandises"
+      ],
+      "answer": 1,
+      "explanation": "Une égalité de quantité ne démontre pas que deux lignes représentent les mêmes biens. Les références, emplacements et pièces doivent permettre de distinguer omission, reprise correcte et éventuel doublon."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’entrepôt contient 200 unités identiques : 40 sont expressément détenues en dépôt pour un client, qui en conserve les droits ; les 160 autres appartiennent à l’entreprise. Quel périmètre retenir pour son propre stock dans ce cas ?",
+      "options": [
+        "40 unités",
+        "0 unité",
+        "160 unités",
+        "200 unités"
+      ],
+      "answer": 2,
+      "explanation": "Le contrat distingue les biens de l’entreprise de ceux détenus pour le client. La présence physique des 40 unités confiées ne les transforme pas en stock propre."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un bien appartenant à l’entreprise est donné en garantie d’un emprunt et reste chez elle. Le comptable le retire du stock au seul motif de la sûreté. Quelle analyse manque ?",
+      "options": [
+        "La garantie impose une sortie du stock puis la constatation d’une créance de même montant sur la banque",
+        "Le maintien physique dans l’entrepôt suffit à justifier le stock sans examiner le contrat de garantie",
+        "Le bien doit être retiré du stock à hauteur du montant de l’emprunt garanti, même sans transfert de droits",
+        "Les droits conservés et les conditions de la garantie ; la sûreté ne prouve pas seule une cession"
+      ],
+      "answer": 3,
+      "explanation": "Une sûreté et une cession ne se confondent pas. Le traitement doit découler des droits et conditions applicables, et non d’une sortie automatique pour le seul fait d’une garantie."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des marchandises facturées sont en transit au 31 décembre. Aucun document ne précise quand les droits ou le contrôle passent à l’acheteur dans le référentiel du cas. Quelle information est prioritaire pour leur rattachement au stock ?",
+      "options": [
+        "Les conditions contractuelles et les faits de transfert applicables à cette date",
+        "La seule date d’impression de la facture",
+        "La seule distance entre fournisseur et acheteur",
+        "Le seul montant des frais de transport indépendamment des conditions"
+      ],
+      "answer": 0,
+      "explanation": "La facturation et la localisation ne règlent pas nécessairement le transfert pertinent. Le contrat et les faits de livraison doivent être rapprochés du référentiel pour conclure à la clôture."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le magasinier indique qu’un lot « est à nous », mais les pièces disponibles montrent un contrat de dépôt pour un tiers. Quelle réponse d’audit convient ?",
+      "options": [
+        "Retenir la déclaration du magasinier dès lors qu’elle concorde avec le comptage physique du lot",
+        "Clarifier la contradiction au moyen du contrat et des autres éléments pertinents",
+        "Conserver le lot dans le stock de l’entreprise jusqu’à son enlèvement par le tiers, indépendamment du contrat",
+        "Compenser le montant du lot détenu pour le tiers avec celui des marchandises de l’entreprise détenues ailleurs"
+      ],
+      "answer": 1,
+      "explanation": "Une contradiction ne se résout pas par la commodité ni par la seule présence physique. Les droits documentés et les faits doivent permettre de comprendre le dépôt et son incidence sur les comptes."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le contrat établit que 50 articles confiés à un réparateur appartiennent toujours à l’entreprise. Le récapitulatif les exclut car ils sont « sortis du bâtiment ». Quelle distinction doit être rétablie ?",
+      "options": [
+        "Les articles doivent sortir du stock jusqu’à leur retour, puis être réintégrés à cette date même si les droits sont maintenus",
+        "Les articles doivent être reclassés en créance sur le réparateur pour leur coût comptable pendant toute la réparation",
+        "Une sortie physique pour réparation n’est pas nécessairement une sortie des droits sur le stock",
+        "Les articles ne peuvent rester au stock que s’ils sont à la fois facturés et physiquement présents dans l’entrepôt de l’entreprise"
+      ],
+      "answer": 2,
+      "explanation": "Le lieu de détention ne détermine pas seul l’appartenance. Le contrat fourni maintient les droits ; il reste à vérifier les quantités, l’état et le traitement approprié de ces articles."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour un article IAS 2, le coût est de 70 €. Le prix de vente estimé est de 82 €, les coûts d’achèvement de 9 € et les coûts nécessaires à la vente de 8 €. Quelle valeur unitaire retenir dans ce cas ordinaire ?",
+      "options": [
+        "70 €",
+        "82 €",
+        "74 €",
+        "65 €"
+      ],
+      "answer": 3,
+      "explanation": "La valeur nette de réalisation vaut 82−9−8=65 €. IAS 2 retient ici le plus faible du coût de 70 € et de cette valeur : 65 €.",
+      "calculation": {
+        "expression": {
+          "op": "min",
+          "args": [
+            {
+              "value": 70
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 82
+                    },
+                    {
+                      "value": 9
+                    }
+                  ]
+                },
+                {
+                  "value": 8
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 65,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 2 : mesure des stocks",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un stock coûte 60 € par unité et peut être vendu 58 €, mais des frais nécessaires de vente restent à supporter. Le tableau retient 58 € comme valeur nette de réalisation sans les examiner. Quel élément manque ?",
+      "options": [
+        "Les coûts nécessaires à la vente, à déduire pour déterminer la valeur nette de réalisation",
+        "Les frais commerciaux déjà engagés lors de l’achat, à ajouter au prix de vente estimé de 58 €",
+        "La marge cible de l’entreprise, à déduire de 58 € à la place des coûts restant nécessaires à la vente",
+        "Le coût historique de 60 €, à conserver comme valeur nette de réalisation tant que les frais de vente ne sont pas payés"
+      ],
+      "answer": 0,
+      "explanation": "La valeur nette de réalisation ne correspond pas toujours au seul prix de vente estimé. Les coûts d’achèvement éventuels et ceux nécessaires à la vente entrent dans sa détermination.",
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 2 : mesure des stocks",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’auditeur observe que 20 % d’un lot est endommagé. Aucun prix de récupération ni coût de remise en état n’est établi. Peut-il proposer mécaniquement une dépréciation de 20 % de la valeur totale ?",
+      "options": [
+        "Non, un comptage rend toute dépréciation impossible",
+        "Non, il faut mesurer l’incidence de l’état sur la valeur selon le référentiel et les données utiles",
+        "Oui, le pourcentage de pièces endommagées est toujours le taux de perte de chaque pièce",
+        "Oui, chaque dommage impose la sortie de tout le lot"
+      ],
+      "answer": 1,
+      "explanation": "Le nombre de pièces affectées ne mesure pas leur perte unitaire. Certaines peuvent conserver une valeur ou être réparables ; l’évaluation exige des informations complémentaires."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Sous IAS 2, un produit ordinaire coûte 45 € et sa valeur nette de réalisation valablement établie est de 51 €. Le responsable veut augmenter le stock à 51 € en raison de sa bonne vendabilité. Que retenir ?",
+      "options": [
+        "96 €, en cumulant coût et prix net",
+        "6 €, correspondant seulement à la marge espérée",
+        "45 €, le plus faible du coût et de la valeur nette de réalisation",
+        "51 €, car toute hausse du prix estimé doit être comptabilisée"
+      ],
+      "answer": 2,
+      "explanation": "Dans le cas ordinaire donné, IAS 2 plafonne la mesure au coût lorsque la valeur nette de réalisation lui est supérieure. La marge future ne constitue pas une hausse automatique du stock.",
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 2 : mesure des stocks",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le dossier distingue 80 articles sains à 30 € et 20 articles endommagés dont la valeur retenue après examen est de 12 € au lieu du coût de 30 €. Quelle valeur totale après cette seule correction obtenir ?",
+      "options": [
+        "3 000 €",
+        "1 200 €",
+        "2 760 €",
+        "2 640 €"
+      ],
+      "answer": 3,
+      "explanation": "Les articles sains valent 80×30=2 400 €, les articles affectés 20×12=240 €. Le total est 2 640 €, ce qui correspond à une perte de 360 € sur le seul sous-lot concerné.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 80
+                },
+                {
+                  "value": 30
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 20
+                },
+                {
+                  "value": 12
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2640,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le prix unitaire contrôlé est un prix de vente TTC. Le tableau le compare directement au coût comptable HT dans un régime où la TVA est récupérable. Quel examen préalable est nécessaire ?",
+      "options": [
+        "Rendre les bases comparables et déterminer la valeur pertinente selon le référentiel",
+        "Convertir le coût comptable HT en TTC puis retenir le prix de vente TTC comme coût unitaire du stock",
+        "Comparer les deux montants tels quels si le taux de TVA est le même pour l’achat et la vente",
+        "Retenir la différence entre prix TTC et coût HT comme marge disponible avant toute analyse de la valeur du stock"
+      ],
+      "answer": 0,
+      "explanation": "Le contrôle doit rapprocher des mesures cohérentes. La présence de TVA récupérable et la différence entre prix de vente et coût doivent être traitées avant toute conclusion sur la valeur du stock."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après inventaire, la liste finale remplace tous les coûts unitaires validés par des prix saisis manuellement sans justification. Les quantités rapprochées suffisent-elles pour accepter le montant final ?",
+      "options": [
+        "Oui, si les quantités ont été rapprochées avec les feuilles signées, les nouveaux prix étant une question de présentation",
+        "Non, les prix modifiés et leur justification doivent aussi être contrôlés",
+        "Oui, si le montant total obtenu reste proche du précédent, même sans rapprochement des prix modifiés",
+        "Non, mais un nouveau comptage physique suffit à valider les coûts unitaires modifiés sans pièces de prix"
+      ],
+      "answer": 1,
+      "explanation": "Le montant combine quantités et valeurs unitaires. Le contrôle des premières ne valide pas une modification non documentée des secondes ; les changements demandent leur propre justification."
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "module": "DSCG6",
+  "chapter": "dossier-synthese",
+  "sourceHash": "d0511496721fba60730eecd527bf7a590fb67c967034bf390c73954a41f12952",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A purchasing manager receives a personal gift from a bidder and will recommend a supplier. Company policy and legal findings are not provided. Which issue can be identified from these facts?",
+      "options": [
+        "A potential conflict between the personal benefit and independent supplier selection.",
+        "A proven criminal offence requiring a specific legal penalty.",
+        "Proof that the bidder’s service quality is lower than the other bids.",
+        "Proof that the firm has already awarded the contract to the donor."
+      ],
+      "answer": 0,
+      "explanation": "Les faits établissent un avantage personnel lié à un décideur et à un candidat. Ils permettent d’identifier un conflit potentiel, mais pas une infraction qualifiée, une qualité de service inférieure ou une attribution déjà décidée."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The manager says, “The gift did not change my view, so no one could reasonably question the process.” Which distinction is missing?",
+      "options": [
+        "Personal confidence is sufficient independent evidence that the process could not reasonably be questioned.",
+        "Actual influence and confidence in the independence of the process are not the same question.",
+        "A modest purchase price automatically rules out any concern about the appearance of influence.",
+        "A declaration by the recipient necessarily settles both actual influence and public confidence without examining the process."
+      ],
+      "answer": 1,
+      "explanation": "L’absence d’influence revendiquée ne suffit pas à écarter un doute raisonnable sur l’indépendance. Montant faible et déclaration sont des éléments à examiner, pas des garanties automatiques sur les deux dimensions."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A gift was offered after one contract ended, shortly before a renewal decision involving the same manager. Which aspect remains relevant to a conflict assessment?",
+      "options": [
+        "A gift after a contract ends cannot relate to any future decision.",
+        "The timing alone proves that the renewal price has already been increased.",
+        "The manager may still influence the upcoming renewal decision.",
+        "The previous contract’s end proves that the bidder has no current commercial interest."
+      ],
+      "answer": 2,
+      "explanation": "Une décision de renouvellement est encore à venir et le bénéficiaire peut y participer. La fin du contrat précédent ne supprime pas cet intérêt, mais la chronologie ne prouve pas non plus une manipulation du prix."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The manager disclosed the gift to a supervisor. No further step is recorded. Which statement separates disclosure from management of the conflict?",
+      "options": [
+        "Disclosure establishes that the manager has been removed from every selection role.",
+        "Disclosure proves that the bidder was assessed by an independent reviewer.",
+        "Disclosure is equivalent to confirmation that the gift complied with the unknown policy.",
+        "Disclosure makes the relationship visible, but does not by itself show how the selection was protected."
+      ],
+      "answer": 3,
+      "explanation": "Signaler un avantage n’établit pas les mesures prises ensuite ni la conformité à une règle absente. Il faut distinguer transparence, évaluation du risque et protections effectivement mises en place."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The bidder that gave a gift also has the strongest documented service score. What is the appropriate analytical position?",
+      "options": [
+        "Examine both the documented merits of the bid and the independence concern, without assuming one cancels the other.",
+        "Treat a documented service score as sufficient assurance that the selection process was independent.",
+        "Treat disclosure of the gift alone as resolving the concern, without examining who produced the scores.",
+        "Set aside all service evidence solely because a gift existed, without examining whether independent review can verify it."
+      ],
+      "answer": 0,
+      "explanation": "Qualité documentée et indépendance du choix sont distinctes. Il faut examiner les deux, sans déduire une indépendance garantie du bon score ni supprimer toute preuve de mérite avant contrôle."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "For this exercise, a supplied company rule allows a modest gift only if it is declared and approved before acceptance. The manager declared it afterwards. Which conclusion follows from the stated rule?",
+      "options": [
+        "Approval after the award is equivalent to prior approval whenever the declaration is recorded.",
+        "The recorded declaration does not establish compliance with the required prior approval.",
+        "Declaration alone replaces approval because both create a written record.",
+        "The modest value alone satisfies the rule, regardless of the timing of approval."
+      ],
+      "answer": 1,
+      "explanation": "La règle fictive impose déclaration et approbation avant acceptation. Un écrit postérieur, la seule déclaration et le faible montant ne satisfont pas séparément toutes ces conditions."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A bid-comparison table sets out price and service criteria, but only the gift recipient scored it and no supporting evidence is attached. What does the table establish?",
+      "options": [
+        "Proof that no subjective judgement affected the scores.",
+        "Proof that the highest-scoring bidder satisfied every underlying service claim.",
+        "A record of that person’s scores, not an independently verified assessment of the bids.",
+        "Independent verification because the scores are written rather than spoken."
+      ],
+      "answer": 2,
+      "explanation": "Un tableau matérialise des appréciations, mais son existence ne valide pas leurs données ni leur indépendance. Les pièces et la démarche de contrôle restent à examiner."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The file contains a signed delivery record for the gift but only an unverified rumour that a payment was promised for choosing the bidder. Which statement distinguishes evidence and suspicion?",
+      "options": [
+        "The documented gift proves the alleged payment promise.",
+        "The rumour is as well established as the signed delivery record.",
+        "The lack of verification proves that the promise was never made.",
+        "Receipt of the gift is documented; the alleged promise remains unverified."
+      ],
+      "answer": 3,
+      "explanation": "Il faut séparer le fait documenté de l’allégation non vérifiée. Le cadeau ne démontre pas à lui seul la promesse, et l’absence de preuve n’établit pas son inexistence."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A bidder claims a 30-minute response time in its presentation. The contract draft offers only next-day response. Which evidence issue should be resolved before scoring service quality?",
+      "options": [
+        "Which response commitment the firm would actually obtain under the agreed terms.",
+        "The presentation figure should replace the draft because it gives the stronger service claim.",
+        "The draft and presentation describe identical response times in different units.",
+        "The presence of two figures proves that the bidder cannot provide any service."
+      ],
+      "answer": 0,
+      "explanation": "Le score doit être lié à la prestation effectivement promise. Les deux délais diffèrent ; choisir le meilleur sans vérifier l’engagement ou conclure à une incapacité totale n’est pas justifié."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A reviewer sees that the gift-giving bidder ranked first and concludes that the ranking was manipulated. What further work is needed?",
+      "options": [
+        "Review only the final ranking and treat its consistency with the award as proof that the underlying scores were independent.",
+        "Check the scoring basis and decision process before inferring manipulation from that association.",
+        "Change the criterion weights retrospectively until a different bidder wins, then describe that result as the original ranking.",
+        "Treat the gift and the first-place ranking as sufficient proof that the scoring was manipulated."
+      ],
+      "answer": 1,
+      "explanation": "L’association motive un examen des pièces, critères et interventions. Elle ne prouve pas seule la manipulation ; un classement final cohérent ou une nouvelle pondération ne reconstitue pas l’indépendance du processus initial."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The panel says, “The same disclosure requirement applies irrespective of the bidder’s ranking.” What does irrespective of mean?",
+      "options": [
+        "Only after the bidder’s ranking has been finalised.",
+        "Because the bidder has achieved the highest ranking.",
+        "Without the bidder’s ranking changing the applicability of the requirement.",
+        "Unless the bidder is ranked first."
+      ],
+      "answer": 2,
+      "explanation": "Irrespective of signifie indépendamment de, sans égard à. Le classement ne modifie donc pas l’application de cette exigence ; ce n’est ni une échéance ni une exception pour le premier."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "After seeing the bids, the manager proposes increasing the weight of a criterion on which the gift-giving bidder performs best. Which review question addresses consistency?",
+      "options": [
+        "Whether changing a weight can be described as a formatting amendment only.",
+        "Whether the preferred bidder agrees with its stronger score under the new weighting.",
+        "Whether the change can be omitted from the comparison to keep the original table.",
+        "Why the criterion’s importance changed and whether the revised weighting is justified independently of bidder identity."
+      ],
+      "answer": 3,
+      "explanation": "Une modification après connaissance des offres doit être justifiée et traçable. L’accord du candidat favorisé, un changement de présentation ou l’omission ne démontre pas la cohérence des critères."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A reviewer says, “The concern is not so much the headline price as the transition risk.” Which interpretation best captures the emphasis?",
+      "options": [
+        "The reviewer places greater emphasis on transition risk than on the headline price.",
+        "The reviewer states that headline price is the only issue requiring attention.",
+        "The reviewer says that the headline price and transition risk are the same measure.",
+        "The reviewer says transition risk has been resolved and needs no further attention."
+      ],
+      "answer": 0,
+      "explanation": "Not so much X as Y met davantage l’accent sur Y. La formule ne nie pas nécessairement toute pertinence de X et n’assimile pas les deux critères."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A scorecard gives cost a weight of 60% and service a weight of 40%. A memo recommends selecting the highest service score without mentioning cost. Which issue should be addressed?",
+      "options": [
+        "The cost weight means the service score must be excluded rather than combined with cost.",
+        "The recommendation does not apply the stated weighting of the two criteria.",
+        "Mentioning both criteria guarantees that their stated weights have been applied.",
+        "The recommendation should reverse the weights merely because service is discussed first in the memo."
+      ],
+      "answer": 1,
+      "explanation": "Une décision fondée seulement sur le service ne combine pas les deux critères selon leurs poids. Les mentionner ne démontre pas le calcul ; l’ordre de rédaction ne justifie pas une inversion des coefficients."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The memo requires an independent review “in lieu of the recipient’s self-certification”. What relationship does in lieu of express?",
+      "options": [
+        "The independent review is to be added to an unchanged requirement for self-certification.",
+        "The independent review must occur before the gift was originally offered.",
+        "The independent review is to replace the self-certification.",
+        "The independent review is payment for the time spent on self-certification."
+      ],
+      "answer": 2,
+      "explanation": "In lieu of signifie à la place de. Le texte prévoit une substitution, non une simple addition, une antériorité à l’offre ou une rémunération."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The gift is returned, but the recipient’s earlier unreviewed scores still determine the ranking. Which action most directly addresses the remaining independence concern?",
+      "options": [
+        "Ask the recipient alone to repeat the scoring and label that repeat exercise an independent review.",
+        "Change the criterion weights retrospectively so that the concern no longer needs to be examined.",
+        "Review only the evidence that the gift was returned, treating that as verification of all earlier scores.",
+        "Arrange an independent examination of the scoring and decision process despite return of the gift."
+      ],
+      "answer": 3,
+      "explanation": "Rendre le cadeau ne vérifie pas les notes antérieures. Leur examen indépendant vise le processus restant en cause ; un nouveau travail du seul intéressé, une pondération changée ou la preuve du retour n’y répondent pas."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The gift recipient must supply technical information, but an independent reviewer can assess the bids. Which recommendation separates useful expertise from final selection?",
+      "options": [
+        "Use the manager’s documented technical input while assigning the review and recommendation to an independent person.",
+        "Exclude all technical information solely because it came from the manager.",
+        "Treat the manager’s technical knowledge as sufficient to remove the independence concern.",
+        "Assign the independent reviewer only the task of copying the manager’s final ranking."
+      ],
+      "answer": 0,
+      "explanation": "La proposition conserve l’information utile tout en séparant sa contribution de l’examen indépendant. Écarter toute donnée ou faire simplement recopier le classement ne réalise pas cette séparation."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An analyst introduces a fictional procurement example with “By way of illustration”. What role is being assigned to the example?",
+      "options": [
+        "It is presented as a representative statistical sample of all procurement decisions.",
+        "It is used to clarify the reasoning through an example, rather than being offered as an observed case.",
+        "It is presented as binding policy applicable to every supplier.",
+        "It is presented as an audit finding from the company’s actual procurement files."
+      ],
+      "answer": 1,
+      "explanation": "By way of illustration annonce un exemple destiné à éclairer une idée. Ici, son caractère fictif exclut de le présenter comme observation d’audit, échantillon représentatif ou règle obligatoire."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A proposed independent reviewer helped write the gift-giving bidder’s proposal. Which condition should be checked before describing that review as independent?",
+      "options": [
+        "Only whether the reviewer can complete the scoring quickly.",
+        "Only whether the reviewer agrees with the existing ranking.",
+        "The reviewer’s relationship with the bidder and role in preparing the offer.",
+        "Only whether the reviewer has a different job title from the purchasing manager."
+      ],
+      "answer": 2,
+      "explanation": "L’indépendance dépend notamment des liens et du rôle réel du contrôleur. Un titre distinct, la rapidité ou l’accord avec le classement ne neutralise pas le lien indiqué avec le candidat."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A director says, “I would sooner postpone the award than bypass the review.” What preference is expressed?",
+      "options": [
+        "The director reports that the award was postponed before the review began.",
+        "The director prefers omitting the review to postponing the award.",
+        "The director predicts that postponement will necessarily make review impossible.",
+        "The director prefers postponing the award to omitting the review."
+      ],
+      "answer": 3,
+      "explanation": "Would sooner A than B exprime une préférence pour A plutôt que B. Sooner n’indique pas ici une chronologie déjà observée ni une prédiction de l’issue."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Company policy on gifts is absent from the file. Which action is appropriate before claiming the gift complied with internal rules?",
+      "options": [
+        "Obtain the applicable policy and check the facts against its conditions.",
+        "Infer compliance from the fact that the manager disclosed the gift.",
+        "Use an unrelated company’s gift limit as the firm’s own binding rule.",
+        "Treat the lack of a policy in the file as proof that the firm has no relevant rule."
+      ],
+      "answer": 0,
+      "explanation": "L’absence de document dans le dossier ne prouve ni absence de règle ni conformité. Il faut obtenir la politique applicable et contrôler ses conditions, plutôt que substituer une règle externe ou la seule déclaration."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The panel objects that independent review may delay an urgent award. Which response addresses that objection while preserving the control’s purpose?",
+      "options": [
+        "Limit the review to the gift’s modest value and exclude the scoring process from examination.",
+        "Set a review deadline and escalation route, with focused checks on the conflict and the selection criteria.",
+        "Defer every independence check until after an irreversible award, without any escalation route.",
+        "Replace independent review with the recipient’s written assurance that the gift had no influence."
+      ],
+      "answer": 1,
+      "explanation": "La réponse organise le contrôle dans le temps et cible les points décisifs. Montant seul, contrôle trop tardif sans recours et assurance du seul intéressé ne préservent pas l’objectif de vérification indépendante."
+    }
+  ]
+}

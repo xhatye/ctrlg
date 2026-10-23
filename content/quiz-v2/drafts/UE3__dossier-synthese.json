@@ -1,0 +1,428 @@
+{
+  "module": "UE3",
+  "chapter": "dossier-synthese",
+  "sourceHash": "8a51bc28b21560160213a9a004a00b92819d7f99ffcc1bd5112ff658e0c4fd75",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un salarié conteste la date de réception d’une proposition. Le dossier comporte le texte daté du 3 mai, la preuve d’envoi du 4 mai et un accusé de réception signé le 7 mai. Quelle pièce documente directement la réception ?",
+      "options": [
+        "Le texte portant la date du 3 mai.",
+        "La preuve d’envoi du 4 mai.",
+        "L’accusé de réception signé du 7 mai.",
+        "La note interne annonçant la rédaction du texte."
+      ],
+      "answer": 2,
+      "explanation": "La rédaction, l’expédition et la réception sont trois événements distincts. L’accusé signé documente directement le dernier. Cette distinction est indispensable lorsqu’une règle fait courir un délai à réception ; une preuve d’envoi ne doit pas être utilisée comme si elle relatait la remise."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un relevé comporte deux lignes : « proposition de nouvelle prime, 5 juin » et « accord du salarié, 5 juin ». La seule pièce citée est un courriel de l’employeur exposant la proposition. Quelle correction documentaire est nécessaire ?",
+      "options": [
+        "Conserver les deux événements puisqu’ils ont la même date.",
+        "Distinguer la proposition prouvée de l’accord non documenté.",
+        "Remplacer la date de l’accord par celle du bulletin suivant.",
+        "Considérer le courriel patronal comme la signature du salarié."
+      ],
+      "answer": 1,
+      "explanation": "Le document émane du proposant et ne contient pas la réponse du salarié. Il prouve la proposition, non l’acceptation de son destinataire. La chronologie doit donc retirer l’accord de la catégorie des faits établis jusqu’à production d’une pièce qui le démontre."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux factures de formation portent les dates du 12 et du 28 août. Un dossier social conclut que la formation a duré seize jours. Que faut-il rechercher pour établir sa durée réelle ?",
+      "options": [
+        "Les dates de réalisation et les heures de présence.",
+        "La date la plus ancienne des deux factures.",
+        "L’écart entre les numéros de factures.",
+        "Le délai de paiement accordé par l’organisme."
+      ],
+      "answer": 0,
+      "explanation": "Les dates de facturation documentent une opération administrative, pas nécessairement les séances réalisées. La durée de formation doit être rattachée au calendrier effectif et aux présences, et non inférée de l’intervalle entre deux pièces financières."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un rapport disciplinaire affirme qu’une absence a duré toute la journée. Le relevé d’accès prouve une entrée à 8 h et une sortie à 10 h, sans information sur une éventuelle mission extérieure. Quelle formulation correspond aux pièces ?",
+      "options": [
+        "L’absence toute la journée est établie par le rapport seul.",
+        "La présence entre 8 h et 10 h est documentée, le reste de la journée demande une vérification.",
+        "La sortie à 10 h démontre une absence injustifiée jusqu’au soir.",
+        "L’entrée à 8 h prouve que toute la journée a été travaillée dans les locaux."
+      ],
+      "answer": 1,
+      "explanation": "Le relevé contredit une absence physique pendant toute la journée, mais ne qualifie pas la période postérieure à 10 h. Une mission extérieure pourrait l’expliquer. Il faut conserver la portée exacte de la pièce, sans transformer une sortie du bâtiment en preuve complète d’absence au travail."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une lettre intitulée « réorganisation technique » retire au salarié son équipe et ses fonctions d’encadrement. Son salaire et son intitulé restent identiques. Quelle comparaison est pertinente pour qualifier le changement ?",
+      "options": [
+        "Les responsabilités réellement exercées avant et après.",
+        "Le seul intitulé conservé sur les bulletins.",
+        "Le seul maintien du salaire brut.",
+        "Le nombre de services figurant dans l’organigramme général."
+      ],
+      "answer": 0,
+      "explanation": "Le contenu concret des fonctions peut évoluer malgré un intitulé et un salaire constants. Le retrait de responsabilités doit être analysé dans son cadre contractuel. Les éléments formels conservés ne suffisent donc pas à conclure qu’aucun changement des fonctions n’a eu lieu."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Après un incident reproché au salarié, une mesure écrite le prive temporairement d’une fonction pour le punir. L’employeur l’appelle « simple ajustement ». Quelle qualification doit être examinée en priorité au regard de L1331-1 ?",
+      "options": [
+        "Une sanction disciplinaire, au vu du motif punitif et de l’effet sur la fonction.",
+        "Une mesure conservatoire d’attente, même si elle a un but punitif définitif.",
+        "Une simple mesure de gestion, du seul fait du titre choisi par l’employeur.",
+        "Une modification étrangère à la discipline dès lors que le salaire ne change pas."
+      ],
+      "answer": 0,
+      "explanation": "L1331-1 définit la sanction par les circonstances et la nature de la mesure prise à la suite d’un comportement jugé fautif. Une dénomination administrative ne neutralise pas son caractère disciplinaire lorsqu’elle affecte la fonction dans un but punitif.",
+      "references": [
+        {
+          "title": "Code du travail, L1331-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1331-1"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Quelle différence L1331-1 établit-il entre une observation verbale et une sanction disciplinaire ?",
+      "options": [
+        "Les observations verbales valent avertissement écrit dès qu’elles critiquent un comportement.",
+        "Les observations verbales sont exclues de la définition légale de la sanction.",
+        "Une observation verbale entre dans la définition légale si elle est faite devant un témoin.",
+        "Une sanction doit nécessairement réduire le salaire pour exister."
+      ],
+      "answer": 1,
+      "explanation": "La définition légale vise les mesures autres que les observations verbales. Une sanction peut affecter la présence, la fonction, la carrière ou la rémunération, immédiatement ou non ; une réduction de salaire n’est donc pas un élément nécessaire de cette qualification.",
+      "references": [
+        {
+          "title": "Code du travail, L1331-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1331-1"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un règlement prévoit une amende de 40 € pour chaque erreur de saisie. L’employeur déduit cette somme du salaire comme punition. Quelle règle s’applique ?",
+      "options": [
+        "La clause autorise l’amende parce qu’elle est écrite.",
+        "Le faible montant rend l’amende librement applicable.",
+        "Les sanctions pécuniaires sont interdites.",
+        "Un accord collectif peut librement autoriser cette amende disciplinaire."
+      ],
+      "answer": 2,
+      "explanation": "L1331-2 interdit les amendes et autres sanctions pécuniaires et répute non écrites les dispositions contraires. La présence de la clause dans un règlement et son montant ne lèvent pas l’interdiction. Le cas porte sur une punition financière, non sur une retenue proportionnelle à du temps non travaillé.",
+      "references": [
+        {
+          "title": "Code du travail, L1331-2",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1331-2"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Pour un licenciement assorti d’un préavis, la lettre recommandée est expédiée le 4 mars, présentée le 6 mars et retirée le 9 mars. Selon L1234-3, quel événement fixe le point de départ du préavis ?",
+      "options": [
+        "L’expédition du 4 mars.",
+        "La présentation du 6 mars.",
+        "Le retrait du 9 mars.",
+        "La date du prochain bulletin de paie."
+      ],
+      "answer": 1,
+      "explanation": "L1234-3 retient la date de présentation de la lettre recommandée notifiant le licenciement. Il ne faut donc confondre ni cette présentation avec l’envoi ni avec le retrait ultérieur de la lettre. Le cas suppose qu’un préavis est bien applicable.",
+      "references": [
+        {
+          "title": "Code du travail, L1234-3",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1234-3"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un employeur demande au salarié s’il accepterait une rupture conventionnelle. Le salarié répond : « Je souhaite d’abord connaître les conditions ». Aucun document n’est signé. Quelle étape est établie ?",
+      "options": [
+        "Une démission définitive.",
+        "Une convention de rupture déjà conclue.",
+        "Un échange exploratoire, sans convention signée.",
+        "Une homologation implicite."
+      ],
+      "answer": 2,
+      "explanation": "La rupture conventionnelle résulte d’une convention signée par les parties et ne peut être imposée. Demander les conditions n’est ni signer une convention ni démissionner. Le dossier établit ici une discussion préalable, dont l’issue reste ouverte.",
+      "references": [
+        {
+          "title": "Code du travail, L1237-11",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1237-11"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un salarié donne son accord écrit à un passage en journée, mais refuse expressément la réduction de salaire proposée dans le même courriel. Quelle lecture de sa réponse est fidèle ?",
+      "options": [
+        "Il accepte l’intégralité des deux changements.",
+        "Il accepte les horaires proposés, mais pas la baisse de salaire.",
+        "Il refuse l’intégralité des deux changements.",
+        "Il ne répond à aucun aspect de la proposition."
+      ],
+      "answer": 1,
+      "explanation": "Les objets de la réponse sont dissociés. L’accord sur un élément ne doit pas être étendu à celui expressément refusé. Il faudra ensuite vérifier les conséquences de cette acceptation partielle et si les propositions formaient un ensemble indivisible, plutôt que d’inventer un consentement global."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une salariée écrit : « J’accepte la mutation si mon salaire fixe de 2 400 € est maintenu ». L’avenant finalement transmis mentionne 2 200 € et n’est pas signé par elle. Que faut-il constater ?",
+      "options": [
+        "L’accord conditionnel couvre le salaire de 2 200 €.",
+        "La réserve de salaire n’a aucun effet sur le périmètre de la réponse.",
+        "L’acceptation exprimée ne porte pas sur les conditions du document final.",
+        "La transmission de l’avenant prouve sa signature par la salariée."
+      ],
+      "answer": 2,
+      "explanation": "L’accord exprimé dépend du maintien du fixe à 2 400 €. Le document final ne remplit pas cette condition et aucune acceptation de sa nouvelle teneur n’est fournie. Une réponse conditionnelle ne doit pas être transformée en consentement à un autre ensemble de conditions."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Pour une rupture conventionnelle individuelle de droit commun, qui peut exercer le droit de rétractation prévu par L1237-13 ?",
+      "options": [
+        "Le salarié seulement.",
+        "L’employeur seulement.",
+        "Chacune des deux parties.",
+        "L’administration à la place des parties."
+      ],
+      "answer": 2,
+      "explanation": "L1237-13 accorde à chacune des parties un délai de quinze jours calendaires pour se rétracter après la signature par les deux parties. Ce droit réciproque est distinct du contrôle ultérieur exercé par l’autorité administrative.",
+      "references": [
+        {
+          "title": "Code du travail, L1237-13",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1237-13"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La convention de rupture a été signée par les deux parties. Le dossier mentionne un délai de rétractation de « quinze jours », sans unité. Quelle qualification du délai est prévue par L1237-13 ?",
+      "options": [
+        "Quinze jours ouvrés.",
+        "Quinze jours ouvrables.",
+        "Quinze jours calendaires.",
+        "Quinze journées effectivement travaillées par le salarié."
+      ],
+      "answer": 2,
+      "explanation": "Le délai de rétractation est de quinze jours calendaires. Il ne doit pas être confondu avec le délai administratif d’instruction, exprimé en jours ouvrables. Pour établir une date butoir, il faudra ensuite appliquer correctement les règles de computation pertinentes.",
+      "references": [
+        {
+          "title": "Code du travail, L1237-13",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1237-13"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une partie adresse une lettre de rétractation d’une rupture conventionnelle. Pour documenter cette démarche selon L1237-13, quelle propriété du moyen utilisé est pertinente ?",
+      "options": [
+        "Attester la date de réception de la lettre par l’autre partie.",
+        "Attester seulement la date à laquelle l’auteur a signé sa lettre.",
+        "Attester seulement la date de remise du courrier au service d’expédition.",
+        "Attester seulement l’information donnée à l’administration sur le projet de rétractation."
+      ],
+      "answer": 0,
+      "explanation": "Le texte prévoit une lettre adressée par tout moyen attestant de sa date de réception par l’autre partie. Le contrôle documentaire ne doit donc pas s’arrêter à une date de fichier ou à une déclaration orale ; il faut identifier la démarche et sa réception.",
+      "references": [
+        {
+          "title": "Code du travail, L1237-13",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1237-13"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une convention de rupture est signée, mais son délai de rétractation est encore en cours. À quelle étape la demande d’homologation doit-elle être adressée selon L1237-14 ?",
+      "options": [
+        "Dès le premier entretien, avant la convention.",
+        "À l’issue du délai de rétractation.",
+        "Avant toute signature, pour autoriser la négociation.",
+        "Après le dernier bulletin suivant la rupture."
+      ],
+      "answer": 1,
+      "explanation": "L1237-14 place la demande d’homologation à l’issue du délai de rétractation, avec un exemplaire de la convention. La chronologie distingue donc négociation, signature, rétractation et contrôle administratif : ces étapes ne sont pas interchangeables.",
+      "references": [
+        {
+          "title": "Code du travail, L1237-14",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1237-14"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Dans la rupture conventionnelle individuelle ordinaire, quel contrôle conditionne la validité de la convention selon L1237-14 ?",
+      "options": [
+        "L’homologation par l’autorité administrative compétente.",
+        "La seule signature des parties après leurs entretiens.",
+        "La seule expiration du délai de rétractation sans retrait des consentements.",
+        "L’approbation du conseil de prud’hommes remplaçant la procédure administrative."
+      ],
+      "answer": 0,
+      "explanation": "L1237-14 subordonne la validité de la convention à son homologation. Les démarches de paie ou de communication ne remplacent pas cette condition. Le cas vise la procédure ordinaire, à distinguer notamment des régimes spéciaux des salariés protégés.",
+      "references": [
+        {
+          "title": "Code du travail, L1237-14",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1237-14"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une rupture conventionnelle ordinaire est homologuée le 20 novembre. La convention indique une fin de contrat le 19 novembre. Quelle difficulté chronologique ressort de L1237-13 ?",
+      "options": [
+        "La rupture précède la première date permise, qui est le lendemain de l’homologation.",
+        "La date est valable parce qu’elle figure dans la convention signée.",
+        "La rupture doit obligatoirement avoir lieu le jour même de l’homologation.",
+        "La date de signature permet aux parties de fixer librement une rupture antérieure à l’homologation."
+      ],
+      "answer": 0,
+      "explanation": "La date de rupture ne peut intervenir avant le lendemain du jour de l’homologation. Avec une homologation le 20 novembre, une fin le 19 est antérieure à cette limite. La signature de la clause ne dispense pas de respecter ce calendrier légal.",
+      "references": [
+        {
+          "title": "Code du travail, L1237-13",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1237-13"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une faute isolée est pleinement connue de l’employeur le 2 janvier. Il engage pour la première fois des poursuites disciplinaires le 15 avril. Aucune poursuite pénale ni nouveau fait n’est en cause. Quel obstacle prévoit L1332-4 ?",
+      "options": [
+        "Le délai de deux mois depuis la connaissance des faits est dépassé.",
+        "L’employeur disposait de deux mois depuis la décision finale de sanctionner.",
+        "Le délai ne commence qu’après un aveu écrit du salarié.",
+        "Toute faute reste sanctionnable jusqu’à la fin du contrat."
+      ],
+      "answer": 0,
+      "explanation": "L1332-4 fait courir le délai à partir de la connaissance des faits par l’employeur, avec l’exception pénale visée par le texte. Les dates données dépassent largement deux mois. Une décision tardive de sanctionner ne déplace pas à elle seule le point de départ.",
+      "references": [
+        {
+          "title": "Code du travail, L1332-4",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1332-4"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un avertissement écrit est contesté. Après examen des éléments de l’employeur et du salarié, un doute subsiste sur les faits reprochés. Selon L1333-1, à qui ce doute profite-t-il ?",
+      "options": [
+        "À l’employeur, auteur de la sanction.",
+        "Au salarié.",
+        "À la partie qui a saisi la juridiction en premier.",
+        "À personne : la sanction est maintenue par défaut."
+      ],
+      "answer": 1,
+      "explanation": "L1333-1 prévoit l’examen contradictoire des éléments et, si nécessaire, des mesures d’instruction. Il dispose que le doute subsistant profite au salarié. La décision ne se réduit donc pas à la présomption de justesse de la sanction ni à l’ordre de saisine du juge.",
+      "references": [
+        {
+          "title": "Code du travail, L1333-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1333-1"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Pour vérifier le délai de L1232-6 avant l’envoi d’une lettre de licenciement personnel, quelles deux dates faut-il rapprocher ?",
+      "options": [
+        "La date prévue de l’entretien préalable et celle de l’expédition de la lettre.",
+        "La date d’envoi de la convocation et celle prévue pour l’entretien.",
+        "La date de l’entretien et celle de présentation de la lettre, quel que soit son envoi.",
+        "La date de présentation de la lettre et celle de fin du préavis."
+      ],
+      "answer": 0,
+      "explanation": "L1232-6 interdit l’expédition moins de deux jours ouvrables après la date prévue de l’entretien préalable. Le contrôle doit donc porter sur les deux événements visés par cette règle, et non sur ceux qui servent à d’autres calculs comme le début du préavis.",
+      "references": [
+        {
+          "title": "Code du travail, L1232-6",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1232-6"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le dossier disciplinaire établit une procédure régulière, mais les faits reprochés sont contestés avec des pièces contradictoires. Quelle question reste à examiner selon L1333-1 ?",
+      "options": [
+        "Si les faits sont de nature à justifier la sanction.",
+        "Si la régularité formelle vaut reconnaissance des faits.",
+        "Si l’absence de défaut de procédure rend inutile l’examen des preuves.",
+        "Si le salarié devait établir un vice de procédure avant de discuter les faits."
+      ],
+      "answer": 0,
+      "explanation": "La régularité de la procédure et le bien-fondé de la sanction sont deux contrôles distincts dans L1333-1. Une procédure correctement suivie n’établit pas, à elle seule, la réalité et la portée des faits reprochés. Le juge doit également examiner ces éléments.",
+      "references": [
+        {
+          "title": "Code du travail, L1333-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1333-1"
+        }
+      ]
+    }
+  ]
+}

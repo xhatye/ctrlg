@@ -1,0 +1,383 @@
+{
+  "module": "DSCG5",
+  "chapter": "gouvernance-dictionnaire",
+  "sourceHash": "8e22889d2d018480dbf329f7e9f01cc0eb2d3884ff197742d6b246b9df6d929c",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Un dictionnaire de données précise principalement :",
+      "options": [
+        "Les types techniques des colonnes uniquement, sans définition de leur sens ni des populations incluses.",
+        "Les valeurs actuellement stockées, considérées comme leur propre définition sans règles de calcul.",
+        "Le sens, l’unité, le format et les règles de calcul ou de périmètre des données.",
+        "Les schémas physiques uniquement, en supposant que le nom des colonnes suffit à définir les indicateurs métier."
+      ],
+      "answer": 2,
+      "explanation": "Le dictionnaire rend les données interprétables et comparables. Il documente leur signification et leurs règles, pas seulement leur emplacement technique."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux rapports affichent 1 200 et 1 450 clients actifs. Le premier retient une facture sur douze mois, le second un compte non supprimé. Quelle conclusion est fondée ?",
+      "options": [
+        "Le différentiel doit être traité comme des doublons avant de comparer les critères d’activité.",
+        "Les deux nombres mesurent la même population parce que leurs rapports utilisent le même libellé.",
+        "Le dernier fichier produit doit remplacer l’autre sans rapprocher les définitions de client actif.",
+        "Les populations diffèrent par définition avant même de rechercher une erreur de calcul."
+      ],
+      "answer": 3,
+      "explanation": "Le même intitulé recouvre deux critères. Il faut relier chaque définition à son usage puis harmoniser si la comparaison l’exige."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un taux de retard commercial exclut les litiges ; le taux utilisé en recouvrement les inclut. Quel préalable manque à une comparaison directe ?",
+      "options": [
+        "Une explication et un rapprochement des règles de population.",
+        "Le calcul d’une moyenne simple des deux pourcentages.",
+        "L’adoption du taux le plus faible comme chiffre commun.",
+        "L’addition des deux numérateurs sans examiner les dénominateurs."
+      ],
+      "answer": 0,
+      "explanation": "Des usages différents peuvent justifier des populations différentes. La comparaison demande d’expliciter les inclusions et exclusions."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La définition de « client actif » passe d’une facture sur douze mois à une facture sur six mois. Comment préserver la lecture de l’évolution ?",
+      "options": [
+        "Remplacer les anciennes valeurs sans indiquer le changement.",
+        "Versionner la définition, dater son application et expliquer la rupture éventuelle.",
+        "Ajouter les deux populations pour éviter toute baisse de l’indicateur.",
+        "Garder le même intitulé et attribuer toute variation au marché."
+      ],
+      "answer": 1,
+      "explanation": "Un changement de règle peut déplacer le chiffre sans changement réel équivalent. La version et la date permettent de distinguer cet effet de l’activité."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un montant est transmis en milliers d’euros mais lu comme des euros. Quel élément du dictionnaire aurait dû être explicitement contrôlé ?",
+      "options": [
+        "Le seul format numérique, en considérant qu’une même précision décimale garantit une unité identique.",
+        "Le seul libellé montant, en supposant qu’il implique toujours l’euro non multiplié.",
+        "L’unité et les règles de conversion du champ.",
+        "Le seul total de lignes, pris comme preuve que les montants sont exprimés à la même échelle."
+      ],
+      "answer": 2,
+      "explanation": "Le nom du champ ne suffit pas. L’unité fait partie du sens et doit être préservée dans les transformations et restitutions."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un indicateur nommé « taux de paiement » n’indique ni la date d’observation ni les factures incluses. Pourquoi son interprétation est-elle fragile ?",
+      "options": [
+        "Le nom taux de paiement suffit à établir que le numérateur et le dénominateur portent sur la même population.",
+        "La date de génération du fichier peut toujours remplacer la date d’observation des paiements.",
+        "La présence d’un pourcentage rend inutile la définition des factures éligibles au calcul.",
+        "Le périmètre et la référence temporelle des deux termes ne sont pas définis."
+      ],
+      "answer": 3,
+      "explanation": "La date et la population changent le résultat. Une règle explicite du numérateur, du dénominateur et de l’observation est nécessaire."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Qui doit arbitrer le sens d’un indicateur métier dans une gouvernance explicitement attribuée ?",
+      "options": [
+        "Le responsable métier habilité pour ce domaine, avec les contributions utiles.",
+        "Le premier utilisateur ayant créé une formule de tableur.",
+        "Le seul administrateur de stockage parce qu’il possède les accès.",
+        "Le fournisseur d’hébergement sans consultation de l’organisation."
+      ],
+      "answer": 0,
+      "explanation": "Le sens dépend du besoin et des usages métier. La compétence technique soutient la mise en œuvre mais ne détermine pas seule la définition."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La personne désignée responsable qualité ne dispose ni du temps ni du pouvoir de faire corriger les sources. Quel risque apparaît ?",
+      "options": [
+        "La nomination suffit à transférer aux équipes sources une obligation de correction sans circuit ni autorité définis.",
+        "Une responsabilité théorique sans moyens d’action suffisants.",
+        "L’absence de moyens n’affecte que la présentation des rapports, sans conséquence possible sur la correction des sources.",
+        "Le suivi d’un indicateur d’erreurs peut remplacer à lui seul la capacité d’obtenir leur correction."
+      ],
+      "answer": 1,
+      "explanation": "Une responsabilité doit être accompagnée de moyens et de mécanismes d’arbitrage. Une désignation nominale ne résout pas les anomalies."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un développeur modifie la règle de calcul d’un KPI pour corriger un problème de performance technique, sans validation métier. Quelle faiblesse faut-il traiter ?",
+      "options": [
+        "La nouvelle formule est validée métier dès lors qu’elle améliore le temps de réponse technique.",
+        "Le changement peut être traité comme purement technique même s’il modifie les dossiers inclus dans le KPI.",
+        "La confusion entre optimiser l’exécution et décider d’une nouvelle définition métier.",
+        "La validation de la définition est remplacée par un test confirmant que le programme s’exécute sans erreur."
+      ],
+      "answer": 2,
+      "explanation": "Une optimisation ne doit pas altérer silencieusement le sens. Les changements de définition doivent être validés selon les responsabilités prévues."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Plusieurs services se renvoient une erreur récurrente de référentiel. Quelle organisation facilite son traitement ?",
+      "options": [
+        "L’accès administrateur donné à tous pour corriger librement.",
+        "Une décision prise uniquement par le service recevant le rapport final.",
+        "L’attente d’une correction spontanée par la source.",
+        "Des rôles explicites pour proposer, valider, exécuter et informer sur la correction."
+      ],
+      "answer": 3,
+      "explanation": "La clarification des tâches réduit les zones sans responsable. Elle doit aussi prévoir les moyens et les délais de traitement."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le métier valide une nouvelle règle de segment client. Quelle séparation reste pertinente pour son déploiement ?",
+      "options": [
+        "Faire appliquer et tester la règle par les acteurs techniques autorisés, selon une procédure tracée.",
+        "Confondre validation métier et accès libre à la base de production.",
+        "Laisser chaque service modifier sa propre copie sans version commune.",
+        "Supprimer les tests puisque la définition a déjà été approuvée."
+      ],
+      "answer": 0,
+      "explanation": "La validation du sens ne remplace pas le contrôle de mise en œuvre. Les responsabilités de décision, d’exécution et de test restent distinctes."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une règle de conservation est décidée, mais aucune équipe n’a la charge de sa suppression effective. Quelle lacune persiste ?",
+      "options": [
+        "La publication de la durée de conservation suffit à prouver que les copies dépassant cette durée ont été supprimées.",
+        "Le passage de la décision à une exécution attribuée et contrôlée.",
+        "La désignation d’un propriétaire du dictionnaire suffit à identifier qui exécute chaque suppression sur les systèmes.",
+        "Le retrait du fichier d’un catalogue suffit à établir son effacement dans les copies opérationnelles et les exports concernés."
+      ],
+      "answer": 1,
+      "explanation": "Une décision n’agit pas seule. Il faut organiser les mécanismes et responsabilités qui assurent effectivement son application."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "La traçabilité des transformations décrit :",
+      "options": [
+        "La liste des tables sources, sans les filtres ni jointures qui changent le résultat.",
+        "La succession des fichiers finaux publiés, sans les opérations reliant sources et indicateurs.",
+        "Les sources, extractions, filtres, rapprochements et calculs produisant le résultat.",
+        "La seule formule arithmétique finale, sans les règles de sélection et de rapprochement appliquées avant elle."
+      ],
+      "answer": 2,
+      "explanation": "Le trajet de la donnée permet de comprendre un résultat et ses changements. Une capture finale ne documente pas les étapes qui l’ont construit."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un chiffre de ventes varie après l’ajout d’un filtre excluant certains avoirs. Comment déterminer l’origine de la variation ?",
+      "options": [
+        "L’attribuer entièrement à une évolution commerciale sans isoler le changement de filtre.",
+        "Comparer seulement les captures finales des deux rapports sans reprendre les transformations.",
+        "Modifier les sources pour supprimer les avoirs avant de mesurer l’effet propre du nouveau filtre.",
+        "Comparer les versions de traitement et mesurer séparément l’effet du filtre."
+      ],
+      "answer": 3,
+      "explanation": "Le résultat peut changer pour des raisons de traitement. L’historique des règles et un rapprochement isolent cet effet de l’évolution économique."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La source contient un client par identifiant ; une jointure multiplie certaines lignes avant le calcul d’un KPI. Quel contrôle est pertinent ?",
+      "options": [
+        "Vérifier la cardinalité de la jointure et les doublons au niveau d’objet attendu.",
+        "Contrôler uniquement la somme finale sans examiner le nombre de correspondances par identifiant.",
+        "Dédupliquer uniquement les totaux publiés sans identifier les objets multipliés par la jointure.",
+        "Tenir chaque ligne jointe pour un nouveau client au seul motif qu’elle apparaît séparément dans le résultat."
+      ],
+      "answer": 0,
+      "explanation": "Une transformation peut créer des répétitions sans doublon dans la source. La traçabilité doit permettre d’identifier l’étape et son effet sur le calcul."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un rapport de factures impayées ne précise pas comment il traite les avoirs. Quelle documentation complète utilement la lignée du calcul ?",
+      "options": [
+        "La seule comparaison du total brut avant prise en compte des avoirs.",
+        "La règle de rapprochement des avoirs, les dates retenues et les exceptions.",
+        "Le seul nombre d’avoirs, sans lien avec les factures ni montants.",
+        "Le seul format du fichier final, sans détail de transformation."
+      ],
+      "answer": 1,
+      "explanation": "Le traitement des avoirs peut changer les montants et la population. Il doit être explicite pour permettre l’explication et la reproduction du résultat."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux extractions portent la même date de création de fichier mais des dates d’observation différentes des paiements. Quel risque apparaît ?",
+      "options": [
+        "La date de création commune garantit que chaque paiement a été observé au même instant dans les deux extractions.",
+        "Le fichier généré en dernier doit être retenu sans vérifier la date métier des données qu’il contient.",
+        "Une différence de situation peut être confondue avec une erreur de calcul.",
+        "Les différences de situation peuvent être neutralisées en renommant les fichiers avec la même date."
+      ],
+      "answer": 2,
+      "explanation": "L’état observé dépend de la date métier retenue, pas seulement de la production du fichier. Cette information doit suivre la donnée."
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une anomalie est retirée du résultat pour rétablir un total attendu, sans analyse. Quelle pratique est préférable ?",
+      "options": [
+        "Retirer également les opérations de même montant pour équilibrer les compteurs.",
+        "Modifier la source afin de faire correspondre le total au budget.",
+        "Valider le rapport si le total final est plausible.",
+        "Documenter l’exception, rechercher sa cause et tracer le traitement autorisé."
+      ],
+      "answer": 3,
+      "explanation": "La suppression d’une exception peut masquer une erreur ou une opération légitime. Son analyse et sa traçabilité sont nécessaires à un contrôle reproductible."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une nouvelle version du dictionnaire renomme un champ utilisé par des rapports automatisés. Le sens métier reste identique, mais les rapports attendent l’ancien nom technique. Quel contrôle prépare la mise en service ?",
+      "options": [
+        "Identifier les consommateurs du champ et tester leur compatibilité avec le changement de nom.",
+        "Déduire la compatibilité technique du seul fait que le sens métier est inchangé.",
+        "Publier le nouveau dictionnaire sans adapter les requêtes, en supposant qu’elles retrouvent le champ par sa définition textuelle.",
+        "Valider uniquement un rapport manuel sans examiner les traitements automatisés utilisant l’ancien nom."
+      ],
+      "answer": 0,
+      "explanation": "La stabilité du sens ne garantit pas la compatibilité des interfaces techniques. Le suivi des consommateurs et les essais permettent de préparer les adaptations nécessaires.",
+      "references": [
+        {
+          "title": "CNIL — Principes du RGPD, article 5",
+          "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un export personnel d’une base client devient obsolète mais reste partagé sans responsable de mise à jour. Quels risques faut-il considérer ?",
+      "options": [
+        "La copie est autorisée pour de nouveaux usages du seul fait qu’elle était accessible pour l’usage initial.",
+        "Des versions contradictoires et une exposition accrue des données.",
+        "L’ancien export devient la référence à privilégier dès lors que davantage de personnes le possèdent.",
+        "La mise à jour de la base centrale garantit que chaque copie personnelle partagée a été synchronisée."
+      ],
+      "answer": 1,
+      "explanation": "Multiplier les copies peut nuire à la cohérence et à la protection. Les destinataires, usages, mises à jour et suppressions doivent être encadrés.",
+      "references": [
+        {
+          "title": "CNIL — Principes du RGPD, article 5",
+          "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une équipe veut réutiliser des contacts pour une nouvelle finalité parce que les données sont déjà disponibles techniquement. Quelle étape manque ?",
+      "options": [
+        "L’accès technique déjà accordé pour l’usage initial suffit à autoriser toute finalité ultérieure.",
+        "Une nouvelle copie de la base remplace l’examen des conditions de la réutilisation.",
+        "L’examen de la nouvelle finalité et des conditions de réutilisation applicables.",
+        "L’absence de changement de format dispense d’examiner la nouvelle utilisation des contacts."
+      ],
+      "answer": 2,
+      "explanation": "La disponibilité technique ne vaut pas autorisation illimitée. La finalité, le besoin et les règles applicables doivent être examinés.",
+      "references": [
+        {
+          "title": "CNIL — Principes du RGPD, article 5",
+          "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une organisation fixe une durée utile de conservation, mais laisse d’anciennes copies accessibles dans des répertoires de partage. Quel contrôle est incomplet ?",
+      "options": [
+        "Le contrôle du format des identifiants dans la base active.",
+        "La validation des formules d’agrégation du tableau final.",
+        "Le suivi des versions du dictionnaire seulement.",
+        "L’application de la conservation et des accès sur les copies et exports concernés."
+      ],
+      "answer": 3,
+      "explanation": "Une règle doit couvrir les lieux où les données subsistent. La maîtrise de la base principale seule peut laisser des copies hors contrôle.",
+      "references": [
+        {
+          "title": "CNIL — Principes du RGPD, article 5",
+          "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2"
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un service veut améliorer la qualité en donnant à tous les salariés le droit de modifier le référentiel client complet. Quelle démarche est préférable ?",
+      "options": [
+        "Définir des rôles de proposition, validation et correction avec les accès nécessaires.",
+        "Donner à chaque lecteur les droits complets d’écriture en traitant la participation comme un contrôle suffisant.",
+        "Permettre des corrections directes sans validation en supposant que le contrôle des erreurs peut être entièrement reporté après publication.",
+        "Laisser chaque service maintenir une copie autonome du référentiel sans règle de rapprochement ni version faisant autorité."
+      ],
+      "answer": 0,
+      "explanation": "Qualité et protection doivent se compléter. Des corrections organisées et tracées évitent les droits excessifs et les versions concurrentes.",
+      "references": [
+        {
+          "title": "CNIL — Principes du RGPD, article 5",
+          "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2"
+        }
+      ]
+    }
+  ]
+}

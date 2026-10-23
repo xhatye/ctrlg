@@ -1,0 +1,470 @@
+{
+  "module": "DSCG2",
+  "chapter": "portefeuille",
+  "sourceHash": "743190fe8ff1f74d579d00bd63cd6eb6fdcb5f9368068690a20e6172867afac8",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un portefeuille conserve 40 % d’un actif qui gagne 5 % et 60 % d’un actif qui perd 2 % sur la même période, sans mouvement. Quel rendement de période obtient-il ?",
+      "options": [
+        "0,8 %",
+        "1,5 %",
+        "3 %",
+        "3,2 %"
+      ],
+      "answer": 0,
+      "explanation": "Le rendement pondéré vaut 0,40 × 5 + 0,60 × (−2) = 0,8 %. Il faut conserver le signe de la perte et les poids initiaux.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.4
+                },
+                {
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.6
+                },
+                {
+                  "value": -2
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 0.8,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux titres représentent 90 % et 10 % du portefeuille. L’analyste prend la moyenne simple de leurs rendements. Quelle hypothèse implicite est fausse ?",
+      "options": [
+        "Il suppose que les titres sont parfaitement corrélés",
+        "Il traite les deux titres comme s’ils représentaient chacun la moitié du capital",
+        "Il suppose que tous les dividendes ont été réinvestis",
+        "Il calcule le rendement dans la devise du titre le plus important"
+      ],
+      "answer": 1,
+      "explanation": "La moyenne simple n’est adaptée que pour des poids égaux dans ce calcul. La pondération doit refléter les parts réellement investies."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel aspect la corrélation entre deux rendements décrit-elle ?",
+      "options": [
+        "L’écart entre leur prix de marché et leur valeur nominale",
+        "Leur rendement total additionné sur deux périodes",
+        "Leur tendance à varier conjointement sur les observations considérées",
+        "Le niveau de leurs seuls dividendes futurs"
+      ],
+      "answer": 2,
+      "explanation": "La corrélation porte sur la relation entre variations, pas sur les niveaux de prix ou le rendement attendu pris isolément."
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux titres différents réagissent presque de la même façon aux variations d’un même secteur. Quelle limite de diversification faut-il examiner ?",
+      "options": [
+        "La seule différence de volatilité individuelle, supposée suffire à éliminer le secteur",
+        "Le seul partage à parts égales, supposé neutraliser l’exposition commune",
+        "La seule différence d’émetteurs, considérée comme preuve d’indépendance des risques",
+        "La forte corrélation de leurs rendements et le facteur commun de secteur"
+      ],
+      "answer": 3,
+      "explanation": "Détenir deux émetteurs ne garantit pas une diversification forte si leurs rendements sont dominés par le même facteur. La relation entre actifs compte."
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un portefeuille détient vingt entreprises du même pays et du même secteur. Quel risque peut rester fortement concentré ?",
+      "options": [
+        "Une baisse commune liée au secteur ou à l’économie concernée",
+        "Une erreur de gestion propre à une seule entreprise seulement",
+        "Une panne isolée sur une usine d’un émetteur seulement",
+        "Un conflit interne touchant uniquement un dirigeant particulier"
+      ],
+      "answer": 0,
+      "explanation": "Le nombre d’émetteurs peut réduire certains risques individuels tout en laissant une exposition commune. La concentration sectorielle et géographique doit être étudiée."
+    },
+    {
+      "id": "q06",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un modèle pédagogique exige un taux sans risque de 3 % et une prime de risque de 4,5 %. Quel rendement exigé total retient-il ?",
+      "options": [
+        "1,5 %",
+        "7,5 %",
+        "13,5 %",
+        "4,5 %"
+      ],
+      "answer": 1,
+      "explanation": "Dans ce modèle additif, 3 + 4,5 = 7,5 %. Le résultat est une rémunération requise sous hypothèses, pas un rendement garanti.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 3
+            },
+            {
+              "value": 4.5
+            }
+          ]
+        },
+        "expected": 7.5,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un commercial présente un rendement espéré de 8 % comme le montant qui sera obtenu chaque année. Quelle confusion corriger ?",
+      "options": [
+        "L’assimilation de ce rendement espéré au rendement médian, tenu pour montant garanti",
+        "La confusion entre rendement brut et rendement net de frais, qui expliquerait à elle seule toute incertitude",
+        "L’assimilation d’une espérance à une réalisation certaine",
+        "L’assimilation de cette espérance au rendement minimum de chaque scénario"
+      ],
+      "answer": 2,
+      "explanation": "L’espérance résume des scénarios ou hypothèses. Les réalisations peuvent être différentes ; elle ne constitue pas une promesse de gain."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour comparer deux corrélations, l’un utilise des rendements quotidiens sur un mois et l’autre des rendements annuels sur dix ans. Quelle précaution manque ?",
+      "options": [
+        "Convertir chaque corrélation en un prix monétaire",
+        "Additionner les deux corrélations pour obtenir une mesure unique",
+        "Retenir celle dont la valeur absolue est la plus faible sans autre contrôle",
+        "Aligner les périodes et examiner la stabilité de la relation mesurée"
+      ],
+      "answer": 3,
+      "explanation": "Une corrélation dépend des observations et de l’horizon. Des séries définies différemment ne permettent pas une comparaison directe sans précaution."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Au début de la période, 15 000 € sont placés en A et 45 000 € en B. Sans apport ni retrait, leurs rendements sont 12 % et 4 %. Quel rendement global calcule-t-on ?",
+      "options": [
+        "6 %",
+        "8 %",
+        "9 %",
+        "16 %"
+      ],
+      "answer": 0,
+      "explanation": "A pèse 25 % et B 75 %. Le rendement vaut 0,25 × 12 + 0,75 × 4 = 6 %, soit 3 600 € de gain sur 60 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "/",
+                  "args": [
+                    {
+                      "value": 15000
+                    },
+                    {
+                      "value": 60000
+                    }
+                  ]
+                },
+                {
+                  "value": 12
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "/",
+                  "args": [
+                    {
+                      "value": 45000
+                    },
+                    {
+                      "value": 60000
+                    }
+                  ]
+                },
+                {
+                  "value": 4
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 6,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un portefeuille affiche peu de fluctuations de prix, mais ses titres sont difficiles à vendre rapidement. Quel risque reste à examiner ?",
+      "options": [
+        "Le seul risque de volatilité, assimilé à tous les risques",
+        "Le risque de liquidité malgré la faible volatilité observée",
+        "Le risque de perte déjà écarté par la stabilité des prix",
+        "Le rendement exigé, devenu égal au taux sans risque par construction"
+      ],
+      "answer": 1,
+      "explanation": "La volatilité ne mesure pas toutes les difficultés économiques. Une faible variation de prix observée n’assure pas la possibilité de vendre vite à un prix convenable."
+    },
+    {
+      "id": "q11",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un investisseur exige une prime plus élevée pour une exposition supplémentaire au risque. Quelle distinction doit-il conserver ?",
+      "options": [
+        "La prime exigée et le gain minimum promis par le placement",
+        "La prime de risque et le remboursement contractuellement garanti du capital",
+        "Rendement exigé et rendement effectivement réalisé",
+        "L’exigence individuelle et le rendement historique, tenu pour automatiquement reproductible"
+      ],
+      "answer": 2,
+      "explanation": "La prime exprime une compensation demandée pour le risque. Elle ne garantit pas que la réalisation atteindra cette exigence."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux actifs ont la même volatilité, mais leur corrélation diffère selon les portefeuilles. Peut-on en déduire une même volatilité de portefeuille à poids identiques ?",
+      "options": [
+        "Oui, les seules volatilités individuelles déterminent ce risque",
+        "Oui, les poids égaux rendent la corrélation sans effet",
+        "Non, parce que le rendement espéré doit alors être différent",
+        "Non, le mouvement conjoint des actifs intervient dans le risque global"
+      ],
+      "answer": 3,
+      "explanation": "La combinaison dépend aussi de la relation entre actifs. Deux portefeuilles de mêmes risques individuels peuvent avoir des risques globaux différents."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une performance est annoncée pour A sur six mois et pour B sur un an. Quel contrôle précède une moyenne de portefeuille ?",
+      "options": [
+        "Rendre cohérentes les périodes de rendement et les conventions utilisées",
+        "Comparer directement les deux pourcentages parce que les montants investis sont identiques",
+        "Doubler le rendement semestriel en le tenant pour un rendement annuel composé exact",
+        "Diviser le rendement annuel par deux en le tenant pour un rendement semestriel composé exact"
+      ],
+      "answer": 0,
+      "explanation": "Des poids corrects ne réparent pas des périodes incompatibles. Les rendements doivent correspondre à un même horizon pour la moyenne de portefeuille."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel risque la diversification entre plusieurs émetteurs vise-t-elle principalement à réduire ?",
+      "options": [
+        "La totalité du risque commun au marché",
+        "La part de risque propre à un émetteur ou une exposition particulière",
+        "La prime de risque exigée pour tous les facteurs de marché",
+        "Le risque de taux commun à tous les émetteurs détenant la même duration"
+      ],
+      "answer": 1,
+      "explanation": "La diversification peut atténuer des risques spécifiques en combinant des expositions. Des facteurs communs peuvent cependant affecter de nombreux actifs ensemble."
+    },
+    {
+      "id": "q15",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Deux actifs ont respectivement des rendements de 2 % et 10 %. Dans un portefeuille sans autre actif, quel poids du second donne un rendement pondéré de 8 % ?",
+      "options": [
+        "25 %",
+        "60 %",
+        "75 %",
+        "80 %"
+      ],
+      "answer": 2,
+      "explanation": "Avec x pour le second, 2(1 − x) + 10x = 8, donc x = (8 − 2)/(10 − 2) = 75 %. Les deux poids totalisent 100 %.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 8
+                    },
+                    {
+                      "value": 2
+                    }
+                  ]
+                },
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 10
+                    },
+                    {
+                      "value": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 75,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une corrélation historiquement faible devient forte lors d’une crise. Quelle limite du raisonnement initial cela illustre-t-il ?",
+      "options": [
+        "L’impossibilité de calculer un rendement moyen pondéré",
+        "La disparition de la distinction entre risque spécifique et marché",
+        "L’équivalence entre corrélation et niveau du taux sans risque",
+        "La dépendance de la diversification à des relations qui peuvent changer"
+      ],
+      "answer": 3,
+      "explanation": "Les relations observées ne sont pas fixes par nature. La diversification doit être appréciée dans plusieurs conditions, notamment quand les facteurs communs dominent."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un rendement constaté de 9 % est comparé à un rendement exigé de 7 % sur la même période. Que peut-on dire sans prévision supplémentaire ?",
+      "options": [
+        "La réalisation dépasse l’exigence de cette période, sans assurer la suivante",
+        "Le rendement exigé doit être relevé rétroactivement à 9 %",
+        "La prime de risque future sera exactement de deux points",
+        "La réalisation prouve l’absence de risque du placement"
+      ],
+      "answer": 0,
+      "explanation": "La comparaison renseigne sur la période observée. Un résultat favorable n’efface pas le risque et ne détermine pas mécaniquement les rendements futurs."
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un portefeuille de fournisseurs industriels indépendants subit une hausse commune du coût de l’énergie. Quel type d’exposition révèle ce choc ?",
+      "options": [
+        "Une erreur propre à un seul émetteur, par définition diversifiée",
+        "Un facteur économique commun aux entreprises détenues",
+        "Un effet de nombre de titres sans rapport avec leur activité",
+        "Un simple écart de pondération arithmétique entre lignes"
+      ],
+      "answer": 1,
+      "explanation": "Un choc peut toucher plusieurs entreprises distinctes par une même voie économique. La dispersion entre noms ne suffit pas si les expositions sous-jacentes sont proches."
+    },
+    {
+      "id": "q19",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un portefeuille sans levier ni vente à découvert contient uniquement deux actifs aux rendements de 3 % et 7 %. Le calcul donne 11 %. Que vérifier ?",
+      "options": [
+        "La corrélation, supposée ajouter un supplément au rendement constaté du portefeuille",
+        "La volatilité, supposée s’ajouter directement à la moyenne des rendements",
+        "Les pondérations et la formule : une moyenne à poids positifs reste entre 3 % et 7 %",
+        "La prime exigée, supposée devoir être ajoutée à la performance déjà observée"
+      ],
+      "answer": 2,
+      "explanation": "Une moyenne pondérée avec poids positifs de somme un reste dans l’intervalle des rendements. Un résultat extérieur suggère une erreur ou une hypothèse omise."
+    },
+    {
+      "id": "q20",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Deux actifs imparfaitement corrélés présentent quel intérêt potentiel ?",
+      "options": [
+        "Leur volatilité combinée devient la moyenne simple de leurs volatilités, indépendamment des poids",
+        "Une corrélation seulement inférieure à un suffit à obtenir une volatilité nulle",
+        "Leur covariance devient nulle dès que leurs volatilités sont différentes",
+        "Leurs fluctuations peuvent se compenser partiellement dans la combinaison"
+      ],
+      "answer": 3,
+      "explanation": "Une relation imparfaite peut réduire les fluctuations combinées. L’effet dépend des poids et des risques individuels ; il n’équivaut pas à une garantie."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour juger la diversification, un analyste compte cinquante lignes sans examiner leurs expositions. Quel complément est nécessaire ?",
+      "options": [
+        "Identifier secteurs, zones, facteurs et relations entre les rendements",
+        "Retenir le prix moyen d’une ligne comme mesure unique du risque",
+        "Vérifier seulement que les cinquante titres ont des codes différents",
+        "Classer les titres par rendement passé puis compter les groupes"
+      ],
+      "answer": 0,
+      "explanation": "Le nombre de lignes n’explique pas les risques communs. L’analyse doit porter sur ce que les actifs représentent économiquement et sur leurs relations."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un produit risqué affiche un rendement espéré proche d’un placement de référence moins risqué. Quelle question est pertinente avant de choisir ?",
+      "options": [
+        "Le rendement voisin démontre-t-il une volatilité identique ?",
+        "La rémunération attendue compense-t-elle les risques et contraintes supplémentaires ?",
+        "Le nombre de titres dispense-t-il d’examiner les conditions de liquidité ?",
+        "La proximité des taux rend-elle les pertes possibles identiques ?"
+      ],
+      "answer": 1,
+      "explanation": "Comparer les rendements ne suffit pas : l’exposition, l’horizon et les contraintes doivent aussi être rapprochés. Une espérance voisine ne prouve pas un risque voisin."
+    }
+  ]
+}

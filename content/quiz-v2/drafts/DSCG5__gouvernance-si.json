@@ -1,0 +1,408 @@
+{
+  "module": "DSCG5",
+  "chapter": "gouvernance-si",
+  "sourceHash": "06474a38cee41c76f540b4a7b91e1ccf2a53c879756cdd5298badb21f02b8088",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "L’alignement du système d’information s’apprécie principalement par :",
+      "options": [
+        "Le nombre de technologies récentes présentes dans l’architecture.",
+        "Le pourcentage d’applications achetées au même fournisseur.",
+        "Le montant annuel consacré aux licences.",
+        "La contribution des usages du SI aux priorités de l’organisation."
+      ],
+      "answer": 3,
+      "explanation": "Un SI est aligné lorsqu’il soutient les besoins et résultats recherchés. La modernité ou le montant dépensé ne prouve pas cette contribution."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un logiciel promet de nombreuses fonctions, mais ne couvre pas le suivi des lots indispensable à l’entreprise. Quel examen prime ?",
+      "options": [
+        "L’adéquation au besoin critique, avant la comparaison du nombre de fonctions.",
+        "Le nombre total d’options annoncé, indépendamment des lots.",
+        "La réduction du prix si le besoin critique reste non couvert.",
+        "La part de marché du fournisseur comme preuve de conformité au besoin."
+      ],
+      "answer": 0,
+      "explanation": "Une fonction critique non couverte peut rendre la solution inadaptée. L’accumulation de fonctions secondaires n’établit pas sa pertinence métier."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La DSI mesure sa réussite uniquement au respect de son budget, tandis que les utilisateurs subissent davantage d’interruptions. Quelle dimension manque ?",
+      "options": [
+        "Le seul taux de consommation budgétaire, considéré comme une mesure suffisante de la qualité du service.",
+        "Le service réellement rendu aux métiers et ses conséquences.",
+        "Le respect du calendrier de paiement des factures fournisseurs, sans mesure des interruptions.",
+        "Le coût d’achat des infrastructures, utilisé à la place de leur fonctionnement pour les utilisateurs."
+      ],
+      "answer": 1,
+      "explanation": "Le contrôle du budget est utile mais partiel. La contribution du SI doit aussi être appréciée par sa qualité de service et ses usages opérationnels."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux projets concurrents consomment une même ressource rare. L’un sert une priorité stratégique validée, l’autre une demande locale accessoire. Que doit organiser la gouvernance ?",
+      "options": [
+        "Un partage égal de la ressource sans examen des enjeux.",
+        "Une priorité au projet ayant été annoncé en premier, sans autre critère.",
+        "Un arbitrage documenté selon valeur, risques, contraintes et priorités.",
+        "Une exécution simultanée fondée sur la capacité de chaque projet prise isolément."
+      ],
+      "answer": 2,
+      "explanation": "L’alignement demande un arbitrage du portefeuille et des capacités. Une somme de décisions locales peut empêcher la réalisation des priorités collectives."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un projet informatique livre une fonctionnalité, mais son bénéfice dépend d’un changement de processus que personne ne porte. Quel défaut est principal ?",
+      "options": [
+        "L’absence d’une mesure du seul nombre de fonctionnalités, supposé remplacer le suivi du bénéfice métier.",
+        "L’absence d’un transfert automatique de la responsabilité du processus au développeur ayant livré le code.",
+        "L’absence d’une recette technique supplémentaire, tenue pour suffisante sans attribuer la transformation du processus.",
+        "Le bénéfice métier n’a pas de responsabilité et d’action de transformation clairement définies."
+      ],
+      "answer": 3,
+      "explanation": "La technologie seule ne produit pas toujours le bénéfice. Le changement d’usage et de processus doit être attribué et accompagné."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Externaliser l’exploitation d’une application signifie :",
+      "options": [
+        "Confier des tâches au prestataire tout en définissant les responsabilités conservées et le contrôle du service.",
+        "Supprimer toute nécessité d’arbitrage métier interne.",
+        "Transférer automatiquement au prestataire tous les risques et décisions de l’organisation.",
+        "Limiter les contrôles internes à la réception des factures."
+      ],
+      "answer": 0,
+      "explanation": "L’externalisation change la répartition des tâches. Les besoins, risques et décisions doivent rester gouvernés, avec des responsabilités explicites."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le fournisseur affirme qu’une anomalie vient des données métier ; le métier affirme qu’elle vient du paramétrage. Quel dispositif facilite le traitement ?",
+      "options": [
+        "Une règle attribuant par défaut les incidents au fournisseur sans vérifier les données et le paramétrage.",
+        "Des responsabilités et procédures d’analyse des incidents aux interfaces.",
+        "Deux analyses séparées sans protocole de partage des preuves ni responsable de coordination.",
+        "Une clôture de l’incident dès que chaque équipe a démontré que son composant fonctionne isolément."
+      ],
+      "answer": 1,
+      "explanation": "Les interfaces demandent des règles de diagnostic et de coopération. La responsabilité ne peut pas être déduite simplement du dernier intervenant."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "L’informatique valide seule une règle de calcul commerciale parce qu’elle sait la programmer. Quelle séparation de responsabilités est nécessaire ?",
+      "options": [
+        "L’équipe technique valide seule le sens métier dès que le calcul produit un nombre conforme à la formule qu’elle a choisie.",
+        "Le fournisseur définit la règle commerciale et sa conformité métier sans validation par l’organisation cliente.",
+        "Le métier valide le sens et les attentes ; l’équipe technique met en œuvre et teste selon les rôles définis.",
+        "La conformité du budget de développement tient lieu de validation des critères et résultats commerciaux attendus."
+      ],
+      "answer": 2,
+      "explanation": "La faisabilité technique ne vaut pas validation métier. Il faut attribuer l’arbitrage du sens et organiser sa traduction dans le système."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après le départ du chef de projet, aucune équipe n’accepte de gérer les incidents courants. Quelle préparation a manqué ?",
+      "options": [
+        "Le maintien du chef de projet comme destinataire informel des incidents sans équipe de support désignée.",
+        "La clôture du projet sur la seule recette fonctionnelle, sans transfert des responsabilités de fonctionnement.",
+        "L’attribution du support au fournisseur par défaut, sans confirmer le périmètre repris ni les procédures d’escalade.",
+        "L’attribution de l’exploitation, du support et des procédures de passage en service."
+      ],
+      "answer": 3,
+      "explanation": "La fin du projet doit préparer la responsabilité durable du service. Les tâches d’exploitation ne disparaissent pas à la livraison."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un prestataire propose une évolution réduisant le contrôle des paiements pour accélérer le traitement. Qui doit porter l’arbitrage ?",
+      "options": [
+        "Les responsables habilités du besoin et du risque, avec l’expertise technique et les contrôles requis.",
+        "Le prestataire peut décider seul parce que l’arbitrage concerne une option de paramétrage.",
+        "L’équipe technique peut supprimer le contrôle dès que le gain de temps est mesuré, sans décision du responsable du risque.",
+        "Le coût de l’évolution suffit à l’arbitrage, indépendamment du risque de paiement introduit par le changement."
+      ],
+      "answer": 0,
+      "explanation": "L’arbitrage engage le processus et ses risques. Le prestataire apporte une expertise, mais ne remplace pas automatiquement les responsabilités de décision internes."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Une solution coûte 14 000 € à l’acquisition et 2 500 € de fonctionnement par an. Sur trois ans, sans actualisation ni autres coûts, quel est son coût total ?",
+      "options": [
+        "16 500 €.",
+        "21 500 €.",
+        "49 500 €.",
+        "19 000 €."
+      ],
+      "answer": 1,
+      "explanation": "Le coût total du périmètre retenu est 14 000 + 3 × 2 500 = 21 500 €. La durée et les exclusions du modèle doivent rester explicites.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 14000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 3
+                },
+                {
+                  "value": 2500
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 21500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une offre de logiciel a un faible abonnement mais facture séparément migration, assistance et export. Quelle comparaison est correcte ?",
+      "options": [
+        "Comparer les seuls abonnements car les autres dépenses sont ponctuelles.",
+        "Additionner les prix sans vérifier les quantités et le périmètre.",
+        "Comparer les coûts pertinents sur une durée et des hypothèses communes.",
+        "Écarter les frais d’export tant qu’une sortie n’est pas décidée."
+      ],
+      "answer": 2,
+      "explanation": "Le coût total dépend du périmètre et de l’horizon. Les coûts nécessaires d’entrée, d’usage et de sortie peuvent modifier le classement des offres."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un comparatif inclut cinq ans de maintenance pour A et seulement un an pour B. Quel retraitement manque ?",
+      "options": [
+        "Comparer les totaux annoncés comme des coûts équivalents malgré les années de maintenance absentes de B.",
+        "Diviser chaque montant par sa propre durée puis supposer ces moyennes suffisantes sans examiner les autres coûts sur l’horizon choisi.",
+        "Retenir uniquement le prix de première année en présentant le résultat comme le coût de possession à cinq ans.",
+        "La mise des deux offres sur un horizon de comparaison cohérent."
+      ],
+      "answer": 3,
+      "explanation": "Des durées différentes ne permettent pas une comparaison directe du coût total. Il faut retenir un horizon commun et expliciter les hypothèses."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Sur deux ans, A coûte 8 000 € d’entrée et 6 000 € par an ; B coûte 14 000 € d’entrée et 2 000 € par an. Aucun autre coût n’existe. Quelle économie totale offre B par rapport à A ?",
+      "options": [
+        "2 000 €.",
+        "6 000 €.",
+        "4 000 €.",
+        "−2 000 €."
+      ],
+      "answer": 0,
+      "explanation": "A coûte 20 000 €, B 18 000 €. L’économie de B est donc de 2 000 €, malgré son prix d’entrée plus élevé.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 8000
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 2
+                    },
+                    {
+                      "value": 6000
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 14000
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 2
+                    },
+                    {
+                      "value": 2000
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux solutions ont le même coût total estimé. L’une ne satisfait pas une exigence métier essentielle. Quelle conclusion retenir ?",
+      "options": [
+        "L’égalité du coût total permet de traiter l’exigence essentielle non satisfaite comme une fonctionnalité facultative sans nouvel arbitrage.",
+        "Le coût seul ne départage pas les solutions ; l’adéquation et les risques doivent être examinés.",
+        "Des coûts égaux donnent une valeur d’usage équivalente même si une fonction indispensable manque.",
+        "Le prix peut remplacer la recette métier dès lors que les estimations de coût sont identiques."
+      ],
+      "answer": 1,
+      "explanation": "Le coût n’est qu’une dimension de la décision. L’égalité n’efface ni les différences de service ni les exigences critiques."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une migration nécessite beaucoup de temps interne, mais le comparatif ne retient que la facture du prestataire. Quelle limite faut-il annoncer ?",
+      "options": [
+        "Le temps interne peut être exclu du coût total du changement dès lors qu’il n’est pas facturé par le prestataire.",
+        "La charge des salariés déjà rémunérés ne mobilise aucune ressource à considérer dans la comparaison de migration.",
+        "Le périmètre exclut des ressources internes mobilisées par le changement.",
+        "La facture du fournisseur inclut nécessairement le temps du client, même si le contrat lui attribue ces travaux."
+      ],
+      "answer": 2,
+      "explanation": "Un coût total pertinent inclut les ressources utiles à la décision, y compris internes selon le périmètre retenu. Une exclusion doit être explicite."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel élément renseigne directement sur la dépendance à un fournisseur de SI ?",
+      "options": [
+        "Le seul montant de la facture annuelle.",
+        "Le nombre de formats annoncés, sans test de leur utilisation.",
+        "Le seul délai contractuel de résiliation, sans préparation opérationnelle.",
+        "La possibilité réelle de récupérer les données et de reprendre les fonctions ailleurs."
+      ],
+      "answer": 3,
+      "explanation": "La dépendance tient aux capacités de changement, aux formats, compétences et interfaces. Le tarif annuel ne décrit pas ces contraintes."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un fournisseur permet un export mais sans documentation des codes ni des relations entre tables. Quelle vérification reste indispensable ?",
+      "options": [
+        "Le succès de l’export physique suffit à prouver l’interprétation des codes et la reconstruction des relations.",
+        "Le droit contractuel de recevoir des fichiers suffit à valider leur usage par le logiciel de remplacement.",
+        "L’égalité des tailles de fichiers avant et après transfert établit la signification des champs et des liens.",
+        "La possibilité d’interpréter et d’utiliser cet export dans une solution de reprise."
+      ],
+      "answer": 3,
+      "explanation": "Un export peut être complet en apparence mais inutilisable sans modèle et correspondances. Ni le droit de résiliation ni le comptage des fichiers ne prouve la reprise effective."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une organisation possède ses données mais les interfaces critiques reposent sur une compétence exclusive du prestataire. Quelle dépendance subsiste ?",
+      "options": [
+        "La propriété des données inclut nécessairement la maîtrise des interfaces conçues par le prestataire.",
+        "La connaissance nécessaire à l’exploitation et au changement de solution.",
+        "Le droit de résilier remplace la disponibilité des compétences nécessaires au changement de solution.",
+        "La réception d’un export suffit à reconstruire les interfaces, sans documentation ni savoir-faire supplémentaire."
+      ],
+      "answer": 1,
+      "explanation": "La maîtrise des données ne suffit pas. Les compétences et la documentation des interfaces peuvent conditionner la continuité et la sortie."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le contrat autorise une sortie, mais fixe un délai d’export de six mois incompatible avec le besoin. Quel point de gouvernance est en jeu ?",
+      "options": [
+        "Le droit de résilier suffit à rendre la sortie praticable, indépendamment du délai réel d’accès aux données.",
+        "Le délai d’export peut être ignoré tant que le contrat prévoit un préavis de sortie plus court.",
+        "La faisabilité opérationnelle de la sortie, au-delà de son droit formel.",
+        "Le délai contractuel de transfert constitue une preuve de continuité même s’il dépasse la durée supportable sans service."
+      ],
+      "answer": 2,
+      "explanation": "Un droit de sortie doit être rapproché de délais et de moyens effectifs. Une clause formelle ne garantit pas une réversibilité utilisable."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une plateforme peu coûteuse exige de reconstruire tous les traitements pour changer de fournisseur. Comment intégrer ce fait au choix ?",
+      "options": [
+        "Le négliger tant que l’abonnement reste inférieur à celui des concurrents.",
+        "Le compter uniquement si le fournisseur augmente déjà son tarif.",
+        "Présenter la sortie comme gratuite puisque les données sont téléchargeables.",
+        "Évaluer le coût, le délai et les risques de reconstruction dans la décision de sourcing."
+      ],
+      "answer": 3,
+      "explanation": "Les coûts de changement et la reprise des fonctions influencent la dépendance. Ils doivent être examinés avant l’engagement, selon les scénarios pertinents."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un exercice d’export réussit sur dix fiches simples, mais ignore historiques, pièces jointes et liens de facturation. Quelle conclusion est justifiée ?",
+      "options": [
+        "La preuve reste limitée au sous-ensemble testé et ne valide pas toute la sortie.",
+        "La lisibilité de dix fiches permet d’étendre le résultat aux pièces jointes et relations qui n’ont pas été exportées.",
+        "Un droit d’export annoncé dans le contrat remplace l’essai des objets métier exclus du test.",
+        "Le nombre de fiches testées suffit à valider le périmètre complet, sans rapprocher les types d’objets et dépendances."
+      ],
+      "answer": 0,
+      "explanation": "La portée d’une preuve dépend de la représentativité du test. Les données et liens nécessaires doivent être inclus ou explicitement laissés hors validation."
+    }
+  ]
+}

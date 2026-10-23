@@ -1,0 +1,555 @@
+{
+  "module": "UE4",
+  "chapter": "tva-credit-report",
+  "sourceHash": "5f92c713f9991fdaf19d1a3a838d702acba97e14222fecd15c29a445e1354d62",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une période comprend 10 000 € HT de ventes taxables au taux fourni de 20 % et 4 000 € de ventes que le cas exclut explicitement de toute TVA collectée. Quel montant de TVA collectée retenir, avant déduction et crédit antérieur ?",
+      "options": [
+        "2 800 €",
+        "2 000 €",
+        "800 €",
+        "14 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Seules les ventes expressément taxables entrent dans ce calcul : 10 000×20 %=2 000 €. Le montant exclu ne doit pas être taxé par une extrapolation du taux fourni. La déduction et le crédit sont ensuite des lignes distinctes du solde.",
+      "calculation": {
+        "expected": 2000,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 10000
+            },
+            {
+              "value": 0.2
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une entreprise présente 3 000 € de TVA collectée et 2 000 € de crédit antérieur disponible. Le préparateur inscrit 1 000 € dans la ligne « TVA collectée ». Quel classement faut-il rétablir ?",
+      "options": [
+        "La taxe collectée reste 3 000 € ; le crédit s’impute dans le calcul du solde.",
+        "La taxe collectée devient 5 000 € par addition du crédit.",
+        "Le crédit remplace la taxe déductible de tous les achats.",
+        "La taxe collectée doit être annulée dès qu’un crédit antérieur existe."
+      ],
+      "answer": 0,
+      "explanation": "Le crédit est une ressource de déduction reportée, pas une réduction des ventes ou de la taxe collectée de la période. Il faut conserver 3 000 € en collecte puis présenter séparément son imputation pour obtenir un rapprochement lisible."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise obtient le remboursement d’un ancien crédit. Ses ventes imposables et leur taxe ne changent pas sur la période courante. Quel effet ce remboursement a-t-il, par lui-même, sur la TVA collectée courante ?",
+      "options": [
+        "Il l’augmente du montant remboursé.",
+        "Il la réduit du montant remboursé.",
+        "Il ne modifie pas la taxe collectée sur les ventes courantes.",
+        "Il transforme les ventes courantes en opérations exonérées."
+      ],
+      "answer": 2,
+      "explanation": "Le remboursement de la créance ancienne et la taxe exigible sur les ventes courantes sont deux flux distincts. Le remboursement n’est pas une nouvelle vente et ne corrige pas, à lui seul, les bases ou taxes des ventes de la période."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les ventes taxables de la période sont de 6 000 € HT au taux fourni de 20 %. Les achats intégralement admis sont de 4 000 € HT au taux fourni de 10 %. Avant tout report, quel est le solde de TVA ?",
+      "options": [
+        "400 €",
+        "800 €",
+        "200 €",
+        "1 600 €"
+      ],
+      "answer": 1,
+      "explanation": "La collecte est 6 000×20 %=1 200 € et la déduction 4 000×10 %=400 €. Le solde vaut 800 €. Taxer simplement l’écart HT de 2 000 € à un taux unique serait erroné puisque ventes et achats ne supportent pas ici le même taux.",
+      "calculation": {
+        "expected": 800,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 6000
+                },
+                {
+                  "value": 0.2
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 4000
+                },
+                {
+                  "value": 0.1
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise en démarrage n’a pas encore de ventes. Elle supporte des dépenses de lancement dont la TVA est intégralement déductible dans le dossier. Quelle analyse correspond à la présentation de la DGFiP ?",
+      "options": [
+        "L’absence de ventes exclut par elle-même tout crédit.",
+        "Un crédit peut résulter des dépenses de lancement ouvrant droit à déduction.",
+        "Le crédit doit être inscrit comme chiffre d’affaires imposable.",
+        "Le droit à déduction est limité au montant des ventes HT déjà réalisées."
+      ],
+      "answer": 1,
+      "explanation": "La DGFiP précise qu’une entreprise qui débute et n’a pas encore réalisé de ventes peut demander, sous les conditions applicables, le remboursement du crédit provenant de ses dépenses de lancement ouvrant droit à déduction. La déduction n’est pas plafonnée par le chiffre d’affaires HT du même mois.",
+      "references": [
+        {
+          "title": "DGFiP, remboursement de crédit de TVA",
+          "url": "https://www.impots.gouv.fr/professionnel/remboursement-de-credit-de-tva-0"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier prévoit un investissement important qui sera acquis le mois prochain. Aucune taxe n’est actuellement déductible à ce titre. Le tableur ajoute déjà la TVA estimée au crédit de ce mois. Quelle distinction faut-il rétablir ?",
+      "options": [
+        "Une prévision de crédit futur n’est pas un droit à déduction acquis sur la période actuelle.",
+        "Toute commande d’investissement crée immédiatement une TVA déductible définitive.",
+        "La TVA future peut être ajoutée au crédit présent dès que le budget est approuvé.",
+        "Le seul montant estimé sur un devis suffit à rendre cette TVA déductible sur la période."
+      ],
+      "answer": 0,
+      "explanation": "Le budget de trésorerie peut anticiper un crédit futur sous hypothèses. Il ne justifie pas une déduction déclarée avant la naissance du droit dans le régime applicable. Il faut séparer les prévisions et les montants fiscalement acquis pour la période."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les achats courants génèrent 300 € de TVA déductible et un investissement 2 000 €, tous droits et dates étant expressément validés. Le préparateur écarte l’investissement parce qu’il n’est pas une charge de l’exercice. Quelle correction convient ?",
+      "options": [
+        "Retenir aussi la TVA déductible sur l’immobilisation dans le solde de TVA.",
+        "Limiter toute déduction de TVA aux seules charges du compte de résultat.",
+        "Étaler nécessairement la TVA sur la durée de l’amortissement comptable.",
+        "Remplacer les 2 000 € de taxe par la dotation annuelle d’amortissement."
+      ],
+      "answer": 0,
+      "explanation": "La déduction de TVA peut porter sur les immobilisations lorsque ses conditions sont remplies. La nature d’actif et le rythme d’amortissement comptable ne suffisent pas à exclure ou étaler cette taxe. Le cas valide expressément les droits et les dates.",
+      "references": [
+        {
+          "title": "DGFiP, remboursement de crédit de TVA",
+          "url": "https://www.impots.gouv.fr/professionnel/remboursement-de-credit-de-tva-0"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un crédit reporté de 900 € provient d’achats déjà pris en compte dans la déclaration précédente. Le préparateur ajoute leurs taxes à la déduction courante tout en conservant le crédit de 900 €. Quelle erreur de suivi commet-il ?",
+      "options": [
+        "Il utilise deux fois les mêmes droits : comme achats courants et comme crédit reporté.",
+        "Il annule à tort le crédit antérieur en ne conservant que la déduction courante.",
+        "Il omet une déduction complémentaire nécessaire au maintien du crédit antérieur.",
+        "Il réduit à tort le crédit reporté du montant des achats déjà déclarés."
+      ],
+      "answer": 0,
+      "explanation": "Le crédit antérieur est le reliquat de droits déjà déduits mais non imputés. Reprendre les taxes d’origine comme nouveaux achats tout en reportant ce reliquat duplique leur effet. Le suivi doit séparer les droits nouveaux de la période et le stock de crédit disponible."
+    },
+    {
+      "id": "q09",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La période dégage 1 700 € de taxe nette avant report. Un crédit antérieur de 600 € est disponible et intégralement imputable. Quel montant reste à payer ?",
+      "options": [
+        "2 300 €",
+        "1 700 €",
+        "1 100 €",
+        "600 €"
+      ],
+      "answer": 2,
+      "explanation": "Le crédit antérieur réduit la taxe nette à régler : 1 700−600=1 100 €. Il n’augmente pas la collecte et ne s’ajoute pas au paiement. Le cas indique qu’il est intégralement disponible et imputable.",
+      "calculation": {
+        "expected": 1100,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 1700
+            },
+            {
+              "value": 600
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La TVA collectée est de 2 400 €, la déduction courante de 1 600 € et le crédit disponible de 1 100 €. Selon la convention solde=collectée−déductible−crédit, quel solde signé obtient-on ?",
+      "options": [
+        "300 €",
+        "−300 €",
+        "1 900 €",
+        "800 €"
+      ],
+      "answer": 1,
+      "explanation": "La période dégage d’abord 800 € de taxe nette. Après imputation du crédit de 1 100 €, le solde signé est −300 €. Ce signe indique un reliquat créditeur de 300 €, non un décaissement négatif déjà effectué.",
+      "calculation": {
+        "expected": -300,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 2400
+                },
+                {
+                  "value": 1600
+                }
+              ]
+            },
+            {
+              "value": 1100
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le solde signé après report vaut exactement zéro. Aucune autre taxe, régularisation ou demande n’intervient. Quelle conclusion correspond à cette déclaration simplifiée ?",
+      "options": [
+        "Un paiement et un nouveau crédit du même montant doivent être constatés.",
+        "Il n’y a ni TVA à payer ni crédit résiduel dans ce calcul.",
+        "Le crédit antérieur reste intégralement disponible malgré son imputation.",
+        "Il faut reconduire le montant de taxe collectée comme crédit."
+      ],
+      "answer": 1,
+      "explanation": "Un solde nul signifie que les droits imputables ont exactement couvert la taxe due dans le périmètre fourni. Il n’existe donc ni reste à régler ni reliquat à reporter. L’ancien crédit utilisé ne doit pas être reconduit comme s’il n’avait pas été consommé."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Avant la période, le suivi présente un crédit de 2 500 €, dont 1 000 € ont fait l’objet d’une demande de remboursement et ne sont plus imputables. La période dégage 1 900 € de taxe nette avant report. Quel montant reste à payer ?",
+      "options": [
+        "0 €",
+        "400 €",
+        "900 €",
+        "1 400 €"
+      ],
+      "answer": 1,
+      "explanation": "Le crédit imputable est seulement 2 500−1 000=1 500 €. La dette courante de 1 900 € est donc réduite à 400 €. La fraction demandée en remboursement ne peut pas être employée une seconde fois en imputation.",
+      "calculation": {
+        "expected": 400,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 1900
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 2500
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "BOI-TVA-DED-50-20-10, remboursement et imputation",
+          "url": "https://bofip.impots.gouv.fr/bofip/1435-PGP.html/identifiant=BOI-TVA-DED-50-20-10-20120912"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après utilisation de 500 € sur un crédit antérieur de 1 200 €, une déclaration conserve 1 200 € comme crédit disponible pour le mois suivant. Quelle correction faut-il apporter au suivi, sans autre mouvement ?",
+      "options": [
+        "Ne conserver que la fraction non utilisée de 700 €.",
+        "Conserver les 1 200 € parce qu’ils ont déjà été déclarés une fois.",
+        "Ajouter les 500 € utilisés pour porter le crédit à 1 700 €.",
+        "Transformer les 500 € imputés en taxe collectée supplémentaire."
+      ],
+      "answer": 0,
+      "explanation": "Une imputation consomme le crédit à concurrence de son montant. La fraction restant disponible est 1 200−500=700 €. Le stock de départ ne se reporte pas inchangé lorsque des droits ont déjà servi à couvrir une taxe courante."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dossier indique deux crédits de 400 € et 700 €, mais celui de 400 € correspond à une version rectifiée qui a été remplacée par le crédit définitif de 700 €. Quel montant antérieur retenir sous ces faits ?",
+      "options": [
+        "1 100 €, somme de toutes les versions.",
+        "700 €, montant définitif de la même période.",
+        "400 €, montant historiquement déclaré en premier.",
+        "300 €, différence obligatoire entre toutes les déclarations."
+      ],
+      "answer": 1,
+      "explanation": "Il s’agit de deux versions du même droit et non de deux crédits indépendants. La version rectifiée définitive doit être rattachée à son historique pour empêcher un cumul. Une déclaration remplacée ne constitue pas un stock de crédit supplémentaire."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un crédit de TVA est encore en cours d’examen à la suite d’une demande de remboursement. Peut-il être imputé parallèlement sur la prochaine taxe due, pour cette même fraction ?",
+      "options": [
+        "Oui, jusqu’au jour du virement effectif.",
+        "Non, la fraction dont le remboursement a été demandé n’est plus utilisable en imputation.",
+        "Oui, si le contribuable promet de régulariser après paiement.",
+        "Oui, si la déclaration suivante est mensuelle."
+      ],
+      "answer": 1,
+      "explanation": "Le BOFiP rappelle le non-cumul : le crédit dont le remboursement a été demandé ne peut plus donner lieu à imputation. Le suivi doit donc distinguer crédit à reporter et créance en cours de remboursement, même avant l’encaissement effectif.",
+      "references": [
+        {
+          "title": "BOI-TVA-DED-50-20-10, remboursement et imputation",
+          "url": "https://bofip.impots.gouv.fr/bofip/1435-PGP.html/identifiant=BOI-TVA-DED-50-20-10-20120912"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau présente 500 € de TVA à payer et 500 € de crédit résiduel provenant exactement du même solde après imputation, sans mécanisme particulier. Quel contrôle permet de détecter l’erreur de signe ?",
+      "options": [
+        "Séparer le cas du solde positif et celui du solde négatif, qui ne produisent pas simultanément ces deux résultats.",
+        "Additionner dette et crédit pour créer une taxe collectée de 1 000 €.",
+        "Retenir les deux montants comme deux droits indépendants.",
+        "Ignorer le signe puisque seuls les montants absolus intéressent la déclaration."
+      ],
+      "answer": 0,
+      "explanation": "Dans le modèle unique fourni, un solde positif donne une dette et un solde négatif un crédit résiduel. Une même différence ne peut produire à la fois un montant payable et un crédit du même montant. Les cas doivent être distingués avant la présentation des montants positifs."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une période dégage 800 € de taxe nette avant report ; un crédit antérieur de 2 000 € est imputable. Quel crédit reste à reporter après imputation, sans remboursement demandé ?",
+      "options": [
+        "2 800 €",
+        "1 200 €",
+        "800 €",
+        "0 €"
+      ],
+      "answer": 1,
+      "explanation": "L’imputation absorbe les 800 € de dette courante dans le crédit disponible de 2 000 €. Le reliquat est 2 000−800=1 200 €. Aucune TVA ne reste à payer, mais le crédit ne disparaît pas en totalité.",
+      "calculation": {
+        "expected": 1200,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2000
+            },
+            {
+              "value": 800
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le solde courant avant report est un crédit de 350 €. Le crédit antérieur disponible est de 900 €. Aucun remboursement ni autre correction. Quel crédit final reporter ?",
+      "options": [
+        "550 €",
+        "900 €",
+        "1 250 €",
+        "350 €"
+      ],
+      "answer": 2,
+      "explanation": "Le nouveau crédit s’ajoute au crédit non utilisé de la période précédente : 350+900=1 250 €. Soustraire le crédit courant reviendrait à le traiter comme une dette. Les deux montants sont bien des droits encore disponibles dans ce cas.",
+      "calculation": {
+        "expected": 1250,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 350
+            },
+            {
+              "value": 900
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Janvier se termine avec un crédit reportable de 1 500 €. En février, la taxe nette avant report est de 600 € ; en mars, elle est de 1 200 €. Aucun remboursement ni nouveau crédit. Quel montant reste à payer en mars après utilisation du reliquat ?",
+      "options": [
+        "300 €",
+        "600 €",
+        "900 €",
+        "1 200 €"
+      ],
+      "answer": 0,
+      "explanation": "Février consomme 600 € et laisse 900 € de crédit. En mars, ce reliquat couvre 900 € sur les 1 200 € de taxe nette, d’où 300 € à payer. Le crédit initial ne doit pas être réutilisé intégralement à chaque mois.",
+      "calculation": {
+        "expected": 300,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 1200
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1500
+                },
+                {
+                  "value": 600
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un crédit de 2 400 € est constaté. Les conditions de remboursement partiel sont supposées remplies ; l’entreprise en demande 1 600 € et reporte le reste. Quelle fraction demeure disponible pour une future imputation ?",
+      "options": [
+        "2 400 €",
+        "4 000 €",
+        "1 600 €",
+        "800 €"
+      ],
+      "answer": 3,
+      "explanation": "Le crédit est réparti entre les deux utilisations : 2 400−1 600=800 € restent reportables. La fraction demandée en remboursement sort du stock imputable, même si le virement n’est pas encore reçu.",
+      "calculation": {
+        "expected": 800,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2400
+            },
+            {
+              "value": 1600
+            }
+          ]
+        },
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "BOI-TVA-DED-50-20-10, remboursement et imputation",
+          "url": "https://bofip.impots.gouv.fr/bofip/1435-PGP.html/identifiant=BOI-TVA-DED-50-20-10-20120912"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Au régime réel normal, quel formulaire la DGFiP indique-t-elle pour une demande de remboursement de crédit de TVA, dans sa présentation de 2026 ?",
+      "options": [
+        "Le formulaire 2573 de remboursement de créances d’impôt sur les sociétés.",
+        "Le formulaire 3519 de remboursement de crédit de TVA.",
+        "Le formulaire 3517-S utilisé pour la déclaration annuelle du régime simplifié.",
+        "La seule déclaration CA3, considérée comme demande de remboursement séparée déjà déposée."
+      ],
+      "answer": 1,
+      "explanation": "La DGFiP identifie le formulaire 3519 pour le remboursement en cours d’année et les usagers relevant du réel normal. Les démarches et formulaires varient selon la situation ; une facture justifie éventuellement le droit, mais ne remplace pas à elle seule la demande.",
+      "references": [
+        {
+          "title": "DGFiP, demande de remboursement de crédit de TVA, 2026",
+          "url": "https://www.impots.gouv.fr/professionnel/questions/comment-faire-ma-demande-de-remboursement-de-credit-de-tva"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une direction veut choisir entre report et remboursement du crédit. Quel élément doit-elle intégrer à son choix, au-delà du montant comptable affiché ?",
+      "options": [
+        "Les conditions du remboursement et les besoins prévisibles d’imputation et de trésorerie.",
+        "La seule comparaison du crédit avec le chiffre d’affaires, indépendamment des modalités de restitution.",
+        "Le seul résultat fiscal de l’exercice, considéré comme condition générale du remboursement de TVA.",
+        "La préférence pour un remboursement, considérée comme suffisante pour maintenir aussi la fraction demandée en imputation."
+      ],
+      "answer": 0,
+      "explanation": "La DGFiP présente le report et le remboursement comme deux modes d’utilisation du crédit, ce dernier sous conditions. Le choix exige donc un examen des droits, des échéances et des besoins de trésorerie, sans compter deux fois le même montant ni présumer un versement automatique.",
+      "references": [
+        {
+          "title": "DGFiP, remboursement de crédit de TVA",
+          "url": "https://www.impots.gouv.fr/professionnel/remboursement-de-credit-de-tva-0"
+        }
+      ]
+    }
+  ]
+}

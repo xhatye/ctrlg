@@ -1,0 +1,248 @@
+{
+  "sourceHash": "7f604afcb3ccbd5ea0273f094998e0c65f159dd794dbb33783529edf04ef285c",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "dc324c63547e055066cec63717bc65a9754e4a891628fbf6ec21e48b4a98de6e",
+      "selected": 0,
+      "reason": "Le mot exposure renvoie à deux risques présents dans le contexte. La clarification doit les distinguer sans choisir arbitrairement un seul risque.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "b4c382efaa0793510eabcd416b1140b8932e07fcab5ee7138bc7f767c68dc772",
+      "selected": 1,
+      "reason": "La demande de répétition porte exactement et poliment sur le chiffre non entendu, sans lui substituer une autre hypothèse.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "9264467e926555680042e17887acf422df5f2558b5fb70bf37d00d01e5e28e9d",
+      "selected": 0,
+      "reason": "La prémisse ruled out est contraire aux faits. Il faut la rectifier explicitement avant de défendre une option non encore exclue.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "53bd5f84d36839cf794c142b10e4c6839b7257132b46550968177e34c7682844",
+      "selected": 3,
+      "reason": "L’ouverture annonce le bénéfice et la condition de rejet, conformément aux deux volets de la question. Les autres ouvertures omettent un volet.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "2da6fb00be2355aedee91278c67beb9ecd7453a03d405af8b71bc9e92190a5c8",
+      "selected": 0,
+      "reason": "Le prix de migration est absent et nécessaire au coût total. Le premier choix identifie cette lacune sans inventer ni substituer un chiffre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "3a44fb5f4febeaedc89fe47f263c841b8897a7e9108877f9573037da4dbf0ff7",
+      "selected": 3,
+      "reason": "La couverture d’incidents nocturnes fournit un avantage lié au besoin. Répéter la préférence dans les trois autres formulations reste circulaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "fecf34856e06b1a4583ee9236a1a8e003ca5ae1aeda157584ee644d3541fd54b",
+      "selected": 1,
+      "reason": "Le bénéfice pertinent est la perte évitée supérieure au surcoût, non le prix lui-même ni un pourcentage appliqué à toutes les dépenses.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "773b9c1a24d83ab888e83e8ef1c5c5af865b754bf350de9551bd22c0b77f0c88",
+      "selected": 0,
+      "reason": "L’accord sur la restitution des données est une condition encore non satisfaite. La recommandation doit rester conditionnelle avant engagement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "cb349668d388b5e6309e5a0bfd65d112661dd014a2b9984f70b967870331866b",
+      "selected": 2,
+      "reason": "Le coût de première année inclut transition et ressources retenues sur le même périmètre. Une comparaison des seules factures récurrentes omet des coûts du scénario.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "7a8475b344e60c74d4a69d70fa38c7808c38f630aa69750752a1ca72433220da",
+      "selected": 1,
+      "reason": "L’ancienneté d’une pratique ne prouve pas sa supériorité actuelle. Tester les besoins présents et preuves d’avantage examine sa pertinence.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "754282bad8ba9dadb94ccc60d93cb50fcc8c32e39df87b9885e18df16c620448",
+      "selected": 1,
+      "reason": "No less expensive signifie au moins aussi cher, égalité comprise. Ce n’est ni strictement plus cher ni au plus aussi cher.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "22fdac07f16ecd2446735b66850b9d60b49f08d7853370993c34e16150b61595",
+      "selected": 0,
+      "reason": "Ajouter les services manquants aligne les périmètres. Comparer directement des prestations différentes ne mesure pas un prix équivalent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "4b6f1311e14bf345be0f2cc89bfb34d5b9da3b02f534937aa3a433f5c51b6764",
+      "selected": 0,
+      "reason": "450moins200 impose250tickets excédentaires selon tarifapplicable. Le coût de pleine capacité ou les quotients de forfait n’intègrent pas les dépassements.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "747185cbef188c488faa7283ce7674874bafe0e95b38af72d2d0a25e7cecf93c",
+      "selected": 2,
+      "reason": "La conversion doit expliciter un taux puis examiner sa sensibilité. Une période identique ne rend pas identiques les monnaies.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "a479b1ce6a9a00600b73cc17ee8006e39e4b76bb929dfa5889c2337dd9ef9954",
+      "selected": 2,
+      "reason": "Les fenêtres de service diffèrent. Le pourcentage seul ne permet pas de déduire les heures d’indisponibilité sans rapprocher les dénominateurs.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "1e77c6ebf8bf3a07e19302ac66e3dacd27e6547776f6f12fe46ebb9424e766bd",
+      "selected": 1,
+      "reason": "La comparaison à deux ans doit cumuler les frais de service et de sortie dans le même scénario. Ni première année ni sortie seule ne couvrent ce périmètre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "4dc3ea18d8c5cbbbbf60a56d06ec6a7186079b752760f0af8ab233857c453aea",
+      "selected": 0,
+      "reason": "Need not retire l’obligation, sans interdire le renouvellement. Il ne décrit pas un contrat déjà renouvelé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "58ca7fbf51b00bdfae37ae51c6c0878b307d5da2eacda3b18c8962618c626356",
+      "selected": 1,
+      "reason": "Should have been completed exprime ici une exigence ou recommandation passée explicitement non satisfaite, pas une déduction de réalisation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "45241b2ef88f1dd2615e1337848bda25905ceb26ae7f96db190b0d33808d1ca4",
+      "selected": 0,
+      "reason": "Cost-prohibitive qualifie ici un coût empêchant l’entreprise d’entreprendre le déploiement. Il n’exprime ni impossibilité de chiffrer ni interdiction juridique de facturer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "da20a9497bfef91c7bb8c0101249f4fe889985a406409ffdb50f872a570d9483",
+      "selected": 3,
+      "reason": "Might have + participe décrit ici une possibilité passée non réalisée, sans affirmer effet constaté ni action future.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "106d991f8b156d6b1589a6a176c2727511aaf5d9b179bcd12281d60c794b7fa6",
+      "selected": 2,
+      "reason": "Liable for concerne la responsabilité ; liable to +infinitif vise ici la propension ou le risque, sans indemnisation déjà constatée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "bffbc5a1cff215ac5576afeaa29bb8bea0688b6af2e1cf5c62584581fc344c35",
+      "selected": 3,
+      "reason": "Must have submitted formule une inférence forte au passé. Une obligation passée demanderait had to ; ce n’est ni ordre futur ni recommandation non suivie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "sourceHash": "b33a22baf373d54e8945ab1a57e4d8e1b717410f8958755dc3fd0030ce6e6dbc",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "b1c310b5f12ae0f8c6003247219ea0a32830ea43a7c8019b21eb8e3b2aea428d",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Prime de marché : 7 % − 2 % = cinq points."
+    },
+    {
+      "id": "q02",
+      "digest": "ceb64a0fba027e1222ebf2a895d32c2f8a82273a17fba7187db8be2ac8c8e696",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La prime est le rendement de marché moins le taux sans risque. Le distracteur arithmétique/géométrique précise pourtant que la convention arithmétique est explicitement fournie : cette précision élimine artificiellement le choix. Révision résolue : les nouvelles erreurs de méthode sont distinctes et pertinentes."
+    },
+    {
+      "id": "q03",
+      "digest": "e9d440aa7ec4ff42bd77e4cc3f589041e236f65ba29f8d18df8369e3dc97f66b",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Prime du titre : 1,2 × 6 = 7,2 points."
+    },
+    {
+      "id": "q04",
+      "digest": "7677b1992ec08aefc191431227a40c48546338eb7ae9c8e7d821e28581cd1471",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le bêta multiplie la prime de marché, pas le seul rendement brut ni le taux sans risque."
+    },
+    {
+      "id": "q05",
+      "digest": "ae36d53f50b8a24ac6a8f5e42cf388998082e8bda04b66d9a43215f7966b6248",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Ke = 3 + 0,5 × (9−3) = 6 %."
+    },
+    {
+      "id": "q06",
+      "digest": "8970ff2b81a9d68ad414e405ddafbb311f30b0b9d29e611f0cd80db71c0878a9",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Écart : 11 − 8 = trois points."
+    },
+    {
+      "id": "q07",
+      "digest": "abd95818f96c06f2e01dff80ac15a22ff8a802ae6c5e7a7f7d185fc0fe1a88c5",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Bêta entre zéro et un et prime positive donnent une fraction de prime : Ke entre Rf et Rm."
+    },
+    {
+      "id": "q08",
+      "digest": "5a625703f5903211e31b536a7a66f3c23fe78ae15920c9cc733c2b4badd1869d",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le bêta décrit une sensibilité du modèle et non une perte maximale garantie pour chaque séance."
+    },
+    {
+      "id": "q09",
+      "digest": "28294bc0687b1eac10289fbd1a4a59c8ac8e7f41fd63e18441117df0c4f87c08",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Bêta zéro annule la prime systématique et laisse Rf."
+    },
+    {
+      "id": "q10",
+      "digest": "76536cdf3745cd00c2258a07a234b78d09fe0329c96cade71f1f8021e8208ac9",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Périodes du taux sans risque et du rendement marché doivent être cohérentes. Remplacer un taux par le nominal de l’action est absurde. Révision résolue de nouveau : les alternatives portent désormais sur des confusions de périmètre, de convention ou de méthode du même domaine."
+    },
+    {
+      "id": "q11",
+      "digest": "2565436ce17580bd1bccc4c84e7db4118ecc1d3a3221655a008b06ebb8383e88",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Bêta = prime du titre / prime du marché = 4 / 5 = 0,8."
+    },
+    {
+      "id": "q12",
+      "digest": "4344f5b52622137cceebd34f2c8d973f379edf61f8794d7f28661a9e178d8cf7",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Développer Rf + bêta(Rm−Rf) exige le terme −bêta×Rf manquant."
+    },
+    {
+      "id": "q13",
+      "digest": "ee2b0cb301edd4d3d8cf60444f9a9c3b339274604edf1c3eb82ab22734644ee7",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Bêta un donne Ke = Rm et donc écart nul."
+    },
+    {
+      "id": "q14",
+      "digest": "214550745c44ae0679a228981a91d81964163b40e47c99c541d814de176b7702",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Variation : (1,1−0,8) × 4 = 1,2 point."
+    },
+    {
+      "id": "q15",
+      "digest": "b3a3c10944878443536cefc7a55ffdb4b578179215e37265fac24d3f410b02b7",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La prime de marché fournie est déjà nette de Rf ; ne pas le retrancher une seconde fois."
+    },
+    {
+      "id": "q16",
+      "digest": "45f76c90804dad0b5df56bfe89f5e08021b47ba87e22fb3b563f7437740368dd",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Même bêta et mêmes paramètres donnent même exigence dans le modèle, pas même réalisation ni volatilité totale."
+    },
+    {
+      "id": "q17",
+      "digest": "a4ebbdea6e827a60309b0a842088c276ac666c883c46e5f086281d28133424e3",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Ke = 4 + 1,5 × 6 = 13 ; écart à 10 de trois points."
+    },
+    {
+      "id": "q18",
+      "digest": "10b4f668a2aa6f6197daf73cf69818f2be96ccd466f642d7e41ff258224b3748",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Ke est une exigence modélisée, non un coupon certain d’action."
+    },
+    {
+      "id": "q19",
+      "digest": "9f84f570e9f270d82ff12e433d61dbafb3157e291ee350be89fff8cbfee5bdf4",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Variation = bêta 0,75 × hausse marché de deux points = 1,5 point."
+    },
+    {
+      "id": "q20",
+      "digest": "5681a1d170c5ab8c4035770b5a189660be646eba6412e6bf621e905212860d34",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le bêta doit représenter le risque des flux. Capital nominal et nombre d’actions ne fournissent pas une alternative de comparabilité pertinente. Révision résolue de nouveau : les alternatives portent désormais sur des confusions de périmètre, de convention ou de méthode du même domaine."
+    },
+    {
+      "id": "q21",
+      "digest": "b1063d289f02fc23f7fc56f6cb962c368f06fe48c2c08009a114724976079eba",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Avec prime positive et bêta inférieur à un, Ke−Rm = (bêta−1)×prime est négatif ; vérifier une formule donnant l’inverse."
+    },
+    {
+      "id": "q22",
+      "digest": "176b1b746e6b9fd38ea0f23ab74ff3f59d130e36f110b34b9d09ec7e9bedcbb5",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le bêta est un coefficient sans unité, pas un pourcentage de probabilité ou une prime annuelle."
+    }
+  ]
+}

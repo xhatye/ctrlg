@@ -1,0 +1,533 @@
+{
+  "module": "UE11",
+  "chapter": "ecarts-action",
+  "sourceHash": "93934de7ef369ec1557559a1215b6a5e99bfe413c58314f438fc8f5595839c83",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Les délais restent stables autour de 8 jours, dans les limites statistiques de la carte de contrôle établie sur ce processus. Le contrat client exige au plus 5 jours. Que montre cette situation ?",
+      "options": [
+        "Un processus peut être statistiquement stable tout en ne satisfaisant pas l’exigence du client.",
+        "Le respect des limites statistiques démontre le respect du délai contractuel, même si la moyenne dépasse 5 jours.",
+        "L’exigence de 5 jours doit être relevée à 8 jours pour prouver que le processus est sous contrôle statistique.",
+        "L’écart à 5 jours démontre à lui seul une cause exceptionnelle apparue pendant la période observée."
+      ],
+      "answer": 0,
+      "explanation": "Les limites de contrôle décrivent la variation du processus étudié ; les spécifications expriment ce qui est requis. Un fonctionnement stable peut être durablement insuffisant pour le client. Il faut améliorer le niveau du processus, sans confondre stabilité et conformité.",
+      "references": [
+        {
+          "title": "NIST — Variables control charts : control limits and specification limits",
+          "url": "https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc32.htm"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un écart réel − standard de +300 € est présenté comme favorable, sans préciser la nature du poste. Quelle information est indispensable ?",
+      "options": [
+        "Si le montant est présenté en euros arrondis ou avec centimes, sans autre précision sur le poste.",
+        "S’il s’agit d’une recette ou d’un coût, en plus de la convention de signe.",
+        "Si le service à l’origine du tableau établit un budget annuel ou mensuel, sans préciser le poste.",
+        "Si le montant est supérieur à celui de la période précédente, indépendamment de sa nature."
+      ],
+      "answer": 1,
+      "explanation": "Une recette plus élevée et un coût plus élevé ne s’interprètent pas de la même manière. Le signe seul ne suffit pas ; la mesure et sa base doivent accompagner le commentaire."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les factures montrent une hausse du prix unitaire de matière, tandis que la consommation par produit reste stable sur un champ comparable. Quelle piste est la plus directement étayée ?",
+      "options": [
+        "Une hausse des pertes physiques par produit, même si le taux de consommation matière reste inchangé.",
+        "Une hausse du seul volume produit, supposée expliquer une variation du prix unitaire de facture.",
+        "Une variation des conditions de prix d’approvisionnement à examiner.",
+        "Une hausse de la part des produits complexes, supposée expliquer le prix de la même matière facturée à l’unité."
+      ],
+      "answer": 2,
+      "explanation": "Les pièces documentent d’abord une évolution de prix. Elles ne prouvent pas à elles seules sa responsabilité ou l’absence d’autres effets, mais orientent la recherche vers les conditions d’achat."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une panne documentée provoque des pertes de matière ; une action doit cibler cette cause. Quelle proposition est la plus directement reliée au diagnostic ?",
+      "options": [
+        "Renégocier le prix matière uniquement pour compenser financièrement les pertes sans traiter le défaut matériel établi.",
+        "Renforcer le contrôle final uniquement pour identifier les rebuts, sans intervention sur la panne qui les provoque.",
+        "Accélérer les cadences sur la machine défaillante sans vérifier l’effet sur les pertes ni la disponibilité.",
+        "Prévoir une intervention sur le matériel et suivre pertes et disponibilité."
+      ],
+      "answer": 3,
+      "explanation": "Une action doit répondre à la cause étayée. Le suivi des pertes et du fonctionnement permet d’examiner son effet plutôt que choisir un levier sans relation avec le problème observé."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un standard de produit simple est appliqué à des produits plus complexes puis tout écart est qualifié de mauvaise efficacité. Quelle limite apparaît ?",
+      "options": [
+        "La référence ne représente peut-être pas le mix et les conditions réelles à comparer.",
+        "La hausse de complexité se traduit seulement dans les prix de vente, sans modifier la consommation standard pertinente.",
+        "Le coût moyen de tous les produits suffit à mesurer l’efficacité de chacun, même si leur complexité varie.",
+        "La référence devient comparable dès que les coûts sont exprimés par unité, sans distinguer les catégories de produits."
+      ],
+      "answer": 0,
+      "explanation": "Le référentiel doit couvrir les caractéristiques de l’activité. Des différences de contenu peuvent produire un écart sans dérive identique ; la composition doit être étudiée avant d’attribuer la cause."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Le coût réel est 8 400 € et le standard comparable 8 000 €. Selon standard − réel, quel écart signé calcule-t-on ?",
+      "options": [
+        "400 €",
+        "-400 €",
+        "16 400 €",
+        "4,76 %"
+      ],
+      "answer": 1,
+      "explanation": "Avec la convention imposée, l’écart est 8 000 − 8 400 = −400 €. Le coût dépasse la référence malgré le signe négatif, ce qui montre l’importance de ne pas commenter un signe sans convention.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 8000
+            },
+            {
+              "value": 8400
+            }
+          ]
+        },
+        "expected": -400,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour réduire les retours clients, l’entreprise ajoute une inspection avant expédition, sans modifier pour l’instant la fabrication. Dans un classement prévention, évaluation et défaillances, quelle catégorie décrit directement le coût de cette inspection ?",
+      "options": [
+        "Prévention des défauts par modification du procédé de fabrication.",
+        "Défaillance externe supportée après réception par le client.",
+        "Évaluation de la conformité avant livraison.",
+        "Défaillance interne correspondant au coût de reprise des seuls produits effectivement défectueux."
+      ],
+      "answer": 2,
+      "explanation": "L’inspection est une activité d’évaluation : elle vérifie la conformité. Elle peut détecter des défauts avant livraison, sans être elle-même la modification préventive du procédé ni le coût de réparation des produits identifiés comme défectueux.",
+      "references": [
+        {
+          "title": "ASQ — Cost of Quality : prevention, appraisal and failure costs",
+          "url": "https://asq.org/quality-resources/cost-of-quality"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le protocole de contrôle déclenche une investigation pour un point hors limites ou pour six valeurs successives strictement croissantes. Six relevés augmentent de suite mais restent chacun dans les limites. Quelle conduite suit ce protocole ?",
+      "options": [
+        "Ne rien examiner parce que seule la position du dernier point par rapport aux limites doit être retenue.",
+        "Recalculer immédiatement les limites sur ces six points pour intégrer leur progression au fonctionnement habituel.",
+        "Écarter les cinq premiers points et juger la stabilité d’après le seul dernier relevé.",
+        "Examiner le signal de tendance prévu, sans en déduire à lui seul une cause particulière certaine."
+      ],
+      "answer": 3,
+      "explanation": "Les règles du protocole portent aussi sur la structure de la série, pas seulement sur chaque dépassement isolé. La succession croissante déclenche donc une investigation. Un signal statistique n’identifie cependant pas par lui-même l’origine technique ou humaine du changement.",
+      "references": [
+        {
+          "title": "NIST — Variables control charts : control limits and specification limits",
+          "url": "https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc32.htm"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le prix standard initial était de 4 €/kg. Une hausse du marché conduit à retenir un prix révisé de référence de 5 €/kg. Cent kilogrammes sont achetés à 5,20 €. L’écart opérationnel demandé compare le réel au prix révisé, à quantité réelle. Quel écart opérationnel de prix obtient-on ?",
+      "options": [
+        "20 € défavorables",
+        "120 € défavorables",
+        "100 € défavorables",
+        "20 € favorables"
+      ],
+      "answer": 0,
+      "explanation": "Le coût opérationnel de référence est 100 × 5 = 500 €, contre 520 € réels : écart de 20 € défavorables. L’écart par rapport au budget initial serait de 120 €, dont 100 € liés à la révision de la référence de marché. Les deux comparaisons répondent à des questions distinctes.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 5.2
+                },
+                {
+                  "value": 5
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 20,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Par rapport à un scénario de référence, le chiffre d’affaires augmente de 500 € et l’ensemble des charges augmente de 300 €, sans autre changement. Quel effet net ces deux variations ont-elles sur le résultat ?",
+      "options": [
+        "800 € d’amélioration",
+        "200 € d’amélioration",
+        "200 € de dégradation",
+        "500 € d’amélioration"
+      ],
+      "answer": 1,
+      "explanation": "L’effet sur le résultat est la variation des produits moins celle des charges : 500 − 300 = 200 € d’amélioration. Additionner les deux hausses confondrait leurs effets économiques opposés, bien que les deux écarts soient positifs selon réel moins référence.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 500
+            },
+            {
+              "value": 300
+            }
+          ]
+        },
+        "expected": 200,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un écart est attribué à un fournisseur mais le rapport ne conserve ni facture ni donnée de qualité. Quelle démarche est nécessaire ?",
+      "options": [
+        "Attribuer l’écart au fournisseur dès lors que son nom figure dans le suivi d’achats, sans examiner les livraisons.",
+        "Remplacer les prix réels par le dernier tarif catalogue pour vérifier le fournisseur, sans contrôler remises et urgences.",
+        "Confronter l’hypothèse aux pièces et événements pertinents.",
+        "Tenir l’avis du service utilisateur pour une preuve suffisante même si aucune livraison n’a été reliée à l’anomalie."
+      ],
+      "answer": 2,
+      "explanation": "La décomposition donne des pistes mais pas une preuve de cause. Les documents et événements servent à établir ce qui a changé avant de désigner une action ou un responsable."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Après une renégociation censée réduire le prix matière, quel suivi teste directement l’effet recherché sans masquer les autres effets ?",
+      "options": [
+        "Le nombre de commandes renégociées, pris comme preuve du gain même si leurs prix nets ne sont pas suivis.",
+        "Le coût total matière de la période, comparé sans correction de volumes, qualité ou périmètre.",
+        "Le pourcentage de remise annoncé, comparé sans vérifier le tarif auquel il s’applique ni les frais associés.",
+        "Les prix comparables, conditions d’achat et éventuels effets de qualité ou délai."
+      ],
+      "answer": 3,
+      "explanation": "Le suivi doit viser le mécanisme de l’action. Un total peut varier pour d’autres raisons ; les conditions et contreparties permettent un bilan plus cohérent qu’un simple montant agrégé."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le standard date d’une ancienne méthode de fabrication désormais abandonnée. Quelle question faut-il poser ?",
+      "options": [
+        "La référence décrit-elle encore une consommation attendue pertinente dans les conditions actuelles ?",
+        "La référence peut-elle être ramenée au coût réel du mois afin d’annuler les écarts du nouveau procédé ?",
+        "La référence peut-elle être conservée au motif que son usage historique suffit à prouver sa validité technique ?",
+        "La référence peut-elle être remplacée par le prix de vente pour éviter de chiffrer la consommation du nouveau procédé ?"
+      ],
+      "answer": 0,
+      "explanation": "Un standard est une convention à confronter au travail réel. Une modification de procédé peut rendre certaines comparaisons inadaptées ; la mise à jour doit être justifiée et traçable."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau additionne un écart en kilogrammes et un écart en euros pour former un total de coût. Quel défaut faut-il corriger ?",
+      "options": [
+        "La somme est correcte si les deux écarts sont présentés avec le même signe défavorable.",
+        "Les composantes n’ont pas une unité commune permettant cette addition.",
+        "La somme est correcte si les kilogrammes proviennent de la même matière que l’écart de prix en euros.",
+        "La somme est correcte si le total est ensuite divisé par le nombre de produits, sans valoriser les kilogrammes."
+      ],
+      "answer": 1,
+      "explanation": "Une décomposition de coût doit être exprimée en grandeurs monétaires comparables. Une quantité physique peut être valorisée selon la convention, mais ne s’ajoute pas directement à des euros."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une investigation coûterait 200 € dans tous les cas. Elle a 25 % de chances de permettre une économie certaine de 1 000 €, et 75 % de ne produire aucune économie. Aucun autre effet n’est retenu. Quel gain net espéré son lancement présente-t-il ?",
+      "options": [
+        "250 €",
+        "800 €",
+        "50 €",
+        "−200 €"
+      ],
+      "answer": 2,
+      "explanation": "L’économie espérée vaut 25 % × 1 000 + 75 % × 0 = 250 €. Le coût certain de 200 € reste dû même si l’investigation n’aboutit pas. Le gain net espéré est donc 50 €, sans garantir que chaque investigation soit bénéficiaire.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.25
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "value": 200
+            }
+          ]
+        },
+        "expected": 50,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La formation est proposée alors que le diagnostic établit un défaut d’approvisionnement, non de compétence. Quelle question améliore le choix d’action ?",
+      "options": [
+        "Peut-on augmenter le nombre d’heures de formation pour compenser le surcoût, sans changer les conditions d’approvisionnement ?",
+        "Peut-on mesurer la réussite par la présence en formation même si l’incident d’achat persiste ?",
+        "Peut-on choisir la formation parce que son budget est disponible, sans examiner le mécanisme à corriger ?",
+        "Quel mécanisme relie la formation à la cause documentée, ou faut-il un levier différent ?"
+      ],
+      "answer": 3,
+      "explanation": "Les leviers ne sont pas interchangeables. Une action doit viser le problème établi ; une formation peut être utile dans un autre cas sans corriger ici la condition d’achat identifiée."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "La norme prévoit 180 heures productives pour le volume réalisé. L’atelier a payé 220 heures, dont 20 heures d’arrêt documentées, à un taux standard de 10 €/heure. Le dossier sépare l’inactivité et l’écart d’efficacité sur les seules heures productives. Quel surcoût d’efficacité calculer, hors inactivité ?",
+      "options": [
+        "200 € défavorables",
+        "400 € défavorables",
+        "2 000 € défavorables",
+        "0 €, puisque les heures d’arrêt sont documentées."
+      ],
+      "answer": 0,
+      "explanation": "Les heures productives réelles sont 220 − 20 = 200 heures. Leur dépassement de norme vaut 200 − 180 = 20 heures, soit 200 €. Les 20 heures d’arrêt représentent séparément 200 € ; attribuer la totalité des 400 € à l’efficacité productive mélangerait les deux mécanismes.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 220
+                    },
+                    {
+                      "value": 20
+                    }
+                  ]
+                },
+                {
+                  "value": 180
+                }
+              ]
+            },
+            {
+              "value": 10
+            }
+          ]
+        },
+        "expected": 200,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un dépassement devient un chiffre négatif après inversion de convention. Que devient la situation économique observée ?",
+      "options": [
+        "Le dépassement devient une économie puisque la nouvelle convention donne un nombre négatif.",
+        "Elle ne change pas ; seule l’écriture du différentiel est inversée.",
+        "Le coût réel doit être corrigé du double de l’écart pour rester cohérent avec le changement de signe.",
+        "Le dépassement devient une baisse de volume, même si la différence de coût et les quantités observées sont inchangées."
+      ],
+      "answer": 1,
+      "explanation": "Le sens de soustraction modifie le signe mais pas les faits. Il faut commenter la différence économique avec la convention, au lieu d’utiliser un code de signe comme jugement indépendant."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Sur 100 commandes, 90 sont livrées en 2 jours et 10 en 20 jours. L’engagement prévoit au moins 95 % des commandes livrées en cinq jours au plus. Quel bilan est correct, même si le délai moyen est inférieur à cinq jours ?",
+      "options": [
+        "100 % sont conformes au délai parce que leur moyenne est inférieure à cinq jours.",
+        "95 % sont conformes au délai parce que ce pourcentage est l’objectif annoncé.",
+        "90 % sont conformes au délai : l’engagement de 95 % n’est pas atteint malgré la moyenne favorable.",
+        "10 % sont conformes au délai, car seules les commandes de vingt jours doivent figurer dans le dénominateur."
+      ],
+      "answer": 2,
+      "explanation": "Les 90 commandes livrées en deux jours respectent le seuil ; les dix autres non. La proportion conforme est 90/100 = 90 %, en dessous de 95 %. La moyenne de 3,8 jours ne décrit pas la proportion de commandes respectant le délai promis.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 90
+                },
+                {
+                  "value": 100
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 90,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une action réduit les coûts mais allonge les délais au-delà de l’exigence client. Quel bilan est utile ?",
+      "options": [
+        "Valider l’économie et traiter le dépassement du délai comme une question commerciale extérieure au bilan de l’action.",
+        "Comparer le seul coût par produit, en excluant les effets de délai tant qu’ils ne sont pas tous chiffrés.",
+        "Maintenir l’action dès lors que l’économie finance les coûts internes, sans examiner l’engagement client.",
+        "Évaluer le gain et la contrainte de service pour réexaminer l’arbitrage."
+      ],
+      "answer": 3,
+      "explanation": "Le contrôle de gestion éclaire plusieurs dimensions. Un gain partiel peut avoir une contrepartie importante ; les objectifs et contraintes doivent rester visibles dans le bilan."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Les reprises ont quatre causes : A, 50 cas à 2 € ; B, 10 cas à 30 € ; C, 20 cas à 5 € ; D, 100 cas à 0,50 €. L’équipe veut cibler le plus petit nombre de causes couvrant au moins 90 % du coût total. Quel ensemble remplit cet objectif ?",
+      "options": [
+        "500 € couverts en ciblant B, A et C.",
+        "450 € couverts en ciblant B, A et D.",
+        "400 € couverts en ciblant B et A.",
+        "250 € couverts en ciblant A, C et D."
+      ],
+      "answer": 0,
+      "explanation": "Les coûts par cause sont A 100 €, B 300 €, C 100 € et D 50 €, soit 550 € au total. Le seuil de 90 % est 495 €. Aucune paire ne suffit ; B+A+C couvre 500 €, soit environ 90,91 %. Cibler les causes selon leur seule fréquence privilégierait à tort D.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 10
+                    },
+                    {
+                      "value": 30
+                    }
+                  ]
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 50
+                    },
+                    {
+                      "value": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 20
+                },
+                {
+                  "value": 5
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le responsable veut suivre une correction sur la même période et la même population que le problème initial. Quel avantage cela apporte-t-il ?",
+      "options": [
+        "Elle prouve que tout changement observé est causé par l’action, puisque le champ de comparaison est stable.",
+        "Une comparaison plus cohérente, sans garantir à elle seule l’attribution causale exclusive.",
+        "Elle permet de supprimer l’examen des autres changements de prix, de demande ou de méthode dans cette population.",
+        "Elle permet de transposer directement l’effet à toute autre population, puisque le périmètre initial est constant."
+      ],
+      "answer": 1,
+      "explanation": "Un champ stable aide à interpréter les écarts. Il reste nécessaire d’examiner d’autres changements, mais l’alignement réduit les différences dues à la manière de mesurer."
+    }
+  ]
+}

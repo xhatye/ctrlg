@@ -1,0 +1,350 @@
+{
+  "module": "UE7",
+  "chapter": "decision",
+  "sourceHash": "aa9aa787fb4c990fc69bb62a2ad58d791450454a3584e9baf29d7d276a70dbc8",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux solutions informatiques diffèrent par leur prix, délai, qualité et risque. Que doit définir le décideur avant de choisir ?",
+      "options": [
+        "Retenir le prix seul sans vérifier les autres exigences.",
+        "Choisir d’abord puis chercher des arguments pour défendre cette option.",
+        "Des critères et contraintes explicites permettant de comparer les options.",
+        "Additionner directement des euros, des jours et une note de qualité sans convention."
+      ],
+      "answer": 2,
+      "explanation": "Les dimensions de la décision doivent être définies et rendues comparables avant la sélection. Cela évite de changer les critères après coup ou d’ignorer une contrainte importante au profit du seul prix."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une équipe dispose d’un délai court et d’informations incomplètes. Elle retient une solution respectant les exigences essentielles sans examiner toutes les possibilités imaginables. Quelle notion correspond ?",
+      "options": [
+        "La rationalité limitée et la recherche d’une solution satisfaisante.",
+        "La preuve d’un optimum global parmi toutes les options possibles.",
+        "L’absence de toute rationalité dès qu’une donnée manque.",
+        "Une décision purement automatique sans aucun jugement."
+      ],
+      "answer": 0,
+      "explanation": "Les capacités, informations et délais limitent la recherche. Une solution satisfaisante peut être justifiée sans prétendre démontrer qu’elle est la meilleure de l’ensemble des options jamais envisageables."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un manager veut appliquer exactement la même prime à toute difficulté d’engagement, sans examiner les situations. Quelle limite doit-il reconnaître ?",
+      "options": [
+        "Retenir le montant de prime comme seule donnée suffisante pour choisir une réponse à toute difficulté.",
+        "Évaluer l’engagement à partir du seul salaire, sans examiner le travail ni ses contraintes.",
+        "Remplacer les problèmes d’autonomie par une annonce de reconnaissance sans revoir les décisions possibles.",
+        "Les leviers varient selon les personnes, le travail et le contexte."
+      ],
+      "answer": 3,
+      "explanation": "La rémunération peut compter, mais elle n’est pas un mécanisme universel suffisant. Autonomie, reconnaissance, conditions et contraintes doivent être examinées avant de choisir une action."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un nouvel outil change les tâches quotidiennes mais l’entreprise se limite à envoyer une annonce de lancement. Quel complément répond directement au changement de travail ?",
+      "options": [
+        "Multiplier les annonces de lancement sans permettre aux utilisateurs d’essayer les tâches modifiées.",
+        "Une formation aux tâches, un soutien et des retours d’usage adaptés aux difficultés.",
+        "Évaluer l’appropriation sur la seule réception des messages de communication.",
+        "Reporter tout soutien pratique après la première évaluation, sans dispositif pour les situations bloquantes."
+      ],
+      "answer": 1,
+      "explanation": "Informer est utile mais ne garantit pas la capacité à effectuer les nouvelles tâches. L’accompagnement doit relier formation, soutien et retours aux effets concrets de l’outil sur l’activité."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une option moins chère que les autres ne respecte pas le délai impératif du dossier. Quelle correction du classement respecte cette exigence ?",
+      "options": [
+        "Compenser son retard par son prix faible dans une moyenne de notes avant de vérifier son admissibilité.",
+        "Attribuer la même note de délai à toutes les options pour les départager sur leur coût.",
+        "Écarter les options hors délai impératif avant de comparer les coûts des options admissibles.",
+        "Réduire le poids du délai afin que l’option moins chère conserve la première place."
+      ],
+      "answer": 2,
+      "explanation": "Les critères et contraintes doivent refléter le besoin. Une option peut être moins chère tout en étant inacceptable si elle ne respecte pas une exigence impérative ; l’arbitrage doit le rendre visible."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une décision est présentée comme optimale parce qu’elle est la meilleure parmi trois options connues. Quelle réserve faut-il formuler ?",
+      "options": [
+        "Le choix est le meilleur de l’ensemble examiné, sans preuve qu’aucune autre option pertinente n’existe.",
+        "La première place parmi ces options établit à elle seule que la recherche de toutes les solutions est complète.",
+        "Le nombre limité d’options implique que les autres solutions pertinentes ont nécessairement été exclues pour motif établi.",
+        "La meilleure note locale démontre que les critères retenus couvrent tous les usages possibles."
+      ],
+      "answer": 0,
+      "explanation": "La rationalité limitée invite à préciser le champ de recherche. On peut justifier une sélection entre alternatives observées sans généraliser cette conclusion à toutes les solutions possibles."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un salarié pense pouvoir atteindre la performance demandée et souhaite la prime annoncée. Il doute cependant que l’entreprise la verse même si le résultat est atteint, car elle n’a pas respecté plusieurs engagements passés. Quel lien du modèle attente-instrumentalité-valence est principalement fragilisé ?",
+      "options": [
+        "La valence : la valeur que le salarié attribue à la récompense.",
+        "L’attente : la confiance dans le lien entre effort fourni et performance atteignable.",
+        "Le niveau de compétence technique nécessaire à l’exécution du travail.",
+        "L’instrumentalité : la confiance dans le lien entre performance atteinte et récompense reçue."
+      ],
+      "answer": 3,
+      "explanation": "L’attente relie effort et performance ; l’instrumentalité relie performance et conséquence ; la valence est la valeur donnée à cette conséquence. Ici, la capacité et l’intérêt pour la prime sont présents, mais la confiance dans son versement manque.",
+      "references": [
+        {
+          "title": "OpenStax — Process theories of motivation",
+          "url": "https://openstax.org/books/organizational-behavior/pages/7-3-process-theories-of-motivation"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les salariés ont suivi une formation mais ne disposent d’aucun soutien lorsqu’un cas réel inhabituel bloque l’outil. Quelle dimension de l’accompagnement reste faible ?",
+      "options": [
+        "La communication sur la date initiale, supposée résoudre les exceptions rencontrées après formation.",
+        "L’assistance et la possibilité de traiter les difficultés pendant la mise en pratique.",
+        "La seule mesure du nombre d’heures de formation déjà dispensées.",
+        "La validation administrative des présences, prise comme solution aux blocages réels."
+      ],
+      "answer": 1,
+      "explanation": "L’accompagnement ne s’arrête pas à la session de formation. Des retours et un soutien pendant l’usage permettent de relier les connaissances apprises aux situations concrètes et de corriger les obstacles."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une grille compare une solution sur son coût et une autre sur son seul délai, sans renseigner les mêmes dimensions. Quel contrôle rend l’arbitrage plus lisible ?",
+      "options": [
+        "Choisir la solution dont le seul critère renseigné paraît le plus favorable, sans compléter les autres.",
+        "Remplacer toute donnée manquante par une note favorable pour pouvoir calculer le classement.",
+        "Évaluer chaque option sur une grille commune en signalant les informations manquantes.",
+        "Appliquer des critères différents selon les atouts connus de chaque fournisseur."
+      ],
+      "answer": 2,
+      "explanation": "Les alternatives doivent être comparées sur les mêmes critères. Les lacunes doivent rester visibles ; une comparaison asymétrique peut faire paraître une option meilleure uniquement parce que ses défauts n’ont pas été documentés."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une information supplémentaire pourrait améliorer le choix mais coûte du temps alors que la décision doit être prise rapidement. Quel raisonnement convient ?",
+      "options": [
+        "Comparer l’intérêt de poursuivre la recherche avec son coût et le délai disponible.",
+        "Poursuivre jusqu’à la certitude complète même si le délai impératif de décision est dépassé.",
+        "Retenir le seul coût de recherche, sans examiner si l’information peut changer la décision.",
+        "Retenir tout gain d’information comme justification suffisante, quel que soit son délai d’obtention."
+      ],
+      "answer": 0,
+      "explanation": "La recherche d’information elle-même est contrainte. Le décideur doit expliciter les limites et arbitrer, sans confondre l’absence de connaissance parfaite avec l’impossibilité de décider de façon argumentée."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un salarié termine moins de dossiers parce que le logiciel tombe régulièrement en panne. Pourquoi l’étiquette de démotivation ne suffit-elle pas ?",
+      "options": [
+        "Le nombre de dossiers traités suffit à départager manque d’effort et panne des moyens.",
+        "La baisse de volume doit être interprétée comme une préférence pour moins travailler avant d’examiner les interruptions.",
+        "Une prime de quantité suffit à corriger les pannes sans intervention sur le logiciel.",
+        "Une contrainte matérielle peut expliquer le résultat indépendamment d’un manque de motivation."
+      ],
+      "answer": 3,
+      "explanation": "Le comportement mesuré dépend aussi des moyens et conditions d’exécution. Il faut examiner les faits avant de déduire une intention ou choisir une action de motivation qui ne traiterait pas le blocage."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une réorganisation modifie la répartition des responsabilités et suscite des inquiétudes concrètes. Comment associer participation et décision ?",
+      "options": [
+        "Recueillir les avis après décision en les présentant comme une possibilité de modifier tous les points déjà arrêtés.",
+        "Faire remonter les difficultés, préciser les marges de discussion puis expliquer les arbitrages retenus.",
+        "Recueillir tous les avis sans indiquer ce qui est négociable ni comment la décision sera rendue.",
+        "Assimiler la participation à une obligation de retenir chaque préférence individuelle."
+      ],
+      "answer": 1,
+      "explanation": "La participation doit avoir un cadre compréhensible. Elle permet d’identifier les effets réels et d’améliorer le projet, sans garantir un accord unanime ni dispenser d’expliciter les décisions prises."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après avoir retenu un fournisseur, le responsable change les critères de comparaison pour que son choix apparaisse systématiquement premier. Quel risque cela crée-t-il ?",
+      "options": [
+        "Une révision de critères devient indépendante du choix dès lors que les nouvelles notes sont chiffrées.",
+        "Le classement obtenu établit que les critères étaient les mêmes avant et après la sélection.",
+        "Une justification après coup qui réduit la transparence de l’arbitrage.",
+        "Le changement de poids démontre la collecte d’informations nouvelles même si aucune n’est fournie."
+      ],
+      "answer": 2,
+      "explanation": "Les critères doivent guider la comparaison plutôt qu’être ajustés uniquement pour défendre une conclusion. Les expliciter avant le choix rend le raisonnement contrôlable et limite une sélection d’arguments opportuniste."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que signifie la rationalité limitée dans le cadre d’une décision ?",
+      "options": [
+        "Les informations, capacités de traitement et délais ne sont pas illimités.",
+        "Les décideurs ne raisonnent jamais avec des critères.",
+        "Toute solution choisie est nécessairement la meilleure possible.",
+        "Un manque d’information autorise à inventer les données manquantes."
+      ],
+      "answer": 0,
+      "explanation": "La notion reconnaît des contraintes réelles de recherche et de traitement. Elle n’interdit pas une décision argumentée, mais oblige à préciser le champ examiné et les limites plutôt qu’affirmer une optimisation universelle."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une nouvelle autonomie est annoncée mais toute décision reste soumise aux mêmes validations préalables. Quel diagnostic faut-il envisager ?",
+      "options": [
+        "L’annonce d’autonomie suffit à établir une délégation même si toutes les autorisations restent inchangées.",
+        "Le nombre de personnes consultées mesure directement les droits de décision effectivement délégués.",
+        "Le fait de transmettre davantage d’informations équivaut à pouvoir décider sans validation préalable.",
+        "La marge réelle de décision peut être différente du discours et doit être observée."
+      ],
+      "answer": 3,
+      "explanation": "Un levier doit être analysé dans ses pratiques effectives. Une autonomie nominale sans pouvoir réel peut ne pas produire les effets attendus ; il faut examiner responsabilités, moyens et validations."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour vérifier qu’une formation accompagne réellement un changement, quelle observation est plus utile que son seul taux de présence ?",
+      "options": [
+        "La satisfaction déclarée immédiatement après la session, sans observation d’un usage.",
+        "La capacité à réaliser les nouvelles tâches et les difficultés rencontrées lors de l’usage.",
+        "Le nombre d’heures de cours reçues, pris comme mesure directe de la compétence acquise.",
+        "La remise d’une attestation de présence, considérée comme preuve de transfert sur le poste."
+      ],
+      "answer": 1,
+      "explanation": "La participation ne démontre pas à elle seule un apprentissage utilisable. Observer l’exécution des tâches et les demandes d’aide permet de cibler le soutien et de corriger la formation si nécessaire."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les deux seuls critères pertinents sont un coût faible et un délai court. A coûte 100 et demande 5 jours ; B coûte 120 et demande 7 jours, sans autre différence. Pourquoi peut-on écarter B sans fixer des poids compensatoires entre ces deux critères ?",
+      "options": [
+        "Aucune option ne peut être écartée sans poids explicites, même si elle est moins bonne sur chaque critère.",
+        "Il faut comparer le coût par jour et retenir B parce que son prix rapporté à sa durée est plus faible.",
+        "Parce que B est moins bonne sur chacun des deux critères retenus et n’apporte ici aucune contrepartie.",
+        "Il faut moyenner directement le coût et le nombre de jours pour obtenir une note commune avant toute comparaison."
+      ],
+      "answer": 2,
+      "explanation": "A domine B sur les critères explicitement retenus : elle est moins coûteuse et plus rapide. Aucun arbitrage entre avantage et inconvénient n’est nécessaire dans ce cas ; cette conclusion dépend de l’absence d’autre différence pertinente donnée par le dossier."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une solution satisfaisante a été retenue sous contrainte de temps. Une donnée importante nouvelle arrive ensuite. Quelle attitude est cohérente avec la rationalité limitée ?",
+      "options": [
+        "Réexaminer la décision si l’information change suffisamment les critères ou les risques.",
+        "Conserver le choix malgré toute information nouvelle afin que sa justification initiale reste inchangée.",
+        "Conclure que l’information nouvelle rend sans valeur toutes les données utilisées au départ.",
+        "Remplacer le premier choix par la dernière option évoquée sans comparer l’effet de l’information sur les critères."
+      ],
+      "answer": 0,
+      "explanation": "Un choix peut être justifié avec les connaissances disponibles et mériter une révision quand elles changent. Reconnaître les limites de la décision initiale permet un suivi plutôt qu’une prétention à l’infaillibilité."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une prime dépend du résultat collectif et les contributions individuelles ne sont pas identifiées. Un membre réduit son effort en pensant que les autres atteindront quand même la cible. Quel ajustement traite directement ce mécanisme en conservant un objectif collectif ?",
+      "options": [
+        "Augmenter seulement le montant de la prime, sans modifier la visibilité ni le lien des contributions.",
+        "Agrandir l’équipe en supposant que la présence de plus de collègues renforcera mécaniquement sa contribution.",
+        "Utiliser le seul temps de présence comme preuve de contribution utile, sans examiner les tâches effectivement réalisées.",
+        "Clarifier les contributions attendues et leur visibilité dans la production commune, sans réduire le suivi au seul total d’équipe."
+      ],
+      "answer": 3,
+      "explanation": "Le mécanisme décrit est un relâchement de la contribution en comptant sur les autres. Clarifier ce que chacun apporte et rendre les contributions visibles cible ce lien ; une prime plus forte, une équipe plus grande ou la seule présence ne le corrige pas directement.",
+      "references": [
+        {
+          "title": "Shepperd et Taylor — Social loafing and expectancy-value theory",
+          "url": "https://doi.org/10.1177/01461672992512008"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une objection au changement concerne une double saisie créée par le nouvel outil. Le responsable répond seulement « soyez plus positifs ». Quelle dimension est ignorée ?",
+      "options": [
+        "Le nombre de personnes ayant lu la communication initiale, considéré comme solution à la double saisie.",
+        "L’effet concret du changement sur les tâches et la charge de travail.",
+        "Le niveau d’adhésion déclaré, pris comme cause suffisante du temps supplémentaire indépendamment du circuit.",
+        "La seule rapidité de lecture des écrans, sans examiner pourquoi les mêmes données doivent être ressaisies."
+      ],
+      "answer": 1,
+      "explanation": "Une difficulté pratique doit être examinée comme telle. L’accompagnement exige d’identifier les effets sur le travail et les corrections possibles, plutôt que de remplacer ce diagnostic par une injonction générale."
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux options présentent des avantages différents : l’une coûte moins cher, l’autre réduit un risque critique. Quelle conclusion est la plus rigoureuse ?",
+      "options": [
+        "L’option moins chère est nécessairement meilleure en toutes circonstances.",
+        "Le risque ne doit pas être discuté s’il est difficile à chiffrer.",
+        "Le choix doit expliciter l’importance des critères et les compromis acceptés.",
+        "Il faut additionner directement euros et probabilité sans convention."
+      ],
+      "answer": 2,
+      "explanation": "Une décision implique parfois des arbitrages non réductibles au seul coût. Les rendre explicites permet de justifier le choix au regard de l’objectif, des contraintes et des risques plutôt que déclarer une supériorité absolue."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le nouvel outil nécessite un accompagnement intense la première semaine. L’assistance disponible peut suivre une équipe à la fois, et les équipes peuvent continuer temporairement avec l’ancien outil. Quel choix de déploiement traite directement cette contrainte sans prétendre supprimer tout risque ?",
+      "options": [
+        "Planifier des vagues compatibles avec la capacité d’assistance, puis vérifier les retours avant la suivante.",
+        "Basculer toutes les équipes le même jour et considérer la demande d’aide comme déjà couverte par l’annonce du lancement.",
+        "Supprimer l’assistance pour rendre identiques les conditions des équipes, sans autre moyen de soutien.",
+        "Former uniquement la première équipe et supposer que les autres n’auront aucun besoin d’accompagnement."
+      ],
+      "answer": 0,
+      "explanation": "La contrainte est la capacité d’accompagnement lors de la mise en service. Des vagues permettent de la mobiliser sur un périmètre compatible puis de tirer les enseignements du début, tout en conservant un fonctionnement provisoire explicitement disponible."
+    }
+  ]
+}

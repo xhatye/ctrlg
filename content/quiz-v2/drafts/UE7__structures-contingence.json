@@ -1,0 +1,448 @@
+{
+  "module": "UE7",
+  "chapter": "structures-contingence",
+  "sourceHash": "10630855eecba708cc5a17807d63953a24bc382af2807d1661ca6d081364e812",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise regroupe tous ses spécialistes achats dans un même service pour partager leurs compétences et moyens. Quelle logique est principalement recherchée ?",
+      "options": [
+        "Une responsabilité distincte par marché, sans aucun moyen commun.",
+        "Une fonction spécialisée favorisant expertise et économies de ressources.",
+        "Un double rattachement systématique à un métier et à un projet.",
+        "Une suppression de toute spécialisation des activités."
+      ],
+      "answer": 1,
+      "explanation": "La logique fonctionnelle rassemble des compétences similaires. Elle peut permettre un partage d’expertise et de ressources, mais le bénéfice ne démontre pas que toutes les interfaces avec les autres fonctions sont déjà résolues."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Chaque gamme de produits dispose de son responsable, de ses moyens et d’un suivi de résultats propres. Quel principe de regroupement est décrit ?",
+      "options": [
+        "Une structure uniquement fonctionnelle sans responsabilité produit.",
+        "Une centralisation de toutes les décisions courantes à un seul poste.",
+        "Une logique divisionnelle organisée autour des produits.",
+        "Une matrice dont le seul critère serait le niveau hiérarchique."
+      ],
+      "answer": 2,
+      "explanation": "La division rassemble un ensemble d’activités autour d’un produit, marché ou zone. Elle vise une responsabilité située, mais le groupe doit encore coordonner ses ressources communes et objectifs."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une organisation conserve des rattachements fonctionnels et projets. Les chefs de projet contrôlent toutefois l’essentiel du budget et disposent d’un pouvoir important d’affectation des ressources du projet. Par opposition à une matrice où ce pouvoir reste surtout aux fonctions, quelle configuration est décrite ?",
+      "options": [
+        "Une matrice forte du point de vue de la direction de projet.",
+        "Une matrice faible où le chef de projet joue seulement un rôle de coordination.",
+        "Une structure exclusivement fonctionnelle sans responsabilité projet.",
+        "Une structure sans fonction métier puisque tout croisement a disparu."
+      ],
+      "answer": 0,
+      "explanation": "Les matrices peuvent différer par le partage d’autorité. Dans une matrice forte, le pouvoir penche vers les responsables projet tout en conservant le croisement avec les fonctions ; il ne s’agit pas nécessairement de supprimer les métiers.",
+      "references": [
+        {
+          "title": "PMI — The matrix organization",
+          "url": "https://www.pmi.org/learning/library/matrix-organization-structure-reason-evolution-1837"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un consultant recommande la même structure à un atelier routinier et à une équipe d’innovation très incertaine sans examiner leurs tâches. Quelle limite faut-il relever ?",
+      "options": [
+        "Le consultant peut retenir la structure la plus formalisée en supposant que cette seule propriété convient aux deux activités.",
+        "Le consultant peut appliquer la structure du client le plus performant sans comparer les conditions de travail.",
+        "La seule réduction du nombre de niveaux suffit à traiter toute différence d’incertitude.",
+        "L’adaptation aux conditions du travail et de l’environnement n’a pas été justifiée."
+      ],
+      "answer": 3,
+      "explanation": "La contingence relie les choix à leur contexte. Des tâches et incertitudes différentes peuvent appeler des mécanismes différents ; une recette unique sans diagnostic ne démontre pas la pertinence de la proposition."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Pour suivre les dossiers traversant achats, production et ventes, une entreprise désigne un coordinateur d’interface. Il anime les échanges et signale les blocages, mais n’a pas d’autorité hiérarchique sur les trois services. Quel mécanisme est ajouté ?",
+      "options": [
+        "Une seconde autorité hiérarchique sur chaque salarié, identique à celle de son chef de service.",
+        "Un rôle de liaison transversale facilitant la coordination sans fusionner les fonctions.",
+        "Une division par produits dotée de son propre résultat et de tous ses moyens.",
+        "Une suppression de la spécialisation fonctionnelle au profit d’un seul poste polyvalent."
+      ],
+      "answer": 1,
+      "explanation": "Un rôle de liaison peut relier des fonctions sans les supprimer ni donner une seconde autorité hiérarchique à tous les salariés. La responsabilité d’animation et d’alerte doit être distinguée du pouvoir de commander aux équipes.",
+      "references": [
+        {
+          "title": "OpenStax — Organizational designs and structures",
+          "url": "https://openstax.org/books/principles-management/pages/4-3-organizational-designs-and-structures"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Trois divisions ont chacune recréé un outil de support très similaire. Quel coût organisationnel potentiel doit être étudié ?",
+      "options": [
+        "Une preuve que chaque division dispose de moins de moyens propres qu’avec un service partagé.",
+        "Une preuve que les outils répondent à des besoins distincts du seul fait de leur création séparée.",
+        "La duplication de moyens qui pourraient, selon les besoins, être mutualisés.",
+        "Une économie déjà acquise pour le groupe parce que chaque division a choisi son outil localement."
+      ],
+      "answer": 2,
+      "explanation": "La responsabilité divisionnelle peut s’accompagner de duplications. Il faut comparer leur utilité pour les besoins locaux et les possibilités de partage, sans supposer que toute autonomie exige de tout reproduire."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un expert qualité conseille les responsables de production et propose des méthodes, mais la décision de production reste à leurs responsables hiérarchiques. Quel statut de son intervention est directement décrit ?",
+      "options": [
+        "Une fonction de conseil et d’appui distincte du commandement hiérarchique de la production.",
+        "Une autorité hiérarchique sur tout opérateur dès qu’un conseil technique est formulé.",
+        "Une responsabilité de production exclusive transférée par la seule consultation de l’expert.",
+        "Une absence de toute influence possible parce que l’expert ne donne pas d’ordre hiérarchique."
+      ],
+      "answer": 0,
+      "explanation": "L’appui spécialisé peut influencer les décisions sans devenir une autorité hiérarchique sur les équipes conseillées. Il faut distinguer conseil, décision et exécution plutôt qu’assimiler toute expertise à un pouvoir de commandement.",
+      "references": [
+        {
+          "title": "FAO — Structure of an organization",
+          "url": "https://www.fao.org/4/w7503e/w7503e04.htm"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une entreprise change fortement de stratégie et de marchés mais conserve sa structure sans réexamen. Quelle question de contingence faut-il poser ?",
+      "options": [
+        "Remplacer automatiquement toute responsabilité sans comparer les effets de l’organisation actuelle et les besoins nouveaux.",
+        "Conserver les coordinations sur la seule base de leur bon fonctionnement dans l’ancienne stratégie.",
+        "Évaluer l’adaptation au seul coût de rédaction du nouvel organigramme.",
+        "Les responsabilités, moyens et coordinations restent-ils adaptés aux nouveaux besoins ?"
+      ],
+      "answer": 3,
+      "explanation": "Une modification du contexte appelle un examen de l’adéquation, pas un changement automatique. Il faut confronter les mécanismes existants aux nouveaux besoins avant de recommander maintien ou évolution."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une fonction centralisée détient une expertise rare nécessaire à plusieurs produits. Quelle donnée aide à évaluer son maintien commun plutôt que sa duplication ?",
+      "options": [
+        "Retenir le coût apparent de chaque unité sans examiner la rareté de l’expertise à dupliquer.",
+        "La possibilité de partager l’expertise et les besoins d’interface de chaque produit.",
+        "Retenir le nombre de demandes reçues comme preuve que les moyens sont déjà suffisants.",
+        "Retenir la seule proximité géographique du service comme mesure de son adéquation à tous les produits."
+      ],
+      "answer": 1,
+      "explanation": "Le diagnostic doit rapprocher bénéfices de spécialisation et besoins de réponse. Une ressource rare peut gagner à être commune, mais ses interfaces doivent être organisées pour ne pas bloquer les activités servies."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Trois divisions disposent chacune d’un support coûtant 6 000 € par mois. Un support commun assurerait le même service pour 12 000 € par mois, mais chaque division garderait 1 000 € de liaison mensuelle. Sans coût de transition ni autre effet, quelle économie mensuelle nette prévoit cette mutualisation ?",
+      "options": [
+        "6 000 €.",
+        "9 000 €.",
+        "3 000 €.",
+        "18 000 €."
+      ],
+      "answer": 2,
+      "explanation": "Le coût actuel est de 3 × 6 000 = 18 000 €. Le coût mutualisé complet est de 12 000 + 3 × 1 000 = 15 000 €. L’économie nette est donc de 3 000 € ; omettre les liaisons surestimerait le gain du partage.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 3
+                },
+                {
+                  "value": 6000
+                }
+              ]
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 3
+                    },
+                    {
+                      "value": 1000
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 3000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un expert est affecté à deux projets et à sa fonction habituelle pour des charges qui dépassent sa capacité. Quel contrôle est prioritaire dans la matrice ?",
+      "options": [
+        "Rapprocher les demandes de capacité disponible et arbitrer explicitement les priorités.",
+        "Attribuer la totalité de la même capacité à chaque projet séparément avant d’additionner leurs plannings.",
+        "Répartir la surcharge à parts égales entre projets sans vérifier les échéances ou les compétences requises.",
+        "Retenir le premier planning validé comme preuve que les autres demandes seront couvertes par la capacité restante."
+      ],
+      "answer": 0,
+      "explanation": "La coordination doit aussi traiter les ressources effectivement disponibles. Un croisement de dimensions ne crée pas de capacité supplémentaire ; les demandes concurrentes doivent être rendues visibles puis arbitrées."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que signifie une approche contingente du choix de structure ?",
+      "options": [
+        "Choisir toujours la structure ayant le plus de niveaux.",
+        "Écarter l’analyse des tâches pour retenir une solution réputée moderne.",
+        "Déduire la structure du seul nom de l’entreprise.",
+        "Justifier le choix par les conditions et besoins de l’organisation plutôt qu’une recette universelle."
+      ],
+      "answer": 3,
+      "explanation": "La contingence invite à relier organisation et contexte. Elle demande des faits sur les activités et incertitudes pour argumenter l’adaptation, au lieu de proposer une liste ou un modèle présenté comme valable partout."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une entreprise conserve un noyau de conception mais confie fabrication et logistique à des partenaires juridiquement autonomes coordonnés par contrats et systèmes d’information. Quelle distinction organisationnelle est essentielle ?",
+      "options": [
+        "Les salariés de chaque partenaire deviennent automatiquement subordonnés au concepteur.",
+        "La coordination interentreprises repose ici sur un réseau de partenaires, pas sur un seul organigramme hiérarchique intégré.",
+        "Les partenaires n’ont plus besoin de règles d’interface dès lors qu’ils restent juridiquement distincts.",
+        "L’existence de contrats suffit à faire de tous les partenaires une seule division interne."
+      ],
+      "answer": 1,
+      "explanation": "Une structure en réseau relie des contributions sans nécessairement les intégrer dans une même hiérarchie. La coordination passe par interfaces, engagements et information ; l’autonomie juridique ne supprime pas ces dépendances.",
+      "references": [
+        {
+          "title": "OpenStax — Organizational designs and structures",
+          "url": "https://openstax.org/books/principles-management/pages/4-3-organizational-designs-and-structures"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise organise ses ensembles autour de zones géographiques pour répondre à des marchés locaux. Quelle dimension de la logique divisionnelle est utilisée ?",
+      "options": [
+        "Le seul métier technique commun à tous les produits.",
+        "Le niveau d’ancienneté des salariés.",
+        "Une responsabilité par zone ou marché territorial.",
+        "Un croisement obligatoire fonction-projet pour chaque tâche."
+      ],
+      "answer": 2,
+      "explanation": "Les divisions peuvent être constituées par zone, marché ou produit selon le modèle. L’important est l’ensemble dont la responsabilité est organisée ; cela ne décrit pas automatiquement une matrice ni une fonction unique."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La convention RACI du dossier utilise R pour réaliser le travail, A pour en répondre et valider, C pour être consulté avant la décision, I pour recevoir ensuite l’information. L’expert doit donner un avis préalable mais ne réalise ni ne valide la tâche. Quel statut correspond à ce rôle ?",
+      "options": [
+        "C : consulté.",
+        "A : responsable de validation.",
+        "R : réalisateur.",
+        "I : informé après décision."
+      ],
+      "answer": 0,
+      "explanation": "L’expert intervient avant la décision pour apporter son avis : il est consulté selon les définitions fournies. Ce rôle ne vaut ni exécution de la tâche, ni validation finale, ni simple information reçue après coup.",
+      "references": [
+        {
+          "title": "PMI — Roles, responsibilities and resources",
+          "url": "https://www.pmi.org/learning/library/best-practices-managing-people-quality-management-7012"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Des spécialistes sont détachés à plein temps pour une mission de six mois, sous un responsable unique de cette mission. Ils ne reçoivent pas simultanément de priorités de leurs fonctions d’origine pendant ce détachement, puis y retourneront. Quel dispositif est le plus directement décrit ?",
+      "options": [
+        "Une simple coordination informelle sans équipe dédiée.",
+        "Une matrice à deux autorités simultanées sur le travail de la mission.",
+        "Une division permanente par marché autonome pour toute activité future.",
+        "Une équipe projet temporaire dédiée à une mission."
+      ],
+      "answer": 3,
+      "explanation": "La mission limitée et l’affectation dédiée sous un responsable correspondent à une organisation par projet temporaire. Le retour ultérieur aux fonctions ne constitue pas en lui-même une double autorité simultanée pendant la mission.",
+      "references": [
+        {
+          "title": "FAO — Structure of an organization",
+          "url": "https://www.fao.org/4/w7503e/w7503e04.htm"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "À long terme, une entreprise peut redimensionner tous ses moyens. Le passage à une unité de plus grande taille permet de produire davantage à un coût moyen inférieur, à qualité et prix des ressources comparables. Quel phénomène ce constat illustre-t-il ?",
+      "options": [
+        "Des déséconomies d’échelle, caractérisées par une hausse du coût moyen à plus grande taille.",
+        "Des économies d’échelle liées à la taille de production.",
+        "Des rendements d’échelle constants associés à un coût moyen inchangé.",
+        "Une variation de court terme du taux d’utilisation d’un équipement dont la taille reste fixe."
+      ],
+      "answer": 1,
+      "explanation": "Les économies d’échelle décrivent une diminution du coût moyen lorsque l’échelle de production augmente dans une comparaison de long terme. Le constat porte sur les coûts de production, et non sur le seul tarif de vente ou un changement de monnaie.",
+      "references": [
+        {
+          "title": "OpenStax — Costs in the long run",
+          "url": "https://openstax.org/books/principles-economics-3e/pages/7-5-costs-in-the-long-run"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le résultat d’une division est comparé à celui d’une autre sans tenir compte des moyens communs facturés différemment. Quel contrôle est utile ?",
+      "options": [
+        "Classer les résultats locaux bruts sans examiner les ressources communes exclues ou imputées.",
+        "Réduire les moyens du service le plus facturé avant de vérifier les conventions appliquées.",
+        "Expliciter les ressources, indicateurs et conventions avant de comparer les performances locales.",
+        "Considérer la division la moins facturée comme plus productive sans comparer les services reçus."
+      ],
+      "answer": 2,
+      "explanation": "Une responsabilité locale nécessite des indicateurs interprétables. Des conventions différentes peuvent modifier le résultat affiché sans refléter une meilleure gestion ; les moyens et règles de mesure doivent être documentés."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une matrice facilite l’accès de projets à plusieurs expertises mais augmente les réunions d’arbitrage. Comment apprécier ce bilan ?",
+      "options": [
+        "Comparer le bénéfice de coordination aux coûts et difficultés du croisement, selon les besoins.",
+        "Évaluer la matrice sur le seul nombre de réunions sans examiner les décisions et erreurs qu’elles permettent de traiter.",
+        "Évaluer la matrice sur le seul nombre d’expertises accessibles sans examiner le coût des arbitrages.",
+        "Transposer le bilan d’une autre entreprise sans comparer ses projets, ses fonctions et ses tensions de capacité."
+      ],
+      "answer": 0,
+      "explanation": "Un choix de structure comporte des avantages et contraintes. L’analyse doit mesurer leur pertinence dans le contexte plutôt que considérer un gain comme preuve de perfection ou un coût comme réfutation automatique."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une nouvelle structure permettrait 10 000 € d’économie de fonctionnement par an. Sa transition coûterait 30 000 € une fois au départ. Le bilan demandé couvre exactement deux ans, sans actualisation ni autre effet. Quel solde économies moins coût de transition faut-il présenter ?",
+      "options": [
+        "20 000 €.",
+        "10 000 €.",
+        "−30 000 €.",
+        "−10 000 €."
+      ],
+      "answer": 3,
+      "explanation": "Sur les deux ans retenus, les économies atteignent 2 × 10 000 = 20 000 €. Après le coût de transition de 30 000 €, le solde est −10 000 €. Le gain annuel ne suffit donc pas à rendre le bilan positif sur cet horizon donné.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 2
+                },
+                {
+                  "value": 10000
+                }
+              ]
+            },
+            {
+              "value": 30000
+            }
+          ]
+        },
+        "expected": -10000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La division conception modifie ses plans d’après les essais de fabrication ; la fabrication ajuste ses essais d’après les nouveaux plans. Chaque division a donc besoin de retours de l’autre, et non d’un simple transfert unique dans un seul sens. Quel type d’interdépendance est décrit ?",
+      "options": [
+        "Une indépendance complète des activités des deux divisions.",
+        "Une interdépendance réciproque nécessitant des interactions entre les contributions.",
+        "Une interdépendance séquentielle strictement unidirectionnelle.",
+        "Une simple mise en commun de ressources sans échange entre activités."
+      ],
+      "answer": 1,
+      "explanation": "Les contributions s’ajustent par retours dans les deux sens : elles sont réciproquement dépendantes. Cela crée un besoin d’interaction plus soutenu qu’un enchaînement strictement unidirectionnel ou une simple mise en commun de ressources.",
+      "references": [
+        {
+          "title": "OpenStax — Intergroup behavior and performance",
+          "url": "https://openstax.org/books/organizational-behavior/pages/9-4-intergroup-behavior-and-performance"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une organisation combine certains moyens fonctionnels communs avec des responsabilités locales par produit. Comment la décrire sans forcer une recette unique ?",
+      "options": [
+        "Considérer la présence de plusieurs logiques comme un défaut suffisant pour tout remplacer sans examen.",
+        "Retenir seulement la logique dominante dans le nom, sans examiner les autres pratiques.",
+        "Examiner les logiques présentes, leurs interfaces et leur adaptation aux besoins réels.",
+        "Attribuer automatiquement à la combinaison tous les avantages sans les coûts de coordination de ses composantes."
+      ],
+      "answer": 2,
+      "explanation": "Le diagnostic porte sur le fonctionnement et son adéquation, pas seulement sur une étiquette. Il faut analyser les rôles et interfaces effectivement mis en place pour apprécier la combinaison et ses arbitrages."
+    }
+  ]
+}

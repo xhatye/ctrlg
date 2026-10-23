@@ -1,0 +1,507 @@
+{
+  "module": "DSCG2",
+  "chapter": "dcf-croissance",
+  "sourceHash": "1c0c42b4ee40600fc77ea2ed14f8f80dec056f166635414fd55ce2c3288aaf5b",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le dernier flux détaillé F3 est de 30 000 €. La croissance annuelle perpétuelle supposée commence après cette année et vaut 2 %. Quel premier flux F4 alimente la rente ?",
+      "options": [
+        "30600 €",
+        "30000 €",
+        "29400 €",
+        "31212 €"
+      ],
+      "answer": 0,
+      "explanation": "Le premier flux de la rente est celui de l’année suivante : F4 = F3 × 1,02 = 30 600 €. Appliquer deux croissances le daterait un an trop tard.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 30000
+            },
+            {
+              "value": 1.02
+            }
+          ]
+        },
+        "expected": 30600,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un modèle fournit directement F6 comme premier flux de la rente après l’horizon explicite de cinq ans. Le préparateur le multiplie encore par (1 + g) avant la formule. Quel décalage introduit-il ?",
+      "options": [
+        "Il utilise F5 à la place de F6 dans le numérateur",
+        "Il utilise F7 à la place de F6 dans le numérateur",
+        "Il ramène correctement F6 à la fin de l’année 5",
+        "Il annule la croissance déjà retenue dans le flux"
+      ],
+      "answer": 1,
+      "explanation": "Le premier flux est déjà daté de la bonne période. Le faire croître encore ajoute une période de croissance et surestime la base si g est positif."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un DCF retient un taux r de 8,5 % et une croissance g de 2,5 %. Quel écart r − g faut-il utiliser, exprimé en points de pourcentage ?",
+      "options": [
+        "11 points",
+        "3,4 points",
+        "6 points",
+        "0,06 point"
+      ],
+      "answer": 2,
+      "explanation": "L’écart est 8,5 − 2,5 = 6 points, soit 0,06 en décimal. Les points et la représentation décimale ne sont pas la même unité.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 8.5
+            },
+            {
+              "value": 2.5
+            }
+          ]
+        },
+        "expected": 6,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une rente est calculée en divisant le flux par 7 au lieu de 0,07, alors que r − g vaut sept points. Quel effet cela a-t-il sur la valeur ?",
+      "options": [
+        "Elle est multipliée par cent par rapport au calcul cohérent",
+        "Elle ne change pas car sept points sont égaux au nombre sept sans unité",
+        "Elle devient négative quelle que soit la valeur du flux",
+        "Elle est divisée par cent par rapport au calcul cohérent en décimal"
+      ],
+      "answer": 3,
+      "explanation": "Sept points de taux correspondent au nombre 0,07 dans le dénominateur. Utiliser 7 rend le dénominateur cent fois plus grand et la valeur cent fois plus petite."
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le flux de l’année 4 vaut 48 000 €. Le modèle retient g = 0 et r = 6 % pour la rente commençant en année 5. Quelle valeur terminale calcule-t-on à la fin de l’année 4 ?",
+      "options": [
+        "800000 €",
+        "48000 €",
+        "2880 €",
+        "848000 €"
+      ],
+      "answer": 0,
+      "explanation": "Avec croissance nulle, F5 = 48 000 €. La rente à la fin de l’année 4 vaut 48 000 / 0,06 = 800 000 €, avant actualisation à aujourd’hui.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 48000
+            },
+            {
+              "value": 0.06
+            }
+          ]
+        },
+        "expected": 800000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans VTn = F suivant / (r − g), quelle date porte la valeur terminale si le premier flux de rente est Fn+1 ?",
+      "options": [
+        "La fin de l’année n+1, après le premier flux de rente",
+        "La fin de l’année n, une période avant le premier flux de la rente",
+        "La date initiale dans tous les cas",
+        "La date de la dernière facture constituant le flux"
+      ],
+      "answer": 1,
+      "explanation": "La formule valorise la suite de flux une période avant son premier terme. La valeur ainsi datée devra être actualisée pour rejoindre une autre date."
+    },
+    {
+      "id": "q07",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une VT de 121 000 € est datée à la fin de l’année 2. Au taux annuel de 10 %, un fichier la divise une seule fois par 1,10. De combien sa contribution actuelle est-elle surestimée ?",
+      "options": [
+        "11000 €",
+        "21000 €",
+        "10000 €",
+        "12100 €"
+      ],
+      "answer": 2,
+      "explanation": "Le fichier affiche 110 000 €, mais la bonne contribution est 121 000/1,10² = 100 000 €. L’erreur d’une période produit donc une surestimation de 10 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 121000
+                },
+                {
+                  "value": 1.1
+                }
+              ]
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 121000
+                },
+                {
+                  "op": "pow",
+                  "args": [
+                    {
+                      "value": 1.1
+                    },
+                    {
+                      "value": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 10000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’horizon explicite passe de trois à cinq ans. Une feuille conserve l’exposant trois pour actualiser la nouvelle VT5. Quel problème apparaît ?",
+      "options": [
+        "La contribution terminale est actualisée comme si elle était située deux ans après la date de valeur",
+        "Les deux années supplémentaires doivent être retranchées de la croissance perpétuelle plutôt que de changer l’exposant",
+        "La somme des cinq flux détaillés compense le défaut d’actualisation des deux dernières périodes terminales",
+        "La contribution terminale n’est pas ramenée sur les cinq périodes nécessaires"
+      ],
+      "answer": 3,
+      "explanation": "L’exposant suit la date de la valeur actualisée. Conserver trois sous-actualise une valeur située à cinq ans si le taux positif reste inchangé."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La croissance perpétuelle dépasse le taux d’actualisation dans une rente positive. Quelle intervention est nécessaire avant d’interpréter la valeur ?",
+      "options": [
+        "Revoir les hypothèses ou le modèle, car la condition de convergence n’est pas satisfaite",
+        "Remplacer directement le dénominateur par sa valeur absolue",
+        "Conserver le calcul et présenter le signe négatif comme une décote",
+        "Supprimer le taux d’actualisation du dénominateur"
+      ],
+      "answer": 0,
+      "explanation": "Le modèle requiert r > g. Une manipulation du signe ne rétablit pas la convergence de la suite de flux ni sa plausibilité économique."
+    },
+    {
+      "id": "q10",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une croissance de 3 % est annoncée, mais le tableau prend F suivant = F terminal + 3 euros. Quelle confusion corriger ?",
+      "options": [
+        "La croissance doit être retranchée du flux terminal pour construire le suivant",
+        "Un taux de croissance doit multiplier le flux, pas devenir un montant fixe",
+        "Le taux doit être ajouté au flux uniquement si le flux est négatif",
+        "Le flux suivant doit être égal au flux terminal quelle que soit la croissance"
+      ],
+      "answer": 1,
+      "explanation": "La formule F suivant = F terminal × (1 + g) exprime une variation proportionnelle. Trois pour cent ne signifie pas trois unités monétaires."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le premier flux d’une rente est fixé à 12 000 €. Sa VT est de 200 000 €. Quel écart r − g, en points, est impliqué par cette formule ?",
+      "options": [
+        "16,67 points",
+        "0,06 point",
+        "6 points",
+        "12 points"
+      ],
+      "answer": 2,
+      "explanation": "On isole r − g = 12 000 / 200 000 = 0,06, soit six points. Ce calcul n’identifie pas r et g séparément.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 200000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 6,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux modèles ont le même premier flux de rente et le même écart r − g, mais des taux r différents. Leur VT à l’horizon est-elle identique ?",
+      "options": [
+        "Oui, donc leur valeur actuelle est aussi identique à toute date",
+        "Non, car VT utilise séparément le niveau de chaque taux après fixation du premier flux",
+        "Non, car un même écart implique nécessairement un même taux r",
+        "Oui, mais leur valeur actuelle peut différer du fait de l’actualisation à r"
+      ],
+      "answer": 3,
+      "explanation": "Avec F suivant fixé, la VT dépend du seul écart r − g. Son actualisation à la date initiale dépend en revanche du taux r et de l’horizon."
+    },
+    {
+      "id": "q13",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une valeur actuelle terminale représente 85 % du DCF total. Quelle lecture est la plus pertinente ?",
+      "options": [
+        "La conclusion dépend fortement des hypothèses de long terme qui fondent cette composante",
+        "La prévision détaillée suffit à valider la valeur totale dès lors que ses trois premières années sont fiables",
+        "Le poids de 85 % mesure la probabilité de réalisation de la valeur terminale",
+        "Ce poids implique que la contribution terminale doit être ramenée à 50 % du total, sans modifier les hypothèses"
+      ],
+      "answer": 0,
+      "explanation": "Ce poids révèle la place majeure du long terme dans l’estimation. Il appelle une justification des hypothèses et une sensibilité, sans invalider seul le modèle."
+    },
+    {
+      "id": "q14",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le modèle retient une croissance de long terme des flux mais aucune évolution des investissements nécessaires à cette croissance. Quelle cohérence examiner ?",
+      "options": [
+        "L’application de la croissance aux flux avant déduction des investissements, en conservant cette valeur comme flux disponible",
+        "Le financement des besoins nécessaires au flux durable projeté",
+        "Le seul taux de croissance du résultat, tenu pour égal au taux de croissance du flux disponible",
+        "La seule égalité entre dotations aux amortissements et investissements de remplacement, sans analyser les besoins d’expansion"
+      ],
+      "answer": 1,
+      "explanation": "Un flux disponible en croissance doit rester cohérent avec les dépenses et besoins qu’exige l’activité. Un paramètre de croissance ne crée pas gratuitement ces ressources."
+    },
+    {
+      "id": "q15",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le premier flux de rente reste fixé à 18 000 €. Le dénominateur r − g passe de 6 % à 9 %. De combien la VT diminue-t-elle ?",
+      "options": [
+        "50000 €",
+        "150000 €",
+        "100000 €",
+        "300000 €"
+      ],
+      "answer": 2,
+      "explanation": "La VT passe de 18 000/0,06 = 300 000 à 18 000/0,09 = 200 000 €. La baisse est 100 000 €, à premier flux inchangé.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 18000
+                },
+                {
+                  "value": 0.06
+                }
+              ]
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 18000
+                },
+                {
+                  "value": 0.09
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 100000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le flux terminal courant strictement positif est maintenu, et g augmente tout en restant inférieur à r. Quels éléments changent dans VT = F terminal × (1+g)/(r−g) ?",
+      "options": [
+        "Le numérateur diminue et le dénominateur augmente",
+        "Seul le dénominateur augmente",
+        "Seul le numérateur reste fixe et le dénominateur augmente",
+        "Le numérateur augmente et le dénominateur diminue"
+      ],
+      "answer": 3,
+      "explanation": "Avec un flux terminal positif inchangé, g agit à la fois sur le premier flux et sur l’écart au taux. Ces deux effets augmentent la VT dans les hypothèses données."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une feuille ajoute la VT non actualisée à des valeurs actuelles, puis actualise la somme entière sur tout l’horizon. Pourquoi cela reste-t-il incorrect ?",
+      "options": [
+        "Les flux déjà actualisés subissent une deuxième actualisation",
+        "La VT ne doit être actualisée sous aucune condition",
+        "Les flux détaillés sont nécessairement comptés deux fois en numérateur de rente",
+        "Le résultat doit être identique si le taux est positif"
+      ],
+      "answer": 0,
+      "explanation": "Il faut actualiser chaque montant depuis sa propre date. Appliquer ensuite le facteur terminal à des valeurs déjà actuelles les décale artificiellement encore."
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le dernier flux explicite est de 10 000 €, g = 2 % et r = 8 %. Quelle VT à cette date donne le modèle, au centime ?",
+      "options": [
+        "166666,67 €",
+        "170000 €",
+        "127500 €",
+        "510000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le premier flux de rente vaut 10 200 €. On divise par 0,08 − 0,02 = 0,06, soit 170 000 €. Utiliser directement 10 000 omet la croissance suivante.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 10000
+                },
+                {
+                  "value": 1.02
+                }
+              ]
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 0.08
+                },
+                {
+                  "value": 0.02
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 170000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une variation du taux modifie à la fois la VT à l’horizon et son facteur d’actualisation. Que doit faire une sensibilité complète de sa contribution actuelle ?",
+      "options": [
+        "Modifier uniquement le dénominateur de la rente puis garder l’ancien facteur d’actualisation",
+        "Modifier uniquement le facteur d’actualisation puis garder la VT initiale",
+        "Recalculer ces deux composantes pour chaque taux testé",
+        "Ajouter l’écart de taux au montant actuel sans recalcul"
+      ],
+      "answer": 2,
+      "explanation": "Le même taux intervient dans la rente et dans son retour à la date initiale. Une sensibilité partielle ne décrit pas l’effet total du paramètre."
+    },
+    {
+      "id": "q20",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi examiner l’écart entre r et g, plutôt que leur seule positivité ?",
+      "options": [
+        "Il détermine à lui seul la part du DCF total provenant de la période explicite, indépendamment des flux",
+        "Il correspond directement au taux de croissance nécessaire pour conserver la capacité de production",
+        "Il mesure la décote annuelle applicable au seul flux de la première année détaillée",
+        "Il commande la convergence et une part majeure de la sensibilité de la rente"
+      ],
+      "answer": 3,
+      "explanation": "Des taux tous deux positifs peuvent rester incompatibles si g atteint ou dépasse r. Leur écart influe aussi fortement sur la valeur obtenue."
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un analyste applique une croissance annuelle à un flux trimestriel sans adapter le rythme de la rente. Quelle incohérence doit-il résoudre ?",
+      "options": [
+        "La fréquence des flux, la croissance et le taux doivent partager des périodes cohérentes",
+        "Quatre fois le flux trimestriel peuvent être traités comme encaissés en fin d’année, sans effet de calendrier",
+        "La croissance annuelle peut être divisée par quatre en la tenant pour une croissance trimestrielle composée exacte",
+        "Le taux annuel peut être appliqué à chaque trimestre dès lors que la croissance reste annuelle"
+      ],
+      "answer": 0,
+      "explanation": "Le calendrier et les taux doivent correspondre. Il faut définir un flux et des paramètres périodiques cohérents, sans interdire une modélisation trimestrielle adaptée."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une note présente la contribution actuelle de la seule VT comme la valeur totale, alors que des flux explicites positifs existent aussi. Quelle omission relève-t-on ?",
+      "options": [
+        "La déduction des flux explicites de la VT même s’ils sont postérieurs",
+        "Les valeurs actuelles des flux explicites non inclus dans la rente",
+        "Le nominal de la dette, qui remplace tous les flux explicites",
+        "La seconde croissance de la VT après son actualisation"
+      ],
+      "answer": 1,
+      "explanation": "La contribution terminale est une composante du DCF. Les flux explicites doivent être ajoutés à leur propre valeur actuelle s’ils ne sont pas déjà inclus."
+    }
+  ]
+}

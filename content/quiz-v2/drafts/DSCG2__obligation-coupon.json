@@ -1,0 +1,521 @@
+{
+  "module": "DSCG2",
+  "chapter": "obligation-coupon",
+  "sourceHash": "50817cddbc82deebfc7b811ab5a82f23f28640b143df53fe67cb240ef441e4c4",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une obligation de nominal 2 000 € porte un taux facial annuel de 3 %. Quel coupon annuel verse-t-elle ?",
+      "options": [
+        "60 €",
+        "600 €",
+        "6 €",
+        "2060 €"
+      ],
+      "answer": 0,
+      "explanation": "Le coupon est nominal × taux facial : 2 000 × 0,03 = 60 €. Le remboursement du nominal est distinct du coupon.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 2000
+            },
+            {
+              "value": 0.03
+            }
+          ]
+        },
+        "expected": 60,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une obligation à taux fixe est cotée 950 € pour un nominal de 1 000 €. Le comptable calcule le coupon facial sur 950 €. Quelle base doit-il rétablir ?",
+      "options": [
+        "Le prix de marché actualisé une année supplémentaire",
+        "Le nominal contractuel de 1 000 €",
+        "Le seul écart de 50 € entre prix et nominal",
+        "La somme du prix et du nominal"
+      ],
+      "answer": 1,
+      "explanation": "Le coupon facial découle du contrat et du nominal. Le prix payé par l’investisseur ne modifie pas cette base contractuelle."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un coupon de 55 € sera versé dans un an. Le rendement annuel requis est de 10 %. Quelle est sa valeur actuelle ?",
+      "options": [
+        "55 €",
+        "60,5 €",
+        "50 €",
+        "45 €"
+      ],
+      "answer": 2,
+      "explanation": "La valeur actuelle vaut 55/1,10 = 50 €. Le coupon reste 55 € à son échéance ; l’actualisation change sa valeur aujourd’hui.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 55
+            },
+            {
+              "value": 1.1
+            }
+          ]
+        },
+        "expected": 50,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un coupon est versé aujourd’hui, exactement à la date de valorisation. Quel facteur temporel appliquer à ce seul flux dans le modèle sans frais ?",
+      "options": [
+        "Un facteur d’actualisation d’une année entière",
+        "Un facteur de capitalisation jusqu’au remboursement final",
+        "Un facteur égal au taux facial",
+        "Un facteur égal à un"
+      ],
+      "answer": 3,
+      "explanation": "Un flux daté d’aujourd’hui n’est ni reporté ni ramené dans le temps. Son montant entre directement dans la valeur à cette date."
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une obligation verse 100 € dans un an puis 1 100 € dans deux ans, remboursement inclus. Au rendement annuel de 10 %, quel est son prix aujourd’hui ?",
+      "options": [
+        "1000 €",
+        "1200 €",
+        "1090,91 €",
+        "909,09 €"
+      ],
+      "answer": 0,
+      "explanation": "Le prix est 100/1,10 + 1 100/1,10² = 1 000 €. Chaque montant est actualisé depuis sa date propre.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 100
+                },
+                {
+                  "value": 1.1
+                }
+              ]
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 1100
+                },
+                {
+                  "op": "pow",
+                  "args": [
+                    {
+                      "value": 1.1
+                    },
+                    {
+                      "value": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le flux final de l’obligation comprend déjà coupon et nominal. Le modèle ajoute encore un nominal au prix actualisé. Quelle erreur identifier ?",
+      "options": [
+        "Le dernier coupon est entièrement omis",
+        "Le remboursement final est valorisé deux fois",
+        "Le premier coupon est actualisé deux fois",
+        "Le taux facial remplace le rendement requis"
+      ],
+      "answer": 1,
+      "explanation": "Il faut détailler les flux avant de les actualiser. Si le nominal est compris dans le dernier flux, l’ajouter séparément crée un double compte."
+    },
+    {
+      "id": "q07",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le nominal est de 1 000 € et le prix calculé de 960 €. Quelle décote en pourcentage du nominal représente cet écart ?",
+      "options": [
+        "4,17 %",
+        "40 %",
+        "4 %",
+        "96 %"
+      ],
+      "answer": 2,
+      "explanation": "La décote monétaire est de 40 €. Rapportée au nominal de 1 000 €, elle vaut 4 %. Le rapport au prix répondrait à une autre question.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 1000
+                    },
+                    {
+                      "value": 960
+                    }
+                  ]
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 4,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une obligation à coupon annuel de 4 % est valorisée juste après coupon, remboursée au pair, sans défaut ni frais. Le rendement requis vaut 6 %. Quel lien prix/nominal est attendu ?",
+      "options": [
+        "Un prix égal au nominal quelle que soit la durée",
+        "Un prix supérieur au nominal",
+        "Un prix égal à la seule somme non actualisée des coupons",
+        "Un prix inférieur au nominal"
+      ],
+      "answer": 3,
+      "explanation": "Les coupons offrent moins que le rendement de marché requis. Une décote permet d’ajouter un gain au remboursement et d’atteindre ce rendement dans le modèle."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle distinction sépare taux facial et rendement requis ?",
+      "options": [
+        "Le premier fixe le coupon, le second sert à valoriser les flux au prix étudié",
+        "Le premier est le prix, le second le nominal",
+        "Le premier actualise les flux et le second fixe le coupon contractuel",
+        "Les deux taux sont égaux par définition à chaque date"
+      ],
+      "answer": 0,
+      "explanation": "Le contrat fixe le coupon à partir du taux facial. Le rendement exigé par le marché peut évoluer et modifier le prix sans changer ce coupon."
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le contrat fixe chaque coupon annuel à 4 % du nominal initial de 1 000 €, mais prévoit un remboursement final de 1 050 €. Un tableau calcule les coupons à 4 % de 1 050 €. Quel élément contractuel confond-il ?",
+      "options": [
+        "La base du coupon fixée au nominal initial et le montant distinct du remboursement final",
+        "Le taux facial et le taux de rendement actuariel exigé sur le marché",
+        "Le coupon annuel et le coupon couru entre deux dates de paiement",
+        "La périodicité annuelle du coupon et la durée totale jusqu’au remboursement"
+      ],
+      "answer": 0,
+      "explanation": "La clause fixe la base du coupon au nominal initial, indépendamment du montant de remboursement final. La prime de remboursement ne modifie donc pas ici le coupon contractuel. Il faut lire séparément les clauses de coupon et de remboursement."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le coupon de l’année 2 et celui de l’année 1 sont tous deux divisés une fois par (1+y). Quel défaut subsiste ?",
+      "options": [
+        "Les deux coupons doivent être additionnés puis actualisés sur une seule période parce que leur montant est identique",
+        "Les deux coupons doivent utiliser le même facteur, calculé à la date moyenne des deux paiements",
+        "Le second coupon n’est pas actualisé sur ses deux périodes",
+        "Le second coupon doit être actualisé au taux facial plutôt qu’au rendement de marché afin de tenir compte de sa date"
+      ],
+      "answer": 2,
+      "explanation": "Une même valeur nominale de coupon ne signifie pas une même date. Le second coupon demande un exposant deux avec la convention annuelle donnée."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une obligation vaut 1 035 € pour un nominal de 1 000 €. Quelle prime de prix, en euros, paie-t-on au-dessus du nominal ?",
+      "options": [
+        "-35 €",
+        "1035 €",
+        "2035 €",
+        "35 €"
+      ],
+      "answer": 3,
+      "explanation": "La prime de prix est 1 035 − 1 000 = 35 €. C’est un écart de valeur, distinct du coupon contractuel.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 1035
+            },
+            {
+              "value": 1000
+            }
+          ]
+        },
+        "expected": 35,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant ajoute les coupons futurs et le nominal sans actualiser, alors que le rendement requis est strictement positif. Quel biais obtient-il pour ces flux positifs ?",
+      "options": [
+        "Une surestimation par rapport à leur valeur actuelle",
+        "Une sous-estimation par rapport à leur valeur actuelle",
+        "Une valeur inchangée si les coupons sont égaux",
+        "Une décote égale au seul taux facial"
+      ],
+      "answer": 0,
+      "explanation": "À taux positif, chaque flux futur positif vaut moins aujourd’hui que son montant futur. La somme non actualisée surestime donc la valeur actuelle."
+    },
+    {
+      "id": "q14",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le prix de marché baisse après une hausse du rendement exigé. Le taux facial reste fixe. Que devient le coupon annuel contractuel ?",
+      "options": [
+        "Il baisse dans la même proportion que le prix",
+        "Il reste inchangé si le nominal et les clauses restent identiques",
+        "Il augmente pour égaler immédiatement le nouveau rendement requis",
+        "Il devient égal à la décote de marché"
+      ],
+      "answer": 1,
+      "explanation": "Le mouvement de prix ne réécrit pas le contrat. Le nouveau rendement résulte du prix payé et des mêmes flux futurs, pas d’une modification du coupon."
+    },
+    {
+      "id": "q15",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un coupon versé dans un an a une valeur actuelle de 48 € au taux annuel de 5 %. Quel coupon futur est impliqué ?",
+      "options": [
+        "45,71 €",
+        "48 €",
+        "50,4 €",
+        "2,4 €"
+      ],
+      "answer": 2,
+      "explanation": "Pour remonter au flux futur, on capitalise : 48 × 1,05 = 50,40 €. Diviser de nouveau déplacerait la valeur dans le mauvais sens.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 48
+            },
+            {
+              "value": 1.05
+            }
+          ]
+        },
+        "expected": 50.4,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le coupon facial et le rendement requis sont tous deux de 5 %, avec remboursement au nominal, juste après coupon, sans frais ni défaut. Quelle relation attend-on ?",
+      "options": [
+        "Une prime égale à la somme des coupons futurs",
+        "Une décote égale au dernier coupon",
+        "Un prix nul parce que l’écart de taux est nul",
+        "Un prix au pair dans ce modèle"
+      ],
+      "answer": 3,
+      "explanation": "Quand la rémunération contractuelle et le rendement requis coïncident dans ces conditions, l’actualisation des flux conduit au nominal."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une obligation à deux ans est remboursable au pair. Le tableau place le nominal à l’année 1. Que faut-il corriger ?",
+      "options": [
+        "La date de remboursement, donc son facteur d’actualisation",
+        "Le taux d’actualisation, réduit de moitié en conservant le remboursement à un an",
+        "Le montant actualisé du nominal, conservé à un an mais divisé ensuite par deux",
+        "La date de tous les coupons, avancée d’un an pour rendre le tableau cohérent avec le nominal mal placé"
+      ],
+      "answer": 0,
+      "explanation": "Le calendrier est une donnée du contrat. Déplacer le remboursement modifie sa valeur actuelle ; on doit corriger la date plutôt qu’un autre paramètre."
+    },
+    {
+      "id": "q18",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coupon contractuel annuel est de 72 € pour un nominal de 1 800 €. Quel taux facial implique-t-il ?",
+      "options": [
+        "25 %",
+        "4 %",
+        "7,2 %",
+        "0,04 %"
+      ],
+      "answer": 1,
+      "explanation": "Le taux facial vaut coupon/nominal : 72/1 800 = 0,04, soit 4 %. Le prix de marché n’est pas nécessaire à ce calcul contractuel.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 72
+                },
+                {
+                  "value": 1800
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 4,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un acheteur assimile une décote de 50 € à son gain net certain en cas de revente demain. Quelle distinction manque ?",
+      "options": [
+        "La décote actuelle et le nominal, supposés identiques",
+        "Le coupon reçu demain et le prix payé aujourd’hui, supposés identiques",
+        "La décote actuelle au nominal et le prix futur de revente encore incertain",
+        "Le prix futur et le taux facial, qui seraient liés par une égalité fixe"
+      ],
+      "answer": 2,
+      "explanation": "La décote est un écart au nominal aujourd’hui. Une revente avant remboursement dépendra du marché et des conditions futures, même si les flux sont fixes."
+    },
+    {
+      "id": "q20",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un taux annuel effectif est utilisé pour un coupon situé à six mois. Quelle précision manque avant de choisir le facteur d’actualisation ?",
+      "options": [
+        "L’application du facteur annuel complet dès lors que le taux est exprimé par an",
+        "La division par deux du seul facteur annuel obtenu, sans adapter l’exposant",
+        "L’application d’un demi-taux annuel comme taux semestriel composé exactement équivalent",
+        "La convention de période adaptée à cette demi-année"
+      ],
+      "answer": 3,
+      "explanation": "La formule doit représenter la durée réelle et la convention de taux. Un flux semestriel ne s’actualise pas mécaniquement comme un flux à un an."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Chaque titre d’une même émission obligataire est évalué 980 €. Aucun effet de bloc ni frais n’est retenu. Quel prix total donne le modèle pour trois titres ?",
+      "options": [
+        "2940 €",
+        "980 €",
+        "326,67 €",
+        "3000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le prix unitaire de 980 € se multiplie par trois titres, soit 2 940 €. Le nominal ne remplace pas le prix calculé pour cette quantité.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 980
+            },
+            {
+              "value": 3
+            }
+          ]
+        },
+        "expected": 2940,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un prix calculé sans défaut ni option est présenté comme une garantie de revente réelle. Quelle limite faut-il rappeler ?",
+      "options": [
+        "Le prix calculé ne peut varier que si le nominal change",
+        "La valeur dépend du rendement, des flux et des hypothèses du modèle",
+        "La présence d’un coupon fixe garantit le prix à toute date",
+        "Le remboursement au pair assure la revente au pair avant l’échéance"
+      ],
+      "answer": 1,
+      "explanation": "Une valorisation sous hypothèses n’est pas une garantie de transaction. Risque de défaut, liquidité et évolution des taux peuvent affecter la revente."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que mesure nominal moins prix lorsque le prix est inférieur au nominal ?",
+      "options": [
+        "Le rendement annuel total sans autre calcul",
+        "Le coupon couru dans tous les calendriers",
+        "La décote monétaire par rapport au nominal",
+        "La perte déjà réalisée sur la période passée"
+      ],
+      "answer": 2,
+      "explanation": "La décote est un écart de montants. Elle ne donne pas seule un rendement annuel : le calendrier, les coupons et le prix payé doivent aussi être considérés."
+    }
+  ]
+}

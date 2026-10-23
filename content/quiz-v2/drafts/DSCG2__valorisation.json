@@ -1,0 +1,452 @@
+{
+  "module": "DSCG2",
+  "chapter": "valorisation",
+  "sourceHash": "3d374d59bbce295a00e88d914f28b2db8256da2f12113d57bf863194c3c1c4c0",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des flux sont calculés avant versement aux prêteurs et disponibles pour dette et fonds propres. Quelle valeur cherche-t-on directement en les actualisant avec un taux adapté à ce périmètre ?",
+      "options": [
+        "Une valeur d’entreprise à répartir entre les financeurs concernés",
+        "La seule valeur des actions après déduction de la dette",
+        "Le capital social nominal inscrit dans les statuts",
+        "La seule trésorerie distribuable de l’exercice"
+      ],
+      "answer": 0,
+      "explanation": "Les flux décrits concernent tous les financeurs. La valeur des capitaux propres demande ensuite le passage de la valeur d’entreprise à celle des actionnaires."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une valorisation retient une dette financière de 320 000 € et une trésorerie déductible de 90 000 €. Quelle dette nette financière obtient-on dans ce périmètre ?",
+      "options": [
+        "410000 €",
+        "230000 €",
+        "320000 €",
+        "90000 €"
+      ],
+      "answer": 1,
+      "explanation": "La dette nette est la dette financière diminuée de la trésorerie retenue : 320 000 − 90 000 = 230 000 €. Additionner les deux inverse l’effet de la trésorerie.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 320000
+            },
+            {
+              "value": 90000
+            }
+          ]
+        },
+        "expected": 230000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un groupe détient de la trésorerie dont une partie est bloquée. Le dossier ne précise pas la trésorerie déductible. Quelle démarche est justifiée ?",
+      "options": [
+        "Déduire le solde bancaire total sans examiner sa disponibilité",
+        "Assimiler la trésorerie bloquée à une dette financière de même montant",
+        "Définir le périmètre déductible et justifier le traitement des sommes bloquées",
+        "Traiter toute trésorerie comptable comme libre dès lors que le groupe en est juridiquement propriétaire"
+      ],
+      "answer": 2,
+      "explanation": "La dette nette dépend du périmètre convenu. Une trésorerie comptable ne se confond pas nécessairement avec le montant déductible retenu dans la valorisation."
+    },
+    {
+      "id": "q04",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La valeur d’entreprise est de 1 400 000 € et la dette nette financière de 350 000 €, sans autre ajustement. Quelle est la valeur des capitaux propres ?",
+      "options": [
+        "1750000 €",
+        "1400000 €",
+        "350000 €",
+        "1050000 €"
+      ],
+      "answer": 3,
+      "explanation": "Dans le schéma simplifié, la valeur revenant aux actionnaires est 1 400 000 − 350 000 = 1 050 000 €. La dette nette est retranchée, pas ajoutée.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 1400000
+            },
+            {
+              "value": 350000
+            }
+          ]
+        },
+        "expected": 1050000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après avoir calculé VE − (dette − trésorerie), un analyste ajoute encore la trésorerie aux capitaux propres. Quelle erreur relève-t-on ?",
+      "options": [
+        "La trésorerie retenue est prise en compte deux fois",
+        "La dette financière est prise en compte deux fois",
+        "La trésorerie est entièrement omise du passage",
+        "La valeur d’entreprise est remplacée par le capital nominal"
+      ],
+      "answer": 0,
+      "explanation": "La formule VE − dette + trésorerie intègre déjà la trésorerie retenue. Une seconde addition surestime la valeur des actions du même montant."
+    },
+    {
+      "id": "q06",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une valeur des capitaux propres de 840 000 € se répartit entre 12 000 actions identiques, sans autre droit. Quelle valeur par action calculer ?",
+      "options": [
+        "0,0143 €",
+        "70 €",
+        "100,8 €",
+        "700 €"
+      ],
+      "answer": 1,
+      "explanation": "La valeur totale se divise par le nombre de titres concernés : 840 000 / 12 000 = 70 €. Il faut un nombre d’actions cohérent avec les droits valorisés.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 840000
+            },
+            {
+              "value": 12000
+            }
+          ]
+        },
+        "expected": 70,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux sociétés ont une même valeur d’entreprise mais des dettes nettes différentes. Sans autre ajustement, comment comparer leur valeur des capitaux propres ?",
+      "options": [
+        "Les capitaux propres ont la même valeur puisque les activités ont la même valeur",
+        "La société à dette nette plus élevée a la valeur des actions la plus élevée",
+        "La société à dette nette plus faible a une valeur des capitaux propres plus élevée",
+        "La comparaison dépend uniquement du capital nominal des deux sociétés"
+      ],
+      "answer": 2,
+      "explanation": "La valeur d’entreprise rémunère l’ensemble des financeurs. Avec une même VE, une dette nette moindre laisse une valeur plus importante aux actionnaires."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans le schéma dette financière moins trésorerie, un analyste ajoute les fournisseurs à la dette financière sans justification de périmètre. Quel contrôle manque ?",
+      "options": [
+        "L’ajout de toutes les dettes de bilan au passage financier, sans distinguer exploitation et financement",
+        "La déduction des fournisseurs de la trésorerie, considérée comme retraitement suffisant de tout double compte",
+        "La seule compensation des fournisseurs avec les créances clients au bilan, sans vérifier le traitement du BFR dans les flux",
+        "La qualification des postes et leur traitement déjà inclus dans les flux valorisés"
+      ],
+      "answer": 3,
+      "explanation": "Un ajustement dépend du périmètre et de la manière dont les flux ont été construits. Ajouter un poste déjà reflété ailleurs peut produire un double compte."
+    },
+    {
+      "id": "q09",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le flux disponible de l’année terminale est F, et le premier flux de la rente est attendu un an plus tard avec croissance g. Quel numérateur utiliser dans F suivant / (r − g) ?",
+      "options": [
+        "F × (1 + g)",
+        "F × (1 − g)",
+        "F / (1 + g)",
+        "F × (r − g)"
+      ],
+      "answer": 0,
+      "explanation": "Le numérateur est le flux de la période suivante. Si F est le dernier flux détaillé, il faut d’abord lui appliquer une croissance de période."
+    },
+    {
+      "id": "q10",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une rente perpétuelle vaut 100 000 € avec un premier flux de 6 000 € l’an prochain et un taux r de 10 %. Quelle croissance g est impliquée par VT = F suivant/(r − g) ?",
+      "options": [
+        "6 %",
+        "4 %",
+        "16 %",
+        "10 %"
+      ],
+      "answer": 1,
+      "explanation": "Le dénominateur impliqué vaut 6 000/100 000 = 6 %. Comme r − g = 6 % et r = 10 %, g = 4 %, ce qui respecte r > g.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 0.1
+                },
+                {
+                  "op": "/",
+                  "args": [
+                    {
+                      "value": 6000
+                    },
+                    {
+                      "value": 100000
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 4,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau de flux pour l’entreprise intègre déjà les intérêts versés aux prêteurs, puis utilise un CMPC construit pour des flux avant financement. Que faut-il réexaminer ?",
+      "options": [
+        "La conversion des intérêts en remboursement de principal, sans modifier le total des flux déduits",
+        "La seule date de versement des intérêts, tenue pour correction suffisante de leur inclusion dans le flux",
+        "La définition des flux et le risque de double prise en compte du financement",
+        "L’ajout des intérêts au CMPC sous forme d’une prime de taux sans modifier les flux après financement"
+      ],
+      "answer": 2,
+      "explanation": "Les flux et le taux doivent partager le même périmètre de financement. Déduire des paiements déjà représentés dans le taux peut fausser la valeur."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une entreprise vaut 600 000 €. Elle possède 150 000 € de trésorerie retenue et 100 000 € de dette financière. Sans autre ajustement, quelle valeur des capitaux propres obtient-on ?",
+      "options": [
+        "550000 €",
+        "350000 €",
+        "850000 €",
+        "650000 €"
+      ],
+      "answer": 3,
+      "explanation": "La dette nette est négative : 100 000 − 150 000 = −50 000 €. Les capitaux propres valent donc 600 000 − (−50 000) = 650 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 600000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 100000
+                },
+                {
+                  "value": 150000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 650000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi la valeur économique des capitaux propres peut-elle différer du capital nominal ?",
+      "options": [
+        "Elle reflète les droits économiques valorisés plutôt que le seul montant statutaire",
+        "Elle doit rester égale aux capitaux propres comptables, car ceux-ci représentent déjà toute perspective future",
+        "Elle est égale au capital nominal augmenté de la seule trésorerie, indépendamment des autres actifs et dettes",
+        "Elle est limitée au montant des apports libérés, même lorsque les flux attendus ont une valeur différente"
+      ],
+      "answer": 0,
+      "explanation": "Le capital nominal décrit un montant juridique de capital. Une valorisation des droits économiques dépend notamment des flux et du risque, pas de ce seul montant."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le vendeur veut déduire toute la trésorerie de la dette, alors qu’une partie est déjà incluse dans un actif séparément valorisé. Quel risque examiner ?",
+      "options": [
+        "Une omission de trésorerie, qu’il faudrait corriger en ajoutant encore le même montant aux fonds propres",
+        "Un double avantage de valeur pour la même ressource",
+        "Une sous-estimation de dette, qu’il faudrait corriger en retranchant la ressource deux fois de la dette brute",
+        "Un écart de présentation sans effet sur les fonds propres, car actif séparé et trésorerie seraient compensés sans justification"
+      ],
+      "answer": 1,
+      "explanation": "Chaque ressource doit être comptée selon un périmètre cohérent. Une trésorerie déjà valorisée séparément ne peut apporter deux fois le même supplément de valeur."
+    },
+    {
+      "id": "q15",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le taux d’actualisation est de 7 % et la croissance terminale de 6,9 %. Une faible variation de croissance transforme fortement la valeur. Pourquoi ?",
+      "options": [
+        "Le premier flux est nécessairement sous-estimé d’un montant connu",
+        "La rente ignore mathématiquement le taux d’actualisation",
+        "L’écart r − g est très faible, ce qui amplifie la sensibilité de la rente",
+        "Le dénominateur devient indépendant de g lorsqu’il est positif"
+      ],
+      "answer": 2,
+      "explanation": "Un petit dénominateur produit une valeur fortement sensible aux hypothèses. Le respect formel de r > g ne suffit pas à établir la plausibilité économique."
+    },
+    {
+      "id": "q16",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une valorisation est arrêtée au 31 décembre ; la dette nette transmise est celle du 30 juin, avant un emprunt important. Que faut-il obtenir ?",
+      "options": [
+        "Le maintien du solde de juin si le taux d’actualisation est annuel",
+        "La moyenne des dettes nettes de juin et décembre, utilisée comme dette à la date de valeur sans réconciliation",
+        "Le seul montant brut du nouvel emprunt, sans tenir compte des variations de trésorerie ni des autres mouvements",
+        "Un passage documenté à la dette nette à la date de valorisation"
+      ],
+      "answer": 3,
+      "explanation": "La date et le périmètre des ajustements doivent correspondre à la valeur calculée. Un solde ancien peut omettre une modification importante du financement."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Sans autre changement, une trésorerie supplémentaire de 40 000 € entre dans le périmètre déductible ; VE et dette financière sont inchangées. De combien augmente la valeur des capitaux propres ?",
+      "options": [
+        "40000 €",
+        "-40000 €",
+        "80000 €",
+        "0 €"
+      ],
+      "answer": 0,
+      "explanation": "Dans VE − dette + trésorerie, une hausse de 40 000 € de la trésorerie retenue augmente les capitaux propres de 40 000 €, sous ces hypothèses.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 40000
+            },
+            {
+              "value": 1
+            }
+          ]
+        },
+        "expected": 40000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un analyste additionne les flux détaillés des années 1 à 5 et une rente incluant elle aussi ces cinq flux. Quel défaut doit-il corriger ?",
+      "options": [
+        "Le remplacement de la rente par une moyenne des cinq flux sans modifier les périodes déjà incluses",
+        "Le recouvrement des périodes comptées dans les deux composantes",
+        "La différence entre une croissance nulle sur les flux détaillés et une croissance positive ensuite, tenue pour seule cause du double compte",
+        "Le taux d’actualisation, supposé corriger le chevauchement dès lors qu’il est identique pour les deux blocs"
+      ],
+      "answer": 1,
+      "explanation": "Une valeur terminale doit représenter les périodes postérieures à l’horizon explicite. Des périodes présentes dans les deux blocs sont valorisées deux fois."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux valorisations donnent la même VE mais des valeurs par action différentes. Les actions ont les mêmes droits. Quelles données contrôler avant de conclure à une erreur ?",
+      "options": [
+        "La seule égalité des taux de croissance du chiffre d’affaires passé",
+        "La seule valeur nominale de chaque titre",
+        "Dette nette, autres ajustements éventuels et nombre d’actions retenu",
+        "Le seul signe des flux de la première année"
+      ],
+      "answer": 2,
+      "explanation": "Le passage à l’action dépend des ajustements et du nombre de titres. Une même valeur d’activité ne détermine pas à elle seule le prix par action."
+    },
+    {
+      "id": "q20",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle précaution accompagne une valeur obtenue par actualisation de flux prévisionnels ?",
+      "options": [
+        "Présenter le seul scénario central en tenant les autres hypothèses raisonnables pour sans effet sur la valeur",
+        "Retenir la valeur centrale comme point certain dès lors que toutes les formules du fichier sont exactes",
+        "Remplacer les hypothèses de flux par le prix souhaité pour calibrer ensuite le taux cohérent avec ce prix",
+        "Présenter le scénario, le taux, la date et les limites de l’estimation"
+      ],
+      "answer": 3,
+      "explanation": "Une valeur de modèle dépend d’hypothèses et d’un périmètre. Elle n’est ni un prix garanti, ni une trésorerie acquise, ni un montant juridique de capital."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste soustrait la dette brute puis soustrait aussi la dette nette à la VE, sans autre justification. Quelle erreur de passage relève-t-on ?",
+      "options": [
+        "Une dette prise en compte deux fois dans le calcul des capitaux propres",
+        "Une trésorerie prise en compte deux fois comme supplément de valeur sans double déduction de dette",
+        "Une dette brute ajoutée aux fonds propres au lieu d’être retranchée",
+        "Une absence de prise en compte de la trésorerie, alors qu’elle figure déjà dans la dette nette soustraite"
+      ],
+      "answer": 0,
+      "explanation": "La dette nette inclut déjà la dette financière diminuée de la trésorerie retenue. Soustraire également la dette brute double son effet négatif."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un flux terminal positif ne peut être maintenu qu’avec un investissement annuel oublié du modèle. Quelle vérification est prioritaire ?",
+      "options": [
+        "La réduction de la dette nette du montant de l’investissement omis",
+        "La cohérence du flux durable avec les dépenses nécessaires à son maintien",
+        "La hausse du nombre d’actions pour conserver la valeur par titre",
+        "Le maintien du flux avant investissement en choisissant un taux plus faible"
+      ],
+      "answer": 1,
+      "explanation": "La rente suppose un flux durable cohérent. Omettre une dépense nécessaire surestime ce flux ; ajuster un autre poste sans justification ne corrige pas le modèle."
+    }
+  ]
+}

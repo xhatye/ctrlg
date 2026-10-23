@@ -1,0 +1,353 @@
+{
+  "module": "DSCG6",
+  "chapter": "english-synthesis",
+  "sourceHash": "a966c6458feed8cc3e0725838fabcea506da16e7b9c1d38fe7b9bde057500075",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A note compares rising annual sales with a growing receivables balance and asks whether cash collection is keeping pace. Which opening states its central question without announcing an unsupported conclusion?",
+      "options": [
+        "The note examines whether stronger sales are being matched by cash collection.",
+        "The note examines whether gross profit margin has risen as fast as annual sales.",
+        "The note compares supplier payment terms with existing loan maturities.",
+        "The note evaluates whether reducing customer credit limits would maximise unit sales."
+      ],
+      "answer": 0,
+      "explanation": "La question annoncée relie ventes et encaissements. Marge, échéances fournisseurs et plafonds de crédit sont des sujets financiers voisins, mais ne définissent pas l’objet indiqué."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A memo compares early-payment discounts with additional borrowing to cover a seasonal cash shortfall. Which question best describes the decision it analyses?",
+      "options": [
+        "Which option has the lowest headline percentage rate, without adjusting for the amount and duration financed?",
+        "Which financing approach best addresses the seasonal shortfall on the terms compared?",
+        "Which option produces the largest permanent increase in share capital?",
+        "Which method minimises the annual fee while leaving the timing of cash receipts outside the comparison?"
+      ],
+      "answer": 1,
+      "explanation": "Le mémo compare deux moyens de couvrir un besoin saisonnier avec leurs conditions. Montants, durée et calendrier comptent ; le taux seul, le forfait seul ou un apport permanent ne résument pas cette décision."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A document asks whether inventory growth explains a cash decline. Its title is “Understanding the cash decline.” A summary opens, “The document proves inventory growth is the cause.” What is the defect?",
+      "options": [
+        "The summary preserves the distinction between the topic and the result.",
+        "The summary changes the reporting unit from cash to inventory quantities.",
+        "The summary converts a question under investigation into a confirmed causal conclusion.",
+        "The summary converts a confirmed finding into a question under investigation."
+      ],
+      "answer": 2,
+      "explanation": "Un sujet d’investigation n’est pas un résultat acquis. L’ouverture proposée attribue au document une démonstration causale que la question seule n’établit pas."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A board paper considers accepting a large low-margin order that would also tie up working capital. Which description keeps both dimensions of its central issue?",
+      "options": [
+        "The paper assesses order volume as a substitute for profitability and funding.",
+        "The paper establishes that a profitable order cannot create a funding need.",
+        "The paper asks only whether the sales team can record higher revenue.",
+        "The paper assesses the order’s profitability alongside its funding implications."
+      ],
+      "answer": 3,
+      "explanation": "La commande peut affecter à la fois la marge et le besoin de financement. La formulation correcte conserve cet arbitrage ; les autres réduisent la décision au volume ou supposent que rentabilité et liquidité coïncident."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A note analyses whether extending customer credit terms would support sales without putting too much pressure on liquidity. Which sentence introduces the scope appropriately?",
+      "options": [
+        "The note evaluates the sales and liquidity implications of longer customer credit terms.",
+        "The note evaluates only the interest on existing bank loans under tighter collection terms.",
+        "The note compares supplier payment periods with the maturity of long-term investments.",
+        "The note assesses whether a higher gross margin automatically finances all additional receivables."
+      ],
+      "answer": 0,
+      "explanation": "Le périmètre associe allongement du crédit client, ventes et liquidité. Il ne porte ni uniquement sur les intérêts bancaires, ni sur le crédit fournisseur, ni sur une équivalence entre marge et financement des créances."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report attributes a discrepancy to “a failure to reconcile the two ledgers”. Which paraphrase preserves the meaning?",
+      "options": [
+        "The two ledgers were successfully reconciled, and that successful reconciliation caused the discrepancy.",
+        "The required comparison and adjustment between the ledgers was not carried out successfully.",
+        "The discrepancy proves that the two ledgers contain identical entries.",
+        "Reconciliation was completed but its results have not yet been published."
+      ],
+      "answer": 1,
+      "explanation": "Failure to suivi du verbe désigne un défaut d’accomplissement : le rapprochement n’a pas été effectué avec succès. La phrase ne décrit ni réussite, ni identité des écritures, ni simple retard de publication."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The company depends on a revolving credit facility to pay suppliers. “Were it not for this facility, we could not meet those payments.” What does the opening mean?",
+      "options": [
+        "The facility was cancelled before the supplier payments were made.",
+        "The company will cancel the facility after the next payment date.",
+        "If the facility were not available, the company would be unable to meet those payments.",
+        "Any increase in the facility’s cost would immediately stop all supplier payments."
+      ],
+      "answer": 2,
+      "explanation": "Were it not for envisage par inversion conditionnelle l’absence d’un soutien existant. La phrase n’annonce pas une annulation ni l’effet automatique d’une hausse de coût."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "“The faster collection process must not come at the expense of accuracy.” What trade-off is this warning against?",
+      "options": [
+        "Increasing a separate accuracy budget by exactly the collection saving.",
+        "Paying an accuracy-related fee before the collection process starts.",
+        "Charging collection costs to the accuracy-control department.",
+        "Improving collection speed by sacrificing accuracy."
+      ],
+      "answer": 3,
+      "explanation": "At the expense of signifie au détriment de. L’avertissement vise une rapidité obtenue en dégradant l’exactitude, et non une imputation comptable ou un paiement."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Complete the sentence with the relative pronoun showing that the revised terms belong to the supplier: “The supplier, ___ terms were revised, requested a meeting.”",
+      "options": [
+        "whose",
+        "whom",
+        "which",
+        "who"
+      ],
+      "answer": 0,
+      "explanation": "Whose exprime la possession reliant le fournisseur à ses conditions. Whom est un complément de personne ; who un sujet ; which seul ne marque pas cette possession."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A table reports “Profit excluding a one-off disposal gain.” Which summary correctly describes that profit measure?",
+      "options": [
+        "The reported measure shows the gain itself rather than profit from the remaining items.",
+        "The reported measure removes the one-off disposal gain from profit.",
+        "The reported measure includes the gain but excludes the disposal proceeds from cash flow.",
+        "The reported measure equals total profit including every disposal effect."
+      ],
+      "answer": 1,
+      "explanation": "Excluding annonce le retrait de l’élément indiqué du calcul du profit présenté. La phrase ne décrit pas les flux de trésorerie ni le montant isolé de la plus-value."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "“We staggered the payments so as not to exhaust the credit line.” What does so as not to introduce?",
+      "options": [
+        "A consequence showing that the credit line was actually exhausted.",
+        "A contrast unrelated to why payments were staggered.",
+        "A purpose: avoiding exhaustion of the credit line.",
+        "A condition requiring the credit line to be exhausted first."
+      ],
+      "answer": 2,
+      "explanation": "So as not to introduit un but négatif : éviter un événement. Il explique le motif de l’échelonnement sans affirmer que ce but a effectivement été atteint."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A memo annualises one quarter’s sales by multiplying them by four. Which caveat should a synthesis retain?",
+      "options": [
+        "The annualised figure is the audited total of four completed quarters.",
+        "Multiplying by four removes the effect of seasonal differences between quarters.",
+        "The annualised figure establishes that the same revenue was received in cash.",
+        "The annualised figure assumes that the quarter is a suitable basis for the rest of the year."
+      ],
+      "answer": 3,
+      "explanation": "Une annualisation extrapole une période. Elle ne prouve pas la réalisation de quatre trimestres ni l’absence de saisonnalité et ne renseigne pas automatiquement les encaissements."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A finance director proposes “an across-the-board reduction in discretionary budgets”. What scope does across-the-board indicate?",
+      "options": [
+        "A reduction applying to all discretionary budget categories concerned, rather than selected ones.",
+        "A reduction limited to the directors’ own travel budget.",
+        "A reduction applying only to budgets already above their limits.",
+        "A transfer of each budget to a different department."
+      ],
+      "answer": 0,
+      "explanation": "Across-the-board signifie général dans le champ concerné. Ici, tous les budgets discrétionnaires visés sont concernés ; board ne désigne pas les seuls administrateurs et across ne signifie pas transfert."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "“The proposed refinancing is by no means risk-free.” Which interpretation is faithful?",
+      "options": [
+        "The refinancing cannot proceed because every form of risk is legally prohibited.",
+        "The refinancing is certainly not free of risk.",
+        "The refinancing carries no risk of any kind.",
+        "No risk assessment exists, so the risk must be treated as zero."
+      ],
+      "answer": 1,
+      "explanation": "By no means renforce la négation : absolument pas, nullement. La proposition n’est donc pas sans risque ; cela ne quantifie pas le risque et ne déclare pas d’interdiction juridique."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A note presents revenue “net of returns,” while an earlier draft gave revenue before returns. Which warning is necessary when comparing their figures?",
+      "options": [
+        "Net of returns means that the company has received the amount in cash.",
+        "The two figures are interchangeable because both are labelled revenue.",
+        "The revenue definitions differ and must be aligned before interpreting the difference.",
+        "The difference between the figures directly measures sales growth over time."
+      ],
+      "answer": 2,
+      "explanation": "Net of returns retranche les retours. Comparer cette mesure à une valeur avant retours sans harmoniser le périmètre peut fabriquer une variation ; net ne signifie pas ici encaissé."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The report shows revenue growth of 5% at constant exchange rates and 2% as reported. Which summary retains the distinction?",
+      "options": [
+        "Revenue growth was 7%, obtained by adding the two percentages.",
+        "Revenue rose by 5 percentage points between the two reporting dates.",
+        "The 2% figure measures profit while the 5% figure measures cash collection.",
+        "Revenue growth was 2% as reported and 5% excluding the specified exchange-rate effect."
+      ],
+      "answer": 3,
+      "explanation": "Les deux taux correspondent à deux mesures de la même croissance, selon le traitement du change. Ils ne s’additionnent pas et ne deviennent pas des indicateurs de marge ou d’encaissement."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Company A’s annual figures end on 30 June; company B’s end on 31 December. Both are labelled 2025. What should a comparison disclose?",
+      "options": [
+        "Their twelve-month periods end at different dates and cover different months.",
+        "The matching year labels establish that their reporting periods are identical.",
+        "Company A’s amount represents six months because its year ends in June.",
+        "Company B’s amount necessarily includes six more months than company A’s."
+      ],
+      "answer": 0,
+      "explanation": "Deux exercices de douze mois peuvent couvrir des mois différents. La date de clôture ne réduit pas l’un à six mois et le même millésime ne suffit pas à prouver l’identité de période."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The note reports higher receivables but provides no ageing analysis. Which additional analysis most directly addresses whether collection has deteriorated?",
+      "options": [
+        "Compare only total closing receivables with the prior balance, without distinguishing due dates.",
+        "Examine overdue balances and payment delays alongside the sales mix and period.",
+        "Review only new invoices not yet due and infer the condition of all overdue accounts from them.",
+        "Use annual sales growth alone as the percentage change in payment delays."
+      ],
+      "answer": 1,
+      "explanation": "Montants échus et délais, replacés dans le contexte des ventes, ciblent une dégradation du recouvrement. Le solde global, les seules factures non échues et la croissance des ventes ne mesurent pas seuls les retards."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Profit increased, but operating cash flow decreased. Which follow-up best investigates the difference between these measures?",
+      "options": [
+        "Explain the cash decline solely by the profit increase without examining reconciling items.",
+        "Compare the two figures as if both measured the same inflows during the period.",
+        "Reconcile profit to cash flow, including non-cash items and working-capital movements.",
+        "Replace cash flow with profit because the income statement has already been prepared."
+      ],
+      "answer": 2,
+      "explanation": "Le rapprochement identifie les éléments non monétaires et les décalages de besoin en fonds de roulement. Les mesures ne sont pas interchangeables ; constater un écart ne suffit pas à en déduire sa cause."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report shows higher revenue but does not separate price changes from volumes sold. Which further analysis directly addresses whether the business sold more units?",
+      "options": [
+        "Use revenue growth as the exact measure of unit-volume growth.",
+        "Subtract selling expenses from revenue and treat the remainder as the number of units sold.",
+        "Assume prices were unchanged because the report does not discuss them.",
+        "Decompose revenue changes into price, volume and relevant mix effects."
+      ],
+      "answer": 3,
+      "explanation": "Le chiffre d’affaires combine prix, quantités et composition. Retrancher des charges produit encore un montant monétaire, pas un nombre d’unités ; l’absence de prix détaillés ne prouve pas leur stabilité."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Inventory increased before a new product launch. The note gives no subsequent sales or obsolescence data. Which follow-up addresses whether the stock build was productive rather than excessive?",
+      "options": [
+        "Review subsequent sell-through, stock ageing and obsolete items against the launch plan.",
+        "Treat the inventory increase as proof that customer demand exceeded forecasts.",
+        "Treat the inventory increase as an equal increase in cash generated.",
+        "Conclude that the stock is obsolete because it was acquired before launch."
+      ],
+      "answer": 0,
+      "explanation": "Les ventes ultérieures, l’ancienneté et l’obsolescence aident à apprécier le stock constitué. Son augmentation seule ne prouve ni succès commercial, ni génération de trésorerie, ni obsolescence."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A company reports a positive operating cash flow but omits planned investment payments and debt maturities. Which limitation matters before concluding that its coming cash needs are covered?",
+      "options": [
+        "Debt maturities can be disregarded whenever operating cash flow is positive.",
+        "Operating cash flow alone does not show whether cash covers investment and financing outflows.",
+        "Positive operating cash flow proves that all cash requirements have already been financed.",
+        "Investment payments are included in operating cash flow by definition in the note."
+      ],
+      "answer": 1,
+      "explanation": "La capacité à couvrir les besoins futurs dépend aussi des flux d’investissement, de financement et des ressources disponibles. Un flux d’exploitation positif ne donne pas à lui seul le calendrier complet de liquidité."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A draft recommends reducing customer credit limits, but the note has not identified which customer groups are overdue. Which next step would make that recommendation better targeted?",
+      "options": [
+        "Use customer revenue alone as proof of which accounts are overdue.",
+        "Select customers with the largest current invoices without checking their due dates.",
+        "Analyse overdue exposure by customer group before deciding where limits should change.",
+        "Apply the same reduction to each customer because the aggregate receivables balance rose."
+      ],
+      "answer": 2,
+      "explanation": "Une recommandation sur les limites doit être reliée à l’exposition et aux retards des groupes concernés. Un solde global, un montant de vente ou une facture importante n’identifie pas directement les retards."
+    }
+  ]
+}

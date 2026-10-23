@@ -1,0 +1,413 @@
+{
+  "module": "DSCG4",
+  "chapter": "ecart-acquisition-donne",
+  "sourceHash": "4a57fa975db78e7d647800970da838cef2260e6b5afdd67a01682de61abe2096",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour un calcul d’acquisition simplifié, les actifs identifiables retenus valent 420 000 € et les passifs identifiables 170 000 €. Quel actif net identifiable utiliser ?",
+      "options": [
+        "250 000 €",
+        "420 000 €",
+        "590 000 €",
+        "170 000 €"
+      ],
+      "answer": 0,
+      "explanation": "L’actif net est la différence entre actifs et passifs du périmètre : 420 000−170 000=250 000 €. Le prix payé pour les titres constitue une autre donnée.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 420000
+            },
+            {
+              "value": 170000
+            }
+          ]
+        },
+        "expected": 250000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le préparateur calcule l’actif net identifiable en additionnant les actifs et les dettes reprises. Quelle correction faut-il apporter ?",
+      "options": [
+        "Retrancher les seuls passifs à court terme et conserver les passifs à long terme dans l’actif net",
+        "Retrancher les passifs identifiables des actifs identifiables",
+        "Compenser les passifs identifiables avec le prix des titres avant de déterminer l’actif net de la cible",
+        "Retrancher les dettes financières en excluant les autres passifs identifiables du calcul"
+      ],
+      "answer": 1,
+      "explanation": "Les passifs représentent des obligations qui diminuent l’actif net acquis. Leur addition aux actifs produit une grandeur différente et fausse les étapes suivantes."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une dette identifiable de 30 000 € a été oubliée dans l’actif net d’une acquisition. Toutes les autres valeurs restent identiques. Quel est l’effet de sa prise en compte ?",
+      "options": [
+        "Le prix payé diminue nécessairement de 30 000 €",
+        "L’actif net reste inchangé parce qu’une dette n’est pas un actif",
+        "L’actif net identifiable diminue de 30 000 €",
+        "L’actif net identifiable augmente de 30 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La dette omise doit être soustraite des actifs retenus. La correction de la mesure de l’actif net ne réécrit pas automatiquement la contrepartie effectivement transférée."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau reprend des actifs identifiables de 300 000 €, mais ajoute le prix des titres de 240 000 € parmi ces mêmes actifs pour calculer leur actif net. Quel défaut faut-il relever ?",
+      "options": [
+        "Le prix des titres constitue toujours un actif identifiable supplémentaire de l’acquise",
+        "Les actifs identifiables doivent nécessairement être ramenés au prix des titres",
+        "L’actif net doit être calculé sans aucun passif dès que le prix est connu",
+        "Le prix d’acquisition des titres est confondu avec les actifs identifiables de l’entité acquise"
+      ],
+      "answer": 3,
+      "explanation": "Le prix est la contrepartie donnée par l’acquéreur. Il se compare à une quote-part d’actif net ; l’y incorporer crée un calcul circulaire ou un double compte."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans le modèle de goodwill partiel fourni, à quelle date faut-il rendre cohérentes les valeurs des actifs et passifs identifiables ?",
+      "options": [
+        "À la date d’acquisition retenue par le cas",
+        "À la seule clôture suivante, même si les valeurs ont changé",
+        "À la date de paiement du dernier dividende, dans tous les cas",
+        "À la date choisie pour obtenir le goodwill le plus faible"
+      ],
+      "answer": 0,
+      "explanation": "Le prix et les valeurs identifiables doivent se rapporter à l’opération analysée. Des évolutions postérieures ne doivent pas être confondues avec la mesure à cette date."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’actif net identifiable à l’acquisition est de 200 000 €. La quote-part acquise dans le modèle est de 65 %. Quel montant attribuer à cette quote-part ?",
+      "options": [
+        "307 692,31 €",
+        "130 000 €",
+        "70 000 €",
+        "200 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La quote-part du modèle vaut 200 000×65 %=130 000 €. Le complément de 70 000 € correspond à la part non acquise de cet actif net.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 200000
+            },
+            {
+              "value": 0.65
+            }
+          ]
+        },
+        "expected": 130000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’acquéreur détient 80 % de la cible. Le tableau applique 80 % aux actifs identifiables mais retranche 100 % des passifs pour sa quote-part d’actif net. Quelle formule respecte le périmètre fourni ?",
+      "options": [
+        "100 % × actifs identifiables − 80 % × passifs identifiables",
+        "80 % × (actifs identifiables + passifs identifiables)",
+        "80 % × (actifs identifiables − passifs identifiables)",
+        "80 % × actifs identifiables − 100 % × passifs identifiables"
+      ],
+      "answer": 2,
+      "explanation": "La quote-part porte sur le même actif net, pas sur des quotités différentes d’actifs et de passifs. Le pourcentage s’applique à leur différence."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le cas fixe une participation économique acquise de 60 %, mais 75 % des droits de vote. Il impose d’utiliser la participation économique pour la quote-part d’actif net. Quel taux retenir dans ce calcul ?",
+      "options": [
+        "75 %",
+        "67,5 %, moyenne des deux taux",
+        "100 % dès que les droits de vote sont majoritaires",
+        "60 %"
+      ],
+      "answer": 3,
+      "explanation": "La grandeur demandée est une quote-part économique selon la convention donnée. Les droits de vote éclairent les pouvoirs, mais ne remplacent pas ici le pourcentage indiqué."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La quote-part acquise d’actif net est de 180 000 € et correspond à 75 % de l’actif net total. Quel contrôle retrouve cet actif net total ?",
+      "options": [
+        "180 000 / 75 %",
+        "180 000 × 75 %",
+        "180 000 − 75 % de 180 000",
+        "180 000 / 25 %"
+      ],
+      "answer": 0,
+      "explanation": "Le montant est déjà une fraction du total. Diviser par 0,75 reconstitue 240 000 €, alors qu’une nouvelle multiplication réduirait deux fois le même périmètre."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau a déjà calculé la quote-part de 90 % des actifs nets, puis lui applique une seconde fois 90 % avant le goodwill. Quel biais crée-t-il ?",
+      "options": [
+        "Il ne modifie pas la quote-part acquise, puisque le même pourcentage est appliqué aux mêmes actifs nets",
+        "Il sous-évalue la quote-part acquise en appliquant deux fois le pourcentage",
+        "Il majore la quote-part acquise parce que deux applications de 90 % doivent être additionnées",
+        "Il minore le prix payé plutôt que la quote-part d’actif net utilisée dans le calcul"
+      ],
+      "answer": 1,
+      "explanation": "La participation ne doit pas être appliquée deux fois à une quote-part déjà calculée. Cette sous-évaluation peut ensuite gonfler à tort le goodwill du modèle."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le modèle impose un goodwill partiel égal au prix payé moins la quote-part acquise d’actif net. Le prix est 210 000 € et cette quote-part 168 000 €. Quel goodwill calculer ?",
+      "options": [
+        "210 000 €",
+        "378 000 €",
+        "42 000 €",
+        "168 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le goodwill du modèle vaut 210 000−168 000=42 000 €. La quote-part doit être mesurée avant cette comparaison ; elle n’est pas elle-même le goodwill.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 210000
+            },
+            {
+              "value": 168000
+            }
+          ]
+        },
+        "expected": 42000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une acquisition porte sur 80 % d’un actif net de 150 000 €, pour un prix de 145 000 €. Le modèle est celui du goodwill partiel, sans autre composante. Quelle séquence est correcte ?",
+      "options": [
+        "Retrancher 150 000 € du prix et conclure à −5 000 €",
+        "Appliquer 80 % au prix puis retrancher l’actif net entier",
+        "Ajouter le prix et la quote-part pour obtenir le goodwill",
+        "Calculer 120 000 € de quote-part, puis 25 000 € de goodwill"
+      ],
+      "answer": 3,
+      "explanation": "Il faut comparer le prix de la fraction acquise à l’actif net de cette même fraction : 150 000×0,80=120 000, puis 145 000−120 000=25 000 €."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour un goodwill partiel, le prix de 70 % des titres est comparé à 100 % des actifs nets. Quelle incohérence existe ?",
+      "options": [
+        "Le prix et l’actif net comparés ne portent pas sur la même quote-part",
+        "Le prix doit toujours être comparé à 100 % des actifs nets quelle que soit la fraction acquise",
+        "Les 30 % non acquis doivent être retranchés une seconde fois du prix payé",
+        "Le pourcentage acquis ne sert qu’à répartir les paiements bancaires"
+      ],
+      "answer": 0,
+      "explanation": "Dans la convention partielle, le prix de la fraction acquise se compare à sa quote-part d’actif net. Utiliser tout l’actif net change la convention de mesure sans justification."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "À prix et pourcentage acquis fixes, une dette identifiable supplémentaire réduit l’actif net acquis. Quel sens de variation du goodwill partiel en résulte dans ce modèle ?",
+      "options": [
+        "Il devient automatiquement nul quelle que soit la dette",
+        "Il augmente puisque la quote-part d’actif net diminue",
+        "Il diminue du seul fait que les passifs augmentent",
+        "Il reste nécessairement identique parce que le prix ne varie pas"
+      ],
+      "answer": 1,
+      "explanation": "Le goodwill est le prix diminué de la quote-part d’actif net. Réduire ce second terme augmente la différence, dans le modèle où toutes les autres composantes sont fixes."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le goodwill partiel a été calculé avec un prix de 330 000 € et une quote-part d’actif net de 280 000 €. Une erreur dans le prix est corrigée : il était de 318 000 €, sans autre changement. Quel goodwill corrigé obtenir ?",
+      "options": [
+        "50 000 €",
+        "62 000 €",
+        "38 000 €",
+        "12 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le prix corrigé remplace l’ancien dans la même formule : 318 000−280 000=38 000 €. Le goodwill diminue de 12 000 €, mais ce montant n’est pas sa nouvelle valeur.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 318000
+            },
+            {
+              "value": 280000
+            }
+          ]
+        },
+        "expected": 38000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une feuille présente un écart négatif de prix moins quote-part d’actif net. Elle le renomme immédiatement « goodwill positif » sans revoir le calcul. Quelle démarche convient ?",
+      "options": [
+        "Comptabiliser l’écart négatif comme un goodwill à amortir sans réexaminer les valeurs identifiables",
+        "Reporter automatiquement l’écart négatif en diminution du prix des titres jusqu’à l’annulation du solde",
+        "Répartir directement l’écart négatif en diminution des actifs identifiables sans vérifier leur mesure et le référentiel",
+        "Contrôler les valeurs et examiner le traitement de l’écart négatif dans le référentiel applicable"
+      ],
+      "answer": 3,
+      "explanation": "Le signe du résultat fait partie du calcul et ne se corrige pas par changement d’étiquette. Une différence négative appelle les vérifications et règles du cadre applicable."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier exclut expressément frais accessoires et contrepartie conditionnelle du prix fourni. Le préparateur invente une majoration forfaitaire de 10 % avant de calculer le goodwill. Quel défaut commet-il ?",
+      "options": [
+        "Il ajoute une composante que les hypothèses du calcul n’autorisent pas",
+        "La majoration peut être traitée comme une correction du prix sans pièce, dès lors qu’elle reste présentée séparément",
+        "La majoration peut compenser l’absence de contrepartie conditionnelle en utilisant un pourcentage uniforme du prix",
+        "La majoration peut être incluse dans le goodwill du modèle parce que les frais accessoires ne figurent pas dans l’actif net fourni"
+      ],
+      "answer": 0,
+      "explanation": "Le modèle fournit les composantes à retenir. Une majoration non documentée modifie le prix comparé à l’actif net et fabrique un goodwill sans fondement dans le cas."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le modèle évalue la part non acquise à sa quote-part d’actifs nets. Ceux-ci valent 360 000 € et l’acquéreur prend 75 %. Quelle part non acquise mesurer ?",
+      "options": [
+        "480 000 €",
+        "90 000 €",
+        "270 000 €",
+        "360 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le complément de participation est 25 %. La part non acquise des actifs nets vaut donc 360 000×0,25=90 000 €, distincte d’un prix de marché de ces titres.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 360000
+            },
+            {
+              "value": 0.25
+            }
+          ]
+        },
+        "expected": 90000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La quote-part acquise d’actif net est de 240 000 € et la part non acquise, mesurée sur la même base, de 60 000 €. Quel total doivent-elles reconstituer ?",
+      "options": [
+        "240 000 € de prix payé pour l’ensemble des titres",
+        "60 000 € de passifs identifiables",
+        "300 000 € d’actifs nets identifiables",
+        "180 000 € de goodwill"
+      ],
+      "answer": 2,
+      "explanation": "Les deux fractions complémentaires du même actif net s’additionnent : 240 000+60 000=300 000 €. Elles ne déterminent pas à elles seules prix payé et goodwill."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le prix de 80 % des titres est de 200 000 €. L’analyste évalue les 20 % non acquis à 50 000 € par simple proportion du prix, alors que le cas impose leur quote-part d’actifs nets. Que doit-il reprendre ?",
+      "options": [
+        "La suppression du pourcentage non acquis parce que la mère contrôle",
+        "L’addition des 50 000 € au prix pour transformer sans réserve le goodwill partiel en prix total",
+        "La division du prix de la mère par les seuls droits de vote du minoritaire",
+        "La base de mesure de la part non acquise, qui est différente du prix proportionnel dans cette convention"
+      ],
+      "answer": 3,
+      "explanation": "Une extrapolation du prix peut donner une autre mesure que la quote-part d’actifs nets imposée. Il faut respecter la convention du cas plutôt que confondre ces bases."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une acquisition devient intégrale : 100 % des titres sont acquis, sans autre intérêt détenu par un tiers. Quelle part non acquise des actifs nets subsiste dans ce modèle ?",
+      "options": [
+        "Zéro",
+        "La totalité de l’actif net",
+        "Le goodwill calculé",
+        "Le prix payé diminué des passifs seulement"
+      ],
+      "answer": 0,
+      "explanation": "Le complément de 100 % est nul. Cette absence de part non acquise n’implique pas l’absence de goodwill, qui dépend séparément du prix et de l’actif net."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi un calcul de goodwill partiel préparatoire ne suffit-il pas à traiter tout regroupement réel ?",
+      "options": [
+        "Le choix du goodwill partiel dispense d’analyser les passifs identifiables dès lors que le prix est connu",
+        "D’autres composantes et règles de reconnaissance ou de mesure peuvent devoir être examinées",
+        "La différence prix moins quote-part d’actif net suffit pour tout regroupement même avec des contreparties conditionnelles",
+        "La mesure de la part non acquise et les composantes du prix sont identiques dans tous les regroupements réels"
+      ],
+      "answer": 1,
+      "explanation": "L’exercice peut exclure participations antérieures, contreparties conditionnelles, fiscalité ou autres particularités. La réponse doit conserver ces limites et identifier le référentiel avant de les traiter."
+    }
+  ]
+}

@@ -1,0 +1,569 @@
+{
+  "module": "UE9",
+  "chapter": "inventaire-cutoff",
+  "sourceHash": "c01b4482d6f726be71c8507e894c7bda4d90c9b3b39151d74a1692e7fa4a2bfe",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat prévoit des prestations mensuelles distinctes. Celles de décembre sont exécutées avant clôture mais facturées avec janvier sur un document reçu en février. Quelle analyse temporelle convient ?",
+      "options": [
+        "Séparer les services selon leur réalisation plutôt que suivre la date unique de facture",
+        "Rattacher obligatoirement tout à février",
+        "Rattacher obligatoirement tout à décembre",
+        "Choisir la date de règlement pour toute la facture"
+      ],
+      "answer": 0,
+      "explanation": "Une facture regroupée peut couvrir plusieurs périodes économiques. Le rattachement doit identifier ce qui est reçu avant la clôture et ce qui appartient à la suite.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier fournit un contrat signé mais aucune preuve que le service prévu pour décembre a été rendu. Peut-on conclure à une consommation certaine sur la seule signature ?",
+      "options": [
+        "Oui, toute signature signifie que le service est consommé",
+        "Non, il faut vérifier la réalisation effective du service",
+        "Oui, si le paiement est prévu après clôture",
+        "Non, il faut reconnaître uniquement les services payés comptant"
+      ],
+      "answer": 1,
+      "explanation": "Le contrat décrit des engagements ; il ne prouve pas toujours l’exécution. La date et la réalité du service doivent être étayées.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture reçue en décembre concerne explicitement une intervention exécutée en janvier suivant. Quel fait doit guider le rattachement de la charge ?",
+      "options": [
+        "Le seul mois d’arrivée du document",
+        "Le seul taux de taxe de la facture",
+        "La période d’exécution de l’intervention",
+        "Le nombre de relances déjà reçues"
+      ],
+      "answer": 2,
+      "explanation": "Le document peut précéder la prestation. Une date de facture ne transforme pas un service futur en consommation de l’exercice clos.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le service est achevé avant clôture, mais le montant et ses conditions sont incertains et non documentés. Quelle démarche renforce le dossier ?",
+      "options": [
+        "Choisir le montant nécessaire pour atteindre le bénéfice cible",
+        "Ne jamais examiner une charge tant que rien n’est payé",
+        "Reporter sans analyse tout service non facturé à l’année suivante",
+        "Rechercher les conditions contractuelles et une estimation justifiable"
+      ],
+      "answer": 3,
+      "explanation": "L’information de réalisation ne suffit pas au chiffrage. Une estimation doit être reliée aux faits et aux conditions connues, avec ses limites explicites.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un service est reçu avant clôture. Son prix contractuel hors taxe est de 120 € par heure et 18 heures sont confirmées. Aucun enregistrement n’existe encore. Quel montant de charge à payer documente ce calcul, sans taxe ni autre frais ?",
+      "options": [
+        "2 160 €",
+        "138 €",
+        "1 800 €",
+        "120 €"
+      ],
+      "answer": 0,
+      "explanation": "Les données confirmées donnent 18 × 120 = 2 160 €. La charge et l’obligation correspondante sont examinées sur cette base documentée.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 120
+            },
+            {
+              "value": 18
+            }
+          ]
+        },
+        "expected": 2160,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture non parvenue est constatée pour une prestation déjà reçue, avec une dette estimée. Cette écriture constitue-t-elle une réserve bancaire disponible ?",
+      "options": [
+        "Oui, le montant est immédiatement versé en banque",
+        "Non, elle reconnaît une charge et une obligation, pas un encaissement",
+        "Oui, si aucune facture n’est arrivée",
+        "Non, mais elle supprime l’obligation de payer le fournisseur"
+      ],
+      "answer": 1,
+      "explanation": "Une régularisation de clôture ne crée pas de liquidité. Elle rend visibles une consommation de période et son obligation de règlement.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le préparateur constitue une « charge à payer générale » de 5 % des ventes sans identifier de services reçus ni d’obligation. Quel fondement manque ?",
+      "options": [
+        "Une hausse mécanique de la banque",
+        "Un chiffre d’affaires encore plus élevé",
+        "Des faits, une période et une estimation reliés à une obligation identifiable",
+        "Un montant rond plutôt qu’un pourcentage"
+      ],
+      "answer": 2,
+      "explanation": "Une régularisation n’est pas une réserve libre. Son montant doit être justifié par les opérations et conditions du dossier.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le relevé d’un service consommé avant clôture est établi après clôture mais confirme le volume antérieur. Quelle utilisation en faire ?",
+      "options": [
+        "Ignorer toujours tout document reçu après clôture",
+        "Créer un service supplémentaire au jour du relevé",
+        "Remplacer le volume confirmé par une estimation arbitraire",
+        "L’utiliser comme élément de preuve pour évaluer la consommation de la période concernée"
+      ],
+      "answer": 3,
+      "explanation": "Un document ultérieur peut renseigner une prestation passée. Il faut relier l’information à la bonne période, sans confondre date de preuve et date de réalisation.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une dette de prestation non facturée est déjà incluse dans le montant de charge à payer retenu. L’équipe ajoute à nouveau l’estimation de la même prestation. Quel risque faut-il prévenir ?",
+      "options": [
+        "Une double reconnaissance de charge et de dette",
+        "Une omission de toute charge de la période",
+        "Une hausse du chiffre d’affaires client",
+        "Une transformation de la dette en stock"
+      ],
+      "answer": 0,
+      "explanation": "Les estimations doivent être suivies par opération. Un même service ne doit pas apparaître deux fois parce qu’il figure dans deux listes de contrôle.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un abonnement de service de 6 000 € hors taxes a été entièrement comptabilisé en produit. Le contrat couvre dix mois uniformes dont quatre sont réalisés avant clôture. Quel produit concerne encore les six mois futurs ?",
+      "options": [
+        "2 400 €",
+        "3 600 €",
+        "6 000 €",
+        "600 €"
+      ],
+      "answer": 1,
+      "explanation": "La fraction non réalisée est 6/10 du prix : 6 000 × 6 / 10 = 3 600 €. Le produit déjà enregistré pour cette fraction appelle une régularisation d’avance.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 6000
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 6
+                },
+                {
+                  "value": 10
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 3600,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Un produit a été comptabilisé alors que la prestation qui le justifie sera fournie après clôture. Quel mécanisme de rattachement doit être examiné ?",
+      "options": [
+        "Une charge à payer pour le client du vendeur",
+        "Un remboursement de capital financier",
+        "Un produit constaté d’avance",
+        "Une dépréciation automatique du stock"
+      ],
+      "answer": 2,
+      "explanation": "Le PCG distingue les produits enregistrés avant la fourniture du service. Le report évite de présenter comme acquis à cette période ce qui relève du futur.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client a payé d’avance la totalité d’un service futur. Le vendeur veut garder tout le montant dans le produit de l’exercice parce que les fonds sont reçus. Quelle distinction manque ?",
+      "options": [
+        "Montant encaissé et montant facturé, considérés comme seuls critères de rattachement",
+        "Date du paiement et date de la facture, sans examiner la prestation",
+        "Créance client et produit, supposés devoir évoluer ensemble à chaque paiement",
+        "Encaissement et période de réalisation du produit"
+      ],
+      "answer": 3,
+      "explanation": "Le paiement ne prouve pas que le service est déjà réalisé. Le rattachement du produit peut demander une régularisation malgré l’encaissement confirmé.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une assurance future déjà enregistrée en charge et un service futur déjà enregistré en produit sont tous deux classés comme CCA. Que faut-il distinguer ?",
+      "options": [
+        "Le report de charge et le report de produit, qui n’ont pas le même sens",
+        "La date des deux paiements, considérée comme seul critère de choix entre CCA et PCA",
+        "Le solde net des deux opérations, qui permettrait de les compenser dans une seule CCA",
+        "Leur qualité d’avance, supposée suffire à les présenter dans un même actif"
+      ],
+      "answer": 0,
+      "explanation": "Les deux opérations obéissent à une logique temporelle, mais l’une retire une charge et l’autre un produit. Leur nature ne doit pas être confondue.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Avant régularisation, le résultat est 8 000 €. Une CCA de 1 200 € retire une charge future et un PCA de 900 € retire un produit futur, sans autre effet ni impôt. Quel résultat corrigé obtient-on ?",
+      "options": [
+        "10 100 €",
+        "8 300 €",
+        "5 900 €",
+        "7 700 €"
+      ],
+      "answer": 1,
+      "explanation": "Retirer la charge augmente le résultat de 1 200 € ; retirer le produit le baisse de 900 €. Le solde est 8 000 + 1 200 − 900 = 8 300 €.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 8000
+                },
+                {
+                  "value": 1200
+                }
+              ]
+            },
+            {
+              "value": 900
+            }
+          ]
+        },
+        "expected": 8300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une charge ou un produit d’avance est régularisé à la clôture sans mouvement bancaire nouveau. Quelle présentation de trésorerie est correcte pour cette seule écriture ?",
+      "options": [
+        "La CCA doit être ajoutée aux encaissements comme une restitution de prime",
+        "Le PCA doit être ajouté aux décaissements comme un remboursement immédiat au client",
+        "Aucun encaissement ou décaissement nouveau n’est créé par la répartition",
+        "La banque doit être ajustée de l’écart entre charge et produit reportés"
+      ],
+      "answer": 2,
+      "explanation": "La régularisation corrige les périodes de résultat et les postes correspondants. Elle ne refait pas un paiement déjà intervenu.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une prestation a été estimée à 2 200 € à la clôture. La facture définitive porte sur la même prestation pour 2 350 €, sans taxe dans le cas. Quel écart doit être expliqué lors du rapprochement ?",
+      "options": [
+        "4 550 €",
+        "2 200 €",
+        "2 350 €",
+        "150 €"
+      ],
+      "answer": 3,
+      "explanation": "La différence est 2 350 − 2 200 = 150 €. La facture doit être reliée à l’estimation pour traiter cet écart sans compter deux fois toute la prestation.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2350
+            },
+            {
+              "value": 2200
+            }
+          ]
+        },
+        "expected": 150,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La facture définitive est enregistrée comme une nouvelle charge entière sans rapprocher la charge à payer déjà constituée. Quel défaut cela peut-il créer ?",
+      "options": [
+        "Une double charge sur la même consommation",
+        "Une annulation automatique des dettes fournisseur",
+        "Une garantie que l’estimation était exacte",
+        "Une absence totale de mouvement comptable"
+      ],
+      "answer": 0,
+      "explanation": "La facture dénoue et précise une opération déjà régularisée. Le suivi doit vérifier son traitement et les différences, pas créer une consommation supplémentaire fictive.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une estimation de charge à payer est devenue sans objet parce qu’une pièce établit que le service n’a pas été réalisé. Quelle démarche de contrôle convient ?",
+      "options": [
+        "La maintenir pour conserver une réserve de résultat",
+        "Réexaminer et corriger l’estimation avec la preuve et le traitement appropriés",
+        "La transformer automatiquement en chiffre d’affaires",
+        "La payer malgré l’absence de prestation pour fermer le dossier"
+      ],
+      "answer": 1,
+      "explanation": "Le dénouement permet aussi de contredire une estimation. Les comptes doivent suivre les faits justifiés plutôt qu’un montant reconduit sans motif.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux factures finales sont rapprochées d’une seule estimation, alors qu’elles décrivent des prestations distinctes. Quel contrôle doit compléter le montant total ?",
+      "options": [
+        "La seule égalité des totaux, suffisante dans tous les cas",
+        "Le nombre de mois de couverture d’une assurance sans lien",
+        "L’identité et le périmètre de chaque opération estimée puis facturée",
+        "Le seul paiement du plus grand fournisseur"
+      ],
+      "answer": 2,
+      "explanation": "Un rapprochement global peut masquer une opération omise et une autre comptée en double. Les références et objets des services doivent être reliés séparément.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les comptes sont arrêtés avec des estimations. Quelle information de suivi rend leur dénouement plus fiable ?",
+      "options": [
+        "Un total sans détail conservé uniquement en mémoire",
+        "La suppression des estimations dès qu’une facture arrive, sans lien",
+        "Le remplacement de toutes les estimations par le budget commercial",
+        "Une liste par opération avec période, base d’estimation, pièces et rapprochement final"
+      ],
+      "answer": 3,
+      "explanation": "La piste de suivi relie la régularisation aux faits qui la justifient et à sa résolution. Elle permet d’expliquer écarts et ajustements.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une charge reçue non facturée de 2 400 € doit être ajoutée ; une charge future de 900 € et un produit futur de 600 € doivent être retirés de leurs comptes de résultat respectifs. Quel effet net sur le résultat, hors impôt ?",
+      "options": [
+        "−2 100 €",
+        "−900 €",
+        "3 900 €",
+        "−3 900 €"
+      ],
+      "answer": 0,
+      "explanation": "La charge à payer baisse le résultat de 2 400 €, la CCA l’augmente de 900 € et le PCA le baisse de 600 €. Effet net : −2 100 €.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": -2400
+                },
+                {
+                  "value": 900
+                }
+              ]
+            },
+            {
+              "value": 600
+            }
+          ]
+        },
+        "expected": -2100,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle affirmation constitue un bon contrôle de coupure des exercices ?",
+      "options": [
+        "La date de paiement suffit toujours à choisir l’exercice",
+        "Chaque charge ou produit est relié à sa réalisation et à la régularisation documentée nécessaire",
+        "Une facture finale permet de supprimer toute piste d’estimation",
+        "Une balance égale garantit le bon rattachement de toutes les opérations"
+      ],
+      "answer": 1,
+      "explanation": "La coupure recherche la bonne période économique. Elle demande des pièces, des évaluations cohérentes et un suivi du dénouement, pas seulement des dates bancaires.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes 486 et 487",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    }
+  ]
+}

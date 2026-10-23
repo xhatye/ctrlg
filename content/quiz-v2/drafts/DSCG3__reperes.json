@@ -1,0 +1,566 @@
+{
+  "module": "DSCG3",
+  "chapter": "reperes",
+  "sourceHash": "74865194e80bba90b9ddaa0c99681fd1f1b12170a8f32e1d9795fc8578ebd669",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "foundation",
+      "q": "Une activité gagne des ventes mais son taux de marge sur coût variable diminue. Que faut-il examiner en priorité ?",
+      "options": [
+        "La seule marge unitaire du produit le plus vendu, sans vérifier les autres produits ni leurs poids.",
+        "Le prix net, le coût variable unitaire et le mélange des ventes.",
+        "La seule hausse du chiffre d’affaires total, supposée préserver le taux de contribution historique.",
+        "La moyenne simple des prix catalogue, sans vérifier les remises ni la structure des ventes."
+      ],
+      "answer": 1,
+      "explanation": "Le taux de marge dépend des prix, coûts variables et produits vendus. Une croissance du chiffre d’affaires ne garantit donc pas une meilleure contribution."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste rapporte la marge sur coût variable française au chiffre d’affaires mondial. Quel défaut affecte son ratio ?",
+      "options": [
+        "Il mélange des périmètres différents.",
+        "Il devrait retrancher les charges fixes du numérateur.",
+        "Il devrait utiliser les capitaux propres au dénominateur.",
+        "Il calcule nécessairement un taux de marge nette."
+      ],
+      "answer": 0,
+      "explanation": "Le numérateur et le dénominateur doivent correspondre à la même activité et période pour que le taux soit interprétable."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Le résultat résiduel d’un centre d’investissement est défini comme son résultat opérationnel moins une rémunération exigée du capital employé. Quelle différence avec le seul résultat opérationnel cette mesure introduit-elle ?",
+      "options": [
+        "Elle retranche uniquement les intérêts effectivement payés aux banques, en ignorant les capitaux propres.",
+        "Elle convertit le résultat en pourcentage des ventes, sans tenir compte des actifs nécessaires.",
+        "Elle fait apparaître le résultat restant après une charge conventionnelle couvrant le capital mobilisé.",
+        "Elle remplace le résultat par le montant de trésorerie encaissé sur les ventes du centre."
+      ],
+      "answer": 2,
+      "explanation": "Le résultat résiduel tient compte de l’exigence de rémunération du capital nécessaire à l’activité, y compris lorsque ce capital n’est pas uniquement financé par dette. Un bénéfice opérationnel positif peut donc coexister avec un résultat résiduel négatif.",
+      "references": [
+        {
+          "title": "ACCA — Divisional performance management : ROI, residual income and EVA",
+          "url": "https://www.accaglobal.com/ie/en/student/exam-support-resources/professional-exams-study-resources/p5/technical-articles/divisional-performance-management.html"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un centre réalise un résultat opérationnel annuel de 84 000 €. Son capital employé est de 300 000 € au début de l’année et de 400 000 € à la fin ; la convention retient leur moyenne simple. Quel ROI, défini par résultat opérationnel/capital moyen, obtient-on ?",
+      "options": [
+        "21 %",
+        "28 %",
+        "84 %",
+        "24 %"
+      ],
+      "answer": 3,
+      "explanation": "Le capital moyen est (300 000 + 400 000)/2 = 350 000 €. Le ROI vaut 84 000/350 000 = 24 %. Employer le seul capital initial ou final donnerait 28 % ou 21 %, sans suivre la convention de moyenne annoncée.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 84000
+                },
+                {
+                  "op": "/",
+                  "args": [
+                    {
+                      "op": "+",
+                      "args": [
+                        {
+                          "value": 300000
+                        },
+                        {
+                          "value": 400000
+                        }
+                      ]
+                    },
+                    {
+                      "value": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 24,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "ACCA — Divisional performance management : ROI, residual income and EVA",
+          "url": "https://www.accaglobal.com/ie/en/student/exam-support-resources/professional-exams-study-resources/p5/technical-articles/divisional-performance-management.html"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un centre affiche un ROI de 20 %. Un projet autonome proposé aurait un rendement de 15 %, supérieur au taux de rémunération exigé de 10 %, avec des bases homogènes et sans autre effet dans ce modèle annuel. Quel risque crée une prime fondée uniquement sur le maintien du ROI du centre ?",
+      "options": [
+        "Elle incite à accepter le projet uniquement parce que son rendement dépasse le ROI courant.",
+        "Elle peut inciter à refuser un projet au rendement supérieur à l’exigence de capital, parce qu’il abaisse le ratio moyen du centre.",
+        "Elle neutralise toute différence entre rendement moyen et contribution au résultat résiduel.",
+        "Elle impose que tout projet inférieur à 20 % détruise de la valeur, même si l’exigence de capital est de 10 %."
+      ],
+      "answer": 1,
+      "explanation": "Le rendement du projet est inférieur au ROI actuel et peut donc diluer ce ratio. Il dépasse pourtant la charge de capital de 10 % dans le modèle : sa contribution résiduelle est positive. L’incitation locale sur le seul ratio peut ainsi contrarier l’objectif du groupe.",
+      "references": [
+        {
+          "title": "ACCA — Divisional performance management : ROI, residual income and EVA",
+          "url": "https://www.accaglobal.com/ie/en/student/exam-support-resources/professional-exams-study-resources/p5/technical-articles/divisional-performance-management.html"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle condition est nécessaire au calcul classique du seuil en divisant les charges fixes par le taux de marge sur coût variable ?",
+      "options": [
+        "Un taux de marge sur coût variable positif et des hypothèses de structure stables.",
+        "Un résultat déjà positif sur chaque mois de la période.",
+        "Une égalité entre coûts variables et charges fixes.",
+        "Un taux de marge nette identique au taux de marge sur coût variable."
+      ],
+      "answer": 0,
+      "explanation": "La formule suppose une contribution positive des ventes à la couverture des charges fixes et un modèle cohérent dans la zone étudiée."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux centres de tailles très différentes sont classés sur leur seul résultat résiduel en euros. Le plus grand présente le montant le plus élevé. Pourquoi ce classement ne suffit-il pas à conclure qu’il utilise mieux chaque euro de capital ?",
+      "options": [
+        "Le résultat résiduel devrait être divisé par le nombre de salariés sans examiner les actifs.",
+        "Un résultat résiduel positif démontre nécessairement un ROI supérieur à celui de tout centre plus petit.",
+        "Une mesure absolue peut être plus élevée en raison de la taille ; l’efficience relative du capital demande d’autres éléments comparables.",
+        "Le résultat résiduel doit être identique pour tous les centres dès que le taux de capital est commun."
+      ],
+      "answer": 2,
+      "explanation": "Le résultat résiduel mesure un montant au-delà de la rémunération exigée, non directement un rendement relatif. La taille des bases engagées peut expliquer des écarts absolus. Une comparaison de performance doit expliciter ce qu’elle cherche à classer et contrôler les différences pertinentes.",
+      "references": [
+        {
+          "title": "ACCA — Divisional performance management : ROI, residual income and EVA",
+          "url": "https://www.accaglobal.com/ie/en/student/exam-support-resources/professional-exams-study-resources/p5/technical-articles/divisional-performance-management.html"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le ROI d’un centre se décompose en marge opérationnelle sur ventes × rotation du capital, cette dernière étant ventes/capital. L’objectif est un ROI de 18 % et la rotation prévue vaut 1,5. Quel taux de marge opérationnelle faut-il atteindre pour obtenir cet objectif ?",
+      "options": [
+        "27 %",
+        "18 %",
+        "1,2 %",
+        "12 %"
+      ],
+      "answer": 3,
+      "explanation": "Le taux de marge requis satisfait marge × 1,5 = 18 %. Il vaut donc 18 %/1,5 = 12 %. Cette décomposition distingue deux leviers de rentabilité : la marge par euro vendu et l’activité réalisée par euro de capital.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 18
+            },
+            {
+              "value": 1.5
+            }
+          ]
+        },
+        "expected": 12,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "ACCA — Divisional performance management : ROI, residual income and EVA",
+          "url": "https://www.accaglobal.com/ie/en/student/exam-support-resources/professional-exams-study-resources/p5/technical-articles/divisional-performance-management.html"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le résultat opérationnel reste stable tandis que la valeur nette comptable des actifs baisse par amortissement, sans investissement ni amélioration documentée des processus. Le ROI calculé sur cette valeur nette augmente. Quelle interprétation est prudente ?",
+      "options": [
+        "La hausse peut provenir de la diminution de la base comptable, sans prouver une amélioration économique de l’exploitation.",
+        "La hausse prouve que chaque actif produit physiquement davantage, même si l’activité est inchangée.",
+        "La hausse prouve que la trésorerie d’exploitation a augmenté exactement du montant des amortissements.",
+        "La hausse rend inutiles les informations sur l’âge des actifs lorsque les centres sont comparés."
+      ],
+      "answer": 0,
+      "explanation": "À numérateur stable, un dénominateur comptable qui diminue augmente mécaniquement le ratio. L’âge et la valorisation des actifs peuvent donc affecter le classement ; la hausse du ROI ne démontre pas ici une meilleure performance opérationnelle.",
+      "references": [
+        {
+          "title": "ACCA — Divisional performance management : ROI, residual income and EVA",
+          "url": "https://www.accaglobal.com/ie/en/student/exam-support-resources/professional-exams-study-resources/p5/technical-articles/divisional-performance-management.html"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le taux de marge sur coût variable est négatif et les charges fixes sont positives. Que signifie une hausse de ventes au même prix et au même coût unitaire ?",
+      "options": [
+        "Elle couvre progressivement les charges fixes malgré la marge négative.",
+        "Elle augmente la perte : un seuil positif classique n’existe pas dans ces conditions.",
+        "Elle réduit les charges fixes en proportion de la croissance.",
+        "Elle produit l’équilibre dès que le chiffre d’affaires égale les charges fixes."
+      ],
+      "answer": 1,
+      "explanation": "Chaque vente supplémentaire apporte une contribution négative. Il faut modifier les conditions économiques ; augmenter le volume seul ne rétablit pas l’équilibre."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un modèle de performance économique part d’un résultat opérationnel après impôt de 60 000 €, où 20 000 € de recherche ont été intégralement déduits. Pour ce modèle seulement, la recherche est capitalisée et une consommation économique de 5 000 € remplace la charge de 20 000 €. Le capital ajusté est déjà fixé à 500 000 €, au taux fictif de 10 %. Quelle valeur économique ajoutée obtient-on, résultat ajusté moins charge de capital ?",
+      "options": [
+        "10 000 €",
+        "30 000 €",
+        "25 000 €",
+        "75 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le résultat ajusté vaut 60 000 + 20 000 − 5 000 = 75 000 €. La charge du capital ajusté vaut 500 000 × 10 % = 50 000 €. La valeur ajoutée du modèle est 25 000 €. Le capital de 500 000 € est fourni déjà ajusté : il ne faut pas lui ajouter une seconde fois la recherche.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 60000
+                    },
+                    {
+                      "value": 20000
+                    }
+                  ]
+                },
+                {
+                  "value": 5000
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 500000
+                },
+                {
+                  "value": 0.1
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 25000,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "ACCA — Divisional performance management : ROI, residual income and EVA",
+          "url": "https://www.accaglobal.com/ie/en/student/exam-support-resources/professional-exams-study-resources/p5/technical-articles/divisional-performance-management.html"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Un rapport annonce un écart de coût de +8 000 €. Quelle information faut-il connaître avant de qualifier ce signe ?",
+      "options": [
+        "Le signe du coût pris isolément : tout écart positif doit être présenté comme une économie.",
+        "Le signe du coût pris isolément : tout écart positif doit être présenté comme un surcoût, quel que soit le sens de soustraction.",
+        "Le seul montant du coût réel, sans identifier sa référence ni les prestations comparées.",
+        "La convention de calcul et la comparabilité des volumes et périmètres."
+      ],
+      "answer": 3,
+      "explanation": "Le signe n’a pas de sens favorable ou défavorable sans convention. Une comparaison pertinente suppose aussi des bases comparables."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une carte stratégique relie formation, qualité du premier traitement, fidélisation puis résultat financier. Quel usage de cette chaîne soutient le pilotage sans transformer la carte en preuve statistique ?",
+      "options": [
+        "Expliciter les mécanismes supposés, suivre les mesures reliées et confronter les liens aux observations.",
+        "Considérer que dessiner une flèche démontre déjà l’effet chiffré de chaque formation sur le résultat.",
+        "Remplacer les indicateurs de processus par le seul nombre de formations, réputé mesurer directement la fidélisation.",
+        "Évaluer chaque indicateur sans examiner les délais ni les liens supposés entre les étapes."
+      ],
+      "answer": 0,
+      "explanation": "La carte expose une logique stratégique à rendre observable et à éprouver. Elle aide à relier capacités, processus, clients et résultats, mais une représentation n’établit pas seule la force ou l’exclusivité de chaque relation causale.",
+      "references": [
+        {
+          "title": "ACCA — Balanced scorecard",
+          "url": "https://www.accaglobal.com/caribbean/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/balanced-scorecard.html"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût réel atteint 118 000 € et le budget comparable 112 000 €. Avec la convention réel moins budget, quel écart constate-t-on ?",
+      "options": [
+        "−6 000 €, favorable.",
+        "+6 000 €, défavorable.",
+        "+6 000 €, favorable.",
+        "−6 000 €, défavorable."
+      ],
+      "answer": 1,
+      "explanation": "118 000 − 112 000 = +6 000 €. Pour un coût comparable, ce dépassement est défavorable selon la convention explicitement donnée.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 118000
+            },
+            {
+              "value": 112000
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans un tableau de bord prospectif, le taux de conformité des produits au premier passage est mesuré à l’intérieur de l’atelier, avant toute livraison. À quelle perspective se rattache principalement cet indicateur tel qu’il est défini ?",
+      "options": [
+        "Perspective financière : rentabilité du capital et marges.",
+        "Perspective client : satisfaction exprimée après utilisation.",
+        "Perspective des processus internes : qualité du fonctionnement productif.",
+        "Perspective apprentissage : développement des compétences et capacités futures."
+      ],
+      "answer": 2,
+      "explanation": "La mesure porte directement sur le fonctionnement interne et la qualité du traitement avant livraison. Elle peut influencer satisfaction et coûts, mais ses effets possibles ne changent pas l’objet immédiatement mesuré par cet indicateur.",
+      "references": [
+        {
+          "title": "ACCA — Balanced scorecard",
+          "url": "https://www.accaglobal.com/caribbean/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/balanced-scorecard.html"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le prix d’une matière augmente à cause d’un contrat négocié par le siège. Le responsable d’atelier ne choisit que les quantités consommées. Comment analyser son dépassement ?",
+      "options": [
+        "Lui imputer l’écart de prix du siège en supposant que la consommation locale prouve son influence sur la négociation.",
+        "Retenir son seul coût total par unité en mélangeant prix imposé et consommation locale.",
+        "Écarter aussi l’écart de quantité, au motif qu’un prix échappe à sa responsabilité.",
+        "Distinguer l’effet prix imposé de l’effet de consommation qu’il peut influencer."
+      ],
+      "answer": 3,
+      "explanation": "L’écart global reste utile au pilotage, mais l’évaluation du responsable doit distinguer ses leviers de ceux du siège."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle combinaison représente des dimensions complémentaires du pilotage d’une prestation ?",
+      "options": [
+        "Marge, charge de travail et taux de réclamation.",
+        "Chiffre d’affaires, ventes en euros et recettes commerciales.",
+        "Budget annuel, budget mensuel et budget hebdomadaire.",
+        "Effectif inscrit, nombre de salariés et total des collaborateurs."
+      ],
+      "answer": 0,
+      "explanation": "La première combinaison rapproche un résultat économique, des moyens mobilisés et la qualité. Les autres déclinent surtout une même dimension."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une équipe réduit son temps moyen de traitement en transférant les dossiers difficiles vers une autre équipe. Quel risque le tableau de bord révèle-t-il ?",
+      "options": [
+        "La baisse locale prouve que les ressources nécessaires au parcours complet ont baissé dans les mêmes proportions.",
+        "Une optimisation locale qui déplace la charge et peut masquer le délai global.",
+        "La baisse locale permet de retirer du délai global le temps passé dans l’équipe destinataire.",
+        "La baisse locale permet d’évaluer toute l’organisation sur les seuls dossiers simples conservés."
+      ],
+      "answer": 1,
+      "explanation": "Le délai local baisse sans preuve de réduction du parcours complet. Il faut suivre les transferts, la charge reçue ailleurs et le délai de bout en bout."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un suivi des flux attribue aux déchets 20 % du coût de matière de 10 000 € et 20 % du coût d’énergie de 4 000 €. L’élimination de ces déchets coûte encore 500 €, non inclus dans ces deux postes. Quel coût total des déchets ce modèle met-il en évidence ?",
+      "options": [
+        "500 €",
+        "2 800 €",
+        "3 300 €",
+        "14 500 €"
+      ],
+      "answer": 2,
+      "explanation": "Les déchets ont consommé 2 000 € de matière et 800 € d’énergie, auxquels s’ajoutent 500 € d’élimination : total 3 300 €. Le seul poste visible de traitement ne représente donc pas toutes les ressources affectées au flux perdu.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 10000
+                    },
+                    {
+                      "value": 4000
+                    }
+                  ]
+                },
+                {
+                  "value": 0.2
+                }
+              ]
+            },
+            {
+              "value": 500
+            }
+          ]
+        },
+        "expected": 3300,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "ACCA — Environmental management accounting",
+          "url": "https://www.accaglobal.com/gb/en/student/exam-support-resources/prodipsust-study-resources/technical-articles/environmental-management-accounting.html"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le chiffre d’affaires et la satisfaction montent, mais les heures supplémentaires deviennent permanentes. Quel point reste à analyser ?",
+      "options": [
+        "La hausse des ventes permet de considérer les heures supplémentaires comme une capacité permanente sans contrainte à vérifier.",
+        "La satisfaction des clients suffit à valider la charge des équipes, même si les heures supplémentaires deviennent durables.",
+        "Le coût horaire majoré doit seul remplacer toute analyse de disponibilité future des équipes.",
+        "La soutenabilité des ressources et la capacité à maintenir la performance."
+      ],
+      "answer": 3,
+      "explanation": "Des résultats favorables peuvent reposer sur une surcharge durable. Le suivi des moyens complète celui des résultats et de la qualité."
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Avant lancement, le modèle de cycle de vie d’un produit prévoit 80 000 € de contribution cumulée après ses coûts de fabrication et de distribution. Il reste à couvrir 60 000 € de conception et 30 000 € de fin de vie, exclus de cette contribution. Sans actualisation ni autre effet dans ce modèle, quel solde global est prévu ?",
+      "options": [
+        "−10 000 €",
+        "80 000 €",
+        "20 000 €",
+        "50 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le solde sur tout le cycle est 80 000 − 60 000 − 30 000 = −10 000 €. La contribution positive de commercialisation ne suffit pas ici à couvrir les phases de conception et de fin de vie. Ce modèle de lancement retient tous ces coûts futurs, sans confondre coût de fabrication et coût de cycle.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 80000
+                },
+                {
+                  "value": 60000
+                }
+              ]
+            },
+            {
+              "value": 30000
+            }
+          ]
+        },
+        "expected": -10000,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "ACCA — Target costing and life-cycle costing",
+          "url": "https://www.accaglobal.com/hk/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/target-lifestyle.html"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La direction veut réduire le seuil par une maintenance moins fréquente. Quelle information doit compléter l’économie annoncée ?",
+      "options": [
+        "La baisse du seul budget de maintenance, supposée représenter le gain total même si les arrêts deviennent plus fréquents.",
+        "Les effets attendus sur pannes, capacité, qualité et coûts futurs.",
+        "La réduction du coût fixe imputé par produit, sans prise en compte des interventions reportées.",
+        "La baisse du nombre d’interventions, supposée prouver une meilleure fiabilité sans suivi des incidents."
+      ],
+      "answer": 1,
+      "explanation": "Une économie de maintenance peut entraîner des coûts et pertes de capacité. L’analyse doit intégrer ces conséquences avant de retenir le gain."
+    }
+  ]
+}

@@ -1,0 +1,469 @@
+{
+  "module": "DSCG4",
+  "chapter": "test-depreciation-ias",
+  "sourceHash": "0406829bcb5a70584817c8ee0f897ea5663bef4283f05e4b6e8f4d10ea0ef115",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un dossier IAS 36 donne une juste valeur de 87 000 € et des coûts de sortie de 4 500 €. Quelle valeur nette de sortie faut-il préparer pour le test ?",
+      "options": [
+        "82 500 €",
+        "87 000 €",
+        "91 500 €",
+        "4 500 €"
+      ],
+      "answer": 0,
+      "explanation": "Les coûts de sortie diminuent la valeur obtenue par cette voie : 87 000−4 500=82 500 €. La valeur d’utilité éventuelle sera comparée à ce montant net.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 87000
+            },
+            {
+              "value": 4500
+            }
+          ]
+        },
+        "expected": 82500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le prix de cession fourni est déjà net des commissions de sortie de 3 000 €. Le préparateur retranche à nouveau ces commissions avant le test. Quelle erreur commet-il ?",
+      "options": [
+        "Il devrait déduire les commissions de la valeur d’utilité plutôt que de la valeur de sortie nette",
+        "Il déduit deux fois les mêmes coûts de sortie",
+        "Il doit conserver la seconde déduction pour distinguer le prix proposé et le prix encaissable",
+        "Il devrait répartir cette seconde déduction sur la durée d’utilité restante de l’actif"
+      ],
+      "answer": 1,
+      "explanation": "Le libellé net signifie que les commissions données ont déjà réduit la mesure. Reprendre la même déduction minore à tort la valeur de sortie."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un acquéreur propose un prix sous réserve d’une condition dont la réalisation reste incertaine. Le dossier l’utilise comme juste valeur nette certaine sans analyser la condition. Quel examen manque ?",
+      "options": [
+        "La seule concordance du prix proposé avec la valeur comptable, utilisée pour valider le prix conditionnel",
+        "La seule solvabilité financière de l’acquéreur, utilisée pour tenir le prix conditionnel pour acquis",
+        "La portée de l’offre et les hypothèses soutenant la mesure retenue",
+        "La seule proximité de la date de l’offre avec la clôture, utilisée pour dispenser de l’examen de la condition"
+      ],
+      "answer": 2,
+      "explanation": "Une proposition conditionnelle n’établit pas mécaniquement une mesure certaine. Il faut examiner comparabilité, conditions et éléments disponibles selon le cadre de valorisation."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La valeur de sortie est exprimée en dollars et la valeur d’utilité en euros. Aucune conversion n’est faite avant leur comparaison. Quelle correction est indispensable ?",
+      "options": [
+        "Comparer les seuls chiffres en ignorant la monnaie",
+        "Additionner les deux mesures pour neutraliser l’effet de change",
+        "Retenir systématiquement la valeur exprimée en euros sans examiner l’autre",
+        "Exprimer les deux mesures dans une monnaie cohérente avec le test"
+      ],
+      "answer": 3,
+      "explanation": "Un maximum de valeurs exprimées dans des unités monétaires différentes n’a pas de sens sans conversion appropriée. Les monnaies et hypothèses de change doivent être identifiées."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le tableau compare une juste valeur de l’actif isolé à des coûts de sortie concernant toute une usine. Quel défaut doit-il examiner ?",
+      "options": [
+        "L’incohérence de périmètre entre valeur et coûts déduits",
+        "L’absence d’une répartition des coûts de l’usine entre les exercices restant à courir, indépendamment des actifs cédés",
+        "La nécessité de remplacer la juste valeur isolée par le coût historique de l’actif pour conserver ces coûts globaux",
+        "La nécessité de déduire les coûts de l’usine de la valeur d’utilité de l’actif plutôt que de sa juste valeur"
+      ],
+      "answer": 0,
+      "explanation": "Les coûts doivent correspondre à la voie de sortie et au périmètre valorisé. Une soustraction arithmétique exacte ne justifie pas des données relatives à des ensembles différents."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La valeur comptable d’un actif est de 50 000 €. Une valeur d’utilité fiable de 58 000 € est établie. Dans le test IAS 36, faut-il toujours mesurer aussi la juste valeur nette pour démontrer l’absence de perte ?",
+      "options": [
+        "Non, parce que la valeur comptable doit alors être relevée à 58 000 € automatiquement",
+        "Non, une des deux mesures supérieure à la valeur comptable peut suffire à cette conclusion",
+        "Oui, l’absence de perte exige toujours une moyenne de deux mesures complètes",
+        "Oui, même une valeur d’utilité supérieure ne peut jamais être utilisée"
+      ],
+      "answer": 1,
+      "explanation": "IAS 36 permet de ne pas déterminer l’autre mesure lorsqu’une mesure pertinente dépasse déjà la valeur comptable. Cela ne crée pas à lui seul une réévaluation à la hausse.",
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 36 : pertes de valeur et reprises",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-36-impairment-of-assets/"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une seule estimation fiable est disponible : une valeur d’utilité de 35 000 € pour un actif comptable de 40 000 €. La valeur nette de sortie reste inconnue et n’a pas été justifiée comme non mesurable. Peut-on fixer une perte certaine de 5 000 € avec ces seuls faits ?",
+      "options": [
+        "Oui, une donnée manquante doit être assimilée à zéro",
+        "Non, parce que toute valeur d’utilité inférieure au coût est interdite",
+        "Non, l’autre voie de récupération peut modifier le maximum pertinent",
+        "Oui, la valeur d’utilité est toujours le seul montant autorisé"
+      ],
+      "answer": 2,
+      "explanation": "Une mesure inférieure à la valeur comptable ne suffit pas toujours à établir la valeur recouvrable. Les données manquantes et les conditions du référentiel doivent être traitées."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les valeurs nettes de sortie de deux experts diffèrent parce que l’un inclut un terrain et l’autre seulement le bâtiment. Quelle étape précède leur utilisation dans le test ?",
+      "options": [
+        "Retenir leur moyenne pour éliminer l’écart de périmètre",
+        "Retenir le montant le plus bas sans examiner les biens",
+        "Ajouter les deux estimations comme deux récupérations du même ensemble",
+        "Rendre comparables les périmètres et les hypothèses"
+      ],
+      "answer": 3,
+      "explanation": "Des estimations d’objets différents ne se comparent pas directement. Le test doit reposer sur les actifs et droits effectivement concernés, puis sur des mesures cohérentes."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau remplace la valeur recouvrable par le seul prix historique parce que ce dernier est justifié par une facture. Quelle limite faut-il préciser ?",
+      "options": [
+        "Une preuve du coût ancien ne mesure pas nécessairement la récupération actuelle par usage ou sortie",
+        "La facture ne peut être retenue qu’après indexation du coût historique sur l’inflation, ce qui suffit alors au test",
+        "Le coût historique doit être diminué de l’amortissement fiscal plutôt que de l’amortissement comptable pour mesurer la récupération",
+        "Le prix historique constitue un plancher de valeur recouvrable tant que l’actif n’a pas été vendu"
+      ],
+      "answer": 0,
+      "explanation": "La facture peut établir le coût, sans démontrer les avantages futurs ou la valeur nette de sortie actuels. La fiabilité d’un document ne signifie pas qu’il répond à toute mesure."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le modèle fournit une valeur d’utilité de 64 000 € et une valeur nette de sortie du même montant. Comment traiter cette égalité pour la valeur recouvrable ?",
+      "options": [
+        "Retenir le coût historique sans considérer les deux valeurs égales",
+        "Retenir 64 000 €, sans cumuler deux fois les voies de récupération",
+        "Retenir 128 000 €, puisque les deux experts concordent",
+        "Retenir zéro, car aucune valeur n’est supérieure à l’autre"
+      ],
+      "answer": 1,
+      "explanation": "Le maximum de deux valeurs égales est cette même valeur. La concordance peut conforter l’analyse, mais ne transforme pas des voies alternatives en deux montants à additionner."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un actif IAS 36 vaut 140 000 € en comptabilité. Sa valeur d’utilité est 118 000 € ; sa juste valeur est 132 000 € avec 7 000 € de coûts de sortie. Sans particularité de réévaluation, quelle perte constater ?",
+      "options": [
+        "22 000 €",
+        "29 000 €",
+        "15 000 €",
+        "8 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La valeur nette de sortie est 125 000 €, supérieure aux 118 000 € d’utilité. La valeur recouvrable est donc 125 000 €, puis la perte 140 000−125 000=15 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 140000
+            },
+            {
+              "op": "max",
+              "args": [
+                {
+                  "value": 118000
+                },
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 132000
+                    },
+                    {
+                      "value": 7000
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 15000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une perte de valeur de 18 000 € est constatée sur un actif dont la valeur comptable avant test est de 120 000 €. Quelle proportion de cette valeur initiale représente la perte ?",
+      "options": [
+        "17,65 %",
+        "85 %",
+        "6,67 %",
+        "15 %"
+      ],
+      "answer": 3,
+      "explanation": "Le taux de réduction rapporté à la valeur avant test est 18 000/120 000×100=15 %. Utiliser la valeur restante comme dénominateur répondrait à une autre question.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 18000
+                },
+                {
+                  "value": 120000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 15,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un actif est amorti de 10 000 € sur l’exercice avant test. Sa valeur nette après cet amortissement est fournie. Le préparateur soustrait encore les 10 000 € avant de la comparer à la valeur recouvrable. Quel risque apparaît ?",
+      "options": [
+        "Un double comptage de l’amortissement dans la valeur de départ du test",
+        "Une insuffisance automatique de perte égale au coût historique",
+        "Une obligation de déduire chaque amortissement une fois par voie de récupération",
+        "Une absence de différence entre valeur brute et valeur nette dans tous les cas"
+      ],
+      "answer": 0,
+      "explanation": "Le test part de la valeur comptable pertinente à sa date. Si l’amortissement y est déjà compris, le soustraire encore modifie à tort la comparaison."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le montant des pertes de valeur augmente alors que la valeur recouvrable a augmenté et que la valeur comptable avant test est fixe. Les deux restent dans la zone de perte. Quel contrôle logique faut-il effectuer ?",
+      "options": [
+        "Remplacer la valeur comptable par la valeur recouvrable pour supprimer le contrôle",
+        "Vérifier le signe de la différence : une récupération accrue doit réduire la perte dans ces hypothèses",
+        "Considérer la hausse de perte comme la conséquence normale de toute hausse de récupération",
+        "Ajouter systématiquement la variation de valeur recouvrable à la perte ancienne"
+      ],
+      "answer": 1,
+      "explanation": "Dans cette zone, la perte vaut valeur comptable moins valeur recouvrable. À première valeur constante, l’augmentation de la seconde doit faire baisser le résultat."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le test conclut à une perte comptable de 8 000 €. Le dossier ne donne aucun régime fiscal. Peut-on en déduire une économie immédiate d’IS de 25 % ?",
+      "options": [
+        "Oui, le nom IAS 36 fixe lui-même le taux fiscal à 25 %",
+        "Non, parce qu’une perte comptable ne peut jamais avoir d’effet fiscal",
+        "Non, il manque notamment l’admission fiscale et la situation d’imposition",
+        "Oui, toute perte comptable est automatiquement déductible au même taux"
+      ],
+      "answer": 2,
+      "explanation": "Comptabilisation et traitement fiscal sont deux analyses distinctes. L’effet d’impôt ne se calcule pas sans connaître les règles et la situation pertinentes."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une unité comprend du goodwill et d’autres actifs. Le responsable répartit toute perte directement au prorata de tous les montants sans examiner le goodwill. Quelle règle IAS 36 doit-il vérifier ?",
+      "options": [
+        "Une répartition de la perte entre goodwill et autres actifs proportionnellement à leurs valeurs comptables dès le premier euro",
+        "Une affectation de la perte aux seuls actifs corporels avant de déprécier éventuellement le goodwill",
+        "Une affectation de la perte à l’actif dont la durée d’utilisation restante est la plus courte, avant les autres actifs",
+        "L’affectation prioritaire de la perte au goodwill avant la répartition aux autres actifs selon les règles"
+      ],
+      "answer": 3,
+      "explanation": "La perte d’une unité n’a pas le même traitement qu’un simple actif isolé. IAS 36 prévoit de réduire d’abord le goodwill, puis d’appliquer les règles aux autres actifs.",
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 36 : pertes de valeur et reprises",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-36-impairment-of-assets/"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Après une perte de valeur, un actif a une valeur comptable de 36 000 €. Le dossier impose d’amortir cette base sans résiduel sur trois années restantes égales. Quelle dotation annuelle future calculer ?",
+      "options": [
+        "12 000 €",
+        "36 000 €",
+        "9 000 €",
+        "108 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La nouvelle base du modèle se répartit sur la durée restante : 36 000/3=12 000 € par an. La perte ne supprime pas la consommation future de l’actif.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 36000
+            },
+            {
+              "value": 3
+            }
+          ]
+        },
+        "expected": 12000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un matériel autre que goodwill a été déprécié. Des estimations nouvelles permettent une reprise ; la valeur sans perte antérieure serait 45 000 € à cette date. La valeur après reprise envisagée est de 52 000 €. Quel plafond IAS 36 faut-il examiner ?",
+      "options": [
+        "La valeur de 52 000 € du seul fait qu’elle figure au budget",
+        "La valeur qui aurait résulté en l’absence de la perte antérieure, ici 45 000 €",
+        "Le prix de vente brut le plus élevé trouvé, sans autre plafond",
+        "Le coût d’achat augmenté de toutes les dotations annuelles"
+      ],
+      "answer": 1,
+      "explanation": "La reprise d’un actif autre que goodwill est plafonnée à la valeur qu’il aurait eue sans la perte antérieure. Elle ne constitue pas une réévaluation libre au montant souhaité.",
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 36 : pertes de valeur et reprises",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-36-impairment-of-assets/"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un actif autre que goodwill vaut 30 000 € avant reprise. Les conditions de reprise IAS 36 sont établies ; la valeur recouvrable est 44 000 € et le plafond sans perte antérieure 39 000 €. Quel montant maximal reprendre ?",
+      "options": [
+        "39 000 €",
+        "44 000 €",
+        "9 000 €",
+        "14 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La valeur cible est limitée au minimum de 44 000 et 39 000, soit 39 000 €. La reprise maximale est 39 000−30 000=9 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "min",
+              "args": [
+                {
+                  "value": 44000
+                },
+                {
+                  "value": 39000
+                }
+              ]
+            },
+            {
+              "value": 30000
+            }
+          ]
+        },
+        "expected": 9000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une amélioration des perspectives permet-elle de reprendre une perte de valeur antérieure sur le goodwill sous IAS 36 ?",
+      "options": [
+        "Oui, dans la limite du coût initial du goodwill diminué de son amortissement théorique",
+        "Oui, si l’amélioration résulte d’un événement externe documenté plutôt que d’un changement interne",
+        "Oui, en répartissant la reprise entre goodwill et autres actifs selon leurs valeurs avant dépréciation",
+        "Non, une perte de valeur sur le goodwill ne se reprend pas"
+      ],
+      "answer": 3,
+      "explanation": "IAS 36 distingue le goodwill des autres actifs pour les reprises. L’amélioration des perspectives ne permet pas de reconstituer un goodwill précédemment déprécié.",
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 36 : pertes de valeur et reprises",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-36-impairment-of-assets/"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après une perte de valeur, le plan conserve la même dotation annuelle qu’avant, malgré une nouvelle base plus faible et une durée restante inchangée. Quel contrôle faut-il mener ?",
+      "options": [
+        "Réexaminer l’amortissement futur pour répartir la nouvelle valeur sur l’usage restant",
+        "Maintenir toute ancienne annuité par principe, quelle que soit la nouvelle base",
+        "Déduire à nouveau la perte entière à chaque exercice restant",
+        "Remplacer l’amortissement par le seul prix de vente prévu sans durée"
+      ],
+      "answer": 0,
+      "explanation": "Le test peut modifier la base amortissable future. Le plan doit être rapproché de la valeur révisée, du résiduel éventuel et de la durée restante selon le cadre applicable."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau rapproche correctement valeur brute et amortissements, mais omet la perte de valeur déjà constatée au bilan. Quelle donnée de départ faut-il corriger avant un nouveau test ?",
+      "options": [
+        "La valeur brute reconstituée après réintégration de la perte ancienne, celle-ci devant être remplacée à chaque nouveau test",
+        "La valeur comptable nette incluant aussi les pertes de valeur antérieures encore présentes",
+        "La valeur fiscale nette, utilisée pour neutraliser les pertes comptables antérieures avant comparaison",
+        "Le coût diminué des seuls amortissements, la perte précédente devant être imputée uniquement après calcul de la nouvelle perte"
+      ],
+      "answer": 1,
+      "explanation": "Une valeur comptable ne se limite pas toujours au coût moins amortissements. Les pertes antérieures encore comptabilisées doivent être incluses dans son rapprochement pour éviter une base erronée."
+    }
+  ]
+}

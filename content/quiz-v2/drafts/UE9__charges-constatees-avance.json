@@ -1,0 +1,475 @@
+{
+  "module": "UE9",
+  "chapter": "charges-constatees-avance",
+  "sourceHash": "cc50730c97ee78c00db85c1f6360eb1798a0b0604148908c675779e95160c0fb",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une prime annuelle hors taxe de 3 600 € est répartie uniformément sur douze mois. Quel coût de couverture correspond à un mois ?",
+      "options": [
+        "300 €",
+        "3 600 €",
+        "432 €",
+        "30 €"
+      ],
+      "answer": 0,
+      "explanation": "La répartition uniforme conduit à 3 600 / 12 = 300 € par mois. Ce coût mensuel ne dépend pas du nombre de virements effectués.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 3600
+            },
+            {
+              "value": 12
+            }
+          ]
+        },
+        "expected": 300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une assurance annuelle est payée en deux fois. L’étudiant répartit la charge sur deux mois parce qu’il existe deux paiements. Quelle durée doit guider la répartition ?",
+      "options": [
+        "Les deux jours de virement uniquement",
+        "Les douze mois de couverture dans le cas uniforme",
+        "Les mois où le compte bancaire est positif",
+        "La durée de l’emprunt du dirigeant"
+      ],
+      "answer": 1,
+      "explanation": "La consommation du service suit la période couverte, distincte des modalités de paiement. Deux versements ne signifient pas deux mois de protection."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat indique une couverture non uniforme selon les périodes. Peut-on utiliser sans autre justification une charge identique chaque mois ?",
+      "options": [
+        "Oui, toute dépense se répartit obligatoirement par douzièmes",
+        "Oui, si le paiement a été fait en une seule fois",
+        "Non, il faut examiner le rythme réel de consommation et les conditions du dossier",
+        "Non, il faut toujours passer toute la dépense le jour du paiement"
+      ],
+      "answer": 2,
+      "explanation": "La division par douze suppose une consommation uniforme. Une couverture différente exige une répartition étayée plutôt qu’un automatisme."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Deux primes annuelles uniformes coûtent respectivement 1 200 € et 2 400 €, hors taxes. Quel coût mensuel total couvrent-elles ensemble ?",
+      "options": [
+        "3 600 €",
+        "100 €",
+        "200 €",
+        "300 €"
+      ],
+      "answer": 3,
+      "explanation": "La couverture mensuelle totale est (1 200 + 2 400) / 12 = 300 €. Les contrats se combinent sans changer la durée annuelle de chacun.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 1200
+                },
+                {
+                  "value": 2400
+                }
+              ]
+            },
+            {
+              "value": 12
+            }
+          ]
+        },
+        "expected": 300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une assurance annuelle commence le 1er septembre et la clôture a lieu au 31 décembre. Avec prorata mensuel uniforme, combien de mois appartiennent à l’exercice clos ?",
+      "options": [
+        "Quatre mois",
+        "Huit mois",
+        "Douze mois",
+        "Trois mois"
+      ],
+      "answer": 0,
+      "explanation": "Septembre, octobre, novembre et décembre concernent l’exercice clos. Les huit mois suivants correspondent à la couverture future."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une prime annuelle de 1 800 € a été entièrement comptabilisée. La couverture consommée avant clôture est de cinq mois, avec répartition uniforme. Quelle charge doit rester dans l’exercice clos ?",
+      "options": [
+        "1 050 €",
+        "750 €",
+        "1 800 €",
+        "360 €"
+      ],
+      "answer": 1,
+      "explanation": "La charge consommée vaut 1 800 × 5 / 12 = 750 €. La part future est traitée séparément, sans annuler le paiement.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 1800
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 5
+                },
+                {
+                  "value": 12
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 750,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La couverture a commencé avant la clôture, mais l’étudiant retire toute la prime des charges comme si aucun service n’avait été consommé. Quel montant faut-il conserver ?",
+      "options": [
+        "Toujours zéro dès qu’une CCA existe",
+        "La totalité du paiement, quelle que soit la couverture",
+        "La part correspondant à la couverture déjà consommée",
+        "Le seul montant encore dû au fournisseur"
+      ],
+      "answer": 2,
+      "explanation": "Le rattachement sépare passé et futur. Une régularisation partielle ne justifie pas d’effacer la fraction de service consommée pendant l’exercice."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La prime est réglée après la clôture mais le service a été partiellement consommé avant celle-ci. Le paiement tardif suffit-il à exclure toute charge de l’exercice clos ?",
+      "options": [
+        "Oui, seule la date bancaire détermine la charge",
+        "Oui, les services non payés n’ont jamais d’effet comptable",
+        "Non, mais toute la couverture future doit aussi être passée en charge",
+        "Non, la période de consommation reste à analyser"
+      ],
+      "answer": 3,
+      "explanation": "Le rattachement économique ne se réduit pas aux décaissements. Le paiement tardif peut coexister avec une charge de période à constater."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La prime annuelle est de 2 400 € et la charge retenue dans l’exercice de 600 €, selon une répartition uniforme mensuelle. Combien de mois ont été consommés ?",
+      "options": [
+        "3 mois",
+        "4 mois",
+        "9 mois",
+        "6 mois"
+      ],
+      "answer": 0,
+      "explanation": "Le coût mensuel est 2 400 / 12 = 200 €. La charge de 600 € représente 600 / 200 = trois mois.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 600
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 2400
+                },
+                {
+                  "value": 12
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 3,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’année civile n’est pas celle de la couverture d’assurance. Le préparateur retient automatiquement douze mois en charge à chaque clôture. Quelle information doit-il rapprocher ?",
+      "options": [
+        "Le seul nombre de factures reçues dans l’année",
+        "Les dates du contrat et la fraction consommée dans chaque exercice",
+        "Le seul solde bancaire au 31 décembre",
+        "La seule date de création de l’entreprise"
+      ],
+      "answer": 1,
+      "explanation": "Une couverture à cheval sur deux exercices se répartit selon ses propres dates. L’année civile de clôture ne remplace pas l’échéancier du contrat."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une prime annuelle de 3 000 € est enregistrée entièrement en charge. Trois mois de couverture sont consommés avant clôture ; la répartition est uniforme. Quelle CCA faut-il constater ?",
+      "options": [
+        "750 €",
+        "3 000 €",
+        "2 250 €",
+        "1 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La couverture future porte sur neuf mois : 3 000 × 9 / 12 = 2 250 €. Cette fraction est retirée de la charge de l’exercice clos.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 3000
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 9
+                },
+                {
+                  "value": 12
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2250,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que représente une CCA dans le cadre du rattachement d’une assurance ?",
+      "options": [
+        "Un produit constaté d’avance pour la période future du contrat",
+        "Une charge à payer pour un service déjà consommé mais non facturé",
+        "Une créance de remboursement exigible de l’assureur égale à la période future",
+        "Un actif de régularisation correspondant à la couverture future déjà enregistrée en charge"
+      ],
+      "answer": 3,
+      "explanation": "La CCA reporte une consommation non encore réalisée. Elle ne constitue ni un remboursement du paiement ni une rentrée d’argent."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une prime déjà comptabilisée ne couvre que des mois après la clôture. Aucune couverture n’a commencé dans l’exercice. Quelle fraction relève de l’avance dans ces hypothèses ?",
+      "options": [
+        "La totalité de la prime",
+        "Aucune fraction puisque la facture est déjà reçue",
+        "La moitié par convention obligatoire",
+        "Le seul montant payé après la clôture"
+      ],
+      "answer": 0,
+      "explanation": "Si tout le service concerne l’avenir, toute la dépense enregistrée est à isoler pour ce futur dans le cas donné. La date de facture seule ne crée pas de consommation passée."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un abonnement est intégralement consommé avant la clôture alors qu’il avait été payé d’avance. Quelle CCA subsiste à cette date, sans autre élément ?",
+      "options": [
+        "La totalité du paiement initial",
+        "Aucune, puisqu’il ne reste pas de couverture future",
+        "Toujours un douzième du contrat",
+        "La moitié du montant consommé"
+      ],
+      "answer": 1,
+      "explanation": "La CCA dépend de la partie restant à consommer à la date d’arrêté. Le fait historique d’un paiement anticipé ne suffit pas après expiration de tout le service."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le comptable enregistre une CCA en débitant la banque pour prétendre « récupérer » la part future. Quelle confusion faut-il corriger ?",
+      "options": [
+        "La régularisation réduit la dette envers l’assureur même si elle a déjà été intégralement payée",
+        "La régularisation constate un remboursement exigible sans clause de restitution",
+        "La régularisation n’annule pas le décaissement déjà réalisé",
+        "La régularisation doit réduire la prime totale facturée au lieu de répartir la charge"
+      ],
+      "answer": 2,
+      "explanation": "La correction réaffecte une charge dans le temps et constate un actif de régularisation. Elle ne décrit aucune rentrée bancaire nouvelle."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une même couverture future figure dans deux contrats de suivi qui renvoient à la même facture. Les deux montants sont additionnés dans la CCA. Quel risque faut-il contrôler ?",
+      "options": [
+        "L’omission de la part consommée, qui devrait être ajoutée à la CCA",
+        "Une compensation entre deux actifs distincts prouvée par les deux fichiers",
+        "Une modification du prix contractuel déduite du seul nombre de suivis",
+        "Le double comptage de la même prestation future"
+      ],
+      "answer": 3,
+      "explanation": "Les références doivent être rapprochées pour identifier un seul engagement réel. Deux suivis administratifs ne prouvent pas deux services distincts."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Sur une prime annuelle uniforme, la charge consommée retenue est 900 € et la CCA 2 700 €. Quel montant de prime totale ce partage suppose-t-il ?",
+      "options": [
+        "3 600 €",
+        "1 800 €",
+        "2 700 €",
+        "900 €"
+      ],
+      "answer": 0,
+      "explanation": "Le passé consommé et le futur reporté doivent reconstituer le contrat : 900 + 2 700 = 3 600 €.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 900
+            },
+            {
+              "value": 2700
+            }
+          ]
+        },
+        "expected": 3600,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La charge retenue et la CCA dépassent ensemble le montant de la prime, sans autre élément du cas. Quelle erreur possible doit être recherchée ?",
+      "options": [
+        "Une simple différence entre charge et paiement qui justifierait à elle seule ce dépassement",
+        "Un chevauchement de mois ou un double comptage de fraction",
+        "Une augmentation de la durée contractuelle établie par le seul total calculé",
+        "Une correction du montant facturé qui découlerait du seul dépassement"
+      ],
+      "answer": 1,
+      "explanation": "Les fractions doivent couvrir la période une seule fois. Un total trop élevé signale notamment des mois comptés dans les deux parties."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le résultat avant régularisation est de 4 000 €. Une CCA justifiée de 900 € doit retirer cette part de charges déjà enregistrées, sans effet fiscal dans l’exercice. Quel résultat corrigé obtient-on ?",
+      "options": [
+        "3 100 €",
+        "900 €",
+        "4 900 €",
+        "4 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Retirer 900 € de charges augmente le résultat de 900 € : 4 000 + 900 = 4 900 €, sans encaissement nouveau.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 4000
+            },
+            {
+              "value": 900
+            }
+          ]
+        },
+        "expected": 4900,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La CCA est correctement enregistrée à la clôture. Quel contrôle faut-il poursuivre lors de l’exercice suivant ?",
+      "options": [
+        "Le maintien du solde initial sans consommation jusqu’à une nouvelle facture",
+        "L’ajout de la CCA d’ouverture à la nouvelle charge annuelle sans reprise du report",
+        "La reprise de toute la CCA sans vérifier quelles périodes sont alors consommées",
+        "Le rattachement de cette couverture à mesure de sa consommation, sans charge doublée"
+      ],
+      "answer": 3,
+      "explanation": "Le report n’est pas une disparition de charge. Le suivi doit veiller à sa reprise dans la bonne période et éviter une double constatation."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le total charge + CCA égale la prime, mais les mois ont été inversés entre période passée et future. L’égalité suffit-elle à valider le rattachement ?",
+      "options": [
+        "Non, il faut aussi vérifier les dates et la fraction de chaque exercice",
+        "Oui, la somme correcte prouve toujours les bonnes périodes",
+        "Oui, dès que la CCA est positive",
+        "Non, car une prime ne peut jamais être répartie"
+      ],
+      "answer": 0,
+      "explanation": "Une répartition peut conserver le total tout en affectant les montants au mauvais exercice. Le contrôle arithmétique et le contrôle temporel sont complémentaires."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel ensemble d’informations permet de justifier une CCA d’assurance ?",
+      "options": [
+        "Le seul montant du virement bancaire",
+        "La facture, les dates de couverture, la convention de répartition et le calcul",
+        "Le seul bénéfice final souhaité",
+        "La moyenne des primes d’autres entreprises sans contrat"
+      ],
+      "answer": 1,
+      "explanation": "La justification relie une dépense enregistrée à un service futur identifié. Le calcul doit être fondé sur ses dates et hypothèses de consommation."
+    }
+  ]
+}

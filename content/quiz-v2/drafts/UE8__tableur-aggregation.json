@@ -1,0 +1,491 @@
+{
+  "module": "UE8",
+  "chapter": "tableur-aggregation",
+  "sourceHash": "7b70aae648e67c8bb38b5b515fb15af55972dbd902d319a984ef040704d722b1",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Une ligne de tableur comporte 30 unités à 8 € HT par unité, sans remise ni TVA à ajouter. Quel montant HT doit afficher cette ligne ?",
+      "options": [
+        "38 €",
+        "240 €",
+        "3,75 €",
+        "300 €"
+      ],
+      "answer": 1,
+      "explanation": "Le montant de la ligne est le produit de la quantité par le prix unitaire : 30 × 8 = 240 €. Additionner les deux données ou diviser la quantité par le prix ne mesure pas le montant facturé.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 30
+            },
+            {
+              "value": 8
+            }
+          ]
+        },
+        "expected": 240,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Une seconde ligne facture 25 unités pour un montant HT total de 300 €, sans remise. Quel prix unitaire retrouve-t-on par contrôle inverse ?",
+      "options": [
+        "7 500 € par unité",
+        "275 € par unité",
+        "12 € par unité",
+        "0,0833 € par unité"
+      ],
+      "answer": 2,
+      "explanation": "Le contrôle inverse rapporte le montant à la quantité : 300 / 25 = 12 € par unité. Il permet de vérifier que le prix correspond bien à une unité et non au montant global de la ligne.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 300
+            },
+            {
+              "value": 25
+            }
+          ]
+        },
+        "expected": 12,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Deux lignes sans remise ni TVA portent sur 20 unités à 10 € et 30 unités à 15 €. Quel montant total HT faut-il retenir ?",
+      "options": [
+        "650 €",
+        "625 €",
+        "325 €",
+        "1 250 €"
+      ],
+      "answer": 0,
+      "explanation": "Il faut calculer chaque montant puis les additionner : 20 × 10 + 30 × 15 = 200 + 450 = 650 €. Multiplier la quantité totale par la somme des prix produirait un total sans sens.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 20
+                },
+                {
+                  "value": 10
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 30
+                },
+                {
+                  "value": 15
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 650,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un achat comprend 10 unités à 6 € et 30 unités à 10 €, sans frais supplémentaires. Quel est le prix moyen pondéré de l’ensemble ?",
+      "options": [
+        "8 € par unité",
+        "16 € par unité",
+        "7 € par unité",
+        "9 € par unité"
+      ],
+      "answer": 3,
+      "explanation": "Le montant total vaut 10 × 6 + 30 × 10 = 360 € pour 40 unités. Le prix moyen est donc 360 / 40 = 9 €. La moyenne simple des deux prix, 8 €, ignore les volumes différents.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 10
+                    },
+                    {
+                      "value": 6
+                    }
+                  ]
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 30
+                    },
+                    {
+                      "value": 10
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 10
+                },
+                {
+                  "value": 30
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 9,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "En B2 figure une quantité et en C2 son prix unitaire. Quelle formule calcule le montant de la ligne, sans taxe ni remise ?",
+      "options": [
+        "=B2+C2",
+        "=B2*C2",
+        "=B2/C2",
+        "=MOYENNE(B2:C2)"
+      ],
+      "answer": 1,
+      "explanation": "Le montant est le produit d’une quantité par un prix exprimé par unité. Une somme, une moyenne ou une division des deux cellules ne fournit pas le montant total de la ligne."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une ligne affiche quantité 12, prix unitaire 40 €, mais sa formule additionne 12 et 40. Quel contrôle explique le défaut ?",
+      "options": [
+        "Le calcul devrait diviser le prix unitaire par la quantité.",
+        "Le calcul devrait retenir seulement le prix unitaire, puisqu’il est déjà en euros.",
+        "Les unités ne correspondent pas au montant attendu : il faut multiplier quantité et prix unitaire.",
+        "Le calcul devrait multiplier la quantité par le total de toutes les lignes au lieu du prix unitaire."
+      ],
+      "answer": 2,
+      "explanation": "Le fait que des cellules soient numériques ne suffit pas à rendre une opération pertinente. Quantité × euros par unité donne des euros ; l’addition de la quantité au prix mélange deux grandeurs différentes."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "D2 et D3 contiennent les montants des deux seules lignes. D4 contient déjà leur total. Quelle formule, placée en F4, additionne les deux lignes une seule fois ?",
+      "options": [
+        "=SOMME(D2:D3)",
+        "=SOMME(D2:D4)",
+        "=SOMME(D2:D3)+D4",
+        "=D4*2"
+      ],
+      "answer": 0,
+      "explanation": "D2:D3 ne comprend que les deux montants de détail. D4 les totalise déjà : l’inclure ou l’ajouter à leur somme compte une seconde fois les mêmes lignes."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux prix unitaires différents concernent respectivement une petite quantité et une grande quantité. Quel calcul représente le prix moyen par unité achetée ?",
+      "options": [
+        "La somme des prix unitaires sans quantité.",
+        "La moyenne simple des deux prix, quelles que soient les quantités.",
+        "Le total des quantités divisé par le nombre de lignes.",
+        "Le montant total des achats divisé par la quantité totale."
+      ],
+      "answer": 3,
+      "explanation": "La pondération par les quantités fait contribuer chaque unité au prix moyen. Le quotient montant total / quantité totale mesure ce prix, tandis qu’une moyenne simple donne le même poids aux deux lignes."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une quantité « 12 unités » est stockée comme texte dans une cellule qui doit participer au calcul. Quelle démarche est préférable ?",
+      "options": [
+        "Inclure le texte dans toutes les sommes sans contrôle.",
+        "Valider et convertir explicitement la donnée selon le format prévu avant le calcul.",
+        "Remplacer systématiquement toute saisie textuelle par zéro.",
+        "Supprimer le prix unitaire de la ligne pour éviter l’erreur."
+      ],
+      "answer": 1,
+      "explanation": "Le calcul exige des types et unités maîtrisés. Une conversion doit être définie et contrôlée ; transformer silencieusement une saisie non valide en zéro pourrait produire un montant faux sans rendre l’erreur visible."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La quantité de la ligne B est connue mais son prix est vide. Quel traitement évite de présenter un total incomplet comme définitivement validé ?",
+      "options": [
+        "Utiliser automatiquement le prix de la ligne précédente sans justification.",
+        "Considérer le prix absent comme une remise de 100 %.",
+        "Signaler la donnée manquante et appliquer le contrôle d’entrée prévu avant validation.",
+        "Supprimer la ligne B du contrôle tout en conservant le total comme complet."
+      ],
+      "answer": 2,
+      "explanation": "Un prix absent n’est pas nécessairement zéro et ne doit pas disparaître silencieusement de l’agrégat. Le contrôle doit rendre l’incomplétude visible et suivre la règle de traitement prévue pour cette saisie."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le total de deux lignes HT est 920 €. La ligne A représente 320 €. Quel montant de la ligne B permet un rapprochement exact, sans taxe ni autre ligne ?",
+      "options": [
+        "600 €",
+        "1 240 €",
+        "2,875 €",
+        "460 €"
+      ],
+      "answer": 0,
+      "explanation": "Avec seulement deux lignes, montant B = total − montant A = 920 − 320 = 600 €. Ce rapprochement inverse permet de détecter une omission ou un montant de ligne incohérent.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 920
+            },
+            {
+              "value": 320
+            }
+          ]
+        },
+        "expected": 600,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une moyenne pondérée de prix positifs est supérieure au plus élevé des prix unitaires, alors que toutes les quantités sont strictement positives. Que faut-il faire ?",
+      "options": [
+        "Accepter le résultat car une pondération augmente toujours le maximum.",
+        "Remplacer la moyenne par la somme des prix.",
+        "Conclure que la ligne la plus chère doit être supprimée.",
+        "Contrôler la formule, les plages et les unités : le résultat sort des bornes attendues."
+      ],
+      "answer": 3,
+      "explanation": "Avec des poids strictement positifs, le prix moyen reste entre les prix extrêmes. Un résultat hors de cet intervalle signale un défaut possible de formule, de périmètre ou d’unité qu’il faut examiner."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une ligne comporte une quantité en centaines d’unités et un prix exprimé par unité. Quel contrôle doit précéder la multiplication ?",
+      "options": [
+        "Vérifier seulement que les deux cellules contiennent des nombres.",
+        "Rendre les unités compatibles, notamment convertir la quantité en unités.",
+        "Prendre la moyenne des deux cellules pour neutraliser leur différence d’unité.",
+        "Multiplier sans conversion et modifier seulement le symbole du résultat."
+      ],
+      "answer": 1,
+      "explanation": "La formule quantité × prix suppose des unités compatibles. Multiplier une quantité exprimée en centaines par un prix unitaire sans conversion sous-estimerait le montant d’un facteur cent."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une ligne de produit est vendue 5 € HT par unité et son montant est 150 € HT, sans remise. Quelle quantité retrouve-t-on par contrôle ?",
+      "options": [
+        "750 unités",
+        "145 unités",
+        "30 unités",
+        "0,0333 unité"
+      ],
+      "answer": 2,
+      "explanation": "La quantité se retrouve par montant / prix unitaire : 150 / 5 = 30 unités. Ce contrôle inverse suppose la même unité et l’absence de remise ou frais qui modifieraient le montant de la ligne.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 150
+            },
+            {
+              "value": 5
+            }
+          ]
+        },
+        "expected": 30,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "B2:B3 contient les quantités et C2:C3 les prix unitaires correspondants. Quelle expression calcule directement le montant total des deux lignes ?",
+      "options": [
+        "=SOMMEPROD(B2:B3;C2:C3)",
+        "=SOMME(B2:B3)*SOMME(C2:C3)",
+        "=MOYENNE(B2:B3)*MOYENNE(C2:C3)",
+        "=SOMME(B2:C3)"
+      ],
+      "answer": 0,
+      "explanation": "SOMMEPROD additionne les produits des cellules correspondantes, donc les montants des lignes. Le produit des sommes ajoute des croisements entre quantités et prix qui ne décrivent pas les achats réels."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le prix du produit A est inférieur à celui de B. On augmente uniquement la quantité de B, à prix constants et quantités positives. Quel effet cela a-t-il sur le prix moyen pondéré ?",
+      "options": [
+        "Il reste nécessairement constant car les deux prix ne changent pas.",
+        "Il diminue car la quantité totale augmente.",
+        "Il devient égal à la somme des deux prix.",
+        "Il se rapproche du prix plus élevé de B et augmente."
+      ],
+      "answer": 3,
+      "explanation": "Augmenter le poids du prix le plus élevé déplace la moyenne dans sa direction. La variation du volume peut donc changer le prix moyen de l’ensemble sans aucune modification des prix unitaires."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une formule de montant de ligne B reprend la quantité de B mais le prix de A à cause d’une mauvaise référence. Quel test détecte le mieux l’erreur ?",
+      "options": [
+        "Choisir deux lignes ayant exactement le même prix et la même quantité.",
+        "Comparer chaque ligne à un calcul indépendant avec des prix différents.",
+        "Vérifier uniquement que le total est positif.",
+        "Relancer sans changement le même calcul du total."
+      ],
+      "answer": 1,
+      "explanation": "Des prix différents rendent visible une référence au mauvais produit. Un contrôle indépendant ligne par ligne cible l’association quantité-prix, alors qu’un total positif ou des prix identiques peuvent masquer l’erreur."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les montants des deux lignes sont justes mais la formule du total ne couvre que la première. Quel type de contrôle révèle directement cette omission ?",
+      "options": [
+        "Le contrôle de l’unicité des noms de produits uniquement.",
+        "Le tri des quantités dans l’ordre croissant.",
+        "Le rapprochement entre le total affiché et la somme indépendante de toutes les lignes prévues.",
+        "La vérification de la seule formule de montant de la première ligne."
+      ],
+      "answer": 2,
+      "explanation": "Le périmètre d’une somme peut être faux même si chaque montant individuel est juste. Comparer le total à une somme indépendante des lignes attendues permet de détecter une plage incomplète."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle différence distingue un montant total d’un prix moyen pondéré ?",
+      "options": [
+        "Le total est exprimé en euros, le prix moyen en euros par unité.",
+        "Le total et le prix moyen ont toujours la même unité et la même valeur.",
+        "Le total doit être calculé sans quantités, contrairement à la moyenne.",
+        "Le prix moyen est obtenu en ajoutant directement toutes les quantités au total."
+      ],
+      "answer": 0,
+      "explanation": "Le total mesure une valeur globale. Le rapport de cette valeur aux quantités mesure un prix par unité ; préciser ces unités permet de détecter des formules qui confondent total, volume et prix."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Dans quel cas une moyenne simple des prix de deux lignes coïncide-t-elle avec leur moyenne pondérée par des quantités égales ?",
+      "options": [
+        "Elle reste forcément différente dès que les prix sont distincts.",
+        "Elle ne peut coïncider que si les montants sont nuls.",
+        "Elle coïncide uniquement si une quantité est ignorée.",
+        "Elle coïncide puisque les deux lignes reçoivent alors le même poids."
+      ],
+      "answer": 3,
+      "explanation": "Lorsque les quantités sont identiques, chaque prix contribue avec le même poids. La moyenne pondérée retrouve alors la moyenne simple, même si les prix unitaires sont différents."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Des prix sont en €/kg mais certaines quantités sont en kg et d’autres en grammes. Pourquoi un prix moyen calculé avant harmonisation des unités n’est-il pas interprétable ?",
+      "options": [
+        "La moyenne pondérée exige nécessairement des prix égaux.",
+        "Le dénominateur additionne des quantités qui ne sont pas exprimées sur une même base.",
+        "Une somme de montants ne peut jamais utiliser plusieurs lignes.",
+        "Les grammes doivent être exclus plutôt que convertis."
+      ],
+      "answer": 1,
+      "explanation": "La quantité totale doit être exprimée dans une unité commune. Mélanger des kg et des grammes dans le même dénominateur altère les poids et peut aussi fausser les montants si la conversion manque au numérateur."
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les montants D2:D5 sont déjà nets d’une remise globale répartie entre les lignes. D6 conserve le montant de cette remise, 20 €, pour information. Quelle formule donne le total facturé sans la déduire une seconde fois ?",
+      "options": [
+        "=SOMME(D2:D5)-D6",
+        "=SOMME(D2:D6)",
+        "=SOMME(D2:D5)",
+        "=SOMME(D2:D5)*(1-D6)"
+      ],
+      "answer": 2,
+      "explanation": "La remise est déjà intégrée dans D2:D5 : leur somme est le total net. Retrancher D6 la déduirait encore ; l’inclure réintroduirait 20 €, et traiter ce montant comme un taux serait incohérent."
+    },
+    {
+      "id": "q23",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Pour contrôler un tableur, un collègue recopie exactement sa formule de montant dans une seconde colonne et obtient le même résultat. Quelle limite subsiste ?",
+      "options": [
+        "La même erreur de référence ou d’opération peut être reproduite dans les deux colonnes.",
+        "La présence de deux colonnes garantit une vérification indépendante.",
+        "La recopie convertit automatiquement tous les types de données correctement.",
+        "Le contrôle prouve que les unités de toutes les lignes sont compatibles."
+      ],
+      "answer": 0,
+      "explanation": "Un contrôle indépendant ne doit pas reproduire aveuglément le traitement initial. Reconstituer le calcul à partir des quantités, prix, unités et périmètre permet de détecter une erreur commune aux formules copiées."
+    }
+  ]
+}

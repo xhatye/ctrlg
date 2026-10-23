@@ -1,0 +1,515 @@
+{
+  "module": "DSCG2",
+  "chapter": "duration-sensibilite",
+  "sourceHash": "40bb973000ff6534f8b55edd15e9e923d8ae7e40a8373b0ff0a196e5d07988e4",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une obligation verse un coupon de 40 € chaque fin d’année et rembourse 1 000 € à la fin de l’année 3. Quel flux doit entrer à la date finale dans le calcul de duration ?",
+      "options": [
+        "1 040 €, comprenant le dernier coupon et le remboursement",
+        "1 000 €, en omettant le dernier coupon",
+        "120 €, somme de tous les coupons",
+        "3 040 €, en multipliant le nominal par le nombre d’années"
+      ],
+      "answer": 0,
+      "explanation": "La pondération temporelle doit porter sur les flux exacts à chaque date. Le dernier paiement comprend coupon et nominal, sans déplacer les coupons antérieurs."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un titre vaut 1 000 €. Les valeurs actuelles de ses deux paiements sont 100 € à un an et 900 € à deux ans. Quelle duration de Macaulay obtient-on ?",
+      "options": [
+        "1,5 an",
+        "1,9 an",
+        "2 ans",
+        "1900 ans"
+      ],
+      "answer": 1,
+      "explanation": "La moyenne pondérée des dates vaut (1 × 100 + 2 × 900)/1 000 = 1,9 an. Les poids sont les valeurs actuelles, pas des parts égales.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 1
+                    },
+                    {
+                      "value": 100
+                    }
+                  ]
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 2
+                    },
+                    {
+                      "value": 900
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 1000
+            }
+          ]
+        },
+        "expected": 1.9,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi la duration d’une obligation à coupons positifs peut-elle être inférieure à sa maturité ?",
+      "options": [
+        "Le remboursement du nominal est exclu des flux qui servent à la moyenne des dates",
+        "Chaque coupon est pondéré par le même poids que le nominal, sans actualisation",
+        "Une partie de la valeur est reçue avant la dernière échéance",
+        "Les dates intermédiaires sont retranchées directement de la maturité sans tenir compte de leurs montants"
+      ],
+      "answer": 2,
+      "explanation": "La duration est une moyenne des dates pondérée par les valeurs actuelles. Des coupons reçus plus tôt déplacent cette moyenne avant l’échéance finale."
+    },
+    {
+      "id": "q04",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La duration de Macaulay est de 4,2 ans et le rendement annuel de 5 %. Quelle duration modifiée retient la convention D/(1+y) ?",
+      "options": [
+        "4,41",
+        "0,2",
+        "84",
+        "4"
+      ],
+      "answer": 3,
+      "explanation": "On divise 4,2 par 1,05, soit 4. La duration modifiée n’est pas obtenue en multipliant par le facteur de capitalisation.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 4.2
+            },
+            {
+              "value": 1.05
+            }
+          ]
+        },
+        "expected": 4,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une duration modifiée de 3,5 est donnée. Le rendement augmente de 0,02, soit deux points. Quelle variation relative approchée de prix, en pourcentage, obtient-on par −Dmod × delta y ?",
+      "options": [
+        "-7 %",
+        "7 %",
+        "-0,07 %",
+        "-700 %"
+      ],
+      "answer": 0,
+      "explanation": "Le calcul en décimal donne −3,5 × 0,02 = −0,07, soit −7 %. Il faut convertir l’écart de deux points en 0,02.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": -3.5
+                },
+                {
+                  "value": 0.02
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": -7,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une obligation vaut 980 €, avec duration modifiée 2. Pour une hausse du rendement de 0,005, quelle variation monétaire approchée calcule-t-on ?",
+      "options": [
+        "9,8 €",
+        "-9,8 €",
+        "-0,01 €",
+        "-980 €"
+      ],
+      "answer": 1,
+      "explanation": "La variation relative est −2 × 0,005 = −1 %. Appliquée au prix de 980 €, elle donne −9,80 €, distincte du pourcentage.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 980
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": -2
+                },
+                {
+                  "value": 0.005
+                }
+              ]
+            }
+          ]
+        },
+        "expected": -9.8,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’approximation par duration donne une baisse de 18,59 €, le calcul exact une baisse de 18,33 €. Que révèle cet écart dans le modèle ?",
+      "options": [
+        "La duration doit être estimée au taux final plutôt qu’au taux initial pour rendre l’approximation exactement égale au prix recalculé",
+        "L’écart provient d’un coupon couru omis, la différence entre prix plein et prix pied de coupon étant supposée égale à cet écart",
+        "La relation prix-taux n’est pas linéaire et la duration donne une approximation locale",
+        "Les deux méthodes doivent donner le même montant pour tout choc, dès lors que les flux sont identiques"
+      ],
+      "answer": 2,
+      "explanation": "Une approximation de premier ordre n’est pas une identité pour un choc fini. Un petit écart ne démontre pas à lui seul une erreur de flux ou de contrat."
+    },
+    {
+      "id": "q08",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les prix sont calculés avec des flux annuels, mais la duration utilise des dates en mois sans conversion. Quel défaut corriger ?",
+      "options": [
+        "Le taux annuel peut être appliqué à chaque mois dès lors que les dates sont bien comptées en mois",
+        "La duration en mois peut être utilisée directement avec un choc annuel sans conversion de son unité",
+        "Le facteur de duration modifiée peut être construit en divisant par douze le seul rendement, sans convertir la duration",
+        "L’unité temporelle des dates et la convention de taux"
+      ],
+      "answer": 3,
+      "explanation": "La duration porte une unité de temps. Les dates et taux doivent être cohérents pour que le passage à la sensibilité ait le sens annoncé."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un zéro-coupon verse un seul paiement dans cinq ans, sans option ni défaut. Quelle est sa duration de Macaulay dans ce modèle ?",
+      "options": [
+        "Cinq ans, car toute la valeur actuelle porte sur cette date",
+        "Zéro, parce qu’aucun coupon intermédiaire n’est versé",
+        "Deux ans et demi, moyenne simple de zéro et cinq",
+        "Le taux de rendement annuel exprimé en années"
+      ],
+      "answer": 0,
+      "explanation": "Avec un seul flux, la moyenne temporelle se concentre sur son échéance. Le taux affecte le prix, mais pas cette date moyenne unique."
+    },
+    {
+      "id": "q10",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un titre verse 50 € à un an et 1 050 € à deux ans. Au taux annuel de 6 %, quel prix exact obtient-on, au centime, hors frais et défaut ?",
+      "options": [
+        "1000 €",
+        "981,67 €",
+        "1100 €",
+        "1037,74 €"
+      ],
+      "answer": 1,
+      "explanation": "Le prix exact est 50/1,06 + 1 050/1,06² = 981,67 €. Le calcul permet de confronter une approximation de sensibilité à la somme actualisée des flux.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 50
+                },
+                {
+                  "value": 1.06
+                }
+              ]
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 1050
+                },
+                {
+                  "op": "pow",
+                  "args": [
+                    {
+                      "value": 1.06
+                    },
+                    {
+                      "value": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 981.67,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une hausse de taux d’un point est saisie comme delta y = 1 dans la formule à taux décimaux. Quelle erreur d’échelle introduit-elle ?",
+      "options": [
+        "Un effet approché cent fois trop faible",
+        "Un simple changement de signe sans effet sur le montant",
+        "Un effet approché cent fois trop important",
+        "Une conversion correcte d’un point en taux décimal"
+      ],
+      "answer": 2,
+      "explanation": "Un point de pourcentage vaut 0,01 dans la formule décimale. Utiliser 1 revient à modéliser une variation de cent points."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux obligations ont la même échéance finale, mais l’une verse des coupons plus importants avant cette échéance. Peut-on déduire une duration identique de leur seule maturité ?",
+      "options": [
+        "Oui, la dernière date détermine seule la moyenne",
+        "Oui, dès lors que les deux nominaux sont égaux",
+        "Non, mais seul le montant du coupon non actualisé suffit à déterminer la différence",
+        "Non, les dates et valeurs actuelles des flux intermédiaires comptent aussi"
+      ],
+      "answer": 3,
+      "explanation": "La maturité n’est qu’une date du calendrier. La duration combine toutes les dates et leurs poids actualisés, qui peuvent différer entre les titres."
+    },
+    {
+      "id": "q13",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La duration est utilisée pour un choc très élevé de rendement. Quelle validation est particulièrement utile ?",
+      "options": [
+        "Recalculer le prix exact aux nouveaux taux plutôt que supposer l’approximation exacte",
+        "Convertir le grand choc en plusieurs petits chocs en réutilisant à chaque étape la duration et le prix initiaux",
+        "Remplacer la duration modifiée par la maturité en supposant que cela supprime l’erreur de courbure",
+        "Corriger la variation de prix en proportion du seul taux facial, sans recalculer les valeurs actuelles"
+      ],
+      "answer": 0,
+      "explanation": "La linéarisation est locale. À choc plus grand, la courbure peut compter davantage ; le calcul exact sous les mêmes hypothèses permet de mesurer l’écart."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une duration modifiée vaut 4 et le rendement baisse de 0,005. Quelle hausse relative approchée du prix, en pourcentage, prévoit la formule ?",
+      "options": [
+        "-2 %",
+        "2 %",
+        "0,02 %",
+        "200 %"
+      ],
+      "answer": 1,
+      "explanation": "La variation est −4 × (−0,005) = +0,02, soit +2 %. Le signe négatif de la sensibilité inverse le sens de la baisse du rendement.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": -4
+                },
+                {
+                  "value": -0.005
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 2,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel dénominateur utilise la duration de Macaulay définie comme moyenne des dates pondérées par valeurs actuelles ?",
+      "options": [
+        "Le seul nominal de remboursement dans tous les cas",
+        "La somme non actualisée des coupons seulement",
+        "Le prix égal à la somme des valeurs actuelles des flux",
+        "Le taux de rendement annuel"
+      ],
+      "answer": 2,
+      "explanation": "Les poids doivent totaliser un : chaque valeur actuelle est rapportée au prix total. Remplacer le prix par le nominal n’est valable que si ces montants coïncident."
+    },
+    {
+      "id": "q16",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste pondère les dates par les flux non actualisés tout en divisant par le prix actualisé. Quelle cohérence manque ?",
+      "options": [
+        "Le dénominateur peut être remplacé par le nominal, tout en conservant les flux non actualisés au numérateur",
+        "Les dates peuvent être pondérées par les seuls coupons nominaux, en excluant le remboursement final",
+        "Le prix actualisé peut être conservé si l’on retire les dates du numérateur pour compenser",
+        "Le numérateur et le dénominateur doivent reposer sur les mêmes valeurs actuelles"
+      ],
+      "answer": 3,
+      "explanation": "La moyenne définie dans le modèle utilise les valeurs actuelles à chaque date. Mélanger poids nominaux et prix actualisé ne respecte pas cette définition."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un portefeuille obligataire est exposé à des mouvements différents des taux courts et longs. Quelle limite de l’unique sensibilité à un choc parallèle rappeler ?",
+      "options": [
+        "Elle ne décrit pas à elle seule tous les effets d’une déformation de courbe",
+        "Elle garantit l’absence de perte si le taux moyen est stable",
+        "Elle mesure directement la probabilité de défaut de chaque émetteur",
+        "Elle remplace les calendriers individuels par une seule échéance contractuelle"
+      ],
+      "answer": 0,
+      "explanation": "Une sensibilité scalaire résume un scénario de taux donné. Des mouvements non parallèles peuvent demander une analyse par maturités ou par scénarios détaillés."
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le prix vaut 1 000 € et la duration modifiée vaut 5. Un rapport annonce « une hausse d’un point de taux coûte exactement 5 € ». Quelle correction apporter ?",
+      "options": [
+        "La baisse est exactement de 5 € car la duration est un montant",
+        "La baisse approchée est de 5 %, soit 50 €, et non exactement 5 €",
+        "La baisse est de 500 % car un point s’écrit 1 dans la formule",
+        "Le prix ne peut pas varier puisque le nominal reste 1 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La duration modifiée convertit une variation de taux en variation relative de prix. Pour un point, −5 × 0,01 = −5 %, puis on applique le prix."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une faible duration est présentée comme une preuve d’absence de défaut et de bonne liquidité. Quelle limite faut-il rappeler ?",
+      "options": [
+        "Une duration faible peut remplacer l’étude de crédit lorsque l’obligation est émise au pair",
+        "Une duration faible permet de déduire un faible écart entre prix acheteur et prix vendeur",
+        "Elle mesure un aspect du risque de taux, pas toutes les dimensions de risque",
+        "Une faible duration implique une faible perte en cas de défaut, indépendamment du taux de recouvrement"
+      ],
+      "answer": 2,
+      "explanation": "La duration ne remplace pas les analyses de crédit et de liquidité. Une sensibilité aux taux faible ne garantit pas le remboursement ou la revente."
+    },
+    {
+      "id": "q20",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le modèle de prix suppose l’absence d’option de remboursement anticipé. Une clause réelle permet un remboursement à une date antérieure. Que faire avant d’appliquer la duration simple ?",
+      "options": [
+        "Appliquer le calendrier initial et ajuster seulement le taux facial pour tenir compte de l’option",
+        "Remplacer la maturité par la première date possible de remboursement, en tenant cet exercice pour certain",
+        "Retenir la moyenne des deux dates de remboursement sans pondérer leurs conditions d’exercice",
+        "Examiner l’effet de la clause sur les flux possibles et le modèle"
+      ],
+      "answer": 3,
+      "explanation": "Une option peut modifier les flux ou leur calendrier selon les conditions. La duration d’un schéma fixe ne doit pas être transférée sans examen de cette hypothèse."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un titre vaut 500 €. Le numérateur de sa duration, somme des dates multipliées par les valeurs actuelles, vaut 1 250 euros-années. Quelle duration obtient-on ?",
+      "options": [
+        "2,5 ans",
+        "0,4 an",
+        "750 ans",
+        "625000 ans"
+      ],
+      "answer": 0,
+      "explanation": "La duration est le rapport 1 250 / 500 = 2,5 ans. Les euros du numérateur et du dénominateur se simplifient, laissant une durée.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1250
+            },
+            {
+              "value": 500
+            }
+          ]
+        },
+        "expected": 2.5,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux scénarios de prix diffèrent aussi par le risque de défaut et les taux. L’analyste attribue toute la variation à la duration de taux. Que manque cette conclusion ?",
+      "options": [
+        "Une attribution de la variation totale au seul facteur dont le choc est numériquement le plus élevé",
+        "Une séparation des facteurs modifiés pour isoler le seul effet de taux",
+        "Une mesure de l’effet de défaut par simple différence des durations, sans recalculer les prix",
+        "Une moyenne des deux taux de scénario appliquée à la variation totale comme coefficient d’attribution"
+      ],
+      "answer": 1,
+      "explanation": "La sensibilité de taux est définie à autres paramètres constants. Quand plusieurs facteurs changent, la variation totale ne peut lui être attribuée sans analyse complémentaire."
+    }
+  ]
+}

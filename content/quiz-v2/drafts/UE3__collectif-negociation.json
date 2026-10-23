@@ -1,0 +1,467 @@
+{
+  "module": "UE3",
+  "chapter": "collectif-negociation",
+  "sourceHash": "bb4576ce8d871afccedb966a87bb3cc27308fd69f07c2f1e11b7b41f45cea161",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un accord couvre expressément les seuls établissements de Lyon et Grenoble. Une salariée de Lille effectue une mission de deux jours à Lyon ; son établissement de rattachement reste Lille. Le texte ne précise pas le traitement des missions. Quelle question faut-il résoudre avant de lui appliquer l’accord ?",
+      "options": [
+        "Si une mission emporte inclusion dans le champ défini par le texte.",
+        "Si tout déplacement entraîne un transfert définitif de rattachement.",
+        "Si son accord individuel remplace le champ territorial négocié.",
+        "Si la date de la mission suffit à étendre le texte à Lille."
+      ],
+      "answer": 0,
+      "explanation": "Le cas soulève une difficulté de champ personnel et territorial : une présence temporaire n’est pas nécessairement un rattachement à un établissement couvert. Il faut interpréter les termes de l’accord relatifs aux salariés concernés, et non déduire l’application du seul lieu de la mission."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un accord prévoit une aide de formation pour les salariés inscrits avant le 30 septembre, avec maintien de l’aide pour les inscriptions déjà acceptées. L’accord cesse de s’appliquer le 1er octobre. Une inscription a été acceptée le 25 septembre et la formation commence le 8 octobre. Quelle lecture respecte la clause transitoire ?",
+      "options": [
+        "La date de début de formation exclut l’aide.",
+        "La fin de l’accord annule toute inscription antérieure.",
+        "L’inscription acceptée bénéficie du maintien prévu.",
+        "Une nouvelle signature de l’accord est nécessaire pour chaque aide."
+      ],
+      "answer": 2,
+      "explanation": "La clause règle précisément les situations en cours : elle maintient l’aide pour les inscriptions déjà acceptées. Le début ultérieur de la formation ne fait pas disparaître cette disposition transitoire. Il ne faut pas confondre fin de l’application générale et sort expressément prévu des dossiers engagés."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une fiche RH annonce « prime pour tous ». L’accord signé réserve la prime aux salariés de production soumis au travail de nuit. Une salariée administrative de jour demande la prime sur le seul fondement de cet accord. Quelle analyse du champ est correcte ?",
+      "options": [
+        "La formule de la fiche étend le champ de l’accord signé.",
+        "Le champ signé ne couvre pas sa situation de travail.",
+        "L’appartenance à l’entreprise suffit à remplir les deux conditions.",
+        "L’absence de condition d’ancienneté supprime la condition de travail de nuit."
+      ],
+      "answer": 1,
+      "explanation": "Les conditions de catégorie et d’organisation du travail sont cumulatives dans l’accord fourni. La salariée ne relève d’aucune des deux. Le résumé ne démontre pas une modification de ce champ ; un éventuel autre fondement de la demande devrait être étudié séparément."
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Dans les matières énumérées à l’article L2253-1 du Code du travail, à quelle condition un accord d’entreprise peut-il écarter les stipulations de branche concurrentes ?",
+      "options": [
+        "Être signé après l’accord de branche.",
+        "Assurer des garanties au moins équivalentes dans la même matière.",
+        "Être approuvé par chaque salarié concerné.",
+        "Accorder un avantage dans une matière différente."
+      ],
+      "answer": 1,
+      "explanation": "L’article L2253-1 prévoit la prévalence de la branche dans les matières énumérées, avec une exception pour l’entreprise assurant des garanties au moins équivalentes. L’équivalence porte sur un ensemble de garanties de la même matière ; elle ne découle ni de la date ni d’un avantage étranger au sujet.",
+      "references": [
+        {
+          "title": "Code du travail, L2253-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2253-1"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une entreprise veut remplacer la classification prévue par sa branche par sa propre grille. Quelle méthode correspond à l’article L2253-1 ?",
+      "options": [
+        "Donner priorité à la grille d’entreprise parce qu’elle est plus détaillée.",
+        "Comparer seulement le nombre de niveaux des deux grilles.",
+        "Examiner si l’ensemble des garanties de classification est au moins équivalent.",
+        "Retenir la grille de branche uniquement si elle a été signée la première."
+      ],
+      "answer": 2,
+      "explanation": "Les classifications figurent parmi les matières de L2253-1. L’entreprise doit donc assurer des garanties au moins équivalentes pour écarter les stipulations de branche concernées. Le nombre de niveaux ou la précision rédactionnelle ne mesurent pas, à eux seuls, les garanties réellement attachées aux emplois.",
+      "references": [
+        {
+          "title": "Code du travail, L2253-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2253-1"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Pour justifier un dispositif de salaires minima hiérarchiques moins protecteur, une entreprise invoque exclusivement des jours de congé supplémentaires, étrangers à la matière des minima. Quelle difficulté affecte ce raisonnement ?",
+      "options": [
+        "Il compare des garanties relevant de matières différentes.",
+        "Il aurait dû comparer seulement les dates de signature.",
+        "Il considère à tort que les salaires minima relèvent de la branche.",
+        "Il aurait dû recueillir une renonciation individuelle aux minima."
+      ],
+      "answer": 0,
+      "explanation": "Les salaires minima hiérarchiques sont visés par L2253-1. L’équivalence s’apprécie par ensemble de garanties se rapportant à la même matière. Des congés supplémentaires ne démontrent donc pas, dans les faits fournis, l’équivalence des garanties portant sur les minima.",
+      "references": [
+        {
+          "title": "Code du travail, L2253-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2253-1"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une branche verrouille expressément les primes pour travaux dangereux. Un accord d’entreprise postérieur prévoit une prime différente. Selon L2253-2, quel examen est nécessaire ?",
+      "options": [
+        "Comparer les garanties de cette matière pour vérifier leur équivalence au moins égale.",
+        "Appliquer l’accord d’entreprise du seul fait de sa date plus récente.",
+        "Écarter la clause de branche parce que les primes ne peuvent être verrouillées.",
+        "Substituer le consentement individuel à l’examen des garanties collectives."
+      ],
+      "answer": 0,
+      "explanation": "Les primes pour travaux dangereux ou insalubres relèvent des matières où la branche peut prévoir expressément un verrouillage. L’accord d’entreprise postérieur ne peut alors différer que s’il assure des garanties au moins équivalentes dans la même matière.",
+      "references": [
+        {
+          "title": "Code du travail, L2253-2",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2253-2"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Quel élément distingue le mécanisme de L2253-2 de la prévalence de branche organisée par L2253-1 ?",
+      "options": [
+        "L’obligation d’une stipulation expresse de la branche dans les matières de L2253-2.",
+        "La possibilité de compenser une garantie par n’importe quel avantage.",
+        "La priorité générale donnée à la norme collective la plus ancienne.",
+        "La nécessité d’un vote individuel unanime pour chaque accord d’entreprise."
+      ],
+      "answer": 0,
+      "explanation": "Pour les matières limitativement visées par L2253-2, le verrouillage suppose une stipulation expresse de la branche. Cette condition ne se confond pas avec le régime de L2253-1. Dans les deux mécanismes, la comparaison pertinente des garanties reste circonscrite à une même matière.",
+      "references": [
+        {
+          "title": "Code du travail, L2253-2",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2253-2"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un avantage relève expressément, pour cet exercice, de L2253-3. Un accord d’entreprise et un accord de branche règlent le même objet ; la branche est plus récente. Quel texte prévaut dans leur articulation ?",
+      "options": [
+        "La branche, parce qu’elle est plus récente.",
+        "Celui qui comporte le montant le plus élevé, quel que soit le régime.",
+        "L’entreprise, même si elle a été conclue avant la branche.",
+        "Le contrat individuel, même s’il ne contient aucune clause sur cet avantage."
+      ],
+      "answer": 2,
+      "explanation": "Dans les matières relevant de L2253-3, les stipulations d’entreprise prévalent sur celles de branche ayant le même objet, qu’elles soient antérieures ou postérieures. La seule chronologie ne rétablit pas une priorité de la branche. Le cas suppose que la matière a été correctement qualifiée.",
+      "references": [
+        {
+          "title": "Code du travail, L2253-3",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2253-3"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une entreprise n’a conclu aucun accord sur une matière relevant de L2253-3. Sa branche applicable contient une règle sur ce sujet. Quel est le résultat de cette absence ?",
+      "options": [
+        "La règle de branche applicable peut régir le sujet.",
+        "La loi interdit désormais d’appliquer une règle de branche.",
+        "L’absence d’accord d’entreprise équivaut à une dérogation à la branche.",
+        "Chaque salarié doit négocier un accord collectif individuel."
+      ],
+      "answer": 0,
+      "explanation": "L2253-3 prévoit expressément l’application de la branche en l’absence d’accord d’entreprise. La priorité donnée à un accord d’entreprise existant ne signifie donc pas que les dispositions de branche disparaissent lorsque l’entreprise ne négocie pas sur le sujet.",
+      "references": [
+        {
+          "title": "Code du travail, L2253-3",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2253-3"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un accord d’entreprise fixe une prime de déplacement. Un accord de branche traite uniquement des classifications. Un étudiant veut écarter ce dernier en invoquant L2253-3 et la prime d’entreprise. Quel point doit-il corriger ?",
+      "options": [
+        "La comparaison doit porter sur des stipulations ayant le même objet.",
+        "Une prime de déplacement devient une classification si elle est collective.",
+        "La branche prime sur chaque clause de l’entreprise, quel que soit son objet.",
+        "Toute clause d’entreprise abroge intégralement la convention de branche."
+      ],
+      "answer": 0,
+      "explanation": "La prévalence décrite par L2253-3 concerne des stipulations ayant le même objet et les matières relevant de cet article. Une prime de déplacement ne permet pas d’écarter une grille de classification. Il faut comparer les dispositions concurrentes sujet par sujet.",
+      "references": [
+        {
+          "title": "Code du travail, L2253-3",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2253-3"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Dans le régime syndical de L2232-12, quelle audience des organisations signataires permet la validité majoritaire directe d’un accord d’entreprise ?",
+      "options": [
+        "Au moins 30 % des suffrages de tous les inscrits.",
+        "Plus de 50 % des suffrages exprimés en faveur des organisations représentatives au premier tour visé par le texte.",
+        "Exactement la moitié des sièges de l’ensemble des représentants du personnel.",
+        "Plus de 50 % des salariés présents lors de la dernière réunion d’information."
+      ],
+      "answer": 1,
+      "explanation": "La majorité directe se mesure en suffrages, non en sièges ni en salariés présents à une réunion. L2232-12 retient plus de 50 % des suffrages exprimés en faveur des organisations représentatives au premier tour des dernières élections des titulaires au CSE.",
+      "references": [
+        {
+          "title": "Code du travail, L2232-12",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2232-12"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Sous L2232-12, les syndicats signataires recueillent exactement 50 % des suffrages pertinents. Aucune consultation de validation n’a eu lieu. Peut-on retenir la majorité directe ?",
+      "options": [
+        "Oui, parce que 50 % est supérieur au tiers.",
+        "Oui, car la signature de l’employeur complète la moitié manquante.",
+        "Non, le seuil de validité majoritaire directe exige plus de 50 %.",
+        "Non, car ce régime exige l’unanimité syndicale."
+      ],
+      "answer": 2,
+      "explanation": "Le seuil direct est strictement supérieur à 50 %. L’égalité à 50 % ne le satisfait pas. Cela n’exclut pas d’examiner la procédure de consultation prévue par le texte lorsque ses conditions sont réunies ; mais cette procédure ne peut être tenue pour déjà réalisée.",
+      "references": [
+        {
+          "title": "Code du travail, L2232-12",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2232-12"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans une négociation relevant de L2232-12, un accord est signé par des syndicats représentant 38 % des suffrages pertinents. Les autres conditions sont réunies et ces signataires demandent la consultation dans le délai prévu. Quelle est la fonction de cette consultation ?",
+      "options": [
+        "Transformer les 38 % en une audience électorale de 51 %.",
+        "Permettre la validation de l’accord par la majorité des suffrages exprimés des salariés consultés.",
+        "Remplacer le texte écrit par le procès-verbal du vote.",
+        "Exiger que la majorité des inscrits ratifie chaque clause séparément."
+      ],
+      "answer": 1,
+      "explanation": "La consultation peut permettre de valider un accord signé par des organisations dépassant 30 % mais n’atteignant pas la majorité directe, selon la procédure légale. L’approbation se mesure à la majorité des suffrages exprimés lors de la consultation ; elle ne modifie pas l’audience électorale des syndicats.",
+      "references": [
+        {
+          "title": "Code du travail, L2232-12",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2232-12"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Après une consultation régulièrement organisée au titre de L2232-12, 46 % des suffrages exprimés approuvent l’accord et 54 % le rejettent. Quelle conséquence prévoit cet article ?",
+      "options": [
+        "L’accord est réputé non écrit.",
+        "L’accord entre en vigueur pour les seuls votants favorables.",
+        "L’accord reste valide parce que les signataires dépassaient 30 %.",
+        "Le rejet reporte seulement l’application au mois suivant."
+      ],
+      "answer": 0,
+      "explanation": "La signature par des syndicats ayant plus de 30 % ne suffit pas à établir la majorité directe. Dans la procédure de validation soumise aux salariés, le défaut d’approbation majoritaire entraîne, selon L2232-12, que l’accord est réputé non écrit.",
+      "references": [
+        {
+          "title": "Code du travail, L2232-12",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2232-12"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un dirigeant soutient qu’une réunion d’information avec les salariés remplace la consultation de validation prévue par L2232-12. Aucun scrutin ni suffrages exprimés ne sont établis. Quelle distinction est décisive ?",
+      "options": [
+        "Une présentation du projet n’établit pas son approbation par la procédure de vote requise.",
+        "La présence à la réunion équivaut à un vote favorable de chaque participant.",
+        "Un échange oral transforme les salariés présents en organisations syndicales représentatives.",
+        "Le nombre de questions posées mesure la majorité de validation."
+      ],
+      "answer": 0,
+      "explanation": "L’information rend le projet connu ; elle ne prouve ni l’organisation d’un scrutin conforme ni le résultat majoritaire exigé. Une consultation de validation est une procédure distincte. Il faut examiner ses modalités et son résultat au lieu de convertir la présence en accord.",
+      "references": [
+        {
+          "title": "Code du travail, L2232-12",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2232-12"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les négociateurs se seraient entendus oralement sur toutes les clauses d’un accord collectif, mais aucun acte écrit n’a été établi. Quel contrôle fondamental impose L2231-3 ?",
+      "options": [
+        "L’existence de l’écrit exigé à peine de nullité.",
+        "La seule preuve de l’absence de désaccord oral.",
+        "La reprise de l’accord dans chaque contrat individuel.",
+        "Le paiement de la première prime comme remplacement de la forme écrite."
+      ],
+      "answer": 0,
+      "explanation": "L2231-3 impose que la convention ou l’accord collectif soit un acte écrit, à peine de nullité. Une convergence orale, même relatée par plusieurs participants, ne remplit pas cette exigence de forme propre à l’accord collectif.",
+      "references": [
+        {
+          "title": "Code du travail, L2231-3",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2231-3"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un accord est régulièrement conclu et déposé le 14 avril. Il ne contient aucune stipulation particulière d’entrée en vigueur. Selon L2261-1, à quelle date devient-il applicable ?",
+      "options": [
+        "Le 1er avril.",
+        "Le 14 avril.",
+        "Le 15 avril.",
+        "Le 1er mai."
+      ],
+      "answer": 2,
+      "explanation": "En l’absence de stipulation contraire, L2261-1 fixe l’application au jour suivant le dépôt auprès du service compétent. Le cas donne un dépôt régulier le 14 avril : la date est donc le 15 avril, et non la date de signature supposée ou le début du mois suivant.",
+      "references": [
+        {
+          "title": "Code du travail, L2261-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2261-1"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le dossier contient un récépissé de dépôt, mais aucune donnée sur les signatures syndicales ni leur audience. Quelle conclusion est étayée ?",
+      "options": [
+        "Le dépôt dispense de vérifier la majorité syndicale.",
+        "La formalité de dépôt est documentée, la validité majoritaire reste à examiner.",
+        "Le récépissé prouve une audience syndicale supérieure à 50 %.",
+        "L’absence d’audience jointe prouve le rejet de l’accord par les salariés."
+      ],
+      "answer": 1,
+      "explanation": "Le dépôt et les conditions de validité sont des contrôles différents. Le récépissé peut documenter la formalité prévue par L2231-6, mais ne remplace pas l’examen des signatures et audiences pertinentes au regard du régime de négociation applicable.",
+      "references": [
+        {
+          "title": "Code du travail, L2231-6",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2231-6"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux versions d’un projet figurent au dossier : V1 prévoit une prime fixe et V2 une prime conditionnelle. Les pages de signatures reçues ne permettent pas de savoir à quelle version elles se rattachent. Quelle pièce faut-il obtenir en priorité pour identifier l’engagement conclu ?",
+      "options": [
+        "Le texte complet signé, avec un rattachement certain des signatures à la version.",
+        "Le dernier projet envoyé par la direction, même s’il n’a pas été signé.",
+        "La version qui accorde le montant maximal dans toutes les situations.",
+        "La version retenue par le premier salarié ayant demandé la prime."
+      ],
+      "answer": 0,
+      "explanation": "Le contenu de l’accord dépend de l’acte effectivement conclu. Quand les conditions diffèrent, les signatures détachées ne permettent pas de choisir la version. Il faut reconstituer un acte signé identifiable ; la chronologie d’envoi ou le caractère avantageux d’un projet ne prouve pas son adoption."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un relevé électoral fournit 600 suffrages valables : 500 en faveur de syndicats représentatifs et 100 en faveur d’organisations non représentatives. Les signataires représentent 260 voix des 500. Sous L2232-12, quel périmètre doit servir à contrôler leur majorité directe ?",
+      "options": [
+        "Les 600 suffrages, car tout vote valable entre au dénominateur.",
+        "Les 500 suffrages en faveur des organisations représentatives.",
+        "Le nombre total de salariés inscrits, abstentionnistes compris.",
+        "Le nombre de sièges gagnés par les organisations signataires."
+      ],
+      "answer": 1,
+      "explanation": "L2232-12 vise les suffrages exprimés en faveur des organisations représentatives au premier tour pertinent. Ici, le dénominateur est donc 500 : les 260 voix dépassent sa moitié. Confondre ce périmètre avec tous les suffrages, les inscrits ou les sièges modifie à tort le test.",
+      "references": [
+        {
+          "title": "Code du travail, L2232-12",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2232-12"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un accord signé contient une clause d’entrée en vigueur au 1er septembre ; un résumé RH indique le 1er juillet. Les conditions de conclusion et de dépôt sont par ailleurs remplies. Quel document faut-il retenir pour la date conventionnelle ?",
+      "options": [
+        "Le résumé, parce qu’il est adressé directement aux salariés.",
+        "La date figurant dans la clause signée, sous réserve de son application régulière.",
+        "La date de la première réunion de négociation.",
+        "La date choisie individuellement par chaque salarié."
+      ],
+      "answer": 1,
+      "explanation": "La règle supplétive de L2261-1 cède devant les stipulations contraires de l’accord. Le résumé RH ne démontre pas une modification du texte signé. Dans les données fournies, la clause identifiée est donc la référence pour la date conventionnelle.",
+      "references": [
+        {
+          "title": "Code du travail, L2261-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2261-1"
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une prime et une classification sont traitées dans deux clauses distinctes d’un accord. Après analyse, la prime relève de L2253-3 et la classification de L2253-1. Comment articuler l’accord avec la branche ?",
+      "options": [
+        "Retenir un seul niveau prioritaire pour l’intégralité de l’accord.",
+        "Appliquer à chaque matière le mécanisme d’articulation qui lui correspond.",
+        "Choisir le niveau dont le texte contient le plus de clauses.",
+        "Compenser une classification moins protectrice par le montant de la prime."
+      ],
+      "answer": 1,
+      "explanation": "L’articulation s’effectue par matière et objet, non par un classement global des textes. La classification relève de l’examen d’équivalence prévu par L2253-1, tandis que la prime, selon l’hypothèse expressément donnée, suit L2253-3. Une compensation entre ces sujets ne remplace pas ces tests.",
+      "references": [
+        {
+          "title": "Code du travail, L2253-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2253-1"
+        }
+      ]
+    }
+  ]
+}

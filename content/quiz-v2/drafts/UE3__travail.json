@@ -1,0 +1,410 @@
+{
+  "module": "UE3",
+  "chapter": "travail",
+  "sourceHash": "d9e232b0fabe92b727589494d3493047eca7abe76f78b985bee433d04acfb86a",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel ensemble de pouvoirs oriente l’examen d’un lien de subordination ?",
+      "options": [
+        "Donner des directives, contrôler leur exécution et sanctionner les manquements.",
+        "Commander un résultat, recevoir une facture et payer son prix.",
+        "Acheter un outil, fixer un budget et comparer des devis.",
+        "Évaluer un produit livré, choisir un fournisseur et négocier une remise."
+      ],
+      "answer": 0,
+      "explanation": "La qualification recherche une autorité sur l’exécution du travail. Les obligations ordinaires d’une relation commerciale ne correspondent pas toutes à ce pouvoir de direction, contrôle et sanction."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le contrat utilise le mot prestataire. En pratique, le donneur d’ordre impose les méthodes, contrôle quotidiennement leur respect et peut sanctionner les refus. Quelle question faut-il examiner ?",
+      "options": [
+        "La seule immatriculation du prestataire, qui tranche tous les faits.",
+        "L’existence d’une subordination dans les conditions réelles d’activité.",
+        "Le seul accord des parties sur une dénomination d’indépendant, à substituer aux faits.",
+        "La seule forme des factures, tenue pour preuve définitive de l’autonomie."
+      ],
+      "answer": 1,
+      "explanation": "La dénomination ne remplace pas les faits d’exécution. Les pouvoirs décrits constituent des indices à rapprocher pour qualifier la relation."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant conclut qu’une mission est salariée parce qu’elle est rémunérée. Quelle condition doit encore être recherchée pour distinguer ici salariat et prestation indépendante ?",
+      "options": [
+        "La seule différence entre salaire et honoraires inscrite dans le titre.",
+        "Le seul fait que la mission a une échéance convenue.",
+        "Un lien de subordination dans l’exécution du travail.",
+        "La seule existence d’un paiement régulier du prix."
+      ],
+      "answer": 2,
+      "explanation": "Une activité rémunérée peut s’inscrire dans plusieurs contrats. La subordination, appréciée par les pouvoirs effectivement exercés, est déterminante pour la distinction posée."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise fixe la date de remise d’un livrable à un consultant qui choisit ses méthodes et organise librement ses interventions. Quel raisonnement est adapté à ce seul délai ?",
+      "options": [
+        "Le délai est une sanction disciplinaire déjà démontrée.",
+        "Le délai prouve toutes les conditions du contrat de travail.",
+        "Le délai supprime toute nécessité d’examiner la relation réelle.",
+        "L’échéance ne suffit pas seule à démontrer les pouvoirs de subordination."
+      ],
+      "answer": 3,
+      "explanation": "Une échéance peut appartenir à une relation commerciale. Il faut distinguer l’exigence de résultat et l’autorité sur les modalités d’exécution, le contrôle et la sanction."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’employeur veut un CDD uniquement pour pouvoir réévaluer chaque année un poste répondant à un besoin durable. Quel obstacle de principe faut-il relever ?",
+      "options": [
+        "La durée limitée souhaitée ne constitue pas, seule, un motif autorisé de besoin temporaire.",
+        "Un CDD est valable dès lors que le salarié préfère une durée limitée.",
+        "Une date annuelle de renouvellement transforme le besoin permanent en besoin temporaire.",
+        "Le paiement mensuel suffit à établir un remplacement."
+      ],
+      "answer": 0,
+      "explanation": "Le CDD répond à un cadre de recours et à un besoin temporaire. L’objectif de flexibilité ne remplace pas un motif autorisé et effectivement caractérisé."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "L’entreprise connaît un surcroît exceptionnel et temporaire de commandes, précisément documenté. Quel cas de recours de L1242-2 doit-elle examiner ?",
+      "options": [
+        "Le remplacement d’un salarié absent dont aucun poste n’est indiqué.",
+        "L’accroissement temporaire de l’activité.",
+        "L’occupation durable d’un emploi permanent au seul motif de la hausse des ventes.",
+        "L’attente d’un CDI qui n’a pas été recruté dans le dossier."
+      ],
+      "answer": 1,
+      "explanation": "Le texte prévoit l’accroissement temporaire d’activité parmi les cas de recours. Le caractère précis et temporaire doit être documenté plutôt que déduit de la seule volonté de conclure un CDD.",
+      "references": [
+        {
+          "title": "Code du travail, article L1242-2",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037312980"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une activité nécessite des tâches qui se répètent chaque année à une périodicité liée aux saisons. Quel motif de L1242-2 est directement à examiner ?",
+      "options": [
+        "Le remplacement d’un salarié nommé, même si aucun absent n’est identifié.",
+        "L’attente d’une nomination de dirigeant.",
+        "L’emploi à caractère saisonnier selon les conditions du texte.",
+        "Le besoin de tester durablement un emploi permanent."
+      ],
+      "answer": 2,
+      "explanation": "La saisonnalité vise des tâches se répétant selon une périodicité liée aux saisons ou aux modes de vie collectifs. Elle se distingue d’un simple souhait de limiter la durée.",
+      "references": [
+        {
+          "title": "Code du travail, article L1242-2",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037312980"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un projet de CDD porte seulement le motif « convenance des parties ». Quel point faut-il compléter ?",
+      "options": [
+        "La durée souhaitée, qui suffit à caractériser le cas de recours.",
+        "L’accord des parties sur un terme, qui remplace le motif de recours.",
+        "La période d’essai, qui justifie à elle seule le caractère temporaire.",
+        "Le cas autorisé et le besoin temporaire effectivement invoqués."
+      ],
+      "answer": 3,
+      "explanation": "L’accord sur une durée ne remplace pas un motif conforme au régime du CDD. Le contrat et les faits doivent préciser la situation de recours."
+    },
+    {
+      "id": "q09",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une salariée est temporairement absente et le dossier envisage son remplacement par un CDD. Quel contrôle est pertinent ?",
+      "options": [
+        "L’absence, le besoin de remplacement et l’identification correcte du motif dans le contrat.",
+        "La seule volonté de l’employeur de limiter la durée de toute nouvelle embauche.",
+        "Le seul montant égal des deux rémunérations, tenu pour preuve du remplacement.",
+        "La seule ancienneté de l’entreprise, tenue pour motif autorisé de CDD."
+      ],
+      "answer": 0,
+      "explanation": "L’absence temporaire peut ouvrir un cas de recours, mais le contrat et les circonstances doivent répondre aux conditions du remplacement et à ses mentions."
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un salarié passe provisoirement à temps partiel par avenant écrit ; l’employeur cherche un remplacement correspondant. Quel cas est visé par L1242-2 ?",
+      "options": [
+        "Un accroissement permanent à qualifier par le seul temps partiel.",
+        "Le remplacement lié au passage provisoire à temps partiel selon les conditions du texte.",
+        "Une saisonnalité déduite de tout horaire réduit.",
+        "Un besoin durable librement couvert sans motif de CDD."
+      ],
+      "answer": 1,
+      "explanation": "L1242-2 prévoit le remplacement lors d’un passage provisoire à temps partiel dans le cadre écrit indiqué. Le caractère provisoire et la correspondance du besoin restent pertinents.",
+      "references": [
+        {
+          "title": "Code du travail, article L1242-2",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037312980"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un salarié a déjà été recruté en CDI mais son entrée en service est différée. L’entreprise envisage un CDD dans l’attente de son arrivée. Quel cas de L1242-2 doit être examiné ?",
+      "options": [
+        "La substitution d’une garantie à un contrat de travail.",
+        "La création d’un emploi saisonnier par toute date future.",
+        "L’attente de l’entrée en service effective du salarié recruté en CDI appelé à remplacer.",
+        "L’absence de tout besoin temporaire dès qu’un CDI est déjà signé."
+      ],
+      "answer": 2,
+      "explanation": "Le texte vise cette situation particulière d’attente. Il faut identifier le recrutement en CDI et l’entrée en service effective attendue, plutôt qu’invoquer une attente indéfinie.",
+      "references": [
+        {
+          "title": "Code du travail, article L1242-2",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037312980"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise indique un motif de remplacement, mais les relevés montrent que le remplaçant occupe une fonction sans lien documenté avec l’absence invoquée. Quel rapprochement faut-il effectuer ?",
+      "options": [
+        "Le motif écrit et la seule date de signature du contrat.",
+        "La rémunération du remplaçant et le montant payé à la personne absente.",
+        "Le motif annoncé et la seule absence d’opposition du remplaçant.",
+        "Le besoin de remplacement allégué et les conditions réelles d’emploi."
+      ],
+      "answer": 3,
+      "explanation": "Le motif écrit doit être confronté aux faits. L’étiquette remplacement ne suffit pas à établir que l’emploi répond réellement au besoin décrit."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Dans un CDD de remplacement relevant des cas visés par L1242-12, quelles informations sur la personne remplacée figurent notamment au contrat ?",
+      "options": [
+        "Son nom et sa qualification professionnelle.",
+        "Le seul nom du remplaçant, tenu pour désignation de la personne remplacée.",
+        "La seule rémunération du remplaçant, tenue pour définition du motif.",
+        "La seule date de signature, tenue pour identification du remplacement."
+      ],
+      "answer": 0,
+      "explanation": "Le texte exige notamment le nom et la qualification professionnelle pour ces remplacements. Il ne faut pas substituer des données personnelles sans rapport aux mentions requises.",
+      "references": [
+        {
+          "title": "Code du travail, article L1242-12",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901206"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Quelle exigence générale L1242-12 pose-t-il pour le CDD ?",
+      "options": [
+        "Un simple accord sur la date suffit, sans définition du motif.",
+        "Un écrit comportant la définition précise du motif.",
+        "Une facture émise chaque mois par le salarié.",
+        "Une simple mention CDD sur le planning."
+      ],
+      "answer": 1,
+      "explanation": "L’écrit doit préciser le motif de recours. Un intitulé ou un planning ne remplace pas le contenu exigé du contrat.",
+      "references": [
+        {
+          "title": "Code du travail, article L1242-12",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901206"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un CDD ne comporte pas de terme précis dans le cas étudié. Quelle mention de L1242-12 doit être prévue ?",
+      "options": [
+        "La date prévisionnelle de retour, retenue comme terme ferme malgré l’absence de terme précis.",
+        "Une durée maximale indiquée à la place de tout engagement minimal.",
+        "La durée minimale pour laquelle il est conclu.",
+        "La durée de la période d’essai, retenue comme durée minimale du contrat."
+      ],
+      "answer": 2,
+      "explanation": "Le texte prévoit une durée minimale lorsqu’il n’y a pas de terme précis. Cette mention doit être distinguée d’une date de fin ferme qui n’est pas fournie ici.",
+      "references": [
+        {
+          "title": "Code du travail, article L1242-12",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901206"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un CDD prévoit un salaire de base et des primes contractuelles identifiées. Pour sa mention de rémunération, que vise L1242-12 ?",
+      "options": [
+        "Le seul salaire de base, les primes relevant exclusivement des bulletins futurs.",
+        "La rémunération annuelle globale sans identification de ses composantes.",
+        "La rémunération de la personne remplacée, substituée à celle du remplaçant.",
+        "Le montant de la rémunération et de ses composantes, primes et accessoires compris s’il en existe."
+      ],
+      "answer": 3,
+      "explanation": "La mention ne se réduit pas nécessairement au salaire de base. Le texte demande les composantes et les primes ou accessoires existants.",
+      "references": [
+        {
+          "title": "Code du travail, article L1242-12",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901206"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le CDD soumis indique le poste, le salaire et les dates, mais aucune convention collective n’est nommée. Quelle mention de L1242-12 manque dans les faits donnés ?",
+      "options": [
+        "L’intitulé de la convention collective applicable.",
+        "Le seul accord collectif d’entreprise relatif au temps de travail.",
+        "Le nom d’une convention proposé par le salarié indépendamment de son champ.",
+        "Le code d’activité de l’entreprise, substitué à l’intitulé de la convention."
+      ],
+      "answer": 0,
+      "explanation": "Le texte énumère l’intitulé de la convention collective applicable parmi les mentions. Identifier l’omission ne dispense pas d’examiner séparément ses conséquences.",
+      "references": [
+        {
+          "title": "Code du travail, article L1242-12",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901206"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un projet prévoit une période d’essai mais omet d’en indiquer la durée. Quel point formel de L1242-12 doit être complété ?",
+      "options": [
+        "Le salaire de base, qui tiendrait lieu de durée d’essai.",
+        "La durée de la période d’essai éventuellement prévue.",
+        "La date du premier bulletin, tenue pour date de fin d’essai.",
+        "Le motif de CDD, tenu pour durée automatique d’essai."
+      ],
+      "answer": 1,
+      "explanation": "Quand une période d’essai est prévue, sa durée figure parmi les mentions du texte. Sa présence au contrat et les limites de fond relèvent de contrôles complémentaires.",
+      "references": [
+        {
+          "title": "Code du travail, article L1242-12",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901206"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Quel délai L1242-13 prévoit-il pour transmettre le contrat au salarié après l’embauche ?",
+      "options": [
+        "Un mois après l’embauche.",
+        "Le dernier jour de la période d’essai.",
+        "Au plus tard dans les deux jours ouvrables suivant l’embauche.",
+        "Au plus tard au premier renouvellement."
+      ],
+      "answer": 2,
+      "explanation": "Le texte prévoit deux jours ouvrables suivant l’embauche. Il faut distinguer ce délai de transmission d’autres délais ou d’une durée de période d’essai.",
+      "references": [
+        {
+          "title": "Code du travail, article L1242-13",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901207"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie donne la même conséquence à tout défaut de mention et à tout retard de transmission du CDD. Quelle méthode doit-elle adopter ?",
+      "options": [
+        "Étendre à chaque défaut de contenu la sanction attachée au retard de transmission.",
+        "Déduire de tout retard de transmission l’absence de motif de recours.",
+        "Déduire de toute mention manquante la même indemnité sans en qualifier l’objet.",
+        "Identifier chaque irrégularité et le régime de conséquence qui lui est propre."
+      ],
+      "answer": 3,
+      "explanation": "Les défauts ne sont pas interchangeables. L’écrit, ses mentions, sa transmission et le motif demandent des qualifications et des conséquences à vérifier distinctement."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le CDD écrit définit précisément son motif. Le dossier ne contient cependant aucune preuve de sa transmission au salarié. Quelle question reste ouverte ?",
+      "options": [
+        "Le respect de la transmission, distinct du contenu déjà documenté.",
+        "La conformité de l’écrit, réputée prouver nécessairement sa réception.",
+        "La transmission présumée à la seule date de rédaction par l’employeur.",
+        "La dispense de transmission, déduite de la précision du motif."
+      ],
+      "answer": 0,
+      "explanation": "Un écrit complet ne démontre pas à lui seul sa transmission. Les pièces doivent être rattachées au contrôle précis : contenu du contrat ou respect de l’envoi."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un CDD décrit le poste, mais le dossier indique qu’il figure sur une liste de risques particuliers pour la santé ou la sécurité. Quel point de L1242-12 faut-il vérifier dans sa désignation ?",
+      "options": [
+        "La seule mention du salaire, tenue pour information suffisante sur les risques.",
+        "La précision requise sur l’appartenance du poste à cette liste de risques.",
+        "L’intitulé d’une autre fonction, considéré comme substitut du poste effectivement occupé.",
+        "La date de signature, considérée comme preuve de l’absence de risque."
+      ],
+      "answer": 1,
+      "explanation": "La désignation du poste comporte, le cas échéant, la précision relative aux risques particuliers mentionnés par le texte. Cette vérification n’établit pas à elle seule toute la prévention.",
+      "references": [
+        {
+          "title": "Code du travail, article L1242-12",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006901206"
+        }
+      ]
+    }
+  ]
+}

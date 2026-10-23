@@ -1,0 +1,338 @@
+{
+  "module": "DSCG7",
+  "chapter": "restitution",
+  "sourceHash": "0b50b2af79309bede6ce56f06850a3677c9f3a76bbdb500fc52bd2d2defef518",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle phrase présente un constat plutôt qu’une explication de ses causes ?",
+      "options": [
+        "Dans les douze dossiers observés, cinq comportaient un retour pour pièce manquante.",
+        "Les retours s’expliquent principalement par une formation insuffisante.",
+        "La formation devrait réduire les retours de dossiers.",
+        "L’autonomie des équipes paraît être le principal facteur de fiabilité."
+      ],
+      "answer": 0,
+      "explanation": "Le constat décrit ce qui a été relevé dans une population définie. Les autres phrases proposent une cause, une action ou une interprétation, qui doivent être étayées séparément."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les données montrent une baisse des délais ; les entretiens suggèrent que les salariés regroupent désormais certaines tâches. Quelle restitution sépare les niveaux de preuve ?",
+      "options": [
+        "Attribuer à chaque dossier la pratique évoquée par un seul salarié sans vérification.",
+        "Présenter la baisse mesurée puis le regroupement des tâches comme une piste explicative issue des entretiens.",
+        "Présenter le regroupement comme une cause démontrée par le seul calcul de la baisse.",
+        "Remplacer la baisse chiffrée par les témoignages, parce qu’ils contiennent une explication."
+      ],
+      "answer": 1,
+      "explanation": "Un résultat chiffré et une explication plausible n’ont pas le même statut. Les relier est utile si l’origine et la portée de chacun restent explicites."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau intitulé « gain de productivité » ne contient que le nombre de dossiers clôturés, sans mesure du temps de travail. Quel titre serait plus fidèle ?",
+      "options": [
+        "Baisse des ressources nécessaires à chaque dossier.",
+        "Effet causal du logiciel sur la productivité individuelle.",
+        "Évolution du nombre de dossiers clôturés sur la période étudiée.",
+        "Évolution démontrée de l’efficacité horaire du service."
+      ],
+      "answer": 2,
+      "explanation": "Le volume clôturé ne mesure pas à lui seul la production par heure ni les ressources mobilisées. Le titre doit nommer la variable observée, pas une conclusion non mesurée."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux personnes parmi huit interrogées jugent une procédure inutile. Les six autres n’ont pas exprimé cet avis, sans que leur position soit précisée. Quelle phrase est fidèle à ces éléments ?",
+      "options": [
+        "Un quart de tous les salariés du cabinet considère la procédure inutile.",
+        "Les six autres personnes interrogées considèrent la procédure utile.",
+        "Deux services de l’organisation considèrent la procédure inutile, puisque deux personnes ont exprimé cet avis.",
+        "Deux personnes sur les huit interrogées ont exprimé cet avis ; la position des six autres n’est pas établie ici."
+      ],
+      "answer": 3,
+      "explanation": "Le constat porte sur deux personnes parmi huit entretiens, sans mesure de l’ensemble des salariés ni attribution à des services. L’absence de cet avis chez les six autres ne démontre pas qu’elles défendent l’avis opposé."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une citation a été raccourcie pour une diapositive, mais la coupure retire « sauf lorsque le client répond tard ». Quelle action préserve son sens ?",
+      "options": [
+        "Rétablir la réserve ou signaler une paraphrase qui conserve cette condition.",
+        "Conserver la phrase raccourcie en ajoutant uniquement le numéro de l’entretien.",
+        "Présenter la citation comme une règle générale parce que les mots conservés sont exacts.",
+        "Déplacer la réserve dans les notes privées sans la rendre accessible au lecteur."
+      ],
+      "answer": 0,
+      "explanation": "Une citation fidèle conserve les conditions qui en déterminent le sens. Une référence exacte ne corrige pas une coupure qui transforme une affirmation conditionnelle en affirmation générale."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La recommandation propose un contrôle supplémentaire qui n’a pas été testé. Comment la présenter ?",
+      "options": [
+        "Comme un gain observé, chiffré en appliquant le bénéfice espéré au volume actuel de dossiers.",
+        "Comme une proposition motivée par l’analyse, dont les effets restent à évaluer.",
+        "Comme une efficacité établie dès lors que le contrôle répond logiquement au diagnostic.",
+        "Comme une pratique validée par l’acceptation de sa proposition, sans distinguer accord et évaluation de ses effets."
+      ],
+      "answer": 1,
+      "explanation": "Une recommandation peut découler du diagnostic sans être déjà mise en œuvre ni validée expérimentalement. Son statut et les vérifications restantes doivent être visibles."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "À quoi sert principalement la présentation des limites d’un mémoire ?",
+      "options": [
+        "À remplacer la description du protocole par une formule de prudence générale.",
+        "À dispenser de justifier les choix de collecte effectués.",
+        "À préciser les conclusions que le terrain et la méthode permettent de soutenir.",
+        "À retirer toute contribution dès qu’une source est imparfaite."
+      ],
+      "answer": 2,
+      "explanation": "Une limite situe la portée d’une contribution. Elle ne rend pas mécaniquement le travail inutile et ne remplace pas la transparence sur la démarche."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’étude porte sur la période de clôture annuelle, pendant laquelle l’équipe reçoit un renfort temporaire. Quelle limite doit accompagner une recommandation pour le fonctionnement ordinaire ?",
+      "options": [
+        "Le renfort prouve que les résultats annuels sont identiques à ceux de la période observée.",
+        "La période de clôture peut être omise du rapport si les indicateurs sont calculés correctement.",
+        "La taille de l’équipe rend inutile toute précision sur la période.",
+        "Les conditions de charge et de ressources de la clôture diffèrent possiblement du reste de l’année."
+      ],
+      "answer": 3,
+      "explanation": "Le contexte saisonnier peut influencer pratiques et résultats. La transposition au fonctionnement courant doit examiner ces conditions plutôt que supposer leur identité."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le jury demande si les résultats d’un cabinet s’appliquent aux très grandes entreprises. Quelle réponse est la mieux étayée ?",
+      "options": [
+        "Décrire les conditions du cas et expliquer lesquelles devraient être examinées avant une transposition.",
+        "Affirmer la transférabilité parce que les deux organisations tiennent une comptabilité.",
+        "Affirmer l’impossibilité de toute comparaison au seul motif que les effectifs diffèrent.",
+        "Multiplier les indicateurs du cabinet par le rapport des effectifs pour obtenir les résultats attendus ailleurs."
+      ],
+      "answer": 0,
+      "explanation": "Une étude de cas peut éclairer un mécanisme, sans prédire mécaniquement son effet dans un autre contexte. Conditions, différences et nouveaux contrôles doivent être explicités."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La conclusion signale « échantillon limité », sans dire comment cela affecte les résultats. Quel complément est utile ?",
+      "options": [
+        "Donner uniquement la durée moyenne des entretiens comme justification suffisante de la portée de l’échantillon.",
+        "Préciser les profils absents et les conclusions qui ne peuvent être généralisées à ces profils.",
+        "Calculer une marge d’erreur probabiliste à partir du seul effectif, sans examiner le recrutement des participants.",
+        "Décrire seulement les profils présents et les tenir pour une couverture suffisante de ceux qui n’ont pas été rencontrés."
+      ],
+      "answer": 1,
+      "explanation": "La réserve devient informative lorsqu’elle relie une caractéristique du terrain à une limite précise d’inférence. Une formule vague ne permet pas au lecteur d’en apprécier l’effet."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le candidat cite une limite importante uniquement après une question du jury alors qu’elle conditionne sa conclusion centrale. Quel défaut de présentation apparaît ?",
+      "options": [
+        "La conclusion serait suffisamment délimitée par une réserve générale en annexe, même si la condition centrale n’est pas identifiée.",
+        "La limite peut être compensée par une baisse forfaitaire du degré de confiance annoncé, sans expliquer ce qu’elle modifie.",
+        "La conclusion initiale omet une condition nécessaire pour en apprécier la portée.",
+        "L’objection du jury doit être présentée comme un résultat empirique supplémentaire confirmé par l’enquête."
+      ],
+      "answer": 2,
+      "explanation": "Les limites déterminantes doivent accompagner la conclusion qu’elles qualifient. Les reconnaître pendant l’échange est utile, mais ne rend pas la formulation initiale complète."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une référence contient seulement « contrôle interne, internet ». Quel enrichissement sert le mieux sa traçabilité ?",
+      "options": [
+        "Décrire plus longuement le thème du contrôle interne sans identifier de document précis.",
+        "Indiquer le nombre de fois où le concept apparaît dans le mémoire sans préciser la source utilisée.",
+        "Ajouter l’appréciation du candidat sur la fiabilité du contenu sans identifier son origine.",
+        "Identifier le document utilisé, son auteur ou organisme, sa date ou version et les éléments permettant de le retrouver."
+      ],
+      "answer": 3,
+      "explanation": "La référence sert à identifier et retrouver le matériau effectivement utilisé. Un commentaire sur le thème, son importance ou sa fiabilité ne remplace pas cette identification."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un candidat reformule avec ses mots l’argument d’un auteur. Que doit-il conserver dans sa rédaction ?",
+      "options": [
+        "L’attribution de l’idée à sa source, même si la formulation est personnelle.",
+        "Les guillemets autour de toute la reformulation comme s’il s’agissait d’un extrait littéral.",
+        "La source uniquement dans ses notes privées, puisque les mots ont changé.",
+        "La présentation de l’idée comme son résultat empirique personnel."
+      ],
+      "answer": 0,
+      "explanation": "Changer les mots ne transforme pas l’origine de l’idée. Une paraphrase doit être attribuée ; des guillemets signaleraient à tort une reproduction exacte."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une phrase est reproduite exactement d’un ouvrage. Quelle présentation distingue une citation d’une paraphrase ?",
+      "options": [
+        "Mettre le passage en gras au lieu d’indiquer qu’il vient d’une source.",
+        "Signaler la reproduction littérale et donner la référence précise selon le dispositif de citation retenu.",
+        "Conserver la phrase exacte sans marque de citation en indiquant seulement le thème du livre.",
+        "Changer un seul mot puis retirer toute attribution."
+      ],
+      "answer": 1,
+      "explanation": "La fidélité et l’attribution doivent permettre de reconnaître une reproduction littérale. Une variation typographique ou un changement mineur ne remplace pas ce signalement."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le mémoire utilise une version d’un rapport de 2021 qui a été remplacée depuis par une nouvelle édition. Quel choix rend l’usage vérifiable ?",
+      "options": [
+        "Supprimer la date afin d’éviter la question de la version.",
+        "Fusionner les titres et dates des deux éditions en une seule référence.",
+        "Identifier la version effectivement consultée et examiner la pertinence de l’actualisation pour l’argument.",
+        "Citer la dernière édition sans l’avoir consultée pour donner une référence plus récente."
+      ],
+      "answer": 2,
+      "explanation": "La référence doit correspondre au document utilisé. Selon l’objet historique ou actuel de l’analyse, la nouvelle édition peut nécessiter un examen, sans falsifier la version consultée."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat n’a lu une idée d’un auteur ancien que dans un ouvrage récent qui la commente. Quelle attribution est transparente ?",
+      "options": [
+        "Citer directement l’ouvrage ancien comme lu en détail.",
+        "Attribuer l’argument ancien au seul auteur du commentaire récent, sans préciser qu’il présente une autre source.",
+        "Citer les deux titres dans la bibliographie sans indiquer lequel a été consulté ni le caractère indirect de la référence.",
+        "Indiquer qu’il utilise ce commentaire et signaler la référence indirecte sans prétendre avoir consulté l’original."
+      ],
+      "answer": 3,
+      "explanation": "La provenance réelle doit être restituée. Une source secondaire peut être utilisée en tant que telle, sans fabriquer une consultation du texte original."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une page web a disparu et le mémoire ne conserve ni titre, ni auteur ou organisme, ni version du contenu utilisé. Quelle conduite traite ce défaut de traçabilité ?",
+      "options": [
+        "Rechercher les éléments permettant de retrouver le document effectivement utilisé et expliciter la limite si cette recherche ne permet pas de le vérifier.",
+        "Attribuer le passage à une nouvelle page du même site sans vérifier qu’elle contient le propos utilisé.",
+        "Remplacer la version disparue par celle actuellement publiée à la même adresse sans contrôler les changements de contenu.",
+        "Retenir le seul nom de l’organisme comme preuve suffisante du contenu exact de la page disparue."
+      ],
+      "answer": 0,
+      "explanation": "Il faut chercher la provenance réelle et signaler ce qui reste invérifiable. Une autre page ou une nouvelle version ne remplace pas automatiquement la source disparue ; la seule identité d’un organisme ne prouve pas son contenu exact."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le jury demande pourquoi certains participants ont été retenus pour les entretiens. Quelle réponse manifeste la maîtrise du travail personnel ?",
+      "options": [
+        "Invoquer le seul nombre d’entretiens comme preuve que le recrutement est adapté à la question.",
+        "Exposer les critères de sélection, leur lien avec la question et les limites des accès obtenus.",
+        "Justifier les participants par leur seule disponibilité, tenue pour preuve de couverture des positions pertinentes.",
+        "Présenter une répartition équilibrée par ancienneté comme réponse suffisante sans expliquer son lien avec l’objet étudié."
+      ],
+      "answer": 1,
+      "explanation": "La maîtrise porte sur les choix et leur justification. Un outil ou un volume de texte ne répond pas à la question sur la sélection des participants."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un outil a proposé un résumé d’entretiens. Que doit pouvoir faire le candidat avant de s’appuyer dessus ?",
+      "options": [
+        "Remplacer les enregistrements par le résumé sans avoir vérifié les passages essentiels.",
+        "Attribuer les choix d’interprétation à l’outil pour ne pas avoir à les défendre.",
+        "Rapprocher le résumé des matériaux autorisés et justifier les interprétations qu’il retient.",
+        "Présenter le résumé comme une source indépendante confirmant les entretiens dont il provient."
+      ],
+      "answer": 2,
+      "explanation": "Une assistance de traitement ne crée pas une nouvelle collecte ni ne transfère la responsabilité intellectuelle. Le candidat doit contrôler ce qui soutient son raisonnement."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le jury indique qu’une autre explication des résultats est possible. Quelle réponse convient ?",
+      "options": [
+        "Répéter la conclusion sans discuter les observations invoquées.",
+        "Accepter la nouvelle explication comme certaine parce qu’elle est proposée par le jury.",
+        "Ajouter les termes de l’explication concurrente dans la conclusion sans réexaminer les liens entre les faits et leur interprétation.",
+        "Examiner les éléments qui départagent les explications et reconnaître ce que le terrain ne tranche pas."
+      ],
+      "answer": 3,
+      "explanation": "Défendre une analyse consiste à examiner les arguments et leurs preuves. Cela n’impose ni rigidité ni adhésion automatique à une explication concurrente."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une erreur limitée de transcription d’un effectif est repérée pendant la soutenance. Quelle réaction est la plus professionnelle ?",
+      "options": [
+        "Corriger l’effectif et examiner si cette correction modifie les calculs ou conclusions concernés.",
+        "Conserver le nombre annoncé parce que le document a déjà été remis.",
+        "Modifier silencieusement la conclusion générale sans identifier l’erreur de départ.",
+        "Déclarer tous les entretiens inutilisables sans analyser l’étendue de l’erreur."
+      ],
+      "answer": 0,
+      "explanation": "La correction doit être proportionnée et traçable. Une erreur ponctuelle demande de suivre ses effets, sans la masquer ni invalider arbitrairement des matériaux sans lien."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat dispose de cinq minutes pour exposer son apport principal. Quel choix sert le mieux cette contrainte ?",
+      "options": [
+        "Reprendre dans l’ordre chaque rubrique du sommaire avec le même temps de parole.",
+        "Articuler question, démarche, résultat central et limite déterminante, puis ouvrir la discussion.",
+        "Consacrer l’essentiel du temps à l’historique général de la profession avant d’évoquer le résultat.",
+        "Présenter d’abord les écoles théoriques retenues en détail, quitte à reporter la contribution empirique à une éventuelle question du jury."
+      ],
+      "answer": 1,
+      "explanation": "Une synthèse doit préserver le raisonnement et la contribution. L’exhaustivité du plan ou des références ne remplace pas la présentation intelligible de ce qui a été étudié et établi."
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "module": "DSCG1",
+  "chapter": "diagnostic",
+  "sourceHash": "1c79f7d2d230113da1bdd36d067dc542c6b89df6e35656eb3101ee18ba3e5941",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux filiales immatriculées distinctes portent presque le même nom. Le contrat de prêt désigne la filiale A comme emprunteur ; aucune garantie ou solidarité de B n’est produite. Quelle première attribution est justifiée ?",
+      "options": [
+        "Le prêt doit être rattaché à A selon les parties de l’acte.",
+        "Le prêt doit être rattaché à B si celle-ci reçoit une partie des fonds, sans rechercher un engagement distinct.",
+        "Le prêt doit être traité comme une dette solidaire des deux filiales parce qu’elles sont contrôlées ensemble.",
+        "Le prêt doit être attribué à la société mère comme emprunteuse dès lors qu’elle pilote la trésorerie du groupe."
+      ],
+      "answer": 0,
+      "explanation": "L’identification de la personne morale contractante précède l’analyse des garanties éventuelles. Des noms voisins et un actionnaire commun ne prouvent pas une dette commune. Le diagnostic doit conserver A comme emprunteur et rechercher séparément tout engagement de B ou d’un associé.",
+      "references": [
+        {
+          "title": "Code civil, article 1199, effet relatif des contrats",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032041378/2026-07-20"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une convention entre vendeur et acquéreur prévoit que le vendeur supportera économiquement un redressement de la société cible. La société et l’administration ne sont pas parties à cette convention. Quelle distinction faut-il conserver ?",
+      "options": [
+        "La répartition contractuelle du coût et l’identité du contribuable légalement poursuivi.",
+        "La signature de la convention et l’extinction automatique de la dette fiscale de la cible.",
+        "L’obligation du vendeur envers l’acquéreur et une obligation identique automatiquement créée pour l’administration.",
+        "Le prix d’acquisition et un dégrèvement fiscal immédiatement acquis."
+      ],
+      "answer": 0,
+      "explanation": "Une allocation conventionnelle de coût doit être lue entre ses parties ; elle ne modifie pas par elle-même le débiteur légal du prélèvement ni les droits d’un tiers. Il faut traiter séparément la dette fiscale de la cible et les recours contractuels qui pourraient financer son coût.",
+      "references": [
+        {
+          "title": "Code civil, article 1199, effet relatif des contrats",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032041378/2026-07-20"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une carte des risques attribue au dirigeant une dette fournisseur que la société a seule contractée, au seul motif qu’il a signé comme représentant. Quel élément faudrait-il établir pour documenter un engagement personnel distinct ?",
+      "options": [
+        "Un fondement d’engagement personnel, par exemple un acte de garantie identifié.",
+        "La seule présence de sa signature dans une case de représentation sociale.",
+        "La seule rémunération qu’il perçoit au titre du mandat.",
+        "La seule décision de payer la facture depuis le compte social."
+      ],
+      "answer": 0,
+      "explanation": "Agir au nom de la société et s’engager personnellement sont deux qualités différentes. La carte doit relier chaque dette à son acte et chaque garantie à son auteur. La signature en représentation ne démontre pas à elle seule une obligation personnelle distincte."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une salariée est employée par A mais intervient sur un projet de B. Aucun transfert de contrat ni autre mécanisme de substitution d’employeur n’est établi. Quel classement documentaire de départ est prudent ?",
+      "options": [
+        "Rattacher son contrat à A et examiner séparément les conditions de son intervention chez B.",
+        "Rattacher son contrat à B dès que celle-ci bénéficie du résultat du projet, sans examiner le mécanisme d’intervention.",
+        "Considérer A et B comme employeurs contractuels conjoints du seul fait que le travail profite à B.",
+        "Traiter le lieu du projet comme modifiant de lui-même l’identité de l’employeur nommé dans le contrat."
+      ],
+      "answer": 0,
+      "explanation": "L’entreprise qui bénéficie d’une intervention ne devient pas automatiquement l’employeur contractuel par ce seul fait. Le diagnostic doit conserver les parties documentées et ouvrir l’examen du mécanisme d’intervention, de ses conditions et de ses conséquences. Il ne faut pas confondre bénéficiaire du projet et partie au contrat."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société commerciale immatriculée détient un immeuble ; ses associés possèdent ses titres. Un tableau présente les associés comme propriétaires directs indivis de l’immeuble sans acte de transfert. Quelle correction apporter à ce tableau ?",
+      "options": [
+        "Rattacher l’immeuble à la société et les titres à leurs associés titulaires.",
+        "Maintenir l’immeuble en indivision directe entre associés, en répartissant sa propriété selon leurs pourcentages de capital.",
+        "Attribuer à chaque associé une quote-part de propriété de l’immeuble au seul motif qu’il peut voter sur sa cession.",
+        "Attribuer l’immeuble directement aux associés qui ont droit aux bénéfices qu’il produit, indépendamment du titre détenu par la société."
+      ],
+      "answer": 0,
+      "explanation": "La personnalité morale et la détention de titres doivent être distinguées de la propriété des actifs sociaux. La carte patrimoniale ne peut donc pas attribuer directement l’immeuble aux associés sur le seul fondement de leurs parts. Un transfert de l’actif exigerait une analyse propre.",
+      "references": [
+        {
+          "title": "Code civil, article 1842, personnalité morale",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049876831/2025-04-19"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une garantie a été signée en juin et couvre expressément les seuls événements survenus depuis le 1er juin. Un fait générateur du risque est documenté en avril. Quelle date commande d’abord l’examen de son entrée dans ce champ ?",
+      "options": [
+        "La date d’avril de l’événement visé.",
+        "La date de révélation de l’événement à l’acquéreur, substituée à sa survenance malgré le champ donné.",
+        "La date de la notification du risque au garant, prise comme date de l’événement couvert.",
+        "La date de paiement éventuel de la perte, substituée à celle du fait générateur."
+      ],
+      "answer": 0,
+      "explanation": "Le texte donné définit le champ par la survenance de l’événement. Il faut donc comparer la date d’avril au seuil du 1er juin. Le moment où le risque est lu ou payé ne remplace pas librement ce critère contractuel ; d’autres clauses pourraient ensuite préciser le mécanisme."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un document établi après l’acquisition décrit un contrôle interne mis en place depuis deux semaines. Le rapport d’audit le présente comme preuve que ce contrôle fonctionnait déjà deux ans auparavant. Quelle inférence doit être corrigée ?",
+      "options": [
+        "La situation récente ne démontre pas à elle seule l’existence et l’efficacité du contrôle sur toute la période passée.",
+        "Tout document postérieur est dépourvu de valeur, même sur les faits qu’il décrit directement.",
+        "Le contrôle récent prouve nécessairement l’absence d’erreurs anciennes.",
+        "L’acquisition remplace l’historique des processus par une date unique."
+      ],
+      "answer": 0,
+      "explanation": "Il faut dater les faits décrits et la période d’observation, pas seulement le document. Une amélioration récente peut être utile pour l’avenir sans prouver le fonctionnement antérieur. Le rapport doit rechercher des traces historiques ou limiter sa conclusion."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une clause impose une notification du risque avant le 30 novembre. Le fait est connu le 20 novembre mais le dossier indique seulement une décision interne de notifier le 25, sans preuve d’envoi ou réception conforme. Quelle étape faut-il documenter ?",
+      "options": [
+        "La notification effective selon les modalités et le délai de la clause.",
+        "La seule réunion interne, considérée comme notification au cocontractant.",
+        "La seule date de découverte, assimilée à tout envoi prévu au contrat.",
+        "Le montant du risque, supposé prolonger automatiquement le délai."
+      ],
+      "answer": 0,
+      "explanation": "La décision interne prépare une notification mais n’en établit pas l’exécution. Il faut lire les modalités exactes et produire les éléments d’envoi ou réception pertinents. La chronologie ne doit pas transformer une intention documentée en acte opposable déjà accompli."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une loi donnée dans l’exercice modifie les conditions d’une opération seulement à compter du 1er janvier N+1. La signature est envisagée en décembre N, la réalisation en février N+1. Quel point temporel faut-il préciser pour conclure au régime applicable ?",
+      "options": [
+        "Le critère retenu par la disposition transitoire : signature, réalisation ou autre événement.",
+        "La seule date de signature, tenue pour gouverner tout effet futur même sans lecture du texte transitoire.",
+        "La seule date de réalisation, tenue pour écarter les effets de toute signature antérieure sans lire le texte.",
+        "La seule date de négociation du prix, tenue pour fixer le régime à appliquer aux actes signés ensuite."
+      ],
+      "answer": 0,
+      "explanation": "La signature et la réalisation peuvent se situer de part et d’autre d’une entrée en vigueur. Il faut identifier l’événement que le texte vise pour son application. La seule présence d’une date d’effet ne permet pas de substituer arbitrairement signature ou clôture de l’opération."
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux points restent ouverts avant une acquisition. A : exposition possible de 200 000 €, avec une réponse attendue dans trois mois. B : exposition de 20 000 €, avec une notification contractuelle à envoyer sous 48 heures pour préserver le recours. Quel acte est prioritaire pour ne pas perdre une possibilité d’action ?",
+      "options": [
+        "Sécuriser sans attendre la notification B dans son délai, tout en poursuivant l’analyse A.",
+        "Attendre la fin de l’analyse A avant toute notification B, en supposant que le montant faible permet de proroger le délai.",
+        "Mentionner B dans le rapport interne sans adresser la notification contractuelle, en tenant ces deux démarches pour équivalentes.",
+        "Envoyer la notification B après la décision d’acquisition, en supposant que cette date remplace le délai contractuel donné."
+      ],
+      "answer": 0,
+      "explanation": "Le montant n’est pas le seul critère de priorité. Une échéance imminente peut faire perdre un recours utile même sur un risque moins élevé. La notification B peut être sécurisée avant la fin de l’analyse A, sans abandonner l’étude du risque financier principal."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un modèle explicitement fourni, le coût attendu se calcule comme probabilité × perte unique. Le risque A est de 100 000 € avec une probabilité donnée de 30 %. Quel coût attendu ce modèle lui attribue-t-il ?",
+      "options": [
+        "30 000 €",
+        "70 000 €",
+        "100 000 €",
+        "333 333,33 €"
+      ],
+      "answer": 0,
+      "explanation": "Dans ce modèle de décision, 100 000×30 %=30 000 €. Cette valeur attendue résume une hypothèse probabilisée ; ce n’est ni un montant certain de condamnation ni une preuve de trésorerie nécessaire dans le scénario le plus défavorable.",
+      "calculation": {
+        "expected": 30000,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 100000
+            },
+            {
+              "value": 0.3
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux risques ont la même perte attendue de 10 000 € selon un modèle fourni. Le premier peut entraîner une perte unique maximale de 500 000 € menaçant la liquidité ; le second une perte maximale de 12 000 €. Quel complément de hiérarchisation est pertinent ?",
+      "options": [
+        "La gravité du scénario extrême et la capacité de l’entreprise à l’absorber.",
+        "L’égalité des pertes attendues, qui rend les risques identiques en tout point.",
+        "Le seul nombre de lignes de chaque description dans le rapport.",
+        "L’ignorance de la perte maximale dès qu’une probabilité est fournie."
+      ],
+      "answer": 0,
+      "explanation": "Une même espérance peut cacher des profils de perte très différents. La capacité de trésorerie et le risque de rupture d’exploitation peuvent rendre un scénario rare mais majeur prioritaire à sécuriser. Le diagnostic ne doit pas réduire toute la décision à une moyenne."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une pièce permettant de prouver le périmètre d’une garantie sera détruite à l’expiration normale d’un stockage dans 24 heures. Sa conservation est autorisée et matériellement possible. Quelle action répond directement à cette urgence documentaire ?",
+      "options": [
+        "Préserver immédiatement une copie traçable, puis poursuivre l’analyse de fond.",
+        "Conserver seulement la conclusion du rapport sur la pièce, en traitant cette conclusion comme substitut au document.",
+        "Conserver un relevé du montant sans identifier la version et le périmètre de la garantie qu’il résume.",
+        "Attendre une validation définitive de couverture avant la sauvegarde, même si la pièce disparaît dans l’intervalle."
+      ],
+      "answer": 0,
+      "explanation": "La conservation autorisée d’une preuve périssable est une action immédiate qui peut préserver toutes les analyses ultérieures. Attendre peut rendre le contrôle impossible. La sauvegarde ne prouve pas encore la validité ou la couverture, mais protège la capacité de les étudier."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le rapport classe un risque comme certain uniquement parce que le montant de la réclamation est élevé. Quelle dimension doit être évaluée séparément ?",
+      "options": [
+        "Le fondement et la probabilité de succès de la réclamation.",
+        "Le plafond d’une garantie, considéré comme fixant à lui seul la certitude de la réclamation.",
+        "La capacité de paiement de la cible, considérée comme déterminant si le demandeur est juridiquement fondé.",
+        "Le montant inscrit dans la demande, considéré comme valant admission par le défendeur dès sa réception."
+      ],
+      "answer": 0,
+      "explanation": "Le montant demandé mesure une exposition revendiquée, non la validité de sa cause ou son issue. Il faut confronter la réclamation aux faits, au droit et aux preuves pour apprécier sa probabilité. La gravité possible et le degré de certitude ne sont pas interchangeables."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une garantie couvre un risque probable mais n’est mobilisable qu’après une notification encadrée. Le vendeur propose de réduire le prix tout en supprimant la garantie. Quelle comparaison doit éclairer la décision ?",
+      "options": [
+        "Le coût résiduel des scénarios, la valeur de la réduction et les conditions de recouvrement de chaque solution.",
+        "Le seul montant nominal du plafond, supposé toujours encaissable.",
+        "La seule existence du mot garantie, indépendamment du champ et du débiteur.",
+        "La suppression du risque sous-jacent dès qu’un prix plus bas est accepté."
+      ],
+      "answer": 0,
+      "explanation": "La réduction de prix et la garantie n’ont pas les mêmes flux ni conditions. Le risque sous-jacent peut subsister dans les deux cas. Il faut comparer l’exposition restante, la certitude économique et les conditions de récupération, plutôt que supposer qu’un plafond de garantie vaut un encaissement certain."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’objectif déclaré est de ne pas réaliser l’acquisition avant l’obtention d’un accord tiers obligatoire dans le scénario. Quelle clause répond le plus directement à cet objectif ?",
+      "options": [
+        "Une condition de réalisation subordonnant la clôture à cet accord identifié.",
+        "Une simple déclaration du vendeur que l’accord serait souhaitable.",
+        "Une indemnité payable après réalisation, sans suspendre celle-ci.",
+        "Une annexe d’information mentionnant seulement que le tiers n’a pas répondu."
+      ],
+      "answer": 0,
+      "explanation": "Une condition de réalisation peut traduire l’objectif de ne pas clôturer tant que l’accord nécessaire n’est pas obtenu. Une déclaration, une indemnité après coup et une information ne jouent pas ce rôle à elles seules. La condition doit être rédigée et contrôlée dans le régime applicable."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’audit n’a porté que sur les contrats supérieurs à 50 000 €, seuil documenté de son périmètre. Comment présenter sa conclusion sur les contrats ?",
+      "options": [
+        "En indiquant ce périmètre et les limites concernant les contrats non examinés.",
+        "En étendant le résultat aux contrats plus petits au seul motif qu’ils présentent individuellement un montant moindre.",
+        "En décrivant le seuil financier comme preuve que les contrats non examinés ne présentent aucun enjeu juridique.",
+        "En présentant l’absence de réserve sur les contrats non examinés comme une validation de leur régularité."
+      ],
+      "answer": 0,
+      "explanation": "Une revue ciblée peut être utile si son périmètre est explicite. Elle ne produit pas une conclusion exhaustive sur les éléments non contrôlés. La recommandation doit donc nommer le seuil, le champ et les éventuels compléments nécessaires pour la décision."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une proposition de garantie exclut un litige déjà identifié. Le rapport recommande de s’appuyer sur cette garantie pour couvrir précisément ce litige. Quelle modification de recommandation est nécessaire ?",
+      "options": [
+        "Traiter le litige hors de la couverture actuelle et négocier, si souhaité, une protection ciblée ou un ajustement adapté.",
+        "Augmenter seulement le plafond général en supposant que cela efface toute exclusion.",
+        "Maintenir la recommandation car tout litige connu est automatiquement couvert.",
+        "Remplacer l’exclusion écrite par un résumé oral favorable."
+      ],
+      "answer": 0,
+      "explanation": "Le montant du plafond ne détermine pas le champ. Si le litige est exclu, il ne doit pas être compté comme couvert ; la protection souhaitée exige une réponse distincte. Le rapport doit relier sa recommandation au texte réel et au risque à traiter."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux pièces donnent des montants différents pour une dette : un état de clôture provisoire et une confirmation bancaire postérieure faisant référence au même jour. Quelle action préalable est utile avant un ajustement de prix ?",
+      "options": [
+        "Rapprocher les périmètres, les dates de valeur et les éléments expliquant l’écart.",
+        "Choisir automatiquement le plus faible pour favoriser l’acquéreur.",
+        "Additionner les deux montants comme deux dettes distinctes.",
+        "Considérer le plus récent document comme preuve de tout fait de l’entreprise."
+      ],
+      "answer": 0,
+      "explanation": "Les deux montants peuvent porter sur des périmètres ou définitions différents malgré une date commune. Il faut expliquer l’écart avant de choisir le montant contractuellement pertinent. Une priorité aveugle au document le plus récent ou au plus favorable ne remplace pas ce rapprochement."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dossier contient un risque non couvert, mais l’acquéreur accepte expressément de le supporter après analyse et décision documentée. Que doit indiquer la recommandation finale ?",
+      "options": [
+        "Le risque résiduel accepté et les hypothèses de cette décision.",
+        "Un risque considéré comme couvert par le vendeur du seul fait que son existence a été discutée.",
+        "Un risque considéré comme éteint parce que l’acquéreur a intégré son coût possible dans la négociation.",
+        "Une certitude de recouvrement supposée dès lors que la décision d’acceptation a été documentée."
+      ],
+      "answer": 0,
+      "explanation": "Accepter un risque est une décision de gestion distincte de son inexistence ou de sa couverture. La restitution doit conserver l’exposition et les conditions d’acceptation pour permettre le suivi. Le consentement économique de l’acquéreur n’efface pas les faits ni les droits des autres parties."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le conseil reçoit une nouvelle pièce qui contredit l’hypothèse décisive d’une recommandation antérieure. Quelle conduite préserve une conclusion professionnelle traçable ?",
+      "options": [
+        "Réévaluer la conclusion, signaler le changement de faits et conserver l’historique de la révision.",
+        "Conserver la recommandation comme définitive malgré la preuve contraire.",
+        "Supprimer la nouvelle pièce pour préserver la cohérence du rapport.",
+        "Ajouter la nouvelle pièce sans modifier la conclusion ni sa portée."
+      ],
+      "answer": 0,
+      "explanation": "La recommandation repose sur des faits et hypothèses identifiables. Leur changement peut justifier une révision. Conserver l’historique et expliquer le nouvel effet rend la position contrôlable, plutôt que masquer l’évolution ou traiter une première conclusion comme intangible."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le rapport propose de « vérifier le risque social » sans désigner de pièce, de responsable ni de moment avant la décision. Quel complément rend l’action exploitable ?",
+      "options": [
+        "Un contrôle identifié, un responsable et une échéance liés à la décision à sécuriser.",
+        "Une répétition du même intitulé dans toutes les rubriques du rapport.",
+        "Une estimation certaine de condamnation sans pièces supplémentaires.",
+        "Un classement du dossier comme clos dès sa transmission."
+      ],
+      "answer": 0,
+      "explanation": "Une recommandation doit permettre de savoir ce qui sera vérifié, par qui et à quel moment pour éclairer la décision. Ces paramètres donnent une portée opérationnelle à la réserve. Répéter un thème général n’établit ni un contrôle accompli ni une information fiable."
+    }
+  ]
+}

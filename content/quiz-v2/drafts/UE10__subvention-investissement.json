@@ -1,0 +1,451 @@
+{
+  "module": "UE10",
+  "chapter": "subvention-investissement",
+  "sourceHash": "37a04ead54c4f9ce2b1564e6c32f78c1f47a41d47dcdd13f36b12da6fa855625",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une aide est reçue pour acheter une machine, mais son maintien dépend d’un engagement d’exploitation. Quel document faut-il examiner avant de retenir son traitement ?",
+      "options": [
+        "La décision d’attribution et ses conditions de reversement",
+        "Le seul avis de crédit bancaire de l’aide",
+        "Le seul plan d’amortissement technique de la machine",
+        "La seule facture d’acquisition de la machine"
+      ],
+      "answer": 0,
+      "explanation": "L’encaissement prouve une entrée de banque, pas l’acquisition définitive du droit. Les conditions de l’aide déterminent les points à examiner."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un comptable classe une aide en produit immédiat parce qu’elle est encaissée. Quel élément de raisonnement manque ?",
+      "options": [
+        "La seule vérification de la date du virement, considérée comme date de réalisation de tout le produit",
+        "L’analyse de l’objet de l’aide et du traitement applicable",
+        "Le seul rapport entre aide et coût du bien, considéré comme suffisant pour déterminer la date du produit",
+        "La seule durée écoulée depuis la demande, considérée comme preuve du droit acquis"
+      ],
+      "answer": 1,
+      "explanation": "La trésorerie et le rattachement au résultat répondent à deux questions différentes. L’objet, les conditions et le cadre retenu doivent être étudiés."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un dossier impose de comptabiliser séparément un actif de 36 000 € et une subvention de 9 000 €. L’actif est amorti sur six ans, sans résiduel, dès le début de l’année. Quelle est sa dotation annuelle ?",
+      "options": [
+        "4500 €",
+        "1500 €",
+        "6000 €",
+        "7500 €"
+      ],
+      "answer": 2,
+      "explanation": "L’actif conserve une base de 36 000 €, soit 6 000 € par an. Déduire l’aide de la base donnerait 4 500 €, contraire au traitement séparé imposé.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 36000
+            },
+            {
+              "value": 6
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un traitement séparant actif et subvention, pourquoi la dotation ne disparaît-elle pas du fait du financement ?",
+      "options": [
+        "Elle traduit chaque année le remboursement de la subvention",
+        "Elle mesure le versement annuel de l’organisme financeur",
+        "Elle correspond à l’écart de trésorerie entre achat et aide",
+        "Elle traduit la consommation de l’actif, distincte de l’origine de ses ressources"
+      ],
+      "answer": 3,
+      "explanation": "La dotation décrit la consommation économique d’un actif. Son mode de financement peut produire un autre mouvement au résultat sans remplacer cette charge."
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une subvention de 12 000 € est reprise selon l’amortissement linéaire sur huit ans de l’actif financé, sans prorata ni événement particulier. Quel produit annuel est prévu ?",
+      "options": [
+        "1500 €",
+        "96000 €",
+        "12000 €",
+        "8000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le rythme imposé répartit les 12 000 € sur huit années complètes, soit 1 500 € par an. Il ne correspond pas à un nouvel encaissement annuel.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 12000
+            },
+            {
+              "value": 8
+            }
+          ]
+        },
+        "expected": 1500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une subvention initiale de 7 200 € présente des reprises cumulées de 2 700 €. Quel montant reste à reprendre, sans autre mouvement ?",
+      "options": [
+        "9900 €",
+        "4500 €",
+        "2700 €",
+        "7200 €"
+      ],
+      "answer": 1,
+      "explanation": "Le solde restant est le montant initial moins les reprises déjà constatées : 7 200 − 2 700 = 4 500 €. Le cumul n’est pas le solde.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 7200
+            },
+            {
+              "value": 2700
+            }
+          ]
+        },
+        "expected": 4500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour une année, un dossier prévoit une dotation de 8 000 € et une reprise de subvention de 2 400 €. Quel est l’effet net sur le résultat de ces seuls mouvements, hors impôt ?",
+      "options": [
+        "5600 €",
+        "-10400 €",
+        "-5600 €",
+        "2400 €"
+      ],
+      "answer": 2,
+      "explanation": "La dotation est une charge et la reprise un produit : −8 000 + 2 400 = −5 600 €. Ce solde ne représente ni le résultat total ni un flux bancaire.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": -8000
+            },
+            {
+              "value": 2400
+            }
+          ]
+        },
+        "expected": -5600,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une entreprise a reçu l’intégralité de son aide l’an dernier. Elle constate cette année une reprise de 1 800 €. Un budget de trésorerie ajoute cet encaissement. Que corriger ?",
+      "options": [
+        "Remplacer 1 800 € par le montant initial de l’aide dans les encaissements",
+        "Classer la reprise parmi les décaissements d’investissement",
+        "Déduire la reprise du remboursement de l’emprunt sans pièce bancaire",
+        "Retirer le flux supposé : la reprise donnée n’apporte pas de nouveau versement"
+      ],
+      "answer": 3,
+      "explanation": "La reprise transfère au résultat une fraction du financement précédemment comptabilisé. Les faits ne prévoient aucun encaissement supplémentaire."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier impose un actif brut de 50 000 € et une aide distincte de 10 000 €. Le tableau présente seulement un actif brut de 40 000 €. Quel défaut relève-t-on ?",
+      "options": [
+        "La compensation ne respecte pas la présentation séparée imposée",
+        "Le coût brut est correct car il correspond au financement restant à charge",
+        "Le tableau doit réduire le brut de 50 000 € et aussi enregistrer 10 000 € de produit",
+        "Le brut doit être augmenté de 10 000 € au titre de la ressource reçue"
+      ],
+      "answer": 0,
+      "explanation": "Le financement net supporté n’est pas le coût brut de l’actif dans ce modèle. La compensation masque également le suivi distinct de la subvention."
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un équipement subventionné est cédé avant la fin de l’échéancier. Que faut-il faire avant d’enregistrer les reprises suivantes ?",
+      "options": [
+        "Poursuivre le tableau inchangé tant que le solde de subvention est positif",
+        "Examiner les conséquences de la cession et les conditions de l’aide",
+        "Suspendre seulement l’amortissement tout en conservant les reprises prévues",
+        "Recommencer l’échéancier de subvention à la date de vente"
+      ],
+      "answer": 1,
+      "explanation": "La cession change les faits qui fondaient l’échéancier. Son effet et les éventuels engagements de remboursement doivent être étudiés avant de poursuivre."
+    },
+    {
+      "id": "q11",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une aide impose de conserver l’équipement cinq ans. Une vente est envisagée après deux ans. Quelle information est décisive pour le risque de reversement ?",
+      "options": [
+        "La comparaison du prix de vente avec la VNC seulement",
+        "Le nombre de reprises déjà passées au résultat seulement",
+        "La clause précisant les conséquences d’une cession anticipée",
+        "Le taux de financement initial de l’actif seulement"
+      ],
+      "answer": 2,
+      "explanation": "Le risque de reversement dépend de l’engagement et des clauses de l’aide. Une VNC ou un cumul de reprises ne remplace pas leur lecture."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un actif coûte 40 000 €, avec amortissements cumulés de 16 000 €. Une subvention distincte de 10 000 € a déjà été reprise pour 4 000 €. Quelle est la seule VNC de l’actif ?",
+      "options": [
+        "18000 €",
+        "30000 €",
+        "6000 €",
+        "24000 €"
+      ],
+      "answer": 3,
+      "explanation": "La VNC de l’actif vaut 40 000 − 16 000 = 24 000 €. Le solde distinct de subvention de 6 000 € n’est pas à retrancher dans cette VNC.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 40000
+            },
+            {
+              "value": 16000
+            }
+          ]
+        },
+        "expected": 24000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau de subvention suit uniquement les produits de reprise de l’année, sans montant initial ni cumul. Quel contrôle devient difficile ?",
+      "options": [
+        "Rapprocher le solde restant avec l’aide initiale et l’ensemble des reprises",
+        "Vérifier la seule addition des produits de reprise de l’année",
+        "Identifier la nature du produit comptabilisé cette année",
+        "Lire le montant de la reprise annuelle isolée"
+      ],
+      "answer": 0,
+      "explanation": "Un échéancier doit relier ouverture, mouvements et clôture. Sans historique ni montant initial, un produit annuel cohérent peut masquer un solde erroné."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une aide de 18 000 € finance un équipement de 60 000 €. Quel taux de financement sert au contrôle proportionnel de reprise, selon le dossier ?",
+      "options": [
+        "23,08 %",
+        "30 %",
+        "70 %",
+        "333,33 %"
+      ],
+      "answer": 1,
+      "explanation": "Le financement représente 18 000 / 60 000 = 30 % du coût. Le rapport inverse ou le montant restant à charge n’exprime pas la même proportion.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 18000
+                },
+                {
+                  "value": 60000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 30,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dossier impose une reprise proportionnelle à la dotation. Une mise en service à mi-année conduit à une demi-dotation. Quelle cohérence contrôler ?",
+      "options": [
+        "La reprise doit rester annuelle entière car l’aide a été encaissée",
+        "La reprise doit être différée entièrement à la fin de vie de l’actif",
+        "La reprise doit suivre la même fraction annuelle selon cette hypothèse",
+        "La reprise doit suivre la date du dernier versement de l’aide"
+      ],
+      "answer": 2,
+      "explanation": "Le cas lie expressément reprise et amortissement. Une fraction de dotation appelle donc la fraction correspondante de reprise, sauf autre règle donnée."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste présente une charge nette de 3 000 € comme le résultat annuel de l’entreprise, après avoir étudié seulement amortissement et reprise. Quelle limite manque ?",
+      "options": [
+        "La substitution du prix du bien à la dotation pour déterminer le résultat annuel",
+        "L’ajout du solde restant de subvention au résultat de chaque année",
+        "La déduction de la reprise de subvention une seconde fois du résultat déjà net",
+        "Les autres charges et produits nécessaires au calcul du résultat total"
+      ],
+      "answer": 3,
+      "explanation": "L’effet de deux mouvements n’épuise pas le compte de résultat. Il faut conserver le périmètre du calcul et intégrer les autres produits et charges pour le total."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel rapprochement étaye l’identification de l’actif financé par une aide ?",
+      "options": [
+        "Décision d’attribution, facture et dossier de mise en service",
+        "Le seul relevé bancaire de l’aide, sans référence au bien désigné",
+        "Le seul montant de reprise annuelle, sans décision d’attribution ni identification du bien",
+        "Le seul budget d’investissement global, sans rapprochement avec les acquisitions réalisées"
+      ],
+      "answer": 0,
+      "explanation": "Les pièces doivent établir le lien entre aide et actif concerné. Des totaux globaux ne prouvent ni l’objet financé ni les conditions associées."
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un solde de subvention à l’ouverture est de 4 800 €. La reprise de l’année est de 1 200 €, sans nouvelle aide ni autre mouvement. Quel solde de clôture obtenir ?",
+      "options": [
+        "6000 €",
+        "3600 €",
+        "1200 €",
+        "4800 €"
+      ],
+      "answer": 1,
+      "explanation": "La reprise diminue le montant restant : 4 800 − 1 200 = 3 600 €. La ressource initialement encaissée ne doit pas être ajoutée une nouvelle fois.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 4800
+            },
+            {
+              "value": 1200
+            }
+          ]
+        },
+        "expected": 3600,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le plan d’amortissement est révisé ; la subvention est reprise suivant ce plan dans le modèle fourni. Quel travail devient nécessaire ?",
+      "options": [
+        "Recalculer l’aide initialement encaissée comme si son montant avait changé",
+        "Reprendre au résultat les amortissements cumulés à la place du solde d’aide",
+        "Examiner l’incidence du nouveau rythme sur les reprises restantes",
+        "Maintenir les anciennes reprises sans les rapprocher du nouveau plan"
+      ],
+      "answer": 2,
+      "explanation": "La modification du rythme d’amortissement peut affecter les reprises liées à ce rythme. Elle ne change pas à elle seule le montant initial du financement."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau donne à la fois une VNC de 15 000 € et un solde de subvention de 3 000 €. Comment les présenter dans l’analyse du traitement séparé ?",
+      "options": [
+        "Comme une unique VNC de 12 000 € dans le registre d’immobilisations",
+        "Comme deux mesures interchangeables du coût restant à amortir",
+        "Comme deux encaissements futurs attendus de la vente de l’actif",
+        "Comme deux soldes distincts dont les rythmes peuvent être liés"
+      ],
+      "answer": 3,
+      "explanation": "L’un est une valeur d’actif après amortissement ; l’autre un financement restant à reprendre. Leur lien ne justifie pas de les confondre."
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une condition d’aide n’est plus satisfaite. Le comptable déduit du seul échéancier qu’aucun examen complémentaire n’est nécessaire. Pourquoi est-ce insuffisant ?",
+      "options": [
+        "L’échéancier ne tranche pas les conséquences d’un engagement non respecté",
+        "La reprise de l’année renseigne à elle seule le montant exigible par le financeur",
+        "La VNC mesure à elle seule le remboursement contractuellement dû",
+        "Le paiement initial suffit à prouver l’absence de dette éventuelle"
+      ],
+      "answer": 0,
+      "explanation": "Le suivi des reprises répond au rattachement du produit, pas à toutes les conditions contractuelles. L’engagement et ses conséquences doivent être réexaminés."
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une subvention de 6 000 € est reprise à hauteur de 25 % par an pendant quatre ans. Le fichier contient une cinquième reprise complète. Quel contrôle la détecte ?",
+      "options": [
+        "La comparaison de chaque reprise avec le seul solde bancaire",
+        "Le cumul des reprises comparé au montant total de l’aide",
+        "La concordance du montant annuel avec celui de l’année précédente seulement",
+        "La comparaison du solde d’aide avec le coût brut de l’actif seulement"
+      ],
+      "answer": 1,
+      "explanation": "Un rythme annuel correct peut être appliqué trop longtemps. Le cumul ne doit pas dépasser la subvention dans le modèle sans autres mouvements."
+    }
+  ]
+}

@@ -1,0 +1,619 @@
+{
+  "module": "UE3",
+  "chapter": "temps-travail-decompte",
+  "sourceHash": "1e64017768d13fd0db698806978a82957faf3f9e6fdebf46c46c1fabd6bf49fb",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quels critères caractérisent le temps de travail effectif selon L3121-1 ?",
+      "options": [
+        "Être dans les locaux, être rémunéré et porter une tenue professionnelle.",
+        "Être à la disposition de l’employeur, suivre ses directives et ne pas pouvoir vaquer librement à des occupations personnelles.",
+        "Être inscrit au planning, même pendant une pause totalement libre.",
+        "Percevoir une indemnité compensant un déplacement personnel."
+      ],
+      "answer": 1,
+      "explanation": "L3121-1 définit le travail effectif à partir des contraintes concrètes envers l’employeur. La présence dans les locaux, l’intitulé du planning ou le paiement ne suffisent pas isolément. Il faut examiner la disponibilité, les directives et la liberté d’occupation personnelle.",
+      "references": [
+        {
+          "title": "Code du travail, L3121-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l3121-1"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pendant une période nommée « pause », une salariée doit surveiller un écran d’alarme et intervenir immédiatement ; elle ne peut se consacrer à ses affaires personnelles. Comment qualifier ce temps au regard de L3121-1 et L3121-2 ?",
+      "options": [
+        "Du temps effectif, car les contraintes décrites remplissent les critères.",
+        "Une pause exclue du décompte du seul fait de son intitulé.",
+        "Du repos quotidien, puisqu’aucune alarme ne s’est déclenchée.",
+        "Une période exclue dès lors qu’elle n’a réalisé aucune intervention."
+      ],
+      "answer": 0,
+      "explanation": "L’activité effectivement déclenchée n’est pas le seul critère : la salariée demeure à disposition sous directives et ne peut vaquer librement à ses occupations. L3121-2 renvoie à ces critères pour les pauses et la restauration. Le nom de la plage ne décide donc pas de sa qualification.",
+      "references": [
+        {
+          "title": "Code du travail, L3121-2",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l3121-2"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une convention paie une pause de trente minutes pendant laquelle le salarié est totalement libre de ses occupations et n’a aucune obligation envers l’employeur. Que faut-il distinguer ?",
+      "options": [
+        "La rémunération de la pause et sa qualification de travail effectif.",
+        "Le paiement d’une pause et sa transformation obligatoire en heure supplémentaire.",
+        "La pause libre et une période soumise à toutes les directives de travail.",
+        "La rémunération prévue et l’interdiction générale de payer une pause."
+      ],
+      "answer": 0,
+      "explanation": "Le paiement est une question différente de la qualification du temps. Les faits décrivent ici une pause libre ; sa rémunération conventionnelle ne suffit pas à la faire entrer dans le décompte du travail effectif. Une assimilation particulière pour un autre calcul devrait être identifiée séparément."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un technicien doit attendre sur une ligne de production pendant un arrêt machine, rester à son poste et exécuter immédiatement les instructions de redémarrage. Il ne peut vaquer à des occupations personnelles. Quel fait fait obstacle à l’exclusion de ce temps comme simple inactivité ?",
+      "options": [
+        "L’absence de production pendant l’attente.",
+        "Le fait qu’il demeure sous les contraintes constitutives du travail effectif.",
+        "Le fait que la durée d’attente est difficile à prévoir.",
+        "Le fait que l’arrêt machine diminue la production journalière."
+      ],
+      "answer": 1,
+      "explanation": "L’absence de production ne signifie pas nécessairement absence de travail effectif. Ici, le salarié reste à disposition, suit les directives et ne dispose pas librement de son temps. Ces contraintes justifient d’intégrer la période, même sans acte productif continu.",
+      "references": [
+        {
+          "title": "Code du travail, L3121-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l3121-1"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un relevé indique « déjeuner : 45 minutes » mais ne précise pas si le salarié devait continuer à répondre aux appels ni s’il pouvait quitter son poste. Quelle information est nécessaire pour qualifier la période ?",
+      "options": [
+        "Les contraintes de disponibilité et la possibilité réelle de vaquer à des occupations personnelles.",
+        "Le paiement prévu pour cette pause, considéré comme seul critère de qualification.",
+        "Le nom de la plage dans le planning, même si les contraintes réelles sont différentes.",
+        "La durée de la pause, considérée comme preuve suffisante de liberté personnelle."
+      ],
+      "answer": 0,
+      "explanation": "La qualification du déjeuner dépend de ses conditions réelles au regard des critères du travail effectif. Le relevé ne les donne pas. Il faut donc préciser disponibilité et liberté de la personne, plutôt que retrancher automatiquement une ligne intitulée déjeuner.",
+      "references": [
+        {
+          "title": "Code du travail, L3121-2",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l3121-2"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pour un salarié à temps complet dans le régime hebdomadaire usuel, que représente la durée de 35 heures ?",
+      "options": [
+        "Une durée légale de référence du travail effectif.",
+        "Une durée maximale hebdomadaire qui ne peut jamais être dépassée.",
+        "Une garantie qu’aucun contrôle de repos n’est nécessaire.",
+        "Une durée qui englobe toute présence personnelle dans les locaux."
+      ],
+      "answer": 0,
+      "explanation": "Les 35 heures constituent la durée légale hebdomadaire de référence pour les salariés à temps complet. Cela ne signifie pas qu’aucune heure au-delà ne peut être accomplie : leur régime doit être examiné, tout comme les limites maximales et les repos.",
+      "references": [
+        {
+          "title": "Code du travail, L3121-27",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l3121-27"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le total hebdomadaire d’un salarié est de 42 heures effectives et les heures supplémentaires ont été payées. Aucun horaire quotidien n’est fourni. Quelle vérification reste nécessaire ?",
+      "options": [
+        "La répartition quotidienne et les repos, que le paiement ne démontre pas.",
+        "La seule égalité entre la somme des majorations payées et les heures déclarées.",
+        "Le respect des repos, tenu pour acquis par la seule présence de majorations sur le bulletin.",
+        "Le seul respect de la durée légale de référence, assimilé à toutes les limites maximales."
+      ],
+      "answer": 0,
+      "explanation": "Le décompte et le paiement des heures supplémentaires ne prouvent pas le respect des autres obligations. Un total hebdomadaire ne montre ni l’amplitude des journées ni les intervalles de repos. Ces contrôles requièrent les horaires détaillés et le régime applicable."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un salarié majeur, soumis à L3121-18 sans dérogation, a accompli 10 h 30 de travail effectif en une journée. Son total hebdomadaire est seulement de 35 heures. Quel contrôle révèle une difficulté ?",
+      "options": [
+        "Le plafond quotidien de 10 heures est dépassé malgré le total hebdomadaire.",
+        "Le respect des 35 heures annule le plafond quotidien.",
+        "Le dépassement quotidien se compense automatiquement par une journée plus courte.",
+        "Seule une moyenne de 10 heures par jour doit être contrôlée, quel que soit le régime."
+      ],
+      "answer": 0,
+      "explanation": "L3121-18 fixe en principe une limite quotidienne de dix heures de travail effectif, sous les exceptions prévues. Le cas exclut ces dérogations. La durée légale hebdomadaire et le plafond quotidien sont distincts ; le respect de la première ne couvre pas le dépassement du second.",
+      "references": [
+        {
+          "title": "Code du travail, L3121-18",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l3121-18"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un salarié termine à 22 h et reprend à 7 h le lendemain. Le régime de L3131-1 lui est applicable, sans exception. Quel constat est exact ?",
+      "options": [
+        "Il dispose de 11 heures de repos parce que les dates sont différentes.",
+        "Il dispose de 9 heures de repos, inférieures au minimum de 11 heures consécutives.",
+        "Il dispose de 9 heures de repos, ce qui satisfait le minimum de 8 heures.",
+        "Le repos est suffisant dès lors que le total de la semaine reste inférieur à 35 heures."
+      ],
+      "answer": 1,
+      "explanation": "L’intervalle de 22 h à 7 h est de neuf heures. L3131-1 prévoit en principe onze heures consécutives, et le cas exclut les exceptions. La référence de 35 heures ne remplace pas ce contrôle de repos entre deux journées.",
+      "references": [
+        {
+          "title": "Code du travail, L3131-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l3131-1"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un salarié relève d’un accord d’aménagement du temps de travail sur une période plus longue que la semaine. Un étudiant calcule les heures supplémentaires par une soustraction hebdomadaire de 35 heures. Quelle étape manque ?",
+      "options": [
+        "Identifier les modalités de décompte prévues par le régime d’aménagement applicable.",
+        "Appliquer d’emblée 35 heures à chaque semaine sans lire l’accord.",
+        "Retenir exclusivement le taux de majoration sans vérifier sa période de décompte.",
+        "Substituer les heures du planning prévisionnel aux heures réalisées."
+      ],
+      "answer": 0,
+      "explanation": "Le calcul hebdomadaire simple n’est pas transposable sans étude à tous les régimes d’aménagement. Il faut connaître la période et les seuils de décompte applicables. Le nombre de semaines ou le seul taux de salaire ne détermine pas cette règle."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une journée comporte deux plages de travail effectif : 8 h 15–12 h et 13 h–17 h 30. La coupure est exclue. Quelle durée décimale faut-il inscrire au relevé ?",
+      "options": [
+        "8,25 heures",
+        "8,45 heures",
+        "9,25 heures",
+        "7,75 heures"
+      ],
+      "answer": 0,
+      "explanation": "La première plage dure 3 h 45, soit 3,75 heures ; la seconde dure 4 h 30, soit 4,5 heures. Le total est 8,25 heures. En écriture décimale, 45 minutes correspondent à 0,75 heure et non à 0,45 heure.",
+      "calculation": {
+        "expected": 8.25,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 12
+                },
+                {
+                  "value": 8.25
+                }
+              ]
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 17.5
+                },
+                {
+                  "value": 13
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans une semaine simple, le relevé indique 42 heures de présence incluant cinq pauses libres de 45 minutes, exclues du travail effectif. La référence est 35 heures, sans autre assimilation. Combien d’heures effectives dépassent cette référence ?",
+      "options": [
+        "7 heures",
+        "3,25 heures",
+        "3,75 heures",
+        "4,75 heures"
+      ],
+      "answer": 1,
+      "explanation": "Les pauses représentent 5 × 0,75 = 3,75 heures. Le travail effectif est donc 42 − 3,75 = 38,25 heures, puis le dépassement de 35 heures est 3,25 heures. Il faut qualifier et exclure les pauses avant de comparer à la référence.",
+      "calculation": {
+        "expected": 3.25,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 42
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 5
+                    },
+                    {
+                      "value": 0.75
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 35
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Deux tâches réalisées par le même salarié sont enregistrées sur des plages qui se chevauchent : 9 h–11 h et 10 h–12 h. Toute la période 9 h–12 h est travaillée, sans interruption. Quelle durée totale de temps effectif faut-il retenir ?",
+      "options": [
+        "4 heures",
+        "2 heures",
+        "3 heures",
+        "5 heures"
+      ],
+      "answer": 2,
+      "explanation": "Le temps d’une même personne ne se compte pas deux fois parce que deux tâches se chevauchent. La réunion des plages couvre 9 h à 12 h, soit trois heures. Additionner leurs durées de deux heures chacune créerait une heure fictive de double décompte.",
+      "calculation": {
+        "expected": 3,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 12
+            },
+            {
+              "value": 9
+            }
+          ]
+        },
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après contrôle d’un relevé, une plage du mardi doit être corrigée. Quelle pratique conserve une piste de vérification ?",
+      "options": [
+        "Conserver l’ancienne valeur, la nouvelle, la date de correction et son justificatif.",
+        "Écraser l’ancienne valeur et ne conserver que le total final.",
+        "Reporter l’écart sur un autre jour pour préserver le total du mardi.",
+        "Supprimer la plage litigieuse en attendant la clôture du mois."
+      ],
+      "answer": 0,
+      "explanation": "Une correction documentée permet de comprendre l’origine de l’écart et de reconstruire le décompte. Écraser ou déplacer une plage masque l’événement effectivement corrigé ; supprimer toute la plage confond l’existence du travail et l’incertitude sur sa durée."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le relevé totalise déjà chaque plage quotidienne de travail. Une formule ajoute ensuite le total hebdomadaire à la somme des mêmes journées. Quel défaut faut-il corriger ?",
+      "options": [
+        "Un double comptage des mêmes heures.",
+        "Une absence de majoration dans le total des durées.",
+        "Un défaut de transformation des jours en mois.",
+        "Une insuffisance de la durée légale de référence."
+      ],
+      "answer": 0,
+      "explanation": "Le total hebdomadaire est l’agrégation des plages quotidiennes ; l’ajouter à ces mêmes plages compte deux fois la même durée. Le relevé doit distinguer les lignes de détail des sous-totaux, avant tout calcul de rémunération."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour un exercice, 2 heures supplémentaires sont payées sur une base de 20 € l’heure, avec une majoration fournie de 10 %. Quelle est leur rémunération totale, base comprise ?",
+      "options": [
+        "4 €",
+        "40 €",
+        "44 €",
+        "42 €"
+      ],
+      "answer": 2,
+      "explanation": "La rémunération totale est 2 × 20 × 1,10 = 44 €. Les 40 € constituent la base des deux heures et les 4 € la seule majoration. Le taux de 10 % est une donnée de l’exercice dans le périmètre fourni, pas une affirmation de taux universel.",
+      "calculation": {
+        "expected": 44,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 2
+                },
+                {
+                  "value": 20
+                }
+              ]
+            },
+            {
+              "value": 1.1
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un dossier fournit six heures majorées de 25 %, sur une base de 18 € par heure. Quel montant représente la majoration seule, hors rémunération de base ?",
+      "options": [
+        "27 €",
+        "108 €",
+        "135 €",
+        "4,50 €"
+      ],
+      "answer": 0,
+      "explanation": "La majoration seule est 6 × 18 × 0,25 = 27 €. Les 108 € représentent la rémunération de base et les 135 € la rémunération totale. Il faut identifier la grandeur demandée avant de multiplier par 0,25 ou par 1,25.",
+      "calculation": {
+        "expected": 27,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 6
+                },
+                {
+                  "value": 18
+                }
+              ]
+            },
+            {
+              "value": 0.25
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un exercice prévoit dix heures supplémentaires à 16 € de base : les huit premières sont majorées de 25 %, les deux dernières de 50 %. Quelle est la rémunération totale de ces dix heures ?",
+      "options": [
+        "200 €",
+        "208 €",
+        "240 €",
+        "48 €"
+      ],
+      "answer": 1,
+      "explanation": "Le calcul se fait par tranche : 8 × 16 × 1,25 = 160 €, puis 2 × 16 × 1,50 = 48 €, soit 208 €. Appliquer 25 % ou 50 % à toutes les heures ignorerait les tranches fournies. La seule majoration globale serait de 48 €.",
+      "calculation": {
+        "expected": 208,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 8
+                    },
+                    {
+                      "value": 16
+                    }
+                  ]
+                },
+                {
+                  "value": 1.25
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 2
+                    },
+                    {
+                      "value": 16
+                    }
+                  ]
+                },
+                {
+                  "value": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Cinq heures supplémentaires ont été payées au taux de base de 17 €, mais leur majoration de 10 %, expressément donnée dans le dossier, a été oubliée. Quel complément brut reste dû pour ces seules heures ?",
+      "options": [
+        "93,50 €",
+        "85 €",
+        "8,50 €",
+        "17 €"
+      ],
+      "answer": 2,
+      "explanation": "La base de 5 × 17 = 85 € a déjà été réglée. Le complément est uniquement 5 × 17 × 0,10 = 8,50 €. Réclamer la rémunération totale de 93,50 € en plus compterait une seconde fois la base déjà payée.",
+      "calculation": {
+        "expected": 8.5,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 5
+                },
+                {
+                  "value": 17
+                }
+              ]
+            },
+            {
+              "value": 0.1
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une heure est rémunérée 24 €, base et majoration de 20 % comprises. Quel est le taux horaire de base correspondant, dans cet exercice ?",
+      "options": [
+        "19,20 €",
+        "20 €",
+        "24,20 €",
+        "28,80 €"
+      ],
+      "answer": 1,
+      "explanation": "Le taux majoré vaut taux de base × 1,20. Il faut donc diviser 24 par 1,20, soit 20 €. Retrancher 20 % du montant déjà majoré ne reconstitue pas la base initiale, car ce pourcentage s’appliquerait au mauvais montant.",
+      "calculation": {
+        "expected": 20,
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 24
+            },
+            {
+              "value": 1.2
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier impose un décompte séparé de chaque semaine, avec référence de 35 heures et aucune compensation entre semaines. Le salarié travaille 30 heures puis 40 heures. Quelle méthode respecte ces hypothèses ?",
+      "options": [
+        "Compenser les cinq heures manquantes de la première semaine avec le dépassement de la seconde.",
+        "Examiner le dépassement de cinq heures dans la seconde semaine indépendamment de la première.",
+        "Retenir seulement la moyenne de 35 heures et conclure à l’absence de dépassement.",
+        "Reporter les heures de la seconde semaine sur la première pour égaliser les relevés."
+      ],
+      "answer": 1,
+      "explanation": "Le régime expressément fourni exclut la compensation entre semaines. La moyenne des deux semaines ne remplace donc pas le décompte séparé. Cette réponse est circonscrite à l’hypothèse donnée ; elle ne préjuge pas des règles d’un véritable accord d’aménagement."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "En régime hebdomadaire simple fourni, une semaine comprend 37 h 45 de travail effectif, avec référence à 35 heures. Toutes les heures au-delà sont rémunérées à 24 € de base majorés de 25 %. Quel est leur montant total ?",
+      "options": [
+        "72 €",
+        "82,50 €",
+        "103,50 €",
+        "66 €"
+      ],
+      "answer": 1,
+      "explanation": "Le dépassement est de 2 h 45, soit 2,75 heures en écriture décimale. Le montant est 2,75 × 24 × 1,25 = 82,50 €. Compter 2,45 heures confond les minutes et les centièmes d’heure ; oublier la majoration aboutit à 66 €.",
+      "calculation": {
+        "expected": 82.5,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 37.75
+                    },
+                    {
+                      "value": 35
+                    }
+                  ]
+                },
+                {
+                  "value": 24
+                }
+              ]
+            },
+            {
+              "value": 1.25
+            }
+          ]
+        },
+        "digits": 2
+      }
+    }
+  ]
+}

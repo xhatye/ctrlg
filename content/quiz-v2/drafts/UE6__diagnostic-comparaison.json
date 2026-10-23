@@ -1,0 +1,407 @@
+{
+  "module": "UE6",
+  "chapter": "diagnostic-comparaison",
+  "sourceHash": "b9c29b11508204039151aa1c05894b9528251ac90a1af0157a08424d6651ed9b",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le ratio de l’an dernier utilise un encours client moyen ; celui de cette année utilise le seul encours de clôture. Peut-on attribuer directement leur différence aux retards clients ?",
+      "options": [
+        "Non, le changement de convention doit d’abord être neutralisé ou expliqué",
+        "Oui, les deux mesures décrivent toujours exactement la même situation",
+        "Oui, si le chiffre d’affaires est positif",
+        "Non, car aucun ratio client ne peut être interprété"
+      ],
+      "answer": 0,
+      "explanation": "Une moyenne et une photographie à une date ne sont pas interchangeables, notamment en cas de saisonnalité. Leur convention peut expliquer une partie de l’écart."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise acquiert une filiale et son chiffre d’affaires total augmente fortement. Quel contrôle rend la comparaison annuelle plus pertinente ?",
+      "options": [
+        "Assimiler toute hausse à une progression du volume des anciens sites",
+        "Distinguer l’effet du nouveau périmètre de l’évolution à périmètre comparable",
+        "Comparer uniquement les capitaux propres de clôture",
+        "Exclure sans explication toutes les ventes de la filiale"
+      ],
+      "answer": 1,
+      "explanation": "Une variation du périmètre modifie les données agrégées. Une comparaison cohérente doit isoler ce changement de celui de l’activité existante."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un taux de marge utilise le résultat d’une activité et le chiffre d’affaires de toutes les activités. Quelle faiblesse présente-t-il pour juger cette activité ?",
+      "options": [
+        "Le taux doit être remplacé par le total des dettes",
+        "Tout résultat d’activité doit être comparé au capital social",
+        "Le numérateur et le dénominateur ne couvrent pas le même périmètre",
+        "Le dénominateur est toujours inutile dans un diagnostic"
+      ],
+      "answer": 2,
+      "explanation": "Le résultat et la base doivent décrire le même objet. Leur mélange produit un ratio dont la variation n’a pas d’interprétation opérationnelle claire."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Avant de comparer deux ratios portant le même nom, quelle information faut-il documenter ?",
+      "options": [
+        "Seulement leur ordre de classement",
+        "Uniquement le signe positif du numérateur",
+        "Seulement le nombre de décimales affichées",
+        "Leur définition, leurs données et leurs conventions de calcul"
+      ],
+      "answer": 3,
+      "explanation": "Un intitulé commun ne garantit pas un calcul identique. Numérateur, dénominateur, dates et reclassements définissent la comparabilité."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une comparaison en euros mélange des comptes exprimés en euros et d’autres en milliers d’euros. Quelle étape doit précéder tout commentaire de performance ?",
+      "options": [
+        "Convertir les montants dans une unité commune",
+        "Arrondir chaque valeur à l’entier sans conversion",
+        "Comparer uniquement les signes des montants",
+        "Retenir la plus grande valeur affichée comme la meilleure"
+      ],
+      "answer": 0,
+      "explanation": "Un écart d’échelle peut dominer tout écart économique. La normalisation des unités est nécessaire avant les calculs ou le classement."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une activité réalise 400 000 € de chiffre d’affaires et 32 000 € de résultat. En définissant le taux de marge comme résultat / chiffre d’affaires, quel taux obtient-on ?",
+      "options": [
+        "12,5 %",
+        "8 %",
+        "0,08 %",
+        "80 %"
+      ],
+      "answer": 1,
+      "explanation": "Le taux défini est 32 000 / 400 000 × 100 = 8 %. Le quotient décimal 0,08 doit être converti en pourcentage.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 32000
+                },
+                {
+                  "value": 400000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 8,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le chiffre d’affaires progresse mais le résultat recule. Quelle piste doit être examinée avant de conclure à une amélioration globale ?",
+      "options": [
+        "Le seul taux de croissance des ventes pris comme mesure suffisante de performance",
+        "Le seul total de ventes, sans le rapporter aux coûts et au résultat",
+        "L’évolution des prix, volumes, mix et charges",
+        "Le résultat de la période précédente sans tenir compte des nouvelles conditions d’activité"
+      ],
+      "answer": 2,
+      "explanation": "Les ventes ne déterminent pas seules la performance. Une marge unitaire plus faible ou des charges plus élevées peuvent réduire le résultat malgré la croissance."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’activité passe de 100 000 € à 120 000 € de ventes ; son taux de marge défini résultat / ventes passe de 10 % à 7 %. Quel est le résultat de la seconde période ?",
+      "options": [
+        "12 000 €",
+        "10 000 €",
+        "17 000 €",
+        "8 400 €"
+      ],
+      "answer": 3,
+      "explanation": "Le nouveau résultat est 120 000 × 7 % = 8 400 €, inférieur aux 10 000 € initiaux malgré la hausse des ventes.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 120000
+            },
+            {
+              "value": 0.07
+            }
+          ]
+        },
+        "expected": 8400,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une hausse de prix augmente le chiffre d’affaires alors que les quantités vendues baissent. Le rapport parle uniquement de hausse du volume. Quelle correction faut-il apporter ?",
+      "options": [
+        "Distinguer l’effet prix de l’effet quantité",
+        "Remplacer les prix par les seuls encaissements",
+        "Conclure que les quantités sont inchangées parce que les ventes augmentent",
+        "Assimiler le prix de vente au coût d’achat"
+      ],
+      "answer": 0,
+      "explanation": "Un montant de chiffre d’affaires combine prix et quantités. Sa hausse ne prouve pas une augmentation du volume physique vendu."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les ventes se déplacent vers des produits à plus faible marge, sans changement des marges par produit. Quel facteur peut réduire le taux de marge global ?",
+      "options": [
+        "Une hausse automatique de toutes les marges unitaires",
+        "Le changement du mix des ventes",
+        "La seule diminution des échéances de dette",
+        "L’augmentation nécessaire de la valeur des stocks"
+      ],
+      "answer": 1,
+      "explanation": "Même si chaque marge unitaire est stable, le poids des catégories vendues modifie la marge moyenne. Le mix est donc une piste distincte des prix et coûts."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le résultat annuel progresse grâce à un produit exceptionnel non récurrent. Peut-on en déduire sans retraitement une amélioration durable de l’activité courante ?",
+      "options": [
+        "Oui, tous les produits se reproduisent nécessairement",
+        "Oui, si le résultat global est positif",
+        "Non, il faut distinguer la contribution non récurrente",
+        "Non, car un produit exceptionnel doit être ignoré dans tous les comptes"
+      ],
+      "answer": 2,
+      "explanation": "La performance totale peut inclure un événement qui ne se reproduira pas. Il faut le présenter pour apprécier la tendance de l’activité courante."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise rentable doit payer ses fournisseurs avant d’encaisser ses clients. Quel risque peut subsister ?",
+      "options": [
+        "Une trésorerie disponible assimilée au résultat sans examiner les dates",
+        "Un crédit client considéré comme une ressource encaissée pour payer les fournisseurs",
+        "Une couverture des échéances déduite de la seule marge positive",
+        "Un déficit de liquidités aux échéances"
+      ],
+      "answer": 3,
+      "explanation": "La rentabilité n’assure pas la disponibilité des fonds au bon moment. Le calendrier des encaissements et décaissements reste déterminant."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le compte bancaire est élevé parce qu’un emprunt vient d’être reçu. Le rapport y voit une amélioration certaine de la rentabilité. Pourquoi la conclusion est-elle excessive ?",
+      "options": [
+        "L’encaissement de dette apporte des liquidités sans constituer un résultat",
+        "Le capital emprunté doit être ajouté au résultat pour mesurer la rentabilité de la période",
+        "La hausse de banque permet de déduire une hausse identique de marge commerciale",
+        "Le prêt reçu remplace le besoin d’analyser les produits et charges de l’activité"
+      ],
+      "answer": 0,
+      "explanation": "La source de liquidité importe : un financement remboursable n’est pas une performance d’exploitation. Le résultat doit être analysé séparément."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un investissement est payé immédiatement et les bénéfices ne sont attendus que plus tard. Quel outil complète le mieux un ratio de rentabilité prévu ?",
+      "options": [
+        "Le seul résultat nominal final",
+        "Un échéancier des flux et besoins de financement",
+        "L’hypothèse que le paiement sera repoussé automatiquement",
+        "Un ratio sans dates ni base de calcul"
+      ],
+      "answer": 1,
+      "explanation": "Le décalage entre dépenses et bénéfices attendus peut créer une tension avant la rentabilité. Le suivi des flux datés vérifie la capacité à financer cette phase."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une entreprise présente un résultat positif mais des créances anciennes peu recouvrées. Quel examen permet d’apprécier sa liquidité ?",
+      "options": [
+        "Le seul chiffre de résultat positif",
+        "Uniquement le taux de marge prévu l’an prochain",
+        "L’ancienneté des créances, leur recouvrement et les échéances de paiement",
+        "La moyenne sectorielle de rentabilité sans les encours clients"
+      ],
+      "answer": 2,
+      "explanation": "Des produits comptabilisés ne sont pas forcément encaissés. L’analyse de recouvrement et des échéances éclaire les fonds réellement mobilisables."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle phrase distingue correctement rentabilité et liquidité ?",
+      "options": [
+        "La rentabilité est uniquement le total du compte bancaire",
+        "La liquidité est toujours égale au bénéfice annuel",
+        "Les deux notions excluent les décalages de paiement",
+        "La rentabilité rapporte un résultat à une base ; la liquidité concerne les paiements aux échéances"
+      ],
+      "answer": 3,
+      "explanation": "L’une mesure une performance relative, l’autre la possibilité de régler les engagements. Les délais et investissements peuvent les dissocier."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le délai client d’une entreprise dépasse la moyenne sectorielle, mais elle vend surtout à de grands comptes avec des conditions différentes. Quelle conclusion est prudente ?",
+      "options": [
+        "Examiner le modèle commercial avant de qualifier l’écart d’anomalie",
+        "Déclarer immédiatement chaque créance irrécouvrable",
+        "Traiter la moyenne comme une échéance obligatoire pour tous",
+        "Ignorer définitivement le recouvrement puisque les clients sont grands"
+      ],
+      "answer": 0,
+      "explanation": "Une moyenne sert de repère et doit être contextualisée. Les conditions commerciales peuvent expliquer l’écart, sans dispenser du suivi des règlements."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un secteur mélange commerces encaissant comptant et prestataires vendant à crédit. Quel risque présente leur délai client moyen pour juger une entreprise précise ?",
+      "options": [
+        "La moyenne doit être ajoutée au délai réel pour rendre les profils comparables",
+        "Il agrège des modèles économiques différents",
+        "Chaque délai réel doit être remplacé par la moyenne pour neutraliser le modèle commercial",
+        "Le délai peut être comparé à partir du seul chiffre d’affaires, sans tenir compte des encours"
+      ],
+      "answer": 1,
+      "explanation": "Une moyenne hétérogène peut être peu représentative d’un profil donné. Une comparaison avec des entreprises proches améliore le diagnostic."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise saisonnière est comparée à un concurrent régulier à leur même date de clôture. Quelle précaution est utile pour les encours du cycle ?",
+      "options": [
+        "Considérer la date commune comme une garantie de comparabilité parfaite",
+        "Ignorer les stocks de l’entreprise saisonnière",
+        "Analyser les moyennes et les pics saisonniers, pas seulement la date commune",
+        "Remplacer les encours par les capitaux propres"
+      ],
+      "answer": 2,
+      "explanation": "La même date peut représenter une pointe pour l’une et une période ordinaire pour l’autre. La saisonnalité doit être rendue visible."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le responsable exige un ratio exactement égal à la moyenne du secteur. Pourquoi cette cible ne s’impose-t-elle pas automatiquement ?",
+      "options": [
+        "Tout ratio supérieur à la moyenne est nécessairement mauvais",
+        "Tout ratio inférieur est nécessairement bon",
+        "Une moyenne interdit toute analyse des écarts",
+        "La moyenne décrit un ensemble et ne définit pas un optimum universel"
+      ],
+      "answer": 3,
+      "explanation": "Le niveau souhaitable dépend du modèle, des risques et des objectifs. Une référence statistique ne remplace pas cette analyse."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour le même indicateur, trois entreprises ont des valeurs de 5 %, 10 % et 30 %. Quelle est leur moyenne arithmétique simple ?",
+      "options": [
+        "15 %",
+        "10 %",
+        "30 %",
+        "45 %"
+      ],
+      "answer": 0,
+      "explanation": "La moyenne simple est (5 + 10 + 30) / 3 = 15 %. Elle diffère de deux des trois profils et ne décrit pas chaque entreprise.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 5
+                    },
+                    {
+                      "value": 10
+                    }
+                  ]
+                },
+                {
+                  "value": 30
+                }
+              ]
+            },
+            {
+              "value": 3
+            }
+          ]
+        },
+        "expected": 15,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un ratio se détériore et l’équipe propose immédiatement une seule cause. Quelle démarche renforce le diagnostic ?",
+      "options": [
+        "Choisir la cause la plus fréquente sans vérifier le dossier",
+        "Confronter plusieurs explications aux données opérationnelles et au contexte",
+        "Modifier la définition pour retrouver le ratio ancien",
+        "Présenter la corrélation observée comme une preuve suffisante de causalité"
+      ],
+      "answer": 1,
+      "explanation": "Le ratio signale une variation sans en donner automatiquement la cause. Les faits permettent de départager hypothèses de prix, volume, délais ou périmètre."
+    }
+  ]
+}

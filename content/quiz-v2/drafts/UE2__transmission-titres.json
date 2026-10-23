@@ -1,0 +1,368 @@
+{
+  "module": "UE2",
+  "chapter": "transmission-titres",
+  "sourceHash": "f04383bfa86f9bdec4309e0ab3a32bfe0b30e2724e2d11e9893b7cb320e6f5d0",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Avant d’appliquer une procédure à une cession de participation, quelle identification est nécessaire ?",
+      "options": [
+        "La forme sociale et la nature des titres transmis.",
+        "La seule valeur totale annoncée, considérée comme critère du régime de transmission.",
+        "Le seul statut fiscal personnel du vendeur, substitué au régime des titres.",
+        "Le régime d’une autre participation du cédant, appliqué sans identifier les titres du dossier."
+      ],
+      "answer": 0,
+      "explanation": "Les droits et règles de transmission dépendent des titres et de la forme. Le terme participation ne décrit pas suffisamment le régime du dossier."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le vendeur propose « une partie de ses titres ». L’acte ne précise ni leur nombre ni leur catégorie, alors que plusieurs catégories existent. Que manque-t-il directement à la description de la cession ?",
+      "options": [
+        "Le prix global seul, considéré comme description suffisante de tous les titres visés.",
+        "L’identification des titres et droits effectivement cédés.",
+        "La liste des actifs de la société, substituée à l’identification des titres cédés.",
+        "Le nombre des seuls titres détenus par les autres associés, substitué à celui de l’objet vendu."
+      ],
+      "answer": 1,
+      "explanation": "Le nombre et la catégorie déterminent l’objet transmis et les droits correspondants. Un prix global ne compense pas l’imprécision de cet objet."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société par actions est encore en formation et n’est pas immatriculée. Un souscripteur veut négocier ses actions comme des titres déjà négociables. Selon le premier alinéa de L228-10, quel événement doit d’abord intervenir ?",
+      "options": [
+        "La signature du projet de statuts par le souscripteur seul.",
+        "Le premier versement effectué sur le compte de dépôt des apports.",
+        "L’immatriculation de la société au registre du commerce et des sociétés.",
+        "La première décision de gestion prise au nom de la société en formation."
+      ],
+      "answer": 2,
+      "explanation": "L228-10 fixe la négociabilité des actions après l’immatriculation de la société au RCS. La souscription, le dépôt ou un acte de gestion préparatoire ne se confondent pas avec cet événement. La question vise les actions elles-mêmes, sans traiter une promesse particulière.",
+      "references": [
+        {
+          "title": "Code de commerce, article L228-10, version depuis le 15 juin 2024",
+          "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000005634379/LEGISCTA000006133176/2025-06-13/"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les titres vendus donnent des droits financiers différents selon leur catégorie. Quel document permet d’apprécier ce que l’acquéreur recevra ?",
+      "options": [
+        "Le seul prix de cession par titre, retenu comme définissant les droits futurs aux bénéfices.",
+        "Le seul pourcentage du capital vendu, retenu comme décrivant toute priorité financière.",
+        "Le dernier dividende versé, retenu comme garantissant le même droit pour les exercices suivants.",
+        "Les clauses déterminant les droits des catégories de titres concernées."
+      ],
+      "answer": 3,
+      "explanation": "Le prix et le nombre de titres n’expriment pas tous les droits. Les clauses applicables permettent d’identifier les prérogatives attachées à l’objet transmis."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une cession porte sur des actions de SAS. Une copie utilise automatiquement la procédure de parts de SARL tirée d’une autre étude. Quelle correction retenir ?",
+      "options": [
+        "Rechercher les textes et clauses correspondant aux actions et à la SAS du dossier.",
+        "Conserver les conditions de SARL et changer seulement les intitulés de la société et des titres.",
+        "Appliquer d’abord la règle légale de SARL, puis les clauses de SAS seulement si elles donnent un résultat identique.",
+        "Prendre la procédure de SARL comme supplétive au seul motif qu’aucune clause de SAS n’a encore été lue."
+      ],
+      "answer": 0,
+      "explanation": "Une pratique d’une autre forme ne démontre pas le régime applicable. Les titres et la forme déterminent les recherches pertinentes."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel énoncé distingue agrément et préemption ?",
+      "options": [
+        "L’agrément fixe une priorité d’achat ; la préemption est une autorisation.",
+        "L’agrément organise une autorisation ; la préemption organise une priorité d’acquisition.",
+        "L’agrément organise l’accord du vendeur sur le prix ; la préemption organise l’accord de l’acquéreur.",
+        "L’agrément et la préemption sont deux procédures d’autorisation dont seule la majorité de vote diffère."
+      ],
+      "answer": 1,
+      "explanation": "Les clauses ne poursuivent pas le même objet. L’une organise l’autorisation de la transmission ; l’autre donne une priorité d’acquisition selon son champ."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une clause de préemption fournie ne vise que les ventes à des tiers. Le projet porte sur une donation. Quel point faut-il examiner avant d’étendre la priorité ?",
+      "options": [
+        "La valeur économique du don, retenue comme assimilant nécessairement donation et vente pour la clause.",
+        "L’intérêt du bénéficiaire de la priorité, retenu comme permettant d’élargir seul les opérations visées.",
+        "Le champ des opérations couvertes par la clause et les règles pertinentes.",
+        "La présence d’un tiers au capital après la donation, retenue comme suffisante pour appliquer toute clause visant les ventes."
+      ],
+      "answer": 2,
+      "explanation": "L’opération projetée et le champ de la clause doivent être comparés. Une priorité visant certaines ventes ne s’étend pas à toute transmission par simple similitude économique."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier prévoit à la fois une priorité d’achat et une autorisation de la cession. Le bénéficiaire de la priorité renonce à l’exercer. Que reste-t-il à vérifier ?",
+      "options": [
+        "La procédure de préemption, considérée comme ayant aussi donné l’agrément par le silence du bénéficiaire.",
+        "Le résultat de la priorité, considéré comme substituant le tiers aux bénéficiaires pour toute procédure d’autorisation.",
+        "La validité du prix, considérée comme rendant sans objet une autorisation distincte.",
+        "La procédure d’autorisation distincte prévue dans le dossier."
+      ],
+      "answer": 3,
+      "explanation": "La renonciation à une priorité ne démontre pas l’accomplissement d’une procédure d’agrément. Les objets et étapes doivent être distingués."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une notification de cession doit, selon la clause fournie, indiquer prix et identité de l’acquéreur. Elle indique le prix mais omet l’identité. Quel contrôle doit être complété ?",
+      "options": [
+        "La conformité de la notification aux informations requises par la clause.",
+        "La seule date d’envoi, considérée comme suffisante malgré l’identité omise.",
+        "La connaissance supposée de l’acquéreur par un seul associé, substituée au contenu de la notification.",
+        "Le seul prix, considéré comme permettant d’identifier automatiquement tout acquéreur."
+      ],
+      "answer": 0,
+      "explanation": "La notification doit être rapprochée des exigences prévues. L’omission porte sur une donnée requise ; ses conséquences demandent ensuite l’examen du régime et de la clause."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une SAS prévoit statutairement une inaliénabilité des actions pendant douze ans. Quel point de l’article L227-13 faut-il relever ?",
+      "options": [
+        "Le délai peut atteindre la durée de la société si tous les associés acceptent la clause.",
+        "Le texte permet une durée n’excédant pas dix ans.",
+        "Le délai est de cinq ans, durée présentée comme plafond de L227-13.",
+        "Le plafond est de vingt ans si les actions ne sont pas admises sur un marché."
+      ],
+      "answer": 1,
+      "explanation": "L’article L227-13 fixe un plafond de dix ans pour l’inaliénabilité prévue dans les statuts de SAS. Le projet de douze ans doit être confronté à cette limite.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-13",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006227107"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie annonce la même sanction pour toute violation d’une clause de cession, sans lire le régime ni la clause. Quel correctif appliquer ?",
+      "options": [
+        "Choisir la sanction la plus forte pour sécuriser l’analyse.",
+        "Retenir toujours la seule réparation d’une somme égale au prix.",
+        "Rechercher le fondement et les conséquences propres au manquement identifié.",
+        "Écarter toute sanction dès qu’un prix est payé."
+      ],
+      "answer": 2,
+      "explanation": "Les conséquences ne se déduisent pas d’une formule universelle. Il faut préciser la clause, l’opération, le régime et le manquement avant de conclure."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi distinguer l’accord de cession et son opposabilité dans les rapports concernés ?",
+      "options": [
+        "La signature prouve nécessairement toutes les formalités envers tous les tiers.",
+        "Le paiement remplace toutes les étapes de transmission des droits.",
+        "La connaissance d’un projet de vente vaut transfert définitif.",
+        "La rencontre des volontés ne documente pas automatiquement tous les effets envers société et tiers."
+      ],
+      "answer": 3,
+      "explanation": "Selon le régime, des démarches peuvent conditionner certains effets. Il faut identifier l’accord et vérifier séparément les formalités pertinentes."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’acte de cession est signé ; une formalité requise envers la société est encore inscrite comme « à faire » dans le dossier. Comment présenter l’avancement ?",
+      "options": [
+        "Distinguer l’acte signé et l’étape encore nécessaire pour l’effet concerné.",
+        "Décrire toute la cession comme achevée dans tous les rapports.",
+        "Traiter la signature comme preuve que la formalité a été exécutée.",
+        "Considérer que l’acquéreur peut choisir librement de supprimer la formalité."
+      ],
+      "answer": 0,
+      "explanation": "La trace d’un acte ne prouve pas chaque étape de sa mise en œuvre. Le dossier doit montrer les formalités faites et celles qui restent à accomplir."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une clause d’exercice impose une autorisation avant une cession donnée. Le dossier prouve une autorisation mais elle concerne un autre acquéreur. Quel contrôle est nécessaire ?",
+      "options": [
+        "Le seul accord du vendeur sur le prix, tenu pour agrément du nouvel acquéreur.",
+        "La concordance entre l’autorisation produite et l’opération effectivement réalisée.",
+        "Le nombre de titres cédés, tenu pour seul objet de toute autorisation.",
+        "L’autorisation donnée à un tiers précédent, considérée comme réutilisable pour tout acquéreur."
+      ],
+      "answer": 1,
+      "explanation": "Une autorisation n’est pas interchangeable entre opérations. L’identité de l’acquéreur et l’objet du projet doivent être rapprochés de la décision d’agrément fournie."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie considère un projet d’acte non signé comme preuve définitive d’une transmission déjà réalisée. Quelle distinction manque ?",
+      "options": [
+        "La différence entre une formalité fiscale et une formalité de publicité.",
+        "La différence entre l’identification des titres et leur valeur nominale.",
+        "La différence entre document préparatoire, accord conclu et étapes de réalisation.",
+        "La différence entre le prix provisoire et son mécanisme d’ajustement."
+      ],
+      "answer": 2,
+      "explanation": "Un projet peut documenter une négociation, mais pas nécessairement l’accord final ou sa mise en œuvre. L’analyse doit rattacher chaque pièce à son stade réel."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les pièces de cession donnent deux dates, l’une pour l’accord, l’autre pour une formalité d’effet envers la société. Comment organiser leur lecture ?",
+      "options": [
+        "Retenir la plus récente pour tous les effets sans distinction.",
+        "Retenir la première pour tous les effets sans distinction.",
+        "Calculer une date moyenne de cession.",
+        "Identifier à quel effet et à quelle étape correspond chaque date."
+      ],
+      "answer": 3,
+      "explanation": "Les dates peuvent se rapporter à des effets différents. Il faut construire une chronologie qualifiée plutôt que chercher une date unique à appliquer indistinctement."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel ensemble rend le dossier de cession traçable ?",
+      "options": [
+        "Acte, titres identifiés, clauses, procédures réalisées et garanties convenues.",
+        "Projet d’acte, prix envisagé et calendrier prévisionnel, sans vérifier leurs versions finales.",
+        "Reçu du prix et liste des titres, tenus pour preuve suffisante de toutes les autorisations et garanties.",
+        "Modèle d’acte et courriels de négociation, retenus à la place des pièces établissant les étapes accomplies."
+      ],
+      "answer": 0,
+      "explanation": "Le prix ne décrit pas l’objet, les conditions et les risques. Le dossier doit permettre de relier les engagements aux titres et aux étapes de l’opération."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le prix est fixé « sous réserve d’un ajustement » mais le projet ne définit ni les données ni la date de calcul. Quelle information demander ?",
+      "options": [
+        "L’identité du payeur, considérée comme formule suffisante de tout ajustement.",
+        "La formule et les conditions précises de l’ajustement envisagé.",
+        "Le seul prix initial, considéré comme définition de sa variation future.",
+        "Le montant nominal des titres, considéré comme ajustement automatiquement convenu."
+      ],
+      "answer": 1,
+      "explanation": "Un ajustement peut modifier le prix réellement payé. Sa formule, sa date et les données de référence doivent être documentées au lieu d’être supposées."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une garantie de cession est annoncée, mais l’acte ne précise pas quelles situations elle couvre. Que faut-il approfondir pour comparer les risques ?",
+      "options": [
+        "La seule dénomination de garantie, considérée comme couverture de tout risque.",
+        "Le seul prix payé, considéré comme contenu complet des conditions de garantie.",
+        "Le champ, les conditions et les limites de la garantie convenue.",
+        "La seule signature du cédant, considérée comme engagement illimité pour tout événement futur."
+      ],
+      "answer": 2,
+      "explanation": "Le mot garantie ne définit pas les engagements. Son périmètre et ses conditions doivent être lus pour apprécier les risques réellement transférés."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Pour une cession, le vendeur connaît une information déterminante liée directement au contrat, légitimement ignorée de l’autre partie selon les faits. Une clause prétend exclure tout devoir d’information de L1112-1. Quelle limite légale examiner ?",
+      "options": [
+        "La clause exclut le devoir si le vendeur accepte en contrepartie une garantie de passif.",
+        "Le devoir peut être exclu entre professionnels qui disposent chacun d’un conseil.",
+        "Le devoir peut être écarté pour une information déterminante moyennant une réduction de prix convenue.",
+        "Les parties ne peuvent ni limiter ni exclure ce devoir légal d’information."
+      ],
+      "answer": 3,
+      "explanation": "L’article 1112-1 interdit l’exclusion conventionnelle du devoir qu’il définit. Il faut d’abord vérifier que les conditions du devoir sont réunies dans le cas.",
+      "references": [
+        {
+          "title": "Code civil, article 1112-1",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032007138"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Pendant la négociation des titres, une partie reproche seulement à l’autre de ne pas lui avoir révélé sa propre estimation de leur valeur. Quelle réserve particulière de L1112-1 est pertinente ?",
+      "options": [
+        "Le devoir qu’il prévoit ne porte pas sur l’estimation de la valeur de la prestation.",
+        "Le devoir inclut le prix de réserve personnel dès qu’un écart important existe entre les estimations des parties.",
+        "Le devoir inclut l’estimation propre du vendeur dès que l’acquéreur n’a pas réalisé d’expertise indépendante.",
+        "Le devoir inclut l’estimation propre du vendeur si elle a influencé le prix auquel il était disposé à vendre."
+      ],
+      "answer": 0,
+      "explanation": "Le texte distingue information déterminante et estimation de valeur de la prestation, qu’il exclut du devoir décrit. Cela ne dispense pas d’examiner un autre fait ou fondement invoqué.",
+      "references": [
+        {
+          "title": "Code civil, article 1112-1",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032007138"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "En 2026, le prix d’une cession relevant du droit commun de la vente est laissé à l’estimation d’un tiers selon l’article 1592. Ce tiers refuse sa mission. Quelle possibilité le texte prévoit-il pour éviter que ce refus empêche la vente ?",
+      "options": [
+        "Retenir comme prix l’estimation personnelle du vendeur sans accord supplémentaire.",
+        "Faire procéder à l’estimation par un autre tiers.",
+        "Remplacer le prix par le nominal des titres, sans autre stipulation.",
+        "Retenir le prix proposé par l’acquéreur dès lors qu’il a financé l’opération."
+      ],
+      "answer": 1,
+      "explanation": "Dans sa version depuis juillet 2019, 1592 prévoit que si le tiers ne veut ou ne peut estimer, il n’y a point de vente, sauf estimation par un autre tiers. La défaillance du tiers ne donne pas à une partie le pouvoir de fixer seule le prix et ne le remplace pas par le nominal.",
+      "references": [
+        {
+          "title": "Code civil, article 1592, estimation par un autre tiers",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038799710/2026-05-13"
+        }
+      ]
+    }
+  ]
+}

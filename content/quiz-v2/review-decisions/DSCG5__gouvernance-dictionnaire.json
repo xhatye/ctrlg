@@ -1,0 +1,259 @@
+{
+  "sourceHash": "8e22889d2d018480dbf329f7e9f01cc0eb2d3884ff197742d6b246b9df6d929c",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "21d86033a0716a5d69fd6be3bbaefc1aa6b0a9b57ebca4541b52ef18115ed38f",
+      "selected": 0,
+      "reason": "Le dictionnaire décrit sens et conventions, au-delà des types et valeurs.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "c975f77acf74944c54539190f922f8de7986f23be0abc076694c20b4c7b4f714",
+      "selected": 3,
+      "reason": "Deux définitions de client actif créent des populations différentes avant calcul.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "aa013f6b20bf0db9072e44940022b119978fad82f0cad623813a1bf7ee7aef7b",
+      "selected": 3,
+      "reason": "Le traitement des litiges modifie la population à rapprocher avant comparaison.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "536e3e5df859355450d957449f02981ac80456758bf0df93c9a850af066b9495",
+      "selected": 3,
+      "reason": "La nouvelle définition doit être versionnée et sa rupture de série expliquée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "7c26169454a26b9635303da4c4fce338cf6031d512925d1dce7179c096e42e0c",
+      "selected": 0,
+      "reason": "L’échelle milliers ou euros appartient à l’unité et à la conversion.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "238a64930f7bdf481a2f52e5d8b18f739d4032fc47e6a95e53d0ee318085c617",
+      "selected": 3,
+      "reason": "La date métier et les factures éligibles définissent les termes du taux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "ffb295dc4a392237f253d0633b6c13e690b52a7216c2e46411021eaa9b15c0f2",
+      "selected": 2,
+      "reason": "Le sens métier relève du responsable habilité et des contributions du domaine.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "cf20c980c69ea8514281333a8e999f93c469943c53aaf813a314991124ae9c60",
+      "selected": 3,
+      "reason": "Une nomination sans temps ni autorité ne donne pas les moyens de correction.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "1c2c0ea909055f013426c5949ad54338cb1b2a16213ba1f747adddcc37f2bf13",
+      "selected": 0,
+      "reason": "La performance technique ne délègue pas la décision de changer un sens métier.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "f231043c4f5fdedf46a0866a79d65169f5bccf119f0d05702d3015f076e18cc1",
+      "selected": 0,
+      "reason": "Les rôles de proposition, validation, exécution et information doivent être attribués.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "0a95a129044dc2c304dd1f5ed1c455ad4f824cad72f4ea8f64a3576d28039714",
+      "selected": 1,
+      "reason": "La validation métier doit être suivie d’une application technique autorisée et testée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "653cb316d0b3e4b60a81743f1e235f5a5d239d1142d8105709e50b7558e73bc2",
+      "selected": 2,
+      "reason": "Une politique de conservation doit être suivie d’une exécution attribuée et contrôlée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "7e3e892de1c3747ce58b59c3a07971634d954db13b361e69cc52c70f1a6e65df",
+      "selected": 3,
+      "reason": "La lignée comprend toutes transformations des sources à la valeur finale.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "4d1c2ebf406853e439b4c88c503451cd169175ae9a9043b754931e402aaf5409",
+      "selected": 0,
+      "reason": "Comparer versions et effet du filtre isole le changement de traitement de l’activité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "eb418dd0120b3ee44c386cba599a58ff04bcd01faf4316badbe838ab4136235e",
+      "selected": 3,
+      "reason": "La jointure peut multiplier un client sur plusieurs lignes ; contrôler cardinalité et objet.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "69a9f260bd35eedd26525459e27b06e7d7b6203f372a73ccbfed75cee116f17c",
+      "selected": 0,
+      "reason": "Le traitement des avoirs, les dates et exceptions définissent le résultat de recouvrement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "6cd10e92b412e4cc4869a18f1fc7efef0466b32c0344493d630eea60efce5ab0",
+      "selected": 3,
+      "reason": "La date du fichier ne détermine pas la situation métier observée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "c90ae4a5d74bbe1b79a637ac15a25715bc89126eb1828f5db3100b675b368a3b",
+      "selected": 0,
+      "reason": "Une anomalie doit rester tracée et analysée avant correction autorisée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "0b687e2c259265bcc71dbc9a72f7512d88706b1e1d90728e4e5accb5a38fc900",
+      "selected": 1,
+      "reason": "Le sens inchangé ne préserve pas une requête dépendant de l’ancien nom technique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "aa604a9e90ea26dbe3634169d9fdec54a1855d18a8ae079b6d04cf9a7306f079",
+      "selected": 0,
+      "reason": "Une copie obsolète partagée crée divergences et exposition sans synchronisation garantie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "93c4f6f6556e01b6cf5fc74b54ff4fe1b5d3ff45f997c9caf111233916b88404",
+      "selected": 2,
+      "reason": "La nouvelle finalité doit être examinée ; accès technique ne suffit pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "dbd6d2821989279c2c5e22cdba58b156e3db421b3eadb59e728cf8d1165ea735",
+      "selected": 0,
+      "reason": "La conservation doit également couvrir copies et exports encore accessibles.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "fe04d5737a23b65622f0299367f19735d46dd094e2e50ab9b2e2e76b4fd0baff",
+      "selected": 0,
+      "reason": "Les rôles et droits proportionnés encadrent proposition et validation des corrections.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

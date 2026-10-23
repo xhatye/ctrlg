@@ -18,7 +18,7 @@ test('archived retrieval tasks preserve historical quiz/card IDs and numeric var
   assert.ok(c.quiz.length>old.quizCount&&c.cards.length>old.cardCount,id+'/'+c.id);
   const w=c.caseWorkshops[0],dossier=studyModule(id,'case',()=>.2,{chapter:c.id,variant:w.variant});assert.equal(dossier.format,'Atelier de relecture');assert.equal(dossier.questions.length,3);
   for(const q of dossier.questions){assert.equal(checkCaseStep(q,String(q.guide.answer)).correct,true);assert.ok(q.rubric.criteria.length);}
-  if(old.numericVariants){assert.equal(w.variant,old.numericVariants);assert.equal(studyModule(id,'case',()=>.2,{chapter:c.id,variant:old.numericVariants-1}).questions[0].guide.type,'number');for(const n of c.quiz.slice(old.quizCount))assert.ok(n.q.includes(c.cas.contexte),'numeric question must state its input data');}
+  if(old.numericVariants){assert.equal(w.variant,old.numericVariants);assert.equal(studyModule(id,'case',()=>.2,{chapter:c.id,variant:old.numericVariants-1}).questions[0].guide.type,'number');for(const n of c.quiz.slice(old.quizCount).filter(n=>!n.editorialId))assert.ok(n.q.includes(c.cas.contexte),'legacy numeric question must retain its input data');}
   const lastIndex=quizIndices(c).at(-1),lastQuiz=resolveReviewItem('quiz',id+':'+c.id+':n'+lastIndex);assert.equal(lastQuiz.q,c.quiz[lastIndex].q);
   const lastCard=resolveReviewItem('card',id+':'+c.id+':card'+(c.cards.length-1));assert.equal(lastCard.a,c.cards.at(-1).a);
   cases+=moduleCatalogue(id).chapters.find(ch=>ch.id===c.id).curatedCaseCount;

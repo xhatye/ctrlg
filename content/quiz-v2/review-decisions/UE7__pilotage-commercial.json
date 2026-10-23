@@ -1,0 +1,248 @@
+{
+  "sourceHash": "e3fa304ea5ba4a1abc67015f79ce0d244b40f5fb8094d1ced3caef12dfbe656a",
+  "reviewer": "codex-law-tax-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "155ae978eafaa71b4f2580f2b6fa0b059171610c3c331a2ca4b2f06644f2ce5d",
+      "selected": 2,
+      "reason": "Quatre-vingts acheteurs sur mille prospects donnent huit pour cent de conversion, sur personnes uniques.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "f6efd91276f388d411a1f547f76b4cc6c7c9cd0c297fc5a7343c6ce3478be021",
+      "selected": 2,
+      "reason": "Quatre mille huit cents sur quatre-vingts acheteurs donnent soixante euros par acheteur, distinct de recette par prospect.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "a281f10f4bc4a1b723e003b4a292cc3f7a5d4aa47db9e34a8537f880ec31e19c",
+      "selected": 2,
+      "reason": "Mille deux cents de budget sur quatre-vingts nouveaux acheteurs donnent quinze euros de coût d’acquisition moyen.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "89abfba5bac8f3f4205e0b1506bba81137f62421bfaaf4218701bad7d3b18f26",
+      "selected": 1,
+      "reason": "Quatre mille huit cents sur mille prospects donnent quatre euros quatre-vingts par prospect, non le panier des seuls acheteurs.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "e36c9ac1b87700bc6ed12a87f9524cde2d64d8f23e07f343d4559ce454df746a",
+      "selected": 1,
+      "reason": "Une conversion de prospects uniques compte des acheteurs uniques, pas des commandes répétées ; dédupliquer ces acheteurs ne supprime pas leurs ventes du chiffre d’affaires.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "efd283383368ca622db9e7419ec6ed867ede1e85430cb24aa727a85aba3384ae",
+      "selected": 2,
+      "reason": "Les moyennes par acheteur et par commande ont des dénominateurs différents ; l’unité et les historiques doivent être harmonisés avant comparaison.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "8d09704d6e2dbe736d0a3686a703f0c4897a3006cf693c74afc4f207179e960b",
+      "selected": 2,
+      "reason": "Des frais non documentés peuvent rendre incomplet le budget affecté et sous-estimer l’acquisition ; connaître précisément les acheteurs ne garantit pas ce numérateur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "fa7b3ed20d350a42f3a58c2a61ab7e7de3ebc93da3b8b86c6aa3177d841d1ed6",
+      "selected": 1,
+      "reason": "La recette par prospect ne retranche pas les coûts pertinents ; elle ne suffit pas à établir une marge supérieure ou un coût déjà déduit.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "a2b936be160a7d899173dddbb10be8761861653376d11db1eaad847bac848c46",
+      "selected": 2,
+      "reason": "La conversion doit être reliée au volume, panier et coûts ; une remise peut accroître les achats tout en réduisant marge et bilan net.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "0f373c23b843308f5d81174dfde0044addcbe12ab7e28c20a61a2fffcb2c81d7",
+      "selected": 2,
+      "reason": "Chiffre d’affaires brut et population nette de remboursements peuvent représenter des champs distincts ; exactitude d’un total seul ne résout pas cette incohérence.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "58a58ce2092156ae074110bc8b1d6a07ee89dfefacc175103a8b46ba3ca316a4",
+      "selected": 0,
+      "reason": "Cinquante fois quarante donnent deux mille de marge avant acquisition ; moins sept cent cinquante laissent mille deux cent cinquante.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "4e12bdbbd245dd001d0e1b737211aa98eafbf01ec86e9ed114ae209767d069db",
+      "selected": 1,
+      "reason": "Conversion acheteurs/prospects fois panier CA/acheteurs donne CA/prospects, sur une cohorte identique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "1955f6ec7e10a2b382b5c1751847938255e567d570271a88c9b010bc57b5effe",
+      "selected": 3,
+      "reason": "La conversion globale rapporte les acheteurs uniques aux prospects totaux dédupliqués ; une moyenne non pondérée ignore les tailles de cohortes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "4a51f5536893e3f13ada4bb04604d1b79c124ae1324fa0658cf17dacc13ea7aa",
+      "selected": 2,
+      "reason": "Cent vingt acheteurs fois soixante-quinze euros donnent neuf mille de chiffre d’affaires si les hypothèses sont réalisées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "83fed52ac3dfbf3ac212555e9d2a504a1c2f21a56ce12511f3bc577ba5198c23",
+      "selected": 3,
+      "reason": "L’identité découle de la simplification des mêmes acheteurs entre les ratios ; elle exige des populations et un chiffre d’affaires cohérents ainsi qu’un taux en proportion.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "e79a45cf4e9dda4bea30833eea39e936fe3f07e17578629d59ad91b429cab7ec",
+      "selected": 3,
+      "reason": "Des fenêtres de suivi différentes changent la possibilité d’acheter ; des conversions cumulées ne sont pas directement comparables sans durée harmonisée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "cd4e64daa86cc0104dcf661cf9857c588a27b20c29f926976b805f9ecaf8b704",
+      "selected": 1,
+      "reason": "Cent acheteurs sur cinq pour cent exigent deux mille prospects uniques comparables dans le modèle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "be00db8605426d113c39c96dc85c6f9376367fc6336067e45f249d2275d33092",
+      "selected": 3,
+      "reason": "De gros achats peuvent relever la moyenne alors que la majorité baisse ; elle ne mesure pas une amélioration identique de tous les clients.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "cb5dbd54bb3ea850fc00bd190b50af188f05cad4110fe4542cf0f8cd450647fa",
+      "selected": 1,
+      "reason": "Coûts et clients multicanaux exigent une convention explicite et la gestion des chevauchements ; compter chaque client plusieurs fois fabrique une attribution.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "59556244cc3ffe953112a44f39de0eeb78f4b4437e152b438b6b09df83a8c0ef",
+      "selected": 3,
+      "reason": "La fidélisation concerne le retour de la même cohorte ; le réachat sur une fenêtre définie répond mieux à cet objectif que messages ouverts ou première remise.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "29be37d356cf66658e5bbae49e2d04baf0e3363aa823eb4724d7584c1fe96708",
+      "selected": 0,
+      "reason": "Douze euros au plus pour quatre-vingt-dix acheteurs impliquent mille quatre-vingts euros de budget maximal.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "a3e8e2f3f0ee1f31712152a6ff9bd2647d315546489202a921072c0e2bc64f67",
+      "selected": 0,
+      "reason": "L’objectif livré demande de suivre le passage des acheteurs convertis à une livraison effective ; clics, impressions et panier initial ne mesurent pas les annulations.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

@@ -1,0 +1,521 @@
+{
+  "module": "UE9",
+  "chapter": "facture-remises",
+  "sourceHash": "18f95269fc323c8a464a1ef15259bd0f18a50376ec8706b429c1ee3a4624dde4",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le brut HT d’une facture est de 2 500 €. Une première remise de 8 % est accordée. Quel montant HT reste après cette réduction seule ?",
+      "options": [
+        "2 300 €",
+        "2 700 €",
+        "200 €",
+        "2 492 €"
+      ],
+      "answer": 0,
+      "explanation": "La remise vaut 2 500 × 8 % = 200 €. Le net après cette étape est donc 2 500 × 0,92 = 2 300 €.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 2500
+            },
+            {
+              "value": 0.92
+            }
+          ]
+        },
+        "expected": 2300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour appliquer une remise de 5 %, le tableur multiplie le brut par 0,05 et présente ce résultat comme le net. Quelle confusion faut-il corriger ?",
+      "options": [
+        "Il applique déjà deux remises successives",
+        "Il calcule la réduction, pas le montant restant après réduction",
+        "Il calcule la TVA de la facture",
+        "Il reconstitue automatiquement le brut initial"
+      ],
+      "answer": 1,
+      "explanation": "Le facteur 0,05 donne le montant retranché. Pour obtenir le net, le facteur restant est 1 − 0,05 = 0,95."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une première remise de 10 % conduit à un net HT de 1 800 €. Quel était le brut HT avant cette remise ?",
+      "options": [
+        "1 980 €",
+        "1 620 €",
+        "2 000 €",
+        "18 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le net vaut brut × 0,90. Le brut est donc 1 800 / 0,90 = 2 000 €, et non le net augmenté simplement de 10 %. ",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1800
+            },
+            {
+              "value": 0.9
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le brut affiché inclut une quantité erronée. L’application correcte des pourcentages de remise suffit-elle à valider la facture ?",
+      "options": [
+        "Oui, un pourcentage exact corrige tout brut incorrect",
+        "Oui, dès que le TTC est positif",
+        "Non, il faut supprimer toutes les remises même si elles sont accordées",
+        "Non, il faut aussi rapprocher quantités et prix unitaires des pièces"
+      ],
+      "answer": 3,
+      "explanation": "Des calculs exacts sur une base erronée restent erronés. Le contrôle de facture commence par les données de quantité, prix et réductions acquises."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une facture de 1 000 € HT reçoit deux remises successives de 10 % puis 5 %, sans autre élément. Quel est le net commercial HT ?",
+      "options": [
+        "855 €",
+        "850 €",
+        "950 €",
+        "900 €"
+      ],
+      "answer": 0,
+      "explanation": "La seconde remise s’applique au montant restant : 1 000 × 0,90 × 0,95 = 855 €. Additionner les taux donnerait à tort 850 €.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 1000
+                },
+                {
+                  "value": 0.9
+                }
+              ]
+            },
+            {
+              "value": 0.95
+            }
+          ]
+        },
+        "expected": 855,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Deux remises successives de 20 % et 10 % sont accordées. Quel taux unique équivalent correspond à leur effet total, sans arrondis intermédiaires ?",
+      "options": [
+        "30 %",
+        "28 %",
+        "18 %",
+        "72 %"
+      ],
+      "answer": 1,
+      "explanation": "Le facteur restant est 0,80 × 0,90 = 0,72. La réduction totale est donc 1 − 0,72 = 0,28, soit 28 %. ",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 0.8
+                    },
+                    {
+                      "value": 0.9
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 28,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une facture applique une remise de 5 % puis une de 3 %, mais chaque montant de réduction est calculé sur le brut initial. Quelle règle de calcul a été omise ?",
+      "options": [
+        "La seconde remise porte uniquement sur la TVA",
+        "Les deux taux doivent être multipliés directement par le TTC",
+        "La seconde remise porte sur le montant restant après la première",
+        "Chaque remise doit être ajoutée au brut"
+      ],
+      "answer": 2,
+      "explanation": "Des remises successives ont des assiettes successives. Reprendre le brut pour chaque réduction les transforme en remises cumulées autrement définies."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux remises proportionnelles successives de 4 % et 6 % sont inversées, sans frais fixes ni arrondis intermédiaires. Quel effet sur le net commercial exact ?",
+      "options": [
+        "Le net augmente de 2 % du brut",
+        "Le net baisse de 2 % du brut",
+        "Le net devient égal au brut diminué de 10 %",
+        "Aucun, le produit des deux facteurs reste identique"
+      ],
+      "answer": 3,
+      "explanation": "La multiplication des facteurs 0,96 et 0,94 donne le même résultat dans les deux ordres. Cette propriété n’autorise pas à additionner leurs taux."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Après une première remise, le montant restant est de 2 000 €. Une seconde remise ramène ce montant à 1 940 €. Quel est le taux de cette seconde remise ?",
+      "options": [
+        "3 %",
+        "6 %",
+        "2,91 %",
+        "97 %"
+      ],
+      "answer": 0,
+      "explanation": "La seconde réduction vaut 60 € sur une base de 2 000 € : 60 / 2 000 × 100 = 3 %. ",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 2000
+                    },
+                    {
+                      "value": 1940
+                    }
+                  ]
+                },
+                {
+                  "value": 2000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 3,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une réduction fixe de 100 € et une remise de 10 % sont annoncées. Peut-on supposer que leur ordre est sans effet comme pour deux facteurs proportionnels ?",
+      "options": [
+        "Oui, addition et multiplication commutent toujours ensemble",
+        "Non, l’ordre détermine ici la base de la remise proportionnelle",
+        "Oui, dès lors que les deux réductions sont positives",
+        "Non, parce qu’une remise proportionnelle est obligatoirement une TVA"
+      ],
+      "answer": 1,
+      "explanation": "Une somme fixe retranchée avant ou après une remise ne produit pas le même net. Les conditions doivent préciser l’ordre des opérations."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le net commercial HT après toutes les remises est de 1 500 €. Le taux de TVA fourni pour l’exercice est 20 %. Quel montant de TVA calculer ?",
+      "options": [
+        "1 800 €",
+        "250 €",
+        "300 €",
+        "1 200 €"
+      ],
+      "answer": 2,
+      "explanation": "L’assiette imposée par le cas est le net commercial : 1 500 × 0,20 = 300 €. Le TTC est un autre montant.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 1500
+            },
+            {
+              "value": 0.2
+            }
+          ]
+        },
+        "expected": 300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le net commercial est inférieur au brut grâce aux remises. Le préparateur calcule pourtant la TVA sur le brut. Quel biais cela crée-t-il dans le modèle fourni ?",
+      "options": [
+        "Il sous-estime la TVA et le TTC",
+        "Il ne modifie que la charge HT, jamais le paiement",
+        "Il annule l’effet de la TVA déductible sur la balance",
+        "Il surestime la TVA et le TTC"
+      ],
+      "answer": 3,
+      "explanation": "Le cas impose une taxe sur le montant après réductions. Une assiette trop élevée augmente la taxe puis le total dû."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le brut HT est de 2 000 € et une remise acquise le ramène à 1 800 €. Avec la TVA fournie de 20 %, de combien une taxe calculée à tort sur le brut serait-elle excessive ?",
+      "options": [
+        "40 €",
+        "400 €",
+        "360 €",
+        "200 €"
+      ],
+      "answer": 0,
+      "explanation": "L’écart d’assiette vaut 200 €. L’excès de taxe est 200 × 20 % = 40 €, non la totalité de la remise.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 2000
+                },
+                {
+                  "value": 1800
+                }
+              ]
+            },
+            {
+              "value": 0.2
+            }
+          ]
+        },
+        "expected": 40,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La facture d’achat comprend une TVA intégralement déductible selon l’hypothèse. Quel montant distingue-t-on du net commercial porté en achats ?",
+      "options": [
+        "La TVA, ajoutée obligatoirement une seconde fois au coût",
+        "La TVA déductible, séparée de la charge HT",
+        "L’ensemble TTC, porté uniquement en achats sans taxe distincte",
+        "La remise, traitée comme un emprunt reçu"
+      ],
+      "answer": 1,
+      "explanation": "Dans le cas fourni, la charge correspond au net commercial HT et la taxe récupérable est isolée. La dette conserve le total TTC."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le taux de taxe de l’exercice n’est pas indiqué. Le comptable en choisit un parce qu’il est fréquent. Quel comportement est préférable pour résoudre le cas ?",
+      "options": [
+        "Appliquer toujours 20 % à toute opération",
+        "Assimiler l’absence de taux à une exonération certaine",
+        "Identifier le taux applicable ou obtenir la donnée manquante avant le chiffrage",
+        "Remplacer la TVA par le taux de remise"
+      ],
+      "answer": 2,
+      "explanation": "Un taux fréquent n’est pas une justification universelle. L’exercice doit fournir ou permettre d’établir l’hypothèse de taxe utilisée."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le net commercial HT est de 920 € et la TVA donnée de 184 €, sans frais ni acompte. Quel total TTC doit être payé ?",
+      "options": [
+        "736 €",
+        "920 €",
+        "184 €",
+        "1 104 €"
+      ],
+      "answer": 3,
+      "explanation": "Le TTC est la somme du net commercial et de la taxe : 920 + 184 = 1 104 €. La remise a déjà été intégrée au net.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 920
+            },
+            {
+              "value": 184
+            }
+          ]
+        },
+        "expected": 1104,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le total TTC après remises est de 2 400 €. La taxe fournie est de 20 %, sans autre élément. Quel net commercial HT reconstitue ce total ?",
+      "options": [
+        "2 000 €",
+        "1 920 €",
+        "2 880 €",
+        "400 €"
+      ],
+      "answer": 0,
+      "explanation": "Le TTC vaut HT × 1,20, donc HT = 2 400 / 1,20 = 2 000 €. Retirer 20 % du TTC ne donne pas le HT.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 2400
+            },
+            {
+              "value": 1.2
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le net commercial et la TVA sont déjà additionnés pour former le TTC. Le préparateur retranche ensuite à nouveau les remises. Quelle erreur fait-il ?",
+      "options": [
+        "Il ajoute à tort une TVA supplémentaire",
+        "Il compte deux fois les réductions déjà comprises dans le net commercial",
+        "Il oublie toujours la valeur brute des stocks",
+        "Il applique un taux de remise au seul produit financier"
+      ],
+      "answer": 1,
+      "explanation": "Les réductions ont déjà été opérées avant le calcul de la taxe et du total. Les déduire à nouveau minore le règlement sans base supplémentaire."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une vente à crédit comporte des remises déjà acquises et un TTC final. Quel montant forme la créance client dans le cas sans acompte ?",
+      "options": [
+        "Le brut HT avant toutes les réductions",
+        "La seule taxe calculée sur le net",
+        "Le TTC final après les réductions et la taxe",
+        "Le seul net commercial, en omettant la taxe facturée"
+      ],
+      "answer": 2,
+      "explanation": "Le client doit le total final de sa facture. Le produit de vente et la taxe sont ventilés distinctement, mais la créance inclut les deux."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le calcul de TTC est exact mais le compte fournisseur est débité lors d’un achat à crédit non réglé. Quel point du sens comptable faut-il corriger ?",
+      "options": [
+        "La dette doit rester absente jusqu’au paiement",
+        "Le compte fournisseur est toujours un produit",
+        "Le TTC doit être crédité uniquement en banque malgré l’absence de paiement",
+        "La dette fournisseur doit être créditée à sa naissance"
+      ],
+      "answer": 3,
+      "explanation": "Le calcul de facture et le sens d’écriture sont deux contrôles distincts. Une dette non payée se constate au crédit du compte fournisseur."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture comporte des arrondis imposés à chaque étape. Pour contrôler son TTC, quelle méthode est appropriée ?",
+      "options": [
+        "Reproduire les règles d’arrondi annoncées et rapprocher les composantes",
+        "Arrondir uniquement le TTC en ignorant les conditions données",
+        "Remplacer tous les prix par des entiers avant toute remise",
+        "Conclure que chaque écart de centime est une réduction supplémentaire"
+      ],
+      "answer": 0,
+      "explanation": "Les arrondis peuvent expliquer de petits écarts. Le contrôle doit suivre la convention explicitement utilisée avant de conclure à une erreur."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel rapprochement contrôle le mieux la cohérence d’une facture avec remises et TVA ?",
+      "options": [
+        "Le seul total TTC comparé au paiement, sans vérifier la succession des réductions",
+        "Brut, réductions, net commercial, taxe puis total TTC",
+        "Le brut rapproché du TTC en appliquant directement le taux de TVA sans examiner les remises",
+        "Le net commercial rapproché de la TVA, sans vérifier les remises à l’origine du net"
+      ],
+      "answer": 1,
+      "explanation": "La chaîne complète rend visibles les erreurs de base, de taux ou de double déduction. Contrôler seulement le paiement ne valide pas chaque étape."
+    }
+  ]
+}

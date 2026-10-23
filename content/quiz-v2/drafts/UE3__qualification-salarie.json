@@ -1,0 +1,374 @@
+{
+  "module": "UE3",
+  "chapter": "qualification-salarie",
+  "sourceHash": "983926c18984873a2009447ba9202ff8797153299c1a4372da46c87e00818721",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Dans le champ de L8221-6, quelle portée a l’immatriculation ou inscription visée pour l’activité concernée ?",
+      "options": [
+        "Une présomption de non-salariat susceptible d’être renversée dans les conditions du texte.",
+        "Une exclusion définitive de tout contrat de travail avec un donneur d’ordre.",
+        "Une présomption de salariat envers chaque client.",
+        "Une dispense de toute analyse des conditions réelles."
+      ],
+      "answer": 0,
+      "explanation": "La présomption prévue au I ne ferme pas l’analyse. Le II permet d’établir un contrat de travail lorsque les conditions de subordination juridique permanente sont réunies.",
+      "references": [
+        {
+          "title": "Code du travail, article L8221-6",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l8221-6"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une personne invoque L8221-6 pour son activité immatriculée. Le travailleur produit des éléments de subordination juridique permanente envers un donneur d’ordre. Comment les examiner ?",
+      "options": [
+        "Les écarter du seul fait de l’immatriculation.",
+        "Les confronter aux conditions du II qui permettent d’établir un contrat de travail.",
+        "Déduire une condamnation pénale de leur seule production.",
+        "Considérer que toute mission est salariée dès qu’elle est rémunérée."
+      ],
+      "answer": 1,
+      "explanation": "Le statut déclaré peut ouvrir une présomption ; les prestations réelles peuvent conduire à la renverser dans les conditions légales. Les deux contrôles ne sont pas contradictoires.",
+      "references": [
+        {
+          "title": "Code du travail, article L8221-6",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l8221-6"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une copie applique la présomption de non-salariat à toute activité d’une personne sans vérifier le lien avec l’immatriculation invoquée. Quel contrôle manque ?",
+      "options": [
+        "La seule date de la dernière facture, indépendante de l’activité.",
+        "Le seul montant du revenu, pris comme champ du texte.",
+        "Le champ personnel et matériel de la présomption.",
+        "La seule préférence des parties pour le statut indépendant."
+      ],
+      "answer": 2,
+      "explanation": "L8221-6 rattache la présomption aux personnes et à l’activité donnant lieu à l’immatriculation ou inscription visée. Il faut établir ce champ avant d’en déduire ses effets.",
+      "references": [
+        {
+          "title": "Code du travail, article L8221-6",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l8221-6"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier rassemble un contrat intitulé partenariat, une immatriculation et des plannings de travail imposés. Quelle organisation du raisonnement convient ?",
+      "options": [
+        "Le titre écarte nécessairement toute question sur les plannings.",
+        "Les plannings annulent l’immatriculation comme formalité d’entreprise.",
+        "Le revenu le plus favorable permet de choisir librement le régime.",
+        "Distinguer la dénomination, la présomption éventuelle et les conditions réelles d’exécution."
+      ],
+      "answer": 3,
+      "explanation": "Les éléments n’ont pas le même objet. Le titre, le statut déclaré et les faits doivent être articulés avec les règles applicables plutôt qu’utilisés isolément comme conclusion."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une convention annonce une liberté totale alors que des échanges décrivent des méthodes obligatoires. Comment apprécier la portée de la convention ?",
+      "options": [
+        "La confronter à l’organisation effectivement appliquée.",
+        "Considérer les méthodes obligatoires comme juridiquement inexistantes par le seul titre.",
+        "Tenir toute consigne pour librement choisie parce que la convention évoque la liberté.",
+        "Déduire une rupture du contrat de toute discussion sur ses termes."
+      ],
+      "answer": 0,
+      "explanation": "Une clause annonce un cadre ; les faits peuvent renseigner son application réelle. La qualification demande cette confrontation plutôt que l’effacement d’une catégorie de pièces."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un professionnel réalise presque tout son chiffre d’affaires avec un client. Ce seul pourcentage caractérise-t-il une subordination juridique ?",
+      "options": [
+        "Oui, la dépendance économique équivaut toujours à un pouvoir disciplinaire.",
+        "Non, il faut distinguer dépendance économique et autorité sur l’exécution du travail.",
+        "Oui, il prouve toutes les instructions quotidiennes reçues.",
+        "Non, une clientèle concentrée interdit toute relation salariée."
+      ],
+      "answer": 1,
+      "explanation": "La concentration des recettes peut caractériser une dépendance économique sans prouver seule direction, contrôle et sanction. Les pouvoirs concrets doivent être examinés.",
+      "references": [
+        {
+          "title": "Cour d’appel de Riom, 5 mai 2022,19/02004",
+          "url": "https://www.courdecassation.fr/decision/62736aeda58162057dac68ad"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une plateforme note les prestations, mais le dossier ne précise pas les conséquences de la note. Quel point faut-il éclaircir pour parler de pouvoir de sanction ?",
+      "options": [
+        "La seule présence de chiffres sur l’écran, tenue pour sanction.",
+        "Le seul nom du dispositif, substitué à son fonctionnement.",
+        "Les conséquences réelles de la notation et son rapport aux consignes.",
+        "Le seul prix de la prestation, tenu pour mesure de l’autorité."
+      ],
+      "answer": 2,
+      "explanation": "La fonction du dispositif importe : appréciation du résultat, contrôle, mesures contraignantes ou autres effets. La note seule ne décrit pas son pouvoir réel."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client vérifie le livrable final mais le prestataire conserve le choix de ses méthodes. Quelle distinction rend l’analyse pertinente ?",
+      "options": [
+        "Tout contrôle du résultat impose un statut salarié.",
+        "Toute autonomie de méthode supprime l’obligation de résultat convenu.",
+        "La vérification du résultat prouve nécessairement une sanction disciplinaire.",
+        "Le contrôle du résultat contractuel et l’autorité sur les modalités d’exécution sont à distinguer."
+      ],
+      "answer": 3,
+      "explanation": "Le mot contrôle peut désigner des réalités différentes. Il faut analyser l’autorité sur le travail et pas seulement la vérification d’un résultat promis."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Dans l’arrêt Société générale, quand le travail dans un service organisé peut-il être un indice de subordination ?",
+      "options": [
+        "Lorsque l’employeur détermine unilatéralement les conditions d’exécution.",
+        "Lorsque les professionnels se coordonnent librement pour partager un même équipement.",
+        "Lorsque les horaires communs résultent de leur accord négocié à égalité.",
+        "Lorsque le client précise le résultat attendu en laissant le choix des moyens."
+      ],
+      "answer": 0,
+      "explanation": "L’indice dépend de l’organisation imposée par l’employeur. Une intégration matérielle ou un mode de paiement ne remplace pas l’examen des pouvoirs.",
+      "references": [
+        {
+          "title": "Cour de cassation, chambre sociale,13 novembre1996,94-13.187",
+          "url": "https://www.courdecassation.fr/decision/6079b1769ba5988459c523c8"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie voit dans une règle de sécurité commune au site la preuve complète d’un contrat de travail. Quel défaut faut-il relever ?",
+      "options": [
+        "Une règle de sécurité ne peut concerner que les salariés.",
+        "Un fait isolé remplace l’analyse de sa fonction et de l’ensemble des pouvoirs.",
+        "Le respect de la sécurité rend toute mission indépendante par définition.",
+        "Le site partagé vaut toujours plusieurs contrats de travail."
+      ],
+      "answer": 1,
+      "explanation": "Une contrainte doit être contextualisée. La règle d’accès ou de sécurité ne démontre pas, à elle seule, les pouvoirs de direction, contrôle et sanction dans l’activité."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La clause permet de refuser des missions, mais les refus entraînent en pratique des mesures punitives. Que faut-il confronter ?",
+      "options": [
+        "Le seul volume de missions, traité comme preuve d’une liberté entière.",
+        "Le seul libellé de la clause, tenu pour preuve de son application effective.",
+        "La liberté annoncée et les effets réels de son exercice.",
+        "La seule acceptation d’une mission, traitée comme renonciation à tout refus futur."
+      ],
+      "answer": 2,
+      "explanation": "Une autonomie effective s’apprécie dans son fonctionnement. Une permission écrite peut avoir une portée différente si l’exercice du refus déclenche des contraintes."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le professionnel possède son ordinateur, mais des directives obligatoires, contrôles quotidiens et sanctions sont allégués. Quel poids donner à l’outil personnel ?",
+      "options": [
+        "Il exclut nécessairement toute subordination.",
+        "Il transforme toute directive en conseil facultatif.",
+        "Il remplace la preuve des conditions de travail.",
+        "C’est un indice à apprécier avec les autres dimensions de l’organisation."
+      ],
+      "answer": 3,
+      "explanation": "La propriété du moyen de travail renseigne une dimension de l’autonomie. Elle ne tranche pas à elle seule l’autorité exercée sur la prestation."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le prestataire choisit sa clientèle, négocie ses prix et décide de ses moyens selon les pièces. Comment utiliser ces faits ?",
+      "options": [
+        "Comme indices d’autonomie dans la relation étudiée, confrontés aux autres éléments.",
+        "Comme critère décisif excluant l’examen du contrôle de son activité.",
+        "Comme éléments de rémunération remplaçant l’examen du pouvoir de direction.",
+        "Comme preuve suffisante que l’immatriculation rend la présomption irréfragable."
+      ],
+      "answer": 0,
+      "explanation": "Ces faits concernent des choix économiques et opérationnels. Leur portée doit rester reliée à la relation examinée, sans devenir une règle universelle sur toutes les activités."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le contrat autorise un remplaçant choisi librement, mais le donneur d’ordre impose en pratique cette personne et ses méthodes. Quelle dimension est contestée ?",
+      "options": [
+        "La permission écrite seule, tenue pour liberté effective malgré les pratiques décrites.",
+        "L’autonomie réellement disponible au-delà de l’autorisation écrite.",
+        "Le seul nombre de remplacements réalisés, tenu pour critère complet de qualification.",
+        "L’absence de facture du remplaçant, tenue pour preuve d’un pouvoir disciplinaire."
+      ],
+      "answer": 1,
+      "explanation": "La possibilité de remplacement doit être effective pour éclairer l’autonomie. La clause et la pratique doivent être rapprochées au lieu d’être lues comme deux réalités indépendantes."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant exclut le salariat du seul fait de l’existence de plusieurs clients. Quelle limite doit-il reconnaître ?",
+      "options": [
+        "Le nombre de clients serait un critère exclusif primant les conditions d’exécution.",
+        "La pluralité de clients établirait une autonomie identique pour chacune des missions.",
+        "Les conditions propres à la relation litigieuse restent à examiner.",
+        "La qualification devrait être déterminée par la répartition du chiffre d’affaires entre clients."
+      ],
+      "answer": 2,
+      "explanation": "La pluralité de clients renseigne l’autonomie mais ne qualifie pas irréfragablement chaque relation. Les pouvoirs du donneur d’ordre en litige restent à analyser."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des échanges montrent une négociation des délais et des moyens choisis par le prestataire ; ils ne renseignent pas toutes les possibilités de contrôle. Comment présenter leur portée ?",
+      "options": [
+        "Comme une renonciation écrite au salariat.",
+        "Comme une preuve que toute activité du secteur est indépendante.",
+        "Comme un résultat définitif par simple comptage des échanges.",
+        "En identifiant les dimensions d’autonomie documentées et les points non renseignés."
+      ],
+      "answer": 3,
+      "explanation": "Les indices doivent être rattachés à ce qu’ils décrivent. Leur portée ne doit pas être étendue à des pouvoirs absents des pièces ou à toutes les activités."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle conclusion convient à une qualification examinée sur un dossier incomplet ?",
+      "options": [
+        "Les indices établis, la qualification envisagée et les vérifications nécessaires.",
+        "Un montant indemnitaire fixé sans données de calcul.",
+        "Le seul statut revendiqué par le donneur d’ordre.",
+        "Une majorité automatique obtenue en comptant les indices."
+      ],
+      "answer": 0,
+      "explanation": "Le raisonnement doit présenter les faits et les limites. Les indices ne sont pas tous équivalents et ne permettent pas d’inventer une décision ou ses montants."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une requalification est envisagée, mais le salaire de référence et les circonstances de la rupture ne sont pas fournis. Quelle démarche est rigoureuse ?",
+      "options": [
+        "Annoncer un montant de réparation sans ses données ni son fondement.",
+        "Distinguer qualification et conséquences financières, puis identifier les informations nécessaires.",
+        "Prendre toute somme facturée comme indemnité automatique de rupture.",
+        "Déduire toutes les conséquences du seul mot requalification."
+      ],
+      "answer": 1,
+      "explanation": "La qualification et les conséquences chiffrées demandent des examens différents. Une requalification possible ne démontre pas toutes les bases d’une indemnisation."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans le champ du II de L8221-6, quel élément distinct faut-il établir pour la dissimulation d’emploi salarié décrite par ce texte ?",
+      "options": [
+        "Le seul fait de produire une facture plutôt qu’un bulletin.",
+        "La seule dépendance économique du prestataire.",
+        "La soustraction intentionnelle aux obligations d’employeur visées par le texte.",
+        "Le seul fait que le prestataire n’ait pas réalisé de bénéfice."
+      ],
+      "answer": 2,
+      "explanation": "Le texte distingue l’existence du contrat de travail et l’élément intentionnel de dissimulation. La requalification ne doit pas être présentée automatiquement comme preuve de cette intention.",
+      "references": [
+        {
+          "title": "Code du travail, article L8221-6",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l8221-6"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie nie tout pouvoir de sanction parce qu’aucune sanction n’a été prononcée pendant une mission courte. Quelle distinction manque ?",
+      "options": [
+        "Le pouvoir de donner des consignes et la seule fixation d’un résultat à atteindre.",
+        "La vérification d’une prestation et le simple paiement d’une facture.",
+        "La liberté de choisir ses clients et la liberté de fixer ses prix.",
+        "L’existence d’un pouvoir de sanction et son exercice déjà constaté."
+      ],
+      "answer": 3,
+      "explanation": "L’analyse porte sur les pouvoirs dans la relation. L’absence d’exercice passé ne démontre pas, à elle seule, l’absence du pouvoir examiné."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le travailleur dit que le planning est imposé ; le donneur d’ordre le présente comme une proposition libre. Quel type de pièce aide directement à trancher cet indice ?",
+      "options": [
+        "Les échanges sur les choix, refus possibles et suites données aux refus.",
+        "Le seul titre indépendant du contrat.",
+        "La seule date de facturation de la mission.",
+        "Le nom du logiciel de planning, sans données sur son fonctionnement."
+      ],
+      "answer": 0,
+      "explanation": "Les échanges et conséquences d’un refus renseignent le caractère réel de la contrainte. Un intitulé contractuel ou logiciel ne suffit pas à décrire cette organisation."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier établit une clientèle personnelle et un contrôle quotidien contraignant. Comment présenter ces indices opposés ?",
+      "options": [
+        "Retenir la clientèle personnelle comme critère excluant la portée du contrôle quotidien.",
+        "Expliquer leur portée respective et les points à éclaircir, sans compensation arithmétique.",
+        "Retenir le contrôle quotidien comme une simple vérification commerciale sans examiner ses modalités.",
+        "Départager les indices selon le montant de rémunération associé à chacun."
+      ],
+      "answer": 1,
+      "explanation": "Les indices doivent être reliés à leur fonction dans la relation. Leur contradiction demande une analyse et non un calcul de majorité ou une neutralisation mécanique."
+    }
+  ]
+}

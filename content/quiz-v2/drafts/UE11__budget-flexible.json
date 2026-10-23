@@ -1,0 +1,613 @@
+{
+  "module": "UE11",
+  "chapter": "budget-flexible",
+  "sourceHash": "db0a4412e3acc7e076b51b44c95366ae01952689022edf7f9a91293d30bda82a",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Dans un domaine linéaire, le budget total vaut 5 000 € pour 100 unités et 6 000 € pour 200 unités, avec la même partie fixe. Quel coût variable unitaire ces deux points impliquent-ils ?",
+      "options": [
+        "50 €",
+        "10 €",
+        "30 €",
+        "1 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La variation de coût est 1 000 € pour 100 unités supplémentaires. Le coefficient variable vaut donc 1 000 / 100 = 10 €/unité ; diviser chaque coût total par son volume inclurait la part fixe.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 6000
+                },
+                {
+                  "value": 5000
+                }
+              ]
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 200
+                },
+                {
+                  "value": 100
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 10,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le modèle est coût = 4 000 € fixes + 10 € par unité. Pour un volume réel de 180 unités dans le même domaine, quel budget flexible calcule-t-on ?",
+      "options": [
+        "9 000 €",
+        "1 800 €",
+        "5 800 €",
+        "4 180 €"
+      ],
+      "answer": 2,
+      "explanation": "Le budget est 4 000 + 10 × 180 = 5 800 €. La partie fixe n’est pas multipliée par l’augmentation de volume, puisqu’elle reste constante dans le domaine indiqué.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 4000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 10
+                },
+                {
+                  "value": 180
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 5800,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût réel est 6 200 €, le budget initial 5 000 € et le flexible 5 800 €. Selon réel moins référence, quel écart reste après ajustement au volume ?",
+      "options": [
+        "400 €",
+        "1 200 €",
+        "800 €",
+        "-400 €"
+      ],
+      "answer": 0,
+      "explanation": "L’écart au budget flexible est 6 200 − 5 800 = 400 €. La différence au budget initial contient aussi l’effet d’activité et ne doit pas être confondue avec ce résidu.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 6200
+            },
+            {
+              "value": 5800
+            }
+          ]
+        },
+        "expected": 400,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le protocole déclenche une alerte si le dépassement du budget flexible est à la fois supérieur à 100 € et supérieur à 2 % du budget. Pour un budget de 6 000 €, le coût réel est de 6 110 €. Que prévoit cette règle ?",
+      "options": [
+        "Une alerte, car dépasser 100 € suffit même si la condition de pourcentage n’est pas remplie.",
+        "Une alerte, car 110 € représentent plus de 2 % de 6 000 €.",
+        "Aucune alerte, parce que seule la comparaison au budget initial et non au budget flexible serait autorisée.",
+        "Aucune alerte selon cette double condition : 110 € dépassent 100 €, mais représentent environ 1,83 % du budget."
+      ],
+      "answer": 3,
+      "explanation": "Les deux conditions sont cumulatives. Le dépassement absolu est 110 €, mais le seuil relatif de 2 % de 6 000 € vaut 120 €. Le critère relatif n’est donc pas rempli. Cela n’interdit pas une surveillance ; cela décrit uniquement le déclenchement prévu par cette règle."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le budget de 100 unités est 5 000 € et le coût variable unitaire déterminé vaut 10 €. Quel montant fixe est compatible avec ce modèle linéaire ?",
+      "options": [
+        "5 100 €",
+        "4 000 €",
+        "50 €",
+        "1 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La part variable de 100 unités vaut 100 × 10 = 1 000 €. La part fixe est donc 5 000 − 1 000 = 4 000 €, dans le même domaine et la même période.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 5000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 100
+                },
+                {
+                  "value": 10
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 4000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le volume augmente de 20 %. Un calcul multiplie tout le budget par 1,20 alors que seule sa composante variable est proportionnelle. Quel effet peut-il produire ?",
+      "options": [
+        "Une sous-évaluation de la part fixe, puisque toute augmentation du volume doit diminuer les coûts fixes totaux.",
+        "Une adaptation exacte de la référence, puisque le budget et l’activité sont exprimés dans la même période.",
+        "Une augmentation artificielle de la part fixe dans la référence.",
+        "Une correction du seul coût variable unitaire, sans changement du montant de charges fixes retenu."
+      ],
+      "answer": 2,
+      "explanation": "Le recalcul doit suivre la structure des coûts. Multiplier tout le budget ferait varier une charge qui était supposée stable dans le domaine, ce qui peut masquer ou créer un écart résiduel."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le budget initial vaut 5 000 € et le budget recalculé au volume réel 5 800 €. Quelle composante d’activité obtient-on selon flexible moins initial ?",
+      "options": [
+        "800 €",
+        "10 800 €",
+        "1 200 €",
+        "-800 €"
+      ],
+      "answer": 0,
+      "explanation": "La différence de référence est 5 800 − 5 000 = 800 €. Dans le modèle retenu, elle correspond à la variation attendue liée au volume, pas au surcoût résiduel réel − flexible.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 5800
+            },
+            {
+              "value": 5000
+            }
+          ]
+        },
+        "expected": 800,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le premier exemplaire d’un nouveau produit demande 100 heures. Le modèle d’apprentissage indique qu’à chaque doublement de la production cumulée, le temps moyen cumulé par exemplaire devient 80 % de sa valeur précédente. Combien d’heures ce modèle attribue-t-il au deuxième exemplaire seul ?",
+      "options": [
+        "80 heures",
+        "160 heures",
+        "20 heures",
+        "60 heures"
+      ],
+      "answer": 3,
+      "explanation": "Pour deux exemplaires, le temps moyen cumulé devient 100 × 80 % = 80 heures. Le temps total des deux est 160 heures. Le premier ayant déjà demandé 100 heures, le deuxième seul demande 60 heures. Le taux porte sur la moyenne cumulée, non directement sur chaque exemplaire.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 100
+                    },
+                    {
+                      "value": 0.8
+                    }
+                  ]
+                },
+                {
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 60,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "ACCA — Formula sheet : cumulative average learning curve",
+          "url": "https://www.accaglobal.com/content/dam/ACCA_Global/Students/fun/f5/f5-205-jun-q.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "L’entreprise construit un budget fondé sur les activités nécessaires aux ventes attendues. Quel enchaînement décrit cette construction prospective plutôt qu’une simple répartition de coûts historiques ?",
+      "options": [
+        "Charges historiques totales → répartition uniforme sur les produits → maintien du même total pour toute demande.",
+        "Ventes et services attendus → activités nécessaires → inducteurs prévus → ressources à mobiliser.",
+        "Ressources déjà disponibles → dépenses de l’an passé → ventes supposées égales à ces dépenses.",
+        "Résultat cible → suppression des activités coûteuses → demande présumée satisfaite sans vérification."
+      ],
+      "answer": 1,
+      "explanation": "Le budget fondé sur les activités part des prestations attendues, détermine les activités et leurs volumes d’inducteurs, puis les ressources nécessaires. Il ne se réduit pas à partager un total passé ou à supposer suffisants les moyens déjà présents.",
+      "references": [
+        {
+          "title": "ACCA — All about budgeting, part 3",
+          "url": "https://www.accaglobal.com/africa/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/budgeting3.html"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le coût prévu suit C = 1 000 + 2Q + 50B, avec Q le nombre d’unités et B le nombre de lots préparés. Le programme passe de 1 000 unités en 10 lots à 1 000 unités en 20 lots. Quelle hausse de budget découle de ce changement seul ?",
+      "options": [
+        "0 €",
+        "1 000 €",
+        "500 €",
+        "2 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le nombre d’unités ne change pas : la partie 2Q reste identique. La préparation de dix lots supplémentaires ajoute 50 × (20 − 10) = 500 €. Une adaptation sur le seul volume de pièces manquerait ce changement d’activité de préparation.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 50
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 20
+                },
+                {
+                  "value": 10
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 500,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "ACCA — All about budgeting, part 3",
+          "url": "https://www.accaglobal.com/africa/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/budgeting3.html"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Quelle égalité rapproche correctement les trois références avec la convention réel moins budget ?",
+      "options": [
+        "Réel − initial = (flexible − initial) + (réel − flexible).",
+        "Réel − initial = réel + flexible + initial.",
+        "Réel − flexible = flexible − initial dans tous les cas.",
+        "Initial − réel = flexible + réel."
+      ],
+      "answer": 0,
+      "explanation": "La décomposition sépare la variation de référence liée à l’activité et le résidu au volume réel. La somme doit retrouver l’écart total, ce qui fournit un contrôle arithmétique."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Au terme du premier trimestre, une entreprise veut conserver en permanence douze mois de prévision devant elle, en tenant compte des informations nouvelles. Quelle démarche correspond à un budget glissant ?",
+      "options": [
+        "Conserver définitivement la fin d’année civile comme horizon et n’actualiser aucun trimestre restant.",
+        "Recalculer seulement le coût attendu du trimestre terminé à son volume réel, sans prévoir de nouveaux mois.",
+        "Remplacer les résultats réels du trimestre passé par les dernières prévisions pour obtenir douze mois homogènes.",
+        "Actualiser les mois encore futurs et ajouter un trimestre à l’horizon initial pour maintenir douze mois prévus."
+      ],
+      "answer": 3,
+      "explanation": "Le budget glissant décale régulièrement son horizon et actualise les périodes futures. Le recalcul d’un coût passé au volume réel correspond à une autre fonction, celle de la référence ajustée pour analyser la performance.",
+      "references": [
+        {
+          "title": "ACCA — All about budgeting, part 3",
+          "url": "https://www.accaglobal.com/africa/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/budgeting3.html"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que décrit un budget flexible dans le modèle simple ?",
+      "options": [
+        "Une référence dont tous les paramètres sont recalculés à partir des coûts réels pour rendre nul le résidu.",
+        "Un coût attendu pour différents niveaux d’activité selon des paramètres explicités.",
+        "Une nouvelle prévision des ventes futures établie à partir du dernier mois, sans fonction de coût selon l’activité.",
+        "Une autorisation de dépense égale aux encaissements bancaires disponibles, sans hypothèse de ressources consommées."
+      ],
+      "answer": 1,
+      "explanation": "La flexibilité désigne l’adaptation de la référence au volume pertinent. Les hypothèses doivent rester explicites ; le budget n’est pas modifié arbitrairement pour faire disparaître les écarts."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le coût réel de 1 200 unités est comparé au budget prévu pour 1 000, puis la différence est nommée « écart de prix ». Quelle confusion apparaît ?",
+      "options": [
+        "Le passage du budget au réel permet déjà de mesurer le seul effet de prix dès lors que les deux totaux sont en euros.",
+        "Le nom donné à l’écart suffit à exclure les différences de quantité dans son calcul.",
+        "Un effet de volume possible est attribué au prix sans décomposition adaptée.",
+        "L’écart mesure seulement la variation de charges fixes, même si des charges variables dépendent du volume."
+      ],
+      "answer": 2,
+      "explanation": "Le dépassement total peut inclure la consommation attendue pour davantage d’activité. Le flexible aide à isoler cette composante ; il ne suffit pas de renommer le solde pour en établir la cause."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Les composantes d’activité et de résidu ne reconstituent pas l’écart total. Quel contrôle précède tout commentaire ?",
+      "options": [
+        "Vérifier signes, références, formules et périmètres communs.",
+        "Conserver la composante d’activité et remplacer le résidu par le montant souhaité sans vérifier son calcul initial.",
+        "Présenter la différence comme une cause opérationnelle supplémentaire sans identifier ses références.",
+        "Comparer seulement les valeurs absolues, en ignorant le sens favorable ou défavorable des composantes."
+      ],
+      "answer": 0,
+      "explanation": "La décomposition doit être cohérente arithmétiquement. Un écart de rapprochement peut révéler une erreur ou un changement de périmètre, avant même de discuter les explications économiques."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une équipe ne reconduit pas automatiquement les dépenses de l’année précédente. Elle justifie les activités proposées, leur niveau de service et les ressources nécessaires avant de les classer. Quelle logique budgétaire applique-t-elle ?",
+      "options": [
+        "Un budget incrémental fondé uniquement sur une hausse uniforme des montants passés.",
+        "Une adaptation mécanique de toutes les charges au taux de croissance des ventes.",
+        "Une valorisation des seules sorties bancaires, sans justification des services rendus.",
+        "Un budget à base zéro fondé sur la justification et la priorité des activités."
+      ],
+      "answer": 3,
+      "explanation": "La logique à base zéro demande une justification des activités et ressources au lieu d’accorder une reconduction automatique du passé. Elle ne signifie pas que toute activité ou toute dépense doit disparaître ; elle organise leur examen et leur priorité.",
+      "references": [
+        {
+          "title": "ACCA — All about budgeting, part 3",
+          "url": "https://www.accaglobal.com/africa/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/budgeting3.html"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le prix d’une matière bénéficie d’un palier de remise au-delà d’un volume donné. Pourquoi une pente variable unique peut-elle devenir inadaptée ?",
+      "options": [
+        "Le montant total de matière reste identique au seuil, quel que soit le volume et le prix applicable.",
+        "Le coût variable unitaire n’est plus constant sur tout le domaine.",
+        "Le coefficient variable doit rester le tarif initial et toute remise doit être traitée comme une baisse de charge fixe.",
+        "La remise peut être appliquée à tous les volumes projetés, même lorsqu’ils ne remplissent pas la condition contractuelle."
+      ],
+      "answer": 1,
+      "explanation": "Le modèle linéaire suppose un coefficient stable. Des paliers de prix demandent d’identifier les intervalles et de recalculer les scénarios appropriés plutôt que prolonger une même pente sans contrôle."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un modèle comporte 6 000 € fixes et 4 € variables par unité. Si l’activité augmente de 500 unités dans le même domaine, quelle hausse attendue du budget cette seule variation entraîne-t-elle ?",
+      "options": [
+        "8 000 €",
+        "6 500 €",
+        "2 000 €",
+        "24 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La part fixe reste inchangée et la variation variable vaut 500 × 4 = 2 000 €. On calcule ici une différence de budgets, pas leur niveau total.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 500
+            },
+            {
+              "value": 4
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une droite ajustée aux observations entre 500 et 1 000 unités donne C = −200 + 5Q. Le rapport appelle immédiatement −200 € « charge fixe physique certaine à activité nulle ». Quelle réserve est pertinente ?",
+      "options": [
+        "L’interception est un paramètre de la droite ajustée ; son interprétation comme charge réelle à zéro doit être validée, hors de la plage observée.",
+        "Les 200 € négatifs peuvent être retranchés des dépenses fixes comptables sans rapprochement, parce que le coefficient provient de données observées.",
+        "Il faut remplacer mécaniquement l’interception par zéro en gardant la pente de 5 €, sans réestimer ni vérifier le modèle modifié.",
+        "Une bonne qualité d’ajustement entre 500 et 1 000 unités suffit à valider le montant prévu à zéro, sans données de faible activité."
+      ],
+      "answer": 0,
+      "explanation": "La droite décrit un ajustement dans un intervalle observé. À zéro, on extrapole hors de cet intervalle ; l’interception négative n’établit pas une ressource physique ou une recette certaine. Il faut examiner la spécification et la pertinence du modèle pour cet usage."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le mois prochain aura, avec probabilités égales, 100 ou 300 unités d’activité. Le coût sera de 1 000 € jusqu’à 200 unités incluses et de 2 000 € au-delà. Quel coût espéré faut-il budgéter selon ces scénarios, plutôt que le coût calculé à la seule activité moyenne ?",
+      "options": [
+        "1 000 €",
+        "2 000 €",
+        "3 000 €",
+        "1 500 €"
+      ],
+      "answer": 3,
+      "explanation": "Le coût espéré est 0,5 × 1 000 + 0,5 × 2 000 = 1 500 €. L’activité moyenne vaut 200 unités, pour lesquelles la fonction donne 1 000 €. Avec ce palier non linéaire, calculer le coût de l’activité moyenne ne donne pas le coût moyen des scénarios.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.5
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.5
+                },
+                {
+                  "value": 2000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1500,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le modèle est C = 1 000 + vQ. Pour Q = 100, le coefficient v est seulement connu dans l’intervalle de 2 à 3 €, sans probabilité sur ses valeurs. Quel commentaire est justifié ?",
+      "options": [
+        "Le coût prévu est exactement 1 250 €, car le milieu d’un intervalle est nécessairement une espérance.",
+        "Le modèle borne le coût entre 1 200 et 1 300 €, sans établir à lui seul une espérance de 1 250 €.",
+        "Le modèle ne permet de calculer aucune borne de coût tant que les probabilités des coefficients ne sont pas connues.",
+        "Le coût est exactement 1 300 €, car la borne haute est nécessairement la valeur la plus probable."
+      ],
+      "answer": 1,
+      "explanation": "Pour le volume donné, les bornes sont 1 000 + 2 × 100 et 1 000 + 3 × 100. Un intervalle sans distribution ne donne pas de probabilité aux valeurs ; son milieu peut servir de scénario choisi, mais n’est pas automatiquement une espérance démontrée."
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans son domaine valide, le coût mensuel est C = 2 000 + 4Q. L’entreprise ne peut dépasser 6 000 € sur ce périmètre et ne subit aucune autre contrainte. Quel volume maximal entier respecte cette enveloppe ?",
+      "options": [
+        "1 500 unités",
+        "2 000 unités",
+        "1 000 unités",
+        "500 unités"
+      ],
+      "answer": 2,
+      "explanation": "L’enveloppe disponible après les charges fixes est 6 000 − 2 000 = 4 000 €. À 4 € par unité, elle finance 1 000 unités. Diviser les 6 000 € par 4 oublierait le montant fixe déjà mobilisé.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 6000
+                },
+                {
+                  "value": 2000
+                }
+              ]
+            },
+            {
+              "value": 4
+            }
+          ]
+        },
+        "expected": 1000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Chaque économie déclarée par un service entraîne une baisse identique de son budget suivant, sans examen des besoins. Un responsable retarde alors des économies pour préserver son enveloppe. Quelle modification du pilotage vise directement cette incitation ?",
+      "options": [
+        "Évaluer les gains révélés et les besoins futurs séparément, sans retirer automatiquement toute économie de l’enveloppe suivante.",
+        "Réduire encore davantage le budget des services qui révèlent des économies pour renforcer la pression sur leurs dépenses.",
+        "Accorder systématiquement plus de moyens aux services ayant consommé toute leur enveloppe, sans examiner leurs besoins.",
+        "Évaluer les responsables sur le seul écart nul au budget, en traitant toute économie déclarée comme un échec de prévision."
+      ],
+      "answer": 0,
+      "explanation": "Une diminution future automatique peut inciter à cacher ou retarder les gains. Examiner séparément l’efficacité démontrée et les besoins justifiés réduit cette pénalisation de la révélation des économies. Récompenser la consommation intégrale ou pénaliser plus fortement les gains renforcerait le problème."
+    }
+  ]
+}

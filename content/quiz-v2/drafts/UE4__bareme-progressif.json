@@ -1,0 +1,492 @@
+{
+  "module": "UE4",
+  "chapter": "bareme-progressif",
+  "sourceHash": "7c7dcc7e8262fbb8aa0a2550a4ad8f1fb8934ae96fa55a21c2ca3c9f6dea7040",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un barème progressif par tranches, comment chaque taux doit-il être appliqué ?",
+      "options": [
+        "À la seule fraction de base située dans sa tranche.",
+        "À toute la base dès que la tranche est atteinte.",
+        "Au montant d’impôt de la tranche précédente.",
+        "Au nombre total de parts avant division de la base."
+      ],
+      "answer": 0,
+      "explanation": "Le principe d’une progression par tranches consiste à répartir la base, puis à taxer chaque fraction avec son propre taux. Atteindre une tranche supérieure ne modifie pas rétroactivement le taux des fractions déjà situées dans les tranches inférieures."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un barème fictif prévoit 0 % sur les premiers 10 000 €, 10 % sur les 10 000 € suivants et 30 % au-delà. Pour une base de 25 000 €, quelle répartition est correcte ?",
+      "options": [
+        "25 000 € à 30 %.",
+        "10 000 € à 0 %, 10 000 € à 10 % et 5 000 € à 30 %.",
+        "10 000 € à 0 %, 20 000 € à 10 % et 25 000 € à 30 %.",
+        "5 000 € à 0 % et 20 000 € à 30 %."
+      ],
+      "answer": 1,
+      "explanation": "Les fractions doivent reconstituer exactement les 25 000 € sans chevauchement. La première est de 10 000 €, la deuxième de 10 000 € et le reliquat de 5 000 €. Les bornes des tranches ne sont pas des montants à additionner intégralement entre eux."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un barème fictif taxe 0 % jusqu’à 10 000 €, 10 % de 10 000 à 20 000 € et 20 % au-delà. La base est exactement de 20 000 €. Quelle fraction relève du taux de 20 % ?",
+      "options": [
+        "20 000 €",
+        "10 000 €",
+        "0 €",
+        "1 €"
+      ],
+      "answer": 2,
+      "explanation": "La fraction supérieure concerne ce qui excède 20 000 €. À la borne exacte, aucun montant n’y est encore situé. Il faut distinguer la borne de séparation et la largeur taxable d’une tranche ; le franchissement futur ne taxe pas la base passée à 20 %."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau de tranches utilise à la fois « base totale » pour la première ligne et les fractions supérieures pour les autres. Quel contrôle permet de détecter le chevauchement ?",
+      "options": [
+        "Vérifier que la somme des fractions est égale à la base, sans la dépasser.",
+        "Vérifier que la somme de tous les taux vaut 100 %.",
+        "Vérifier que chaque ligne reprend l’intégralité de la base.",
+        "Vérifier que l’impôt final est identique à la base."
+      ],
+      "answer": 0,
+      "explanation": "Les fractions constituent une partition de la base : elles doivent être exhaustives et sans double comptage. Leur somme est donc un contrôle de cohérence utile. Les taux n’ont aucune obligation de totaliser 100 %, car ils portent sur des fractions distinctes."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux foyers ont la même base totale mais des nombres de parts différents dans un modèle de quotient donné. Peut-on choisir leurs tranches à partir de la base totale avant division ?",
+      "options": [
+        "Oui, le nombre de parts ne sert qu’au paiement bancaire.",
+        "Non, les tranches s’appliquent au quotient calculé selon le nombre de parts.",
+        "Oui, toute base totale atteint la même tranche pour tous les foyers.",
+        "Non, il faut toujours remplacer les parts par le nombre de salariés."
+      ],
+      "answer": 1,
+      "explanation": "Dans le mécanisme de quotient fourni, la division précède l’application du barème. C’est le quotient par part qui détermine la répartition dans les tranches, puis le résultat est remultiplié. Comparer les bases totales seules omet une étape essentielle du modèle."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Barème fictif pour une part : 0 % sur les premiers 10 000 €, 10 % sur les 10 000 € suivants, puis 30 %. La base est de 25 000 €, sans autre mécanisme. Quel impôt de barème en résulte ?",
+      "options": [
+        "7 500 €",
+        "2 500 €",
+        "1 500 €",
+        "3 500 €"
+      ],
+      "answer": 1,
+      "explanation": "La première tranche produit zéro, la deuxième 10 000×10 %=1 000 € et la troisième 5 000×30 %=1 500 €. Le total est 2 500 €. Appliquer 30 % à toute la base donnerait 7 500 €, ce qui effacerait la progression par fractions.",
+      "calculation": {
+        "expected": 2500,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 10000
+                },
+                {
+                  "value": 0.1
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 5000
+                },
+                {
+                  "value": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un barème fictif comporte trois taux de 0 %, 10 % et 20 %. Le préparateur les additionne et applique 30 % à toute la base. Quelle information a-t-il perdue ?",
+      "options": [
+        "La largeur de chaque fraction de base relevant de chaque taux.",
+        "Le seul montant global de la base, sans connaître sa répartition aux seuils.",
+        "Le seul total des pourcentages, qui suffirait à calculer tout barème.",
+        "La seule identité du taux marginal et du taux moyen."
+      ],
+      "answer": 0,
+      "explanation": "Les taux seuls ne donnent pas l’impôt sans les fractions auxquelles ils s’appliquent. Leur addition ne reproduit pas un barème par tranches. Le calcul doit associer chaque largeur taxable à son taux avant de sommer les montants d’impôt."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau calcule correctement l’impôt de chaque tranche mais oublie la ligne à 0 % dans la présentation de la base. Quel contrôle de complétude reste utile ?",
+      "options": [
+        "Présenter aussi la fraction à 0 % pour reconstituer toute la base.",
+        "Supprimer cette fraction de la base totale du foyer.",
+        "Ajouter l’impôt nul au taux de la tranche supérieure.",
+        "Taxer la fraction à 0 % au taux le plus élevé par défaut."
+      ],
+      "answer": 0,
+      "explanation": "Une fraction non taxée reste une partie de la base répartie. La conserver dans le tableau facilite le contrôle de la somme des fractions, même si elle n’ajoute aucun montant d’impôt. Le taux zéro n’autorise pas à faire disparaître la donnée de base."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’énoncé fournit un barème fictif mais l’étudiant le remplace par des seuils d’une ancienne déclaration réelle qu’il a mémorisés. Quelle méthode répond à l’exercice ?",
+      "options": [
+        "Appliquer le barème et les exclusions explicitement fournis.",
+        "Choisir systématiquement le barème produisant le moins d’impôt.",
+        "Mélanger les seuils fictifs avec les taux réels sans l’indiquer.",
+        "Retenir uniquement le taux maximal du barème mémorisé."
+      ],
+      "answer": 0,
+      "explanation": "Le problème demande un mécanisme pédagogique dont les paramètres sont fixés. Les remplacer change la question et rend le résultat invérifiable dans son périmètre. Une application réelle exige en revanche un barème daté et l’ensemble des dispositifs pertinents."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un calcul de barème est exact pour une base donnée, mais l’énoncé exclut expressément décote, réductions, crédits et plafonnement du quotient. Quelle dénomination décrit son résultat avec justesse ?",
+      "options": [
+        "Un impôt de barème simplifié sous les hypothèses fournies.",
+        "Un avis d’imposition réel définitif du foyer.",
+        "Une preuve que tous les mécanismes fiscaux sont nuls dans la réalité.",
+        "Un montant après tous les avantages personnels, même ceux que l’énoncé exclut."
+      ],
+      "answer": 0,
+      "explanation": "Le résultat est valide dans le modèle annoncé, sans prendre en compte les mécanismes exclus. Il ne doit pas être présenté comme un avis réel ou comme la preuve que ces mécanismes ne concerneraient pas le foyer. La portée du calcul dépend de ses hypothèses."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que mesure le taux moyen d’imposition d’un modèle simple ?",
+      "options": [
+        "L’impôt calculé divisé par la base correspondante.",
+        "Le taux de la dernière tranche multiplié par le nombre de parts.",
+        "La moyenne arithmétique de tous les taux du barème.",
+        "Le taux nominal de la première tranche, quelle que soit la base."
+      ],
+      "answer": 0,
+      "explanation": "Le taux moyen rapporte la charge d’impôt totale à sa base. Il peut différer du taux marginal, lequel concerne une fraction supplémentaire de base dans une tranche donnée. Faire la moyenne simple des taux ignorerait les largeurs effectivement taxées."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un modèle fictif, un foyer a une base de 40 000 € et un impôt de 3 200 €. Quel est son taux moyen, exprimé en pourcentage ?",
+      "options": [
+        "12,5 %",
+        "8 %",
+        "32 %",
+        "0,08 %"
+      ],
+      "answer": 1,
+      "explanation": "Le taux moyen est 3 200/40 000=0,08, soit 8 %. Le rapport inverse de 12,5 n’est pas le taux. Il faut aussi distinguer l’écriture décimale 0,08 de son expression en pourcentage.",
+      "calculation": {
+        "expected": 8,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 3200
+                },
+                {
+                  "value": 40000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le taux moyen d’un foyer est de 8 %, tandis que sa dernière tranche atteinte est de 20 %. Un petit supplément de base reste entièrement dans cette tranche ; aucun autre dispositif. Quel taux décrit l’impôt supplémentaire sur ce supplément ?",
+      "options": [
+        "8 %, taux moyen appliqué rétroactivement à tout supplément.",
+        "20 %, taux marginal dans la tranche restant inchangée.",
+        "28 %, somme du taux moyen et du taux marginal.",
+        "12 %, différence entre les deux taux."
+      ],
+      "answer": 1,
+      "explanation": "Dans le modèle sans changement de tranche ni autre dispositif, chaque euro supplémentaire relève du taux de 20 %. Le taux moyen résume la charge passée sur toute la base et ne fixe pas le coût marginal de ce supplément. Les deux mesures répondent à deux questions distinctes."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un barème fictif applique 10 % jusqu’à 20 000 € de base et 30 % au-delà. La base passe de 19 500 € à 20 500 €, sans autre mécanisme. Quel est l’impôt supplémentaire ?",
+      "options": [
+        "100 €",
+        "300 €",
+        "200 €",
+        "1 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le supplément de 1 000 € se partage entre 500 € encore à 10 % et 500 € à 30 %. La hausse d’impôt est donc 50+150=200 €. Un taux unique sur tout le supplément ignorerait le franchissement du seuil.",
+      "calculation": {
+        "expected": 200,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 500
+                },
+                {
+                  "value": 0.1
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 500
+                },
+                {
+                  "value": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un foyer franchit légèrement une tranche supérieure dans un modèle progressif sans mécanisme complémentaire. Le contribuable affirme que tout son revenu net d’impôt va chuter parce que toute la base serait désormais taxée au nouveau taux. Quelle correction est exacte ?",
+      "options": [
+        "Seule la fraction supplémentaire dans la nouvelle tranche relève du nouveau taux.",
+        "Toute la base devient immédiatement soumise au nouveau taux.",
+        "Les tranches antérieures sont imposées une deuxième fois au nouveau taux.",
+        "Le franchissement impose de rembourser toutes les fractions auparavant à taux nul."
+      ],
+      "answer": 0,
+      "explanation": "Le barème par tranches ne crée pas cette taxation rétroactive de la base entière. Les fractions inférieures conservent leurs taux. La variation nette doit être étudiée sur le supplément dans le modèle donné ; d’autres dispositifs, s’ils existaient, demanderaient leur propre analyse."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un modèle fictif, une déduction d’assiette de 500 € réduit entièrement une fraction imposée au taux marginal de 30 %, sans franchir de seuil. Un autre dispositif, distinct, accorde un crédit d’impôt de 500 € entièrement imputable. Quelle économie produit la seule déduction d’assiette ?",
+      "options": [
+        "500 €",
+        "150 €",
+        "350 €",
+        "30 €"
+      ],
+      "answer": 1,
+      "explanation": "La déduction réduit la base de 500 €, dont l’imposition aurait été de 500×30 %=150 €. Elle se distingue du crédit imputable de 500 € qui réduit directement l’impôt dans l’autre dispositif fourni. Les mêmes montants nominaux ne procurent donc pas le même effet.",
+      "calculation": {
+        "expected": 150,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 500
+            },
+            {
+              "value": 0.3
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Modèle fictif : 0 % jusqu’à 10 000 € par part, 10 % de 10 000 à 30 000 €, puis 20 %. Le foyer a 80 000 € de base et deux parts, sans plafonnement ni autre dispositif. Quel est l’impôt total du foyer ?",
+      "options": [
+        "4 000 €",
+        "8 000 €",
+        "12 000 €",
+        "16 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le quotient est 80 000/2=40 000 €. Par part : 20 000×10 % + 10 000×20 %=4 000 €. Il faut ensuite multiplier par deux parts, soit 8 000 €. Oublier cette dernière étape confond l’impôt par part et celui du foyer.",
+      "calculation": {
+        "expected": 8000,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 20000
+                    },
+                    {
+                      "value": 0.1
+                    }
+                  ]
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 10000
+                    },
+                    {
+                      "value": 0.2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un modèle pédagogique donne, après division de la base et application du barème, un impôt de 650 € par part. Le nombre de parts fourni est 2,5 et aucun autre mécanisme ne s’applique. Quel impôt total retenir ?",
+      "options": [
+        "260 €",
+        "1 300 €",
+        "1 625 €",
+        "650 €"
+      ],
+      "answer": 2,
+      "explanation": "L’impôt par part doit être remultiplié par le nombre de parts effectivement fourni : 650×2,5=1 625 €. Une fraction de part ne doit pas être supprimée par un arrondi libre, et une nouvelle division inverserait le mécanisme.",
+      "calculation": {
+        "expected": 1625,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 650
+            },
+            {
+              "value": 2.5
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour 60 000 € de base et trois parts, un étudiant calcule le quotient de 20 000 €, applique le barème, puis multiplie l’impôt par 60 000. Quel facteur doit remplacer ce dernier multiplicateur ?",
+      "options": [
+        "Le nombre de parts, soit trois.",
+        "Le taux marginal, quelle que soit sa tranche.",
+        "La base totale, qui est le bon facteur à conserver.",
+        "Le quotient de 20 000 €, indépendamment du barème."
+      ],
+      "answer": 0,
+      "explanation": "La dernière étape restitue le nombre de parts après le calcul sur un quotient. Il faut donc remultiplier l’impôt par trois. La base totale a déjà été utilisée pour construire le quotient et ne constitue pas ce multiplicateur de sortie."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un foyer fournit un nombre de parts pour un exercice pédagogique. Le calcul réel pourrait dépendre du plafonnement de l’avantage du quotient. L’exercice exclut ce plafonnement. Que peut-on conclure ?",
+      "options": [
+        "Le calcul simplifié applique les parts données, sans prétendre établir le plafonnement réel.",
+        "Le plafonnement est inexistant pour tous les foyers de la réalité.",
+        "Le nombre de parts fourni doit être remplacé arbitrairement par un.",
+        "Il faut inventer un plafond non fourni pour terminer l’exercice."
+      ],
+      "answer": 0,
+      "explanation": "Le modèle est déterminé par ses exclusions. On peut appliquer le quotient donné sans calculer un plafonnement absent, tout en indiquant cette limite. Une déclaration réelle exigerait une vérification des règles et de la situation du foyer, plutôt qu’un plafond inventé."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux modèles donnent le même impôt de 1 000 € par part. Le premier compte une part, le second deux parts. Peut-on déduire qu’ils ont le même impôt total avant tout autre mécanisme ?",
+      "options": [
+        "Oui, l’impôt par part est toujours le montant du foyer.",
+        "Non, le total dépend aussi du nombre de parts par lequel l’impôt est remultiplié.",
+        "Oui, deux parts divisent nécessairement le montant final par deux.",
+        "Non, il faut multiplier l’impôt par la base totale avant toute prise en compte des parts."
+      ],
+      "answer": 1,
+      "explanation": "Le montant par part n’est qu’une étape intermédiaire. En le remultipliant, les totaux sont ici 1 000 € et 2 000 €. Cela ne compare pas deux foyers de même revenu : la question porte uniquement sur le passage du résultat par part au résultat total."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le calcul du quotient est effectué sur une base annuelle, mais le barème donné concerne une base mensuelle et aucune règle de conversion n’est fournie. Quelle vérification est nécessaire avant de liquider ?",
+      "options": [
+        "Rendre cohérentes les périodes de base et de barème selon le modèle applicable.",
+        "Appliquer directement les seuils mensuels à toute la base annuelle.",
+        "Multiplier les taux par douze sans examiner les seuils.",
+        "Remplacer la base annuelle par l’impôt du mois le plus favorable."
+      ],
+      "answer": 0,
+      "explanation": "Les seuils et la base doivent être exprimés sur une période cohérente. Un mélange de périodicités peut déplacer artificiellement la base dans les tranches. Il faut connaître la convention de conversion du modèle avant de calculer, plutôt que modifier librement les taux."
+    }
+  ]
+}

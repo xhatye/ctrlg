@@ -1,0 +1,521 @@
+{
+  "module": "DSCG4",
+  "chapter": "consol-controle",
+  "sourceHash": "f52bb27814e6d8395c1c9bd85a445d556bcf6ae0594ff68689ad4de94c5a9ded",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "M détient 60 % de A ; A possède 40 % de B. Dans une analyse française simplifiée des droits, A est contrôlée exclusivement et ses votes dans B sont intégralement dirigés par M. Quel couple « droits dirigés dans B ; intérêt économique indirect » retenir ?",
+      "options": [
+        "40 % ; 24 %",
+        "24 % ; 24 %",
+        "60 % ; 40 %",
+        "100 % ; 40 %"
+      ],
+      "answer": 0,
+      "explanation": "Les votes portés par la filiale contrôlée sont ici dirigés pour 40 %. La fraction économique indirecte correspond à 60 %×40 %=24 %. Le cas distingue expressément les deux objets."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "P possède 75 % de A et 60 % de C. A possède 20 % de B et C en possède 30 %, sans autres voies ni chevauchement. Quel intérêt économique total P possède-t-elle dans B ?",
+      "options": [
+        "81 %",
+        "33 %",
+        "50 %",
+        "18 %"
+      ],
+      "answer": 1,
+      "explanation": "La première voie apporte 75 %×20 %=15 %, la seconde 60 %×30 %=18 %. Les participations distinctes s’additionnent : 33 %.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 0.75
+                    },
+                    {
+                      "value": 0.2
+                    }
+                  ]
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 0.6
+                    },
+                    {
+                      "value": 0.3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 33,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un investisseur possède 30 % du capital mais 55 % des votes grâce à des catégories de titres différentes. Pour étudier le pouvoir de voter les décisions pertinentes, quel chiffre utiliser en première lecture ?",
+      "options": [
+        "La moyenne de 30 % et 55 %, soit 42,5 %",
+        "Le produit des deux pourcentages, soit 16,5 %",
+        "Les 55 % des droits de vote, à rapprocher des règles de décision",
+        "Les 30 % du capital, en supposant les droits identiques"
+      ],
+      "answer": 2,
+      "explanation": "Le capital et les voix peuvent diverger. L’analyse du pouvoir part des droits attachés aux titres et des décisions concernées ; une moyenne ou un produit ne crée pas un droit de vote."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une option donne à M un droit substantif susceptible de contribuer au contrôle de F. Elle n’est pas exercée et ne donne actuellement aucun accès aux rendements des titres visés. L’analyste augmente pourtant la part économique existante de M. Quelle erreur commet-il ?",
+      "options": [
+        "Il devrait nécessairement exclure toute option de l’examen du pouvoir",
+        "Il doit attribuer à M tous les résultats dès qu’une option existe",
+        "Il faut remplacer les droits existants par le prix futur de l’option",
+        "Il confond l’examen du pouvoir et l’allocation fondée sur les intérêts actuellement détenus"
+      ],
+      "answer": 3,
+      "explanation": "Un droit potentiel peut intervenir dans l’analyse du contrôle sans être traité comme une détention économique déjà réalisée. Le cas exclut expressément un accès actuel aux rendements de ces titres.",
+      "references": [
+        {
+          "title": "IFRS 10, dispositions sur les droits substantifs et le contrôle",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "F subit une perte. M, qui détient 80 % de ses titres ordinaires et contrôle F, soutient que son exposition a cessé puisque le rendement est négatif. Comment analyser cette affirmation ?",
+      "options": [
+        "Une exposition à des pertes peut faire partie de rendements variables",
+        "Une perte constitue un événement à exclure de la notion de rendement, qui viserait ici seulement les distributions",
+        "La variabilité doit être testée uniquement sur les dividendes distribués, sans tenir compte des pertes sur l’investissement",
+        "L’exposition doit être ramenée à la valeur des votes, la perte comptable n’intervenant pas dans les rendements"
+      ],
+      "answer": 0,
+      "explanation": "La variabilité ne se limite pas au gain. Une perte n’annule pas par elle-même les droits ni la détention ; les dimensions du contrôle restent à apprécier dans les faits.",
+      "references": [
+        {
+          "title": "IFRS 10, dispositions sur les droits substantifs et le contrôle",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les décisions qui déterminent les rendements d’une société portent sur la sélection des investissements. M dispose actuellement du droit substantif de les choisir seule, mais ne l’a pas encore exercé. Quel énoncé décrit le critère de pouvoir ?",
+      "options": [
+        "L’existence du pouvoir doit attendre l’exercice effectif du droit de décision par M",
+        "La capacité actuelle compte, même sans exercice préalable du droit",
+        "Le pouvoir dépend ici de la fréquence des décisions déjà prises plutôt que de la capacité actuelle de les prendre",
+        "Le pouvoir doit être attribué à la partie qui a pris la dernière décision, même si M détient désormais le droit substantif"
+      ],
+      "answer": 1,
+      "explanation": "Le pouvoir renvoie à une capacité actuelle de diriger les activités pertinentes. Il ne faut pas la confondre avec l’historique d’utilisation ; les autres critères du contrôle restent nécessaires.",
+      "references": [
+        {
+          "title": "IFRS 10, dispositions sur les droits substantifs et le contrôle",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une banque peut seulement s’opposer à une modification qui menacerait sa sûreté ; les faits qualifient ce droit de purement protecteur. Les décisions d’exploitation appartiennent à un autre investisseur. Que démontre ce seul veto ?",
+      "options": [
+        "Un droit protecteur peut être assimilé à une direction des activités pertinentes parce qu’il limite une décision exceptionnelle",
+        "La banque doit être considérée comme co-décideur de toutes les activités pertinentes du seul fait de ce veto protecteur",
+        "La protection de la banque, sans lui conférer à elle seule le pouvoir sur les activités pertinentes",
+        "Le droit de bloquer une atteinte à la sûreté suffit à attribuer à la banque le pouvoir sur l’exploitation courante"
+      ],
+      "answer": 2,
+      "explanation": "Un droit protecteur préserve une position sans donner en lui-même la direction des activités pertinentes. Il ne suffit donc pas à conclure au contrôle du prêteur.",
+      "references": [
+        {
+          "title": "IFRS 10, dispositions sur les droits substantifs et le contrôle",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une option est juridiquement exerçable aujourd’hui, mais son prix et ses conditions rendent l’exercice impraticable dans le contexte documenté. Le dossier la compte d’office comme un droit substantif. Quel examen a été omis ?",
+      "options": [
+        "La seule date d’exercice autorisée au contrat, tenue pour suffisante pour qualifier le droit de substantif",
+        "Le pourcentage théorique de votes après conversion, sans examiner les conditions économiques de l’exercice",
+        "La seule absence d’interdiction légale d’exercer l’option, indépendamment des obstacles pratiques documentés",
+        "La capacité pratique d’exercer le droit, au-delà de sa seule possibilité juridique"
+      ],
+      "answer": 3,
+      "explanation": "L’étiquette « exerçable » ne résout pas toutes les conditions du caractère substantif. Les obstacles économiques et pratiques doivent être analysés dans leur contexte.",
+      "references": [
+        {
+          "title": "IFRS 10, dispositions sur les droits substantifs et le contrôle",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un droit sera exerçable avant la prochaine décision sur les activités pertinentes, sans obstacle pratique. Il est écarté au seul motif qu’il ne peut être exercé ce matin. Quelle règle faut-il réexaminer ?",
+      "options": [
+        "Le moment où les décisions pertinentes devront effectivement être prises",
+        "La possibilité d’exercer ce matin, considérée comme condition nécessaire indépendamment du calendrier des décisions",
+        "La date à laquelle les titres seront effectivement acquis, sans tenir compte de la capacité de décider avant cette acquisition",
+        "Le pourcentage de voix actuellement exercées, en excluant les droits potentiels jusqu’à leur conversion effective"
+      ],
+      "answer": 0,
+      "explanation": "IFRS 10 examine la possibilité d’utiliser les droits au moment requis pour les décisions. Certains droits peuvent être substantifs sans être immédiatement exerçables ; leur calendrier réel est donc déterminant.",
+      "references": [
+        {
+          "title": "IFRS 10, dispositions sur les droits substantifs et le contrôle",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "M détient 45 % des votes. Les autres actionnaires sont nombreux et dispersés, sans autre information. Quelle conclusion est justifiée à ce stade ?",
+      "options": [
+        "Assimiler la dispersion à un transfert juridique de tous les titres à M",
+        "Examiner la capacité pratique de M à décider unilatéralement, sans conclure automatiquement",
+        "Exclure nécessairement tout pouvoir parce que M reste sous 50 %",
+        "Déclarer nécessairement le contrôle parce que M est le premier actionnaire"
+      ],
+      "answer": 1,
+      "explanation": "La détention minoritaire et la dispersion sont des faits à analyser avec les autres circonstances. Elles ne dispensent pas d’étudier les décisions, la participation et la capacité pratique réelle.",
+      "references": [
+        {
+          "title": "IFRS 10, dispositions sur les droits substantifs et le contrôle",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un gestionnaire prend des décisions exclusivement comme mandataire d’un investisseur principal, selon une analyse contractuelle complète. Peut-il conclure à son propre contrôle du seul fait qu’il décide matériellement ?",
+      "options": [
+        "Oui, dès qu’il facture des honoraires, même comme agent",
+        "Non, parce qu’un gestionnaire ne peut jamais contrôler aucune entité",
+        "Non, ses décisions prises comme agent ne suffisent pas à établir son propre contrôle",
+        "Oui, toute signature opérationnelle impose un contrôle en son nom"
+      ],
+      "answer": 2,
+      "explanation": "La qualification de mandataire distingue la décision exercée pour un autre de celle exercée en principal. Il faut analyser le rôle réel ; le seul acte matériel de décision ne tranche pas le contrôle.",
+      "references": [
+        {
+          "title": "IFRS 10, dispositions sur les droits substantifs et le contrôle",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les activités pertinentes passent de la recherche à la commercialisation. Les droits de décision ne sont pas attribués aux mêmes parties pour ces deux phases. Que doit examiner l’investisseur ?",
+      "options": [
+        "Uniquement le pourcentage historique du capital, définitivement figé",
+        "Seulement le montant initial payé pour ses titres",
+        "La moyenne des pouvoirs des deux phases, indépendamment des activités",
+        "Si les faits nouveaux modifient l’analyse du pouvoir et du contrôle"
+      ],
+      "answer": 3,
+      "explanation": "L’analyse des droits dépend des activités qui déterminent les rendements. Un changement pertinent appelle une réévaluation des faits, au lieu de reconduire mécaniquement la conclusion ancienne.",
+      "references": [
+        {
+          "title": "IFRS 10, dispositions sur les droits substantifs et le contrôle",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Avec 18 % des votes, M participe de façon démontrée aux politiques financières et opérationnelles grâce à des droits effectifs, sans contrôle. Comment apprécier le seuil IAS 28 ?",
+      "options": [
+        "La présomption liée à moins de 20 % peut être renversée par des preuves d’influence notable",
+        "L’influence doit être exclue parce que le seuil de 20 % n’est pas atteint, même avec les droits de participation décrits",
+        "Le seuil de 20 % doit être calculé sur le capital plutôt que les votes avant d’examiner les droits décrits",
+        "Les preuves de participation ne peuvent être utilisées qu’après le franchissement du seuil de présomption"
+      ],
+      "answer": 0,
+      "explanation": "Le seuil ne remplace pas les faits. Une influence notable peut être clairement démontrée sous 20 % ; le cas donne précisément des droits et une participation effectifs aux politiques.",
+      "references": [
+        {
+          "title": "IAS 28 : influence notable",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-28-investments-in-associates-and-joint-ventures/"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "M détient 24 % des voix de F. Un autre investisseur en détient 70 %. Le seul fait de cette majorité empêche-t-il nécessairement l’influence notable de M ?",
+      "options": [
+        "Oui, la majorité d’un autre investisseur suffit à renverser la présomption des 24 % sans autre analyse",
+        "Non, un autre actionnaire majoritaire n’exclut pas à lui seul une influence notable de M",
+        "Oui, l’influence de M suppose que ses voix puissent bloquer seules les décisions de l’actionnaire à 70 %",
+        "Non, mais à condition de requalifier d’abord la relation en contrôle conjoint sur le seul fondement de ces deux pourcentages"
+      ],
+      "answer": 1,
+      "explanation": "Le pouvoir de participer aux politiques peut coexister avec le contrôle d’un autre investisseur. Il faut examiner les droits et la participation de M plutôt que déduire leur absence de la seule majorité adverse.",
+      "references": [
+        {
+          "title": "IAS 28 : influence notable",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-28-investments-in-associates-and-joint-ventures/"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une convention retire à M toute participation aux politiques malgré 22 % des voix, et l’absence d’influence est clairement démontrée. L’analyste impose la mise en équivalence du seul seuil. Quelle erreur commet-il ?",
+      "options": [
+        "Il doit prendre le seuil de 50 % comme seuil d’influence notable",
+        "Il peut décider librement de la méthode selon le résultat souhaité",
+        "Il transforme une présomption réfutable en règle irréfragable",
+        "Il devrait obligatoirement intégrer globalement toute détention de 22 %"
+      ],
+      "answer": 2,
+      "explanation": "Le seuil IAS 28 présume l’influence, mais des preuves claires peuvent renverser cette présomption. La qualification réelle précède le choix du traitement.",
+      "references": [
+        {
+          "title": "IAS 28 : influence notable",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-28-investments-in-associates-and-joint-ventures/"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "M ne contrôle pas F. Elle fournit des informations techniques indispensables et échange des dirigeants avec F. À quoi ces faits peuvent-ils contribuer sous IAS 28 ?",
+      "options": [
+        "À démontrer un contrôle exclusif de M, les apports techniques tenant lieu de droit de décision unilatérale",
+        "À établir seulement une relation commerciale, les échanges de dirigeants étant sans pertinence pour l’influence",
+        "À imposer une mise en équivalence sur ces seuls faits, sans examiner les autres conditions de la relation",
+        "À démontrer une influence notable en complément des autres éléments"
+      ],
+      "answer": 3,
+      "explanation": "La fourniture d’informations techniques essentielles et les échanges de dirigeants figurent parmi les indicateurs d’influence. Leur portée doit être appréciée avec les droits et le contexte.",
+      "references": [
+        {
+          "title": "IAS 28 : influence notable",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-28-investments-in-associates-and-joint-ventures/"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une associée mise en équivalence dégage 90 000 € de résultat après son acquisition. L’investisseur en détient 30 % ; aucune correction ni limitation n’est requise. Quelle quote-part de résultat reconnaître ?",
+      "options": [
+        "27 000 €",
+        "90 000 €",
+        "30 000 €",
+        "63 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La mise en équivalence retient ici la quote-part du résultat postérieur à l’acquisition : 90 000×30 %=27 000 €. Elle ne reprend pas 100 % du résultat de l’associée.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 90000
+            },
+            {
+              "value": 0.3
+            }
+          ]
+        },
+        "expected": 27000,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "IAS 28 : influence notable",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-28-investments-in-associates-and-joint-ventures/"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour une participation mise en équivalence, le comptable constate le dividende reçu comme un nouveau produit en plus de la quote-part de résultat déjà reconnue. Quel traitement IAS 28 a-t-il omis ?",
+      "options": [
+        "La distribution augmente la participation comme la quote-part de résultat, puisqu’il s’agit d’un rendement supplémentaire",
+        "La distribution reçue réduit la valeur comptable de la participation",
+        "La distribution diminue la quote-part de résultat de la période plutôt que la valeur de la participation",
+        "Le dividende reçu est sans incidence sur la participation dès lors que le résultat de l’associée a déjà été reconnu"
+      ],
+      "answer": 1,
+      "explanation": "La quote-part de résultat est déjà reconnue par la mise en équivalence. La distribution est une diminution de la participation ; la compter de nouveau en résultat ferait un double compte dans le cas présenté.",
+      "references": [
+        {
+          "title": "IAS 28 : influence notable",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-28-investments-in-associates-and-joint-ventures/"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dossier IFRS conclut que M contrôle F. Il choisit ensuite de la traiter comme une associée uniquement pour diminuer l’endettement présenté ; aucune exception n’est applicable. Quelle critique convient ?",
+      "options": [
+        "La mise en équivalence est imposée dès qu’une filiale est endettée",
+        "L’intégration de F dépend uniquement du dividende qu’elle verse",
+        "La méthode doit découler de la qualification et du référentiel, sans choix opportuniste",
+        "Le préparateur peut choisir toute méthode si le ratio final est meilleur"
+      ],
+      "answer": 2,
+      "explanation": "L’objectif d’un ratio ne transforme pas une filiale en associée. Une conclusion de contrôle et l’absence d’exception doivent conduire au traitement correspondant dans le cadre IFRS.",
+      "references": [
+        {
+          "title": "IFRS 10, dispositions sur les droits substantifs et le contrôle",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "M obtient le contrôle de F le 1er octobre. Dans le cas IFRS simplifié, quelle période du résultat annuel de F entre dans les comptes consolidés de M pour l’année civile ?",
+      "options": [
+        "La totalité de l’année, même avant le contrôle",
+        "La seule journée du 31 décembre",
+        "Aucune période avant le premier dividende de F",
+        "La période du 1er octobre au 31 décembre"
+      ],
+      "answer": 3,
+      "explanation": "L’intégration des produits et charges d’une filiale commence à la date d’obtention du contrôle. Le seul fait d’être filiale à la clôture n’attribue pas les résultats antérieurs au contrôle.",
+      "references": [
+        {
+          "title": "IFRS 10, dispositions sur les droits substantifs et le contrôle",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une filiale utilise une méthode différente de celle du groupe pour des opérations similaires dans des circonstances similaires. Quel travail IFRS est requis pour la consolidation ?",
+      "options": [
+        "Ajuster ses comptes pour appliquer les méthodes du groupe aux opérations concernées",
+        "Conserver les méthodes individuelles dès lors qu’elles sont admises pour les comptes propres de la filiale",
+        "Appliquer les méthodes du groupe seulement à la fraction des postes correspondant à la détention de la mère",
+        "Compenser les différences de méthodes par une moyenne des résultats individuels sans retraiter les opérations concernées"
+      ],
+      "answer": 0,
+      "explanation": "La préparation des comptes consolidés demande des méthodes homogènes pour les opérations comparables. L’approbation des comptes individuels ne dispense pas des retraitements de consolidation.",
+      "references": [
+        {
+          "title": "IFRS 10, dispositions sur les droits substantifs et le contrôle",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "M conserve 80 % du capital de F mais un accord vient de modifier les droits sur les activités pertinentes. Quelle justification doit figurer au dossier de périmètre ?",
+      "options": [
+        "La confirmation que la détention de capital suffit à conserver la conclusion antérieure sans étudier l’accord",
+        "L’analyse datée des nouveaux droits et de leurs effets sur la conclusion de contrôle",
+        "Le calcul des intérêts économiques inchangés, utilisé comme justification suffisante de la stabilité du contrôle",
+        "La comparaison de la rentabilité avant et après accord, substituée à l’examen des nouveaux droits décisionnels"
+      ],
+      "answer": 1,
+      "explanation": "Une détention stable ne garantit pas une gouvernance identique. La conclusion doit rendre compte des droits applicables à la date considérée et des faits qui pourraient modifier le contrôle.",
+      "references": [
+        {
+          "title": "IFRS 10, dispositions sur les droits substantifs et le contrôle",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ifrs-10-consolidated-financial-statements/"
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau de périmètre comporte deux sociétés portant le même nom commercial mais des identifiants juridiques distincts. Le préparateur les fusionne en une ligne sans examen. Quel risque doit-il traiter ?",
+      "options": [
+        "La disparition automatique des titres de l’une des sociétés",
+        "Une obligation de retenir seulement la société la plus ancienne",
+        "Une omission ou un double compte provenant d’une identification incorrecte des entités",
+        "Une simple différence de présentation sans effet possible sur le périmètre"
+      ],
+      "answer": 2,
+      "explanation": "Le périmètre porte sur des entités identifiées et sur leurs liens réels. Le nom commercial ne permet pas de confondre deux personnes distinctes ; la carte et les détentions doivent être rapprochées."
+    }
+  ]
+}

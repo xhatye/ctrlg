@@ -1,0 +1,456 @@
+{
+  "module": "DSCG4",
+  "chapter": "consolidation",
+  "sourceHash": "8220ba2bd811e229af489038bdcabdba09d160d429d33b05aa923ef37ea7423e",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel ensemble caractérise le contrôle dans IFRS 10 ?",
+      "options": [
+        "Pouvoir, exposition à des rendements variables et capacité d’utiliser ce pouvoir pour agir sur ces rendements",
+        "Détention d’un titre, perception d’un dividende et présence dans le même secteur",
+        "Majorité du capital seulement, sans aucun examen des droits",
+        "Rentabilité de l’investissement, taille de l’entité et date de clôture identique"
+      ],
+      "answer": 0,
+      "explanation": "Le contrôle exige d’articuler les trois dimensions prévues. Un pourcentage ou un dividende isolé ne remplace pas l’examen des droits, des rendements et de leur lien."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un investisseur perçoit des rendements variables mais ne dispose d’aucun pouvoir sur les activités pertinentes et ne peut utiliser aucun pouvoir pour les modifier. Les faits donnés établissent-ils son contrôle IFRS 10 ?",
+      "options": [
+        "Non, parce que seuls des rendements fixes permettent le contrôle",
+        "Non, l’exposition aux rendements ne remplit pas à elle seule les autres conditions",
+        "Oui, tout rendement variable donne automatiquement le pouvoir",
+        "Oui, dès lors que l’investissement est bénéficiaire"
+      ],
+      "answer": 1,
+      "explanation": "Les rendements constituent une dimension du contrôle, pas une condition suffisante. Les faits excluent ici le pouvoir et la capacité de le lier aux rendements."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux investisseurs ont le même pourcentage de capital dans deux entités différentes. Le premier décide seul des activités pertinentes ; le second n’a que des droits protecteurs. Peut-on conclure à un contrôle identique du seul pourcentage ?",
+      "options": [
+        "Oui, les droits contractuels n’ont jamais d’effet sur le pouvoir",
+        "Non, parce que tout droit protecteur établit un pouvoir supérieur",
+        "Non, la nature des droits et les autres conditions doivent être examinées pour chaque relation",
+        "Oui, un pourcentage identique impose toujours la même conclusion"
+      ],
+      "answer": 2,
+      "explanation": "Le capital ne décrit pas à lui seul les droits exercés. Des droits de protection ne se confondent pas automatiquement avec la capacité actuelle de diriger les activités pertinentes."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La mère considère qu’elle perd nécessairement le contrôle dès qu’un dividende n’est pas distribué cette année. Quel raisonnement doit-elle reprendre ?",
+      "options": [
+        "Tout contrôle exige un dividende fixe payé à chaque clôture",
+        "L’absence de dividende annule automatiquement les droits de vote",
+        "Les rendements ne concernent que les paiements déjà encaissés",
+        "L’exposition aux rendements variables n’est pas limitée à un dividende effectivement versé dans l’année"
+      ],
+      "answer": 3,
+      "explanation": "L’analyse porte sur les droits et l’exposition aux rendements de l’implication, pas seulement sur un flux distribué. Le pouvoir et son lien aux rendements restent à examiner."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une convention décide qui peut approuver les politiques opérationnelles d’une cible, mais elle n’est pas fournie. Le dossier indique seulement 55 % du capital. Quel document faut-il obtenir pour conclure sur les pouvoirs ?",
+      "options": [
+        "La convention et les droits effectifs relatifs aux activités pertinentes",
+        "Le registre des titres seul, en assimilant le pourcentage de capital à tous les pouvoirs décisionnels",
+        "Le relevé des présences aux dernières assemblées, sans examiner les droits prévus par la convention",
+        "Les derniers comptes de la cible, en déduisant les règles de décision de la répartition des dividendes"
+      ],
+      "answer": 0,
+      "explanation": "Le pourcentage est un élément, mais une convention peut affecter les décisions pertinentes. L’absence de cette pièce doit rester visible dans la conclusion."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans IAS 28, que signifie l’influence notable ?",
+      "options": [
+        "Recevoir un prix d’intérêt fixe sans aucune participation aux politiques",
+        "Participer aux décisions de politique financière et opérationnelle sans les contrôler ni les contrôler conjointement",
+        "Détenir nécessairement plus de la moitié des droits de vote",
+        "Décider seul de toutes les activités pertinentes"
+      ],
+      "answer": 1,
+      "explanation": "L’influence notable est une participation au pouvoir de décision sans contrôle. La méthode de comptabilisation demande de qualifier la relation dans le référentiel.",
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 28 : influence notable et mise en équivalence",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-28-investments-in-associates-and-joint-ventures/"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un investisseur détient 25 % des droits de vote. Sous IAS 28, quelle portée a le seuil de 20 % en l’absence d’autres faits ?",
+      "options": [
+        "Une conclusion définitive d’influence notable, sans possibilité de la contredire par l’analyse des droits",
+        "Un seuil de contrôle conjoint dès lors qu’aucune majorité individuelle n’est donnée",
+        "Une présomption d’influence notable à apprécier et éventuellement à renverser",
+        "Un simple seuil de détention sans présomption, l’influence ne pouvant être analysée qu’au-delà de 50 %"
+      ],
+      "answer": 2,
+      "explanation": "Le seuil de vote est une présomption d’influence notable, pas une preuve automatique de contrôle. Les éléments susceptibles d’infirmer ou de préciser la relation doivent être examinés.",
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 28 : influence notable et mise en équivalence",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-28-investments-in-associates-and-joint-ventures/"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une participation donne droit à un siège et à une participation effective aux décisions de politique financière, mais aucun pouvoir de les diriger ou de les contrôler conjointement. Quelle relation faut-il examiner ?",
+      "options": [
+        "Le contrôle exclusif démontré par tout siège",
+        "L’absence certaine de toute influence faute de majorité",
+        "La propriété de tous les actifs de la cible par l’investisseur",
+        "L’influence notable"
+      ],
+      "answer": 3,
+      "explanation": "Les faits décrivent une participation aux politiques sans maîtrise de celles-ci. Ils doivent être rapprochés de la notion d’influence notable et de ses conditions."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Hors exceptions, quelle méthode IAS 28 demande-t-elle pour une participation dans une entreprise associée ?",
+      "options": [
+        "La mise en équivalence",
+        "L’intégration globale",
+        "L’intégration proportionnelle des actifs et passifs",
+        "La comptabilisation au coût sans ajustement ultérieur lié au résultat de l’associée"
+      ],
+      "answer": 0,
+      "explanation": "IAS 28 prévoit la mise en équivalence des entreprises associées dans le cadre concerné. L’influence notable ne se confond pas avec le contrôle d’une filiale.",
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 28 : influence notable et mise en équivalence",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-28-investments-in-associates-and-joint-ventures/"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le choix de méthode repose uniquement sur le fait que la participation rapporte un dividende élevé. Quelle information manque en priorité ?",
+      "options": [
+        "La seule durée prévue de placement, sans examiner aucun droit",
+        "La qualification du contrôle, du contrôle conjoint ou de l’influence dans le référentiel retenu",
+        "Le montant de dividende suffit à imposer une intégration globale",
+        "La seule comparaison des cours boursiers de deux dates"
+      ],
+      "answer": 1,
+      "explanation": "Le rendement ne détermine pas à lui seul la relation juridique et économique pertinente. Les pouvoirs et le référentiel doivent guider la méthode avant les techniques de calcul."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "M détient 60 % de A, qui détient 75 % de B. La chaîne est simple, sans autre lien. Quel intérêt économique indirect M détient-elle dans B ?",
+      "options": [
+        "75 %",
+        "135 %",
+        "45 %",
+        "60 %"
+      ],
+      "answer": 2,
+      "explanation": "Dans cette chaîne simple, les intérêts économiques se multiplient : 0,60×0,75=0,45, soit 45 %. Cette mesure n’est pas, à elle seule, une analyse des pouvoirs.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.6
+                },
+                {
+                  "value": 0.75
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 45,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "M détient directement 10 % de B et 80 % de A, laquelle détient séparément 40 % de B. Aucun autre lien ni chevauchement de titres. Quel intérêt économique total M détient-elle dans B ?",
+      "options": [
+        "32 %",
+        "50 %",
+        "90 %",
+        "42 %"
+      ],
+      "answer": 3,
+      "explanation": "La voie indirecte représente 80 %×40 %=32 %. La participation directe distincte de 10 % s’ajoute : 42 %. Les deux chemins doivent être identifiés sans double compte.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 0.1
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 0.8
+                    },
+                    {
+                      "value": 0.4
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 42,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau calcule 100 % d’intérêt économique dans une filiale parce que son contrôle exclusif est établi, alors que la mère n’en détient que 70 % dans le schéma simple. Que faut-il distinguer ?",
+      "options": [
+        "La capacité de contrôle et la quote-part économique détenue",
+        "Le pourcentage de détention et le pourcentage de votes, supposés devoir tous deux être portés à 100 % lors de l’intégration",
+        "Le pourcentage de contrôle et la part de résultat, supposés devenir identiques à la part intégrée de chaque actif",
+        "Le choix de méthode et le prix d’acquisition, ce dernier étant supposé fixer la quote-part économique à 100 %"
+      ],
+      "answer": 0,
+      "explanation": "La consolidation globale n’attribue pas tous les intérêts économiques à la mère. Dans le schéma donné, la part des autres détenteurs reste une dimension distincte du contrôle."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "M détient 50 % de A et A détient 60 % de B, sans autre voie. B distribue 40 000 € et l’exercice demande seulement la quote-part économique indirecte de ce montant, sans retenue ni autre condition. Quel montant correspond à M ?",
+      "options": [
+        "40 000 €",
+        "12 000 €",
+        "20 000 €",
+        "24 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La fraction économique donnée vaut 50 %×60 %=30 %. Sa part dans les 40 000 € est donc 12 000 €. Ce calcul ne prouve pas un virement direct déjà reçu par M.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 40000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.5
+                },
+                {
+                  "value": 0.6
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 12000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux diagrammes décrivent en réalité les mêmes titres de B détenus par A. L’analyste additionne deux fois leur intérêt indirect parce qu’il voit deux dessins. Quel contrôle manque ?",
+      "options": [
+        "La concordance des montants des deux diagrammes, utilisée pour justifier de les ajouter",
+        "L’addition des pourcentages présentés dans chaque dessin sans rapprocher les titres auxquels ils correspondent",
+        "L’identification des détentions réelles pour éviter de compter deux fois la même voie",
+        "Le remplacement de la participation indirecte par la moyenne des pourcentages des deux étages de la chaîne"
+      ],
+      "answer": 2,
+      "explanation": "Les représentations ne créent pas des participations supplémentaires. Il faut reconstituer les titres réellement détenus et distinguer voies distinctes et duplications de documentation."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une chaîne de participation a changé en milieu d’exercice. L’analyste utilise le pourcentage de clôture pour tous les dividendes et droits de la période sans examiner les dates. Quelle précaution est nécessaire ?",
+      "options": [
+        "Conserver obligatoirement le taux final pour toute opération antérieure",
+        "Faire la moyenne simple des pourcentages même si leurs durées sont inconnues",
+        "Retenir toujours le taux le plus élevé de l’année",
+        "Dater les changements et appliquer les pourcentages pertinents aux objets et périodes étudiés"
+      ],
+      "answer": 3,
+      "explanation": "Un pourcentage est lié à une structure et une date. Les effets sur les résultats, droits ou distributions demandent un rattachement temporel correspondant au traitement demandé."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société intégrée globalement présente une créance de 12 000 € sur une autre entité du même périmètre, qui présente la dette réciproque de même montant. Quel objectif poursuit l’élimination réciproque ?",
+      "options": [
+        "Éviter de présenter le groupe comme créancier et débiteur de lui-même pour cette relation",
+        "Réduire l’endettement envers les tiers du groupe du montant de toute créance détenue par une filiale",
+        "Compenser une créance interne avec les seules dettes externes de la mère pour présenter une position nette",
+        "Éliminer la dette interne en conservant la créance comme actif net du groupe"
+      ],
+      "answer": 0,
+      "explanation": "Les comptes individuels portent des droits et obligations entre sociétés. Dans la présentation du groupe concernée, ces soldes réciproques ne représentent pas une relation avec un tiers."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La créance interne est de 15 000 € et la dette réciproque de 13 000 €. Le préparateur force les deux à zéro sans analyser l’écart. Que doit-il faire d’abord ?",
+      "options": [
+        "Éliminer les 13 000 € concordants et qualifier le reliquat de créance externe sans pièce complémentaire",
+        "Rapprocher les différences de dates, règlements ou enregistrements pour expliquer les 2 000 €",
+        "Retenir les 15 000 € dans les deux comptes en ajustant d’office la dette de l’acheteur",
+        "Compenser les 2 000 € par une autre différence interne de montant opposé sans rapprocher les opérations"
+      ],
+      "answer": 1,
+      "explanation": "Une réciprocité attendue mais non concordante demande un rapprochement. Des flux en transit ou erreurs peuvent expliquer l’écart ; une écriture d’équilibrage non justifiée ne suffit pas."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les chiffres d’affaires individuels de M et F sont 300 000 € et 220 000 €. Ils incluent 40 000 € de ventes de M à F. Le cas impose leur élimination intégrale, sans autre correction. Quel chiffre d’affaires consolidé obtenir ?",
+      "options": [
+        "560 000 €",
+        "40 000 €",
+        "480 000 €",
+        "520 000 €"
+      ],
+      "answer": 2,
+      "explanation": "L’addition donne 520 000 €, dont 40 000 € internes à retrancher pour conserver les ventes du groupe aux tiers : 480 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 300000
+                },
+                {
+                  "value": 220000
+                }
+              ]
+            },
+            {
+              "value": 40000
+            }
+          ]
+        },
+        "expected": 480000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "F achète des marchandises à un fournisseur totalement extérieur au périmètre. Le préparateur veut éliminer cet achat au seul motif que F est une filiale. Quelle réponse convient ?",
+      "options": [
+        "L’achat doit être éliminé à hauteur du pourcentage de détention de F, le reste étant présenté comme achat aux tiers",
+        "L’achat doit être éliminé en totalité parce que les opérations de F sont déjà incluses dans ses comptes individuels",
+        "L’achat doit être éliminé si la mère finance le règlement, même lorsque le fournisseur reste extérieur",
+        "L’achat reste une opération du groupe avec un tiers ; il n’est pas interne par la seule qualité de F"
+      ],
+      "answer": 3,
+      "explanation": "La qualification dépend des deux parties et du périmètre, pas du seul statut de l’acheteur. Une relation avec un tiers ne s’élimine pas comme une opération réciproque interne."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une consolidation additionne les actifs et passifs de sociétés contrôlées mais ne traite jamais les soldes ou opérations entre elles. Quelle étape manque ?",
+      "options": [
+        "Les retraitements et éliminations nécessaires à une présentation cohérente du groupe",
+        "Limiter les ajustements aux seules méthodes comptables des filiales, sans traiter leurs relations réciproques",
+        "Compenser uniquement les soldes internes de bilan, en conservant les produits et charges internes de l’année",
+        "Retenir les comptes individuels additionnés comme présentation finale dès lors que chaque bilan est équilibré"
+      ],
+      "answer": 0,
+      "explanation": "La simple addition peut conserver des relations du groupe avec lui-même et des profits internes non réalisés. Les techniques doivent suivre le référentiel et les opérations identifiées."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le groupe vend à un client externe un lot qu’une filiale avait acquis auprès d’une autre société du groupe. Pourquoi faut-il distinguer ces deux ventes dans l’analyse ?",
+      "options": [
+        "La vente interne peut être présentée comme chiffre d’affaires du groupe dès qu’elle est facturée, puis la vente externe aussi",
+        "L’une est interne au périmètre et l’autre réalise une opération avec un tiers",
+        "La vente externe doit être neutralisée parce que le profit a déjà été enregistré par la filiale vendeuse initiale",
+        "Les deux ventes doivent être éliminées, le passage préalable dans le groupe empêchant de reconnaître la vente finale"
+      ],
+      "answer": 1,
+      "explanation": "Le parcours d’un bien peut comporter plusieurs opérations de nature différente. Leur distinction permet d’éliminer les relations internes sans supprimer les ventes réelles aux tiers."
+    }
+  ]
+}

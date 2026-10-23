@@ -1,0 +1,248 @@
+{
+  "sourceHash": "18f95269fc323c8a464a1ef15259bd0f18a50376ec8706b429c1ee3a4624dde4",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "b95c8ca6ebe8bd7667ae437623b0b81155896c72a6436dea75c883ebd3d52f76",
+      "selected": 0,
+      "reason": "2 500 × (1 − 8 %) = 2 300 euros après la première remise.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "a0b8d1b4e28eec9c6d073ceb792e969defc26c33ac96d78e6f975f9c6d3dd512",
+      "selected": 1,
+      "reason": "Brut × 5 % donne la réduction ; le net est brut × 95 %.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "829191616bccf5a79172184a892d7cc681e0068aebfeea4191320d66a0ab2e05",
+      "selected": 3,
+      "reason": "1 800 / 0,90 = 2 000 euros de brut avant la remise.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "d1dec102bafd24fec73e64142d1d13d15ed91030ef12a5cebdfb7336e502e439",
+      "selected": 0,
+      "reason": "Des taux justes sur une quantité fausse produisent un montant faux ; il faut contrôler le brut avec les pièces.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "8ab3c4d996865167ac538fff15b425f81bf3da9d8962e0b9f86b504b1d015687",
+      "selected": 1,
+      "reason": "1 000 × 0,90 × 0,95 = 855 euros de net commercial.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "1b42b80c06f7b154943784977f1947f8ea51700f27963756a664e2a8b598ffc8",
+      "selected": 1,
+      "reason": "1 − (0,80 × 0,90) = 28 % de réduction globale équivalente.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "be9feffddf12ecfc42dd6cabea65f56379e29984d63d50cbe7857ea483b41c89",
+      "selected": 1,
+      "reason": "Chaque remise successive porte sur le restant, donc la seconde sur le net de la première.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "40fc8149caebb4596806415d07edbcea1ce5a84f5ad9b09df9e580bfe34ebbbc",
+      "selected": 0,
+      "reason": "Sans arrondi ni frais fixes, le produit 0,96 × 0,94 est commutatif.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "67dd35d12c52de4b6ace2bff8fe9852c8db367daea1bff2abab6a6809a583cb1",
+      "selected": 1,
+      "reason": "La baisse de 60 divisée par la base de 2 000 représente 3 %.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "780ab9df546dd295539733fadc9d2f6fa6aba55dc1a416c9618258e5840130a4",
+      "selected": 0,
+      "reason": "Une soustraction fixe et un facteur proportionnel ne commutent pas ; l’ordre fixe la base du pourcentage.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "67d3ace1b354e97d2e1d0dcff411f3971744bb60d94e498cabc9a81b11afb475",
+      "selected": 3,
+      "reason": "1 500 × 20 % = 300 euros de TVA sur le net commercial donné.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "a3c6c48a76282d9100f9db19bdfea8f445369330d536edcd48b6363a15a5b9fc",
+      "selected": 3,
+      "reason": "Taxer un brut supérieur au net majore la taxe puis le TTC dans ce cas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "a9754865c6cad9071d0dad1d0b111d8488bf2b8f138b9d1141a4f68f8082bf5c",
+      "selected": 2,
+      "reason": "La base excédentaire est 200 ; à 20 %, la TVA est majorée de 40 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "cdaa39b09e5b217804cba0e29e74fc5dc6de70f387cd2ca8d987548a3713d02d",
+      "selected": 2,
+      "reason": "La TVA entièrement déductible est distinguée de l’achat net HT.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "dc7750a8386635c8189219f2275d1adad56dccee6a54b64b6e304f9f7ae001a7",
+      "selected": 2,
+      "reason": "Un taux absent doit être déterminé ou obtenu ; on ne déduit pas un taux fréquent ni une exonération.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "f05b98c30fece0e8135b80f29fedae3bd2706661ff9b9a40cd3915cc1bc107bd",
+      "selected": 0,
+      "reason": "920 plus 184 donnent 1 104 euros TTC à payer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "50beb90858e871c1ecac7f8e770f5845504c230d168b2e16a82283c830baf728",
+      "selected": 1,
+      "reason": "2 400 / 1,20 = 2 000 euros HT ; retirer 20 % du TTC serait faux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "8f8ec7476007ababce201d185584ed603eb82e3da258de9aa36b535476660b2e",
+      "selected": 2,
+      "reason": "Les remises ont déjà réduit le net ; une nouvelle déduction les compterait deux fois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "13e95f076dad7c055ac5f06bb01d6625ccfdbeb057295dce0c96d97c4820269b",
+      "selected": 3,
+      "reason": "Sans acompte, la créance est le TTC final facturé après réductions.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "3a31ab873360b0d86c4f46d087bf8bd36063335988c49227f5ca7d63c191ac17",
+      "selected": 1,
+      "reason": "Un achat à crédit fait naître un solde fournisseur au crédit, avant tout paiement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "cf23d79487df6082be57f5ed4cd0ef8cd0d34685cd45d2aa4f5286d619ff0796",
+      "selected": 3,
+      "reason": "Les conventions d’arrondi imposées doivent être reproduites à chaque étape pour rapprocher le TTC.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "7020435281ad53f3ba0e5b166db5b68e2984354767ff28ebf20f325466475e21",
+      "selected": 0,
+      "reason": "Le rapprochement de chaque étape, du brut au TTC, contrôle les remises avant l’assiette et le montant de TVA.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

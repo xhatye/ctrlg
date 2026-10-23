@@ -1,0 +1,445 @@
+{
+  "module": "DSCG1",
+  "chapter": "reperes",
+  "sourceHash": "41bcdebbf365dffdb8cb0dc218c4c5143d0add36a57e8a2a1ce0bcfcf1c5ed40",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une personne est dirigeante de la société mère et signe en parallèle un contrat de mission avec une filiale distincte. Quelle cartographie est nécessaire avant de qualifier ses droits ?",
+      "options": [
+        "Distinguer le mandat dans la mère et la relation contractuelle avec la filiale.",
+        "Attribuer les deux relations à une personne morale unique du seul fait du groupe.",
+        "Considérer tout contrat avec la filiale comme une décision des associés de la mère.",
+        "Déduire l’existence d’un contrat de travail de la seule facture de mission."
+      ],
+      "answer": 0,
+      "explanation": "Une même personne physique peut intervenir dans plusieurs relations avec des personnes morales distinctes. Il faut identifier, pour chacune, les parties, l’objet, les pouvoirs et les conditions d’exercice. La seule appartenance au groupe ne donne pas une qualification unique à toutes les relations."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une rémunération est versée à une dirigeante « au titre du mandat social ». Aucun emploi distinct n’est documenté. Un tableau la classe comme salaire dû au titre d’un contrat de travail. Quelle question doit être traitée avant ce classement ?",
+      "options": [
+        "L’existence et les conditions d’une relation salariée distincte du mandat.",
+        "Le montant de rémunération le plus élevé de l’entreprise.",
+        "La seule périodicité mensuelle du versement, qui suffirait à caractériser un salaire.",
+        "Le seul accord des associés sur le budget de rémunération."
+      ],
+      "answer": 0,
+      "explanation": "La rémunération du mandat ne démontre pas par elle-même un contrat de travail. Le classement doit reposer sur une relation salariée réelle et ses conditions propres, plutôt que sur le versement ou sa fréquence. Les deux fondements doivent être séparés avant d’étudier les droits correspondants."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dirigeant bénéficie d’une indemnité conventionnelle de fin de mandat. Il possède aussi un contrat de travail dont l’existence et la poursuite sont établies. Comment examiner une rupture de l’ensemble de ses fonctions ?",
+      "options": [
+        "Distinguer la cessation du mandat et le sort du contrat de travail, avec leurs fondements respectifs.",
+        "Assimiler toute indemnité de mandat à une indemnité de licenciement.",
+        "Déduire la rupture du contrat de la seule disparition du titre de dirigeant.",
+        "Considérer la décision des associés comme une dispense universelle de procédure sociale."
+      ],
+      "answer": 0,
+      "explanation": "Les deux relations sont distinctes, même si une opération concerne le même dirigeant. Il faut déterminer ce qui a été décidé dans chaque cadre et les effets qui s’y attachent. Une indemnité de mandat ou une révocation ne remplace pas l’examen du contrat de travail."
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Dans l’examen d’un cumul entre mandat social et contrat de travail, quels éléments doivent notamment être caractérisés pour les fonctions salariées ?",
+      "options": [
+        "Un emploi réel distinct du mandat, rémunéré comme tel et exercé dans un lien de subordination.",
+        "La seule inscription du dirigeant dans un organigramme.",
+        "Le seul versement d’un revenu mensuel au dirigeant.",
+        "La seule qualité d’associé minoritaire."
+      ],
+      "answer": 0,
+      "explanation": "La qualification repose sur les fonctions effectivement exercées, leur distinction et leur subordination, avec la rémunération correspondante. La jurisprudence ne se satisfait pas d’un libellé de contrat ou d’un indice isolé. Les règles propres à la forme sociale doivent aussi être vérifiées.",
+      "references": [
+        {
+          "title": "Cass. soc., 14 mai 1998, 96-40.693, fonctions distinctes et subordination",
+          "url": "https://www.courdecassation.fr/decision/6079b1919ba5988459c52855"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une présidente reçoit des orientations stratégiques de l’assemblée au titre de son mandat. Elle en déduit automatiquement un lien de subordination pour une activité salariée, sans décrire de fonction technique distincte. Quelle différence doit-elle établir ?",
+      "options": [
+        "Le contrôle de son mandat et l’autorité exercée sur un emploi salarié distinct.",
+        "L’approbation des comptes et la preuve que chaque tâche technique a été dirigée comme un emploi.",
+        "L’évaluation stratégique du mandat et un contrôle disciplinaire salarié, tenus pour identiques par nature.",
+        "La fixation de la rémunération de mandat et une instruction d’exécution sur une mission technique, traitées comme équivalentes."
+      ],
+      "answer": 0,
+      "explanation": "Le contrôle institutionnel de la direction ne suffit pas à qualifier un emploi distinct sous subordination. Il faut relier les directives, contrôles et pouvoirs pertinents aux fonctions salariées alléguées, et non utiliser les seules prérogatives des associés sur le mandat.",
+      "references": [
+        {
+          "title": "CA Fort-de-France, 18 février 2025, 22/00170, rémunération et mandat gratuit",
+          "url": "https://www.courdecassation.fr/decision/67b6c52d8da72feaa1a415d7"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un dirigeant exerce réellement une mission de laboratoire distincte. Deux rémunérations sont identifiées, mais aucun élément ne décrit qui dirige, contrôle ou peut sanctionner cette mission. Quelle condition reste à établir ?",
+      "options": [
+        "Une rémunération propre aux fonctions salariées.",
+        "Le lien de subordination propre à la mission salariée.",
+        "L’exercice effectif de fonctions techniques distinctes du mandat.",
+        "La détention d’une qualification correspondant aux fonctions techniques."
+      ],
+      "answer": 1,
+      "explanation": "La réalité d’un travail technique et une rémunération identifiable ne démontrent pas à elles seules une exécution salariée. La subordination doit également être caractérisée dans les conditions réelles de la mission. Aucun cumul ne peut être tenu pour acquis sur les deux premières données seulement.",
+      "references": [
+        {
+          "title": "Cass. soc., 14 mai 1998, 96-40.693, fonctions distinctes et subordination",
+          "url": "https://www.courdecassation.fr/decision/6079b1919ba5988459c52855"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un mandat social est expressément gratuit. Un emploi technique réel, distinct et subordonné est établi, avec une rémunération salariale propre ; les autres conditions sont remplies. Le fait qu’une seule rémunération soit versée exclut-il à lui seul le cumul ?",
+      "options": [
+        "Oui, deux versements rémunérés sont impératifs même pour un mandat gratuit.",
+        "Non, le mandat gratuit n’exige pas la création d’une rémunération de mandat pour rendre le salaire identifiable.",
+        "Oui, un mandat gratuit empêche tout emploi technique.",
+        "Non, parce qu’une rémunération unique prouve toujours toutes les autres conditions."
+      ],
+      "answer": 1,
+      "explanation": "La rémunération des fonctions techniques doit être identifiable, mais cela n’impose pas de rémunérer un mandat expressément gratuit. Les autres critères ne disparaissent pas pour autant ; le cas les établit. La jurisprudence distingue l’identification du salaire et l’exigence artificielle d’un double revenu.",
+      "references": [
+        {
+          "title": "CA Fort-de-France, 18 février 2025, 22/00170, rémunération et mandat gratuit",
+          "url": "https://www.courdecassation.fr/decision/67b6c52d8da72feaa1a415d7"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le contrat d’un dirigeant décrit comme emploi salarié exactement les mêmes missions de direction que son mandat, sans fonction technique distincte démontrée. Quelle faiblesse affecte le cumul allégué ?",
+      "options": [
+        "L’absence de fonctions salariées effectivement distinctes.",
+        "L’absence de deux niveaux de salaire, tenue pour seule condition de distinction des fonctions.",
+        "L’absence d’un changement d’intitulé de poste, qui suffirait à rendre les mêmes missions distinctes.",
+        "L’absence d’un nouveau document, qui suffirait à créer un emploi sans modifier les fonctions réelles."
+      ],
+      "answer": 0,
+      "explanation": "Deux actes ne suffisent pas à créer deux fonctions réelles différentes. Le cumul allégué nécessite de distinguer le travail salarié du mandat exercé. Il faut examiner les missions et leur exécution concrète ; la signature d’un document ne résout pas cette condition.",
+      "references": [
+        {
+          "title": "Cass. soc., 14 mai 1998, 96-40.693, fonctions distinctes et subordination",
+          "url": "https://www.courdecassation.fr/decision/6079b1919ba5988459c52855"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un salarié devient mandataire social et cesse d’exercer des fonctions techniques subordonnées. Aucune novation ni convention contraire n’est établie. Selon la jurisprudence rappelée en 2025, quel est le sort de son contrat de travail ?",
+      "options": [
+        "Il est automatiquement rompu par démission.",
+        "Il est suspendu pendant la durée du mandat.",
+        "Il est nécessairement annulé rétroactivement depuis l’embauche.",
+        "Il est automatiquement transformé en contrat commercial avec les associés."
+      ],
+      "answer": 1,
+      "explanation": "La Cour de cassation rappelle qu’en l’absence de novation ou convention contraire, le contrat est suspendu lorsque le salarié devenu mandataire cesse les fonctions techniques subordonnées. La nomination ne suffit pas à prouver une volonté de mettre fin au contrat.",
+      "references": [
+        {
+          "title": "Cass. soc., 12 février 2025, 23-11.369, suspension et novation",
+          "url": "https://www.courdecassation.fr/decision/67ac54d091acc6fabdb2cea5"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Pour affirmer qu’un contrat de travail antérieur a disparu lors de la nomination au mandat, un dossier ne produit que le Kbis et des pouvoirs de signature bancaire. Quelle réserve juridique découle de la décision du 12 février 2025 ?",
+      "options": [
+        "Ces éléments de direction ne caractérisent pas, à eux seuls, une volonté non équivoque de nover le contrat.",
+        "Tout Kbis emporte nécessairement démission de tous les contrats antérieurs.",
+        "Les pouvoirs bancaires créent une novation irréfragable dans chaque société.",
+        "L’absence de travail salarié rend impossible toute suspension du contrat."
+      ],
+      "answer": 0,
+      "explanation": "La décision distingue l’exercice du mandat et la preuve d’une novation ou convention contraire sur le contrat antérieur. Les éléments qui démontrent des pouvoirs de dirigeant ne suffisent pas à prouver clairement la disparition du contrat, qui peut avoir été seulement suspendu.",
+      "references": [
+        {
+          "title": "Cass. soc., 12 février 2025, 23-11.369, suspension et novation",
+          "url": "https://www.courdecassation.fr/decision/67ac54d091acc6fabdb2cea5"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un contrat de travail antérieur a été régulièrement suspendu pendant un mandat, sans novation ni convention contraire. Le mandat prend fin. Quelle analyse du contrat faut-il effectuer selon la jurisprudence ?",
+      "options": [
+        "Examiner la reprise de ses effets à la fin du mandat.",
+        "Le considérer automatiquement rompu depuis la nomination initiale.",
+        "Le transformer sans accord en prestation indépendante.",
+        "Refuser toute reprise parce qu’aucun salaire n’était versé pendant la suspension."
+      ],
+      "answer": 0,
+      "explanation": "La jurisprudence rattache à la fin du mandat la reprise des effets du contrat suspendu, sous les réserves précisées. Une suspension n’est pas une rupture. L’absence de salaire durant la période suspendue ne suffit donc pas à effacer le contrat antérieur.",
+      "references": [
+        {
+          "title": "Cass. soc., 17 juin 2015, 14-10.230, reprise du contrat suspendu",
+          "url": "https://www.courdecassation.fr/decision/61372947cd580146774354e0"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "En 2026, un salarié est proposé comme administrateur d’une SA. Son contrat est écrit mais ne correspond à aucun emploi effectif. Quel obstacle prévoit l’article L225-22 ?",
+      "options": [
+        "L’exigence d’un emploi effectif pour sa nomination comme administrateur en qualité de salarié.",
+        "L’interdiction absolue de nommer tout salarié administrateur, même avec emploi réel.",
+        "L’obligation de supprimer son contrat avant toute nomination de salarié.",
+        "La possibilité de remplacer l’emploi effectif par un salaire simplement déclaré."
+      ],
+      "answer": 0,
+      "explanation": "L225-22 subordonne la nomination du salarié à un contrat correspondant à un emploi effectif. La seule formalisation du contrat ne satisfait pas cette condition. Le texte ne formule pas une interdiction générale de tout administrateur salarié et doit être appliqué dans sa version pertinente.",
+      "references": [
+        {
+          "title": "Code de commerce, L225-22, version depuis octobre 2025",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051322421/2026-04-23"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "En 2026, une SA compte neuf administrateurs en fonction, dont deux sont liés par un contrat de travail ordinaire. Aucun administrateur ne relève d’une catégorie exclue du décompte. La limite fournie est le tiers des administrateurs. Combien de sièges supplémentaires peuvent au maximum être occupés par des administrateurs salariés ordinaires, sans changer l’effectif total ?",
+      "options": [
+        "0 siège",
+        "1 siège",
+        "3 sièges",
+        "7 sièges"
+      ],
+      "answer": 1,
+      "explanation": "Le tiers de neuf est trois administrateurs salariés ordinaires au maximum. Deux sièges étant déjà concernés, il reste une place dans un conseil dont l’effectif demeure neuf. Le calcul suppose l’absence des catégories exclues par le texte, expressément précisée.",
+      "calculation": {
+        "expected": 1,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 9
+                },
+                {
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "Code de commerce, L225-22, version depuis octobre 2025",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051322421/2026-04-23"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Pour le plafond des administrateurs liés par un contrat de travail d’une SA en 2026, le dossier inclut un administrateur élu par les salariés au titre de L225-27. Selon L225-22, comment traiter cette catégorie dans le nombre d’administrateurs salariés soumis au plafond ?",
+      "options": [
+        "L’inclure comme tout administrateur salarié ordinaire, sans distinction.",
+        "Ne pas la compter dans ce nombre, selon l’exception prévue.",
+        "La compter deux fois pour sa double qualité.",
+        "La considérer comme dépourvue de mandat social."
+      ],
+      "answer": 1,
+      "explanation": "L225-22 prévoit des catégories non comptées pour déterminer le nombre d’administrateurs liés par un contrat soumis au plafond, notamment les administrateurs élus par les salariés. Le contrôle ne doit donc pas additionner sans distinction tous les sièges ayant un lien salarial.",
+      "references": [
+        {
+          "title": "Code de commerce, L225-22, version depuis octobre 2025",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051322421/2026-04-23"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Dans la SA, l’article L225-22 indique-t-il que le salarié nommé administrateur perd nécessairement le bénéfice de son contrat de travail ?",
+      "options": [
+        "Oui, toute nomination vaut démission du contrat.",
+        "Non, le texte prévoit qu’il ne perd pas le bénéfice de ce contrat, dans les conditions applicables.",
+        "Oui, dès que le conseil a plus de trois membres.",
+        "Non, parce qu’aucun emploi effectif n’est nécessaire."
+      ],
+      "answer": 1,
+      "explanation": "Le texte organise la possibilité de nomination d’un salarié à un emploi effectif et précise le maintien du bénéfice de son contrat. Il faut conserver les conditions et limites prévues ; la nomination n’est ni une démission automatique ni une dispense d’examiner la réalité du travail.",
+      "references": [
+        {
+          "title": "Code de commerce, L225-22, version depuis octobre 2025",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051322421/2026-04-23"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dossier de cumul prévoit 40 000 € de rémunération annuelle de mandat et une mission salariée distincte, mais ne fournit aucun régime fiscal ni taux applicable aux bénéficiaires. Que peut-on chiffrer sans inventer une imposition définitive ?",
+      "options": [
+        "Les montants bruts contractuels documentés, puis les scénarios fiscaux seulement sous hypothèses explicites.",
+        "Un net fiscal définitif en appliquant à tous les revenus le seul taux d’une simulation non rattachée au bénéficiaire.",
+        "Un revenu imposable total égal à la seule rémunération de mandat, en omettant la mission salariée distincte.",
+        "Un impôt personnel exact en appliquant le taux d’imposition de la société au brut du mandat."
+      ],
+      "answer": 0,
+      "explanation": "Les droits bruts et leur qualification doivent être distingués des effets fiscaux. Sans régime, situation et paramètres applicables, un montant d’impôt personnel définitif ne peut être déduit du seul revenu de mandat. Une simulation conditionnelle doit annoncer les données retenues."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une note chiffre le coût fiscal d’une activité technique exercée pour la société A, en utilisant sans explication les données de bénéfice de sa société sœur B. Quelle vérification s’impose ?",
+      "options": [
+        "Identifier le contribuable et le périmètre fiscal auxquels chaque base se rapporte.",
+        "Additionner tous les bénéfices du groupe même sans régime commun établi.",
+        "Retenir la société ayant le taux le plus faible, indépendamment de l’opération.",
+        "Assimiler les données comptables de deux sociétés liées sans rapprochement."
+      ],
+      "answer": 0,
+      "explanation": "Le lien capitalistique ne permet pas d’utiliser indifféremment les bases des sociétés. Il faut identifier qui est imposé et, s’il existe, le régime autorisant un périmètre commun. Sans cette justification, le calcul mélange des personnes ou des assiettes différentes."
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une simulation est correcte avec un taux fourni de 25 %. L’opération finale prévoit un périmètre différent de celui utilisé pour la base. Le taux n’a pas changé. Quelle conclusion est rigoureuse ?",
+      "options": [
+        "Le taux inchangé ne garantit pas que la base et le montant final restent valides.",
+        "La stabilité du taux valide automatiquement toutes les autres données.",
+        "Le montant devient exact dès lors que l’arrondi est correct.",
+        "Le changement de périmètre ne peut concerner que le droit social, jamais la fiscalité."
+      ],
+      "answer": 0,
+      "explanation": "Une liquidation dépend de l’assiette et des conditions autant que du taux. Un changement de périmètre peut modifier les éléments imposables ou leur régime, même avec un pourcentage inchangé. Il faut réexaminer les données de base avant de reconduire le montant simulé."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une personne physique exerce déjà cinq mandats d’administrateur dans cinq SA ayant leur siège en France. Aucun régime dérogatoire n’est applicable. Elle veut accepter un sixième mandat de même nature en 2026. Quel contrôle de L225-21 doit guider la recommandation ?",
+      "options": [
+        "Le plafond de cinq mandats simultanés serait dépassé par ce sixième mandat.",
+        "Le plafond ne concerne que les mandats rémunérés, même si le texte ne donne pas cette limitation.",
+        "Chaque société apprécie séparément le plafond, sans tenir compte des autres mandats de la personne.",
+        "Le consentement de la sixième société dispense à lui seul du plafond légal."
+      ],
+      "answer": 0,
+      "explanation": "L225-21 limite en principe la personne physique à cinq mandats d’administrateur de SA ayant leur siège en France. Le cas exclut les dérogations : la seule acceptation d’une société ne permet pas un sixième cumul simultané.",
+      "references": [
+        {
+          "title": "Code de commerce, article L225-21, cumul et régularisation des mandats",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006223614/2026-04-01"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier comporte un contrat de travail signé et une fiche de mission, mais aucun élément sur l’exécution réelle depuis la prise de mandat. Quel niveau de conclusion peut-on défendre ?",
+      "options": [
+        "La formalisation est documentée, mais l’exécution réelle et les conditions du cumul restent à vérifier.",
+        "La signature prouve nécessairement toute l’exécution future dans un lien de subordination.",
+        "La fiche de mission dispense d’examiner les pouvoirs réellement détenus.",
+        "Le manque de preuves d’exécution démontre automatiquement une fraude commise."
+      ],
+      "answer": 0,
+      "explanation": "Les actes sont utiles, mais le cumul doit aussi se vérifier dans la réalité de l’activité. Une absence de pièces ne doit être transformée ni en preuve que toutes les conditions sont satisfaites ni en démonstration automatique d’une fraude. Il faut préciser le contrôle et les éléments attendus."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une nomination place une personne physique au-delà du plafond de mandats de L225-21, sans dérogation. Quel délai ce texte donne-t-il pour se démettre d’un mandat à compter de cette nomination ?",
+      "options": [
+        "Trois mois.",
+        "Un mois.",
+        "Six mois.",
+        "Jusqu’à l’approbation des comptes de la dernière société, quelle que soit sa date."
+      ],
+      "answer": 0,
+      "explanation": "Le texte prévoit de se démettre d’un mandat dans les trois mois de la nomination qui crée l’infraction. Ce délai n’est pas remplacé par la date variable d’une assemblée d’approbation des comptes.",
+      "references": [
+        {
+          "title": "Code de commerce, article L225-21, cumul et régularisation des mandats",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006223614/2026-04-01"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une chronologie mentionne une nomination au mandat en janvier et une rémunération salariée jusqu’en décembre, sans démontrer un travail subordonné continu. Quelle analyse évite une inférence excessive ?",
+      "options": [
+        "Le versement documente la rémunération, mais ne prouve pas à lui seul la poursuite des conditions salariées pendant toute la période.",
+        "Tout versement postérieur prouve de façon irréfragable une absence de suspension.",
+        "La nomination suffit à démontrer qu’aucune somme n’a pu être versée ensuite.",
+        "Le seul dernier bulletin efface tous les actes relatifs au mandat."
+      ],
+      "answer": 0,
+      "explanation": "Les paiements et les bulletins sont des éléments de preuve, mais il faut les relier à l’activité et à son régime réel. La continuité des montants ne démontre pas à elle seule l’absence de suspension ou la réalité de fonctions salariées distinctes pendant l’ensemble du mandat."
+    }
+  ]
+}

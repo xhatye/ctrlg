@@ -1,0 +1,259 @@
+{
+  "sourceHash": "01222fb27400500dd8600e1c8120764d18aa681696c096799ccf671dbb28cff9",
+  "reviewer": "codex-law-tax-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "54d44772678cab229aae87ddbc13fdbccb80a022e8d152a10a79b39435788af2",
+      "selected": 3,
+      "reason": "Minutes désigne le compte rendu écrit de la réunion précédente et ses décisions, non durée des présentations ou factures.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "ab23145c0270b0a44a98a4e420463eca810c35f161b15100d67acda4f014abce",
+      "selected": 2,
+      "reason": "Accord de principe soumis au budget conserve le préalable non réalisé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "dce39220c506d7283504e6989f5d352359f3bba6d4ba97e880953e1430c71484",
+      "selected": 1,
+      "reason": "Chair désigne ici la personne qui préside, pas tout participant ni automatiquement le fournisseur ou exécutant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "7fab6b1e2de3f2366976fb051bc809c93173c6ea20c8b228b5f189bdd8b84605",
+      "selected": 3,
+      "reason": "La recommandation est formulée mais le vote reporté ne vaut ni approbation ni rejet déjà acquis.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "e859d45e802ce3dbc1b8010bfdd0bd6734196a5de91cf73d50e33934433a874c",
+      "selected": 3,
+      "reason": "Apologies consigne les absences notifiées dans ce contexte de compte rendu, non faute dans les présentations ou vote négatif.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "0b9491ca855a4bc913df0a731b3d1388cd8105d0901ff26cba59a2b703082435",
+      "selected": 3,
+      "reason": "Trois présents ne satisfont pas le minimum explicite de quatre votants pour décider ; quorum manquant, pas résultat du vote.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "ac083370cded1dfa743d5cf1f9c27c6eb45e74f47bec04fbff50b7b0030aed15",
+      "selected": 3,
+      "reason": "Responsable, livrable et date rendent l’action vérifiable ; les trois autres formulations omettent au moins une de ces dimensions.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "9ad2313c0dbd1efe161549ec6b553ddafadc8a91afe70886c0014fafdb67ce7a",
+      "selected": 0,
+      "reason": "La date non convenue reste à confirmer ; proposition informelle ou échéance d’un autre projet ne l’établit pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "f170d2d9c6f7a83370538b1fc8b63f8e7a7dbbf3b3a4b7fee530b3aa9e1b151f",
+      "selected": 2,
+      "reason": "Le passif approuvé par Lina nomme l’approbatrice ; Karim est chargé de la revue antérieure, sans approbation conjointe donnée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "611fb2d6597213a24993f5bc33450eca6dfcf64d28e59c9903d901db9c55343f",
+      "selected": 1,
+      "reason": "Outstanding signifie non encore achevé dans cet action log, et non exceptionnellement réussi, annulé ou validé complet.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "091390de0ff7b5329949f6736039c04398c1d1adcda1259beb3ba531ed12015a",
+      "selected": 2,
+      "reason": "Une contribution possible ne nomme pas le propriétaire final ; il faut confirmer l’attribution avant de la consigner.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "e56dffc24f1040fc083c8886a1a7881adda366361517e8a4d742049f4c139172",
+      "selected": 3,
+      "reason": "Inprogress nomme préparation sans résultat final, pas approved/completed/cancelled.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "51ce13529d8de3695936b0e87f7b9fa6a48d6d09d5b0146ffb39f264ee03ebc8",
+      "selected": 0,
+      "reason": "Any other business permet de soulever d’autres points selon le cadre de réunion, sans approuver automatiquement ni changer d’entreprise.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "caa4d83c2a5387f43fac410de60fd3cfd91153062cb8a10815338b7d67b8f489",
+      "selected": 0,
+      "reason": "Unanimous in favour signifie que tous les votants ont soutenu la motion ; ce n’est pas une simple majorité ou absence de vote.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "4c18fe446a7ff9aaa4e3468e91be8698295b4d593d8fdfe87cb38f97b2fa6244",
+      "selected": 2,
+      "reason": "Abstain signifie ne voter ni pour ni contre ; cela ne démontre pas à soi seul que la personne a quitté la réunion.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "111b068aaa931aea09715fbc45d56891e0e5c0136933358b32025a85fd0db993",
+      "selected": 0,
+      "reason": "Will commitment doit rester engagement lundi sans devenir possibilité ni exécution.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "55a7cd7e7ced786a1d63bc2c5e7a16456d6c2eb9bc6cf36235b0d4e01ce17feb",
+      "selected": 3,
+      "reason": "Had submitted présente le dépôt comme antérieur au propos rapporté lors de la réunion, pas comme engagement futur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "4395ee8f13b6405bc2368a51846b1e2a273ffd4c515a776f7cb016bc8b6e1d13",
+      "selected": 3,
+      "reason": "Écrire le mois en lettres dans 9 April 2026 supprime l’ambiguïté jour/mois qu’un changement de séparateur laisse intacte.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "c177a20cc782e2770560db2ab7b9ebb560f2f96b451603306b1894c09086af1c",
+      "selected": 0,
+      "reason": "Le conflit doit être précisé et clarifié avant de consigner une approbation finale, pas résolu par choix arbitraire d’un compte rendu.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "1d73709a8dac826484aa5c79450c2e8149d013afe18939ae358d3d14b16dd43b",
+      "selected": 2,
+      "reason": "La correction doit être identifiable et communiquée pour éviter que deux dates restent applicables aux destinataires.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "9725b1aea13e40d46e7baed6abfcdb4f213fb5f18feaea52969f3b43faa9c727",
+      "selected": 0,
+      "reason": "Le contenu sensible exige destinataires et canal conformes aux besoins et accès autorisés ; invitation seule ne couvre pas toutes annexes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "6598ff246bf9180e4a2aa1179edc0ce7aee564147e00469426df211fc738e3eb",
+      "selected": 1,
+      "reason": "Il faut retirer les détails personnels sans lien avec les décisions, y compris des annexes distribuées, tout en conservant l’utile.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "142241ccafa1597100853ffdeb1a40db568801fca51d93db524f5024119b9fb4",
+      "selected": 0,
+      "reason": "L’exactitude du rôle d’approbation prime la fluidité : un brouillon connu comme contradictoire doit être vérifié.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

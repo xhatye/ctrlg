@@ -1,0 +1,259 @@
+{
+  "sourceHash": "992a86d22db09d9683652d415aa613b972ca426c7645a82c16c47c9fc174c934",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "cfac3ba8fab779e1e2c8d09d12cec9a588a5d89fe8e605a3a92415ace58247e8",
+      "selected": 0,
+      "reason": "Le coût de 28 000 moins la valeur résiduelle de 4 000 donne 24 000 euros de base amortissable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "81c0990dd7fa1b0743922bbbba982555dc26a4f656e358e58a1fca473b1c12db",
+      "selected": 3,
+      "reason": "Un rythme de consommation constant justifie le linéaire ; le financement est une question distincte.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "37b3b4fdc51723ec8c252fe97bd583eb1b860ad142c57e4877ba624cb206e8fd",
+      "selected": 1,
+      "reason": "La durée doit refléter les conditions attendues d’utilisation de l’actif, pas l’objectif de résultat souhaité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "798b41b9580744dc13d2e429deaebc55397ed63afeac498727b247801ceab57a",
+      "selected": 3,
+      "reason": "Le PCG retient la plus courte des limites pertinentes ; ici le contrat borne l’utilisation à trois ans.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "e5aa9fb6746bc2ecf2e23326b12efbbaa80e9c43fe3a598cdd4d55e7f77eef68",
+      "selected": 1,
+      "reason": "L’amortissement décrit la consommation, et non le paiement de la dette d’achat.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "348d3981f5bc2a0eafafe9429132d5a0a42df72df3f1077a9e2e743a2f3e5f92",
+      "selected": 0,
+      "reason": "Un actif de durée non limitée ne s’amortit pas, mais peut faire l’objet d’une dépréciation selon le PCG.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "ab896d5933032cc4f117bdc7c20d5d05166856eeb94a89e55768e8c2184e523f",
+      "selected": 0,
+      "reason": "40 000 − 15 000 − 3 000 = 22 000 euros de VNC.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "6d38a794b3a0a61caf1ead23cd53cdfb4d1a6a0a2d88f49f4ee83efdb2adde6d",
+      "selected": 3,
+      "reason": "La dépréciation déjà comprise dans la VNC ne doit pas être retranchée une deuxième fois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "e3632e748ac75b3ce8826f030d5a56fc4c482c4483be111178fabee14b6136d2",
+      "selected": 3,
+      "reason": "La valeur brute se reconstitue par 19 000 + 7 000 + 2 000 = 28 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "9522a0b74798e88e40e9449892c5fd5ef95e422de7b520b2763f7092b9689f1e",
+      "selected": 3,
+      "reason": "L’égalité de VNC ne prouve ni coûts initiaux égaux, ni état ou prix de marché identiques.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "84b703970abefed3c16fdbf880d275917e8a56f37da0654586feb42261e2ca2f",
+      "selected": 3,
+      "reason": "La VNC doit tenir compte du cumul de toutes les corrections et non de la seule dotation annuelle ou de la valeur résiduelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "e327bafe2bc3a0c98a15aae4a43f64fac6bedbca1d50e15380e63a8cc8aa38df",
+      "selected": 0,
+      "reason": "Les frais nécessaires pour mettre en état d’usage sont examinés comme coûts directement attribuables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "9d13b6e81104e08234a8e56ba3f396f3231dfdb7387332ec296e22e724d0d349",
+      "selected": 2,
+      "reason": "18 000 + 700 + 1 300 = 20 000 euros ; la publicité expressément exclue n’entre pas au coût.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "288714843cffd9ea0ed162d08fec6c8edef5cc4af97e0df066817e8a820de435",
+      "selected": 1,
+      "reason": "Le lien direct avec la mise en état de l’actif doit être étayé pour inclure le coût.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "bf4fdb2525dacbe144d7ea34dd09bd374613c3a101ec6b2737cdcd08b9c6bb46",
+      "selected": 2,
+      "reason": "Le PCG retient le prix d’achat après déduction des réductions commerciales acquises.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "43b3da59274e348793e5fead81032c7922c045969e9e43d0c5ddf57dbf95bfcf",
+      "selected": 3,
+      "reason": "Le remboursement de dette ne crée pas une dépense d’acquisition ou de mise en état à ajouter à l’actif.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "f2f2720829a6483225419b18caf4aca3070520d749fc329420ad428442c5256e",
+      "selected": 3,
+      "reason": "Il faut une preuve de l’intervention et de son rattachement à la machine, plutôt qu’un seul budget ou un règlement global.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "1dde04897613b0b6159d83aa050f90420633414fd14b3e4af48a270a390a8242",
+      "selected": 2,
+      "reason": "Obsolescence et performances dégradées sont des indices conduisant à examiner un test de perte de valeur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "d7e616874b05073c71678a805ac05b6935cde44b545f52be4c061e919e1d7564",
+      "selected": 3,
+      "reason": "La dépréciation est 14 000 − 10 500 = 3 500 euros selon la règle du cas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "9d022930aca9533a400100c38f3d41cbbe305372a92f82c9dc3824a4f04845f9",
+      "selected": 0,
+      "reason": "Un test de perte ne crée pas une dépréciation négative lorsque la valeur actuelle est supérieure au net comptable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "6354a9472e4c4ebbe063edd1b153911ffad5dbcf5e4ab4bd0e209acd3084f326",
+      "selected": 0,
+      "reason": "Le montant de perte doit être justifié par l’évaluation ; un pourcentage destiné au résultat n’est pas une mesure fondée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "46d0160a36451a3ac257ceeef01e0d8816dbca519f98b1cec317a863534edc9e",
+      "selected": 1,
+      "reason": "Diminuer le brut puis comptabiliser encore la perte revient à déduire deux fois le même écart du net.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "335f0376d48c6e70b55f8b991ea9df33994f8c4f78d399e9b130c93ddb42907e",
+      "selected": 1,
+      "reason": "L’amortissement décrit la consommation prévue ; la dépréciation traite une perte de valeur évaluée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

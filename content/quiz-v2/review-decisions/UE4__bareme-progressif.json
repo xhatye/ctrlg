@@ -1,0 +1,248 @@
+{
+  "sourceHash": "7c7dcc7e8262fbb8aa0a2550a4ad8f1fb8934ae96fa55a21c2ca3c9f6dea7040",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "96e694ddba8a96118b6f026c3340f9c252783f7428edd044351c52b9bb5085fc",
+      "selected": 0,
+      "reason": "Chaque taux porte uniquement sur la fraction de base de sa tranche, sans reprendre toute la base.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "fc4d958faf46c7f52197f6eeb048e504beb37e94ec15273abc5260c28471a524",
+      "selected": 0,
+      "reason": "Les vingt-cinq mille se répartissent en dix mille à zéro, dix mille à dix et cinq mille à trente pour cent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "31aaaa49947e0f950447301f2371c4bbcf92afe0dcf62abd2c1a183ee8daad9f",
+      "selected": 0,
+      "reason": "À exactement vingt mille, aucun euro n’est au-delà du seuil et donc aucune fraction ne relève de vingt pour cent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "48d45b17306f30af6c63f09eb3e68012122fa9c04834205d3c8b441ff27adff4",
+      "selected": 3,
+      "reason": "Le contrôle des fractions doit reconstituer la base sans chevauchement ; les taux ne doivent pas nécessairement totaliser cent pour cent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "17c02699003d20f130fd955847f48b1b671a5541e9f0955eaa37c781561e53de",
+      "selected": 1,
+      "reason": "Le modèle de quotient applique les tranches à la base par part, qui dépend du nombre de parts.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "9dffcf6924797cd35da921c1eef77369e328196aac2bfa1a871257e8be25b6a1",
+      "selected": 1,
+      "reason": "La première tranche donne zéro, la seconde mille, la dernière mille cinq cents : total deux mille cinq cents.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "20199826e17e154d976fa1e2f45b052caf7ded3aa7aeda31b07f55830e084b3e",
+      "selected": 0,
+      "reason": "Additionner les taux ignore les largeurs des fractions de base auxquelles chacun doit s’appliquer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "0721adfc50392380d77fbf81af11b7cf8db83fd3714664e9c7d0e67b6504d308",
+      "selected": 1,
+      "reason": "La fraction à taux nul reste une partie de la base à présenter pour en vérifier la complétude.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "a553e52ccb01b2bb29870400fab417fc2ad0318cc069e3e86db39a51df58c36d",
+      "selected": 0,
+      "reason": "Un exercice explicitement fictif se résout avec son barème fourni et ses exclusions, pas avec des seuils mémorisés d’un autre régime.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "a2e4676e39b971e9d3c7280eed4a5fdc16e6fd014dbc4cf7e33015be181ee3e4",
+      "selected": 1,
+      "reason": "Le montant est un impôt de barème simplifié sous hypothèses ; il ne vaut pas avis réel intégrant les dispositifs exclus.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "b054f79ac5d453cddb545eb10061672c2b20ba7ea4ccb5ffa1c7a00529f266d9",
+      "selected": 0,
+      "reason": "Le taux moyen est le rapport entre impôt calculé et base correspondante, distinct d’une moyenne simple des taux nominaux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "054ca2692f80b4bc0e6680ea0740749784e7c69137d70d57d5dda499ac2e6546",
+      "selected": 3,
+      "reason": "Trois mille deux cents sur quarante mille valent 0,08, soit huit pour cent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "f5c05191d05a1c3648860c95f070b8db09bb8386cf5fc4e9f28252024a590298",
+      "selected": 1,
+      "reason": "Un supplément entièrement dans la tranche inchangée subit le taux marginal de vingt pour cent et non le taux moyen.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "8e0fc5583036d6070628f347d59685560dcab7276b195c320226bda3c52526e1",
+      "selected": 2,
+      "reason": "Cinq cents de supplément à dix pour cent donnent cinquante et cinq cents à trente donnent cent cinquante, soit deux cents supplémentaires.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "733d0da592e534a9d18eee4d84ee0bd9d6dbd8945cdca388eff1ee1792fbd177",
+      "selected": 2,
+      "reason": "Seule la fraction supplémentaire de la nouvelle tranche est au nouveau taux ; le franchissement ne retaxe pas le revenu antérieur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "4c9df199dff2f5154deb265cd24e9c5e6a4b84c94ce04653d3a852ead2e77ef1",
+      "selected": 0,
+      "reason": "La déduction de cinq cents à trente pour cent économise cent cinquante ; le crédit distinct n’entre pas dans ce calcul demandé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "b405683877b912f2b1871d6f03108fe588afd7be960e90dd43cad61006f24903",
+      "selected": 3,
+      "reason": "Le quotient est quarante mille : deux mille dans la tranche à dix pour cent et deux mille dans celle à vingt donnent quatre mille par part, huit mille pour deux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "b4b843e44bd70e47e880f28f0f2c65a4a130884d70336a5eab4b3261f8a54bee",
+      "selected": 1,
+      "reason": "Six cent cinquante euros par part multipliés par deux parts et demie donnent mille six cent vingt-cinq.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "041be072edcffffd5380179981b3d4b69201589715331b5e3ebae99a521c7164",
+      "selected": 1,
+      "reason": "Après le barème par part, il faut remultiplier par le nombre de parts de trois, pas par le revenu total.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "dfb89837e108201cbdf9f3c902498ce791393b392444aa95134d984f3c2696e8",
+      "selected": 1,
+      "reason": "Le modèle exclut le plafonnement : on applique les parts données sans en déduire l’absence universelle de ce mécanisme réel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "549614fba383001a7c91b9ac2fdfbd91ff29b1671d8d6db02ef8f947dc5f6cdc",
+      "selected": 1,
+      "reason": "Mille par part donnent mille avec une part et deux mille avec deux, avant les autres mécanismes exclus.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "d56be034883f3ecfd5a7a92091653324b1bcc4d7e5010c829a139a66c3781b92",
+      "selected": 3,
+      "reason": "Les périodes d’assiette et de barème doivent être rendues cohérentes avant application, sans multiplier arbitrairement les taux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

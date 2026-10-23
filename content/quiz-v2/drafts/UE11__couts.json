@@ -1,0 +1,460 @@
+{
+  "module": "UE11",
+  "chapter": "couts",
+  "sourceHash": "cce69a98eee173af0f9b39d72cb308fb783d5a4d62a7df5c89e1d82b71eabd37",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "foundation",
+      "q": "Une matière utilisée par un produit est mesurée directement pour ce produit, sans répartition intermédiaire. Comment qualifier cette charge pour cet objet de coût ?",
+      "options": [
+        "Directe, car son affectation au produit est identifiable.",
+        "Indirecte, parce que toute matière doit passer par une clé commune.",
+        "Nécessairement fixe, indépendamment de son mode d’affectation.",
+        "Supplétive, parce qu’elle est mesurée en quantité."
+      ],
+      "answer": 0,
+      "explanation": "Le caractère direct est relatif à l’objet et à la possibilité d’affectation sans répartition pertinente. Il ne se déduit pas du seul type de dépense ou du comportement fixe ou variable."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un atelier commun fabrique plusieurs produits et son énergie n’est pas mesurée par produit. Quelle étape permet de construire leur coût dans le modèle retenu ?",
+      "options": [
+        "Répartir l’énergie selon le chiffre d’affaires sans vérifier le lien avec les consommations.",
+        "Choisir une répartition ou un modèle d’activité cohérent avec la consommation de ressources.",
+        "Répartir le même montant par référence de produit, quelle que soit son activité.",
+        "Utiliser les seules matières directes comme base sans examiner le fonctionnement de l’atelier."
+      ],
+      "answer": 1,
+      "explanation": "Une charge commune nécessite une convention explicable pour les objets servis. La clé ne doit pas être arbitraire ; sa pertinence dépend du lien avec l’activité et des données disponibles."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Un centre de 6 000 € de charges réalise 300 heures d’activité sur la même période. Quel coût par heure d’unité d’œuvre calcule-t-on ?",
+      "options": [
+        "0,05 € par heure",
+        "1 800 000 € par heure",
+        "20 € par heure",
+        "300 € par heure"
+      ],
+      "answer": 2,
+      "explanation": "Le coût d’unité d’œuvre est charges du centre / nombre d’unités : 6 000 / 300 = 20 € par heure. Le quotient inverse ne possède pas la même unité et ne permet pas l’imputation attendue.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 6000
+            },
+            {
+              "value": 300
+            }
+          ]
+        },
+        "expected": 20,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un lot comporte 900 € de charges directes et 600 € de charges indirectes imputées, dans un périmètre sans autre charge. Quel coût complet du lot obtient-on ?",
+      "options": [
+        "300 €",
+        "540 000 €",
+        "900 €",
+        "1 500 €"
+      ],
+      "answer": 3,
+      "explanation": "Le coût complet du périmètre combine les deux catégories : 900 + 600 = 1 500 €. Il ne faut ni exclure la part indirecte ni la retrancher de la part directe.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 900
+            },
+            {
+              "value": 600
+            }
+          ]
+        },
+        "expected": 1500,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le loyer d’un bâtiment est identifiable pour le centre qui l’occupe, mais ce centre sert plusieurs produits. Pourquoi peut-il être direct pour le centre et indirect pour un produit ?",
+      "options": [
+        "La qualification dépend de l’objet auquel on cherche à affecter la charge.",
+        "Une même dépense doit être directe ou indirecte pour tous les objets sans exception.",
+        "Le montant du loyer détermine seul son caractère direct.",
+        "La charge devient nécessairement variable lorsqu’on change d’objet."
+      ],
+      "answer": 0,
+      "explanation": "Le centre et le produit n’ont pas le même périmètre. Une charge propre au centre peut demander une répartition entre ses produits ; le caractère direct n’est donc pas une propriété absolue de toute dépense."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une clé répartit les frais de réglage uniquement selon les ventes alors que certains produits exigent beaucoup plus de réglages par unité. Quel défaut faut-il examiner ?",
+      "options": [
+        "L’écart de coût imputé traduit nécessairement une différence de rendement du personnel.",
+        "La clé peut mal refléter la consommation de l’activité concernée.",
+        "Le prix de vente par produit devrait remplacer les ventes totales pour mesurer les réglages.",
+        "Le nombre d’unités vendues suffit pour imputer un réglage même si la taille des lots diffère."
+      ],
+      "answer": 1,
+      "explanation": "Une clé doit avoir un lien pertinent avec les ressources consommées. Si la consommation de réglages diffère des ventes, la répartition peut transférer artificiellement des coûts entre produits."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les charges d’un centre sont annuelles mais son activité au dénominateur couvre un seul mois. Quelle correction est prioritaire ?",
+      "options": [
+        "Diviser toutes les charges annuelles par douze sans examiner leur saisonnalité.",
+        "Utiliser le mois le plus actif comme s’il représentait l’activité annuelle entière.",
+        "Faire correspondre la période des charges et celle de l’activité.",
+        "Conserver les périodes différentes puis répartir le taux obtenu également sur tous les mois."
+      ],
+      "answer": 2,
+      "explanation": "Un coût unitaire d’activité exige un numérateur et un dénominateur de même champ temporel. Le mélange des périodes crée un taux artificiel et fausse ensuite l’imputation aux objets."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un lot de 100 unités a un coût complet de 2 000 €. Un tableau présente 2 000 € comme coût par unité. Quelle distinction manque ?",
+      "options": [
+        "La distinction entre coût de production et coût de distribution, puisque le lot correspond à une seule référence.",
+        "La distinction entre coût direct et indirect, les seuls indirects devant être divisés par la quantité.",
+        "La distinction entre coût réel et coût prévu, le coût réel étant présenté au total et le prévu par unité.",
+        "La distinction entre coût total du lot et coût unitaire obtenu en rapportant ce total à sa quantité."
+      ],
+      "answer": 3,
+      "explanation": "Le coût total et le coût unitaire sont deux mesures différentes. Les unités doivent être explicites ; utiliser le coût du lot pour chaque unité multiplierait artificiellement la valeur globale."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un technicien travaille exclusivement sur un produit et son salaire mensuel ne change pas avec le volume dans le domaine étudié. Quelle affirmation est cohérente ?",
+      "options": [
+        "La charge peut être directe à ce produit tout en étant fixe dans ce domaine.",
+        "Son affectation exclusive en fait une charge variable, même si le volume change sans modifier le salaire.",
+        "Son montant mensuel constant en fait une charge indirecte, malgré son affectation connue au produit.",
+        "La part directe doit être limitée aux primes liées au volume ; le salaire de base relève du commun."
+      ],
+      "answer": 0,
+      "explanation": "Le mode d’affectation et le comportement par rapport au volume sont deux questions distinctes. L’affectation exclusive permet ici un coût direct ; elle ne démontre pas un caractère variable."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux produits utilisent le même centre selon des nombres d’heures différents. Une clé pertinente est l’heure. Que doit suivre leur imputation ?",
+      "options": [
+        "Le coût horaire attribué une fois à chaque produit, sans multiplier par ses heures.",
+        "La consommation horaire de chacun multipliée par le coût de l’heure.",
+        "La part des heures du produit multipliée par le coût d’une seule heure du centre.",
+        "Le total des heures du centre multiplié par le coût horaire pour chacun des produits."
+      ],
+      "answer": 1,
+      "explanation": "Une fois l’unité d’œuvre horaire justifiée, chaque produit reçoit des charges selon les heures qu’il consomme. Les montants ne sont pas égaux par principe si les consommations diffèrent."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le centre ne réalise aucune unité d’œuvre pendant une période mais présente des charges. Peut-on calculer un coût unitaire fini en divisant par zéro ?",
+      "options": [
+        "Oui, il vaut zéro puisque l’activité servant à l’imputation est nulle.",
+        "Oui, le dernier coût unitaire connu devient le quotient de cette période sans autre convention.",
+        "Non, le quotient est indéfini ; la sous-activité et la convention de traitement doivent être explicitées.",
+        "Oui, les charges divisées par les unités vendues donnent ce quotient même si celles-ci proviennent d’un autre centre."
+      ],
+      "answer": 2,
+      "explanation": "Le taux charges/activité ne se calcule pas comme nombre fini avec une activité nulle. Il faut décrire la situation et ses conventions, plutôt que fabriquer un dénominateur ou assimiler absence d’activité et coût nul."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un coût complet est communiqué sans objet, période ni convention d’imputation. Quelle utilisation comporte un risque ?",
+      "options": [
+        "Demander le périmètre de calcul avant interprétation.",
+        "Vérifier les quantités auxquelles le coût est rapporté.",
+        "Examiner les charges incluses et leur ventilation.",
+        "Le comparer directement à un autre coût comme s’ils représentaient nécessairement la même mesure."
+      ],
+      "answer": 3,
+      "explanation": "Le mot complet se rapporte à un périmètre défini. Sans ses conventions, deux nombres peuvent porter sur des objets ou périodes différents ; leur comparaison immédiate peut donc être trompeuse."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une facture de 1 000 € distingue 600 € de prestation exclusivement pour A et 400 € de service commun à A et B. Le modèle affecte directement les 600 € à A et partage le commun par moitié. Quel montant de cette facture imputer à A ?",
+      "options": [
+        "800 €",
+        "500 €",
+        "1 000 €",
+        "600 €"
+      ],
+      "answer": 0,
+      "explanation": "La facture doit être décomposée selon sa traçabilité : 600 € sont propres à A, auxquels s’ajoute sa moitié du service commun, 400 × 50 % = 200 €. A reçoit donc 800 €, et B les 200 € restants.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 600
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 400
+                },
+                {
+                  "value": 0.5
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 800,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La totalité des frais d’un service commun est affectée au produit le plus rentable pour préserver les autres marges. Quel défaut de méthode apparaît ?",
+      "options": [
+        "Une sous-estimation des charges propres au produit, que le service commun ne doit pas compenser.",
+        "L’imputation est guidée par le résultat souhaité plutôt que par une consommation explicable.",
+        "Une différence de calendrier des décaissements, qui suffit à expliquer cette affectation du service.",
+        "Une erreur de classement fixe-variable, qui imposerait de rendre toute la charge variable."
+      ],
+      "answer": 1,
+      "explanation": "Une convention ne doit pas seulement fabriquer les marges désirées. Il faut relier les charges aux usages ou activités pertinents et conserver une explication vérifiable de la répartition."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un lot consomme 30 heures d’un centre dont le coût d’unité d’œuvre est 20 € par heure. Quelle charge du centre doit-il recevoir ?",
+      "options": [
+        "0,667 €",
+        "50 €",
+        "600 €",
+        "1,50 €"
+      ],
+      "answer": 2,
+      "explanation": "L’imputation suit heures du lot × coût horaire, soit 30 × 20 = 600 €. Diviser les deux nombres ne mesure pas les euros de ressources attribués au lot.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 30
+            },
+            {
+              "value": 20
+            }
+          ]
+        },
+        "expected": 600,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un lot de 100 unités comparables supporte un coût complet total de 1 500 €, sans rebut ni autre quantité. Quel coût unitaire obtient-on ?",
+      "options": [
+        "150 000 € par unité",
+        "1 400 € par unité",
+        "0,0667 € par unité",
+        "15 € par unité"
+      ],
+      "answer": 3,
+      "explanation": "Le coût unitaire vaut 1 500 / 100 = 15 €. L’hypothèse précise la quantité au dénominateur ; il ne faut pas multiplier le total par le nombre d’unités.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1500
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 15,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le modèle transfère 30 % des 2 000 € du service auxiliaire vers un centre principal qui avait 1 400 € de charges propres. Après transfert, ce centre répartit son coût sur 100 heures. Le produit A en consomme 3. Quel coût du centre imputer à A ?",
+      "options": [
+        "60 €",
+        "42 €",
+        "18 €",
+        "102 €"
+      ],
+      "answer": 0,
+      "explanation": "Le centre reçoit 2 000 × 30 % = 600 €. Avec ses 1 400 € propres, il répartit 2 000 € sur 100 heures, soit 20 €/h. Trois heures consommées par A donnent 60 €. Le transfert précède le calcul du coût horaire.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 1400
+                    },
+                    {
+                      "op": "*",
+                      "args": [
+                        {
+                          "value": 2000
+                        },
+                        {
+                          "value": 0.3
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "value": 100
+                }
+              ]
+            },
+            {
+              "value": 3
+            }
+          ]
+        },
+        "expected": 60,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Les coûts imputés à tous les produits dépassent les charges du centre, alors que tout le centre doit être réparti une seule fois dans ce modèle. Quel contrôle est utile ?",
+      "options": [
+        "Réduire uniformément les imputations jusqu’au total des charges sans rechercher leur origine.",
+        "Rapprocher les charges du centre et la somme des imputations, en recherchant doublons ou unités incohérentes.",
+        "Compenser l’excédent par une baisse des matières directes sans vérifier leur montant.",
+        "Présenter l’écart comme coût de sous-activité avant de comparer les unités d’œuvre retenues."
+      ],
+      "answer": 1,
+      "explanation": "Le total attribué doit respecter la convention de répartition. Un rapprochement permet d’identifier des consommations comptées deux fois, un taux incohérent ou un défaut de périmètre avant de conclure sur les produits."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Les heures d’activité diminuent et les mêmes charges sont divisées par moins d’heures. Le coût de l’heure augmente. Que faut-il éviter d’en déduire automatiquement ?",
+      "options": [
+        "Le dénominateur a changé dans le calcul.",
+        "Le taux peut augmenter sans hausse des charges totales.",
+        "Le centre a nécessairement dépensé davantage en euros.",
+        "Le niveau d’activité mérite d’être pris en compte dans le commentaire."
+      ],
+      "answer": 2,
+      "explanation": "Un coût unitaire peut varier avec l’activité même si les charges totales ne changent pas. Il faut séparer la variation du taux et celle de la dépense pour interpréter correctement l’évolution."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un calcul additionne matières directes, main-d’œuvre directe et le centre qui contient déjà ces mêmes matières. Quel risque apparaît ?",
+      "options": [
+        "Seule la main-d’œuvre doit être retirée du coût, puisque les matières figurent dans le centre.",
+        "Les matières peuvent rester ajoutées séparément si le centre contient le même achat sous une autre rubrique.",
+        "Le double ajout est neutralisé par la répartition du centre entre plusieurs produits.",
+        "Une même charge peut être comptée deux fois dans le coût."
+      ],
+      "answer": 3,
+      "explanation": "Le périmètre des éléments additionnés doit être contrôlé. La complétude ne justifie pas un double compte ; il faut identifier ce qui est déjà inclus dans un centre avant d’ajouter les charges directes."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les données ne permettent pas de connaître la consommation d’un service commun par produit. Quelle réponse méthodologique est préférable ?",
+      "options": [
+        "Expliciter la limite et rechercher une mesure ou une clé justifiée avec ses hypothèses.",
+        "Répartir également par produit en tenant cette égalité pour preuve de consommations égales.",
+        "Reprendre la clé d’un autre service sans vérifier la comparabilité des activités.",
+        "Utiliser les volumes vendus sans rechercher leur relation avec la consommation du service."
+      ],
+      "answer": 0,
+      "explanation": "Une information manquante doit rester visible. Le choix d’un modèle de répartition peut être nécessaire mais demande une justification et des limites, pas une certitude fabriquée à partir de données absentes."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un responsable veut utiliser un coût complet moyen pour décider d’une commande supplémentaire, sans examiner ce que cette commande change. Quel préalable est utile ?",
+      "options": [
+        "Répartir les mêmes fixes sur le nouveau volume et traiter la baisse du coût moyen comme une économie décaissée.",
+        "Définir la question et les ressources réellement modifiées avant de choisir le périmètre de coût pertinent.",
+        "Considérer tout coût indirect imputé comme une dépense évitable si la commande est refusée.",
+        "Retenir seulement les matières ajoutées sans vérifier la capacité disponible ni les autres ressources déclenchées."
+      ],
+      "answer": 1,
+      "explanation": "Une méthode doit servir un objectif précis. Le coût complet décrit un périmètre global ; une décision additionnelle demande d’examiner les effets propres de l’option plutôt que supposer leur égalité avec un coût moyen."
+    }
+  ]
+}

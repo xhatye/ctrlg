@@ -1,0 +1,356 @@
+{
+  "module": "UE1",
+  "chapter": "personnes-patrimoine",
+  "sourceHash": "2e428b7e4ceacecd085d9edc95f504de718b57c23db5215d8c5b77143b0fd622",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Qu’est-ce qu’une personne physique en droit ?",
+      "options": [
+        "Un être humain titulaire de droits et d’obligations.",
+        "Une société exerçant une activité matérielle.",
+        "Un patrimoine affecté à une activité économique.",
+        "Une enseigne enregistrée au nom d’une entreprise."
+      ],
+      "answer": 0,
+      "explanation": "La personne physique est l’être humain, à distinguer d’une organisation dotée de personnalité morale. Son activité professionnelle ne constitue pas à elle seule une autre personne."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Nora exerce une activité en son nom sous l’enseigne « Atelier N ». Aucune société n’est constituée. Qui faut-il identifier comme sujet de droit pour le contrat qu’elle signe personnellement ?",
+      "options": [
+        "L’enseigne Atelier N, distincte de Nora.",
+        "Nora, personne physique exerçant cette activité.",
+        "La clientèle de l’atelier, considérée comme un groupement.",
+        "Le local où l’activité est exercée."
+      ],
+      "answer": 1,
+      "explanation": "L’enseigne désigne l’activité mais ne crée pas, par elle-même, une personne distincte. Le sujet qui signe personnellement reste Nora, sous réserve des règles patrimoniales de son activité."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant conclut que l’ouverture d’une seconde boutique par un entrepreneur en son nom crée une seconde personne physique. Que faut-il lui expliquer ?",
+      "options": [
+        "Chaque local professionnel constitue une personne morale.",
+        "Chaque activité exige un nouvel être humain titulaire des droits.",
+        "Le nombre de lieux d’activité ne détermine pas le nombre de sujets de droit.",
+        "La personnalité physique appartient uniquement au premier établissement."
+      ],
+      "answer": 2,
+      "explanation": "Les lieux et activités ne sont pas des personnes. Il faut identifier l’être humain et les éventuelles organisations juridiquement distinctes, plutôt que compter les établissements."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dossier évoque une protection de certains biens d’un entrepreneur individuel. Quelle question doit être distinguée de cette protection ?",
+      "options": [
+        "Le montant des biens protégés.",
+        "La nature professionnelle de la dette.",
+        "Le régime patrimonial applicable à l’activité.",
+        "L’existence éventuelle d’une personne distincte de l’entrepreneur."
+      ],
+      "answer": 3,
+      "explanation": "Une règle de protection patrimoniale concerne les biens et dettes concernés. Elle ne démontre pas, par elle-même, qu’une société ou un autre sujet de droit a été créé."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat désigne uniquement « Cabinet Horizon », alors que deux personnes exercent séparément sous cette même appellation. Quelle vérification effectuer d’abord ?",
+      "options": [
+        "Identifier précisément la personne qui contracte sous cette appellation.",
+        "Attribuer le contrat à celle qui dispose du local le plus grand.",
+        "Partager la dette entre les deux activités selon leur chiffre d’affaires.",
+        "Traiter l’appellation comme une société déjà constituée."
+      ],
+      "answer": 0,
+      "explanation": "Une appellation seule peut laisser incertaine l’identité du cocontractant. Il faut rechercher les mentions et pièces désignant le sujet de droit engagé."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans une société dotée de la personnalité morale, quelle distinction est essentielle ?",
+      "options": [
+        "La société et son représentant possèdent nécessairement le même patrimoine.",
+        "La société est un sujet de droit distinct de son représentant.",
+        "Le représentant devient propriétaire personnel des biens qu’il commande pour elle.",
+        "La personnalité de la société dépend de la présence physique du représentant lors de chaque acte."
+      ],
+      "answer": 1,
+      "explanation": "La société et l’être humain qui agit pour elle sont distincts. La représentation permet d’agir au nom d’un sujet sans confondre son patrimoine avec celui du signataire."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat désigne la société Delta comme acheteuse. Sa directrice habilitée signe expressément au nom de Delta ; les conditions d’engagement sont remplies. À qui rattacher la dette de prix ?",
+      "options": [
+        "À la directrice en raison de sa signature matérielle.",
+        "À l’associé majoritaire en raison du contrôle de Delta.",
+        "À Delta, partie acheteuse représentée à l’acte.",
+        "Au salarié qui réceptionnera le bien."
+      ],
+      "answer": 2,
+      "explanation": "La directrice agit ici pour la société dans les conditions indiquées. La dette se rattache à l’acheteuse Delta et non à la seule main qui a signé."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société possède des machines et son associé détient les titres de cette société. Quel énoncé distingue correctement ces objets ?",
+      "options": [
+        "L’associé détient les machines en indivision avec la société à proportion de ses titres.",
+        "Les machines sont détenues directement par l’associé, la société n’étant que leur gestionnaire.",
+        "La détention des titres confère à l’associé un droit de propriété sur chaque machine prise séparément.",
+        "L’associé détient ses titres ; la société détient les machines qui lui appartiennent."
+      ],
+      "answer": 3,
+      "explanation": "La propriété de titres ne se confond pas avec la propriété directe des actifs sociaux. Il faut rattacher chaque objet au patrimoine de son titulaire."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un dossier attribue une obligation à une association dont les conditions de personnalité juridique ne sont pas documentées. Quelle étape manque avant de traiter le groupement comme une personne distincte ?",
+      "options": [
+        "Vérifier les conditions juridiques et pièces établissant sa personnalité.",
+        "Rechercher seulement le nombre de ses adhérents.",
+        "Choisir le membre disposant du plus grand patrimoine.",
+        "Utiliser la présence d’un nom collectif comme preuve suffisante."
+      ],
+      "answer": 0,
+      "explanation": "La personnalité dépend du régime et des conditions du groupement. Le nom et le nombre de membres n’établissent pas, à eux seuls, l’existence d’un sujet distinct."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dirigeant change, mais le contrat de location désigne toujours la même société dotée de personnalité morale. Quel raisonnement initial adopter ?",
+      "options": [
+        "Le départ de l’ancien dirigeant transfère le bail à son patrimoine.",
+        "Identifier la continuité de la partie sociale et examiner séparément sa nouvelle représentation.",
+        "Partager les loyers entre les deux dirigeants selon leur durée de fonction.",
+        "Assimiler le changement de dirigeant à la création d’un autre locataire."
+      ],
+      "answer": 1,
+      "explanation": "L’identité de la société ne se confond pas avec celle de ses représentants successifs. Il faut distinguer la partie au contrat et la personne habilitée à agir pour elle."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Un matériel figure dans les locaux d’une organisation. Quelle information peut-on en déduire immédiatement ?",
+      "options": [
+        "L’organisation en est propriétaire.",
+        "Le dirigeant l’a acquis personnellement.",
+        "Le matériel est présent dans les locaux, mais son titre de détention reste à déterminer.",
+        "Le fournisseur conserve nécessairement sa propriété."
+      ],
+      "answer": 2,
+      "explanation": "La présence et l’usage ne suffisent pas à attribuer la propriété. Il faut rechercher les contrats ou titres permettant de distinguer achat, location et autre détention."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise utilise une imprimante mise à disposition par location. Le contrat identifie le loueur comme propriétaire. Comment présenter la ressource ?",
+      "options": [
+        "Un actif appartenant personnellement au salarié utilisateur.",
+        "Un bien dont l’entreprise dispose d’un droit de vente du seul fait de son usage.",
+        "Un bien détenu par le client qui rembourse les impressions.",
+        "Un matériel utilisé par l’entreprise et appartenant au loueur selon le contrat."
+      ],
+      "answer": 3,
+      "explanation": "Le droit d’utiliser le matériel découle de la location, tandis que la propriété est attribuée au loueur. Usage professionnel et titularité doivent être distingués."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un titre confère à une personne l’usufruit d’un bien et laisse à une autre la nue-propriété. Selon 578, quel droit l’usufruitier détient-il ?",
+      "options": [
+        "La jouissance du bien d’autrui, avec obligation d’en conserver la substance.",
+        "Une moitié de pleine propriété en indivision, quel que soit le titre.",
+        "Un droit de vendre seul la pleine propriété en conservant tout le prix.",
+        "Une créance de remboursement d’un prêt garanti par ce bien."
+      ],
+      "answer": 0,
+      "explanation": "L’usufruit est un droit de jouissance sur un bien dont la propriété appartient à un autre, à charge de conserver sa substance. Il ne doit pas être assimilé à une quote-part indivise de pleine propriété.",
+      "references": [
+        {
+          "title": "Code civil, article 578, usufruit",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006429233"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des indivisaires titulaires de 70 % des droits veulent accomplir un acte d’administration relevant de l’exploitation normale du bien. Ils informent les autres. Hors convention ou dispositif particulier, quel seuil de 815-3 permet cette décision ?",
+      "options": [
+        "La majorité en nombre des personnes, sans tenir compte des droits indivis.",
+        "Au moins deux tiers des droits indivis pour cet acte d’administration.",
+        "L’unanimité imposée à tout acte, y compris celui donné en administration normale.",
+        "Au moins trois quarts des droits indivis, seuil applicable selon cette analyse à l’administration normale."
+      ],
+      "answer": 1,
+      "explanation": "815-3 admet notamment les actes d’administration à la majorité d’au moins deux tiers des droits indivis, avec information des autres. Le texte distingue ce régime de celui des actes de disposition ou hors exploitation normale.",
+      "references": [
+        {
+          "title": "Code civil, article 815-3, administration des biens indivis",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006432378/2020-07-09"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie mélange une dette personnelle d’un associé et une dette de la société parce qu’elles ont été contractées le même jour. Quel critère doit remplacer cette coïncidence ?",
+      "options": [
+        "La source de financement commune, tenue pour fusion des deux débiteurs.",
+        "La personne qui tire un avantage économique de chaque dépense, indépendamment de l’engagement.",
+        "L’identité de la personne engagée dans chaque opération.",
+        "La personne qui a effectué matériellement le virement, assimilée dans tous les cas au débiteur."
+      ],
+      "answer": 2,
+      "explanation": "La date ne fusionne pas les sujets de droit. Il faut examiner qui s’est engagé pour rattacher chaque dette au patrimoine concerné."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société conserve un véhicule appartenant à un tiers ; le dossier ne précise pas le contrat autorisant cette utilisation. Quelle conclusion est adaptée ?",
+      "options": [
+        "La détention transforme le véhicule en bien social.",
+        "L’absence du contrat prouve un achat au comptant.",
+        "Le dirigeant est propriétaire parce qu’il détient les clés.",
+        "La propriété du tiers est indiquée ; le fondement et l’étendue du droit d’usage restent à documenter."
+      ],
+      "answer": 3,
+      "explanation": "Le dossier sépare déjà propriétaire et utilisateur. La pièce manquante concerne le fondement de l’usage, dont il ne faut pas inventer les conditions."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel objet a l’examen des pouvoirs d’un représentant ?",
+      "options": [
+        "Déterminer s’il est habilité à agir au nom de la personne représentée dans l’acte considéré.",
+        "Déterminer si les biens de la personne représentée deviennent les siens.",
+        "Déterminer si la représentation crée une nouvelle personne physique.",
+        "Déterminer si le représenté cesse d’être titulaire de ses obligations."
+      ],
+      "answer": 0,
+      "explanation": "Les pouvoirs concernent l’habilitation à agir pour autrui. Ils ne suppriment pas la distinction des sujets ni ne transfèrent automatiquement leurs biens."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une délégation autorise une responsable à commander du mobilier, mais le contrat à signer porte sur un emprunt. Que doit-on examiner ?",
+      "options": [
+        "La présence de son nom dans la délégation suffit à couvrir l’emprunt.",
+        "L’étendue de l’habilitation et sa correspondance avec l’opération d’emprunt.",
+        "La délégation prouve qu’elle sera personnellement débitrice de l’emprunt.",
+        "La valeur du mobilier déjà acheté remplace tout contrôle du mandat."
+      ],
+      "answer": 1,
+      "explanation": "L’habilitation doit être rapprochée de l’acte envisagé. Un mandat pour une catégorie d’achats ne décrit pas nécessairement un pouvoir pour un financement distinct."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un représentant déclare agir pour le compte d’autrui mais conclut le contrat en son propre nom, dans le cas du second alinéa de 1154. Qui cet alinéa désigne-t-il comme engagé envers le cocontractant ?",
+      "options": [
+        "Le représenté seul, même si son nom n’est pas celui du contractant.",
+        "Le représentant et le représenté nécessairement comme codébiteurs solidaires.",
+        "Le représentant seul, qui a contracté en son propre nom.",
+        "Le bénéficiaire final du bien, quel que soit le nom sous lequel le contrat est conclu."
+      ],
+      "answer": 2,
+      "explanation": "1154 distingue la représentation au nom du représenté et l’action pour son compte en nom propre. Dans cette seconde situation, le représentant est seul engagé à l’égard du cocontractant.",
+      "references": [
+        {
+          "title": "ANC, annexe officielle reproduisant l’article 1154 du Code civil",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Autres%20publications/Compta_produits-ventes-biens-services/Consultation-publique-annexe1.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant affirme que la personnalité morale d’une société prouve les pouvoirs de toute personne qui affirme la représenter. Quelle distinction manque ?",
+      "options": [
+        "La distinction entre dette et créance dans le patrimoine du signataire.",
+        "La distinction entre le prix et la date de l’engagement.",
+        "La distinction entre siège social et domicile du dirigeant.",
+        "La distinction entre existence du représenté et habilitation du représentant."
+      ],
+      "answer": 3,
+      "explanation": "La personnalité répond à l’existence du sujet de droit ; les pouvoirs répondent à l’habilitation de celui qui agit pour lui. Le premier contrôle ne remplace pas le second."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat et une délégation de signature concernent deux sociétés différentes du même groupe. Quelle vérification est nécessaire ?",
+      "options": [
+        "Faire correspondre le représenté désigné au contrat avec la personne ayant donné les pouvoirs.",
+        "Attribuer les pouvoirs à toutes les sociétés dès lors que leurs dirigeants se connaissent.",
+        "Retenir la délégation du groupe la plus récente, quelle que soit la société concernée.",
+        "Déduire de la délégation que le signataire engage toujours son patrimoine personnel."
+      ],
+      "answer": 0,
+      "explanation": "Les pouvoirs doivent être rattachés au bon représenté. L’existence d’un groupe ne rend pas les mandats de toutes ses sociétés interchangeables."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le même dirigeant signe un contrat pour sa société et un engagement personnel distinct dans le même dossier. Comment lire ses signatures ?",
+      "options": [
+        "Comme un engagement exclusivement social pour les deux actes.",
+        "En identifiant la qualité et la personne engagée dans chacun des actes.",
+        "Comme un transfert de tout son patrimoine à la société.",
+        "Comme un engagement personnel pour tout acte social futur."
+      ],
+      "answer": 1,
+      "explanation": "Une personne peut agir dans des qualités différentes. Il faut lire séparément les actes et leurs termes pour identifier le représenté et l’éventuel engagement personnel."
+    }
+  ]
+}

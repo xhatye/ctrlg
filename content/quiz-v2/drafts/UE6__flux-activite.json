@@ -1,0 +1,437 @@
+{
+  "module": "UE6",
+  "chapter": "flux-activite",
+  "sourceHash": "e18225a4d308000db5e817520b460c75a74bbd82d2874fc822021c8536ce938c",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi un tableau de flux construit à partir du résultat nécessite-t-il des corrections ?",
+      "options": [
+        "Le résultat inclut des éléments non monétaires et des décalages de paiement",
+        "Le résultat est toujours égal à la variation bancaire",
+        "Chaque produit correspond obligatoirement à un paiement immédiat",
+        "Les charges non monétaires sont toujours des investissements payés"
+      ],
+      "answer": 0,
+      "explanation": "Le résultat repose sur des produits et charges, pas uniquement sur les mouvements d’argent. Les corrections expliquent leur passage aux flux."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans une méthode indirecte simplifiée, une dotation non monétaire est retranchée une seconde fois du résultat pour calculer le flux. Quelle correction faut-il faire ?",
+      "options": [
+        "La considérer comme un remboursement de capital",
+        "Neutraliser la charge calculée en l’ajoutant au résultat",
+        "L’ajouter aux ventes puis la payer à la banque",
+        "Supprimer la dette fournisseur du bilan"
+      ],
+      "answer": 1,
+      "explanation": "La dotation a déjà diminué le résultat sans paiement correspondant. La retrancher encore accentue l’écart au lieu de le corriger."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un résultat comprend une vente non encore encaissée. Quelle information aide à expliquer le passage vers le flux d’activité ?",
+      "options": [
+        "La seule durée d’amortissement des immobilisations",
+        "Le montant nominal du capital social sans variation",
+        "La variation des créances liée au décalage de règlement",
+        "Le cumul des dividendes depuis la création"
+      ],
+      "answer": 2,
+      "explanation": "Une vente comptabilisée mais non encaissée laisse des ressources immobilisées chez les clients. Le passage aux flux doit rendre ce décalage visible."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le responsable assimile directement CAF et flux d’activité alors que le BFR augmente. Que manque-t-il au passage simplifié ?",
+      "options": [
+        "L’ajout de tout le prix d’achat des machines comme produit",
+        "Le retrait de la totalité du résultat une seconde fois",
+        "L’ajout obligatoire des nouveaux emprunts dans l’activité",
+        "La consommation de trésorerie liée à la variation du BFR"
+      ],
+      "answer": 3,
+      "explanation": "La CAF constitue une étape de ressource potentielle. Dans le schéma donné, une hausse du BFR absorbe une partie de cette ressource."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise réalise un produit non monétaire dans le résultat de départ. Le modèle demande de neutraliser tous ces produits. Quel traitement convient ?",
+      "options": [
+        "Le retrancher pour ne pas le présenter comme un encaissement",
+        "L’ajouter une seconde fois au flux",
+        "Le traiter comme une dette payée",
+        "Le garder comme encaissement certain sans autre information"
+      ],
+      "answer": 0,
+      "explanation": "Un produit sans encaissement ne peut pas rester assimilé à un flux monétaire. Sa neutralisation retire l’effet déjà compris dans le résultat."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans le schéma flux d’activité = CAF − variation du BFR, la CAF est 45 000 € et le BFR augmente de 9 000 €. Quel flux obtient-on ?",
+      "options": [
+        "54 000 €",
+        "36 000 €",
+        "45 000 €",
+        "9 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La hausse du besoin consomme une ressource : 45 000 − 9 000 = 36 000 € de flux d’activité simplifié.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 45000
+            },
+            {
+              "value": 9000
+            }
+          ]
+        },
+        "expected": 36000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La CAF est de 28 000 €. Le BFR passe de 18 000 € à 12 000 €. Avec le modèle flux d’activité = CAF − variation du BFR, quel flux calcule-t-on ?",
+      "options": [
+        "22 000 €",
+        "16 000 €",
+        "34 000 €",
+        "40 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La variation du BFR est 12 000 − 18 000 = −6 000 €. Sa diminution libère 6 000 €, d’où 28 000 − (−6 000) = 34 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 28000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 18000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 34000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le BFR final est 20 000 € et le BFR initial 17 000 €. L’analyste déduit 20 000 € de la CAF dans le passage aux flux. Quelle donnée devait-il retenir ?",
+      "options": [
+        "Le cumul de 37 000 €",
+        "Le seul BFR initial de 17 000 €",
+        "La moitié du BFR final par convention générale",
+        "La variation de 3 000 €, pas le stock final de besoin"
+      ],
+      "answer": 3,
+      "explanation": "Un passage de période mesure la ressource supplémentaire immobilisée. Déduire le stock final recompterait le besoin déjà présent à l’ouverture."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le BFR reste négatif mais devient moins négatif au cours de la période. Quel effet de sa variation faut-il intégrer dans le modèle usuel ?",
+      "options": [
+        "Une consommation de ressources liée à une variation positive",
+        "Une libération de ressources garantie par le seul signe négatif",
+        "Aucun effet car tout BFR négatif est exclu des flux",
+        "Une charge comptable égale au BFR final"
+      ],
+      "answer": 0,
+      "explanation": "Passer vers une valeur moins négative correspond à une hausse du BFR. Le signe du niveau final ne doit pas être confondu avec celui de la variation."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau définit ΔBFR comme initial moins final, puis applique une formule qui suppose final moins initial. Quelle correction est nécessaire ?",
+      "options": [
+        "Ajouter simplement le BFR final aux deux côtés",
+        "Harmoniser la convention de variation et le signe du passage aux flux",
+        "Supprimer toutes les créances du calcul",
+        "Modifier la CAF pour retrouver une trésorerie positive"
+      ],
+      "answer": 1,
+      "explanation": "Une variation peut être définie selon deux conventions, mais la formule doit suivre celle choisie. Leur mélange inverse l’effet économique."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le cadre du dossier classe acquisitions d’actifs en investissement et nouveaux emprunts en financement. Une machine est achetée avec un prêt encaissé séparément. Quelle présentation convient ?",
+      "options": [
+        "Déduire le prêt du prix de la machine pour ne montrer qu’un investissement net",
+        "Classer la machine en activité car elle sera utilisée pour vendre",
+        "Présenter le paiement de la machine et l’emprunt dans leurs catégories distinctes",
+        "Classer le prêt comme une vente de matériel"
+      ],
+      "answer": 2,
+      "explanation": "Le financement explique la source de fonds mais ne réduit pas le coût de l’actif acquis. Les deux flux distincts doivent rester traçables."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier impose de classer les intérêts payés en flux d’activité. Le tableau les classe en financement sans explication. Quel principe est en cause ?",
+      "options": [
+        "L’interdiction universelle de classer des intérêts hors activité",
+        "L’obligation de confondre intérêts et principal",
+        "Le fait que tous les intérêts sont non monétaires",
+        "Le respect du cadre demandé, qu’il faut annoncer et appliquer"
+      ],
+      "answer": 3,
+      "explanation": "Les classements doivent suivre le référentiel et les conventions du cas. Il ne faut pas présenter une classification choisie comme universelle."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une immobilisation a été acquise, mais son règlement est entièrement reporté après la période analysée. Quel traitement correspond à un tableau des seuls mouvements de trésorerie de cette période ?",
+      "options": [
+        "Ne pas afficher un paiement qui n’a pas encore eu lieu et documenter l’opération non monétaire si requis",
+        "Déduire immédiatement le prix comme s’il avait été payé",
+        "Ajouter le prix aux encaissements de financement",
+        "Traiter l’achat comme une dotation payée"
+      ],
+      "answer": 0,
+      "explanation": "Un tableau de trésorerie suit les paiements effectifs du périmètre. Une acquisition non réglée appelle une information adaptée, sans inventer de décaissement."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Le remboursement du principal d’un emprunt et son encaissement initial ont-ils la même nature que la vente de marchandises ?",
+      "options": [
+        "Oui, ils sont des produits d’activité au même titre que les ventes",
+        "Non, ils relèvent du financement dans le cadre annoncé",
+        "Oui, ils mesurent tous la marge commerciale",
+        "Non, mais ils constituent tous des achats d’actifs"
+      ],
+      "answer": 1,
+      "explanation": "Le principal d’emprunt correspond à une ressource financière reçue puis remboursée. Il ne mesure pas une vente ni un résultat d’exploitation."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un nouveau prêt figure à la fois dans la ligne des encaissements d’activité et dans celle du financement. Que faut-il corriger ?",
+      "options": [
+        "L’absence d’un encaissement, supposée compensée par deux catégories",
+        "Un reclassement sans effet sur le total bien que le même flux ait été ajouté deux fois",
+        "Le double enregistrement du même encaissement",
+        "Une sous-estimation de ressources égale au principal reçu"
+      ],
+      "answer": 2,
+      "explanation": "Le prêt reçu une seule fois ne doit apparaître qu’une fois dans la somme des flux. La traçabilité permet d’identifier le doublon."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans le cadre fourni, le flux d’activité est +30 000 €, l’investissement payé −42 000 € et le financement net +18 000 €. Sans autre effet, quelle variation nette de trésorerie obtient-on ?",
+      "options": [
+        "90 000 €",
+        "−30 000 €",
+        "12 000 €",
+        "6 000 €"
+      ],
+      "answer": 3,
+      "explanation": "On additionne les flux avec leurs signes : 30 000 − 42 000 + 18 000 = 6 000 € de variation nette.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 30000
+                },
+                {
+                  "value": 42000
+                }
+              ]
+            },
+            {
+              "value": 18000
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La trésorerie initiale est de 7 000 € et la somme des flux de la période de −11 000 €, sans autre effet. Quel solde final calcule-t-on ?",
+      "options": [
+        "−4 000 €",
+        "18 000 €",
+        "4 000 €",
+        "−11 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le solde final vaut initial plus variation : 7 000 − 11 000 = −4 000 €. Ce déficit doit être expliqué ou financé dans le modèle.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 7000
+            },
+            {
+              "value": -11000
+            }
+          ]
+        },
+        "expected": -4000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La trésorerie passe de 5 000 € à 14 000 €. Les flux connus totalisent +7 000 € et aucun autre effet n’est supposé. Quel flux net manque pour réconcilier le tableau ?",
+      "options": [
+        "9 000 €",
+        "2 000 €",
+        "12 000 €",
+        "−2 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La variation observée est 14 000 − 5 000 = 9 000 €. Les flux connus n’en expliquent que 7 000 €, il manque donc +2 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 14000
+                },
+                {
+                  "value": 5000
+                }
+              ]
+            },
+            {
+              "value": 7000
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La somme des flux explique exactement le solde bancaire final. Peut-on conclure que chaque flux a été classé dans la bonne catégorie ?",
+      "options": [
+        "Oui, l’égalité prouve la nature correcte de chaque opération",
+        "Oui, tant que la trésorerie finale est positive",
+        "Non, une erreur de catégorie peut conserver la somme totale",
+        "Non, car un tableau réconcilié est forcément incomplet"
+      ],
+      "answer": 2,
+      "explanation": "L’égalité vérifie les montants globaux, pas toutes les imputations. Déplacer un flux entre catégories ne change pas nécessairement le total."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le solde final calculé diffère du solde observé. Quelle démarche est prioritaire ?",
+      "options": [
+        "Créer une ligne d’exploitation sans justificatif pour fermer l’écart",
+        "Modifier le solde initial sans consulter la période précédente",
+        "Conclure immédiatement à une perte comptable",
+        "Rechercher omissions, doublons, dates et effets exclus du périmètre"
+      ],
+      "answer": 3,
+      "explanation": "Un écart est un signal de contrôle. Il doit être résolu par la traçabilité des mouvements et des conventions, pas par un ajustement arbitraire."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un tableau de flux, la variation de trésorerie doit être rapprochée de quelle différence ?",
+      "options": [
+        "Trésorerie finale moins trésorerie initiale",
+        "Trésorerie initiale moins trésorerie finale",
+        "Trésorerie finale augmentée de la trésorerie initiale",
+        "Le solde de trésorerie final seul, sans reprise du solde initial"
+      ],
+      "answer": 0,
+      "explanation": "Le tableau explique le passage entre deux positions de trésorerie. La comparaison avec cette différence constitue un contrôle de cohérence indispensable."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau affiche une variation négative mais une trésorerie finale encore positive. Le lecteur y voit une contradiction. Quelle explication convient ?",
+      "options": [
+        "Toute variation négative rend automatiquement le solde final négatif",
+        "La trésorerie initiale peut être assez élevée pour absorber la baisse",
+        "La variation doit être remplacée par le bénéfice",
+        "Un solde positif impose une variation positive"
+      ],
+      "answer": 1,
+      "explanation": "Niveau et variation sont distincts. Une trésorerie peut diminuer au cours d’une période tout en demeurant positive après cette baisse."
+    }
+  ]
+}

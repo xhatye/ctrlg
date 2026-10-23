@@ -1,0 +1,566 @@
+{
+  "module": "UE11",
+  "chapter": "budget-production",
+  "sourceHash": "2cdae0fb50f3ddc6588eaaae1ca8e290c021b0c841a67990dc71a776d380559c",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Sans rebut ni encours, les ventes prévues sont 2 000 unités, le stock initial 300 et le stock final cible 500. Quelle production faut-il programmer ?",
+      "options": [
+        "2 800 unités",
+        "2 200 unités",
+        "1 800 unités",
+        "1 200 unités"
+      ],
+      "answer": 1,
+      "explanation": "La production couvre les ventes et l’augmentation souhaitée du stock : 2 000 + 500 − 300 = 2 200 unités. Le stock initial constitue une ressource déjà disponible.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 2000
+                },
+                {
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "value": 300
+            }
+          ]
+        },
+        "expected": 2200,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Le stock de produits passe d’un niveau initial de 300 unités à une cible finale de 500. Quelle variation signée est recherchée ?",
+      "options": [
+        "800 unités",
+        "-200 unités",
+        "200 unités",
+        "0,60 unité"
+      ],
+      "answer": 2,
+      "explanation": "La variation de stock est final − initial : 500 − 300 = +200 unités. Cette augmentation demande une production supplémentaire par rapport aux seules ventes, sous les hypothèses sans perte.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 500
+            },
+            {
+              "value": 300
+            }
+          ]
+        },
+        "expected": 200,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le programme est de 2 200 produits. Chaque produit consomme 2 kg de matière, sans perte ni rebut. Quelle consommation totale prévoir ?",
+      "options": [
+        "4 400 kg",
+        "1 100 kg",
+        "2 202 kg",
+        "200 kg"
+      ],
+      "answer": 0,
+      "explanation": "La consommation suit la production, y compris les produits destinés au stock : 2 200 × 2 = 4 400 kg. Les seules ventes ne décrivent pas le besoin de fabrication.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 2200
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "expected": 4400,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La production consomme 4 400 kg de matière au prix prévu de 4 €/kg, sans autre charge dans ce calcul. Quelle valeur de matière obtient-on ?",
+      "options": [
+        "1 100 €",
+        "4 404 €",
+        "400 €",
+        "17 600 €"
+      ],
+      "answer": 3,
+      "explanation": "La valeur de consommation est 4 400 × 4 = 17 600 €. Ce montant ne constitue pas automatiquement le paiement du mois ni le coût complet de la production.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 4400
+            },
+            {
+              "value": 4
+            }
+          ]
+        },
+        "expected": 17600,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un budget prévoit une hausse du stock final mais fixe la production égale aux ventes, sans autre entrée. Quel besoin est omis ?",
+      "options": [
+        "Les unités supplémentaires qu’il faudrait vendre pour financer la hausse du stock, supposées faire partie des ventes déjà prévues.",
+        "Les unités supplémentaires nécessaires pour augmenter le stock.",
+        "Les unités du stock initial à fabriquer de nouveau, indépendamment du niveau de la cible finale.",
+        "Les unités achetées aux fournisseurs, supposées constituer des produits finis alors que le modèle ne prévoit aucune autre entrée."
+      ],
+      "answer": 1,
+      "explanation": "Si le stock doit augmenter, les fabrications dépassent les sorties vendues dans ce modèle. Reprendre uniquement les ventes ignore l’objectif de stockage et rend l’équation de flux incohérente."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le stock final cible est inférieur au stock initial et aucun rebut n’est prévu. Quelle incidence peut avoir ce déstockage sur la production nécessaire ?",
+      "options": [
+        "Il impose de rajouter la baisse de stock aux ventes pour obtenir les unités à fabriquer.",
+        "Il permet de réduire la production de la totalité du stock final cible, sans examiner le stock initial.",
+        "Il permet de satisfaire une partie des ventes avec les unités déjà en stock.",
+        "Il permet de réduire les ventes prévues du même montant, même si les commandes clients restent inchangées."
+      ],
+      "answer": 2,
+      "explanation": "Le stock initial peut alimenter les ventes. Une cible plus basse autorise une diminution de stock et réduit donc la production nécessaire, sous réserve de la cohérence du volume et de la disponibilité."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le besoin de matière est calculé sur les ventes alors que la production inclut aussi une hausse de stock. Quelle correction est nécessaire ?",
+      "options": [
+        "Utiliser le volume à fabriquer pour appliquer le besoin de matière par produit.",
+        "Ajouter à la matière des ventes la matière du seul stock final, sans déduire le stock initial de produits disponibles.",
+        "Appliquer la norme matière aux ventes puis valoriser les produits fabriqués pour le stock comme s’ils n’avaient consommé que du temps machine.",
+        "Appliquer la norme matière aux ventes puis ajouter encore la matière de toute la production prévue."
+      ],
+      "answer": 0,
+      "explanation": "La matière est consommée par la fabrication, pas seulement par la vente. Des produits fabriqués pour le stock mobilisent aussi les ressources dans le modèle donné."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La matière est valorisée dans le budget de production, mais le fournisseur est payé plus tard. Quelle distinction faut-il conserver ?",
+      "options": [
+        "La consommation doit être inscrite au mois du paiement, même si les matières sont utilisées avant cette date.",
+        "Le règlement fournisseur doit être placé au mois de consommation, sans tenir compte des conditions de crédit.",
+        "Le montant de dette fournisseur doit être déduit du coût consommé pour obtenir le coût de fabrication du mois.",
+        "Le coût de consommation et le calendrier de paiement ne sont pas la même mesure."
+      ],
+      "answer": 3,
+      "explanation": "La valeur de ressources consommées n’indique pas seule les flux de trésorerie. Les achats, stocks de matière et délais fournisseurs demandent un budget articulé distinct."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Sans perte, un stock initial de 300 unités reçoit 2 200 unités produites et subit 2 000 unités vendues. Quel stock final retrouve-t-on ?",
+      "options": [
+        "4 500 unités",
+        "500 unités",
+        "100 unités",
+        "-100 unités"
+      ],
+      "answer": 1,
+      "explanation": "Le stock final est initial + production − ventes : 300 + 2 200 − 2 000 = 500 unités. Cette vérification inverse teste la cohérence du programme et de la cible.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 300
+                },
+                {
+                  "value": 2200
+                }
+              ]
+            },
+            {
+              "value": 2000
+            }
+          ]
+        },
+        "expected": 500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une direction augmente sa cible de stock sans changer les ventes prévues. Quel effet doit-elle examiner au-delà du nombre d’unités ?",
+      "options": [
+        "L’augmentation de cible doit être validée sur les seuls frais de stockage, la fabrication relevant du budget de ventes inchangé.",
+        "L’augmentation de cible doit être évaluée au prix de vente comme si elle constituait déjà une entrée de trésorerie.",
+        "La capacité, les matières et le financement mobilisés par les produits supplémentaires.",
+        "L’augmentation de cible doit être absorbée en relevant seulement le coût unitaire des unités déjà programmées, sans produire davantage."
+      ],
+      "answer": 2,
+      "explanation": "Un objectif de stock entraîne des besoins de production et de moyens. L’analyse doit couvrir ses contraintes et sa justification, plutôt que le traiter comme une réserve créée sans ressources."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Cent produits finis doivent être fabriqués. Chacun utilise deux sous-ensembles et 1 kg de matière directe. Le stock initial est de 50 sous-ensembles et leur stock final cible de 10. Chaque sous-ensemble à fabriquer nécessite 3 kg de cette même matière, sans perte. Quelle consommation totale de matière faut-il prévoir ?",
+      "options": [
+        "580 kg",
+        "700 kg",
+        "550 kg",
+        "480 kg"
+      ],
+      "answer": 0,
+      "explanation": "Il faut 200 sous-ensembles pour les produits finis. Après utilisation du stock initial et constitution de la cible, il faut en fabriquer 200 + 10 − 50 = 160. Ils consomment 480 kg, auxquels s’ajoutent les 100 kg utilisés directement sur les produits finis : total 580 kg.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "op": "+",
+                      "args": [
+                        {
+                          "op": "*",
+                          "args": [
+                            {
+                              "value": 100
+                            },
+                            {
+                              "value": 2
+                            }
+                          ]
+                        },
+                        {
+                          "value": 10
+                        }
+                      ]
+                    },
+                    {
+                      "value": 50
+                    }
+                  ]
+                },
+                {
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 100
+                },
+                {
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 580,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le programme passe d’un prix matière donné à un prix révisé, mais conserve le coût total initial sans le préciser. Quel contrôle est requis ?",
+      "options": [
+        "Conserver le montant initial pour préserver la comparaison, tout en présentant les deux scénarios comme établis au nouveau prix.",
+        "Réduire la quantité physique à due proportion de la hausse de prix, sans vérifier le maintien du programme de production.",
+        "Affecter la différence de valorisation au seul stock final sans contrôler la part de matière consommée.",
+        "Revaloriser la consommation au prix du scénario et distinguer l’effet de prix de celui des volumes."
+      ],
+      "answer": 3,
+      "explanation": "La valeur combine quantité et prix. Une nouvelle hypothèse de prix peut changer le montant même à programme physique constant ; la convention doit rester visible dans le budget."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La formule ventes + stock cible − stock initial donne une valeur négative. Quelle lecture opérationnelle est prudente ?",
+      "options": [
+        "Lancer un ordre de fabrication égal à la valeur absolue du résultat pour ramener le stock vers sa cible.",
+        "La cohérence des ventes, stocks et cible doit être revue ; l’excédent disponible n’est pas une fabrication négative.",
+        "Ramener la production à zéro puis annoncer que la cible de stock est atteinte, sans contrôler le surplus restant.",
+        "Déduire le surplus des prévisions de ventes même si les commandes clients sont maintenues."
+      ],
+      "answer": 1,
+      "explanation": "Le flux algébrique peut révéler un stock initial supérieur aux sorties et à la cible. Il faut traiter ce surplus et les hypothèses plutôt que transformer le signe en ordre physique impossible."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un stock cible est exprimé en cartons et le stock initial en unités, avec dix unités par carton. Quelle étape manque avant de calculer la variation ?",
+      "options": [
+        "Soustraire les nombres tels quels et exprimer le résultat en unités, puisque le stock final sera finalement vendu en unités.",
+        "Diviser le nombre de cartons par dix pour le ramener au nombre d’unités avant la différence.",
+        "Convertir les deux stocks dans une même unité physique.",
+        "Multiplier aussi le stock initial déjà en unités par dix pour traiter les deux données avec le même coefficient."
+      ],
+      "answer": 2,
+      "explanation": "L’équation de stock exige des quantités homogènes. Le nombre de cartons et celui d’unités ne sont pas directement comparables ; une conversion documentée évite une cible incohérente."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "L’entreprise dispose de matière en stock. Le besoin calculé de consommation est-il automatiquement le montant à acheter pendant le mois ?",
+      "options": [
+        "Non, les achats exigent aussi l’analyse des stocks de matière et autres entrées ou cibles.",
+        "Oui, car le stock initial doit être conservé intact même lorsqu’aucune telle contrainte n’est prévue.",
+        "Oui, car le besoin de consommation inclut déjà le stock final de matière quelle que soit la cible retenue.",
+        "Non, il suffit de déduire le stock final cible de la consommation, sans examiner le stock initial."
+      ],
+      "answer": 0,
+      "explanation": "Le budget de consommation décrit les ressources utilisées. La quantité à acheter dépend des disponibilités et objectifs de matière ; il ne faut pas confondre les deux flux."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le programme demande 4 400 kg et l’enveloppe de matière consommée est limitée à 19 800 €. Quel prix moyen maximal par kg respecte cette seule enveloppe ?",
+      "options": [
+        "4 €",
+        "0,2222 €",
+        "24 200 €",
+        "4,50 €"
+      ],
+      "answer": 3,
+      "explanation": "Le prix moyen compatible est 19 800 / 4 400 = 4,50 €/kg. Ce plafond budgétaire ne garantit ni la disponibilité de matière ni la conformité de sa qualité.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 19800
+            },
+            {
+              "value": 4400
+            }
+          ]
+        },
+        "expected": 4.5,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une production de 2 200 unités nécessite deux heures par unité. La capacité disponible est 4 000 heures. De combien le besoin dépasse-t-il cette capacité ?",
+      "options": [
+        "4 400 heures",
+        "400 heures",
+        "200 heures",
+        "6 200 heures"
+      ],
+      "answer": 1,
+      "explanation": "Le besoin est 2 200 × 2 = 4 400 heures. Le dépassement est donc 4 400 − 4 000 = 400 heures ; le programme doit être rapproché des moyens avant d’être considéré réalisable.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 2200
+                },
+                {
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "value": 4000
+            }
+          ]
+        },
+        "expected": 400,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le stock initial comprend 20 produits finis. Cinquante livraisons clients sont dues la première semaine ; toute la fabrication du mois ne sera disponible qu’en troisième semaine. Le budget mensuel prévoit un stock final suffisant. Quelle limite du contrôle mensuel faut-il signaler ?",
+      "options": [
+        "Le stock final cible suffit à garantir la disponibilité de toutes les livraisons de la première semaine.",
+        "La fabrication de troisième semaine doit être comptée dans le stock disponible dès le premier jour du mois.",
+        "Le stock initial doit être comparé seulement aux ventes de la dernière semaine, puisque le contrôle porte sur la clôture.",
+        "Le solde mensuel ne révèle pas à lui seul le manque de produits disponibles à la date des premières livraisons."
+      ],
+      "answer": 3,
+      "explanation": "Avant la fabrication, 20 produits seulement sont disponibles pour 50 livraisons : il manque 30 produits à cette date. Un stock final satisfaisant ne résout pas cette rupture intermédiaire. Le programme doit être vérifié sur un échéancier adapté aux livraisons."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Des rebuts apparaissent alors que la norme initiale supposait aucune perte. Comment poursuivre le budget matière ?",
+      "options": [
+        "Réexaminer les besoins et les hypothèses, sans appliquer aveuglément la norme sans perte.",
+        "Conserver les mêmes besoins puisque la norme se rapporte aux seuls produits conformes, même si les rebuts ont consommé de la matière.",
+        "Déduire les rebuts du volume à lancer avant d’appliquer la norme, même si l’objectif de produits conformes reste inchangé.",
+        "Ajouter le taux de rebut au prix de la matière, tout en gardant inchangés les besoins physiques d’approvisionnement."
+      ],
+      "answer": 0,
+      "explanation": "Une nouvelle condition peut rendre le modèle initial incomplet. Les quantités et causes doivent être documentées pour ajuster le besoin, au lieu d’inventer un taux ou de masquer les ressources perdues."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un coût matière total est nommé coût complet alors que main-d’œuvre et charges de centre restent hors calcul. Quelle précision est nécessaire ?",
+      "options": [
+        "Le coût complet est mesuré dès lors que la matière constitue la principale ressource en valeur.",
+        "Le coût complet est mesuré si toutes les factures de matière sont reprises, même si d’autres ressources restent exclues.",
+        "Le montant devient un coût complet dès qu’il est réparti entre toutes les unités fabriquées.",
+        "Le montant mesure la seule matière du périmètre, pas les ressources encore exclues."
+      ],
+      "answer": 3,
+      "explanation": "Le libellé doit refléter les éléments incorporés. Un coût partiel peut être utile mais ne doit pas être présenté comme un coût complet sans les autres composantes pertinentes."
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Sans en-cours initial ni perte, un atelier prévoit d’achever 400 unités et d’avoir 100 unités supplémentaires en cours à 40 % de leur transformation en fin de mois. Une unité équivalente correspond au travail de transformation d’une unité achevée. Combien d’unités équivalentes de transformation faut-il budgéter ?",
+      "options": [
+        "500 unités équivalentes",
+        "440 unités équivalentes",
+        "400 unités équivalentes",
+        "540 unités équivalentes"
+      ],
+      "answer": 1,
+      "explanation": "Les 400 unités achevées représentent 400 unités équivalentes. Le travail prévu sur les 100 en-cours représente 100 × 40 % = 40 unités équivalentes. Le total de transformation est 440 ; les 500 unités physiques ne sont pas toutes achevées au même degré.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 400
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 100
+                },
+                {
+                  "value": 0.4
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 440,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "OpenStax — Equivalent units in an initial processing stage",
+          "url": "https://openstax.org/books/principles-managerial-accounting/pages/5-3-explain-and-compute-equivalent-units-and-total-cost-of-production-in-an-initial-processing-stage"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les ventes prévues sont révisées à la baisse mais la cible de stock est conservée. Quel effet faut-il examiner avant de garder l’ancien programme ?",
+      "options": [
+        "Le risque de sous-stock final causé par la baisse des ventes, à programme inchangé.",
+        "Le risque de trésorerie uniquement, le volume de stock restant au niveau cible à production constante.",
+        "Le risque que la production inchangée crée un stock supérieur à la cible.",
+        "Le risque d’un besoin de production supplémentaire égal à la baisse des ventes."
+      ],
+      "answer": 2,
+      "explanation": "Le programme et les stocks sont liés. Une baisse des sorties à production stable augmente le stock final ; le budget doit être réarticulé à la nouvelle demande."
+    },
+    {
+      "id": "q23",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un tableau calcule les matières pour les seules ventes puis ajoute encore les matières de toute la production. Quelle anomalie faut-il vérifier ?",
+      "options": [
+        "Un possible double compte d’une partie des ressources de fabrication.",
+        "Une sous-estimation du besoin physique correspondant exactement à la hausse de stock prévue.",
+        "Un simple décalage du calendrier des achats, sans changement du besoin physique total calculé.",
+        "Un écart de prix matière, à corriger en revalorisant les mêmes quantités additionnées."
+      ],
+      "answer": 0,
+      "explanation": "Les besoins doivent être définis sur une base unique. La production inclut déjà les unités destinées aux ventes ; ajouter celles-ci une seconde fois peut gonfler la matière budgétée."
+    }
+  ]
+}

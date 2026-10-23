@@ -1,0 +1,436 @@
+{
+  "module": "DSCG2",
+  "chapter": "risques",
+  "sourceHash": "ffbd06393daab1c6ef5f8f4dbd143533ab3dd21fb5af587bf19bf63fb17f43cd",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une entreprise doit régler 18 000 USD. La cotation est 1 EUR = 1,20 USD, sans frais. Quel montant en euros correspond à cette dette ?",
+      "options": [
+        "15000 €",
+        "21600 €",
+        "18000 €",
+        "3600 €"
+      ],
+      "answer": 0,
+      "explanation": "La cotation donne des dollars par euro : il faut diviser 18 000 USD par 1,20 USD/EUR, soit 15 000 EUR. Multiplier inverserait la conversion.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 18000
+            },
+            {
+              "value": 1.2
+            }
+          ]
+        },
+        "expected": 15000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un exportateur doit recevoir un montant fixé en dollars. Sa monnaie de gestion est l’euro. Si l’euro s’apprécie contre le dollar, quel effet examiner, à montant dollar inchangé ?",
+      "options": [
+        "Une augmentation de la contrevaleur en euros de la créance",
+        "Une diminution de la contrevaleur en euros de la créance",
+        "Une diminution du nombre de dollars dus par le client",
+        "Une augmentation du taux contractuel du crédit accordé au client"
+      ],
+      "answer": 1,
+      "explanation": "Chaque dollar vaut alors moins d’euros. L’exposition d’un montant à recevoir en dollars est inverse de celle d’une dette à payer dans cette devise."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un emprunt porte un taux variable révisé chaque trimestre. Le budget conserve le taux de départ pour toutes les échéances. Quel risque sous-estime-t-il ?",
+      "options": [
+        "La variation du nominal initial du seul fait de la révision du taux",
+        "Le risque d’actualisation des flux d’une obligation détenue sans lien avec cet emprunt",
+        "La variation des intérêts lors des révisions contractuelles",
+        "La variation de devise d’une dette libellée en monnaie de gestion"
+      ],
+      "answer": 2,
+      "explanation": "Le taux variable peut modifier les intérêts futurs selon le contrat. Il faut distinguer cette exposition du nominal, de la devise et du prix d’un actif financier."
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un prêt conserve un principal de 200 000 € pendant un an. Le taux d’intérêt annuel passe de 3 % à 5 %, sans autre frais. Quel supplément d’intérêts annuel cela représente-t-il ?",
+      "options": [
+        "2000 €",
+        "10000 €",
+        "6000 €",
+        "4000 €"
+      ],
+      "answer": 3,
+      "explanation": "L’augmentation est de deux points : 200 000 × (0,05 − 0,03) = 4 000 €. Les intérêts totaux au nouveau taux seraient de 10 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 200000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 0.05
+                },
+                {
+                  "value": 0.03
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 4000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pour une obligation à flux fixes inchangés, comment évolue sa valeur lorsque le taux de marché augmente, toutes choses égales par ailleurs ?",
+      "options": [
+        "Elle diminue car les flux sont davantage actualisés",
+        "Elle augmente car le coupon contractuel est automatiquement relevé",
+        "Elle reste égale au nominal quel que soit le taux de marché",
+        "Elle augmente du même pourcentage que le taux de marché"
+      ],
+      "answer": 0,
+      "explanation": "Les paiements fixes deviennent moins attractifs relativement au marché et leur valeur actuelle baisse. Le coupon contractuel ne change pas dans cette hypothèse."
+    },
+    {
+      "id": "q06",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un titre sans coupon rembourse seulement 1 100 € dans un an. Le taux de marché est de 10 %. Quelle valeur actuelle obtient-on, hors frais et défaut ?",
+      "options": [
+        "1100 €",
+        "1000 €",
+        "1210 €",
+        "990 €"
+      ],
+      "answer": 1,
+      "explanation": "La valeur actuelle du paiement unique vaut 1 100 / 1,10 = 1 000 €. Le nominal de remboursement ne se confond pas avec son prix actuel.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1100
+            },
+            {
+              "value": 1.1
+            }
+          ]
+        },
+        "expected": 1000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une dette de 100 000 USD à trois mois est couverte pour seulement 70 000 USD à la même date. Que reste-t-il à analyser ?",
+      "options": [
+        "Un risque de taux sur la totalité de la dette causé par ce seul écart de volume",
+        "Une surcouverture de 30 000 USD",
+        "Une exposition de change sur le montant non couvert",
+        "Une couverture complète puisque les dates correspondent"
+      ],
+      "answer": 2,
+      "explanation": "L’alignement des échéances ne suffit pas si le montant est incomplet. Les 30 000 USD restants demeurent exposés au change dans ce schéma."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un achat en dollars sera payé en septembre, mais la couverture choisie se termine en juin. Quelle limite faut-il identifier ?",
+      "options": [
+        "Une erreur de devise malgré une dette et une couverture toutes deux en dollars",
+        "Une suppression du risque de septembre par le seul dénouement de juin",
+        "Une erreur de nominal prouvée par la différence de dates",
+        "Un décalage d’échéance qui peut nécessiter renouvellement ou ajustement"
+      ],
+      "answer": 3,
+      "explanation": "La correspondance de devise et de montant ne règle pas un décalage de dates. Il faut examiner la période encore exposée et le coût d’un ajustement."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La cotation est « 0,90 EUR pour 1 USD ». L’étudiant divise la dette en dollars par 0,90 pour obtenir des euros. Quelle correction faire ?",
+      "options": [
+        "Multiplier les dollars par 0,90 EUR/USD",
+        "Multiplier les dollars par le taux inverse, 1 / 0,90, pour cette cotation",
+        "Appliquer une baisse de 10 % au montant obtenu après la division initiale",
+        "Calculer dette × (1 − 0,90) et présenter cet écart comme la contre-valeur totale en euros"
+      ],
+      "answer": 0,
+      "explanation": "Le taux exprime directement des euros par dollar. Multiplier permet d’annuler l’unité USD et d’obtenir des EUR ; l’opération dépend de la cotation."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise emprunte à taux fixe mais doit refinancer une forte échéance dans deux ans. Quel risque n’est pas écarté par le seul taux fixe actuel ?",
+      "options": [
+        "La révision trimestrielle du coupon du prêt fixe actuel",
+        "Le risque de conditions et de disponibilité du refinancement futur",
+        "La baisse des intérêts dus sur le prêt actuel, présentée comme conséquence directe d’une hausse des taux de marché",
+        "La hausse des mensualités du prêt actuel à chaque nouvelle cotation de marché"
+      ],
+      "answer": 1,
+      "explanation": "Le taux fixe stabilise les intérêts contractuels actuels. Il ne garantit pas le financement d’une échéance future ni les conditions d’un nouveau prêt."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le taux de marché augmente mais un analyste relève le coupon contractuel d’une obligation à taux fixe pour recalculer son prix. Quelle confusion commet-il ?",
+      "options": [
+        "Il confond la valeur de remboursement contractuelle avec le prix de marché auquel le titre est revendu",
+        "Il confond le rendement courant coupon/prix avec le rendement actuariel intégrant le remboursement",
+        "Il confond taux d’actualisation de marché et flux contractuels fixes",
+        "Il confond le coupon annuel avec le coupon couru depuis le dernier paiement"
+      ],
+      "answer": 2,
+      "explanation": "Une variation du marché modifie le taux auquel les flux fixes sont valorisés. Elle ne réécrit pas le coupon contractuel de l’obligation considérée."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une vente en devise reste incertaine et une couverture ferme est prise sur son montant maximum. Quelle difficulté examiner si la vente est finalement réduite ?",
+      "options": [
+        "Une disparition de l’engagement de couverture par la seule baisse des ventes",
+        "Un risque de change limité au seul chiffre d’affaires déjà encaissé",
+        "Une augmentation du volume commercial nécessairement produite par la couverture",
+        "Une couverture excédant l’exposition effectivement réalisée"
+      ],
+      "answer": 3,
+      "explanation": "Une couverture doit être rapprochée du montant réel ou probable de l’exposition. Un engagement ferme peut subsister au-delà des besoins finalement constatés."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une dette de 20 000 USD coûte 16 000 € avec une première cotation, puis 18 000 € au règlement. Quel surcoût en euros apparaît, hors frais ?",
+      "options": [
+        "2000 €",
+        "-2000 €",
+        "34000 €",
+        "4000 €"
+      ],
+      "answer": 0,
+      "explanation": "L’exposition se mesure ici par la variation de contrevaleur : 18 000 − 16 000 = 2 000 €. Ce surcoût ne modifie pas le nominal de 20 000 USD.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 18000
+            },
+            {
+              "value": 16000
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le dossier prévoit 25 000 € de coût couvert et 300 € de frais de couverture. Quel coût total comparer au scénario non couvert ?",
+      "options": [
+        "24700 €",
+        "25300 €",
+        "25000 €",
+        "300 €"
+      ],
+      "answer": 1,
+      "explanation": "La comparaison doit inclure le coût de la protection : 25 000 + 300 = 25 300 €. Ne retenir que le taux couvert omettrait les frais fournis.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 25000
+            },
+            {
+              "value": 300
+            }
+          ]
+        },
+        "expected": 25300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le principal d’un prêt diminue chaque mois. Pour simuler une hausse du taux, l’analyste applique l’écart de taux au nominal initial pendant toute la durée. Que vérifier ?",
+      "options": [
+        "Le nominal initial, réutilisé comme encours constant jusqu’à l’échéance finale",
+        "La moyenne arithmétique des seuls encours initial et final, sans tenir compte des dates d’amortissement",
+        "L’encours effectivement exposé à chaque période",
+        "Le capital restant dû après la dernière échéance, appliqué rétroactivement à toute la période"
+      ],
+      "answer": 2,
+      "explanation": "Le risque d’intérêts dépend du capital encore dû aux périodes concernées. Utiliser un nominal initial constant peut surestimer l’effet d’une hausse future."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un investisseur détient une obligation à flux fixes et souhaite la vendre avant son remboursement. Pourquoi une hausse des taux peut-elle l’affecter ?",
+      "options": [
+        "Le rendement courant coupon/prix reste égal au taux de marché initial, ce qui impose de céder avec une perte déjà fixée",
+        "Le prix de cession augmente pour compenser le coupon devenu inférieur aux nouveaux taux",
+        "La valeur de remboursement et le prix de cession restent égaux tant qu’aucun coupon n’est impayé",
+        "Le prix de cession peut baisser même si les flux contractuels restent fixes"
+      ],
+      "answer": 3,
+      "explanation": "Le risque de prix existe en cas de cession avant terme. La stabilité des paiements contractuels n’assure pas la stabilité de la valeur de marché."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quels paramètres rapprocher en premier pour apprécier une couverture de change ?",
+      "options": [
+        "Devise, montant, échéance et exposition économique visée",
+        "Devise et montant, en négligeant les écarts d’échéance entre dette et couverture",
+        "Échéance et coût de la couverture, en assimilant des devises historiquement corrélées",
+        "Montant notionnel de la couverture, sans distinguer dette à payer et créance à encaisser"
+      ],
+      "answer": 0,
+      "explanation": "Une couverture pertinente correspond à l’exposition étudiée. Des différences de devise, de volume ou de date peuvent laisser un risque résiduel."
+    },
+    {
+      "id": "q18",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise facture et encaisse dans sa monnaie de gestion, mais paie ses achats en devise étrangère. Quelle opération expose directement son coût de règlement au change ?",
+      "options": [
+        "Les créances clients fixées dans sa monnaie de gestion",
+        "Les achats à payer dans la devise étrangère",
+        "Le capital nominal libellé dans sa monnaie de gestion",
+        "Les amortissements historiques calculés sans dette en devise"
+      ],
+      "answer": 1,
+      "explanation": "Le paiement futur en devise exige une conversion. Les montants fixes dans la monnaie de gestion n’ont pas cette exposition directe dans les faits donnés."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une couverture réduit les pertes en scénario défavorable mais limite aussi le gain en scénario favorable selon ses clauses. Comment l’évaluer ?",
+      "options": [
+        "La rejeter parce qu’une protection doit améliorer chaque scénario sans contrepartie",
+        "La juger sur le seul scénario favorable au change",
+        "Comparer les résultats nets des deux scénarios avec les clauses et coûts de protection",
+        "Assimiler le gain abandonné à un paiement déjà exigible dans tous les scénarios"
+      ],
+      "answer": 2,
+      "explanation": "La couverture se juge selon son objectif et ses contreparties. Réduire l’incertitude peut avoir un coût ou limiter un avantage, à mesurer sur des scénarios cohérents."
+    },
+    {
+      "id": "q20",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux valorisations d’une obligation diffèrent. L’une utilise un coupon qui inclut déjà le remboursement final puis ajoute encore le nominal. Quel défaut expliquer ?",
+      "options": [
+        "Une simple différence de taux sans effet sur les flux",
+        "Une omission de tous les coupons intermédiaires prouvée par le prix",
+        "Une compensation normale entre coupon et remboursement",
+        "Un double comptage du remboursement dans les flux"
+      ],
+      "answer": 3,
+      "explanation": "Il faut reconstituer les flux contractuels avant d’actualiser. Le remboursement ne doit pas être ajouté deux fois sous des libellés différents."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle affirmation décrit correctement le champ d’un taux fixe contractuel ?",
+      "options": [
+        "Il fixe les intérêts selon les modalités prévues, sans garantir tous les autres aspects du financement",
+        "Il garantit que le refinancement futur aura le même taux",
+        "Il fixe la valeur de marché de la dette jusqu’à l’échéance",
+        "Il garantit que l’emprunteur disposera des fonds pour chaque remboursement"
+      ],
+      "answer": 0,
+      "explanation": "Le taux fixe concerne un mécanisme d’intérêts. Liquidité, refinancement, défaut et éventuelle valeur de marché relèvent d’autres dimensions à examiner."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une couverture est libellée dans une devise différente de la dette. Les deux devises étaient historiquement proches. Quel contrôle est nécessaire ?",
+      "options": [
+        "La seule égalité initiale des montants convertis, suffisante pour toute la durée",
+        "Le risque résiduel lié à une évolution différente des deux devises",
+        "La réduction du nominal de la dette par la corrélation passée",
+        "Le remplacement de l’échéance contractuelle par la période historique observée"
+      ],
+      "answer": 1,
+      "explanation": "Une relation historique ne garantit pas des mouvements identiques à l’avenir. Une couverture indirecte doit être étudiée pour le risque qu’elle laisse subsister."
+    },
+    {
+      "id": "q23",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un budget indique une dépense future de « 50 000 » sans devise. Pourquoi le calcul de couverture ne peut-il être fiabilisé ?",
+      "options": [
+        "Seule l’absence de taux à terme empêche le calcul ; le montant nominal permettrait déjà d’identifier la devise",
+        "La devise de la dette peut être déduite de la nationalité du fournisseur, sans lire le contrat",
+        "La monnaie et la cotation nécessaires au calcul de l’exposition ne sont pas identifiées",
+        "La monnaie de tenue du budget doit être considérée comme la monnaie contractuelle de paiement sans vérification"
+      ],
+      "answer": 2,
+      "explanation": "Un nombre sans unité monétaire ne définit pas l’exposition de change. Il faut identifier la devise, la monnaie de gestion et la convention de conversion."
+    }
+  ]
+}

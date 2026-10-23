@@ -1,0 +1,573 @@
+{
+  "module": "DSCG3",
+  "chapter": "dossier-synthese",
+  "sourceHash": "91c704cf3f48d40e07e6326311b0966054ee59ce7b21849479ddd8b76d6b8ce0",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une enquête de recommandation compte 100 réponses : 55 promoteurs (notes 9–10), 25 passifs (7–8) et 20 détracteurs (0–6). Le Net Promoter Score est le pourcentage de promoteurs moins celui de détracteurs, calculés sur toutes les réponses. Quel score obtient-on ?",
+      "options": [
+        "55 points.",
+        "46,67 points.",
+        "35 points.",
+        "80 points."
+      ],
+      "answer": 2,
+      "explanation": "Les promoteurs représentent 55 % et les détracteurs 20 % des 100 répondants : NPS = 55 − 20 = 35 points. Les passifs sont inclus dans la population totale, mais ne s’ajoutent pas aux promoteurs et ne sont pas retranchés comme détracteurs.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 55
+                    },
+                    {
+                      "value": 20
+                    }
+                  ]
+                },
+                {
+                  "value": 100
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 35,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "Bain — mesure du Net Promoter Score",
+          "url": "https://www.netpromotersystem.com/about/measuring-your-net-promoter-score/"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une réorganisation économise 28 000 € dans les achats, mais ajoute 9 000 € de contrôles et 6 000 € de retours. Aucun autre effet n’existe. Quel gain global annuel reste-t-il ?",
+      "options": [
+        "43 000 €.",
+        "19 000 €.",
+        "22 000 €.",
+        "13 000 €."
+      ],
+      "answer": 3,
+      "explanation": "Le gain net est 28 000 − 9 000 − 6 000 = 13 000 €. Les économies d’un centre doivent être diminuées des charges induites ailleurs.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 28000
+                },
+                {
+                  "value": 9000
+                }
+              ]
+            },
+            {
+              "value": 6000
+            }
+          ]
+        },
+        "expected": 13000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La production livre plus tôt à l’entrepôt, mais avance seulement des articles qui n’étaient pas urgents. Les commandes prioritaires restent en retard. Quel suivi manque ?",
+      "options": [
+        "La conformité aux priorités et au délai promis de chaque commande.",
+        "La date moyenne d’entrée de tous les articles en entrepôt uniquement.",
+        "Le coût des seuls articles terminés avant la date de reporting.",
+        "Le nombre total de pièces terminées, sans rattachement aux demandes."
+      ],
+      "answer": 0,
+      "explanation": "Une avance de production n’est utile que si elle sert les besoins. Le suivi doit relier les flux aux commandes et engagements prioritaires."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux unités réduisent chacune leur stock de sécurité sans coordonner leurs délais d’approvisionnement réciproques. Quel point doit être arbitré ?",
+      "options": [
+        "Le stock moyen propre à chaque unité, en supposant que leurs protections peuvent être optimisées séparément.",
+        "Le risque de rupture du flux global et la répartition cohérente des protections.",
+        "Le montant total de stocks, en supposant qu’une même valeur assure la même protection à chaque emplacement.",
+        "Le délai du seul fournisseur final, en supposant que les délais internes n’influencent pas la protection."
+      ],
+      "answer": 1,
+      "explanation": "Des réductions locales cumulées peuvent supprimer toute protection contre les aléas. La disponibilité doit être étudiée sur la chaîne complète."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Les ventes finales d’une chaîne restent proches de leur moyenne. Pourtant, chaque intermédiaire revoit ses commandes et ajoute une marge de précaution ; les commandes reçues par l’usine deviennent beaucoup plus variables en remontant la chaîne. Quel phénomène décrit cette observation ?",
+      "options": [
+        "Une économie d’échelle : le coût moyen baisse parce que l’usine produit davantage.",
+        "Une courbe d’apprentissage : le temps de fabrication baisse avec l’expérience cumulée.",
+        "Une amplification de la demande, dite effet coup de fouet, entre les maillons de la chaîne.",
+        "Une différenciation retardée : la configuration finale attend la commande du client."
+      ],
+      "answer": 2,
+      "explanation": "L’effet coup de fouet désigne une variabilité croissante des commandes vers l’amont, qui peut dépasser celle de la demande finale. Les ajustements successifs et les délais d’information peuvent l’amplifier. Ce n’est ni une baisse de coût par volume ni un apprentissage.",
+      "references": [
+        {
+          "title": "Lean Enterprise Institute — Demand Amplification",
+          "url": "https://www.lean.org/lexicon-terms/demand-amplification/"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’assistance refuse les demandes jugées hors périmètre, mais leur définition n’est pas partagée avec les commerciaux. Quelle action réduit le conflit ?",
+      "options": [
+        "Confier à l’assistance la définition unilatérale du périmètre après signature des contrats commerciaux.",
+        "Autoriser les commerciaux à promettre les exceptions sans préciser les capacités ni la procédure d’accord.",
+        "Transférer au commercial le coût de chaque refus en conservant des engagements de service différents.",
+        "Clarifier les engagements vendus, les critères d’acceptation et l’escalade des exceptions."
+      ],
+      "answer": 3,
+      "explanation": "Le conflit provient d’une interface et de règles de service mal définies. Les engagements doivent être communs et les exceptions arbitrables."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un fabricant conserve des bases de produit communes et n’ajoute les accessoires propres à chaque pays qu’après réception des commandes. Il cherche ainsi à éviter des stocks finis excédentaires dans un pays et insuffisants dans un autre. Quelle logique met-il en œuvre ?",
+      "options": [
+        "Une différenciation retardée, qui repousse la configuration spécifique jusqu’à une information plus précise sur la demande.",
+        "Une fabrication de toutes les variantes sur prévision, avec affectation définitive des composants à chaque pays dès le départ.",
+        "Un regroupement des commandes en lots plus espacés, sans modifier le moment où chaque variante est figée.",
+        "Une diversification des fournisseurs pour chaque variante, sans modifier le niveau auquel les stocks sont différenciés."
+      ],
+      "answer": 0,
+      "explanation": "La différenciation retardée conserve une base commune plus longtemps et configure le produit lorsque la demande spécifique est mieux connue. Elle permet une réaffectation entre variantes, sous réserve des délais et coûts de configuration ; elle ne supprime pas ces opérations.",
+      "references": [
+        {
+          "title": "MIT — Yossi Sheffi, résilience et postponement",
+          "url": "https://web.mit.edu/sheffi/www/documents/cpo_weatheringstorm.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La direction utilise la même information commerciale pour discuter régulièrement avec les équipes d’une incertitude stratégique : le changement des attentes clients. Elle remet en question les hypothèses et explore de nouvelles initiatives, au lieu de ne commenter que les écarts aux cibles fixées. Selon Simons, quel usage domine ?",
+      "options": [
+        "Un usage diagnostique, centré sur la correction des écarts à des standards déjà définis.",
+        "Un usage interactif, centré sur le dialogue et l’apprentissage autour d’incertitudes stratégiques.",
+        "Un système de limites, centré sur les domaines d’activité et comportements interdits.",
+        "Un système de croyances, centré sur la diffusion des valeurs et de la mission."
+      ],
+      "answer": 1,
+      "explanation": "L’usage interactif implique les dirigeants et les équipes dans un débat récurrent sur les incertitudes importantes pour la stratégie. Le diagnostique suit plutôt l’atteinte de cibles ; les systèmes de limites et de croyances fixent respectivement des bornes et des valeurs.",
+      "references": [
+        {
+          "title": "HBS — Simons et les leviers de contrôle",
+          "url": "https://online.hbs.edu/blog/post/levers-of-control"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une ligne dispose de 420 minutes nettes par jour pour une demande de 140 unités. Le takt time est le temps disponible divisé par la demande. Le temps de cycle réel est de 3,5 minutes par unité. Quel takt faut-il respecter, et la cadence actuelle suffit-elle sans autre capacité ?",
+      "options": [
+        "3,5 minutes par unité ; la cadence suffit car c’est le cycle mesuré.",
+        "0,33 minute par unité ; la cadence est trop lente.",
+        "3 minutes par unité ; le cycle actuel est trop lent pour satisfaire toute la demande.",
+        "3 minutes par unité ; le cycle actuel est assez rapide pour satisfaire toute la demande."
+      ],
+      "answer": 2,
+      "explanation": "Le takt est 420/140 = 3 minutes par unité. Un cycle de 3,5 minutes permet seulement 120 unités en 420 minutes, contre 140 demandées. Le takt découle de la demande ; le cycle décrit le rythme réel du processus.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 420
+            },
+            {
+              "value": 140
+            }
+          ]
+        },
+        "expected": 3,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "Lean Enterprise Institute — Takt Time",
+          "url": "https://www.lean.org/lexicon-terms/takt-time/"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le siège modifie en cours d’année les règles d’allocation, sans changer les moyens ni l’activité d’un centre. Quel risque affecte sa prime fondée sur la marge ?",
+      "options": [
+        "Une prime qui refléterait la variation des seules dépenses directement décidées par le responsable.",
+        "Une prime qui refléterait une économie de ressources du centre égale au montant réalloué.",
+        "Une prime qui refléterait un changement de marge commerciale externe du centre.",
+        "Une rémunération qui varie pour une convention et non pour une action du responsable."
+      ],
+      "answer": 3,
+      "explanation": "Une variation de clé peut changer la marge analytique sans modifier le comportement ni les ressources. L’évaluation doit identifier cet effet de convention."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un responsable reçoit de nouvelles délégations d’achat. Quelle mise à jour doit accompagner cette évolution ?",
+      "options": [
+        "Adapter les objectifs et l’évaluation aux nouveaux leviers confiés.",
+        "Conserver une évaluation limitée aux coûts d’exécution, sans intégrer la sélection désormais déléguée des fournisseurs.",
+        "Évaluer seulement la baisse des prix unitaires en écartant les engagements de qualité et de délai confiés avec les achats.",
+        "Reprendre les objectifs du service central des achats, même pour les catégories et volumes restés hors délégation."
+      ],
+      "answer": 0,
+      "explanation": "La responsabilité doit évoluer avec les pouvoirs. Il faut préciser le périmètre, les limites et les conséquences attendues des nouvelles décisions."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une équipe est primée sur les appels traités et abrège les échanges avant résolution. Quel mécanisme faut-il corriger ?",
+      "options": [
+        "L’incitation à traiter en priorité les demandes complexes plutôt que les demandes simples.",
+        "L’incitation au débit d’appels dissociée de la résolution utile.",
+        "L’incitation à allonger la durée des appels afin de maximiser une prime fondée sur les volumes.",
+        "L’incitation à accroître le taux de résolution au premier appel même si le volume brut ralentit."
+      ],
+      "answer": 1,
+      "explanation": "La cadence peut progresser tandis que le service baisse. L’incitation doit reconnaître la résolution et la qualité, avec des mesures de charge cohérentes."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Des contrôles sont sautés juste avant la clôture mensuelle pour atteindre la cible de délais. Quelle information permet de tester cet effet de l’incitation ?",
+      "options": [
+        "Le total annuel des contrôles manquants, sans distinction de date ni de volume de dossiers.",
+        "Le délai moyen mensuel des seuls dossiers contrôlés, sans suivi des contrôles omis.",
+        "Les contrôles manquants et incidents par date, notamment autour de la clôture.",
+        "Le total mensuel des primes, sans rattachement aux dates des contrôles et des opérations."
+      ],
+      "answer": 2,
+      "explanation": "La distribution temporelle des contrôles et incidents peut révéler un comportement lié à la cible. Le total annuel seul masque ce mécanisme."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un bonus collectif facilite l’entraide mais certaines contributions restent invisibles. Quelle adaptation conserve la coopération tout en améliorant l’évaluation ?",
+      "options": [
+        "Remplacer tout le bonus par un classement individuel sur le volume.",
+        "Verser le même montant sans examiner les engagements des membres.",
+        "Ne suivre que les heures déclarées par chaque salarié.",
+        "Clarifier les contributions attendues et les traces utiles, en conservant un objectif partagé."
+      ],
+      "answer": 3,
+      "explanation": "Une évaluation équilibrée rend les contributions compréhensibles sans encourager un comportement individualiste contraire à la coopération recherchée."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un dirigeant ne contrôle pas un indice de marché. Cet indice renseigne cependant sur le choc commun qui affecte le résultat de son entreprise. Selon le principe d’informativité de Holmström, pourquoi peut-il être utile dans la conception de sa rémunération ?",
+      "options": [
+        "Il peut aider à distinguer la part liée aux actions du dirigeant du bruit commun, même si celui-ci ne contrôle pas l’indice.",
+        "Il doit remplacer le résultat propre de l’entreprise dès qu’il varie davantage que ce résultat.",
+        "Il justifie une prime plus élevée dès qu’il augmente, sans examiner son lien avec le résultat propre.",
+        "Il ne peut être pertinent que si le dirigeant peut modifier directement la valeur de l’indice."
+      ],
+      "answer": 0,
+      "explanation": "Une variable hors contrôle peut améliorer l’information sur les actions en aidant à filtrer un choc commun. Le principe d’informativité ne se réduit donc pas à rémunérer uniquement les variables contrôlées. Il faut examiner l’information supplémentaire apportée, pas seulement sa variabilité.",
+      "references": [
+        {
+          "title": "Bengt Holmström — principe d’informativité",
+          "url": "https://www.nobelprize.org/uploads/2018/06/holmstrom-lecture.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un responsable gonfle une estimation de dépenses pour obtenir ensuite une économie facile. Quel processus limite cette manipulation ?",
+      "options": [
+        "Utiliser automatiquement l’estimation déclarée comme cible définitive.",
+        "Confronter les hypothèses aux facteurs d’activité et discuter les écarts avant validation.",
+        "Mesurer uniquement la différence entre budget annoncé et budget dépensé.",
+        "Augmenter systématiquement l’enveloppe lorsque les dépenses baissent."
+      ],
+      "answer": 1,
+      "explanation": "Une cible construite sur des hypothèses vérifiables et discutées limite les réserves cachées. Un simple écart favorable ne prouve pas la performance."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les réclamations augmentent mais le tableau ne permet pas d’identifier produit, cause ni date. Quelle amélioration soutient une action ciblée ?",
+      "options": [
+        "Ajouter seulement un objectif de baisse au total existant.",
+        "Multiplier la fréquence du même total non détaillé.",
+        "Structurer les réclamations par dimensions utiles avec une qualité de saisie vérifiée.",
+        "Retenir uniquement les réclamations déjà résolues."
+      ],
+      "answer": 2,
+      "explanation": "La segmentation pertinente permet de localiser la cause et la responsabilité. Sans données fiables et exploitables, une alerte globale reste difficile à traiter."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Avant une étude, la probabilité d’un marché favorable est 20 %. L’étude émet un signal positif dans 80 % des cas favorables et dans 10 % des cas défavorables. Un signal positif est obtenu. Avec P(F|+) = P(F)P(+|F)/[P(F)P(+|F) + P(non F)P(+|non F)], quelle probabilité actualisée du marché favorable obtient-on, arrondie à deux décimales ?",
+      "options": [
+        "80 %.",
+        "66,67 %.",
+        "20 %.",
+        "16 %."
+      ],
+      "answer": 1,
+      "explanation": "La probabilité conjointe d’un marché favorable et d’un signal positif vaut0,20 ×0,80 =0,16. Celle d’un marché défavorable et du même signal vaut0,80 ×0,10 =0,08. Parmi tous les signaux positifs, la part favorable vaut0,16/(0,16 +0,08) =66,67 %. Ce n’est pas la fiabilité conditionnelle de80 % utilisée en sens inverse.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 0.2
+                    },
+                    {
+                      "value": 0.8
+                    }
+                  ]
+                },
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "op": "*",
+                      "args": [
+                        {
+                          "value": 0.2
+                        },
+                        {
+                          "value": 0.8
+                        }
+                      ]
+                    },
+                    {
+                      "op": "*",
+                      "args": [
+                        {
+                          "value": 0.8
+                        },
+                        {
+                          "value": 0.1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 66.67,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "OpenStax — probabilité conditionnelle et théorème de Bayes",
+          "url": "https://openstax.org/books/principles-data-science/pages/3-4-probability-theory"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une activité passe de 1 000 à 1 500 dossiers et de 40 à 45 réclamations, avec des définitions inchangées. Quel est le nouveau taux de réclamation et son évolution relative par rapport à l’ancien taux ?",
+      "options": [
+        "3 % ; baisse relative de 25 %.",
+        "3 % ; baisse relative de 1 %.",
+        "4,5 % ; hausse relative de 12,5 %.",
+        "4 % ; stabilité malgré la hausse du volume."
+      ],
+      "answer": 0,
+      "explanation": "L’ancien taux est 40/1 000 = 4 %, le nouveau 45/1 500 = 3 %. Le taux baisse d’un point, soit (3 − 4)/4 = −25 % en relatif. Le nombre de réclamations augmente de 12,5 %, mais le volume croît plus vite : le diagnostic diffère selon la mesure.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 45
+                },
+                {
+                  "value": 1500
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 3,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un tableau produit une alerte de surcharge, sans scénario ni seuil de décision. Quelle suite rend le suivi actionnable ?",
+      "options": [
+        "Définir un nouveau seuil d’alerte plus élevé sans vérifier les possibilités de résorption de la charge.",
+        "Préciser les capacités de réponse, leurs coûts et le responsable de l’arbitrage.",
+        "Fixer une cible de réduction du retard sans identifier qui peut redéployer les moyens.",
+        "Accroître la fréquence du tableau sans préparer de règle de décision ni de réponse."
+      ],
+      "answer": 1,
+      "explanation": "Une alerte devient utile lorsqu’elle peut déclencher une décision préparée : redéploiement, priorisation ou moyens supplémentaires avec responsabilité claire."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une prime initialement conçue pour accélérer le traitement s’accompagne durablement de reprises et de plaintes. Quelle décision est justifiée ?",
+      "options": [
+        "Maintenir les mêmes critères et compenser les plaintes par une hausse du montant de la prime.",
+        "Évaluer la prime sur le délai médian des seuls dossiers sans reprise, en excluant les effets défavorables.",
+        "Revoir la règle à partir des effets constatés et définir une mesure plus complète.",
+        "Remplacer le suivi des délais par le seul nombre de plaintes, sans conserver l’objectif de rapidité."
+      ],
+      "answer": 2,
+      "explanation": "Une incitation doit être confrontée à ses effets réels. Réviser son contenu est légitime pour rétablir la cohérence avec le service recherché."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une option coûte 60 000 € et entraîne 10 000 € de reprises. Une autre coûte 66 000 € avec 2 000 € de reprises, à service final identique. Quelle économie totale procure la seconde ?",
+      "options": [
+        "6 000 €.",
+        "8 000 €.",
+        "−6 000 €.",
+        "2 000 €."
+      ],
+      "answer": 3,
+      "explanation": "Le coût total passe de 70 000 € à 68 000 €, soit 2 000 € économisés. La dépense initiale plus élevée est compensée par la baisse des reprises.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 60000
+                },
+                {
+                  "value": 10000
+                }
+              ]
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 66000
+                },
+                {
+                  "value": 2000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q23",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un projet est évalué par chaque service uniquement sur les économies qu’il lui apporte. Les coûts d’interface ne sont attribués à personne. Quel dispositif manque ?",
+      "options": [
+        "Un responsable du bilan transversal incluant les coûts et bénéfices d’interface.",
+        "Une règle affectant les coûts non attribués au service économisant le plus, sans bilan des conséquences globales.",
+        "Une somme des seules économies déclarées par les services, en supposant que les coûts d’interface s’équilibrent.",
+        "Une comparaison des budgets locaux avant et après projet, en laissant les interfaces hors de leur périmètre."
+      ],
+      "answer": 0,
+      "explanation": "Les effets transversaux risquent d’être oubliés sans responsabilité d’ensemble. Le bilan doit rassembler les conséquences utiles à la décision globale."
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "sourceHash": "5895bd6e500b5d3b7375f6d2f27c9bd9601cc6fd7eaa05fc813de249be62c7b6",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "fb2672fcf117549bf29dda98d9ac33fc38f6fecc371304eeae77590e4c249ce6",
+      "selected": 1,
+      "reason": "Neuf mille de réintégrations moins treize mille de déductions donnent une variation signée de moins quatre mille.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "a8509c61cc2f426a5d2bf2f7a7805a30db6a3ed2266ea7c1b96e1aec91e3da6a",
+      "selected": 0,
+      "reason": "La variation est déjà signée : trente mille plus moins deux mille donne vingt-huit mille ; une nouvelle négation inverse son effet.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "bd85262bf8f0187404abb1cc3c9a91f839acf7ddef19225620e2a9d8c4aca78f",
+      "selected": 1,
+      "reason": "Une variation négative ne prouve pas une base finale négative : il manque le résultat de départ.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "1923112d4c971a94a68a1d7f04d13b954704afd23313e1c676f7750ca023eb69",
+      "selected": 0,
+      "reason": "Le total mensuel est déjà compris dans les lignes annuelles ; l’ajouter encore double les mêmes corrections.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "140ab80b9e4d64c6f6dc710e05f827ae3d02513addd534829ef130bb40c71ce8",
+      "selected": 1,
+      "reason": "Quarante-huit mille plus moins trois mille cinq cents donnent quarante-quatre mille cinq cents avant toute autre opération.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "76f5a46997da85cd839e7da5e20cc62f811fae209defee59784dbe41029742f4",
+      "selected": 2,
+      "reason": "L’apport sans produit ni retraitement donné ne modifie pas par lui-même la base du résultat.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "0ebde397c5923a7afca32846157a41aedc555c1f359fe96915ebf27a14f1761f",
+      "selected": 1,
+      "reason": "L’imputation autorisée de douze mille diminue soixante-dix mille à cinquante-huit mille de base positive.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "247c9e77c98925149ae5fa33571619bdbed7729d8975e9009a4a2e8d1aa20cbf",
+      "selected": 2,
+      "reason": "Les acomptes sont des paiements à rapprocher de l’impôt, pas des déductions de la base taxable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "192f1065ad933ce97bbb5d0cfbf837f341f7dcc054aefdcd8771a4391005883b",
+      "selected": 2,
+      "reason": "Le taux réduit visé suppose notamment un capital entièrement libéré pour les sociétés concernées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "a85549cc42f10e4628b7697696dedc8e23532951c6fd2f59bfcc8039aa9dc8a5",
+      "selected": 0,
+      "reason": "La moitié seulement libérée ne satisfait pas la condition de libération intégrale malgré les autres critères fournis.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "c8353d236da50e3d3d12fc83985a391d140a2bdfcc09eb197b7ef7f1d6fdfe2e",
+      "selected": 3,
+      "reason": "Le seuil de détention est au moins soixante-quinze pour cent ; soixante-quatorze sans relais éligible ne suffit pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "856b1b461ef663c2da488434c929ce02053309f41ff71e4aed359ea7c5fc1cc0",
+      "selected": 0,
+      "reason": "Le périmètre du groupe fiscal doit être pris en compte, et non le seul chiffre d’affaires de la mère.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "9d4e678fde1bf0783583b7ec9d3d860974cfa5e59b723650824d8b54d9b1adf8",
+      "selected": 0,
+      "reason": "Quarante-deux mille cinq cents à quinze pour cent valent six mille trois cent soixante-quinze ; dix-sept mille cinq cents à vingt-cinq font quatre mille trois cent soixante-quinze ; total dix mille sept cent cinquante.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "3244224c88db48455ed58dcaadb274eb16e7e5cb4a5ec7f098cff99958a98b5c",
+      "selected": 0,
+      "reason": "Un exercice de six mois représente la moitié du plafond annuel de quarante-deux mille cinq cents, soit vingt et un mille deux cent cinquante.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "256ca851ce3776129f6aaddb17c837242a6f8ae781a31d0b570d7d16e5e4f0ea",
+      "selected": 0,
+      "reason": "L’éligibilité ne supprime pas le plafond de fraction de bénéfice admise au taux réduit.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "e5dd71733c719aace79978eca1130cf08302947894cbccbddbe31249b57cbfc1",
+      "selected": 1,
+      "reason": "La formulation n’excédant pas inclut exactement dix millions pour le seul seuil considéré.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "47a2ce6231b67f18c3fbbe33aabab6c94e7e2d6584dde30dc5ff6fdd6f260f32",
+      "selected": 2,
+      "reason": "La liquidation proportionnelle demandée multiplie la base fiscale définitive par le taux, sans conversion de prix TTC.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "954bc55ab9104d61e997ea1b27630e266d743e2ac4b3cebe5aec0da56eff9bc6",
+      "selected": 0,
+      "reason": "L’impôt est vingt-six mille fois vingt-cinq pour cent soit six mille cinq cents ; le résultat après charge est vingt-quatre mille moins six mille cinq cents, soit dix-sept mille cinq cents.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "12bfd702a6656b348435ddb4093da55eabc53fa80178316e69f0679fa0bfc2ff",
+      "selected": 3,
+      "reason": "L’IS se calcule sur la base fiscale mais se déduit du résultat comptable avant impôt de vingt-cinq mille pour la seconde étape.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "0c0776c77ad99eb6f4d26773647b9eba3fc14bdc0a325fbdc3b9ef3b55d28b88",
+      "selected": 3,
+      "reason": "La charge est l’impôt de l’exercice de six mille ; l’acompte affecte la dette restant à payer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "54935e3776e7ab633ac8971ceb8d9ba4b77e5f9e4e6c03574cc3b5303689bac4",
+      "selected": 2,
+      "reason": "Trente et un mille cinq cents après impôt plus huit mille cinq cents de charge donnent quarante mille avant impôt.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "c14a77cfcd6024712718365a8edd7d9ea07015968fcdf71c54304e8910ec4520",
+      "selected": 1,
+      "reason": "À résultat avant impôt inchangé, une base accrue augmente la charge d’impôt et réduit le résultat après impôt.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

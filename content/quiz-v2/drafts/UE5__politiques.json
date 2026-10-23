@@ -1,0 +1,373 @@
+{
+  "module": "UE5",
+  "chapter": "politiques",
+  "sourceHash": "1aaf51f117f41203fa93f8089a3834d641c48bd9c71d019baa1d7442319fb589",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle situation correspond à la notion générale d’inflation ?",
+      "options": [
+        "Le prix d’un produit augmente une fois sans autre information.",
+        "Les prix de nombreux biens augmentent de manière générale et durable.",
+        "Le revenu nominal d’un salarié augmente.",
+        "Le volume d’activité d’une entreprise diminue."
+      ],
+      "answer": 1,
+      "explanation": "L’inflation concerne l’évolution générale et durable des prix. Une hausse isolée ou une variation du revenu ne suffit pas, à elle seule, à établir ce phénomène."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un revenu nominal augmente exactement dans la même proportion que l’indice de prix pertinent, à base identique. Que peut-on dire du revenu réel dans le modèle d’indices ?",
+      "options": [
+        "Il baisse nécessairement.",
+        "Il augmente autant que le revenu nominal.",
+        "Il reste stable puisque le rapport des indices reste inchangé.",
+        "Il est égal au montant nominal sans correction."
+      ],
+      "answer": 2,
+      "explanation": "Le revenu réel dépend du rapport entre indice du revenu nominal et indice des prix. Si les deux évoluent dans la même proportion, leur rapport reste constant : le pouvoir d’achat mesuré est stable."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une hausse du taux directeur contribue à augmenter les taux de nouveaux crédits. Quel canal est ici mis en évidence ?",
+      "options": [
+        "Les conditions de financement transmettent une décision monétaire aux emprunteurs.",
+        "Les achats publics augmentent directement le revenu disponible des emprunteurs concernés.",
+        "La baisse d’un prélèvement relève directement la trésorerie disponible des emprunteurs.",
+        "La dépréciation de la monnaie augmente le prix des biens importés achetés par les emprunteurs."
+      ],
+      "answer": 0,
+      "explanation": "Le taux directeur influence les conditions monétaires, qui peuvent se répercuter sur les financements. Cette chaîne ne signifie ni que tous les taux changent uniformément ni que l’effet sur les prix soit immédiat."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel choix relève directement d’un instrument de politique budgétaire ?",
+      "options": [
+        "Modifier le taux directeur de la banque centrale.",
+        "Faire varier un taux bancaire privé par négociation commerciale.",
+        "Calculer un indice de prix à la consommation.",
+        "Modifier les dépenses publiques ou les prélèvements."
+      ],
+      "answer": 3,
+      "explanation": "La politique budgétaire utilise les dépenses publiques et les prélèvements. Les taux directeurs sont des instruments monétaires ; mesurer les prix ne constitue pas, en soi, une décision de dépense ou de prélèvement."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le prix du café augmente fortement dans une ville. Un commentaire en déduit que le niveau général national des prix a augmenté dans la même proportion. Quelle démarche permet de vérifier cette généralisation ?",
+      "options": [
+        "Appliquer le taux local du café à tous les prix nationaux pour conserver une référence unique.",
+        "Mesurer le panier national pertinent, avec ses prix et pondérations, avant de conclure.",
+        "Remplacer le taux local par la hausse maximale observée dans les cafés de la ville.",
+        "Calculer la moyenne des prix locaux du café sans intégrer les autres biens du panier national."
+      ],
+      "answer": 1,
+      "explanation": "Un produit et un lieu ne représentent pas automatiquement l’ensemble des prix étudiés. Il faut une mesure cohérente avec le périmètre, le panier et la période avant de conclure sur l’inflation générale."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un salarié reçoit une augmentation nominale, mais les prix de son panier de consommation augmentent encore davantage en proportion. Quelle conclusion sur son pouvoir d’achat est justifiée ?",
+      "options": [
+        "La hausse nominale démontre un gain réel parce que le salaire en euros est le numérateur de la comparaison.",
+        "La hausse des prix est déjà entièrement prise en compte dans le montant nominal de l’augmentation.",
+        "La hausse de revenu ne compense pas ici la hausse des prix du panier pertinent.",
+        "Le pouvoir d’achat augmente de l’addition du taux de salaire et du taux de hausse des prix."
+      ],
+      "answer": 2,
+      "explanation": "Un montant nominal plus élevé peut acheter moins de biens si les prix augmentent davantage. Le pouvoir d’achat exige une comparaison avec l’évolution des prix, et non la seule observation du salaire en euros."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une décision de taux directeur est prise aujourd’hui ; un analyste exige un effet identique sur tous les prix dès demain. Quelle réserve faut-il formuler ?",
+      "options": [
+        "La transmission passe par plusieurs canaux et délais, avec des effets possiblement différents selon les acteurs.",
+        "Seuls les prix financés par un crédit nouveau peuvent réagir ; les anticipations ne jouent aucun rôle.",
+        "La transmission doit être achevée dès que le marché monétaire ajuste ses taux, même si les dépenses n’ont pas encore changé.",
+        "Un effet retardé sur les prix signifierait que la décision n’a pas influencé les taux de crédit intermédiaires."
+      ],
+      "answer": 0,
+      "explanation": "Les conditions de financement, les décisions des agents puis les prix peuvent réagir avec des délais différents. Une causalité économique attendue ne doit pas être transformée en résultat instantané et uniforme garanti."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un programme accroît certaines dépenses publiques. Quels éléments faut-il examiner avant d’annoncer son effet global sur l’activité ?",
+      "options": [
+        "Le montant annoncé suffit à mesurer l’augmentation finale du PIB, sans examiner les importations induites.",
+        "La dépense brute constitue à elle seule le gain net d’activité, sans examiner les réactions du financement.",
+        "L’effet de court terme peut être extrapolé sur plusieurs années en conservant le même impact cumulé chaque année.",
+        "Son financement, le contexte économique et l’horizon d’analyse."
+      ],
+      "answer": 3,
+      "explanation": "Les effets d’une dépense ne se déduisent pas de son montant isolé. Son financement, les réactions possibles et les conditions économiques influencent le résultat selon la période considérée."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux ménages consacrent des parts très différentes de leur budget au logement et à l’énergie. Pourquoi peuvent-ils ressentir différemment une même évolution des prix moyens ?",
+      "options": [
+        "Le panier moyen doit être appliqué avec les mêmes poids à chaque ménage pour mesurer exactement son exposition personnelle.",
+        "Leurs paniers et pondérations de consommation ne sont pas identiques.",
+        "L’exposition dépend seulement de leur revenu en euros, et non de leurs achats d’énergie ou de logement.",
+        "Les évolutions individuelles correspondent à la moyenne simple des hausses de tous les prix, sans pondération par leurs dépenses."
+      ],
+      "answer": 1,
+      "explanation": "Un indicateur repose sur un panier et des poids. Des structures de consommation différentes peuvent exposer les ménages à des hausses différentes, sans invalider automatiquement l’indicateur moyen."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Des indices cohérents de base 100 atteignent 110 pour le revenu nominal et 105 pour les prix. Quel est l’indice du revenu réel, arrondi à deux décimales ?",
+      "options": [
+        "5",
+        "115,50",
+        "104,76",
+        "95,45"
+      ],
+      "answer": 2,
+      "explanation": "L’indice réel vaut 110 / 105 × 100 ≈ 104,76. Il ne suffit pas de soustraire les deux indices : la correction du revenu par les prix repose sur un rapport.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 110
+                },
+                {
+                  "value": 105
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 104.76,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un ménage dispose d’un ancien prêt à taux fixe inchangé, un autre cherche un nouveau prêt. Pourquoi une modification des conditions de financement peut-elle les toucher différemment immédiatement ?",
+      "options": [
+        "Leurs expositions contractuelles au nouveau coût du crédit ne sont pas les mêmes.",
+        "La mensualité de l’ancien prêt augmente dans la même proportion que le taux des nouveaux prêts malgré son taux fixe inchangé.",
+        "Le nouveau prêt doit reprendre le taux historique de l’ancien tant que les deux ménages utilisent la même monnaie.",
+        "Le ménage endetté au taux fixe subit d’abord le changement du taux contractuel, et le nouvel emprunteur seulement à son renouvellement."
+      ],
+      "answer": 0,
+      "explanation": "Les modalités et moments de financement conditionnent l’exposition aux nouveaux taux. Un prêt existant inchangé et une nouvelle demande ne subissent pas nécessairement le même effet immédiat, même dans un contexte monétaire commun."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un responsable classe une baisse d’impôt décidée par l’État parmi les instruments de taux directeur. Quelle correction convient ?",
+      "options": [
+        "La baisse d’un prélèvement relève de la politique de refinancement des banques auprès de la banque centrale.",
+        "La baisse d’un prélèvement relève de la politique de réserves obligatoires des banques.",
+        "La baisse d’un prélèvement relève des achats de titres par la banque centrale.",
+        "La baisse d’un prélèvement relève de la politique budgétaire, à distinguer de l’instrument monétaire."
+      ],
+      "answer": 3,
+      "explanation": "La nature de l’instrument est essentielle pour analyser son canal. Modifier un prélèvement agit par la politique budgétaire ; une décision de taux directeur relève d’une autre chaîne de transmission."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un taux d’inflation diminue mais reste positif. Pourquoi est-il incorrect d’en déduire automatiquement une baisse du niveau général des prix ?",
+      "options": [
+        "Les prix reviennent à leur ancien niveau dès que le taux devient inférieur à celui de l’année précédente.",
+        "Les prix peuvent continuer à monter, mais à un rythme plus faible.",
+        "La baisse du taux signifie que les prix actuels sont inférieurs aux prix de la période de référence.",
+        "La diminution du taux suffit à annuler la hausse cumulée enregistrée auparavant."
+      ],
+      "answer": 1,
+      "explanation": "Le taux décrit la vitesse de variation, pas le niveau lui-même. Un taux plus faible encore positif correspond à une hausse moins rapide des prix, et non nécessairement à des prix en baisse."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour comparer le pouvoir d’achat entre deux dates, un analyste oppose un indice de revenu d’une base à un indice de prix d’une autre sans conversion. Quel préalable manque ?",
+      "options": [
+        "Soustraire directement les indices de revenu et de prix malgré leurs années de référence différentes.",
+        "Diviser les indices bruts ; le rapport éliminerait de lui-même la différence de dates de base.",
+        "Rendre les bases et périmètres compatibles avant de calculer le rapport.",
+        "Ramener les deux indices à 100 à leurs dates respectives, puis interpréter leur égalité comme une stabilité réelle entre ces dates."
+      ],
+      "answer": 2,
+      "explanation": "Un rapport d’indices n’est interprétable que si la référence et le périmètre sont cohérents. Une différence de base non traitée peut créer une évolution réelle artificielle sans rapport avec le pouvoir d’achat."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La banque centrale annonce une trajectoire future de taux plus élevés. Les taux de marché à long terme réagissent avant toute modification du taux directeur courant. Quel canal peut expliquer cette réaction ?",
+      "options": [
+        "Le canal des anticipations de taux futurs, qui entrent dans les conditions financières présentes.",
+        "La répercussion d’une hausse déjà appliquée au taux directeur courant, alors que celui-ci est encore inchangé.",
+        "La révision du taux contractuel de tous les prêts anciens à taux fixe comme conséquence nécessaire de l’annonce.",
+        "L’alignement des taux longs sur la seule moyenne des taux directeurs passés, sans rôle des taux attendus."
+      ],
+      "answer": 0,
+      "explanation": "Les anticipations sur les taux futurs peuvent influencer dès aujourd’hui les taux à moyen et long terme. Le canal ne nécessite pas que le taux directeur courant ait déjà changé. L’annonce ne démontre ni une décision budgétaire ni une révision des contrats fixes existants.",
+      "references": [
+        {
+          "title": "BCE — mécanisme de transmission et anticipations",
+          "url": "https://www.ecb.europa.eu/mopo/intro/transmission/html/index.en.html"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux plans annoncent le même montant de dépenses supplémentaires, mais l’un est financé par une hausse de prélèvements et l’autre par un emprunt. Pourquoi ne faut-il pas supposer leurs effets identiques ?",
+      "options": [
+        "Le même montant brut de dépense représente déjà le même apport net de demande, quel que soit le prélèvement associé.",
+        "Le prélèvement diminue l’offre de monnaie émise exactement comme le ferait le remboursement d’un emprunt public.",
+        "Une dépense financée par emprunt n’a pas de contrepartie future pour les agents, contrairement à une dépense financée par l’impôt.",
+        "Les modes de financement peuvent modifier les ressources et les réactions des agents."
+      ],
+      "answer": 3,
+      "explanation": "Le financement fait partie de l’analyse budgétaire. Une hausse de prélèvements et un emprunt ne mettent pas nécessairement les mêmes contraintes sur les agents ni au même horizon."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel est l’effet d’une hausse du niveau général des prix sur ce qu’une unité monétaire permet d’acheter, à biens comparables ?",
+      "options": [
+        "Elle permet d’acheter davantage puisque le prix monétaire du panier devient plus grand.",
+        "Elle permet d’acheter moins.",
+        "Elle achète la même quantité parce que la valeur faciale de l’unité monétaire est inchangée.",
+        "Elle conserve son pouvoir d’achat réel dès lors que la hausse concerne le panier général plutôt qu’un seul produit."
+      ],
+      "answer": 1,
+      "explanation": "Quand davantage de monnaie est nécessaire pour un même panier, une unité monétaire achète une part plus petite de ce panier. Il faut distinguer ce pouvoir d’achat de l’évolution des revenus nominaux."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pendant une récession, les recettes d’un impôt sur les revenus diminuent et les allocations de chômage augmentent en application des règles existantes, sans vote d’un nouveau plan. Quelle qualification convient à ce soutien de la demande ?",
+      "options": [
+        "Une relance discrétionnaire résultant de nouvelles décisions de dépenses et de taux d’imposition.",
+        "Un assouplissement monétaire décidé par une baisse des taux directeurs.",
+        "Le fonctionnement des stabilisateurs automatiques liés au cycle économique.",
+        "Une consolidation budgétaire discrétionnaire visant à réduire immédiatement le déficit."
+      ],
+      "answer": 2,
+      "explanation": "Les bases imposables et le nombre de bénéficiaires changent avec la conjoncture, même à règles inchangées. Ces mécanismes soutiennent le revenu disponible en récession : ce sont des stabilisateurs automatiques. Une relance discrétionnaire supposerait de nouvelles mesures.",
+      "references": [
+        {
+          "title": "FMI — politique budgétaire et stabilisateurs automatiques",
+          "url": "https://www.imf.org/external/pubs/ft/fandd/basics/36-fiscal-policy.htm"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise reporte un investissement parce que le coût du nouveau financement a augmenté. À quel maillon de la transmission monétaire rattacher ce comportement ?",
+      "options": [
+        "La réaction d’une décision d’investissement aux conditions de financement.",
+        "La réaction du prix des importations à une modification du taux de change.",
+        "La réaction des recettes fiscales à une variation des revenus imposables.",
+        "La réaction des achats publics à une modification des crédits votés."
+      ],
+      "answer": 0,
+      "explanation": "L’instrument monétaire peut influencer les financements, puis les décisions des agents. Le report d’un investissement illustre ce canal, sans démontrer que toutes les entreprises réagissent de façon identique."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un projet public a des dépenses immédiates et des bénéfices attendus plus tard. Pourquoi une conclusion fondée sur un seul horizon très court peut-elle être incomplète ?",
+      "options": [
+        "Le décaissement initial suffit à mesurer le coût économique total, sans suivre les dépenses d’entretien ultérieures.",
+        "Le résultat net de la première période suffit à représenter la rentabilité du projet sur toute sa durée.",
+        "Les bénéfices annoncés pour plus tard peuvent être traités comme réalisés dès le paiement de la dépense.",
+        "Les effets et les incertitudes peuvent différer entre court et long terme."
+      ],
+      "answer": 3,
+      "explanation": "Le calendrier des dépenses et des effets compte dans l’évaluation. Une observation de court terme ne permet pas à elle seule de confirmer ou d’écarter tous les effets ultérieurs, qui doivent rester explicités et incertains."
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le prix d’un produit augmente tandis que celui d’un autre diminue. Que faut-il pour conclure sur l’évolution générale du panier étudié ?",
+      "options": [
+        "Appliquer une moyenne simple des deux taux même si les poids dans le panier sont très différents.",
+        "Tenir compte des prix et des poids des produits dans le panier pertinent.",
+        "Comparer seulement les variations de prix en euros, sans tenir compte des quantités achetées.",
+        "Utiliser le taux du produit le plus cher comme taux représentatif, sans examiner son poids dans la dépense."
+      ],
+      "answer": 1,
+      "explanation": "Un indicateur général doit agréger les évolutions selon le panier et ses pondérations. Des variations opposées de produits ne permettent pas de conclure sur l’ensemble sans préciser leur poids relatif."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Quelle présentation d’un effet attendu de politique économique est la plus rigoureuse ?",
+      "options": [
+        "Un montant de dépenses et sa variation, traités comme le montant directement équivalent de PIB supplémentaire.",
+        "Une date d’annonce et une date de reprise de l’activité, traitées comme la preuve du mécanisme.",
+        "Un instrument, un canal plausible, un horizon et les conditions qui limitent la conclusion.",
+        "Un objectif d’activité et un délai souhaité, traités comme une prévision des effets sans autre hypothèse."
+      ],
+      "answer": 2,
+      "explanation": "Une analyse relie l’instrument au mécanisme et aux conditions de transmission. Expliciter délais, contexte et limites permet de distinguer un effet attendu d’une certitude universelle ou d’une causalité non démontrée."
+    }
+  ]
+}

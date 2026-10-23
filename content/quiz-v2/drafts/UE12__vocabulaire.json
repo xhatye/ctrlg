@@ -1,0 +1,338 @@
+{
+  "module": "UE12",
+  "chapter": "vocabulaire",
+  "sourceHash": "c0940f688300b00044177cc97659054fc221d8a03ba5c207ab8120e910436c7d",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "In a company income statement, which term normally describes sales before deducting expenses?",
+      "options": [
+        "Revenue",
+        "Net profit",
+        "Retained earnings",
+        "Operating margin"
+      ],
+      "answer": 0,
+      "explanation": "Revenue désigne les ventes ou revenus selon le contexte. Le bénéfice et la marge sont des résultats obtenus après prise en compte de certaines charges."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Profit is defined as revenue minus total expenses. Both revenue and expenses rose, but profit fell. Which relationship must hold?",
+      "options": [
+        "Revenue and expenses necessarily increased by the same percentage.",
+        "The absolute increase in expenses exceeded the absolute increase in revenue.",
+        "Revenue and expenses increased by the same absolute amount.",
+        "The absolute increase in expenses was less than the absolute increase in revenue."
+      ],
+      "answer": 1,
+      "explanation": "La variation du résultat est la hausse absolue des revenus moins la hausse absolue des charges. Pour que le résultat baisse, la seconde doit dépasser la première ; comparer seulement les taux ne suffit pas."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A translator renders “annual revenue” as “bénéfice annuel” in a sales report. What is the main problem?",
+      "options": [
+        "Assets are being confused with liabilities.",
+        "A forecast is being confused with an audit opinion.",
+        "Sales are being confused with profit.",
+        "Annual figures are being confused with monthly figures."
+      ],
+      "answer": 2,
+      "explanation": "La traduction change l’indicateur : revenue renvoie ici aux ventes, tandis que bénéfice suppose la prise en compte des charges. La période annuelle est conservée."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A human resources report states: “Staff turnover fell following the retention programme.” What does turnover refer to here?",
+      "options": [
+        "Sales made during the financial year",
+        "Inventories sold during the month",
+        "Profit retained within the company",
+        "Employees leaving and being replaced"
+      ],
+      "answer": 3,
+      "explanation": "Le contexte des ressources humaines et de la fidélisation désigne la rotation du personnel. Turnover ne signifie chiffre d’affaires que dans certains contextes commerciaux."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A supplier asks about a business’s “annual turnover” to assess its sales volume. Which reply answers the question?",
+      "options": [
+        "Our annual sales were €800,000.",
+        "Our annual net profit was €80,000.",
+        "Our closing bank balance was €40,000.",
+        "Our total assets were €600,000."
+      ],
+      "answer": 0,
+      "explanation": "Dans ce contexte commercial, annual turnover désigne le chiffre d’affaires annuel. Le bénéfice, la trésorerie et les actifs mesurent des réalités différentes."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A summary replaces “operating profit” with “net profit” without any further information. Why is this unsafe?",
+      "options": [
+        "The two terms necessarily relate to different years.",
+        "The two terms can exclude different categories of expenses.",
+        "Net profit always means the amount of cash collected.",
+        "Operating profit is another term for annual revenue."
+      ],
+      "answer": 1,
+      "explanation": "Le résultat opérationnel et le résultat net n’intègrent pas nécessairement les mêmes produits et charges. Il faut préserver le niveau de résultat annoncé par la source."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Which English term normally refers to costs recognised in an income statement?",
+      "options": [
+        "Equity",
+        "Borrowings",
+        "Expenses",
+        "Receipts"
+      ],
+      "answer": 2,
+      "explanation": "Expenses correspond ici aux charges du compte de résultat. Les receipts sont des encaissements, les borrowings des emprunts et equity les capitaux propres."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An accountant records an unpaid December electricity bill as a December expense. Which statement preserves the distinction between accounting and cash?",
+      "options": [
+        "The payment has already reduced the bank balance.",
+        "No expense can exist until the supplier is paid.",
+        "The unpaid bill is automatically a sales receipt.",
+        "The expense is recognised before the bill is paid."
+      ],
+      "answer": 3,
+      "explanation": "La reconnaissance d’une charge et son paiement peuvent intervenir à des dates différentes. Une facture non réglée ne prouve donc pas un décaissement en décembre."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A cash budget labels every outgoing payment “expense”, including repayment of loan principal. Which approach correctly distinguishes cash from accounting?",
+      "options": [
+        "Separate cash payments from expenses; loan principal repayment reduces a debt.",
+        "Treat the whole principal repayment as interest expense for the period.",
+        "Classify every outgoing payment as an operating expense regardless of its purpose.",
+        "Recognise an expense only when an invoice is paid, regardless of when it was incurred."
+      ],
+      "answer": 0,
+      "explanation": "Un décaissement n’est pas nécessairement une charge : le principal remboursé réduit une dette. Il faut aussi distinguer la date de paiement d’une facture de la reconnaissance de la charge."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A manager says: “We cut travel expenses, although sales were unchanged.” Which interpretation is supported?",
+      "options": [
+        "The company’s liabilities necessarily disappeared.",
+        "One category of costs decreased.",
+        "Every category of costs decreased.",
+        "Sales receipts necessarily increased."
+      ],
+      "answer": 1,
+      "explanation": "La phrase établit une baisse des frais de déplacement uniquement. Elle ne décrit ni toutes les charges, ni les encaissements, ni l’ensemble des dettes."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A note says “expenses were incurred in March and paid in April”. Which French summary is accurate?",
+      "options": [
+        "Les ventes concernent mars et leur règlement intervient en avril.",
+        "Les dépenses ont été annulées avant tout paiement.",
+        "Les charges concernent mars et le paiement intervient en avril.",
+        "Les charges et le paiement concernent uniquement avril."
+      ],
+      "answer": 2,
+      "explanation": "Incurred décrit ici le rattachement de la charge, tandis que paid désigne le règlement. Les confondre effacerait le décalage entre résultat et trésorerie."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Which balance-sheet term refers to resources recognised as belonging to or controlled by a business?",
+      "options": [
+        "Liabilities",
+        "Expenses",
+        "Revenue",
+        "Assets"
+      ],
+      "answer": 3,
+      "explanation": "Assets désigne les actifs reconnus au bilan. Les liabilities correspondent aux dettes et autres passifs hors capitaux propres ; charges et revenus relèvent du résultat."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A customer owes the company money for goods already delivered. How should “trade receivable” be understood?",
+      "options": [
+        "An amount due from a customer",
+        "An amount due to a supplier",
+        "An amount invested by a shareholder",
+        "An amount distributed as a dividend"
+      ],
+      "answer": 0,
+      "explanation": "Une créance client est une somme à recevoir du client. Elle ne doit pas être inversée avec une dette fournisseur, somme que l’entreprise doit à un tiers."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report lists a bank loan under “liabilities”. What does this classification communicate?",
+      "options": [
+        "The company has already repaid the whole loan.",
+        "The company owes an obligation to a lender.",
+        "The lender owns all the company’s equipment.",
+        "The loan is part of the company’s sales revenue."
+      ],
+      "answer": 1,
+      "explanation": "Le classement en liabilities indique une obligation envers un prêteur. Il ne transforme pas l’emprunt en ventes et ne démontre pas que la dette est déjà remboursée."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A translation uses “equity” and “liabilities” interchangeably in a balance-sheet analysis. What distinction has been lost?",
+      "options": [
+        "Gross profit versus operating profit",
+        "Cash receipts versus cash payments",
+        "Shareholders’ interest versus obligations owed to others",
+        "Current sales versus sales in a previous year"
+      ],
+      "answer": 2,
+      "explanation": "Equity correspond aux capitaux propres ; liabilities désigne les dettes et autres passifs reconnus hors capitaux propres. Leur confusion déforme la structure du financement."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A business buys equipment that will serve for several years. In a balance-sheet description, which heading is relevant to that equipment?",
+      "options": [
+        "Revenue",
+        "Trade payables only",
+        "Share capital only",
+        "Assets"
+      ],
+      "answer": 3,
+      "explanation": "Le matériel reconnu au bilan constitue un actif. La façon dont il est financé peut créer une dette, mais cette dette ne remplace pas le classement du matériel lui-même."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "An English summary translates “trade payables” as “créances clients”. What is the correct interpretation?",
+      "options": [
+        "Amounts owed to suppliers",
+        "Amounts owed by customers",
+        "Amounts paid by shareholders",
+        "Amounts kept as cash reserves"
+      ],
+      "answer": 0,
+      "explanation": "Trade payables désigne les dettes fournisseurs. Les créances clients se traduisent par trade receivables : le sens du flux à payer ou à recevoir est essentiel."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "What does “cash flow” primarily describe?",
+      "options": [
+        "The number of products held in inventory",
+        "Movements of cash into and out of a business",
+        "Profit after every accounting adjustment",
+        "The total market value of a business"
+      ],
+      "answer": 1,
+      "explanation": "Cash flow renvoie aux flux de trésorerie. Il ne constitue pas un synonyme automatique du bénéfice, de la valeur de marché ou des quantités stockées."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A company reports a profit but many customers have not paid their invoices. Which conclusion is most appropriate?",
+      "options": [
+        "Unpaid invoices must have no effect on cash collection.",
+        "A profitable company cannot have a cash shortage.",
+        "Profit does not by itself prove that cash is available.",
+        "Profit proves that every customer has paid."
+      ],
+      "answer": 2,
+      "explanation": "Le résultat peut intégrer des ventes encore non encaissées. Un bénéfice positif ne suffit donc pas à démontrer que l’entreprise dispose de liquidités immédiatement."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A company receives a new bank loan. Which description of the immediate cash movement is accurate?",
+      "options": [
+        "It is sales revenue from customers.",
+        "It is profit from selling inventory.",
+        "It is a cash outflow to suppliers.",
+        "It is a cash inflow from financing."
+      ],
+      "answer": 3,
+      "explanation": "L’encaissement d’un emprunt apporte de la trésorerie au titre du financement. Il ne constitue ni un chiffre d’affaires commercial ni un bénéfice issu des ventes."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A note reports revenue and expenses, not cash movements. Which information addresses the gap between those accounting figures and the related operating receipts and payments?",
+      "options": [
+        "The timing of related cash settlements and any non-cash items.",
+        "Changes in share capital and the total dividends declared.",
+        "Equipment purchase payments and repayments of loan principal.",
+        "The movement in the company’s share price and market value."
+      ],
+      "answer": 0,
+      "explanation": "Les décalages de règlement et les éléments non monétaires distinguent le résultat des flux liés aux opérations concernées. Financement, investissement et valeur de marché relèvent d’autres périmètres."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A company sells an old machine and receives payment immediately. Which wording reports the cash fact without assuming a profit?",
+      "options": [
+        "The sale was an operating expense paid in cash.",
+        "The sale generated a cash inflow.",
+        "The sale necessarily generated an accounting profit.",
+        "The sale increased trade payables."
+      ],
+      "answer": 1,
+      "explanation": "Le règlement reçu est bien une entrée de trésorerie. Pour conclure à un profit de cession, il faudrait aussi connaître la valeur comptable et les coûts éventuels."
+    }
+  ]
+}

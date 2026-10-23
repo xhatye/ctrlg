@@ -1,0 +1,31 @@
+{
+  "policy": "Independent answer-free solving, followed by answer and explanation reconciliation; no author reviews their own subject.",
+  "reviewerByModule": {
+    "UE1": "codex-accounting-finance-independent-review",
+    "UE2": "codex-accounting-finance-independent-review",
+    "UE3": "codex-root-independent-review",
+    "UE4": "codex-root-independent-review",
+    "UE5": "codex-law-tax-independent-review",
+    "UE6": "codex-root-independent-review",
+    "UE7": "codex-law-tax-independent-review",
+    "UE8": "codex-root-independent-review",
+    "UE9": "codex-root-independent-review",
+    "UE10": "codex-root-independent-review",
+    "UE11": "codex-accounting-finance-independent-review",
+    "UE12": "codex-law-tax-independent-review",
+    "UE13": "codex-law-tax-independent-review",
+    "DSCG1": "codex-root-independent-review",
+    "DSCG2": "codex-economics-systems-independent-review",
+    "DSCG3": "codex-accounting-finance-independent-review",
+    "DSCG4": "codex-economics-systems-independent-review",
+    "DSCG5": "codex-accounting-finance-independent-review",
+    "DSCG6": "codex-root-independent-review",
+    "DSCG7": "codex-economics-systems-independent-review"
+  },
+  "totals": {
+    "codex-root-independent-review": 2043,
+    "codex-law-tax-independent-review": 868,
+    "codex-accounting-finance-independent-review": 1290,
+    "codex-economics-systems-independent-review": 799
+  }
+}

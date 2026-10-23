@@ -1,0 +1,391 @@
+{
+  "module": "UE6",
+  "chapter": "equilibre",
+  "sourceHash": "7e2a62517507f4e41eb3dece2876b13ce8e957c837363c2c1b86590559f130f3",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un bilan fonctionnel simplifié, que représente un FRNG positif ?",
+      "options": [
+        "Un excédent des ressources stables sur les emplois stables",
+        "Un excédent des créances clients sur les ventes",
+        "Le montant des seuls comptes bancaires",
+        "Le résultat bénéficiaire de l’exercice"
+      ],
+      "answer": 0,
+      "explanation": "Le FRNG compare financements et emplois durables. Son excédent peut contribuer au financement du cycle, sans représenter le résultat comptable."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Des ressources stables de 210 000 € financent des emplois stables de 165 000 €. Quel est le FRNG ?",
+      "options": [
+        "375 000 €",
+        "45 000 €",
+        "165 000 €",
+        "−210 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le calcul du fonds de roulement oppose ressources stables et emplois stables : 210 000 − 165 000 = 45 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 210000
+            },
+            {
+              "value": 165000
+            }
+          ]
+        },
+        "expected": 45000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise achète une machine payée immédiatement avec ses disponibilités, sans nouveau financement stable. Quel effet mécanique cet achat a-t-il sur le FRNG ?",
+      "options": [
+        "Il augmente car la machine est utile durablement",
+        "Il reste inchangé parce que l’achat est payé",
+        "Il diminue car les emplois stables augmentent",
+        "Il devient nécessairement négatif"
+      ],
+      "answer": 2,
+      "explanation": "L’acquisition augmente les emplois stables sans ressources stables supplémentaires. Le FRNG baisse ; son signe final dépend de sa valeur initiale."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un emprunt à long terme est encaissé avant l’achat de l’équipement qu’il financera. Dans le bilan fonctionnel intermédiaire, comment évolue le FRNG ?",
+      "options": [
+        "Il diminue du capital emprunté",
+        "Il ne varie que lors du premier remboursement",
+        "Il devient égal au chiffre d’affaires",
+        "Il augmente du financement stable reçu"
+      ],
+      "answer": 3,
+      "explanation": "L’encaissement augmente les ressources stables alors que les emplois stables ne changent pas encore. Le FRNG progresse à ce stade."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une entreprise finance durablement un équipement, mais classe l’emprunt long terme parmi les dettes fournisseurs. Quelle conséquence fausse son diagnostic fonctionnel ?",
+      "options": [
+        "Le FRNG est sous-estimé et le BFR est artificiellement réduit",
+        "Le FRNG est surestimé et le BFR augmenté",
+        "Le résultat comptable devient nécessairement nul",
+        "Le classement ne modifie aucun agrégat"
+      ],
+      "answer": 0,
+      "explanation": "La ressource durable manque au FRNG et apparaît à tort dans les ressources d’exploitation. Ce double déplacement déforme l’explication de l’équilibre."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un apport en capital finance exactement une nouvelle immobilisation du même montant, sans autre mouvement. Comment varie le FRNG ?",
+      "options": [
+        "Il augmente du double de l’apport",
+        "Il reste inchangé car ressources et emplois stables augmentent autant",
+        "Il baisse du montant de l’immobilisation",
+        "Il devient nécessairement nul"
+      ],
+      "answer": 1,
+      "explanation": "Les deux composantes durables croissent du même montant. Leur différence ne change pas, même si le bilan et les capacités productives augmentent."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un calcul de BFR d’exploitation hors trésorerie, quel poste doit être exclu de ce périmètre ?",
+      "options": [
+        "Les créances clients d’exploitation",
+        "Les dettes fournisseurs d’exploitation",
+        "Le solde disponible du compte bancaire",
+        "Les stocks de marchandises"
+      ],
+      "answer": 2,
+      "explanation": "Les disponibilités relèvent de la trésorerie et non du BFR hors trésorerie. Les mélanger ferait perdre la cohérence du calcul fonctionnel."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un fournisseur accepte un délai de paiement plus long, à achats et stocks comparables. Que devient le financement du cycle ?",
+      "options": [
+        "Le besoin augmente car l’entreprise doit encore payer",
+        "Le besoin est inchangé tant que la facture existe",
+        "Le besoin disparaît définitivement",
+        "Le besoin diminue car le crédit fournisseur finance davantage le cycle"
+      ],
+      "answer": 3,
+      "explanation": "Un règlement plus tardif augmente généralement les dettes fournisseurs à activité comparable. Ces ressources réduisent le besoin de financement net."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une équipe calcule le BFR avec des stocks valorisés en fin d’année et des créances moyennes d’un autre exercice sans signaler ce choix. Quelle est la faiblesse principale ?",
+      "options": [
+        "Le mélange de dates empêche une lecture cohérente de la situation",
+        "Les stocks ne peuvent jamais entrer dans un BFR",
+        "Les créances doivent être ignorées si elles sont moyennes",
+        "Le BFR doit toujours utiliser les ventes TTC comme unique donnée"
+      ],
+      "answer": 0,
+      "explanation": "Les postes doivent correspondre à une date ou à une convention de moyenne cohérente. Leur mélange non expliqué produit un indicateur difficile à interpréter."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une commande importante impose de constituer du stock avant toute livraison. Aucun crédit fournisseur supplémentaire n’est accordé. Quel besoin doit être anticipé ?",
+      "options": [
+        "Un bénéfice automatiquement encaissé dès la commande",
+        "Un financement supplémentaire du cycle avant les encaissements",
+        "Une baisse immédiate du BFR grâce au stockage",
+        "Un financement stable apporté automatiquement par le client"
+      ],
+      "answer": 1,
+      "explanation": "Le stock immobilise des ressources avant la vente et l’encaissement. L’absence de financement fournisseur supplémentaire accroît le besoin transitoire."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le BFR initial vaut 30 000 €. Pour préparer une saison, les stocks augmentent de 12 000 € et les dettes fournisseurs de 7 000 € ; les autres postes sont constants. Quel est le nouveau BFR ?",
+      "options": [
+        "49 000 €",
+        "11 000 €",
+        "35 000 €",
+        "25 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le besoin supplémentaire net est 12 000 − 7 000 = 5 000 €. Le BFR passe donc de 30 000 à 35 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 30000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 7000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 35000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une forte hausse du BFR est présentée comme une perte du même montant. Quel commentaire faut-il retenir ?",
+      "options": [
+        "Toute hausse de stock réduit le bénéfice du même montant",
+        "Toute créance client impayée est immédiatement une perte totale",
+        "Le BFR mesure exclusivement les charges financières",
+        "Le BFR décrit un financement immobilisé, pas une charge comptable"
+      ],
+      "answer": 3,
+      "explanation": "Le BFR est un agrégat de bilan. Son augmentation peut consommer de la trésorerie sans constituer une perte dans le compte de résultat."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le FRNG est positif mais inférieur au BFR, lui aussi positif. Quel constat décrit le financement du solde restant dans ce cadre fonctionnel ?",
+      "options": [
+        "L’entreprise mobilise un financement de trésorerie net",
+        "Le financement stable présente nécessairement un déficit avant même le financement du cycle",
+        "Le BFR constitue une ressource qui s’ajoute au FRNG",
+        "Le besoin non couvert est une charge diminuant le résultat du même montant"
+      ],
+      "answer": 0,
+      "explanation": "Lorsque le BFR dépasse le FRNG, leur différence est négative. Cela révèle un besoin net de financement de trésorerie, pas directement une absence de rentabilité."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le FRNG vaut 20 000 € et le BFR −15 000 €. Quelle est la trésorerie nette ?",
+      "options": [
+        "5 000 €",
+        "35 000 €",
+        "−15 000 €",
+        "20 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Il faut retrancher le BFR avec son signe : 20 000 − (−15 000) = 35 000 €. Le cycle fournit ici une ressource.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 20000
+            },
+            {
+              "value": -15000
+            }
+          ]
+        },
+        "expected": 35000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un bilan fonctionnel donne FRNG = 60 000 €, BFR = 45 000 € et trésorerie nette = 25 000 €. Quelle vérification est prioritaire ?",
+      "options": [
+        "Déduire un bénéfice supplémentaire de 10 000 € du seul écart entre les chiffres",
+        "Attribuer automatiquement l’écart aux délais clients sans vérifier les calculs et classements",
+        "Rechercher une erreur de calcul ou de périmètre car l’identité ne concorde pas",
+        "Considérer le signe positif des trois montants comme une preuve suffisante de cohérence"
+      ],
+      "answer": 2,
+      "explanation": "Avec ces données cohérentes, le solde attendu est 15 000 €. L’écart impose de vérifier calculs et classements avant toute interprétation."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’entreprise a une trésorerie nette légèrement positive à la clôture mais connaît des pics saisonniers de stock. Que peut-on conclure ?",
+      "options": [
+        "Aucune tension ne peut survenir avant la clôture suivante",
+        "Les besoins saisonniers n’affectent jamais la trésorerie",
+        "Le solde de clôture garantit tous les paiements futurs",
+        "La photographie de clôture ne suffit pas pour apprécier les tensions en cours d’année"
+      ],
+      "answer": 3,
+      "explanation": "Le bilan décrit une date donnée. Un cycle saisonnier peut créer des pointes de besoin qui nécessitent une analyse des variations intra-annuelles."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le FRNG augmente de 8 000 € et le BFR augmente de 13 000 € sur la même période. Quel diagnostic qualitatif convient ?",
+      "options": [
+        "La trésorerie nette se dégrade car le besoin croît plus vite que la ressource",
+        "La trésorerie nette progresse puisque le FRNG augmente",
+        "La trésorerie nette reste identique car les deux augmentent",
+        "Le résultat comptable baisse nécessairement de 13 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La variation de trésorerie correspond à celle du FRNG moins celle du BFR. Une hausse de ressource inférieure à la hausse du besoin dégrade le solde."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi analyser les délais de paiement clients à activité comparable ?",
+      "options": [
+        "Pour attribuer toute hausse des créances à une hausse des retards",
+        "Pour distinguer l’effet du délai de celui du volume des ventes",
+        "Pour déduire le délai de paiement de la seule variation du chiffre d’affaires",
+        "Pour conclure à un délai identique dès que deux entreprises ont le même encours client"
+      ],
+      "answer": 1,
+      "explanation": "Un stock de créances dépend des ventes et de leur délai d’encaissement. Comparer l’activité permet d’isoler plus clairement l’effet du crédit accordé."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les ventes sont stables mais plusieurs clients règlent plus tard que prévu. Quelle action éclaire le mieux l’origine du besoin ?",
+      "options": [
+        "Examiner uniquement le total des ventes facturées sans distinguer leur règlement",
+        "Se fier au délai contractuel prévu sans vérifier les paiements réels",
+        "Analyser l’ancienneté des créances et les échéances dépassées",
+        "Utiliser uniquement le bénéfice de la période comme preuve de bon recouvrement"
+      ],
+      "answer": 2,
+      "explanation": "L’ancienneté et les échéances des créances permettent d’identifier les retards. Une marge stable n’exclut pas une tension liée aux encaissements."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les créances clients augmentent alors que le délai moyen d’encaissement ne change pas. L’analyste accuse immédiatement les retards clients. Quelle information lui manque ?",
+      "options": [
+        "Le taux de marge sur les ventes",
+        "Le seul montant du capital social",
+        "Le montant des dividendes distribués",
+        "L’évolution du volume des ventes à crédit"
+      ],
+      "answer": 3,
+      "explanation": "À délai constant, une hausse des ventes à crédit peut augmenter les créances. L’encours seul ne permet pas d’attribuer la variation à des retards."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client règle une créance existante et aucun autre poste ne change. Quel mécanisme décrit ce paiement ?",
+      "options": [
+        "La créance diminue, le BFR baisse et les disponibilités augmentent",
+        "Le chiffre d’affaires augmente une seconde fois",
+        "Le stock augmente du montant reçu",
+        "Le FRNG baisse car les clients ont payé"
+      ],
+      "answer": 0,
+      "explanation": "Le règlement transforme une créance en liquidités sans créer une nouvelle vente. Il libère le financement précédemment immobilisé dans le crédit client."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise propose de raccourcir le crédit client pour soulager sa trésorerie. Quelle précaution rend l’analyse complète ?",
+      "options": [
+        "Supposer que le BFR restera toujours inchangé",
+        "Évaluer aussi l’effet commercial possible sur les ventes",
+        "Assimiler chaque encaissement plus rapide à une hausse du bénéfice identique",
+        "Écarter la possibilité de perdre des clients"
+      ],
+      "answer": 1,
+      "explanation": "Réduire le délai peut libérer des ressources, mais modifier les conditions commerciales peut affecter les ventes. L’effet financier doit être rapproché de cet enjeu."
+    }
+  ]
+}

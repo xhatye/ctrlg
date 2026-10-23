@@ -1,0 +1,359 @@
+{
+  "module": "DSCG4",
+  "chapter": "audit",
+  "sourceHash": "96bde5b342f1076b17badb91680ec30a790580458e5b2427a32e40d0650543c6",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’auditeur sélectionne dix machines figurant au registre et recherche chacune dans l’atelier. Quelle assertion teste-t-il principalement ?",
+      "options": [
+        "L’existence des machines enregistrées",
+        "L’exhaustivité de toutes les acquisitions de l’exercice",
+        "Le montant des amortissements annuels",
+        "La propriété juridique de chaque machine"
+      ],
+      "answer": 0,
+      "explanation": "Le point de départ est une population déjà comptabilisée et la recherche porte sur sa présence. Ce sens du contrôle ne recherche pas les acquisitions absentes du registre."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une machine est vue chez l’entreprise. L’auditeur conclut qu’elle lui appartient sans lire le contrat de location signalé. Quelle limite a-t-il négligée ?",
+      "options": [
+        "L’utilisation de la machine dans la production démontre que la société en détient les droits de propriété",
+        "La présence physique ne démontre pas les droits de propriété",
+        "La prise en charge de l’entretien suffit à qualifier la machine de propriété de l’entreprise",
+        "L’inscription au registre immobilisé rend inutile le rapprochement des droits avec le contrat signalé"
+      ],
+      "answer": 1,
+      "explanation": "L’observation répond à une question de présence. Le contrat peut établir que le bien appartient à un tiers ; les droits et obligations nécessitent des éléments propres."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un créancier confirme un solde à la date du 30 novembre, alors que les comptes audités sont arrêtés au 31 décembre. Quel complément est nécessaire pour exploiter ce solde à la clôture ?",
+      "options": [
+        "Utiliser la date de réponse comme date du solde confirmé",
+        "Déduire que toute différence constitue une dette fictive",
+        "Rapprocher les mouvements intervenus entre les deux dates",
+        "Reporter sans changement le solde confirmé au 31 décembre"
+      ],
+      "answer": 2,
+      "explanation": "Une confirmation porte sur une date déterminée. Les règlements, factures et autres mouvements de décembre doivent expliquer le passage à la date des comptes."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une confirmation externe fiable d’une créance prouve-t-elle, à elle seule, que son montant sera intégralement encaissé ?",
+      "options": [
+        "Oui, confirmer une dette vaut garantie bancaire de paiement",
+        "Oui, dès lors que la réponse porte sur le montant exact",
+        "Non, une confirmation externe ne peut étayer aucune assertion",
+        "Non, l’existence du solde et sa recouvrabilité sont distinctes"
+      ],
+      "answer": 3,
+      "explanation": "La réponse peut conforter le solde reconnu par le tiers sans garantir sa solvabilité future. Il faut aussi examiner les éléments d’évaluation et de recouvrement."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un salarié transmet à l’auditeur une réponse de fournisseur depuis sa propre adresse, en la présentant comme une confirmation reçue directement du tiers. Que faut-il contrôler ?",
+      "options": [
+        "L’origine et la transmission de la réponse avant d’en apprécier la fiabilité",
+        "La concordance de la réponse avec le solde client, sans autre vérification de son circuit de transmission",
+        "La présence du nom du fournisseur dans le fichier, assimilée à une authentification de la réponse",
+        "La signature interne du responsable achats, utilisée pour qualifier la réponse de confirmation directe du tiers"
+      ],
+      "answer": 0,
+      "explanation": "La fiabilité dépend notamment de l’origine et des circonstances de collecte. Une réponse relayée par l’entité ne se traite pas automatiquement comme une réponse obtenue directement du tiers.",
+      "references": [
+        {
+          "title": "H2A, NEP 500 : caractère probant des éléments collectés",
+          "url": "https://h2a-france.org/normes/caractere-probant-des-elements-collectes/"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’auditeur cherche des dettes fournisseurs omises au 31 décembre. Quelle sélection répond le plus directement à cet objectif ?",
+      "options": [
+        "Limiter les contrôles aux dettes déjà inscrites dont le montant dépasse le seuil de sélection",
+        "Examiner des paiements et factures reçus après clôture pour rechercher des obligations antérieures non enregistrées",
+        "Examiner uniquement les soldes fournisseurs déjà inscrits pour vérifier leurs additions",
+        "Sélectionner uniquement les factures déjà comptabilisées et confirmer leur présence au dossier"
+      ],
+      "answer": 1,
+      "explanation": "Pour détecter des omissions, il faut partir d’éléments susceptibles de révéler des obligations absentes. Les paiements postérieurs doivent être reliés aux livraisons ou prestations concernées."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un extrait du registre ne contient que les factures enregistrées. L’auditeur y sélectionne des lignes et conclut qu’aucune facture n’a été omise. Quel défaut de population existe ?",
+      "options": [
+        "La sélection couvre l’exhaustivité dès lors que le total de l’extrait est rapproché du grand livre",
+        "Le rapprochement des lignes du registre avec leurs factures suffit à identifier les factures jamais enregistrées",
+        "Les factures absentes ne peuvent pas être sélectionnées dans le seul registre",
+        "Un échantillon plus important issu de cet extrait remplace la recherche de documents absents du registre"
+      ],
+      "answer": 2,
+      "explanation": "La sélection dans une population enregistrée ne permet pas, à elle seule, de retrouver ses absents. Une population ou une procédure indépendante est nécessaire pour ce risque."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un bon de réception daté du 29 décembre n’est rapproché d’aucune facture ni charge. Quelle recherche est prioritaire ?",
+      "options": [
+        "Rattacher la charge à janvier sur la seule base de la date attendue de la facture",
+        "Reporter l’examen du rattachement à la date de règlement du fournisseur",
+        "Traiter le bon de réception comme un simple engagement sans examiner la livraison réalisée",
+        "Identifier la livraison et vérifier si une dette ou charge à payer devait être enregistrée à la clôture"
+      ],
+      "answer": 3,
+      "explanation": "Le bon peut révéler une opération réalisée avant clôture dont la facturation est tardive. Il faut examiner la réalité, la nature et le rattachement de l’obligation."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des numéros de bons de livraison manquent dans une séquence censée être continue. Que permet d’abord cette anomalie ?",
+      "options": [
+        "Cibler une recherche d’opérations manquantes sans tenir chaque numéro absent pour une vente certaine",
+        "Quantifier une omission en appliquant le montant moyen des ventes aux numéros absents avant toute recherche",
+        "Considérer la séquence comme exhaustive lorsque son premier et son dernier numéro concordent",
+        "Limiter le contrôle aux bons présents parce qu’une rupture de numérotation ne renseigne pas sur les opérations absentes"
+      ],
+      "answer": 0,
+      "explanation": "Une rupture de séquence est un indice. Annulations, erreurs de numérotation ou opérations omises doivent être distinguées avec les pièces, sans fabriquer un montant."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’auditeur reçoit une extraction fournisseurs excluant les comptes soldés. Pourquoi cette restriction peut-elle gêner une recherche de dettes omises ?",
+      "options": [
+        "Le solde nul suffit à écarter les comptes concernés des travaux portant sur le rattachement des opérations",
+        "Des paiements ou mouvements de comptes soldés peuvent révéler des factures de la période non rattachées correctement",
+        "Les paiements postérieurs ne sont utiles qu’aux comptes encore créditeurs dans l’extraction fournie",
+        "La sélection des seuls soldes ouverts couvre les charges de la période dès que leur total concorde avec le grand livre"
+      ],
+      "answer": 1,
+      "explanation": "Le solde final nul ne décrit pas tous les flux ni leur rattachement. Le périmètre de l’extraction doit correspondre à l’objectif du test et rester justifié."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle démarche illustre le mieux un contrôle d’exhaustivité des stocks ?",
+      "options": [
+        "Vérifier seulement les prix unitaires des articles déjà recensés",
+        "Sélectionner des lignes de l’état et rechercher uniquement les biens correspondants dans l’entrepôt",
+        "Sélectionner des biens présents dans l’entrepôt et rechercher leur inscription dans l’état de stock",
+        "Sélectionner des lignes de l’état et vérifier seulement leur addition"
+      ],
+      "answer": 2,
+      "explanation": "Le test part ici du terrain vers l’enregistrement pour rechercher des éléments manquants. Le sens inverse vise principalement l’existence des éléments recensés."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un lot est physiquement présent mais son modèle n’est plus vendu et aucun prix de cession n’est documenté. Quel travail répond au risque d’évaluation ?",
+      "options": [
+        "Confirmer le coût d’achat et s’en tenir à ce coût, sans étudier les perspectives de vente du modèle",
+        "Appliquer au lot la marge moyenne des produits courants, sans examiner son caractère abandonné",
+        "Utiliser le dernier prix catalogue connu, sans vérifier qu’une vente reste réalisable à ce prix",
+        "Examiner l’obsolescence et les valeurs pertinentes selon le référentiel applicable"
+      ],
+      "answer": 3,
+      "explanation": "La présence et le comptage n’établissent pas la valeur d’un stock ancien. Le traitement demande des données de coût, d’état et de réalisation pertinentes, sans montant arbitraire."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une estimation repose sur un prix de revente de 80 € par article. Des ventes comparables récentes ont lieu à 55 €, sans différence de qualité documentée. Quelle analyse est adaptée ?",
+      "options": [
+        "Expliquer l’écart entre l’hypothèse retenue et les transactions comparables",
+        "Conserver 80 € puisque ce montant figurait au budget initial",
+        "Retenir 55 € pour tous les articles de l’entreprise sans comparaison",
+        "Considérer que le prix de 55 € prouve une erreur de comptage"
+      ],
+      "answer": 0,
+      "explanation": "Les observations de marché peuvent contredire une hypothèse d’évaluation. Il faut en apprécier la comparabilité et obtenir une justification de l’écart avant de conclure."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un modèle de dépréciation est correctement calculé mais n’inclut pas la gamme abandonnée qui concentre le risque. Quelle limite demeure ?",
+      "options": [
+        "L’absence de ventes de la gamme justifie de la sortir de la population de dépréciation sans autre analyse",
+        "L’exactitude du calcul ne corrige pas une population incomplète",
+        "Le taux moyen des gammes conservées peut être appliqué au total comptable pour compenser l’exclusion",
+        "La concordance du modèle avec la population sélectionnée suffit à valider le montant de dépréciation de tous les stocks"
+      ],
+      "answer": 1,
+      "explanation": "Le calcul porte sur les entrées sélectionnées. L’omission d’articles à risque peut biaiser la conclusion même sans faute arithmétique dans la formule."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour une créance contestée, le client confirme la facture mais produit une réclamation argumentée portant sur la qualité. Quelle assertion appelle des travaux complémentaires ?",
+      "options": [
+        "La réalité du règlement, considérée comme déjà garantie par la confirmation",
+        "L’exhaustivité du compte client, considérée comme seule question soulevée par la réclamation",
+        "L’évaluation et les conséquences possibles du litige sur le recouvrement",
+        "L’exactitude arithmétique du seul total des factures, sans examiner le litige"
+      ],
+      "answer": 2,
+      "explanation": "Le montant confirmé n’éteint pas le risque de contestation ou d’impayé. Les pièces du différend et les perspectives de règlement éclairent la valeur recouvrable de la créance."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La direction remet une lettre affirmant que tous les stocks sont vendables. L’auditeur la tient pour suffisante malgré des marchandises endommagées observées. Que manque-t-il ?",
+      "options": [
+        "La mise à jour de la date de la lettre suffit à lever le désaccord avec le constat physique",
+        "La généralité de la déclaration permet de limiter le test aux gammes non endommagées",
+        "La confirmation de cette même affirmation par le responsable commercial remplace l’étude des pertes sur les articles observés",
+        "La confrontation de cette déclaration aux éléments contradictoires et aux contrôles nécessaires"
+      ],
+      "answer": 3,
+      "explanation": "Une déclaration ne neutralise pas une observation contradictoire. Il faut examiner les articles concernés, la portée de la contradiction et les procédures complémentaires adaptées."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux fichiers valorisent le même lot : l’un utilise 100 unités, l’autre 120, sans mouvement entre leurs dates. Quelle première démarche évite un contrôle trompeur de la valeur ?",
+      "options": [
+        "Rapprocher le périmètre et la quantité avant de comparer les seuls prix unitaires",
+        "Rapprocher les seuls totaux monétaires, puis retenir le fichier présentant le coût unitaire le mieux documenté",
+        "Contrôler la facture du prix unitaire dans chaque fichier avant d’expliquer la différence de quantité",
+        "Expliquer l’écart par un arrondi de valorisation sans vérifier les quantités du lot"
+      ],
+      "answer": 0,
+      "explanation": "La valeur dépend de la quantité comme du prix. Une divergence de population doit être expliquée plutôt que masquée par une comparaison partielle des prix."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture de janvier porte sur une prestation effectivement achevée en décembre dans le cadre de comptabilisation donné. Quel contrôle vise le rattachement correct ?",
+      "options": [
+        "Répartir la charge par moitié entre les deux mois sans autre donnée",
+        "Comparer les preuves de réalisation avec la période de comptabilisation de la charge et de la dette",
+        "Retenir nécessairement janvier parce que la facture y est imprimée",
+        "Retenir le mois du paiement comme période de charge dans tous les cas"
+      ],
+      "answer": 1,
+      "explanation": "La date matérielle de facture ne décrit pas toujours la réalisation. Les pièces d’exécution permettent de contrôler la séparation des exercices selon les règles données."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture de vente est datée du 30 décembre mais le dossier montre que le transfert prévu par le régime du cas n’intervient que le 4 janvier. Quelle difficulté faut-il examiner ?",
+      "options": [
+        "Une vente à rattacher au seul mois du paiement futur, quel que soit le transfert",
+        "Une vente à répartir par moitié entre décembre et janvier du seul fait de ces deux dates",
+        "Une comptabilisation prématurée de la vente au regard du transfert pertinent",
+        "Une vente à rattacher nécessairement à décembre parce que la facture a cette date"
+      ],
+      "answer": 2,
+      "explanation": "Le contrôle doit rapprocher la reconnaissance du produit de l’événement exigé par le régime fourni. La seule date de facturation ne remplace pas cet événement."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des stocks sont comptés le 28 décembre et les comptes arrêtés le 31. Quelle procédure relie utilement les quantités aux comptes ?",
+      "options": [
+        "Retenir les quantités du 28 sans tenir compte des mouvements",
+        "Reporter tous les mouvements de décembre sur janvier",
+        "Remplacer les quantités comptées par le budget de vente",
+        "Contrôler les entrées et sorties entre comptage et clôture"
+      ],
+      "answer": 3,
+      "explanation": "Un inventaire à une date différente exige un rapprochement des mouvements jusqu’à la clôture. Leur contrôle évite de confondre des quantités relevant de deux dates."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La même livraison figure dans les ventes de décembre et de janvier. L’auditeur n’a relevé aucune différence de prix. Quel risque subsiste ?",
+      "options": [
+        "Un double enregistrement de la même opération sur deux périodes",
+        "Une absence de produit dans les deux périodes",
+        "Un simple décalage de paiement ne nécessitant aucun contrôle des produits",
+        "Une double livraison démontrée par le seul fait que deux factures ont le même prix"
+      ],
+      "answer": 0,
+      "explanation": "L’égalité des montants ne prouve pas deux opérations distinctes. Les références et dates de réalisation doivent permettre de détecter le doublon et son rattachement."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une sélection ne couvre que les factures émises avant le 31 décembre. Pourquoi peut-elle manquer des produits à rattacher à décembre ?",
+      "options": [
+        "La facturation antérieure à la clôture constitue un critère suffisant de population pour l’exhaustivité des produits",
+        "Certaines opérations réalisées avant clôture peuvent n’avoir été facturées qu’après",
+        "L’absence de facture au 31 décembre permet de reporter l’examen de l’opération au prochain exercice",
+        "Le contrôle des factures de décembre couvre les produits à recevoir dès que leur numérotation est continue"
+      ],
+      "answer": 1,
+      "explanation": "La recherche de produits non facturés ou mal rattachés nécessite d’autres sources de réalisation. La population des factures déjà émises peut exclure précisément les opérations recherchées."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel dossier rend une procédure de séparation des exercices vérifiable ?",
+      "options": [
+        "Le rapprochement du chiffre d’affaires annuel avec les déclarations, sans détail des opérations autour de la clôture",
+        "La liste des factures sélectionnées et leurs montants, sans pièces de réalisation ni règle de rattachement",
+        "Les opérations sélectionnées, leurs pièces datées, la règle de rattachement et la conclusion sur les écarts",
+        "Les bons de livraison sélectionnés, sans rapprochement avec leur comptabilisation ni analyse des écarts"
+      ],
+      "answer": 2,
+      "explanation": "Le dossier doit relier chaque résultat au fait et à la période concernés. Un total ou un paiement global ne permet pas de reconstituer les contrôles effectués."
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "sourceHash": "2710ca95452b9a3e0c01b1c8a8dec5d1b7dbb43aa7e3a1af47ca43122362c51d",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "3ed24cd6a97da78fa4bc554bcae0af3b2f095a38c45f520f0959213b94b856c7",
+      "selected": 1,
+      "reason": "25%de120 réservent30euros de marge cible.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "29ce9b9689ed0b864ce146e1852b15b287672e2977a38aa4775579f6491ef8ea",
+      "selected": 2,
+      "reason": "75%de120 donnent90euros de coût admissible.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "aaa4726623683f0f3d09c0a9721687f97e184979b8736eb5876ddc8e1eadaefb",
+      "selected": 1,
+      "reason": "100moins90 imposent10euros de réduction.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "b0ee78a10a704f4a36329786e62e97baf153b17213359e8a415b0f87781a36d3",
+      "selected": 1,
+      "reason": "10sur100 représentent10%ducoûtestimé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "2bbd00f55b74f688c5b0529bb134b3b1fbb6ecb89cb1429f763b6a6a1ef562e0",
+      "selected": 2,
+      "reason": "Marge surprix et majoration surcoût ont dénominateurs différents.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "b0f3c67f0505a2fa6246a8a3d646d0c42af729dbd940cac7d49baa007654c1ec",
+      "selected": 3,
+      "reason": "La cible est une exigence à rendre faisable, pas un coût observé acquis.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "279b2a10a6575931512e9d569c8c9d7a201f75a3437d1e59e473b4185d3dff80",
+      "selected": 3,
+      "reason": "Une économie supprimant exigenceessentielle ne respecte pas usage constant requis.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "b2f327df25b95f1cec32af97df8e712184bfaf71ea7e9ffa347b6f4af09fd1bb",
+      "selected": 3,
+      "reason": "L’effort défini sur estimé doit conserver son dénominateur ou être nommé différemment.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "6520ac2482dbcbe2a6d9ecd156b331b059239fa02f7683dc38d10ff487f348c0",
+      "selected": 0,
+      "reason": "Àtaux constant, la marge eneuros diminue proportionnellement au prix.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "003759a6434fa80a22dd0795373a097dd6db5402eec18934ed409c959418e54b",
+      "selected": 1,
+      "reason": "90diviséspar75% retrouvent120euros de prix.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "4df6df073416534ad52c243e400a7831e9c9475dc0a3048b4996d93bb82d54d2",
+      "selected": 0,
+      "reason": "Une estimation sousplafond ne garantit ni coûts réels futurs ni autres conséquences.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "6da70ba7e04e5ef5538e8b5ce2982b6588ee61ca7e47a47646541ee04c09214d",
+      "selected": 1,
+      "reason": "10euros fois3000unités donnent30000euros d’effort.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "f61d29d12482c0d5d51cf3c3a6ff1574da38a392514bffec0356d53e80e032da",
+      "selected": 0,
+      "reason": "20sur100 donnent20%de marge surprix.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "1a0671615b5892953ff877f53529ede96292039d1e9695290190d1e39732d3bc",
+      "selected": 1,
+      "reason": "Àprixfixe plusdemarge laisse moins de coût admissible.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "18b0198ae1cd96b1d02ed08a4e45739a2a5fc925b71bc49fb7afd31376abdaad",
+      "selected": 2,
+      "reason": "Deuxplans touchant même ressource peuvent compter la même économie deuxfois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "57301e2cd3a5f27f508871a4fdf748b57bd35a66060054f08819dd6e09fb1ad3",
+      "selected": 2,
+      "reason": "Les arrondis doivent suivre le calcul et non modifier l’effort àréaliser.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "a5623b3085bd99fed33bf78924bebdc3e8e2d006bf8a00b49997b587e0284b1e",
+      "selected": 2,
+      "reason": "L’équivalencequalité doit être examinée avant conclure gain net réel de fournisseur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "5173744581b9f893823361f3b4a21f3c505b1382809836899ef73458d6b6bfb0",
+      "selected": 3,
+      "reason": "Prix et marge souhaitée déterminent coût admissible puis écart au coût estimé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "d9c3cb643d721156c08e5578cb4ef1ae4c207d8d7d65c263b5e1724dfe04fe77",
+      "selected": 1,
+      "reason": "Un petit écart peut rester techniquement infaisable sanssolutionprouvée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "88b2a3268e818842081d8a16fe0260763184282e5ab2898a2ce92cd467d6263a",
+      "selected": 1,
+      "reason": "Bvaleur0.2/0.5=0.4 inférieur àA0.5/0.2=2.5 ; examinerB sans supprimer fonction.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "5c13d19673c691bdd5f8ab929092c81355dd69e3c00de5a8f97d2bd918c0d41c",
+      "selected": 2,
+      "reason": "Unprix incertain produit des coûtscibles conditionnels aux scénarios.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "8d0bc6e3aa00b07a033a500207cdba6efa929341dd6b4132dd51cf277b6f7748",
+      "selected": 2,
+      "reason": "Coût92+9000/Q<=95 donne9000/Q<=3 doncQ>=3000.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "95bd8673e3b04b081186a545339f2e8c14c859cb04febcf61f2b570b048ab2ef",
+      "selected": 2,
+      "reason": "Le gainnet vaut achat15moins traitement4 surmêmepérimètre, pas15seul.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

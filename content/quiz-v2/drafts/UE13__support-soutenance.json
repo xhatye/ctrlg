@@ -1,0 +1,365 @@
+{
+  "module": "UE13",
+  "chapter": "support-soutenance",
+  "sourceHash": "772e219b062cde2bbe554b897bf2049d9ee059846e77b19a8d830b284f5b138c",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une diapositive contient un tableau montrant que les retards sont surtout concentrés sur les dossiers incomplets. Quel titre rend explicite le constat porté par cette preuve, sans ajouter de causalité ?",
+      "options": [
+        "Les retards observés se concentrent sur les dossiers incomplets.",
+        "Les dossiers incomplets causent à eux seuls tous les retards.",
+        "La complétude supprime tout retard dans le service.",
+        "La correction des dossiers incomplets a déjà résolu le problème."
+      ],
+      "answer": 0,
+      "explanation": "Un titre de constat peut guider la lecture du tableau sans dépasser ce qu’il montre. La concentration observée ne démontre ni cause exclusive, ni disparition des retards, ni effet d’une action déjà réalisée."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour expliquer un traitement jamais enregistré à l’écran, le candidat crée une animation qui en reconstitue les étapes d’après la procédure. Quelle légende distingue le rôle du visuel ?",
+      "options": [
+        "Enregistrement direct du traitement observé sur le terrain.",
+        "Reconstitution pédagogique des étapes de la procédure, et non captation d’une exécution réelle.",
+        "Mesure du temps réel de traitement établie par la durée de l’animation.",
+        "Preuve de l’exécution identique de tous les dossiers pendant le stage."
+      ],
+      "answer": 1,
+      "explanation": "Une reconstitution peut expliquer un fonctionnement, mais sa durée et son déroulement ne sont pas ceux d’un enregistrement d’activité. Le support doit distinguer explication du mécanisme et preuve empirique d’une exécution."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat veut imposer le même nombre de diapositives à tous les exposés. Quel critère doit plutôt guider la sélection ?",
+      "options": [
+        "Le nombre de documents disponibles et leur ordre de création, sans référence au temps d’exposé.",
+        "La durée consacrée par un autre candidat à son sujet, prise comme plan applicable au nouveau sujet.",
+        "Les consignes, le temps disponible et le raisonnement à présenter.",
+        "Le nombre de diapositives du rapport le plus long, pris comme norme pour toute soutenance."
+      ],
+      "answer": 2,
+      "explanation": "Il n’existe pas dans ce support un nombre universel à appliquer. L’organisation doit rester cohérente avec l’épreuve et les éléments nécessaires à la démonstration."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La décision compare deux solutions selon trois critères explicitement prioritaires : délai, fiabilité et coût. Les preuves sont dispersées sur des pages séparées par fournisseur. Quel plan facilite une comparaison symétrique ?",
+      "options": [
+        "Présenter toutes les forces de A puis toutes les faiblesses de B.",
+        "Présenter pour chaque solution un nombre différent de critères selon les données les plus favorables.",
+        "Classer les fournisseurs selon la longueur de leur documentation.",
+        "Présenter les mêmes trois critères dans le même ordre pour chaque solution, en signalant les données manquantes."
+      ],
+      "answer": 3,
+      "explanation": "Une comparaison symétrique maintient les mêmes critères et rend visibles les lacunes. Elle ne garantit pas le choix final, mais empêche qu’une différence de structure fasse passer une absence d’information pour une supériorité."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une diapositive décrit le protocole prévu ; la suivante présente des résultats obtenus après une modification de ce protocole. Quel lien doit être explicité oralement entre les deux ?",
+      "options": [
+        "Ce qui a changé entre le protocole prévu et celui effectivement appliqué aux résultats.",
+        "Le fait que toute modification rend automatiquement les résultats inutilisables.",
+        "Le fait que le protocole prévu reste la description exacte de toute réalisation.",
+        "La possibilité d’évaluer la conformité au protocole en regardant seulement la date du diaporama."
+      ],
+      "answer": 0,
+      "explanation": "La transition doit distinguer intention et réalisation afin que le jury comprenne de quelle méthode proviennent les résultats. Le changement doit être décrit avec ses conséquences, sans être masqué ni traité comme invalidation automatique."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La recommandation propose un déploiement après validation d’un test de sécurité. Ce test n’a pas encore été réalisé. Quel schéma final traduit la dépendance prévue ?",
+      "options": [
+        "Déploiement puis test de sécurité, quelle que soit l’issue du test.",
+        "Test de sécurité ; déploiement seulement si la validation exigée est obtenue.",
+        "Déploiement présenté comme acquis et test classé comme simple retour d’expérience.",
+        "Test et déploiement simultanés, la condition étant considérée satisfaite par leur planification."
+      ],
+      "answer": 1,
+      "explanation": "La validation est ici une condition préalable, pas une tâche indépendante ou un contrôle a posteriori. Le support doit montrer l’ordre et la condition de passage sans annoncer comme acquise une étape encore non réalisée."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un graphique prolonge une série de résultats réels par trois mois de prévisions. Toutes les valeurs sont dessinées avec le même trait et sans séparation. Quelle correction préserve le statut de preuve ?",
+      "options": [
+        "Retirer les dates des trois derniers mois pour les rendre moins comparables.",
+        "Présenter toute la série comme observée puisque les prévisions utilisent les données antérieures.",
+        "Distinguer explicitement la partie observée de la partie prévue et signaler la transition.",
+        "Remplacer les résultats réels par les prévisions pour conserver une seule nature de données."
+      ],
+      "answer": 2,
+      "explanation": "Une prévision n’est pas une observation, même si elle est calculée à partir de celle-ci. Une séparation lisible et une légende évitent de présenter le prolongement estimé comme un résultat déjà constaté."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La médiane des délais diminue, mais les plus longs dossiers restent très lents. Quelle lecture conserve les deux informations ?",
+      "options": [
+        "Le délai médian baisse, ce qui impose que le délai moyen baisse dans la même proportion.",
+        "Le délai médian baisse, ce qui mesure directement la baisse du délai maximal.",
+        "Le délai médian baisse, ce qui garantit qu’aucun dossier ne dépasse plus la nouvelle médiane.",
+        "Le délai médian baisse, tandis que des cas extrêmes restent longs."
+      ],
+      "answer": 3,
+      "explanation": "Un indicateur central ne décrit pas chaque observation. Le commentaire peut présenter l’amélioration médiane sans effacer les situations extrêmes encore observées."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le support montre une capture où une règle signale un paiement comme doublon. L’enquête confirme ensuite qu’il s’agit de deux opérations légitimes. Quel rôle donner à cette capture dans l’exposé ?",
+      "options": [
+        "Illustrer un faux positif et la nécessité d’une vérification après le signal.",
+        "Illustrer un doublon de paiement confirmé par la seule présence du signal.",
+        "Mesurer à elle seule le pourcentage global de faux positifs du dispositif.",
+        "Démontrer que le dispositif ne peut jamais signaler un vrai doublon."
+      ],
+      "answer": 0,
+      "explanation": "Le cas illustre une alerte qui ne correspond pas à une anomalie réelle. Il justifie de distinguer signal et confirmation, sans mesurer une fréquence globale ni prouver l’absence de tout vrai positif."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une donnée défavorable est retirée du graphique sans raison méthodologique, afin de rendre la tendance plus nette. Quel défaut apparaît ?",
+      "options": [
+        "Une réduction de la taille de l’échantillon qui conserve nécessairement sa distribution initiale.",
+        "Une sélection qui peut déformer la preuve présentée.",
+        "Une correction de valeur extrême justifiée par le seul fait qu’elle contredit la tendance souhaitée.",
+        "Une neutralisation de l’incertitude qui permet d’interpréter la tendance restante comme exacte."
+      ],
+      "answer": 1,
+      "explanation": "Le choix des observations doit être justifié. Retirer un résultat défavorable pour améliorer l’apparence peut modifier l’interprétation de l’ensemble."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une annexe détaillée est utile seulement si le jury la demande. Pendant la répétition, sa recherche oblige à faire défiler toutes les pages et le candidat perd l’endroit où reprendre. Quelle préparation répond à ce problème précis ?",
+      "options": [
+        "Insérer toute l’annexe au milieu du fil principal même si elle n’est pas demandée.",
+        "Retirer la conclusion pour garder l’annexe affichée jusqu’à la fin.",
+        "Prévoir un accès repéré à l’annexe et un retour clairement identifié au fil principal.",
+        "Reprendre l’exposé depuis son début après chaque consultation d’annexe."
+      ],
+      "answer": 2,
+      "explanation": "Le problème concerne la navigation pendant un échange. Un repérage direct et un point de retour permettent d’approfondir une réponse sans perdre le raisonnement principal ; l’annexe n’a pas à être imposée systématiquement."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La même mesure est donnée en heures sur une diapositive et en jours sur une autre. Quelle vérification s’impose avant comparaison ?",
+      "options": [
+        "Comparer directement les valeurs parce que les deux mesurent une durée.",
+        "Diviser toutes les valeurs par 24, même si les jours indiqués sont des jours ouvrés conventionnels.",
+        "Multiplier tous les jours par huit sans vérifier la convention des données.",
+        "Rendre les unités et conventions de durée cohérentes."
+      ],
+      "answer": 3,
+      "explanation": "La comparaison des durées nécessite une unité et une convention explicites. Des valeurs dans des unités différentes ne sont pas directement comparables."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le message porte sur la comparaison de trois catégories au même instant. Quel support répond directement à ce besoin ?",
+      "options": [
+        "Un tableau ou un graphique de comparaison clairement étiqueté.",
+        "Une courbe reliant les catégories comme si leur ordre constituait une évolution dans le temps.",
+        "Trois graphiques séparés aux échelles différentes non signalées pour comparer directement leurs hauteurs.",
+        "Des surfaces non proportionnelles aux valeurs, à comparer d’après leur taille apparente."
+      ],
+      "answer": 0,
+      "explanation": "La forme doit correspondre au message. Une comparaison de catégories demande des repères communs, pas une temporalité artificielle ou un processus sans rapport."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux équipes traitent respectivement 100 et 1 000 dossiers. Leurs graphiques empilés à 100 % montrent tous deux 20 % de dossiers incomplets. Quelle information ces barres de même hauteur ne représentent-elles pas directement ?",
+      "options": [
+        "La part relative de dossiers incomplets dans chaque équipe.",
+        "La différence de volumes absolus de dossiers incomplets, soit 20 contre 200.",
+        "L’égalité des proportions de dossiers incomplets.",
+        "La complémentarité entre les parts complètes et incomplètes dans chaque équipe."
+      ],
+      "answer": 1,
+      "explanation": "Une barre normalisée décrit des parts et efface la différence de volumes totaux. À part identique, les effectifs incomplets sont pourtant de 20 et 200 ; afficher les volumes complète la lecture sans modifier les proportions.",
+      "references": [
+        {
+          "title": "Santé publique France — Représentations graphiques, effectifs et base100",
+          "url": "https://www.santepubliquefrance.fr/sites/default/files/rdd/document/39235_12639-ps.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau distingue les cellules « 0 » (absence mesurée d’incident) et « — » (donnée non recueillie), selon sa légende. Lors de sa simplification pour l’oral, quelle modification conserve cette distinction ?",
+      "options": [
+        "Remplacer les tirets par zéro pour avoir une seule présentation numérique.",
+        "Remplacer tous les zéros par des tirets pour raccourcir le tableau.",
+        "Conserver les deux codes et leur légende explicite.",
+        "Supprimer les lignes sans données puis présenter le tableau comme exhaustif."
+      ],
+      "answer": 2,
+      "explanation": "Un zéro observé et une absence de mesure n’ont pas le même sens. La simplification doit garder cette distinction ; fusionner les codes ou retirer silencieusement les lignes peut transformer une lacune en résultat."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux montants sont représentés par des disques dont l’aire doit être proportionnelle au montant. Le second montant vaut quatre fois le premier. Quelle relation entre les rayons respecte cette convention, sachant que l’aire vaut π × rayon² ?",
+      "options": [
+        "Le second rayon est quatre fois le premier.",
+        "Le second rayon est seize fois le premier.",
+        "Les deux rayons sont égaux puisque la forme est identique.",
+        "Le second rayon est deux fois le premier."
+      ],
+      "answer": 3,
+      "explanation": "Doubler le rayon multiplie l’aire par quatre. Multiplier le rayon par quatre créerait une aire seize fois plus grande et amplifierait le rapport des montants. La dimension codant la valeur est ici l’aire, non le rayon.",
+      "references": [
+        {
+          "title": "Union européenne — Scaled symbol maps",
+          "url": "https://data.europa.eu/apps/data-visualisation-guide/scaled-symbol-maps"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un axe vertical commence au-dessus de zéro et amplifie visuellement un petit écart. Quel contrôle de présentation est justifié ?",
+      "options": [
+        "Rendre l’échelle explicite et vérifier que le commentaire décrit correctement l’écart.",
+        "Interpréter le rapport des hauteurs visibles comme le rapport des valeurs malgré une origine tronquée.",
+        "Comparer seulement la distance entre les sommets des barres sans tenir compte de la graduation.",
+        "Conserver le commentaire d’un graphique à origine nulle sans vérifier l’effet du changement d’échelle."
+      ],
+      "answer": 0,
+      "explanation": "Une échelle doit être lisible et interprétée correctement. L’impression visuelle ne remplace pas l’examen des valeurs et du sens de la différence."
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une courbe présente des observations à intervalles très différents, mais l’axe les espace toutes également sans explication. Quel point vérifier ?",
+      "options": [
+        "Le montant total des observations, supposé suffire à déterminer la vitesse entre chaque date.",
+        "La représentation du temps et l’interprétation de la vitesse des variations.",
+        "La seule succession des dates, supposée garantir que les pentes restent comparables malgré les distances.",
+        "Le seul écart vertical entre les points, supposé mesurer une vitesse sans durée correspondante."
+      ],
+      "answer": 1,
+      "explanation": "L’espacement des dates peut modifier la perception d’une évolution. Le visuel doit rendre la convention temporelle compréhensible et éviter une lecture trompeuse de la pente."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’exposé doit durer 15 minutes, puis un échange séparé de 10 minutes. Le candidat a préparé 20 minutes d’exposé et prévoit d’utiliser les cinq premières minutes d’échange pour le terminer. Quel ajustement respecte la répartition donnée ?",
+      "options": [
+        "Garder 20 minutes d’exposé en réduisant unilatéralement l’échange à cinq minutes.",
+        "Compter les questions comme une partie facultative de la durée d’exposé.",
+        "Ramener le fil principal à 15 minutes et réserver les compléments aux questions pertinentes.",
+        "Annoncer les conclusions uniquement après les questions, en conservant les 20 minutes de contexte."
+      ],
+      "answer": 2,
+      "explanation": "Les deux temps ont des fonctions et durées distinctes explicitement données. Le candidat doit terminer son raisonnement dans les 15 minutes, puis utiliser des compléments en réponse au jury plutôt que prélever sur l’échange prévu."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat prépare une réponse sur la rapidité d’une procédure. La mesure commence à la réception d’un dossier complet, mais le jury pourrait demander le délai total depuis la première demande du client. Quelle préparation évite une réponse hors périmètre ?",
+      "options": [
+        "Utiliser la mesure existante comme délai total en supposant les temps antérieurs nuls.",
+        "Multiplier le délai mesuré par deux pour intégrer les temps antérieurs sans les observer.",
+        "Répondre avec le délai mesuré sans expliquer son point de départ.",
+        "Préparer la distinction entre les deux délais et identifier les dates supplémentaires nécessaires au délai total."
+      ],
+      "answer": 3,
+      "explanation": "La question possible porte sur un autre point de départ. La mesure disponible reste utile pour son périmètre, mais ne couvre pas le temps précédant le dossier complet ; il faut expliquer cette différence et les données manquantes."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pendant une répétition, un auditeur comprend le résultat mais demande pourquoi l’option B a été écartée. Le candidat possède la comparaison, absente de son exposé. Quelle révision traite directement ce retour ?",
+      "options": [
+        "Ajouter le critère décisif de rejet de B et son appui factuel, avec le détail disponible en complément.",
+        "Ajouter de nouvelles descriptions de l’option A sans mentionner la comparaison.",
+        "Répéter le résultat final plus lentement sans présenter le choix entre options.",
+        "Retirer B de toute mention pour supprimer la question de son rejet."
+      ],
+      "answer": 0,
+      "explanation": "Le retour vise un maillon manquant du raisonnement : pourquoi une alternative est écartée. Le critère et sa preuve répondent à ce manque sans développer tout le dossier ni croire qu’une répétition du résultat justifie le choix."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le diaporama autorisé ne contient pas de donnée client. Cependant, le partage de tout le bureau projette aussi les notifications nominatives de la messagerie. Quelle préparation traite cette exposition supplémentaire ?",
+      "options": [
+        "Protéger uniquement le fichier du diaporama par mot de passe.",
+        "Limiter l’affichage à la fenêtre utile et neutraliser les notifications avant la projection.",
+        "Déplacer les notifications dans un coin de l’écran partagé.",
+        "Renommer le diaporama pour indiquer que les autres fenêtres sont privées."
+      ],
+      "answer": 1,
+      "explanation": "La surface projetée dépasse ici le fichier contrôlé. Les fenêtres et notifications peuvent divulguer d’autres informations ; restreindre le partage et neutraliser ces affichages traite ce canal, contrairement à un nom de fichier ou un placement discret."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat veut pouvoir expliquer son résultat si le graphique ne s’affiche pas. Quelle préparation soutient cette autonomie ?",
+      "options": [
+        "Conserver une copie de remplacement sans vérifier qu’elle contient la dernière version des résultats.",
+        "Préparer uniquement une capture des titres, sans les valeurs nécessaires pour expliquer le résultat.",
+        "Préparer une lecture orale du résultat et disposer d’un support de remplacement autorisé.",
+        "Conserver le graphique dans un service en ligne sans vérifier l’accès disponible dans la salle."
+      ],
+      "answer": 2,
+      "explanation": "Comprendre le résultat permet de l’expliquer indépendamment de son affichage. Un support de remplacement peut aider s’il respecte le cadre de présentation et la confidentialité."
+    }
+  ]
+}

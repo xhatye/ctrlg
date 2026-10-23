@@ -1,0 +1,353 @@
+{
+  "module": "DSCG6",
+  "chapter": "english-governance",
+  "sourceHash": "fe9fa8cb65c12caec5136e5f0e9a29aca0e3a265624ee52e7e19f0036fb5ab99",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A governance chart states: managers propose purchases, a technical panel reviews specifications and a director authorises spending. Which question concerns oversight rather than preparation or execution?",
+      "options": [
+        "How does the technical panel challenge the assumptions in the proposals it reviews?",
+        "How do managers collect the initial equipment specifications?",
+        "How does the purchasing team send the approved order to the supplier?",
+        "How does the warehouse record delivery of the purchased equipment?"
+      ],
+      "answer": 0,
+      "explanation": "L’oversight concerne notamment l’examen critique des décisions et hypothèses. Réunir les besoins, passer une commande autorisée et enregistrer une livraison sont ici des tâches de préparation ou d’exécution."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "For this exercise, a board charter requires the board to monitor delegated purchasing decisions. Management says delegation means the board no longer needs any reports. What should the analysis note?",
+      "options": [
+        "The charter applies only when the board places each order itself.",
+        "Delegation of purchasing does not remove the monitoring duty expressly retained by the charter.",
+        "Delegation automatically replaces the charter’s reporting requirement.",
+        "The purchasing team’s job title is equivalent to a completed board review."
+      ],
+      "answer": 1,
+      "explanation": "L’énoncé fixe une obligation interne de suivi malgré la délégation. Il faut lire ce partage tel qu’il est donné, sans supposer une disparition des rapports ou une règle générale de droit non fournie."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "In a governance discussion, what does asking a decision-maker to be accountable most directly mean?",
+      "options": [
+        "Requiring the person to explain and justify the decision and its consequences.",
+        "Requiring the person to perform every operational task personally.",
+        "Treating the person’s job title as a substitute for explaining the decision.",
+        "Treating delegation of execution as removal of the need to report on the decision."
+      ],
+      "answer": 0,
+      "explanation": "Accountable renvoie au fait de rendre compte et de justifier. Cela ne signifie pas exécuter matériellement chaque tâche ni détenir des titres. Le terme ne remplace pas non plus les données comptables."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A manager reveals a family link with a bidder only after the contract is awarded. Which timing issue should a governance review examine?",
+      "options": [
+        "Whether disclosure after award proves that the relationship began only after award.",
+        "Whether the family link alone confirms that the contract price was excessive.",
+        "Whether the completed award makes the decision process irrelevant to review.",
+        "Whether the relationship could have been considered before the selection and approval decisions."
+      ],
+      "answer": 3,
+      "explanation": "Le moment de la déclaration peut avoir empêché un examen avant décision. Il ne date pas nécessairement le début du lien, ne démontre pas un prix excessif et ne supprime pas l’intérêt de revoir le processus."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An approval note identifies the supplier but not the person who authorised the exception to procurement policy. Which governance information is missing?",
+      "options": [
+        "The authority responsible for the exception and the basis on which it was approved.",
+        "The author of the general policy, treated as the person who approved this particular exception.",
+        "The employee who entered the invoice, treated as the authority who authorised the exception.",
+        "The supplier’s acceptance of the order, treated as internal approval of the policy exception."
+      ],
+      "answer": 0,
+      "explanation": "Le dossier doit identifier la décision d’exception et son auteur. La rédaction d’une règle générale, la saisie d’une facture et l’acceptation commerciale du fournisseur ne démontrent pas qui a autorisé cette dérogation interne."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A reviewer receives a proposal’s summary but is denied the assumptions behind its expected savings. What limits effective scrutiny?",
+      "options": [
+        "The preparer’s signature makes the savings assumptions independently verified without supporting calculations.",
+        "The reviewer cannot test key assumptions using only the favourable summary.",
+        "A favourable history of past projects validates the assumptions of this proposal without access to them.",
+        "Approval of the summary proves that the forecast savings have already been realised."
+      ],
+      "answer": 1,
+      "explanation": "L’examen doit remonter aux hypothèses déterminantes. Signature, antécédents favorables et approbation ne fournissent pas ces calculs ni ne transforment des économies prévues en résultat réalisé."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Two committees review exactly the same file using the same checklist, but neither examines the proposal’s main technical assumption. Which change best addresses the gap?",
+      "options": [
+        "Count the two signatures as proof that the technical assumption has been tested.",
+        "Treat the duplicated review as a substitute for the missing technical information.",
+        "Assign a competent review of the technical assumption and remove unnecessary duplication.",
+        "Add a third identical checklist review without changing the matters examined."
+      ],
+      "answer": 2,
+      "explanation": "Le nombre de contrôles ne remplace pas leur pertinence. Cibler l’hypothèse avec une compétence adaptée traite l’angle mort ; répéter une liste qui l’ignore ne le fait pas."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A manager proposes a contract, scores it and approves it alone. The proposed control is to separate proposal, review and authorisation. Which arrangement implements that separation?",
+      "options": [
+        "The manager prepares and reviews the proposal while a director signs without receiving the review’s supporting evidence.",
+        "The manager prepares and approves the proposal, with a qualified colleague reviewing it only after the binding award.",
+        "The manager prepares, reviews and decides while a colleague merely files each signed document.",
+        "The manager prepares the proposal, another qualified person reviews it and an authorised director decides."
+      ],
+      "answer": 3,
+      "explanation": "Le partage doit correspondre à des interventions réelles et utiles avant décision. Un classement, une revue après engagement ou une signature sans examen ne réalise pas la séparation proposée."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A reviewer raises a material objection, but the approval record says only “unanimous support.” Which governance improvement addresses this discrepancy?",
+      "options": [
+        "Record the objection, its resolution or escalation and the basis for the final decision.",
+        "Keep the objection only in a private working note while describing the final decision as unanimously supported without qualification.",
+        "Record the vote total alone and treat it as sufficient evidence that the substantive objection was resolved.",
+        "Delete the objection from the working papers to align them with the final statement of unanimous support."
+      ],
+      "answer": 0,
+      "explanation": "Le dossier doit rendre visible le traitement du désaccord. Total des votes, note privée ou suppression ne justifient pas une description de soutien unanime face à une objection réelle non expliquée."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An urgent purchase uses an exception route that the supplied policy permits with director approval and a recorded reason. Which evidence best supports compliance with that route?",
+      "options": [
+        "The final invoice, treated as proof that every prior approval occurred.",
+        "The director’s approval and the recorded reason for using the exception.",
+        "The project manager’s statement that the purchase was urgent, without the approval record.",
+        "The supplier’s willingness to deliver quickly, without the internal exception decision."
+      ],
+      "answer": 1,
+      "explanation": "La politique fictive exige deux éléments précis. L’urgence, la capacité de livraison et une facture peuvent être utiles mais ne prouvent pas à eux seuls l’autorisation et la motivation requises."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An approval box is ticked, but no review comments or supporting checks are retained. Which evidence would better demonstrate that the review operated in practice?",
+      "options": [
+        "A trace of the checks performed, issues raised and responses considered before approval.",
+        "A confirmation that the reviewer received the file, treated as proof of the checks performed.",
+        "A description of the reviewer’s formal authority, used in place of evidence of actual review.",
+        "The same tick copied into a second register without additional review evidence."
+      ],
+      "answer": 0,
+      "explanation": "Le fonctionnement effectif du contrôle demande des traces de son exécution : vérifications, objections et réponses. Réception du dossier, autorité formelle et duplication d’une validation ne démontrent pas à elles seules le travail réalisé."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A procedure says, “The committee acts pursuant to the authority delegated by the board.” What does pursuant to indicate?",
+      "options": [
+        "In anticipation of authority that has not yet been delegated.",
+        "In opposition to the limits of the delegated authority.",
+        "Without needing to consider the delegated authority.",
+        "In accordance with, and under, the delegated authority."
+      ],
+      "answer": 3,
+      "explanation": "Pursuant to rattache l’action à une autorité ou règle dont elle découle et qu’elle suit. La formule ne signifie ni anticipation d’une autorité inexistante ni opposition ou dispense de la considérer."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Complete the relative construction: “The board received three proposals, none of ___ included an exit plan.”",
+      "options": [
+        "which",
+        "whom",
+        "whose",
+        "what"
+      ],
+      "answer": 0,
+      "explanation": "None of which reprend ici les trois propositions, objets déjà identifiés. Whom reprend des personnes ; whose marque la possession ; what ne reprend pas cet antécédent dans cette construction."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The chair asks for a review conducted “at arm’s length from the deal team”. What relationship is requested?",
+      "options": [
+        "A review fully integrated into the deal team’s own decision-making process.",
+        "A review conducted independently of the deal team rather than under its influence.",
+        "A review limited to the physical distance between the reviewers’ desks.",
+        "A review whose conclusion is approved by the deal team before any evidence is examined."
+      ],
+      "answer": 1,
+      "explanation": "At arm’s length désigne ici une relation indépendante, sans proximité d’influence. Le sens n’est pas une distance physique et n’impose pas d’intégrer la conclusion au contrôle de l’équipe examinée."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The board sees only average approval time. Several urgent purchases are substantially overdue despite a low average. Which addition makes those exceptions visible?",
+      "options": [
+        "Overdue urgent cases and their age, alongside the average.",
+        "Only the mean duration of completed urgent purchases, excluding those still waiting.",
+        "Only the total number of urgent requests, without their status or waiting time.",
+        "Only the overall percentage approved within target, without identifying overdue urgent cases."
+      ],
+      "answer": 0,
+      "explanation": "Des cas urgents ouverts peuvent disparaître d’un indicateur des seuls dossiers terminés ou d’un agrégat global. Leur statut et ancienneté, présentés avec la moyenne, rendent les exceptions recherchées visibles."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which sentence correctly keeps the two responsibilities grammatically parallel after not only…but also?",
+      "options": [
+        "The committee is responsible not only for setting limits but also for monitoring compliance.",
+        "The committee is responsible not only to set limits but also for monitoring compliance.",
+        "The committee is responsible for not only set limits but also monitoring compliance.",
+        "The committee is responsible not only for setting limits but also to monitor compliance."
+      ],
+      "answer": 0,
+      "explanation": "Les deux fonctions coordonnées ont la même construction : for setting et for monitoring. Mélanger infinitif et groupe prépositionnel, ou placer set après for, rompt cette structure."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Managers receive bonuses for low reported incident counts. Which question directly probes whether this incentive could distort the completeness of reporting?",
+      "options": [
+        "Could the incentive affect reporting behaviour as well as actual incident prevention?",
+        "Which job grades were made eligible for the bonus scheme?",
+        "Was the numerical reporting target formally approved in the budget process?",
+        "How much weight does the bonus calculation give to different incident severities?"
+      ],
+      "answer": 0,
+      "explanation": "La question vise l’effet de l’incitation sur les déclarations, distinct de la prévention réelle. Éligibilité, approbation de cible et pondération sont d’autres aspects du dispositif mais ne testent pas directement ce mécanisme d’incomplétude."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A board wants extra independent approval for high-risk purchases but worries about delay. Which recommendation addresses both objectives?",
+      "options": [
+        "Monitor only the number of approvals, treating volume as proof of risk reduction.",
+        "Target the extra review at defined high-risk cases and monitor both exceptions and review delays.",
+        "Add the same approval stage to every purchase and ignore its turnaround time.",
+        "Remove the review for urgent high-risk purchases without a replacement control."
+      ],
+      "answer": 1,
+      "explanation": "Une réponse proportionnée cible le risque et mesure le coût de délai du contrôle. Le volume d’approbations ne prouve pas leur efficacité ; l’urgence ne suffit pas à supprimer le risque visé."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "For an exercise, a £50,000 review threshold is a proposed internal control parameter, not a stated legal requirement. Which wording preserves that status?",
+      "options": [
+        "We propose independent review above £50,000 and should assess whether that threshold captures the intended risk.",
+        "The law requires review above £50,000, as established solely by this proposal.",
+        "An amount below £50,000 is legally free of governance risk.",
+        "Use of £50,000 in another company establishes that it is the appropriate threshold here."
+      ],
+      "answer": 0,
+      "explanation": "Le seuil est un choix interne à calibrer selon le risque visé. La proposition ne démontre ni obligation légale ni absence de risque sous ce montant ; le recours à ce seuil dans une autre entreprise ne prouve pas son adéquation ici."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "You recommend a specialist review because the proposed contract contains unusual technical risks. The next proposal uses a tested standard specification and independent price benchmarks. Which response shows a revisable, evidence-based recommendation?",
+      "options": [
+        "Keep the identical review because a recommendation must never depend on changed facts.",
+        "Remove every approval solely because one specification is standard.",
+        "Treat independent price benchmarks as proof that every technical risk has disappeared.",
+        "Reassess whether the same specialist review is proportionate to the different risks and evidence."
+      ],
+      "answer": 3,
+      "explanation": "Une recommandation dépend des faits qui la justifient. Un contexte moins inhabituel peut appeler un contrôle ajusté ; cela n’impose ni maintien automatique ni suppression totale des vérifications."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A temporary review stage is introduced to address a specific purchasing risk. Which follow-up supports a later decision to retain, change or remove it?",
+      "options": [
+        "Review the stage’s findings, unresolved risks and delays after a defined period.",
+        "Retain it permanently because its introduction proves its continuing value.",
+        "Remove it as soon as the first proposal passes, without examining later cases.",
+        "Count the number of forms produced as the sole measure of improved decisions."
+      ],
+      "answer": 0,
+      "explanation": "Un bilan à échéance définie doit mettre en regard les effets utiles, risques persistants et coûts de délai. L’introduction, un premier succès ou le nombre de formulaires ne démontre pas la valeur durable du mécanisme."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "“Independent review may uncover conflicts. ___, it can delay the award.” Which connector explicitly presents the delay as a countervailing consideration?",
+      "options": [
+        "For example",
+        "However",
+        "Therefore",
+        "In other words"
+      ],
+      "answer": 1,
+      "explanation": "However marque ici le contraste entre bénéfice et inconvénient. For example introduit une illustration, therefore une conséquence et in other words une reformulation, pas ce contrepoint."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A reviewer proposes testing only high-value approvals. The main risk is repeated small orders split to stay below the approval threshold. Which adjustment best fits that mechanism?",
+      "options": [
+        "Keep the high-value population unchanged because each small order is individually below the limit.",
+        "Treat the total number of suppliers as sufficient evidence that order splitting is absent.",
+        "Include patterns of related small orders when defining the review population.",
+        "Increase the threshold so that fewer orders enter the existing review."
+      ],
+      "answer": 2,
+      "explanation": "Le risque décrit se manifeste par une succession de petits achats liés. Le périmètre doit pouvoir les repérer ; le seul contrôle des grands montants laisse cet angle mort et le nombre de fournisseurs ne répond pas au mécanisme."
+    }
+  ]
+}

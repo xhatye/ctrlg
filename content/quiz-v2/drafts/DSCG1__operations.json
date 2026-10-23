@@ -1,0 +1,417 @@
+{
+  "module": "DSCG1",
+  "chapter": "operations",
+  "sourceHash": "271b641fff650f69bcaf34c756e09abdd8e4d6970340d78a8d4ed66364210006",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un acquéreur achète la totalité des actions de la société C. La société C reste partie à un contrat de maintenance, sans clause particulière ni autre opération sur ce contrat. Quelle distinction caractérise l’opération ?",
+      "options": [
+        "Les actions changent de propriétaire, sans cession séparée du contrat de maintenance par ce seul fait.",
+        "Le contrat de maintenance est nécessairement cédé personnellement à l’actionnaire acquéreur.",
+        "La vente des actions éteint automatiquement toutes les obligations de C.",
+        "Les actifs et contrats sont obligatoirement répartis directement entre les anciens actionnaires."
+      ],
+      "answer": 0,
+      "explanation": "La cession des actions change la détention de la société ; elle ne constitue pas par elle-même une cession individuelle de chaque contrat détenu par la personne morale. Les clauses relatives au changement de contrôle et les autres régimes pertinents doivent être examinés séparément si le dossier en contient."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un acquéreur achète seulement une machine appartenant à C. Le contrat exclut les titres de C et tout autre actif. Que peut-il en déduire sur le contrôle capitalistique de C ?",
+      "options": [
+        "La maîtrise de cet actif suffit à établir une participation majoritaire dans son propriétaire.",
+        "Aucun transfert de contrôle par les titres ne résulte de cette seule acquisition d’actif.",
+        "L’acquéreur devient titulaire des droits de vote correspondant à la part de cette machine dans les actifs de C.",
+        "L’acquéreur détient désormais indirectement des titres de C à hauteur de la valeur de la machine achetée."
+      ],
+      "answer": 1,
+      "explanation": "L’objet transmis est la machine désignée, non les titres de son propriétaire. Le prix payé pour cet actif ne confère pas à lui seul une participation au capital ou un pouvoir de vote. L’analyse des droits acquis commence par le périmètre exact de l’acte."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans une acquisition d’actions, un contrat de la cible contient une clause exigeant un accord préalable du cocontractant en cas de changement de contrôle. Quelle vérification découle de la clause donnée ?",
+      "options": [
+        "Obtenir ou contrôler l’accord prévu pour ce changement de contrôle.",
+        "Ignorer la clause parce qu’aucune cession formelle du contrat n’a lieu.",
+        "Considérer la clause comme automatiquement satisfaite par le paiement du prix des actions.",
+        "Traiter toute clause de changement de contrôle comme une cession d’actif déjà réalisée."
+      ],
+      "answer": 0,
+      "explanation": "L’absence de cession séparée du contrat ne dispense pas de lire une clause qui vise précisément le changement de contrôle. La règle fournie par ce contrat doit être confrontée à l’opération envisagée et aux accords obtenus. Il ne faut pas confondre les deux déclencheurs."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans la cession de contrat de droit commun de l’article 1216, quelle forme est exigée pour l’acte de cession lui-même ?",
+      "options": [
+        "Un écrit, à peine de nullité.",
+        "Un écrit requis seulement pour la preuve, la cession restant valable si elle est orale.",
+        "Une notification au cédé, qui tient lieu à elle seule d’acte écrit entre cédant et cessionnaire.",
+        "Un acte authentique, à peine de nullité de toute cession de contrat de droit commun."
+      ],
+      "answer": 0,
+      "explanation": "L’article 1216 exige que la cession soit constatée par écrit. Cette exigence doit être distinguée des modalités de l’accord du cocontractant cédé et de l’opposabilité de l’opération. Le cas vise le droit commun, sous réserve des régimes spéciaux qui pourraient exister.",
+      "references": [
+        {
+          "title": "Code civil, article 1216, cession de contrat",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032041419/2022-01-27"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une clause permet par avance la cession d’un contrat de maintenance ordinaire. Le cédé n’est pas intervenu à l’acte et n’en a pas pris acte. Selon l’article 1216, quelle formalité permet de faire produire effet à la cession à son égard ?",
+      "options": [
+        "La notification au cédé de la cession conclue.",
+        "La seule décision interne de l’acquéreur de payer le prix.",
+        "Le seul transfert de la machine entretenue, sans autre régime établi.",
+        "L’absence de toute information, puisque l’accord préalable supprime le contrôle d’effet."
+      ],
+      "answer": 0,
+      "explanation": "L’article 1216 prévoit que, lorsque l’accord est donné par avance, la cession produit effet à l’égard du cédé quand elle lui est notifiée ou lorsqu’il en prend acte. Le cas exclut la prise d’acte ; la notification est donc l’étape à documenter.",
+      "references": [
+        {
+          "title": "Code civil, article 1216, cession de contrat",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032041419/2022-01-27"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une liste d’actifs à acquérir comprend les ordinateurs physiques, mais exclut explicitement les licences de logiciels appartenant à un éditeur. Quel contrôle empêche de présumer un droit d’usage logiciel acquis ?",
+      "options": [
+        "Vérifier séparément les licences nécessaires et leurs conditions de transmission ou d’obtention.",
+        "Assimiler chaque ordinateur à la propriété de tous les logiciels installés.",
+        "Déduire des numéros de série une licence perpétuelle de l’éditeur.",
+        "Considérer l’éditeur comme automatiquement engagé par l’acte auquel il n’est pas partie."
+      ],
+      "answer": 0,
+      "explanation": "Le matériel et les droits d’usage du logiciel sont des objets différents. L’acte exclut les licences : leur présence sur les appareils n’établit donc pas leur acquisition. Il faut contrôler la continuité d’usage et les autorisations requises dans le périmètre de l’opération."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’annexe d’une cession d’actifs inclut un dépôt de garantie de 8 000 €, mais le prix et les écritures de clôture le comptent aussi comme une restitution déjà reçue. Aucun paiement de restitution n’a eu lieu. Quel rapprochement faut-il effectuer ?",
+      "options": [
+        "Distinguer le droit transmis et le flux de remboursement afin de ne pas compter deux fois sa valeur.",
+        "Conserver le droit dans les actifs transmis et ajouter le remboursement comme s’il avait déjà été encaissé.",
+        "Retirer le droit des actifs transmis en présumant que la ligne de restitution constitue la preuve du paiement.",
+        "Traiter le dépôt comme une charge définitive parce que le remboursement n’a pas encore été reçu."
+      ],
+      "answer": 0,
+      "explanation": "Le périmètre doit identifier le droit et son sort, puis être rapproché des flux réellement intervenus. Un droit transmis ne peut être simultanément traité comme déjà remboursé sans pièce. Le risque d’un double comptage affecte le prix et le bilan de clôture."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un prix d’actifs a été calculé à partir d’une liste version V1. L’acte final signé exclut un entrepôt qui figurait dans V1, sans modification du prix documentée. Quel point doit être examiné ?",
+      "options": [
+        "La cohérence du prix et du périmètre définitif réellement acquis.",
+        "La possibilité de retenir V1 pour la propriété et l’acte final pour les autres obligations sans accord complémentaire.",
+        "L’inclusion économique de l’entrepôt, tenue pour équivalente à son transfert juridique malgré l’exclusion finale.",
+        "L’utilisation du prix initial comme preuve suffisante que les parties ont annulé l’exclusion mentionnée dans l’acte final."
+      ],
+      "answer": 0,
+      "explanation": "La valorisation doit correspondre aux droits transmis. Une liste préparatoire n’établit pas que l’actif reste inclus quand l’acte final l’exclut. Il faut contrôler l’incidence de cette évolution sur le prix convenu, et non réintroduire l’entrepôt par hypothèse."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans une cession de dette de droit commun, le créancier consent à la substitution mais ne libère pas expressément le débiteur originaire ; aucune clause contraire n’existe. Que prévoit l’article 1327-2 ?",
+      "options": [
+        "Le débiteur originaire demeure tenu solidairement au paiement.",
+        "Le débiteur originaire est libéré par le seul consentement du créancier à la substitution.",
+        "Le débiteur originaire reste tenu seulement pour la fraction de dette qui lui serait personnellement profitable.",
+        "Le débiteur originaire ne reste tenu qu’après de vaines poursuites préalables contre le nouveau débiteur."
+      ],
+      "answer": 0,
+      "explanation": "Le texte distingue le consentement à la cession et le consentement exprès à la libération pour l’avenir. À défaut de cette libération, et sauf clause contraire, le débiteur originaire reste solidairement tenu. La carte des engagements doit donc conserver cette exposition.",
+      "references": [
+        {
+          "title": "Code civil, article 1327-2, libération du débiteur originaire",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000032034727/2026-05-14"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le vendeur promet que « toutes les dettes sont reprises », mais le dossier n’identifie ni les créanciers, ni les actes, ni les régimes de transmission. Quelle analyse du périmètre est nécessaire ?",
+      "options": [
+        "Relier chaque dette à son régime et aux accords requis, au lieu d’attribuer un effet universel à la formule.",
+        "Tenir la formule pour libération certaine de tous les débiteurs envers tous les tiers.",
+        "Traiter les dettes inconnues comme juridiquement inexistantes.",
+        "Considérer le prix comme preuve suffisante de l’accord de chaque créancier."
+      ],
+      "answer": 0,
+      "explanation": "Une formule générale entre parties ne démontre pas tous les effets externes d’une reprise de dettes. Il faut identifier les engagements et les mécanismes applicables, notamment les conditions de libération du débiteur initial. Le périmètre économique annoncé et le résultat juridique à l’égard des créanciers sont distincts."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’audit d’acquisition relève une licence critique qui expirera deux mois après la réalisation. Aucun renouvellement ferme n’est obtenu. Quelle vérification vise directement la continuité d’exploitation ?",
+      "options": [
+        "La disponibilité du droit d’usage après l’échéance et les conditions de renouvellement.",
+        "La validité de la licence pendant les deux mois restants, retenue comme preuve de sa prolongation.",
+        "L’inscription du logiciel au bilan, retenue comme assurant le maintien du droit d’usage après son terme.",
+        "Le seul budget de renouvellement prévu par l’acquéreur, retenu comme engagement déjà pris par l’éditeur."
+      ],
+      "answer": 0,
+      "explanation": "Une activité rentable jusqu’à présent peut dépendre d’un droit qui expire bientôt. L’audit doit identifier l’échéance, les droits futurs et les conditions du renouvellement avant de conclure à la continuité. Le coût matériel ou les autres risques ne prouvent pas le maintien de la licence."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le vendeur déclare qu’aucun nantissement n’affecte un actif. L’audit reprend la déclaration sans demander de pièce ni examiner les informations pertinentes disponibles. Quelle limite faut-il signaler ?",
+      "options": [
+        "Une déclaration de partie n’équivaut pas à une vérification documentaire indépendante.",
+        "La déclaration constitue une recherche indépendante dès lors qu’elle est reproduite dans un acte signé.",
+        "La garantie donnée par le vendeur rend inutile la distinction entre absence de sûreté vérifiée et risque indemnisable.",
+        "La valeur déclarée de l’actif suffit à confirmer qu’aucune sûreté ne réduit les droits transmis."
+      ],
+      "answer": 0,
+      "explanation": "La déclaration contractuelle peut créer un engagement utile selon ses termes, mais son rôle diffère de celui d’une vérification préalable. Le rapport doit décrire ce qui a été contrôlé et la portée de la pièce. Une affirmation du vendeur ne doit pas être présentée comme une recherche indépendante accomplie."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le rapport financier valorise un stock sur sa quantité physique. L’audit juridique constate que certains biens sont expressément détenus pour le compte de tiers et exclus de la propriété de la cible. Quel rapprochement s’impose ?",
+      "options": [
+        "Rapprocher quantité détenue, propriété et périmètre de valorisation.",
+        "Assimiler toute détention physique à la propriété acquise avec les titres.",
+        "Additionner la valeur des biens de tiers au prix sans autre analyse.",
+        "Considérer l’inventaire physique comme une preuve définitive de propriété."
+      ],
+      "answer": 0,
+      "explanation": "L’inventaire et les droits de propriété répondent à deux contrôles complémentaires. Les biens de tiers peuvent être présents sans appartenir à la cible ; leur inclusion dans la valeur des actifs doit donc être examinée. L’audit transversal confronte le chiffrage aux droits réellement détenus."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une dette litigieuse est seulement évaluée dans une fourchette de 30 000 à 80 000 €. L’audit ne permet pas encore de trancher. Quel traitement du chiffrage est professionnel ?",
+      "options": [
+        "Présenter les scénarios et leurs fondements, sans transformer la borne haute ou basse en certitude.",
+        "Retenir systématiquement 30 000 € comme dette définitivement due.",
+        "Présenter 80 000 € comme jugement déjà prononcé.",
+        "Supprimer toute fourchette pour rendre le rapport plus précis en apparence."
+      ],
+      "answer": 0,
+      "explanation": "Une fourchette peut refléter une incertitude réelle sur les faits, le droit ou l’issue. L’audit doit expliciter les scénarios et les pièces nécessaires. Choisir une borne sans justification ne réduit pas cette incertitude ; cela masque seulement la portée de la conclusion."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le contrat prévoit un ajustement de prix sur la dette nette à la réalisation. L’audit utilise seulement un état datant de trois mois avant, sans vérifier les mouvements intermédiaires. Quel élément manque au rapprochement ?",
+      "options": [
+        "Le passage de l’état audité aux montants définis à la date de réalisation.",
+        "La confirmation des seuls soldes d’origine, tenue pour couvrant les mouvements intervenus depuis cet état.",
+        "Le rapprochement avec le budget annuel, retenu comme substitut aux soldes réels de la réalisation.",
+        "La confirmation que les définitions contractuelles sont constantes, retenue comme preuve que les montants n’ont pas varié."
+      ],
+      "answer": 0,
+      "explanation": "L’audit d’une date antérieure ne reconstitue pas automatiquement les soldes de la réalisation. Il faut tracer les mouvements, le périmètre et les définitions de l’ajustement. Le prix contractuel ne remplace pas les données servant à appliquer sa clause."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une garantie contractuelle couvre une perte admise de 24 000 €. Elle prévoit une franchise absolue de 5 000 €, déduite de toute indemnité, puis un plafond de 30 000 €. Toutes les autres conditions sont remplies. Quelle indemnité résulte de ces clauses ?",
+      "options": [
+        "24 000 €",
+        "19 000 €",
+        "5 000 €",
+        "30 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La franchise absolue reste à la charge du bénéficiaire : 24 000−5 000=19 000 €. Ce montant ne dépasse pas le plafond. Il faut suivre l’ordre contractuel fourni et ne pas confondre la franchise avec un simple seuil déclenchant la couverture de la totalité.",
+      "calculation": {
+        "expected": 19000,
+        "expression": {
+          "op": "min",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 24000
+                },
+                {
+                  "value": 5000
+                }
+              ]
+            },
+            {
+              "value": 30000
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une garantie prévoit un seuil de déclenchement de 5 000 € : s’il est dépassé, toute la perte admise est couverte dès le premier euro, dans la limite de 20 000 €. La perte admise est de 12 000 € et toutes les conditions sont remplies. Quelle indemnité est prévue ?",
+      "options": [
+        "7 000 €",
+        "5 000 €",
+        "12 000 €",
+        "20 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La clause définit un seuil de déclenchement et non une franchise à déduire. La perte de 12 000 € dépasse 5 000 € ; elle est donc couverte intégralement dans le plafond de 20 000 €. Soustraire le seuil appliquerait un autre mécanisme que celui fourni.",
+      "calculation": {
+        "expected": 12000,
+        "expression": {
+          "op": "min",
+          "args": [
+            {
+              "value": 12000
+            },
+            {
+              "value": 20000
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une garantie a un plafond global de 40 000 € pour toute sa durée. Des indemnisations antérieures de 28 000 € l’ont déjà consommé. Une nouvelle perte de 18 000 € est entièrement couverte avant plafond, sans franchise. Quel montant maximal reste mobilisable pour cette perte ?",
+      "options": [
+        "18 000 €",
+        "40 000 €",
+        "12 000 €",
+        "58 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le plafond résiduel est 40 000−28 000=12 000 €. La nouvelle perte excède ce reliquat, donc l’indemnité maximale est 12 000 €. Un plafond global ne se renouvelle pas pour chaque réclamation quand le contrat le fixe pour l’ensemble de la durée.",
+      "calculation": {
+        "expected": 12000,
+        "expression": {
+          "op": "min",
+          "args": [
+            {
+              "value": 18000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 40000
+                },
+                {
+                  "value": 28000
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La garantie couvre les pertes dont la cause est antérieure à la réalisation, à condition d’une notification dans les 18 mois suivants. Une perte est payée 12 mois après réalisation mais sa cause est née trois mois après celle-ci. Quelle condition échoue d’après les faits ?",
+      "options": [
+        "L’antériorité de la cause, indépendamment de la date de paiement.",
+        "La notification, considérée comme trop tardive au seul motif que la perte a été payée après la réalisation.",
+        "Le rattachement à une perte couverte, considéré comme acquis dès lors que le paiement intervient dans les 18 mois.",
+        "La condition temporelle, considérée comme satisfaite parce que seule la date de paiement compterait pour l’antériorité."
+      ],
+      "answer": 0,
+      "explanation": "Le champ temporel porte ici sur la cause de la perte, tandis que le délai de notification est une autre condition. Une cause apparue après la réalisation ne satisfait pas l’antériorité, même si le paiement et une éventuelle notification sont intervenus avant 18 mois."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une clause indemnise la société cible elle-même. L’actionnaire acquéreur traite le paiement attendu comme s’il lui était personnellement dû, sans stipulation à son profit. Quel point du texte faut-il distinguer ?",
+      "options": [
+        "Le bénéficiaire de l’indemnité et le détenteur des titres.",
+        "Le taux de participation et un droit direct automatique à tout paiement de la cible.",
+        "Le plafond et une répartition obligatoire entre anciens associés.",
+        "La qualité d’acquéreur et celle de créancier nécessairement identiques."
+      ],
+      "answer": 0,
+      "explanation": "La désignation du bénéficiaire fait partie du mécanisme de garantie. Être actionnaire ne permet pas de traiter comme personnelle toute créance de la société. Il faut lire qui peut agir, qui reçoit le paiement et quelles conséquences économiques en découlent."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La garantie rembourse la perte après déduction des indemnités d’assurance effectivement reçues pour le même dommage. Le bénéficiaire reçoit une indemnité d’assurance mais ne la mentionne pas dans sa demande de garantie. Quel contrôle est nécessaire ?",
+      "options": [
+        "Appliquer la clause de non-cumul pour mesurer la perte nette encore couverte.",
+        "Cumuler systématiquement l’assurance et la garantie sur toute la perte brute.",
+        "Réduire uniquement le prix d’achat initial sans lire la clause.",
+        "Considérer l’assurance comme étrangère au dommage qu’elle indemnise."
+      ],
+      "answer": 0,
+      "explanation": "Le contrat fourni limite l’indemnisation à la perte nette d’autres sommes reçues pour le même dommage. Il faut rapprocher les paiements et la demande afin de respecter cette définition. La garantie ne doit pas être calculée sur une perte brute déjà partiellement compensée si la clause l’exclut."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le bénéficiaire a démontré une perte couverte et respecté la notification. Le garant est devenu insolvable et aucune sûreté n’est disponible. Quelle limite économique reste à exposer ?",
+      "options": [
+        "Un droit à indemnité établi ne garantit pas le recouvrement effectif auprès du garant.",
+        "La notification régulière donne un droit de prélèvement direct sur les autres actifs de la cible non prévus en garantie.",
+        "La couverture contractuelle transforme la créance en encaissement certain, l’insolvabilité ne concernant que son calendrier.",
+        "La reconnaissance de la perte permet de compenser d’office l’indemnité avec un prix déjà intégralement payé."
+      ],
+      "answer": 0,
+      "explanation": "Le fondement de la créance et sa capacité de recouvrement sont distincts. L’insolvabilité peut empêcher ou limiter l’encaissement malgré un droit contractuel valable. Le diagnostic doit donc évaluer aussi la solvabilité et les moyens de sécurisation, sans assimiler couverture et trésorerie certaine."
+    }
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "module": "UE11",
+  "chapter": "couts-incorporation",
+  "sourceHash": "c9fbee57cd44a4f5789023442cb69d89473a0708fe9f30e8a85145dda932e3a1",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un directeur demande « le coût » sans préciser s’il cherche un coût de produit, de client ou de décision. Quelle clarification est prioritaire ?",
+      "options": [
+        "Retenir le coût complet du produit le plus proche, puis demander seulement le nombre d’unités souhaité.",
+        "Retenir le coût moyen annuel déjà disponible, puis adapter son intitulé à la décision étudiée.",
+        "Définir l’objet, la période et l’usage attendu de l’information.",
+        "Demander uniquement le prix de vente cible pour en déduire le périmètre des charges à retenir."
+      ],
+      "answer": 2,
+      "explanation": "Une méthode doit répondre à une question. Produit, client et décision peuvent mobiliser des périmètres différents ; le nom général de coût ne suffit pas pour comparer ou utiliser les données."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une charge comptable est exclue d’un calcul analytique selon une convention justifiée. Qu’est-ce que cette exclusion signifie ?",
+      "options": [
+        "Elle change le périmètre du calcul sans supprimer à elle seule la charge de la comptabilité.",
+        "Elle impose d’enregistrer le même retraitement dans la comptabilité financière avant de calculer les coûts de gestion.",
+        "Elle transforme cette charge en élément de stock, même si aucun actif correspondant n’existe dans le dossier.",
+        "Elle transforme son montant en charge supplétive de signe opposé, indépendamment de l’objectif de calcul."
+      ],
+      "answer": 0,
+      "explanation": "L’incorporation détermine les éléments retenus dans un calcul de gestion. Un retraitement ne réécrit pas automatiquement les opérations comptables ; les différences doivent être suivies pour le rapprochement."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une charge supplétive valorise l’usage d’un moyen propre, sans opération donnant lieu à paiement ou à dette dans le dossier. Quel statut lui donner dans le rapport ?",
+      "options": [
+        "Une dette née lors du calcul, dont le règlement reste seulement à fixer.",
+        "Une charge comptable certaine non encore enregistrée, même sans opération correspondante.",
+        "Un décaissement différé prouvé par l’inscription du montant dans le coût.",
+        "Une convention de coût économique à distinguer des paiements et dettes observés."
+      ],
+      "answer": 3,
+      "explanation": "La charge supplétive enrichit ici le calcul économique selon une convention. Son inscription dans le coût ne démontre pas un décaissement, une dette ou une opération comptable omise. Le rapport doit garder cette distinction et expliquer l’estimation."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Les charges comptables sont 10 000 €, dont 800 € exclus du calcul. Une charge supplétive de 500 € est ajoutée. Quel total analytique obtient-on dans ce périmètre simplifié ?",
+      "options": [
+        "11 300 €",
+        "9 700 €",
+        "8 700 €",
+        "10 300 €"
+      ],
+      "answer": 1,
+      "explanation": "Le passage est 10 000 − 800 + 500 = 9 700 €. Il faut conserver ces lignes d’écart pour expliquer la différence, plutôt que considérer le total analytique comme une erreur comptable.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 10000
+                },
+                {
+                  "value": 800
+                }
+              ]
+            },
+            {
+              "value": 500
+            }
+          ]
+        },
+        "expected": 9700,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux coûts sont comparés, l’un par produit fabriqué et l’autre par client servi. Quel défaut de lecture faut-il éviter ?",
+      "options": [
+        "Examiner les ressources rattachées à chaque objet.",
+        "Rechercher des unités et périodes communes quand c’est pertinent.",
+        "Les traiter comme des mesures identiques du seul fait qu’ils sont exprimés en euros.",
+        "Décrire les conventions différentes avant toute conclusion."
+      ],
+      "answer": 2,
+      "explanation": "L’unité monétaire ne garantit pas un même objet. Une différence peut venir du périmètre ou du service rendu ; elle n’établit pas directement une meilleure efficacité."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un retraitement de charge est appliqué sans raison ni trace du montant d’origine. Quel contrôle devient difficile ?",
+      "options": [
+        "Le rapprochement et l’explication de l’écart avec le référentiel comptable.",
+        "Le calcul de la somme finale uniquement, puisque les montants d’origine sont inutiles dès qu’un total est obtenu.",
+        "La détermination des quantités physiques vendues uniquement, même si le retraitement porte sur une valorisation.",
+        "La vérification du seul coefficient de répartition entre produits, en supposant que le total retenu n’a pas changé."
+      ],
+      "answer": 0,
+      "explanation": "Les conventions doivent rester traçables. Sans origine et justification, on ne peut pas déterminer si l’écart résulte d’un choix de périmètre, d’une valorisation ou d’une erreur."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les charges comptables incluent 8 000 € d’amortissement d’une machine. La convention analytique remplace cette dotation par une charge d’usage de 10 000 € pour la même machine et la même période. Quel traitement respecte une substitution, plutôt qu’un cumul ?",
+      "options": [
+        "Conserver les 8 000 € puis ajouter les 10 000 € intégralement.",
+        "Retenir les seuls 2 000 € comme coût total d’usage de la machine.",
+        "Exclure les 10 000 € du calcul parce qu’ils diffèrent de la dotation comptable.",
+        "Retirer les 8 000 € du périmètre retenu puis y incorporer les 10 000 €."
+      ],
+      "answer": 3,
+      "explanation": "La convention remplace une mesure de consommation de la même ressource par une autre. Il faut donc enlever la dotation d’origine avant d’incorporer la charge d’usage. Le coût retenu pour cette machine est 10 000 €, et la différence d’incorporation est de 2 000 €."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un total analytique de 9 700 € résulte de charges comptables, moins 800 € exclus, plus 500 € supplétifs. Quel montant comptable retrouve-t-on ?",
+      "options": [
+        "9 400 €",
+        "10 000 €",
+        "11 000 €",
+        "9 700 €"
+      ],
+      "answer": 1,
+      "explanation": "On inverse le passage : charges comptables = 9 700 + 800 − 500 = 10 000 €. Ce contrôle vérifie les signes des exclusions et additions.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 9700
+                },
+                {
+                  "value": 800
+                }
+              ]
+            },
+            {
+              "value": 500
+            }
+          ]
+        },
+        "expected": 10000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un stock contient d’abord 100 unités à 10 €, puis reçoit 100 unités à 20 €. Cent unités sont consommées. Un calcul les valorise à 1 000 € en premier entré-premier sorti ; un autre à 1 500 € au coût moyen de 15 €. Quelle vérification explique leur différence sans la qualifier immédiatement d’erreur ?",
+      "options": [
+        "Vérifier le seul nombre d’unités achetées, supposé rendre identiques les coûts consommés quelle que soit la méthode.",
+        "Vérifier seulement les paiements fournisseurs, supposés déterminer la valeur des sorties de stock.",
+        "Rapprocher le coût consommé et le stock restant selon chaque convention, dont la somme doit retrouver les 3 000 € disponibles.",
+        "Reporter l’écart de 500 € dans les quantités consommées pour rendre identiques les deux valorisations."
+      ],
+      "answer": 2,
+      "explanation": "En premier entré-premier sorti, 1 000 € sont consommés et 2 000 € restent en stock. Au coût moyen, chaque part vaut 1 500 €. Les deux répartitions totalisent 3 000 € ; la convention de valorisation explique ici l’écart du coût consommé, sans modifier les flux physiques.",
+      "references": [
+        {
+          "title": "IFRS Foundation — IAS 2 : inventory cost formulas",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-2-inventories/"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une charge est retenue dans le périmètre analytique et doit ensuite être partagée entre produits. Que faut-il distinguer ?",
+      "options": [
+        "L’incorporation au calcul et le mode d’affectation directe ou de répartition.",
+        "L’incorporation au calcul et la variabilité sont le même classement dès qu’une charge est retenue.",
+        "Une charge incorporée doit être répartie entre tous les produits, même si elle peut être mesurée directement pour un seul.",
+        "Une charge indirecte doit être exclue du total analytique, même si une répartition justifiée est possible."
+      ],
+      "answer": 0,
+      "explanation": "Sélection des charges et affectation aux objets sont deux étapes différentes. Incorporer une charge ne dit pas à lui seul comment elle sera rattachée ni son comportement par rapport au volume."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une charge supplétive est déjà intégrée dans le total analytique puis ajoutée une seconde fois au coût des produits. Quel risque apparaît ?",
+      "options": [
+        "Le même élément est déplacé vers un autre produit sans effet sur le total des coûts calculés.",
+        "Le même élément est neutralisé, puisque la charge supplétive s’annule lorsqu’elle est ajoutée à deux étapes.",
+        "Le même élément devient une charge comptable observée du seul fait de sa seconde affectation.",
+        "Le même élément économique est compté deux fois."
+      ],
+      "answer": 3,
+      "explanation": "Le périmètre doit éviter les répétitions. Une convention ajoutée au total ne doit pas être réintroduite comme une nouvelle charge à une étape ultérieure sans suivre son incorporation préalable."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le coût analytique diffère du coût comptable et le rapport conclut immédiatement à une erreur. Quelle première analyse est nécessaire ?",
+      "options": [
+        "Répartir l’écart entre produits au prorata des volumes avant de vérifier ses causes.",
+        "Rapprocher exclusions, supplétives, périodes et méthodes de valorisation.",
+        "Retenir le montant comptable comme seule valeur juste et remplacer le total analytique sans suivre ses conventions.",
+        "Traiter l’écart comme une différence d’arrondi, même si des retraitements de périmètre importants sont documentés."
+      ],
+      "answer": 1,
+      "explanation": "Une différence peut être voulue et justifiée. Le tableau de passage aide à séparer conventions et anomalies, au lieu de traiter toute divergence comme une faute de calcul."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une machine achetée et payée 12 000 € est utilisée pendant plusieurs années. Le dossier distingue le budget d’investissement du coût mensuel et fixe la charge d’usage du mois à 200 €. Quel traitement évite de confondre acquisition et consommation de la période ?",
+      "options": [
+        "Incorporer les 12 000 € et les 200 € au coût du mois pour refléter à la fois paiement et usage.",
+        "Incorporer les 12 000 € au coût du mois et reporter les 200 € au budget d’investissement.",
+        "Retenir les 200 € d’usage dans le coût mensuel et suivre séparément l’acquisition de 12 000 €.",
+        "Retenir 0 € dans le coût mensuel tant que la machine reste physiquement utilisable."
+      ],
+      "answer": 2,
+      "explanation": "Le coût mensuel décrit ici l’usage consommé pendant le mois selon la convention du dossier. Le paiement de l’acquisition relève d’un suivi d’investissement distinct ; le reprendre entièrement en plus de la charge d’usage mélangerait deux mesures et deux horizons."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une convention de charge d’usage retient une valeur de 60 000 €, une valeur résiduelle de 10 000 € et une capacité totale de 20 000 heures. La charge suit les heures effectivement utilisées, non le calendrier. Pour 500 heures utilisées ce mois, quel coût d’usage incorporer ?",
+      "options": [
+        "1 250 €",
+        "1 500 €",
+        "10 000 €",
+        "2,50 €"
+      ],
+      "answer": 0,
+      "explanation": "La capacité consommable est valorisée à (60 000 − 10 000) / 20 000 = 2,50 € par heure. Les 500 heures utilisées portent 1 250 €. La convention suit l’utilisation de la capacité ; une annuité calendaire ne remplace pas cette mesure du mois.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 60000
+                    },
+                    {
+                      "value": 10000
+                    }
+                  ]
+                },
+                {
+                  "value": 20000
+                }
+              ]
+            },
+            {
+              "value": 500
+            }
+          ]
+        },
+        "expected": 1250,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "IFRS Foundation — IAS 16 : depreciable amount and useful life",
+          "url": "https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2021/issued/part-a/ias-16-property-plant-and-equipment.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une convention de gestion répartit une charge annuelle de maintenance prévisionnelle de 24 000 € selon les heures-machine prévues : 1 200 heures sur l’année, dont 200 en janvier. Le paiement de janvier est de 9 000 € et n’est pas la clé choisie. Quel montant de maintenance incorporer à janvier selon cette convention ?",
+      "options": [
+        "2 000 €",
+        "9 000 €",
+        "24 000 €",
+        "4 000 €"
+      ],
+      "answer": 3,
+      "explanation": "La convention retient 24 000 / 1 200 = 20 € par heure prévue. Les 200 heures de janvier portent donc 4 000 €. Ni le douzième uniforme de 2 000 €, ni le décaissement de 9 000 € ne représentent la règle de consommation retenue dans ce dossier.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 24000
+                },
+                {
+                  "value": 1200
+                }
+              ]
+            },
+            {
+              "value": 200
+            }
+          ]
+        },
+        "expected": 4000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "La rémunération supplétive du capital est fixée, pour l’exercice, à un taux fictif annuel de 5 % appliqué au capital moyen. Le capital passe régulièrement de 100 000 € en début d’année à 140 000 € en fin d’année ; la convention retient leur moyenne simple. Quel montant annuel calculer ?",
+      "options": [
+        "7 000 €",
+        "6 000 €",
+        "5 000 €",
+        "2 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le capital moyen retenu est (100 000 + 140 000) / 2 = 120 000 €. La rémunération économique conventionnelle vaut 120 000 × 5 % = 6 000 €. Employer le seul capital initial ou final ne suivrait pas la base moyenne explicitement définie.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 100000
+                    },
+                    {
+                      "value": 140000
+                    }
+                  ]
+                },
+                {
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "value": 0.05
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "L’entreprise veut connaître le coût de servir un client qui demande de nombreux petits envois. Un simple coût par produit ignore ces services. Que faut-il préciser ?",
+      "options": [
+        "Reprendre le coût produit par unité, en supposant que les petits envois sont représentés par le seul volume de produits.",
+        "Ajouter à chaque produit le coût moyen de livraison de l’entreprise, sans tenir compte de la fréquence des envois du client.",
+        "L’objet client et les activités associées doivent être définis avant la méthode.",
+        "Comparer les seuls prix de vente par produit pour déduire la rentabilité du service spécifique au client."
+      ],
+      "answer": 2,
+      "explanation": "Un objet différent peut demander d’autres activités et données. La méthode doit suivre la question plutôt que supposer qu’un coût de produit couvre tous les comportements de service."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un responsable exclut des charges uniquement pour afficher un résultat favorable, sans objectif de calcul explicité. Quel défaut apparaît ?",
+      "options": [
+        "Le retraitement n’est pas justifié par une convention et un usage transparents.",
+        "Il s’agit seulement d’un coefficient de répartition entre produits mal choisi, sans problème de sélection des charges.",
+        "Il s’agit seulement d’un manque de charges supplétives, dont l’ajout suffirait à rendre tout périmètre pertinent.",
+        "Il s’agit seulement d’un décalage de période que résoudrait la conversion de tous les montants en valeurs mensuelles."
+      ],
+      "answer": 0,
+      "explanation": "Les conventions doivent servir l’analyse et être documentées. Changer le périmètre pour fabriquer un score empêche une lecture fiable et un rapprochement explicable."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une charge supplétive est estimée avec un taux fourni mais sa base n’est pas documentée. Quel complément est nécessaire ?",
+      "options": [
+        "Le taux et le résultat souhaité, utilisé comme base pour retrouver le coût qui produira ce résultat.",
+        "Le taux et le prix de vente des produits, même si la convention vise la rémunération d’un capital immobilisé.",
+        "Le taux annuel et une base de fin de période retenue sans préciser si la convention exige une base moyenne.",
+        "La base, l’unité, la période et la raison de l’évaluation."
+      ],
+      "answer": 3,
+      "explanation": "Une estimation économique doit pouvoir être comprise et reproduite. Le taux seul ne suffit pas à définir le montant ou sa pertinence ; les hypothèses de la convention restent nécessaires."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Les charges comptables et analytiques sont égales à 12 000 €. Le passage n’utilise que 700 € d’exclusions et une charge supplétive inconnue. Quel montant supplétif explique cette égalité ?",
+      "options": [
+        "0 €",
+        "700 €",
+        "12 700 €",
+        "-700 €"
+      ],
+      "answer": 1,
+      "explanation": "Le passage 12 000 − 700 + supplément = 12 000 impose un supplément de 700 €. L’égalité des totaux ne signifie pas l’absence de retraitement : deux effets peuvent se compenser.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 12000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 700
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 700,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux totaux sont égaux mais les lignes de passage comportent des exclusions et additions importantes qui se compensent. Quelle conclusion est prudente ?",
+      "options": [
+        "L’égalité démontre que les mêmes charges ont été retenues ligne par ligne.",
+        "L’égalité permet de supprimer les lignes de passage pour comparer ensuite les catégories de coûts comme identiques.",
+        "L’égalité nette ne suffit pas à démontrer l’identité des éléments inclus.",
+        "L’égalité démontre que chaque exclusion est compensée par une addition portant sur la même ressource."
+      ],
+      "answer": 2,
+      "explanation": "Un rapprochement doit garder ses composantes, pas seulement le solde. Des différences opposées peuvent donner le même total tout en décrivant des conventions très différentes."
+    },
+    {
+      "id": "q22",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une définition de coût change en cours de série. Que faut-il faire pour comparer les périodes ?",
+      "options": [
+        "Harmoniser la convention si possible ou expliquer précisément la rupture.",
+        "Calculer les variations sur les valeurs brutes et attribuer l’ensemble de la différence aux ressources consommées.",
+        "Appliquer le taux de variation du total à chaque poste pour neutraliser le changement, sans reconstituer son périmètre.",
+        "Ajouter la même somme aux deux périodes, quel que soit le montant réellement affecté par la nouvelle définition."
+      ],
+      "answer": 0,
+      "explanation": "Une évolution apparente peut venir du périmètre plutôt que des ressources. La traçabilité des conventions permet de séparer ces effets et de limiter la portée du commentaire."
+    }
+  ]
+}

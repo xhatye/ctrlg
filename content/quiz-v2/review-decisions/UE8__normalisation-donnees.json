@@ -1,0 +1,248 @@
+{
+  "sourceHash": "870a8076d3f18c8dc9d7f20dddf6ac3ac8994db171142233c2e6ad7d99e40506",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "fb0b326fe3738ebcc742c8c0fad66ed9c8428d89eac8c4a21927bccfc61354d9",
+      "selected": 1,
+      "reason": "Le grain est l’objet ou le fait décrit par une ligne, distinct de son format ou de son ordre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "ec6a9f23b802cf924305ff9ff51358fffc5a6d6d4caf12a2247cbc5889d44f8b",
+      "selected": 0,
+      "reason": "La règle garantit un libellé par code, mais permet plusieurs codes partageant un libellé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "f02ea6975d19f1af32ae957491d9dc2449850f78f1dcb4a2fa79807c9e19fe92",
+      "selected": 1,
+      "reason": "Les copies divergentes d’une même adresse actuelle traduisent une anomalie de mise à jour.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "829837f20f8c0463b1fc6bfa6aa5533d32e0e3c94c461715f3b3d541470c754b",
+      "selected": 3,
+      "reason": "La séparation doit préserver une clé étrangère entre facture et client existant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "baac58ee8531f7a0d4c71f61c7bac92309e24aa3d939fa2117073bf4b86969d5",
+      "selected": 0,
+      "reason": "Le numéro de facture associé au numéro de ligne identifie la ligne quand la numérotation recommence par facture.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "53efd18da4154c15817d2f916fce03e48bb184ea46e27ee6d170953b9f3f3cb6",
+      "selected": 0,
+      "reason": "L’échantillon de noms distincts ne prouve pas une règle métier qui interdirait tous les futurs homonymes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "59b2a3a50803d594085b1d9dbd8391940655cd783566d3594c68e57391997a6a",
+      "selected": 0,
+      "reason": "Ne pouvoir créer un fournisseur sans facture est une anomalie d’insertion du fournisseur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "531fc62af4e41f0c293d371840feb15ab3c90a00d0398207b7093c8bbb5c6d2f",
+      "selected": 0,
+      "reason": "La normalisation traite la structure et les dépendances ; des contraintes de valeurs restent nécessaires.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "b3e3e7e3dce291c5addb399b3720e6b9e35bb8e5139d8eaa3a388efced20bf76",
+      "selected": 2,
+      "reason": "Le total d’en-tête se répète au grain détail ; le sommer comme s’il était propre au détail est une confusion de grain.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "d820e0276fcf7fcd0371b3f445d54ba49fefdd72b60df4efbccfc4f103f6ac37",
+      "selected": 2,
+      "reason": "L’identifiant client détermine son adresse courante unique, mais une adresse peut décrire plusieurs clients.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "1a619e37d63f396797de6fd2786237fa46b85b4951ac23b7311e4903e36270fe",
+      "selected": 2,
+      "reason": "Supprimer la dernière facture détruit à tort des coordonnées qui ont un sens indépendant de cette facture.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "4dc8500e3c846a17134f474d404ebcc4a54cd786e6b051a5d158a2275ad14e28",
+      "selected": 2,
+      "reason": "Le rattachement de chaque facture au bon client vérifie la conservation du lien après décomposition.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "682b4cd349fc2ab86ad11ad3c15c95987dbde52d9499909b1c0f472a5b916046",
+      "selected": 3,
+      "reason": "Le grain délimite les informations du même fait et permet de choisir une clé qui le distingue.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "0e629be866853e9f6d290aa64777d7afc8ef9a19bf76b2d815e0397ab07cdcd1",
+      "selected": 3,
+      "reason": "L’observation de valeurs égales dans les essais ne garantit pas une dépendance dans toutes les situations permises par les règles.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "85e007aaddafbc7555145aa3550bda066f605cb61f0c4e2e9753e6cca18ce64f",
+      "selected": 1,
+      "reason": "L’adresse historique de livraison et l’adresse actuelle constituent des faits temporels distincts ; leur coexistence peut être légitime.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "9dde0ec9f5ae9324146d6b4be641c52b10c318cc65107cb1ebcc0323ee55a886",
+      "selected": 1,
+      "reason": "Une structure normalisée ne décide pas des autorisations de modification des utilisateurs.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "c2062b85edec543409a40517ee3af685be3581392664a120da35c0dcc40e9f4c",
+      "selected": 0,
+      "reason": "Une date commune à toutes les lignes de la facture appartient à l’en-tête de cette facture.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "b8b91cb4da78693a92a44b2c31a0cf7be0537093e20aa703ee87686c83cda798",
+      "selected": 1,
+      "reason": "Une valeur de X fixe Y selon la règle sans que Y détermine nécessairement X.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "59ded21e3cb1ba3236cd7fc343f43aa78d1d0cdea4b69b39d51eabe6255f4a76",
+      "selected": 0,
+      "reason": "Une clé artificielle ne supprime pas les redondances des attributs descriptifs restés en place.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "c66d1d4be3d4b03fe884d06e3551c6bcd5f804c36d2749f7c0bf172b8b3d2b71",
+      "selected": 0,
+      "reason": "Un modèle fiable associe unicité, références, contrôles des valeurs et droits adaptés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "6e260fe76d41b93173f8e23f5c30a6918028c7cd5e5d96f60fecd4c0ffbfd824",
+      "selected": 2,
+      "reason": "Le service actuel et l’imputation historique de chaque note de frais décrivent deux faits différents.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "c02bd5b0927934f99d71415731ed630e57b4ec9caf025bb4ef84f50d2fae610a",
+      "selected": 2,
+      "reason": "Le lien doit utiliser des identifiants appropriés plutôt que des libellés non uniques.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

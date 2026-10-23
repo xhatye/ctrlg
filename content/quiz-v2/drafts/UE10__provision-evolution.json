@@ -1,0 +1,483 @@
+{
+  "module": "UE10",
+  "chapter": "provision-evolution",
+  "sourceHash": "b469ba64662f92d0e9851e824c7cfbb75bee64263657c5371ed71c2a3ac5e99b",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une obligation remplit les conditions du dossier. La provision existante vaut 3 500 € et le montant nécessaire 4 800 €. Quel complément est nécessaire, sans autre mouvement ?",
+      "options": [
+        "1 300 €",
+        "8 300 €",
+        "4 800 €",
+        "3 500 €"
+      ],
+      "answer": 0,
+      "explanation": "Le complément porte le solde existant à la cible : 4 800 − 3 500 = 1 300 €. Le total nécessaire ne doit pas être ajouté intégralement.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 4800
+            },
+            {
+              "value": 3500
+            }
+          ]
+        },
+        "expected": 1300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le calcul ajoute la nouvelle estimation entière à l’ancienne provision, alors que les deux représentent le même risque à deux dates. Quel défaut faut-il corriger ?",
+      "options": [
+        "La suppression de toute obligation à la clôture",
+        "Le double comptage de la partie déjà constituée",
+        "La baisse du risque, nécessairement égale au nouveau montant",
+        "L’absence de tout effet sur le bilan"
+      ],
+      "answer": 1,
+      "explanation": "La nouvelle estimation définit le solde cible du même passif. L’ajustement se calcule par différence avec l’existant, pas par cumul de deux évaluations successives."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La provision nécessaire est supérieure à l’existante. L’entreprise n’a encore rien payé au titre du risque. Quel effet décrit la dotation complémentaire dans le modèle ?",
+      "options": [
+        "Une baisse de provision et un remboursement reçu",
+        "Un décaissement immédiat égal au complément",
+        "Une charge et une hausse de provision, sans paiement nouveau par cette seule écriture",
+        "Un nouvel apport reçu pour financer la provision"
+      ],
+      "answer": 2,
+      "explanation": "La dotation ajuste le passif et le résultat. Le financement et le paiement éventuel sont des événements distincts de cette mesure comptable."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Deux risques indépendants demandent des provisions finales de 2 000 € et 5 000 €. Les soldes existants sont 1 200 € et 3 500 €, sans autre mouvement. Quel total de dotations complémentaires est requis ?",
+      "options": [
+        "7 000 €",
+        "4 700 €",
+        "9 300 €",
+        "2 300 €"
+      ],
+      "answer": 3,
+      "explanation": "Les compléments sont 2 000 − 1 200 = 800 € et 5 000 − 3 500 = 1 500 €, soit 2 300 € pour les deux risques distincts.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 2000
+                },
+                {
+                  "value": 1200
+                }
+              ]
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 5000
+                },
+                {
+                  "value": 3500
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un risque était déjà doté l’an dernier mais sa provision a été reprise ensuite. Le préparateur utilise encore la dotation ancienne comme solde existant. Que faut-il vérifier ?",
+      "options": [
+        "Le solde réellement constitué après tous les mouvements",
+        "Le seul montant de première dotation",
+        "Le total des paiements de toute l’entreprise",
+        "Le bénéfice cible avant correction"
+      ],
+      "answer": 0,
+      "explanation": "L’ajustement compare la cible au solde actuel. Une dotation historique n’est pas forcément encore présente après reprises ou autres dénouements."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une provision d’ouverture de 6 000 € reçoit une dotation complémentaire justifiée de 1 700 €, sans autre mouvement. Quel solde final représente le passif ?",
+      "options": [
+        "4 300 €",
+        "7 700 €",
+        "1 700 €",
+        "6 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le solde de bilan est 6 000 + 1 700 = 7 700 €. La charge de cette seule mise à jour ne se confond pas avec le stock final.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 6000
+            },
+            {
+              "value": 1700
+            }
+          ]
+        },
+        "expected": 7700,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le bilan affiche uniquement la dotation de l’exercice et omet la provision antérieure encore présente. Quel montant risque d’être sous-estimé ?",
+      "options": [
+        "Le seul produit de reprise de la période",
+        "Le capital initialement souscrit",
+        "Le stock final de provision au bilan",
+        "Le paiement déjà effectué au fournisseur"
+      ],
+      "answer": 2,
+      "explanation": "Le bilan présente le solde après mouvements, pas seulement le flux de dotation de l’année. Il faut conserver l’ouverture tant qu’elle n’est pas dénouée."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une provision finale atteint 9 000 €, dont 2 000 € de complément de l’année. Le résultat doit-il être diminué de nouveau du solde entier de 9 000 € au titre de cette mise à jour seule ?",
+      "options": [
+        "Oui, chaque bilan impose de repasser tout le solde en charge",
+        "Oui, mais il faut aussi retirer la même somme de la banque",
+        "Non, aucune dotation ne peut affecter le résultat",
+        "Non, le complément représente la variation nouvelle de ce modèle"
+      ],
+      "answer": 3,
+      "explanation": "Le solde représente un cumul. Repasser le total comme charge supplémentaire recompterait les montants déjà reconnus auparavant."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le suivi d’une provision sans paiement donne ouverture 8 000 €, dotations 1 500 € et reprises 2 200 €. Quel solde final calcule-t-on ?",
+      "options": [
+        "7 300 €",
+        "11 700 €",
+        "8 700 €",
+        "−700 €"
+      ],
+      "answer": 0,
+      "explanation": "Le passage est ouverture + dotations − reprises : 8 000 + 1 500 − 2 200 = 7 300 €. Les sens des mouvements doivent être conservés.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 8000
+                },
+                {
+                  "value": 1500
+                }
+              ]
+            },
+            {
+              "value": 2200
+            }
+          ]
+        },
+        "expected": 7300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau de passage aboutit à un solde négatif de provision sans autre opération ou convention pouvant l’expliquer. Quel contrôle effectuer avant de le présenter ?",
+      "options": [
+        "Reclasser le solde négatif en produit sans rapprocher les mouvements",
+        "Rechercher un excès de reprise ou une erreur de signe, de périmètre ou de report",
+        "Limiter la reprise au dernier paiement sans examiner la provision antérieure",
+        "Compenser le solde avec une provision d’un autre risque sans vérifier les dossiers"
+      ],
+      "answer": 1,
+      "explanation": "Un solde anormal doit être expliqué par les mouvements réels. Il ne se corrige pas par une écriture arbitraire destinée seulement à boucler le tableau."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La provision constituée est de 5 000 €. Dans un scénario alternatif exclusif, le besoin final ne serait que de 3 600 €. Quelle reprise adapte le stock à ce scénario, sans paiement ?",
+      "options": [
+        "8 600 €",
+        "3 600 €",
+        "1 400 €",
+        "5 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le solde existant dépasse la cible alternative de 5 000 − 3 600 = 1 400 €. La reprise réduit cette différence, sans produire un encaissement.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 5000
+            },
+            {
+              "value": 3600
+            }
+          ]
+        },
+        "expected": 1400,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un risque ne répond plus aux conditions du cadre et aucune provision ne reste justifiée. Quelle direction d’ajustement doit être examinée ?",
+      "options": [
+        "Une dotation supplémentaire égale au solde ancien",
+        "Le maintien de la provision pour les dépenses futures sans lien",
+        "Le transfert automatique du solde en banque",
+        "La reprise du montant devenu sans objet"
+      ],
+      "answer": 3,
+      "explanation": "Une provision doit rester liée à une obligation justifiée. Le dénouement favorable demande l’examen d’une reprise et non d’une réserve libre conservée sans motif."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La reprise nécessaire est traitée comme une charge supplémentaire au débit du résultat. Quelle confusion de sens faut-il corriger ?",
+      "options": [
+        "La reprise réduit la provision et produit l’effet inverse d’une dotation dans ce modèle",
+        "La reprise augmente le risque du même montant",
+        "Une reprise constitue toujours un remboursement de capital",
+        "Le solde de provision doit être ajouté aux ventes"
+      ],
+      "answer": 0,
+      "explanation": "Dotation et reprise ont des sens opposés sur le stock et le résultat. La même variation ne doit pas être qualifiée dans le mauvais sens."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La provision baisse après révision favorable, mais le montant de banque reste identique. Est-ce cohérent avec une simple reprise sans paiement ?",
+      "options": [
+        "Non, la reprise doit diminuer la dette bancaire du même montant",
+        "Oui, la reprise réduit la provision au passif sans créer d’encaissement",
+        "Non, la reprise doit être enregistrée en remboursement reçu du tiers",
+        "Oui, car la reprise transfère seulement le montant vers une autre provision sans effet sur le résultat"
+      ],
+      "answer": 1,
+      "explanation": "Une reprise modifie la mesure comptable de l’obligation. Elle ne décrit pas un virement reçu, même si elle améliore le résultat selon le schéma."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier principal nécessite une dotation, le scénario alternatif une reprise. Les deux écritures sont cumulées sur le même risque à la même clôture. Quel défaut apparaît ?",
+      "options": [
+        "Le risque est correctement couvert deux fois par prudence",
+        "La comparaison de scénarios interdit toute mesure du passif",
+        "Deux évaluations exclusives sont traitées comme deux événements simultanés",
+        "La reprise doit être conservée uniquement parce qu’elle améliore le résultat"
+      ],
+      "answer": 2,
+      "explanation": "Les scénarios décrivent des hypothèses différentes pour un même objet. On les compare avant le choix justifié ; on ne cumule pas leurs effets comme deux obligations."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une reprise de provision permet-elle d’affirmer que toute somme anciennement prévue sera encaissée ?",
+      "options": [
+        "Oui, le fournisseur doit rembourser toute reprise",
+        "Oui, la provision était nécessairement un dépôt bancaire",
+        "Non, il faut augmenter la dotation du même montant",
+        "Non, une baisse d’obligation estimée n’est pas une créance à recevoir"
+      ],
+      "answer": 3,
+      "explanation": "La reprise ajuste un passif ou une correction devenue excessive. Elle ne crée pas à elle seule un droit à remboursement ni une disponibilité."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Deux scénarios exclusifs d’un même risque conduisent à des provisions finales de 7 500 € et 4 200 €. Quel écart de passif final les sépare ?",
+      "options": [
+        "3 300 €",
+        "11 700 €",
+        "4 200 €",
+        "7 500 €"
+      ],
+      "answer": 0,
+      "explanation": "L’écart entre évaluations est 7 500 − 4 200 = 3 300 €. Il sert à comparer les hypothèses, pas à créer une troisième provision cumulée.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 7500
+            },
+            {
+              "value": 4200
+            }
+          ]
+        },
+        "expected": 3300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le solde initial est le même dans deux scénarios et leurs autres mouvements sont identiques. L’un aboutit à une provision plus élevée. Quel effet comparatif a cette seule différence sur le résultat du modèle ?",
+      "options": [
+        "Un résultat plus élevé parce que le passif augmente",
+        "Un résultat plus faible à hauteur du surcroît net de provision",
+        "Une banque supérieure du montant de la différence",
+        "Une variation de capital nominal du même montant"
+      ],
+      "answer": 1,
+      "explanation": "À base comparable, davantage de dotation nette ou moins de reprise pèse sur le résultat. La comparaison n’implique pas un paiement bancaire simultané."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le scénario le plus favorable est retenu uniquement parce qu’il produit le meilleur résultat. Quel critère de choix manque ?",
+      "options": [
+        "Le fait de choisir toujours le plus faible passif",
+        "Le montant des ventes à atteindre pour absorber l’écart",
+        "La pertinence de l’estimation au regard des faits et du cadre applicable",
+        "La nécessité de rendre identiques tous les scénarios"
+      ],
+      "answer": 2,
+      "explanation": "Une estimation ne se choisit pas pour l’effet souhaité sur le résultat. Les données et conditions doivent justifier le scénario retenu."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une provision existante vaut 4 000 €. Le scénarioA exige 5 500 € et le scénarioB 3 200 €. Quel écart sépare leurs effets nets sur le résultat avant impôt dans ce modèle ?",
+      "options": [
+        "700 €",
+        "8 700 €",
+        "1 500 €",
+        "2 300 €"
+      ],
+      "answer": 3,
+      "explanation": "A entraîne une charge de 1 500 € ; B une reprise de 800 €. Le résultat de B dépasse donc celui de A de 1 500 + 800 = 2 300 €.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 5500
+                },
+                {
+                  "value": 4000
+                }
+              ]
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 4000
+                },
+                {
+                  "value": 3200
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau de scénarios ne précise pas si les chiffres sont des montants de passif final ou des variations de l’année. Quel risque de lecture faut-il lever ?",
+      "options": [
+        "Confondre stocks et mouvements puis compter deux fois une partie de l’obligation",
+        "Comparer des montants de même unité avec des hypothèses explicites",
+        "Distinguer une charge d’un paiement, ce qui serait inutile",
+        "Suivre l’ouverture, qui ne peut jamais affecter le solde"
+      ],
+      "answer": 0,
+      "explanation": "Le sens de chaque donnée doit être annoncé. Un montant cible et un complément ne sont pas interchangeables dans le passage au résultat ou au bilan."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel contrôle synthétise correctement le suivi d’une provision ?",
+      "options": [
+        "Le seul montant du meilleur résultat possible",
+        "Ouverture, mouvements justifiés, solde final et scénario retenu cohérents entre eux",
+        "La somme de tous les scénarios, même exclusifs",
+        "Le solde bancaire pris comme montant de provision"
+      ],
+      "answer": 1,
+      "explanation": "Le suivi relie estimation et comptabilisation. Il sépare la mesure du passif, sa variation et les éventuels paiements futurs."
+    }
+  ]
+}

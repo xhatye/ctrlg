@@ -1,0 +1,248 @@
+{
+  "sourceHash": "b26b35842f317521496042eb9d3365f1339aa34d673b1af43303f51eaa76ad29",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "bed2653d0447a0cac3c602e7bb12b8ccf647b5e39cda18347216657badf65fd8",
+      "selected": 3,
+      "reason": "La complétude rapproche les factures reçues des identifiants attendus à source.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "8087a335cb713461c5eec846f7ec2927fc6547d232a0b6d8642530b16820cf53",
+      "selected": 3,
+      "reason": "L’obligation du champ prouve seulement une valeur présente, pas sa justesse.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "736ca29fca3725087f94e8b2a858b4157d0cefe7613978a468997a6d1e305eb8",
+      "selected": 2,
+      "reason": "Le calendrier valide31février comme impossible contrairement aux caractères et séparateurs.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "ce868b5093264aec6d18941e31587d60bae4e3c3ab8213874372babf6302969f",
+      "selected": 3,
+      "reason": "La référence client doit exister dans le référentiel attendu, format seul insuffisant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "e26b7d3644e15b5c566f736759ca07d6b0bf4c897741a1067d69042326645c81",
+      "selected": 1,
+      "reason": "La livraison actuelle nécessite une adresse rapprochée d’une source à jour.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "f56a144c7b5f75812b0a2e7ad2b150030b7f450bd28622adad643910cd579c5f",
+      "selected": 1,
+      "reason": "Le rapprochement couvre émis reçus rejets et reprises sur même périmètre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "79cfa6153b5d5e9855151b1097426b8ae6afbf6e360f8cce9d4ddb18e4b106ce",
+      "selected": 3,
+      "reason": "Les quatre rejets doivent être traités et repris sans doubler les96reçus.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "a29ccdaafd2332b474bb0e6387e5dd055f40f13c82d5c6228bf117404f69eef4",
+      "selected": 0,
+      "reason": "L’unicité doit être définie au niveau composite fournisseur-numéro de facture.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "eff6db8ec8abd14a4c83f25c77344713dcbc2b43a6feb6b159085ec82f744813",
+      "selected": 0,
+      "reason": "Le rejeu doit connaître réception par identifiant et éviter double traitement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "bbcb32576845940ff03eb7100408322227d7d3569e852ec4755dd48f8cd63280",
+      "selected": 0,
+      "reason": "Créées et validées désignent des populations différentes à harmoniser.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "2152f5ebb296a3b761c9b5a7699abebdeb50cc7cfe8b75cd560025e14d97ba2b",
+      "selected": 1,
+      "reason": "Les devises et paramètres de conversion doivent être documentés au rapprochement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "1284846110b453b2c7b2dbde94896627519548c14e72fd981513f6ced3b4b93c",
+      "selected": 0,
+      "reason": "Auteur action objet et moment dans journal protégé rendent événement exploitable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "7f76105894c502daa30954f50919238adf85d0928670332a468dca517dd6c6d9",
+      "selected": 2,
+      "reason": "Le défaut de production de traces doit être supervisé et traité par conduite définie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "64972689d2b1855e2765c3cf52fba01a2b1506efed66e60f39076d71fb595537",
+      "selected": 0,
+      "reason": "Supprimer ses propres traces permet à l’auteur d’altérer la preuve de ses actions.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "02b24d31370f6e8f5c4265cdd4a2677cf7fb9afc487387429e62383095f770e3",
+      "selected": 3,
+      "reason": "Auteur action et objet restent disponibles ; seule la chronologie manque sanshorodatage.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "7ed683c6d69ef985d4294942f58a40e9111964f7e86ae5a256da93a3c726a6fe",
+      "selected": 2,
+      "reason": "La journalisation doit être justifiée en événements, données, droits et rétention.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "fa3a0b1c3941cbfbfc0882b3161391b4ed73e9a92b38b6bb2030b8cc938cb3d2",
+      "selected": 3,
+      "reason": "Des horloges non synchronisées peuvent inverser l’ordre apparent des événements.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "546baa18545c9fdc5da14952c0c9e31ded2c36fa3a92a531d10fca4d9bb44c8e",
+      "selected": 0,
+      "reason": "L’alerte doit être attribuée à un traitement responsable et suivi.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "798ee6c10e4cc2d53106deb4ede1a697152fc668ace62a74269ff1645bc502d0",
+      "selected": 1,
+      "reason": "Une correction sans motif ni auteur laisse sa justification et son exécution invérifiables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "7460894c3f558a057c9e3749a8f063b3f5338971618614185230827529071aaf",
+      "selected": 0,
+      "reason": "L’âge et la gravité des exceptions montrent retard et risque au-delà du seul flux nouveau.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "a6d9cbdeb5e5aad89f59c175d23742d99dc00dbd270f80f5e5587d03f53d7044",
+      "selected": 3,
+      "reason": "Tester le défaut corrigé et cas représentatifs vérifie correction et absence de régression.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "796c3428c7cb10e046a7e818c795e87ecdc5941ae47076106846e3ec39e28b15",
+      "selected": 0,
+      "reason": "Une anomalie récurrente impose de corriger la règle et contrôler les reprises.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

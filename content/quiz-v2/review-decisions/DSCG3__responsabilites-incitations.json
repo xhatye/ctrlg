@@ -1,0 +1,248 @@
+{
+  "sourceHash": "55ff6d0d0bd94460b2f81a57413d5af13be0565d6008f41b39a0a557e9d1b1b9",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "8dd2fe307b7c2e41aa9ecffa4aa20fa0c355a2fc9b8cc89a9047f5a2a9d0e36d",
+      "selected": 3,
+      "reason": "La prime a déjà atteint son plafond : le supplément de résultat ne donne aucun bonus marginal.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "625187c09368a63782c36014025b792f3b819470766ba083dec286a01e1ce17c",
+      "selected": 2,
+      "reason": "Le ratio d’actifs contient un investissement décidé hors desleviers locaux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "455b21bde5b852fca7da37c7c876ba4249a4cb0f6599e0d2eb4cf7d0f22735ae",
+      "selected": 3,
+      "reason": "Seuls les7000euros deconsommation relèvent dulevier local décrit.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "ae34edbc1b621d435623268c465937305126cd47d45994c76bd775b63fbdebea",
+      "selected": 2,
+      "reason": "La prime attendue risquée vaut 2 contre 1, alors que le gain collectif attendu vaut 5 contre 10.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "879a1b23ce74efb243eb79381a95f5ac80e743ceb700bfc96f3ea1a7dfdeac2f",
+      "selected": 3,
+      "reason": "Un levier annuel ne devient pas maîtrisable mensuellement par un simple découpage.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "f17d15843a4eb23f34b2c7480863b9b9fecbe1f182ac3200eeeec4bb441db551",
+      "selected": 0,
+      "reason": "Le report de maintenance améliore le résultat apparent présent aux dépens du risque futur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "6aec65a750a808c4c1adb505bfc80d6e5b9006cba1663e640e4edf8639d472cc",
+      "selected": 3,
+      "reason": "Le prix d’achat seul ne reflète ni possession ni obsolescence du stock supplémentaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "49569f766ede1a1bb1088277ae3872010a34e169252d99d27ef4aa1f0c0dd826",
+      "selected": 0,
+      "reason": "La transparence prédictive doit être distinguée de la performance finale.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "afdaab8f30ed7813913053369091d7a6abfcce826aaf7909144a25f71cf6a74d",
+      "selected": 0,
+      "reason": "Le déplacement de contrats entre périodes change le bonus sans amélioration de la performance totale.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "0e3eb11c068ae0cdcd16643193017f85f1779da0c5ca2638991108e0f162cc1e",
+      "selected": 3,
+      "reason": "Le classement local peut décourager la diffusion d’un procédé utile au groupe.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "353643ec47f88173809ef17e7ea2d66f81233724993ac8ed67678a559c0870b7",
+      "selected": 1,
+      "reason": "Consommer pourpréserver lenveloppe ne démontre paslutilité économique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "103d72c30adf2da01d08e9aef991d1ca85dbc2f5c7829b1325443a41360c0397",
+      "selected": 0,
+      "reason": "Le membre reçoit un dixième du gain collectif de 10 et supporte 2 : solde privé −1.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "3efdd3b179d9dab4cae00004c1460a6736727d15c55e75c3df7372ab1176b605",
+      "selected": 3,
+      "reason": "Les économies logistiques peuvent créer coût etarrêts enproduction.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "c74dc330d66cf1e85f5723a832714ca125fbc99bb9c9eeea0c2731450136e987",
+      "selected": 1,
+      "reason": "La valorisation interne doit éviter le refus local d’une opération collectivement profitable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "3389074297ac1f6dafdc3fa20085a3c926de323687eaa16cde77d0abfc6b783c",
+      "selected": 3,
+      "reason": "110 − 0,02 × 900 = 92, inférieur aux 100 certains : le salarié choisit le certain.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "cfef1bd20efa3205447d4fa59742bee59612ebcc65f7379b4b628b1d2e55358f",
+      "selected": 0,
+      "reason": "Latraçabilité despassages sépare commande incomplète etretard dentrepôt.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "57b8eabdea524e56e265d5d82327a1e550bb281fb278ca91108487520be8bcea",
+      "selected": 2,
+      "reason": "Les projets locaux se disputent une même capacité, qui nécessite un arbitrage commun.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "75d7bc02fbce1ec47d8175a458e507285df1da96c78c0a9c0bb3ad79c35e8ce9",
+      "selected": 0,
+      "reason": "Desindicateurs complémentaires etdesarbitrages forment unensemble cohérent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "76704c3e0f991e272c84cd38b48196c0f7e914266197d88e63f316bd94643a8e",
+      "selected": 1,
+      "reason": "Productionutile parheure eterreurs suivent cadence etqualité ensemble.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "da447e70745e3e247914fa7ffad5ed5fe33c5da995a762b00ee934a73c0d8c67",
+      "selected": 2,
+      "reason": "Les extractions doivent être réconciliées à définitions, clôture et période cohérentes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "0a52fc50c95b9183cf71da789fb55af18de7a6545a3663f688621033b1298ef4",
+      "selected": 1,
+      "reason": "Le groupe de référence doit subir des chocs comparables pour isoler une performance relative.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "3e6027c48a4a9f961e432a8eca9ffbd9751c00aefca581b1875a9744f6cf0de3",
+      "selected": 1,
+      "reason": "La restitution d’une rémunération déjà versée correspond au mécanisme de clawback.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

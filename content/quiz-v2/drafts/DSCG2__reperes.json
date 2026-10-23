@@ -1,0 +1,468 @@
+{
+  "module": "DSCG2",
+  "chapter": "reperes",
+  "sourceHash": "a0bd15a56309da103496529e005d7aa36bcc5f518256069170e314d4a8df936b",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un analyste actualise des flux disponibles pour tous les financeurs au seul rendement exigé par les actionnaires. Quel point doit-il corriger ?",
+      "options": [
+        "La cohérence entre destinataires des flux et taux d’actualisation",
+        "Le seul choix entre valeur comptable et valeur de marché des fonds propres",
+        "La seule répartition du taux actionnarial entre les années de prévision",
+        "Le seul classement des intérêts versés dans la valeur terminale"
+      ],
+      "answer": 0,
+      "explanation": "Les flux pour l’entreprise et ceux pour les actionnaires n’ont pas le même périmètre. Le taux doit correspondre au risque et aux financeurs concernés."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Des flux en dollars sont actualisés à un taux associé à des flux en euros, sans conversion ni justification. Quelle réserve est prioritaire ?",
+      "options": [
+        "L’absence de conversion des flux au seul cours historique de constitution de la société",
+        "L’incohérence possible entre devise des flux et devise du taux",
+        "La différence entre le rendement exigé et le coupon contractuel d’une obligation",
+        "L’absence de conversion de tous les flux au cours comptant actuel, tenu pour constant sans justification"
+      ],
+      "answer": 1,
+      "explanation": "La devise fait partie de la cohérence de valorisation. Une conversion ou un modèle cohérent doit être explicité, plutôt que mélanger directement taux et flux."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour estimer une valeur d’usage, un dossier prévoit les flux à prix constants en excluant l’inflation générale. Le taux utilisé inclut cette inflation. Quelle correction de cohérence prévoit IAS 36, paragraphe 40 ?",
+      "options": [
+        "Conserver le taux nominal et ajouter seulement l’inflation à la valeur finale calculée",
+        "Aligner les deux bases : flux réels avec taux réel, ou flux nominaux avec taux nominal",
+        "Appliquer le taux nominal aux flux constants en considérant que l’actualisation les rend nominaux",
+        "Ajouter l’inflation au taux nominal pour compenser son exclusion des flux"
+      ],
+      "answer": 1,
+      "explanation": "Les flux et le taux doivent reposer sur une hypothèse d’inflation cohérente. IAS 36, paragraphe 40, distingue flux nominaux actualisés au taux nominal et flux réels actualisés au taux réel. Mélanger ces deux bases fausse la valeur.",
+      "references": [
+        {
+          "title": "IAS 36, paragraphe 40 : cohérence des hypothèses d’inflation des flux et du taux",
+          "url": "https://www.ifrs.org/content/dam/ifrs/publications/pdf-standards/english/2021/issued/part-a/ias-36-impairment-of-assets.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un modèle de CMPC avec dette et fonds propres, quelle distinction est essentielle ?",
+      "options": [
+        "Les poids sont les taux d’intérêt de chaque financement",
+        "Les coûts sont les montants comptables des financements",
+        "Les parts de financement sont les échéances de paiement des intérêts",
+        "Les poids mesurent les parts de financement et les coûts les rendements requis"
+      ],
+      "answer": 3,
+      "explanation": "Un poids et un coût ont des rôles différents : le premier pondère, le second rémunère le risque et le financement. Les confondre déforme le CMPC."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le modèle retient 70 % de fonds propres au coût de 10 % et 30 % de dette au coût après impôt de 4 %. Quel CMPC calcule-t-il ?",
+      "options": [
+        "8,2 %",
+        "7 %",
+        "14 %",
+        "9,8 %"
+      ],
+      "answer": 0,
+      "explanation": "La contribution des fonds propres vaut 7 points et celle de la dette 1,2 point. Le total est 8,2 %, avec un coût de dette déjà fourni après impôt.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.7
+                },
+                {
+                  "value": 10
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.3
+                },
+                {
+                  "value": 4
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 8.2,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le coût de dette fourni est déjà après impôt. L’étudiant lui applique à nouveau le facteur fiscal avant de calculer le CMPC. Quelle erreur produit-il ?",
+      "options": [
+        "Une absence de pondération du coût des fonds propres",
+        "Une double prise en compte du bénéfice fiscal dans le coût de dette",
+        "Une conversion du coût nominal de dette en valeur de marché",
+        "Une augmentation du poids de dette indépendamment de ses valeurs"
+      ],
+      "answer": 1,
+      "explanation": "Si le coût est déjà net, appliquer encore le facteur fiscal le réduit une seconde fois. La définition de l’entrée doit être vérifiée avant la formule."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans VT = F suivant / (r − g), quelle condition sur les taux est requise par le modèle de croissance perpétuelle ?",
+      "options": [
+        "r doit être égal à g",
+        "g doit dépasser r pour représenter une croissance",
+        "r doit être strictement supérieur à g",
+        "r et g doivent être tous deux égaux à zéro"
+      ],
+      "answer": 2,
+      "explanation": "Le modèle impose r > g pour converger et donner une valeur finie avec un flux positif. Une égalité annule le dénominateur."
+    },
+    {
+      "id": "q08",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le premier flux de la rente perpétuelle est de 15 000 € l’an prochain ; r = 8 % et g = 2 %. Quelle valeur donne le modèle aujourd’hui ?",
+      "options": [
+        "187500 €",
+        "750000 €",
+        "150000 €",
+        "250000 €"
+      ],
+      "answer": 3,
+      "explanation": "La valeur est 15 000 / (0,08 − 0,02) = 250 000 €. Le flux fourni est déjà celui de la période suivante : il ne faut pas le faire croître encore.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 15000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 0.08
+                },
+                {
+                  "value": 0.02
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 250000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une valeur terminale est calculée à la fin de l’année 5, puis ajoutée sans actualisation aux flux ramenés à aujourd’hui. Quel problème cela pose-t-il ?",
+      "options": [
+        "Des valeurs de dates différentes sont additionnées",
+        "La valeur terminale serait par nature un flux de l’année 1",
+        "Les flux explicites auraient dû être capitalisés à l’infini",
+        "Le taux de croissance aurait dû être ajouté au taux d’actualisation"
+      ],
+      "answer": 0,
+      "explanation": "La valeur terminale à cinq ans doit elle aussi être ramenée à la date de valorisation. Les montants additionnés doivent être datés de façon cohérente."
+    },
+    {
+      "id": "q10",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une valeur dépend surtout de flux situés au-delà de la prévision détaillée. Quel test complète le mieux l’analyse ?",
+      "options": [
+        "Une sensibilité limitée aux ventes de la première année détaillée",
+        "Une sensibilité aux hypothèses de taux et de croissance terminale",
+        "Un scénario faisant varier les flux détaillés tout en conservant la valeur terminale en montant fixe",
+        "Une comparaison des seules valeurs comptables des immobilisations à la date initiale"
+      ],
+      "answer": 1,
+      "explanation": "Une forte composante terminale rend la valeur sensible à ses hypothèses. Des scénarios explicités montrent cette dépendance sans transformer la valeur en certitude."
+    },
+    {
+      "id": "q11",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "À flux futurs strictement positifs et fixes, une hausse du taux d’actualisation accroît la valeur calculée. Que vérifier d’abord ?",
+      "options": [
+        "La ventilation de la valeur totale entre valeur terminale et flux détaillés, à taux inchangé",
+        "Le choix de poids de financement historiques au lieu de poids de marché, sans modifier le taux utilisé",
+        "Le sens de la formule et les facteurs d’actualisation",
+        "Le classement de certains flux positifs entre exploitation et investissement, sans changer leurs dates ni montants"
+      ],
+      "answer": 2,
+      "explanation": "Avec des flux positifs inchangés, relever le taux diminue les facteurs de valeur actuelle. Le résultat inverse suggère une erreur de formule ou de saisie."
+    },
+    {
+      "id": "q12",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un projet nécessite 100 000 € aujourd’hui et verse 110 000 € dans un an. Au taux requis de 10 %, sa VAN est nulle. Comment l’interpréter ?",
+      "options": [
+        "Il ne procure aucun encaissement au financeur",
+        "Son rendement est nul puisque sa VAN est nulle",
+        "Il détruit une valeur égale à l’investissement initial",
+        "Il atteint exactement la rémunération exigée sous ces hypothèses"
+      ],
+      "answer": 3,
+      "explanation": "La VAN mesure la valeur au-delà du rendement requis. Le flux rembourse ici le capital et rémunère 10 %, sans surplus par rapport à cette exigence."
+    },
+    {
+      "id": "q13",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une VAN centrale de 80 000 € tombe à 60 000 € après un scénario de taux plus élevé. Quelle baisse relative de la VAN centrale mesurer ?",
+      "options": [
+        "25 %",
+        "33,33 %",
+        "20 %",
+        "75 %"
+      ],
+      "answer": 0,
+      "explanation": "La baisse de 20 000 € se rapporte au scénario central de 80 000 €, soit 25 %. Utiliser la valeur finale comme base mesurerait un autre pourcentage.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 80000
+                    },
+                    {
+                      "value": 60000
+                    }
+                  ]
+                },
+                {
+                  "value": 80000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 25,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier impose des poids de financement en valeur de marché. L’analyste reprend des capitaux propres comptables sans comparaison. Quelle vérification manque ?",
+      "options": [
+        "La concordance entre taux nominal de la dette et taux après impôt, indépendamment des montants pondérés",
+        "La conformité de la pondération à la convention de valeur retenue",
+        "La comparaison du bénéfice comptable avec le dividende distribué, tenue pour contrôle des poids",
+        "La pondération par le montant des charges financières et des dividendes de la période"
+      ],
+      "answer": 1,
+      "explanation": "Le choix des poids doit correspondre au modèle. Une valeur comptable ne peut remplacer silencieusement la valeur de marché exigée dans le dossier."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un modèle de rente positive retient g = 6 % et r = 5 % ; la formule donne une valeur négative. Quelle conclusion est fondée ?",
+      "options": [
+        "La valeur négative prouve que la croissance détruit toute l’entreprise",
+        "Il faut retenir la valeur absolue du résultat sans changer les hypothèses",
+        "Les hypothèses ne respectent pas la condition du modèle de rente croissante",
+        "Il suffit d’actualiser le résultat négatif une année supplémentaire"
+      ],
+      "answer": 2,
+      "explanation": "La condition r > g n’est pas satisfaite. Changer le signe ou actualiser encore ne répare pas l’absence de convergence du modèle utilisé."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une analyse présente une fourchette de valeur issue de trois scénarios. Quelle information la rend interprétable ?",
+      "options": [
+        "La moyenne des trois valeurs, sans conserver les scénarios qui la composent",
+        "La fréquence historique des scénarios, tenue pour probabilité future sans justification",
+        "La seule hypothèse de chiffre d’affaires, même lorsque taux et marge changent aussi",
+        "Les hypothèses, leurs combinaisons et la date de valeur de chaque scénario"
+      ],
+      "answer": 3,
+      "explanation": "Une fourchette n’est informative que si l’on sait ce qui varie et ce qui reste fixe. Les hypothèses permettent de juger sa portée économique."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un calcul utilise un taux annuel composé pour une suite de flux mensuels, sans adapter périodes ni taux. Quel contrôle faut-il effectuer ?",
+      "options": [
+        "Aligner l’unité de période du taux avec les dates des flux",
+        "Appliquer le taux annuel à chaque mois comme si chaque mois constituait une année entière",
+        "Regrouper sans correction tous les flux mensuels en fin d’année puis appliquer le taux annuel",
+        "Diviser le taux annuel composé par douze en le tenant pour un taux mensuel équivalent exact"
+      ],
+      "answer": 0,
+      "explanation": "La cohérence temporelle est indispensable. Il faut une conversion de taux et un calendrier adaptés, pas une correction arbitraire du résultat final."
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un placement verse 11 000 € à un an et 12 100 € à deux ans, sans autre flux. Le taux annuel donné est 10 %. Quelle valeur actuelle totale obtient-on ?",
+      "options": [
+        "21000 €",
+        "20000 €",
+        "23100 €",
+        "19090,91 €"
+      ],
+      "answer": 1,
+      "explanation": "Chaque flux est ramené depuis sa propre date : 11 000/1,10 + 12 100/1,10² = 10 000 + 10 000 = 20 000 €. Un même exposant pour les deux flux serait incorrect.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 11000
+                },
+                {
+                  "value": 1.1
+                }
+              ]
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 12100
+                },
+                {
+                  "op": "pow",
+                  "args": [
+                    {
+                      "value": 1.1
+                    },
+                    {
+                      "value": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 20000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant additionne directement coût des fonds propres et coût net de dette pour déterminer le CMPC. Que manque-t-il ?",
+      "options": [
+        "Le retrait du coût de dette du coût des fonds propres",
+        "La multiplication des deux coûts sans utiliser de valeurs",
+        "La pondération de chaque coût par sa part de financement",
+        "Le remplacement des coûts par la somme des financements"
+      ],
+      "answer": 2,
+      "explanation": "Le CMPC est une moyenne pondérée, pas une addition brute des coûts. Les poids reflètent les valeurs de financement retenues et totalisent un."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour faire passer une VAN négative en positive, un analyste baisse le taux sans modifier ni justifier le risque. Quelle critique est pertinente ?",
+      "options": [
+        "La baisse du taux doit être justifiée par la seule baisse du montant investi, sans examiner le risque des flux",
+        "Une VAN devenue positive prouve à elle seule que le risque du projet a diminué",
+        "La baisse du taux peut être justifiée par le seul fait que le TRI est inférieur au taux initial",
+        "Le taux est choisi pour le résultat recherché plutôt que pour les flux et leur risque"
+      ],
+      "answer": 3,
+      "explanation": "Un taux plus faible peut accroître la VAN, mais sa pertinence doit être justifiée. Le calibrer pour obtenir une décision favorable biaise l’analyse."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une valeur terminale est fondée sur une marge exceptionnelle observée la dernière année détaillée. Quelle vérification est prioritaire ?",
+      "options": [
+        "La soutenabilité du flux servant de base à la rente de long terme",
+        "La seule égalité du flux avec le résultat comptable de cette année",
+        "Le maintien de la marge exceptionnelle parce qu’elle est la plus récente",
+        "Le choix d’un taux de croissance compensant la marge sans autre analyse"
+      ],
+      "answer": 0,
+      "explanation": "Le modèle prolonge un flux sur un horizon très long. Une performance transitoire ne peut devenir une base durable sans justification."
+    },
+    {
+      "id": "q22",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que signifie actualiser un flux futur ?",
+      "options": [
+        "Transformer un bénéfice comptable en encaissement constaté",
+        "Exprimer son équivalent à une date antérieure avec un taux cohérent",
+        "Ajouter le taux au montant futur pour le dater aujourd’hui",
+        "Convertir la devise du flux par le seul taux d’intérêt"
+      ],
+      "answer": 1,
+      "explanation": "L’actualisation relie des montants à des dates différentes. Elle ne prouve pas qu’un flux est encaissé et n’effectue pas à elle seule une conversion de devise."
+    }
+  ]
+}

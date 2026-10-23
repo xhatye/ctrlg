@@ -1,0 +1,362 @@
+{
+  "module": "UE1",
+  "chapter": "sources",
+  "sourceHash": "efa19208b59ce8c27b9fbb9a7fd20588db5041a911cf1b6d855d31b7dd4a7ed0",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un règlement de l’Union européenne est entré en vigueur et la situation relève de son champ. Un rédacteur attend une loi française de transposition pour l’appliquer. Quelle caractéristique du règlement doit-il prendre en compte ?",
+      "options": [
+        "Il n’engage que les institutions de l’Union, sans effet dans les États.",
+        "Il doit être ratifié par chaque contrat privé pour être applicable.",
+        "Il devient applicable seulement après la publication d’une recommandation nationale.",
+        "Il est directement applicable dans les États membres, à distinguer d’une transposition."
+      ],
+      "answer": 3,
+      "explanation": "Le règlement est directement applicable dans les États membres. Il faut contrôler son entrée en vigueur et son champ, mais ne pas lui imposer le mécanisme de transposition d’une directive.",
+      "references": [
+        {
+          "title": "EUR-Lex, règlement, article 288 TFUE",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=LEGISSUM:regulation"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise utilise un appareil contre un loyer et doit le restituer au terme prévu. Quelle qualification guide la première recherche ?",
+      "options": [
+        "Une vente à paiement échelonné, parce qu’une somme périodique est versée.",
+        "Une location de matériel.",
+        "Un prêt gratuit de matériel, en écartant le loyer indiqué.",
+        "Une acquisition définitive, déduite de la seule utilisation professionnelle."
+      ],
+      "answer": 1,
+      "explanation": "Loyer et restitution orientent vers la location. L’usage de l’appareil ne démontre pas une acquisition ; le contrat doit être examiné selon l’opération réellement décrite."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un candidat cherche une règle sur le licenciement pour un différend entre deux entreprises portant sur une facture. Quelle erreur commet-il ?",
+      "options": [
+        "Il confond le droit applicable avec la date d’exigibilité de la facture.",
+        "Il confond l’obligation invoquée avec sa preuve de paiement.",
+        "Il sélectionne un régime sans qualifier la relation décrite.",
+        "Il applique une règle de formation à une question de capacité."
+      ],
+      "answer": 2,
+      "explanation": "Le dossier décrit une relation commerciale entre entreprises, pas une rupture de contrat de travail. Il faut qualifier les parties et l’opération avant de choisir le régime."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour étudier un acte ancien, quelle information faut-il rapprocher de sa qualification ?",
+      "options": [
+        "La date de la réclamation uniquement, réputée remplacer celle de l’acte.",
+        "La date de consultation du site, réputée déterminer la règle applicable.",
+        "La dernière date du dossier, sans distinguer acte et procédure.",
+        "La date de l’acte et la version applicable de la norme."
+      ],
+      "answer": 3,
+      "explanation": "Une règle trouvée aujourd’hui ne gouverne pas nécessairement tous les actes passés. Les dates et le champ de la norme doivent être rapprochés de l’opération."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une partie cite une décision favorable concernant un prêt, mais le litige étudié porte sur un dépôt avec restitution du même objet. Quelle démarche est appropriée ?",
+      "options": [
+        "Comparer les qualifications et les faits avant de transposer la solution.",
+        "Retenir la décision parce que le résultat demandé est identique.",
+        "Appliquer la qualification du prêt au dépôt afin d’utiliser la décision.",
+        "Écarter la qualification et ne comparer que les montants concernés."
+      ],
+      "answer": 0,
+      "explanation": "La proximité d’un résultat recherché ne suffit pas à transposer une décision. Les faits juridiquement pertinents et la catégorie de l’opération doivent être comparés."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans le schéma de droit commun des obligations, qui doit établir l’obligation dont l’exécution est demandée ?",
+      "options": [
+        "La personne à qui l’exécution est demandée, dès qu’elle conteste la dette.",
+        "La personne qui réclame cette exécution.",
+        "La personne disposant du moins de pièces, quelle que soit sa prétention.",
+        "La personne qui s’est exécutée la première, même si elle ne réclame rien."
+      ],
+      "answer": 1,
+      "explanation": "La personne qui réclame l’exécution doit établir le fondement de sa demande. Cela ne signifie pas que la partie invoquant ensuite un paiement soit dispensée de le justifier."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un réparateur réclame le prix d’une intervention ; le client conteste l’avoir commandée. Quelle question probatoire vient d’abord ?",
+      "options": [
+        "Quelles pièces établissent que le client n’a pas reçu de relance ?",
+        "Quelles pièces établissent la solvabilité du client ?",
+        "Quelles pièces établissent l’accord et le service invoqués ?",
+        "Quelles pièces établissent le montant habituel des autres interventions ?"
+      ],
+      "answer": 2,
+      "explanation": "La contestation porte sur l’existence de l’obligation. Il faut donc rechercher l’accord et la prestation invoqués avant de raisonner comme si la dette était acquise."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une cliente admet une dette de fourniture mais affirme l’avoir réglée en espèces. Dans le schéma de droit commun, que doit-elle étayer ?",
+      "options": [
+        "L’absence de contestation de la facture lors de sa réception.",
+        "L’absence de relance antérieure, tenue pour quittance.",
+        "L’existence de la commande déjà admise, plutôt que son règlement.",
+        "Le paiement qu’elle invoque pour se dire libérée."
+      ],
+      "answer": 3,
+      "explanation": "La dette est admise ; le fait discuté est son extinction par paiement. La cliente doit justifier ce paiement, sans que l’absence de virement suffise à écarter tout paiement en espèces."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant écrit : « Le créancier doit prouver la dette, donc le débiteur n’a jamais à produire de preuve de paiement. » Quelle correction s’impose ?",
+      "options": [
+        "Distinguer preuve de l’obligation et preuve du fait libératoire.",
+        "Faire supporter au créancier toute preuve de paiement dès lors qu’il réclame la dette.",
+        "Tenir le débiteur pour libéré dès qu’il allègue un paiement détaillé.",
+        "Faire supporter au débiteur la preuve initiale de la dette qu’il conteste."
+      ],
+      "answer": 0,
+      "explanation": "La charge varie avec la prétention : établir l’obligation et justifier son paiement sont deux questions. La première charge n’efface pas la seconde."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client présente un avis d’ordre de virement non exécuté pour soutenir qu’il a payé. Que faut-il rechercher ?",
+      "options": [
+        "La confirmation que la banque a reçu l’instruction, même restée sans exécution.",
+        "Une pièce établissant l’exécution et le bénéficiaire du paiement.",
+        "La preuve de l’intention du client de payer à cette date.",
+        "L’accord initial sur le prix, tenu pour preuve du règlement ultérieur."
+      ],
+      "answer": 1,
+      "explanation": "L’ordre donné et son exécution sont distincts. Une preuve utile doit relier le mouvement réellement effectué à son bénéficiaire et à la dette discutée."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le relevé d’une semaine ne montre aucun paiement, mais le débiteur invoque un chèque du mois précédent. Quelle conclusion correspond à l’état du dossier ?",
+      "options": [
+        "La remise alléguée du chèque suffit à établir sa valeur libératoire sans pièce.",
+        "L’absence de virement prouve que le paiement n’a pas été fait, quel que soit son mode.",
+        "Le relevé produit ne tranche pas ce paiement : il faut des pièces portant sur le chèque allégué.",
+        "La facture impayée selon le fournisseur prime sans examen sur toute preuve bancaire."
+      ],
+      "answer": 2,
+      "explanation": "La période et le mode de paiement allégués ne sont pas couverts de manière suffisante. Il faut rechercher les pièces du chèque plutôt que déduire du relevé la présence ou l’absence de tout paiement."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que signifie la distinction entre le patrimoine d’une société dotée de la personnalité juridique et celui de ses associés ?",
+      "options": [
+        "Chaque associé possède directement une quote-part de chaque bien détenu par la société.",
+        "Toute dette sociale devient personnelle dès qu’un associé la connaît.",
+        "Une dette de la société peut être attribuée à l’associé au choix du créancier sans engagement distinct.",
+        "Les biens et dettes doivent être rattachés au titulaire concerné."
+      ],
+      "answer": 3,
+      "explanation": "La société et ses associés sont des sujets distincts. Il faut attribuer chaque bien et dette au bon titulaire, tout en examinant séparément d’éventuels engagements personnels."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société achète un véhicule et un associé possède déjà sa voiture personnelle. Quel document aide à attribuer le véhicule acheté ?",
+      "options": [
+        "Le contrat d’achat identifiant la société comme acquéreur.",
+        "Le relevé montrant quel compte a financé l’achat, tenu pour titre de propriété à lui seul.",
+        "La désignation du conducteur principal dans l’assurance, tenue pour identité du propriétaire.",
+        "Le tableau d’affectation du véhicule au dirigeant, tenu pour transfert de propriété."
+      ],
+      "answer": 0,
+      "explanation": "Le titre et l’identité de l’acquéreur sont pertinents pour rattacher le bien. L’utilisation personnelle ou les préférences d’un associé ne remplacent pas cet examen."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un créancier invoque une garantie personnelle signée par un associé pour une dette de la société. Comment analyser la demande contre cet associé ?",
+      "options": [
+        "Confondre les patrimoines de la société et de l’associé dès qu’une garantie existe.",
+        "Examiner l’existence et la portée de la garantie personnelle malgré la distinction des personnes.",
+        "Écarter toute demande contre l’associé au seul motif qu’il n’est pas la société.",
+        "Déduire de la garantie que l’associé est devenu acquéreur de la prestation sociale."
+      ],
+      "answer": 1,
+      "explanation": "La séparation des patrimoines n’efface pas un engagement personnel. Il faut examiner la garantie et sa portée, sans pour autant confondre la société et l’associé."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie attribue une facture au dirigeant uniquement parce qu’il a signé au nom de la société. Quelle vérification manque ?",
+      "options": [
+        "La personne qui a matériellement reçu la prestation, assimilée à la partie débitrice.",
+        "La personne qui a avancé les frais, assimilée à la partie engagée.",
+        "La qualité du signataire, ses pouvoirs et la partie engagée.",
+        "Le bénéficiaire économique du contrat, assimilé au débiteur sans lire l’acte."
+      ],
+      "answer": 2,
+      "explanation": "Signer comme représentant n’équivaut pas nécessairement à s’engager personnellement. Il faut identifier la partie au contrat et examiner les pouvoirs exercés."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux sociétés ont le même associé majoritaire. L’une doit une somme à un fournisseur ; aucune garantie de l’autre n’est indiquée. Quelle conclusion est prudente ?",
+      "options": [
+        "Les deux sociétés sont débitrices parce qu’elles ont un associé commun.",
+        "L’associé commun devient débiteur personnel sans engagement supplémentaire.",
+        "Le fournisseur peut attribuer la facture à la société la plus solvable.",
+        "Il faut identifier la société engagée sans fusionner leurs patrimoines."
+      ],
+      "answer": 3,
+      "explanation": "Un associé commun ne suffit pas à confondre les sujets de droit. La dette se rattache à la personne engagée ; un engagement distinct ne se présume pas."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La loi attache aux faits établis dans un dossier une présomption expressément qualifiée de simple. La partie adverse présente une preuve contraire. Selon 1354, quel traitement est approprié ?",
+      "options": [
+        "Examiner cette preuve, car une présomption simple peut être renversée.",
+        "Écarter toute preuve contraire comme pour une présomption irréfragable.",
+        "Limiter la preuve contraire au seul objet autorisé pour une présomption mixte, même sans limite légale ici.",
+        "Supprimer la présomption dès que la partie adverse la conteste, sans examiner ses preuves."
+      ],
+      "answer": 0,
+      "explanation": "La présomption simple admet une preuve contraire par tout moyen. Une simple contestation ne suffit pas à la renverser, mais sa qualification interdit aussi de rejeter par principe la preuve produite.",
+      "references": [
+        {
+          "title": "Code civil, article 1354, présomptions légales",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000032042336/2024-04-14"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une condition de la règle dépend d’une notification reçue. Le dossier contient seulement un brouillon non envoyé. Quelle conclusion correspond à cette pièce ?",
+      "options": [
+        "Le brouillon établit la réception parce qu’il contient une adresse de destinataire.",
+        "Le brouillon prépare le message mais ne démontre pas sa réception.",
+        "Le brouillon prouve la réception à sa date de rédaction.",
+        "Le brouillon rend la notification sans objet, car l’auteur avait décidé de notifier."
+      ],
+      "answer": 1,
+      "explanation": "Un brouillon permet de connaître un contenu envisagé, pas l’envoi et encore moins la réception. L’application doit tenir compte de ce que la pièce établit réellement."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans un litige civil sur un prêt, l’impossibilité morale de se procurer un écrit est établie au sens de 1360. Le demandeur propose des témoignages pour établir le prêt. Quel effet de cette impossibilité faut-il retenir ?",
+      "options": [
+        "Elle rend le prêt nul même si les parties étaient d’accord.",
+        "Elle dispense le demandeur de prouver l’existence de toute obligation.",
+        "Elle permet d’examiner la preuve par tous moyens sans établir automatiquement le prêt.",
+        "Elle transforme tout témoignage en reconnaissance de dette irréfragable."
+      ],
+      "answer": 2,
+      "explanation": "L’impossibilité établie ouvre l’exception à la preuve écrite. Elle concerne l’admissibilité des moyens : elle ne prouve pas elle-même le prêt et ne rend pas chaque témoignage décisif.",
+      "references": [
+        {
+          "title": "TJ Toulouse, 20 janvier 2025, 22/05385, article 1360 et impossibilité morale",
+          "url": "https://www.courdecassation.fr/decision/678ece5bbfd75b73b3e472b3"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour ce prêt civil, l’écrit est exigé au-delà de 1 500 € selon le régime donné ; aucune exception n’est établie. La créance est de 4 000 €, mais le prêteur ne réclame que 1 000 €. Selon 1359, que produit cette réduction de demande sur l’exigence d’écrit ?",
+      "options": [
+        "Elle supprime l’exigence puisque le juge ne peut accorder que 1 000 €.",
+        "Elle la supprime seulement si le créancier répartit le solde entre plusieurs demandes.",
+        "Elle la remplace par une preuve du seul virement initial, automatiquement suffisante.",
+        "Elle ne permet pas d’éviter la règle d’écrit applicable à la créance supérieure au seuil."
+      ],
+      "answer": 3,
+      "explanation": "1359 empêche d’échapper à la preuve écrite en restreignant la demande ou en ne réclamant qu’une partie de la créance. Le contrôle porte ici sur la créance de 4 000 €, non sur sa seule fraction réclamée.",
+      "references": [
+        {
+          "title": "Code civil, article 1359, preuve par écrit et fractionnement",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032042311/2026-04-11"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une décision est invoquée sans faits comparables ni indication du problème qu’elle tranche. Quel ajout rendrait l’argument réellement utile ?",
+      "options": [
+        "Expliquer la question tranchée et la comparer aux faits du litige.",
+        "Appliquer son résultat parce que les deux dossiers ont un créancier et un débiteur.",
+        "Déduire l’identité des régimes de la seule proximité des montants.",
+        "Retenir sa solution indépendamment du problème qu’elle examine."
+      ],
+      "answer": 0,
+      "explanation": "La portée d’une décision se comprend par la question et les faits auxquels elle répond. La comparaison permet d’évaluer la pertinence de la transposition proposée."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un virement prouve qu’une somme a quitté un compte, mais le bénéficiaire est masqué. Pourquoi la conclusion « le fournisseur a été payé » est-elle prématurée ?",
+      "options": [
+        "L’ordre de virement prouve le bénéficiaire quelle que soit la pièce produite.",
+        "Le lien entre la somme versée et le créancier reste à établir.",
+        "La somme sortie du compte doit être répartie entre toutes les factures connues.",
+        "La dette est éteinte dès lors qu’un montant équivalent quitte le compte du débiteur."
+      ],
+      "answer": 1,
+      "explanation": "Une pièce peut établir un mouvement bancaire sans établir à qui il profite. Le bénéficiaire et l’opération concernée doivent être rapprochés de la créance."
+    }
+  ]
+}

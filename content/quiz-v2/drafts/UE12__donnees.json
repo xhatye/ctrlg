@@ -1,0 +1,338 @@
+{
+  "module": "UE12",
+  "chapter": "donnees",
+  "sourceHash": "f4e7eeeef5eaf3f04beda57727ac5907a9cf2f77f621caea656ddc3bab131c28",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "In “sales rose from €40,000 to €55,000”, what does “from €40,000” identify?",
+      "options": [
+        "The starting sales level",
+        "The final sales level",
+        "The amount of the increase",
+        "The rate of the increase"
+      ],
+      "answer": 0,
+      "explanation": "From introduit le niveau de départ ; to introduit le niveau d’arrivée. Le montant et le taux de variation constituent encore deux informations différentes."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A chart shows 80 employees in January and 95 in June. Which sentence preserves the direction and period of the change?",
+      "options": [
+        "Headcount reached 80 in June, up from 95 in January.",
+        "Headcount rose from 80 in January to 95 in June.",
+        "Headcount rose from 95 in January to 80 in June.",
+        "Headcount fell from 80 in January to 95 in June."
+      ],
+      "answer": 1,
+      "explanation": "La description doit conserver les deux niveaux, leurs dates et le sens de la variation. Inverser les dates ou employer fell déforme la trajectoire montrée."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A chart uses thousands of euros, but a summary copies its labels and describes them simply as euros. What is the main reporting error?",
+      "options": [
+        "An observed result has become a forecast.",
+        "A relative change has become a percentage-point change.",
+        "The measurement scale has been lost.",
+        "The starting and ending dates have been reversed."
+      ],
+      "answer": 2,
+      "explanation": "Une échelle en milliers doit rester visible dans le commentaire. Copier les seuls nombres en euros change les montants, même si le sens de la variation est conservé."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "One chart reports monthly sales in euros and another reports annual sales in euros. Which comparability problem is explicitly shown?",
+      "options": [
+        "The figures use different currencies.",
+        "One figure is a volume and the other a monetary value.",
+        "One figure is a profit and the other a sales amount.",
+        "The reporting periods differ."
+      ],
+      "answer": 3,
+      "explanation": "Comparer un mois et une année sans retraitement mélange deux périmètres temporels. Les deux séries portent pourtant sur des ventes en euros : ces caractéristiques sont communes."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "The source says “revenue fell to €90,000”. A summary says “revenue fell by €90,000”. What has changed?",
+      "options": [
+        "An ending level has been replaced by a change amount.",
+        "A change amount has been replaced by a starting level.",
+        "A sales amount has been replaced by an expense amount.",
+        "A current observation has been replaced by a future promise."
+      ],
+      "answer": 0,
+      "explanation": "To indique le niveau atteint, tandis que by indique l’ampleur de la baisse. Les deux phrases n’énoncent pas la même information financière."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A table contains two divisions, but the accompanying sentence reports “total company sales”. What must be established before using that wording?",
+      "options": [
+        "That both divisions use the same reporting currency, even if other divisions are omitted.",
+        "That the table covers the company’s full sales perimeter",
+        "That sales rose in both divisions, regardless of sales outside the table.",
+        "That the two divisions have equal sales, even if the company contains additional activities."
+      ],
+      "answer": 1,
+      "explanation": "Une somme portant sur deux divisions ne représente le total de l’entreprise que si le périmètre est complet. Le commentaire ne doit pas élargir silencieusement le champ des données."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Which sentence reports the magnitude of a relative increase rather than a final amount?",
+      "options": [
+        "Revenue stood at €12 million.",
+        "Revenue was €12 million at year-end.",
+        "Revenue increased by 12%.",
+        "Revenue increased to €12 million."
+      ],
+      "answer": 2,
+      "explanation": "By 12% exprime un taux de variation. Les trois autres phrases donnent un niveau de chiffre d’affaires, sans chiffrer l’ampleur de la hausse."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report separately states that sales rose by €5,000 and gives a relative growth rate. Which additional figure is needed to verify that rate?",
+      "options": [
+        "The final sales figure used as the denominator without subtracting the increase.",
+        "The increase itself, used as both the numerator and the comparison base.",
+        "The average of opening and closing sales, used instead of the stated initial base.",
+        "The initial sales amount used as the comparison base"
+      ],
+      "answer": 3,
+      "explanation": "Une variation relative rapporte l’écart à une base initiale. Des montants concernant les produits, la banque ou le capital ne fournissent pas cette base de ventes."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Two divisions report the same absolute sales increase but different initial sales levels. A writer assigns them the same growth rate. What is the problem?",
+      "options": [
+        "Equal absolute changes can represent different relative changes.",
+        "Equal absolute changes must have opposite signs.",
+        "Growth rates do not depend on the comparison base.",
+        "Each division’s final level must equal the absolute change."
+      ],
+      "answer": 0,
+      "explanation": "Le taux dépend de l’écart et du niveau de départ. Un même supplément de ventes pèse davantage sur une petite base que sur une grande base."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A source states “sales increased by 8% compared with last year”. Which information must remain in a faithful summary?",
+      "options": [
+        "The same 8% figure presented as a comparison with the previous month.",
+        "The 8% change and its year-on-year comparison base",
+        "The 8% figure presented as the company’s current market share.",
+        "The year-on-year comparison presented as an 8% increase in the level of profit."
+      ],
+      "answer": 1,
+      "explanation": "Le chiffre de 8% n’a de sens qu’avec sa référence temporelle. La phrase ne donne pas automatiquement un montant absolu ni une prévision pour l’année suivante."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A chart begins at zero sales. A student divides the increase by that starting value to report a conventional growth percentage. What should the commentary state?",
+      "options": [
+        "The rate is 100% whenever sales move from zero to a positive amount.",
+        "The rate is zero because the starting value is zero.",
+        "A conventional relative growth rate cannot be calculated using a zero base.",
+        "The final positive amount can serve directly as the conventional percentage increase."
+      ],
+      "answer": 2,
+      "explanation": "Une division par une base nulle ne fournit pas un taux de variation classique exploitable. Il faut décrire l’évolution autrement, par exemple en montant et en niveau atteint."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Which expression normally describes the difference between two percentage rates?",
+      "options": [
+        "A change in currency units",
+        "A change in headcount units",
+        "A change in calendar months",
+        "A change in percentage points"
+      ],
+      "answer": 3,
+      "explanation": "Une différence entre deux taux s’exprime en points de pourcentage. Cette unité se distingue des euros, des effectifs ou de la durée observée."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A table says that delivery times \"ranged from 4 to 9 days\". Which description preserves the meaning of this range?",
+      "options": [
+        "The reported minimum was 4 days and the maximum was 9 days.",
+        "The average delivery took 4 days and every delivery took no more than 4 days.",
+        "Every delivery took exactly the midpoint between 4 and 9 days.",
+        "The delivery time increased from 4 days to 9 days during the period."
+      ],
+      "answer": 0,
+      "explanation": "Ranged from…to describes the bounds of the reported values. It does not by itself describe a mean, a common value or a change over time."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "An English report says that \"one in four respondents\" selected an option. What proportion does this expression describe?",
+      "options": [
+        "Four respondents out of each hundred.",
+        "A quarter of the respondents.",
+        "Four respondents for each one who selected another option.",
+        "One respondent fewer than the four previously reported."
+      ],
+      "answer": 1,
+      "explanation": "One in four means one out of every four, or a quarter. It expresses a proportion rather than a four-percent rate, a four-to-one ratio or a subtraction."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A chart presents both “relative growth” and “percentage-point change” for a market share. What should an English commentary do?",
+      "options": [
+        "Use percent and percentage points interchangeably when both refer to the same market share.",
+        "Keep only the numerical values and leave the reader to infer which measure each uses.",
+        "Name the measure used each time it cites a change.",
+        "Present the relative change as the final share and the point change as its initial level."
+      ],
+      "answer": 2,
+      "explanation": "Les deux mesures peuvent décrire la même évolution sous des angles différents. Le lecteur doit savoir si le commentaire parle d’un écart de taux ou d’une variation rapportée à une base."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "An analyst subtracts two profit margins, then labels the result “growth relative to the initial margin” without dividing by the initial margin. Which correction is appropriate?",
+      "options": [
+        "Keep the relative-growth label because subtracting two percentage rates automatically produces a relative rate.",
+        "Call the difference the final profit margin, without adding it to the initial margin.",
+        "Divide the difference by the final margin but continue to label it as growth relative to the initial margin.",
+        "Label the subtraction as a percentage-point change."
+      ],
+      "answer": 3,
+      "explanation": "La soustraction de deux marges donne leur écart en points. Une croissance relative demanderait de rapporter cet écart à la marge initiale."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An English summary says “the interest rate rose by one point” for an international audience. Which revision makes the unit explicit?",
+      "options": [
+        "The interest rate rose by one percentage point.",
+        "The interest rate rose by one percent relative to its previous level.",
+        "The interest rate rose to one percent.",
+        "The interest rate rose by one hundred percent of its previous level."
+      ],
+      "answer": 0,
+      "explanation": "Percentage point précise l’unité de l’écart de taux et évite l’ambiguïté de point. Il ne faut pas introduire une référence au chiffre d’affaires absente de la source."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Which statement distinguishes an observed association from a proven cause?",
+      "options": [
+        "The two measures moved together, which is sufficient to identify the direction of causation.",
+        "The two measures moved together, but this does not establish causation.",
+        "The association establishes causation once the variables are expressed in the same unit.",
+        "The association becomes causal when it appears in more than one graph from the same dataset."
+      ],
+      "answer": 1,
+      "explanation": "Une association temporelle ou statistique ne suffit pas à prouver une cause. D’autres facteurs ou un mécanisme inverse peuvent expliquer les mouvements observés."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Sales rose after an advertising campaign, but the same period included a general market recovery. Which sentence is best supported?",
+      "options": [
+        "The rise after the campaign estimates its separate effect, even though the market recovered at the same time.",
+        "The common timing of the campaign and recovery allows their individual contributions to be identified directly.",
+        "Sales rose after the campaign; the market recovery may also have contributed.",
+        "The campaign’s effect equals the whole sales increase after subtracting no contribution for the recovery."
+      ],
+      "answer": 2,
+      "explanation": "Les données autorisent un constat et plusieurs explications possibles. Elles ne permettent pas d’isoler la contribution de la campagne sans analyse supplémentaire."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Read: \"The survey compared delivery speed and reliability. The latter received the higher rating.\" Which aspect received the higher rating?",
+      "options": [
+        "Delivery speed.",
+        "Both aspects received an equal rating.",
+        "The aspect measured in the earlier survey, regardless of the order named here.",
+        "Reliability."
+      ],
+      "answer": 3,
+      "explanation": "The latter refers to the second of the two items just mentioned, reliability. The former would refer to delivery speed."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A small observational dataset links training attendance with higher productivity. What would strengthen a causal claim?",
+      "options": [
+        "Examining alternative factors and the way participants were selected",
+        "Treating the observed difference as the effect of training without examining differences between attendees and non-attendees.",
+        "Increasing the number of observations from the same selected group while assuming selection can no longer matter.",
+        "Replacing the initial comparison with the final productivity level alone, without considering the starting situations."
+      ],
+      "answer": 0,
+      "explanation": "Une analyse causale doit examiner les explications concurrentes et la sélection des personnes formées. Une formulation plus affirmative ne remplace pas ces contrôles."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A dashboard contains no cost data. The writer concludes that higher revenue proves higher profit. Which limitation should be stated?",
+      "options": [
+        "A sales dashboard necessarily measures every component of net profit.",
+        "Profit cannot be inferred from revenue growth alone without relevant cost information.",
+        "Revenue growth means profit must change by the same amount.",
+        "The absence of cost data proves costs were unchanged."
+      ],
+      "answer": 1,
+      "explanation": "Le bénéfice dépend aussi des charges du périmètre étudié. L’absence d’information sur les coûts ne permet ni de les supposer constants ni de garantir une amélioration du résultat."
+    }
+  ]
+}

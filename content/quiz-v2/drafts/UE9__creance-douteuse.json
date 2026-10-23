@@ -1,0 +1,436 @@
+{
+  "module": "UE9",
+  "chapter": "creance-douteuse",
+  "sourceHash": "64ae6e9713a874469a6136e2ddf865ac5d851ea468e51ec9705a083e3cfaf780",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une facture initiale est de 9 600 € TTC avec une taxe fournie de 20 %. Le client a déjà réglé 2 400 € TTC. L’exercice calcule le risque sur le HT restant. Quelle base HT reste exposée ?",
+      "options": [
+        "6 000 €",
+        "7 200 €",
+        "8 000 €",
+        "5 760 €"
+      ],
+      "answer": 0,
+      "explanation": "Le solde restant est 9 600 − 2 400 = 7 200 € TTC. Sa base HT est 7 200 / 1,20 = 6 000 €, selon les hypothèses de taxe du cas.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 9600
+                },
+                {
+                  "value": 2400
+                }
+              ]
+            },
+            {
+              "value": 1.2
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier impose une dépréciation sur le HT, avec TVA récupérable en cas de perte définitive. L’étudiant applique le risque directement au TTC. Que doit-il corriger ?",
+      "options": [
+        "Le taux de perte, obligatoirement égal à la TVA",
+        "La base de calcul, en isolant d’abord le HT du solde restant",
+        "Le paiement reçu, qui doit être ajouté à la dette client",
+        "Le montant initial, qui doit toujours être doublé"
+      ],
+      "answer": 1,
+      "explanation": "Le cas définit une base HT. Utiliser le TTC ferait porter la perte estimée sur une composante que l’hypothèse de l’exercice distingue."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture comporte plusieurs taux de taxe et le dossier demande une perte sur le HT. Peut-on diviser arbitrairement tout le TTC par un seul facteur choisi ?",
+      "options": [
+        "Oui, le taux le plus élevé s’applique toujours à toutes les lignes",
+        "Oui, le taux de perte remplace le taux de taxe",
+        "Non, il faut connaître la ventilation ou une base HT justifiée",
+        "Non, il faut systématiquement supprimer toute dépréciation"
+      ],
+      "answer": 2,
+      "explanation": "Une conversion globale exige une assiette et un taux cohérents. Des taux différents appellent une ventilation ou une information adaptée."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le montant communiqué est déjà un solde HT. Le préparateur le divise encore par 1 + taux de TVA avant de déprécier. Quelle erreur fait-il ?",
+      "options": [
+        "Il reconstitue correctement le montant TTC",
+        "Il applique une hausse de risque nécessaire",
+        "Il transforme automatiquement la créance en encaissement",
+        "Il retire une composante de taxe qui n’est déjà plus dans la base"
+      ],
+      "answer": 3,
+      "explanation": "La nature de la donnée doit être lue avant conversion. Une base déjà HT ne doit pas être diminuée une nouvelle fois comme si elle était TTC."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une créance HT résiduelle de 3 000 € présente une perte probable estimée à 35 % dans l’exercice. Quelle dépréciation totale est nécessaire sur cette base ?",
+      "options": [
+        "1 050 €",
+        "1 950 €",
+        "3 035 €",
+        "35 €"
+      ],
+      "answer": 0,
+      "explanation": "La perte probable est 3 000 × 0,35 = 1 050 €. Les 65 % restants correspondent à une fraction nette, pas au montant de dépréciation.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 3000
+            },
+            {
+              "value": 0.35
+            }
+          ]
+        },
+        "expected": 1050,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que représente le pourcentage de perte probable fourni dans un dossier de créance douteuse ?",
+      "options": [
+        "Le taux de TVA obligatoire de toutes les créances",
+        "Une estimation du risque à étayer, pas un taux réglementaire universel",
+        "Le taux d’intérêt annuel du prêteur",
+        "Un pourcentage garanti d’encaissement déjà réalisé"
+      ],
+      "answer": 1,
+      "explanation": "Le pourcentage traduit une appréciation du recouvrement dans le cas. Il doit être fondé sur les informations disponibles et peut évoluer."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le client paie une partie de sa dette avant la clôture et le risque porte désormais sur le solde. Quelle base faut-il examiner pour l’estimation ?",
+      "options": [
+        "La facture initiale sans tenir compte du règlement",
+        "Le seul montant déjà encaissé",
+        "Le montant encore dû, avec la convention HT du dossier",
+        "Le total des ventes annuelles de tous les clients"
+      ],
+      "answer": 2,
+      "explanation": "Le risque de non-recouvrement concerne ce qui reste à recevoir. Le paiement confirmé réduit la base exposée, qui doit ensuite suivre la convention de taxe du cas."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une créance est seulement douteuse, sans perte définitive établie. Le comptable veut la supprimer entièrement des comptes. Quelle distinction manque-t-il ?",
+      "options": [
+        "La dépréciation doit réduire directement le montant facturé sans suivre de correction distincte",
+        "Le reclassement du client suffit à constater toute la perte probable",
+        "La dépréciation doit être confondue avec un avoir commercial sur le prix convenu",
+        "Une estimation de perte probable ne se confond pas avec un abandon ou une irrécouvrabilité définitive"
+      ],
+      "answer": 3,
+      "explanation": "La dépréciation ajuste une valeur face au risque. Elle ne prouve pas à elle seule l’extinction du droit ni une perte définitivement constatée."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une garantie crédible modifie l’estimation de récupération, mais le pourcentage historique est reconduit sans analyse. Quel contrôle est pertinent ?",
+      "options": [
+        "Réexaminer l’estimation à partir des éléments disponibles à la clôture",
+        "Conserver toujours le premier taux parce qu’il est historique",
+        "Transformer la garantie en paiement déjà reçu sans preuve",
+        "Remplacer le taux de risque par celui de TVA"
+      ],
+      "answer": 0,
+      "explanation": "L’estimation doit refléter les informations du dossier. Une garantie, sa portée et sa fiabilité peuvent modifier le recouvrement attendu sans être un encaissement immédiat."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le fichier présente un taux de perte probable de 130 % sur la seule créance HT, sans autre obligation. Que faut-il vérifier ?",
+      "options": [
+        "La nécessité d’augmenter automatiquement le capital social",
+        "L’erreur de taux ou de base, puisque la perte de cette seule base ne peut excéder sa totalité",
+        "L’obligation de multiplier le TTC par 130",
+        "L’absence de toute nécessité de contrôle si le calcul arithmétique est juste"
+      ],
+      "answer": 1,
+      "explanation": "Sur une créance isolée et sans autre coût, la perte de la base ne peut dépasser 100 %. Le taux ou le périmètre est incohérent avec les faits."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La dépréciation totale nécessaire est évaluée à 1 800 €. Une dépréciation de 700 € existe déjà sur cette créance. Quelle dotation complémentaire faut-il examiner ?",
+      "options": [
+        "2 500 €",
+        "1 800 €",
+        "1 100 €",
+        "700 €"
+      ],
+      "answer": 2,
+      "explanation": "Seule la différence reste à constituer : 1 800 − 700 = 1 100 €. Comptabiliser encore le total doublerait la partie déjà présente.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 1800
+            },
+            {
+              "value": 700
+            }
+          ]
+        },
+        "expected": 1100,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La dépréciation existante est de 2 000 €. La nouvelle perte estimée ne nécessite plus que 1 200 €. Quel montant de reprise correspond à cet ajustement ?",
+      "options": [
+        "3 200 €",
+        "1 200 €",
+        "2 000 €",
+        "800 €"
+      ],
+      "answer": 3,
+      "explanation": "La correction existante dépasse le besoin de 2 000 − 1 200 = 800 €. Cet excédent se reprend au lieu de créer une dotation négative mal interprétée.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2000
+            },
+            {
+              "value": 1200
+            }
+          ]
+        },
+        "expected": 800,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La perte nécessaire est de 40 % du HT. Le comptable ajoute cette perte entière à la dépréciation antérieure sans la comparer au besoin final. Quel risque faut-il prévenir ?",
+      "options": [
+        "Une dépréciation cumulée supérieure à l’estimation nécessaire",
+        "Une absence certaine de correction de la créance",
+        "Une augmentation automatique de la créance brute",
+        "Une TVA toujours déduite deux fois dans les ventes"
+      ],
+      "answer": 0,
+      "explanation": "L’estimation définit le montant total souhaité à la clôture. La dotation est un ajustement par rapport à l’existant, pas l’ajout mécanique d’un nouveau total."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après analyse, le montant nécessaire est exactement égal à la dépréciation déjà constituée, sans autre événement. Quel ajustement de montant faut-il passer ?",
+      "options": [
+        "Une dotation égale au montant nécessaire une seconde fois",
+        "Aucun ajustement du montant de dépréciation",
+        "Une reprise totale suivie d’une nouvelle vente",
+        "Une annulation du solde client"
+      ],
+      "answer": 1,
+      "explanation": "L’objectif est le stock de correction final. Quand l’existant correspond déjà au besoin, aucun complément ou excédent de reprise n’apparaît."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le comptable compare la perte estimée au seul montant de dotation de l’an dernier, sans vérifier le solde cumulé de dépréciation. Quelle donnée doit-il utiliser ?",
+      "options": [
+        "La dotation initiale conservée sans examiner les reprises ultérieures",
+        "Le besoin final de perte ajouté intégralement au solde existant",
+        "La correction existante encore portée sur la créance à la date du contrôle",
+        "Le montant brut de la créance traité comme une correction déjà constituée"
+      ],
+      "answer": 2,
+      "explanation": "Le besoin final se compare à ce qui est encore constitué. Une dotation passée n’est pas forcément identique au solde actuel après reprises ou autres ajustements."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le risque a diminué à la clôture mais la société souhaite maintenir une correction excessive pour réduire son résultat. Quelle démarche est attendue ?",
+      "options": [
+        "Conserver systématiquement le plus grand montant historique",
+        "Augmenter la dépréciation sans limite par prudence",
+        "Traiter la reprise comme un remboursement client effectivement reçu",
+        "Ajuster la correction à l’estimation justifiée du dossier"
+      ],
+      "answer": 3,
+      "explanation": "L’estimation ne doit pas être manipulée pour atteindre un résultat cible. Les corrections doivent correspondre au risque documenté, ni être mécaniquement maintenues ni confondues avec du cash."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une base HT de 8 000 € est dépréciée à hauteur de 25 % selon le cas. Quelle valeur HT nette après dépréciation reste-t-il ?",
+      "options": [
+        "6 000 €",
+        "2 000 €",
+        "10 000 €",
+        "8 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La fraction nette est 75 % de la base : 8 000 × 0,75 = 6 000 €. La perte de 2 000 € ne représente pas la valeur restante.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 8000
+            },
+            {
+              "value": 0.75
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La base HT vaut 5 000 € et la dépréciation 2 000 €. L’étudiant annonce une créance brute réduite à 3 000 € par l’effet de cette seule estimation. Quelle distinction doit-il préserver ?",
+      "options": [
+        "La dotation annuelle et la dépréciation cumulée, supposées ici égales au brut",
+        "La créance brute et sa correction de valeur, dont le net est distinct",
+        "La réduction commerciale acquise au client et le montant de l’estimation, traités comme un même avoir",
+        "Le règlement partiel du client et la dépréciation, supposés réduire de la même façon le droit brut"
+      ],
+      "answer": 1,
+      "explanation": "Une correction de valeur ne se confond pas avec un règlement ou une réduction du droit brut. Les montants brut, correction et net doivent rester identifiables."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La valeur HT nette estimée de recouvrement est de 4 000 €. Peut-on la présenter comme une entrée bancaire certaine à la clôture ?",
+      "options": [
+        "Oui, toute valeur nette est immédiatement encaissable",
+        "Oui, dès que le client est classé douteux",
+        "Non, c’est une valeur estimée, pas un paiement observé",
+        "Non, parce qu’une créance n’a jamais de valeur nette"
+      ],
+      "answer": 2,
+      "explanation": "L’estimation évalue une récupération probable et ne décrit pas sa réalisation ni sa date. La trésorerie nécessite un encaissement effectif ou prévu selon des hypothèses."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La créance brute est de 9 600 € TTC. L’exercice retient une dépréciation calculée sur HT de 2 000 €. Quelle valeur du poste TTC diminué de cette seule correction obtient-on ?",
+      "options": [
+        "6 000 €",
+        "11 600 €",
+        "2 000 €",
+        "7 600 €"
+      ],
+      "answer": 3,
+      "explanation": "Le poste TTC net de cette correction vaut 9 600 − 2 000 = 7 600 €. Il ne faut pas le confondre avec le HT net, qui utilise une autre base.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 9600
+            },
+            {
+              "value": 2000
+            }
+          ]
+        },
+        "expected": 7600,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le taux de perte estimée augmente, à base HT inchangée et hors autres corrections. Comment évolue la valeur HT nette de la créance ?",
+      "options": [
+        "Elle diminue",
+        "Elle augmente",
+        "Elle reste inchangée tant que le paiement n’a pas eu lieu",
+        "Elle devient égale au montant initial TTC"
+      ],
+      "answer": 0,
+      "explanation": "Une perte probable plus élevée réduit la fraction nette estimée. L’absence de paiement ne rend pas automatiquement la correction de valeur inchangée."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel rapprochement sécurise un dossier de créance douteuse ?",
+      "options": [
+        "Le seul taux habituellement utilisé pour tous les clients",
+        "Solde brut restant, base de risque, estimation justifiée, correction existante et valeur nette",
+        "Le seul chiffre d’affaires annuel sans suivi des règlements",
+        "Le prix de vente d’un actif sans lien avec la créance"
+      ],
+      "answer": 1,
+      "explanation": "Le contrôle combine données de créance, paiements, hypothèses et corrections. Un taux isolé ne suffit ni à évaluer le risque ni à calculer le complément."
+    }
+  ]
+}

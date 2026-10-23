@@ -1,0 +1,248 @@
+{
+  "sourceHash": "823919c793868f792cecf1d9ed0b67352c047adb673dd953c1a5881a42dcd7f5",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "7712c041fe7a05d12c6f55993038fb9e7ba5e7aa2b4cd9a5c036f8555b41aa73",
+      "selected": 1,
+      "reason": "Cent vingt mille de CA prévu moins quatre-vingt-dix mille au seuil laissent trente mille de marge de sécurité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "0754011d241a8fdd4a5d4b838c8bb903c8b813b6d53450872b500e444e6cc5d1",
+      "selected": 0,
+      "reason": "Trente mille divisés par cent vingt mille donnent vingt-cinq pour cent d’indice de sécurité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "d5dee76084cb4cb62bf425d23cb743b539a7dfc9440c25640c2397049f756352",
+      "selected": 1,
+      "reason": "Le seuil représente trois quarts du CA uniforme ; trois quarts de trois cent soixante donnent deux cent soixante-dix jours.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "29e9756c0e6283990c3f4cb6540db67d4728364f7c54a79eb23e4335e77a856c",
+      "selected": 1,
+      "reason": "Quatre-vingt-dix mille euros divisés par soixante-quinze euros par unité donnent mille deux cents unités au seuil.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "49d832e9c05ea5c3192572a3ed40a8bde4dd4e4a068579edd2665844c4b0df81",
+      "selected": 2,
+      "reason": "La marge de sécurité est le CA excédant le seuil sous les hypothèses du modèle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "cc2ced4e33ae595ab39d32ae0d66a86807b7cc47662e69a92a09b3bffdd1249a",
+      "selected": 2,
+      "reason": "L’indice défini rapporte la marge auCA et non au seuil.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "51bf72828cc0565988640d4ff5bf694ff4e95d707a78c90e172c83ecb808ae09",
+      "selected": 1,
+      "reason": "La formule date linéaire suppose des ventes uniformes et non saisonnières.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "b82ba216cb4319549c4d73c89ab9477f9b573412b24735f0c7f773a47f4b32f7",
+      "selected": 1,
+      "reason": "15000restants sur30000enavril représentent la moitié des30jours, donc15avril.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "10919c930a95cd5e5b07c3bf2e31e351889795869cb5d208cd398c46f7c5533a",
+      "selected": 1,
+      "reason": "CA−90000=0,4CA donneCA150000euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "ca7b51172adb6f9655843941cd0507ad38f83ad84320932cd967d416d42056ea",
+      "selected": 3,
+      "reason": "La sécurité de vingt pour cent du CA de cent mille est vingt mille ; le seuil correspondant est quatre-vingt mille.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "c7583947ac46aa98af8249fe2f40325d02fffa5896022de2027db3020f53323f",
+      "selected": 3,
+      "reason": "Le cumul passe de cinquante mille en février à quatre-vingt-dix mille en mars : le premier franchissement est en mars.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "172ef30bbc114a0a5ff2239381bd42514f84362bc2c12db2a2c31e9d65af9bc9",
+      "selected": 2,
+      "reason": "À seuil en euros constant, le prix accru réduit la quantité équivalente.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "53d5d95a0e73898310a31539792945429246be43c8c4eb81ed89398f437f8614",
+      "selected": 0,
+      "reason": "La marge de sécurité doit utiliser le nouveau CA et le seuil pertinent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "6a9d466b663587eb72177653b9c62643db49ce3ce184cc839e216996bd5e2b42",
+      "selected": 0,
+      "reason": "Un dénominateur nul ne définit pas un ratio fini.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "a72963fb5b0a42ad9946ae36e368e39efb647bd0c91d73e5182e7888eaeffdb4",
+      "selected": 1,
+      "reason": "La base temporelle change le calcul du point mort sans modifier les données de marge.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "abcf8f388b8fa622c83cbd1699b229b9ce58298e400f334aec0688371679d61d",
+      "selected": 3,
+      "reason": "Le prix pondéré dépend du mix de volumes ; les anciens poids ne sont plus garantis.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "39e3452d12367d15ed4fc3fb6031de0041c99f52bbbfac5045a7ee584d29565e",
+      "selected": 1,
+      "reason": "Le levier4 multiplie la hausse de ventes5% en hausse du résultat20%.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "18b8d33d169550524ebed4d04af864f46b2b464402cdb637e687d4733923eeb2",
+      "selected": 0,
+      "reason": "Une même marge en euros n’est pas une même fraction de CA différents.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "86c082eb1f60602e00dae3179fdca7ec7aca71003145117d3451d951415c32fc",
+      "selected": 1,
+      "reason": "Un point mort au-delà de l’exercice signifie couverture non atteinte dans le scénario.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "9dcd1b2a6b6fb50a84e0ec1fcd09980691e3ac9ad0989cf4ef8051e56a75fdd0",
+      "selected": 1,
+      "reason": "Le résultat10000 réparti sur5000unités autorise2euros de remise unitaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "988629a5c49b0bd0decf3e75aa15b0fa337d264e526895d64daa37c2e4fc306b",
+      "selected": 2,
+      "reason": "La baisse de marge impose recalcul du seuil et de la sécurité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "847fc8264ab2418d9b8969f731620ff7b68cd5fb177014953a3451a218348463",
+      "selected": 1,
+      "reason": "La date est conditionnelle au rythme d’activité et aux paramètres du modèle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

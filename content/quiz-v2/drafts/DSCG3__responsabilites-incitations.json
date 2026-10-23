@@ -1,0 +1,411 @@
+{
+  "module": "DSCG3",
+  "chapter": "responsabilites-incitations",
+  "sourceHash": "55ff6d0d0bd94460b2f81a57413d5af13be0565d6008f41b39a0a557e9d1b1b9",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une prime vaut 10 % du résultat dépassant 100 000 €, avec un plafond de prime de 20 000 €. Le résultat déjà atteint est de 400 000 €. Sans autre critère, que devient la prime pour 10 000 € de résultat supplémentaire ?",
+      "options": [
+        "Elle augmente de 1 000 €, car tout résultat supplémentaire reçoit nécessairement 10 %.",
+        "Elle reste plafonnée, ce qui supprime ici l’incitation marginale créée par cette prime seule.",
+        "Elle augmente de 10 000 €, car le plafond porte sur le résultat et non sur la prime.",
+        "Elle diminue de 1 000 €, puisque dépasser le plafond constitue une pénalité."
+      ],
+      "answer": 1,
+      "explanation": "La prime calculée avant plafond serait déjà de 30 000 € et est ramenée à 20 000 €. Elle reste donc à 20 000 € si le résultat augmente encore de 10 000 €. Le plafond ne supprime pas les autres motivations possibles, mais il annule le gain marginal de ce seul mécanisme dans cette zone."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un directeur est évalué sur la rentabilité d’actifs dont le montant et le remplacement sont décidés exclusivement au siège. Quelle réserve formuler ?",
+      "options": [
+        "La rentabilité ne fournit aucune information économique sur le site.",
+        "Les charges de fonctionnement sont toutes non contrôlables.",
+        "Le ratio incorpore des décisions d’investissement qui ne relèvent pas de lui.",
+        "Le ratio doit être remplacé par le montant des amortissements uniquement."
+      ],
+      "answer": 2,
+      "explanation": "Le rendement des actifs peut intéresser le groupe, mais l’attribution individuelle de la performance doit tenir compte du pouvoir sur les investissements."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un surcoût total de 18 000 € comprend 11 000 € dus à un tarif imposé et 7 000 € de surconsommation sous responsabilité locale. Quel montant relève directement du levier de consommation décrit ?",
+      "options": [
+        "18 000 €.",
+        "11 000 €.",
+        "29 000 €.",
+        "7 000 €."
+      ],
+      "answer": 3,
+      "explanation": "La part rattachée au levier local est 18 000 − 11 000 = 7 000 €. Cela ne rend pas le reste sans intérêt pour le pilotage du groupe.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 18000
+            },
+            {
+              "value": 11000
+            }
+          ]
+        },
+        "expected": 7000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le dirigeant peut choisir un projet sûr rapportant 10 ou un projet risqué rapportant 40 ou −30 avec probabilités égales. Sa prime vaut 10 % du gain positif et zéro en cas de perte. Sans autre effet, quel conflit d’incitation le modèle fait-il apparaître ?",
+      "options": [
+        "Le projet risqué donne une prime espérée de 2 contre 1, alors que son gain espéré pour l’entreprise est de 5 contre 10.",
+        "Le projet risqué donne une prime espérée de 0,5 contre 1 parce que les pertes sont déduites de la prime.",
+        "Le projet risqué donne nécessairement le même classement pour le dirigeant et l’entreprise puisque le taux de prime est commun.",
+        "Le projet sûr rapporte moins en espérance à l’entreprise parce que 40 dépasse 10 dans l’état favorable."
+      ],
+      "answer": 0,
+      "explanation": "La prime du projet risqué vaut 4 dans l’état favorable et zéro dans l’autre : moyenne 2. L’entreprise reçoit en moyenne (40−30)/2 = 5. Le projet sûr donne une prime de 1 et un gain de 10. La limitation du bonus à zéro en cas de perte peut donc favoriser un risque qui réduit le gain espéré du principal."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un responsable peut agir sur un coût seulement à horizon annuel, mais sa prime mensuelle sanctionne les écarts sans délai d’adaptation. Quel défaut est central ?",
+      "options": [
+        "Il suffit de publier le coût plus souvent pour rendre immédiatement évitables les engagements annuels.",
+        "L’horizon d’évaluation ne correspond pas au délai d’action du responsable.",
+        "Il suffit de répartir le coût annuel en douze fractions pour donner chaque mois le droit de résilier les engagements.",
+        "Il suffit d’inverser le signe de l’écart pour neutraliser le délai d’adaptation sans changer la prime."
+      ],
+      "answer": 1,
+      "explanation": "La contrôlabilité dépend aussi du temps disponible pour agir. Les objectifs et la rémunération doivent tenir compte des engagements et délais de décision."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un centre est primé sur la production de fin d’année et reporte la maintenance nécessaire à janvier. Quel effet pervers menace la performance ?",
+      "options": [
+        "Un gain durable démontré par le seul volume supplémentaire produit avant la clôture.",
+        "Une économie de maintenance définitive, même si l’intervention reste nécessaire le mois suivant.",
+        "Un gain de court terme obtenu au prix d’un risque et d’un coût futurs.",
+        "Une amélioration de fiabilité prouvée par l’absence d’intervention pendant le mois de prime."
+      ],
+      "answer": 2,
+      "explanation": "Le découpage annuel peut encourager un report défavorable au-delà de la période de prime. L’évaluation doit intégrer la maintenance et les effets futurs."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un acheteur obtient une remise en commandant bien plus que les besoins. Sa prime ne retient que le prix unitaire. Quel coût est insuffisamment pris en compte ?",
+      "options": [
+        "Le seul prix catalogue avant remise, en supposant qu’il englobe toutes les conséquences du volume acheté.",
+        "La seule variation de quantité commandée, sans coût de détention ni durée de consommation.",
+        "Le seul nombre de fournisseurs consultés, pris comme mesure du coût total du surstock.",
+        "Le stockage, l’immobilisation de ressources et le risque d’obsolescence induits."
+      ],
+      "answer": 3,
+      "explanation": "La remise unitaire peut être dépassée par les conséquences du surstock. L’incitation doit porter sur l’économie d’achat dans un périmètre pertinent."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les responsables évitent de signaler une prévision de perte, car toute alerte réduit immédiatement leur prime. Quelle modification soutient une information plus utile ?",
+      "options": [
+        "Distinguer la qualité de prévision et d’alerte de la performance opérationnelle finale.",
+        "Récompenser uniquement les prévisions les plus proches de l’objectif initial.",
+        "Sanctionner autant l’alerte précoce que la découverte tardive.",
+        "Remplacer la prévision par le budget inchangé pour conserver une trajectoire favorable."
+      ],
+      "answer": 0,
+      "explanation": "Confondre annoncer et causer un mauvais résultat décourage la transparence. La qualité d’anticipation mérite une appréciation distincte de l’exécution."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un bonus dépend d’un seuil brutal de ventes à la clôture. Des contrats sont avancés au détriment des ventes du mois suivant. Quelle analyse du mécanisme est pertinente ?",
+      "options": [
+        "Le dépassement de la cible démontre une demande additionnelle durable, même si les contrats proviennent du mois suivant.",
+        "L’effet de seuil peut déplacer le calendrier sans améliorer la performance sur l’ensemble des périodes.",
+        "Le déplacement de signatures permet de déduire les remises accordées de toute comparaison de marge.",
+        "Le bonus mesure le gain consolidé sur plusieurs périodes dès lors qu’il repose sur un seuil mensuel."
+      ],
+      "answer": 1,
+      "explanation": "Une incitation à une date donnée peut déplacer les ventes entre périodes. Il faut analyser la performance cumulée et les concessions accordées."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une équipe refuse de partager une méthode efficace pour préserver son rang dans un classement interne. Quel risque du système d’incitation apparaît ?",
+      "options": [
+        "Le classement individuel garantit le partage des méthodes, puisque chaque équipe améliore son propre rang.",
+        "Le refus de partage constitue une économie de formation suffisante pour le groupe, sans étudier les gains ailleurs.",
+        "Une compétition locale qui décourage la diffusion de bonnes pratiques.",
+        "Le gain local de classement peut être ajouté au résultat global sans tenir compte des apprentissages perdus."
+      ],
+      "answer": 2,
+      "explanation": "La comparaison peut stimuler l’effort mais aussi freiner la coopération. Les incitations doivent reconnaître la contribution à la performance collective."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une prime récompense uniquement l’absence de dépassement du budget. Un responsable engage une dépense inutile pour éviter une baisse future de son enveloppe. Quel biais observe-t-on ?",
+      "options": [
+        "Une allocation démontrée des ressources selon les besoins.",
+        "Une optimisation du coût d’opportunité des fonds.",
+        "Une information plus fidèle sur les besoins futurs.",
+        "Une consommation de budget visant sa conservation plutôt que l’utilité économique."
+      ],
+      "answer": 3,
+      "explanation": "La crainte de perdre une enveloppe peut provoquer des dépenses de fin de période sans valeur. La procédure doit permettre de discuter les besoins réels."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Dans un modèle d’équipe de dix personnes, un effort individuel coûte 2 au salarié concerné et ajoute 10 à une récompense collective partagée également entre les dix. Aucun autre effet n’existe. Quel gain net privé cet effort procure-t-il à celui qui le réalise, malgré son intérêt collectif ?",
+      "options": [
+        "−1",
+        "8",
+        "1",
+        "−2"
+      ],
+      "answer": 0,
+      "explanation": "Le salarié reçoit 10/10 = 1 de récompense supplémentaire et supporte seul le coût de 2 : son gain privé est −1. Le gain collectif net est pourtant 10−2 = 8. La dilution de la rémunération de l’effort peut créer un problème d’incitation, sans prouver que tout salarié refusera effectivement l’effort.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 10
+                },
+                {
+                  "value": 10
+                }
+              ]
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "expected": -1,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La logistique réduit ses coûts en espaçant les livraisons. La production supporte ensuite davantage de stocks et d’arrêts. Comment évaluer la décision ?",
+      "options": [
+        "Sur le seul budget de la logistique, puisque chaque centre est autonome.",
+        "Sur les coûts et le service du processus incluant les effets en production.",
+        "Sur le coût du stock, en excluant toute économie logistique.",
+        "Sur le montant des prix de transfert uniquement."
+      ],
+      "answer": 1,
+      "explanation": "Les effets traversent les frontières des centres. Une économie locale doit être rapprochée des surcoûts et pertes de service qu’elle entraîne ailleurs."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un centre refuse un transfert interne qui lui paraît peu rentable, alors qu’il éviterait un achat externe coûteux pour le groupe. Quelle question de gouvernance se pose ?",
+      "options": [
+        "La préférence locale suffit à prouver l’intérêt du groupe même si les coûts réellement évités diffèrent.",
+        "Le prix interne négocié doit seul décider, sans comparaison avec les coûts et alternatives de l’ensemble.",
+        "La règle de valorisation et l’arbitrage permettent-ils une décision cohérente au niveau global ?",
+        "Le transfert doit être imposé au tarif le plus haut pour maximiser le résultat vendeur sans examiner la contrepartie."
+      ],
+      "answer": 2,
+      "explanation": "Une règle peut donner au centre un intérêt différent de celui du groupe. Il faut étudier le coût économique et les incitations, puis prévoir un arbitrage."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "À effort identique, un salarié compare un salaire certain de 100 et un salaire variable de moyenne 110 et de variance 900. Le modèle fourni donne l’équivalent certain CE = moyenne − 0,02 × variance. Il préfère le plus grand équivalent certain. Quelle valeur donne le salaire variable et quel choix en découle ?",
+      "options": [
+        "110 ; il préfère le variable en retenant seulement la moyenne.",
+        "128 ; il préfère le variable en ajoutant la compensation du risque.",
+        "92 ; il préfère le salaire certain de 100.",
+        "100 ; les deux salaires lui sont indifférents."
+      ],
+      "answer": 2,
+      "explanation": "CE = 110 − 0,02 × 900 = 92, inférieur au salaire certain de 100. Dans ce modèle fictif d’aversion au risque, la hausse de rémunération moyenne ne suffit pas à compenser le risque. La comparaison porte sur le partage du risque, à effort supposé identique.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 110
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.02
+                },
+                {
+                  "value": 900
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 92,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "Bengt Holmström — compromis entre risque et incitation",
+          "url": "https://www.nobelprize.org/uploads/2018/06/holmstrom-lecture.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La vente attribue une livraison tardive à l’entrepôt ; l’entrepôt l’attribue à une commande transmise incomplète. Quel suivi aide à résoudre l’interface ?",
+      "options": [
+        "Des délais et règles de complétude traçables à chaque passage de responsabilité.",
+        "Un classement des centres fondé uniquement sur leur résultat annuel.",
+        "Une moyenne globale sans distinction des étapes du processus.",
+        "La facturation interne de chaque retard sans analyse de son origine."
+      ],
+      "answer": 0,
+      "explanation": "La traçabilité des étapes et de la qualité des informations permet d’identifier les causes et les responsabilités, sans masquer les interfaces."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux centres doivent partager une capacité rare. Chacun maximise son propre volume sans connaître les engagements de l’autre. Quelle action est prioritaire ?",
+      "options": [
+        "Fixer les volumes de chaque centre séparément puis supposer que la capacité totale suffira aux deux.",
+        "Organiser un arbitrage de capacité à partir des priorités et conséquences globales.",
+        "Allouer la capacité au centre ayant le plus grand budget historique sans étudier les besoins futurs.",
+        "Promettre à chaque centre toute la capacité tant qu’aucun dépassement réel n’est encore observé."
+      ],
+      "answer": 1,
+      "explanation": "Une ressource commune exige une coordination des engagements. L’arbitrage doit tenir compte de la valeur et du service global, pas seulement du volume local."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Un ensemble cohérent d’indicateurs implique principalement :",
+      "options": [
+        "Un maximum de mesures produites à la même fréquence.",
+        "Un unique résultat financier pour tous les niveaux.",
+        "Des définitions claires, des complémentarités et des arbitrages explicites.",
+        "Une cible identique pour chaque indicateur afin de simplifier les primes."
+      ],
+      "answer": 2,
+      "explanation": "La cohérence vient des liens avec les objectifs et décisions. Elle suppose des définitions stables et un traitement explicite des tensions entre dimensions."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une équipe veut prévenir la baisse de qualité liée à une hausse de cadence. Quelle paire de mesures est la plus adaptée ?",
+      "options": [
+        "Le nombre de dossiers traités et le taux d’occupation, sans suivi des erreurs.",
+        "La cadence et le coût direct, sans prise en compte des reprises.",
+        "Le temps de traitement des seuls dossiers sans anomalie.",
+        "La production utile par heure et le taux d’erreurs ou de reprises."
+      ],
+      "answer": 3,
+      "explanation": "Rapprocher la cadence du résultat correct permet d’éviter une productivité apparente obtenue au détriment de la qualité."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux tableaux donnent des résultats différents car leurs dates d’extraction et leurs règles de clôture diffèrent. Quelle action doit précéder un arbitrage sur les primes ?",
+      "options": [
+        "Réconcilier les définitions et les périodes de référence.",
+        "Retenir la dernière extraction comme nécessairement exacte sans expliquer les événements et règles de clôture.",
+        "Prendre le résultat le plus favorable à chaque responsable sans vérifier si les bases sont compatibles.",
+        "Moyenner les deux tableaux sans identifier les opérations incluses dans un seul des deux."
+      ],
+      "answer": 0,
+      "explanation": "Une décision de rémunération exige des bases comparables et traçables. Les différences de clôture et d’extraction doivent être comprises et traitées."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une prime compare un site industriel à un groupe de référence soumis à d’autres marchés, procédés et contraintes de service. Le site paraît meilleur après un choc qui a surtout touché les comparateurs. Quelle limite de l’évaluation relative faut-il discuter ?",
+      "options": [
+        "Tout écart relatif favorable démontre une meilleure maîtrise locale, indépendamment des expositions des comparateurs.",
+        "Le groupe de référence peut ne pas neutraliser les chocs pertinents pour le site ; sa comparabilité doit être examinée.",
+        "La mesure relative rend inutile la connaissance des contextes dès lors que tous les scores sont sur la même échelle.",
+        "Un groupe plus grand en nombre suffit à rendre identiques les expositions de ses membres à celle du site."
+      ],
+      "answer": 1,
+      "explanation": "L’évaluation relative peut être informative quand la référence capte des conditions comparables. Des marchés et contraintes différents peuvent produire un avantage relatif sans amélioration propre. Le nombre de comparateurs ou l’unité du score ne remplace pas cette analyse."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une convention de prime prévoit, sous conditions définies, la restitution de montants déjà versés si des résultats utilisés s’avèrent erronés. Le contrôle cherche à identifier ce mécanisme, sans présumer son application automatique. Quel terme le décrit ?",
+      "options": [
+        "Un simple report de paiement d’une prime qui n’a jamais été versée.",
+        "Une garantie de prime acquise quel que soit le résultat ultérieurement vérifié.",
+        "Une clause de restitution ou clawback portant sur une rémunération déjà payée.",
+        "Une réduction d’une attribution différée non encore acquise, sans restitution de paiement antérieur."
+      ],
+      "answer": 2,
+      "explanation": "Dans le cas décrit, la convention organise une restitution de rémunération déjà versée : c’est le mécanisme de clawback. Une réduction d’une attribution différée non acquise relève d’un autre moment du dispositif. Le respect des conditions prévues reste à vérifier avant toute mise en œuvre.",
+      "references": [
+        {
+          "title": "Federal Reserve — Sound incentive compensation : deferral, malus and return of payments",
+          "url": "https://www.federalreserve.gov/frrs/guidance/guidance-on-sound-incentive-compensation-policies.htm"
+        }
+      ]
+    }
+  ]
+}

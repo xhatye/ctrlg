@@ -1,0 +1,445 @@
+{
+  "module": "UE9",
+  "chapter": "dossier-synthese",
+  "sourceHash": "bbd3b618ba0aaef22af04dc537748603f15d9546796710a104d08e7c13b5b5ac",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux factures à crédit concernent une machine utilisée durablement et une réparation courante déjà consommée. Le cas impose d’immobiliser la machine et de constater la réparation en charge. Quelle comparaison est correcte ?",
+      "options": [
+        "Les deux créent une dette, mais seule la réparation constitue ici une charge immédiate",
+        "Toute facture crée nécessairement une charge immédiate de même montant",
+        "La machine ne crée aucune dette tant qu’elle n’est pas payée",
+        "La réparation devient une immobilisation parce qu’elle est facturée à crédit"
+      ],
+      "answer": 0,
+      "explanation": "La facture documente l’opération sans définir seule sa nature. Les hypothèses distinguent ici un actif durable et une consommation courante."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un service consommé est facturé 2 000 € sans taxe. Un avoir valable de 300 € réduit ce service avant tout paiement. Quel montant net de dette fournisseur reste-t-il, sans autre opération ?",
+      "options": [
+        "2 300 €",
+        "1 700 €",
+        "300 €",
+        "2 000 €"
+      ],
+      "answer": 1,
+      "explanation": "L’avoir réduit la dette de la prestation : 2 000 − 300 = 1 700 €. Le règlement à venir doit être rapproché de ce montant net.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2000
+            },
+            {
+              "value": 300
+            }
+          ]
+        },
+        "expected": 1700,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La même facture est importée depuis deux dossiers différents sous deux références internes. Le logiciel ne signale pas de doublon de référence. Quel contrôle reste nécessaire ?",
+      "options": [
+        "Se fier exclusivement aux deux identifiants internes distincts",
+        "Supprimer toute facture du même fournisseur",
+        "Rapprocher les informations de la facture réelle, du fournisseur et de la prestation",
+        "Considérer les deux imports comme deux services distincts par principe"
+      ],
+      "answer": 2,
+      "explanation": "Des identifiants internes différents peuvent viser la même pièce. Le contrôle doit porter sur l’événement et le document réels, pas seulement sur leur indexation."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture de prestation porte une date mais le libellé ne permet pas de connaître la période de service. Quelle information complémentaire rechercher ?",
+      "options": [
+        "La date d’enregistrement au journal, sans autre preuve de réalisation",
+        "La date prévue du règlement, retenue comme période du service",
+        "La date d’envoi de la facture, assimilée à la fin du service",
+        "Le contrat ou le détail établissant quand le service a été fourni"
+      ],
+      "answer": 3,
+      "explanation": "La date documentaire peut différer de la période économique. Le contrat ou le détail d’exécution est utile pour le rattachement."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un dossier de facture et règlement, quel lien doit rester traçable ?",
+      "options": [
+        "Le document initial, son écriture, les réductions éventuelles et les paiements qui le dénouent",
+        "Le montant de vente et le capital social sans pièce",
+        "Le seul total bancaire final, sans tiers ni objet",
+        "Une nouvelle charge pour chaque document de paiement"
+      ],
+      "answer": 0,
+      "explanation": "La chaîne identifie l’opération et les événements qui la modifient ou la soldent. Elle évite d’assimiler chaque pièce à une consommation nouvelle."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture correcte de 900 € est enregistrée dans un compte de charge inadapté, au débit pour 900 € et avec le bon fournisseur au crédit. Quel contrôle échoue malgré l’équilibre ?",
+      "options": [
+        "L’égalité des montants de l’écriture",
+        "Le choix du compte représentant la nature de la charge",
+        "La présence de la contrepartie fournisseur",
+        "Le fait que le total crédit soit supérieur au débit"
+      ],
+      "answer": 1,
+      "explanation": "Les deux côtés restent égaux. C’est la représentation économique du compte de charge qui doit être corrigée, pas l’équilibre arithmétique."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une prestation est enregistrée dans le bon compte et pour le bon montant, mais dans le mauvais exercice. Peut-on la déclarer correcte sur ces deux seuls critères ?",
+      "options": [
+        "Oui, le compte et le montant suffisent à toute validation",
+        "Oui, si la banque sera payée un jour",
+        "Non, le rattachement de période est aussi nécessaire",
+        "Non, il faut toujours modifier aussi le montant même s’il est exact"
+      ],
+      "answer": 2,
+      "explanation": "Une information peut être exacte en nature et en valeur mais mal placée dans le temps. Les contrôles se complètent sans se remplacer."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une facture de 1 250 € a été enregistrée deux fois en charges avec deux dettes identiques, sans paiement. De combien charge et dette sont-elles chacune surévaluées ?",
+      "options": [
+        "2 500 €",
+        "0 €",
+        "625 €",
+        "1 250 €"
+      ],
+      "answer": 3,
+      "explanation": "Une seule prestation justifie 1 250 €. Le doublon ajoute un excédent de 1 250 € dans chacun des postes, malgré des écritures équilibrées.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 1250
+                },
+                {
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "value": 1250
+            }
+          ]
+        },
+        "expected": 1250,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une erreur sous-évalue un achat de 200 € et une autre le surévalue de 200 €. Le total des charges semble exact. Quelle conclusion convient ?",
+      "options": [
+        "Les deux opérations restent à corriger et à justifier séparément",
+        "Les erreurs doivent être conservées car le total est juste",
+        "Les fournisseurs ont nécessairement le même solde correct",
+        "Une compensation de montants prouve une compensation de droits et dettes"
+      ],
+      "answer": 0,
+      "explanation": "Un total correct peut masquer des erreurs sur les tiers, pièces ou périodes. La compensation arithmétique ne valide pas les écritures individuelles."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le contrôleur vérifie uniquement que tous les documents portent un montant positif. Quel contrôle manque pour l’écriture de chaque opération ?",
+      "options": [
+        "Seulement la présence du nom du fournisseur, sans analyse des montants",
+        "Les comptes, leurs sens, les totaux et la nature du fait traduit",
+        "Uniquement le total TTC, même si l’opération est déjà enregistrée",
+        "La seule date de paiement, même si la prestation concerne une autre période"
+      ],
+      "answer": 1,
+      "explanation": "Le signe apparent de la pièce ne détermine pas toute l’écriture. Les comptes et mouvements doivent traduire la nature économique avec équilibre et justification."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une dette fournisseur de 2 700 € est réglée pour 1 800 €, puis pour 600 €, sans remise ni autre opération. Quel montant reste à payer ?",
+      "options": [
+        "2 400 €",
+        "900 €",
+        "300 €",
+        "5 100 €"
+      ],
+      "answer": 2,
+      "explanation": "Les règlements cumulés de 2 400 € réduisent la dette de 2 700 €, laissant 300 € à rapprocher et à payer.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2700
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 1800
+                },
+                {
+                  "value": 600
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le paiement est inférieur à la facture et un avoir documenté explique exactement la différence. Quel contrôle doit précéder une nouvelle charge ou un écart arbitraire ?",
+      "options": [
+        "Enregistrer automatiquement la différence comme frais bancaires",
+        "Créer un deuxième achat égal au montant payé",
+        "Conserver une dette résiduelle sans examiner l’avoir",
+        "Rapprocher l’avoir et son enregistrement avec la facture et le paiement"
+      ],
+      "answer": 3,
+      "explanation": "Une réduction documentée peut expliquer le montant net dû. Le traitement doit suivre les pièces plutôt qu’une explication inventée de la différence."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le compte fournisseur est soldé par le paiement, mais le comptable enregistre simultanément une nouvelle charge égale au même virement. Que faut-il vérifier ?",
+      "options": [
+        "Une double contrepartie ou une charge supplémentaire sans nouvelle prestation",
+        "Une absence certaine d’écriture initiale de facture",
+        "Le caractère obligatoire d’une nouvelle charge à chaque paiement",
+        "L’égalité du chiffre d’affaires et des achats"
+      ],
+      "answer": 0,
+      "explanation": "Le paiement ne crée pas une consommation supplémentaire. Les écritures doivent être rapprochées pour éviter une charge injustifiée liée au même dénouement."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un paiement unique règle trois factures déjà comptabilisées du même fournisseur. Comment contrôler son effet ?",
+      "options": [
+        "Enregistrer trois nouveaux achats pour les mêmes factures",
+        "Identifier les factures soldées et rapprocher leur montant net au virement",
+        "Solder toutes les factures futures sans distinction",
+        "Assimiler tout le virement au seul montant de la facture la plus récente"
+      ],
+      "answer": 1,
+      "explanation": "Un regroupement bancaire ne change pas la nature des dettes réglées. Le lettrage conserve le détail nécessaire et les éventuels reliquats."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un fournisseur présente deux dettes de 800 € et 1 100 €. Un avoir de 200 € est acquis et enregistré avant le virement de solde. Sans taxe ni autre élément, quel virement éteint le solde ?",
+      "options": [
+        "1 900 €",
+        "2 100 €",
+        "1 700 €",
+        "900 €"
+      ],
+      "answer": 2,
+      "explanation": "Le net dû est 800 + 1 100 − 200 = 1 700 €. Il faut intégrer l’avoir déjà justifié au rapprochement du paiement.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 800
+                },
+                {
+                  "value": 1100
+                }
+              ]
+            },
+            {
+              "value": 200
+            }
+          ]
+        },
+        "expected": 1700,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Un règlement d’une dette déjà reconnue modifie directement quels postes dans le cas simple payé par banque ?",
+      "options": [
+        "La charge et la banque comme si la prestation était comptabilisée au paiement",
+        "La dette et un produit du montant de la dette réglée",
+        "La charge et la dette sans mouvement de banque",
+        "La dette et la banque"
+      ],
+      "answer": 3,
+      "explanation": "Le paiement dénoue une obligation et diminue les liquidités. La consommation ou l’acquisition correspondante a déjà été traduite à l’étape précédente."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La facture et le paiement sont dans l’exercice suivant mais une pièce prouve que la prestation est achevée avant clôture. Quelle question de clôture doit être examinée ?",
+      "options": [
+        "La charge et l’obligation à rattacher à l’exercice clos",
+        "La création d’un produit de vente supplémentaire",
+        "Le seul report du paiement dans un budget sans effet comptable possible",
+        "L’annulation automatique du contrat"
+      ],
+      "answer": 0,
+      "explanation": "La réalisation peut précéder les documents et le décaissement. Le dossier doit être régularisé selon les faits et le cadre applicables."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le résultat avant ajustements est de 10 000 €. Une prestation consommée non comptabilisée impose 1 500 € de charge ; une couverture future déjà comptabilisée exige 400 € de CCA. Hors taxe et impôt, quel résultat corrigé retenir ?",
+      "options": [
+        "8 100 €",
+        "8 900 €",
+        "11 900 €",
+        "10 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La prestation diminue le résultat de 1 500 €, tandis que la CCA retire 400 € de charge : 10 000 − 1 500 + 400 = 8 900 €.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 10000
+                },
+                {
+                  "value": 1500
+                }
+              ]
+            },
+            {
+              "value": 400
+            }
+          ]
+        },
+        "expected": 8900,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un dossier conclut à une dette nulle parce que rien n’a été payé après clôture, alors qu’un service antérieur est reçu et dû. Quelle confusion fait-il ?",
+      "options": [
+        "Une dette ne peut exister que le jour du virement",
+        "Un service reçu sans règlement est forcément gratuit",
+        "L’absence de paiement n’établit pas l’absence d’obligation",
+        "Toute dette est une simple estimation de chiffre d’affaires"
+      ],
+      "answer": 2,
+      "explanation": "La dette décrit une obligation, non un paiement déjà réalisé. L’absence de décaissement peut précisément expliquer son maintien au bilan."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les comptes sont équilibrés mais aucun rapprochement n’a été fait entre les soldes fournisseurs et les pièces de clôture. Que faut-il conclure ?",
+      "options": [
+        "La balance équilibrée suffit à confirmer chaque facture et chaque paiement",
+        "Le seul contrôle de l’égalité débit-crédit du journal remplace le rapprochement des pièces",
+        "La concordance du total des fournisseurs avec l’exercice précédent suffit à valider les soldes",
+        "Une étape de justification des soldes reste nécessaire"
+      ],
+      "answer": 3,
+      "explanation": "L’équilibre ne démontre pas que les dettes existent, sont complètes et bien rattachées. Les pièces et mouvements justifient les soldes présentés."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier simplifié exclut toute TVA. Le rédacteur affirme que son traitement sans taxe vaut pour toutes les factures réelles. Quelle limite doit-il rappeler ?",
+      "options": [
+        "L’exclusion est une hypothèse pédagogique, pas une règle universelle",
+        "L’exclusion de TVA dans l’énoncé constitue une preuve d’exonération du fournisseur réel",
+        "L’exclusion permet de traiter la TVA d’une facture réelle comme une remise commerciale",
+        "L’exclusion signifie que toute TVA réelle devra être comptabilisée uniquement au règlement"
+      ],
+      "answer": 0,
+      "explanation": "Une hypothèse délimite le calcul du cas. Dans une situation réelle, il faut examiner la taxe et les conditions applicables plutôt que généraliser cette exclusion."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle conclusion décrit un contrôle de synthèse correctement mené ?",
+      "options": [
+        "Le seul total de la balance est égal, donc tout est prouvé",
+        "Les pièces, écritures, soldes, période et incidences financières sont rapprochés avec leurs limites",
+        "Le compte bancaire positif démontre le bon rattachement des charges",
+        "Chaque virement a été traité comme une nouvelle facture"
+      ],
+      "answer": 1,
+      "explanation": "La synthèse relie plusieurs niveaux de preuve. Elle distingue les contrôles formels de la réalité et de la période économique des opérations."
+    }
+  ]
+}

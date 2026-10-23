@@ -1,0 +1,361 @@
+{
+  "module": "DSCG7",
+  "chapter": "dossier-synthese",
+  "sourceHash": "18a7c93142f531bed9aa52266b0b2ae57f97d6988c83fac5a3ca02f8edb288a4",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le tableau de production compte 40 lots ; les entretiens évoquent 75 factures. Un lot peut regrouper plusieurs factures. Comment utiliser les deux nombres ?",
+      "options": [
+        "Identifier la relation entre lots et factures avant de conclure à un désaccord sur le volume traité.",
+        "Retenir 75 comme correction certaine du tableau parce que ce nombre est plus grand.",
+        "Faire la moyenne de 40 et 75 comme volume commun aux deux sources.",
+        "Considérer les factures comme des lots supplémentaires et additionner les deux nombres."
+      ],
+      "answer": 0,
+      "explanation": "Les unités ne sont pas identiques. Un rapprochement du grain des données peut expliquer les chiffres sans qu’une source soit fausse."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un rapport mesure des dossiers reçus en mars, un autre ceux clôturés en mars. Les nombres diffèrent. Quel rapprochement traite ce cas ?",
+      "options": [
+        "Remplacer les clôtures par les réceptions pour rendre les tableaux concordants.",
+        "Examiner les dossiers ouverts en début et en fin de période, ainsi que les flux d’entrée et de clôture.",
+        "Comparer les deux totaux comme deux comptages de la même population.",
+        "Traiter toute réception sans clôture en mars comme une erreur définitive."
+      ],
+      "answer": 1,
+      "explanation": "Entrées et sorties d’un processus ne portent pas forcément sur les mêmes dossiers. Les en-cours relient les populations et permettent d’expliquer l’écart."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un suivi mensuel commence avec 12 dossiers ouverts. Il en reçoit 35 et en clôture 38, sans autre mouvement. Combien de dossiers restent ouverts selon ce rapprochement ?",
+      "options": [
+        "47",
+        "85",
+        "9",
+        "3"
+      ],
+      "answer": 2,
+      "explanation": "Les dossiers ouverts en fin de mois valent 12 + 35 − 38 = 9. Le rapprochement vérifie une cohérence de flux sans démontrer la qualité de chaque traitement.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 12
+                },
+                {
+                  "value": 35
+                }
+              ]
+            },
+            {
+              "value": 38
+            }
+          ]
+        },
+        "expected": 9,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les comptes rendus de réunion annoncent une décision d’utiliser un contrôle. Les journaux montrent qu’il n’a commencé qu’un mois plus tard. Que permet cette combinaison ?",
+      "options": [
+        "Retenir la date de réunion comme début de l’exposition au contrôle, même si aucun dossier n’y a encore été soumis.",
+        "Interpréter le lancement différé comme une seconde décision indépendante sans vérifier la continuité du projet.",
+        "Dater la mise en œuvre au premier compte rendu disponible, en le substituant aux traces d’utilisation effective.",
+        "Distinguer la décision de déploiement et la mise en œuvre effective dans la chronologie analysée."
+      ],
+      "answer": 3,
+      "explanation": "Une décision et son exécution sont deux événements. Les deux sources peuvent être exactes tout en portant sur des phases différentes."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le journal d’activité enregistre l’utilisation d’une fonction mais pas la raison du choix. Les entretiens expliquent les motifs déclarés. Quelle combinaison est fidèle ?",
+      "options": [
+        "Utiliser le journal pour l’usage enregistré et les entretiens pour les motifs exprimés, en examinant leur articulation.",
+        "Présenter le motif déclaré comme un champ effectivement enregistré dans chaque ligne du journal.",
+        "Déduire la fréquence des motifs du seul nombre de connexions à la fonction.",
+        "Remplacer les usages enregistrés par les intentions évoquées, sans conserver leurs statuts distincts."
+      ],
+      "answer": 0,
+      "explanation": "Chaque matériau répond à une partie de la question. Leur combinaison doit conserver la différence entre comportement enregistré et raison déclarée."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le même dossier reçoit dans deux fichiers les mentions « accepté » et « rejeté ». L’une concerne la pièce justificative, l’autre la demande complète. Que faut-il vérifier ?",
+      "options": [
+        "Traiter le statut le plus récent comme annulant les autres sans distinguer la demande de ses pièces.",
+        "L’objet exact auquel chaque statut s’applique avant de conclure à une contradiction.",
+        "Comparer les deux mentions comme deux décisions de même niveau parce qu’elles concernent le même dossier.",
+        "Conclure à un désaccord entre agents avant d’identifier l’objet précis et l’étape auxquels chaque statut s’applique."
+      ],
+      "answer": 1,
+      "explanation": "Un statut peut qualifier différents objets d’un même dossier. Le niveau de décision doit être rapproché avant de juger les sources incompatibles."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une extraction générée en juin reprend un solde arrêté en avril. Une extraction générée en mai reprend le solde de mai. Quel point évite un classement chronologique erroné ?",
+      "options": [
+        "Classer les soldes selon la date de génération des exports, en supposant qu’elle correspond toujours à leur date de référence.",
+        "Retenir le fichier produit en juin comme décrivant nécessairement un solde plus récent que le fichier produit en mai.",
+        "Distinguer la date de production du fichier et la date des faits qu’il décrit.",
+        "Comparer les deux soldes comme deux mesures de juin parce que les fichiers sont lus pendant ce mois."
+      ],
+      "answer": 2,
+      "explanation": "Un document récent peut présenter une période ancienne. La date d’extraction et la date d’observation doivent être identifiées séparément."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un écart reste inexpliqué après examen des dates et définitions. Les deux sources ont des éléments de fiabilité, mais aucune ne permet de trancher. Quelle restitution est correcte ?",
+      "options": [
+        "Choisir la source qui donne la meilleure conclusion professionnelle sans autre justification.",
+        "Transformer l’absence de solution en concordance implicite des deux sources.",
+        "Écarter les deux sources sans expliquer ce qu’elles apportent encore.",
+        "Conserver les interprétations compatibles avec les preuves et préciser le contrôle qui manque pour départager l’écart."
+      ],
+      "answer": 3,
+      "explanation": "Une incertitude persistante doit rester identifiable. Elle peut limiter une conclusion tout en laissant des informations exploitables sur le cas."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau par service indique que les services où la formation est la plus fréquente ont la productivité moyenne la plus élevée. Il ne relie pas la formation et la productivité de chaque salarié. Quelle conclusion dépasse les données ?",
+      "options": [
+        "Affirmer que, dans chaque service, les salariés formés sont individuellement plus productifs que les non-formés.",
+        "Décrire une association observée entre les indicateurs agrégés des services étudiés.",
+        "Indiquer que l’unité du tableau est le service et non le salarié.",
+        "Préciser que la comparaison porte sur des moyennes de productivité par service."
+      ],
+      "answer": 0,
+      "explanation": "Une relation entre indicateurs de groupes ne permet pas de déduire une relation au niveau individuel sans les données correspondantes. Le résultat agrégé peut être décrit en conservant son unité et sa portée."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le taux global d’erreur est plus faible dans l’équipe A. Pourtant, à niveau de difficulté identique, A présente un taux plus élevé que B dans chaque catégorie. Quelle donnée permet d’examiner cette inversion ?",
+      "options": [
+        "La moyenne simple des deux taux globaux, sans tenir compte des catégories de difficulté.",
+        "La répartition des dossiers faciles et difficiles entre les équipes, ainsi que les taux par catégorie.",
+        "Le seul taux de la catégorie majoritaire dans A, supposé résumer aussi la composition de B.",
+        "La somme des taux par catégorie, utilisée comme taux global sans pondération par leurs effectifs."
+      ],
+      "answer": 1,
+      "explanation": "Des compositions différentes peuvent inverser une comparaison agrégée. Les taux conditionnels et les poids des catégories permettent de comprendre cette situation ; elle ne se résout pas par une moyenne non pondérée."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le protocole prévoit qu’un dossier doit réunir les conditions A et B pour être éligible. Un dossier satisfait A mais pas B. Que peut-on conclure de l’application de cette règle ?",
+      "options": [
+        "Il est éligible puisque l’une des deux conditions prévues est satisfaite.",
+        "Il est éligible si A concerne davantage de dossiers que B dans le corpus.",
+        "Il est inéligible selon la règle conjonctive annoncée, même si A est vérifiée.",
+        "Son éligibilité est établie dès que la condition A a été contrôlée avant la condition B."
+      ],
+      "answer": 2,
+      "explanation": "Une règle exigeant A et B demande leur réunion. Confondre cette conjonction avec une alternative change le critère d’inclusion, indépendamment du résultat ultérieur du dossier."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le classement de deux solutions s’inverse selon que cinq dossiers incomplets sont exclus ou conservés avec une convention de traitement justifiée. Comment présenter ce résultat ?",
+      "options": [
+        "Retenir seulement la convention qui classe en tête la solution recommandée, comme si le classement était stable.",
+        "Faire la moyenne des deux rangs comme preuve que le choix de traitement n’a plus d’effet sur la décision.",
+        "Conclure que l’authenticité des données suffit à rendre le classement indépendant des conventions retenues.",
+        "Montrer cette sensibilité et expliquer quelles hypothèses de traitement soutiennent chaque classement."
+      ],
+      "answer": 3,
+      "explanation": "L’analyse de sensibilité met ici en évidence une conclusion dépendante du traitement des données. Cette dépendance doit être exposée pour apprécier la robustesse de la recommandation."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une enquête conserve les commentaires favorables dans le texte et place les réserves uniquement dans une annexe non discutée. Quel risque d’analyse existe ?",
+      "options": [
+        "Une sélection de présentation qui rend la conclusion plus favorable que la confrontation complète des matériaux.",
+        "La présence des réserves dans une annexe rend leur discussion facultative, même lorsqu’elles contredisent la conclusion centrale.",
+        "La séparation des avis par emplacement constitue une pondération justifiée sans critère relatif à leur force probante.",
+        "Le corps du mémoire suffit à établir le caractère dominant des commentaires favorables, indépendamment du corpus complet."
+      ],
+      "answer": 0,
+      "explanation": "La présence matérielle de réserves ne suffit pas si l’analyse les écarte de la discussion. La conclusion doit tenir compte des éléments pertinents dans les deux sens."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat définit l’amélioration par la baisse des délais. Les délais augmentent, mais il change après coup l’indicateur principal pour le volume, seul résultat favorable. Que doit-il rendre explicite ?",
+      "options": [
+        "La requalification des anciens délais comme erreurs de saisie sans pièce.",
+        "Le changement de critère, sa justification et ce qu’il laisse subsister du résultat défavorable sur les délais.",
+        "Le seul gain de volume en retirant les délais du compte rendu de méthode.",
+        "La confirmation complète de l’hypothèse initiale au motif qu’un autre indicateur s’améliore."
+      ],
+      "answer": 1,
+      "explanation": "Un indicateur peut évoluer pour une raison substantielle, mais le changement ne doit pas masquer une observation contraire à l’attente initiale."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un même protocole de contrôle documentaire est appliqué très précisément aux cas défavorables et superficiellement aux cas favorables. Quel biais cela peut-il créer ?",
+      "options": [
+        "Une correction automatique des erreurs de collecte dans les cas favorables.",
+        "Une diversité suffisante des méthodes qui supprime le besoin de critères comparables.",
+        "Une exigence de preuve asymétrique qui favorise l’explication préférée.",
+        "Une indépendance accrue des deux ensembles de cas par la différence de contrôle."
+      ],
+      "answer": 2,
+      "explanation": "Un examen critique doit s’appliquer aux éléments qui confirment comme à ceux qui contestent l’idée. Des standards de preuve asymétriques peuvent orienter la conclusion."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les données permettent deux explications concurrentes. Quelle collecte supplémentaire est la plus informative ?",
+      "options": [
+        "Chercher une situation que les deux explications décrivent de la même façon.",
+        "Multiplier uniquement les copies des documents déjà favorables à la première.",
+        "Interroger le commanditaire sur l’explication qu’il préfère voir retenue.",
+        "Cibler une situation où les deux explications prédisent des observations différentes."
+      ],
+      "answer": 3,
+      "explanation": "Un cas discriminant aide à départager les explications. Une observation attendue dans les deux cadres apporte moins d’éléments pour ce choix."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau reconstitue des indicateurs à partir de données partagées, mais les règles de calcul ne sont pas décrites. Quelle limite concerne la vérification du résultat ?",
+      "options": [
+        "Un autre lecteur ne peut pas facilement reproduire le traitement pour contrôler la conclusion numérique.",
+        "Le nom du tableur suffit à identifier les règles de traitement, même si plusieurs formules peuvent produire des résultats différents.",
+        "Le partage des données brutes permet toujours de reconstituer les filtres et transformations sans autre indication.",
+        "La concordance du total final avec l’attente du commanditaire remplace le contrôle des étapes de calcul."
+      ],
+      "answer": 0,
+      "explanation": "La vérification d’un traitement nécessite de comprendre les opérations réalisées. Le format ou le résultat final ne fournit pas nécessairement ces règles."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux options ont des bénéfices attendus proches. La première peut être interrompue à faible coût ; la seconde impose un engagement irréversible important. Les résultats de l’étude restent incertains. Quelle dimension manque à un arbitrage fondé sur les seuls bénéfices moyens ?",
+      "options": [
+        "Le bénéfice moyen suffit à rendre les deux options équivalentes malgré leurs engagements différents.",
+        "La réversibilité des engagements et les conséquences d’une décision défavorable sous incertitude.",
+        "Le coût de sortie peut être ignoré dès lors qu’il n’est pas payé le jour de la décision.",
+        "L’irréversibilité constitue à elle seule une preuve que le bénéfice attendu de la seconde option sera plus élevé."
+      ],
+      "answer": 1,
+      "explanation": "Des bénéfices moyens proches ne rendent pas identiques les conséquences possibles ni la capacité de revenir sur le choix. L’arbitrage doit expliciter ces caractéristiques sans imposer automatiquement une option."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le résultat favorable n’apparaît que lorsque le référent est présent. Comment formuler la recommandation de déploiement ?",
+      "options": [
+        "Présenter le gain des journées avec référent comme effet autonome du dispositif, sans organiser la continuité de cette fonction.",
+        "Déduire de l’existence d’une procédure écrite que l’absence du référent n’affectera pas son fonctionnement.",
+        "Intégrer cette dépendance au référent et tester l’organisation prévue pendant ses absences.",
+        "Conserver la moyenne des seules journées accompagnées comme prévision de toutes les journées sans distinguer les conditions de présence."
+      ],
+      "answer": 2,
+      "explanation": "Une condition de fonctionnement observée doit entrer dans la recommandation. Son omission transformerait un effet conditionnel en promesse indépendante des ressources nécessaires."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le déploiement n’est rentable que si au moins 60 % des salariés utilisent l’outil. L’enquête situe l’adoption possible entre 40 % et 80 %, sans permettre de choisir une valeur précise. Quelle synthèse éclaire le mieux la décision ?",
+      "options": [
+        "Retenir 60 % comme adoption observée parce que ce taux correspond au seuil de rentabilité.",
+        "Retenir 80 % comme prévision acquise puisque cette valeur est compatible avec l’enquête.",
+        "Utiliser 60 % comme garantie de rentabilité au seul motif qu’il s’agit du milieu de la plage envisagée.",
+        "Présenter les scénarios d’adoption de part et d’autre du seuil et leurs conséquences, plutôt qu’un gain unique supposé certain."
+      ],
+      "answer": 3,
+      "explanation": "Le seuil de rentabilité n’est pas une prévision d’usage. Lorsque les hypothèses plausibles traversent ce seuil, les scénarios rendent visible la dépendance de la décision à l’adoption effective."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un comité souhaite une décision binaire malgré un résultat incertain. Quelle synthèse soutient un arbitrage éclairé ?",
+      "options": [
+        "Présenter les options, leurs conséquences sous hypothèses et les incertitudes déterminantes pour la décision.",
+        "Supprimer les hypothèses pour donner une réponse plus ferme.",
+        "Présenter la préférence du comité comme conclusion démontrée par les données.",
+        "Ajouter un pourcentage de confiance sans règle de calcul pour rendre l’incertitude chiffrée."
+      ],
+      "answer": 0,
+      "explanation": "Une décision peut être prise sous incertitude si ses bases sont explicites. La demande de fermeté ne crée pas une preuve ni une probabilité mesurée."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux incertitudes subsistent : le taux d’adoption peut faire changer l’option préférée, tandis que les variations plausibles du coût d’impression ne changent jamais le classement. Une collecte supplémentaire est possible sur un seul point. Quel critère guide utilement sa priorité ?",
+      "options": [
+        "La facilité de mesure suffit à privilégier le coût d’impression, même si le classement reste inchangé dans toute sa plage plausible.",
+        "Sa capacité à réduire l’incertitude qui peut modifier l’arbitrage, en tenant compte du coût de la collecte.",
+        "Il faut répartir nécessairement les moyens à parts égales entre les deux points, indépendamment de leur influence sur la décision.",
+        "Le point dont l’unité monétaire est la plus précise doit être étudié en priorité, quel que soit son rôle dans l’arbitrage."
+      ],
+      "answer": 1,
+      "explanation": "L’utilité d’une information supplémentaire dépend notamment de sa capacité à éclairer une décision encore susceptible de changer. La facilité de mesure ne suffit pas ; le coût et l’apport attendu de la collecte doivent être rapprochés."
+    }
+  ]
+}

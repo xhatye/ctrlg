@@ -1,0 +1,489 @@
+{
+  "module": "UE4",
+  "chapter": "resultat-fiscal",
+  "sourceHash": "a4f144ac2e83ac4d8cbe067ea89476212c0cf6e1fe57f6e0a76c6ac4517f4a20",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une charge a réduit le résultat comptable, mais sa déduction fiscale est expressément interdite. Quel sens doit avoir le retraitement extra-comptable ?",
+      "options": [
+        "Une déduction, car toute charge réduit aussi la base fiscale.",
+        "Une réintégration, pour neutraliser sa déduction comptable.",
+        "Une annulation du produit le plus proche.",
+        "Aucune correction, puisque la charge est comptabilisée."
+      ],
+      "answer": 1,
+      "explanation": "La charge a déjà diminué le résultat de départ. Pour que cette diminution n’affecte pas la base fiscale, il faut ajouter son montant par réintégration. L’enregistrement comptable et l’admission fiscale répondent à deux analyses distinctes."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une pénalité mise à la charge d’une entreprise pour violation d’une obligation légale figure dans ses charges. Quel traitement résulte de l’article 39, 2 du CGI ?",
+      "options": [
+        "La déduire si elle a déjà été payée.",
+        "La déduire dès lors que l’infraction concerne l’activité.",
+        "La réintégrer comme pénalité non admise en déduction.",
+        "La déduire si son montant a été approuvé par les associés."
+      ],
+      "answer": 2,
+      "explanation": "L’article 39, 2 exclut les sanctions pécuniaires et pénalités mises à la charge des contrevenants à des obligations légales. Leur paiement ou leur lien avec l’activité ne lève pas cette exclusion. La charge ayant réduit le résultat comptable doit être neutralisée fiscalement.",
+      "references": [
+        {
+          "title": "CGI, article 39, version 2026",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006307568"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un résultat comptable après impôt inclut une charge d’impôt sur les sociétés. Pour déterminer le bénéfice imposable, comment traiter cette charge selon l’article 213 du CGI ?",
+      "options": [
+        "La réintégrer, puisqu’elle n’est pas déductible pour cet impôt.",
+        "La déduire une seconde fois pour éviter une double imposition.",
+        "La conserver en déduction parce qu’elle a été déclarée.",
+        "La déduire seulement si le résultat après impôt est positif."
+      ],
+      "answer": 0,
+      "explanation": "L’article 213 exclut notamment l’IS des charges déductibles pour l’établissement de l’impôt. Lorsque le résultat de départ est après cette charge, son effet doit être neutralisé. Il faut identifier le résultat de départ avant d’appliquer les corrections pour éviter une réintégration en double.",
+      "references": [
+        {
+          "title": "CGI, article 213, non-déductibilité de l’IS",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048847356/2025-05-20"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une rémunération comptabilisée de 12 000 € ne correspond, selon les faits définitivement établis du dossier, à un travail effectif que pour 9 000 €. L’énoncé exclut toute autre difficulté. Quel montant réintégrer ?",
+      "options": [
+        "12 000 €",
+        "9 000 €",
+        "3 000 €",
+        "21 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le dossier n’admet que 9 000 € sur les 12 000 € déjà comptabilisés. L’excédent de 3 000 € est donc à réintégrer. L’article 39 subordonne la déduction des rémunérations à un travail effectif et à un montant non excessif au regard du service rendu.",
+      "calculation": {
+        "expected": 3000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 12000
+            },
+            {
+              "value": 9000
+            }
+          ]
+        },
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "CGI, article 39, version 2026",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006307568"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une dépense personnelle, expressément non déductible, a été payée par la société et enregistrée uniquement en créance sur le dirigeant. Elle n’a pas affecté le résultat comptable donné. Faut-il l’ajouter à ce résultat comme charge à neutraliser ?",
+      "options": [
+        "Oui, tout paiement non déductible se réintègre même sans charge au résultat.",
+        "Non, aucune déduction comptable de cette dépense n’est à neutraliser dans ce résultat.",
+        "Oui, dès lors que le paiement apparaît sur le compte bancaire de la société.",
+        "Non, parce que toute dépense personnelle est fiscalement déductible."
+      ],
+      "answer": 1,
+      "explanation": "Le tableau de passage corrige l’effet des éléments inclus dans son résultat de départ. Ici, aucune charge n’a réduit ce résultat : la dépense est portée en créance. Ajouter son montant créerait une correction sans effet comptable initial à neutraliser ; les autres conséquences restent une analyse distincte."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise a comptabilisé une dépense effective, justifiée, rattachée au bon exercice et engagée dans son intérêt. Aucune exclusion spéciale n’est applicable. Que justifie cet ensemble de conditions générales ?",
+      "options": [
+        "Leur examen soutient la déduction fiscale de la charge.",
+        "Le seul paiement détermine l’exercice de déduction, même si la charge se rattache à un autre.",
+        "Une charge n’est déductible que si elle a généré immédiatement une vente égale.",
+        "Le seul enregistrement en charge suffit, même si une exclusion fiscale spéciale existe."
+      ],
+      "answer": 0,
+      "explanation": "La doctrine officielle retient notamment l’intérêt de l’exploitation ou la gestion normale, une charge effective suffisamment justifiée et son rattachement au bon exercice. Le cas précise que ces conditions sont réunies et écarte une exclusion spéciale. Une rentabilité immédiate opération par opération n’est pas imposée par ces seuls critères.",
+      "references": [
+        {
+          "title": "BOI-BIC-CHG-10, conditions générales des charges",
+          "url": "https://bofip.impots.gouv.fr/bofip/3848-PGP.html/identifiant=BOI-BIC-CHG-10-20190123"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Un produit est compris dans le résultat comptable mais expressément exonéré dans le régime fiscal de l’exercice. Quelle correction neutralise son inclusion dans la base ?",
+      "options": [
+        "Une réintégration du produit.",
+        "Une déduction extra-comptable du montant exonéré.",
+        "Une déduction limitée à l’impôt théorique correspondant au produit.",
+        "Une compensation avec les seules charges non déductibles, avant de neutraliser le solde."
+      ],
+      "answer": 1,
+      "explanation": "Le produit a augmenté le résultat comptable. La déduction extra-comptable retire de la base la fraction que le régime exonère. Il faut justifier l’exonération et son périmètre ; la correction fiscale ne consiste pas à comptabiliser une seconde fois le même produit."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un produit comptabilisé de 8 000 € bénéficie, dans le régime fictif fourni, d’une exonération de 75 % sans autre retraitement. Quel montant déduire extra-comptablement ?",
+      "options": [
+        "2 000 €",
+        "8 000 €",
+        "6 000 €",
+        "10 666,67 €"
+      ],
+      "answer": 2,
+      "explanation": "La correction vise la fraction exonérée : 8 000×75 %=6 000 €. Les 2 000 € restants demeurent dans la base. Déduire la totalité confondrait exonération partielle et totale ; les 75 % sont une hypothèse de cet exercice.",
+      "calculation": {
+        "expected": 6000,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 8000
+            },
+            {
+              "value": 0.75
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un produit exonéré de 1 000 € a déjà été retiré du résultat servant expressément de point de départ au tableau. Le préparateur prévoit une nouvelle déduction de 1 000 €. Quel défaut identifiez-vous ?",
+      "options": [
+        "Une double neutralisation du même produit.",
+        "Une réintégration insuffisante de ce produit.",
+        "Une obligation de supprimer le produit une seconde fois dans les écritures comptables.",
+        "Une obligation d’ajouter 1 000 € à la base pour obtenir l’exonération."
+      ],
+      "answer": 0,
+      "explanation": "Une déduction ne doit être appliquée que si l’élément a encore l’effet à neutraliser dans la base de départ. Le produit est déjà exclu ici. Le déduire à nouveau abaisserait indûment le résultat de 1 000 €, indépendamment de la validité de l’exonération."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dirigeant demande une déduction supplémentaire parce qu’il veut diminuer l’impôt. Aucun dispositif ni élément déductible supplémentaire n’est identifié. Quel point manque pour inscrire la déduction ?",
+      "options": [
+        "Un fondement fiscal applicable et ses conditions remplies.",
+        "Une décision de gestion exprimant le montant d’impôt souhaité.",
+        "Le seul libellé du compte comptable utilisé.",
+        "L’existence d’une facture, tenue pour suffisante quel que soit le régime du traitement."
+      ],
+      "answer": 0,
+      "explanation": "Une déduction extra-comptable doit correspondre à un traitement permis par le régime applicable. Un objectif de réduction de l’impôt ne crée pas de droit. Il faut identifier l’élément, le texte et les conditions avant de choisir un montant à retrancher."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une reprise de provision de 2 500 € est comptabilisée en produit. Le dossier précise que la dotation initiale avait été intégralement réintégrée et que le régime impose de neutraliser cette reprise. Quel traitement applique cette donnée ?",
+      "options": [
+        "Réintégrer à nouveau 2 500 €.",
+        "Déduire extra-comptablement 2 500 €.",
+        "Conserver deux produits imposables de 2 500 €.",
+        "Réduire directement les acomptes sans corriger la base."
+      ],
+      "answer": 1,
+      "explanation": "L’énoncé fournit le régime : la dotation n’avait pas été déduite et le produit de reprise doit être neutralisé. La correction du produit comptabilisé est une déduction de 2 500 €. Il faut assurer le suivi entre exercices, non réintégrer une seconde fois la même provision."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un résultat comptable avant impôt de 18 400 € inclut les éléments à corriger. Le dossier impose 2 100 € de réintégrations et 700 € de déductions. Quelle est la base fiscale ?",
+      "options": [
+        "15 600 €",
+        "19 800 €",
+        "21 200 €",
+        "17 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La base est 18 400+2 100−700=19 800 €. Les réintégrations augmentent le résultat et les déductions le diminuent. Ce tableau ne modifie pas directement le résultat comptable de 18 400 € ; il explique une base fiscale différente.",
+      "calculation": {
+        "expected": 19800,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 18400
+                },
+                {
+                  "value": 2100
+                }
+              ]
+            },
+            {
+              "value": 700
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le résultat comptable est de 20 000 €. Deux corrections distinctes sont documentées : +1 200 € et −1 200 €. Un étudiant supprime les deux lignes car elles se compensent. Quel contrôle reste nécessaire ?",
+      "options": [
+        "Conserver le fondement et le suivi des deux éléments malgré un effet net nul.",
+        "Transformer chaque correction en zéro sans conserver sa nature.",
+        "Réintégrer les deux montants parce que le solde est nul.",
+        "Déduire les deux montants pour conserver la compensation."
+      ],
+      "answer": 0,
+      "explanation": "Une compensation numérique ne rend pas les traitements identiques ni inutiles. Chacun peut avoir son fondement et son suivi dans le temps. Le tableau doit donc conserver les deux corrections, même si leur effet net sur la base est nul."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un résultat de 14 000 € est présenté comme « après impôt ». Une charge d’IS de 4 000 € y figure, sans autre correction. Le tableau part pourtant de 18 000 € et réintègre encore 4 000 €. Quel défaut faut-il corriger ?",
+      "options": [
+        "L’IS a été neutralisé deux fois dans le passage.",
+        "L’IS aurait dû être déduit deux fois.",
+        "Le résultat avant impôt devrait être de 10 000 €.",
+        "Le résultat fiscal doit toujours être égal à 14 000 €."
+      ],
+      "answer": 0,
+      "explanation": "Repartir de 18 000 € a déjà rétabli les 4 000 € d’IS soustraits au résultat après impôt. Les ajouter encore les neutralise deux fois. Il faut choisir un résultat de départ clairement défini, puis n’appliquer chaque correction qu’une seule fois.",
+      "references": [
+        {
+          "title": "CGI, article 213, non-déductibilité de l’IS",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048847356/2025-05-20"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une charge non déductible de 900 € a été correctement réintégrée une première fois, puis une seconde fois par erreur. La base finale affichée est 31 800 €. Quelle base corrigée retenir, sans autre erreur ?",
+      "options": [
+        "30 900 €",
+        "30 000 €",
+        "32 700 €",
+        "31 800 €"
+      ],
+      "answer": 0,
+      "explanation": "Il faut supprimer seulement la correction supplémentaire de 900 €, puisque la première réintégration est justifiée. La base corrigée est 31 800−900=30 900 €. Retrancher 1 800 € supprimerait également le retraitement qui devait être conservé.",
+      "calculation": {
+        "expected": 30900,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 31800
+            },
+            {
+              "value": 900
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La comptabilité a omis une charge qui, selon le dossier, doit être enregistrée et est intégralement déductible. Quelle séquence permet de préparer un passage fiscal fiable ?",
+      "options": [
+        "Identifier l’erreur comptable et le résultat corrigé avant de traiter les divergences fiscales.",
+        "Réintégrer une charge qui ne figure dans aucun résultat.",
+        "Conserver le résultat erroné et annoncer qu’aucune charge omise ne peut être déduite.",
+        "Doubler la déduction fiscale sans examiner le résultat comptable utilisé."
+      ],
+      "answer": 0,
+      "explanation": "Une omission comptable et une divergence de traitement fiscal ne sont pas la même chose. Il faut déterminer le résultat de départ exact et tracer sa correction. Une fois la charge correctement incluse et fiscalement admise selon le cas, aucune seconde neutralisation n’est nécessaire."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau indique un résultat fiscal supérieur de 3 000 € au résultat comptable, mais détaille seulement une déduction de 500 € et une réintégration de 2 000 €. Quel constat ressort du rapprochement ?",
+      "options": [
+        "Les corrections détaillées n’expliquent qu’une hausse de 1 500 €.",
+        "Les corrections détaillées expliquent exactement la hausse de 3 000 €.",
+        "La déduction de 500 € augmente la base à 2 500 €.",
+        "Les montants ne peuvent pas être rapprochés entre eux."
+      ],
+      "answer": 0,
+      "explanation": "L’effet net détaillé est +2 000−500=+1 500 €. Il manque donc une explication à l’écart annoncé de 3 000 €. Le rapprochement entre le total et les lignes détecte une omission ou une erreur, sans permettre de deviner la correction manquante."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une base fiscale positive est définitivement fixée à 26 000 €. Le cas impose un taux unique fictif de 22 %, sans réduction, crédit ou autre mécanisme. Quel impôt en résulte ?",
+      "options": [
+        "5 720 €",
+        "5 200 €",
+        "20 280 €",
+        "11 818,18 €"
+      ],
+      "answer": 0,
+      "explanation": "Dans le modèle fourni, l’impôt est 26 000×22 %=5 720 €. Le montant de 20 280 € serait la base diminuée de cet impôt, pas l’impôt lui-même. Ce taux est une donnée de calcul, et ne doit pas être généralisé à une déclaration réelle.",
+      "calculation": {
+        "expected": 5720,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 26000
+            },
+            {
+              "value": 0.22
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un exercice fournit un taux d’impôt de 24 % sur une base fiscale positive. Un étudiant applique plutôt le taux de TVA de 20 % présent sur une facture annexe. Quelle distinction doit-il rétablir ?",
+      "options": [
+        "Les taux correspondent à des prélèvements et des assiettes différents.",
+        "Le taux de TVA remplace tous les taux d’impôt dès qu’une facture existe.",
+        "Le taux le moins élevé doit être choisi dans tout exercice.",
+        "Les deux taux doivent être additionnés pour imposer le résultat."
+      ],
+      "answer": 0,
+      "explanation": "Le taux fourni pour l’impôt sur la base fiscale ne se remplace pas par celui d’une taxe sur les ventes. Les prélèvements, leurs bases et leurs taux doivent rester identifiés. L’application d’un taux ne se décide pas par proximité documentaire ou par avantage financier."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le calcul d’impôt utilise un taux annoncé comme hypothèse simplifiée. Le dossier réel pourrait comporter plusieurs taux ou un dispositif particulier. Comment délimiter la conclusion ?",
+      "options": [
+        "Présenter le montant sous l’hypothèse donnée et vérifier séparément le régime réel.",
+        "Affirmer que le taux fourni s’applique à toutes les entreprises et périodes.",
+        "Remplacer le taux fourni par le dernier taux rencontré sur internet sans qualifier le régime.",
+        "Renoncer à tout calcul même lorsque base et taux d’exercice sont fournis."
+      ],
+      "answer": 0,
+      "explanation": "Un modèle explicitement donné permet un calcul conditionnel utile. Il ne démontre pas le taux réel applicable à tout dossier. La conclusion doit conserver le périmètre de l’hypothèse et distinguer l’exercice de la vérification fiscale complète."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le résultat comptable avant impôt est de 40 000 € et la base fiscale arrêtée de 46 000 €. Le taux unique donné est 25 %, sans autre mécanisme. Quelle différence d’impôt résulterait de l’erreur consistant à taxer le résultat comptable au lieu de la base ?",
+      "options": [
+        "1 500 € de sous-évaluation",
+        "1 500 € de surévaluation",
+        "6 000 € de sous-évaluation",
+        "11 500 € de sous-évaluation"
+      ],
+      "answer": 0,
+      "explanation": "La différence de bases est de 6 000 €. Au taux donné de 25 %, l’impôt omis serait de 1 500 €. L’erreur porte sur le choix de la base à taxer ; les corrections extra-comptables ne doivent pas être ignorées au moment de la liquidation.",
+      "calculation": {
+        "expected": 1500,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 46000
+                },
+                {
+                  "value": 40000
+                }
+              ]
+            },
+            {
+              "value": 0.25
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’impôt calculé est de 6 000 €, mais un acompte de 2 000 € a déjà été versé. Le dossier demande l’impôt de l’exercice, pas le solde de trésorerie. Quel montant répond à cette demande ?",
+      "options": [
+        "4 000 €",
+        "8 000 €",
+        "6 000 €",
+        "2 000 €"
+      ],
+      "answer": 2,
+      "explanation": "L’acompte est un versement déjà effectué ; il ne change pas le montant d’impôt calculé sur l’exercice. Le solde restant à payer serait une autre grandeur. Il faut lire l’objet de la question pour distinguer impôt de l’exercice et règlement complémentaire."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau présente la base fiscale comme « bénéfice net disponible en banque après impôt ». Quelle distinction faut-il rétablir ?",
+      "options": [
+        "Base imposable, résultat après impôt et liquidités sont trois grandeurs distinctes.",
+        "La base fiscale représente toujours la trésorerie immédiatement disponible.",
+        "Les réintégrations sont des encaissements reçus de l’administration.",
+        "Les déductions sont nécessairement des règlements à des fournisseurs."
+      ],
+      "answer": 0,
+      "explanation": "La base fiscale sert au calcul de l’impôt et découle des corrections du résultat. Le résultat après impôt et la trésorerie répondent à d’autres mécanismes. Les écritures extra-comptables ne sont pas, en elles-mêmes, des encaissements ou décaissements."
+    }
+  ]
+}

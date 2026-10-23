@@ -1,0 +1,248 @@
+{
+  "sourceHash": "1e64017768d13fd0db698806978a82957faf3f9e6fdebf46c46c1fabd6bf49fb",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "b539ca65b1682a12f43e284babd5f15088d145ee51fec0ba7d9b5948179f1383",
+      "selected": 0,
+      "reason": "Le travail effectif suppose disposition de l’employeur, directives et impossibilité de vaquer librement à ses occupations personnelles.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "a757f41650a2f97737da37f61e3f5669154a4defb626b2b31f669d3f41847c91",
+      "selected": 1,
+      "reason": "La surveillance obligatoire et la disponibilité immédiate sans liberté personnelle remplissent les critères malgré le nom de pause.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "564308f62c1826cefac0ecd977f2257a1375688482b8a5bab8e262adb4e542c6",
+      "selected": 1,
+      "reason": "Une pause peut être rémunérée sans être du travail effectif ; les contraintes données sont distinctes du paiement conventionnel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "7729b7ce13851b1dbacdce3b2a4948a6a400ba9b60b64d785c2270087501a4d8",
+      "selected": 1,
+      "reason": "L’attente reste sous directives, au poste et sans liberté personnelle ; l’absence de production ne suffit pas à exclure ce temps.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "d2f87249c593ececf69233c03202cc77847006d5d85a92603a4a0e8cf1695276",
+      "selected": 3,
+      "reason": "Les contraintes réelles et la liberté personnelle permettent de qualifier le déjeuner, contrairement à sa seule durée ou rémunération.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "4ba30a835c6e2f7a09baf4b83918871a6048831aef21ab9e432fca07db67f262",
+      "selected": 0,
+      "reason": "Trente-cinq heures est la durée légale de référence dans ce régime, pas un plafond maximal absolu.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "c6ab38883b21cd71bc47093c022f2446a39e6774ac48a637c8938c5e23600fee",
+      "selected": 0,
+      "reason": "Le paiement des heures ne prouve ni la répartition quotidienne ni le respect des repos et limites maximales.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "f0548c79163ec35e95285077ca4a66fb4e36557e5b64a6b42cb4d2bd32f50320",
+      "selected": 1,
+      "reason": "Dix heures trente dépassent la limite quotidienne de dix heures applicable sans dérogation, même avec une semaine de trente-cinq.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "f85356eba00b5d20f52be63021898a73a52a20e13174c891138f87d0027e9cb6",
+      "selected": 2,
+      "reason": "De vingt-deux à sept heures il y a neuf heures, inférieures aux onze heures consécutives requises sans exception.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "6cfe906103192e1914daccbbc2fce40c7f6b70b393653af72e086e347627042f",
+      "selected": 1,
+      "reason": "Un aménagement plurihebdomadaire peut modifier le décompte : il faut lire ses modalités avant une soustraction hebdomadaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "1b41eafd601c398e51d34448344dced2dd304a53bcef09d9acdd20cb46b4f374",
+      "selected": 1,
+      "reason": "De huit quinze à douze : trois heures quarante-cinq ; de treize à dix-sept trente : quatre heures trente ; total huit heures quinze soit 8,25.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "10fc741a01e700e6f490ae46ad46df1168c6c736a2b81feee1c1b898c8ea5f42",
+      "selected": 0,
+      "reason": "Cinq pauses de trois quarts d’heure font 3,75 ; quarante-deux moins 3,75 moins trente-cinq donne 3,25 heures de dépassement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "1323a6d26da12ab8343ad5503c3a9e3766709079435b4a317d15948573c060d0",
+      "selected": 1,
+      "reason": "L’union des deux plages est neuf heures à midi, soit trois heures sans compter deux fois le chevauchement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "78d4e2c6469cbd4866022c6ca88d486536df894efcde8633744c1cae8215d69a",
+      "selected": 0,
+      "reason": "Les anciennes et nouvelles valeurs datées et justifiées conservent une piste de correction plutôt qu’un écrasement non traçable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "8da13f4d238474e1363346426eadbf1f1163a5b9fc8405c172cea9113875c493",
+      "selected": 1,
+      "reason": "Ajouter le total hebdomadaire aux journées qui le composent compte deux fois les mêmes heures.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "b485ddbe2261dd510538adf1786eec652ce3067105719f5ce625ec37fea7a88b",
+      "selected": 3,
+      "reason": "Deux heures fois vingt euros fois 1,10 donnent quarante-quatre euros, base et majoration incluses.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "fdbcd959e8acc44c4399bdd599674f4f6ed5365c0151fde85da3fdfeebe45904",
+      "selected": 2,
+      "reason": "Six heures fois dix-huit euros fois vingt-cinq pour cent donnent vingt-sept euros de majoration seule.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "8333a30d8541ae0084b46e7fbaa9f018600bcad1118cdfd7031583171e1aa9ba",
+      "selected": 1,
+      "reason": "Huit fois seize fois 1,25 valent cent soixante ; deux fois seize fois 1,50 valent quarante-huit ; total deux cent huit.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "20279f094447061d70960ecc1395d5e3d99381d2b948bb0f85fd931af4092235",
+      "selected": 1,
+      "reason": "La base est déjà réglée ; seul cinq fois dix-sept fois dix pour cent, soit huit euros cinquante, reste dû.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "c40d7d0f7d68393ad14f04d5f5d5f2843d7c4b4188be05b5b0e1aa4d9cd4177b",
+      "selected": 1,
+      "reason": "Vingt-quatre euros divisés par 1,20 donnent une base horaire de vingt euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "8d62d4322c1ce7d054933f911e0e0c16a0fc234a7671f838cc9ee3bb854bca10",
+      "selected": 1,
+      "reason": "L’absence expresse de compensation impose d’examiner les cinq heures supplémentaires de la seconde semaine indépendamment.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "65beb2f0a28d8f56b66eaf3d514c2255815a00ecbf22ee5ef132e99439bd5974",
+      "selected": 3,
+      "reason": "Deux heures quarante-cinq font 2,75 heures ; multipliées par vingt-quatre et 1,25, elles valent quatre-vingt-deux euros cinquante.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

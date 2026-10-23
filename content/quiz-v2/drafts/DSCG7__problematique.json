@@ -1,0 +1,338 @@
+{
+  "module": "DSCG7",
+  "chapter": "problematique",
+  "sourceHash": "3f419b0988dffc49e713c7ebe31466edd29a0c638ddb14a057fc993a15e0cd8e",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle différence distingue principalement un thème de mémoire d’une problématique ?",
+      "options": [
+        "Le thème désigne un domaine ; la problématique organise une question à analyser.",
+        "Le thème expose des résultats ; la problématique en fournit le résumé.",
+        "Le thème définit une population ; la problématique fixe la taille de son échantillon.",
+        "Le thème fournit une hypothèse ; la problématique désigne son indicateur."
+      ],
+      "answer": 0,
+      "explanation": "Un domaine comme la digitalisation ne précise pas encore le phénomène à comprendre. La question donne une direction à l’analyse ; elle ne se réduit ni à un indicateur ni à une rubrique."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un candidat constate que deux équipes utilisant le même outil traitent différemment les exceptions de facturation. Quelle question transforme le mieux ce constat en problème à étudier ?",
+      "options": [
+        "Quels sont les intitulés de poste des collaborateurs des deux équipes ?",
+        "Comment les règles de traitement des exceptions expliquent-elles les pratiques différentes des deux équipes ?",
+        "Quelles fonctionnalités le fournisseur propose-t-il dans la dernière version de l’outil ?",
+        "Quel historique retrace le déploiement de l’outil dans l’entreprise ?"
+      ],
+      "answer": 1,
+      "explanation": "Le contraste à comprendre concerne les pratiques malgré un équipement commun. La bonne question porte sur ce mécanisme ; les autres demandes apportent un inventaire ou un contexte sans traiter ce contraste."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une mission confiée au stagiaire consiste à rédiger un manuel de procédures. Que faut-il ajouter pour en faire un objet de mémoire analytique ?",
+      "options": [
+        "Définir uniquement les critères formels d’acceptation du manuel par le maître de stage.",
+        "Organiser le mémoire comme un suivi du calendrier de livraison du manuel.",
+        "Une question sur les difficultés auxquelles la formalisation répond et des éléments permettant d’en examiner les effets.",
+        "Utiliser la seule validation du manuel par le service comme preuve de ses effets sur les difficultés de traitement."
+      ],
+      "answer": 2,
+      "explanation": "Un livrable opérationnel peut soutenir le mémoire, mais l’analyse doit expliquer un problème et confronter des éléments. Allonger le mode d’emploi ne crée pas cette démarche."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le projet de mémoire énumère la paie, la cybersécurité et les achats, sans lien identifié entre ces thèmes. Quel défaut faut-il traiter d’abord ?",
+      "options": [
+        "L’insuffisance d’une description technique détaillée de chaque outil évoqué.",
+        "L’absence d’un indicateur chiffré unique destiné à remplacer toute question sur ces activités.",
+        "Le manque d’une présentation chronologique de l’entreprise avant de retenir ces thèmes.",
+        "L’absence d’une question directrice reliant les développements."
+      ],
+      "answer": 3,
+      "explanation": "Le problème n’est pas d’équilibrer des rubriques sans rapport, mais de construire un fil d’analyse. Un tableau ou un nouvel ordre ne justifierait pas leur présence commune."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un mémoire vise à comprendre pourquoi certains dossiers nécessitent des reprises. Quelle sous-question contribue le plus directement à cette recherche ?",
+      "options": [
+        "À quelles étapes les reprises apparaissent-elles et quels motifs sont enregistrés ?",
+        "Quel tarif moyen est facturé aux clients pour un dossier, sans distinguer les reprises ?",
+        "Quel volume total de dossiers le cabinet prévoit-il de traiter l’année prochaine ?",
+        "Quel est le coût moyen d’archivage des dossiers achevés, sans analyser leur traitement ?"
+      ],
+      "answer": 0,
+      "explanation": "Repérer étapes et motifs prépare l’explication des reprises. Les autres mesures décrivent tarification, prévision ou coût d’archivage, sans identifier ici les causes des corrections."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un projet d’enquête, que désigne l’unité d’analyse ?",
+      "options": [
+        "L’entité retenue pour recruter les participants, même si les conclusions portent sur un autre niveau.",
+        "L’entité sur laquelle portent les conclusions, par exemple un dossier ou une équipe.",
+        "La ligne élémentaire du fichier de collecte, considérée comme équivalente à l’entité sur laquelle on conclut.",
+        "La période de regroupement des résultats, considérée comme l’entité dont on étudie les pratiques."
+      ],
+      "answer": 1,
+      "explanation": "L’unité d’analyse répond à la question : sur quoi raisonne-t-on ? Elle se distingue de l’interlocuteur, de l’outil de collecte et du calendrier."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’enquête compare des dossiers, mais plusieurs entretiens sont menés avec le même responsable. Quel élément doit rester distinct ?",
+      "options": [
+        "Chaque citation comme unité d’analyse et le dossier comme simple support de stockage.",
+        "Chaque entretien comme dossier indépendant, même lorsqu’il concerne le même cas.",
+        "Le dossier comme unité d’analyse et le responsable comme source d’information.",
+        "Le responsable comme unité d’analyse et chaque entretien comme nouveau dossier."
+      ],
+      "answer": 2,
+      "explanation": "Le nombre d’interviews ne multiplie pas le nombre de dossiers étudiés. Distinguer unité et source empêche de présenter des témoignages répétés comme des cas supplémentaires."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La question porte sur le délai de traitement des factures du service achats en 2025. La collecte inclut aussi des notes de frais de 2023, sans justification. Quel choix rend le périmètre cohérent ?",
+      "options": [
+        "Les intégrer au même indicateur parce qu’elles sont toutes liées à un paiement.",
+        "Les utiliser pour remplacer les factures les plus difficiles à analyser.",
+        "Les ajouter uniquement lorsque leur présence réduit la moyenne observée.",
+        "Séparer ces pièces ou justifier explicitement une comparaison avant de les intégrer à l’analyse des factures de 2025."
+      ],
+      "answer": 3,
+      "explanation": "Nature des documents et période définissent le périmètre. Une comparaison peut être intéressante si elle est construite ; le mélange non justifié change l’objet mesuré."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un projet étudie le délai entre réception et validation d’une facture. Pour un second service, les données commencent seulement à sa saisie comptable. Que faut-il préciser avant la comparaison ?",
+      "options": [
+        "Le point de départ effectivement mesuré dans chaque service et la comparabilité des délais.",
+        "La même unité en jours, considérée comme suffisante même avec des événements de départ différents.",
+        "Le délai cible de chaque service, à utiliser en remplacement de ses dates de réception observées.",
+        "Le nombre de factures de chaque service, considéré comme rendant les durées comparables sans autre ajustement."
+      ],
+      "answer": 0,
+      "explanation": "Réception et saisie peuvent être séparées dans le temps. Même unité ou effectif connu ne rendent pas identiques les événements mesurés ; un délai cible ne remplace pas une observation."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le chercheur veut expliquer les retards du service encaissement. Il interroge uniquement les concepteurs de l’outil, sans document ni utilisateur opérationnel. Quelle conclusion sur ces entretiens est la plus justifiée ?",
+      "options": [
+        "Ils permettent de décrire les pratiques réelles en assimilant le fonctionnement prévu au fonctionnement exécuté.",
+        "Ils éclairent la conception de l’outil, mais ne documentent pas suffisamment ses usages réels et les contraintes quotidiennes du service.",
+        "Ils établissent les causes des retards dès lors que les concepteurs connaissent la logique du logiciel.",
+        "Ils doivent être exclus de l’enquête parce qu’un concepteur ne peut apporter d’information utile à une recherche sur les usages."
+      ],
+      "answer": 1,
+      "explanation": "Le concepteur peut renseigner la conception, mais cette source ne suffit pas à observer l’activité effective. Il faut exploiter son apport sans assimiler prescription, connaissance technique et pratique réelle."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le titre annonce une étude de toutes les filiales, mais les accès autorisés portent sur une seule filiale. Quelle révision est la plus cohérente ?",
+      "options": [
+        "Présenter les données de la filiale accessible comme des données consolidées du groupe.",
+        "Remplacer les observations manquantes par les objectifs budgétaires du groupe.",
+        "Délimiter l’étude au cas accessible et indiquer ce qu’il permet d’examiner.",
+        "Conserver le titre large en présentant les autres filiales dans l’organigramme."
+      ],
+      "answer": 2,
+      "explanation": "Un organigramme ou un budget ne remplace pas des observations des autres filiales. Une délimitation explicite permet de conduire une étude de cas sans lui attribuer un terrain fictif."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi définir un concept central avant de sélectionner ses indicateurs ?",
+      "options": [
+        "Pour sélectionner l’indicateur dont le volume de données disponibles est le plus élevé.",
+        "Pour choisir l’indicateur le plus chiffré, indépendamment de la dimension qu’il représente.",
+        "Pour reprendre l’indicateur cité le plus souvent dans la bibliographie sans examiner son adéquation au terrain.",
+        "Pour préciser les dimensions recherchées et juger si les observations les représentent."
+      ],
+      "answer": 3,
+      "explanation": "La définition donne un critère de pertinence aux indicateurs. La disponibilité ou le volume des données ne suffisent pas à établir qu’ils représentent la notion étudiée."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le mémoire définit la qualité d’un dossier par exactitude, complétude et respect du délai. Quelle stratégie de mesure correspond à cette définition ?",
+      "options": [
+        "Prévoir des observations pour chacune des trois dimensions et expliciter leur articulation.",
+        "Contrôler seulement l’exactitude des montants puis présenter ce résultat comme la qualité sur les trois dimensions.",
+        "Vérifier seulement la présence de chaque pièce attendue puis présenter ce taux comme une mesure complète de qualité.",
+        "Retenir uniquement le délai de clôture parce qu’il est disponible pour chaque dossier."
+      ],
+      "answer": 0,
+      "explanation": "Une définition multidimensionnelle appelle des observations cohérentes. Un indicateur de volume ou de moyen ne couvre pas par lui-même exactitude, complétude et délai."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans deux parties du mémoire, « autonomie » signifie respectivement décision sans visa et travail sans assistance technique. Quel travail conceptuel faut-il effectuer ?",
+      "options": [
+        "Choisir le sens qui donne le résultat le plus favorable pour chaque partie.",
+        "Distinguer les deux dimensions ou retenir une définition stable et préciser leur relation.",
+        "Fusionner leurs indicateurs sous une moyenne sans expliquer les sens différents.",
+        "Réserver la définition au premier chapitre et conserver ensuite les usages contradictoires."
+      ],
+      "answer": 1,
+      "explanation": "Deux usages peuvent désigner des dimensions distinctes. Les expliciter évite d’attribuer à un même mot des résultats qui ne parlent pas de la même réalité."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le concept retenu est la coordination entre équipes. Quel indicateur est le plus directement relié à une difficulté de transmission des dossiers ?",
+      "options": [
+        "Le temps moyen passé à la saisie initiale à l’intérieur de la première équipe.",
+        "La proportion de dossiers archivés après livraison, sans information sur leur passage entre équipes.",
+        "La proportion de dossiers renvoyés faute de pièce attendue au passage entre équipes.",
+        "Le nombre total de dossiers finalisés par chaque équipe, sans distinguer les transmissions."
+      ],
+      "answer": 2,
+      "explanation": "Le retour pour pièce manquante renseigne un défaut précis de transmission. Les autres mesures portent sur volume, saisie ou archivage et ne ciblent pas directement ce mécanisme."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un concept est défini dans le cadre théorique mais n’intervient ni dans le guide d’entretien ni dans l’analyse finale. Quel complément lui donnerait un rôle effectif dans la démarche ?",
+      "options": [
+        "Ajouter une seconde synthèse de sa définition dans la conclusion sans la rapprocher des données.",
+        "Le remplacer par la variable la plus facile à extraire, sans vérifier son rapport avec la question étudiée.",
+        "Reprendre les sens différents donnés par chaque participant sans expliciter comment ils seront analysés.",
+        "Définir ses dimensions observables puis relier les matériaux et leur interprétation à ces dimensions."
+      ],
+      "answer": 3,
+      "explanation": "La mobilisation d’un concept suppose un lien entre définition, observations et interprétation. Répéter une définition, choisir une variable par commodité ou juxtaposer les usages sans règle ne construit pas ce lien."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’équipe appelle « incident » toute demande d’aide, alors que le mémoire réserve ce terme à une erreur ayant nécessité une reprise. Que faut-il faire avec les données de l’équipe ?",
+      "options": [
+        "Vérifier leur contenu et établir une règle de correspondance avant de compter les incidents au sens du mémoire.",
+        "Reprendre le total brut des demandes d’aide comme nombre d’erreurs avec reprise.",
+        "Renommer les demandes d’aide sans vérifier les catégories qu’elles recouvrent.",
+        "Écarter toutes les données au seul motif que le libellé initial diffère."
+      ],
+      "answer": 0,
+      "explanation": "Une différence de vocabulaire ne rend pas les données inutiles mais exige une qualification. Certaines demandes peuvent correspondre à la définition, d’autres non."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle propriété attend-on d’une question d’enquête ouverte sur son résultat ?",
+      "options": [
+        "Elle dispense de définir des catégories pour interpréter les réponses.",
+        "Elle permet aux données de soutenir, de nuancer ou de contredire l’attente initiale.",
+        "Elle laisse le terrain et la période indéfinis jusqu’à la conclusion.",
+        "Elle réserve la formulation de toute hypothèse à l’après-collecte."
+      ],
+      "answer": 1,
+      "explanation": "L’ouverture concerne la conclusion, pas l’absence de cadre ou d’hypothèses. Une hypothèse peut guider la recherche si elle reste confrontable aux données."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Quelle question étudie les effets d’une nouvelle procédure en laissant possible un résultat favorable, défavorable ou absent ?",
+      "options": [
+        "Comment démontrer que l’introduction de la procédure a supprimé les erreurs ?",
+        "Quelles étapes composent le manuel de la nouvelle procédure ?",
+        "Quels changements de délai et de qualité observe-t-on après son introduction dans l’équipe étudiée ?",
+        "Quels changements faut-il recommander dans le manuel avant toute collecte sur ses effets ?"
+      ],
+      "answer": 2,
+      "explanation": "La bonne question permet d’observer des effets contrastés ou absents. Les autres formulations imposent un succès, décrivent seulement le contenu du manuel ou cherchent déjà une recommandation avant l’évaluation."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le commanditaire souhaite que le mémoire démontre la supériorité de son outil. Quelle réponse protège la démarche de recherche ?",
+      "options": [
+        "Remplacer les observations défavorables par les prévisions du fournisseur.",
+        "Conserver les observations défavorables seulement dans les notes privées du candidat.",
+        "Fixer les critères après avoir identifié ceux sur lesquels l’outil obtient les meilleurs résultats.",
+        "Convenir de critères d’évaluation et présenter les résultats obtenus, y compris ceux qui ne soutiennent pas cette attente."
+      ],
+      "answer": 3,
+      "explanation": "Une évaluation doit pouvoir contredire la préférence du commanditaire. Critères opportunistes et retrait d’éléments négatifs empêchent cette confrontation."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La question initiale porte sur une réduction des erreurs, mais l’enquête révèle surtout un déplacement des erreurs vers une autre étape. Quelle révision est justifiée ?",
+      "options": [
+        "Approfondir le déplacement constaté et expliciter l’évolution de la question d’analyse.",
+        "Présenter le déplacement comme une disparition des erreurs pour conserver le titre initial.",
+        "Exclure la seconde étape du périmètre après lecture des résultats sans le signaler.",
+        "Considérer l’enquête comme inexploitable du seul fait qu’elle nuance l’attente initiale."
+      ],
+      "answer": 0,
+      "explanation": "Un résultat inattendu peut enrichir la question si l’évolution et ses limites sont documentées. Il ne doit être ni maquillé en succès ni rejeté parce qu’il surprend."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’hypothèse prévoit que les reprises diminuent lorsque les responsabilités sont clarifiées. Quel cas faut-il aussi rechercher pour l’éprouver ?",
+      "options": [
+        "Un entretien visant à recueillir le degré d’adhésion des responsables à la clarification, sans observer les reprises.",
+        "Une équipe aux responsabilités clarifiées où les reprises ne diminuent pas, afin d’examiner ce qui diffère.",
+        "Une équipe aux reprises faibles sélectionnée sans information sur ses responsabilités, afin de tenir la performance pour preuve de clarification.",
+        "Un examen limité au contrôle de présence de la nouvelle fiche de responsabilité, utilisé pour conclure sur l’évolution des reprises."
+      ],
+      "answer": 1,
+      "explanation": "Un cas contraire documenté permet d’examiner les conditions et limites de l’explication. Répéter l’idée ou sélectionner seulement ses confirmations n’en éprouve pas la portée."
+    }
+  ]
+}

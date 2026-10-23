@@ -1,0 +1,248 @@
+{
+  "sourceHash": "03e6b77f269104a763425756c8f7175ed0480b61d040be4a468c17a5b04def80",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "62a09fe12be7a648714648486a8654c8dee0b3cb217fa3485ba6af30894fa1e8",
+      "selected": 3,
+      "reason": "1100kg à6 donnent6600 euros de coût réel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "b047db6157bb557e2e55f1b48fafa7e29fccbdb49d0bdca2c25d4c5d312f91d4",
+      "selected": 1,
+      "reason": "L’écart prix est1100 fois(6−5), donc1100 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "4e63146807b9015998d52fedfd8340e0d512d8827e7164e36f6f078a1201403f",
+      "selected": 2,
+      "reason": "Cent kg excédentaires à5 donnent500 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "102f20a7731ffb34cd9336e51e1ebb77e6b0e6d7d66ca17ddce11ecd0bab27d7",
+      "selected": 1,
+      "reason": "Le coût réel6600 dépasse le standard5000 de1600.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "56e08bbf9366f5943c06d7447496aa3a095c817ef305ff1a3c29bbd84569e921",
+      "selected": 3,
+      "reason": "La quantité réelle au prix standard est un intermédiaire, le coût réel utilise le prix réel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "62231fdad1887cb29dca0b03baa92e267782c02a4ca8b5ad101b9ab8ebbbd917",
+      "selected": 3,
+      "reason": "Changer la base de prix en conservant quantité inchangée exige contrôle de la décomposition imposée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "82de74539bb0b3d12554db248c2b8528b6aee614bf0347f57d9902e717d2833d",
+      "selected": 3,
+      "reason": "Le standard physique autorisé est la norme unitaire multipliée par la production réelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "950d3d46a6111019e76d9d8a34d8733b344edf0bfdb0c428bb9643f80e59e36a",
+      "selected": 1,
+      "reason": "Les500 non réconciliés empêchent un commentaire causal fiable avant correction des bases.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "ff6330e5f3ab60ba477d8a62b454205ffc32f619ea93ad29eb032319acf0bdec",
+      "selected": 3,
+      "reason": "La consommation diffère des achats en présence de mouvements de stock.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "631a7adaa867b4e6c849bdaf0a1d269c47441bcd6836bbcd5e823e42cdf4ad18",
+      "selected": 1,
+      "reason": "540 fois(9−10) donne un écart favorable de−540.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "096e4c3cea467f3ec4010b686a3c7469b2578e8fd3299d1f92ffe58f8a118cc3",
+      "selected": 0,
+      "reason": "La norme de2kg pour500unités autorise1000kg.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "77e47200a4fe19d3787f4b8a358730184a9c52a3fd3235b30da5671db199202e",
+      "selected": 2,
+      "reason": "Des effets opposés peuvent se compenser et masquer leurs causes dans le petit solde total.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "ce5e17ff915216ea3fe3333a958555711e217d07fe383fdddf694110bc1c882e",
+      "selected": 0,
+      "reason": "La tonne doit devenir kg ou le prix devenir euros par tonne pour calculer le coût.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "7bc7469940ee383e1746e60d5f0db464d307818ec0ae02aef8824b3200da1272",
+      "selected": 2,
+      "reason": "Un écart de prix n’identifie ni cause ni responsabilité sans analyse de l’urgence.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "d5da19e50467f607fe1bf37f5e7f87580e52a0604e8ad7b45e7cc3ee147f7df9",
+      "selected": 3,
+      "reason": "Une faible consommation ne prouve pas une meilleure performance de produits conformes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "3f64339381157ebbd8b2e1d9be5b0716408b023bf460e0049551a5e7c05f04e8",
+      "selected": 3,
+      "reason": "Une somme cohérente exige un sens de soustraction commun ou explicite.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "93594d67319f1abaeb1ad0a2857733bcc2cd55e98bf59a07650730f55035f544",
+      "selected": 0,
+      "reason": "500kg non consommés portent0.20 par kg soit100 de surcoût encore lié au stock.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "6518a00041f7361c5f1d1569d32c12c61befaf6ccb5e06e5a53d68b0121fd3a0",
+      "selected": 2,
+      "reason": "Des qualités mélangées exigent de distinguer effet de mix et effet de prix.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "5f3241d4f72645d0f8295fdcaeda5f0550f466324f0a7399fe07bf2c6452fc34",
+      "selected": 3,
+      "reason": "Une double adaptation au volume gonfle le standard autorisé et réduit l’écart défavorable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "8df0a6f484932038a95128b5cbcdd49e31abffe56c2297a60fd321a6b4cbab83",
+      "selected": 1,
+      "reason": "La réconciliation mathématique ne démontre pas la cause à traiter opérationnellement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "68d07aea5bf7e8bb15273e370ef00fa87cec3c22a102c8cd3617ec1cdf72cefb",
+      "selected": 3,
+      "reason": "Le gain de prix doit être mis en regard des coûts de stockage et risques nouveaux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "2ab199bb0a8935788ce108d41831c5f813c48704f63c3d53b4030529672bebbc",
+      "selected": 1,
+      "reason": "Réel standardisé350 moins standard320 donne30défavorables de composition.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

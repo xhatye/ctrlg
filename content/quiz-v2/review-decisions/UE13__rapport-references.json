@@ -1,0 +1,248 @@
+{
+  "sourceHash": "f67f69ebc1937acec6e834cfc58e2a8862e39a2bf8d2a18984690fcc148ba8d4",
+  "reviewer": "codex-law-tax-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "3ff89501a4ee105844cacd0f094475ccaf64809b205f66220990c8eb92161d35",
+      "selected": 0,
+      "reason": "La période explicitement donnée du tableau est deux mille vingt-deux ; mise à jour, téléchargement et rédaction sont des dates distinctes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "97ea34c8d21cbfa4a53752d7e6cc5d0145de674ada8ea70a27e9b7bc75aa97ea",
+      "selected": 2,
+      "reason": "La référence doit identifier l’édition réellement exploitée ; combiner date récente et ancien contenu ou pagination induit le lecteur en erreur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "930b3e623755d976a007be83cc37d9292df8112d632b7eb76ea1f2965e3cb86a",
+      "selected": 3,
+      "reason": "L’erratum modifie les données du calcul ; il faut recalculer et citer la version corrigée, pas simplement ajouter une ligne bibliographique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "4eeab9d2af191964c7170f481bed52e9d3d18a68661beb4abedd23196204358c",
+      "selected": 3,
+      "reason": "Primaire décrit ici la proximité de l’enregistrement à la déclaration ; cela ne prouve ni véracité de la déclaration ni absence de biais.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "83cc1ffea3f6c061b439480d5a81d2f3f3cdb06437095a16740770c3dbf581d5",
+      "selected": 1,
+      "reason": "L’origine des données brutes et l’auteur du calcul personnel doivent être attribués séparément ; créer le tableau ne crée pas les données.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "9191b184535ba0e3a1e658d3134304d0676f2826b7fb06c0c9228fc765c4a0ac",
+      "selected": 2,
+      "reason": "Une référence honnête conserve l’identité du document consulté et explicite une difficulté de vérification sans feindre une autre consultation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "578cb325b6b35b1c545e7c48216913c81c2c0ee9eb3ef06b185974482d5aadbf",
+      "selected": 3,
+      "reason": "L’origine de la réutilisation et la part réellement actualisée distinguent l’ancien apport du nouveau ; titre ou date changés ne suffisent pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "cb1f7272df498c4923a3a3f57dce7d4381d0ccdf006fb554183f77a8947456bf",
+      "selected": 1,
+      "reason": "Une traduction personnelle doit identifier l’auteur et le texte d’origine tout en précisant le rôle du traducteur étudiant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "dd35a5b841d1c139144cb789fcba9b88cfd6102cac2e82eac47b3cf68753efba",
+      "selected": 1,
+      "reason": "Le dirigeant énonce la phrase et l’auteur la conteste ; attribuer cette phrase à la position de l’auteur confond voix citée et analyse.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "79d580d3c4faef0c236c02b613be634ceb0cbd1f9bec5579bd9e17f511a7bb95",
+      "selected": 1,
+      "reason": "Une coupure doit conserver la portée du texte, notamment son exception ; référence exacte et ordre des mots seuls ne garantissent pas la fidélité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "5fbfabcc9b48327153a2a5a4f987f3b33ac1b1c7ab4ee0cd6cf9179ac70f5fab",
+      "selected": 2,
+      "reason": "La référence attribue le cadre emprunté tandis que les observations et l’application originale restent identifiées comme travail de l’étudiant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "ef72ac577898bbaa9f032009e4fd800b7aeb82387a8bee4fbf97f6d66f253369",
+      "selected": 1,
+      "reason": "Les positions des deux sources et la synthèse personnelle doivent être distinguées ; une citation commune fabriquée effacerait le désaccord.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "928e52c62acd085e04f9c96a0f7cf0b8d13f07042b34ffa3371af525993596e3",
+      "selected": 3,
+      "reason": "Une méthode conditionnelle ne démontre pas que le terrain remplit sa condition ; l’homogénéité locale doit être vérifiée séparément.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "4468f5b4fc6544fd26469f3d492d89558be8262ca1e80c7dcf3bbc7cb2b445bf",
+      "selected": 3,
+      "reason": "Une notice plausible fournie par un outil ne prouve ni existence ni contenu ; la référence doit être retrouvée et contrôlée ou écartée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "d12c202d4bf795762659ee419a40bd21458d261fc71ed800bbc7660a3aeb267f",
+      "selected": 3,
+      "reason": "Une bonne rédaction ne prouve pas un résultat de terrain ; il faut le vérifier puis réviser ou retirer ce qui n’est pas étayé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "9073bbf21856f87c9d27c1a63f640564062cd995ec29fed07e5839701046e1fa",
+      "selected": 0,
+      "reason": "Un lien d’intérêt est un élément critique à confronter aux données et à la méthode ; il ne détermine pas seul le vrai ou le faux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "991df8dd402036c8acee59092abf844cf3b62f3dcfba7cde92c9677f54149f45",
+      "selected": 2,
+      "reason": "La grille privilégie la qualité méthodologique et documentaire ; trois reprises sans données ne valent pas trois votes indépendants contre une étude.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "2482cf13f48563b05c9594cd8a931d1d77139704c270b646ac97491814832afb",
+      "selected": 2,
+      "reason": "La relecture doit faire correspondre chaque emprunt à la référence exacte, et pas seulement à un auteur ou à un autre ouvrage connu.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "976072d2a4b24725e13f66c83e8e2d6218608be7ea40c22f2f3cf0b031658733",
+      "selected": 3,
+      "reason": "Deux relais d’une enquête partagent une même origine ; ils ne constituent pas deux échantillons ou confirmations indépendantes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "dba2f097fca314cf0176839635793090a639019e0a36cb587348245090874a11",
+      "selected": 0,
+      "reason": "Le style donné exige des suffixes cohérents pour identifier le texte effectivement mobilisé ; l’année seule laisse l’ambiguïté.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "813d79cfe3ef7e990bbd75a361b7dcd640462fd1fe743a318965fa13eb45354d",
+      "selected": 1,
+      "reason": "Les renvois se bouclent sans source de données initiale ; leur circularité ne fournit pas une estimation indépendante du coût.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "824b47709542fded75780d35045b224e8b377a8d3241fd4349f12736c7dc97ad",
+      "selected": 0,
+      "reason": "La preuve chiffrée et la protection des détails doivent être contrôlées ensemble ; la justesse du calcul n’autorise pas une diffusion intégrale.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

@@ -1,0 +1,404 @@
+{
+  "module": "DSCG5",
+  "chapter": "risques-donnees",
+  "sourceHash": "210af5f0bbf3577f7594a589d60852e66bfbd5049ba38d76722e7371f2a6b3a7",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "L’objectif de délai de reprise porte sur :",
+      "options": [
+        "Le nombre maximal d’enregistrements conservés en sauvegarde.",
+        "La durée pendant laquelle l’organisation conserve ses archives.",
+        "Le temps visé pour rendre le service de nouveau utilisable.",
+        "L’ancienneté maximale des données que l’on accepte de perdre."
+      ],
+      "answer": 2,
+      "explanation": "L’objectif de temps concerne la remise en service. Il doit être distingué de la perte de données tolérée et des durées de conservation."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un cluster réplique immédiatement les suppressions sur ses deux nœuds. Une suppression accidentelle a donc effacé les données sur les deux. Aucune version antérieure n’y est conservée. Quelle limite de la réplication ce cas illustre-t-il ?",
+      "options": [
+        "La présence de deux nœuds garantit la récupération de la version antérieure même si la suppression a été répliquée partout.",
+        "Basculer vers le second nœud restaure nécessairement les lignes supprimées puisqu’il possède la même copie à jour.",
+        "La réplication transforme chaque opération de suppression en une sauvegarde historique indépendante.",
+        "La redondance des nœuds ne fournit pas à elle seule un point antérieur permettant d’annuler cette suppression."
+      ],
+      "answer": 3,
+      "explanation": "Une réplication peut propager une erreur logique. Revenir à un état antérieur exige un mécanisme adapté de sauvegarde, de version ou de restauration ; un second exemplaire du même état supprimé ne suffit pas.",
+      "references": [
+        {
+          "title": "Microsoft Learn — Redundancy, replication, and backup",
+          "url": "https://learn.microsoft.com/en-us/azure/reliability/concept-redundancy-replication-backup"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une organisation définit « reprise en quatre heures » sans préciser le point de départ ni l’état de service attendu. Quelle faiblesse présente l’objectif ?",
+      "options": [
+        "Il ne permet pas une mesure comparable et vérifiable du délai.",
+        "La durée annoncée suffit à fixer si le chronomètre commence à la panne, à la détection ou à l’alerte.",
+        "Le redémarrage du premier composant peut être considéré comme fin de reprise sans définir les fonctions métier utilisables.",
+        "Les équipes peuvent choisir chacune leur point de départ puis comparer directement leurs durées comme une même mesure."
+      ],
+      "answer": 0,
+      "explanation": "Pour évaluer un délai, il faut définir le départ, la fin et le périmètre. Sinon deux mesures peuvent qualifier différemment le même exercice."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le métier fixe une interruption totale maximale de8heures, comprenant la remise en service puis2heures incompressibles de rattrapage avant retour à l’activité normale. Quel délai maximal de remise en service laisse ces2heures dans la limite prévue ?",
+      "options": [
+        "8 heures.",
+        "6 heures.",
+        "10 heures.",
+        "2 heures."
+      ],
+      "answer": 1,
+      "explanation": "Les8heures comprennent les deux phases. La remise en service doit donc intervenir au plus tard après8 − 2 = 6heures pour laisser les2heures de rattrapage prévues.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 8
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "expected": 6,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un temps de reprise contractuel exclut la remise à disposition des interfaces comptables, pourtant indispensables à l’activité. Quel risque de lecture apparaît ?",
+      "options": [
+        "Le respect du délai sur le composant couvert permet d’annoncer le respect du délai de tout le processus malgré les interfaces exclues.",
+        "Le délai des interfaces peut être considéré inclus par défaut sans vérifier le périmètre de l’engagement.",
+        "Une conformité contractuelle partielle peut masquer un besoin métier non couvert.",
+        "La signature du contrat remplace la mesure du temps nécessaire au rétablissement des fonctions métier non couvertes."
+      ],
+      "answer": 2,
+      "explanation": "Le périmètre doit être rapproché des dépendances utiles au métier. Respecter un engagement limité ne prouve pas que l’activité peut reprendre."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "L’objectif de point de reprise correspond principalement à :",
+      "options": [
+        "La durée nécessaire pour ouvrir l’application de secours.",
+        "Le délai de déclaration d’un incident au support.",
+        "La durée d’utilisation du serveur avant remplacement.",
+        "La perte de données admissible, exprimée notamment en durée d’activité."
+      ],
+      "answer": 3,
+      "explanation": "Le point de reprise indique jusqu’où les données peuvent être récupérées par rapport à l’incident. Il ne décrit pas le temps de restauration."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le besoin est de perdre au plus trente minutes de saisies. Une sauvegarde quotidienne constitue l’unique protection. Quelle conclusion est justifiée ?",
+      "options": [
+        "Le dispositif ne démontre pas le respect de cette perte maximale entre deux sauvegardes.",
+        "Une sauvegarde quotidienne garantit une perte maximale de trente minutes.",
+        "La perte maximale est égale à la durée du dernier test de restauration.",
+        "Le besoin est satisfait si la restauration dure moins de trente minutes."
+      ],
+      "answer": 0,
+      "explanation": "Entre deux copies quotidiennes, bien plus de trente minutes de saisies peuvent ne pas être récupérables. La protection doit être adaptée au besoin."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une sauvegarde récupérable est arrêtée à 10 h. L’incident survient à 12 h 30 et aucune autre protection n’existe. Quelle durée d’activité n’est pas récupérée à partir de cette copie ?",
+      "options": [
+        "150 heures.",
+        "2,5 heures.",
+        "0,5 heure.",
+        "12,5 heures."
+      ],
+      "answer": 1,
+      "explanation": "De 10 h à 12 h 30, il s’écoule 2 heures 30, soit 2,5 heures. Cette perte potentielle est distincte du temps requis pour restaurer.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 12.5
+            },
+            {
+              "value": 10
+            }
+          ]
+        },
+        "expected": 2.5,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un rapport affirme que le RPO est respecté parce que l’application a redémarré rapidement. Quel contrôle manque ?",
+      "options": [
+        "La durée jusqu’au retour de l’écran de connexion, utilisée comme mesure de la fraîcheur des opérations récupérées.",
+        "L’heure de fin du transfert réseau, sans identifier le dernier mouvement présent dans les données restaurées.",
+        "Le point jusqu’auquel les données ont effectivement été récupérées.",
+        "Le taux de disponibilité de l’application, pris comme preuve du point temporel jusqu’auquel les données ont été reprises."
+      ],
+      "answer": 2,
+      "explanation": "Le redémarrage renseigne sur le temps de reprise. Le RPO demande d’examiner les données récupérées et la perte d’activité correspondante."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un mécanisme de copie est prévu toutes les quinze minutes, mais aucune vérification de son intégrité ni de sa restauration n’existe. Que peut-on conclure sur une perte maximale de quinze minutes ?",
+      "options": [
+        "La planification des copies établit une perte maximale sans vérifier si les opérations ont réussi et si les copies sont utilisables.",
+        "Le nombre de copies prévues remplace le contrôle du dernier état réellement récupérable.",
+        "La durée de chaque transfert fixe à elle seule l’ancienneté des données restaurées.",
+        "La fréquence prévue est compatible en apparence, mais la capacité réelle reste à vérifier."
+      ],
+      "answer": 3,
+      "explanation": "La fréquence n’est qu’un élément : il faut que les copies soient effectivement réalisées, cohérentes et récupérables dans le dispositif."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le test reprend en une heure mais perd trois heures de données. Les objectifs étaient deux heures de reprise et une heure de perte. Quel bilan est correct ?",
+      "options": [
+        "Le temps est conforme, mais la perte de données dépasse l’objectif.",
+        "La perte est conforme, mais le temps dépasse l’objectif.",
+        "Les deux objectifs sont conformes puisque l’application redémarre.",
+        "Les deux objectifs mesurent le même phénomène et doivent être fusionnés."
+      ],
+      "answer": 0,
+      "explanation": "La reprise en une heure respecte la cible de deux heures. Trois heures de données perdues dépassent la tolérance d’une heure."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "La pseudonymisation remplace les identifiants directs. Quelle conséquence faut-il retenir ?",
+      "options": [
+        "Le remplacement des noms suffit à établir l’anonymat malgré une table de correspondance permettant de retrouver les personnes.",
+        "Une réidentification peut rester possible avec des informations supplémentaires.",
+        "L’absence de nom dans un export supprime la possibilité d’identifier par croisement avec des informations supplémentaires.",
+        "La pseudonymisation rend la table de correspondance inutile à protéger puisque le fichier principal n’a plus de noms."
+      ],
+      "answer": 1,
+      "explanation": "Le remplacement des identifiants réduit l’identification directe, sans garantir l’anonymat. Les possibilités de rapprochement doivent rester prises en compte.",
+      "references": [
+        {
+          "title": "CNIL — Anonymisation et pseudonymisation",
+          "url": "https://cnil.fr/fr/technologies/lanonymisation-de-donnees-personnelles"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un fichier remplace les noms par des codes. Une table séparée associe chaque code à une personne. Quelle qualification est la plus prudente ?",
+      "options": [
+        "Un fichier anonyme du seul fait de l’absence de noms.",
+        "Une base sans donnée personnelle parce que la table est séparée.",
+        "Un fichier pseudonymisé, dont la réidentification reste possible via la correspondance.",
+        "Un ensemble de données uniquement agrégées."
+      ],
+      "answer": 2,
+      "explanation": "La table permet de rattacher les données aux personnes. La séparation peut réduire le risque, mais ne transforme pas automatiquement l’ensemble en données anonymes.",
+      "references": [
+        {
+          "title": "CNIL — Anonymisation et pseudonymisation",
+          "url": "https://cnil.fr/fr/technologies/lanonymisation-de-donnees-personnelles"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une équipe retire les noms mais conserve fonction très rare, date et lieu précis d’un événement. Quel risque doit-elle examiner ?",
+      "options": [
+        "Le retrait du nom suffit à exclure toute identification, indépendamment de la rareté des caractéristiques conservées.",
+        "La présence de chaque information dans une colonne différente empêche leur combinaison par les destinataires.",
+        "La désignation du fichier comme statistique remplace l’examen des combinaisons permettant d’identifier une personne.",
+        "La réidentification par combinaison d’informations indirectes."
+      ],
+      "answer": 3,
+      "explanation": "Des informations indirectes peuvent suffire à retrouver une personne. L’absence de nom ne permet pas de conclure seule à l’anonymat.",
+      "references": [
+        {
+          "title": "CNIL — Anonymisation et pseudonymisation",
+          "url": "https://cnil.fr/fr/technologies/lanonymisation-de-donnees-personnelles"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une table de correspondance de pseudonymes est accessible aux mêmes personnes que le fichier diffusé. Quelle amélioration réduit l’identification aisée ?",
+      "options": [
+        "Limiter et protéger séparément l’accès aux informations de correspondance selon le besoin.",
+        "Conserver la correspondance dans un onglet masqué du même fichier distribué à tous les destinataires.",
+        "Accorder les mêmes droits sur le fichier pseudonymisé et sa table de correspondance sans distinction de besoin.",
+        "Protéger uniquement le nom du fichier de correspondance tout en le laissant téléchargeable par les mêmes personnes."
+      ],
+      "answer": 0,
+      "explanation": "La séparation et la maîtrise de l’accès aux informations supplémentaires réduisent le risque. Elles ne dispensent pas d’évaluer l’ensemble du traitement.",
+      "references": [
+        {
+          "title": "CNIL — Anonymisation et pseudonymisation",
+          "url": "https://cnil.fr/fr/technologies/lanonymisation-de-donnees-personnelles"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Les identifiants directs ont été remplacés par des pseudonymes, mais une réidentification reste possible. Quel principe doit guider les destinataires et usages du fichier ?",
+      "options": [
+        "Le remplacement des noms suffit à autoriser tout destinataire sans examiner son besoin.",
+        "La réduction de l’identification directe ne dispense pas de contrôler les finalités, accès et destinataires.",
+        "La présence de pseudonymes dispense de définir la finalité de chaque réutilisation.",
+        "La seule transformation des identifiants suffit à déclarer le fichier anonyme malgré les moyens de réidentification conservés."
+      ],
+      "answer": 1,
+      "explanation": "Le cas précise que l’identification reste possible. La pseudonymisation constitue une mesure de protection, sans supprimer à elle seule le besoin de maîtriser les finalités et les accès.",
+      "references": [
+        {
+          "title": "CNIL — Anonymisation et pseudonymisation",
+          "url": "https://cnil.fr/fr/technologies/lanonymisation-de-donnees-personnelles"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une donnée est complète mais inexacte lorsque :",
+      "options": [
+        "Le champ obligatoire est vide.",
+        "Deux systèmes emploient une même définition.",
+        "Le champ est renseigné mais contient une valeur fausse.",
+        "La donnée est disponible au moment prévu et correspond à la source."
+      ],
+      "answer": 2,
+      "explanation": "La présence d’une valeur renseigne sur la complétude, pas sur sa vérité. Un contrôle de saisie obligatoire doit être complété par un contrôle pertinent du contenu."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une adresse respecte le format postal mais correspond à l’ancien domicile du client. Quelle dimension de qualité fait surtout défaut ?",
+      "options": [
+        "L’exhaustivité du champ, alors que l’adresse est présente mais n’est plus actuelle.",
+        "La validité syntaxique du code postal, alors que le format est annoncé conforme.",
+        "L’unicité de la fiche client, sans élément indiquant ici une duplication.",
+        "L’actualité de l’information pour l’usage prévu."
+      ],
+      "answer": 3,
+      "explanation": "Un format valide peut contenir une information devenue obsolète. La qualité dépend de l’usage, notamment lorsqu’il faut contacter la personne actuellement."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Les totaux d’un état concordent avec les lignes présentes, mais plusieurs opérations n’ont jamais été intégrées. Quel contrôle manque ?",
+      "options": [
+        "La complétude du périmètre rapprochée d’une source indépendante.",
+        "L’addition arithmétique des seules lignes déjà présentes.",
+        "La conformité du format monétaire des totaux.",
+        "La taille des colonnes dans le fichier de restitution."
+      ],
+      "answer": 0,
+      "explanation": "Une somme exacte peut porter sur un ensemble incomplet. Le rapprochement avec la source doit vérifier la présence des opérations attendues."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux systèmes donnent des dates de naissance différentes pour un même identifiant client. Quelle action est prioritaire ?",
+      "options": [
+        "Retenir le fichier le plus récemment exporté sans identifier la source métier dont provient la date.",
+        "Rechercher la source fiable et tracer la correction selon une règle validée.",
+        "Choisir la date majoritaire dans les copies sans vérifier la fiabilité des sources qui la répètent.",
+        "Conserver les deux dates comme deux faits distincts pour le même client sans traiter leur contradiction."
+      ],
+      "answer": 1,
+      "explanation": "L’incohérence doit être résolue par une vérification appropriée. Une règle arbitraire de sélection ne prouve pas l’exactitude de la valeur retenue."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un référentiel contient 100 % de numéros de téléphone renseignés, mais beaucoup sont des valeurs par défaut inutilisables. Quel bilan est correct ?",
+      "options": [
+        "Assimiler la présence d’une valeur à une preuve que le téléphone permet effectivement de joindre le client.",
+        "Déduire l’exactitude des coordonnées du seul passage du contrôle de champ obligatoire.",
+        "La complétude apparente ne démontre ni l’exactitude ni l’utilité des contacts.",
+        "Utiliser le taux de remplissage comme mesure suffisante de la qualité des contacts sans contrôler les valeurs par défaut."
+      ],
+      "answer": 2,
+      "explanation": "Le remplissage peut masquer des données non informatives. Le contrôle doit vérifier la propriété utile au besoin, ici la possibilité réelle de contact."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un contrôle rejette des données suspectes puis les exclut silencieusement du rapport. Quel risque de qualité subsiste ?",
+      "options": [
+        "Déduire l’exhaustivité du rapport de la seule validité des lignes qui ont franchi les contrôles.",
+        "Considérer les rejets comme corrigés dès lors qu’ils ont été retirés du résultat publié.",
+        "Présenter le résultat filtré comme l’ensemble du périmètre source sans signaler les données exclues ni leur incidence.",
+        "Un résultat incomplet sans visibilité sur les exceptions et leur traitement."
+      ],
+      "answer": 3,
+      "explanation": "Les rejets doivent être recensés, expliqués et traités. Les faire disparaître du résultat sans suivi peut masquer une perte de données utiles."
+    }
+  ]
+}

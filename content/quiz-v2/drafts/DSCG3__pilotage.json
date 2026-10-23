@@ -1,0 +1,392 @@
+{
+  "module": "DSCG3",
+  "chapter": "pilotage",
+  "sourceHash": "9768dca271139c42b8f8ee4925394d749ba0c3b3afa2c88dea4ed9219b52bf50",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle précision transforme un intitulé comme « qualité de service » en indicateur exploitable ?",
+      "options": [
+        "La fixation d’une cible sans définition des données.",
+        "La publication d’un total annuel sans périmètre.",
+        "Une formule, un périmètre, une source et une fréquence définis.",
+        "Le classement du service par rapport à lui-même sans référence."
+      ],
+      "answer": 2,
+      "explanation": "Un indicateur demande une définition reproductible : formule, population, période et source. Un objectif général ne fournit pas à lui seul une mesure."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux agences comptent les réclamations : l’une par appel, l’autre par dossier client. Quel préalable à leur comparaison manque ?",
+      "options": [
+        "Une conversion en pourcentages suffirait à rendre comparables appels et dossiers sans changer les comptes.",
+        "Un même objectif numérique suffirait à rendre identiques les événements comptés.",
+        "Une même fréquence mensuelle de publication suffirait à harmoniser les unités de chaque numérateur.",
+        "Une définition commune de l’unité de comptage."
+      ],
+      "answer": 3,
+      "explanation": "Un client peut appeler plusieurs fois pour un même dossier. Comparer les nombres exige de traiter ces différences de définition."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un taux d’erreur baisse parce que les dossiers non contrôlés sont inclus au dénominateur, mais leurs erreurs restent inconnues. Quel défaut faut-il examiner ?",
+      "options": [
+        "Le dénominateur ne correspond pas à la population dont les erreurs sont observées.",
+        "Le numérateur devrait être le nombre de contrôleurs plutôt que les erreurs constatées, puisque des dossiers ne sont pas contrôlés.",
+        "Le ratio devrait utiliser la population totale comme si chaque dossier non contrôlé avait été confirmé sans erreur.",
+        "Le ratio devrait être corrigé uniquement en augmentant la fréquence de publication, sans revoir la population observée."
+      ],
+      "answer": 0,
+      "explanation": "Le ratio peut sous-estimer les erreurs si son dénominateur inclut des dossiers dont la qualité n’a pas été mesurée. Le protocole doit être explicite."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un indicateur mensuel de délai est connu six semaines après clôture. Le responsable doit agir chaque semaine. Quelle adaptation est la plus utile ?",
+      "options": [
+        "Rendre la cible annuelle plus exigeante sans changer l’information.",
+        "Associer un signal opérationnel rapide au suivi consolidé plus tardif.",
+        "Utiliser le résultat tardif comme seule information de la semaine en cours.",
+        "Supprimer la traçabilité afin d’obtenir instantanément un chiffre non contrôlé."
+      ],
+      "answer": 1,
+      "explanation": "Un signal avancé et suffisamment fiable aide à agir. Le suivi consolidé conserve son rôle d’évaluation, avec un délai clairement annoncé."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La moyenne du délai reste stable, alors que les dossiers très en retard deviennent plus nombreux. Quel complément est pertinent ?",
+      "options": [
+        "La moyenne des délais calculée uniquement sur les dossiers clos dans les temps.",
+        "Le nombre total de dossiers traités, sans information de retard.",
+        "La proportion de dossiers dépassant le délai promis.",
+        "La moyenne annuelle, sans détail de la période où les retards augmentent."
+      ],
+      "answer": 2,
+      "explanation": "La moyenne ne décrit pas la dispersion. Le taux de dépassement fait apparaître la fraction des clients exposés à un retard excessif."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une équipe corrige rétroactivement ses données de production. Comment préserver la compréhension du tableau de bord ?",
+      "options": [
+        "Remplacer les anciens chiffres sans conserver de date de révision.",
+        "Calculer le taux sur les seules lignes qui n’ont jamais changé.",
+        "Additionner les versions successives pour conserver toutes les données.",
+        "Tracer les versions, la cause des corrections et leur effet sur les séries."
+      ],
+      "answer": 3,
+      "explanation": "Une correction peut améliorer la fiabilité mais rompre la comparaison. La date et la nature de la révision doivent rester identifiables."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "L’efficacité d’une action désigne principalement :",
+      "options": [
+        "L’atteinte de l’objectif poursuivi.",
+        "La baisse des moyens indépendamment des résultats.",
+        "La réduction de l’écart entre budget et dépense uniquement.",
+        "L’augmentation du nombre d’actions engagées, quelle que soit leur issue."
+      ],
+      "answer": 0,
+      "explanation": "L’efficacité compare les résultats aux objectifs. Elle ne dit pas, à elle seule, si les ressources utilisées étaient proportionnées."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "foundation",
+      "q": "Un service devait traiter 95 % des demandes sous deux jours et atteint 97 %. Ses coûts ont augmenté. Que peut-on conclure directement ?",
+      "options": [
+        "Son efficience est nécessairement meilleure.",
+        "Il est efficace au regard de cet objectif de délai.",
+        "Il a atteint tous ses objectifs de qualité et de coût.",
+        "La hausse des coûts prouve qu’il est inefficace sur le délai."
+      ],
+      "answer": 1,
+      "explanation": "La cible de délai est dépassée : l’objectif précis est atteint. L’appréciation des coûts et de l’efficience nécessite d’autres informations."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une formation a accueilli tous les salariés prévus. L’objectif était de réduire les erreurs de saisie. Quelle mesure permet d’évaluer son efficacité sur cet objectif ?",
+      "options": [
+        "Le nombre d’invitations expédiées.",
+        "Le taux de présence, pris comme preuve suffisante.",
+        "L’évolution des erreurs de saisie sur un périmètre comparable.",
+        "Le coût des supports imprimés par participant."
+      ],
+      "answer": 2,
+      "explanation": "La présence mesure la réalisation de l’action. L’effet visé porte sur les erreurs ; leur évolution doit être observée en tenant compte du contexte."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le délai cible est atteint en rejetant les demandes complexes, pourtant incluses dans la mission. Quelle conclusion est justifiée ?",
+      "options": [
+        "L’efficacité globale est prouvée par le respect du délai affiché.",
+        "L’efficience est prouvée dès lors que les rejets évitent du travail.",
+        "Il suffit de relever le nombre de dossiers clos pour confirmer le succès.",
+        "Le respect d’une mesure partielle ne prouve pas l’atteinte de la mission."
+      ],
+      "answer": 3,
+      "explanation": "L’exclusion de demandes prévues peut améliorer le délai mesuré tout en dégradant le service rendu. Il faut vérifier le périmètre réellement servi."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une direction réduit sa cible après avoir observé un résultat décevant, puis annonce un objectif atteint. Quel point doit être distingué ?",
+      "options": [
+        "L’atteinte de la cible initiale et la pertinence de sa révision.",
+        "La nouvelle cible et la cible initiale devraient être moyennées pour réévaluer rétroactivement l’atteinte.",
+        "La nouvelle cible devrait remplacer la cible initiale dans tout l’historique sans conserver l’ancienne référence.",
+        "L’atteinte de la nouvelle cible suffirait à établir que les moyens employés pour la cible initiale étaient efficients."
+      ],
+      "answer": 0,
+      "explanation": "Une révision peut être justifiée, mais elle ne doit pas effacer la trajectoire initiale. Il faut expliquer le changement et présenter les deux références."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Comment apprécier l’efficience d’un processus ?",
+      "options": [
+        "En comptant exclusivement ses résultats sans examiner les moyens.",
+        "En rapprochant les résultats utiles des ressources mobilisées.",
+        "En comparant les objectifs affichés au nombre de responsables.",
+        "En recherchant systématiquement le budget le plus faible, même sans résultat."
+      ],
+      "answer": 1,
+      "explanation": "L’efficience rapproche les résultats et les ressources. Une économie qui détruit le résultat utile ne suffit pas à caractériser une amélioration."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux équipes traitent autant de dossiers de difficulté comparable, avec la même qualité. L’une utilise moins d’heures. Quelle lecture est la plus solide ?",
+      "options": [
+        "Elle est moins efficace, car elle travaille moins longtemps.",
+        "Les données ne permettent aucune comparaison de moyens.",
+        "Elle est plus efficiente sur le critère des heures utilisées.",
+        "Elle respecte nécessairement mieux tous les objectifs de l’entreprise."
+      ],
+      "answer": 2,
+      "explanation": "À résultat et qualité comparables, consommer moins d’heures indique une meilleure efficience de cette ressource, sans prouver une supériorité sur tous les critères."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un centre réduit ses heures internes mais achète une sous-traitance plus chère pour le même service. Pourquoi le gain d’efficience annoncé est-il fragile ?",
+      "options": [
+        "La diminution des seules heures internes suffirait à conclure, puisque les prestations externes ne mobilisent pas les salariés du centre.",
+        "L’efficience devrait être jugée sur le coût horaire interne seulement, même si le service est désormais réalisé ailleurs.",
+        "La dépense externe devrait être répartie sur un autre centre pour maintenir la comparabilité apparente du premier indicateur.",
+        "Le calcul omet des ressources externes mobilisées pour obtenir le résultat."
+      ],
+      "answer": 3,
+      "explanation": "Le périmètre de ressources doit inclure les moyens remplacés par la sous-traitance. Une baisse d’heures internes peut masquer un coût total supérieur."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le coût par dossier baisse, mais les reprises doublent. Quelle unité de résultat évite de célébrer une productivité trompeuse ?",
+      "options": [
+        "Les dossiers finalisés correctement, en tenant compte des reprises nécessaires.",
+        "Tous les passages sur un dossier, chacun compté comme un dossier nouveau.",
+        "Les seuls dossiers ouverts, même sans traitement.",
+        "Les écritures enregistrées avant toute vérification."
+      ],
+      "answer": 0,
+      "explanation": "Compter le travail répété comme une production nouvelle gonfle le résultat. Une mesure du service correct intègre la qualité et les ressources de reprise."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une automatisation réduit le coût de traitement mais accroît fortement les coûts de surveillance et de correction. Quelle comparaison faut-il effectuer ?",
+      "options": [
+        "Comparer seulement les minutes de saisie avant et après.",
+        "Comparer le coût et la qualité du processus complet avant et après.",
+        "Comparer le nouveau coût de surveillance au seul ancien budget de formation.",
+        "Comparer les dépenses prévues sans intégrer les corrections observées."
+      ],
+      "answer": 1,
+      "explanation": "Le gain se mesure sur l’ensemble du processus. Les contrôles et corrections induits par l’automatisation font partie des moyens nécessaires au résultat."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une prime rémunère le nombre de dossiers traités. Les dossiers complexes sont laissés en attente. Quel indicateur manque pour apprécier la production utile ?",
+      "options": [
+        "Le seul nombre total de dossiers clos, publié plus souvent sans distinguer les catégories.",
+        "Le seul montant de primes par dossier clos, supposé mesurer le service rendu aux dossiers encore en attente.",
+        "La composition du stock et les délais par catégorie de difficulté.",
+        "La durée moyenne des seuls dossiers achevés, en excluant les dossiers difficiles toujours ouverts."
+      ],
+      "answer": 2,
+      "explanation": "Un volume global masque la sélection des dossiers. La difficulté et le vieillissement du stock permettent de suivre le service sur toute la population."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel mécanisme décrit un effet pervers d’un indicateur ?",
+      "options": [
+        "Une donnée fiable est utilisée pour une décision conforme à l’objectif.",
+        "Une mesure est documentée avant sa première publication.",
+        "Un objectif est décliné en responsabilités clairement attribuées.",
+        "Les acteurs optimisent la mesure rémunérée au détriment du résultat recherché."
+      ],
+      "answer": 3,
+      "explanation": "Une mesure est un proxy de l’objectif. Si la prime favorise son amélioration artificielle ou partielle, le comportement peut détériorer la mission réelle."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les commerciaux sont primés sur les ventes signées. Les annulations ultérieures augmentent. Quel complément limite le décalage entre prime et résultat utile ?",
+      "options": [
+        "Suivre les ventes maintenues et les annulations selon une fenêtre définie.",
+        "Retenir seulement le nombre de rendez-vous commerciaux.",
+        "Augmenter le poids du montant signé sans contrôler les annulations.",
+        "Compter toute annulation comme une nouvelle opportunité vendue."
+      ],
+      "answer": 0,
+      "explanation": "Le suivi doit distinguer la signature du revenu durablement acquis. Une fenêtre et des règles stables évitent les comparaisons opportunistes."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une équipe clôture les tickets la veille du reporting puis les rouvre le lendemain. Quelle vulnérabilité du dispositif exploite-t-elle ?",
+      "options": [
+        "La mesure du nombre de salariés affectés au support.",
+        "Une photographie du stock qui ne suit ni réouvertures ni résolution réelle.",
+        "Le calcul du coût salarial annuel de l’équipe.",
+        "Une mesure du délai de résolution définitive déjà vérifiée."
+      ],
+      "answer": 1,
+      "explanation": "La photographie à date peut être manipulée. Le suivi des réouvertures et de la résolution durable rapproche la mesure de l’objectif de service."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une cible très exigeante conduit les équipes à ne plus déclarer les incidents mineurs. Quelle réponse de pilotage est la plus adaptée ?",
+      "options": [
+        "Conserver la seule baisse déclarée comme mesure de prévention, puisque les incidents mineurs ne déterminent pas le score.",
+        "Accroître la pénalisation de chaque déclaration pour renforcer la pression sur les équipes.",
+        "Vérifier les pratiques de déclaration et distinguer transparence, gravité et prévention.",
+        "Comparer les services sur le seul nombre brut d’incidents, sans tenir compte du volume ni des règles de déclaration."
+      ],
+      "answer": 2,
+      "explanation": "Une baisse déclarative peut venir d’une dissimulation. Le dispositif doit encourager la remontée utile et analyser les causes plutôt que pénaliser toute déclaration."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau de bord s’enrichit de trente ratios sans responsable ni décision associée. Quelle priorité améliore son utilité ?",
+      "options": [
+        "Fixer une cible chiffrée pour les trente ratios avant de vérifier quels leviers permettraient d’agir sur eux.",
+        "Accroître la fréquence de publication des trente ratios sans clarifier les décisions attendues.",
+        "Conserver uniquement les ratios les plus faciles à produire, indépendamment des questions du responsable.",
+        "Sélectionner les mesures liées aux décisions et désigner leurs responsables."
+      ],
+      "answer": 3,
+      "explanation": "La quantité d’indicateurs n’est pas une garantie de pilotage. Chaque mesure retenue doit répondre à une question et soutenir une action identifiable."
+    },
+    {
+      "id": "q23",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Deux solutions sont notées sur 10, une note haute étant meilleure : A obtient 9 en qualité et 3 en coût ; B obtient 6 sur chacun des deux critères. Le score est w × qualité + (1−w) × coût. Quel poids de qualité rend les deux solutions exactement indifférentes ?",
+      "options": [
+        "50 %",
+        "25 %",
+        "75 %",
+        "100 %"
+      ],
+      "answer": 0,
+      "explanation": "Le score de A est 9w + 3(1−w) = 3 + 6w ; celui de B reste 6. L’égalité exige 6w = 3, donc w = 50 %. Au-dessus, A est préférée ; au-dessous, B. La question porte sur la sensibilité du choix aux poids, et non sur le seul calcul d’un score pour des poids déjà fixés.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 6
+                    },
+                    {
+                      "value": 3
+                    }
+                  ]
+                },
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 9
+                    },
+                    {
+                      "value": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 50,
+        "digits": 0
+      }
+    }
+  ]
+}

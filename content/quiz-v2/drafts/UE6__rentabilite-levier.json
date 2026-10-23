@@ -1,0 +1,429 @@
+{
+  "module": "UE6",
+  "chapter": "rentabilite-levier",
+  "sourceHash": "e2b89ef687bf7e3b08554072c00c3992c56fe9a54cdc62919a66a9a037cea074",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans le modèle simplifié de levier, comment l’actif économique est-il financé ?",
+      "options": [
+        "Par les capitaux propres et la dette financière",
+        "Par les seuls intérêts de l’emprunt",
+        "Par le seul résultat net annuel",
+        "Par les seules créances clients"
+      ],
+      "answer": 0,
+      "explanation": "Le modèle relie l’actif économique au total des fonds propres et de la dette financière. Les intérêts rémunèrent une ressource sans constituer son principal."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un modèle sans autres financements, les capitaux propres sont de 90 000 € et la dette financière de 60 000 €. Quel actif économique financent-ils ?",
+      "options": [
+        "30 000 €",
+        "150 000 €",
+        "90 000 €",
+        "60 000 €"
+      ],
+      "answer": 1,
+      "explanation": "L’actif économique financé dans ce modèle vaut capitaux propres + dette, soit 90 000 + 60 000 = 150 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 90000
+            },
+            {
+              "value": 60000
+            }
+          ]
+        },
+        "expected": 150000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux entreprises disposent du même actif économique mais l’une le finance avec davantage de dette et moins de fonds propres. Quel effet cette seule information permet-elle d’identifier ?",
+      "options": [
+        "Une hausse du résultat économique provoquée par la seule substitution de dette aux fonds propres",
+        "Une baisse du coût de dette démontrée par la seule part de dette plus élevée",
+        "Une structure de financement différente, sans préjuger du rendement économique",
+        "Un montant total d’actif économique accru par la seule modification des proportions de financement"
+      ],
+      "answer": 2,
+      "explanation": "La dette modifie la répartition des ressources finançant l’actif. Le rendement économique dépend de l’activité, pas mécaniquement de cette répartition."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour obtenir l’actif économique financé, un étudiant additionne capitaux propres et seuls intérêts annuels. Quelle confusion faut-il corriger ?",
+      "options": [
+        "Les capitaux propres doivent être remplacés par les dividendes",
+        "L’actif économique est toujours égal aux intérêts",
+        "Les intérêts représentent déjà toute la dette financière",
+        "Les intérêts sont un coût périodique ; il faut le principal de dette dans ce modèle"
+      ],
+      "answer": 3,
+      "explanation": "Un coût annuel et un encours de dette sont de nature différente. Le financement de l’actif comprend le capital emprunté, non ses seuls intérêts."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise remplace une partie de ses fonds propres par une dette, sans modifier l’actif économique ni son rendement dans le modèle. Quelle grandeur change directement ?",
+      "options": [
+        "Le montant des intérêts et la répartition du résultat entre financeurs",
+        "Le résultat opérationnel avant intérêts, par le seul effet du remplacement des fonds propres",
+        "Le rendement économique de l’actif, sans changement de son exploitation",
+        "Le coût comptable des actifs, réduit du financement nouvellement reçu"
+      ],
+      "answer": 0,
+      "explanation": "À actif et rendement fixes, le résultat économique reste inchangé. Une dette supplémentaire modifie le coût du financement et le résultat résiduel des fonds propres."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans le modèle sans impôt, quel résultat rapporte-t-on à l’actif économique pour mesurer sa rentabilité avant coût de dette ?",
+      "options": [
+        "Le résultat après dividendes uniquement",
+        "Le résultat économique avant intérêts de la dette",
+        "Les intérêts annuels uniquement",
+        "Le remboursement annuel du principal"
+      ],
+      "answer": 1,
+      "explanation": "La rentabilité économique apprécie le rendement de l’actif avant la répartition liée au coût de la dette. Elle ne doit pas utiliser un remboursement de capital."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un actif économique de 200 000 € rapporte 7 % par an avant coût de dette, dans un modèle sans impôt. Quel résultat économique annuel produit-il ?",
+      "options": [
+        "28 571,43 €",
+        "7 000 €",
+        "14 000 €",
+        "186 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le résultat économique correspond au montant investi multiplié par le rendement : 200 000 × 0,07 = 14 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 200000
+            },
+            {
+              "value": 0.07
+            }
+          ]
+        },
+        "expected": 14000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une analyse annonce une rentabilité économique en divisant le résultat après intérêts par les seuls capitaux propres. Quel indicateur calcule-t-elle en réalité dans le modèle sans impôt ?",
+      "options": [
+        "La rentabilité économique de l’actif",
+        "Le coût contractuel de la dette",
+        "Le ratio de dette sur actif économique",
+        "La rentabilité financière des capitaux propres"
+      ],
+      "answer": 3,
+      "explanation": "Le résultat résiduel après coût de dette rapporté aux fonds propres mesure leur rentabilité. Il ne mesure pas le rendement global de l’actif."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’actif économique reste inchangé mais son rendement diminue. Le montant de dette et son taux sont fixes. Quelle première conséquence est certaine dans le modèle ?",
+      "options": [
+        "Le résultat économique avant intérêts diminue",
+        "Les intérêts baissent automatiquement dans la même proportion",
+        "Le capital de dette disparaît à concurrence de la baisse",
+        "La rentabilité financière reste obligatoirement constante"
+      ],
+      "answer": 0,
+      "explanation": "Un rendement moindre appliqué au même actif réduit le résultat économique. Les intérêts d’une dette stable à taux fixe ne baissent pas automatiquement."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le résultat économique est une prévision de rendement, alors que les intérêts sont contractuellement dus. Pourquoi leur comparaison ne constitue-t-elle pas une garantie ?",
+      "options": [
+        "Les intérêts n’existent que si le rendement est positif",
+        "Le rendement prévu peut ne pas se réaliser alors que les échéances subsistent",
+        "Une prévision est juridiquement équivalente à un encaissement",
+        "Le taux fixe rend le résultat économique certain"
+      ],
+      "answer": 1,
+      "explanation": "Le modèle compare un rendement d’activité incertain à un coût de financement. Le financement par dette maintient une obligation de paiement malgré les aléas."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un cas sans impôt ni autre élément, le résultat économique est de 18 000 €. La dette stable de 100 000 € coûte 5 % par an. Quel résultat revient aux fonds propres ?",
+      "options": [
+        "23 000 €",
+        "18 000 €",
+        "13 000 €",
+        "5 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Les intérêts sont 100 000 × 5 % = 5 000 €. Le résultat revenant aux fonds propres est 18 000 − 5 000 = 13 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 18000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 100000
+                },
+                {
+                  "value": 0.05
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 13000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le résultat économique ne couvre pas les intérêts annuels, et aucun autre produit ni impôt n’est retenu. Quel est le résultat résiduel des fonds propres ?",
+      "options": [
+        "Il est automatiquement nul",
+        "Il reste positif si la dette est à taux fixe",
+        "Il est égal au montant du principal emprunté",
+        "Il est négatif"
+      ],
+      "answer": 3,
+      "explanation": "Le résultat résiduel est le résultat économique diminué des intérêts. Si ceux-ci sont supérieurs, la différence devient négative dans ce modèle."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant soustrait au résultat économique les intérêts et le remboursement du capital pour calculer le résultat revenant aux fonds propres du modèle. Quel traitement faut-il distinguer ?",
+      "options": [
+        "Le remboursement du principal est un flux de financement, distinct du calcul du résultat",
+        "Le remboursement du principal remplace toujours les intérêts dans le résultat",
+        "Les intérêts doivent être ajoutés car ils sont encaissés par le prêteur",
+        "Les deux éléments sont systématiquement des produits de l’entreprise"
+      ],
+      "answer": 0,
+      "explanation": "Les intérêts constituent le coût retenu dans le calcul du résultat simplifié. Le remboursement du capital affecte la trésorerie et l’encours, pas ce résultat."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le coût de la dette augmente alors que l’actif économique, son rendement et le montant de dette sont fixes. Sans impôt, comment évolue le résultat revenant aux fonds propres ?",
+      "options": [
+        "Il augmente puisque le prêteur exige plus",
+        "Il diminue à cause des intérêts plus élevés",
+        "Il reste fixe tant que le principal ne change pas",
+        "Il devient égal au résultat économique avant intérêts"
+      ],
+      "answer": 1,
+      "explanation": "Une hausse du taux augmente les intérêts sur la même dette. Leur déduction réduit le résultat résiduel disponible pour les fonds propres."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi le résultat revenant aux fonds propres ne doit-il pas être assimilé à un dividende automatiquement payé ?",
+      "options": [
+        "Tout résultat est versé immédiatement aux actionnaires",
+        "La présence d’une dette interdit tout résultat positif",
+        "Le résultat est une mesure de performance ; la distribution et la liquidité demandent une analyse distincte",
+        "Le résultat résiduel est le montant du capital remboursé"
+      ],
+      "answer": 2,
+      "explanation": "La rémunération économique mesurée par le résultat ne renseigne pas à elle seule sur les distributions effectives ou les encaissements disponibles."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le cas stipule expressément « aucun impôt ». Un étudiant ajoute néanmoins une économie fiscale aux intérêts pour améliorer le résultat des fonds propres. Pourquoi est-ce injustifié ?",
+      "options": [
+        "Les intérêts sont déjà exprimés après remboursement du capital",
+        "Toute dette procure toujours une économie fiscale égale à son principal",
+        "Un cas sans impôt interdit de calculer les intérêts",
+        "Il introduit un effet fiscal exclu par les hypothèses du modèle"
+      ],
+      "answer": 3,
+      "explanation": "Les hypothèses délimitent le calcul. Ajouter un avantage fiscal non fourni modifie artificiellement la rentabilité dans ce cas sans impôt."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un modèle sans impôt, le résultat revenant aux fonds propres est de 12 000 € pour des capitaux propres de 80 000 €. Quelle est leur rentabilité ?",
+      "options": [
+        "15 %",
+        "6,67 %",
+        "10 %",
+        "1,5 %"
+      ],
+      "answer": 0,
+      "explanation": "La rentabilité financière vaut 12 000 / 80 000 × 100 = 15 %. Le dénominateur est le montant des fonds propres, non l’actif total.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 80000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 15,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans le modèle sans impôt et à dette positive, la rentabilité économique est supérieure au coût de la dette. Comment se situe normalement la rentabilité financière ?",
+      "options": [
+        "Au-dessous de la rentabilité économique dans tous les cas",
+        "Au-dessus de la rentabilité économique, par effet de levier favorable",
+        "Toujours exactement au niveau du taux de la dette",
+        "Nécessairement à zéro car la dette absorbe tout le résultat"
+      ],
+      "answer": 1,
+      "explanation": "L’écart favorable entre rendement économique et coût de dette bénéficie aux fonds propres. Cette amplification ne supprime pas les risques financiers."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La rentabilité économique devient inférieure au coût de la dette dans le modèle sans impôt. Quel effet le financement par dette a-t-il sur la rentabilité des fonds propres ?",
+      "options": [
+        "Il l’améliore nécessairement grâce au principal emprunté",
+        "Il la fixe au taux contractuel de la dette",
+        "Il la dégrade par rapport à la rentabilité économique",
+        "Il la rend identique quelle que soit la part de dette"
+      ],
+      "answer": 2,
+      "explanation": "L’écart défavorable de rendement produit un effet de levier négatif. Le coût de dette pèse alors davantage sur le résultat rapporté aux fonds propres."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une rentabilité financière prévisionnelle élevée est utilisée pour affirmer que les échéances pourront toujours être payées. Quelle confusion faut-il relever ?",
+      "options": [
+        "Une forte rentabilité permet d’assimiler le résultat annuel à des fonds disponibles à chaque échéance",
+        "La rentabilité financière inclut déjà l’ensemble des remboursements de principal",
+        "Le taux de rentabilité des fonds propres permet de déduire les dates de règlement des clients",
+        "Un ratio de performance ne garantit ni les encaissements ni leur calendrier"
+      ],
+      "answer": 3,
+      "explanation": "Les échéances exigent des liquidités à des dates précises. Une performance prévue peut s’accompagner de délais clients ou d’aléas qui créent des tensions."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Si rendement économique et coût de dette sont égaux, que prévoit le modèle sans impôt sur la rentabilité des fonds propres, supposés positifs ?",
+      "options": [
+        "Elle est égale au rendement économique, sans écart de levier",
+        "Elle est le double du rendement économique",
+        "Elle est nulle quelle que soit l’activité",
+        "Elle augmente automatiquement avec chaque euro de dette"
+      ],
+      "answer": 0,
+      "explanation": "Lorsque l’écart rendement économique moins coût de dette est nul, la dette ne crée pas d’écart de rentabilité dans ce modèle."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux entreprises comparables ont des rentabilités financières différentes parce que leurs endettements diffèrent. Quelle précaution est nécessaire avant de juger leur performance d’exploitation ?",
+      "options": [
+        "Retenir uniquement la rentabilité financière la plus élevée",
+        "Comparer aussi la rentabilité économique et le coût de dette",
+        "Supposer que leurs risques sont identiques puisque l’activité est comparable",
+        "Exclure les intérêts de toute analyse de financement"
+      ],
+      "answer": 1,
+      "explanation": "La rentabilité des fonds propres combine performance économique et structure financière. Une différence peut provenir du levier plutôt que de l’exploitation."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un modèle de levier ne comporte ni impôt ni variation de dette pendant l’année. Comment présenter son résultat à un dirigeant ?",
+      "options": [
+        "Comme un rendement directement transposable après impôt sans retraitement",
+        "Comme une prévision de trésorerie qui intègre déjà toutes les dates de remboursement",
+        "Comme une conclusion conditionnelle à ces hypothèses, à compléter pour son cas réel",
+        "Comme une comparaison valable pour toute évolution d’endettement sans nouvelle simulation"
+      ],
+      "answer": 2,
+      "explanation": "Les simplifications rendent le mécanisme lisible mais limitent sa portée. Fiscalité, variations de financement, trésorerie et incertitude peuvent modifier l’analyse réelle."
+    }
+  ]
+}

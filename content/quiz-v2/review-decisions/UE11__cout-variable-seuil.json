@@ -1,0 +1,248 @@
+{
+  "sourceHash": "1e474b8b3e9a07269b6dd7c92411752147d8cae1ea02960243ea0ee6d61fffda",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "af0fcbc1e8214a5b3fb187380cafc6aeec5e36c7af1746846c9fd1537ce727f7",
+      "selected": 0,
+      "reason": "La marge unitaire est trente euros, multipliée par quatre cents unités, soit douze mille euros avant fixes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "53318f1b697d26e948fcc6f4904541560211e45050df23c6a2e3cbb54171a94b",
+      "selected": 2,
+      "reason": "Le taux de marge est le complément à cent pour cent des soixante-cinq de variables, soit trente-cinq pour cent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "22431022e02427fc49fe00b09c8ff79ecaf5234c446898ce3cdb24e8755941c7",
+      "selected": 1,
+      "reason": "Quinze mille de fixes divisés par cinquante mille au seuil donnent un taux de trente pour cent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "0b1ec6897884ca0d692b7f584a399c3caeb237e346639cbd3782ab4fc592acff",
+      "selected": 0,
+      "reason": "La marge vingt-quatre mille moins le résultat six mille donne dix-huit mille de charges fixes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "42405a49817f2c49ffda3a5920e5c6679b64dfcba24058aa6ea9b8decd58c8eb",
+      "selected": 0,
+      "reason": "Une marge unitaire positive inchangée augmente la contribution avec les ventes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "c709cdace0db490dd2ecb36dbd01556170417336328788b831625b9ad17a21b4",
+      "selected": 3,
+      "reason": "0,4 et40% représentent la même proportion sous conventions cohérentes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "85548efd666980a69c5ebd697491f5a3185bc43536bf23722a4925d35a401b0f",
+      "selected": 0,
+      "reason": "Un taux plus faible requiert plus de CA pour couvrir les mêmes fixes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "517fcc227e5768c729a6b88b60f05a6abcf7ded54ce51b50526ea2f6b1684a73",
+      "selected": 0,
+      "reason": "20unités stockées absorbent600/120=5 de fixes chacune, donc100euros de résultat différé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "cc69d4945dea5c8f56001ba780d01f221d49bdbf4eab1155feefa8aaef17e6b6",
+      "selected": 0,
+      "reason": "Deux euros de hausse variable sur cinq cents unités réduisent la marge de mille euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "2d2b7f06b79b151c311e65082e91a43ff4484d7bd4cdda416e444e0c54ad8036",
+      "selected": 1,
+      "reason": "Les cent premières contribuent1000, puis40unités à5 couvrent les200restants.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "a756910dda937654f903e32aa0957091b9e2122b832e80cce2aed2d5018b1ff8",
+      "selected": 1,
+      "reason": "Au-dessous du seuil avec marge positive, la contribution ne couvre pas les fixes : le résultat est négatif.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "ce01d499184c3354449e385fc962a39db0b0d31508dc1cc90adfbb0850732e0c",
+      "selected": 0,
+      "reason": "Quatre-vingt mille fois vingt-cinq pour cent donnent vingt mille, plafond de fixes pour résultat non négatif.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "ba9ca93ec3d029e9b89065a540d6a1940cfa82c328e6648fdb67b83b56e12e73",
+      "selected": 1,
+      "reason": "La charge fixe est soustraite deux fois malgré ses libellés différents.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "6a93354d7df964676fe9db2d39bce25998fd60ca57bae371a6c460585f646bee",
+      "selected": 0,
+      "reason": "La contribution par unité monte mais celle par euro de vente baisse.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "ba9ad96ed492f9d6b6dd1e70d0c6fd7c21fb436136fe37c3058c7f63314a66b1",
+      "selected": 3,
+      "reason": "Les valeurs doivent être remises sur une même base de taxe et de temps.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "195151f2e075fc06163fd0b94054da0b489b8df142afa3c1a69a72071d632e0b",
+      "selected": 3,
+      "reason": "La baisse de résultat est un critère partiel sans mesure du bénéfice qualité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "baae2fb631968a3780f8d1fea9efbbd2b5bb298ed1d11c61e6d68e2a1332ed81",
+      "selected": 1,
+      "reason": "Les points haut et bas sont définis par les volumes100et300, pas par le coût maximal1700.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "30c0d9acd2d046022241bc9984deff3b894645b252bbb040bb4159ca7cbd8ec5",
+      "selected": 2,
+      "reason": "Cinquante mille fois trente-deux pour cent donnent seize mille de marge sur coûts variables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "9bf8b11c67107a9e816dcbbc5d489b009c9755d2c1ea7fc6023ca089e64ed091",
+      "selected": 0,
+      "reason": "Une marge négative ne couvre pas des fixes positifs par hausse du volume.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "de8d234c2acb55928b6d295d32aed9c34a8e29b357280377012ed322b7704133",
+      "selected": 3,
+      "reason": "La reconstitution teste le calcul annoncé sans valider les hypothèses.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "79fde1f49bb3e76ba9494dcaf07604923837b32d4efc95d3df5ae01135908c4d",
+      "selected": 2,
+      "reason": "30000divisés par10000 donnent un levier de3.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "8c07deb8700e288431b1efc93d85231e5d9f3b2de2a758b7f230287b64d96f91",
+      "selected": 2,
+      "reason": "600nets exigent800avant prélèvement, plus1000fixes, soit180unités à10.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

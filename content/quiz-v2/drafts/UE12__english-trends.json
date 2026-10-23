@@ -1,0 +1,353 @@
+{
+  "module": "UE12",
+  "chapter": "english-trends",
+  "sourceHash": "9eabf97cf95ae61ed76f9c6728adbc2e9790f3b1d659bf93ab2a5fea02d033cd",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "A report says \"Demand has been rising since January\" and the reporting period is still ongoing. Which interpretation fits this wording?",
+      "options": [
+        "The upward movement began in January and has continued into the current period.",
+        "The upward movement is scheduled to start in a future January.",
+        "The upward movement ended before January began.",
+        "The sentence states only January’s final demand level, without describing a movement."
+      ],
+      "answer": 0,
+      "explanation": "Has been rising since links an ongoing process with its starting point. It is not a forecast or merely a statement of the level at one date."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which phrase correctly completes \"The report records ___ demand for the service\", when the writer means that demand became lower?",
+      "options": [
+        "a decline at",
+        "a decline in",
+        "a declining of",
+        "a decline to"
+      ],
+      "answer": 1,
+      "explanation": "A decline in demand names the variable that became lower. A decline of normally introduces an amount; a decline to introduces the level reached."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Sales rose for several months and then stayed close to the same level. Which expression best describes this final phase?",
+      "options": [
+        "Sales accelerated.",
+        "Sales reversed their upward trend and fell.",
+        "Sales levelled off.",
+        "Sales continued rising at an increasing rate."
+      ],
+      "answer": 2,
+      "explanation": "Levelled off describes a movement becoming broadly flat after an increase or decrease. It differs from acceleration or reversal into a decline."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Orders increased by 9.8%. Which description retains that figure’s proximity to 10% without placing it above 10%?",
+      "options": [
+        "Orders increased by just over 10%.",
+        "Orders increased by at least 10%.",
+        "Orders increased by no less than 10%.",
+        "Orders increased by just under 10%."
+      ],
+      "answer": 3,
+      "explanation": "Just under places the figure slightly below the reference value. Just over, at least and no less than place it above or at that value."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "The source reports “an increase of 5% over the full two-year period”. A summary calls it “5% every year”. What has been altered?",
+      "options": [
+        "The period to which the growth rate applies",
+        "The currency in which the figures are reported",
+        "The distinction between gross and net profit",
+        "The identity of the reporting company"
+      ],
+      "answer": 0,
+      "explanation": "Un taux cumulé sur deux ans n’est pas un taux à appliquer chaque année. La reformulation doit conserver la durée à laquelle la variation se rapporte."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report gives a percentage increase in units sold but no selling-price information. Which description stays within the evidence?",
+      "options": [
+        "The average selling price increased by that percentage.",
+        "The volume of units sold increased.",
+        "Sales revenue increased by the same percentage.",
+        "Net profit increased by the same percentage."
+      ],
+      "answer": 1,
+      "explanation": "Une hausse des quantités renseigne sur le volume. Sans prix et sans coûts, elle ne fixe ni la croissance du chiffre d’affaires ni celle du bénéfice."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Revenue fell from €100,000 to €80,000 and then rose to €90,000. Which wording accurately describes the last movement?",
+      "options": [
+        "Revenue recovered fully to its initial level.",
+        "Revenue reached a new high above its initial level.",
+        "Revenue recovered partially but remained below its initial level.",
+        "Revenue continued falling from its intermediate low."
+      ],
+      "answer": 2,
+      "explanation": "Recovered partially describes a rise after the fall that does not restore the starting level. The final €90,000 is between the low and the initial €100,000."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Actual output was 105 units against a target of 100. Which wording accurately states performance against the target?",
+      "options": [
+        "Output fell short of the target.",
+        "Output exactly met the target.",
+        "Output was capped at the target.",
+        "Output exceeded the target."
+      ],
+      "answer": 3,
+      "explanation": "Exceed means to be above the reference. Fall short means to be below, and exactly meet means equality; a cap is a limit rather than the reported excess."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A source says “sales peaked at €3 million in May”. Which summary preserves both the level and its status?",
+      "options": [
+        "Sales reached their highest reported level of €3 million in May.",
+        "Sales increased by exactly €3 million in May.",
+        "Sales remained at €3 million throughout the year.",
+        "Sales will peak at €3 million next May."
+      ],
+      "answer": 0,
+      "explanation": "Peaked at désigne un maximum observé. Il ne donne pas à lui seul le montant de l’augmentation, une stabilité annuelle ou une prévision future."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A chart labels its final observation “€7m”. Which wording preserves the unit when describing that level?",
+      "options": [
+        "Revenue rose by seven percentage points over the period.",
+        "Revenue ended the period at seven million euros.",
+        "Revenue ended the period at seven thousand euros.",
+        "Revenue rose by seven percent over the period."
+      ],
+      "answer": 1,
+      "explanation": "Le symbole m correspond ici à million, et at décrit le niveau. Passer à milliers, à un taux ou à des points modifie la mesure."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Monthly orders moved sharply up and down, although their annual average was close to last year’s. Which description preserves both features?",
+      "options": [
+        "Orders were stable in every month because the annual average was unchanged.",
+        "Orders declined steadily throughout the year because some months were lower.",
+        "Orders were volatile during the year despite a broadly unchanged annual average.",
+        "Orders rose steadily throughout the year because some months were higher."
+      ],
+      "answer": 2,
+      "explanation": "Volatile describes the pronounced fluctuations. A stable annual average does not imply that each observation was stable or followed one steady direction."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A production report gives a target of 80 units and actual output of 70 units. Which summary preserves the status of the figures?",
+      "options": [
+        "Actual output reached 80 units.",
+        "The target was revised down to 70 units.",
+        "The target guarantees 80 units next year.",
+        "Actual output was below the target."
+      ],
+      "answer": 3,
+      "explanation": "Une cible et un constat sont deux informations différentes. Le résultat de 70 unités reste inférieur à la cible de 80 ; aucun changement de cible ni résultat futur garanti n’est indiqué."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Profit fell \"by up to 8%\" across the divisions studied. Which statement preserves the limit expressed by \"up to\"?",
+      "options": [
+        "The decline is described as no greater than 8%; the wording does not require every division to have declined by exactly 8%.",
+        "Every division necessarily recorded exactly the same 8% decline.",
+        "Each division recorded a decline of at least 8%.",
+        "The combined profit margin necessarily finished at 8%."
+      ],
+      "answer": 0,
+      "explanation": "Up to states an upper limit in this description. It does not give a minimum, a common value for every division or the final margin."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A market report states that \"sales tripled\". Which comparison does that expression describe?",
+      "options": [
+        "The final sales level was the initial level plus 3%.",
+        "The final sales level was three times the initial level.",
+        "The final sales level was four times the initial level.",
+        "The final sales level was one third of the initial level."
+      ],
+      "answer": 1,
+      "explanation": "Tripled means that the final level equals three times the initial level. It is not a three-percent increase or an addition of three times the starting level."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A report correctly states that a margin rose by four percentage points. A headline changes this to “profit rose by four percent”. What is wrong?",
+      "options": [
+        "Percentage points always measure the growth of total profit.",
+        "The original statement already gave the total profit amount.",
+        "Both the indicator and the type of change have been altered.",
+        "Only the language has changed; the financial meaning is identical."
+      ],
+      "answer": 2,
+      "explanation": "La marge est un ratio, tandis que le profit est un montant. En outre, un écart en points ne se confond pas avec une hausse relative du bénéfice."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A report says that rising service revenue \"offset the fall in product revenue\" and total revenue was unchanged. What did the service increase do?",
+      "options": [
+        "It caused an additional decline of the same size in total revenue.",
+        "It converted the product-revenue decline into a decline in costs.",
+        "It left total revenue lower by the full amount of the product-revenue decline.",
+        "It compensated for the product-revenue decline in the total."
+      ],
+      "answer": 3,
+      "explanation": "Offset means to counterbalance another movement. In this case the stated unchanged total makes the compensating role explicit."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A table labels a margin movement “pp”. A translator expands this as “percentage profits”. Which expansion is correct?",
+      "options": [
+        "Percentage points",
+        "Payment periods",
+        "Price per product",
+        "Profit payments"
+      ],
+      "answer": 0,
+      "explanation": "Dans un tableau de variation de taux ou de marges, pp abrège percentage points. Percentage profits n’est pas l’intitulé de cette unité."
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The report says that subscription services \"accounted for 30% of revenue\". What does this phrase describe?",
+      "options": [
+        "The rate at which subscription revenue increased during the year.",
+        "The share of total revenue generated by subscription services.",
+        "The share of subscription revenue remaining after its costs were deducted.",
+        "The amount by which total revenue exceeded its previous level."
+      ],
+      "answer": 1,
+      "explanation": "Accounted for describes a contribution to a total here, not a growth rate or margin. The denominator is total revenue."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A seasonal business compares December sales with November sales. Which additional comparison would help distinguish seasonal patterns from year-on-year performance?",
+      "options": [
+        "December sales with the same year’s annual total alone, treated as an equivalent monthly reference.",
+        "December sales with an unrelated low-season month, without controlling the seasonal difference.",
+        "December sales with December sales in the previous year",
+        "December sales with the average of January and February alone, treated as a year-on-year comparison."
+      ],
+      "answer": 2,
+      "explanation": "Une comparaison avec le même mois de l’année précédente aide à tenir compte de la saisonnalité. Elle doit néanmoins conserver le même périmètre et les mêmes unités."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Costs fell while sales remained stable. Which connecting expression accurately contrasts the two observations?",
+      "options": [
+        "Costs fell because sales remained stable, making the contrast a stated causal explanation.",
+        "Costs fell only if sales remained stable, making the contrast a condition.",
+        "Costs fell so that sales would remain stable, making the contrast a purpose.",
+        "Costs fell, whereas sales remained stable."
+      ],
+      "answer": 3,
+      "explanation": "Whereas marque un contraste sans ajouter une cause. Des ventes stables et des coûts en baisse peuvent être rapportés ensemble sans surinterprétation."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A chart reports growth \"year to date\" at the end of September. Which period does this expression normally cover in a calendar-year report?",
+      "options": [
+        "From the beginning of the current year through the September reporting date.",
+        "September alone compared with August.",
+        "The twelve months ending in September, regardless of the start of the current year.",
+        "The completed previous calendar year only."
+      ],
+      "answer": 0,
+      "explanation": "Year to date refers to the elapsed part of the current reporting year. It differs from month-on-month, a rolling twelve-month period and the previous full year."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report gives a forecast for next quarter and actual figures for the current quarter. Which summary makes the distinction clear?",
+      "options": [
+        "The current figures are hypothetical because a forecast is also shown.",
+        "Current figures are observed; next-quarter figures remain projections.",
+        "Both sets of figures are completed historical results.",
+        "The forecast guarantees next quarter’s outcome."
+      ],
+      "answer": 1,
+      "explanation": "Le fait qu’un document réunisse constat et prévision ne change pas le statut de chaque série. Le commentaire doit préserver cette distinction temporelle et probatoire."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A writer compares nominal sales growth with a constant-price growth figure as if both measured the same change. Which issue should be disclosed?",
+      "options": [
+        "The shared percentage sign establishes that both figures use an identical price basis.",
+        "Both growth figures necessarily remove the effect of changing prices because each compares two periods.",
+        "The price basis differs between the two measures.",
+        "The nominal figure can be treated as a volume measure without checking whether price changes were removed."
+      ],
+      "answer": 2,
+      "explanation": "Une mesure à prix constants vise à neutraliser un effet de prix, contrairement à une évolution nominale. Le même symbole % ne rend pas les bases équivalentes."
+    }
+  ]
+}

@@ -1,0 +1,469 @@
+{
+  "module": "UE5",
+  "chapter": "dossier-synthese",
+  "sourceHash": "256e3172abf30fda33f5bcd5f79bddf9f899bb6d0bceb702d7f25e5cdfc6ebb3",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pourquoi l’expression «productivité apparente du travail» ne permet-elle pas d’attribuer toute la richesse produite au seul effort des travailleurs ?",
+      "options": [
+        "Le ratio ne rapporte la production qu’au travail, mais son niveau dépend aussi des autres facteurs et de leur combinaison.",
+        "Le mot apparente signifie que la production mesurée est nécessairement fictive.",
+        "Le ratio déduit déjà séparément toute contribution des équipements et des consommations intermédiaires.",
+        "La présence des heures au dénominateur démontre que les équipements ne contribuent pas à la production."
+      ],
+      "answer": 0,
+      "explanation": "Le terme apparente signale le caractère partiel de l’indicateur. Ce n’est ni une mesure de l’effort pur ni une preuve de production fictive.",
+      "references": [
+        {
+          "title": "Insee — Productivité apparente du travail",
+          "url": "https://www.insee.fr/fr/metadonnees/definition/c1977"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La production du trimestre est divisée par les heures du seul dernier mois. Quel contrôle de périmètre manque ?",
+      "options": [
+        "La seule cohérence des produits vendus, qui rendrait les durées automatiquement comparables.",
+        "La même période au numérateur et au dénominateur.",
+        "La seule durée la plus récente, supposée représenter tout le trimestre sans extrapolation explicitée.",
+        "La concordance des totaux annuels de ventes, sans rapprochement des heures de la période mesurée."
+      ],
+      "answer": 1,
+      "explanation": "Un ratio de productivité relie la production aux heures qui lui correspondent. Des périodes différentes peuvent produire une valeur artificielle sans représenter les conditions réelles de réalisation de cette production."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une mesure indique 0,2 heure nécessaire par pièce, puis 0,1 heure par pièce. Comment lire le sens de cette évolution, pour des pièces comparables ?",
+      "options": [
+        "Le nombre de pièces par heure diminue dans le même sens que les heures par pièce.",
+        "La mesure en heures par pièce est identique au nombre de pièces par heure.",
+        "Le temps nécessaire par pièce diminue ; cette mesure est l’inverse d’une productivité exprimée en pièces par heure.",
+        "La baisse signifie que la production exige davantage de travail pour chaque pièce."
+      ],
+      "answer": 2,
+      "explanation": "Heures par pièce est une intensité en travail. Sa baisse signifie moins de temps pour une pièce ; le ratio inverse pièces par heure augmente."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux groupes suivent initialement la même tendance. Un pilote de formation concerne un groupe tiré au sort, avec un autre groupe comparable non formé pendant l’essai. Quel intérêt présente ce groupe témoin ?",
+      "options": [
+        "Garantir que les deux groupes auront exactement le même résultat malgré la formation.",
+        "Permettre d’attribuer au pilote toute hausse nationale observée, sans regarder les résultats des groupes.",
+        "Remplacer toute mesure avant et après par le seul nombre de personnes formées.",
+        "Fournir un point de comparaison pour les évolutions qui auraient pu se produire même sans la formation."
+      ],
+      "answer": 3,
+      "explanation": "Le groupe témoin aide à construire une comparaison contrefactuelle. Le tirage au sort soutient la comparabilité, sans garantir des résultats identiques ni dispenser de mesurer l’effet."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un atelier compte 1 000 pièces fabriquées dont 50 sont rebutées, pour 100 heures. On définit la productivité utile comme les pièces conformes par heure. Quelle valeur obtient-on ?",
+      "options": [
+        "9,5 pièces par heure",
+        "10 pièces par heure",
+        "0,5 pièce par heure",
+        "10,5 pièces par heure"
+      ],
+      "answer": 0,
+      "explanation": "Les pièces conformes sont 1 000 − 50 = 950. Le ratio utile vaut 950 / 100 = 9,5 pièces par heure ; compter la production brute répondrait à une autre définition.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1000
+                },
+                {
+                  "value": 50
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 9.5,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une entreprise externalise une étape : les heures internes baissent mais sa production déclarée conserve toute la prestation. Pourquoi la hausse du ratio interne doit-elle être interprétée prudemment ?",
+      "options": [
+        "Attribuer entièrement le gain de ratio à une meilleure méthode interne sans examiner le travail acheté.",
+        "Le périmètre des heures a changé ; une partie du travail peut avoir été déplacée hors du champ mesuré.",
+        "Comparer seulement les heures internes avant et après comme mesure de tout le travail nécessaire.",
+        "Déduire de la baisse des heures internes que les fournisseurs n’ont fourni aucun travail supplémentaire."
+      ],
+      "answer": 1,
+      "explanation": "Le ratio interne peut augmenter parce que le travail d’un prestataire n’est plus au dénominateur. Il faut examiner la frontière de mesure avant d’attribuer tout le gain à une meilleure efficacité totale."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La productivité globale augmente alors que la productivité de chaque secteur est inchangée. La part de l’emploi augmente dans le secteur le plus productif. Quelle explication est compatible avec ces faits ?",
+      "options": [
+        "Une hausse nécessaire de la productivité à l’intérieur de chaque secteur malgré leur stabilité annoncée.",
+        "Une erreur certaine de calcul car une composition différente ne peut pas modifier un agrégat.",
+        "Un effet de réallocation de l’emploi vers un secteur à productivité plus élevée.",
+        "Une augmentation identique de l’effort de chaque salarié comme seule explication possible."
+      ],
+      "answer": 2,
+      "explanation": "La productivité agrégée dépend des productivités sectorielles et de leur poids. Déplacer le travail vers des secteurs plus productifs peut relever la moyenne sans gain interne."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un rapport associe une hausse de productivité à une nouvelle organisation, mais ne contrôle pas la composition des produits fabriqués. Quelle hypothèse alternative faut-il examiner ?",
+      "options": [
+        "Une amélioration de méthode nécessairement identique pour tous les produits, même sans observations par catégorie.",
+        "Une hausse d’effort démontrée par le seul total de pièces, sans détail des tâches.",
+        "Une variation de prix comme seule explication d’un ratio en pièces physiques par heure.",
+        "Un changement vers des produits plus rapides à fabriquer peut expliquer une partie du ratio."
+      ],
+      "answer": 3,
+      "explanation": "La composition de l’activité peut modifier le nombre de pièces par heure sans changement équivalent de chaque processus. Il faut considérer cette possibilité avant d’attribuer exclusivement l’écart à l’organisation."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "À productivité supposée constante de huit pièces par heure, combien d’heures faut-il prévoir pour 1 000 pièces comparables ?",
+      "options": [
+        "125 heures",
+        "8 000 heures",
+        "992 heures",
+        "0,008 heure"
+      ],
+      "answer": 0,
+      "explanation": "On inverse le ratio production/heures : heures = production / productivité, soit 1 000 / 8 = 125. La prévision reste conditionnelle à la stabilité de la productivité et à la comparabilité des pièces.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1000
+            },
+            {
+              "value": 8
+            }
+          ]
+        },
+        "expected": 125,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un atelier inclut les heures de réglage dans le travail mesuré, l’autre les exclut. Que faut-il préciser avant de comparer leurs ratios ?",
+      "options": [
+        "Comparer les ratios comme s’ils couvraient la même ressource dès lors que les deux sont en pièces par heure.",
+        "La convention d’heures retenues et l’effet de cette différence de champ.",
+        "Considérer les réglages comme nuls dans le premier atelier uniquement pour améliorer son résultat affiché.",
+        "Remplacer les heures de réglage du second atelier par celles du premier sans vérifier les pratiques."
+      ],
+      "answer": 1,
+      "explanation": "Les heures indirectes ou de réglage peuvent changer le dénominateur. Il faut harmoniser les conventions ou expliciter la limite de comparaison, sans confondre une différence comptée avec un avantage réel."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans une entreprise, on souhaite mesurer la richesse nouvellement créée plutôt que la valeur totale des ventes incluant des biens achetés à d’autres entreprises. Quel numérateur convient à une mesure usuelle de productivité apparente du travail ?",
+      "options": [
+        "Le seul chiffre d’affaires courant, sans retrait des consommations intermédiaires.",
+        "Le total des achats de consommations intermédiaires, sans la production propre.",
+        "La valeur ajoutée en volume.",
+        "Le solde de trésorerie disponible à la date de clôture."
+      ],
+      "answer": 2,
+      "explanation": "La valeur ajoutée mesure la richesse créée après consommations intermédiaires ; une évaluation en volume distingue cet apport des seules variations de prix.",
+      "references": [
+        {
+          "title": "Insee — Productivité apparente du travail",
+          "url": "https://www.insee.fr/fr/metadonnees/definition/c1977"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Une étude mesure un résidu de productivité multifactorielle après prise en compte du travail et du capital. Pourquoi ne peut-elle l’appeler automatiquement «progrès technique pur» ?",
+      "options": [
+        "La décomposition observe directement chaque invention et exclut toute autre influence par définition.",
+        "Le résidu est toujours égal au nombre de machines achetées pendant la période.",
+        "Toute modification de méthode statistique est nécessairement sans effet sur ce résidu.",
+        "Le résidu peut aussi refléter organisation, effets d’échelle ou erreurs de mesure non séparés par cette décomposition."
+      ],
+      "answer": 3,
+      "explanation": "La productivité multifactorielle est obtenue par résidu. Plusieurs influences peuvent y être agrégées ; son interprétation exige donc des précautions.",
+      "references": [
+        {
+          "title": "OCDE — Multifactor productivity",
+          "url": "https://www.oecd.org/en/data/indicators/multifactor-productivity.html"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Deux unités comparables produisent respectivement 100 pièces en 10 heures et 900 pièces en 50 heures. Quelle productivité horaire agrégée obtient-on ?",
+      "options": [
+        "16,67 pièces par heure",
+        "14 pièces par heure",
+        "28 pièces par heure",
+        "10 pièces par heure"
+      ],
+      "answer": 0,
+      "explanation": "Le total est 1 000 pièces pour 60 heures, soit 16,67 pièces par heure. La moyenne simple de leurs ratios, 14, attribuerait le même poids à des quantités de travail différentes.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 100
+                },
+                {
+                  "value": 900
+                }
+              ]
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 10
+                },
+                {
+                  "value": 50
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 16.67,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un atelier compare une semaine de forte activité à un mois entier incluant une fermeture saisonnière. Quelle réserve doit accompagner la comparaison ?",
+      "options": [
+        "Retenir le meilleur ratio disponible comme référence unique sans examiner la période couverte.",
+        "Les périodes et conditions d’activité peuvent ne pas être représentatives d’un même champ comparable.",
+        "Multiplier les deux ratios par la même constante comme correction suffisante de saisonnalité.",
+        "Comparer les seuls niveaux affichés en omettant les durées et conditions de fonctionnement."
+      ],
+      "answer": 1,
+      "explanation": "La durée et les conditions de mesure doivent être explicites. Une fermeture ou une activité saisonnière peut modifier le ratio ; il faut vérifier la comparabilité au lieu d’interpréter tout écart comme une différence d’organisation."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "On définit ici le coût salarial unitaire comme le coût du travail par heure divisé par la production par heure. À coût horaire inchangé, une meilleure productivité a quel effet sur ce coût unitaire ?",
+      "options": [
+        "Elle augmente le coût salarial par unité parce que davantage d’unités partagent le même coût horaire.",
+        "Elle laisse nécessairement le coût salarial unitaire inchangé tant que le salaire horaire est stable.",
+        "Elle réduit le coût salarial par unité produite, sans exiger une baisse du coût horaire.",
+        "Elle impose une baisse du salaire horaire de même montant que la production supplémentaire."
+      ],
+      "answer": 2,
+      "explanation": "Le coût horaire se répartit sur davantage d’unités. Le coût par unité peut donc baisser sans baisse de rémunération horaire ; cette relation ne couvre pas tous les autres coûts."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une direction attribue la hausse du ratio à une prime introduite le même mois qu’une baisse de qualité. Que faut-il comparer avant de parler de gain de performance ?",
+      "options": [
+        "Mesurer seulement les primes versées comme preuve de qualité des pièces obtenues.",
+        "Conserver uniquement le meilleur ratio journalier sans préciser la production non conforme.",
+        "Juger le résultat par la seule hausse de volume brut, en excluant les retours et rebuts.",
+        "La mesure de production utile, les autres changements et les éventuels effets sur la qualité."
+      ],
+      "answer": 3,
+      "explanation": "Une mesure partielle peut s’améliorer en déplaçant des coûts ou en dégradant le résultat utile. La qualité et les changements simultanés sont nécessaires pour apprécier la portée du gain et son explication."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "À productivité horaire inchangée, la durée moyenne travaillée par personne diminue. Quelle évolution de la production par personne est compatible avec cette situation ?",
+      "options": [
+        "Elle peut diminuer parce que chaque personne travaille moins d’heures, sans baisse de production par heure.",
+        "Elle doit augmenter parce qu’une durée plus courte augmente automatiquement la production totale.",
+        "Elle reste nécessairement inchangée puisque productivité par tête et productivité horaire sont identiques.",
+        "Elle mesure uniquement le nombre de personnes et ne dépend pas de leurs heures travaillées."
+      ],
+      "answer": 0,
+      "explanation": "Production par personne = production par heure × heures par personne, à champ cohérent. Les deux mesures de productivité peuvent donc évoluer différemment.",
+      "references": [
+        {
+          "title": "Insee — Productivité apparente du travail",
+          "url": "https://www.insee.fr/fr/metadonnees/definition/c1977"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un nouveau logiciel mesure les heures différemment à partir de juillet. Le graphique montre une rupture au même moment. Quel contrôle est prioritaire ?",
+      "options": [
+        "Attribuer la rupture au fonctionnement économique sans tester l’effet de la nouvelle mesure.",
+        "Vérifier l’effet du changement de convention et reconstruire si possible une série comparable.",
+        "Présenter les deux séries comme strictement identiques au motif qu’elles portent le même titre.",
+        "Moyenner les niveaux avant et après comme correction suffisante, sans connaître les nouvelles règles de comptage."
+      ],
+      "answer": 1,
+      "explanation": "Un changement de méthode peut produire une variation apparente. Il faut documenter les conventions et leur effet avant de conclure à une modification de l’efficacité réelle sur toute la série."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une entreprise prévoit d’augmenter ses ventes grâce à des gains de productivité. Pourquoi la possibilité de produire davantage ne suffit-elle pas à établir que ces ventes se réaliseront ?",
+      "options": [
+        "La hausse de productivité crée automatiquement une commande pour chaque unité supplémentaire.",
+        "Les clients doivent acheter la totalité de la capacité nouvelle dès qu’elle est disponible.",
+        "La capacité productive et les débouchés demandés par les clients sont deux conditions distinctes.",
+        "La production possible et les ventes réalisées constituent le même flux quelle que soit la demande."
+      ],
+      "answer": 2,
+      "explanation": "Un gain d’efficacité permet d’accroître l’offre possible, mais la vente dépend aussi des débouchés. Il faut distinguer capacité, production et commercialisation."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux entreprises produisent autant par heure aujourd’hui. L’une renouvelle ses équipements, l’autre reporte leur entretien nécessaire. Pourquoi cette égalité ne décrit-elle pas toute leur situation future ?",
+      "options": [
+        "Une égalité actuelle garantit des capacités identiques à toutes les dates futures.",
+        "Le report d’entretien prouve toujours un progrès technique durable.",
+        "Les investissements ne peuvent influencer que les prix, jamais les conditions de production.",
+        "Le ratio actuel n’établit pas à lui seul la soutenabilité de leurs capacités et de leur efficacité dans le temps."
+      ],
+      "answer": 3,
+      "explanation": "Une performance de période peut reposer sur des moyens entretenus différemment. Le ratio courant ne remplace pas l’examen des capacités futures et des besoins de renouvellement."
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un atelier produit 3 000 pièces pendant 9 000 minutes de travail. Quelle productivité exprime-t-on en pièces par heure ?",
+      "options": [
+        "20 pièces par heure",
+        "0,3333 pièce par heure",
+        "3 pièces par heure",
+        "180 pièces par heure"
+      ],
+      "answer": 0,
+      "explanation": "Il faut convertir 9 000 minutes en 150 heures, puis 3 000 / 150 = 20 pièces par heure. Diviser directement par les minutes donnerait un autre indicateur et une autre unité.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 3000
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 9000
+                },
+                {
+                  "value": 60
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 20,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une comparaison conserve la même quantité brute mais un atelier assure aussi un service après-vente important. Quelle information faut-il examiner pour ne pas masquer une différence de contenu ?",
+      "options": [
+        "Comparer uniquement les quantités brutes sans documenter les prestations incluses dans le travail.",
+        "Les activités incluses dans le champ de production et les heures associées au service.",
+        "Supposer que le prix du service corrige automatiquement toutes les différences de tâches et d’heures.",
+        "Exclure les heures de service dans un seul atelier sans retirer la prestation correspondante du champ comparé."
+      ],
+      "answer": 1,
+      "explanation": "La prestation mesurée peut dépasser le seul nombre de pièces. Le champ des activités et du travail doit être explicité afin qu’un contenu plus large ne soit pas assimilé sans examen à une inefficacité."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un atelier teste une méthode pendant une semaine et mesure une hausse. Avant de généraliser, pourquoi observer aussi la stabilité du résultat sur plusieurs cycles habituels ?",
+      "options": [
+        "Pour rendre la généralisation certaine par le seul allongement du calendrier, sans données supplémentaires.",
+        "Pour remplacer les observations du pilote par sa meilleure journée uniquement.",
+        "Pour vérifier si le gain persiste lorsque les conditions ordinaires et variations d’activité se reproduisent.",
+        "Pour garantir que chaque semaine future reproduira exactement la semaine d’essai."
+      ],
+      "answer": 2,
+      "explanation": "Un pilote court peut décrire un résultat transitoire. Des observations sur les cycles pertinents évaluent sa stabilité, sans constituer une garantie universelle."
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "sourceHash": "50817cddbc82deebfc7b811ab5a82f23f28640b143df53fe67cb240ef441e4c4",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "f1adc650f0a89894da33afb6ff43456af72c3835e490970ec794b77b47a4bf24",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Coupon facial : 2 000 × 3 % = 60 EUR."
+    },
+    {
+      "id": "q02",
+      "digest": "6b6f2d07835f0247c546d5781fd0ab35fd3e89b9e6c846d20c34b32e5521f402",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le coupon fixé au contrat se calcule sur le nominal 1 000, pas le cours courant 950."
+    },
+    {
+      "id": "q03",
+      "digest": "f8421f3dc602ede43b2548e955192e9210d644cfbe9171c484225f67613462c7",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Valeur actuelle : 55 / 1,10 = 50."
+    },
+    {
+      "id": "q04",
+      "digest": "71edcec708cd59e7e82c40b60a3800a58cdfdf7b50584c7c7341db7af46e1736",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Un flux présent vaut son montant : facteur un à la date de valorisation."
+    },
+    {
+      "id": "q05",
+      "digest": "1bd0abe4f7faf3d21d30dcbcb3a4b00396618e1fec287879d4a490c8bfdc4a02",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "100/1,10 + 1 100/1,10² = 1 000, au pair."
+    },
+    {
+      "id": "q06",
+      "digest": "ce7755298bfd5281ad26866e95a3e4ca78c8984264ca4a741085bb0f737916b9",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le nominal est déjà dans le flux final ; le modèle le compte deux fois."
+    },
+    {
+      "id": "q07",
+      "digest": "f03961391810e7d790e138d92ade0e6a6510cea4dbe12de0a0c3747c03358a71",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Décote rapportée au nominal : (1 000 − 960)/1 000 = 4 %."
+    },
+    {
+      "id": "q08",
+      "digest": "da624aa3ff806d937f454e998a4e6f0f8135959df1a23885477646bb967c5ff8",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Coupon inférieur au rendement requis donne une décote pour ce remboursement au pair sans défaut."
+    },
+    {
+      "id": "q09",
+      "digest": "e4ec893f96db319b7ebd1ac95a17d4971f9d64bcd8d9a7832c5a6cd6eee8bebd",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le facial détermine les coupons, le rendement sert à actualiser leur calendrier au prix étudié."
+    },
+    {
+      "id": "q10",
+      "digest": "f029a22ac16ab8506f943f14411a7d733880090267e910afba2495a720f1eeaa",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le contrat distingue la base nominale du coupon et la somme remboursée. La nouvelle question teste cette distinction contractuelle, sans refaire le calcul du dernier flux déjà traité en duration."
+    },
+    {
+      "id": "q11",
+      "digest": "434eb5fb78941d131f8748058d0f0bdcd8e8c2d946ea53b18f4c3b5af6c39e12",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le second coupon doit subir deux périodes d’actualisation. Coupons devenant variables et nominal nécessairement double sont des distracteurs faibles. Révision résolue de nouveau : le résultat retenu reste cohérent avec les unités et clauses explicites ; les erreurs proposées portent sur les conversions, les échéances ou les formules."
+    },
+    {
+      "id": "q12",
+      "digest": "a86f5f426e1b05d6c14b1325e05d846f6cdb371e71fd6e77448ed6184a88b3fd",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Prime monétaire : 1 035 − 1 000 = 35."
+    },
+    {
+      "id": "q13",
+      "digest": "3e6d08bb0e4ad1e7bfdc659eb558fd47077917f9dcea04c435f0aaf01aca5be8",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "À taux positif, ne pas actualiser surestime des paiements futurs positifs."
+    },
+    {
+      "id": "q14",
+      "digest": "ab3a9342d2d9cc37788a50113fa81929d17b551e6f0c3724bdf2595e6ee238e1",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le nominal et les clauses fixent le coupon, indépendamment du changement de prix de marché."
+    },
+    {
+      "id": "q15",
+      "digest": "0a1bb158975a35f4d6a24fcc59415617c2dcabaf9f4f68727ed37b6809d0220d",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Coupon futur = 48 × 1,05 = 50,40."
+    },
+    {
+      "id": "q16",
+      "digest": "70db95321199fd69dbcd561c9dcdc5329aaf2c4d5b89eaf68ec5c38d4c686952",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Facial égal au rendement et remboursement au pair donnent un prix au pair dans ce modèle."
+    },
+    {
+      "id": "q17",
+      "digest": "8c5aeca073b65c2cc8704da12a7419cdf5836a0449c1db09afe5e68175c8f11b",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le calendrier du nominal doit être corrigé. Réduire le nominal par les années et changer le facial pour compenser n’ont pas de vraisemblance financière. Révision résolue de nouveau : le résultat retenu reste cohérent avec les unités et clauses explicites ; les erreurs proposées portent sur les conversions, les échéances ou les formules."
+    },
+    {
+      "id": "q18",
+      "digest": "9236ade3c43b60c75b6a7c5a5476e3281ecd10b574f46756e56cbb6cd9407ec4",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Taux facial = 72/1 800 × 100 = 4 %."
+    },
+    {
+      "id": "q19",
+      "digest": "7988ea233866538501f68e11f5c5b251548d617503ca01743b4a3681afd735f9",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La décote actuelle ne garantit pas un prix de revente futur ni un gain net déterminé."
+    },
+    {
+      "id": "q20",
+      "digest": "6f2914534f91bc160d14196c6259cfc773aafbe90db2c0c0321b00a2b6c2b630",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Un taux annuel effectif demande une convention pour un demi-exercice. Coupon fictif et nominal transformé en rendement sont des alternatives absurdes. Révision résolue de nouveau : le résultat retenu reste cohérent avec les unités et clauses explicites ; les erreurs proposées portent sur les conversions, les échéances ou les formules."
+    },
+    {
+      "id": "q21",
+      "digest": "fca0c63399b989e695c544489d2f9605b72121be24cb5ed11dc2435fb4791f5d",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Trois titres à 980 donneraient 2 940 sans effet de bloc, mais l’introduction annonce deux obligations avant d’en demander trois : reformuler sur chaque titre d’une même émission. Révision résolue de nouveau : le résultat retenu reste cohérent avec les unités et clauses explicites ; les erreurs proposées portent sur les conversions, les échéances ou les formules."
+    },
+    {
+      "id": "q22",
+      "digest": "6e56c0172c6f78229dae719f1e06adb35aae5d6e9c8dbcf68f9a6124c1715120",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le prix théorique dépend des hypothèses et ne garantit pas la revente réelle."
+    },
+    {
+      "id": "q23",
+      "digest": "41be6a27e6fcfea1b86268157e3da02a5b9fd5c5456b64e85ca200ff3bd6f7b1",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Nominal moins prix sous le pair mesure la décote monétaire, pas le rendement annuel."
+    }
+  ]
+}

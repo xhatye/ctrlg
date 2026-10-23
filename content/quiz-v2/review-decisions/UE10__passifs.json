@@ -1,0 +1,248 @@
+{
+  "sourceHash": "6eee03893f7da3bcab38aa8540b0c032bbd0318fc4bd6c21bb3fca3ad1eed80f",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "bb1dc4bd6589c9b205e5e13256b704ff6b09bbae6fe8958061e0348e77bd5da0",
+      "selected": 0,
+      "reason": "Montant et échéance certains caractérisent une dette ; le litige demande les critères de provision.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "e8e71eab991849f7572317c6df868406741b80fca95269f7c99ecf51a076b188",
+      "selected": 2,
+      "reason": "Le document manquant ne suffit pas à créer l’incertitude d’une provision si montant et échéance sont déterminés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "37f10a3d801e568ac61068d85347f51901f8e7572bdd7d5d6054ffdad5f4b1d6",
+      "selected": 3,
+      "reason": "Selon le PCG, une provision est un passif dont le montant ou l’échéance n’est pas précisément fixé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "7d207198a1b7d814192194d0ce9775e6f9b91d4c1fef1b83a4df1b82e7bfa038",
+      "selected": 0,
+      "reason": "Placer de l’argent ne prouve pas les conditions de reconnaissance d’un passif comptable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "c16d209afbae742702f1c079395b6ce7023a5592903cc7a642c24ca56423c553",
+      "selected": 0,
+      "reason": "Les ventes passées et garanties contractuelles peuvent créer l’obligation actuelle nécessitant un examen de provision.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "42a439f32b7070816873db7526e03e47c3042b732c3d85c1d37689384c343416",
+      "selected": 2,
+      "reason": "Une rénovation future librement révocable sans engagement ne crée pas à elle seule l’obligation actuelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "d9b109999cf3edad832f518be1ea0ff02584640a72eacdfc3b685fedbc28ea2d",
+      "selected": 0,
+      "reason": "Le fait passé doit être complété par les conditions de sortie de ressources et d’estimation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "3913b5636569b5018e482e833698831f65403300e46db58edc19fc5c6130539f",
+      "selected": 0,
+      "reason": "Le manque de bénéfice ne permet pas d’omettre une provision remplissant les conditions applicables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "d7152ddb30cfe9094d05afd1aa3dd178de6941e5aa71be7f93664e09c421cab5",
+      "selected": 3,
+      "reason": "La provision doit d’abord être reliée aux faits passés créant une obligation actuelle, avant le budget ou le montant précédent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "d8947123e64eb7aad398308137d770e0a5dfccec87aba04e653b7a8054b7640e",
+      "selected": 1,
+      "reason": "3 000 × 70 % + 10 000 × 30 % = 5 100 euros selon la convention pondérée expressément imposée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "8d6d5f41cc2af8a5eeb89aa7cd02abc5e44cef0fdf77d70e95a0c37f21da5a11",
+      "selected": 3,
+      "reason": "Une moyenne imposée pondérée doit utiliser les probabilités distinctes et non des poids égaux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "d44ebbe54a69fc9b8a65f905a16dd8a07ae868bda78138a5bdc4cf07bbc0545d",
+      "selected": 3,
+      "reason": "Les faits, hypothèses et limites de l’estimation doivent être conservés ; le seul statut de l’expert ne justifie pas tout scénario.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "02a4091a2100748a319f6933a63ed64846edf8f0903cb59aeaafa984627e104b",
+      "selected": 0,
+      "reason": "7 400 nécessaires moins 6 000 existants donnent 1 400 euros de dotation complémentaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "fa59ed78749fbd4a5f84ef179467042373f1e5c84ba126771287b75d442cb916",
+      "selected": 3,
+      "reason": "Le fondement de déduction fiscale doit être vérifié séparément de la présence d’une dotation comptable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "2be16f881f0e770eb9588df15775189c618ffd7426c8f44625d3bc275d6a5e53",
+      "selected": 2,
+      "reason": "Une baisse justifiée de l’estimation nécessite de comparer et ajuster l’existant, pas conserver systématiquement le maximum.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "0841355d4c017dab9ba1a9de70e18eb94521bea6c89132feb25493baa801ada1",
+      "selected": 2,
+      "reason": "Il faut déterminer si la lettre ultérieure précise une situation déjà née à la clôture.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "8d1877d72e71387a51ab3dcdebdd185ed66cd02a3bc28e8b5a2c6234c4c0cb84",
+      "selected": 1,
+      "reason": "Un fait nouveau postérieur se distingue d’une situation antérieure précisée ; son information requise doit être examinée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "1a5d5f6a5848bb16e9cfcca1b8d50f660d986b570318a8dca3f88ccd5503d51f",
+      "selected": 0,
+      "reason": "5 800 moins 4 500 donnent 1 300 euros d’écart de mesure du même litige.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "f20dd2c94e9fb806329005d44d050d8d9260fb1fc4873c2175bbdac1496cfdf6",
+      "selected": 2,
+      "reason": "L’obligation peut naître en décembre et être confirmée en janvier ; la date de pièce seule ne décide pas du rattachement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "d41e936d6f193662f959db8d9cf3ee2fdfad587bcb86adda28b6e7d5613bccd1",
+      "selected": 1,
+      "reason": "Les informations nouvelles peuvent préciser des passifs déjà nés avant clôture, qui ne doivent pas être ignorés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "2d95481e42d2ce01ba9a2051bc8b5320b3e482185e4bd078fc1afe0783ad87d6",
+      "selected": 3,
+      "reason": "Les faits anciens et le projet nouveau du même document doivent être séparés selon leur situation propre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "d1be3a5f1703afa9831e47341b16ba248e450046fc29aa1687fcd99ae99d98f7",
+      "selected": 0,
+      "reason": "Une piste complète relie fait générateur, obligation, risque, mesure et dénouement, sans se limiter au montant réclamé ou aux paiements.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

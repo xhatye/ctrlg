@@ -1,0 +1,413 @@
+{
+  "module": "UE6",
+  "chapter": "diagnostic-fonctionnel",
+  "sourceHash": "7fcba6b98b5ef17c2d014170fe6077e699cced09d9aec8850ddf4df795ea0be3",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un dossier donne 180 000 € d’emplois stables et un FRNG de 35 000 €. Quelles ressources stables permettent de reconstituer cet équilibre ?",
+      "options": [
+        "215 000 €",
+        "145 000 €",
+        "180 000 €",
+        "35 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le FRNG est la différence ressources moins emplois. Les ressources sont donc 180 000 + 35 000 = 215 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 180000
+            },
+            {
+              "value": 35000
+            }
+          ]
+        },
+        "expected": 215000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un crédit fournisseur est inclus dans les ressources stables, bien qu’il relève du cycle d’exploitation dans le dossier. Quel agrégat ce classement surestime-t-il directement ?",
+      "options": [
+        "Les emplois stables",
+        "Le FRNG",
+        "Les créances clients",
+        "Le total des actifs du cycle"
+      ],
+      "answer": 1,
+      "explanation": "Ce crédit finance le cycle et ne relève pas des ressources stables du cas. L’y inclure gonfle directement le FRNG."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le FRNG devient négatif après une acquisition payée sans ressource durable nouvelle. Quelle lecture est correcte ?",
+      "options": [
+        "Les ressources stables excèdent les emplois stables mais couvrent une moindre part du cycle",
+        "Le déficit du FRNG mesure à lui seul la totalité du BFR",
+        "Les ressources stables ne couvrent plus tous les emplois stables",
+        "La trésorerie nette est négative sans qu’il soit nécessaire de connaître le BFR"
+      ],
+      "answer": 2,
+      "explanation": "Un FRNG négatif révèle un déficit de financement stable des emplois stables. Il ne mesure pas une perte comptable."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un actif stable est cédé et son retrait diminue les emplois stables ; les ressources stables sont supposées inchangées. Comment évolue le FRNG dans ce périmètre ?",
+      "options": [
+        "Il diminue",
+        "Il devient égal au produit de cession",
+        "Il reste fixe par définition",
+        "Il augmente"
+      ],
+      "answer": 3,
+      "explanation": "La diminution des emplois stables accroît leur différence avec les ressources stables. Cette lecture suppose bien les autres postes inchangés."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le FRNG s’améliore à cause d’une réduction des emplois stables, mais le directeur parle d’un apport nouveau de financement durable. Quelle précision faut-il apporter ?",
+      "options": [
+        "L’amélioration provient ici d’un moindre emploi, pas d’une ressource stable supplémentaire",
+        "Un nouveau financement stable a été obtenu pour le montant de l’amélioration",
+        "L’amélioration mesure directement une baisse du besoin d’exploitation",
+        "La hausse du FRNG prouve une hausse identique de trésorerie sans examen du BFR"
+      ],
+      "answer": 0,
+      "explanation": "La différence peut augmenter par hausse des ressources ou baisse des emplois. Les causes ont des implications différentes pour le diagnostic."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les actifs d’exploitation hors trésorerie valent 74 000 €. Les dettes d’exploitation du seul périmètre fourni valent 29 000 €. Quel BFRE obtient-on ?",
+      "options": [
+        "103 000 €",
+        "45 000 €",
+        "29 000 €",
+        "74 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le BFRE oppose emplois et ressources d’exploitation : 74 000 − 29 000 = 45 000 € de besoin net.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 74000
+            },
+            {
+              "value": 29000
+            }
+          ]
+        },
+        "expected": 45000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La banque est incluse par erreur parmi les créances clients dans le BFRE. Quel effet cela a-t-il sur l’analyse ?",
+      "options": [
+        "Le besoin du cycle est réduit du montant de disponibilités classé en clients",
+        "Le FRNG est majoré parce que la banque est devenue une créance d’exploitation",
+        "Le besoin du cycle est gonflé par un poste de trésorerie",
+        "Le classement accroît les dettes d’exploitation plutôt que les emplois du cycle"
+      ],
+      "answer": 2,
+      "explanation": "Le BFRE décrit les postes du cycle hors trésorerie. Inclure des disponibilités dans les clients mélange besoin de cycle et solde bancaire."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un dossier comporte des dettes hors exploitation, mais l’exercice calcule uniquement le BFRE. Comment faut-il traiter le périmètre ?",
+      "options": [
+        "Déduire toutes les dettes sans examiner leur nature",
+        "Ajouter les dettes hors exploitation aux stocks",
+        "Les remplacer par le montant des emprunts",
+        "Séparer ces dettes des dettes d’exploitation du calcul demandé"
+      ],
+      "answer": 3,
+      "explanation": "Le BFRE ne couvre que l’exploitation. Un besoin hors exploitation doit être suivi séparément si l’analyse globale du dossier l’exige."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise augmente simultanément son stock et son crédit fournisseur du même montant. Les autres postes sont fixes. Quel effet sur le BFRE ?",
+      "options": [
+        "Aucun effet net sur le BFRE",
+        "Une hausse égale au double du montant",
+        "Une baisse égale au stock acheté",
+        "Un BFRE nécessairement nul"
+      ],
+      "answer": 0,
+      "explanation": "Le nouvel emploi de stock est compensé par une ressource fournisseur identique. Le solde du cycle reste inchangé dans le périmètre simplifié."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le crédit fournisseur baisse alors que les actifs du cycle restent constants. Le rapport conclut à une baisse du BFRE. Quelle correction s’impose ?",
+      "options": [
+        "Le BFRE diminue du montant des dettes réglées",
+        "Le BFRE augmente, car une ressource du cycle diminue",
+        "Le BFRE reste constant car les actifs du cycle sont inchangés",
+        "La variation concerne uniquement le FRNG, pas le BFRE"
+      ],
+      "answer": 1,
+      "explanation": "À emplois identiques, une baisse des ressources d’exploitation accroît le besoin net. Le signe de la variation a été inversé."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La trésorerie nette est de −12 000 € et le FRNG de 28 000 €. Aucun BFR hors exploitation. Quel BFRE explique ces montants ?",
+      "options": [
+        "16 000 €",
+        "−40 000 €",
+        "40 000 €",
+        "28 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Trésorerie = FRNG − BFRE ; on obtient BFRE = 28 000 − (−12 000) = 40 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 28000
+            },
+            {
+              "value": -12000
+            }
+          ]
+        },
+        "expected": 40000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La trésorerie nette baisse malgré un FRNG en hausse. Quelle situation peut expliquer cette évolution ?",
+      "options": [
+        "Le BFRE diminue et le FRNG augmente",
+        "Le BFRE reste constant et le FRNG augmente",
+        "Le BFRE devient plus négatif tandis que le FRNG augmente",
+        "Le BFRE augmente davantage que le FRNG"
+      ],
+      "answer": 3,
+      "explanation": "Le solde se dégrade lorsque la hausse du besoin dépasse l’amélioration du financement stable. Il faut comparer les deux variations."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un déficit de trésorerie nette est présenté comme une preuve suffisante de perte comptable. Quel examen manque-t-il ?",
+      "options": [
+        "Celui des produits et charges ; le solde fonctionnel mesure un financement",
+        "Celui des seuls emplois stables pour remplacer les charges",
+        "Celui du seul montant des fournisseurs pour prouver le bénéfice",
+        "Aucun : déficit de trésorerie et perte sont identiques"
+      ],
+      "answer": 0,
+      "explanation": "Le compte de résultat apprécie la performance. Des besoins de cycle ou d’investissement peuvent créer un déficit de trésorerie sans perte."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "FRNG et BFRE sont tous deux négatifs. Peut-on connaître le signe de la trésorerie nette sans leurs montants ?",
+      "options": [
+        "Oui, elle est toujours négative",
+        "Non, il faut comparer les deux valeurs",
+        "Oui, elle est toujours positive",
+        "Oui, elle est toujours nulle"
+      ],
+      "answer": 1,
+      "explanation": "La soustraction de deux nombres négatifs peut être positive, négative ou nulle. Le signe des agrégats seuls ne suffit pas."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Au cours d’une période, le FRNG augmente de 9 000 € et le BFRE baisse de 4 000 €. Quelle est la variation de trésorerie nette ?",
+      "options": [
+        "5 000 €",
+        "−13 000 €",
+        "13 000 €",
+        "−5 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La variation vaut ΔFRNG − ΔBFRE = 9 000 − (−4 000) = 13 000 €. Une réduction du besoin améliore aussi la trésorerie.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 9000
+            },
+            {
+              "value": -4000
+            }
+          ]
+        },
+        "expected": 13000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le total des actifs du cycle moins les dettes du cycle est retranché deux fois du FRNG. Quelle conséquence en résulte si le BFRE est positif ?",
+      "options": [
+        "Une trésorerie nette correcte car le cycle comporte deux catégories",
+        "Une hausse du FRNG du montant des fournisseurs",
+        "Une absence d’effet tant que le bilan est équilibré",
+        "Une trésorerie nette sous-estimée du BFRE compté deux fois"
+      ],
+      "answer": 3,
+      "explanation": "Le BFRE doit être déduit une seule fois. Le double retrait d’un besoin positif minore artificiellement le solde de trésorerie."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel ensemble correspond aux actifs du cycle hors trésorerie dans le cas simplifié stocks-clients-fournisseurs ?",
+      "options": [
+        "Stocks et créances clients",
+        "Stocks et dettes fournisseurs",
+        "Créances clients et emprunts financiers",
+        "Disponibilités bancaires et capitaux propres"
+      ],
+      "answer": 0,
+      "explanation": "Les stocks et les clients constituent les emplois du cycle. Les fournisseurs sont une ressource et la banque relève de la trésorerie."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les actifs du cycle hors trésorerie totalisent 96 000 € ; les stocks valent 41 000 €. Le cycle ne comprend que stocks et clients. Quel montant de créances clients reste-t-il ?",
+      "options": [
+        "137 000 €",
+        "55 000 €",
+        "41 000 €",
+        "96 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Les actifs du cycle sont stocks plus clients. Les clients représentent donc 96 000 − 41 000 = 55 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 96000
+            },
+            {
+              "value": 41000
+            }
+          ]
+        },
+        "expected": 55000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client règle intégralement sa créance. Aucun autre poste du cycle ne varie. Quelle transformation décrit ce paiement ?",
+      "options": [
+        "Une ressource stable devient un emploi stable",
+        "Un stock est transformé en dette fournisseur",
+        "Un actif du cycle devient de la trésorerie",
+        "Une nouvelle créance naît du règlement reçu"
+      ],
+      "answer": 2,
+      "explanation": "L’encaissement remplace le poste client par des disponibilités. Il ne crée pas une nouvelle vente ni un nouvel emploi du cycle."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le rapport affirme : « Les actifs du cycle ont augmenté, donc le BFRE a augmenté du même montant. » Quelle donnée faut-il aussi examiner ?",
+      "options": [
+        "La seule variation du chiffre d’affaires, sans examiner les dettes du cycle",
+        "La seule évolution du FRNG, utilisée comme équivalent du BFRE",
+        "Le seul solde bancaire final, sans tableau des postes d’exploitation",
+        "La variation des dettes d’exploitation"
+      ],
+      "answer": 3,
+      "explanation": "Le besoin net dépend aussi des ressources du cycle. Une hausse du crédit fournisseur peut compenser tout ou partie des actifs supplémentaires."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les stocks baissent mais les créances clients augmentent davantage. Sans autre mouvement, comment évoluent les actifs du cycle hors trésorerie ?",
+      "options": [
+        "Ils augmentent malgré la baisse des stocks",
+        "Ils diminuent en suivant uniquement le mouvement du stock",
+        "Ils restent constants parce qu’un poste baisse et l’autre augmente",
+        "Leur évolution suit les dettes fournisseurs plutôt que la somme stocks-clients"
+      ],
+      "answer": 0,
+      "explanation": "Il faut additionner les variations des deux emplois. La hausse des créances, si elle domine la baisse des stocks, augmente leur total."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un bilan ne donne que les stocks et les clients. Peut-on calculer le BFRE complet du modèle en supposant sans vérification les fournisseurs nuls ?",
+      "options": [
+        "Oui, tout poste non communiqué est nul dans un dossier réel",
+        "Non, il faut connaître ou justifier l’absence de dettes d’exploitation",
+        "Oui, les fournisseurs n’entrent que dans le FRNG",
+        "Non, car stocks et clients ne permettent même pas de calculer les actifs du cycle"
+      ],
+      "answer": 1,
+      "explanation": "Les actifs du cycle peuvent être calculés, mais un besoin net exige aussi les ressources correspondantes. Une donnée manquante n’est pas une donnée nulle."
+    }
+  ]
+}

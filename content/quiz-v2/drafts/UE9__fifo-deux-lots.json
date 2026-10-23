@@ -1,0 +1,477 @@
+{
+  "module": "UE9",
+  "chapter": "fifo-deux-lots",
+  "sourceHash": "a94a476a4274d9a519b658c232eff3afb0ad1b49484e4af7db2ad38582939c0a",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "La seule décision d’utiliser PEPS au lieu du CMP change-t-elle le coût total des deux lots déjà achetés, sans correction de valeur ?",
+      "options": [
+        "Non, elle change leur répartition entre sorties et stock final",
+        "Oui, elle modifie le prix réellement payé aux fournisseurs",
+        "Oui, elle supprime le coût du premier lot",
+        "Non, mais elle impose un stock final en quantité identique aux ventes"
+      ],
+      "answer": 0,
+      "explanation": "La méthode affecte la répartition du disponible. Le coût des unités achetées ne change pas du seul fait de choisir une convention de sortie."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour reconstituer la valeur des deux lots, le fichier additionne leurs coûts unitaires sans tenir compte des quantités. Quel calcul faut-il rétablir ?",
+      "options": [
+        "La somme des prix de vente futurs",
+        "La somme de chaque quantité multipliée par son coût unitaire",
+        "La moyenne des dates d’entrée",
+        "Le produit des deux quantités sans prix"
+      ],
+      "answer": 1,
+      "explanation": "La valeur totale porte sur toutes les unités de chaque lot. Un coût unitaire isolé ne remplace pas la valeur de l’ensemble du lot."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les lots sont triés du prix le plus bas au plus élevé avant d’appliquer PEPS, sans regarder leurs dates. Quel critère de priorité manque-t-il ?",
+      "options": [
+        "L’ordre alphabétique des fournisseurs",
+        "Le plus grand total de facture",
+        "L’ordre chronologique d’entrée",
+        "La plus forte marge commerciale"
+      ],
+      "answer": 2,
+      "explanation": "PEPS signifie premier entré, premier sorti. La priorité découle de l’ancienneté d’entrée, pas de l’intérêt économique supposé du prix."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les deux seuls lots disponibles avant une sortie contiennent 75 et 125 unités. Après une sortie de 140 unités, combien d’unités restent-elles ?",
+      "options": [
+        "65 unités",
+        "200 unités",
+        "140 unités",
+        "60 unités"
+      ],
+      "answer": 3,
+      "explanation": "Le contrôle quantitatif est indépendant du coût : 75 + 125 − 140 = 60 unités restantes, avant d’identifier leur lot.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 75
+                },
+                {
+                  "value": 125
+                }
+              ]
+            },
+            {
+              "value": 140
+            }
+          ]
+        },
+        "expected": 60,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Avant une sortie, le premier lot contient 100 unités et le second 160 unités. Une sortie PEPS de 140 unités est demandée. Combien d’unités viennent du second lot ?",
+      "options": [
+        "40 unités",
+        "100 unités",
+        "140 unités",
+        "120 unités"
+      ],
+      "answer": 0,
+      "explanation": "Le premier lot fournit d’abord 100 unités. Les 140 − 100 = 40 unités complémentaires sont prélevées dans le second.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 140
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 40,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le premier lot contient 90 unités et la sortie PEPS n’en demande que 50. Quel prélèvement effectue-t-on dans le second lot ?",
+      "options": [
+        "Les 50 unités demandées",
+        "Aucun, le premier lot suffit",
+        "Les 40 unités restant dans le premier lot",
+        "La moitié de chaque lot sans tenir compte de l’âge"
+      ],
+      "answer": 1,
+      "explanation": "La priorité va au lot le plus ancien, dans la limite de la sortie. On ne passe au second que si le premier est entièrement épuisé."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La quantité du second lot prélevée est calculée par sorties moins quantité du premier lot. Le résultat est négatif parce que la sortie est petite. Quelle correction de raisonnement faut-il faire ?",
+      "options": [
+        "Le prélèvement négatif signifie une entrée dans le second lot",
+        "Il faut inverser les coûts des lots",
+        "Le prélèvement du second est nul tant que le premier suffit",
+        "Un second lot doit toujours fournir une quantité positive"
+      ],
+      "answer": 2,
+      "explanation": "La formule de complément suppose que le premier lot est épuisé. Une quantité négative indique ici une branche de calcul inadaptée."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La sortie est exactement égale à la quantité du premier lot. Quelle situation subsiste immédiatement après cette sortie, sans autre mouvement ?",
+      "options": [
+        "Les deux lots sont réduits de moitié",
+        "Le second est épuisé en premier",
+        "Le stock total est forcément nul",
+        "Le premier lot est épuisé et le second est intact"
+      ],
+      "answer": 3,
+      "explanation": "La sortie consomme précisément les unités les plus anciennes. Aucune unité du second lot n’est nécessaire à cette opération."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une sortie PEPS prélève quelques unités du second lot alors que des unités du premier demeurent disponibles, sans contrainte particulière du cas. Que faut-il vérifier ?",
+      "options": [
+        "Le respect de la priorité du lot le plus ancien",
+        "Le calcul de la TVA collectée seulement",
+        "La nécessité de valoriser tous les stocks au dernier prix",
+        "Le fait que les deux lots aient forcément le même prix"
+      ],
+      "answer": 0,
+      "explanation": "Dans le cas ordinaire fourni, le premier lot doit être épuisé avant le second. Un mélange anticipé ne respecte pas la convention annoncée."
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Deux lots sont entrés avant la sortie : 80 unités à 8 € puis 100 unités à 12 €. Une sortie PEPS de 120 unités est réalisée. Quel est son coût total ?",
+      "options": [
+        "1 440 €",
+        "1 120 €",
+        "960 €",
+        "1 200 €"
+      ],
+      "answer": 1,
+      "explanation": "Les 80 premières unités coûtent 640 €, puis 40 unités du second coûtent 480 €. Le coût sorti est 640 + 480 = 1 120 €.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 80
+                },
+                {
+                  "value": 8
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 120
+                    },
+                    {
+                      "value": 80
+                    }
+                  ]
+                },
+                {
+                  "value": 12
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1120,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une sortie dépassant le premier lot est entièrement valorisée à son ancien coût unitaire. Quelle correction faut-il effectuer ?",
+      "options": [
+        "Valoriser toute la sortie au prix de vente",
+        "Ajouter le coût des unités non sorties à la sortie",
+        "Valoriser le complément au coût du second lot",
+        "Calculer la moyenne simple des prix en ignorant les quantités"
+      ],
+      "answer": 2,
+      "explanation": "Le premier coût ne s’applique qu’aux unités disponibles de ce lot. Le complément prélevé dans le second doit garder son propre coût."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les deux lots ont exactement le même coût unitaire. Quelle conséquence pour la valeur d’une même sortie entre PEPS et CMP, dans ce cas sans autres frais ?",
+      "options": [
+        "PEPS produit toujours une sortie moins chère",
+        "CMP produit toujours une sortie moins chère",
+        "La valeur ne peut être calculée sans prix de vente",
+        "Les valeurs sont identiques malgré des conventions distinctes"
+      ],
+      "answer": 3,
+      "explanation": "Si tous les coûts unitaires sont égaux, leur ordre ou leur moyenne ne modifie pas le coût attribué à chaque unité sortie."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux lots égaux en quantité sont achetés successivement à coûts croissants. Une sortie égale au premier lot est valorisée en PEPS. Comparée au CMP des deux lots, sa valeur est-elle plus basse ?",
+      "options": [
+        "Oui, elle utilise entièrement le coût ancien plus faible",
+        "Non, elle utilise nécessairement le dernier coût",
+        "Non, elle inclut automatiquement une marge",
+        "Les valeurs sont toujours égales, même si les coûts diffèrent"
+      ],
+      "answer": 0,
+      "explanation": "Le premier lot est entièrement sorti au coût le plus bas. Le CMP des deux coûts distincts est supérieur à ce coût ancien dans les conditions données."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le coût PEPS des sorties est porté comme montant de chiffre d’affaires de vente. Quelle distinction manque-t-il ?",
+      "options": [
+        "La différence entre un coût PEPS des sorties et leur coût au CMP, qui expliquerait à elle seule le chiffre d’affaires",
+        "Le coût du stock sorti et le prix auquel il est vendu",
+        "La distinction entre stock initial et achats, dont la somme constituerait le produit des ventes",
+        "La différence entre quantité vendue et stock restant, supposée déterminer seule le prix facturé"
+      ],
+      "answer": 1,
+      "explanation": "La valorisation de stock mesure une consommation au coût. Le produit de vente dépend du prix facturé et ne se déduit pas de la seule méthode PEPS."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une sortie totale de 50 unités provient d’un premier lot à 6 €, puis d’un second à 10 €. Son coût PEPS total est 380 €. Combien d’unités du premier lot cette sortie contient-elle ?",
+      "options": [
+        "20 unités",
+        "38 unités",
+        "30 unités",
+        "50 unités"
+      ],
+      "answer": 2,
+      "explanation": "Si x unités coûtent 6 €, les autres coûtent 10 € : 6x + 10(50 − x) = 380. On obtient x = (500 − 380) / 4 = 30 unités.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 50
+                    },
+                    {
+                      "value": 10
+                    }
+                  ]
+                },
+                {
+                  "value": 380
+                }
+              ]
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 10
+                },
+                {
+                  "value": 6
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 30,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier impose PEPS, mais le préparateur répartit chaque sortie proportionnellement aux quantités des deux lots. Quel problème cela pose-t-il ?",
+      "options": [
+        "Il respecte forcément PEPS parce que les quantités sont conservées",
+        "Il transforme les achats en ventes sans effet sur le coût",
+        "Il ne peut se tromper tant que les deux lots sont positifs",
+        "Il applique un mélange pondéré au lieu de l’épuisement chronologique demandé"
+      ],
+      "answer": 3,
+      "explanation": "La conservation des quantités ne valide pas la méthode. PEPS suit l’ordre d’entrée et ne prélève pas une quote-part de chaque lot par défaut."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le premier lot est totalement épuisé. Le second comptait 140 unités à 15 €, dont 50 ont été sorties. Quelle valeur de stock final reste-t-il, sans correction de valeur ?",
+      "options": [
+        "1 350 €",
+        "2 100 €",
+        "750 €",
+        "90 €"
+      ],
+      "answer": 0,
+      "explanation": "Le second lot conserve 140 − 50 = 90 unités, valorisées à leur coût de 15 €, soit 1 350 €.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 140
+                },
+                {
+                  "value": 50
+                }
+              ]
+            },
+            {
+              "value": 15
+            }
+          ]
+        },
+        "expected": 1350,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une petite sortie n’a pas épuisé le premier lot. Peut-on valoriser tout le stock final au seul coût du second lot ?",
+      "options": [
+        "Oui, tout stock final PEPS prend toujours le dernier prix",
+        "Non, le reliquat contient encore des unités des deux lots",
+        "Oui, dès que deux lots ont été reçus",
+        "Non, il faut toujours le valoriser uniquement au premier prix"
+      ],
+      "answer": 1,
+      "explanation": "Le coût final dépend des lots réellement restants. Le dernier prix seul convient au cas où le premier lot a effectivement disparu."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La valeur disponible vaut 3 500 € et le coût PEPS des sorties 1 400 €, sans autres mouvements. Le stock final calculé est 2 600 €. Quel contrôle signale un problème ?",
+      "options": [
+        "Le stock final doit être exactement égal aux sorties",
+        "Le coût disponible ne peut pas être supérieur aux sorties",
+        "Les sorties et le stock final dépassent ensemble la valeur disponible",
+        "Un stock final supérieur au coût sorti est toujours interdit"
+      ],
+      "answer": 2,
+      "explanation": "Le total des valeurs doit se conserver : le reliquat attendu est 3 500 − 1 400 = 2 100 €. Le tableau affiche 500 € de trop."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les prix des lots successifs diminuent. Dans un cas où le premier lot sort entièrement et seul le second reste, comment se situe le coût unitaire final par rapport au premier coût ?",
+      "options": [
+        "Il est plus élevé parce que PEPS garantit une hausse",
+        "Il est toujours la moyenne simple des deux prix",
+        "Il est nécessairement égal au prix de vente",
+        "Il est plus faible, car le reliquat est le lot récent moins cher"
+      ],
+      "answer": 3,
+      "explanation": "Le reliquat conserve ici le coût du second lot. La conclusion dépend du sens des prix et du fait que le premier lot soit entièrement sorti."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le stock final est calculé au bon prix du second lot, mais la quantité inclut encore des unités déjà sorties de ce lot. Quel élément est erroné ?",
+      "options": [
+        "Le suivi des quantités restantes malgré un coût unitaire correct",
+        "Le coût unitaire du second lot, qu’il faudrait remplacer par celui du premier pour corriger le reliquat",
+        "Le coût moyen des deux lots, qu’il faudrait appliquer malgré la consigne PEPS",
+        "La valorisation des seules sorties du premier lot, sans contrôler le reliquat du second"
+      ],
+      "answer": 0,
+      "explanation": "Prix et quantité doivent tous deux être contrôlés. Une bonne unité de coût ne corrige pas un reliquat surestimé."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quels contrôles se complètent pour une fiche PEPS à deux lots ?",
+      "options": [
+        "Prix de vente identique au dernier achat et bénéfice nul",
+        "Ordre des lots, quantités restantes et réconciliation des valeurs au coût",
+        "Sorties proportionnelles à chaque lot et moyenne simple",
+        "Stock final systématiquement nul et achats égaux aux ventes"
+      ],
+      "answer": 1,
+      "explanation": "La priorité chronologique détermine les lots affectés, puis quantités et valeurs doivent se rapprocher du disponible réel. Aucun de ces contrôles ne suffit seul."
+    }
+  ]
+}

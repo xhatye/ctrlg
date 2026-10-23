@@ -1,0 +1,466 @@
+{
+  "module": "UE5",
+  "chapter": "marche-travail-ratios",
+  "sourceHash": "79356a43eb9cbf8825f39a02c0e906805f9e2507ebb2455834937db01f789056",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Dans une population définie sans double compte, 8 400 personnes sont en emploi et 600 sont classées chômeuses. Combien de personnes actives compte-t-on ?",
+      "options": [
+        "7 800 personnes",
+        "8 400 personnes",
+        "9 000 personnes",
+        "14 personnes"
+      ],
+      "answer": 2,
+      "explanation": "La population active réunit les personnes en emploi et les chômeurs : 8 400 + 600 = 9 000 personnes. Les inactifs n’entrent pas dans cette somme.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 8400
+            },
+            {
+              "value": 600
+            }
+          ]
+        },
+        "expected": 9000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une enquête classe 600 personnes au chômage parmi 9 000 actifs. Quel taux de chômage obtient-on, arrondi à deux décimales ?",
+      "options": [
+        "6,67 %",
+        "15 %",
+        "93,33 %",
+        "0,0667 %"
+      ],
+      "answer": 0,
+      "explanation": "Le taux de chômage rapporte les chômeurs à la population active : 600 / 9 000 × 100 ≈ 6,67 %. Le dénominateur n’est ni le seul emploi ni la population totale.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 600
+                },
+                {
+                  "value": 9000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 6.67,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Une population retenue de 12 000 personnes comprend 9 000 actifs. Quel est son taux d’activité ?",
+      "options": [
+        "133,33 %",
+        "25 %",
+        "9 %",
+        "75 %"
+      ],
+      "answer": 3,
+      "explanation": "Le taux d’activité utilise comme base la population retenue : 9 000 / 12 000 × 100 = 75 %. Le taux complémentaire de 25 % correspond ici aux inactifs sur ce même champ.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 9000
+                },
+                {
+                  "value": 12000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 75,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Dans la population d’âge retenu de 12 000 personnes, 8 400 occupent un emploi. Quel taux d’emploi calcule-t-on ?",
+      "options": [
+        "42 %",
+        "70 %",
+        "142,86 %",
+        "30 %"
+      ],
+      "answer": 1,
+      "explanation": "Le taux d’emploi est personnes en emploi / population retenue × 100, soit 8 400 / 12 000 × 100 = 70 %. Le dénominateur doit correspondre au même champ que l’emploi observé.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 8400
+                },
+                {
+                  "value": 12000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 70,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau additionne les personnes en emploi aux actifs puis appelle cette somme « population active totale ». Quel problème apparaît ?",
+      "options": [
+        "Les chômeurs sont comptés deux fois parce qu’ils seraient également inclus dans les personnes en emploi.",
+        "Les inactifs sont ajoutés aux personnes en emploi, ce qui change le champ de la population étudiée.",
+        "Les personnes en emploi sont déjà incluses dans les actifs et sont donc comptées deux fois.",
+        "La population totale d’âge retenu est confondue avec les seuls chômeurs dans cette addition."
+      ],
+      "answer": 2,
+      "explanation": "Les actifs comprennent déjà emploi et chômage. Ajouter l’emploi une seconde fois crée un double compte ; les catégories doivent être définies et articulées avant de former un total."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Des chômeurs cessent d’être classés actifs, sans qu’aucun nouvel emploi soit créé. Le taux de chômage peut-il diminuer ?",
+      "options": [
+        "Oui : la baisse peut venir d’une sortie de la population active plutôt que d’une hausse de l’emploi.",
+        "Non : toute baisse du taux prouve des créations d’emploi.",
+        "Non : les inactifs restent toujours au dénominateur du taux de chômage.",
+        "Oui : parce que le taux de chômage se calcule seulement sur les emplois créés."
+      ],
+      "answer": 0,
+      "explanation": "Le chômage et la population active peuvent diminuer lorsque des personnes sortent de l’activité. Le taux peut reculer sans création d’emploi ; il faut examiner les effectifs et les transitions, pas seulement le ratio."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des personnes auparavant inactives commencent à chercher un emploi et sont classées chômeuses selon l’enquête, sans emploi supplémentaire. Quel effet direct cela a-t-il sur la population active ?",
+      "options": [
+        "Elle diminue parce qu’on retire ces personnes de l’inactivité avant de les compter dans les actifs.",
+        "Elle reste identique parce que la population totale ne change pas.",
+        "Elle augmente seulement lorsque ces personnes obtiennent un emploi, même si elles sont déjà classées chômeuses.",
+        "Elle augmente, les nouveaux chômeurs entrant dans les actifs."
+      ],
+      "answer": 3,
+      "explanation": "Une personne classée chômeuse est active dans les définitions retenues. L’entrée de personnes auparavant inactives augmente donc les actifs, même si le nombre de personnes en emploi ne change pas."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un taux d’emploi est stable mais la part de temps partiel augmente. Quelle limite faut-il rappeler ?",
+      "options": [
+        "Le taux stable montre une durée moyenne stable parce que les personnes à temps partiel sont pondérées par leurs heures.",
+        "Un ratio fondé sur les personnes ne décrit pas à lui seul les durées ou la qualité des emplois.",
+        "Le taux stable signifie que le passage du temps plein au temps partiel a été compensé par davantage d’inactifs.",
+        "Le taux doit être recalculé en excluant toutes les personnes à temps partiel de l’emploi."
+      ],
+      "answer": 1,
+      "explanation": "Le taux compte des personnes en emploi sur une population. Deux situations peuvent présenter le même taux avec des volumes d’heures, contrats et conditions de travail différents."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans les définitions de l’exercice, qui compose la population active ?",
+      "options": [
+        "Tous les habitants sans distinction de situation.",
+        "Les seules personnes occupant un emploi salarié.",
+        "Les personnes en emploi et les chômeurs, sans double compte.",
+        "Les seuls chômeurs et les personnes inactives."
+      ],
+      "answer": 2,
+      "explanation": "La population active additionne emploi et chômage dans un même champ défini. Elle ne doit pas être confondue avec l’ensemble des habitants ni réduite aux seules personnes qui ont déjà un emploi."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste rapporte les chômeurs à toute la population d’âge retenu et nomme le résultat « taux de chômage ». Quelle correction est nécessaire ?",
+      "options": [
+        "Utiliser la population active comme dénominateur du taux de chômage défini ici.",
+        "Utiliser les seules personnes en emploi au dénominateur pour obtenir le taux de chômage parmi les actifs.",
+        "Utiliser les chômeurs plus les inactifs au dénominateur, en excluant les personnes en emploi.",
+        "Utiliser la population totale au dénominateur mais appeler le résultat taux d’emploi sans changer le numérateur."
+      ],
+      "answer": 0,
+      "explanation": "Le ratio chômeurs/population retenue répond à une autre question. Pour le taux de chômage, la base est la population active ; préciser les dénominateurs évite de confondre les indicateurs."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux régions affichent des taux d’activité calculés sur des tranches d’âge différentes. Que faut-il faire avant une comparaison directe ?",
+      "options": [
+        "Convertir les deux taux en effectifs pour que les différences de tranche d’âge disparaissent de la comparaison.",
+        "Comparer les taux tels quels en supposant que l’âge n’influence pas la participation au marché du travail.",
+        "Pondérer chaque taux par la taille totale du territoire sans harmoniser leurs tranches d’âge.",
+        "Harmoniser ou expliciter les champs de population utilisés."
+      ],
+      "answer": 3,
+      "explanation": "Le taux dépend du champ de population. Des tranches d’âge différentes peuvent modifier la composition du dénominateur et des actifs ; la comparabilité doit être examinée avant d’interpréter l’écart."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Sur un même champ, le taux d’activité vaut a et le taux de chômage vaut u, exprimés tous deux en proportions. Quelle expression donne le taux d’emploi ?",
+      "options": [
+        "a + u",
+        "a × (1 − u)",
+        "a / u",
+        "1 − a − u"
+      ],
+      "answer": 1,
+      "explanation": "Parmi les actifs, la part en emploi est 1 − u. La part des actifs dans la population est a ; leur produit donne donc la part en emploi dans la population retenue, à définitions cohérentes."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une population définie compte 15 000 personnes, dont 10 000 actifs. Combien sont inactives dans ce découpage exhaustif ?",
+      "options": [
+        "25 000 personnes",
+        "10 000 personnes",
+        "5 000 personnes",
+        "1,5 personne"
+      ],
+      "answer": 2,
+      "explanation": "Dans ce découpage, population totale retenue = actifs + inactifs. Les inactifs sont donc 15 000 − 10 000 = 5 000 personnes, et non seulement les chômeurs déjà inclus dans les actifs.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 15000
+            },
+            {
+              "value": 10000
+            }
+          ]
+        },
+        "expected": 5000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une population active de 20 000 personnes présente un taux de chômage de 10 %. Quel nombre de chômeurs cela représente-t-il ?",
+      "options": [
+        "2 000 personnes",
+        "18 000 personnes",
+        "200 personnes",
+        "200 000 personnes"
+      ],
+      "answer": 0,
+      "explanation": "Le taux exprimé en proportion vaut 0,10. Le nombre de chômeurs est 20 000 × 0,10 = 2 000 ; les 18 000 autres actifs sont en emploi dans le découpage retenu.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 20000
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 10
+                },
+                {
+                  "value": 100
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le nombre d’actifs augmente, mais la population retenue augmente encore plus vite en proportion. Que peut devenir le taux d’activité ?",
+      "options": [
+        "Il augmente parce qu’une hausse du nombre d’actifs suffit, même si le champ de population croît davantage.",
+        "Il reste identique parce que les deux effectifs augmentent, quel que soit leur rythme respectif.",
+        "Il devient égal au taux d’emploi dès que la population totale progresse plus vite que les actifs.",
+        "Il peut diminuer puisque le dénominateur progresse plus vite."
+      ],
+      "answer": 3,
+      "explanation": "Le taux est un rapport, pas un effectif. Une augmentation du nombre d’actifs peut coexister avec une baisse de leur part si la population de référence augmente davantage en proportion."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un rapport additionne le taux d’emploi et le taux de chômage pour obtenir 100 %, mais le premier utilise toute la population retenue et le second les actifs. Quel défaut de raisonnement apparaît ?",
+      "options": [
+        "Leur somme vaut100 % dès lors qu’ils utilisent tous deux des personnes en âge de travailler quelque part dans leur formule.",
+        "Ils n’ont pas le même dénominateur et ne constituent pas directement deux parts complémentaires.",
+        "Il suffit de remplacer le numérateur du taux de chômage par les inactifs pour rendre les deux taux complémentaires.",
+        "Il suffit de soustraire le taux d’emploi de100 % pour obtenir le taux de chômage parmi les actifs."
+      ],
+      "answer": 1,
+      "explanation": "Les parts complémentaires exigent une base identique et un découpage cohérent. Emploi/population et chômage/actifs ne sont pas directement additionnables pour former 100 %."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des chômeurs trouvent un emploi, sans autre entrée ni sortie d’activité. Que devient le nombre d’actifs ?",
+      "options": [
+        "Il diminue du nombre de recrutés.",
+        "Il augmente du nombre de recrutés.",
+        "Il reste stable, les personnes passant d’une composante des actifs à l’autre.",
+        "Il devient égal au nombre d’habitants."
+      ],
+      "answer": 2,
+      "explanation": "Les personnes concernées étaient déjà actives comme chômeuses. Leur passage à l’emploi change la composition des actifs sans modifier leur total, sous l’hypothèse d’absence d’autres mouvements."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le nombre de chômeurs augmente mais le taux de chômage diminue. Est-ce forcément une contradiction ?",
+      "options": [
+        "Non, les actifs peuvent avoir augmenté encore plus vite en proportion.",
+        "Oui, un ratio ne peut pas évoluer différemment de son numérateur.",
+        "Oui, le dénominateur du chômage est constant par définition.",
+        "Non, parce que les chômeurs sont exclus de la population active."
+      ],
+      "answer": 0,
+      "explanation": "Le taux dépend du numérateur et du dénominateur. Si les actifs progressent suffisamment, la part des chômeurs peut baisser alors même que leur nombre augmente ; les effectifs doivent être examinés ensemble."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Quelle question le taux d’activité permet-il de poser directement ?",
+      "options": [
+        "Quelle est la durée moyenne des épisodes de chômage ?",
+        "Quelle est la qualité des emplois proposés ?",
+        "Quelle est la part des chômeurs dans les seuls actifs ?",
+        "Quelle part de la population retenue est en emploi ou au chômage ?"
+      ],
+      "answer": 3,
+      "explanation": "Le taux d’activité situe les actifs dans la population de référence. La durée du chômage, la qualité des emplois et la part de chômeurs parmi les actifs demandent d’autres mesures."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux territoires ont le même nombre de personnes en emploi mais des populations retenues différentes. Peut-on en déduire des taux d’emploi égaux ?",
+      "options": [
+        "Oui, parce qu’un nombre égal de personnes en emploi implique la même part occupée dans chaque population.",
+        "Non, la base de population compte aussi dans le calcul du ratio.",
+        "Oui, parce que le taux d’emploi rapporte les emplois aux seuls actifs et élimine ainsi la population retenue.",
+        "Non, parce que le taux d’emploi serait déterminé par la part de chômeurs parmi les actifs sans utiliser la population totale."
+      ],
+      "answer": 1,
+      "explanation": "Un taux d’emploi rapporte l’effectif en emploi à une population définie. Un même numérateur donne des taux différents si les dénominateurs diffèrent ; il faut donc connaître les deux grandeurs."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une enquête indique qu’une personne n’occupe pas d’emploi. Peut-on la classer automatiquement comme chômeuse dans le découpage du dossier ?",
+      "options": [
+        "Oui, toute personne sans emploi est nécessairement active.",
+        "Oui, les inactifs sont toujours considérés comme des chômeurs.",
+        "Non, il faut appliquer les définitions de l’enquête pour distinguer chômage et inactivité.",
+        "Non, car une personne sans emploi doit forcément être exclue de toute population."
+      ],
+      "answer": 2,
+      "explanation": "L’absence d’emploi ne suffit pas à déterminer la catégorie. Les définitions imposées par l’enquête doivent être utilisées pour distinguer les chômeurs, inclus dans les actifs, des inactifs."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une personne occupe un emploi à temps partiel, souhaite travailler davantage et est disponible pour le faire. Les définitions statistiques du dossier retiennent cette situation parmi le sous-emploi. Comment la classer sans confondre les indicateurs ?",
+      "options": [
+        "En emploi et en sous-emploi ; elle n’est pas classée chômeuse du seul fait de vouloir davantage d’heures.",
+        "Chômeuse plutôt qu’en emploi, parce que son nombre d’heures n’atteint pas le temps plein.",
+        "Inactive dans le halo du chômage, parce qu’elle souhaite travailler davantage.",
+        "À la fois en emploi et au chômage au sens du même découpage, afin de compter ses heures manquantes."
+      ],
+      "answer": 0,
+      "explanation": "Le sous-emploi décrit notamment certaines personnes déjà en emploi à temps partiel qui souhaitent et peuvent travailler davantage. Il complète donc le taux de chômage sans transformer ces personnes en chômeurs ni les compter deux fois dans le découpage emploi/chômage/inactivité.",
+      "references": [
+        {
+          "title": "Insee — chômage, halo et sous-emploi",
+          "url": "https://www.insee.fr/fr/statistiques/documentation/Chomage_m.pdf"
+        }
+      ]
+    }
+  ]
+}

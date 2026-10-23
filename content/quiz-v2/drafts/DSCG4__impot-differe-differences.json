@@ -1,0 +1,413 @@
+{
+  "module": "DSCG4",
+  "chapter": "impot-differe-differences",
+  "sourceHash": "f8e942891b16738c879b9989be08967e80e3acf9a9ac9d72dbb60ae913c682ff",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que distingue principalement une analyse d’impôt différé d’un calcul d’impôt courant ?",
+      "options": [
+        "Les conséquences fiscales futures des éléments, au-delà de la base taxable de la période",
+        "Le seul montant des acomptes déjà payés à l’administration",
+        "Le seul délai accordé pour régler l’impôt courant de l’exercice",
+        "Le seul remboursement d’un excédent d’impôt courant déjà versé"
+      ],
+      "answer": 0,
+      "explanation": "L’impôt courant concerne les règles et la base taxable de la période. Le différé examine notamment les effets futurs du recouvrement d’un actif ou du règlement d’un passif dans un cadre identifié."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le dossier donne un impôt courant de 18 000 € et une charge d’impôt différé de 3 000 €, tous deux au résultat. Il n’existe aucun autre élément d’impôt. Quelle charge totale d’impôt réduit le résultat ?",
+      "options": [
+        "3 000 €",
+        "21 000 €",
+        "15 000 €",
+        "18 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Les deux charges du périmètre se cumulent au résultat : 18 000+3 000=21 000 €. Cela ne signifie pas que 21 000 € sont tous immédiatement payables.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 18000
+            },
+            {
+              "value": 3000
+            }
+          ]
+        },
+        "expected": 21000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un passif d’impôt différé est reconnu dans le modèle IAS 12 du dossier. L’analyste l’inscrit intégralement parmi les décaissements fiscaux déjà effectués cette année. Quelle distinction manque ?",
+      "options": [
+        "La charge d’impôt et l’acompte d’impôt, le passif différé devant être traité comme un acompte déjà versé",
+        "La dette courante et la dette différée, toutes deux devant être inscrites en décaissement à leur date de reconnaissance",
+        "La reconnaissance d’un effet fiscal futur et un paiement courant effectif",
+        "Le montant brut et le montant net du paiement, le passif différé devant simplement être compensé par l’impôt courant"
+      ],
+      "answer": 2,
+      "explanation": "Une conséquence fiscale future reconnue ne prouve pas un virement déjà réalisé. Le tableau de trésorerie doit conserver le rapprochement avec les paiements effectifs."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’auditeur reçoit un solde d’impôt différé de clôture de 8 000 €. Le préparateur l’utilise directement comme charge différée de l’année, sans lire le solde d’ouverture ni les autres mouvements. Que doit-il contrôler ?",
+      "options": [
+        "La seule concordance entre les 8 000 € et le dernier acompte versé",
+        "L’obligation de comptabiliser chaque solde de clôture comme une nouvelle charge entière",
+        "Le remplacement du solde différé par la base fiscale courante",
+        "Le passage du solde d’ouverture au solde de clôture et la nature de ses mouvements"
+      ],
+      "answer": 3,
+      "explanation": "Un stock au bilan n’est pas automatiquement le flux de charge annuel. Le rapprochement doit expliquer variations et affectations avant de déterminer ce qui passe au résultat."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un cas IAS 12 simplifié, un actif a une valeur comptable de 84 000 € et une base fiscale de 60 000 €. Quel écart entre ces deux valeurs faut-il d’abord analyser ?",
+      "options": [
+        "24 000 €",
+        "60 000 €",
+        "84 000 €",
+        "144 000 €"
+      ],
+      "answer": 0,
+      "explanation": "L’écart est 84 000−60 000=24 000 €. Son calcul précède l’examen du dénouement fiscal et des conditions de reconnaissance ; ce montant n’est pas encore un impôt.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 84000
+            },
+            {
+              "value": 60000
+            }
+          ]
+        },
+        "expected": 24000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pour un actif du modèle IAS 12 fourni, quelle question permet de comprendre sa base fiscale ?",
+      "options": [
+        "Quel impôt sera payé sur l’ensemble du résultat courant, sans isoler cet actif ?",
+        "Quel montant sera déductible fiscalement des avantages économiques lors de son recouvrement ?",
+        "Quelle est sa valeur comptable, réputée toujours égale à sa base fiscale ?",
+        "Quelle est sa valeur de marché brute, réputée définir seule les déductions futures ?"
+      ],
+      "answer": 1,
+      "explanation": "La base fiscale mesure un montant attribué à l’actif pour les effets fiscaux de sa récupération. Elle ne se confond pas automatiquement avec valeur comptable, valeur de marché ou impôt courant global."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un actif vaut 50 000 € en comptabilité. Le dossier indique que 50 000 € seront encore fiscalement déductibles lors de son recouvrement. Sans autre particularité, quelle différence de base observe-t-on sur cet actif ?",
+      "options": [
+        "Une différence temporaire imposable de 50 000 €, égale à la valeur comptable de l’actif",
+        "Une différence temporaire déductible de 50 000 €, égale aux déductions fiscales futures",
+        "Aucune différence entre valeur comptable et base fiscale",
+        "Une différence permanente de 50 000 €, les déductions fiscales étant futures plutôt qu’actuelles"
+      ],
+      "answer": 2,
+      "explanation": "Les deux valeurs comparées sont égales dans les faits fournis. La présence d’un actif ne suffit pas à créer une différence temporaire sur cet élément."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau prend systématiquement la valeur comptable d’un actif comme sa base fiscale, alors que le dossier prévoit un amortissement fiscal plus rapide. Quel examen manque ?",
+      "options": [
+        "Le montant de l’amortissement comptable annuel, à retenir directement comme base fiscale à la clôture",
+        "Le coût fiscal initial avant tout amortissement, les déductions déjà pratiquées étant sans effet sur la base restante",
+        "L’impôt courant économisé grâce à l’amortissement fiscal, à retenir comme base fiscale de l’actif",
+        "Le montant des déductions fiscales restantes après l’amortissement déjà admis"
+      ],
+      "answer": 3,
+      "explanation": "Des amortissements différents peuvent laisser des valeurs restantes différentes. La base fiscale doit être rapprochée des déductions futures, pas copiée automatiquement sur la valeur comptable."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une provision de 12 000 € a été comptabilisée, sans déduction fiscale actuelle. Le dossier précise que son règlement sera déductible et donne une base fiscale nulle au passif. Pourquoi ne faut-il pas lui appliquer aveuglément la règle de signe d’un actif ?",
+      "options": [
+        "Le règlement du passif produit ici une déduction future, et non un recouvrement d’actif imposable",
+        "Le passif constitue ici une différence imposable parce que sa valeur comptable dépasse sa base fiscale, comme pour un actif",
+        "L’absence de déduction actuelle suffit à qualifier l’écart de permanent, malgré la déduction prévue au règlement",
+        "La base fiscale nulle implique l’absence de toute différence temporaire, quelle que soit la valeur comptable du passif"
+      ],
+      "answer": 0,
+      "explanation": "Le sens fiscal s’explique par le dénouement : le paiement donnera ici une déduction. La seule soustraction de deux valeurs, sans identifier actif ou passif et ses effets, peut inverser la conclusion."
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un actif présente une différence temporaire imposable de 36 000 € dans le cas IAS 12, sans exception de reconnaissance. Le taux applicable fourni est 25 %. Quel passif d’impôt différé calculer ?",
+      "options": [
+        "144 000 €",
+        "9 000 €",
+        "36 000 €",
+        "27 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La différence constitue une base d’effet futur, à multiplier par le taux donné : 36 000×25 %=9 000 €. Ce montant est distinct de la différence elle-même.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 36000
+            },
+            {
+              "value": 0.25
+            }
+          ]
+        },
+        "expected": 9000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un actif sera récupéré pour sa valeur comptable de 100 000 €, entièrement imposable dans le cas fourni, mais seules 70 000 € de déductions fiscales resteront disponibles. Hors exception IAS 12, quel effet décrit l’écart ?",
+      "options": [
+        "Une absence de différence puisque l’actif a déjà été payé",
+        "Une charge définitivement non déductible de 100 000 € dans tous les cas",
+        "Une différence temporaire imposable pouvant conduire à un passif d’impôt différé",
+        "Une différence déductible donnant automatiquement une rentrée de banque"
+      ],
+      "answer": 2,
+      "explanation": "Le recouvrement donné laisse 100 000−70 000=30 000 € imposables. Le modèle conduit donc à un effet fiscal futur à payer plutôt qu’à une déduction future."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le dossier valide la reconnaissance d’un actif d’impôt différé sur une différence déductible de 20 000 €. Le taux fourni est de 30 %. Quel actif comptabiliser ?",
+      "options": [
+        "20 000 €",
+        "14 000 €",
+        "26 000 €",
+        "6 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Sous les conditions de reconnaissance expressément validées, l’effet fiscal vaut 20 000×30 %=6 000 €. Le taux est une donnée du cas, pas un taux universel.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 20000
+            },
+            {
+              "value": 0.3
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une différence temporaire imposable est de 16 000 € et le taux fourni de 25 %. Le préparateur inscrit un passif différé de 16 000 €. Quelle erreur commet-il ?",
+      "options": [
+        "Il confond la différence de base et son effet d’impôt de 4 000 €",
+        "Il devrait ajouter l’impôt de 4 000 € à la différence de base pour mesurer un passif de 20 000 €",
+        "Il devrait diviser la différence de base par 25 % pour déterminer le montant fiscal futur",
+        "Il devrait conserver 16 000 € au passif et comptabiliser séparément 4 000 € uniquement lors du règlement"
+      ],
+      "answer": 0,
+      "explanation": "Le passif représente l’impôt futur dans le modèle, non la base imposable future entière. Le calcul est 16 000×0,25=4 000 €."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un passif différé doit passer de 5 000 € à 3 500 €. Le dossier précise que toute cette diminution est un produit d’impôt au résultat, sans autre mouvement. Quel produit constater ?",
+      "options": [
+        "8 500 €",
+        "1 500 €",
+        "3 500 €",
+        "5 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le produit correspond à la diminution de l’obligation future donnée : 5 000−3 500=1 500 €. Le solde restant de 3 500 € n’est pas le flux de l’année.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 5000
+            },
+            {
+              "value": 3500
+            }
+          ]
+        },
+        "expected": 1500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le cas IAS 12 indique un actif comptable de 40 000 € et une base fiscale de 55 000 €. Son recouvrement ouvrira 55 000 € de déductions pour 40 000 € de montants imposables ; les conditions d’utilisation sont validées. Quel effet de base apparaît ?",
+      "options": [
+        "Une différence temporaire imposable de 15 000 €",
+        "Une différence permanente déductible de 15 000 €",
+        "Une différence temporaire déductible de 15 000 €",
+        "Une différence temporaire déductible de 55 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le recouvrement donné laisse davantage de déductions que de montants imposables. L’écart de 15 000 € est donc déductible selon les hypothèses, avec une reconnaissance soumise aux conditions validées."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une différence temporaire imposable reste fixée à 10 000 €. Le dossier impose, pour sa nouvelle mesure, un taux applicable de 28 % au lieu de 25 %, sans exception. Quelle variation du passif différé résulte de cette seule modification ?",
+      "options": [
+        "Une diminution de 300 €",
+        "Une augmentation de 3 000 €",
+        "Aucune variation parce que la base est identique",
+        "Une augmentation de 300 €"
+      ],
+      "answer": 3,
+      "explanation": "Le passif passe de 10 000×25 %=2 500 à 10 000×28 %=2 800 €. Le montant de base peut rester identique alors que son effet fiscal varie."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une amende de 4 000 € est définitivement non déductible et ne créera aucune déduction ultérieure selon le dossier. Sa réintégration donne-t-elle, à elle seule, un actif différé ?",
+      "options": [
+        "Non, aucune déduction future ne naît de cette différence permanente",
+        "Oui, un actif différé égal à 4 000 € multipliés par le taux d’impôt, puisque la charge a été réintégrée",
+        "Oui, si l’entreprise prévoit des bénéfices futurs suffisants, même sans déduction fiscale possible de cette amende",
+        "Oui, mais seulement à la date du règlement de l’amende plutôt qu’à celle de sa comptabilisation"
+      ],
+      "answer": 0,
+      "explanation": "La réintégration permanente n’est pas un report d’avantage fiscal. Il faut une conséquence future correspondant aux critères du cadre ; elle est expressément absente pour cette amende."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise a des pertes reportables, mais aucune prévision fiable de bénéfices permettant leur utilisation. Le dossier n’établit pas d’autre source de récupération. Que faut-il faire avant de reconnaître l’actif différé potentiel ?",
+      "options": [
+        "Reconnaître l’actif sur la totalité des pertes dès lors que le droit au report existe juridiquement",
+        "Examiner et justifier les conditions de récupération plutôt que comptabiliser automatiquement tout le stock",
+        "Reconnaître l’actif à hauteur de l’impôt payé l’année précédente, sans examiner les possibilités d’utilisation des pertes",
+        "Reconnaître l’actif intégralement puis compenser l’incertitude par un passif différé de même montant"
+      ],
+      "answer": 1,
+      "explanation": "L’existence d’un droit fiscal ne prouve pas son utilisation probable. La reconnaissance comptable de l’actif exige l’examen des conditions et des éléments soutenant sa récupération."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les prévisions utilisées pour justifier un actif différé reposent sur un chiffre d’affaires doublé sans contrats ni capacité de production supplémentaire. Quelle faiblesse faut-il examiner ?",
+      "options": [
+        "La seule signature du budget, tenue pour garantie des bénéfices prévus",
+        "La conformité de la multiplication du déficit par le taux, tenue pour preuve des ventes futures",
+        "Le fondement économique des bénéfices futurs supposés permettre la récupération",
+        "Le choix du scénario le plus favorable, tenu pour justification suffisante de la récupération"
+      ],
+      "answer": 2,
+      "explanation": "Un calcul fiscal peut être exact alors que la perspective de récupération est insuffisamment étayée. Les hypothèses commerciales et opérationnelles doivent soutenir les bénéfices projetés."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le modèle IAS 12 exclut expressément les exceptions de reconnaissance. Le rédacteur veut appliquer le résultat sans réserve à une opération réelle comportant une exception non étudiée. Quelle méthode est correcte ?",
+      "options": [
+        "Appliquer le calcul du modèle, puis mentionner l’exception uniquement dans l’annexe sans analyser la reconnaissance",
+        "Reconnaître l’impôt différé dès qu’un écart de base existe, en réservant l’examen des exceptions au règlement fiscal",
+        "Écarter l’exception si son traitement modifie le résultat proportionnel obtenu dans le modèle simplifié",
+        "Identifier l’exception et le cadre réel avant de transposer le calcul"
+      ],
+      "answer": 3,
+      "explanation": "Un modèle délimité n’établit pas le traitement de situations qu’il exclut. Les conditions spécifiques peuvent modifier reconnaissance ou mesure même si le calcul proportionnel est identique."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une différence fiscale est présentée comme temporaire, mais le dossier montre qu’aucun de ses effets ne se résorbera et qu’aucune déduction future n’est permise. Quel point faut-il revoir ?",
+      "options": [
+        "La qualification de la différence et le fondement de l’effet différé annoncé",
+        "Le seul nombre d’exercices du tableau, supposé rendre toute différence temporaire",
+        "La conversion automatique du montant en acompte d’impôt courant",
+        "L’obligation d’appliquer le taux même sans conséquence fiscale future"
+      ],
+      "answer": 0,
+      "explanation": "Le caractère temporaire se justifie par les effets futurs, pas par l’existence d’un écart dans un tableau. Une différence permanente ne crée pas le même traitement."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un actif différé potentiel est de 9 000 € par calcul. Le dossier ne permet de justifier sa récupération qu’à hauteur de 6 000 €, et impose de retenir cette seule fraction. Quelle conclusion respecte les données ?",
+      "options": [
+        "Reconnaître zéro malgré la récupération de 6 000 € expressément validée",
+        "Reconnaître 6 000 € et distinguer les 3 000 € potentiels non justifiés",
+        "Reconnaître 9 000 € parce que la multiplication est exacte",
+        "Reconnaître 3 000 € comme passif pour solder la différence"
+      ],
+      "answer": 1,
+      "explanation": "Le montant théorique et la fraction remplissant les conditions ne se confondent pas. Le cas impose de limiter la reconnaissance à l’avantage de 6 000 € justifié."
+    }
+  ]
+}

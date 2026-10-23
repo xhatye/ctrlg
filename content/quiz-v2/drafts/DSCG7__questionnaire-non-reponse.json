@@ -1,0 +1,417 @@
+{
+  "module": "DSCG7",
+  "chapter": "questionnaire-non-reponse",
+  "sourceHash": "16576af35309e71033e08c68c05c6d32a61015fc58bab1eecc9d2c5f3b517893",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle différence sépare population cible et échantillon réalisé ?",
+      "options": [
+        "La première désigne les unités visées ; le second celles effectivement étudiées.",
+        "La première désigne les répondants ; le second tous les salariés de l’organisation.",
+        "Les deux termes désignent nécessairement le même groupe.",
+        "L’échantillon réalisé correspond uniquement aux invitations envoyées."
+      ],
+      "answer": 0,
+      "explanation": "Une enquête distingue les personnes auxquelles elle s’intéresse, celles qu’elle recrute et celles qui répondent effectivement. Ces ensembles peuvent différer."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’enquête vise les clients actifs à fin décembre. Le fichier inclut aussi d’anciens clients partis en juin. Quelle opération prépare le recrutement ?",
+      "options": [
+        "Définir comme actifs les clients ayant reçu un courriel récent, sans vérifier leur relation avec le cabinet à la date retenue.",
+        "Définir et appliquer le critère d’appartenance à la population cible à la date retenue.",
+        "Envoyer à tous les contacts puis appeler l’ensemble population active.",
+        "Conserver les anciens clients dès lors que leur adresse est encore valide, en assimilant joignabilité et activité."
+      ],
+      "answer": 1,
+      "explanation": "Une base de contacts ne coïncide pas nécessairement avec la population visée. Son périmètre doit être contrôlé à partir de la définition annoncée."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une enquête visant toutes les équipes est diffusée dans le seul groupe de discussion des utilisateurs experts. Quel risque de recrutement apparaît ?",
+      "options": [
+        "Un tirage aléatoire de toute la population du seul fait du nombre de membres du groupe.",
+        "Une mesure exhaustive des opinions des non-utilisateurs.",
+        "Une surreprésentation des personnes les plus impliquées dans cet usage.",
+        "Une répartition garantie entre experts et débutants."
+      ],
+      "answer": 2,
+      "explanation": "Un canal volontaire spécialisé peut attirer des profils particuliers. Le nombre de réponses dans ce canal ne démontre pas la couverture des autres usages."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat souhaite obtenir des réponses de chaque service mais diffuse un lien général sans suivre l’origine des répondants. Quelle information manque pour vérifier ce but ?",
+      "options": [
+        "Le seul taux de réponse global, utilisé comme preuve que chaque service est présent.",
+        "Le nombre d’invitations par service, utilisé comme équivalent au nombre de répondants de chaque service.",
+        "La diversité des métiers déclarés, tenue pour preuve de présence de tous les services sans vérifier leur correspondance.",
+        "La couverture effective des services parmi les réponses, dans des conditions compatibles avec la protection des personnes."
+      ],
+      "answer": 3,
+      "explanation": "La réception d’invitations ou une diversité globale ne prouve pas la couverture effective de chaque service. Il faut une information adaptée à cette dimension."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un service peu nombreux répond dix fois plus que sa part dans la population. Peut-on appeler le total brut « avis moyen de tous les salariés » sans autre examen ?",
+      "options": [
+        "Non, la composition des répondants et les règles éventuelles de pondération doivent être examinées.",
+        "Oui, toute réponse a le même poids dans la population quelle que soit la sélection.",
+        "Oui, dès que le petit service répond le plus souvent.",
+        "Non, il faut supprimer ce service de l’enquête plutôt que décrire sa présence."
+      ],
+      "answer": 0,
+      "explanation": "Un résultat brut décrit d’abord le groupe qui répond. Le rapprochement avec la population exige d’examiner sa composition et les hypothèses d’un éventuel redressement."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La question demande : « Êtes-vous satisfait de la rapidité et de la fiabilité ? ». Quel problème de mesure faut-il traiter ?",
+      "options": [
+        "La même note peut être attribuée après collecte à chacune des dimensions pour reconstituer deux évaluations distinctes.",
+        "Deux dimensions peuvent recevoir des jugements différents et devraient être distinguées.",
+        "Une seule note permet d’identifier séparément le jugement sur chaque dimension sans autre question.",
+        "Une réponse obligatoire suffit à lever l’ambiguïté entre les deux dimensions."
+      ],
+      "answer": 1,
+      "explanation": "Un répondant peut apprécier la rapidité et critiquer la fiabilité. Une seule réponse mélange ces deux évaluations et ne permet pas de les reconstituer séparément."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les catégories d’âge proposées sont « moins de 30 », « 30 à 40 » et « plus de 40 ». Une personne a exactement 40 ans. Quel contrôle est nécessaire pour toute la grille ?",
+      "options": [
+        "Rattacher les personnes exactement à la borne aux deux catégories puis additionner leurs réponses dans les deux groupes.",
+        "Faire choisir à chaque répondant la catégorie qu’il juge la plus proche sans annoncer une convention commune pour les bornes.",
+        "Vérifier que les bornes sont explicites, sans chevauchement ni valeur exclue.",
+        "Exclure les valeurs situées aux bornes afin de rendre les catégories restantes plus faciles à comparer."
+      ],
+      "answer": 2,
+      "explanation": "Une grille doit permettre un classement interprétable. Les conventions de bornes doivent être compréhensibles et couvrir les valeurs visées."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un salarié n’utilise pas l’outil évalué. Aucune réponse « non concerné » n’est prévue dans l’échelle de satisfaction. Quel effet peut en résulter ?",
+      "options": [
+        "Une mesure certaine de satisfaction moyenne chez les non-utilisateurs.",
+        "Une augmentation garantie de la validité parce que tout le monde choisit une note.",
+        "Une preuve que la question s’applique à tous puisque le formulaire l’impose.",
+        "Une réponse artificielle, par exemple au milieu de l’échelle, alors qu’aucun jugement d’usage n’est disponible."
+      ],
+      "answer": 3,
+      "explanation": "Forcer une réponse n’en crée pas le fondement. Il faut distinguer absence de jugement pertinent et position intermédiaire sur une échelle."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le questionnaire demande le nombre d’incidents « récemment ». Quelle précision améliorerait l’interprétation des nombres ?",
+      "options": [
+        "Une période de référence commune et définie.",
+        "Un arrondi des nombres à la dizaine, considéré comme neutralisant les différences de période.",
+        "La date de réponse seule, utilisée comme substitut à la période à laquelle chaque nombre se rapporte.",
+        "Une échelle plus détaillée de nombres d’incidents, sans préciser la durée couverte."
+      ],
+      "answer": 0,
+      "explanation": "Sans période commune, deux nombres peuvent couvrir des durées très différentes. Une fenêtre définie rend les réponses temporellement comparables."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le filtre indique que seuls les utilisateurs doivent répondre sur les fonctions de l’outil. Le formulaire affiche pourtant ces questions aux non-utilisateurs et exige une note. Que faut-il corriger ?",
+      "options": [
+        "Le libellé de la note en conservant l’obligation de juger une fonction non utilisée.",
+        "L’enchaînement des questions pour respecter l’éligibilité définie par le filtre.",
+        "Le calcul de la moyenne uniquement, sans changer le recueil forcé.",
+        "La population cible en déclarant utilisateurs tous ceux qui ont répondu."
+      ],
+      "answer": 1,
+      "explanation": "Le filtrage fait partie de la construction du questionnaire. Il évite de fabriquer une évaluation chez une personne à laquelle la question ne s’applique pas."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le test du formulaire montre que les répondants interprètent différemment une consigne. Que démontre ce test à lui seul ?",
+      "options": [
+        "La correction de cette consigne suffit à établir la validité de l’ensemble des questions sans tester les autres.",
+        "La compréhension du formulaire par les testeurs démontre la représentativité des futurs répondants.",
+        "Un problème à corriger, sans validation globale de tout l’instrument.",
+        "L’identification de ce problème prouve que toutes les autres questions sont interprétées de façon identique par la population."
+      ],
+      "answer": 2,
+      "explanation": "Un prétest révèle des difficultés particulières. Corriger l’une d’elles ne démontre pas à lui seul la qualité de toute la mesure ou de tout le recrutement."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’enquête compte 250 invitations valides et 55 questionnaires répondus selon la définition annoncée. Quel taux de réponse obtient-on ?",
+      "options": [
+        "18 %",
+        "45,45 %",
+        "78 %",
+        "22 %"
+      ],
+      "answer": 3,
+      "explanation": "Le taux annoncé prend les réponses sur les invitations valides : 55 ÷ 250 × 100 = 22 %. Il ne décrit pas, à lui seul, le biais de non-réponse.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 55
+                },
+                {
+                  "value": 250
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 22,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "Statistique Canada, la non-réponse",
+          "url": "https://www150.statcan.gc.ca/n1/pub/62f0026m/2010002/section2-fra.htm"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une personne a répondu au questionnaire mais a laissé trois questions vides. Quelle distinction décrit ce cas ?",
+      "options": [
+        "Une non-réponse partielle à certains items, distincte d’une absence complète de questionnaire.",
+        "Une non-réponse totale à toutes les questions de la personne.",
+        "Trois personnes supplémentaires absentes de l’échantillon.",
+        "Trois réponses de valeur zéro aux items concernés."
+      ],
+      "answer": 0,
+      "explanation": "L’absence porte ici sur certains items. Le statut du questionnaire et l’effectif exploitable à chaque question doivent rester distincts.",
+      "references": [
+        {
+          "title": "Statistique Canada, la non-réponse",
+          "url": "https://www150.statcan.gc.ca/n1/pub/62f0026m/2010002/section2-fra.htm"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux enquêtes ont chacune 60 % de réponses. Peut-on conclure que leurs biais de non-réponse sont identiques ?",
+      "options": [
+        "Oui, un même taux de participation implique les mêmes différences d’opinion entre répondants et absents.",
+        "Non, il faut aussi examiner les profils et mécanismes liés à la participation.",
+        "Oui, le biais est déterminé entièrement par la part des questionnaires non retournés.",
+        "Non, l’enquête ayant le plus de répondants a nécessairement le plus faible biais, indépendamment de leurs profils."
+      ],
+      "answer": 1,
+      "explanation": "Un taux ne décrit pas comment répondants et non-répondants diffèrent sur les variables d’intérêt. Une même proportion peut recouvrir des sélections différentes.",
+      "references": [
+        {
+          "title": "Statistique Canada, la non-réponse",
+          "url": "https://www150.statcan.gc.ca/n1/pub/62f0026m/2010002/section2-fra.htm"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le protocole prévoit une participation libre et des relances non coercitives. Quelle relance respecte ces conditions ?",
+      "options": [
+        "Un rappel personnalisé du supérieur exigeant que chacun justifie son absence de réponse.",
+        "Un message conditionnant la validation de la mission à la remise du questionnaire.",
+        "Un rappel informatif rappelant le caractère volontaire et les modalités de participation.",
+        "Une relance annonçant la transmission au responsable de la liste des salariés qui ne participent pas."
+      ],
+      "answer": 2,
+      "explanation": "La relance peut informer sans transformer le refus ou le silence en faute. Répondre à la place des personnes change aussi la nature de la collecte."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat pondère les réponses pour retrouver la répartition connue des services. Que doit-il encore discuter ?",
+      "options": [
+        "La disparition certaine de tout biais après pondération par service.",
+        "L’identité automatique des avis dans chaque service entre répondants et absents.",
+        "La possibilité de présenter les poids comme de nouvelles personnes réellement interrogées.",
+        "Les hypothèses du redressement et les différences possibles qui ne sont pas corrigées par cette seule variable."
+      ],
+      "answer": 3,
+      "explanation": "La pondération ajuste certaines compositions selon des hypothèses. Elle ne crée pas des observations et ne prouve pas que toute sélection pertinente est neutralisée."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un questionnaire est proposé seulement sur ordinateur aux salariés administratifs et seulement par téléphone aux techniciens. Un écart de réponses apparaît. Quelle limite affecte l’interprétation de cet écart ?",
+      "options": [
+        "L’effet du métier et celui du mode de collecte ne peuvent pas être distingués avec ce seul dispositif.",
+        "L’écart mesure uniquement le métier puisque le contenu des questions est identique.",
+        "L’écart mesure uniquement le mode de collecte puisque les salariés appartiennent au même cabinet.",
+        "L’identité des questions suffit à rendre les deux modes de réponse équivalents sans vérification."
+      ],
+      "answer": 0,
+      "explanation": "Le mode de collecte varie ici exactement avec le métier. Le dispositif ne permet pas d’attribuer séparément l’écart à ces deux facteurs ; il faudrait une comparaison qui les dissocie."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "80 personnes ont remis un questionnaire. Pour un item donné, 60 ont répondu, dont 45 choisissent « satisfait ». En calculant sur les réponses valides à cet item, quel taux faut-il afficher ?",
+      "options": [
+        "45 %",
+        "75 %",
+        "56,25 %",
+        "25 %"
+      ],
+      "answer": 1,
+      "explanation": "Le dénominateur défini est 60, non 80 : 45 ÷ 60 × 100 = 75 %. Il faut aussi signaler les 20 réponses manquantes pour situer ce résultat.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 45
+                },
+                {
+                  "value": 60
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 75,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le tableau remplace les réponses vides par zéro avant de calculer une moyenne de satisfaction sur une échelle de 1 à 5. Quel défaut introduit-il ?",
+      "options": [
+        "Il attribue un point neutre de satisfaction, en supposant que zéro représente le milieu de l’échelle annoncée de 1 à 5.",
+        "Il utilise une convention neutre qui laisse nécessairement inchangée la moyenne des notes exprimées.",
+        "Il attribue une valeur hors échelle à une absence de réponse sans justification.",
+        "Il corrige la non-réponse en lui attribuant un score connu, sans avoir à poser d’hypothèse sur les personnes absentes."
+      ],
+      "answer": 2,
+      "explanation": "Une donnée manquante n’est pas une note observée. Le traitement doit être décrit et justifié ; une valeur hors échelle modifie artificiellement la moyenne."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une question autorise plusieurs motifs de retard par répondant. Les pourcentages de motifs additionnés dépassent 100 %. Que faut-il vérifier avant d’y voir une erreur ?",
+      "options": [
+        "Ramener chaque motif à une part du total des citations puis présenter ces parts comme les pourcentages de répondants.",
+        "Retenir uniquement le premier motif cité par chaque personne tout en annonçant les résultats de la question à choix multiples.",
+        "Conclure que le total doit être de 100 % dès que chaque pourcentage utilise le même nombre de répondants au dénominateur.",
+        "L’unité de pourcentage et la possibilité de choix multiples annoncée dans la question."
+      ],
+      "answer": 3,
+      "explanation": "Des pourcentages de répondants ayant choisi chaque motif peuvent se cumuler au-delà de 100 % si plusieurs choix sont autorisés. La présentation doit préciser cette convention."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un résultat sur deux salariés d’une petite équipe permettrait à leurs collègues de déduire l’avis d’une personne. Quel examen précède sa diffusion ?",
+      "options": [
+        "Le risque d’identification ou d’inférence et les possibilités de regroupement ou de restitution moins détaillée.",
+        "Le seul retrait des noms, considéré comme supprimant toute identification par le contexte.",
+        "La publication des seuls pourcentages, considérée comme suffisante même si l’effectif de deux personnes reste connu.",
+        "La présentation dans une annexe, considérée comme supprimant tout risque de lecture par les collègues."
+      ],
+      "answer": 0,
+      "explanation": "De petits effectifs peuvent rendre des opinions attribuables même sans noms. Les modalités de restitution doivent être adaptées à ce risque."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un formulaire bloque l’envoi lorsqu’un répondant n’indique pas son revenu. Le tableau final, limité aux formulaires envoyés, ne contient donc aucun revenu manquant. Quelle analyse du parcours de réponse manque ?",
+      "options": [
+        "Déduire l’absence de sélection sur le revenu du seul fait que les formulaires envoyés sont complets.",
+        "Examiner les abandons provoqués éventuellement par cette question obligatoire, au-delà des seuls formulaires envoyés.",
+        "Assimiler tous les débuts de questionnaire à des réponses complètes puisque le champ est obligatoire.",
+        "Conclure que rendre un champ obligatoire garantit que les personnes réticentes ont finalement communiqué leur revenu."
+      ],
+      "answer": 1,
+      "explanation": "L’obligation peut déplacer la non-réponse de l’item vers l’abandon du formulaire. La complétude des réponses finales ne renseigne pas à elle seule sur les personnes qui ont interrompu leur participation."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux items de satisfaction utilisent des échelles opposées : 1 signifie satisfait dans le premier et insatisfait dans le second. Que faut-il faire avant un score combiné où une valeur élevée doit être favorable ?",
+      "options": [
+        "Conserver le sens opposé et appeler le total satisfaction sans autre précision.",
+        "Traiter la plus grande note de chaque item comme favorable quel que soit son libellé.",
+        "Harmoniser le sens des scores selon une règle explicite avant de les agréger.",
+        "Additionner les nombres bruts parce que les deux échelles vont de 1 à 5."
+      ],
+      "answer": 2,
+      "explanation": "Des nombres identiques peuvent avoir des sens opposés. Une agrégation doit conserver une direction cohérente et une règle de recodage traçable."
+    }
+  ]
+}

@@ -1,0 +1,531 @@
+{
+  "module": "DSCG2",
+  "chapter": "portefeuille-deux-actifs",
+  "sourceHash": "13dc343b5f873d0c542fe27af7986d089bbcd784796911419db0803a8b247979",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un portefeuille sans levier contient seulement A et B. A pèse 35 %. Quel poids reste pour B ?",
+      "options": [
+        "65 %",
+        "35 %",
+        "135 %",
+        "0,65 %"
+      ],
+      "answer": 0,
+      "explanation": "Les deux poids couvrent tout le portefeuille : 100 − 35 = 65 %. Ce contrôle suppose bien deux actifs seulement, sans levier ni position négative.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "value": 35
+            }
+          ]
+        },
+        "expected": 65,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux actifs sont annoncés comme représentant tout le portefeuille sans levier, mais les poids saisis totalisent 120 %. Que faut-il clarifier ?",
+      "options": [
+        "La seule corrélation, qui expliquerait ce total",
+        "La définition des poids ou une exposition supplémentaire non déclarée",
+        "La volatilité, qui doit être ajoutée aux poids",
+        "Le rendement espéré, qui doit ramener le total à zéro"
+      ],
+      "answer": 1,
+      "explanation": "Les poids d’un portefeuille intégralement réparti sans levier totalisent un. Une somme de 120 % ne se corrige pas par un paramètre de risque."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un portefeuille pondère A à 25 % et B à 75 %. Leurs rendements espérés sont −4 % et 8 %. Quelle espérance obtient-on ?",
+      "options": [
+        "2 %",
+        "7 %",
+        "5 %",
+        "12 %"
+      ],
+      "answer": 2,
+      "explanation": "L’espérance vaut 0,25 × (−4) + 0,75 × 8 = 5 %. Le signe négatif de l’un des scénarios moyens doit être conservé.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.25
+                },
+                {
+                  "value": -4
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.75
+                },
+                {
+                  "value": 8
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 5,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans la variance de deux actifs, quel terme fait intervenir leur mouvement conjoint ?",
+      "options": [
+        "wA × rendementA + wB × rendementB",
+        "La seule somme des volatilités individuelles",
+        "La seule différence des rendements espérés",
+        "2 × wA × wB × corrélation × sigmaA × sigmaB"
+      ],
+      "answer": 3,
+      "explanation": "Le terme croisé représente la covariance pondérée. L’espérance et les seuls risques individuels ne suffisent pas à calculer la variance combinée."
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "A et B pèsent chacun 50 %. Leurs volatilités sont 10 et 20 points, et leur corrélation vaut zéro. Quelle variance, en points carrés, obtient-on ?",
+      "options": [
+        "125 points²",
+        "225 points²",
+        "250 points²",
+        "15 points²"
+      ],
+      "answer": 0,
+      "explanation": "Le terme croisé est nul. La variance est 0,5² × 10² + 0,5² × 20² = 25 + 100 = 125 points².",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.25
+                },
+                {
+                  "value": 100
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.25
+                },
+                {
+                  "value": 400
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 125,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une variance de portefeuille est donnée à 144 points carrés. Quelle volatilité correspondante, en points, faut-il présenter ?",
+      "options": [
+        "144 points",
+        "12 points",
+        "20736 points",
+        "72 points"
+      ],
+      "answer": 1,
+      "explanation": "La volatilité est la racine carrée de la variance : √144 = 12 points. Les deux mesures n’ont pas la même unité.",
+      "calculation": {
+        "expression": {
+          "op": "pow",
+          "args": [
+            {
+              "value": 144
+            },
+            {
+              "value": 0.5
+            }
+          ]
+        },
+        "expected": 12,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant écrit « volatilité 100 % » parce que la variance vaut 100 points carrés. Quelle transformation manque ?",
+      "options": [
+        "Diviser la variance par la corrélation",
+        "Multiplier la variance par les deux poids",
+        "Prendre la racine carrée, ce qui donne 10 points de volatilité",
+        "Soustraire le rendement moyen à la variance"
+      ],
+      "answer": 2,
+      "explanation": "Variance et écart-type ne se confondent pas. La racine ramène les points carrés à des points de taux, ici dix points."
+    },
+    {
+      "id": "q08",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "À poids et volatilités strictement positifs inchangés, la corrélation passe de 0,8 à 0,2. Quel effet le modèle donne-t-il sur la variance ?",
+      "options": [
+        "Elle augmente parce que les rendements sont moins proches",
+        "Elle reste inchangée car les risques individuels sont fixes",
+        "Elle devient égale au rendement moyen",
+        "Elle diminue avec le terme croisé"
+      ],
+      "answer": 3,
+      "explanation": "La corrélation multiplie un coefficient positif du terme croisé. Sa baisse réduit donc la variance, à autres paramètres fixes."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste modifie seulement la corrélation et annonce une nouvelle espérance de rendement, alors que poids et espérances individuelles restent inchangés. Quelle formule rappelle le problème ?",
+      "options": [
+        "L’espérance est la somme des rendements espérés pondérés, sans corrélation",
+        "L’espérance est égale à la variance multipliée par la corrélation",
+        "La corrélation remplace le poids de l’actif le plus risqué",
+        "L’espérance doit être égale à la volatilité combinée"
+      ],
+      "answer": 0,
+      "explanation": "La corrélation agit dans la variance, pas directement dans la moyenne pondérée des rendements attendus. Les deux calculs doivent rester distincts."
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les poids sont de 50 % chacun, les volatilités 10 points et 10 points, la corrélation 0,5. Quel est le seul terme croisé de variance, en points carrés ?",
+      "options": [
+        "50 points²",
+        "25 points²",
+        "12,5 points²",
+        "100 points²"
+      ],
+      "answer": 1,
+      "explanation": "Le terme croisé vaut 2 × 0,5 × 0,5 × 0,5 × 10 × 10 = 25 points². Il s’ajoute aux deux termes individuels.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "op": "*",
+                      "args": [
+                        {
+                          "value": 2
+                        },
+                        {
+                          "value": 0.5
+                        }
+                      ]
+                    },
+                    {
+                      "value": 0.5
+                    }
+                  ]
+                },
+                {
+                  "value": 0.5
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 25,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les poids d’un portefeuille sont calculés sur les montants de départ. Des apports interviennent pendant la période. Quelle limite de la performance pondérée simple faut-il examiner ?",
+      "options": [
+        "La seule corrélation entre actifs, supposée absorber les apports",
+        "L’utilisation des poids de fin de période comme s’ils avaient été investis pendant toute la période",
+        "La chronologie des flux et la convention de mesure de performance",
+        "L’ajout de tous les apports au capital initial sans distinguer leurs dates d’investissement"
+      ],
+      "answer": 2,
+      "explanation": "Des flux externes changent les capitaux investis et leurs dates. La formule simple sans mouvement ne doit pas être appliquée sans préciser la convention."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un portefeuille présente une volatilité estimée de 8 %. Peut-on y lire une perte maximale de 8 % sur toute période ?",
+      "options": [
+        "Oui, la volatilité donne directement la perte la plus élevée possible",
+        "Oui, si les poids totalisent 100 %",
+        "Non, parce que l’écart-type ne peut concerner des rendements négatifs",
+        "Non, un écart-type n’est pas une borne certaine de perte"
+      ],
+      "answer": 3,
+      "explanation": "L’écart-type décrit une dispersion dans un modèle ou un échantillon. Il n’est pas une limite garantie aux réalisations défavorables."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans la variance, l’étudiant utilise wA × sigmaA² au lieu de wA² × sigmaA². Quelle étape doit-il corriger ?",
+      "options": [
+        "Mettre le poids au carré dans le terme individuel de variance",
+        "Remplacer la variance individuelle par sa racine carrée tout en conservant le poids simple",
+        "Mettre le poids au carré seulement dans le terme de covariance, en conservant le terme individuel donné",
+        "Diviser la variance individuelle par le poids au lieu de la multiplier par son carré"
+      ],
+      "answer": 0,
+      "explanation": "Une variable pondérée par w a une variance multipliée par w². Le poids est donc au carré dans chacun des deux termes individuels."
+    },
+    {
+      "id": "q14",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Deux actifs sont parfaitement corrélés positivement, avec poids 50 % chacun et volatilités 10 et 20 points. Quelle volatilité de portefeuille obtient-on ?",
+      "options": [
+        "5 points",
+        "15 points",
+        "11,18 points",
+        "30 points"
+      ],
+      "answer": 1,
+      "explanation": "Avec corrélation +1 et poids positifs, la volatilité vaut la moyenne pondérée des volatilités : 0,5 × 10 + 0,5 × 20 = 15 points.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.5
+                },
+                {
+                  "value": 10
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.5
+                },
+                {
+                  "value": 20
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 15,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux actifs de même volatilité sont parfaitement corrélés négativement et pondérés à parts égales dans le modèle. Que devient leur variance combinée ?",
+      "options": [
+        "Elle est égale à la somme des variances individuelles",
+        "Elle est négative",
+        "Elle s’annule sous ces hypothèses exactes",
+        "Elle est égale à la volatilité d’un seul actif"
+      ],
+      "answer": 2,
+      "explanation": "Les deux variations se compensent exactement dans ce cas théorique. Une corrélation imparfaite ou des paramètres différents peut retirer cette compensation."
+    },
+    {
+      "id": "q16",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux portefeuilles ont la même espérance, mais l’un comporte des pertes possibles bien plus importantes. Quelle conclusion est pertinente ?",
+      "options": [
+        "Le même rendement moyen implique le même profil de pertes",
+        "Le portefeuille plus dispersé a forcément une espérance plus forte",
+        "La variance doit être ignorée si les poids sont connus",
+        "La moyenne seule ne suffit pas à comparer leurs risques"
+      ],
+      "answer": 3,
+      "explanation": "L’espérance est une mesure centrale. Des distributions très différentes peuvent partager une moyenne ; dispersion et pertes doivent être étudiées séparément."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "A et B totalisent le portefeuille. Le rapport montant A/montant B est 2. Quel est le poids de A, au centième de point ?",
+      "options": [
+        "66,67 %",
+        "200 %",
+        "50 %",
+        "33,33 %"
+      ],
+      "answer": 0,
+      "explanation": "Si B vaut une part, A en vaut deux ; le total est trois. Le poids de A vaut 2/(2+1) = 66,67 %, différent du simple rapport A/B.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 2
+                },
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 2
+                    },
+                    {
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 66.67,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une corrélation de 1,4 est saisie dans le modèle usuel de variance à deux actifs. Que vérifier avant d’interpréter le résultat ?",
+      "options": [
+        "Ramener mécaniquement la valeur à un en divisant toute corrélation supérieure à un par elle-même, sans rechercher l’erreur",
+        "La mesure ou la saisie : une corrélation usuelle doit être entre −1 et +1",
+        "Utiliser la covariance brute de 1,4 comme corrélation sans normaliser par les volatilités",
+        "Conserver 1,4 en la considérant comme une corrélation possible entre actifs très volatils"
+      ],
+      "answer": 1,
+      "explanation": "La corrélation normalisée appartient à l’intervalle [−1;+1]. Une valeur extérieure indique une incohérence de données ou de calcul à corriger."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une variance est calculée avec des volatilités décimales 0,10 et 0,20. Quelle unité attendre pour sa racine ?",
+      "options": [
+        "Une variance décimale qu’il suffit de multiplier par cent, sans prendre la racine",
+        "Un taux en pourcentage déjà converti, auquel il ne faut plus appliquer de facteur cent",
+        "Un taux décimal, à multiplier par 100 pour l’afficher en pourcentage",
+        "Une racine exprimée en pourcentage au carré, à multiplier par dix mille"
+      ],
+      "answer": 2,
+      "explanation": "La racine retrouve l’unité des volatilités d’entrée. Avec des taux décimaux, 0,15 signifie 15 %, alors que la variance reste en taux au carré."
+    },
+    {
+      "id": "q20",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le calcul à corrélation nulle conserve un terme croisé positif. Quel contrôle faut-il effectuer ?",
+      "options": [
+        "Remplacer la corrélation nulle par un poids de 50 %",
+        "Mettre les rendements moyens au carré à la place des volatilités",
+        "Supprimer les deux termes individuels de variance",
+        "Vérifier que la corrélation multiplie effectivement le terme croisé"
+      ],
+      "answer": 3,
+      "explanation": "Avec rho = 0, le produit croisé doit s’annuler. Cela ne signifie pas que les risques individuels ni la variance totale deviennent nuls."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Le rendement espéré pondéré d’un portefeuille sans levier et à poids positifs vérifie quelle propriété ?",
+      "options": [
+        "Il est compris entre les deux espérances individuelles",
+        "Il dépasse leur somme si la corrélation est négative",
+        "Il égale la racine de leur variance moyenne",
+        "Il est positif dès que deux actifs différents sont détenus"
+      ],
+      "answer": 0,
+      "explanation": "Une moyenne à coefficients positifs de somme un reste entre ses composantes. La diversification ne garantit pas un signe positif du rendement."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un risque de défaut et une difficulté de revente sont ignorés au motif que la volatilité calculée est faible. Quelle limite rappeler ?",
+      "options": [
+        "La volatilité est la probabilité exacte de défaut de l’émetteur",
+        "L’écart-type des rendements ne résume pas toutes les dimensions de risque",
+        "La liquidité est automatiquement assurée par une faible variance",
+        "Une faible variance suffit à garantir le capital à l’échéance"
+      ],
+      "answer": 1,
+      "explanation": "La mesure statistique est utile dans son cadre, mais ne remplace pas l’analyse du crédit et de la liquidité. Un chiffre faible ne garantit pas le placement."
+    }
+  ]
+}

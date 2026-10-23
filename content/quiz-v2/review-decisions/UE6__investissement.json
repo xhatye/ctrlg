@@ -1,0 +1,259 @@
+{
+  "sourceHash": "20b3675f842c5371786f7d0cab49029452e01405015d74d4a59775c8f3855a25",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "6195168284c6f141249d3385ed4a7b24f3baeb8ca49b0ca563cbc9628dd6536a",
+      "selected": 1,
+      "reason": "Comparer des flux datés suppose une référence temporelle et des conventions cohérentes, pas seulement la somme nominale.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "e76fd21dacbdd52a698776873ab92041ce99babf62b091be57f1a2d299eada0b",
+      "selected": 1,
+      "reason": "6 050 / 1,10² = 5 000 euros, avec deux périodes annuelles.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "3bc2986b748df81f2ef48cc57cf51cbe6d97eae2b7b4b2e4d71674dfb72eec61",
+      "selected": 3,
+      "reason": "Avec un taux strictement positif, diviser un décaissement immédiat par un facteur supérieur à un réduit indûment sa valeur actuelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "01ef937b3eb1e264f3382f6c5191cb044477e5f6716956209f29571ff3aa7e6f",
+      "selected": 2,
+      "reason": "Avec un taux positif, reporter le même encaissement réduit sa valeur actuelle sans suffire à rendre tout le projet non rentable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "1a29c5d18cace4cd6abb4b9fce328fe58916c59f380279a39dc43589f289e2c8",
+      "selected": 2,
+      "reason": "Au taux nul, le facteur d’actualisation vaut un quelle que soit la date, donc la valeur actuelle est nominale.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "12bdf2c9a20afda92ab45632458290c977f7091bf6068f1769c43667f9cc7422",
+      "selected": 3,
+      "reason": "Un taux mensuel et des périodes annuelles doivent être convertis dans un même cadre temporel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "8352191b55f020c510d0e6eef6ec289ff20431c0940f3df7fe9e22ca2da906a6",
+      "selected": 1,
+      "reason": "5 000 × 0,95 + 5 000 × 0,90 − 12 000 = −2 750 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "eec71513a6f8a9239abbf6e9c465684522dfb2abed67f06b352d734748c5eb7e",
+      "selected": 2,
+      "reason": "Une VAN nulle couvre l’investissement et l’exigence incorporée au taux, sans décrire le bénéfice comptable annuel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "51d30b3013e7c137527df3fb26aec1944e4b6d6755118726f77f56b7fe4546d2",
+      "selected": 1,
+      "reason": "La VAN de 3 000 est un solde après l’investissement : la valeur actuelle des flux futurs est 23 000, pas 3 000.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "83266bcfd53dd294090e44f6a616ca1cd6002e104e7851cd5aa3ed21fb259250",
+      "selected": 2,
+      "reason": "À comparabilité et exclusivité données, le critère VAN privilégie B : 6 000 excède 4 000.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "fe3b8e5f35671aa8d923d6ebb65eb1820f2d0716b409157d5d3d7c23443dffdd",
+      "selected": 2,
+      "reason": "La croissance non justifiée fragilise les flux prévisionnels et donc la crédibilité de la VAN annoncée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "fe1dc43318d7f4cd2278f0616ed1f62710e76b0f5ae801bf565528f81f32ec7d",
+      "selected": 1,
+      "reason": "La même création de valeur n’efface pas des besoins initiaux de liquidité différents ; il faut examiner leur financement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "a654ec4b59628b7b6387d79288eb27878e457cfab31f6dab99ac948d6d654007",
+      "selected": 2,
+      "reason": "L’étude payée non remboursable ne change plus selon la décision, contrairement aux achats et maintenances futurs évitables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "eac90700e804bd4ab0939d441816a4aa032b00ab95f408ccea8f5299492c4771",
+      "selected": 2,
+      "reason": "La décision doit comparer ses conséquences futures évitables, pas tenter de récupérer psychologiquement une dépense déjà irréversible.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "958bd6d15f4a9c8aa719a6b86b5c242ba8ad4470e9367564ebc4f2a31a101558",
+      "selected": 3,
+      "reason": "Une imputation de coût fixe inchangé n’est pas automatiquement une variation de décaissement causée par le projet.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "d62125da391d0efd017635a634c4afe0a06e1acf9b3e7761e065eb015a8e73c8",
+      "selected": 3,
+      "reason": "La licence reste évitable si le projet est refusé : son décaissement futur est différentiel et doit être daté.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "e81eb71635ce15212e390ac406a4308782d36b6e8bfcbb125be0b60e0154610c",
+      "selected": 1,
+      "reason": "L’étude irrécupérable est exclue ; 10 000 + 2 000 = 12 000 euros de besoins initiaux évitables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "e40e2b41005b86dc4a8396da7ec8160b10ade8cdd02ce9dc50f20e7f477405a8",
+      "selected": 2,
+      "reason": "Une hausse du BFR mobilise des ressources à la date considérée, sans constituer une perte comptable identique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "a891dc2c4069d87a945ec22ab5fadbbcdfead470ec5382fccac06a0519814fac",
+      "selected": 1,
+      "reason": "Les stocks et créances compromis empêchent de présumer une récupération intégrale ; estimer les montants réellement récupérables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "522e827716de05ef441749cc159c12f2dc2d5690ffa330f0fe40b9d1c3d59b99",
+      "selected": 1,
+      "reason": "La hausse du besoin est 6 500 − 4 000 = 2 500 euros, pas la totalité du nouveau solde.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "77beb1f3e52fc2d9eb2dc6fe3cefff25837033cec7c7910f823ec9ded59d7970",
+      "selected": 3,
+      "reason": "Les créances attendues après production doivent être placées à leur date de récupération, sans double vente.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "75f2393382636f2fabbe85323e9d6af19796a2be1acdd1f2014811d35f4f1e5b",
+      "selected": 0,
+      "reason": "Déduire chaque solde annuel recompte un financement déjà constitué : seules variations et récupération justifiée sont pertinentes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "731f580868e4aeb12344aaf55e26dbd00bbcc1ec2a9770c3bc95cb6505e0d97e",
+      "selected": 0,
+      "reason": "Un calendrier plus fin révèle le besoin saisonnier que les flux annuels nets peuvent masquer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

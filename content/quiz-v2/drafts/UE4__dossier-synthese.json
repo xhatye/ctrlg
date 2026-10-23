@@ -1,0 +1,507 @@
+{
+  "module": "UE4",
+  "chapter": "dossier-synthese",
+  "sourceHash": "11230515c4d4a252248e758c12946812956ebea1066d492309ae9543a6ac5d0f",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pour suivre une note d’avoir corrigeant une facture identifiée, quelle référence permet le rapprochement documentaire ?",
+      "options": [
+        "Le numéro et la date de la facture initiale corrigée.",
+        "La seule date du prochain règlement du fournisseur.",
+        "Le seul montant global du compte fournisseur à la clôture.",
+        "Le numéro de n’importe quelle facture récente du même vendeur."
+      ],
+      "answer": 0,
+      "explanation": "Le BOFiP prévoit une référence explicite à la facture initiale, avec numéro et date, ainsi que les mentions pertinentes de la rectification. Ce lien permet d’identifier l’opération corrigée et de prévenir une confusion avec une autre facture du même vendeur.",
+      "references": [
+        {
+          "title": "BOI-TVA-DECLA-30-20-20-20, factures rectificatives et avoirs",
+          "url": "https://bofip.impots.gouv.fr/bofip/142-PGP.html/identifiant=BOI-TVA-DECLA-30-20-20-20-20190925"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une note indique « remise commerciale : 120 € », sans préciser la facture visée ni si le montant est HT ou TTC. Quel complément est nécessaire avant de corriger une base de TVA ?",
+      "options": [
+        "Identifier l’opération, la nature du montant et la taxe correspondante.",
+        "Soustraire 120 € de toutes les factures en attente.",
+        "Considérer les 120 € comme une TVA intégralement déductible supplémentaire.",
+        "Appliquer automatiquement le taux le plus élevé du catalogue."
+      ],
+      "answer": 0,
+      "explanation": "La note ne donne ni le périmètre de la correction ni son unité fiscale. Il faut rapprocher l’avoir de l’opération et distinguer base HT, taxe et total TTC. Le montant isolé ne justifie pas une correction chiffrée de n’importe quelle déclaration."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un document annule et remplace une facture initiale de 1 000 € HT par une facture rectifiée de 900 € HT. Il ne prévoit pas une deuxième livraison. Quelle lecture évite le double comptage ?",
+      "options": [
+        "Additionner les deux factures comme deux ventes de 1 900 € HT.",
+        "Retenir la nouvelle version comme montant corrigé de la même vente.",
+        "Retenir seulement la différence de 100 € comme vente totale finale.",
+        "Conserver l’ancienne facture et ignorer toute rectification."
+      ],
+      "answer": 1,
+      "explanation": "La facture rectifiée remplace ici la première pour la même opération. Le montant final de la vente est 900 € HT ; l’écart de 100 € est une correction et non la totalité de la vente. La piste documentaire doit conserver les versions sans les traiter comme deux opérations indépendantes."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une somme versée au client rembourse un prêt qu’il avait accordé au vendeur. Aucun prix de vente ni taxe n’est corrigé. Le préparateur veut traiter ce remboursement comme un avoir de TVA. Quelle distinction faut-il rétablir ?",
+      "options": [
+        "Une opération de financement n’est pas, dans ces faits, une réduction de prix de vente taxable.",
+        "Tout paiement au client réduit obligatoirement la TVA collectée.",
+        "Tout remboursement de prêt constitue une nouvelle vente au client.",
+        "Le remboursement transforme le capital du prêt en base HT négative."
+      ],
+      "answer": 0,
+      "explanation": "La qualité de client du destinataire ne suffit pas à faire d’un versement une correction de prix. Ici, le remboursement éteint une dette de financement indépendante. Il ne faut donc pas en déduire une réduction de base ou de taxe sur une vente non identifiée."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le fournisseur envoie deux fois le même avoir, avec le même numéro, la même date et la même facture initiale. Le second envoi est expressément un duplicata. Quelle précaution de suivi faut-il prendre ?",
+      "options": [
+        "Ne pas comptabiliser deux corrections distinctes pour le même avoir.",
+        "Doubler le montant car deux courriels ont été reçus.",
+        "Retenir le duplicata comme une nouvelle livraison.",
+        "Annuler le prix de toutes les ventes du fournisseur."
+      ],
+      "answer": 0,
+      "explanation": "Le duplicata prouve une nouvelle transmission du même document, pas une seconde réduction accordée. L’identification par numéro et rattachement à la facture permet de bloquer une double utilisation de l’avoir, tout en conservant la trace de réception."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un avoir réduit de 250 € HT une vente. Le dossier impose une correction de TVA au taux de 20 %, sans autre élément. Quel est le total TTC de l’avoir ?",
+      "options": [
+        "250 €",
+        "50 €",
+        "300 €",
+        "200 €"
+      ],
+      "answer": 2,
+      "explanation": "La taxe corrigée est 250×20 %=50 €. La réduction totale de dette est donc 250+50=300 € TTC. La base, la taxe et le total doivent rester distincts pour contrôler la correction.",
+      "calculation": {
+        "expected": 300,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 250
+            },
+            {
+              "value": 1.2
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un avoir est fixé à 132 € TTC pour une opération dont le taux fourni est 10 %. Le cas précise qu’il réduit la base et la taxe. Quel montant HT corrige-t-il ?",
+      "options": [
+        "118,80 €",
+        "120 €",
+        "132 €",
+        "12 €"
+      ],
+      "answer": 1,
+      "explanation": "La réduction TTC contient déjà la taxe : 132/1,10=120 € HT, avec 12 € de TVA. Soustraire 10 % de 132 produirait 118,80 € et utiliserait le taux sur la mauvaise base.",
+      "calculation": {
+        "expected": 120,
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 132
+            },
+            {
+              "value": 1.1
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un avoir concerne deux lignes distinctes : réduction de 300 € HT au taux fourni de 20 % et de 200 € HT au taux fourni de 10 %. Quelle TVA totale doit-il corriger ?",
+      "options": [
+        "100 €",
+        "80 €",
+        "50 €",
+        "580 €"
+      ],
+      "answer": 1,
+      "explanation": "La TVA doit être calculée par taux : 300×20 %=60 € et 200×10 %=20 €, soit 80 €. Appliquer un taux unique à la somme des bases ignorerait la ventilation fournie ; le TTC de l’avoir serait 580 €.",
+      "calculation": {
+        "expected": 80,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 300
+                },
+                {
+                  "value": 0.2
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 200
+                },
+                {
+                  "value": 0.1
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La facture initiale concernait une opération au taux de 10 %. Un taux de 20 % apparaît désormais dans le logiciel, mais le dossier impose de corriger la vente initiale au taux de 10 %. Quel taux utiliser pour cet avoir ?",
+      "options": [
+        "20 %, parce que le logiciel le propose aujourd’hui.",
+        "15 %, moyenne des taux ancien et nouveau.",
+        "10 %, taux de correction expressément fixé pour l’opération.",
+        "0 %, parce qu’un avoir ne comporte jamais de TVA."
+      ],
+      "answer": 2,
+      "explanation": "L’avoir corrige une opération identifiée dans le cadre fourni. Le taux actuel du logiciel ne remplace pas celui que le dossier impose pour cette correction. La gestion des taux doit suivre le régime de l’opération, sans supposer que tout avoir utilise le taux le plus récent."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour un avoir de 100 € HT au taux fourni de 20 %, le tableur calcule 100/1,20 comme TVA de l’avoir. Quelle erreur commet-il ?",
+      "options": [
+        "Il applique une conversion TTC vers HT à un montant déjà HT, au lieu de calculer la taxe.",
+        "Il utilise correctement la formule de la TVA sur une base HT.",
+        "Il applique un taux trop faible mais la bonne formule.",
+        "Il a seulement inversé le sens du paiement bancaire."
+      ],
+      "answer": 0,
+      "explanation": "La base de 100 € est déjà hors taxe. La TVA vaut 100×20 %=20 €. La division par 1,20 sert à retirer la taxe d’un montant TTC, pas à déterminer la taxe d’une base HT ; il faut contrôler à la fois la formule et l’unité d’entrée."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une facture de 1 800 € TTC reste totalement impayée. Un avoir de 240 € TTC corrige son prix. Aucun autre mouvement. Quel solde reste dû au fournisseur ?",
+      "options": [
+        "2 040 €",
+        "1 560 €",
+        "240 €",
+        "1 800 €"
+      ],
+      "answer": 1,
+      "explanation": "L’avoir diminue la dette issue de cette facture : 1 800−240=1 560 €. Le cas exclut tout paiement ; il n’y a donc pas à enregistrer un virement de 240 € simplement parce que la dette a été réduite.",
+      "calculation": {
+        "expected": 1560,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 1800
+            },
+            {
+              "value": 240
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une facture de 1 200 € TTC a déjà reçu un règlement de 500 €. Un avoir ultérieur de 180 € TTC réduit cette même facture, sans autre paiement. Quel reste à payer ?",
+      "options": [
+        "1 020 €",
+        "700 €",
+        "520 €",
+        "880 €"
+      ],
+      "answer": 2,
+      "explanation": "Il faut suivre les deux diminutions distinctes : le règlement de 500 € et l’avoir de 180 €. Le reste est 1 200−500−180=520 €. Déduire seulement l’avoir oublierait le paiement antérieur ; le déduire deux fois ne serait pas justifié.",
+      "calculation": {
+        "expected": 520,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1200
+                },
+                {
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "value": 180
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture est déjà intégralement réglée. Le fournisseur émet un avoir de 150 € TTC et précise qu’il sera imputé sur une prochaine commande ; aucun virement n’a été fait. Quelle situation est documentée ?",
+      "options": [
+        "Une entrée de trésorerie de 150 € déjà reçue.",
+        "Un droit du client à imputer 150 € selon l’accord, sans remboursement bancaire établi.",
+        "Une nouvelle dette de 150 € du client envers le fournisseur.",
+        "L’annulation de toutes les commandes futures sans autre accord."
+      ],
+      "answer": 1,
+      "explanation": "L’avoir corrige le montant de l’opération passée et les modalités fournies prévoient une imputation future. Il ne prouve pas un remboursement en banque. Le suivi du compte fournisseur doit distinguer ce droit du client et les règlements effectifs."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le client n’a pas payé sa facture. Le fournisseur émet un avoir commercial réduisant le prix et inscrit « remboursement » dans un courriel, sans mouvement bancaire. Quel fait doit être décrit avec précision ?",
+      "options": [
+        "La dette est réduite ; un remboursement reçu n’est pas établi.",
+        "Tout emploi du mot remboursement établit un virement exécuté.",
+        "L’avoir prouve que la facture avait été réglée intégralement avant son émission.",
+        "La réduction du prix augmente le montant encore dû."
+      ],
+      "answer": 0,
+      "explanation": "Le libellé du courriel ne remplace pas l’historique des règlements. Une facture impayée peut être réduite par avoir sans restituer de fonds déjà versés. Il faut décrire le solde modifié et conserver la réserve sur tout mouvement bancaire absent du dossier."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une facture de 600 € TTC est déjà payée. Le fournisseur accorde un avoir de 240 € TTC puis rembourse seulement 100 € en banque. Quel montant de l’avoir reste à restituer ou imputer selon l’accord, sans autre mouvement ?",
+      "options": [
+        "340 €",
+        "140 €",
+        "240 €",
+        "360 €"
+      ],
+      "answer": 1,
+      "explanation": "L’avoir crée ici un droit de 240 € pour le client sur une facture déjà réglée. Le remboursement partiel en utilise 100 €, laissant 140 €. Il faut distinguer le prix corrigé, la somme effectivement reçue et le solde du droit restant.",
+      "calculation": {
+        "expected": 140,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 240
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client conteste le prix et demande un avoir de 300 €. Le fournisseur n’a encore accepté aucune réduction et aucun avoir n’est émis. Le dossier ne donne pas d’autre fondement de baisse. Que peut-on constater ?",
+      "options": [
+        "Une demande de correction, sans réduction de prix déjà établie par ces seuls faits.",
+        "Un avoir définitivement acquis du seul fait de la demande.",
+        "Une taxe corrigée automatiquement le jour de toute contestation.",
+        "Un paiement de 300 € nécessairement reçu du fournisseur."
+      ],
+      "answer": 0,
+      "explanation": "Une demande commerciale ne prouve pas sa réalisation. Il faut rechercher l’accord ou le document de correction et le fondement applicable avant de décrire une baisse définitive de dette ou de TVA. Le montant réclamé ne constitue pas par lui-même un avoir accordé."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un avoir indique 400 € HT, 80 € de TVA et 470 € TTC. Quel contrôle numérique détecte directement l’anomalie ?",
+      "options": [
+        "HT+TVA doit être rapproché du TTC, qui devrait ici être 480 €.",
+        "Le HT doit toujours être égal au TTC.",
+        "La TVA doit être soustraite du HT pour obtenir le TTC de tout avoir.",
+        "Le total du prix de vente initial doit être ajouté à la TVA de l’avoir."
+      ],
+      "answer": 0,
+      "explanation": "Les composantes annoncées donnent 400+80=480 €, non 470 €. Ce rapprochement identifie une incohérence arithmétique. Il ne désigne pas à lui seul quelle ligne a été mal saisie ni ne valide le régime ou la période de la correction."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client avait intégralement déduit la TVA d’une facture d’achat. Il reçoit une rectification qui réduit expressément la taxe de 60 €, sans exception particulière. Quel sens de correction est requis sur la déduction ?",
+      "options": [
+        "Diminuer la déduction antérieure de la taxe corrigée.",
+        "Augmenter la déduction de 60 € comme pour un nouvel achat.",
+        "Conserver systématiquement la taxe déduite même si le montant facturé est rectifié.",
+        "Transformer les 60 € en taxe collectée sur une nouvelle vente du client."
+      ],
+      "answer": 0,
+      "explanation": "L’article 271 II-3 impose les rectifications correspondantes des déductions lorsque les factures sont rectifiées. Le montant de taxe d’achat est réduit ; le client ne doit donc pas conserver une déduction supérieure à la taxe corrigée dans le cas donné.",
+      "references": [
+        {
+          "title": "CGI, article 271 II-3, correction des déductions, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053545646/2026-06-21"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client apprend en juin 2026 la rectification d’une facture dont il avait déduit la TVA en avril. Le cas relève du 3 du II de l’article 271 et exclut tout régime particulier. Quelle période le texte vise-t-il pour mentionner la rectification de la déduction ?",
+      "options": [
+        "Le mois de juin, au cours duquel il a eu connaissance de la rectification.",
+        "Le mois d’avril, au titre de la déduction initiale, même si la rectification n’était pas encore connue.",
+        "Le mois du règlement de l’avoir, même si sa connaissance est antérieure.",
+        "Le dernier mois de l’exercice, afin de regrouper les régularisations annuelles."
+      ],
+      "answer": 0,
+      "explanation": "Le texte prévoit la déclaration souscrite au titre du mois au cours duquel le redevable a eu connaissance de la rectification. Il faut donc dater la connaissance de la correction et la distinguer de l’opération initiale ou d’une future utilisation commerciale de l’avoir.",
+      "references": [
+        {
+          "title": "CGI, article 271 II-3, correction des déductions, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053545646/2026-06-21"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le vendeur émet un avoir réduisant la taxe de sa vente. Le client traite le même document comme une hausse de TVA déductible. Quel contrôle de sens doit être effectué ?",
+      "options": [
+        "Relier la réduction de taxe facturée à la correction correspondante du droit à déduction du client.",
+        "Confirmer que tout avoir augmente toujours la déduction du client.",
+        "Assimiler l’avoir à une seconde facture d’achat identique à la première.",
+        "Ajouter la réduction de taxe au prix HT de la vente initiale."
+      ],
+      "answer": 0,
+      "explanation": "Une même correction se lit de part et d’autre de l’opération. La réduction de taxe facturée ne constitue pas une taxe d’achat nouvelle supplémentaire pour le client. Sous les hypothèses de correction de la taxe fournies, il faut ajuster sa déduction dans le même sens de réduction.",
+      "references": [
+        {
+          "title": "CGI, article 271 II-3, correction des déductions, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000053545646/2026-06-21"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le total HT+TVA d’un avoir est cohérent. Le préparateur en conclut que le document concerne forcément la bonne facture et la bonne période. Quelle limite reste à indiquer ?",
+      "options": [
+        "La cohérence arithmétique ne valide pas à elle seule le rattachement documentaire et temporel.",
+        "Un total exact interdit toute vérification des références.",
+        "Le calcul exact fixe toujours la période au mois du paiement futur.",
+        "Une égalité HT+TVA=TTC prouve nécessairement le remboursement bancaire."
+      ],
+      "answer": 0,
+      "explanation": "Le rapprochement numérique vérifie une relation entre montants. Il ne prouve ni le lien avec la facture initiale, ni la date pertinente pour la correction, ni un flux bancaire. Les contrôles de référence, de sens et de période doivent rester distincts."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une facture initiale de 1 000 € HT au taux fourni de 20 % est corrigée par un avoir de 200 € HT au même taux. Pour contrôler la taxe finale cumulée sur l’opération, quel montant doit rester après la correction ?",
+      "options": [
+        "240 €",
+        "200 €",
+        "160 €",
+        "40 €"
+      ],
+      "answer": 2,
+      "explanation": "La taxe initiale est 200 € et celle de l’avoir 40 €. La taxe nette de l’opération est 160 €, cohérente avec la base finale de 800 € au taux de 20 %. Le total TTC final de l’opération serait une grandeur différente de cette seule taxe.",
+      "calculation": {
+        "expected": 160,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 1000
+                },
+                {
+                  "value": 0.2
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 200
+                },
+                {
+                  "value": 0.2
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    }
+  ]
+}

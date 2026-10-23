@@ -1,0 +1,248 @@
+{
+  "sourceHash": "482c55a6c8782ed0da5c4cf61673e22b8427994f3fbe552fe342414c8d4c46f5",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "9a2026e286d0c7b3a6f6fa0f0b567a6d6e918e02aafb7f2ac5254ff19b677ba7",
+      "selected": 2,
+      "reason": "Le périmètre externe spécifie usages données interfaces et limites du service.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "4e976a4deb22efdc5fb98b91694469e48cec31deca12bfa6b1b08fcb22b0ee61",
+      "selected": 2,
+      "reason": "10000*110/100=11000 selon clause fournie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "5a79010dd6de0548ecee1baf48b5f3176fb585e7be3a77d4601fd72615f443d4",
+      "selected": 0,
+      "reason": "55sessionssimultanées dépassent capacité40 ;120personnes n’est pas la métrique contractuelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "4e013ae42ebb95c86ff8c2462946b5021e09d4ef10f954c50719ebf767e8984f",
+      "selected": 2,
+      "reason": "La matrice attribue droits applicatifs au client qui doit les corriger.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "1579b7c85aa2b0aa4426fe519ff67d75427d37d9922e56b0b6082055a6a2dad2",
+      "selected": 3,
+      "reason": "Un forfait payé ne vérifie pas qualité sémantique ou usage des données migrées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "3fd9c4f252581984aa638b5cebe4881b822307136735e3013f62409b41b76db2",
+      "selected": 2,
+      "reason": "La clause impose mesures et demande dans30jours, pas crédit automatique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "9e1c9c8fcab2a1d6ac9f21b4201c6b8f17117f3b18e7ca94b94a42cb32322963",
+      "selected": 1,
+      "reason": "La cible interne99.95 et engagement99.5 sont deux références distinctes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "760d5a34a40474639a0e0d470f5f6b3958556ce4474aae91cdb25ee6f1293da9",
+      "selected": 2,
+      "reason": "95%auplus2sec laisse5%non décrits, pas un maximum de2sec.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "35c653b3acf28b10ecbd2b88346119e35a3d87c269c533d61bad919e4abe91b8",
+      "selected": 2,
+      "reason": "Une compensation financière ne constitue pas une capacité de reprise technique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "1ff50512e657a790965f64e8d80ed943be0929541bb8081a692b033a09abda4f",
+      "selected": 3,
+      "reason": "Une plage de contact24h ne fixe pas un délai de résolution.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "c67aab7ede73a5f9600ae9587a6361864543078f56024358b28b61246d836304",
+      "selected": 1,
+      "reason": "Les maintenances exclues peuvent réduire continuité réelle malgré bon taux contractuel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "d293ab40477f40f8a2df1d8d25d95975af3970ace8f759a1ac33c3168c8d6275",
+      "selected": 1,
+      "reason": "Un rapportjanvierjuin ne couvre pas seul les changements de septembre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "7875e2acd26fccd943a6e162bc630e449e74322994f2a42cb804234a07ba5ea0",
+      "selected": 0,
+      "reason": "Les données exportées ne reconstituent pas les règles de calcul absentes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "5e08554308182d612488242180d0b861e43067492cb85d0e97cd0f0782fc99a6",
+      "selected": 3,
+      "reason": "Documentation utilisable et transmission réduisent dépendance à la personneclé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "b7279cdcc1a5bf1269023f595a9c472e8fce686a43149287e2b4eea22f0dc738",
+      "selected": 1,
+      "reason": "Le fichier propriétaire doit pouvoir être converti avec coût et faisabilité vérifiés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "d8a427b0f8aa8bfeaf341866297209fe436233217c43934bdcbf312e1b54002d",
+      "selected": 1,
+      "reason": "Le changement de soustraitant doit suivre information et revue convenues.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "1242dc826e45d4862d31af9024af7c2be6b0aed493d754a939412c9cff751fd8",
+      "selected": 3,
+      "reason": "Le stockagefrançais ne signifie pas accès depuisFrance ; cartographier les deux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "d0a3e331750fcb209b503ffd032cd2f6dbc2d7fa04186457d17cb599f2aff4b7",
+      "selected": 0,
+      "reason": "La possession matérielle du code ne confère pas un droit de modifier exclu par clause.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "9fe2f2dc396aa402abb32a29fae9e61e5d85f5657acc3b880f9740cfe2b6daad",
+      "selected": 3,
+      "reason": "Un exportdernierjour laisse pas le temps pour validation et correction avant extinction.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "1dfa8cd43259777b8c2ca764e8d9cbb5799de26fe23d423e783ca519e95660de",
+      "selected": 1,
+      "reason": "Un échec sur pièces jointes nécessaires exige correction puis nouveau test.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "7a8182b84fc5172c376cbb30bc58a5c82a7f0e99c5626982b956121583e4641d",
+      "selected": 3,
+      "reason": "La sortie requiert pilotage rôles calendrier critères, au-delà du droit formel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "723758d419074126d2a7ff6b9791fa139ce0c718b9e88dd998e184743fbfe823",
+      "selected": 1,
+      "reason": "Les nouvelles dépendances critiques ne sont pas couvertes automatiquement par testancien.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

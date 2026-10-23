@@ -1,0 +1,254 @@
+{
+  "sourceHash": "3213a59bf80865e9531c390dfbf02b52cc0dc5da2fdfc2308807b0d9ce321a18",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "d9b6c67ab272ca5311029805a7261df5dafe0f87ef263da44a7cf16491e06971",
+      "selected": 1,
+      "reason": "La confidentialité limite la consultation aux personnes habilitées, distinctement de disponibilité et intégrité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "ecf7ebd0188a2dbc1b0a3990ee029792c5448c17abca9f045968fe55102a0d6d",
+      "selected": 0,
+      "reason": "Une modification non autorisée affecte directement l’intégrité du montant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "cc197adea8850b3508f26a65212defaa5008df8500eef2c3c3b427834fed5bb8",
+      "selected": 2,
+      "reason": "Un appareil détenu est un facteur de possession distinct d’un secret mémorisé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "896b888edb90427c92cb53204616a1c2ac3acb458c66d609adb1ad621584933e",
+      "selected": 2,
+      "reason": "Selon la minimisation CNIL, la possibilité technique ne justifie pas des informations sans nécessité définie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "0d725770ebac1789de15b581c6c0b9dbdf37bde490142b7b9e81e301ad842d64",
+      "selected": 1,
+      "reason": "La restriction des lectures aux fonctions utiles traite les droits excessifs constatés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "7eb8ba245cb6c0a32bf4b7efb8202e40d35248a1bb4fe7864a24a8eb88476f2b",
+      "selected": 2,
+      "reason": "La comparaison aux justificatifs et la traçabilité permettent de contrôler le bien-fondé et l’auteur du changement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "8441f3f1ca8a2a87a3c193e5df465871df0e3a1d21e8ed4c365b5ec75ed38587",
+      "selected": 0,
+      "reason": "L’authentification vérifie l’identité ; elle ne remplace pas les règles d’autorisation et de partage.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "97983488820885f0e1c277542ade8fa053a91029bda3fd5247f54a93a8102b21",
+      "selected": 2,
+      "reason": "La finalité et la pertinence de chaque champ doivent fonder le périmètre de collecte.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "996f92107c0085d09401fd22a0da68d5e76caff00fc6f94077fd73ad13481379",
+      "selected": 2,
+      "reason": "Les droits doivent permettre la consultation des factures sans autoriser la modification des coordonnées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "e27f283571dfc54abca6637a26e8692969c341d2fac3609df37d413780a366f0",
+      "selected": 2,
+      "reason": "Un compte partagé ne permet pas d’attribuer de façon fiable une action à un technicien particulier.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "c6eff88c50a70c6125f5e73ec3ee100b65f5a721d02101d9b5540aab1d24a5cb",
+      "selected": 3,
+      "reason": "Un voleur du mot de passe peut rester bloqué s’il ne possède pas le facteur supplémentaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "b6cf27b9955d5b3ed5bc321d4db43fd86d64d676dd25a9e52bd2626c9c3a1f8e",
+      "selected": 2,
+      "reason": "Les habilitations doivent être révisées quand le besoin professionnel disparaît.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "f7b2e048e72b5a98f3783367d516571a5243b597e9c4654fcb0824847bdf7907",
+      "selected": 0,
+      "reason": "Le succès de copie n’atteste ni une restauration correcte ni son délai ; cela doit être testé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "a21cc4b3a51b867249fec5a70495b0ca709b1bd93ff777260a28fe2b3efc8cf4",
+      "selected": 1,
+      "reason": "Chiffrer protège le stockage mais ne rend pas nécessaire la collecte d’une adresse sans finalité établie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "9f484c1cdfc908c68e0cab0dfab5d773277e9f9c95522f8b5f870565d67fd590",
+      "selected": 2,
+      "reason": "La messagerie personnelle non autorisée fait sortir les données du cadre de partage maîtrisé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "026e824e4533ef629304d04ac08d21ce9468884383e3ca9bd8c398fd387c0b95",
+      "selected": 1,
+      "reason": "Une restauration isolée permet les contrôles et chronométrages sans écraser la production.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "f1a9b206b182d8de38252ed790c259bb6d4c0ddd454c33d5b56052c224f9c10d",
+      "selected": 0,
+      "reason": "Valider un second facteur non initié peut autoriser une connexion malveillante.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "c61c92741e79d859f6ad93f2f03a69dc8fb9391b658ef9cf376e5bfb365685c6",
+      "selected": 0,
+      "reason": "La question de finalité et pertinence répond à la minimisation plutôt qu’à la simple faisabilité technique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "3cc08c0acfddd3e18d759282eba15272a0e42f20f00f2a8a1969bdeccc4d74f1",
+      "selected": 3,
+      "reason": "Un accès impossible pendant deux jours dégrade la disponibilité même avec des droits corrects.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "1e3746b32e7eb683aed9d3c778b3d16fbcf4876bf9f9729c8b4e797fd4ab7039",
+      "selected": 3,
+      "reason": "Le justificatif permet de vérifier le fondement réel de la donnée modifiée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "5aba7f18d5c079ad9a88dc325ede486477084e99b17112d8a1058c4ed0370646",
+      "selected": 0,
+      "reason": "L’identité fortement authentifiée ne dispense pas d’autoriser seulement les ressources nécessaires.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "7990dc856c590e89915bd9488d1ef5574b4e1484dfe2db24679323b3dcc43166",
+      "selected": 1,
+      "reason": "La définition des usages doit précéder et justifier la sélection des données, pas l’inverse.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ],
+  "checkedSources": [
+    "https://www.cnil.fr/fr/definition/minimisation",
+    "https://cnil.fr/fr/recommandation-mfa",
+    "https://www.cnil.fr/fr/guide-de-la-securite-des-donnees-personnelles",
+    "https://www.cnil.fr/fr/securite-des-donnees-les-regles-essentielles"
+  ]
+}

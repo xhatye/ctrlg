@@ -1,0 +1,369 @@
+{
+  "module": "UE7",
+  "chapter": "dossier-synthese",
+  "sourceHash": "c0dc01d675cf3660d94d7feccb5d3ea22f49a72afe69e851878d19ffaecbf252",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une livraison plus rapide satisfait le client mais impose des changements de planning quotidiens aux équipes et au fournisseur. Quel diagnostic des attentes est nécessaire ?",
+      "options": [
+        "Évaluer uniquement le délai client et supposer que les ajustements internes sont sans coût.",
+        "Recueillir les attentes de chaque acteur séparément sans examiner les incompatibilités entre elles.",
+        "Identifier qualité de service, charge et prévisibilité pour expliciter leurs tensions.",
+        "Mesurer le nombre de modifications du planning comme preuve suffisante de satisfaction des trois acteurs."
+      ],
+      "answer": 2,
+      "explanation": "Les parties prenantes peuvent juger des dimensions différentes. Le diagnostic doit faire apparaître les attentes présentes plutôt que déduire de la satisfaction d’un acteur une amélioration identique pour tous."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La charte interne d’un projet impose de consulter les représentants des utilisateurs avant décision, mais réserve l’approbation au comité de direction. Quel dispositif respecte ces deux rôles ?",
+      "options": [
+        "Recueillir et examiner leur avis avant de soumettre la décision au comité compétent.",
+        "Informer les représentants seulement après approbation par le comité.",
+        "Présenter le recueil des avis comme un transfert de l’approbation aux représentants.",
+        "Faire approuver par le comité sans consultation au motif qu’il est le décideur final."
+      ],
+      "answer": 0,
+      "explanation": "La consultation préalable et l’autorité de décision sont distinctes. La charte fournie exige la première sans transférer la seconde."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La matrice du dossier distingue influence et intérêt : les acteurs très influents mais peu intéressés doivent être maintenus satisfaits, tandis que les très influents et très intéressés sont associés étroitement. Quel traitement prévoit-elle pour un financeur très influent qui suit peu les opérations ?",
+      "options": [
+        "Le gérer comme un acteur sans influence nécessitant seulement une veille minimale.",
+        "L’associer à chaque détail opérationnel comme si son intérêt était élevé.",
+        "Le traiter comme un acteur très intéressé mais sans pouvoir d’influence.",
+        "Le maintenir satisfait, avec une information adaptée à ses attentes et à son pouvoir."
+      ],
+      "answer": 3,
+      "explanation": "Les deux axes doivent être lus séparément. Le financeur correspond à la case influence élevée, intérêt faible selon la convention explicitement fournie."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une décision d’organisation est lancée sans responsable de suivi ni date de bilan. Quel complément rend la décision réellement réexaminable ?",
+      "options": [
+        "Nommer un responsable sans préciser ce qu’il doit mesurer ni quand un écart doit être examiné.",
+        "Des indicateurs, un responsable, une fréquence et des signes d’alerte liés à l’action.",
+        "Prévoir uniquement une présentation de lancement, sans examen des effets ultérieurs.",
+        "Attendre le bilan annuel global sans définir d’alerte utile pendant la mise en œuvre."
+      ],
+      "answer": 1,
+      "explanation": "Le suivi doit soutenir une décision : qui regarde quoi, quand et avec quelle conséquence. Un tableau sans responsabilité ni déclencheur peut rester descriptif sans permettre d’adapter l’action."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un projet auparavant entièrement interne prévoit désormais des livraisons nocturnes dans une zone habitée. Que doit provoquer ce changement dans l’analyse des parties prenantes ?",
+      "options": [
+        "Conserver la liste initiale au motif qu’elle a été approuvée au lancement.",
+        "Limiter la carte aux signataires des contrats de livraison.",
+        "Réexaminer la carte des acteurs affectés, notamment les riverains exposés aux nouvelles nuisances.",
+        "Considérer les riverains uniquement s’ils financent directement le projet."
+      ],
+      "answer": 2,
+      "explanation": "Une partie prenante peut être affectée sans être cliente, salariée ou signataire. Une modification du périmètre peut donc faire apparaître de nouveaux acteurs à examiner."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une grille fournie note de 0 à 5, une note haute étant meilleure. La note coût vaut 4 avec un poids 40 % et la note qualité 3 avec un poids 60 %. Quel score pondéré calcule-t-on ?",
+      "options": [
+        "3,4 sur 5",
+        "3,6 sur 5",
+        "7 sur 5",
+        "0,34 sur 5"
+      ],
+      "answer": 0,
+      "explanation": "Le score est 4 × 0,40 + 3 × 0,60 = 1,6 + 1,8 = 3,4. Les poids sont fournis par le dossier ; le résultat ne dit pas que cette pondération convient à toute décision.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 4
+                },
+                {
+                  "value": 0.4
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 3
+                },
+                {
+                  "value": 0.6
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 3.4,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Au lancement, un dossier consigne les hypothèses de demande qui justifient une nouvelle organisation. Six mois plus tard, quel usage de cet écrit favorise l’apprentissage ?",
+      "options": [
+        "Réécrire les hypothèses initiales pour les rendre identiques aux résultats observés.",
+        "Évaluer le raisonnement initial seulement avec les informations devenues disponibles après la décision.",
+        "Archiver les hypothèses sans les rapprocher des résultats puisque la décision est déjà prise.",
+        "Comparer les hypothèses initiales et les résultats observés pour comprendre ce qui a confirmé ou infirmé le raisonnement."
+      ],
+      "answer": 3,
+      "explanation": "Conserver le raisonnement disponible au moment du choix permet une évaluation intelligible. L’effacer ou lui attribuer rétrospectivement des informations nouvelles empêche cet apprentissage."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un indicateur franchit le seuil d’alerte prévu, mais le tableau est seulement archivé. Quelle correction rend le suivi opérationnel ?",
+      "options": [
+        "Attendre le bilan final sans examiner l’alerte avant cette échéance.",
+        "Déclencher un examen de la situation et une décision corrective ou une escalade selon les responsabilités prévues.",
+        "Augmenter le seuil après chaque dépassement sans examiner la cause.",
+        "Compter les alertes archivées comme preuve de corrections réalisées."
+      ],
+      "answer": 1,
+      "explanation": "Une alerte utile relie mesure, examen et réponse. L’archivage seul ou un seuil relevé sans analyse ne traite pas la situation détectée."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un client demande « une livraison tous les jours », car il manque de stockage. Le fournisseur propose d’autres modalités. Quel élément est l’intérêt sous-jacent, distinct de la position exprimée ?",
+      "options": [
+        "Exiger exactement un passage quotidien du transporteur.",
+        "Imposer le même calendrier quel que soit le besoin de stockage.",
+        "Réduire le besoin de stockage supporté par le client.",
+        "Retenir d’emblée la première solution technique proposée par le fournisseur."
+      ],
+      "answer": 2,
+      "explanation": "La livraison quotidienne est une solution demandée, donc une position. Le besoin de réduire le stockage est l’intérêt auquel plusieurs solutions pourraient répondre."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux options sont notées, mais la seconde manque d’information sur sa fiabilité. Elle paraît meilleure parce que ce critère a été laissé vide. Comment traiter le résultat ?",
+      "options": [
+        "Signaler la lacune et rechercher l’information ou discuter son incertitude avant de conclure.",
+        "Attribuer une note favorable par défaut au critère non renseigné, sans convention explicite.",
+        "Comparer les seuls totaux disponibles sans mentionner que leur couverture diffère.",
+        "Retenir la note de fiabilité de l’autre option comme estimation certaine pour celle qui est inconnue."
+      ],
+      "answer": 0,
+      "explanation": "Une information absente n’est pas un avantage démontré. La comparaison doit rendre les lacunes visibles et les traiter avec une règle explicite, pas créer une supériorité à partir d’un critère non documenté."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un objectif individuel augmente les résultats de chacun au détriment de l’entraide entre services. Que faut-il examiner ?",
+      "options": [
+        "Renforcer chaque objectif individuel sans observer les échanges nécessaires au résultat collectif.",
+        "Évaluer la coopération par la seule somme des scores individuels malgré les effets décrits.",
+        "Traiter l’entraide comme un temps improductif par principe, sans examiner son apport au service final.",
+        "La cohérence entre incitations individuelles, coopération et performance d’ensemble."
+      ],
+      "answer": 3,
+      "explanation": "Une mesure locale peut déplacer l’effort au détriment d’autres contributions. Il faut identifier les interdépendances et les comportements possibles pour apprécier le résultat collectif au-delà des scores individuels."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le plan forme les agents pour réduire les erreurs de traitement. Le tableau distingue réalisation de l’action et résultat recherché. Quelle paire d’indicateurs respecte cette distinction ?",
+      "options": [
+        "Nombre d’agents invités pour la réalisation ; taux de satisfaction immédiatement après la formation pour la baisse des erreurs.",
+        "Nombre d’agents effectivement formés pour la réalisation ; taux d’erreur des dossiers pour le résultat recherché.",
+        "Taux d’erreur des dossiers pour la réalisation de la formation ; nombre d’agents formés pour son résultat sur les erreurs.",
+        "Nombre de séances prévues pour la réalisation effective ; nombre d’inscrits pour le résultat sur les dossiers."
+      ],
+      "answer": 1,
+      "explanation": "La formation effectuée décrit un produit de l’action, pas son effet sur les erreurs. L’indicateur de résultat doit se rapprocher de l’amélioration effectivement recherchée."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Les retours utilisateurs proviennent uniquement de volontaires très expérimentés. Le service compte aussi des débutants qui utilisent le futur outil. Quelle limite de consultation faut-il traiter ?",
+      "options": [
+        "L’absence d’intérêt de tous les retours volontaires, qui doivent être intégralement supprimés.",
+        "La nécessité de considérer chaque avis expérimenté comme représentatif de tous les niveaux.",
+        "La couverture des profils concernés, car les volontaires expérimentés peuvent ne pas représenter les besoins des débutants.",
+        "Le seul nombre de réponses, sans examiner les profils auxquels elles correspondent."
+      ],
+      "answer": 2,
+      "explanation": "Les avis recueillis sont utiles mais leur couverture doit être connue. Inclure les profils manquants évite de confondre une consultation partielle avec une représentation de tous les usages."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une grille doit attribuer une note élevée à une meilleure option. Elle note pourtant mieux les coûts plus élevés et les qualités plus élevées. Quelle correction respecte le sens annoncé ?",
+      "options": [
+        "Transformer le critère coût pour qu’un coût plus faible obtienne une meilleure note, en documentant l’échelle.",
+        "Inverser seulement la note qualité pour qu’une qualité plus faible soit mieux notée.",
+        "Additionner les coûts en euros aux notes de qualité sans transformation.",
+        "Conserver les notes en supposant que le total corrigera leur sens."
+      ],
+      "answer": 0,
+      "explanation": "Le sens des critères doit correspondre à la convention de préférence : coût plus faible et qualité meilleure donnent une note plus élevée. Le total ne corrige pas une échelle inversée."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un projet est acceptable seulement si la demande atteint le scénario haut. Dans les scénarios central et bas retenus par le dossier, il ne respecte pas les contraintes financières. Quelle conclusion décrit sa robustesse ?",
+      "options": [
+        "Le projet est robuste à tous les scénarios parce qu’un scénario acceptable existe.",
+        "Le scénario haut constitue une prévision certaine dès qu’il rend le projet acceptable.",
+        "L’existence de trois scénarios suffit à démontrer que les contraintes sont respectées dans chacun.",
+        "Le projet dépend fortement de la réalisation du scénario haut et n’est pas robuste aux autres scénarios examinés."
+      ],
+      "answer": 3,
+      "explanation": "Examiner plusieurs scénarios n’élimine pas la dépendance aux hypothèses. Ici, seule une configuration favorable satisfait les contraintes annoncées."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La cible de délai est trois jours. Une procédure impose un examen dès qu’un dossier dépasse cinq jours. Quel rôle joue le seuil de cinq jours ?",
+      "options": [
+        "La cible de performance qui remplace automatiquement l’objectif de trois jours.",
+        "Un seuil d’alerte déclenchant un examen, distinct de la cible de performance.",
+        "Le délai moyen déjà observé pour tous les dossiers du service.",
+        "Une marge autorisant à ignorer tous les dossiers dès qu’ils dépassent cinq jours."
+      ],
+      "answer": 1,
+      "explanation": "Une cible indique le résultat visé. Le seuil d’alerte fixe ici un déclencheur d’examen ; il ne décrit ni un résultat constaté ni une nouvelle cible."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une entreprise dit consulter ses partenaires, mais ne rencontre que ceux qui soutiennent déjà le projet et écarte les opposants concernés. Quelle limite de la démarche apparaît ?",
+      "options": [
+        "Une consultation exhaustive du seul fait que plusieurs partenaires favorables ont été rencontrés.",
+        "Une absence de toute partie prenante opposante puisque son avis n’a pas été recueilli.",
+        "Une sélection des interlocuteurs qui exclut les objections pertinentes avant leur examen.",
+        "Une preuve que les risques soulevés par les autres acteurs sont sans fondement."
+      ],
+      "answer": 2,
+      "explanation": "Un soutien recueilli dans une sélection favorable ne démontre pas une écoute de tous les intérêts pertinents. Les objections doivent être examinées sur leur contenu."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux options changent de rang dès que le poids de la fiabilité passe de 40 % à 45 %, intervalle jugé plausible par les décideurs. Que révèle ce test de sensibilité ?",
+      "options": [
+        "Le classement est sensible à une priorité encore discutée ; la justification de cette pondération est décisive.",
+        "Le classement est indépendant des priorités puisque les deux poids sont proches.",
+        "Le poids de 45 % est automatiquement objectivement vrai parce qu’il change le premier rang.",
+        "La fiabilité doit être supprimée du modèle pour empêcher tout changement de classement."
+      ],
+      "answer": 0,
+      "explanation": "Le test ne fournit pas une priorité universellement correcte. Il révèle que le choix peut changer dans l’intervalle plausible, ce qui doit être explicité au décideur."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un dispositif génère tant d’alertes mineures que les incidents critiques attendent. Quel ajustement conserve une surveillance utile ?",
+      "options": [
+        "Traiter toutes les alertes strictement par ordre d’arrivée sans distinction de gravité.",
+        "Désactiver toutes les alertes pour réduire le nombre de sollicitations.",
+        "Mesurer uniquement le nombre d’alertes produites comme preuve de maîtrise des incidents.",
+        "Hiérarchiser les alertes selon leur gravité et organiser les délais et responsabilités de traitement associés."
+      ],
+      "answer": 3,
+      "explanation": "Produire une alerte n’équivaut pas à traiter un risque. La priorisation et la capacité de réponse doivent permettre une action utile sur les situations critiques."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une action ne produit pas les effets attendus au point de contrôle prévu. Quelle suite correspond à un suivi utile ?",
+      "options": [
+        "Maintenir l’action jusqu’au terme sans examen des hypothèses malgré le point de contrôle prévu.",
+        "Analyser l’écart et réexaminer l’action, ses hypothèses ou ses modalités.",
+        "Réviser seulement la présentation du tableau pour ne plus montrer l’écart à l’objectif initial.",
+        "Attribuer d’emblée l’écart à un défaut d’engagement sans examiner le déroulement de l’action."
+      ],
+      "answer": 1,
+      "explanation": "Le suivi sert à apprendre et décider. Un écart peut venir d’hypothèses ou de mise en œuvre ; l’examiner permet une correction proportionnée plutôt que transformer le tableau en simple justification du choix initial."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Une grille code les avis «faible», «moyen», «fort» par 1, 2, 3. Aucun écart quantitatif entre ces niveaux n’est défini. Que peut-on conclure directement du code 3 comparé au code 1 ?",
+      "options": [
+        "La qualité au niveau 3 est exactement trois fois celle du niveau 1.",
+        "L’écart de qualité entre 1 et 2 est nécessairement identique à celui entre 2 et 3.",
+        "Le niveau 3 est classé plus haut, sans démontrer qu’il représente une qualité trois fois supérieure.",
+        "Le passage de 1 à 3 mesure une hausse de qualité de 200 % démontrée par les avis."
+      ],
+      "answer": 2,
+      "explanation": "Le codage est ordinal : il donne un ordre, pas des rapports de grandeurs ni des intervalles égaux. Une interprétation arithmétique exige des conventions et justifications supplémentaires."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un responsable de suivi est nommé mais n’a ni accès aux données ni possibilité de faire examiner une alerte. Que faut-il vérifier ?",
+      "options": [
+        "La cohérence entre sa responsabilité, les informations et les moyens d’agir ou d’escalader.",
+        "Évaluer le suivi par le seul nombre de personnes officiellement nommées responsables.",
+        "Exiger un compte rendu régulier tout en maintenant le blocage d’accès aux données nécessaires.",
+        "Considérer la nomination comme suffisante pour traiter les alertes sans canal de décision."
+      ],
+      "answer": 0,
+      "explanation": "Une responsabilité doit être opérationnelle. Sans information et voie de traitement, le rôle risque de rester nominal ; les conditions de mesure et d’examen des alertes doivent être définies avec le suivi."
+    }
+  ]
+}

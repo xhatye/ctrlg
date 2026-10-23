@@ -1,0 +1,353 @@
+{
+  "module": "UE12",
+  "chapter": "english-meeting-minutes",
+  "sourceHash": "01222fb27400500dd8600e1c8120764d18aa681696c096799ccf671dbb28cff9",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "An invitation asks you to \"review the minutes of the previous meeting\". What document does minutes refer to here?",
+      "options": [
+        "The written record of the previous meeting’s proceedings and decisions.",
+        "The schedule showing the duration of each presentation at the next meeting.",
+        "The invoices recording the cost of holding the previous meeting.",
+        "The attendance timetable used only to record employees’ working hours."
+      ],
+      "answer": 0,
+      "explanation": "Meeting minutes are the record of proceedings, decisions and actions. The word does not mean a duration measurement in this expression."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Participants supported a proposal in principle, subject to budget approval. Which wording preserves the condition?",
+      "options": [
+        "The proposal was rejected because a budget review is still pending.",
+        "The proposal has support in principle, subject to budget approval.",
+        "The proposal has final approval and can be implemented without further checks.",
+        "The budget has already been approved because participants supported the idea."
+      ],
+      "answer": 1,
+      "explanation": "L’accord de principe ne remplace pas la validation budgétaire attendue. La condition doit être conservée sans présenter l’option comme rejetée ou définitivement autorisée."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "The minutes say \"The chair invited members to comment on the proposal\". Who does chair identify in this sentence?",
+      "options": [
+        "The person who takes every operational action after the meeting, regardless of role.",
+        "The supplier presenting a quotation, regardless of who presides.",
+        "The person presiding over the meeting.",
+        "Every participant entitled to speak, treated as a single role."
+      ],
+      "answer": 2,
+      "explanation": "The chair is the person who presides. The role is distinct from all members collectively, a supplier or the owner of every resulting action."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A committee hears a recommendation to buy equipment but postpones its vote. Which minute is justified?",
+      "options": [
+        "The purchase was approved, with the postponed vote serving only to record an approval already given.",
+        "The committee completed its vote and rejected the recommended purchase.",
+        "The equipment order was authorised while the approval vote remained deferred.",
+        "The purchase was recommended; the approval decision was deferred."
+      ],
+      "answer": 3,
+      "explanation": "Le compte rendu doit distinguer recommandation, décision et exécution. Un vote reporté ne peut pas être présenté comme une autorisation acquise."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Under \"Apologies\", the minutes list two members who notified the organiser that they could not attend. What does this heading record?",
+      "options": [
+        "Members whose notified absence is recorded.",
+        "Members admitting errors in their presentations at the meeting.",
+        "Members who voted against every proposal discussed.",
+        "Members responsible for correcting mistakes in the draft minutes."
+      ],
+      "answer": 0,
+      "explanation": "Apologies in this meeting context records notified non-attendance. It does not mean an admission of a mistake or a vote against a proposal."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The supplied meeting rule requires at least four voting members to be present for a decision. Three are present. A minute says \"The quorum was not met\". What does this mean under the rule?",
+      "options": [
+        "A majority of the three attendees necessarily voted against the proposal.",
+        "The required minimum attendance for making the decision was not reached.",
+        "The proposal was approved because all three attendees could discuss it.",
+        "Four favourable votes were recorded even though only three members were present."
+      ],
+      "answer": 1,
+      "explanation": "Quorum concerns the required attendance, not the vote’s substantive outcome. The question applies the rule supplied rather than assuming a universal threshold."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A minute says “improve reporting”, with no responsible person, output or date. Which revision makes it verifiable?",
+      "options": [
+        "Maya will consider reporting whenever other tasks permit, without an identified output.",
+        "A revised reporting template should be prepared, with no person or delivery date assigned.",
+        "Maya will submit a revised reporting template by 12 May.",
+        "Maya will improve reporting, with neither a specified deliverable nor a deadline."
+      ],
+      "answer": 2,
+      "explanation": "Une action vérifiable identifie un responsable, un livrable et une échéance. Les autres formulations expriment des intentions générales plutôt qu’un engagement contrôlable."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "An action was agreed, but no deadline was set. What should the minutes state?",
+      "options": [
+        "Due on the date suggested informally by one participant but not agreed.",
+        "Due on the next meeting date, even though the meeting set no such deadline.",
+        "Due on the previous project’s deadline, carried forward without confirmation.",
+        "Deadline to be confirmed"
+      ],
+      "answer": 3,
+      "explanation": "Un compte rendu fidèle signale la date manquante au lieu de l’inventer. L’absence d’échéance ne prouve ni l’achèvement ni l’annulation de l’action."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Read the minute: \"The revised purchasing limit was approved by Lina after Karim’s review.\" Who approved the revised limit according to this sentence?",
+      "options": [
+        "Lina.",
+        "Karim.",
+        "Lina and Karim jointly, because both names appear.",
+        "The sentence identifies the reviewer but does not identify the approver."
+      ],
+      "answer": 0,
+      "explanation": "In the passive construction was approved by Lina, the by-phrase names the approver. After Karim’s review assigns a separate earlier review role."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An action log describes a task as \"outstanding\" and states that it has not yet been completed. Which interpretation fits this status?",
+      "options": [
+        "The task was completed to an exceptionally high standard.",
+        "The task remains to be completed.",
+        "The task has been cancelled and no longer requires action.",
+        "The task was approved as complete when it was first assigned."
+      ],
+      "answer": 1,
+      "explanation": "Outstanding in an action log means unresolved or still to be done. It is not the adjective meaning excellent in this context."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A draft action log assigns a task to a person who was only mentioned as a possible contributor. What should the writer do?",
+      "options": [
+        "Assign the task to the possible contributor without confirming whether that role was agreed.",
+        "Treat the person who proposed the task as its owner without checking the assignment.",
+        "Seek confirmation of the owner instead of inventing an assignment.",
+        "Assign final ownership to every contributor mentioned, even where none accepted that responsibility."
+      ],
+      "answer": 2,
+      "explanation": "Une responsabilité ne se déduit pas d’une simple mention. Il faut confirmer l’attribution pour ne pas créer un engagement que la réunion n’a pas établi."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The next meeting reviews an action that is still being prepared. Which status avoids claiming completion?",
+      "options": [
+        "Completed, because preparation has started",
+        "Approved, because a draft exists",
+        "Cancelled, because the task is not finished yet",
+        "In progress, with the remaining deliverable identified"
+      ],
+      "answer": 3,
+      "explanation": "In progress distingue le travail engagé de son achèvement. Un brouillon ou un début d’exécution ne démontre pas une remise finale ni une approbation."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A meeting agenda ends with \"Any other business\". What is the function of this item?",
+      "options": [
+        "To allow additional matters to be raised under the meeting’s applicable arrangements.",
+        "To review only the accounts of companies other than the organisation holding the meeting.",
+        "To record that all matters discussed earlier have been approved without a vote.",
+        "To assign every unfinished action automatically to the meeting organiser."
+      ],
+      "answer": 0,
+      "explanation": "Any other business is a heading for additional matters. It does not itself decide them or allocate all outstanding tasks."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "All six members who vote support a motion, and no member votes against or abstains. The minute records a \"unanimous vote in favour\". Which meaning is preserved?",
+      "options": [
+        "Only a simple majority of the six voting members supported the motion.",
+        "Every member voting supported the motion.",
+        "The chair alone supported the motion while the other five opposed it.",
+        "The members discussed the motion but did not vote on it."
+      ],
+      "answer": 1,
+      "explanation": "Unanimous means agreement by all members in the stated voting group. It should not be used as a synonym for any majority or mere discussion."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A member \"abstained\" in a vote, and the record separately lists votes for and against. What does abstained mean here?",
+      "options": [
+        "The member cast a vote against the motion.",
+        "The member cast a vote for the motion.",
+        "The member did not cast a vote for or against the motion.",
+        "The member necessarily left the meeting before the vote, regardless of the attendance record."
+      ],
+      "answer": 2,
+      "explanation": "Abstention is distinct from a vote against and from a vote in favour. It does not alone establish absence from the meeting."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A participant makes a firm commitment: “I will submit the report on Monday.” Which minute preserves that commitment?",
+      "options": [
+        "The participant mentioned that a report might perhaps be useful.",
+        "The report has already been submitted and approved.",
+        "The participant rejected any responsibility for the report.",
+        "The participant committed to submitting the report on Monday."
+      ],
+      "answer": 3,
+      "explanation": "Le compte rendu doit conserver la force de l’engagement sans le transformer en simple possibilité ou en tâche déjà achevée."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A minute states \"Maya said that she had submitted the report before the meeting.\" When does the submission occur relative to the reported statement?",
+      "options": [
+        "It is presented as earlier than Maya’s statement at the meeting.",
+        "It is presented as a commitment to submit the report after the meeting.",
+        "It is presented as a request that another person submit the report later.",
+        "It is presented as a submission necessarily taking place at the next meeting."
+      ],
+      "answer": 0,
+      "explanation": "Had submitted is past perfect and places the submission before the past reporting point. It is not the future-in-the-past would submit."
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An international action log uses \"09/04/2026\" without a date-format convention. Readers may interpret day and month differently. Which replacement removes that ambiguity if the intended date is 9 April?",
+      "options": [
+        "09/04/26, with the same unspecified day/month convention.",
+        "9 April 2026.",
+        "09-04-2026, changing only the separator without naming the month.",
+        "09.04.2026, changing only the separator without naming the month."
+      ],
+      "answer": 1,
+      "explanation": "Writing the month in words identifies April. A different separator or shorter year does not by itself settle the day/month convention."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Two participants disagree about whether a proposal was approved. What should the minute writer do before stating final approval?",
+      "options": [
+        "Record the version preferred by the chair without checking whether approval or only discussion was recorded.",
+        "Merge the two conflicting accounts into an approval statement without resolving the disputed condition.",
+        "Identify the disputed point and seek clarification.",
+        "Treat the earlier draft of the minutes as conclusive despite the identified conflict in the supporting notes."
+      ],
+      "answer": 2,
+      "explanation": "Le désaccord doit être clarifié à partir des notes et des personnes compétentes. La concision ne justifie pas d’inventer ou de renforcer une décision."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "An agreed action date is corrected after circulation. Which approach preserves an understandable record?",
+      "options": [
+        "Send an unmarked replacement and leave recipients to discover which date changed.",
+        "Keep both dates circulating without identifying which is the agreed correction.",
+        "Change only the archived original without notifying the people expected to act on the new date.",
+        "Record and communicate the correction with its status clearly identified."
+      ],
+      "answer": 3,
+      "explanation": "Une correction doit rester traçable et être communiquée aux personnes concernées. Ni la modification silencieuse ni le maintien volontaire d’une erreur ne facilite le suivi."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Minutes contain sensitive commercial information. How should the distribution list be chosen?",
+      "options": [
+        "Match recipients and channel to the purpose and authorised access.",
+        "Send the full record to everyone who attended part of the meeting without checking their access to the sensitive annexes.",
+        "Use the previous meeting’s recipient list unchanged even if the new record contains additional restricted information.",
+        "Treat receipt of the invitation alone as authorisation to receive every confidential appendix."
+      ],
+      "answer": 0,
+      "explanation": "Le contenu et les destinataires doivent correspondre au besoin et aux accès autorisés. La nature de compte rendu ne rend pas toutes les informations librement diffusables."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A record includes an employee’s unrelated personal details that do not explain any decision. What is the most appropriate editorial check?",
+      "options": [
+        "Retain the unrelated details solely because a participant mentioned them during the meeting.",
+        "Remove unnecessary details while retaining information needed for the meeting’s purpose.",
+        "Move the unnecessary details to an appendix while distributing that appendix to the same full recipient list.",
+        "Treat the details as necessary merely because they make the account more comprehensive."
+      ],
+      "answer": 1,
+      "explanation": "Un compte rendu conserve les informations utiles à son objectif. Une mention informelle n’impose pas de diffuser des détails personnels sans lien avec la décision."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A polished draft contradicts the supporting notes about who approves a purchase. Which quality should take priority?",
+      "options": [
+        "Retain the polished attribution until a later meeting, despite the known contradiction about approval authority.",
+        "Use the draft’s fluent wording as a substitute for checking the decision recorded in the notes.",
+        "Accuracy of the decision and approval role",
+        "Keep the draft and supporting notes inconsistent while treating both as the final authoritative record."
+      ],
+      "answer": 2,
+      "explanation": "La qualité d’un compte rendu repose d’abord sur l’exactitude des décisions et responsabilités. Une présentation soignée ne rend pas correcte une attribution erronée."
+    }
+  ]
+}

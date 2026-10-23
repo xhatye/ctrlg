@@ -1,0 +1,338 @@
+{
+  "module": "UE13",
+  "chapter": "experience",
+  "sourceHash": "3de84b56dc649eb6132c6b095889fb5f68a04d44b201b916c892beadde8e3113",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une mission cherche à localiser le blocage du circuit de validation des factures. Quel ensemble de données répond le plus directement à cet objectif ?",
+      "options": [
+        "Les dates de passage par étape, les responsables et les durées de validation.",
+        "Les volumes mensuels de factures et leurs montants cumulés.",
+        "Les conditions commerciales et remises négociées avec les fournisseurs.",
+        "Les marges par produit et la répartition du chiffre d’affaires par secteur."
+      ],
+      "answer": 0,
+      "explanation": "Les données du circuit permettent de localiser l’étape qui prend du temps. Le volume peut éclairer la charge, mais ne localise pas seul un blocage ; conditions commerciales et marges décrivent d’autres dimensions."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un rapport consacre dix pages à l’organigramme, mais n’identifie pas le service qui valide les factures étudiées. Quelle révision est prioritaire ?",
+      "options": [
+        "Déduire les responsabilités du rang graphique de chaque case.",
+        "Sélectionner les rôles qui expliquent le circuit de validation.",
+        "Conserver tout l’organigramme et retirer l’explication du circuit.",
+        "Remplacer les rôles par la seule liste des noms des salariés."
+      ],
+      "answer": 1,
+      "explanation": "La pertinence du contexte dépend de son rapport avec la mission. Le lecteur doit comprendre les responsabilités utiles, pas reconstruire le processus depuis un document général."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’étudiant disposait seulement d’un accès en lecture au logiciel. Pourquoi préciser cette contrainte dans le contexte de sa mission ?",
+      "options": [
+        "Elle démontre qu’il validait toutes les écritures comptables.",
+        "Elle rend inutile toute explication du travail réellement réalisé.",
+        "Elle délimite les opérations qu’il pouvait effectuer lui-même.",
+        "Elle prouve qu’aucune observation fiable n’était possible."
+      ],
+      "answer": 2,
+      "explanation": "Un accès en lecture permet d’observer ou d’extraire selon les droits, mais ne donne pas un pouvoir de modification. Il aide à qualifier précisément la contribution personnelle."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une amélioration n’a été testée que dans une agence pilote. Comment présenter le périmètre de l’expérience ?",
+      "options": [
+        "Présenter les résultats comme observés dans toutes les agences.",
+        "Assimiler le pilote à un déploiement national achevé.",
+        "Supprimer la mention du pilote pour simplifier le contexte.",
+        "Identifier cette agence et expliquer les limites de généralisation."
+      ],
+      "answer": 3,
+      "explanation": "Le périmètre pilote fait partie de l’information nécessaire à l’interprétation. Le supprimer donnerait au résultat une portée plus large que celle de l’expérience."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une mission analyse uniquement les dossiers reçus avant le 20 juin. Les dossiers complexes sont habituellement transmis plus tard. Quelle limite affecte principalement les conclusions ?",
+      "options": [
+        "La population analysée risque de sous-représenter les dossiers complexes.",
+        "La population analysée risque de surreprésenter les dossiers complexes.",
+        "Les constats sur les dossiers reçus deviennent inexacts du seul fait de la date limite.",
+        "Le nombre de dossiers reçus permet de corriger le biais sans connaître les dossiers absents."
+      ],
+      "answer": 0,
+      "explanation": "Le critère de réception favorise ici les dossiers transmis rapidement, alors que les dossiers complexes arrivent plus tard. Les constats peuvent rester valables pour les dossiers analysés, mais leur généralisation est limitée par cette sélection."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le rapport doit expliquer une méthode sans révéler l’identité d’un client. Quel contexte conserve la pertinence analytique ?",
+      "options": [
+        "Retirer toute caractéristique du dossier, même indispensable au raisonnement.",
+        "Décrire les caractéristiques utiles du dossier avec les précautions de confidentialité.",
+        "Remplacer l’analyse par le nom complet du client.",
+        "Publier tous les échanges commerciaux pour rendre le récit concret."
+      ],
+      "answer": 1,
+      "explanation": "Le contexte peut être précis sans exposer des identifiants inutiles. Il faut conserver les caractéristiques qui expliquent la mission et protéger les données confidentielles."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’étudiant a assisté à la présentation d’un contrôle conçu par sa tutrice. Quelle formulation décrit exactement son rôle ?",
+      "options": [
+        "J’ai dirigé l’équipe responsable de ce contrôle.",
+        "J’ai autorisé sa mise en production pour tout le cabinet.",
+        "J’ai observé la présentation du contrôle conçu par ma tutrice.",
+        "J’ai conçu et validé seul le contrôle présenté."
+      ],
+      "answer": 2,
+      "explanation": "Observer une présentation ne signifie ni concevoir le contrôle ni en autoriser le déploiement. La précision du rôle permet de valoriser honnêtement ce qui a été appris."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’étudiant prépare un rapprochement, sa collègue recherche une pièce et le responsable valide la conclusion. Quelle présentation est fidèle ?",
+      "options": [
+        "S’attribuer la préparation et la validation parce qu’il a ouvert le dossier.",
+        "Attribuer tout le travail au responsable et supprimer sa propre préparation.",
+        "Présenter les trois contributions comme une décision personnelle unique.",
+        "Distinguer sa préparation, l’appui documentaire et la validation du responsable."
+      ],
+      "answer": 3,
+      "explanation": "Le travail collectif n’empêche pas de montrer une contribution personnelle. Les tâches et niveaux de validation doivent rester distincts."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant écrit « j’ai décidé de modifier le circuit », alors qu’il a seulement rédigé une proposition soumise au responsable. Que faut-il corriger ?",
+      "options": [
+        "Distinguer la proposition personnelle de la décision prise par le responsable.",
+        "Remplacer proposition par mise en œuvre pour renforcer la formulation.",
+        "Considérer que toute proposition vaut décision dès qu’elle est écrite.",
+        "Supprimer toute mention de l’auteur de la décision finale."
+      ],
+      "answer": 0,
+      "explanation": "Une proposition peut être une contribution réelle et utile sans être une décision autonome. Le rapport doit conserver la répartition effective des responsabilités."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une procédure a été appliquée par l’étudiant avec contrôle systématique du tuteur. Quelle mention qualifie son autonomie ?",
+      "options": [
+        "Une délégation de direction générale déduite de l’accès au dossier.",
+        "Une réalisation sous supervision, avec les contrôles effectués par le tuteur.",
+        "Une responsabilité exclusive sur la procédure et sa validation finale.",
+        "Une observation sans aucune participation à l’exécution."
+      ],
+      "answer": 1,
+      "explanation": "Exécuter sous supervision n’est ni observer seulement ni exercer une autonomie complète. Décrire les contrôles rend le niveau de responsabilité intelligible."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le rapport indique seulement « utilisation d’un tableur » pour justifier la contribution. Quel complément est le plus utile ?",
+      "options": [
+        "Attribuer au logiciel toutes les décisions prises par l’équipe.",
+        "Déduire de son nom que le travail est exact sans vérification.",
+        "Préciser les traitements réalisés et les contrôles de leur résultat.",
+        "Allonger la liste des fonctions du logiciel sans indiquer celles utilisées."
+      ],
+      "answer": 2,
+      "explanation": "Le nom d’un outil ne prouve ni le travail ni sa qualité. Les opérations et contrôles réalisés rendent la contribution concrète et vérifiable."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle proposition caractérise une analyse plutôt qu’une simple description de mission ?",
+      "options": [
+        "Énumérer les tâches dans leur ordre d’exécution uniquement.",
+        "Reproduire les intitulés des services sans les relier à la mission.",
+        "Présenter la liste des logiciels sans expliquer leur utilisation.",
+        "Expliquer les choix et leurs conséquences à partir des observations."
+      ],
+      "answer": 3,
+      "explanation": "L’analyse relie ce qui a été fait aux raisons, difficultés et effets constatés. Une chronologie ou une liste peut servir de base, mais ne suffit pas à cette explication."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un outil recalcule les totaux sans consulter les justificatifs. L’étudiant propose de supprimer la vérification manuelle de leur présence. Quel contrôle compenserait directement cette suppression ?",
+      "options": [
+        "Un rapprochement de chaque opération avec une pièce effectivement accessible.",
+        "Un second recalcul indépendant des totaux du même fichier.",
+        "Une comparaison du total du mois avec celui du mois précédent.",
+        "Une vérification des habilitations permettant de modifier les formules."
+      ],
+      "answer": 0,
+      "explanation": "Le risque restant est celui d’opérations dépourvues de justificatif. Le rapprochement avec les pièces vise directement leur présence ; les autres contrôles concernent le calcul, la variation globale ou les droits de modification."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après l’installation d’un outil, les erreurs baissent et le volume de dossiers diminue aussi. Le rapport attribue toute la baisse à l’outil. Quelle réserve manque ?",
+      "options": [
+        "Une baisse des erreurs prouve que chaque dossier est sans défaut.",
+        "La variation de volume constitue une autre explication à examiner.",
+        "Le volume doit être ignoré dès qu’un nouvel outil existe.",
+        "Une succession temporelle garantit un effet causal exclusif."
+      ],
+      "answer": 1,
+      "explanation": "Une évolution simultanée du volume peut influencer le nombre d’erreurs. Le constat avant-après ne suffit pas à isoler la contribution propre de l’outil."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les résultats d’un test contredisent l’amélioration attendue. Quelle démarche renforce l’analyse ?",
+      "options": [
+        "Présenter l’objectif initial comme un résultat acquis.",
+        "Remplacer le test par une affirmation non documentée du succès.",
+        "Examiner les écarts, les conditions du test et les explications possibles.",
+        "Retirer les observations défavorables sans le signaler."
+      ],
+      "answer": 2,
+      "explanation": "Un résultat inattendu peut éclairer les limites de la démarche. Il faut l’analyser et le documenter, sans sélectionner uniquement les observations favorables."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un rapprochement a échoué parce que deux extractions utilisaient des dates différentes. Quel enseignement découle directement de cette expérience ?",
+      "options": [
+        "Conclure que tout rapprochement informatique est impossible.",
+        "Conclure que le logiciel est fautif sans examiner les extractions.",
+        "Retenir le fichier le plus volumineux comme preuve de cohérence.",
+        "Vérifier la cohérence des dates et périmètres avant de rapprocher les données."
+      ],
+      "answer": 3,
+      "explanation": "Le problème identifié porte sur la comparabilité des extractions. L’enseignement doit viser cette cause, sans généraliser l’échec à tous les outils ou rapprochements."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le rapport recommande une formation sans diagnostic des difficultés rencontrées. Quelle analyse doit précéder ce choix ?",
+      "options": [
+        "Identifier les causes des écarts et la compétence ou le processus à faire évoluer.",
+        "Choisir d’abord l’offre qui prévoit le plus grand nombre d’heures.",
+        "Fixer un budget puis déduire les besoins de formation de son montant.",
+        "Retenir un catalogue standard avant d’examiner les écarts observés."
+      ],
+      "answer": 0,
+      "explanation": "La recommandation doit partir d’un besoin établi et d’une explication plausible des écarts. Le volume d’heures, le budget ou le catalogue ne peuvent pas tenir lieu de diagnostic."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle caractéristique rend une preuve de résultat exploitable dans un rapport professionnel ?",
+      "options": [
+        "Elle est citée sans lien avec l’affirmation à soutenir.",
+        "Elle est pertinente, vérifiable et utilisable avec l’autorisation requise.",
+        "Elle est volumineuse même si son origine n’est pas identifiable.",
+        "Elle est confidentielle, donc nécessairement plus probante que toute autre pièce."
+      ],
+      "answer": 1,
+      "explanation": "Une pièce soutient une affirmation si son origine et sa pertinence sont compréhensibles. Son usage doit aussi respecter les précautions et autorisations applicables."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une capture ne précise pas la période des données. L’auteur affirme que la date de création du fichier suffit à l’établir. Quelle analyse est correcte ?",
+      "options": [
+        "Un export plus récent contient nécessairement des opérations plus récentes.",
+        "La date d’impression du rapport fixe la période des données sources.",
+        "La période des observations doit être établie ; elle peut différer de la date du fichier.",
+        "La création d’un fichier correspond toujours à la période des opérations qu’il contient."
+      ],
+      "answer": 2,
+      "explanation": "Les dates du fichier, de l’export, de l’impression et des opérations ne sont pas interchangeables. Une comparaison de résultats doit identifier la période réellement observée."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des collègues jugent la nouvelle procédure plus simple, mais aucun temps de traitement n’a été mesuré. Quelle conclusion respecte la preuve disponible ?",
+      "options": [
+        "Le temps de traitement a diminué de moitié.",
+        "La procédure est objectivement plus rapide dans tous les dossiers.",
+        "Chaque utilisateur a confirmé une amélioration mesurée.",
+        "Les avis recueillis suggèrent une simplicité perçue, sans chiffrer un gain de temps."
+      ],
+      "answer": 3,
+      "explanation": "Les avis renseignent une perception, pas une durée chronométrée. Il faut distinguer le type de preuve recueillie et le résultat que l’on souhaite démontrer."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le rapport compare deux taux d’erreur issus de populations et de conventions de comptage différentes. Quel contrôle est prioritaire ?",
+      "options": [
+        "Rendre les mesures comparables ou expliciter la limite de la comparaison.",
+        "Comparer seulement les pourcentages sans examiner leur construction.",
+        "Retenir le taux le plus faible comme mesure certaine du progrès.",
+        "Fusionner les deux taux sans connaître leurs effectifs."
+      ],
+      "answer": 0,
+      "explanation": "Une comparaison exige des définitions et périmètres cohérents. Sans cela, un écart peut provenir du mode de mesure plutôt que d’une amélioration réelle."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un extrait destiné au rapport supprime les noms, mais conserve des montants et dates permettant d’identifier un client unique. Quelle conclusion est correcte ?",
+      "options": [
+        "Une pièce insérée en annexe échappe à toute exigence de confidentialité.",
+        "Le retrait des noms ne suffit pas à garantir la non-identification.",
+        "L’extrait est automatiquement anonyme dès que les noms sont retirés.",
+        "Les montants remplacent toute nécessité d’autorisation de diffusion."
+      ],
+      "answer": 1,
+      "explanation": "La combinaison d’informations peut permettre une réidentification. Il faut examiner le contenu, les destinataires et les autorisations, pas seulement les champs nominatifs."
+    }
+  ]
+}

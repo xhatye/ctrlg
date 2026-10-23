@@ -1,0 +1,356 @@
+{
+  "module": "UE2",
+  "chapter": "formes",
+  "sourceHash": "978019da663c69ee1469f33b71adb163cde47f5e99e2dba8e3a9803a5df4d07c",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle pièce documente directement la fonction de dirigeant, à distinguer de la détention de titres ?",
+      "options": [
+        "L’acte de nomination et le mandat pertinent.",
+        "Le seul registre des titulaires de droits sociaux.",
+        "Le relevé d’un prêt personnel consenti à la société.",
+        "Le justificatif d’un dividende reçu."
+      ],
+      "answer": 0,
+      "explanation": "La nomination et le mandat renseignent sur la fonction de direction. Les droits sociaux, une créance et un dividende relèvent de rapports différents."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour choisir une forme sociale, deux créateurs veulent séparer investissement et gestion : l’un finance, l’autre dirigera selon un mandat. Quelle question doit être traitée distinctement ?",
+      "options": [
+        "Le montant libéré et le montant restant dû sur la souscription du seul financeur.",
+        "Les droits attachés aux titres et l’organisation de la direction.",
+        "La répartition des bénéfices et celle des pertes entre associés, sans traiter le mandat.",
+        "La durée de détention prévue et le prix futur de cession des titres du financeur."
+      ],
+      "answer": 1,
+      "explanation": "L’objectif décrit concerne deux fonctions différentes. La détention des titres et le mandat de gestion doivent être organisés séparément dans le régime retenu."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société holding est nommée présidente d’une SAS. Un conseil soutient que ses propres dirigeants échappent aux responsabilités attachées à cette fonction puisque seule la holding est nommée. Quel correctif résulte de L227-7 ?",
+      "options": [
+        "Les dirigeants de la holding ne répondent que de leurs fautes envers cette holding, jamais des responsabilités de la présidence.",
+        "La responsabilité de la holding remplace celle de ses dirigeants pour les actes de la présidence.",
+        "Ses dirigeants encourent les mêmes responsabilités civiles et pénales que s’ils dirigeaient en nom propre, sans préjudice de la responsabilité solidaire de la holding.",
+        "Le régime s’applique seulement si chacun des dirigeants de la holding possède aussi des actions de la SAS."
+      ],
+      "answer": 2,
+      "explanation": "L227-7 traite précisément de la nomination d’une personne morale comme présidente ou dirigeante de SAS. Ses dirigeants sont soumis aux mêmes conditions, obligations et responsabilités que s’ils exerçaient en nom propre, sans supprimer la responsabilité solidaire de la personne morale.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-7, personne morale présidente",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006227035/2009-09-06"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant choisit une forme uniquement parce que le mot associé figure dans le projet de statuts. Pourquoi cette donnée est-elle insuffisante ?",
+      "options": [
+        "Le mot associé interdit toute forme commerciale.",
+        "Le nombre d’associés détermine seul toute l’organisation.",
+        "La présence d’associés exclut la possibilité d’un dirigeant distinct.",
+        "Le vocabulaire générique ne précise pas la forme ni son régime de gestion."
+      ],
+      "answer": 3,
+      "explanation": "La qualité d’associé se rencontre dans différentes organisations. Le choix exige d’identifier le régime de la forme, ses titres et sa direction."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les associés révoquent un gérant de SARL. Les règles de décision sont respectées, mais la révocation est décidée sans juste motif. Quelle conséquence particulière L223-25 prévoit-il ?",
+      "options": [
+        "La révocation peut donner lieu à des dommages et intérêts pour le gérant.",
+        "L’absence de juste motif transforme la révocation en démission du gérant.",
+        "Le gérant retrouve son mandat dès qu’il demande réparation du préjudice.",
+        "Le mandat est maintenu jusqu’à la fixation judiciaire d’un juste motif."
+      ],
+      "answer": 0,
+      "explanation": "L223-25 distingue la révocation et sa possible conséquence indemnitaire : si elle est décidée sans juste motif, elle peut donner lieu à des dommages et intérêts. L’absence de ce motif ne se traite pas comme une démission ou un maintien automatique du mandat.",
+      "references": [
+        {
+          "title": "Code de commerce, article L223-25, révocation du gérant",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006223152/2023-06-04"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Comment le capital d’une SARL est-il divisé ?",
+      "options": [
+        "En actions.",
+        "En parts sociales.",
+        "En obligations émises automatiquement.",
+        "En avances de trésorerie des associés."
+      ],
+      "answer": 1,
+      "explanation": "Le capital d’une SARL est divisé en parts sociales. Le vocabulaire diffère notamment de celui d’une SAS, dont le capital est divisé en actions."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel terme désigne les titres composant le capital d’une SAS ?",
+      "options": [
+        "Des parts sociales.",
+        "Des comptes courants.",
+        "Des actions.",
+        "Des créances de dividendes."
+      ],
+      "answer": 2,
+      "explanation": "Dans une SAS, le capital est divisé en actions. Une avance en compte courant et un dividende sont des rapports distincts de ces titres de capital."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un projet présente la société comme une SARL mais désigne systématiquement son capital comme composé d’actions. Quel point faut-il corriger ou clarifier ?",
+      "options": [
+        "La cohérence entre montant du capital souscrit et fonds effectivement libérés.",
+        "La cohérence entre valeur nominale des titres et prix demandé lors de leur cession.",
+        "La cohérence entre droits de vote attribués et montant de chaque apport.",
+        "La cohérence entre la forme annoncée et la nature des titres."
+      ],
+      "answer": 3,
+      "explanation": "Le vocabulaire des titres doit correspondre au régime : des parts sociales pour une SARL. L’incohérence doit être résolue avant d’importer une règle propre à une autre forme."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un acquéreur étudie une participation dans une SAS. Le dossier lui remet un modèle de cession de parts de SARL. Quelle démarche est justifiée ?",
+      "options": [
+        "Identifier les actions concernées puis vérifier les règles et clauses adaptées à la SAS.",
+        "Conserver les clauses d’agrément du modèle, en remplaçant uniquement le terme parts par actions.",
+        "Appliquer les majorités de SARL du modèle, puis consulter les statuts de la SAS pour la seule fixation du prix.",
+        "Traiter la procédure de SARL comme le droit commun applicable tant que les statuts de SAS ne l’excluent pas."
+      ],
+      "answer": 0,
+      "explanation": "Parts et actions ne sont pas des étiquettes interchangeables. Un modèle d’une autre forme ne dispense pas de vérifier les titres, clauses et règles du dossier."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie définit une action comme la fraction d’un prêt d’associé au seul motif qu’elle a été payée en argent. Quelle distinction manque ?",
+      "options": [
+        "La différence entre valeur nominale d’un titre et prix de son émission.",
+        "La différence entre titre de capital et créance de financement.",
+        "La différence entre capital souscrit et capital effectivement libéré.",
+        "La différence entre propriété d’un titre et droit de voter attaché à ce titre."
+      ],
+      "answer": 1,
+      "explanation": "Le mode de versement ne détermine pas la nature du droit reçu. Une action est un titre de capital ; une avance de nature prêt crée une créance distincte."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un fournisseur veut poursuivre personnellement un associé de SNC pour une dette sociale. Il n’a encore adressé aucune mise en demeure à la société. Quelle exigence préalable figure à l’article L221-1 ?",
+      "options": [
+        "Obtenir au préalable la dissolution de la SNC pour que les associés répondent des dettes.",
+        "Demander à chaque associé de reconnaître personnellement la dette sociale.",
+        "Mettre vainement en demeure la société par acte extrajudiciaire avant de poursuivre l’associé.",
+        "Limiter préalablement la demande contre l’associé au montant de son apport."
+      ],
+      "answer": 2,
+      "explanation": "Les associés de SNC répondent indéfiniment et solidairement des dettes sociales. L221-1 subordonne cependant la poursuite d’un associé à une vaine mise en demeure de la société par acte extrajudiciaire. La solidarité ne supprime pas cette étape préalable.",
+      "references": [
+        {
+          "title": "Code de commerce, article L221-1, poursuite d’un associé de SNC",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006222461/2024-10-06"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le projet choisit une forme à responsabilité limitée. La banque demande au créateur de garantir personnellement un financement. Quel élément change l’analyse de son risque ?",
+      "options": [
+        "Le seul libellé de la forme, qui garantit l’absence de tout risque personnel.",
+        "Le fait qu’un prêt bancaire est utilisé par la société, qui efface toute garantie.",
+        "Le fait que le créateur soit aussi client de la banque, sans lien avec la garantie.",
+        "Les termes de la garantie qu’il accepterait en son nom."
+      ],
+      "answer": 3,
+      "explanation": "Le risque personnel ne se déduit pas uniquement de la forme sociale. Les clauses de la garantie déterminent l’engagement distinct envisagé."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un créateur compare deux projets de financement : dans le premier aucune garantie personnelle n’est fournie ; dans le second une garantie est proposée. Quel tableau de risque est adapté ?",
+      "options": [
+        "Séparer le risque attaché aux titres et les engagements personnels de chaque projet.",
+        "Limiter les deux projets à la perte possible des apports, la garantie restant une dette de la société.",
+        "Assimiler le plafond de garantie à un apport supplémentaire qui serait déjà perdu dans le second projet.",
+        "Mesurer le risque personnel du second projet au seul solde actuel du prêt, sans lire la couverture de la garantie."
+      ],
+      "answer": 0,
+      "explanation": "Les engagements personnels peuvent différer même lorsque la forme et le capital sont identiques. Le tableau doit les distinguer du risque lié à la détention des titres."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant affirme qu’une forme à responsabilité limitée protège aussi de toute responsabilité pour faute personnelle, sans examiner les faits. Quel correctif apporter ?",
+      "options": [
+        "La seule allégation d’une faute suffit à mettre personnellement toute la dette sociale à la charge du dirigeant.",
+        "Le régime des dettes sociales ne dispense pas d’étudier un fondement lié à une faute propre.",
+        "Une faute de gestion rend les associés responsables à proportion de leur capital, même sans fait personnel.",
+        "L’autorisation d’une opération par les associés dispense d’examiner une faute propre dans son exécution."
+      ],
+      "answer": 1,
+      "explanation": "Dettes sociales, garantie et responsabilité pour faits propres sont des questions distinctes. La forme ne permet pas de conclure à une immunité générale."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une garantie est évoquée dans une présentation commerciale, mais aucun acte n’est joint au dossier. Que faut-il demander avant d’en apprécier la portée ?",
+      "options": [
+        "L’offre de crédit adressée à la société, retenue comme acte engageant personnellement le garant.",
+        "Le tableau d’amortissement du prêt, retenu comme déterminant l’ensemble des conditions de la garantie.",
+        "L’acte identifiant le garant, le bénéficiaire et les conditions de son engagement.",
+        "La décision interne autorisant l’emprunt, retenue comme preuve de l’engagement personnel du créateur."
+      ],
+      "answer": 2,
+      "explanation": "Une présentation ne fixe pas nécessairement les termes de l’engagement. Le risque doit être rattaché à l’acte et aux conditions effectivement convenues."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle relation unit les statuts et une règle impérative applicable à la société ?",
+      "options": [
+        "Les statuts écartent la règle dès lors qu’ils sont signés.",
+        "La règle s’efface si tous les associés la connaissent.",
+        "La règle ne s’applique qu’aux sociétés sans statuts écrits.",
+        "Les statuts doivent s’inscrire dans les limites de la règle impérative."
+      ],
+      "answer": 3,
+      "explanation": "La liberté d’organisation statutaire est encadrée. Une clause contraire ne neutralise pas une règle impérative par sa seule présence dans les statuts."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’énoncé précise qu’une règle impérative réserve une décision à un organe déterminé. Une clause entend donner cette décision à une autre personne. Quel point analyser ?",
+      "options": [
+        "La compatibilité de la clause avec la règle impérative fournie.",
+        "La seule date de signature, qui rendrait la clause prioritaire.",
+        "Le montant de la dépense, qui donnerait libre choix de l’organe.",
+        "L’intérêt économique du bénéficiaire, qui remplacerait la règle."
+      ],
+      "answer": 0,
+      "explanation": "Le conflit porte sur la limite légale à l’organisation statutaire. Il faut examiner cette incompatibilité avant de traiter la clause comme source suffisante de compétence."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le régime laisse aux statuts le choix d’une modalité de fonctionnement. Deux clauses différentes sont envisagées. Quelle analyse guidera le choix ?",
+      "options": [
+        "Toute différence entre les clauses prouve que l’une est nécessairement illégale.",
+        "Vérifier le champ de liberté laissé et les effets pratiques des modalités proposées.",
+        "Choisir la clause du plus ancien modèle sans la comparer au régime.",
+        "Retenir la clause la plus courte comme critère de conformité."
+      ],
+      "answer": 1,
+      "explanation": "Une liberté statutaire réelle se travaille dans son champ. Il faut examiner les effets des choix tout en vérifiant les limites légales pertinentes."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie importe les règles d’un modèle de SAS dans un dossier de SARL sans vérifier leur transposition. Quel est le défaut méthodologique ?",
+      "options": [
+        "Elle confond une règle légale de compétence et une restriction interne propre aux statuts examinés.",
+        "Elle confond le délai d’accomplissement d’une formalité et la date d’effet de cette formalité.",
+        "Elle applique une organisation d’une autre forme sans contrôler le régime du dossier.",
+        "Elle traite la désignation d’un dirigeant comme preuve du contenu de toutes les clauses statutaires."
+      ],
+      "answer": 2,
+      "explanation": "Les statuts et le cadre légal dépendent de la forme. Un modèle ne devient pas applicable à une autre société par la seule similarité de son activité."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un projet de statuts ne dit rien sur une opération envisagée. Quelle recherche complète l’analyse de compétence ?",
+      "options": [
+        "Les habitudes de décision du dirigeant, retenues comme source exclusive de sa compétence.",
+        "Les pouvoirs du président de SAS, appliqués comme règle générale à toute forme sociale.",
+        "L’accord informel du principal associé, retenu comme suppléant toute règle de compétence.",
+        "Les règles applicables à la forme et les clauses pertinentes de l’ensemble des statuts."
+      ],
+      "answer": 3,
+      "explanation": "Le silence d’une phrase ne signifie pas une liberté totale. Il faut rechercher le cadre de la forme et lire les dispositions susceptibles d’organiser l’opération."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les associés souhaitent adopter une clause d’un autre pays pour une société soumise au régime décrit dans l’énoncé. Quelle vérification est essentielle ?",
+      "options": [
+        "Sa compatibilité avec le régime et les règles impératives applicables à cette société.",
+        "Le nombre de sociétés étrangères qui utilisent la clause.",
+        "La seule acceptation de la clause par le rédacteur du projet.",
+        "La traduction du nom de la société, tenue pour changement de régime."
+      ],
+      "answer": 0,
+      "explanation": "Une clause empruntée reste soumise au régime du dossier. Son usage ailleurs ne démontre pas sa conformité dans la société étudiée."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour comparer deux formes, le créateur étudie leurs marges d’organisation statutaire. Quel résultat doit produire cette comparaison ?",
+      "options": [
+        "Une transposition des clauses les plus souples de chaque forme dans un même projet.",
+        "Une identification des choix permis, de leurs limites et des clauses à prévoir.",
+        "Un choix fondé sur la liberté souhaitée, en reportant le contrôle des limites à la première contestation.",
+        "Un tableau des pratiques usuelles, retenu comme équivalent aux choix juridiquement permis."
+      ],
+      "answer": 1,
+      "explanation": "La comparaison utile porte sur les règles et les choix réellement disponibles. Elle doit déboucher sur les points à organiser, sans traiter les statuts comme un document purement publicitaire."
+    }
+  ]
+}

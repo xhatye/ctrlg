@@ -1,0 +1,440 @@
+{
+  "module": "UE2",
+  "chapter": "dossier-synthese",
+  "sourceHash": "d423b6d8a3d8bb636238474651727663e91d7f68602480b6a1908322334c7fdf",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société reçoit deux virements d’un même associé : le premier vise une souscription de titres, le second une avance remboursable documentée. Comment lire le financement ?",
+      "options": [
+        "Deux opérations distinctes, l’une sur les fonds propres et l’autre sur une créance de prêt.",
+        "Une souscription globale ventilée entre capital libéré et prime, malgré le document décrivant un prêt.",
+        "Une avance unique dont la fraction destinée aux titres reste remboursable selon la convention de prêt.",
+        "Une libération partielle de capital, dont les deux virements doivent être déduits du même engagement souscrit."
+      ],
+      "answer": 0,
+      "explanation": "L’identité du payeur ne détermine pas la nature de tous ses versements. Les documents de souscription et de prêt décrivent des droits et engagements différents."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les documents indiquent 12 000 € de capital souscrit et 7 000 € de fonds déjà libérés. Pour le suivi de cette seule souscription, quel montant reste à libérer ?",
+      "options": [
+        "19 000 €",
+        "5 000 €",
+        "7 000 €",
+        "12 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La différence entre souscrit et déjà libéré est 12 000 − 7 000 = 5 000 €. Le calcul ne suppose pas une échéance immédiate ni ne détermine les conditions d’appel du solde.",
+      "calculation": {
+        "digits": 0,
+        "expected": 5000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 12000
+            },
+            {
+              "value": 7000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau assimile le capital souscrit de 12 000 € à une trésorerie disponible de 12 000 €, alors que les pièces montrent une libération partielle et des dépenses. Quel correctif appliquer ?",
+      "options": [
+        "Retenir les seules sommes libérées comme solde bancaire sans déduire les dépenses intervenues ensuite.",
+        "Ajouter le montant encore à libérer au relevé bancaire pour présenter toute la souscription comme disponible.",
+        "Distinguer capital souscrit, sommes libérées et trésorerie restant après les flux.",
+        "Ramener le capital souscrit au solde bancaire restant, même sans opération de réduction de capital."
+      ],
+      "answer": 2,
+      "explanation": "Ces trois montants ne sont pas interchangeables. La souscription renseigne l’engagement de capital, la libération les versements et les flux le solde disponible."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une écriture provisoire classe une souscription de capital parmi les ventes parce que la somme a été encaissée. Quelle pièce permet de corriger sa qualification ?",
+      "options": [
+        "Le relevé bancaire seul, considéré comme permettant de distinguer une souscription d’un règlement client.",
+        "Le registre des titres seul, sans rapprochement avec la décision ni le versement provisoirement classé.",
+        "La déclaration orale du payeur indiquant qu’il est associé, retenue comme preuve que tous ses versements sont des apports.",
+        "Le document de souscription et la décision correspondant à l’opération."
+      ],
+      "answer": 3,
+      "explanation": "L’origine économique et juridique de l’encaissement commande la qualification. Les documents d’apport distinguent ce financement d’une recette commerciale."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un bien est apporté en capital selon les documents ; le contrat identifie une transmission de propriété à la société. Quel élément doit figurer dans le tableau des patrimoines ?",
+      "options": [
+        "Le bien rattaché à la société et les droits sociaux reçus par l’apporteur, selon l’opération décrite.",
+        "Le bien maintenu dans le patrimoine personnel parce que l’apporteur détient les titres reçus.",
+        "Un seul droit d’usage dans le patrimoine social, même si le contrat prévoit une transmission de propriété.",
+        "Le bien et les titres reçus tous deux dans le patrimoine de la société, en raison de l’opération d’apport."
+      ],
+      "answer": 0,
+      "explanation": "L’apport décrit doit être lu selon son objet et ses documents. Il ne se confond ni avec un prêt ni avec une vente d’activité et ne transfère pas tous les biens de l’apporteur."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un investisseur verse des fonds avant que leur qualification définitive soit arrêtée. Aucun document ne tranche entre apport et prêt. Quelle conclusion permet le seul relevé bancaire ?",
+      "options": [
+        "Une souscription au capital définitivement réalisée.",
+        "Une entrée de fonds, dont le fondement doit être précisé par les actes.",
+        "Un prêt immédiatement exigible selon des conditions déjà établies.",
+        "Une vente réalisée au profit de l’investisseur."
+      ],
+      "answer": 1,
+      "explanation": "Le relevé établit le mouvement de trésorerie, pas tous les termes de l’opération. Il faut documenter sa qualification avant de lui attribuer des droits sociaux ou une créance déterminée."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un avenant reporte l’échéance d’une avance d’associé. Une copie affirme que ce seul report prouve la novation, c’est-à-dire l’extinction de l’ancienne obligation et son remplacement. Quelle exigence de l’article 1330 manque à ce raisonnement ?",
+      "options": [
+        "La novation ne pourrait être examinée que si l’ancienne avance était déjà exigible au jour de l’avenant.",
+        "Le maintien du même principal suffirait à exclure toute novation, quelle que soit la volonté exprimée.",
+        "La volonté de nover doit résulter clairement de l’acte ; elle ne se présume pas.",
+        "La signature de l’avenant par le prêteur suffit à établir une novation indépendamment de son objet."
+      ],
+      "answer": 2,
+      "explanation": "1330 interdit de présumer la novation : la volonté de substituer une obligation nouvelle à l’ancienne doit résulter clairement de l’acte. Un avenant modifiant un terme ne prouve pas, par ce seul changement, cette intention d’extinction et de remplacement.",
+      "references": [
+        {
+          "title": "Code civil, articles 1329 et 1330, novation",
+          "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006070721/LEGISCTA000032034970/2024-06-15/"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une convention d’avance prévoit un remboursement sur demande après une date précise. La demande intervient avant cette date. Quel point faut-il comparer ?",
+      "options": [
+        "La seule date de versement initial, retenue comme rendant l’avance immédiatement disponible.",
+        "La date d’approbation des comptes, retenue comme terme de toute dette envers un associé.",
+        "La date de cession éventuelle des titres du prêteur, retenue comme terme de l’avance malgré la convention.",
+        "La demande, le terme convenu et les autres clauses applicables."
+      ],
+      "answer": 3,
+      "explanation": "Une créance ne signifie pas un remboursement disponible à tout instant. La date et les modalités contractuelles sont déterminantes dans la demande formulée."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une avance d’associé documentée présente un principal de 9 000 €. Un remboursement de principal de 2 500 € a déjà été effectué et affecté à cette avance ; aucun autre mouvement n’est indiqué. Quel principal reste en compte ?",
+      "options": [
+        "6 500 €",
+        "11 500 €",
+        "2 500 €",
+        "9 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le principal restant est 9 000 − 2 500 = 6 500 €. Le montant des droits sociaux n’entre pas dans ce calcul de la créance.",
+      "calculation": {
+        "digits": 0,
+        "expected": 6500,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 9000
+            },
+            {
+              "value": 2500
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La société doit rembourser une avance à Alice ; Bernard doit personnellement libérer sa souscription envers la société. Sans cession ni convention particulière entre ces personnes, la société veut compenser ces deux dettes. Quelle condition de 1347 fait défaut ?",
+      "options": [
+        "La présence d’obligations exprimées dans la même monnaie.",
+        "La réciprocité entre les deux mêmes personnes, Alice et Bernard étant distincts.",
+        "L’existence de deux dettes de montants strictement identiques.",
+        "L’identité de la cause juridique des deux dettes, exigée pour toute compensation."
+      ],
+      "answer": 1,
+      "explanation": "La compensation définie par 1347 éteint des obligations réciproques entre deux personnes. La dette envers Alice et la dette de Bernard n’ont pas cette réciprocité. Ni leur lien avec la même société ni leur expression en argent ne fusionne Alice et Bernard.",
+      "references": [
+        {
+          "title": "Code civil, article 1347, réciprocité des obligations",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032042233/2024-06-17"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une avance d’associé est cédée à un tiers. La société débitrice n’a pas déjà consenti à la cession. Selon 1324, quel événement permet de rendre cette cession opposable à la société ?",
+      "options": [
+        "La seule signature entre le cédant et le cessionnaire, sans information de la société.",
+        "Le paiement du prix de la créance entre le cédant et le cessionnaire, sans autre démarche.",
+        "La notification de la cession à la société ou la prise d’acte par celle-ci.",
+        "La cession simultanée des titres de l’associé, même si la société ignore la cession de l’avance."
+      ],
+      "answer": 2,
+      "explanation": "La cession d’une créance et son opposabilité au débiteur sont distinctes. S’il n’y a pas déjà consenti, 1324 prévoit sa notification ou la prise d’acte par le débiteur. Le prix payé entre cédant et cessionnaire ne remplace pas cette condition.",
+      "references": [
+        {
+          "title": "Banque de France, HCJP, article 1324 et opposabilité au débiteur",
+          "url": "https://www.banque-france.fr/system/files/2025-02/rapport_08_f.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un accord prévoit le remboursement d’une avance uniquement si un indicateur de trésorerie défini est atteint. L’associé produit une banque positive, mais pas le calcul de l’indicateur complet. Quel contrôle reste nécessaire ?",
+      "options": [
+        "Le seul solde bancaire, retenu comme équivalent à tout indicateur de trésorerie contractuel.",
+        "La seule demande du prêteur, retenue comme permettant de lever la condition financière.",
+        "La valeur de son avance, retenue comme permettant de réduire le seuil prévu sans accord.",
+        "La condition exacte définie par la convention et sa réalisation."
+      ],
+      "answer": 3,
+      "explanation": "Une banque positive peut ne pas correspondre à l’indicateur convenu, qui peut intégrer d’autres éléments. Il faut appliquer la condition réelle au lieu de lui substituer une donnée isolée."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une caution ayant signé en 2026 paie la dette bancaire de la société. Elle invoque ensuite la subrogation de l’article 2309. Dans quels droits est-elle subrogée ?",
+      "options": [
+        "Dans les droits que le créancier avait contre la société débitrice.",
+        "Dans un recours exclusivement personnel de remboursement, sans transmission des droits du créancier.",
+        "Dans les droits du créancier contre la caution elle-même, afin d’en réclamer le remboursement à la banque.",
+        "Dans une créance nouvelle dépourvue des accessoires du droit détenu par le créancier contre la société."
+      ],
+      "answer": 0,
+      "explanation": "2309 subroge la caution qui a payé tout ou partie de la dette dans les droits du créancier contre le débiteur. Il s’agit d’un recours lié à la dette payée, non d’une attribution de titres, de biens sociaux ou d’une fonction de direction.",
+      "references": [
+        {
+          "title": "Code civil, article 2309, recours subrogatoire de la caution",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044071294/2022-12-07"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour l’exercice, une garantie valablement déclenchée couvre uniquement le principal restant dû, plafonné à 10 000 €, sans frais ni intérêts. Le principal impayé est de 7 000 €. Quel montant résulte de ces seules clauses ?",
+      "options": [
+        "10 000 €",
+        "7 000 €",
+        "17 000 €",
+        "3 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le plafond ne constitue pas un montant fixe à payer. La couverture est limitée au principal impayé de 7 000 €, qui est inférieur à 10 000 € dans l’hypothèse donnée.",
+      "calculation": {
+        "digits": 0,
+        "expected": 7000,
+        "expression": {
+          "op": "min",
+          "args": [
+            {
+              "value": 7000
+            },
+            {
+              "value": 10000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une caution s’est engagée en 2026 et paie la dette sociale le 1er juin. Pour son recours personnel contre le débiteur selon 2308, à compter de quelle date les intérêts sur les sommes payées courent-ils de plein droit ?",
+      "options": [
+        "Du jour où le cautionnement a été signé.",
+        "De la prochaine clôture des comptes sociaux après le paiement.",
+        "Du jour du paiement effectué par la caution.",
+        "Du jour où un jugement condamne le débiteur à rembourser la caution."
+      ],
+      "answer": 2,
+      "explanation": "Dans le régime applicable depuis 2022, 2308 prévoit que les intérêts du recours personnel courent de plein droit du jour du paiement. La signature du cautionnement, la clôture ou un jugement ultérieur ne sont pas le point de départ donné par ce texte.",
+      "references": [
+        {
+          "title": "Cour d’appel, 30 janvier 2025, article 2308 depuis 2022",
+          "url": "https://www.courdecassation.fr/decision/export/679d411c0ed4f7c53edd6729/1"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une caution conventionnelle simple s’engage en 2026, sans solidarité avec le débiteur ni renonciation au bénéfice de discussion. Que permet ce bénéfice selon 2305 ?",
+      "options": [
+        "Obliger le créancier à diviser sa demande entre les différentes cautions de la même dette.",
+        "Obliger le créancier à saisir d’abord les biens de la caution avant de demander paiement à celle-ci.",
+        "Obliger le créancier à poursuivre d’abord les autres cautions, avant le débiteur principal.",
+        "Obliger le créancier à poursuivre d’abord le débiteur principal."
+      ],
+      "answer": 3,
+      "explanation": "Le bénéfice de discussion concerne l’ordre des poursuites : il permet de faire poursuivre d’abord le débiteur principal. Il se distingue de la division entre cautions et d’une modification ou extinction de la dette. Les exclusions de solidarité, renonciation et caution judiciaire sont écartées ici.",
+      "references": [
+        {
+          "title": "Code civil, article 2305, bénéfice de discussion",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044071260/2022-04-28"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le texte d’une garantie couvre un prêt identifié. Le créancier invoque aussi une dette née d’un autre contrat non mentionné. Quel point faut-il examiner ?",
+      "options": [
+        "Le champ des dettes couvertes, au lieu d’étendre automatiquement la garantie.",
+        "Le plafond restant disponible, retenu comme autorisant l’inclusion de toute dette non désignée.",
+        "L’identité du créancier commun aux deux prêts, retenue comme suffisante pour étendre la couverture.",
+        "La proximité des dates de conclusion des deux contrats, retenue comme preuve d’une garantie globale."
+      ],
+      "answer": 0,
+      "explanation": "L’existence d’une garantie n’établit pas son extension à toutes les dettes. Son périmètre et les conditions de couverture doivent être rapprochés de chaque demande."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi rattacher chaque signature à une qualité dans un dossier de financement ?",
+      "options": [
+        "Pour attribuer tous les engagements au signataire, indépendamment du représenté désigné.",
+        "Pour identifier la personne engagée et le fondement de son intervention dans chaque acte.",
+        "Pour considérer la signature apposée en dernier comme remplaçant les engagements signés auparavant.",
+        "Pour traiter la même signature dans plusieurs actes comme un engagement unique de même nature."
+      ],
+      "answer": 1,
+      "explanation": "Une personne peut signer pour la société, comme prêteur ou comme garant. Les effets dépendent de la qualité et de l’acte, pas de la seule présence de la même signature."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Avant de conclure un financement, un tiers doute des pouvoirs d’un représentant conventionnel. Quelle démarche de l’article 1158 lui permet de demander confirmation de l’habilitation ?",
+      "options": [
+        "Demander oralement au représentant de confirmer lui-même ses pouvoirs.",
+        "Écrire au représentant seul en lui demandant de définir le mandat qu’il estime détenir.",
+        "Demander par écrit au représenté une confirmation pour l’acte envisagé, dans un délai raisonnable fixé.",
+        "Demander à un autre créancier si le représentant avait signé des opérations semblables dans le passé."
+      ],
+      "answer": 2,
+      "explanation": "1158 organise une interrogation du représenté, par écrit, portant sur le pouvoir du représentant conventionnel pour l’acte envisagé. Le délai fixé doit être raisonnable. Une affirmation du représentant ou la pratique d’opérations passées ne constitue pas cette démarche.",
+      "references": [
+        {
+          "title": "Code civil, article 1158, interrogation du représenté",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032041094/2020-06-10"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le même jour, une personne signe une souscription pour elle-même et un prêt bancaire au nom de la société avec les pouvoirs indiqués. Comment classer les deux actes ?",
+      "options": [
+        "Deux engagements personnels au seul motif que les actes portent la même signature.",
+        "Une opération sociale de souscription et un engagement personnel pour le prêt, en inversant les qualités données.",
+        "Une souscription au nom de la société et un prêt qui lui serait personnellement consenti par le signataire.",
+        "Une opération personnelle de souscription et un engagement de la société représentée."
+      ],
+      "answer": 3,
+      "explanation": "La même personne intervient dans des qualités différentes. Identifier l’objet et le représenté de chaque signature évite de déplacer une obligation d’un patrimoine à un autre."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le mandat produit autorise uniquement la négociation d’un financement ; le signataire a aussi accepté en son nom une garantie personnelle. Quel tableau est adapté ?",
+      "options": [
+        "Séparer la portée du mandat social et le contenu de l’engagement personnel de garantie.",
+        "Considérer la signature de la garantie comme une extension du mandat aux engagements sociaux de même montant.",
+        "Considérer le mandat de négociation comme une habilitation implicite à souscrire toute garantie personnelle requise.",
+        "Considérer les deux actes comme une garantie sociale unique parce qu’ils portent sur le même financement."
+      ],
+      "answer": 0,
+      "explanation": "Les documents répondent à deux fonctions différentes. Le mandat décrit des pouvoirs pour autrui ; la garantie décrit un engagement propre à analyser séparément."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une synthèse attribue au dirigeant la dette de l’avance qu’un associé a consentie à la société, parce que le dirigeant a signé la réception des fonds pour elle. Quel défaut relever ?",
+      "options": [
+        "Elle confond le prêteur de l’avance et le bénéficiaire d’un remboursement déjà effectué.",
+        "Elle confond signature de représentation et identité du débiteur du prêt.",
+        "Elle confond le principal restant dû et les intérêts exigibles au titre du prêt.",
+        "Elle confond le terme de l’avance et la date de sa première mise à disposition."
+      ],
+      "answer": 1,
+      "explanation": "Recevoir ou signer pour la société ne transforme pas nécessairement la dette en dette personnelle. Il faut lire l’identité de l’emprunteur et la qualité du signataire."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La personne qui a signé un engagement social ne figure pas dans les pièces de nomination ; un mandat spécifique est annoncé mais absent. Quelle étape permet de compléter le dossier ?",
+      "options": [
+        "Déduire un mandat spécial de la seule détention de titres majoritaires par le signataire.",
+        "Déduire la portée du mandat de la seule absence de contestation connue après la signature.",
+        "Obtenir le mandat annoncé et le rapprocher de l’acte et de ses limites.",
+        "Déduire un mandat sans limite du seul fait qu’un responsable de la société a assisté aux négociations."
+      ],
+      "answer": 2,
+      "explanation": "L’analyse doit porter sur les pouvoirs effectivement invoqués. Un mandat annoncé ne peut être reconstitué à partir de la participation ou d’un document d’objet différent."
+    }
+  ]
+}

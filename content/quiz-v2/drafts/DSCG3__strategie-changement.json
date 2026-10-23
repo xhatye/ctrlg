@@ -1,0 +1,344 @@
+{
+  "module": "DSCG3",
+  "chapter": "strategie-changement",
+  "sourceHash": "278f15cd5e8cf3e951bc1c3f1305bbde13abb2e969fc3595f9a4edc525dde3c2",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que désigne la contrôlabilité d’un facteur de performance pour un responsable ?",
+      "options": [
+        "La possibilité d’expliquer a posteriori un facteur, même sans pouvoir agir sur lui.",
+        "La possibilité de mesurer un facteur de façon précise, même lorsque son niveau est imposé.",
+        "La possibilité d’imputer comptablement un coût au service, même sans levier sur ce coût.",
+        "La possibilité pour ce responsable d’agir sur ce facteur."
+      ],
+      "answer": 3,
+      "explanation": "La contrôlabilité dépend des pouvoirs et leviers confiés au responsable. Un facteur important pour le résultat peut rester hors de sa maîtrise."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les responsables locaux proposent leur budget avec une information que le siège connaît mal. Leur prime dépend de la facilité à dépasser la cible acceptée. Certains gonflent les besoins annoncés pour se ménager une réserve. Quelle réponse limite ce biais sans supprimer toute information locale ?",
+      "options": [
+        "Confronter les hypothèses locales à des données indépendantes et discuter les besoins plutôt que récompenser uniquement le dépassement d’une cible négociée.",
+        "Accepter toute estimation locale sans débat, au motif qu’elle contient davantage d’informations de terrain.",
+        "Augmenter systématiquement la réserve demandée afin que tous les responsables dépassent leur cible.",
+        "Supprimer tout échange avec les responsables et reconduire les enveloppes passées comme si elles reflétaient exactement les besoins."
+      ],
+      "answer": 0,
+      "explanation": "L’information locale est utile mais l’incitation décrite favorise une réserve budgétaire artificielle. Le contrôle des hypothèses et un examen des critères de prime limitent ce biais sans renoncer à la participation ni prétendre que le siège connaît seul les besoins.",
+      "references": [
+        {
+          "title": "ACCA — All about budgeting, part 3",
+          "url": "https://www.accaglobal.com/africa/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/budgeting3.html"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une direction exclut tous les risques non contrôlables de ses tableaux de bord. Quel défaut cette décision présente-t-elle ?",
+      "options": [
+        "Elle réduit mécaniquement les risques externes en les retirant des indicateurs transmis.",
+        "Elle confond information nécessaire au pilotage et évaluation de la responsabilité.",
+        "Elle rend tout indicateur local comparable entre sites, même si leurs expositions externes diffèrent.",
+        "Elle permet d’évaluer la réaction au risque sans conserver de données sur le risque lui-même."
+      ],
+      "answer": 1,
+      "explanation": "Un risque externe peut demander anticipation et adaptation même si sa cause échappe au responsable. Il faut le suivre sans lui imputer abusivement son apparition."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une pénurie externe augmente le coût d’achat. L’acheteur peut choisir un substitut et négocier les délais. Quelle évaluation est la plus équilibrée ?",
+      "options": [
+        "Neutraliser toute conséquence de la pénurie, y compris la réponse de l’acheteur.",
+        "Imputer tout le surcoût à l’acheteur sans distinguer ses leviers.",
+        "Séparer le choc externe des choix d’adaptation qu’il pouvait réellement effectuer.",
+        "Évaluer uniquement le prix antérieur, sans examiner les achats réalisés."
+      ],
+      "answer": 2,
+      "explanation": "L’origine externe n’efface pas les décisions de réponse. L’analyse distingue ce qui est subi de la qualité des arbitrages accessibles au responsable."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un chef de service reçoit un objectif de réduction de coûts mais n’a autorité ni sur les achats, ni sur les effectifs, ni sur les méthodes. Quel problème doit être résolu ?",
+      "options": [
+        "Il suffit de détailler mensuellement l’objectif sans modifier les droits de décision ni les moyens.",
+        "Il suffit d’augmenter l’ambition de l’objectif pour créer les leviers opérationnels manquants.",
+        "Il suffit de transférer à ce responsable la charge comptable des achats sans lui donner de pouvoir d’achat.",
+        "Le décalage entre la responsabilité assignée et les leviers de décision."
+      ],
+      "answer": 3,
+      "explanation": "Un objectif engageant doit être accompagné de leviers cohérents, ou être attribué à un niveau qui peut réellement arbitrer les moyens."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pour définir un centre de responsabilité, quel rapprochement est essentiel ?",
+      "options": [
+        "Les objectifs attendus et le pouvoir de décision confié.",
+        "La totalité des coûts affectés, supposés tous maîtrisables localement.",
+        "Le résultat global, sans distinction des décisions déléguées ou imposées.",
+        "Le budget consommé, sans préciser la mission ni les leviers."
+      ],
+      "answer": 0,
+      "explanation": "Le centre doit être évalué au regard des responsabilités effectivement déléguées. Les objectifs et pouvoirs doivent donc être cohérents."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un responsable de maintenance maîtrise les interventions mais ne fixe ni les ventes ni les prix. Quel dispositif correspond le mieux à sa mission ?",
+      "options": [
+        "Une prime sur la baisse du seul budget de maintenance, sans disponibilité ni suivi des pannes.",
+        "Des objectifs de disponibilité et de coût compatibles avec ses moyens.",
+        "Une prime sur le nombre d’interventions réalisées, sans évaluer leur nécessité ou leur effet.",
+        "Une prime sur l’absence de demandes d’intervention enregistrées, sans vérifier les incidents réels."
+      ],
+      "answer": 1,
+      "explanation": "La maintenance agit sur la disponibilité, la qualité des interventions et ses coûts. Les objectifs doivent se rattacher à ces leviers."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Après décentralisation, les équipes locales décident des moyens mais toute approbation reste centralisée, même pour les petites actions courantes. Quel risque apparaît ?",
+      "options": [
+        "Une coordination optimale, puisque toute décision locale est validée par un niveau supplémentaire.",
+        "Une délégation complète démontrée par l’attribution d’un budget, même sans droit de l’engager.",
+        "Une autonomie affichée sans autonomie opérationnelle suffisante.",
+        "Une diminution certaine des délais de décision, même si chaque autorisation ajoute une attente centrale."
+      ],
+      "answer": 2,
+      "explanation": "La délégation nominale ne suffit pas si les décisions courantes restent bloquées. Les seuils et règles d’escalade doivent traduire le pouvoir réellement souhaité."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux centres utilisent un service partagé dont les coûts sont imposés par le siège. Comment présenter sa contribution à leur performance ?",
+      "options": [
+        "Assimiler toute allocation à une consommation librement décidée.",
+        "Masquer la charge commune pour que les résultats semblent maîtrisés.",
+        "Rémunérer uniquement le centre auquel la charge a été la moins affectée.",
+        "Distinguer le coût du service reçu et les décisions que chaque centre peut influencer."
+      ],
+      "answer": 3,
+      "explanation": "Une allocation décrit un coût supporté, mais ne prouve pas sa contrôlabilité locale. Il faut rendre visibles les leviers sur la demande et les règles du siège."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un centre développe les ventes en promettant des délais que la production ne peut tenir. Quelle coordination est prioritaire ?",
+      "options": [
+        "Définir les engagements commerciaux avec les capacités et responsabilités de production.",
+        "Laisser chaque centre maximiser son propre objectif sans interface.",
+        "Imputer tous les retards à la production, qui réalise la dernière étape.",
+        "Mesurer seulement le nombre de promesses commerciales effectuées."
+      ],
+      "answer": 0,
+      "explanation": "Une responsabilité commerciale doit intégrer les effets sur les autres centres. La coordination des engagements et capacités évite une performance locale au détriment du service global."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi décliner une stratégie en indicateurs opérationnels ?",
+      "options": [
+        "Pour remplacer les arbitrages stratégiques par la seule collecte de données.",
+        "Pour relier les décisions quotidiennes aux résultats stratégiques recherchés.",
+        "Pour retenir le même indicateur dans chaque métier sans adaptation.",
+        "Pour garantir les résultats dès que le tableau de bord est publié."
+      ],
+      "answer": 1,
+      "explanation": "La déclinaison rend la stratégie actionnable. Elle exige des liens explicites entre objectifs, actions et résultats, qui restent à vérifier."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise se différencie par la personnalisation, mais rémunère ses ateliers uniquement sur la longueur des séries standard. Quel conflit apparaît ?",
+      "options": [
+        "La personnalisation rend tout indicateur industriel inutile.",
+        "La longueur des séries mesure directement la satisfaction des demandes particulières.",
+        "L’incitation productive peut favoriser la standardisation au détriment de la stratégie.",
+        "L’atelier est nécessairement responsable de la fixation des prix commerciaux."
+      ],
+      "answer": 2,
+      "explanation": "Un objectif de longues séries peut décourager les adaptations attendues par la stratégie. Il faut arbitrer productivité, flexibilité et qualité du service."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une stratégie de service fiable est évaluée uniquement au nombre de nouvelles fonctionnalités livrées. Quel complément répond le mieux à l’objectif stratégique ?",
+      "options": [
+        "La proportion de versions publiées dans le calendrier, sans mesurer leurs effets sur le service.",
+        "Le volume de fonctionnalités développées, même si les indisponibilités augmentent.",
+        "Le nombre de tests lancés, sans vérifier leur résultat ni les incidents en exploitation.",
+        "La disponibilité du service et la fréquence des incidents affectant les utilisateurs."
+      ],
+      "answer": 3,
+      "explanation": "La livraison de fonctions mesure une production de développement. La fiabilité attendue exige des mesures du service effectivement disponible et de ses incidents."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La direction vise une croissance rentable et récompense exclusivement le volume vendu, quelle que soit la remise accordée. Quel ajustement est le plus cohérent ?",
+      "options": [
+        "Associer au volume une contribution économique et des règles de remise explicites.",
+        "Accroître le poids du volume sans suivre les prix nets.",
+        "Remplacer les ventes par le nombre de devis envoyés.",
+        "Fixer une prime indépendante de toute conséquence commerciale."
+      ],
+      "answer": 0,
+      "explanation": "Le volume seul peut être obtenu par des remises destructrices de marge. Une mesure de contribution rapproche l’incitation de la croissance rentable."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Tous les indicateurs d’un plan stratégique sont conformes, mais le résultat recherché n’apparaît pas. Quelle hypothèse mérite d’être testée ?",
+      "options": [
+        "Les mesures conformes prouvent que le résultat existe déjà.",
+        "Les liens supposés entre les actions mesurées et le résultat peuvent être insuffisants.",
+        "Il faut augmenter mécaniquement toutes les cibles sans revoir le modèle.",
+        "Le résultat doit être remplacé par la somme des indicateurs d’action."
+      ],
+      "answer": 1,
+      "explanation": "La réalisation des actions ne valide pas leur efficacité causale. Le mécanisme, les délais et d’autres facteurs peuvent expliquer l’absence du résultat attendu."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux objectifs imposent simultanément de raccourcir les délais et de renforcer chaque contrôle, à effectif inchangé. Quelle démarche prépare un pilotage réaliste ?",
+      "options": [
+        "Évaluer séparément les équipes sans discuter des contraintes communes.",
+        "Retenir uniquement la cible la plus facile à atteindre.",
+        "Examiner le processus, les ressources et les arbitrages entre délai et risque.",
+        "Faire la moyenne numérique des deux objectifs pour supprimer le conflit."
+      ],
+      "answer": 2,
+      "explanation": "Les objectifs peuvent entrer en tension. Il faut rendre explicites les contraintes et choisir des changements de processus ou de moyens cohérents."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "La réussite d’un changement d’outil se vérifie principalement par :",
+      "options": [
+        "Le seul respect de la date de mise en production.",
+        "Le nombre d’équipements distribués.",
+        "La clôture des achats de licences.",
+        "L’adoption des usages attendus et les effets sur le travail et le service."
+      ],
+      "answer": 3,
+      "explanation": "Le déploiement technique est une étape. Le changement réussit si les utilisateurs peuvent et veulent pratiquer les usages qui produisent les effets recherchés."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un logiciel est disponible, mais les équipes continuent à utiliser leurs fichiers parallèles. Quel diagnostic est prioritaire ?",
+      "options": [
+        "Comprendre les obstacles d’usage, de compétence et d’adéquation au travail.",
+        "Conclure à une réussite puisque le logiciel démarre correctement.",
+        "Acheter davantage de licences avant d’examiner les pratiques.",
+        "Mesurer uniquement le nombre de connexions autorisées."
+      ],
+      "answer": 0,
+      "explanation": "La disponibilité ne prouve pas l’adoption. Les fichiers parallèles peuvent signaler des besoins non couverts, un défaut de formation ou une contrainte de processus."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une nouvelle procédure supprime une tâche d’un service mais la reporte sur un autre sans préparation. Quelle action manque ?",
+      "options": [
+        "Une mesure du seul temps économisé par le premier service.",
+        "L’analyse des effets sur les tâches, compétences et charges des acteurs concernés.",
+        "Un objectif de productivité identique dans les deux services sans ajustement.",
+        "La suppression des données du second service du bilan de changement."
+      ],
+      "answer": 1,
+      "explanation": "Le changement doit être analysé sur le processus complet. Une économie locale peut devenir une surcharge ailleurs si les responsabilités et moyens ne sont pas adaptés."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une formation présente uniquement les menus du nouvel outil. Les erreurs concernent surtout les nouveaux rôles de validation. Quel complément est nécessaire ?",
+      "options": [
+        "Une répétition des seuls menus avec davantage de captures d’écran, sans cas de décision.",
+        "Un suivi de présence à la formation considéré comme preuve de maîtrise des validations.",
+        "Des exercices sur les responsabilités, décisions et exceptions du processus cible.",
+        "Une formation des seuls administrateurs techniques, sans préparation des personnes qui décident des validations."
+      ],
+      "answer": 2,
+      "explanation": "La maîtrise de l’interface ne suffit pas quand le processus change. Les utilisateurs doivent comprendre qui valide quoi et savoir traiter les cas opérationnels."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un pilote est concluant dans une équipe experte et disponible. La direction veut généraliser immédiatement à des équipes novices surchargées. Quel risque doit être traité ?",
+      "options": [
+        "La réussite technique du pilote suffit à démontrer que les autres équipes n’auront besoin d’aucun accompagnement supplémentaire.",
+        "L’estimation de délai peut être reprise à l’identique sans tenir compte des compétences et de la charge.",
+        "La qualité de l’outil suffit à neutraliser les différences de disponibilité des équipes lors du déploiement.",
+        "Les conditions du pilote ne sont pas représentatives des moyens et compétences du déploiement."
+      ],
+      "answer": 3,
+      "explanation": "Un pilote renseigne dans certaines conditions. Les écarts de compétences et de disponibilité doivent être intégrés au rythme, à la formation et à l’accompagnement."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après un changement, les connexions au système sont nombreuses mais les opérations sont souvent corrigées manuellement. Quel suivi complète utilement le taux de connexion ?",
+      "options": [
+        "Le taux d’opérations correctement menées et les causes des reprises.",
+        "Le seul nombre de sessions ouvertes, en supposant que chaque connexion correspond à une opération conforme.",
+        "Le nombre de fonctionnalités utilisées, sans vérifier les corrections nécessaires après leur usage.",
+        "La durée moyenne des sessions, considérée comme une preuve suffisante de maîtrise du processus."
+      ],
+      "answer": 0,
+      "explanation": "La connexion est un indicateur d’accès. Le bon usage se mesure par les opérations réalisées conformément au processus et les reprises nécessaires."
+    }
+  ]
+}

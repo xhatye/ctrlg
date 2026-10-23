@@ -1,0 +1,248 @@
+{
+  "sourceHash": "210af5f0bbf3577f7594a589d60852e66bfbd5049ba38d76722e7371f2a6b3a7",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "191a6ae4a49c875198860475ab3c64353e8dd5a0ef5b3b7920a1644a644f4f36",
+      "selected": 3,
+      "reason": "Le délai de reprise mesure le retour du service utilisable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "d31b93c3b76f5ba70a32bb3a1432f4acfa2a04b3be6bff25d077662efb2f1cc5",
+      "selected": 2,
+      "reason": "Une suppression immédiatement répliquée sur tous nœuds ne laisse pas de point historique de récupération.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "0310f9905f0332cb7aeb388ee525d6bff6790c05bd9264be34b0ba880fb22be5",
+      "selected": 0,
+      "reason": "Le début et étatfinal attendu du chrono doivent être définis pour vérifier4heures.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "8e7371bcf3b86958467c076804cd6b3a0cf9238375c9387bc833f1c8234f4275",
+      "selected": 2,
+      "reason": "Budgettotal8 moinsrattrapage2 laisse6 pour remise en service.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "9a530ff1cfbb9178bdc04a6860a84fe46b444bac1a0cc217ee8e6f8954edade7",
+      "selected": 3,
+      "reason": "La conformité du composant couvert peut ignorer interfaces nécessaires au besoin métier.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "1356cbb6b75bdf6ccf05160765ba8d60b74888dd848ae780ff2312a877c76fa5",
+      "selected": 2,
+      "reason": "Le point de reprise mesure la perte de données admissible et non le délai de redémarrage.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "e1fb8a7ec21268ffe8a446a538435a8e288cf34f104c11a8c31809815e00fa94",
+      "selected": 2,
+      "reason": "Une copie quotidienne ne garantit pas une perte limitée à trente minutes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "82909ae2c9cb028d68b8f34cd24218add2f753795b7637d7d7567ea5e9631516",
+      "selected": 3,
+      "reason": "De10h à12h30, deux heures et demie de saisies ne sont pas couvertes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "6db2800c31fb450b3280efd249484aec52924972dad9deae502c3bb45b642118",
+      "selected": 2,
+      "reason": "RPO porte sur fraîcheur des données effectivement récupérées, pas vitesse de redémarrage.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "5e4bb0d53f6849314ece90e3c0e3b01add49ce8f654c4cd7e37223dcc84e58df",
+      "selected": 1,
+      "reason": "Copiesprévues15minutes ne garantissent pas des états réellement récupérables intègres.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "b4621cfcb1c19da1f92dc80b1cfaf3d898d4e6da5a9c1fb48f9720d2d89c9bc6",
+      "selected": 1,
+      "reason": "Une heure de reprise respecte deux heures, mais trois heures perdues dépassent une heure.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "ee3e1704c5922d31b2d1b72d825abef0ee4902a3015c75526de42fa938cc819b",
+      "selected": 3,
+      "reason": "Des informations supplémentaires peuvent permettre réidentification malgré suppression noms directs.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "c8b01f4f4e27da7a42cbd0aafb6e5cb6599fd87933edd2e1fd4582fd7138008b",
+      "selected": 2,
+      "reason": "La table de correspondance permet encore d’identifier les personnes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "8cb1bab6499bc1b6a63a0d2fe8ce083dd6daa19e7f52ce6264d02873ab6b7ccf",
+      "selected": 2,
+      "reason": "Fonctionrare dateetlieu peuvent identifier par combinaison indirecte.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "1f46a8ca6994e3c16d74853d26b839f18449c54478c1bd790dbe3c3d5bfe82e0",
+      "selected": 2,
+      "reason": "La correspondance doit rester séparément protégée selon besoin.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "d5e475e961ea54bead5e6bea9d2239f6c17bb8421c09e572b64449a013cb41d4",
+      "selected": 1,
+      "reason": "Un fichier réidentifiable doit conserver contrôle de finalités et accès malgré pseudonymes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "ebce48e2b1fb4d7e325894cd7a9fa5d4bd7e06b5e276a4418d825e18751e2c71",
+      "selected": 2,
+      "reason": "Un champ présent avec une fausse valeur est complet mais inexact.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "e64f568ccb7ee5b7770fcd8864089ff916fb733cec10e46766cbd23a7f7f85b6",
+      "selected": 0,
+      "reason": "Une adresse anciennedomicile manque d’actualité malgré format valide.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "1946bce895d620a7d167e9da8a62656f781be06529dfd333ac3940b28c8d025b",
+      "selected": 1,
+      "reason": "Une source indépendante permet de contrôler les opérations omises malgré l’égalité du total.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "37df0a6cbe6cc30b1c3996639e34cb0dfa380b96d0dd16ccb281100e0c52660f",
+      "selected": 2,
+      "reason": "Une règle de source fiable et correction tracée résout dates contradictoires.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "c4178e368f356cb835fbf834f4898964fd40731ca2d2b00c394eb220b082eec3",
+      "selected": 2,
+      "reason": "Un champ renseigné de valeurs par défaut ne garantit pas numéro exact ou utilisable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "182441805491e42e65bae6e7d91b7cd9ec717a3b5478188355a3c2018fdb5482",
+      "selected": 3,
+      "reason": "Retirer silencieusement les rejets laisse un rapport incomplet et exceptions nontraitées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

@@ -1,0 +1,448 @@
+{
+  "module": "UE7",
+  "chapter": "productivite-organisation",
+  "sourceHash": "18abc50cd31b9b48fcb8e975f83eef3a4328a3d184c204d18e3289cc788946a3",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "En organisation de la production, le takt time rapporte le temps de production disponible à la demande client. Que représente-t-il ?",
+      "options": [
+        "Le temps réellement observé pour exécuter un cycle au poste.",
+        "L’intervalle de sortie requis pour satisfaire cette demande avec le temps disponible.",
+        "Le délai total vécu par une commande, y compris toutes ses attentes.",
+        "Le temps nécessaire pour changer une série de production."
+      ],
+      "answer": 1,
+      "explanation": "Le takt time traduit un rythme demandé. Il se distingue du cycle observé, du délai de traversée et du changement de série.",
+      "references": [
+        {
+          "title": "Lean Enterprise Institute — Takt time",
+          "url": "https://www.lean.org/lexicon-terms/takt-time/"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après réorganisation, un tableau divise la production réelle par les heures budgétées avant le projet, alors que les heures réellement mobilisées diffèrent. Quelle correction mesure la productivité du travail effectivement réalisée ?",
+      "options": [
+        "Diviser la production prévue au budget initial par les heures budgétées initiales.",
+        "Diviser la production réellement obtenue par les heures budgétées avant le projet.",
+        "Diviser la production réellement obtenue par les heures réellement mobilisées pour cette production.",
+        "Diviser la production prévue au budget initial par les heures réellement mobilisées."
+      ],
+      "answer": 2,
+      "explanation": "La mesure de réalisation rapproche production réelle et heures réellement mobilisées sur le même champ. Les autres quotients mesurent un budget ou mélangent réalisation et prévision."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un service produisait cinq unités par heure. Il réalise désormais 1 600 unités en 280 heures. Combien d’heures aurait exigé ce volume au rythme initial, en plus des heures effectivement utilisées ?",
+      "options": [
+        "40 heures",
+        "320 heures",
+        "60 heures",
+        "280 heures"
+      ],
+      "answer": 0,
+      "explanation": "À l’ancienne productivité, 1 600 / 5 = 320 heures auraient été nécessaires. L’écart de référence est 320 − 280 = 40 heures ; ce calcul ne prouve pas à lui seul une économie monétaire réalisée.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 1600
+                },
+                {
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "value": 280
+            }
+          ]
+        },
+        "expected": 40,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La production augmente mais les heures augmentent encore davantage en proportion, à produits comparables. Quelle lecture de management est justifiée ?",
+      "options": [
+        "Le volume progressant, la productivité horaire progresse nécessairement dans la même proportion.",
+        "Le quotient reste constant puisque production et heures augmentent toutes deux, indépendamment de leurs taux.",
+        "La productivité croît au rythme des heures, sans tenir compte de la variation de production.",
+        "Le volume peut progresser alors que la productivité horaire diminue."
+      ],
+      "answer": 3,
+      "explanation": "Le ratio dépend des deux évolutions. Une hausse de volume obtenue avec une progression plus rapide des heures ne constitue pas un gain de production par heure, même si l’activité totale augmente."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un constructeur annonce un cycle automatique de machine de 20 secondes. Chaque pièce exige aussi un chargement et un déchargement manuels. Pourquoi ce chiffre ne suffit-il pas à programmer la cadence complète du poste ?",
+      "options": [
+        "Il faut utiliser le seul cycle automatique comme temps complet, quelle que soit la manutention nécessaire.",
+        "Il faut intégrer les opérations nécessaires autour du cycle machine et leurs possibilités de recouvrement.",
+        "Il faut considérer le temps de manutention comme nul dès lors que la machine est automatisée.",
+        "Il faut additionner systématiquement tous les temps des opérateurs, même quand plusieurs travaillent en parallèle."
+      ],
+      "answer": 1,
+      "explanation": "Un cycle machine n’est pas nécessairement le cycle complet du poste. La combinaison des tâches, attentes et recouvrements détermine la cadence effective.",
+      "references": [
+        {
+          "title": "Lean Enterprise Institute — Cycle time",
+          "url": "https://www.lean.org/lexicon-terms/cycle-time/"
+        },
+        {
+          "title": "Lean Enterprise Institute — Standardized work",
+          "url": "https://www.lean.org/lexicon-terms/standardized-work/"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un service dispose de 250 heures pour produire 1 500 unités comparables. Quelle productivité minimale doit-il tenir pour réaliser ce programme sans dépasser les heures données ?",
+      "options": [
+        "0,1667 unité par heure",
+        "5 unités par heure",
+        "6 unités par heure",
+        "1 750 unités par heure"
+      ],
+      "answer": 2,
+      "explanation": "La productivité requise est 1 500 / 250 = 6 unités par heure. Il s’agit d’une exigence de capacité pour ce programme, pas d’une preuve que l’équipe saura effectivement l’atteindre.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1500
+            },
+            {
+              "value": 250
+            }
+          ]
+        },
+        "expected": 6,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un dossier exige dix minutes de traitement effectif mais reste deux jours dans les files d’attente. Quelle distinction explique le délai vécu par le client ?",
+      "options": [
+        "Le temps de traitement actif est distinct du délai total de traversée, qui inclut les attentes.",
+        "Les deux jours constituent uniquement un temps de travail actif sur ce dossier.",
+        "Les dix minutes représentent le délai total dès lors que l’attente ne consomme pas de travail actif.",
+        "Le délai total se mesure seulement à partir de la dernière opération, sans inclure les files précédentes."
+      ],
+      "answer": 0,
+      "explanation": "Le temps de traitement concerne le travail effectué sur le dossier ; le délai de traversée comprend aussi son attente entre étapes.",
+      "references": [
+        {
+          "title": "Lean Enterprise Institute — Cycle time",
+          "url": "https://www.lean.org/lexicon-terms/cycle-time/"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une automatisation réduit les heures de travail par pièce mais nécessite davantage de machines et d’énergie. Que mesure directement la hausse des pièces par heure de travail ?",
+      "options": [
+        "Une hausse de productivité globale intégrant déjà les machines et l’énergie sans les mesurer.",
+        "Une baisse du coût total par pièce, indépendamment des coûts des moyens supplémentaires.",
+        "Une augmentation de la rentabilité des capitaux, sans données sur les investissements et résultats.",
+        "Une hausse de productivité du travail, sans démontrer à elle seule une hausse de productivité de tous les facteurs."
+      ],
+      "answer": 3,
+      "explanation": "La productivité du travail est un indicateur partiel. La substitution de capital au travail nécessite d’autres mesures pour apprécier tous les facteurs ou la rentabilité."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le temps standard d’une tâche est établi à partir des seuls dossiers simples traités par l’agent le plus expérimenté. Quelle amélioration du protocole de mesure est prioritaire ?",
+      "options": [
+        "Multiplier les mesures du même agent sur les mêmes dossiers simples uniquement.",
+        "Observer un éventail représentatif de tâches et de conditions d’exécution, en documentant leurs différences.",
+        "Retenir seulement son temps le plus court comme standard de toutes les situations.",
+        "Remplacer chaque observation moins rapide par le meilleur temps mesuré."
+      ],
+      "answer": 1,
+      "explanation": "La répétition d’un échantillon sélectionné ne le rend pas représentatif. Les différences de tâches et de conditions doivent être prises en compte avant de généraliser un temps."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un tableau compte chaque passage en atelier comme une pièce produite, y compris lorsqu’une même pièce revient pour correction. L’objectif est le nombre de pièces conformes livrables. Quel comptage convient ?",
+      "options": [
+        "Additionner tous les passages initiaux et de reprise comme autant de pièces conformes distinctes.",
+        "Ne compter que les passages de reprise, en excluant les pièces conformes dès le premier passage.",
+        "Compter les pièces conformes distinctes, en suivant séparément les passages de reprise.",
+        "Assimiler chaque opération de contrôle à une pièce livrable supplémentaire."
+      ],
+      "answer": 2,
+      "explanation": "Une reprise mobilise de l’activité sans créer nécessairement une nouvelle pièce livrable. Distinguer produits conformes et opérations évite de valoriser artificiellement les reprises."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une machine travaille vite mais reste souvent arrêtée faute de composants. Pour améliorer le débit réalisé à cadence technique inchangée, quelle action traite le problème décrit ?",
+      "options": [
+        "Fiabiliser l’alimentation en composants et réduire les arrêts qui en résultent.",
+        "Augmenter seulement la vitesse nominale pendant les périodes où les composants sont déjà présents.",
+        "Mesurer la production exclusivement pendant les séquences sans rupture et ignorer les arrêts.",
+        "Augmenter l’encours après la machine sans résoudre son manque de composants en amont."
+      ],
+      "answer": 0,
+      "explanation": "Le problème décrit est la disponibilité des composants. Le débit réellement obtenu dépend aussi des arrêts, pas seulement de la vitesse lorsque la machine fonctionne."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un atelier fabrique des lots très importants pour limiter les changements de série, mais les commandes des autres références attendent longtemps. Quel arbitrage faut-il étudier ?",
+      "options": [
+        "Le seul nombre de changements de série, sans tenir compte des délais des commandes.",
+        "Le seul taux d’occupation de la machine, en excluant les références encore en attente.",
+        "La production maximale de la référence déjà en cours, indépendamment de la demande des autres.",
+        "Le compromis entre temps de changement, taille des lots et délai de service des différentes références."
+      ],
+      "answer": 3,
+      "explanation": "Réduire les changements peut allonger l’attente des autres produits. L’optimisation doit intégrer le service demandé, pas un seul indicateur local."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une équipe termine ses commandes à temps et dispose encore de capacité. On propose de produire sans commande pour porter son occupation à 100 %. Quel coût caché faut-il examiner ?",
+      "options": [
+        "Le seul gain de taux d’occupation, présenté comme équivalent à une vente supplémentaire.",
+        "La création de stocks ou d’encours sans demande, avec immobilisation et risques associés.",
+        "L’augmentation du chiffre d’affaires dès fabrication, indépendamment de toute vente.",
+        "La disparition du coût de stockage au seul motif que le personnel est déjà rémunéré."
+      ],
+      "answer": 1,
+      "explanation": "Occuper une ressource ne crée pas automatiquement une vente utile. Une production sans demande peut immobiliser des moyens et accumuler des stocks."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La nouvelle organisation augmente le ratio moyen mais crée un goulot dans un poste indispensable à la fin du processus. Quel complément est pertinent ?",
+      "options": [
+        "Augmenter seulement la cadence du poste déjà le plus rapide sans vérifier l’étape limitante.",
+        "Retenir la moyenne des capacités comme débit garanti du processus complet.",
+        "Observer les capacités et flux aux étapes critiques, pas seulement la moyenne du service.",
+        "Additionner les capacités des postes successifs comme s’ils livraient chacun un produit fini indépendant."
+      ],
+      "answer": 2,
+      "explanation": "Une mesure moyenne peut masquer une contrainte locale de réalisation. Pour programmer l’activité, il faut comprendre les capacités et dépendances des étapes nécessaires, en complément du ratio de productivité."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une hausse du ratio est convertie directement en réduction de salaire total alors qu’aucune heure payée ni contrat n’a changé. Quelle distinction manque ?",
+      "options": [
+        "Un gain de productivité ou de temps de référence n’est pas automatiquement une économie de dépense effectivement réalisée.",
+        "Appliquer directement le pourcentage de gain au total des salaires contractuels sans changement de dépenses.",
+        "Valoriser toutes les heures de référence évitées comme sorties de trésorerie déjà supprimées.",
+        "Comptabiliser immédiatement une baisse de charges sur la seule base du ratio, sans identifier les coûts évitables."
+      ],
+      "answer": 0,
+      "explanation": "L’efficacité technique et le coût payé ne sont pas la même mesure. La traduction en économie dépend de décisions et conditions supplémentaires ; il faut distinguer potentiel, capacité libérée et dépense réellement évitée."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La production totale reste stable alors qu’une part du temps est consacrée à former des nouveaux agents. Quel commentaire est prudent ?",
+      "options": [
+        "Évaluer la formation uniquement par le volume de la première période, sans horizon d’apprentissage.",
+        "Attribuer toute stabilité du volume à une absence d’effet de formation, sans examiner le temps consacré.",
+        "Retirer les heures de formation des coûts du projet sans préciser qu’elles mobilisent des ressources.",
+        "Les heures, la nature des activités et l’horizon doivent être examinés avant d’interpréter l’évolution."
+      ],
+      "answer": 3,
+      "explanation": "Le volume total ne résume pas l’usage des ressources ni les effets futurs. Le temps de formation et les changements d’activité peuvent contribuer au ratio ; il faut garder une interprétation reliée au contexte."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une procédure standard de travail décrit la meilleure méthode connue aujourd’hui. Une équipe propose une méthode testée plus fiable. Comment utiliser le standard dans une démarche d’amélioration continue ?",
+      "options": [
+        "Refuser toute modification car la formalisation rend la méthode définitive.",
+        "Le prendre comme référence à améliorer et le mettre à jour après validation de la nouvelle méthode.",
+        "Laisser chaque poste appliquer durablement une version différente sans mise à jour partagée.",
+        "Supprimer toute référence commune dès qu’une proposition d’amélioration apparaît."
+      ],
+      "answer": 1,
+      "explanation": "Le standard stabilise la méthode actuelle et fournit une base d’amélioration. Il n’empêche ni essais encadrés ni évolution documentée.",
+      "references": [
+        {
+          "title": "Lean Enterprise Institute — Standardized work",
+          "url": "https://www.lean.org/lexicon-terms/standardized-work/"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une équipe vise 1 800 unités à une productivité prévue de six unités par heure. Elle prévoit 20 heures supplémentaires de coordination non incluses dans ce ratio d’exécution. Quel total d’heures faut-il budgéter ?",
+      "options": [
+        "300 heures",
+        "280 heures",
+        "320 heures",
+        "10 820 heures"
+      ],
+      "answer": 2,
+      "explanation": "L’exécution exige 1 800 / 6 = 300 heures. Le dossier définit 20 heures de coordination en plus : le besoin total est 320 heures. Il faut respecter le périmètre du ratio pour éviter d’oublier ou doubler les temps.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 1800
+                },
+                {
+                  "value": 6
+                }
+              ]
+            },
+            {
+              "value": 20
+            }
+          ]
+        },
+        "expected": 320,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le ratio augmente mais les retours d’équipe font état d’une pénibilité accrue. Quelle lecture est cohérente avec une analyse de management ?",
+      "options": [
+        "Le gain de ratio et les conditions de travail sont deux dimensions à examiner ensemble.",
+        "Évaluer les conditions de travail par le seul gain de ratio, sans analyser les situations signalées.",
+        "Traiter les signalements uniquement comme un problème de communication sur les résultats.",
+        "Attendre une baisse du ratio avant d’examiner une pénibilité déjà signalée."
+      ],
+      "answer": 0,
+      "explanation": "Le ratio ne mesure pas toutes les conséquences organisationnelles. Les conditions de travail doivent être examinées avec les autres résultats, sans effacer les observations au motif qu’un indicateur partiel progresse."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Chaque semaine, un service reçoit durablement plus de demandes qu’il ne peut en terminer. Pourquoi un stock tampon ne résout-il pas à lui seul ce déséquilibre ?",
+      "options": [
+        "Il augmente automatiquement la capacité de traitement au même rythme que les entrées.",
+        "Il transforme les demandes en attente en dossiers terminés pour le client.",
+        "Il garantit la stabilité des délais sans changement des entrées ou de la capacité.",
+        "Il absorbe temporairement l’écart mais l’encours continue de croître tant que les entrées dépassent les sorties."
+      ],
+      "answer": 3,
+      "explanation": "Un tampon traite une variabilité temporaire ; il ne supprime pas un excès durable de charge. Le flux entrant doit être rapproché de la capacité de sortie."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une productivité progresse de 25 % puis revient à son niveau de départ. Quelle affirmation sur le taux de baisse de la seconde période faut-il éviter ?",
+      "options": [
+        "Il doit être calculé sur le niveau plus élevé atteint après la hausse.",
+        "Il vaut automatiquement 25 % parce que le mouvement inverse porte sur le même écart absolu.",
+        "Le niveau final peut être égal au niveau initial malgré des taux successifs différents.",
+        "Un retour au départ ne signifie pas que chaque taux est nul."
+      ],
+      "answer": 1,
+      "explanation": "La seconde variation utilise une autre base. Des écarts absolus opposés ne produisent pas nécessairement des pourcentages opposés ; il faut conserver les niveaux et les bases de chaque période."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux services se transmettent les dossiers une seule fois par semaine, même quand ils sont prêts le premier jour. Quelle action vise directement l’attente de transfert, sans demander d’accélérer le traitement de chaque dossier ?",
+      "options": [
+        "Augmenter uniquement la vitesse de saisie du premier service en gardant le même jour de transfert.",
+        "Compter les dossiers prêts comme déjà reçus par le second service sans les lui transmettre.",
+        "Étudier des transmissions plus fréquentes de lots plus petits entre les services.",
+        "Allonger la période entre transferts pour accroître chaque lot, sans examiner le délai client."
+      ],
+      "answer": 2,
+      "explanation": "Le délai provient ici de l’organisation du transfert. Réduire l’intervalle entre transmissions peut raccourcir l’attente même à temps de traitement inchangé."
+    },
+    {
+      "id": "q23",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Lors d’un changement de série, les outils sont recherchés pendant que la machine est arrêtée. Quel principe permet de réduire cet arrêt sans supprimer le réglage nécessaire ?",
+      "options": [
+        "Préparer les outils en amont pendant que la machine fonctionne encore, lorsque cela est réalisable en sécurité.",
+        "Réaliser toute préparation après l’arrêt même si elle pourrait être effectuée avant.",
+        "Réduire le temps enregistré en excluant la recherche d’outils sans changer son organisation.",
+        "Supprimer la vérification du réglage pour compenser le temps de recherche des outils."
+      ],
+      "answer": 0,
+      "explanation": "La méthode SMED distingue opérations internes nécessitant l’arrêt et opérations externes préparables pendant le fonctionnement. Externaliser une préparation possible réduit l’arrêt sans omettre les exigences.",
+      "references": [
+        {
+          "title": "Lean Enterprise Institute — Single-minute exchange of die",
+          "url": "https://www.lean.org/lexicon-terms/single-minute-exchange-of-die/"
+        }
+      ]
+    }
+  ]
+}

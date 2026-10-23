@@ -1,0 +1,371 @@
+{
+  "module": "UE7",
+  "chapter": "organisation",
+  "sourceHash": "81d0f2f360771cbafad7d6536704eb2604396c4b3782b69420ce4cc4a724de06",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi la division du travail crée-t-elle un besoin de coordination ?",
+      "options": [
+        "La spécialisation permet d’évaluer la somme des performances locales comme si les transmissions ne coûtaient rien.",
+        "Des activités réparties doivent être reliées pour produire un résultat collectif cohérent.",
+        "La description complète de chaque poste suffit à déterminer les conditions de tous les transferts entre postes.",
+        "La fixation d’un objectif par service garantit la compatibilité de ces objectifs sans arbitrage commun."
+      ],
+      "answer": 1,
+      "explanation": "Répartir l’activité ne garantit pas que ses composantes s’enchaînent correctement. Les échanges, délais et responsabilités doivent être coordonnés pour que les tâches spécialisées contribuent au même résultat."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une équipe traite des opérations répétitives dont les étapes sont connues et stables. Quel mécanisme permet de coordonner directement leur exécution de manière commune ?",
+      "options": [
+        "Laisser chaque agent choisir une séquence différente, puis harmoniser uniquement les totaux mensuels.",
+        "Retenir le seul objectif de volume, sans modalités communes pour les étapes répétitives.",
+        "Formaliser une procédure adaptée, connue des agents et contrôlée dans son usage.",
+        "Organiser une nouvelle négociation de la méthode pour chaque dossier identique."
+      ],
+      "answer": 2,
+      "explanation": "Une procédure commune peut convenir à des tâches répétitives et prévisibles. Sa pertinence dépend du travail réel ; la formalisation doit être comprise et appliquée, pas seulement déposée dans un document."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Toutes les décisions d’achat, même courantes, remontent à la direction générale. Quel aspect de l’organisation est principalement décrit ?",
+      "options": [
+        "La centralisation des décisions.",
+        "La division du travail par produit uniquement.",
+        "La standardisation nécessaire de toutes les méthodes.",
+        "La coordination informelle entre pairs uniquement."
+      ],
+      "answer": 0,
+      "explanation": "Le constat porte sur le niveau où se concentre le pouvoir de décision. Il ne démontre pas que les méthodes soient standardisées : qui décide et comment le travail est exécuté sont deux dimensions différentes."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une ingénieure dépend d’un responsable de métier et d’un chef de projet. Quelle caractéristique organisationnelle illustre ce double rattachement ?",
+      "options": [
+        "Une centralisation de toutes les décisions chez un seul supérieur.",
+        "Une absence de répartition des tâches.",
+        "Une standardisation exclusive par procédure.",
+        "Un croisement de dimensions caractéristique d’une structure matricielle."
+      ],
+      "answer": 3,
+      "explanation": "La structure matricielle croise notamment les fonctions et les projets. Ce double rattachement peut aider à coordonner les compétences mais exige de clarifier les responsabilités et les priorités."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le service commercial promet des délais sans consulter la production ; chaque service accomplit pourtant ses tâches propres. Quel problème explique les retards récurrents ?",
+      "options": [
+        "Une division du travail insuffisante parce que la production reste impliquée dans le délai promis.",
+        "Une coordination insuffisante entre activités interdépendantes.",
+        "Un défaut de mesure du seul temps commercial, sans lien avec la capacité de production.",
+        "Un niveau de spécialisation garantissant déjà la compatibilité des engagements locaux."
+      ],
+      "answer": 1,
+      "explanation": "L’efficacité locale de chaque service ne garantit pas la cohérence de leurs engagements. Les promesses commerciales et les capacités de production doivent être reliées par des informations et des arbitrages partagés."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une équipe de conception rencontre des problèmes nouveaux qui demandent des ajustements rapides entre spécialistes. Quel mécanisme complète utilement les règles existantes ?",
+      "options": [
+        "Écrire une liste fermée de tous les cas en supposant connus à l’avance les problèmes nouveaux.",
+        "Régler chaque nouveauté par une remontée centrale, en écartant les interactions entre experts concernés.",
+        "Des échanges directs permettant d’ajuster les contributions réciproques.",
+        "Attribuer à chaque spécialité un objectif isolé sans discussion des conséquences pour les autres."
+      ],
+      "answer": 2,
+      "explanation": "Les situations peu prévisibles exigent souvent des échanges pour ajuster les tâches entre experts. Les procédures peuvent rester utiles, mais elles ne décrivent pas nécessairement toutes les décisions nouvelles à prendre."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Des agences locales suivent la même procédure, tout en décidant elles-mêmes des remises dans une limite définie. Quelle distinction ce cas met-il en évidence ?",
+      "options": [
+        "Des pratiques standardisées peuvent coexister avec une délégation de décisions.",
+        "Une procédure commune prouve que toute décision est centralisée.",
+        "Une décision locale implique qu’aucune règle commune n’existe.",
+        "La délégation supprime nécessairement tout contrôle des décisions."
+      ],
+      "answer": 0,
+      "explanation": "Standardisation et centralisation ne sont pas synonymes. Des modalités communes peuvent encadrer une marge de décision locale ; il faut examiner séparément les règles d’exécution et le pouvoir de décider."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans une matrice fonction-projet, deux responsables demandent à une même salariée des livrables urgents incompatibles. Quel risque organisationnel apparaît ?",
+      "options": [
+        "Une insuffisance de compétences prouvée par la seule incompatibilité des calendriers.",
+        "Une absence de contrôle du travail prouvée par la présence de deux responsables.",
+        "Un mécanisme qui garantit l’accord des priorités par la seule double appartenance.",
+        "Un conflit de priorités lié aux responsabilités croisées."
+      ],
+      "answer": 3,
+      "explanation": "La double dimension peut produire des exigences concurrentes. Le problème appelle des règles d’arbitrage et de priorité, plutôt que l’hypothèse qu’une structure matricielle élimine spontanément les tensions."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise découpe une prestation en étapes confiées à des équipes différentes. Quel point doit-elle préciser pour éviter que les dossiers restent bloqués entre deux étapes ?",
+      "options": [
+        "Le responsable du dernier relais, en lui attribuant par défaut tous les dossiers mal transmis.",
+        "Les conditions de transfert, les informations requises et la responsabilité de chaque relais.",
+        "Les objectifs de volume de chaque équipe, sans critère d’acceptation des dossiers reçus.",
+        "Le temps moyen par équipe, sans examiner les informations nécessaires au relais suivant."
+      ],
+      "answer": 1,
+      "explanation": "Les interfaces conditionnent l’enchaînement des tâches. Définir les entrées, sorties et responsabilités des relais rend la division du travail opérationnelle, au-delà de la seule description des équipes."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel énoncé distingue correctement une procédure de la supervision directe ?",
+      "options": [
+        "La procédure fixe les résultats seuls ; la supervision impose uniquement une qualification professionnelle commune.",
+        "La procédure délègue les décisions ; la supervision décrit seulement les tâches sans intervention hiérarchique.",
+        "La procédure fixe des modalités communes ; la supervision coordonne par l’intervention d’un responsable.",
+        "La procédure définit uniquement le rattachement hiérarchique ; la supervision définit uniquement le format des documents."
+      ],
+      "answer": 2,
+      "explanation": "Les deux mécanismes peuvent contribuer à la coordination, mais par des voies différentes. Leur pertinence dépend du travail et de l’incertitude ; ils peuvent aussi se compléter dans une même organisation."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une direction délègue les décisions courantes à des responsables locaux dans un cadre défini. Quel changement décrit-on par rapport à leur validation systématique au siège ?",
+      "options": [
+        "Une moindre concentration de ces décisions au niveau central.",
+        "Une hausse de formalisation des méthodes, qui définit à elle seule le lieu des décisions.",
+        "Une hausse du nombre de niveaux hiérarchiques, quelle que soit leur autorité effective.",
+        "Un regroupement par projets déduit de la seule délégation de décisions courantes."
+      ],
+      "answer": 0,
+      "explanation": "Le changement porte sur le lieu du pouvoir de décision. Il peut laisser subsister des procédures, objectifs et contrôles communs ; la délégation ne définit pas à elle seule une structure matricielle."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Quel bénéfice peut rechercher une entreprise en croisant ses métiers avec ses projets ?",
+      "options": [
+        "Mettre fin aux arbitrages entre priorité métier et priorité projet par le seul dessin du croisement.",
+        "Remplacer toute expertise fonctionnelle par les seules compétences du chef de projet.",
+        "Donner à chaque chef de projet la disponibilité exclusive de tous les experts partagés.",
+        "Mobiliser des compétences de plusieurs fonctions autour d’un projet commun."
+      ],
+      "answer": 3,
+      "explanation": "Le croisement vise notamment à relier les expertises fonctionnelles à des besoins de projet. Ce bénéfice reste potentiel et doit être mis en regard des coûts de coordination et des tensions de responsabilités."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Chaque équipe optimise son propre délai mais transmet des dossiers incomplets qui augmentent les reprises du service suivant. Que révèle cette situation ?",
+      "options": [
+        "La baisse de chaque temps local suffit à prouver la réduction du délai complet, sans compter les reprises déplacées.",
+        "L’optimisation locale peut dégrader l’ensemble si les interdépendances sont mal coordonnées.",
+        "Les reprises doivent être attribuées uniquement à l’équipe qui les corrige, sans examiner l’origine des dossiers incomplets.",
+        "Le transfert des reprises permet de les retirer du coût collectif parce qu’elles ne sont plus dans le premier service."
+      ],
+      "answer": 1,
+      "explanation": "Une amélioration mesurée localement peut déplacer les coûts vers les autres équipes. La coordination doit considérer le flux complet, la qualité des transferts et le résultat collectif, pas seulement les indicateurs de chaque poste."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux équipes connaissent leurs procédures mais poursuivent des priorités incompatibles. Quel élément supplémentaire peut soutenir leur coordination ?",
+      "options": [
+        "Des objectifs locaux renforcés séparément, sans règle de résolution de leurs contradictions.",
+        "Un même format de compte rendu, considéré comme suffisant pour départager les priorités incompatibles.",
+        "Des objectifs partagés et un mécanisme d’arbitrage des priorités.",
+        "Un suivi plus fréquent du volume de chaque équipe, sans critère commun pour décider en cas de conflit."
+      ],
+      "answer": 2,
+      "explanation": "Connaître la manière d’exécuter les tâches ne règle pas tous les conflits de priorités. Des objectifs communs et des règles d’arbitrage peuvent aligner les contributions vers un résultat partagé."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un organigramme comporte de nombreux niveaux. Peut-on en conclure, sans autre observation, que toutes les décisions sont prises au sommet ?",
+      "options": [
+        "Non, il faut examiner les pouvoirs réellement exercés et les délégations.",
+        "Oui, la profondeur hiérarchique permet de déduire sans autre observation le niveau de toute décision.",
+        "Oui, un niveau hiérarchique supplémentaire retire par lui-même les délégations accordées aux autres niveaux.",
+        "Non, la multiplication des niveaux démontre à elle seule la répartition des décisions entre tous les échelons."
+      ],
+      "answer": 0,
+      "explanation": "La structure affichée ne décrit pas entièrement les pratiques. Le degré de centralisation se détermine en étudiant qui peut effectivement décider et quelles décisions remontent, pas seulement la profondeur de l’organigramme."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Pour limiter les tensions d’une structure matricielle, quelle action traite directement la cause des demandes concurrentes ?",
+      "options": [
+        "Donner aux deux responsables des cibles séparées sans arbitrer le temps partagé de la salariée.",
+        "Laisser la salariée choisir seule entre les deux demandes sans critères ni recours définis.",
+        "Faire passer tout projet avant tout métier sans distinguer urgences et responsabilités.",
+        "Clarifier les domaines de responsabilité et les règles d’arbitrage entre responsables."
+      ],
+      "answer": 3,
+      "explanation": "Le croisement des dimensions doit être accompagné de règles de fonctionnement. Définir les responsabilités et l’arbitrage aide à gérer les priorités concurrentes sans prétendre que la seule matrice crée l’accord."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "L’organisation distingue ici division horizontale (spécialisation entre activités) et division verticale (séparation entre conception du travail et exécution). La direction retire aux opérateurs la conception de leurs méthodes et la confie à un bureau spécialisé. Quel changement est directement décrit ?",
+      "options": [
+        "Une réduction de la division verticale parce que les méthodes deviennent communes.",
+        "Un renforcement de la division verticale entre conception et exécution.",
+        "Une décentralisation de la conception vers les opérateurs.",
+        "Un simple élargissement des tâches d’exécution à méthodes inchangées."
+      ],
+      "answer": 1,
+      "explanation": "Les définitions sont fournies : la conception est désormais séparée de l’exécution et retirée aux opérateurs. Le changement renforce donc la division verticale ; il ne constitue ni délégation de conception ni simple élargissement des tâches.",
+      "references": [
+        {
+          "title": "FAO — Structure of an organization",
+          "url": "https://www.fao.org/4/w7503e/w7503e04.htm"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une procédure autrefois adaptée bloque maintenant des cas nouveaux, mais le responsable la conserve sans réévaluation. Quelle analyse est la plus pertinente ?",
+      "options": [
+        "Conserver la règle pour tous les cas au motif que son ancienneté garantit son adaptation actuelle.",
+        "Remplacer toutes les règles par des objectifs de volume sans examiner les risques des nouveaux cas.",
+        "Le mécanisme de coordination doit être réexaminé selon la nature actuelle du travail.",
+        "Multiplier les validations sur le circuit ancien sans examiner pourquoi les nouveaux cas y sont bloqués."
+      ],
+      "answer": 2,
+      "explanation": "La pertinence d’un mode de coordination dépend des tâches et de leur incertitude. Une évolution du travail peut demander d’adapter les règles et de prévoir des échanges ou une supervision pour les cas non couverts."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le siège valide toutes les exceptions mais les agences appliquent seules les décisions courantes dans un cadre commun. Quelle description est la plus précise ?",
+      "options": [
+        "La concentration du pouvoir varie selon la catégorie de décision.",
+        "Toutes les décisions sont également centralisées.",
+        "Toutes les décisions sont également déléguées sans limite.",
+        "La procédure commune prouve qu’aucune agence ne décide réellement."
+      ],
+      "answer": 0,
+      "explanation": "Le pouvoir de décision n’est pas toujours réparti de façon uniforme. Il faut distinguer les décisions courantes des exceptions pour décrire correctement la centralisation et la délégation effectives."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une entreprise appelle son organisation « matricielle » mais chaque salarié dépend d’un seul responsable et aucun croisement fonction-projet n’est observable. Quelle vérification faut-il faire ?",
+      "options": [
+        "Retenir l’appellation officielle comme description suffisante de la double autorité.",
+        "Déduire le caractère matriciel du seul nombre de projets dans le portefeuille.",
+        "Déduire le caractère matriciel du seul partage de locaux entre plusieurs métiers.",
+        "Examiner les rattachements, responsabilités et coordinations réelles plutôt que le seul nom donné."
+      ],
+      "answer": 3,
+      "explanation": "Une étiquette ne démontre pas un mode de fonctionnement. Le diagnostic doit observer comment les dimensions se croisent réellement, qui donne les priorités et comment les acteurs coordonnent leurs contributions."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une organisation confie des activités complexes à des professionnels partageant une qualification spécialisée et des normes de pratique acquises en formation. Chaque acte n’est pas prescrit par un mode opératoire détaillé. Quelle base de coordination est directement mobilisée ?",
+      "options": [
+        "La prescription exhaustive des gestes de chaque acte par une procédure unique.",
+        "La standardisation des compétences et savoirs professionnels nécessaires à l’activité.",
+        "La validation de chaque geste en temps réel par un supérieur unique.",
+        "L’absence de référentiel commun parce que les professionnels travaillent avec autonomie."
+      ],
+      "answer": 1,
+      "explanation": "L’activité est coordonnée ici par une base de compétences et de pratiques professionnelles partagées. L’autonomie d’exécution n’est pas absence de cadre ; elle se distingue d’une prescription exhaustive des gestes ou d’une supervision acte par acte.",
+      "references": [
+        {
+          "title": "FAO — Structure of an organization",
+          "url": "https://www.fao.org/4/w7503e/w7503e04.htm"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un responsable dispose de dix heures par semaine pour les rendez-vous de coordination individuels. Chaque collaborateur direct nécessite deux heures par semaine selon la règle de ce service ; aucun rendez-vous ne peut être groupé ou délégué. Combien de collaborateurs directs ce budget permet-il de suivre ?",
+      "options": [
+        "20 collaborateurs.",
+        "10 collaborateurs.",
+        "5 collaborateurs.",
+        "2 collaborateurs."
+      ],
+      "answer": 2,
+      "explanation": "La capacité de coordination est de 10/2 = 5 collaborateurs dans les conditions données. Le calcul représente une contrainte locale de temps, pas une règle universelle sur le nombre de personnes qu’un manager devrait superviser.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 10
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "expected": 5,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "FAO — Structure of an organization",
+          "url": "https://www.fao.org/4/w7503e/w7503e04.htm"
+        }
+      ]
+    }
+  ]
+}

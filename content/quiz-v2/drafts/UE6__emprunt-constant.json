@@ -1,0 +1,483 @@
+{
+  "module": "UE6",
+  "chapter": "emprunt-constant",
+  "sourceHash": "26397656ed1dda7070d48524049446967848f77e16a9696ec73e741e747a9485",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un emprunt de 48 000 € est remboursé sur six ans par amortissement constant du capital en fin d’année. Quel montant de principal est remboursé chaque année ?",
+      "options": [
+        "8 000 €",
+        "6 000 €",
+        "48 000 €",
+        "288 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le capital est réparti en six fractions identiques : 48 000 / 6 = 8 000 €. Les intérêts s’ajoutent à cette fraction.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 48000
+            },
+            {
+              "value": 6
+            }
+          ]
+        },
+        "expected": 8000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans l’expression « emprunt à amortissement constant du capital », quel élément est constant ?",
+      "options": [
+        "La somme du principal et des intérêts à chaque échéance",
+        "La fraction de principal remboursée à chaque période",
+        "Le capital restant dû au début de chaque période",
+        "Le coût total des intérêts rapporté à chaque période"
+      ],
+      "answer": 1,
+      "explanation": "L’amortissement désigne ici le remboursement du principal. La constance de cette part n’impose pas celle du paiement total avec intérêts."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un capital de 36 000 € est remboursé par fractions de principal de 9 000 € en fin de chaque année. Combien d’échéances annuelles de capital sont nécessaires ?",
+      "options": [
+        "9 échéances",
+        "27 échéances",
+        "4 échéances",
+        "36 échéances"
+      ],
+      "answer": 2,
+      "explanation": "Le nombre de fractions se calcule par 36 000 / 9 000 = 4. Les intérêts ne modifient pas ce nombre de remboursements du principal.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 36000
+            },
+            {
+              "value": 9000
+            }
+          ]
+        },
+        "expected": 4,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau intitulé « capital remboursé constant » affiche des remboursements de principal de 4 000 €, 4 300 € puis 4 600 €. Quel contrôle s’impose ?",
+      "options": [
+        "Conclure que ces hausses sont obligatoires à taux fixe",
+        "Remplacer les intérêts par ces fractions de principal",
+        "Déclarer le tableau exact si les échéances totales sont constantes",
+        "Vérifier que le tableau respecte réellement le mode de remboursement annoncé"
+      ],
+      "answer": 3,
+      "explanation": "Des fractions croissantes de principal ne correspondent pas à un amortissement constant. L’intitulé et les modalités doivent être rapprochés."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le capital est réparti sur davantage d’années avec des fractions annuelles constantes, à capital initial identique. Que devient la fraction annuelle de principal ?",
+      "options": [
+        "Elle diminue",
+        "Elle augmente",
+        "Elle reste égale au capital initial",
+        "Elle devient égale aux intérêts de la première année"
+      ],
+      "answer": 0,
+      "explanation": "Diviser le même capital sur davantage de périodes réduit chaque fraction de remboursement. Cela ne signifie pas un coût total d’intérêts plus faible."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un prêt de 50 000 € à 6 % annuels est versé au début de l’année et remboursé pour la première fois en fin d’année. Quels intérêts rémunèrent cette première année entière ?",
+      "options": [
+        "300 €",
+        "3 000 €",
+        "8 333,33 €",
+        "53 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le capital initial reste dû pendant la première année : les intérêts valent 50 000 × 0,06 = 3 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 50000
+            },
+            {
+              "value": 0.06
+            }
+          ]
+        },
+        "expected": 3000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le premier remboursement est effectué en fin d’année. L’étudiant calcule pourtant les intérêts de cette année sur le capital après remboursement. Pourquoi est-ce incorrect ?",
+      "options": [
+        "L’intérêt doit être calculé uniquement sur la fraction remboursée",
+        "Toute échéance de fin d’année supprime les intérêts",
+        "Le capital remboursé est resté prêté pendant l’année",
+        "Le taux doit être appliqué à l’annuité totale"
+      ],
+      "answer": 2,
+      "explanation": "La base d’intérêts est le capital dû au début de la période. Un remboursement en fin de période ne réduit pas rétroactivement cette base."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux prêts ont le même capital initial, le même taux et un premier remboursement à la même date de fin d’année, mais des durées différentes. Leurs premiers intérêts annuels diffèrent-ils ?",
+      "options": [
+        "Oui, ils sont inversement proportionnels aux durées dans tous les cas",
+        "Oui, le prêt le plus long ne produit aucun intérêt initial",
+        "Non, parce que les échéances totales sont nécessairement identiques",
+        "Non, la base initiale et le taux de cette année sont identiques"
+      ],
+      "answer": 3,
+      "explanation": "La première période porte dans les deux cas sur le même capital prêté au même taux. La durée modifie notamment la fraction de principal, pas ces premiers intérêts."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le calcul retient 4 au lieu de 0,04 pour un taux annuel fourni de 4 %. Quel défaut faut-il corriger ?",
+      "options": [
+        "La conversion du pourcentage en nombre décimal",
+        "La division du capital par la durée",
+        "Le sens de diminution du capital restant dû",
+        "La date du dernier remboursement"
+      ],
+      "answer": 0,
+      "explanation": "Un taux de 4 % correspond à 4 / 100 = 0,04. Utiliser directement 4 multiplie les intérêts attendus par cent."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le prêt prévoit des frais de dossier payés à la signature. Pourquoi faut-il les distinguer des intérêts de la première année dans le tableau simple ?",
+      "options": [
+        "Les frais de signature remplacent les intérêts de première période dans le paiement annuel",
+        "Leur nature et leur date diffèrent des intérêts calculés sur le capital dû",
+        "Les frais doivent être déduits du principal dû même si le contrat ne prévoit pas ce remboursement",
+        "Le taux nominal multiplié par le capital reconstitue déjà tous les frais distincts"
+      ],
+      "answer": 1,
+      "explanation": "Les intérêts du modèle rémunèrent l’encours pendant la période. Des frais distincts exigent une ligne et un traitement conformes aux données contractuelles."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un prêt de 30 000 € est amorti par fractions annuelles de 10 000 €, à 5 % fixes. Sans frais, quel paiement total est dû à la fin de la deuxième année ?",
+      "options": [
+        "11 500 €",
+        "10 500 €",
+        "11 000 €",
+        "20 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Après un premier remboursement de 10 000 €, le capital initial de l’année 2 vaut 20 000 €. Intérêts 1 000 €, plus principal 10 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 10000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 30000
+                    },
+                    {
+                      "value": 10000
+                    }
+                  ]
+                },
+                {
+                  "value": 0.05
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 11000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La deuxième échéance est annoncée égale à la première alors que le principal remboursé reste constant et le taux positif fixe. Quelle incohérence faut-il vérifier ?",
+      "options": [
+        "Le principal doit nécessairement être nul à la deuxième échéance",
+        "Les intérêts doivent augmenter à chaque remboursement",
+        "Le taux fixe exige un encours constant",
+        "Les intérêts doivent baisser avec l’encours, donc le paiement total doit diminuer"
+      ],
+      "answer": 3,
+      "explanation": "À remboursement de principal constant, les intérêts baissent dès que le capital restant dû diminue. L’échéance totale baisse elle aussi."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le principal remboursé chaque année est de 6 000 €, à un taux fixe de 4 %. De combien les intérêts baissent-ils d’une année à la suivante, sans frais ni changement de contrat ?",
+      "options": [
+        "240 €",
+        "1 500 €",
+        "6 000 €",
+        "24 €"
+      ],
+      "answer": 0,
+      "explanation": "La base d’intérêts diminue de 6 000 € à chaque remboursement. La baisse annuelle est donc 6 000 × 0,04 = 240 €.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 6000
+            },
+            {
+              "value": 0.04
+            }
+          ]
+        },
+        "expected": 240,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après la première échéance, le tableur retranche du capital initial la totalité du paiement, intérêts compris. Quel effet attendu sur les échéances suivantes ?",
+      "options": [
+        "Une hausse correcte du capital dû",
+        "Une sous-estimation du capital dû puis des intérêts",
+        "Aucun effet si l’amortissement du capital est constant",
+        "Une surestimation obligatoire de tous les intérêts"
+      ],
+      "answer": 1,
+      "explanation": "Seule la fraction de principal réduit la dette. Retrancher aussi les intérêts réduit trop l’encours et fausse les bases futures."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un prêt est amorti par fractions constantes de 12 000 € en fin d’année. Le taux fixe est 3 %. Quel est le dernier paiement, sans frais ni arrondi résiduel ?",
+      "options": [
+        "12 000 €",
+        "360 €",
+        "12 360 €",
+        "24 360 €"
+      ],
+      "answer": 2,
+      "explanation": "Au début de la dernière année, il reste une fraction de principal : 12 000 €. Le paiement final comprend aussi 12 000 × 3 % = 360 €.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 12000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 0.03
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 12360,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les fractions annuelles de capital remboursé totalisent moins que le capital emprunté, sans remboursement final supplémentaire prévu. Quel défaut faut-il signaler ?",
+      "options": [
+        "Le total des intérêts suffit à justifier le solde de capital non remboursé",
+        "Le dernier capital restant dû peut être ignoré dès que toutes les échéances du tableau sont payées",
+        "L’écart constitue une baisse du coût de dette sans dette résiduelle",
+        "Le tableau ne rembourse pas intégralement le principal"
+      ],
+      "answer": 3,
+      "explanation": "Le total des remboursements de principal doit couvrir le capital initial dans un échéancier intégral. Sinon, une dette résiduelle reste inexpliquée."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un prêt de 60 000 € est remboursé en trois fractions annuelles de capital de 20 000 €. Le taux fixe est 5 %, sans frais. Quel est le total des intérêts ?",
+      "options": [
+        "6 000 €",
+        "9 000 €",
+        "3 000 €",
+        "66 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Les capitaux de début d’année sont 60 000, 40 000 et 20 000 €. Leur somme de 120 000 € à 5 % produit 6 000 € d’intérêts.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 60000
+                    },
+                    {
+                      "value": 40000
+                    }
+                  ]
+                },
+                {
+                  "value": 20000
+                }
+              ]
+            },
+            {
+              "value": 0.05
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant multiplie les intérêts de la première année par le nombre d’années pour obtenir le total d’un emprunt amortissable à capital constant. Pourquoi surestime-t-il le coût ?",
+      "options": [
+        "Les intérêts de première année doivent être exclus du total",
+        "Il ignore la diminution de l’encours après chaque remboursement",
+        "Les intérêts sont toujours payés uniquement la dernière année",
+        "Le taux fixe interdit d’additionner les intérêts annuels"
+      ],
+      "answer": 1,
+      "explanation": "La base initiale n’est pas maintenue pendant toute la durée. Les intérêts forment une suite décroissante qu’il faut sommer."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Hors frais, à quoi correspond la somme de toutes les échéances d’un emprunt intégralement remboursé ?",
+      "options": [
+        "Au seul total des intérêts",
+        "Au capital initial moins les intérêts",
+        "Au capital initial plus le total des intérêts",
+        "Au capital restant dû après la dernière échéance"
+      ],
+      "answer": 2,
+      "explanation": "Chaque paiement comprend principal et intérêts. Le cumul du principal rembourse le capital initial, auquel s’ajoute le coût d’intérêt total."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "À capital et taux positif identiques, un amortissement constant s’étale sur davantage d’années, avec échéances annuelles de fin de période. Quel effet sur le total des intérêts ?",
+      "options": [
+        "Il diminue forcément car chaque fraction de capital est plus faible",
+        "Il reste égal aux intérêts de la première année",
+        "Il devient nul lorsque les échéances sont plus nombreuses",
+        "Il augmente, car le capital est en moyenne conservé plus longtemps"
+      ],
+      "answer": 3,
+      "explanation": "Une durée plus longue ralentit le remboursement du principal et maintient davantage d’encours dans le temps. Le coût cumulé d’intérêts augmente."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour comparer deux offres, le responsable n’examine que le montant de leur première échéance. Quelle dimension importante peut-il manquer ?",
+      "options": [
+        "Le coût cumulé et le profil des paiements sur toute la durée",
+        "Le seul taux nominal, traité comme un résumé suffisant de toutes les conditions",
+        "La seule égalité des capitaux initiaux, supposée garantir des coûts totaux identiques",
+        "Le coût de première année seul, sans tenir compte de l’encours et des années suivantes"
+      ],
+      "answer": 0,
+      "explanation": "Une échéance initiale faible peut accompagner des paiements plus longs ou un coût total plus élevé. Toute la séquence des flux doit être examinée."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat prévoit finalement des remboursements en début d’année au lieu de la fin d’année. Peut-on conserver sans adaptation la somme d’intérêts du modèle initial ?",
+      "options": [
+        "Oui, le taux fixe rend les dates sans effet",
+        "Non, les capitaux exposés pendant chaque période changent",
+        "Oui, si le nombre de remboursements ne change pas",
+        "Non, il faut remplacer les intérêts par le montant de capital remboursé"
+      ],
+      "answer": 1,
+      "explanation": "Les dates déterminent le capital effectivement prêté pendant les périodes. Le modèle de fin de période ne se transpose pas automatiquement à un remboursement anticipé."
+    }
+  ]
+}

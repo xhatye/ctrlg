@@ -4,6 +4,7 @@ import {MODULES,moduleCatalogue,studyModule} from '../lib/study-content.mjs';
 import {questionPool,quizIndices} from '../lib/question-pool.mjs';
 import {resolveReviewItem,normalizeReviewEvents} from '../lib/review-engine.mjs';
 import {DISTRACTOR_REWRITES,QUIZ_REPLACEMENTS,WORKSHOP_REWRITES} from '../lib/quiz-rewrites.mjs';
+import {QUIZ_V2} from '../lib/quiz-v2-data.mjs';
 
 test('all served course questions are explicit editorial selections; retired slots never enter a pool',()=>{
  let total=0,retired=0;
@@ -19,22 +20,40 @@ test('all served course questions are explicit editorial selections; retired slo
   assert.equal(pool.total,expected);assert.equal(moduleCatalogue(id).curatedQuestionCount,expected);total+=expected;
   for(let i=0;i<pool.total;i++){const n=pool.at(i),review=resolveReviewItem('quiz',id+':'+n.id);assert.equal(review.q,n.q);assert.equal(review.a,n.correct);assert.ok(!banned.test(n.q));}
  }
- assert.equal(total,1183);assert.ok(retired>4000);
+ assert.equal(total,5000);assert.ok(retired>4000);
 });
 test('the reported title-matching question is retired, and its replacement tests contract formation',()=>{
  assert.throws(()=>resolveReviewItem('quiz','UE1:offre-acceptation:n4'),{status:410});
  assert.throws(()=>normalizeReviewEvents([{receipt:'old_heading_1234',kind:'quiz',itemId:'UE1:offre-acceptation:n4',selected:'Proposition et engagement'}]),{status:410});
- const c=MODULES.UE1.chapters.find(c=>c.id==='offre-acceptation');assert.equal(quizIndices(c).length,8);
+ const c=MODULES.UE1.chapters.find(c=>c.id==='offre-acceptation');assert.equal(quizIndices(c).length,23);
  const price=QUIZ_REPLACEMENTS['UE1/offre-acceptation'].find(n=>n.q.includes('900 €'));assert.ok(price.correct.includes('offre nouvelle'));assert.ok(price.body.includes('1118'));
  for(const seed of [0,.27,.67,.99]){const session=studyModule('UE1','qcm',()=>seed,{chapter:c.id,focus:'knowledge',count:8});assert.equal(session.items.length,8);for(const n of session.items){assert.ok(!n.q.includes('quel repère'));const canonical=resolveReviewItem('quiz',n.id);assert.equal(n.options[n.answer],canonical.a);assert.equal(n.expl,canonical.explanation);}}
 });
-test('rewritten alternatives use new IDs and never silently change an old question receipt',()=>{
- for(const slot of Object.keys(DISTRACTOR_REWRITES)){const [key,index]=slot.split('#'),[id,chapter]=key.split('/'),c=MODULES[id].chapters.find(c=>c.id===chapter);assert.throws(()=>resolveReviewItem('quiz',id+':'+chapter+':n'+index),{status:410});if(key==='UE1/offre-acceptation')continue;const replacement=quizIndices(c).map(i=>c.quiz[i]).find(n=>n.q===c.quiz[index].q);assert.ok(replacement);assert.deepEqual(replacement.wrong,DISTRACTOR_REWRITES[slot]);}
+test('previous editorial alternatives retain their stored meaning and retired receipts never reactivate',()=>{
+ for(const slot of Object.keys(DISTRACTOR_REWRITES)){const [key,index]=slot.split('#'),[id,chapter]=key.split('/'),c=MODULES[id].chapters.find(c=>c.id===chapter);assert.throws(()=>resolveReviewItem('quiz',id+':'+chapter+':n'+index),{status:410});if(key==='UE1/offre-acceptation')continue;const replacement=c.quiz.find(n=>n.q===c.quiz[index].q&&JSON.stringify(n.wrong)===JSON.stringify(DISTRACTOR_REWRITES[slot]));assert.ok(replacement);assert.deepEqual(replacement.wrong,DISTRACTOR_REWRITES[slot]);assert.ok(!quizIndices(c).includes(c.quiz.indexOf(replacement)));}
 });
-test('workshop inputs accompany mixed-session questions and original answer-specific feedback',()=>{
+test('archived workshop questions retain their context and answer-specific feedback',()=>{
  for(const [id,m]of Object.entries(MODULES))for(const c of m.chapters)if(c.workshop){
-  for(const [i,n] of c.workshop.quiz.entries()){const active=quizIndices(c).map(i=>c.quiz[i]).find(x=>x.q.endsWith(n.q));assert.ok(active.q.startsWith(c.workshop.context));assert.equal(active.correct,n.correct);assert.deepEqual(active.wrongReasons,WORKSHOP_REWRITES[id+'#'+i]?.wrongReasons || n.wrongReasons);}
+  for(const [i,n] of c.workshop.quiz.entries()){const stored=c.quiz.find(x=>x.q.endsWith(n.q)&&x.q.startsWith(c.workshop.context));assert.ok(stored);assert.equal(stored.correct,n.correct);assert.deepEqual(stored.wrongReasons,WORKSHOP_REWRITES[id+'#'+i]?.wrongReasons || n.wrongReasons);assert.ok(!quizIndices(c).includes(c.quiz.indexOf(stored)));}
  }
+});
+
+test('all active chapter slots exactly match the complete independently reviewed release',()=>{
+ let count=0;
+ assert.equal(QUIZ_V2.total,5000);assert.equal(QUIZ_V2.proof.length,225);
+ for(const [id,m]of Object.entries(MODULES))for(const c of m.chapters){
+  const authored=QUIZ_V2.banks[id+'/'+c.id],indices=quizIndices(c);
+  assert.equal(indices.length,authored.length);assert.equal(c.quizRevision,QUIZ_V2.version);
+  for(const [i,q]of authored.entries()){
+   const active=c.quiz[indices[i]];
+   assert.equal(active.q,q.q);assert.equal(active.correct,q.options[q.answer]);
+   assert.deepEqual(active.wrong,q.options.filter((_,n)=>n!==q.answer));assert.equal(active.body,q.explanation);
+   assert.equal(active.editorialId,q.id);assert.equal(active.questionKind,q.kind);
+   for(const ref of q.references||[])assert.ok(c.sources.some(s=>s[1]===ref.url));
+   count++;
+  }
+ }
+ assert.equal(count,5000);
 });
 test('revised calculation answers are independently reconstructed from their explicit inputs',()=>{
  const first=key=>QUIZ_REPLACEMENTS[key][0];

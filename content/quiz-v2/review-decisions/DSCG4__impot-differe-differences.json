@@ -1,0 +1,248 @@
+{
+  "sourceHash": "f8e942891b16738c879b9989be08967e80e3acf9a9ac9d72dbb60ae913c682ff",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "0805c715ef20f00dc68a29ad53fe4629d4a0d5763eb34faeaa67dfbdcad8a4b0",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le différé vise des conséquences fiscales futures, distinctes des acomptes et délais de paiement du courant."
+    },
+    {
+      "id": "q02",
+      "digest": "7497d4720d80aa8abc17c993291a817f2bc6462de092ad8b8336f9270d701ae2",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La charge totale est 18 000 + 3 000 = 21 000, tous les éléments étant au résultat."
+    },
+    {
+      "id": "q03",
+      "digest": "b6e624c53379acc92442b5e950c70ec4554e386ad11f8865b2447e6bc5d750f5",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Reconnaissance du différé et flux bancaire courant sont distincts. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    },
+    {
+      "id": "q04",
+      "digest": "065e2b9297f2fd36c6e837a4c30e584e41271fbc30f19a1fac8f81983a02e3b2",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le mouvement annuel exige un passage ouverture-clôture et la nature des autres mouvements ; le solde final n’est pas automatiquement une charge."
+    },
+    {
+      "id": "q05",
+      "digest": "028e39e3b3266ae7bd5c8465378af562be9c2b373468591245ac29f9a0ad1027",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Différence de base : 84 000 − 60 000 = 24 000 avant analyse de l’effet futur."
+    },
+    {
+      "id": "q06",
+      "digest": "dcc3d107f25bae132fc98c75e292708ffa093fd60d38ca31ed3fe5c1af0bdb32",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La base fiscale de l’actif correspond aux déductions fiscales disponibles lors du recouvrement dans le modèle fourni."
+    },
+    {
+      "id": "q07",
+      "digest": "ab46c23e6f7f28626d86bec9ebcb1a24573cddf713e18fa9ee1f10da6e6eebab",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "50 000 comptables et 50 000 déductibles : zéro écart. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    },
+    {
+      "id": "q08",
+      "digest": "b3c1c92a301926d3b814ff02e8118bcf8e16c535fe930cdc315229646ad7ea61",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Il faut connaître les déductions restantes après l’amortissement fiscal. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    },
+    {
+      "id": "q09",
+      "digest": "4bb4b875db231d1efd2cee7a82dec5ea9207d2a9108162a0699682f81f6b186b",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le passif réglé donnera une déduction, contrairement au recouvrement imposable de l’actif simple. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    },
+    {
+      "id": "q10",
+      "digest": "f558ee3b2e193ffa89515921e70417344a8da8c1a43ee1bf2dc6bb4d95a5e160",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Effet d’impôt : 36 000 × 25 % = 9 000 de passif."
+    },
+    {
+      "id": "q11",
+      "digest": "e5999eaccebc2d9aea09acc4d9fc30603b4f787e3903d65957a193b343502b03",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Cent mille récupérés pour soixante-dix mille de déductions créent 30 000 de différence temporaire imposable, hors exception."
+    },
+    {
+      "id": "q12",
+      "digest": "d688e5030c3b268d1e37ea455253152301b36ac8a5f5959804e407490ac3d83b",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Actif validé : 20 000 × 30 % = 6 000."
+    },
+    {
+      "id": "q13",
+      "digest": "fb46b3cffcdfe511d6504dac31a50e80d3652e3045c0cf82dfe9496c8c842b6e",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La différence temporaire n’est pas son effet fiscal : 16 000 × 25 % = 4 000. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    },
+    {
+      "id": "q14",
+      "digest": "1e08c7c8629cb7083e6312957062f18bef47c38acdff508401a364a9d96f385a",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Diminution du passif : 5 000 − 3 500 = 1 500, intégralement au produit selon le cas."
+    },
+    {
+      "id": "q15",
+      "digest": "2d6a7e20298025fbd7783b9538b59a3959975a6808347337371afc7c8974f3f2",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Base fiscale supérieure de 15 000 signifie des déductions futures supplémentaires : différence déductible. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    },
+    {
+      "id": "q16",
+      "digest": "cab927795b495753432a0c0cade120a1ccc6bd4eb6b335f9ee07f816234b0538",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Passif à 28 % : 2 800, contre 2 500 : augmentation de 300."
+    },
+    {
+      "id": "q17",
+      "digest": "3feaafdc4e11fe72c76a5642bafcf3559da2301063e879ed2498362e90403c5f",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Aucune déduction future : différence permanente. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    },
+    {
+      "id": "q18",
+      "digest": "c94c2cdf927fd726d6ea1f65f70f7996b3ab65585c050d3396fa0cafbf85fe7d",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La récupération doit être justifiée avant comptabilisation. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    },
+    {
+      "id": "q19",
+      "digest": "8510b5ea40b830e8ba65b57b348d13c2e480b2f310de1d6e59a9ae1b4785e5d1",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Il faut étayer la capacité et les bénéfices futurs. Les autres choix testent bien multiplication, signature et scénario optimiste : trois justifications insuffisantes distinctes."
+    },
+    {
+      "id": "q20",
+      "digest": "4805de41483c24b8f14ba87369f72b20e2ca7e68a3862933a6565446c9e91801",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une exception réelle doit être étudiée avant transposition du cas. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    },
+    {
+      "id": "q21",
+      "digest": "77ee30fd2be5aed0916f2735dd534369c3902fae05859b172f203655b1edb8e9",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Sans résorption ni effet futur, il faut revoir la qualification temporaire et l’impôt annoncé."
+    },
+    {
+      "id": "q22",
+      "digest": "fe4d0123f4925a2780f1ef796311bb9692c567ab2b35f104043286399324136a",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le cas valide 6 000 seulement ; les 3 000 supplémentaires restent potentiels non justifiés."
+    }
+  ]
+}

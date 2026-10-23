@@ -1,0 +1,248 @@
+{
+  "sourceHash": "79356a43eb9cbf8825f39a02c0e906805f9e2507ebb2455834937db01f789056",
+  "reviewer": "codex-law-tax-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "1c0d1370b6a69621e78f833995cc209f52a76a69ae1ea1548f9cebf2136dbbe4",
+      "selected": 3,
+      "reason": "La population active additionne emploi et chômage sans double compte, soit huit mille quatre cents plus six cents égale neuf mille.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "94070f3a4596e0b7794afe4f69ee5750c81bf5d8cdf627939493f39be5828169",
+      "selected": 2,
+      "reason": "Six cents sur neuf mille multipliés par cent donnent six virgule soixante-sept pour cent de chômage.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "e57da5d1de28ea376bcd2891f8487e5402e86cf7fe15a6782bdc5b57f3e39dd5",
+      "selected": 2,
+      "reason": "Neuf mille sur douze mille donnent trois quarts, soit soixante-quinze pour cent d’activité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "a9ff77be314338509d9fbd23570772a80a6e95cd228c0d8e383fa1ea4c9d7d35",
+      "selected": 3,
+      "reason": "Huit mille quatre cents sur douze mille donnent soixante-dix pour cent d’emploi.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "2edddbee2164cbe7d088453b0a4db83987b0956c327a703729138da35bf23d3a",
+      "selected": 3,
+      "reason": "Les actifs comprennent déjà emploi et chômage ; leur ajouter de nouveau l’emploi double compte les personnes occupées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "8f27e39766da8bcf2c448a3e9dbe5d075d9f8953987f896ad182d4ec2179296b",
+      "selected": 2,
+      "reason": "Des chômeurs sortant de l’activité peuvent diminuer le ratio sans créations d’emploi ; il faut observer les flux entre catégories.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "44abe1053497ccb9bb48ce67b274513fd96700fca3e5b5ef35ae945493bb72f7",
+      "selected": 1,
+      "reason": "Des inactifs devenus chômeurs entrent dans la population active sans qu’un emploi soit créé ; population totale inchangée ne signifie pas activité stable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "c00a0ee3b47302e6f71d919b4129e477d711255fac16ba840978b51ea392d3a0",
+      "selected": 3,
+      "reason": "Le taux d’emploi en personnes ne pondère pas leur temps ; sa stabilité ne renseigne pas à elle seule sur les heures ou la qualité des emplois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "822e14df9905d04cbf1287992aed87602a35c2eb0c78de9452db7671c40ecb36",
+      "selected": 0,
+      "reason": "Les actifs comprennent emploi et chômage sans double compte. Formule de q01 déjà appliquée, mais définition distingue salariés et inactifs.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "7bf4dbf7236f1ca0995493316947fdb6d21a9033b4cab20deb2900fbea052360",
+      "selected": 0,
+      "reason": "Le taux de chômage rapporte chômeurs aux actifs ; rapporter à toute la population d’âge retenu mesure un autre ratio.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "e5fc8b2a835dc7c33e261a90fde12c0ca52bb9e52f088579312a26d5f205cef7",
+      "selected": 2,
+      "reason": "La population de référence doit être harmonisée ou explicitée ; convertir en effectifs ou pondérer par territoire ne supprime pas les différences d’âge.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "f5c295aa2f6e3dd04e355ac830eb36de7f2f933168df52d23fa8621ae1dc48a0",
+      "selected": 3,
+      "reason": "Sur même champ, emplois/population égale actifs/population multiplié par emplois/actifs, soit a fois un moins u.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "aa45d0ff45da3920b6dcb4a5e48e876b2798142635e715d681b079d7f93fb166",
+      "selected": 3,
+      "reason": "Dans le découpage exhaustif, quinze mille moins dix mille donnent cinq mille inactifs.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "a0ff06290c9ff9e3a119ed5680db6e2140fb0c2a62b7bb5b02d08ed124130073",
+      "selected": 1,
+      "reason": "Dix pour cent de vingt mille donnent deux mille chômeurs, et non les dix-huit mille emplois restants.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "f1899f5f588c68c3d721bafd335fada80947852dc96323812a5de0293c411732",
+      "selected": 2,
+      "reason": "Le rapport actifs sur population peut diminuer si le dénominateur croît plus vite, même quand les deux effectifs augmentent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "f97292da84b5a74b7cd240c10bc3c233dc116818bd3f8e15178a53fe9295466d",
+      "selected": 2,
+      "reason": "Taux d’emploi et taux de chômage n’utilisent pas ici le même dénominateur, donc ils ne forment pas deux parts complémentaires.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "b5d544fd64f6a295c97ab9dac66c8a0e22aadbeaf27667a8b22a4f6b3ea09bde",
+      "selected": 3,
+      "reason": "Un chômeur devenu employé reste actif, donc le total ne change pas dans les hypothèses fournies.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "83202016dcc27cef8acaf8142fe97f419065412b853c94248f73b83fb9e02a97",
+      "selected": 0,
+      "reason": "Un numérateur croissant peut coexister avec ratio décroissant si les actifs croissent plus vite ; même logique de dénominateur que q15, autre ratio institutionnel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "0ccb4618c4459b74fdcfe22888b0cc9186296e4e7fe0809a2a510d991bd73fc0",
+      "selected": 3,
+      "reason": "Le taux d’activité donne la part en emploi ou au chômage dans le champ retenu, non durée du chômage ni qualité des contrats.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "e2b94d371e0419c905911a7fa7530794be8ee35d4ed29295ea2b01d6c5195774",
+      "selected": 0,
+      "reason": "Un même effectif occupé rapporté à des populations différentes peut donner des taux distincts ; l’égalité du seul numérateur est insuffisante.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "1c4bd82b743058dd4b4624f202eb178c393c57abd07a9e395cedc25e2c135f9b",
+      "selected": 1,
+      "reason": "Sans emploi n’implique pas chômage : il faut appliquer la définition qui le distingue de l’inactivité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "b76de908006a3a90a0dd49387f7dbe6260b10226b3b674e782bb75651ad46df8",
+      "selected": 2,
+      "reason": "La personne reste en emploi et peut être en sous-emploi ; vouloir plus d’heures ne la reclasse pas automatiquement au chômage ou hors activité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

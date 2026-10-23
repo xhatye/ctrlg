@@ -1,0 +1,338 @@
+{
+  "module": "DSCG6",
+  "chapter": "presenter",
+  "sourceHash": "d83d1caa1d65a9b4553b5344e9275c4bd29dade9eb5192a3c3f15583c10a60e8",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "You must give a three-minute presentation about whether automatic reminders could shorten invoice payment delays. Which opening states the question directly?",
+      "options": [
+        "Today I will compare reminder software by purchase price and staff training requirements.",
+        "This presentation asks whether automatic reminders could help customers pay sooner.",
+        "Today I will assess whether customers should receive longer payment terms before reminders start.",
+        "This presentation asks how invoice approval can be completed faster before bills are issued."
+      ],
+      "answer": 1,
+      "explanation": "L’ouverture retenue énonce exactement le sujet et la question, sans annoncer une causalité ni une garantie absentes du dossier. Les autres propositions changent le périmètre ou imposent une conclusion."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Your presentation will cover the problem, the proposed change and its limitations, in that order. Which roadmap matches this structure?",
+      "options": [
+        "First, I will describe the proposal; next, I will examine the problem; finally, I will discuss limitations.",
+        "First, I will outline the problem; next, I will examine its limitations; finally, I will assess the proposal.",
+        "First, I will outline the problem; next, I will assess the proposal; finally, I will discuss its limits.",
+        "First, I will assess the proposal; next, I will discuss its limits; finally, I will outline the problem."
+      ],
+      "answer": 2,
+      "explanation": "Le plan annonce les trois étapes dans l’ordre donné. Il aide l’auditoire à suivre le raisonnement, sans déplacer le problème après la recommandation ni rendre l’examen des limites facultatif."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The topic is late customer payments, but the audience is unfamiliar with the term DSO. Which opening makes the technical term accessible?",
+      "options": [
+        "DSO means days sales outstanding: the average contractual period agreed on new customer invoices.",
+        "DSO means days sales outstanding: the time our staff spend preparing and approving invoices.",
+        "DSO means days sales outstanding: an indicator of how long we take to pay our suppliers.",
+        "I will discuss days sales outstanding, or DSO, an indicator related to how long customer receivables remain unpaid."
+      ],
+      "answer": 3,
+      "explanation": "Le bon choix développe le sigle et relie l’indicateur aux créances clients non encaissées. Les distracteurs confondent cet indicateur avec les délais contractuels, la préparation des factures ou les délais de paiement des fournisseurs."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A speaker opens with two minutes of software history in a three-minute talk about choosing a reminder procedure. What change would most improve the opening?",
+      "options": [
+        "Briefly state the decision to be discussed and keep only background needed to understand it.",
+        "Start with a detailed comparison of software versions before identifying the procedure to choose.",
+        "State the preferred procedure immediately, reserving the question it answers for the final summary.",
+        "Replace the software history with a catalogue of reminder features before introducing the decision."
+      ],
+      "answer": 0,
+      "explanation": "Une introduction courte doit rendre la question de décision identifiable. L’historique n’est utile que s’il éclaire cette question ; sa longueur ne remplace pas une orientation claire."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "You will assess one pilot in the Paris office over six weeks. Which scope statement is faithful to the task?",
+      "options": [
+        "I will evaluate the company’s payment performance in every country over the past decade.",
+        "I will focus on the six-week reminder pilot in the Paris office.",
+        "I will assess all future reminder programmes as if they had already been completed.",
+        "I will compare our pilot with competitors, although no competitor data are available."
+      ],
+      "answer": 1,
+      "explanation": "Le périmètre doit conserver l’entité, la durée et l’objet étudiés. La bonne phrase annonce ce travail précis sans étendre l’analyse à des données non disponibles."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Complete the link: “The new procedure is faster. ___, it is more expensive to operate.” The second sentence introduces a drawback.",
+      "options": [
+        "Therefore",
+        "Similarly",
+        "However",
+        "For example"
+      ],
+      "answer": 2,
+      "explanation": "However marque ici l’opposition entre rapidité et coût. Therefore annoncerait une conséquence ; similarly une ressemblance ; for example une illustration, ce qui ne traduit pas la réserve donnée."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Complete the link: “The system sends reminders automatically. ___, it records each response.” The second benefit is additional, not a result of the first.",
+      "options": [
+        "Consequently",
+        "Instead",
+        "Nevertheless",
+        "Furthermore"
+      ],
+      "answer": 3,
+      "explanation": "Furthermore ajoute un deuxième avantage. Le dossier précise qu’il ne s’agit ni d’une conséquence, ni d’un remplacement, ni d’une opposition à la première caractéristique."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Complete the link: “The supplier has withdrawn the only compatible device. ___, the project cannot start as planned.” A consequence is intended.",
+      "options": [
+        "As a result",
+        "By contrast",
+        "For instance",
+        "Likewise"
+      ],
+      "answer": 0,
+      "explanation": "As a result relie le retrait du matériel à l’impossibilité de commencer. Les autres connecteurs annonceraient un contraste, un exemple ou une similarité plutôt que la conséquence fournie."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which sentence clearly announces a move from completed cost analysis to the next topic, implementation?",
+      "options": [
+        "Before reviewing the costs, I will outline the implementation options.",
+        "Having reviewed the costs, I will now turn to implementation.",
+        "While estimating the costs, I will also identify implementation options.",
+        "After discussing implementation, I will return to the cost analysis."
+      ],
+      "answer": 1,
+      "explanation": "Having reviewed présente l’analyse des coûts comme terminée ; turn to annonce l’étape suivante. Les autres phrases placent les coûts après l’implémentation, en cours d’examen ou encore à venir."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Complete the link: “Team A uses daily reminders. ___, Team B contacts customers only once a month.” The intention is to compare different practices.",
+      "options": [
+        "In addition to this benefit",
+        "As a direct result",
+        "By contrast",
+        "For this reason"
+      ],
+      "answer": 2,
+      "explanation": "By contrast met en parallèle deux pratiques différentes. Les autres liens suggèrent un avantage supplémentaire ou une causalité entre les équipes, qui ne sont pas établis."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A speaker says, “The pilot reduced processing time. Therefore, it required an expensive licence.” The licence cost is a separate drawback, not a consequence of the reduction. Which revision best fixes the logic?",
+      "options": [
+        "Replace therefore with consequently.",
+        "Replace therefore with for instance.",
+        "Replace therefore with in other words.",
+        "Replace therefore with however."
+      ],
+      "answer": 3,
+      "explanation": "However oppose l’avantage du pilote à un inconvénient distinct. Consequently conserve le lien causal erroné ; for instance présente le coût comme exemple de baisse du temps ; in other words suggère une reformulation, alors qu’une nouvelle idée est ajoutée."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A slide states that time saved on routine work can support more detailed investigations. Which sentence introduces a particular case as an illustration rather than a result, a restatement or a conclusion?",
+      "options": [
+        "For instance, one team used the saved time to investigate disputed invoices.",
+        "As a result, the team should allocate more of its time to disputed invoices.",
+        "In other words, saved routine processing time can support more detailed work.",
+        "To sum up, time savings should be assessed alongside their practical use."
+      ],
+      "answer": 0,
+      "explanation": "For instance introduit un cas particulier qui illustre l’idée générale. As a result exprime ici une conséquence, in other words reformule l’idée et to sum up signale une synthèse : ces fonctions ne sont pas celles demandées."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A speaker wants an example supporting the claim “Clear invoice references make matching payments easier.” Which example is directly relevant?",
+      "options": [
+        "A team reconciled payments faster after customer account numbers were corrected, with invoice references unchanged.",
+        "A payment showing invoice number INV42 was matched to that invoice without requesting clarification.",
+        "A supplier paid several invoices together, and the matching team requested a breakdown from the payer.",
+        "A team matched the payment from its amount and payer details after the invoice reference had been omitted."
+      ],
+      "answer": 1,
+      "explanation": "Le cas INV42 montre directement comment la référence permet d’identifier la facture payée. Les autres cas concernent des informations de compte, une ventilation manquante ou un rapprochement obtenu malgré l’absence de référence : ils n’illustrent pas ce mécanisme aussi directement."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "One customer paid promptly after receiving a reminder. Which wording uses this example without claiming that it proves the effect for all customers?",
+      "options": [
+        "This case supports setting the same expected payment date for customers receiving reminders.",
+        "This case estimates the average reduction in payment delays after a reminder.",
+        "This case illustrates a possible benefit, but it does not establish how all customers would respond.",
+        "This case separates the effect of the reminder from the effect of the customer’s usual payment cycle."
+      ],
+      "answer": 2,
+      "explanation": "Un cas concret peut illustrer un bénéfice possible. Il ne mesure pas à lui seul un effet moyen, ne permet pas de fixer une réaction commune aux clients et n’isole pas les autres causes possibles du paiement."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A speaker has no real customer case and wishes to show how a proposed escalation procedure would work. Which wording makes the illustration transparent?",
+      "options": [
+        "A case from our completed recovery files shows an invoice unpaid after two reminders.",
+        "Our pilot produced the following outcome when an invoice remained unpaid after two reminders.",
+        "The typical outcome in our customer portfolio is illustrated by an invoice unpaid after two reminders.",
+        "Consider a hypothetical overdue invoice that remains unpaid after two reminders."
+      ],
+      "answer": 3,
+      "explanation": "Hypothetical identifie explicitement une simulation destinée à expliquer le fonctionnement de la procédure. Les autres formulations présentent le cas comme observé dans les dossiers, issu d’un pilote ou représentatif du portefeuille, ce que les faits ne permettent pas."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A speaker gives a detailed example, then immediately changes topic without linking it to the claim about clearer responsibilities. What short addition would help?",
+      "options": [
+        "This illustrates how assigning an owner prevents the same invoice from being left between two teams.",
+        "The example also raises a separate question about which invoice software should be purchased.",
+        "This example completes the background; I will now introduce the recommendation on responsibilities.",
+        "The case gives useful operational detail, which I will leave the audience to relate to the recommendation."
+      ],
+      "answer": 0,
+      "explanation": "L’ajout rend explicite le lien entre l’exemple et l’argument précis. Il ne faut ni laisser l’auditoire deviner ce lien, ni étendre l’exemple à tous les problèmes de l’organisation."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The talk finds that a reminder pilot is promising, but its long-term cost has not been measured. Which closing sentence answers the question while retaining that limit?",
+      "options": [
+        "The pilot is promising; I recommend a full rollout on the assumption that long-term costs match pilot costs.",
+        "The pilot is promising; a longer cost assessment is needed before a full rollout.",
+        "The pilot is promising; I would defer a recommendation until a different reminder tool has been tested.",
+        "The pilot is promising; I recommend rollout after checking customer satisfaction instead of long-term costs."
+      ],
+      "answer": 1,
+      "explanation": "La conclusion reprend une réponse soutenue et indique le contrôle restant. Elle ne transforme pas un pilote prometteur en garantie générale ni ne nie les observations obtenues."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "In the closing sentence, a speaker claims the system prevents fraud, although the presentation only examined processing time. What is the problem?",
+      "options": [
+        "The fraud claim is a restatement of the reduction in processing time.",
+        "The fraud claim can be inferred from a faster process without separate evidence.",
+        "A major unsupported claim has been introduced at the end.",
+        "The fraud claim merely narrows the presentation’s original finding."
+      ],
+      "answer": 2,
+      "explanation": "Réduire un délai de traitement n’établit pas une prévention de fraude. Cette proposition ajoute un résultat nouveau ; elle ne reformule ni ne précise simplement le résultat temporel présenté et exige une analyse distincte."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which closing statement best distinguishes a proposed next step from a result already achieved?",
+      "options": [
+        "The trial next month confirms that the improvement has been sustained.",
+        "The planned trial establishes the improvement’s durability for the rollout decision.",
+        "We have sustained the improvement through the trial scheduled for next month.",
+        "I recommend a controlled trial next month to assess whether the improvement can be sustained."
+      ],
+      "answer": 3,
+      "explanation": "Recommend et to assess présentent une action future destinée à vérifier une hypothèse. Les autres propositions attribuent déjà une confirmation ou un résultat à un essai encore prévu, en confondant la décision de tester et ce que le test établira."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An audience asks, “What should we remember?” after a talk about reducing disputed invoices through clearer approval roles. Which answer provides a focused takeaway?",
+      "options": [
+        "Clear ownership of each approval is the central recommendation; we should test its effect on disputed invoices.",
+        "Faster approval is the priority; the talk establishes that it matters more than assigning responsibility.",
+        "The central recommendation is to reduce approval levels rather than clarify who owns each decision.",
+        "Our takeaway is to settle disputed invoices first and define approval responsibilities after the pilot."
+      ],
+      "answer": 0,
+      "explanation": "Le message final doit répondre à la question étudiée et retenir l’idée centrale. Les autres formulations changent le sujet ou ajoutent une causalité et des besoins non établis."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A three-minute presentation must leave thirty seconds for its conclusion. The speaker is still describing background after two and a half minutes. Which action best protects the conclusion?",
+      "options": [
+        "Use the final thirty seconds to finish the background, then circulate the conclusion by email.",
+        "Move to the core answer and its main limitation, leaving secondary background aside.",
+        "Present a further case briefly and leave the final recommendation to the question session.",
+        "Compress the remaining background into a list and use the last sentence for the recommendation."
+      ],
+      "answer": 1,
+      "explanation": "Passer à la réponse centrale et à sa limite préserve une conclusion dans le temps imparti. Achever ou accélérer le contexte, ajouter un cas et reporter la recommandation risquent de supprimer la réponse ou l’examen de sa principale réserve."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which ending naturally closes a professional presentation and invites discussion without suggesting that the recommendation is beyond challenge?",
+      "options": [
+        "Thank you. Please send scheduling questions to the project office after this meeting.",
+        "Thank you. I suggest we reserve this discussion for the practical steps in the rollout.",
+        "Thank you. I would be happy to discuss the assumptions behind this recommendation.",
+        "Thank you. Please confirm your approval of the recommendation before we review implementation."
+      ],
+      "answer": 2,
+      "explanation": "La bonne clôture ouvre l’examen critique des hypothèses qui soutiennent la recommandation. Les autres propositions limitent la discussion à l’administration ou à l’exécution, ou sollicitent déjà une approbation au lieu d’inviter l’échange demandé."
+    }
+  ]
+}

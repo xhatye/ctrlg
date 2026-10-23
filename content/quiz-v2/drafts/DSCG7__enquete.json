@@ -1,0 +1,362 @@
+{
+  "module": "DSCG7",
+  "chapter": "enquete",
+  "sourceHash": "0152a6950285c6973c3b5454e9780181414d4ba87cff8a3a06bf7b81f3786eb1",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le mémoire cherche à comprendre comment les collaborateurs arbitrent les exceptions non prévues par une procédure. Quel dispositif est le plus adapté à cette exploration ?",
+      "options": [
+        "Des entretiens sur des situations concrètes, complétés si possible par l’observation du traitement.",
+        "Un questionnaire fermé recensant seulement les catégories de dossiers traités, sans demander comment les exceptions sont arbitrées.",
+        "Un classement des personnes par ancienneté, utilisé comme explication suffisante de leurs arbitrages.",
+        "Une revue du manuel de procédure utilisée comme description des décisions prises lorsque ce manuel ne prévoit pas le cas."
+      ],
+      "answer": 0,
+      "explanation": "L’arbitrage est une pratique située : récits concrets et observation peuvent en éclairer le déroulement. Les autres mesures ne documentent pas directement le choix effectué face à une exception."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans une enquête qualitative, à quoi sert principalement la sélection raisonnée de participants ?",
+      "options": [
+        "À constituer un groupe dont les proportions reproduisent nécessairement celles de toute la population.",
+        "À rencontrer des positions ou expériences pertinentes pour la question étudiée.",
+        "À garantir des probabilités égales d’inclusion comme dans un tirage aléatoire simple.",
+        "À sélectionner les personnes les plus faciles à joindre en tenant cette disponibilité pour preuve de pertinence."
+      ],
+      "answer": 1,
+      "explanation": "La sélection raisonnée privilégie la pertinence des cas et la diversité recherchée. Elle ne devient pas pour autant un échantillon probabiliste ni une garantie de réponses identiques."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Tous les entretiens proviennent d’un service qui a soutenu le projet. Les équipes ayant refusé son adoption ne sont pas interrogées. Quel complément cible cette limite ?",
+      "options": [
+        "Ajouter des entretiens dans le même service uniquement pour augmenter l’effectif.",
+        "Répartir les verbatims du service favorable entre plusieurs catégories afin de représenter les services non interrogés.",
+        "Rechercher aussi les expériences des équipes non adoptantes si l’accès et le protocole le permettent.",
+        "Interroger des profils plus variés dans le seul service adoptant, puis tenir cette diversité interne pour une couverture des non-adoptants."
+      ],
+      "answer": 2,
+      "explanation": "La limite concerne les expériences exclues, pas seulement le nombre d’entretiens. Interroger davantage le même groupe ne remplace pas les positions qui manquent."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pendant un entretien, le candidat demande « Vous confirmez que l’outil réduit vos erreurs ? ». Quelle relance permet de recueillir une expérience concrète sans en imposer l’issue ?",
+      "options": [
+        "Sur une échelle de 1 à 10, de combien l’outil a-t-il amélioré votre fiabilité ?",
+        "Je vais vous expliquer les résultats attendus ; dites-moi ensuite lesquels correspondent à votre travail.",
+        "Pouvez-vous énumérer les fonctions prévues dans le manuel de l’outil ?",
+        "Pouvez-vous décrire un dossier récent et les erreurs ou difficultés éventuellement rencontrées ?"
+      ],
+      "answer": 3,
+      "explanation": "Le récit d’un dossier ouvre la description des difficultés et effets réellement vécus. Une échelle qui suppose une amélioration, une présentation préalable des résultats attendus ou un inventaire du manuel ne joue pas ce rôle."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un responsable donne une opinion générale sur l’efficacité du processus. Que permet une demande d’exemple précis ?",
+      "options": [
+        "Examiner sur quels faits et dans quel contexte cette appréciation repose.",
+        "Transformer son opinion en mesure de fréquence pour tous les dossiers.",
+        "Écarter la nécessité de conserver la distinction entre opinion et fait observé.",
+        "Remplacer les données manquantes du processus par la seule appréciation du responsable."
+      ],
+      "answer": 0,
+      "explanation": "Un exemple éclaire le fondement d’une perception, sans prouver sa fréquence générale. Il reste nécessaire de distinguer le récit, son interprétation et les observations disponibles."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un entretien explore une pratique sensible en présence du supérieur qui évalue la personne interrogée. Quel effet méthodologique faut-il anticiper ?",
+      "options": [
+        "Les réponses deviennent un échantillon représentatif des avis du service.",
+        "La personne peut moduler ses propos pour se conformer aux attentes perçues du supérieur.",
+        "La présence du supérieur transforme les réponses en observations directes du travail.",
+        "La présence du supérieur garantit que les réponses sont exhaustives."
+      ],
+      "answer": 1,
+      "explanation": "Le contexte de parole peut influencer ce qui est dit, notamment sur des difficultés professionnelles. Un témoin hiérarchique ne garantit ni sincérité complète ni représentativité."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle condition rend interprétable un taux d’erreurs calculé sur des dossiers ?",
+      "options": [
+        "Utiliser le nombre de salariés comme dénominateur pour tout indicateur de dossier.",
+        "Définir l’erreur différemment dans chaque équipe sans préciser ces conventions.",
+        "Définir ce qui compte comme erreur et quelle population constitue le dénominateur.",
+        "Conserver seulement le pourcentage final sans les effectifs."
+      ],
+      "answer": 2,
+      "explanation": "Le taux dépend d’une règle de classement et d’un ensemble de dossiers clairement définis. Un pourcentage exact arithmétiquement peut rester ambigu si ces deux éléments manquent."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un export mesure les délais des seuls dossiers clôturés ; les dossiers toujours bloqués à la date de collecte n’y figurent pas. Quelle limite faut-il signaler ?",
+      "options": [
+        "Les dossiers ouverts ont nécessairement un délai nul à intégrer dans la moyenne.",
+        "La moyenne des dossiers clos prouve le délai final des dossiers ouverts.",
+        "L’exclusion des dossiers ouverts rend automatiquement le délai moyen plus élevé.",
+        "La mesure des délais achevés peut sous-représenter les dossiers les plus longs encore ouverts."
+      ],
+      "answer": 3,
+      "explanation": "La population observée est conditionnée par l’achèvement. Des dossiers longs non clos peuvent être absents ; le sens exact de l’écart exige d’étudier ce mécanisme, sans leur attribuer une durée finale fictive."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le fichier contient deux lignes par dossier : création et validation. L’analyste compte les lignes comme des dossiers distincts. Quel nettoyage faut-il prévoir ?",
+      "options": [
+        "Identifier les dossiers et leurs événements avant de constituer l’unité statistique retenue.",
+        "Conserver les deux lignes comme deux dossiers pour ne perdre aucune information.",
+        "Supprimer une ligne sur deux selon l’ordre du fichier, sans rapprocher les identifiants.",
+        "Conserver uniquement les événements de création et présenter leurs dates comme des durées complètes de traitement."
+      ],
+      "answer": 0,
+      "explanation": "Des lignes d’événements ne sont pas forcément des unités indépendantes. Leur regroupement doit utiliser les identifiants et règles de traitement, pas une suppression arbitraire."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une colonne de délai utilise des heures dans un fichier et des jours ouvrés dans un autre. Quel préalable est nécessaire à leur agrégation ?",
+      "options": [
+        "Additionner les valeurs puis mentionner seulement « durée moyenne », puisque les deux fichiers décrivent des délais.",
+        "Définir une conversion cohérente et vérifier les conventions de temps réellement utilisées.",
+        "Convertir chaque jour ouvré en vingt-quatre heures sans vérifier les plages et calendriers retenus par les fichiers.",
+        "Comparer seulement le classement des valeurs brutes, en supposant qu’il neutralise le changement d’unité."
+      ],
+      "answer": 1,
+      "explanation": "Les unités et calendriers influencent la signification d’une durée. Une normalisation exige une règle justifiée ; diviser par un effectif ne convertit pas des heures en jours ouvrés."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un fichier de 500 dossiers exclut à l’export tous ceux dont le champ délai est vide. L’analyste annonce « aucune valeur manquante ». Quel contrôle manque ?",
+      "options": [
+        "Remplacer les valeurs absentes par la moyenne sans connaître leur nombre.",
+        "Considérer la taille de 500 dossiers comme preuve que l’extraction est complète.",
+        "Rapprocher la population source et les exclusions d’export pour identifier les observations absentes.",
+        "Vérifier seulement que les 500 cellules restantes sont numériques."
+      ],
+      "answer": 2,
+      "explanation": "L’absence de cellule vide dans un sous-ensemble filtré ne prouve pas l’absence de données manquantes à l’origine. Le filtrage doit être documenté et rapproché de la population attendue."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que vise la triangulation d’une enquête ?",
+      "options": [
+        "Calculer une moyenne de toutes les opinions, quelles que soient leurs bases.",
+        "Remplacer les observations discordantes par l’opinion majoritaire.",
+        "Compter plusieurs copies du même document comme des confirmations indépendantes.",
+        "Confronter des sources ou méthodes pour examiner un même objet sous plusieurs angles."
+      ],
+      "answer": 3,
+      "explanation": "La triangulation analyse ce qu’apporte chaque matériau, notamment ses limites et sa dépendance à d’autres sources. Elle n’est ni un vote ni une multiplication de documents identiques."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le guide prescrit une validation par deux personnes. Des entretiens décrivent un seul visa, et des dossiers le confirment. Comment exploiter ces matériaux ?",
+      "options": [
+        "Analyser l’écart entre procédure prescrite et pratique observée, ainsi que ses conditions.",
+        "Retenir le guide seul comme preuve du fonctionnement effectif.",
+        "Supprimer les entretiens parce qu’ils ne respectent pas la procédure écrite.",
+        "Compter le guide et chaque dossier comme des avis de poids égal dans un vote."
+      ],
+      "answer": 0,
+      "explanation": "Les matériaux n’ont pas le même objet : une prescription peut différer de son application. Leur confrontation permet précisément d’identifier et de comprendre cet écart."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux rapports citent le même tableau produit par la même personne. Le candidat les décrit comme deux mesures indépendantes. Que faut-il corriger ?",
+      "options": [
+        "Le nombre de rapports, considéré comme le nombre de confirmations indépendantes même si le tableau est unique.",
+        "L’indépendance des sources, car les deux rapports reposent ici sur une origine commune.",
+        "Le nombre de signataires distincts, considéré comme le nombre de collectes séparées sans rechercher la provenance.",
+        "La différence de date de publication, considérée comme démontrant à elle seule deux mesures de terrain."
+      ],
+      "answer": 1,
+      "explanation": "Des supports distincts peuvent reprendre une donnée unique. Identifier la provenance évite de confondre répétition et corroboration par une collecte indépendante."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les opérateurs décrivent une procédure avant sa modification, tandis que l’observation porte sur la nouvelle version. Quelle étape aide à comprendre le désaccord ?",
+      "options": [
+        "Considérer l’observation récente comme preuve que les opérateurs ont décrit leur ancienne pratique de façon erronée.",
+        "Appliquer rétrospectivement la nouvelle procédure aux récits anciens pour comparer les deux sources à règles constantes.",
+        "Dater les pratiques et comparer les périodes auxquelles les différents matériaux se rapportent.",
+        "Retenir la procédure majoritairement décrite dans les entretiens comme celle observée aujourd’hui, sans préciser le changement de version."
+      ],
+      "answer": 2,
+      "explanation": "Le désaccord peut venir d’un changement réel dans le temps. Identifier les versions et périodes précède le jugement sur la fiabilité des personnes ou des matériaux."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les journaux habituels montrent peu de doubles contrôles. Pendant l’observation annoncée, chaque dossier en reçoit un ; des salariés disent adapter leur travail à cette présence. Quel point faut-il examiner avant de conclure sur la pratique ordinaire ?",
+      "options": [
+        "La séance observée comme preuve suffisante que les journaux habituels décrivent nécessairement mal toute l’activité.",
+        "La moyenne du nombre de contrôles des deux sources comme reconstitution directe du comportement en l’absence du chercheur.",
+        "Les entretiens comme vote permettant de remplacer les journaux par la description la plus fréquente.",
+        "L’effet possible de la présence du chercheur sur le comportement observé et la portée de cette séance."
+      ],
+      "answer": 3,
+      "explanation": "L’observation peut modifier la pratique au moment où elle se déroule. Les journaux, la séance et les propos doivent être confrontés pour apprécier cette réactivité, sans tenir une séance annoncée pour reflet automatique du fonctionnement habituel."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat remplace les noms par des codes mais conserve un fichier séparé reliant codes et identités. Quelle qualification décrit le mieux cette opération ?",
+      "options": [
+        "Une pseudonymisation, qui ne suffit pas à rendre les personnes anonymes.",
+        "Une anonymisation irréversible, puisque les noms ne sont plus visibles dans le tableau principal.",
+        "Une agrégation statistique, puisque chaque personne a désormais un code.",
+        "Une suppression des données personnelles, puisque le fichier de correspondance est séparé."
+      ],
+      "answer": 0,
+      "explanation": "La table de correspondance permet encore un rattachement aux personnes. Le remplacement des identifiants réduit certains risques sans rendre les données anonymes.",
+      "references": [
+        {
+          "title": "CNIL, recherche scientifique : anonymisation et pseudonymisation",
+          "url": "https://www.cnil.fr/fr/recherche-scientifique-hors-sante-enjeux-et-avantages-de-lanonymisation-et-de-la-pseudonymisation"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une citation sans nom mentionne le seul responsable d’un site précis et une opération connue de l’équipe. Quelle précaution est nécessaire avant diffusion ?",
+      "options": [
+        "Publier la citation intégrale au motif que son auteur est décrit par sa fonction professionnelle.",
+        "Évaluer l’identification indirecte permise par le cumul de ces détails et adapter la restitution.",
+        "Considérer la citation comme anonyme du seul fait que le nom est absent.",
+        "Ajouter un pseudonyme tout en conservant nécessairement chaque détail de contexte."
+      ],
+      "answer": 1,
+      "explanation": "Une fonction unique et un contexte reconnaissable peuvent identifier quelqu’un. La protection doit porter sur le contenu divulgué, pas seulement sur le nom.",
+      "references": [
+        {
+          "title": "CNIL, recherche scientifique : anonymisation et pseudonymisation",
+          "url": "https://www.cnil.fr/fr/recherche-scientifique-hors-sante-enjeux-et-avantages-de-lanonymisation-et-de-la-pseudonymisation"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour étudier le traitement des factures, le formulaire demande l’adresse privée des salariés, sans utilité établie pour l’analyse. Quelle révision correspond à la minimisation ?",
+      "options": [
+        "Conserver le champ et rendre obligatoire une réponse plus détaillée.",
+        "Diffuser l’adresse seulement dans l’annexe, sans modifier la collecte.",
+        "Supprimer ce champ tant qu’aucune nécessité liée à l’objectif n’est justifiée.",
+        "Conserver le champ parce que le stockage disponible est suffisant."
+      ],
+      "answer": 2,
+      "explanation": "La minimisation examine la pertinence des données pour la finalité. Restreindre une publication ne justifie pas une collecte inutile en amont.",
+      "references": [
+        {
+          "title": "CNIL, les six grands principes du RGPD",
+          "url": "https://cnil.fr/fr/comprendre-le-rgpd/les-six-grands-principes-du-rgpd"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un accord de terrain autorise le candidat à consulter des dossiers, mais pas à publier leurs copies. Il veut joindre les dossiers bruts au mémoire. Quelle démarche respecte ce périmètre ?",
+      "options": [
+        "Assimiler l’autorisation de consultation à une autorisation de reproduction intégrale dès lors que la diffusion sert le mémoire.",
+        "Diffuser les dossiers après avoir supprimé uniquement les noms, sans examiner les autres informations identifiantes ni la restriction de publication.",
+        "Joindre les documents dans une annexe à accès restreint, en considérant cette restriction comme remplaçant l’autorisation de diffusion.",
+        "Vérifier les possibilités de restitution autorisées et préparer des extraits ou résultats suffisamment protégés."
+      ],
+      "answer": 3,
+      "explanation": "Le droit de consulter et les conditions de restitution sont distincts. Il faut examiner ce qui peut être diffusé et les protections requises, plutôt qu’étendre l’autorisation par une modalité de présentation."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le protocole prévoit un espace à accès limité. Une copie identifiante a été déposée dans un dossier lisible par tout le personnel. Quelle réponse traite directement cet écart ?",
+      "options": [
+        "Rétablir un accès conforme au protocole et examiner l’exposition créée par cette copie.",
+        "Laisser la copie accessible en lecture seule, en limitant uniquement sa modification.",
+        "Conserver le même accès en remplaçant seulement le titre du fichier par un code.",
+        "Conserver le partage et demander aux lecteurs de ne pas imprimer le document."
+      ],
+      "answer": 0,
+      "explanation": "Le problème concerne les personnes pouvant lire le contenu. Restriction d’écriture, renommage ou consigne d’impression ne rétablissent pas le périmètre d’accès prévu."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le protocole annonce une date de fin de conservation des enregistrements. Le candidat souhaite les garder sans limite pour d’éventuels projets non définis. Quel contrôle faut-il effectuer ?",
+      "options": [
+        "Prolonger la conservation tant qu’aucun participant ne demande la suppression, sans tenir compte de la date annoncée.",
+        "Réexaminer la nécessité et la durée de conservation au regard des finalités et engagements applicables.",
+        "Prolonger la conservation dès lors que les fichiers restent chiffrés, sans réexaminer les usages prévus.",
+        "Considérer l’absence de publication comme une autorisation de conserver indéfiniment."
+      ],
+      "answer": 1,
+      "explanation": "Des protections d’accès ne remplacent pas la justification de conservation. La durée doit être examinée avec les finalités et engagements applicables, même sans demande individuelle de suppression.",
+      "references": [
+        {
+          "title": "CNIL, les six grands principes du RGPD",
+          "url": "https://cnil.fr/fr/comprendre-le-rgpd/les-six-grands-principes-du-rgpd"
+        }
+      ]
+    }
+  ]
+}

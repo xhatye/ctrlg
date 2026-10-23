@@ -1,0 +1,590 @@
+{
+  "module": "UE9",
+  "chapter": "actifs",
+  "sourceHash": "992a86d22db09d9683652d415aa613b972ca426c7645a82c16c47c9fc174c934",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût d’un actif est de 28 000 €. Une valeur résiduelle de 4 000 € doit être retenue dans l’exercice. Quelle base amortissable obtient-on ?",
+      "options": [
+        "24 000 €",
+        "32 000 €",
+        "28 000 €",
+        "4 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La fraction destinée à être consommée est coût moins valeur résiduelle : 28 000 − 4 000 = 24 000 €.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 28000
+            },
+            {
+              "value": 4000
+            }
+          ]
+        },
+        "expected": 24000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une machine est consommée régulièrement sur sa durée d’utilisation. Quelle information justifie le mieux le choix d’un mode linéaire ?",
+      "options": [
+        "Le fait que le fournisseur accepte un paiement échelonné",
+        "Le rythme constant de consommation attendu",
+        "Le montant annuel des remboursements de son financement",
+        "Le prix de revente supérieur au coût initial"
+      ],
+      "answer": 1,
+      "explanation": "Le mode d’amortissement traduit la consommation des avantages de l’actif. Le calendrier de paiement ou de financement ne décrit pas ce rythme.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une équipe choisit la durée d’amortissement pour obtenir exactement le résultat comptable qu’elle souhaite. Quel principe doit guider son estimation à la place ?",
+      "options": [
+        "La seule échéance du prêt ayant financé l’actif",
+        "L’objectif de dividende fixé sans lien avec l’usage",
+        "La durée et les conditions d’utilisation attendues de l’actif",
+        "Le délai de paiement accordé par le fournisseur"
+      ],
+      "answer": 2,
+      "explanation": "La durée reflète l’utilisation de l’actif et ses limites pertinentes. Elle ne sert pas à fabriquer un niveau de résultat ou à reproduire l’échéancier du prêt.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat limite l’utilisation d’un matériel à trois ans, alors que sa durée technique serait de cinq ans. Ces deux limites sont pertinentes pour l’entité. Quelle durée retient le PCG pour cette utilisation ?",
+      "options": [
+        "Cinq ans, car la technique prime toujours le contrat",
+        "Huit ans, en additionnant les deux limites",
+        "Quatre ans, par moyenne obligatoire",
+        "Trois ans, correspondant à la limite pertinente la plus courte"
+      ],
+      "answer": 3,
+      "explanation": "Le PCG retient la limite d’utilisation pertinente la plus courte lorsque plusieurs critères s’appliquent. Le matériel ne procurera pas ici cinq années d’usage.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le comptable traite chaque règlement du fournisseur comme une dotation d’amortissement. Quelle distinction faut-il rétablir ?",
+      "options": [
+        "La consommation de l’actif est distincte du paiement de sa dette d’achat",
+        "Une dotation doit nécessairement suivre chaque virement du même montant",
+        "La base amortissable correspond toujours aux dettes restant à régler",
+        "Un achat comptant interdit tout amortissement ultérieur"
+      ],
+      "answer": 0,
+      "explanation": "L’amortissement mesure une consommation dans le temps. Les règlements réduisent une dette ou la banque et ne fixent pas les dotations.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "La durée d’utilisation d’une immobilisation reste sans limite prévisible selon les critères pertinents. Quel principe du PCG faut-il distinguer de celui des actifs à durée limitée ?",
+      "options": [
+        "Un amortissement obligatoire sur la durée du prêt",
+        "L’absence d’amortissement, sans exclure un examen de dépréciation",
+        "Un amortissement obligatoire sur un an",
+        "L’absence de toute possibilité de perte de valeur"
+      ],
+      "answer": 1,
+      "explanation": "Le PCG distingue durée limitée et non limitée. L’absence d’amortissement ne dispense pas des examens de perte de valeur requis par le cadre.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La valeur brute d’un actif est de 40 000 €, les amortissements cumulés de 15 000 € et les dépréciations cumulées de 3 000 €. Quelle VNC reste-t-il ?",
+      "options": [
+        "25 000 €",
+        "58 000 €",
+        "22 000 €",
+        "28 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La VNC tient compte des deux corrections : 40 000 − 15 000 − 3 000 = 22 000 €, et non des seuls amortissements.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 40000
+                },
+                {
+                  "value": 15000
+                }
+              ]
+            },
+            {
+              "value": 3000
+            }
+          ]
+        },
+        "expected": 22000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La VNC publiée comprend déjà une dépréciation. Le calcul la retranche à nouveau avant la comparaison de valeur. Quel risque cela crée-t-il ?",
+      "options": [
+        "Augmenter artificiellement la valeur brute",
+        "Annuler automatiquement le prix de cession",
+        "Assimiler la dotation à un remboursement de prêt",
+        "Compter deux fois la même diminution de valeur"
+      ],
+      "answer": 3,
+      "explanation": "Il faut identifier si le montant fourni est avant ou après correction. Une même dépréciation ne doit pas diminuer deux fois la VNC.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une fiche indique VNC 19 000 €, amortissements cumulés 7 000 € et dépréciations cumulées 2 000 €. Quelle valeur brute reconstitue ces montants ?",
+      "options": [
+        "28 000 €",
+        "10 000 €",
+        "24 000 €",
+        "19 000 €"
+      ],
+      "answer": 0,
+      "explanation": "On réintègre les corrections à la VNC : 19 000 + 7 000 + 2 000 = 28 000 € de valeur brute.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 19000
+                },
+                {
+                  "value": 7000
+                }
+              ]
+            },
+            {
+              "value": 2000
+            }
+          ]
+        },
+        "expected": 28000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux machines ont la même VNC mais des coûts initiaux et des corrections de valeur différents. Que peut-on conclure de cette seule égalité ?",
+      "options": [
+        "Leurs durées d’utilisation restantes sont forcément égales",
+        "Leurs valeurs comptables nettes sont égales, sans prouver un état ou un prix de marché identiques",
+        "Leurs prix de vente futurs sont garantis identiques",
+        "Leurs dépenses initiales ont forcément été identiques"
+      ],
+      "answer": 1,
+      "explanation": "La VNC est un solde de coût et de corrections. Un même solde ne décrit pas à lui seul l’âge, l’usage restant ou la valeur négociable.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau présente la valeur brute comme la VNC d’un actif déjà amorti. Quel contrôle faut-il effectuer ?",
+      "options": [
+        "Déduire seulement la dotation de l’exercice sans vérifier le cumul antérieur",
+        "Déduire la valeur résiduelle du coût sans tenir compte des amortissements déjà constatés",
+        "Rapprocher les amortissements et dépréciations cumulés de la fiche d’immobilisation",
+        "Rapprocher le seul coût brut avec la facture, sans examiner les corrections de valeur"
+      ],
+      "answer": 2,
+      "explanation": "La valeur brute ne tient pas compte des corrections déjà enregistrées. Le rapprochement des valeurs permet de retrouver le montant net.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un transport et une installation sont nécessaires pour mettre une machine en place et en état d’usage prévu. Quelle analyse du coût d’entrée est appropriée ?",
+      "options": [
+        "Les exclure obligatoirement parce qu’ils ont des factures séparées",
+        "Les ajouter seulement s’ils sont financés par emprunt",
+        "Les traiter automatiquement comme une dépréciation",
+        "Examiner leur inclusion comme coûts directement attribuables"
+      ],
+      "answer": 3,
+      "explanation": "Le lien avec la mise en place et l’état de fonctionnement est pertinent. La présentation sur une facture séparée ne change pas à elle seule leur nature.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le dossier retient dans le coût d’entrée un prix net de 18 000 €, un transport de 700 € et une installation nécessaire de 1 300 €. La publicité de 900 € est expressément exclue. Quel coût capitalise-t-on ?",
+      "options": [
+        "20 000 €",
+        "20 900 €",
+        "18 000 €",
+        "19 300 €"
+      ],
+      "answer": 0,
+      "explanation": "Le périmètre retenu inclut 18 000 + 700 + 1 300 = 20 000 €. La publicité exclue par les hypothèses ne s’ajoute pas.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 18000
+                },
+                {
+                  "value": 700
+                }
+              ]
+            },
+            {
+              "value": 1300
+            }
+          ]
+        },
+        "expected": 20000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une dépense générale sans lien démontré avec la mise en état du matériel est ajoutée automatiquement au coût de celui-ci. Quel appui manque-t-il ?",
+      "options": [
+        "Le seul fait que l’entreprise ait payé la dépense",
+        "La justification du rattachement direct à l’actif dans le cadre applicable",
+        "La preuve que la banque a reçu un nouveau prêt",
+        "L’identité du fournisseur avec celui de la machine, qui suffit toujours"
+      ],
+      "answer": 1,
+      "explanation": "Le paiement ne suffit pas à capitaliser une dépense. Sa nature et son lien avec l’actif doivent être justifiés selon le cadre retenu.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une réduction commerciale acquise diminue le prix d’achat d’une immobilisation corporelle. Quel principe du PCG s’applique au prix entrant dans son coût d’acquisition ?",
+      "options": [
+        "Conserver le prix brut et ajouter la réduction au coût",
+        "Retenir la réduction seule comme valeur brute",
+        "Retenir le prix d’achat net de cette réduction",
+        "Transformer automatiquement la réduction en emprunt reçu"
+      ],
+      "answer": 2,
+      "explanation": "Le coût d’acquisition commence par un prix net des réductions prévues par le PCG. Le prix catalogue brut ne remplace pas le coût réellement retenu.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le coût d’entrée est augmenté du remboursement de capital d’un emprunt finançant la machine. Quelle confusion de nature faut-il relever ?",
+      "options": [
+        "Le remboursement doit être ajouté au coût puis amorti sur la durée restante de la machine",
+        "Le remboursement doit majorer le coût seulement à hauteur de la fraction annuelle du prêt",
+        "Le remboursement doit remplacer le coût d’origine dans la fiche d’immobilisation",
+        "Le remboursement du financement ne constitue pas un nouveau coût de mise en état de l’actif"
+      ],
+      "answer": 3,
+      "explanation": "Le financement et l’acquisition sont deux dimensions différentes. Rembourser le principal ne crée pas une nouvelle dépense attribuable à la mise en service.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel document constitue un appui pertinent pour rattacher un coût d’installation à une machine précise ?",
+      "options": [
+        "Un justificatif décrivant l’intervention et son lien avec la mise en état de cette machine",
+        "Le seul total d’une facture couvrant plusieurs chantiers, sans ventilation par machine",
+        "Le budget estimatif d’installation, sans rapprochement avec l’intervention effectivement réalisée",
+        "Le seul montant du règlement bancaire, sans détail des travaux payés"
+      ],
+      "answer": 0,
+      "explanation": "Le coût doit être traçable et lié à l’actif. Un montant général sans identification de l’intervention ne prouve pas ce rattachement.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une machine devient techniquement obsolète et ses performances se dégradent. Quelle démarche le PCG demande-t-il d’examiner ?",
+      "options": [
+        "L’annulation automatique de sa valeur brute sans calcul",
+        "Un test de perte de valeur selon les conditions du cadre",
+        "Une hausse obligatoire de sa valeur comptable",
+        "L’arrêt de tout amortissement à cause du seul indice"
+      ],
+      "answer": 1,
+      "explanation": "L’obsolescence et des performances dégradées peuvent constituer des indices de perte de valeur. Ils appellent une évaluation, pas un ajustement arbitraire.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un test PCG simplifié, la VNC avant dépréciation est de 14 000 € et la valeur actuelle retenue de 10 500 €. Quel montant faut-il déprécier selon la règle fournie ?",
+      "options": [
+        "10 500 €",
+        "14 000 €",
+        "3 500 €",
+        "24 500 €"
+      ],
+      "answer": 2,
+      "explanation": "La perte de valeur à constater est l’excédent de VNC sur la valeur actuelle : 14 000 − 10 500 = 3 500 €.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 14000
+            },
+            {
+              "value": 10500
+            }
+          ]
+        },
+        "expected": 3500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le test établit une valeur actuelle supérieure à la VNC. L’étudiant calcule une dépréciation négative pour relever automatiquement la valeur. Quel contrôle de sens faut-il rappeler ?",
+      "options": [
+        "Toute différence de valeur doit obligatoirement modifier la valeur brute",
+        "Le prix de marché remplace toujours le coût historique",
+        "Une dépréciation négative est toujours un apport en capital",
+        "Ce test de perte ne constate pas une perte quand la VNC n’excède pas la valeur actuelle"
+      ],
+      "answer": 3,
+      "explanation": "Une comparaison favorable ne crée pas une perte. Le cas d’un relèvement éventuel ou d’une reprise obéit à une analyse distincte, pas à une perte négative automatique.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un indice de perte existe, mais aucun montant de valeur actuelle n’a encore été documenté. Peut-on retenir une réduction forfaitaire choisie pour atteindre le résultat souhaité ?",
+      "options": [
+        "Non, il faut étayer l’évaluation et le montant de la perte",
+        "Oui, tout pourcentage est acceptable si la balance reste équilibrée",
+        "Oui, le niveau de dividende détermine la perte",
+        "Non, il faut nécessairement retirer la totalité du coût initial"
+      ],
+      "answer": 0,
+      "explanation": "L’indice déclenche une investigation. Le montant de correction exige une évaluation justifiée et ne doit pas être fixé par un objectif de résultat.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le comptable remplace à la fois la valeur brute par la valeur actuelle et enregistre en plus la dépréciation correspondante. Quel défaut faut-il prévenir ?",
+      "options": [
+        "Une réduction du seul coût brut sans autre incidence sur le montant net",
+        "La double réduction du même écart de valeur",
+        "La comptabilisation d’une reprise de dépréciation au lieu d’une dotation",
+        "Le maintien de la VNC antérieure malgré les deux corrections enregistrées"
+      ],
+      "answer": 1,
+      "explanation": "Il faut distinguer valeur brute et corrections comptables. Réduire la base brute puis appliquer le même écart une seconde fois déforme la VNC.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle distinction entre amortissement et dépréciation est correcte ?",
+      "options": [
+        "Les deux correspondent nécessairement au paiement du fournisseur",
+        "La dépréciation est le remboursement annuel du principal",
+        "L’amortissement suit la consommation prévue ; la dépréciation traite une perte de valeur selon un test",
+        "L’amortissement remplace tout examen de perte de valeur"
+      ],
+      "answer": 2,
+      "explanation": "Les mécanismes répondent à des questions différentes. Un actif amorti peut aussi nécessiter un examen de perte de valeur.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 213-8 et 214-1 à 214-17",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    }
+  ]
+}

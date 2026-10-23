@@ -60,7 +60,8 @@ test('free or expired accounts cannot start, save, retrieve private exams or rec
 });
 
 test('spaced revision checks actual quiz answers, persists dates, deduplicates retries and schedules 1/3/7/14/30/60 days',async()=>{
- const deps=memory(),item=resolveReviewItem('quiz','UE9:reperes:n0');
+ const c=MODULES.UE9.chapters.find(c=>c.id==='reperes');
+ const deps=memory(),item=resolveReviewItem('quiz','UE9:reperes:n'+c.quizIndices[0]);
  const fail={receipt:'quiz_failure_1234',kind:'quiz',itemId:item.id,selected:item.options[1],correct:true,uid:'other'};
  const normalized=normalizeReviewEvents([fail])[0];assert.equal(normalized.correct,false);assert.equal(normalized.uid,undefined);
  await recordReviews('owner',[fail],deps,now);await recordReviews('owner',[fail],deps,now+1000);assert.equal(deps.records.get('userReview/owner').totalItems,1);

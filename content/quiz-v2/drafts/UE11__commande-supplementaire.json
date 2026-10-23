@@ -1,0 +1,508 @@
+{
+  "module": "UE11",
+  "chapter": "commande-supplementaire",
+  "sourceHash": "cad25cfd190b648f1d26e2780cd481183a2e34960a8a88d9c4776aba4e6b5bf7",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une matière déjà achetée 5 000 € n’a plus d’usage prévu. Elle peut être revendue pour 3 000 € nets. La commande utiliserait tout ce stock, sans remplacement ni autre effet. Quel montant représente le coût d’opportunité de cette utilisation dans la comparaison accepter/refuser ?",
+      "options": [
+        "5 000 €, correspondant au prix historique.",
+        "3 000 €, correspondant au produit net de revente abandonné.",
+        "0 €, parce que le stock a déjà été payé.",
+        "8 000 €, en ajoutant prix historique et revente abandonnée."
+      ],
+      "answer": 1,
+      "explanation": "Le prix historique a déjà été payé dans les deux options. En revanche, accepter fait renoncer aux 3 000 € nets de revente possibles si l’on refuse. Ce flux abandonné constitue ici le coût d’opportunité ; aucun remplacement n’est requis dans les faits fournis.",
+      "references": [
+        {
+          "title": "ACCA, coûts pertinents et coûts d’opportunité",
+          "url": "https://www.accaglobal.com/sg/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/relevant-costs.html"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Une commande de 200 unités consomme 12 € de coût variable additionnel par unité. Quel total variable doit être pris en compte ?",
+      "options": [
+        "212 €",
+        "0,06 €",
+        "2 400 €",
+        "16,67 €"
+      ],
+      "answer": 2,
+      "explanation": "Le coût variable total est 200 × 12 = 2 400 €. La quantité doit correspondre à la commande ; utiliser le coût moyen complet ajouterait potentiellement des charges non modifiées par le choix.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 200
+            },
+            {
+              "value": 12
+            }
+          ]
+        },
+        "expected": 2400,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une commande de 200 unités à 18 € engendre 12 € variables par unité et 500 € de coût fixe spécifique. Aucun autre effet ne varie. Quelle contribution nette apporte-t-elle ?",
+      "options": [
+        "700 €",
+        "1 200 €",
+        "3 100 €",
+        "-700 €"
+      ],
+      "answer": 0,
+      "explanation": "La contribution nette est 200 × (18 − 12) − 500 = 700 €. Le coût spécifique doit être déduit une fois ; le chiffre d’affaires seul ne décrit pas l’apport au résultat.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 200
+                },
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 18
+                    },
+                    {
+                      "value": 12
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 500
+            }
+          ]
+        },
+        "expected": 700,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une commande de 200 unités nécessite 12 € variables par unité et 500 € fixes spécifiques. Quel prix unitaire couvre exactement ces seuls coûts pertinents ?",
+      "options": [
+        "17 €",
+        "2,50 €",
+        "12 €",
+        "14,50 €"
+      ],
+      "answer": 3,
+      "explanation": "Le prix de couverture est 12 + 500 / 200 = 14,50 €. La part spécifique totale doit être rapportée à la quantité ; cette limite ne couvre pas automatiquement tous les objectifs commerciaux.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 12
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 500
+                },
+                {
+                  "value": 200
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 14.5,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La commande utilise une capacité libre sans modifier les autres ventes. Un rapport ajoute son CA à celui de l’activité normale. Quelle hypothèse rend cette addition pertinente ?",
+      "options": [
+        "La compensation de toute baisse de ventes normales par une hausse identique du prix de la commande spéciale.",
+        "L’absence de cannibalisation et le maintien du périmètre normal.",
+        "L’existence d’un prix spécial, considérée comme preuve suffisante qu’aucune vente normale n’est remplacée.",
+        "L’égalité des coûts variables des deux activités, considérée comme garantissant l’indépendance de leurs ventes."
+      ],
+      "answer": 1,
+      "explanation": "Le supplément doit être mesuré par différence entre options. Si des ventes existantes étaient déplacées, leur perte devrait être examinée ; ici, le dossier exclut cet effet."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le loyer déjà engagé est identique avec ou sans la commande et n’est pas résiliable dans le domaine étudié. Comment intervient-il dans la comparaison différentielle ?",
+      "options": [
+        "Il doit être ajouté comme coût différentiel parce qu’il est affecté directement au local utilisé.",
+        "Il doit être réparti sur les seules unités de la commande puis traité comme une dépense provoquée par leur acceptation.",
+        "Il ne constitue pas un supplément de coût entre ces deux options.",
+        "Il doit être retranché des coûts variables de la commande pour neutraliser sa nature fixe."
+      ],
+      "answer": 2,
+      "explanation": "Un coût inchangé ne crée pas de différence entre accepter et refuser. Cela ne signifie pas qu’il n’existe plus dans le résultat global, mais qu’il ne doit pas être présenté comme coût additionnel de la commande."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La contribution calculée est positive mais la commande impose un délai qui mettrait en risque un engagement client prioritaire non chiffré. Quelle conclusion est rigoureuse ?",
+      "options": [
+        "Le calcul positif est un élément utile, mais le risque et la contrainte doivent aussi être examinés.",
+        "L’absence de montant chiffré autorise à traiter l’effet sur l’engagement prioritaire comme nul dans la recommandation complète.",
+        "La contribution suffit à comparer les options même si le délai prioritaire est une condition commerciale ferme.",
+        "Le coût de la commande doit être majoré d’un forfait identique à sa contribution sans vérifier le risque de délai."
+      ],
+      "answer": 0,
+      "explanation": "Une comparaison ne s’épuise pas dans les postes fournis. Une contrainte réelle peut changer la décision ; il faut la rendre explicite sans lui attribuer un coût inventé."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La quantité commandée augmente, tandis que coût variable unitaire et coût fixe spécifique restent identiques. Que devient le prix de couverture des seuls coûts pertinents ?",
+      "options": [
+        "Il augmente parce que le coût fixe doit être ajouté au prix une nouvelle fois pour chaque unité supplémentaire.",
+        "Il reste inchangé puisque le montant total de frais spécifiques ne change pas, quelle que soit la quantité.",
+        "Il diminue exactement de la baisse relative de la part fixe, sans conserver la composante variable unitaire.",
+        "Il diminue vers le coût variable unitaire, car le coût spécifique est réparti sur davantage d’unités."
+      ],
+      "answer": 3,
+      "explanation": "La formule est coût variable unitaire + coût spécifique / quantité. L’augmentation du volume réduit la seconde composante sous les hypothèses données, sans prouver que la demande ou capacité soit suffisante."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le client négocie une baisse de prix à quantité inchangée. Quel élément de la contribution doit être réexaminé directement ?",
+      "options": [
+        "Le seul coût variable total, supposé diminuer dans la même proportion que le prix sans changement de ressource.",
+        "Le CA de la commande et la marge entre prix et coût variable.",
+        "Le seul montant de frais spécifiques, présenté comme se réduisant du même pourcentage que le prix.",
+        "La seule marge relative initiale, présentée comme suffisante sans appliquer le nouveau prix à la quantité."
+      ],
+      "answer": 1,
+      "explanation": "Une remise diminue la recette par unité et donc la contribution si les coûts ne changent pas. Il faut recalculer le différentiel plutôt que conserver un apport issu d’un ancien prix."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une commission de 2 € par unité est engagée uniquement si la commande est acceptée et n’est pas incluse dans le coût fourni. Comment la traiter ?",
+      "options": [
+        "La déduire une seule fois pour 2 € du total de la commande, quelle que soit la quantité.",
+        "La traiter comme 2 € de frais fixes supplémentaires pour répartir ensuite ce total sur les unités.",
+        "L’ajouter aux coûts pertinents selon les unités de la commande.",
+        "L’exclure parce que le coût variable initial était annoncé, sans vérifier le périmètre de ce coût."
+      ],
+      "answer": 2,
+      "explanation": "La pertinence vient de la modification entre options. Une commission réellement additionnelle doit être intégrée sans double compte ; un poste initial incomplet ne dispense pas d’examiner les nouveaux faits fournis."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une commande unique nécessite un équipement acheté 12 000 € et revendable 8 000 € nets à son terme. Elle ajoute 1 000 € de frais de mise en service non récupérables. Sans actualisation, impôt ni autre effet, quel coût net de cet équipement retenir sur l’horizon complet de la commande ?",
+      "options": [
+        "5 000 €",
+        "13 000 €",
+        "4 000 €",
+        "21 000 €"
+      ],
+      "answer": 0,
+      "explanation": "L’acceptation provoque l’achat et la mise en service, puis permet la revente : 12 000 + 1 000 − 8 000 = 5 000 €. Retenir le seul achat omet le flux terminal ; additionner la revente au lieu de la déduire inverse son effet sur le coût net.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "value": 8000
+            }
+          ]
+        },
+        "expected": 5000,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "ACCA, coûts pertinents et coûts d’opportunité",
+          "url": "https://www.accaglobal.com/sg/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/relevant-costs.html"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un prix minimum est calculé comme coût variable unitaire plus le coût fixe spécifique total, sans division par la quantité. Quel défaut apparaît ?",
+      "options": [
+        "Le coût variable doit être multiplié par la quantité puis présenté directement comme un prix unitaire.",
+        "Le coût fixe total peut être ajouté au prix de chaque unité parce que son caractère spécifique dispense de répartition.",
+        "La part fixe doit être divisée par le prix proposé plutôt que par les unités de la commande.",
+        "Une charge totale est ajoutée à une grandeur unitaire sans conversion."
+      ],
+      "answer": 3,
+      "explanation": "Le prix est exprimé par unité. Le coût spécifique doit être réparti sur les unités concernées ; additionner directement son total gonfle artificiellement la limite unitaire."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le devis affiche un CA positif mais le prix est inférieur au coût variable unitaire et un coût spécifique s’ajoute. Quelle erreur serait d’accepter sur le seul CA ?",
+      "options": [
+        "La recette positive ne garantit pas une contribution positive après les coûts.",
+        "La recette suffit à couvrir les coûts variables dès lors que le volume total est positif.",
+        "L’augmentation des unités compense nécessairement une marge unitaire négative sans modifier prix ni coûts.",
+        "Les frais spécifiques sont les seuls éléments à comparer au chiffre d’affaires, les variables étant exclus du raisonnement différentiel."
+      ],
+      "answer": 0,
+      "explanation": "Le CA doit être confronté aux coûts qui varient. Un prix sous le coût variable génère une contribution unitaire négative, encore diminuée par les frais spécifiques dans le scénario."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La capacité libre supposée n’existe finalement pas ; traiter la commande empêcherait une vente normale rentable. Que faut-il revoir ?",
+      "options": [
+        "La quantité de la commande suffit à conserver le prix plancher initial même si des ventes normales sont remplacées.",
+        "Le coût d’opportunité et les effets sur l’activité remplacée.",
+        "Le seul coût variable de la commande reste la référence complète, les contributions perdues n’étant pas décaissées.",
+        "Les charges fixes déjà engagées mesurent à elles seules le manque à gagner sur les ventes normales."
+      ],
+      "answer": 1,
+      "explanation": "Le modèle initial excluait le sacrifice d’une autre activité. Une nouvelle contrainte demande d’intégrer les conséquences réelles de l’alternative abandonnée, pas de prolonger l’hypothèse de capacité libre."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un calcul inclut le coût fixe spécifique dans la marge unitaire puis le retranche encore après multiplication. Quelle anomalie faut-il rechercher ?",
+      "options": [
+        "Une confusion entre prix unitaire et chiffre d’affaires, sans effet des frais spécifiques sur le résultat.",
+        "Une omission des frais spécifiques, parce qu’un montant intégré à la marge unitaire n’intervient pas après multiplication.",
+        "Un double compte du coût spécifique.",
+        "Une simple différence de présentation sans effet sur la contribution nette, les deux traitements se compensant."
+      ],
+      "answer": 2,
+      "explanation": "La même charge doit être prise une fois dans le périmètre. Elle peut être présentée sous forme totale ou répartie par unité, mais ces deux expressions ne doivent pas être soustraites cumulativement."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un prix couvre exactement les coûts pertinents de cette commande exceptionnelle. Peut-il être annoncé comme prix durable couvrant toute l’entreprise ?",
+      "options": [
+        "Oui, la couverture des seuls coûts modifiés suffit à financer le renouvellement futur de toutes les ressources communes.",
+        "Oui, le prix exceptionnel devient une référence de rentabilité totale dès qu’il laisse une contribution différentielle nulle.",
+        "Oui, les ressources inchangées dans cette décision ne doivent entrer dans aucun objectif tarifaire ultérieur.",
+        "Non, le périmètre exceptionnel ne couvre pas automatiquement les charges et objectifs de long terme."
+      ],
+      "answer": 3,
+      "explanation": "Le prix de couverture est défini par la décision et ses hypothèses. Un coût différentiel ne se substitue pas sans examen au financement durable de l’activité et des ressources communes."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le prix proposé baisse de 1,50 € sur une commande de 300 unités, sans autre modification. De combien le CA de la commande diminue-t-il ?",
+      "options": [
+        "450 €",
+        "301,50 €",
+        "200 €",
+        "1,50 €"
+      ],
+      "answer": 0,
+      "explanation": "La variation de recette est quantité × baisse de prix : 300 × 1,50 = 450 €. La contribution diminue du même montant uniquement si tous les coûts et autres effets restent inchangés.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 300
+            },
+            {
+              "value": 1.5
+            }
+          ]
+        },
+        "expected": 450,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel critère rend une charge pertinente pour comparer accepter ou refuser la commande dans ce dossier ?",
+      "options": [
+        "Son seul paiement pendant l’année passée.",
+        "Sa modification entre les deux options, compte tenu des effets documentés.",
+        "Son caractère direct dans toute comptabilité, sans examiner le choix.",
+        "Le fait qu’elle figure dans un coût moyen complet."
+      ],
+      "answer": 1,
+      "explanation": "La comparaison différentielle examine ce qui change. Une charge attribuée ou historique n’est pas automatiquement additionnelle ; les coûts et pertes d’opportunité doivent être reliés aux options."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "L’entreprise ajoute une pénalité supposée alors que le dossier ne prévoit ni clause ni montant. Quelle présentation est préférable ?",
+      "options": [
+        "Ajouter une pénalité estimée au résultat comme si elle était contractuellement établie, sans distinguer l’hypothèse.",
+        "Conclure que le risque est nul au seul motif que le montant n’est pas fourni dans le dossier.",
+        "Séparer le calcul documenté du risque à vérifier sans lui attribuer une donnée fabriquée.",
+        "Reprendre une clause d’une autre commande comme applicable à celle-ci sans vérifier les conditions."
+      ],
+      "answer": 2,
+      "explanation": "Le calcul doit respecter les informations fournies. Une conséquence possible peut être signalée comme point à examiner, mais ne doit pas devenir une charge chiffrée présentée comme un fait sans support."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un investissement nouveau serait nécessaire pour la commande, contrairement aux hypothèses initiales. Quelle démarche est adaptée ?",
+      "options": [
+        "Conserver le prix plancher initial en répartissant seulement le nouveau volume sur la capacité supposée libre.",
+        "Déduire l’amortissement comptable annuel comme seul effet de l’investissement sans examiner achat, revente ni horizon.",
+        "Ajouter le prix d’achat à chaque unité comme si ce total constituait une charge variable unitaire.",
+        "Reformuler les coûts et l’horizon de la décision avant de réutiliser le prix de couverture."
+      ],
+      "answer": 3,
+      "explanation": "Un fait qui modifie les moyens requis peut changer le périmètre pertinent. Il faut examiner montant, durée et autres usages plutôt qu’appliquer une formule issue d’hypothèses devenues inexactes."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une contribution avant frais spécifiques est 2 400 €. Quel plafond de coût fixe spécifique est compatible avec une contribution nette au moins nulle ?",
+      "options": [
+        "2 400 €",
+        "1 200 €",
+        "3 600 €",
+        "4 800 €"
+      ],
+      "answer": 0,
+      "explanation": "La contribution nette est 2 400 − coût spécifique. Elle reste au moins nulle si ce coût ne dépasse pas 2 400 €, sans que cela assure l’intérêt commercial ou la faisabilité de l’opération.",
+      "calculation": {
+        "expression": {
+          "value": 2400
+        },
+        "expected": 2400,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La quantité du devis est incertaine mais un coût spécifique devra être payé intégralement. Quel risque un prix de couverture fondé sur le volume le plus élevé peut-il masquer ?",
+      "options": [
+        "Un volume moindre réduit la part fixe par unité, ce qui rend le prix calculé sur le volume maximal prudent.",
+        "Moins d’unités vendues peuvent laisser le coût spécifique insuffisamment couvert.",
+        "Le prix de couverture reste identique à tout volume puisque le montant fixe total ne change pas.",
+        "Le prix peut être repris sans minimum garanti parce que la part variable reste unitaire."
+      ],
+      "answer": 1,
+      "explanation": "Le coût spécifique par unité augmente lorsque la quantité diminue. Un prix établi sur un volume optimiste reste conditionnel ; il faut distinguer engagement ferme et hypothèse de vente."
+    },
+    {
+      "id": "q23",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "La commande demande 30 heures de travail. Dix heures de capacité libre sont payées au salaire habituel, inchangé avec ou sans commande. Les vingt heures restantes exigent des heures supplémentaires facturées au coût total de 25 € chacune. Quel supplément de coût salarial retenir ?",
+      "options": [
+        "250 €",
+        "750 €",
+        "500 €",
+        "0 €"
+      ],
+      "answer": 2,
+      "explanation": "Les dix heures libres n’ajoutent aucun salaire dans les faits donnés. Les vingt heures supplémentaires coûtent 20 × 25 = 500 €. Compter trente heures à ce tarif inclurait une dépense non modifiée pour les dix premières heures.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 30
+                },
+                {
+                  "value": 10
+                }
+              ]
+            },
+            {
+              "value": 25
+            }
+          ]
+        },
+        "expected": 500,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "ACCA, coûts pertinents et coûts d’opportunité",
+          "url": "https://www.accaglobal.com/sg/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/relevant-costs.html"
+        }
+      ]
+    }
+  ]
+}

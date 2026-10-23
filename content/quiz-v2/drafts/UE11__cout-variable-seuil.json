@@ -1,0 +1,609 @@
+{
+  "module": "UE11",
+  "chapter": "cout-variable-seuil",
+  "sourceHash": "1e474b8b3e9a07269b6dd7c92411752147d8cae1ea02960243ea0ee6d61fffda",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un prix de 80 € et un coût variable de 50 € s’appliquent à 400 unités. Quelle contribution avant charges fixes produit ce volume ?",
+      "options": [
+        "12 000 €",
+        "32 000 €",
+        "20 000 €",
+        "30 €"
+      ],
+      "answer": 0,
+      "explanation": "La contribution est 400 × (80 − 50) = 12 000 €. Le chiffre d’affaires de 32 000 € ne constitue pas la marge, et le résultat nécessiterait encore la déduction des charges fixes.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 400
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 80
+                },
+                {
+                  "value": 50
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 12000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les charges variables représentent 65 % du chiffre d’affaires dans le modèle donné. Quel taux de marge sur coûts variables leur est complémentaire ?",
+      "options": [
+        "65 %",
+        "35 %",
+        "153,85 %",
+        "0,65 %"
+      ],
+      "answer": 1,
+      "explanation": "Le chiffre d’affaires se partage ici entre charges variables et marge : 100 % − 65 % = 35 %. Le taux demandé n’est pas le rapport de la marge aux charges variables.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "value": 65
+            }
+          ]
+        },
+        "expected": 35,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le seuil est 50 000 € pour des charges fixes de 15 000 €. Quel taux de marge en pourcentage est implicite dans ce modèle ?",
+      "options": [
+        "333,33 %",
+        "15 %",
+        "30 %",
+        "70 %"
+      ],
+      "answer": 2,
+      "explanation": "En inversant seuil = charges fixes / taux, on obtient taux = 15 000 / 50 000 = 0,30, soit 30 %. Ce contrôle inverse vérifie la cohérence entre seuil et paramètres.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 15000
+                },
+                {
+                  "value": 50000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 30,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La marge sur coûts variables vaut 24 000 € et le résultat du modèle 6 000 €. Quel montant de charges fixes retrouve-t-on ?",
+      "options": [
+        "30 000 €",
+        "4 €",
+        "6 000 €",
+        "18 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Résultat = marge − charges fixes. Les charges fixes sont donc 24 000 − 6 000 = 18 000 €, à condition que le périmètre ne comporte pas d’autres éléments de résultat.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 24000
+            },
+            {
+              "value": 6000
+            }
+          ]
+        },
+        "expected": 18000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les ventes progressent à prix constant, avec une marge unitaire positive inchangée et les mêmes charges fixes. Quel effet sur la contribution est prévu ?",
+      "options": [
+        "Elle augmente avec les unités vendues.",
+        "Elle reste constante parce que les charges fixes n’ont pas changé.",
+        "Elle augmente seulement du chiffre d’affaires supplémentaire après déduction de toutes les charges fixes une seconde fois.",
+        "Elle baisse parce que la marge unitaire doit être divisée par un volume plus élevé."
+      ],
+      "answer": 0,
+      "explanation": "La marge totale est le produit du volume et de la marge unitaire. Dans le domaine indiqué, chaque unité supplémentaire apporte une contribution positive, distincte de l’évolution des encaissements."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau affiche un taux de 0,4 et un autre de 40 %. Quel examen convient avant de signaler une divergence ?",
+      "options": [
+        "Traiter les deux valeurs comme des taux différents avant de vérifier leur convention d’affichage.",
+        "Vérifier les conventions : ces deux écritures peuvent exprimer la même proportion.",
+        "Comparer seulement les nombres bruts 0,4 et 40 comme s’ils avaient la même unité.",
+        "Diviser encore 0,4 par cent puis le comparer à 40 % comme si les deux conversions étaient nécessaires."
+      ],
+      "answer": 1,
+      "explanation": "Une proportion peut être présentée sous forme décimale ou en pourcentage. Il faut harmoniser les écritures avant comparaison ou calcul, sans confondre écart d’affichage et différence économique."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux scénarios ont les mêmes charges fixes ; le second a un taux de marge plus faible mais encore positif. Quel effet sur le seuil prévoit la formule ?",
+      "options": [
+        "Le seuil baisse proportionnellement au taux parce que les charges fixes sont stables.",
+        "Le seuil reste inchangé puisque le numérateur de la formule reste identique.",
+        "Il augmente, car davantage de ventes sont nécessaires pour couvrir les mêmes charges.",
+        "Le seuil varie du même nombre de points que le taux sans considérer la division par celui-ci."
+      ],
+      "answer": 2,
+      "explanation": "Le taux se trouve au dénominateur du seuil. Une moindre contribution par euro de vente exige un chiffre d’affaires supérieur pour financer le même montant fixe."
+    },
+    {
+      "id": "q08",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Sans stock initial, 120 unités sont produites et 100 vendues. Les fixes de production sont de 600 €. Un modèle complet répartit ces fixes sur les 120 unités ; un modèle variable les déduit tous sur la période. Aucun autre écart n’existe. De combien le résultat complet dépasse-t-il le résultat variable ?",
+      "options": [
+        "600 €",
+        "500 €",
+        "20 €",
+        "100 €"
+      ],
+      "answer": 3,
+      "explanation": "Le modèle complet conserve dans le stock final la part fixe des vingt unités non vendues : 20 × (600 / 120) = 100 €. Le modèle variable déduit les 600 € sur la période. Le résultat complet est donc supérieur de 100 € dans les conventions données.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 120
+                },
+                {
+                  "value": 100
+                }
+              ]
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 600
+                },
+                {
+                  "value": 120
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 100,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "OpenStax, variable costing et absorption costing",
+          "url": "https://openstax.org/books/principles-managerial-accounting/pages/6-5-compare-and-contrast-variable-and-absorption-costing"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le prix reste fixe, mais le coût variable unitaire augmente de 2 € sur 500 unités. Quelle réduction de marge totale cela provoque-t-il, toutes autres données inchangées ?",
+      "options": [
+        "1 000 €",
+        "2 €",
+        "250 €",
+        "502 €"
+      ],
+      "answer": 0,
+      "explanation": "Chaque unité perd 2 € de contribution, donc 500 × 2 = 1 000 €. Il s’agit de la diminution de marge, non d’un changement du chiffre d’affaires ou des charges fixes.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 2
+            },
+            {
+              "value": 500
+            }
+          ]
+        },
+        "expected": 1000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Les cent premières unités vendues valent 20 € chacune ; chaque unité au-delà vaut 15 €, sans remise rétroactive. Le coût variable est de 10 € par unité et les fixes de 1 200 €. Quelle quantité entière couvre exactement les fixes dans ce modèle par tranches ?",
+      "options": [
+        "120 unités",
+        "140 unités",
+        "240 unités",
+        "80 unités"
+      ],
+      "answer": 1,
+      "explanation": "Les cent premières unités apportent 100 × (20 − 10) = 1 000 €. Il reste 200 € à couvrir avec une marge de 15 − 10 = 5 € sur chaque unité supplémentaire, soit quarante unités. Le seuil est donc de 140 unités, sans appliquer le premier prix à toute la vente.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 1200
+                    },
+                    {
+                      "op": "*",
+                      "args": [
+                        {
+                          "value": 100
+                        },
+                        {
+                          "op": "-",
+                          "args": [
+                            {
+                              "value": 20
+                            },
+                            {
+                              "value": 10
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 15
+                    },
+                    {
+                      "value": 10
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 140,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les ventes prévues sont inférieures au seuil, dans le même périmètre et avec une marge positive constante. Quel signe de résultat prédit le modèle ?",
+      "options": [
+        "Positif, puisque chaque vente crée une contribution.",
+        "Nul, dès qu’une marge existe.",
+        "Négatif, la contribution prévue restant insuffisante pour couvrir les charges fixes.",
+        "Impossible à commenter sans connaître le solde bancaire."
+      ],
+      "answer": 2,
+      "explanation": "Une marge positive ne garantit pas sa suffisance. En dessous du seuil, la contribution cumulée laisse une part des charges fixes non couverte dans le modèle."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le chiffre d’affaires prévu est 80 000 € et le taux de marge 25 %. Quel plafond de charges fixes est compatible avec un résultat au moins nul dans ce modèle ?",
+      "options": [
+        "320 000 €",
+        "25 000 €",
+        "80 025 €",
+        "20 000 €"
+      ],
+      "answer": 3,
+      "explanation": "La contribution prévue est 80 000 × 0,25 = 20 000 €. Elle fixe ici le montant maximal de charges fixes couvertes sans perte, sous les hypothèses données.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 80000
+            },
+            {
+              "value": 0.25
+            }
+          ]
+        },
+        "expected": 20000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une charge fixe est déduite dans les charges variables puis à nouveau après la marge. Quel défaut rend le résultat trompeur ?",
+      "options": [
+        "La même charge peut être soustraite deux fois.",
+        "La classification dans les variables transforme cette charge en dépense supplémentaire du même montant.",
+        "La seconde déduction compense la première parce que les deux lignes portent des catégories différentes.",
+        "Le résultat est seulement mal ventilé, sans effet sur son montant puisque le total des charges fixes n’a pas changé."
+      ],
+      "answer": 0,
+      "explanation": "Le modèle exige une classification cohérente et sans double compte. Une dépense déjà retranchée de la marge ne doit pas être retirée une seconde fois comme une autre charge."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "À fixes inchangés, un premier scénario donne une marge unitaire de 10 € et un taux de marge de 50 %, le second une marge unitaire de 12 € et un taux de 40 %. Le seuil en unités baisse mais celui en chiffre d’affaires augmente. Pourquoi ces évolutions sont-elles compatibles ?",
+      "options": [
+        "Le seuil en euros et celui en unités doivent évoluer en sens identique ; l’un des calculs est donc forcément erroné.",
+        "La couverture par unité s’améliore tandis que la contribution par euro de chiffre d’affaires se dégrade.",
+        "Le taux de marge de 40 % est supérieur à celui de 50 % dès lors que la marge unitaire est plus élevée.",
+        "La hausse de marge unitaire réduit les fixes à couvrir, tandis que le taux modifie leur montant comptable."
+      ],
+      "answer": 1,
+      "explanation": "Le seuil en unités divise les fixes par la marge unitaire : une marge plus forte le réduit. Le seuil en euros les divise par le taux : un taux plus faible l’augmente. Les scénarios n’ont pas le même prix unitaire ; unités et euros ne sont pas interchangeables."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un seuil est calculé en euros HT, puis comparé à un montant de ventes utilisant une autre convention de taxes non convertie. Quel préalable manque ?",
+      "options": [
+        "Comparer directement les ventes taxes comprises au seuil hors taxes parce que les deux sont exprimés en euros.",
+        "Convertir les seules charges fixes en taxes comprises tout en conservant le taux calculé hors taxes.",
+        "Rendre les conventions de valeur et la période compatibles.",
+        "Conserver les deux conventions mais utiliser uniquement le signe de leur différence pour conclure sur la couverture."
+      ],
+      "answer": 2,
+      "explanation": "Le seuil et l’activité doivent être sur une même échelle. Une différence de convention peut fabriquer une couverture apparente ; il faut harmoniser les grandeurs avant de conclure."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une dépense améliore la qualité mais augmente les charges fixes. Le résultat du modèle baisse. Que peut-on conclure sans mesure des autres effets ?",
+      "options": [
+        "L’amélioration de qualité doit être classée comme une recette déjà réalisée pour compenser les fixes sans autre mesure.",
+        "La baisse du résultat suffit à exclure tout avantage qualité, même si celui-ci n’est pas encore quantifié.",
+        "La qualité justifie d’exclure le surcoût fixe du modèle de résultat sans préciser ce changement de périmètre.",
+        "Le critère de résultat se dégrade dans le calcul ; le bilan global demande les autres effets."
+      ],
+      "answer": 3,
+      "explanation": "Le modèle éclaire une dimension économique sous hypothèses. Un changement peut aussi affecter qualité, risque ou ventes futures ; le seul écart ne mesure pas tout l’arbitrage."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Trois observations de coût mixte sont disponibles : 100 unités pour 1 000 €, 200 pour 1 700 €, 300 pour 1 600 €. Pour sélectionner les deux observations de la méthode des points haut et bas d’activité, quelle paire retenir ?",
+      "options": [
+        "100 unités / 1 000 € et 300 unités / 1 600 €.",
+        "100 unités / 1 000 € et 200 unités / 1 700 €.",
+        "200 unités / 1 700 € et 300 unités / 1 600 €.",
+        "La moyenne des deux premières observations et celle des deux dernières."
+      ],
+      "answer": 0,
+      "explanation": "La méthode sélectionne les niveaux d’activité extrêmes, ici 100 et 300 unités, et leurs coûts associés. Elle ne choisit pas les coûts le plus faible et le plus élevé. Le coût atypique à 200 unités justifie d’examiner les données, pas de remplacer le critère de sélection annoncé.",
+      "references": [
+        {
+          "title": "OpenStax, méthode high-low : sélection selon l’activité",
+          "url": "https://openstax.org/books/principles-managerial-accounting/pages/2-3-estimate-a-variable-and-fixed-cost-equation-and-predict-future-costs"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un chiffre d’affaires de 50 000 € produit un taux de marge sur coûts variables de 32 %. Quel montant de marge retrouve-t-on ?",
+      "options": [
+        "156 250 €",
+        "16 000 €",
+        "34 000 €",
+        "1 600 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La marge est CA × taux en proportion : 50 000 × 0,32 = 16 000 €. Le complément de 34 000 € représente les charges variables dans ce découpage.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 50000
+            },
+            {
+              "value": 0.32
+            }
+          ]
+        },
+        "expected": 16000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une valeur de seuil négative apparaît avec charges fixes positives et une marge négative. Peut-on la lire comme une quantité ou recette de couverture réalisable ?",
+      "options": [
+        "Oui, la valeur absolue de ce seuil suffit à déterminer le volume couvrant les charges fixes.",
+        "Oui, la marge négative doit être transformée en marge positive avant de commenter le seuil sans modifier prix ni coûts.",
+        "Non, le modèle ne fournit pas dans ce cas un seuil positif de couverture par des ventes à marge négative.",
+        "Oui, la hausse du volume rend la marge totale positive même si chaque unité conserve la même marge négative."
+      ],
+      "answer": 2,
+      "explanation": "Une marge négative ne contribue pas à couvrir des charges fixes positives. Le signe algébrique appelle une analyse des hypothèses plutôt qu’une lecture opérationnelle du quotient comme seuil réalisable."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Pour vérifier le résultat, un analyste reconstitue chiffre d’affaires moins charges variables moins charges fixes. Quel usage a ce contrôle ?",
+      "options": [
+        "À valider automatiquement la pertinence économique de tous les paramètres du modèle.",
+        "À vérifier l’exhaustivité des charges à partir de la seule égalité arithmétique du résultat.",
+        "À confirmer que les prévisions de volume sont réalisables parce que le calcul se reconstitue.",
+        "Il rapproche les composantes du modèle avec le résultat annoncé."
+      ],
+      "answer": 3,
+      "explanation": "Une reconstitution teste la cohérence arithmétique et le périmètre du modèle. Elle ne valide pas automatiquement les hypothèses de ventes ou le calendrier des flux."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le modèle linéaire donne une marge sur coûts variables de 30 000 € et un résultat d’exploitation positif de 10 000 €. Le levier opérationnel au niveau étudié est défini par marge sur coûts variables / résultat. Quelle valeur obtient-on ?",
+      "options": [
+        "3",
+        "0,33",
+        "2",
+        "30"
+      ],
+      "answer": 0,
+      "explanation": "Le levier au point considéré est 30 000 / 10 000 = 3. Dans le domaine et les hypothèses du modèle, il mesure la sensibilité relative du résultat aux variations de ventes. Ce n’est ni une marge de 3 € ni un taux de rentabilité garanti.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 30000
+            },
+            {
+              "value": 10000
+            }
+          ]
+        },
+        "expected": 3,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "OpenStax, levier opérationnel",
+          "url": "https://openstax.org/books/principles-managerial-accounting/pages/3-5-calculate-and-interpret-a-companys-margin-of-safety-and-operating-leverage"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un modèle pédagogique fictif prévoit 10 € de marge par unité, 1 000 € de fixes et un prélèvement de 25 % sur le résultat positif avant prélèvement. Pour atteindre 600 € nets, il utilise net = (10Q − 1 000) × 0,75. Quelle quantité Q répond à cet objectif ?",
+      "options": [
+        "160 unités",
+        "180 unités",
+        "145 unités",
+        "240 unités"
+      ],
+      "answer": 1,
+      "explanation": "L’objectif avant prélèvement est 600 / 0,75 = 800 €. Il faut couvrir 1 000 € de fixes et ces 800 €, soit (1 000 + 800) / 10 = 180 unités. Ajouter simplement 25 % aux 600 € ne retrouve pas le montant brut dont 75 % valent 600 €.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 1000
+                },
+                {
+                  "op": "/",
+                  "args": [
+                    {
+                      "value": 600
+                    },
+                    {
+                      "value": 0.75
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 10
+            }
+          ]
+        },
+        "expected": 180,
+        "digits": 0
+      }
+    }
+  ]
+}

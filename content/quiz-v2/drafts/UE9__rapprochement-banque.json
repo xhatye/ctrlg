@@ -1,0 +1,452 @@
+{
+  "module": "UE9",
+  "chapter": "rapprochement-banque",
+  "sourceHash": "61a3f4e9fdfeb18e8c8ad7d34f44ef49c9fb89bd7719161d106017680bcef1f4",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les soldes positifs désignent des disponibilités. Le relevé affiche 12 000 €, des chèques émis déjà comptabilisés de 2 500 € ne sont pas débités et des remises comptabilisées de 900 € ne sont pas créditées. Quel relevé ajusté obtient-on ?",
+      "options": [
+        "10 400 €",
+        "13 600 €",
+        "8 600 €",
+        "15 400 €"
+      ],
+      "answer": 0,
+      "explanation": "Les chèques diminueront les disponibilités du relevé et les remises les augmenteront : 12 000 − 2 500 + 900 = 10 400 €.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 2500
+                }
+              ]
+            },
+            {
+              "value": 900
+            }
+          ]
+        },
+        "expected": 10400,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un chèque émis et déjà enregistré en comptabilité n’apparaît pas encore sur le relevé. Quel traitement correspond à un simple décalage de date ?",
+      "options": [
+        "Enregistrer un second paiement identique",
+        "Le suivre en rapprochement et diminuer le relevé retraité, sans nouvelle écriture du chèque",
+        "Annuler immédiatement le paiement initial sans preuve",
+        "Ajouter son montant au relevé retraité"
+      ],
+      "answer": 1,
+      "explanation": "Le compte de l’entreprise a déjà enregistré la sortie. La différence de date se traite dans le rapprochement jusqu’au débit bancaire, pas par un doublon."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une remise déjà comptabilisée n’est pas encore créditée sur le relevé. Le préparateur la soustrait au relevé retraité. Quel signe faut-il corriger ?",
+      "options": [
+        "Elle doit être déduite deux fois du compte de banque",
+        "Elle doit devenir une charge d’exploitation",
+        "Elle doit être ajoutée pour refléter l’encaissement déjà enregistré",
+        "Son montant doit être remplacé par les frais bancaires"
+      ],
+      "answer": 2,
+      "explanation": "La remise augmentera le relevé quand elle sera créditée. Dans la convention de disponibilités positives, son retraitement est une addition."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un relevé positif de 8 000 € doit être ajusté à 7 200 €. Les remises en circulation valent 500 € et les chèques constituent l’unique autre différence. Quel total de chèques est en circulation ?",
+      "options": [
+        "300 €",
+        "800 €",
+        "7 700 €",
+        "1 300 €"
+      ],
+      "answer": 3,
+      "explanation": "Avec 7 200 = 8 000 − chèques + 500, on obtient chèques = 8 000 + 500 − 7 200 = 1 300 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 8000
+                },
+                {
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "value": 7200
+            }
+          ]
+        },
+        "expected": 1300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le fichier mélange un relevé exprimé du point de vue de la banque et un compte exprimé du point de vue de l’entreprise, sans convention commune. Quelle précaution prendre ?",
+      "options": [
+        "Définir les signes et le sens des soldes avant les ajustements",
+        "Comparer seulement les mots débit et crédit sans montant",
+        "Remplacer chaque solde par sa valeur absolue sans analyse",
+        "Traiter tout crédit du relevé comme un paiement fournisseur"
+      ],
+      "answer": 0,
+      "explanation": "Les documents peuvent avoir des perspectives opposées. Une convention explicite de disponibilité ou découvert évite de comparer des signes incompatibles."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Après ajustement des opérations en circulation, les disponibilités du relevé valent 6 000 €. Les seuls frais débités par la banque mais non enregistrés sont de 75 €. Quel solde comptable avant enregistrement des frais est cohérent ?",
+      "options": [
+        "5 925 €",
+        "6 075 €",
+        "6 000 €",
+        "75 €"
+      ],
+      "answer": 1,
+      "explanation": "Le compte non corrigé n’a pas encore diminué des frais. Son solde est donc 6 000 + 75 = 6 075 €.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 6000
+            },
+            {
+              "value": 75
+            }
+          ]
+        },
+        "expected": 6075,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le solde comptable a déjà été corrigé des frais. Le rapprochement les retranche une seconde fois du même solde. Quel risque apparaît ?",
+      "options": [
+        "Une hausse correcte du solde à rapprocher",
+        "La disparition du montant des chèques en circulation",
+        "Une sous-estimation artificielle des disponibilités comptables",
+        "Une création automatique de produit bancaire"
+      ],
+      "answer": 2,
+      "explanation": "Une opération enregistrée doit être identifiée comme telle. Déduire à nouveau les mêmes frais répète la correction et crée un écart fictif."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les deux documents présentent des soldes différents avant tout ajustement. Cette seule différence prouve-t-elle une erreur comptable ?",
+      "options": [
+        "Oui, les soldes bruts doivent être identiques à toute heure",
+        "Oui, tout écart doit être porté immédiatement en charge",
+        "Non, les soldes n’ont jamais besoin d’être rapprochés",
+        "Non, des opérations en circulation peuvent expliquer un décalage normal"
+      ],
+      "answer": 3,
+      "explanation": "Les dates de traitement peuvent différer. Il faut identifier les éléments en circulation et les écritures manquantes avant de conclure."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Des frais apparaissent au relevé après sa date de clôture alors que le rapprochement porte sur la date précédente. Quelle vérification est prioritaire avant de les déduire ?",
+      "options": [
+        "Vérifier la période et les dates des éléments retenus",
+        "Les déduire systématiquement de toute période",
+        "Les transformer en remise en circulation",
+        "Les ajouter automatiquement aux chèques émis"
+      ],
+      "answer": 0,
+      "explanation": "Un rapprochement concerne une date et un périmètre. Une ligne d’une autre période ne s’intègre pas sans examen de son rattachement."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un solde comptable est reconstitué uniquement à partir des différences annoncées par l’exercice. Que faut-il vérifier dans un dossier réel ?",
+      "options": [
+        "Que l’hypothèse de liste complète est toujours vraie",
+        "Que la liste des différences est complète et étayée",
+        "Que le résultat comptable égale forcément le relevé",
+        "Que les frais ne sont jamais enregistrés en comptabilité"
+      ],
+      "answer": 1,
+      "explanation": "Un calcul implicite peut être exact sous les hypothèses du cas. Sa transposition exige de contrôler l’exhaustivité des opérations à rapprocher."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Des frais bancaires justifiés ont été prélevés mais ne figurent pas dans les comptes. Quel mouvement bancaire doit constater la correction dans les comptes de l’entreprise ?",
+      "options": [
+        "Un débit de banque correspondant à une entrée",
+        "Aucun mouvement bancaire car le relevé suffit à comptabiliser automatiquement",
+        "Un crédit de banque correspondant à la sortie",
+        "Un crédit fournisseur égal à tous les chèques émis"
+      ],
+      "answer": 2,
+      "explanation": "Le prélèvement diminue les disponibilités comptables et se constate au crédit du compte banque, avec la contrepartie pertinente de frais."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le compte banque présente 4 850 € de disponibilités avant la constatation de 90 € de frais justifiés. Aucun autre ajustement comptable. Quel solde corrigé obtient-on ?",
+      "options": [
+        "4 940 €",
+        "4 850 €",
+        "90 €",
+        "4 760 €"
+      ],
+      "answer": 3,
+      "explanation": "Les frais diminuent le solde : 4 850 − 90 = 4 760 €. L’écriture ne doit pas être confondue avec le simple suivi d’un chèque déjà enregistré.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 4850
+            },
+            {
+              "value": 90
+            }
+          ]
+        },
+        "expected": 4760,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le rapprochement identifie un chèque déjà enregistré puis le comptable repasse cette sortie comme frais bancaires. Quels effets doit-il prévenir ?",
+      "options": [
+        "Une seconde diminution de banque et une fausse charge de frais",
+        "Une sortie de banque correcte mais une simple erreur sans effet sur les charges",
+        "Un débit fournisseur omis que la charge de frais permettrait de solder",
+        "Une régularisation du seul décalage de présentation sans nouveau mouvement de banque"
+      ],
+      "answer": 0,
+      "explanation": "Le chèque est une opération déjà comptabilisée. Le transformer en frais additionnels crée un doublon et dénature la contrepartie."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le relevé comporte un virement client identifiable qui n’est pas enregistré, alors que la facture est déjà en créance. Quelle correction examiner ?",
+      "options": [
+        "Enregistrer une seconde vente du même montant",
+        "Enregistrer l’entrée bancaire et solder la créance correspondante",
+        "Diminuer la banque comme pour des frais",
+        "Créer une dette fournisseur sans lien avec la facture"
+      ],
+      "answer": 1,
+      "explanation": "Le paiement manquant transforme une créance en trésorerie. Sa comptabilisation ne crée pas à nouveau le produit déjà reconnu."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La banque a débité un montant contesté dont l’origine est inconnue. Le préparateur le qualifie définitivement de frais sans pièce. Quelle démarche est préférable ?",
+      "options": [
+        "Assimiler tout débit inconnu à une facture d’achat",
+        "Supprimer la ligne du relevé pour ne pas la suivre",
+        "Rechercher le justificatif et le traitement approprié avant une qualification définitive",
+        "Créer un produit égal pour conserver le résultat"
+      ],
+      "answer": 2,
+      "explanation": "Le rapprochement doit expliquer la nature des différences. Une ligne inexpliquée appelle une investigation, pas une affectation arbitraire."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le débit bancaire d’un chèque comptabilisé le mois précédent apparaît ce mois-ci. Faut-il comptabiliser à nouveau le règlement ?",
+      "options": [
+        "Oui, car chaque relevé impose une nouvelle charge",
+        "Oui, uniquement si le fournisseur a encaissé tard",
+        "Non, il faut annuler automatiquement la facture initiale",
+        "Non, il faut pointer le dénouement de l’élément en circulation"
+      ],
+      "answer": 3,
+      "explanation": "L’opération déjà enregistrée se dénoue dans le document externe. Son pointage évite qu’elle reste à tort dans la liste des éléments en circulation."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le relevé ajusté vaut 9 200 €. Le solde comptable avant frais vaut 9 280 € et les frais non enregistrés 80 €. Quel écart final subsiste après la correction prévue ?",
+      "options": [
+        "0 €",
+        "80 €",
+        "160 €",
+        "−80 €"
+      ],
+      "answer": 0,
+      "explanation": "Le solde comptable corrigé est 9 280 − 80 = 9 200 €. La différence avec le relevé ajusté est donc nulle.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 9200
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 9280
+                },
+                {
+                  "value": 80
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 0,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le relevé retraité vaut 5 400 € et le compte corrigé 5 250 €. Dans la convention écart = relevé retraité − compte corrigé, quel écart reste à expliquer ?",
+      "options": [
+        "−150 €",
+        "150 €",
+        "10 650 €",
+        "0 €"
+      ],
+      "answer": 1,
+      "explanation": "La différence résiduelle est 5 400 − 5 250 = 150 €. Ce montant doit être expliqué par des pièces ou erreurs identifiées, sans écriture de complaisance.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 5400
+            },
+            {
+              "value": 5250
+            }
+          ]
+        },
+        "expected": 150,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux erreurs opposées se compensent et l’écart final devient nul. Pourquoi le seul zéro final ne valide-t-il pas tout le rapprochement ?",
+      "options": [
+        "L’égalité finale suffit dès lors que les deux erreurs ont le même montant",
+        "Le contrôle des seuls totaux dispense de vérifier les signes des lignes",
+        "Il faut aussi justifier chaque élément et exclure les compensations erronées",
+        "L’annulation des deux lignes compensées suffit sans rechercher leurs opérations d’origine"
+      ],
+      "answer": 2,
+      "explanation": "La réconciliation globale ne remplace pas la preuve des lignes. Des erreurs de signes ou montants peuvent se neutraliser sans refléter les opérations réelles."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un chèque figure depuis plusieurs mois parmi les opérations en circulation. Quelle action de contrôle est pertinente ?",
+      "options": [
+        "Le conserver indéfiniment sans suivi car il a déjà été listé",
+        "Le comptabiliser de nouveau chaque mois",
+        "Le transformer automatiquement en recette client",
+        "Rechercher son dénouement, sa validité et les pièces correspondantes"
+      ],
+      "answer": 3,
+      "explanation": "Les éléments de rapprochement doivent être suivis jusqu’à leur résolution. L’ancienneté impose de comprendre la situation plutôt que de reconduire mécaniquement la ligne."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour faire disparaître un écart résiduel, le préparateur saisit une charge du même montant sans justificatif. Quel problème cela masque-t-il ?",
+      "options": [
+        "Une différence non résolue remplacée par une écriture arbitraire",
+        "Des frais de banque établis par le seul fait que le montant résiduel existe",
+        "Une opération déjà identifiée dont seul le libellé manque",
+        "Un simple décalage de présentation qui impose directement une charge"
+      ],
+      "answer": 0,
+      "explanation": "L’objectif est d’expliquer l’écart et sa cause. Un montant de bouclage sans preuve peut équilibrer les chiffres tout en faussant les comptes."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel suivi constitue la conclusion utile d’un rapprochement bancaire ?",
+      "options": [
+        "Le seul affichage de deux soldes bruts positifs",
+        "Des soldes réconciliés, des écritures justifiées et des éléments en circulation suivis",
+        "L’annulation de toutes les différences anciennes sans examen",
+        "La copie du relevé comme nouveau journal d’achats"
+      ],
+      "answer": 1,
+      "explanation": "Le contrôle combine l’explication des soldes, les corrections nécessaires et le dénouement des décalages. Un seul de ces éléments ne suffit pas."
+    }
+  ]
+}

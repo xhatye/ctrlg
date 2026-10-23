@@ -1,0 +1,248 @@
+{
+  "sourceHash": "010b878e89494c0ae58aaef9c2f1dac309122670a18345ab9ce351b397fbf88a",
+  "reviewer": "codex-law-tax-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "e1c29b1a6ea92b132631a6384436d3b4324575d1718c0b330ac29c0e00937f4a",
+      "selected": 1,
+      "reason": "La dépense autonome additionne vingt, trente et cinquante dans la même unité, soit cent, sans y ajouter cY.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "8b3432d9304952c0730a23bbf4593337fd86ed7d488cbe186acf480e1269c33d",
+      "selected": 3,
+      "reason": "Un sur un moins zéro virgule huit donne cinq ; zéro virgule deux est le dénominateur, pas son inverse.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "c9e739c3c132727752b596da3af91fa49edb55aa348d183b56dd6e25e05a07f7",
+      "selected": 3,
+      "reason": "Deux cent quarante sur zéro virgule quatre donnent six cents de revenu d’équilibre sous les hypothèses données.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "5b57bf773db3e9dac8b0b045ffd906d9695f3abfa89168771eb015c9aacaa0fd",
+      "selected": 2,
+      "reason": "Avec c de trois quarts le multiplicateur vaut quatre ; moins vingt de dépense entraîne moins quatre-vingts de revenu dans le modèle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "cf491269366f4349f1ae18d8bb7b584d2197a3130a4a2631f8b1c27c358c327b",
+      "selected": 1,
+      "reason": "cY varie avec Y ; C0 constitue au contraire la composante autonome et ne doit pas être confondue avec la consommation induite.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "6dd63d4cbaff17355a97f6b0b23006bcbcbe65d46312387abe9217b057e6aafd",
+      "selected": 0,
+      "reason": "Pour 0<c<1, augmenter c réduit le dénominateur positif 1−c et augmente donc son inverse.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "bfa30c7b443d204dff0bce7bd94b9d441bf629b35fbac28ac13c444befcf7151",
+      "selected": 3,
+      "reason": "Après regroupement Y(1−c)=A, isoler Y exige de diviser par 1−c ; multiplier renverse l’opération algébrique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "215ef2528e125209aae9e9865be1923e401d07bdd78a18ed4e67906b5029773a",
+      "selected": 3,
+      "reason": "Les effets du modèle restent conditionnels aux prix, capacités et hypothèses ; une estimation empirique de c ne supprime pas ces conditions.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "8d703eb3f1f98b7e4c5f49c1f4cc6eaded38b7b7b7fcf48166b459709e32492f",
+      "selected": 3,
+      "reason": "Une somme de flux exige des unités et périodes cohérentes avant addition ; multiplier un total déjà incohérent ne répare pas chaque composante.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "8ceea4addc750af6b6feed4dbcf8a45a52cfc9f9abadd73038169aedf0054ad3",
+      "selected": 0,
+      "reason": "À c=1, le dénominateur est nul ; l’expression ne définit pas un multiplicateur fini et aucun remplacement arbitraire ne convient.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "1fb5e306beb72b87df02fe9130c0e33e3e6297c44793774eeeedaf19dff55251",
+      "selected": 1,
+      "reason": "Le même c fixe le même k ; les revenus diffèrent proportionnellement aux dépenses autonomes. Indépendance de A et inversion de sens sont faux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "49c7327d474321b510f7e9cb2c5daa0bc4600c7ad8e453bd8e932c2263eb082d",
+      "selected": 1,
+      "reason": "La dépense requise vaut variation de revenu sur multiplicateur : cent sur cinq donnent vingt.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "0380c995b0311dcb73275f8f7255eba2bb8a07959135ccf25864dc9df5fc1dcc",
+      "selected": 0,
+      "reason": "C0 figure déjà dans A ; le rajouter compte deux fois la même dépense autonome, sans représenter une consommation induite supplémentaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "8311ad847cdc09163f7f1a91a849d198fed46bbd0f0a0d4ef7e09630c316d503",
+      "selected": 1,
+      "reason": "Un sur quatre vaut un moins c, donc c égale trois quarts. Inverser la formule sans retrancher à un donnerait un quart.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "377005c1ad38c53aebac461c27f16e36497d6034b9e69b79fa15aae80a0e2b16",
+      "selected": 0,
+      "reason": "L’équilibre annoncé doit satisfaire l’équation de départ par substitution, incluant la consommation induite calculée sur le revenu total Y.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "f2e19e913402e56580d3f59361cb92ade37daa855d48db8805e71836a0abbc29",
+      "selected": 0,
+      "reason": "Changer c modifie k en plus du changement de G ; la formule à k constant n’attribue pas isolément l’écart observé à G.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "5fc816445862b13f884490c82beca2b00c3a2e3957e779611324060c7398777f",
+      "selected": 3,
+      "reason": "Autonome signifie ici fixé indépendamment du revenu dans l’équation, distinct d’un résidu calculé ou d’une dépense induite à chaque tour.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "bdc6eb9f5d9faeca7f7e327eee47338f5da2775f052a253f4a30a1454a2d4808",
+      "selected": 3,
+      "reason": "Avec c nul, un sur un vaut un ; aucune consommation supplémentaire n’est induite par le revenu supplémentaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "38e637b7e76a3794fe68ab1dffc980bbaefe46dd41a10ca275473c1fd6c5c0bc",
+      "selected": 1,
+      "reason": "Une taxe proportionnelle change le revenu disponible et la consommation induite ; l’équation doit être reformulée avant une nouvelle formule.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "ad80e5c052c3498a285c8d903b93786ef2067348e1e8c37638255d6aa93cf8c9",
+      "selected": 2,
+      "reason": "Une relation de niveaux d’équilibre sans périodes ne fixe pas de date de réalisation ; un mécanisme dynamique et des durées sont nécessaires.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "0b699ac2d09d60025a41e7a0a020076628ba02306ea768cf0e40a43d66fcd65d",
+      "selected": 1,
+      "reason": "Quarante plus la moitié de trois cents donnent cent quatre-vingt-dix de consommation, et non la seule composante induite cent cinquante.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "d366d9a508dbcd30ef9c21bb6aa6e5856d035059ca6b473d3cdb5b574e533eaa",
+      "selected": 1,
+      "reason": "Le modèle agrégé ne décrit pas la répartition du gain ni ses effets individuels de bien-être, qui dépendent notamment des prix et besoins.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

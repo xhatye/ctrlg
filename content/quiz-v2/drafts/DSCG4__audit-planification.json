@@ -1,0 +1,389 @@
+{
+  "module": "DSCG4",
+  "chapter": "audit-planification",
+  "sourceHash": "99044a985d8388efdb4182fb30a13f957084aa36b45184b5146099dda6cbb849",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel niveau d’assurance caractérise l’audit des comptes décrit par la NEP 320 ?",
+      "options": [
+        "Une assurance élevée mais non absolue sur l’absence d’anomalies significatives des comptes pris dans leur ensemble",
+        "Une assurance limitée reposant principalement sur des demandes d’informations et des procédures analytiques",
+        "Une conclusion sur la seule exactitude arithmétique des postes ayant fait l’objet de tests",
+        "Une assurance élevée limitée aux seules opérations retenues dans l’échantillon, sans conclusion sur les comptes d’ensemble"
+      ],
+      "answer": 0,
+      "explanation": "L’assurance raisonnable est élevée mais connaît des limites. Elle vise les comptes pris dans leur ensemble et les anomalies significatives, pas une garantie de rentabilité ou de perfection.",
+      "references": [
+        {
+          "title": "H2A, NEP 320 : caractère significatif en audit",
+          "url": "https://h2a-france.org/normes/application-de-la-notion-de-caractere-significatif-lors-de-la-planification-et-de-la-realisation-dun-audit/"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client demande que le rapport d’audit garantisse la réalisation de son budget commercial de l’année prochaine. Quelle délimitation convient ?",
+      "options": [
+        "Garantir les ventes futures dès qu’aucune erreur de calcul n’est trouvée dans le budget",
+        "Distinguer l’opinion sur les comptes de la garantie de réalisation de prévisions commerciales",
+        "Étendre automatiquement l’opinion à toute vente future figurant au budget",
+        "Remplacer les comptes par le budget pour rendre la garantie possible"
+      ],
+      "answer": 1,
+      "explanation": "Le contrôle d’hypothèses utilisées dans les comptes n’équivaut pas à garantir leur réalisation. L’objet de la mission et la portée de la conclusion doivent rester identifiés."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Selon la NEP 300, quelle différence distingue le plan de mission du programme de travail ?",
+      "options": [
+        "Le plan détaille les tests de chaque poste ; le programme décrit uniquement l’approche générale",
+        "Le plan fixe les diligences sur les postes ; le programme sert uniquement au suivi des heures réalisées",
+        "Le plan présente l’approche générale ; le programme précise les diligences nécessaires à sa mise en œuvre",
+        "Le plan porte sur l’organisation administrative du cabinet ; seul le programme définit les risques de la mission"
+      ],
+      "answer": 2,
+      "explanation": "Les deux documents formalisent des niveaux complémentaires de planification. L’orientation générale se décline en nature et étendue des travaux, ressources et calendrier adaptés.",
+      "references": [
+        {
+          "title": "H2A, NEP 300 : planification de l’audit",
+          "url": "https://h2a-france.org/normes/planification-de-laudit/"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’équipe entreprend tous ses tests puis souhaite rédiger rétroactivement un programme présenté comme planifié avant les travaux. Quelle pratique est correcte ?",
+      "options": [
+        "Présenter toutes les décisions prises après les tests comme des décisions initiales",
+        "Supprimer le programme parce que les tests ont déjà été réalisés",
+        "Reprendre le programme de l’année précédente sans signaler les différences",
+        "Planifier les travaux en amont et dater ensuite les adaptations réellement nécessaires"
+      ],
+      "answer": 3,
+      "explanation": "La planification précède les procédures et peut évoluer. La documentation doit distinguer les choix initiaux et leurs adaptations plutôt que fabriquer une chronologie."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une évaluation complexe dépasse les compétences techniques de l’équipe affectée. Quel élément de planification faut-il réexaminer ?",
+      "options": [
+        "Les ressources et le recours éventuel à une expertise adaptée",
+        "Augmenter uniquement le nombre de dossiers examinés par la même équipe sans traiter la compétence technique manquante",
+        "Reporter l’analyse technique à la revue finale sans prévoir de ressource supplémentaire pour l’évaluation",
+        "Considérer l’approbation des hypothèses par la direction comme un substitut à la compétence nécessaire à leur examen"
+      ],
+      "answer": 0,
+      "explanation": "La planification inclut les ressources nécessaires et le recours éventuel à des experts. Une contrainte de compétence ne rend pas l’estimation probante par défaut."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le stock comprend une gamme dont la vente est interdite depuis peu. Le programme prévoit seulement un comptage. Quel risque reste insuffisamment couvert ?",
+      "options": [
+        "La validité de tout encaissement d’un autre client",
+        "L’évaluation et la perte de valeur éventuelle de cette gamme",
+        "La seule existence physique, nécessairement impossible si la vente est interdite",
+        "Le prix d’achat, réputé devenir automatiquement le prix de vente futur"
+      ],
+      "answer": 1,
+      "explanation": "Le comptage renseigne les quantités mais ne traite pas la possibilité de récupérer leur coût. Le programme doit répondre au risque d’évaluation révélé par l’interdiction."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le risque identifié est la comptabilisation de ventes sans livraison réelle. Quelle procédure répond directement à ce risque ?",
+      "options": [
+        "Vérifier uniquement les additions du total des ventes",
+        "Comparer seulement le délai moyen de règlement fournisseurs",
+        "Partir de ventes enregistrées et rechercher les pièces établissant leur réalisation",
+        "Partir seulement de livraisons non facturées pour rechercher des ventes manquantes"
+      ],
+      "answer": 2,
+      "explanation": "La population et le sens du test doivent viser des produits potentiellement enregistrés sans opération réelle. La recherche d’omissions répond à un risque différent."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le programme répète « vérifier les factures » pour tous les postes sans identifier les anomalies recherchées. Que faut-il préciser ?",
+      "options": [
+        "Le nombre de factures à sélectionner, à lui seul, sans préciser les caractéristiques des contrôles",
+        "L’intitulé du compte et le nom du responsable, considérés comme une description suffisante de la procédure",
+        "Le total de factures consultées l’année précédente, à reconduire sans préciser l’anomalie recherchée",
+        "Le risque, l’assertion et les caractéristiques de la procédure adaptée à chaque poste"
+      ],
+      "answer": 3,
+      "explanation": "Nommer une technique ne suffit pas à montrer pourquoi elle répond au risque. La nature de la population, les contrôles et les résultats attendus doivent être reliés à l’assertion."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un nouveau circuit informatique modifie les autorisations et les données des achats. L’équipe veut reconduire les mêmes travaux sans examiner le changement. Quelle démarche manque ?",
+      "options": [
+        "Actualiser la compréhension du processus et les risques avant de reconduire les procédures",
+        "Rapprocher les totaux d’achats de l’année précédente, sans réexaminer le fonctionnement du nouveau circuit",
+        "Conserver les tests antérieurs tant qu’aucune anomalie comptable n’a encore été signalée par l’entité",
+        "S’appuyer sur la recette informatique pour conclure à l’efficacité des autorisations dans l’exercice"
+      ],
+      "answer": 0,
+      "explanation": "Une modification du processus peut changer les risques et la fiabilité des données. L’approche précédente n’est pas automatiquement adaptée au nouvel environnement."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une petite opération peut dissimuler une transaction avec un dirigeant non décrite dans les comptes. Peut-on l’écarter du seul fait que son montant est faible ?",
+      "options": [
+        "Oui, dès lors que le montant isolé reste inférieur au seuil chiffré utilisé pour les comptes d’ensemble",
+        "Non, la nature et les circonstances peuvent aussi rendre une anomalie significative",
+        "Oui, si aucune addition avec les seules anomalies chiffrées déjà connues ne dépasse le seuil",
+        "Non, mais uniquement si l’opération affecte le résultat de l’exercice plutôt qu’une information en annexe"
+      ],
+      "answer": 1,
+      "explanation": "La signification ne dépend pas seulement d’un chiffre. Une information sensible par sa nature ou ses circonstances doit être examinée selon les règles et les utilisateurs concernés.",
+      "references": [
+        {
+          "title": "H2A, NEP 320 : caractère significatif en audit",
+          "url": "https://h2a-france.org/normes/application-de-la-notion-de-caractere-significatif-lors-de-la-planification-et-de-la-realisation-dun-audit/"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Comment se situe le seuil de planification par rapport au seuil de signification dans la NEP 320 ?",
+      "options": [
+        "Il est égal au seuil de signification lorsque le risque d’anomalies significatives est élevé",
+        "Il est supérieur au seuil de signification pour éviter de sélectionner trop de petits éléments",
+        "Il est inférieur au seuil de signification",
+        "Il correspond à la différence entre le seuil de signification et les seules anomalies déjà constatées"
+      ],
+      "answer": 2,
+      "explanation": "Le seuil de planification sert à déterminer les travaux en tenant compte du risque de cumul d’anomalies relevées et non détectées. Il se fixe en dessous du seuil de signification.",
+      "references": [
+        {
+          "title": "H2A, NEP 320 : caractère significatif en audit",
+          "url": "https://h2a-france.org/normes/application-de-la-notion-de-caractere-significatif-lors-de-la-planification-et-de-la-realisation-dun-audit/"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour un exercice purement pédagogique, l’énoncé impose un seuil égal à 2 % d’un critère de 8 000 000 €. Quel montant de seuil en résulte ?",
+      "options": [
+        "16 000 €",
+        "400 000 €",
+        "4 000 000 €",
+        "160 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le calcul demandé est 8 000 000×0,02=160 000 €. Le pourcentage est imposé pour cet exercice ; il ne constitue pas un taux normatif universel pour les missions réelles.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 8000000
+            },
+            {
+              "value": 0.02
+            }
+          ]
+        },
+        "expected": 160000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le seuil initial était fondé sur un résultat prévisionnel devenu très supérieur au résultat réalisé. Quelle réaction la NEP 320 prévoit-elle d’examiner ?",
+      "options": [
+        "Reconsidérer les seuils et l’adaptation des travaux à ces informations nouvelles",
+        "Recalculer le seuil à partir du résultat réalisé sans examiner l’incidence sur les travaux déjà planifiés",
+        "Maintenir le seuil de départ au motif qu’il a été établi de bonne foi sur une prévision disponible à l’époque",
+        "Limiter l’adaptation à l’année suivante, en conservant pour l’exercice la base prévisionnelle devenue non pertinente"
+      ],
+      "answer": 0,
+      "explanation": "Des faits nouveaux peuvent remettre en cause le choix initial. Il faut réexaminer les seuils et, le cas échéant, la nature et l’étendue des procédures nécessaires.",
+      "references": [
+        {
+          "title": "H2A, NEP 320 : caractère significatif en audit",
+          "url": "https://h2a-france.org/normes/application-de-la-notion-de-caractere-significatif-lors-de-la-planification-et-de-la-realisation-dun-audit/"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier identifie trois anomalies non corrigées de 18 000 €, 22 000 € et 15 000 €. Le préparateur les compare séparément à 50 000 € et n’examine pas leur cumul. Quel montant cumulé doit-il aussi considérer ?",
+      "options": [
+        "50 000 €",
+        "55 000 €",
+        "22 000 €",
+        "40 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Les trois montants cumulent 18 000+22 000+15 000=55 000 €. L’incidence cumulée fait partie de l’analyse, qui doit aussi apprécier nature, circonstances et règles d’évaluation."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une équipe copie le même seuil en euros pour une filiale minuscule et un groupe très important, sans apprécier leurs utilisateurs ni leurs comptes. Quel raisonnement manque ?",
+      "options": [
+        "Appliquer le même pourcentage aux capitaux propres de chaque entité sans examiner la pertinence du critère",
+        "Retenir le seuil de la société mère pour chaque entité, sans apprécier le contexte propre des comptes audités",
+        "Le choix de critères pertinents et le jugement adapté à chaque contexte",
+        "Choisir le seuil le plus faible entre les deux dossiers comme montant commun sans examiner les utilisateurs concernés"
+      ],
+      "answer": 2,
+      "explanation": "Les critères de signification dépendent du contexte, des comptes et des besoins des utilisateurs. Un seuil ancien ne se transfère pas par simple copie à une autre mission."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une anomalie est exactement égale au seuil chiffré du dossier. L’analyste la qualifie automatiquement d’insignifiante sans examiner son objet ni les autres écarts. Que doit-il reprendre ?",
+      "options": [
+        "Exclure l’anomalie de l’analyse parce que le dépassement du seuil n’est pas strictement positif",
+        "Examiner son seul montant isolé en reportant l’analyse des autres anomalies à l’exercice suivant",
+        "Classer l’égalité comme non significative dès que le calcul arithmétique du seuil a été validé",
+        "Le jugement sur sa nature, ses circonstances et son incidence avec les autres anomalies"
+      ],
+      "answer": 3,
+      "explanation": "Un seuil numérique ne dispense pas du jugement professionnel. Le caractère significatif d’une anomalie se lit aussi dans sa nature et son contexte, sans règle automatique d’insignifiance."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une confirmation fiable contredit le grand livre sur un montant important. Quelle suite convient avant de conclure ?",
+      "options": [
+        "Investiguer la divergence par des procédures complémentaires pertinentes",
+        "Faire la moyenne des deux montants et arrêter les travaux",
+        "Retenir systématiquement le montant comptable parce qu’il est interne",
+        "Retenir les deux montants comme deux dettes indépendantes sans rapprochement"
+      ],
+      "answer": 0,
+      "explanation": "Des éléments contradictoires exigent une analyse de leurs causes et de leur portée. Ni une moyenne ni un choix automatique d’origine ne résout cette contradiction."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier contient dix copies du même document, toutes issues d’un même fichier. L’équipe les compte comme dix preuves indépendantes. Quelle distinction manque ?",
+      "options": [
+        "L’authenticité du document et sa cohérence interne, à elles seules, suffisent à compter chaque copie comme corroboration distincte",
+        "Le volume matériel des copies et l’indépendance de leurs sources",
+        "Les copies obtenues par des interlocuteurs différents constituent des sources indépendantes même si elles reproduisent le même fichier",
+        "Les copies transmises à des dates différentes apportent chacune une corroboration nouvelle du même fait sans autre élément"
+      ],
+      "answer": 1,
+      "explanation": "La multiplication des copies ne crée pas de nouvelles origines d’information. Quantité, indépendance, pertinence et fiabilité doivent être appréciées séparément."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau produit par l’entité sert de population aux tests mais omet tout un établissement. Quelle vérification préalable aurait été utile ?",
+      "options": [
+        "Rapprocher uniquement le total de l’extraction avec le total figurant dans le même fichier source",
+        "Augmenter le taux de sélection à l’intérieur du tableau fourni sans vérifier son périmètre",
+        "L’exactitude et l’exhaustivité de l’information utilisée pour sélectionner les contrôles",
+        "Obtenir l’approbation du tableau par son préparateur en la tenant pour un substitut au rapprochement des établissements"
+      ],
+      "answer": 2,
+      "explanation": "Un test fondé sur une extraction incomplète peut manquer des opérations du périmètre. Il faut apprécier les données utilisées, pas seulement exécuter correctement une sélection."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une pièce externe est remise dans des conditions qui suscitent un doute sérieux sur son authenticité. Peut-on la tenir pour certaine du seul fait de son origine annoncée ?",
+      "options": [
+        "Oui, l’origine annoncée externe peut primer sur les anomalies du circuit de transmission",
+        "Oui, la concordance avec les données comptables internes suffit ici à lever le doute sur l’auteur",
+        "Non, il faut écarter la pièce sans examiner si son authenticité peut être établie par des travaux complémentaires",
+        "Non, la fiabilité dépend aussi de la nature et des circonstances de collecte"
+      ],
+      "answer": 3,
+      "explanation": "L’origine est un facteur de fiabilité, pas une garantie absolue. Des indices de validité douteuse appellent des investigations appropriées."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un risque nouveau justifie d’étendre les travaux après le programme initial. Quelle trace conserver selon la NEP 300 ?",
+      "options": [
+        "Les modifications du programme et les raisons qui les ont motivées",
+        "Conserver le programme final détaillé en supprimant la justification des changements devenus sans objet après les tests",
+        "Conserver les nouvelles heures et pièces de travail, sans identifier les raisons de l’extension",
+        "Conserver uniquement l’évaluation initiale du risque, les tests supplémentaires étant décrits dans leurs résultats"
+      ],
+      "answer": 0,
+      "explanation": "Le programme peut être adapté aux informations obtenues. L’évolution doit être datée et motivée au dossier pour rendre la démarche et ses choix compréhensibles.",
+      "references": [
+        {
+          "title": "H2A, NEP 300 : planification de l’audit",
+          "url": "https://h2a-france.org/normes/planification-de-laudit/"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Des tests d’existence satisfaisants sont seuls documentés pour un actif dont la valeur est très incertaine. L’équipe veut conclure à la conformité de toutes ses assertions. Que doit-elle limiter ?",
+      "options": [
+        "Conclure sur l’évaluation à partir de l’existence dès lors que les quantités contrôlées concordent",
+        "La conclusion à la portée des travaux réalisés et prévoir les contrôles d’évaluation manquants",
+        "Valider le montant global en se fondant sur le coût d’acquisition historique sans autre contrôle de la perte de valeur",
+        "Étendre seulement la taille de la sélection pour l’existence afin de lever l’incertitude portant sur la valeur"
+      ],
+      "answer": 1,
+      "explanation": "Une preuve répond à des assertions déterminées. La conclusion ne peut s’étendre à l’évaluation sans éléments pertinents, même lorsque l’actif existe effectivement."
+    }
+  ]
+}

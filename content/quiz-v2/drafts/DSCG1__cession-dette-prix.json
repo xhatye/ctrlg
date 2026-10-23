@@ -1,0 +1,560 @@
+{
+  "module": "DSCG1",
+  "chapter": "cession-dette-prix",
+  "sourceHash": "e5d92a5ee8d7986330b8f9f09ee8aa213cce374346818930e6a88d85d1388b49",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le contrat retient comme dette nette les emprunts de 180 000 € moins la seule trésorerie libre. Sur 70 000 € en banque, 25 000 € sont expressément exclus car bloqués. Quelle dette nette doit être retenue ?",
+      "options": [
+        "110 000 €",
+        "135 000 €",
+        "155 000 €",
+        "85 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La trésorerie retenue est de 70 000−25 000=45 000 €. La dette nette est donc de 180 000−45 000=135 000 €. Déduire tout le solde bancaire méconnaîtrait l’exclusion donnée.",
+      "calculation": {
+        "expected": 135000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 180000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 70000
+                },
+                {
+                  "value": 25000
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La convention inclut une dette de compte courant d’associé dans la dette nette. Le vendeur propose de l’écarter parce qu’il est aussi titulaire des titres cédés. Quel traitement respecte la définition fournie ?",
+      "options": [
+        "L’exclure parce que le prêteur est le vendeur.",
+        "L’exclure tant que le vendeur n’a pas cédé sa créance avec ses titres.",
+        "L’inclure selon la convention, malgré la double qualité du vendeur.",
+        "L’inclure uniquement si le compte courant est exigible à la date de clôture, malgré la définition fournie."
+      ],
+      "answer": 2,
+      "explanation": "La définition contractuelle donnée inclut cette dette. La qualité d’associé du créancier ne transforme pas le compte courant en trésorerie de la cible ni ne justifie son exclusion."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le contrat inclut les emprunts de 90 000 € et les intérêts courus de 3 000 €, exclut les dettes fournisseurs de 12 000 € et retient 20 000 € de trésorerie. Quel montant de dette nette en résulte ?",
+      "options": [
+        "85 000 €",
+        "70 000 €",
+        "105 000 €",
+        "73 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Les intérêts sont expressément inclus, à la différence des fournisseurs. La dette nette contractuelle vaut 90 000+3 000−20 000=73 000 €.",
+      "calculation": {
+        "expected": 73000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 90000
+                },
+                {
+                  "value": 3000
+                }
+              ]
+            },
+            {
+              "value": 20000
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une dette de 15 000 € figure dans le total des emprunts de 100 000 € et sur une ligne de détail jointe. Le préparateur additionne les deux lignes pour calculer la dette nette. Quel contrôle corrige cette erreur ?",
+      "options": [
+        "Rapprocher total et détail pour ne compter la même dette qu’une fois.",
+        "Retenir le détail et le total comme deux engagements distincts faute de même libellé.",
+        "Soustraire la ligne du total puis conserver seulement le total diminué, en laissant la dette de détail hors calcul.",
+        "Exclure le total et ne retenir que la ligne détaillée, bien que le total comprenne aussi d’autres emprunts."
+      ],
+      "answer": 0,
+      "explanation": "Une ligne de détail ne constitue pas une dette supplémentaire si elle est déjà comprise dans le total. Le rapprochement des populations évite ici un double comptage."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "À la même date, la cible utilise 30 000 € de trésorerie retenue pour rembourser 30 000 € d’emprunt retenu. Aucun frais ni autre mouvement n’intervient. Quelle est la variation de dette nette, définie comme dette moins trésorerie ?",
+      "options": [
+        "−30 000 €",
+        "0 €",
+        "+30 000 €",
+        "−60 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Dette et trésorerie baissent du même montant. Leur différence reste inchangée : (D−30 000)−(T−30 000)=D−T. Le remboursement ne crée donc pas, à lui seul, une variation de dette nette.",
+      "calculation": {
+        "expected": 0,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 30000
+            },
+            {
+              "value": 30000
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La dette est extraite au 30 juin et la trésorerie au 31 juillet, alors que la convention impose une photographie au 30 juin. Quel traitement prépare un calcul conforme ?",
+      "options": [
+        "Utiliser les deux chiffres puisque chacun est documenté.",
+        "Faire la moyenne des deux soldes bancaires pour neutraliser le mois d’écart.",
+        "Obtenir la trésorerie au 30 juin et rapprocher les postes à la même date.",
+        "Remplacer la dette du 30 juin par son échéance annuelle prévue."
+      ],
+      "answer": 2,
+      "explanation": "La fiabilité de chaque chiffre ne compense pas l’incohérence des dates. L’ajustement doit rapprocher dette et trésorerie sur la date contractuelle, pas combiner deux photographies."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La convention définit le dépassement comme dette nette de clôture moins cible. La cible est de 50 000 € et la dette nette de clôture de −10 000 €, soit une trésorerie nette. Quel dépassement signé obtient-on ?",
+      "options": [
+        "60 000 €",
+        "40 000 €",
+        "−40 000 €",
+        "−60 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le signe négatif de la dette nette doit être conservé : −10 000−50 000=−60 000 €. Ce résultat décrit une dette nette inférieure à la cible, non un dépassement positif.",
+      "calculation": {
+        "expected": -60000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": -10000
+            },
+            {
+              "value": 50000
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau indique un dépassement positif de 20 000 €. Le contrat donne ajustement du prix = cible−dette nette réelle. Le préparateur augmente le prix de 20 000 €. Quelle confusion explique l’erreur ?",
+      "options": [
+        "Il a utilisé le dépassement avec le même signe que l’ajustement, alors qu’ils sont opposés.",
+        "Il a omis un ajustement de la cible par rapport au prix de base, supposé nécessaire en plus de l’écart calculé.",
+        "Il a retenu un écart en euros alors que la formule imposerait de convertir l’écart en pourcentage du prix.",
+        "Il a traité un écart au seuil comme un dépassement, alors que le contrat indiquerait une franchise de même montant."
+      ],
+      "answer": 0,
+      "explanation": "Le dépassement est réel−cible, tandis que l’ajustement est cible−réel. Un dépassement positif implique donc une baisse du prix. La formule donnée ne prévoit ni ajustement supplémentaire, ni conversion en pourcentage, ni franchise."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La dette nette réelle est identique à la cible. Le contrat ne prévoit ni seuil, ni autre ajustement. Quel effet cela produit-il sur le prix de base ?",
+      "options": [
+        "Le prix baisse du montant total de la cible.",
+        "Le prix reste égal au prix de base.",
+        "Le prix augmente du montant de la trésorerie.",
+        "Le prix devient égal au seul montant de la dette nette."
+      ],
+      "answer": 1,
+      "explanation": "L’écart réel−cible est nul ; l’ajustement opposé est donc nul également. Le prix de base n’intègre aucune variation au titre de cette seule clause."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La convention définit cible et clôture selon les mêmes postes. Le vendeur compare une dette brute de clôture à la cible de dette nette. Pourquoi cette comparaison est-elle incorrecte ?",
+      "options": [
+        "La cible devrait être comparée à la dette brute en réintégrant aussi la trésorerie dans le prix de base.",
+        "La cible devrait être remplacée par une dette brute théorique sans modifier la définition contractuelle.",
+        "Les deux termes doivent suivre la même définition de dette nette.",
+        "La trésorerie de clôture devrait être déduite deux fois pour rendre la comparaison prudente."
+      ],
+      "answer": 2,
+      "explanation": "La comparaison n’est significative que si les deux montants ont le même périmètre. Une dette brute ne peut remplacer la dette nette exigée par le contrat."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La convention prévoit une baisse de prix seulement pour la partie du dépassement de dette nette excédant une franchise absolue de 10 000 €. Le dépassement est de 28 000 €. Quel est l’ajustement signé du prix ?",
+      "options": [
+        "−28 000 €",
+        "+18 000 €",
+        "−10 000 €",
+        "−18 000 €"
+      ],
+      "answer": 3,
+      "explanation": "La franchise absolue laisse 10 000 € sans ajustement. Seuls 28 000−10 000=18 000 € réduisent le prix, d’où un ajustement de −18 000 €.",
+      "calculation": {
+        "expected": -18000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 0
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 28000
+                },
+                {
+                  "value": 10000
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La convention prévoit un seuil de déclenchement de 10 000 € : une fois dépassé, tout l’écart réduit le prix. L’écart est de 14 000 €. Quel traitement distingue ce seuil d’une franchise absolue ?",
+      "options": [
+        "Réduire le prix de 14 000 €, et non de 4 000 €.",
+        "Réduire le prix de 4 000 €, et non de 14 000 €.",
+        "Réduire le prix de 10 000 €, correspondant au seul seuil.",
+        "Maintenir le prix, car le seuil n’est pas égal à l’écart."
+      ],
+      "answer": 0,
+      "explanation": "Le mécanisme est expressément un seuil de déclenchement. Une fois celui-ci franchi, le contrat fait porter la réduction sur tout l’écart ; déduire le seuil appliquerait une franchise différente."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La dette nette excède la cible de 90 000 €. La convention réduit le prix de cet écart, mais plafonne cette réduction à 60 000 €. Quel ajustement signé faut-il appliquer ?",
+      "options": [
+        "−90 000 €",
+        "−60 000 €",
+        "−30 000 €",
+        "+60 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le montant de la réduction est le plus petit de 90 000 € et 60 000 €. L’ajustement signé est donc −60 000 €, le solde excédentaire n’étant pas couvert par cette clause.",
+      "calculation": {
+        "expected": -60000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 0
+            },
+            {
+              "op": "min",
+              "args": [
+                {
+                  "value": 90000
+                },
+                {
+                  "value": 60000
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le contrat ne corrige le prix que si la dette nette réelle dépasse la cible. Elle lui est inférieure de 40 000 €. Quel effet permet la clause ainsi rédigée, sans autre mécanisme ?",
+      "options": [
+        "Augmenter automatiquement le prix de 40 000 €.",
+        "Réduire automatiquement le prix de 40 000 €.",
+        "Ne pas augmenter le prix au titre de cette clause unilatérale.",
+        "Réduire le prix de la dette nette cible."
+      ],
+      "answer": 2,
+      "explanation": "Le cas définit une correction seulement à la baisse en cas de dépassement. L’avantage économique d’une dette inférieure ne crée pas une hausse que cette clause ne prévoit pas."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le contrat fournit ajustement = cible−réel. La cible est de 100 000 €. Deux calculs utilisent respectivement 170 000 € puis 150 000 € de dette nette réelle. De combien le second ajustement relève-t-il le prix par rapport au premier ?",
+      "options": [
+        "−20 000 €",
+        "−50 000 €",
+        "+50 000 €",
+        "+20 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le premier ajustement est −70 000 €, le second −50 000 €. La révision de la dette nette relève donc le prix de 20 000 €, même si l’ajustement final reste négatif.",
+      "calculation": {
+        "expected": 20000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 100000
+                },
+                {
+                  "value": 150000
+                }
+              ]
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 100000
+                },
+                {
+                  "value": 170000
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le contrat fixe la valeur de 100 % des titres à 900 000 € avant ajustement et prévoit cible−réel, soit 40 000−100 000 €. L’acquéreur achète 60 % des titres au prorata du prix ajusté. Quel prix doit-il payer ?",
+      "options": [
+        "504 000 €",
+        "540 000 €",
+        "480 000 €",
+        "840 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La valeur ajustée de tous les titres est de 900 000+40 000−100 000=840 000 €. Le prix de 60 % est ensuite de 840 000×0,60=504 000 €. Retirer tout l’écart au prix de 60 % confond les périmètres.",
+      "calculation": {
+        "expected": 504000,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 900000
+                    },
+                    {
+                      "value": 40000
+                    }
+                  ]
+                },
+                {
+                  "value": 100000
+                }
+              ]
+            },
+            {
+              "value": 0.6
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le prix ajusté est de 470 000 €. Un acompte sur ce prix de 70 000 € a déjà été payé. Aucun autre mouvement n’est prévu. Quel solde du prix reste à verser à la clôture ?",
+      "options": [
+        "470 000 €",
+        "400 000 €",
+        "540 000 €",
+        "70 000 €"
+      ],
+      "answer": 1,
+      "explanation": "L’acompte est un paiement déjà effectué sur le prix, pas un nouvel ajustement de valorisation. Le solde restant à payer vaut 470 000−70 000=400 000 €.",
+      "calculation": {
+        "expected": 400000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 470000
+            },
+            {
+              "value": 70000
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le prix ajusté est de 500 000 €. Une retenue de garantie de 50 000 € est conservée temporairement par l’acquéreur, sans réduction du prix selon le contrat. Le rapport annonce un prix définitif de 450 000 €. Quelle distinction rétablir ?",
+      "options": [
+        "Prix des titres et valeur d’entreprise avant prise en compte de la dette nette.",
+        "Montant de la garantie et somme déjà appelée pour un dommage établi.",
+        "Prix contractuel et montant immédiatement décaissé après retenue.",
+        "Prix provisoire et prix ajusté par la variation de dette nette de clôture."
+      ],
+      "answer": 2,
+      "explanation": "Une retenue affecte le calendrier de paiement lorsqu’elle ne diminue pas le prix contractuel. Le décaissement immédiat de 450 000 € n’est donc pas, à lui seul, un nouveau prix définitif."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La convention impose prix ajusté = prix de base+cible−réel. Prix de base : 600 000 € ; cible : 80 000 € ; prix ajusté : 550 000 €. Quelle dette nette réelle correspond à ces données ?",
+      "options": [
+        "30 000 €",
+        "50 000 €",
+        "630 000 €",
+        "130 000 €"
+      ],
+      "answer": 3,
+      "explanation": "En isolant le réel : réel=600 000+80 000−550 000=130 000 €. L’écart de 50 000 € est le dépassement, et non le montant complet de la dette nette réelle.",
+      "calculation": {
+        "expected": 130000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 600000
+                },
+                {
+                  "value": 80000
+                }
+              ]
+            },
+            {
+              "value": 550000
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le contrat fournit prix ajusté = base+cible−réel. Une révision d’estimation augmente la dette retenue de 12 000 € et la trésorerie retenue de 5 000 €, sans autre changement. Quel effet cette seule révision a-t-elle sur le prix ?",
+      "options": [
+        "Une baisse de 7 000 €.",
+        "Une hausse de 7 000 €.",
+        "Une baisse de 17 000 €.",
+        "Une hausse de 17 000 €."
+      ],
+      "answer": 0,
+      "explanation": "La dette nette augmente de 12 000−5 000=7 000 €. Comme elle est retranchée dans la formule, le prix baisse de 7 000 €. Additionner les deux variations inverse le rôle de la trésorerie."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le prix final a été calculé en retranchant une dette fournisseur explicitement exclue de la définition contractuelle. Les pièces confirment son montant mais aucun avenant ne modifie la définition. Quelle correction est justifiée ?",
+      "options": [
+        "Conserver la déduction parce que la dette existe dans les comptes.",
+        "Recalculer le prix en respectant l’exclusion prévue par la convention.",
+        "Ajouter cette dette à la cible pour modifier symétriquement le périmètre des deux termes, sans avenant.",
+        "Compenser la déduction par une trésorerie réputée disponible du même montant, sans modifier les postes de dette."
+      ],
+      "answer": 1,
+      "explanation": "La réalité de la dette et son inclusion dans la formule sont deux questions différentes. Une pièce comptable exacte ne modifie pas la définition contractuelle retenue pour l’ajustement."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux annexes de la convention donnent des définitions contradictoires de la trésorerie retenue. Elles ne comportent pas de règle de priorité et conduisent à deux prix différents. Quelle restitution est fidèle au dossier ?",
+      "options": [
+        "Appliquer la définition la plus large au motif qu’elle serait nécessairement plus précise que l’autre.",
+        "Utiliser la définition des comptes de la cible sans faire confirmer que les parties l’ont retenue pour le prix.",
+        "Présenter les deux calculs conditionnels et obtenir une clarification de la convention avant de fixer le prix.",
+        "Retenir la définition qui donne le prix le plus proche du prix de base comme traduction présumée de l’intention des parties."
+      ],
+      "answer": 2,
+      "explanation": "La contradiction doit être résolue dans les documents contractuels. Le calcul de deux effets possibles éclaire la décision, mais ne confère pas à l’analyste le pouvoir de choisir une nouvelle clause."
+    }
+  ]
+}

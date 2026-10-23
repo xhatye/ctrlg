@@ -1,0 +1,356 @@
+{
+  "module": "UE1",
+  "chapter": "litige-contradictoire",
+  "sourceHash": "235d280f7a9d6a3fe96c5b9737fce660d370565739b1316f366b7e774736b252",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle distinction sépare une prétention de son fondement dans un litige ?",
+      "options": [
+        "Le résultat demandé et la justification juridique de ce résultat.",
+        "Le résultat demandé et le montant accordé par un juge.",
+        "La preuve du paiement et la date de la facture.",
+        "Le montant de la dette et son échéance."
+      ],
+      "answer": 0,
+      "explanation": "La prétention indique ce qu’une partie veut obtenir ; le fondement indique pourquoi elle estime y avoir droit. Aucun de ces deux éléments ne constitue seul la preuve des faits."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise écrit seulement « votre prestation pose problème ». Quelle précision rendrait sa demande plus claire ?",
+      "options": [
+        "L’insistance sur son mécontentement.",
+        "Le résultat demandé, par exemple l’achèvement d’une tâche identifiée.",
+        "Le nombre de relances déjà envoyées.",
+        "L’indication qu’elle a consulté plusieurs fournisseurs."
+      ],
+      "answer": 1,
+      "explanation": "Un reproche ne permet pas de savoir si la partie souhaite une exécution, une restitution ou une réparation. Il faut exprimer le résultat concret recherché."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans un procès civil, une partie demande uniquement la condamnation de l’adversaire à lui payer 4 000 €. Aucun autre chef de demande n’est formé. Le juge envisage d’accorder 5 000 € parce qu’il estime le dommage supérieur. Quelle limite résulte de l’article 5 du Code de procédure civile ?",
+      "options": [
+        "Le juge peut dépasser le montant demandé lorsque les pièces établissent un dommage plus élevé.",
+        "Le juge peut ajouter une somme s’il la présente comme une rectification de la demande.",
+        "Le juge doit se prononcer sur ce qui est demandé, sans accorder davantage que cette demande.",
+        "Le juge doit inviter le défendeur à choisir entre le montant demandé et celui qu’il estime dû."
+      ],
+      "answer": 2,
+      "explanation": "L’article 5 impose au juge de se prononcer sur tout ce qui est demandé et seulement sur ce qui est demandé. Il ne peut accorder ici plus que les 4 000 € réclamés sur ce chef au seul motif que les pièces permettraient un montant supérieur.",
+      "references": [
+        {
+          "title": "Cour d’appel, 8 octobre 2024, articles 4 et 5 du CPC",
+          "url": "https://www.courdecassation.fr/decision/export/67061e66fde28ee42071142e/0"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une partie identifie précisément un document utile à la preuve, détenu par son adversaire qui refuse de le produire. Quelle démarche l’article 11 du Code de procédure civile permet-il de demander au juge ?",
+      "options": [
+        "Tenir le contenu allégué pour établi du seul fait du refus et statuer sur cette base.",
+        "Autoriser la partie à consulter elle-même les dossiers internes de l’adversaire.",
+        "Transférer à l’adversaire la preuve de l’ensemble des faits du litige.",
+        "Enjoindre à l’adversaire de produire cet élément, au besoin sous astreinte."
+      ],
+      "answer": 3,
+      "explanation": "Lorsqu’une partie détient un élément de preuve, l’article 11 permet au juge, sur requête de l’autre partie, de lui enjoindre de le produire, au besoin sous astreinte. Cette mesure ciblée n’équivaut ni à une autorisation d’accès privé aux dossiers ni à un renversement général de la charge de la preuve.",
+      "references": [
+        {
+          "title": "Cour d’appel de Versailles, article 11 du CPC et production de pièces",
+          "url": "https://www.courdecassation.fr/decision/67932e3e20da87ff5e011287"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier contient une commande, une livraison et une proposition de règlement amiable. Comment organiser leur examen ?",
+      "options": [
+        "Les dater et distinguer ce que chaque événement permet d’établir.",
+        "Prendre la proposition amiable comme preuve de livraison conforme.",
+        "Présenter la livraison comme la date de l’accord amiable.",
+        "Regrouper les trois événements comme une reconnaissance de dette unique."
+      ],
+      "answer": 0,
+      "explanation": "Ces événements ont des objets différents : engagement, exécution et recherche d’une solution. Une chronologie évite de leur attribuer le même effet."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel classement des pièces aide directement à analyser la preuve d’un litige ?",
+      "options": [
+        "Leur ordre chronologique, sans distinction entre les faits qu’elles peuvent établir.",
+        "Leur rattachement à chaque fait à établir.",
+        "Leur regroupement par catégorie de support, sans examen de leur lien avec le désaccord.",
+        "Leur séparation selon la partie qui les produit, en présumant leur pertinence dans chaque groupe."
+      ],
+      "answer": 1,
+      "explanation": "Le fait à établir oriente la lecture de la pièce. Auteur, date, intégrité et concordance doivent ensuite être examinés, y compris pour une pièce défavorable."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un reçu confirme l’arrivée de vingt colis. Le client conteste la conformité des produits. Que permet de distinguer cette pièce ?",
+      "options": [
+        "Réception de colis et paiement intégral, qui seraient identiques.",
+        "Réception et acceptation de toute modification future.",
+        "Réception matérielle et conformité du contenu, à examiner séparément.",
+        "Réception et preuve de l’accord initial sur le prix."
+      ],
+      "answer": 2,
+      "explanation": "Un accusé de réception ne démontre pas nécessairement toutes les caractéristiques des produits livrés. Sa portée doit être rapprochée de la contestation précise."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un courriel est produit sans sa fin ; celle-ci peut contenir une réserve sur l’accord invoqué. Que vérifier ?",
+      "options": [
+        "Le nombre de relances du demandeur.",
+        "La valeur commerciale de la prestation.",
+        "Le seul nom donné au fichier.",
+        "L’intégralité et le contexte de l’échange."
+      ],
+      "answer": 3,
+      "explanation": "Une réserve peut changer la portée du message. La pièce doit être examinée dans son intégrité et rapprochée de l’échange dont elle est extraite."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un demandeur ignore un courriel défavorable qui contredit sa version des dates. Quelle méthode adopter ?",
+      "options": [
+        "Le confronter aux autres pièces et expliquer sa portée.",
+        "L’écarter parce que son contenu est contesté par le demandeur.",
+        "Retenir la version soutenue par le plus grand nombre de fichiers.",
+        "Prendre la première version écrite comme seule version recevable."
+      ],
+      "answer": 0,
+      "explanation": "Une pièce défavorable doit être analysée comme les autres. La contradiction et les raisons de privilégier un élément doivent être expliquées dans le raisonnement."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Au cours d’un procès civil, une partie demande une expertise pour remplacer ses propres recherches de preuve, alors que sa carence dans leur administration est établie. Quelle limite de l’article 146 du Code de procédure civile s’applique ?",
+      "options": [
+        "La demande suffit à obliger le juge à désigner un expert dès qu’un fait est contesté.",
+        "Une mesure d’instruction ne peut être ordonnée pour suppléer cette carence.",
+        "L’expertise devient de droit si la partie accepte d’en avancer les frais.",
+        "Le recours à un expert transfère à l’adversaire la charge de réunir les preuves manquantes."
+      ],
+      "answer": 1,
+      "explanation": "L’article 146 permet une mesure d’instruction lorsque les éléments disponibles sont insuffisants, mais interdit qu’elle serve à suppléer la carence de la partie dans l’administration de la preuve. L’énoncé établit cette carence ; la seule demande ou l’avance des frais ne l’efface pas.",
+      "references": [
+        {
+          "title": "Code de procédure civile, article 146, limite aux mesures d’instruction",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006410269/2026-05-09"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un courriel mentionne une intervention sur une tâche alors que le contrat en comporte trois. Comment l’utiliser pour apprécier l’achèvement ?",
+      "options": [
+        "Comme preuve suffisante de toutes les tâches du contrat.",
+        "Comme preuve que le contrat avait pour objet une seule tâche.",
+        "Comme élément sur l’intervention, à compléter sur le reste de la mission.",
+        "Comme quittance du prix total de la prestation."
+      ],
+      "answer": 2,
+      "explanation": "La portée de la pièce dépend de ce qu’elle décrit. Une intervention documentée ne prouve pas nécessairement toutes les tâches conditionnant la demande de paiement."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel est l’objet du contradictoire ?",
+      "options": [
+        "Obtenir l’accord des parties sur la valeur de chaque preuve.",
+        "Retirer le droit de contester après réception des pièces.",
+        "Faire reconnaître toutes les demandes avant la décision.",
+        "Permettre de connaître et discuter utilement les demandes, moyens et pièces adverses."
+      ],
+      "answer": 3,
+      "explanation": "Le contradictoire permet une discussion utile. Il n’impose ni consensus ni reconnaissance de la valeur probante des documents communiqués."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une pièce pertinente est communiquée trop tard pour qu’une partie prépare sa réponse. Quelles questions distinguer ?",
+      "options": [
+        "Sa pertinence et les conditions de sa discussion.",
+        "Sa réception et l’accord obligatoire du destinataire sur son contenu.",
+        "La force de la pièce et le nombre de fichiers transmis.",
+        "La date de la pièce et l’existence nécessaire d’une nullité du contrat."
+      ],
+      "answer": 0,
+      "explanation": "La pertinence ne résout pas les conditions de communication. Il faut examiner la possibilité de discussion et les règles procédurales dans la situation donnée."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie affirme : « La pièce a été communiquée, donc elle est vraie et la demande est fondée. » Quelle correction convient ?",
+      "options": [
+        "La communication remplace la preuve si le document porte une date.",
+        "La communication permet la discussion ; la force probante et le fond restent à examiner.",
+        "La communication vaut reconnaissance des faits par le destinataire.",
+        "La communication établit l’accord sur toutes les conséquences juridiques."
+      ],
+      "answer": 1,
+      "explanation": "La communication ne démontre pas par elle-même l’authenticité ni tous les faits allégués. La pièce peut être discutée et sa portée doit être appréciée."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une annexe invoquée pour justifier une demande a été transmise dans un fichier illisible. Quel problème concret faut-il traiter ?",
+      "options": [
+        "Le respect de l’échange, considéré comme acquis dès que le fichier figure dans le bordereau.",
+        "L’exactitude de l’annexe, considérée comme acquise si l’adversaire n’a pas pu la contester point par point.",
+        "L’accès effectif au contenu pour permettre sa discussion.",
+        "L’utilité de demander des explications orales, considérées comme un remplacement suffisant de l’annexe invoquée."
+      ],
+      "answer": 2,
+      "explanation": "La discussion doit être possible dans des conditions utiles. La seule transmission d’un nom de fichier ne permet pas de connaître un contenu inaccessible."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une pièce est révélée au dernier instant ; aucune règle de procédure ni décision du juge n’est fournie. Quelle conclusion est fondée ?",
+      "options": [
+        "Retenir son exclusion comme conséquence acquise du retard, avant d’examiner le temps restant pour répondre.",
+        "Retenir sa recevabilité comme acquise du seul fait qu’elle a été communiquée avant la décision.",
+        "Traiter son importance pour le fond comme dispensant de vérifier la possibilité d’y répondre.",
+        "La difficulté de discussion et ses conséquences procédurales doivent être examinées."
+      ],
+      "answer": 3,
+      "explanation": "Le caractère tardif peut poser une difficulté, mais il ne permet pas d’inventer une sanction automatique. Il faut identifier les règles et circonstances pertinentes."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant exige l’approbation de l’adversaire pour qu’une pièce puisse être discutée. Quelle distinction lui manque ?",
+      "options": [
+        "La possibilité de discuter une pièce ne signifie pas devoir l’approuver.",
+        "L’approbation de la pièce signifie le retrait de la demande.",
+        "La réception vaut accord sur son contenu.",
+        "La contestation de la pièce démontre son absence de pertinence."
+      ],
+      "answer": 0,
+      "explanation": "Le contradictoire permet aussi le désaccord. Il vise la connaissance et la discussion utiles, pas l’obtention préalable du consentement de l’adversaire à la preuve."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel objectif caractérise une démarche amiable de résolution d’un litige ?",
+      "options": [
+        "Imposer la solution proposée par la première partie.",
+        "Rechercher une solution acceptée par les parties.",
+        "Prononcer une décision juridictionnelle lors du premier entretien.",
+        "Suspendre tous les délais dès le premier échange."
+      ],
+      "answer": 1,
+      "explanation": "Une démarche amiable cherche un accord, éventuellement avec l’aide d’un tiers. Son existence ne prouve ni une décision judiciaire ni une suspension générale des délais."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un fournisseur propose une remise et un échéancier ; le client souhaite encore discuter les échéances. Que documenter avant d’annoncer un accord final ?",
+      "options": [
+        "La seule intention du fournisseur de régler le litige.",
+        "L’absence de refus de toute discussion par le client.",
+        "Les termes acceptés et les points encore en négociation.",
+        "Le nombre de propositions envoyées."
+      ],
+      "answer": 2,
+      "explanation": "Les échanges peuvent rapprocher les positions sans conclure sur tous les termes. L’accord final et sa portée doivent être établis à partir des engagements effectivement acceptés."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un délai pour agir approche pendant des négociations ; aucune suspension applicable n’est établie. Quelle démarche est adaptée ?",
+      "options": [
+        "Attendre la fin du dialogue avant d’examiner le délai.",
+        "Traiter la proposition de remise comme une décision de justice.",
+        "Considérer le délai suspendu dès qu’une réunion est convenue.",
+        "Vérifier les délais et règles parallèlement aux échanges."
+      ],
+      "answer": 3,
+      "explanation": "Une négociation ne permet pas de présumer toute suspension de délai. La protection des droits demande un contrôle des règles applicables au litige."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les parties veulent préserver leur relation, mais l’une évoque une urgence concernant ses droits. Quels critères doivent guider le choix des démarches ?",
+      "options": [
+        "La relation, l’urgence, les coûts, les droits et les règles procédurales.",
+        "La relation seule, au prix de tout délai à venir.",
+        "Le coût immédiat seul, indépendamment de l’urgence.",
+        "Le choix de la première partie, assimilé à un accord."
+      ],
+      "answer": 0,
+      "explanation": "La stratégie doit tenir compte des contraintes concrètes. Préserver le dialogue ne dispense pas d’examiner l’urgence et les démarches nécessaires à la protection des droits."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tiers clarifie les intérêts des parties ; aucun accord ni décision n’est fourni. Quelle portée donner à son intervention ?",
+      "options": [
+        "Une clôture du litige dès la première réunion.",
+        "Une aide à la recherche d’accord dont le résultat et les effets restent à établir.",
+        "Une solution obligatoirement imposée aux deux parties.",
+        "Une reconnaissance de dette par la partie qui a demandé son aide."
+      ],
+      "answer": 1,
+      "explanation": "L’aide d’un tiers n’établit pas à elle seule un accord final ou une décision obligatoire. Il faut vérifier le mécanisme et les engagements effectivement obtenus."
+    }
+  ]
+}

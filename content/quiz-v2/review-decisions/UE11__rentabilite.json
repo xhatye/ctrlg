@@ -1,0 +1,248 @@
+{
+  "sourceHash": "351c5de99609b5a13b3412a466a8a7da15b5284b7ef2853979118f7f3685009c",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "a1928b7a15bd0a7be7039ca980f700be97fdbe9faa4af34384e2c10de3db1ff5",
+      "selected": 1,
+      "reason": "Quarante mille moins vingt-six mille donnent quatorze mille de marge sur coûts variables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "0a33cca5bf920602aeeb3badc4b8fc880e9c7ac8b4c8d62b0a5e8d3443d7844f",
+      "selected": 1,
+      "reason": "Quatorze mille sur quarante mille donnent trente-cinq pour cent du chiffre d’affaires.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "9cff2c04cf4f3dfa49450fba8e4cb2e40af5df774b9dee66792afde6b77c5676",
+      "selected": 1,
+      "reason": "Le seuil en valeur est douze mille divisés par zéro virgule quatre, soit trente mille euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "485065f83462bcf4ceefc3b9f46a46be58dc4e9aaf37dfeb60ec395a464b1749",
+      "selected": 3,
+      "reason": "La marge unitaire est vingt euros ; dix mille divisés par vingt donnent cinq cents unités au seuil.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "2460cb34468cc969fbef66c7a445a35b157be6e0e5e8911521fc1b7622fcd448",
+      "selected": 0,
+      "reason": "La contribution inférieure aux fixes laisse un résultat négatif.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "605cf559a91e11adf9af944f3e87412de5c6dc03aca4dadba9bc1d4c140f7f19",
+      "selected": 0,
+      "reason": "Le taux de marge sur coûts variables se mesure par rapport au chiffre d’affaires, non aux seules variables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "a68f24aab03bba0669a43b12563d9b976997310b613f881f462c5c4933e64783",
+      "selected": 1,
+      "reason": "Au seuil, la contribution couvre exactement les charges fixes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "f4ba4cac1c80e3025e8112aa0cf7b9a75c872a089e11ea2d801fbca57ab1a21f",
+      "selected": 3,
+      "reason": "Les unités indivisibles imposent l’entier supérieur ou égal au seuil théorique pour assurer la couverture.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "4e5061a8474cb9f0546eb8caaa208301e78c8bb8dc48ec429d9ec0557a10f78e",
+      "selected": 1,
+      "reason": "La contribution couvre les fixes avant de former le bénéfice.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "937e0d8759994b1a93b43369ccc83cb541ee43487d1d2012fb6f7ffc2fd18142",
+      "selected": 3,
+      "reason": "La baisse de prix modifie à la fois la marge et sa base de taux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "a96eed6eddec2b045c4bae2b9613f64dc87f6d40604e3b31b84fc76c57ae2a6c",
+      "selected": 1,
+      "reason": "Le chiffre d’affaires doit couvrir treize mille de contribution à quarante pour cent, soit trente-deux mille cinq cents.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "b5c2311635badc2da9ca6a9ecea0f45289fc03e28b65bb3ed22cb1754a8e06ed",
+      "selected": 0,
+      "reason": "Une marge nulle ne couvre aucun fixe strictement positif.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "ae84d56e6265f6e165d28092339c9751a7c38ef6f9638ffc96ad519ba7dcb833",
+      "selected": 3,
+      "reason": "Soixante mille fois trente pour cent moins douze mille donnent six mille euros de résultat.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "f1e3972bc9c210148ff5c3bdec7191cb0ac68e192520f589932ae7ec949f9b28",
+      "selected": 2,
+      "reason": "Diviser par35 au lieu de0,35 réduit le seuil par cent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "1057ff95eeb9b914d6135cf17e968aecd5a8c66438f7d11da7bf02ec9b9363d8",
+      "selected": 1,
+      "reason": "À taux positif constant, plus de fixes exige davantage de ventes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "c4d1c563375cbb56d8f009f9fb2117351dc67086f6bb49cefc08537f7e15a530",
+      "selected": 0,
+      "reason": "Une marge unitaire accrue réduit la quantité couvrant les fixes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "e670e906edac677c9cb84d38859db9fc820400be8d22303a8dc8c2fd4038e2f7",
+      "selected": 0,
+      "reason": "Contribution économique et calendrier des flux monétaires diffèrent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "c32652b25ce9cb5dd17a10cedbc27873aae5dcb6c8308e64199d19bfadb21372",
+      "selected": 3,
+      "reason": "Le taux global pondère les taux par la composition des ventes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "f42995d9127e232064ba8c8ed424f02cff30d0e1ef96ca76a99e64a651780280",
+      "selected": 3,
+      "reason": "Le seuil et les ventes doivent être comparés sur le même horizon.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "eb593a9ee403cab3d2d92c976d35e882d605c1fcbbcef07eef508cda703a3478",
+      "selected": 0,
+      "reason": "Un seuil au-delà de la capacité est inaccessible dans le modèle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "e655114de4d0ff491e9ed35726f3e00c3928c743835c173997de41b659aed0da",
+      "selected": 2,
+      "reason": "Le palier de nouvelle équipe oblige à réviser les charges fixes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "9113fb1f365db55da92f7d936212df1d915e329c8d3985a3a7f729ff727640d0",
+      "selected": 1,
+      "reason": "La rentabilité prévue reste conditionnelle aux hypothèses du scénario.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

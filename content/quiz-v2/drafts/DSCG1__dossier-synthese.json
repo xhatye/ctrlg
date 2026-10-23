@@ -1,0 +1,368 @@
+{
+  "module": "DSCG1",
+  "chapter": "dossier-synthese",
+  "sourceHash": "bf6481ffdc56b0f4cbe28294dbc7de990d84b43ec96dd76b0233c63057c26942",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’acquisition vise les titres de H, qui détient 60 % de F. Le site industriel est juridiquement détenu par F et non par H. Quel schéma décrit le périmètre à auditer ?",
+      "options": [
+        "L’acquéreur achète directement 100 % du site en achetant H.",
+        "L’acquéreur n’a à examiner que le bilan de H puisque le site n’y figure pas directement.",
+        "Les titres H sont acquis ; l’exposition au site passe par la participation H dans F.",
+        "Les associés minoritaires de F deviennent vendeurs de leurs titres par l’achat de H."
+      ],
+      "answer": 2,
+      "explanation": "La chaîne de détention permet de distinguer acquisition directe et exposition indirecte. Elle évite de traiter un actif détenu en filiale comme un bien directement transféré par les vendeurs de H."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une lettre de mission couvre seulement les contrats de la cible A. Le projet d’acquisition comprend aussi sa filiale B, partie à des contrats de distribution. Que faut-il adapter pour couvrir le besoin décrit ?",
+      "options": [
+        "Conclure que les contrats B ont été revus par extension du contrôle de A.",
+        "Déduire des comptes consolidés que les contrats B ont les mêmes clauses que ceux de A.",
+        "Supprimer les contrats B du projet pour conserver le périmètre documentaire initial.",
+        "Préciser l’extension de mission aux contrats B et les travaux complémentaires nécessaires."
+      ],
+      "answer": 3,
+      "explanation": "Le périmètre d’une acquisition et celui d’une mission doivent être rapprochés. Le contrôle des contrats de A ne prouve pas celui de contrats distincts conclus par B."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La revue recense cinquante contrats actifs selon la liste commerciale. Le grand livre fait apparaître des redevances relatives à deux contrats absents de cette liste. Quelle vérification complète prioritairement la population examinée ?",
+      "options": [
+        "Rapprocher les deux contrats identifiés et déterminer s’ils sont actifs et dans le périmètre.",
+        "Examiner uniquement les cinquante contrats pour préserver l’homogénéité de la liste initiale.",
+        "Déclarer les deux redevances hors périmètre parce qu’elles ne sont pas sur la liste commerciale.",
+        "Compenser les deux omissions en examinant deux contrats déjà présents une seconde fois."
+      ],
+      "answer": 0,
+      "explanation": "Le rapprochement de sources révèle un risque de population incomplète. Les nouveaux éléments doivent être qualifiés, pas exclus du seul fait de leur absence du premier inventaire."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La revue d’acquisition est arrêtée au 31 mars. Un nouveau financement a été signé en avril avant la clôture prévue en mai. Quel complément répond à ce changement de périmètre temporel ?",
+      "options": [
+        "Reprendre seulement les contrats clos avant le 31 mars.",
+        "Actualiser les engagements intervenus entre la date d’arrêté de la revue et la clôture prévue.",
+        "Tenir le financement d’avril pour déjà vérifié parce qu’il reprend la même banque.",
+        "Utiliser le budget de mars comme preuve du contenu du contrat d’avril."
+      ],
+      "answer": 1,
+      "explanation": "Un événement nouveau peut modifier le risque couvert par une revue antérieure. Il faut organiser une actualisation ciblée des engagements et ne pas confondre prévision et acte signé."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour connaître la priorité entre trois sûretés, le dossier fournit seulement le montant total des emprunts. Quelle demande documentaire cible effectivement la question posée ?",
+      "options": [
+        "Les seules échéances de remboursement des emprunts.",
+        "Le tableau des intérêts comptabilisés par trimestre.",
+        "Les actes de sûreté et les pièces pertinentes relatives à leur constitution, portée et rang.",
+        "Le budget d’investissement qui avait justifié les emprunts."
+      ],
+      "answer": 2,
+      "explanation": "Le montant du financement n’établit pas les droits attachés aux sûretés ni leur priorité. La demande doit porter sur les actes et les formalités pertinentes pour cette question."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dirigeant remet un tableau « aucun contentieux », tandis qu’une lettre d’avocat décrit une procédure en cours au nom de la cible. Quel traitement documentaire est justifié ?",
+      "options": [
+        "Retenir le tableau comme exhaustif parce qu’il est la synthèse la plus récente, sans vérifier sa date de référence.",
+        "Retenir la lettre d’avocat comme preuve d’une perte certaine, sans examiner l’objet ni l’avancement de la procédure.",
+        "Écarter la contradiction en supposant que les deux sources visent la même période et des entités différentes sans le vérifier.",
+        "Identifier la contradiction, la date et le périmètre de chaque source, puis demander sa résolution documentée."
+      ],
+      "answer": 3,
+      "explanation": "La remise d’une synthèse ne neutralise pas une source contraire. La contradiction doit être expliquée avant de conclure, en vérifiant notamment personnes, dates et objet de la procédure."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une annexe du contrat de crédit est fournie, mais sa référence renvoie à une version antérieure du contrat principal. Quelle vérification évite de combiner des documents incompatibles ?",
+      "options": [
+        "Établir le rattachement de l’annexe à la version signée du crédit et identifier les avenants.",
+        "Retenir l’annexe parce qu’elle mentionne le même emprunteur, sans vérifier les versions du crédit.",
+        "Retenir l’annexe parce que son plafond est identique, sans rapprocher les clauses et avenants applicables.",
+        "Retenir l’annexe parce qu’elle était utilisée lors de la négociation, sans documenter son rattachement à l’accord final."
+      ],
+      "answer": 0,
+      "explanation": "L’annexe n’est utile que si son rattachement à l’engagement étudié est établi. Les références et avenants permettent de contrôler la cohérence de version, au-delà du seul intitulé de banque."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "En SARL pluripersonnelle, le projet de cession à un tiers doit être notifié dans les conditions de L223-14. Le dossier prouve la notification à la société mais pas aux associés. Quel document complémentaire cible ce contrôle ?",
+      "options": [
+        "La preuve d’un envoi au gérant, traitée comme notification personnelle à tous les associés.",
+        "Les justificatifs de notification à chacun des associés concernés par le texte.",
+        "La seule preuve d’envoi à l’associé majoritaire, considérée comme couvrant la collectivité.",
+        "La preuve d’une information de l’acquéreur, considérée comme remplaçant celle des associés de la société."
+      ],
+      "answer": 1,
+      "explanation": "Le texte vise la notification à la société et à chacun des associés. La preuve d’un seul destinataire ne documente pas l’ensemble des notifications exigées.",
+      "references": [
+        {
+          "title": "Code de commerce, article L223-14, cession à un tiers et notifications",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006223059/2015-05-29"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un associé de SARL détient 70 % des parts, mais il est seul favorable parmi quatre associés. Les statuts ne renforcent pas la majorité et la cession envisagée est à un tiers étranger. Peut-on tenir l’agrément de L223-14 pour établi par ces seuls votes ?",
+      "options": [
+        "Oui, le seuil en parts remplace la majorité en nombre d’associés.",
+        "Oui, le vote du vendeur est exclu du nombre des associés par ce seul texte.",
+        "Non, la majorité en nombre des associés manque malgré les 70 % des parts.",
+        "Non, l’unanimité est exigée pour toute cession à un tiers."
+      ],
+      "answer": 2,
+      "explanation": "L223-14 demande une majorité des associés représentant au moins la moitié des parts, sauf majorité statutaire renforcée. Les deux dimensions doivent être vérifiées ; une seule personne sur quatre ne constitue pas cette majorité.",
+      "references": [
+        {
+          "title": "Code de commerce, article L223-14, cession à un tiers et notifications",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006223059/2015-05-29"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dossier invoque l’agrément tacite de trois mois de L223-14 pour une SARL ayant plusieurs associés. Les notifications ont été reçues à des dates différentes. Quel événement doit être identifié pour le point de départ prévu ?",
+      "options": [
+        "La première discussion du prix avec l’acquéreur.",
+        "La première des notifications, même si les autres sont postérieures.",
+        "La seule date portée sur le projet rédigé par le vendeur.",
+        "La dernière des notifications prévues par le texte."
+      ],
+      "answer": 3,
+      "explanation": "Le délai donné par L223-14 court à compter de la dernière notification requise. La chronologie des réceptions est donc déterminante pour contrôler l’agrément tacite invoqué.",
+      "references": [
+        {
+          "title": "Code de commerce, article L223-14, cession à un tiers et notifications",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006223059/2015-05-29"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le contrat de financement renvoie à une annexe non remise, qui décrit les engagements limitant les distributions. Le rapport conclut à une liberté de distribuer tout le résultat. Quelle réserve est adaptée ?",
+      "options": [
+        "Les limitations contractuelles ne peuvent être appréciées avant obtention de l’annexe pertinente.",
+        "L’absence d’annexe prouve qu’aucune limitation n’existe.",
+        "Les limitations sont réputées identiques à celles d’un autre financement du groupe.",
+        "Le montant distribuable peut être déduit du seul solde de trésorerie pour lever ce point."
+      ],
+      "answer": 0,
+      "explanation": "Une annexe non produite n’est pas une clause inexistante. La réserve doit identifier la conclusion impossible à ce stade : connaître les restrictions contractuelles sur les distributions."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une caution serait « libérée », selon le vendeur, mais seule une demande de mainlevée est produite ; aucune réponse du créancier ni autre justification n’est fournie. Quelle qualification documentaire est exacte ?",
+      "options": [
+        "Libération prouvée par l’intention exprimée du vendeur.",
+        "Demande de libération documentée, mais libération encore non établie.",
+        "Dette principale éteinte du seul fait que la mainlevée est demandée.",
+        "Garantie remplacée par une obligation de l’acquéreur dès le dépôt de la demande."
+      ],
+      "answer": 1,
+      "explanation": "Une demande et son acceptation ou son autre effet juridique sont des faits distincts. La pièce remise ne suffit pas à tenir la libération pour acquise."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une lettre de revue exclut l’analyse fiscale. Le comité demande néanmoins « absence de redressement garantie » parce que tous les contrats ont été remis. Quelle limite faut-il expliciter ?",
+      "options": [
+        "La remise des contrats vaut contrôle fiscal indirect de tous les exercices.",
+        "L’absence de redressement doit être présumée si aucun litige n’est recensé.",
+        "La mission et les pièces remises ne fondent pas cette assurance fiscale ; un contrôle spécifique reste à définir.",
+        "L’absence de contrôle fiscal sur un exercice prouve la conformité des suivants."
+      ],
+      "answer": 2,
+      "explanation": "Le périmètre de mission exclut précisément cette conclusion. Une complétude contractuelle n’établit pas la conformité fiscale ni l’absence de redressement futur."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une acquisition dépend contractuellement de la validité d’une licence à la clôture. La seule licence fournie expire avant cette clôture et son renouvellement est dit « en discussion ». Que manque-t-il pour fermer ce point ?",
+      "options": [
+        "La preuve du paiement d’un ancien renouvellement, considérée comme valant engagement de renouveler à la nouvelle date.",
+        "Une projection de ventes utilisant la licence, considérée comme preuve du droit de poursuivre cet usage.",
+        "La seule preuve que le renouvellement est demandé, considérée comme accord du concédant à la prolongation.",
+        "Une preuve suffisante de la couverture de la licence à la date de clôture prévue."
+      ],
+      "answer": 3,
+      "explanation": "Une discussion n’établit pas le renouvellement. Le contrôle vise la condition temporelle fournie : disposer du droit d’usage à la clôture, au moyen d’un document adapté."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La convention revue relève de L223-19. Le procès-verbal d’une SARL comptabilise les parts de l’associé intéressé dans la majorité et enregistre son vote. Quel contrôle légal est nécessaire ?",
+      "options": [
+        "Recalculer selon l’exclusion du vote et des parts de l’intéressé prévue par cet article.",
+        "Valider les votes au seul motif que l’intéressé détient la majorité du capital.",
+        "Exclure seulement son vote mais conserver toutes ses parts dans la majorité prévue par ce texte.",
+        "Remplacer le vote par le seul avis de l’intéressé sur l’avantage économique."
+      ],
+      "answer": 0,
+      "explanation": "L223-19 exclut l’intéressé du vote ainsi que ses parts du calcul du quorum et de la majorité. Le tableau doit reproduire cette règle, pas seulement le nombre de voix exprimées.",
+      "references": [
+        {
+          "title": "Code de commerce, article L223-19, conventions et vote en SARL",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006223120/2023-03-11"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une SARL sans commissaire aux comptes conclut une convention relevant de L223-19 avec son gérant non associé. La revue ne produit qu’une approbation postérieure. Quel contrôle spécifique manque au regard du texte ?",
+      "options": [
+        "L’approbation préalable du seul gérant intéressé, considérée comme suffisante pour cette convention.",
+        "L’approbation préalable de l’assemblée prévue pour cette situation.",
+        "La seule mention de la convention au procès-verbal d’une réunion postérieure, considérée comme preuve de l’accord avant signature.",
+        "La signature du contrat par les deux parties, considérée comme tenant lieu de l’autorisation préalable des associés."
+      ],
+      "answer": 1,
+      "explanation": "Dans cette situation précise, le deuxième alinéa impose une approbation préalable de l’assemblée. Une pièce postérieure ne prouve pas le respect de cette chronologie.",
+      "references": [
+        {
+          "title": "Code de commerce, article L223-19, conventions et vote en SARL",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006223120/2023-03-11"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le plan de revue attribue le contrôle d’une autorisation à trois personnes, sans responsable de collecte ni date, alors que la décision d’investissement est vendredi. Quelle formulation rend l’action exploitable ?",
+      "options": [
+        "Autorisation probablement obtenue, point classé favorable.",
+        "Contrôle à répartir entre les équipes après la décision.",
+        "Nommer un responsable, la pièce attendue et une échéance compatible avec la décision de vendredi.",
+        "Documenter seulement le coût du contrôle et supprimer l’échéance."
+      ],
+      "answer": 2,
+      "explanation": "Une recommandation doit permettre de piloter le contrôle. Responsable, livrable et échéance relient l’incertitude à la décision qui en dépend."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux risques sont recensés : un bail susceptible de cesser avant la réalisation et un écart de facture limité pouvant être réglé après. Le bail est indispensable à l’exploitation ; aucune alternative n’est disponible. Quelle priorité est justifiée ?",
+      "options": [
+        "Traiter d’abord la facture parce que son montant est certain.",
+        "Traiter les deux points par ordre d’arrivée des documents.",
+        "Repousser le bail parce que sa perte n’est pas encore certaine.",
+        "Clarifier d’abord la continuité du bail avant de décider la réalisation."
+      ],
+      "answer": 3,
+      "explanation": "Le risque sur le bail conditionne l’exploitation et l’opération, contrairement à l’écart limité réglable ensuite. La priorité dépend des conséquences et du moment de la décision, pas du seul caractère certain du montant."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La revue a reçu et vérifié une autorisation auparavant manquante. Le tableau garde la mention « document absent ». Quelle mise à jour préserve une trace fiable ?",
+      "options": [
+        "Conserver la réserve historique, dater la réception et le contrôle, puis indiquer le nouveau statut justifié.",
+        "Effacer toute trace de la réserve pour présenter le dossier comme complet depuis l’origine.",
+        "Maintenir la réserve ouverte sans mention de la pièce reçue.",
+        "Clore le risque sur la seule réception sans préciser le contrôle effectué."
+      ],
+      "answer": 0,
+      "explanation": "La traçabilité demande de distinguer la réception et le contrôle, puis de conserver l’évolution datée du statut. Elle n’impose ni l’effacement de l’historique ni une réserve devenue inexacte."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un risque a été examiné et chiffré ; le comité décide de l’accepter explicitement dans les limites précisées, sans mesure nouvelle. Quel statut reflète la décision ?",
+      "options": [
+        "Risque inexistant depuis la décision du comité.",
+        "Risque résiduel accepté et documenté, avec les limites de l’acceptation.",
+        "Risque transféré automatiquement au vendeur par l’acceptation.",
+        "Risque non étudié puisque aucune action n’est demandée."
+      ],
+      "answer": 1,
+      "explanation": "Accepter un risque ne le supprime pas. La conclusion doit conserver l’exposition examinée, son propriétaire et les limites de la décision, afin de ne pas transformer un arbitrage en assurance d’absence de risque."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La revue conclut que les pièces fournies sont cohérentes sur le financement, mais n’a pas contrôlé l’exhaustivité des garanties. Quelle phrase restitue correctement cette limite ?",
+      "options": [
+        "Aucune garantie ne peut exister hors des pièces déjà fournies.",
+        "Toutes les garanties sont valables puisqu’aucune incohérence n’a été observée.",
+        "La cohérence des pièces remises est constatée ; l’exhaustivité des garanties demeure un contrôle distinct non réalisé.",
+        "Le financement est dépourvu de risque parce que ses montants se rapprochent des comptes."
+      ],
+      "answer": 2,
+      "explanation": "La cohérence interne des documents examinés et leur exhaustivité sont deux assertions différentes. L’absence de contradiction dans un lot ne prouve pas qu’aucune pièce ou garantie manque."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le comité reçoit une réserve « annexe manquante » sans précision. Cette annexe fixe l’exigibilité anticipée d’un emprunt en cas de changement de contrôle. Quelle restitution est la plus utile avant acquisition ?",
+      "options": [
+        "Annexe non fournie ; le sujet sera traité à la prochaine clôture annuelle.",
+        "Annexe non fournie ; le financement est considéré maintenu puisque les échéances ont été payées.",
+        "Annexe non fournie ; la dette est considérée non exigible par hypothèse implicite.",
+        "L’effet de l’acquisition sur l’exigibilité reste à déterminer ; obtenir la clause et décider du financement avant réalisation."
+      ],
+      "answer": 3,
+      "explanation": "Une réserve opérationnelle relie la pièce à la conséquence qui reste incertaine. Ici, elle doit éclairer la continuité du financement avant la réalisation, plutôt que seulement inventorier une annexe absente."
+    }
+  ]
+}

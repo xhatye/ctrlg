@@ -1,0 +1,259 @@
+{
+  "sourceHash": "9768dca271139c42b8f8ee4925394d749ba0c3b3afa2c88dea4ed9219b52bf50",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "94033364173d27c48e5a616458b838543215f2d1951c65c4f49e5c722773d4ea",
+      "selected": 3,
+      "reason": "Un indicateur exige formule, source, périmètre et fréquence.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "652cfc57d94b0f2a0118f5543a5d1e2b017ed1c181113c249b068e993095d53f",
+      "selected": 2,
+      "reason": "Appels et dossiers sont des unités différentes à harmoniser pour comparer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "d6be77200777c5696e84fcdaa373ff3bf28abf01b31f76511e82d02dab5bbdaa",
+      "selected": 0,
+      "reason": "Le dénominateur de noncontrôlés ne correspond pas aux erreurs observées des contrôlés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "f959e0b9596949695b4cbeea2a79d23f1307d12a5a0e869fd3b80b8048aaf13b",
+      "selected": 0,
+      "reason": "Le rythme de décision hebdomadaire demande un signal plus rapide.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "76cc150647421a828487802a06271720a0f6049a11ca93b89fdaef20926dd1ca",
+      "selected": 2,
+      "reason": "Le taux de dépassement complète la moyenne qui masque les retards extrêmes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "f333ce143c3e4e37421c33580a90e8e5e397fd4ac717f5ed5fd230d57a05a70e",
+      "selected": 3,
+      "reason": "Une révision doit être datée, motivée et réconciliée dans la série.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "507c52ba6cb2e5bcc55558de5832ba80004a76aadd40f44480c0f6d4a85f44f3",
+      "selected": 0,
+      "reason": "L’efficacité mesure l’atteinte de l’objectif poursuivi.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "81db1ec171d1d9f90e467f878fcb1b5409ce7b0a593711836887bb4faf18de4e",
+      "selected": 1,
+      "reason": "97%atteint la cible95% de délai, sans prouver efficience globale.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "cd86bbf75b5548f9b9a9efde78ff3efb4ece9866c065f4d68fb952e22744e733",
+      "selected": 0,
+      "reason": "Le but était l’erreur de saisie et non la présence à la formation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "0f1b38621cc112efba1352bbfb2b7c489dbcf6f83a34a7e1d57999b40109d8d7",
+      "selected": 3,
+      "reason": "Écarter les cas de la mission améliore un indice sans remplir la mission.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "6a7069369cf6b22a29c4101d40747ae41c6bded04fc9065f9d1486a8204ccde9",
+      "selected": 0,
+      "reason": "Changer la cible après résultat ne prouve pas atteinte de la référence initiale.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "7c7009b3204826af19ec6dd4cd9ebd018c56269743812f60d2108888faf88857",
+      "selected": 2,
+      "reason": "L’efficience rapproche résultat utile et ressources mobilisées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "a2cad1442dbc566756210e4474abca0f64040ab79c130ecfac34c8b5813b1803",
+      "selected": 1,
+      "reason": "À qualité/complexité égales, moins d’heures est plus efficient sur ce critère.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "e897b2cf9fd59b72da626bf1c57a53cd7ad1af187f06372f9abea9a13e2f4c43",
+      "selected": 3,
+      "reason": "Le transfert externe consomme des ressources ignorées par seul indicateur heures internes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "92ea927d1381b63d193cf16407475d2ffc2966d4aa9698ce4347c637a1f19d56",
+      "selected": 0,
+      "reason": "Les dossiers finalisés sans défaut évitent de compter les reprises comme production utile.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "633b214205f77b5ee12e200d915a533118c2973c8b6e1f05647b74ef4eddc2e5",
+      "selected": 0,
+      "reason": "Le coût complet du processus inclut surveillance et corrections ajoutées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "e9e1cb31da110214856f092e864ba57d582518f1a9a18190242d7ffa8388ebd2",
+      "selected": 0,
+      "reason": "Le stock de cas complexes et leurs délais complètent le débit des seuls dossiers clos.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "b066cff065dcdbb478e0dc55466d088f24151d166ec93b389cd16cf1fac5637b",
+      "selected": 0,
+      "reason": "Une mesure rémunérée peut être optimisée au détriment de la finalité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "303250539a1886029f8a2697dde2c3293ffc0086e2006b904a1f2210840ad260",
+      "selected": 3,
+      "reason": "Les ventes maintenues et leurs annulations relient prime au résultat utile.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "68ab2e14e8cfdb87c13645f831f455be35e2fd37e4f324ae8d0bdb5859f1ecf6",
+      "selected": 3,
+      "reason": "Le stock photographié à date peut être manipulé par fermeture/réouverture.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "d709c42c4a59509f0b65152aed63daa857dbe7d6a3345ea47a795feb385cef05",
+      "selected": 3,
+      "reason": "La cible peut inciter à cacher incidents ; contrôler transparence et gravité avec prévention.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "9744b3aaf647edf3fe178cf89fe56c2476b8e0d6129eb163827714c8e928ec39",
+      "selected": 3,
+      "reason": "Les décisions, leviers et responsables donnent utilité aux ratios.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "d1cd1c950ab5637ff80421cf730d5c9c0d51b15b23449d5d7aba4385f52a0895",
+      "selected": 2,
+      "reason": "A=3+6w etB=6 ; égalité donnew0.5 soit50%.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

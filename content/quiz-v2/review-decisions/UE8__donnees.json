@@ -1,0 +1,251 @@
+{
+  "sourceHash": "378d4b72ea404b21b8d4f658972c6f571d562e5160cab99f9854b59bebe6f413",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "0312f3c79d7d967c8c9bb93256075ce00e1de0a003783ea952724a326a749b82",
+      "selected": 2,
+      "reason": "Une clé primaire identifie une seule ligne et ne peut contenir de valeur NULL.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "1cae5e38712ef59465c438da69fa9bab035293dec100aeacd5ac6d24b63b263f",
+      "selected": 3,
+      "reason": "Un identifiant unique et obligatoire reste valable malgré les homonymes et déménagements.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "424fe4f3bdf78d1ae47be16277b4aed96457518c733b6b3e0771a3d8cf6d1e61",
+      "selected": 1,
+      "reason": "La clé étrangère vérifie que la référence client de la commande correspond à un client existant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "1e34784901c0d5803afbed0782b3bcafe097e3fbe6328bcee0b85da5fcdf1990",
+      "selected": 0,
+      "reason": "Une relation un à plusieurs répète légitimement la référence client dans ses commandes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "b956fdd95312c30409a876ca6028bb0a270f4b71c19f5f303951bf115a342a28",
+      "selected": 2,
+      "reason": "La clé du client se place côté commandes, avec une référence par commande.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "163b5e40cf6ac04b2cba9a412124de34609abcd5b033c0b0ebccf833f68a0689",
+      "selected": 0,
+      "reason": "Des copies de la même adresse courante divergent lors d’une mise à jour partielle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "b45674c279bebfd1c7eac6e5e96bc83bc7e5545bb216f7156d669fc86525a763",
+      "selected": 3,
+      "reason": "Réutiliser un identifiant de commande pour deux achats détruit l’identification unique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "2ec80fcb552975d416570915fa6c2598d8bb338ecf16095e16ad9784ec04c3e7",
+      "selected": 2,
+      "reason": "NOT NULL impose la présence d’un client et la référence garantit son existence.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "ce08a4e94770af2f8d550e34a87a659654e2249161eb5ce90cc83a0922dd20f4",
+      "selected": 1,
+      "reason": "L’intégrité référentielle ne valide pas les règles métier propres au montant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "f366bd2b3bf3af6ba00df09e4a5e3f13fe4d664eae1175b02700528b542f881f",
+      "selected": 2,
+      "reason": "Une adresse historique de facture et une adresse courante de client ont des rôles distincts à conserver.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "cbaa96779d8cbd2d79e3a2accc9ada8ade66cf057c268395e4d120b6c5a4d0de",
+      "selected": 1,
+      "reason": "Une clé métier ou composée peut convenir si ses propriétés d’unicité et de non-nullité sont garanties.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "05a061a99441955343022d09895f666bd17d986187ae7e7d71efbd92bb818f77",
+      "selected": 3,
+      "reason": "La cardinalité minimale précise si zéro commande est permis pour un client créé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "5ba1e7ffee234e4d40366c70745911ebf27f9fc9e274a0b80c68e73e274402ff",
+      "selected": 0,
+      "reason": "Une clé artificielle identifie les lignes mais ne supprime pas la redondance des adresses.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "13e25a45a374d949d1f6f349b2d97e41d459505bc694c1e016f0493e0e57b533",
+      "selected": 1,
+      "reason": "ON DELETE RESTRICT interdit de supprimer une ligne parent encore référencée ; CASCADE et SET NULL seraient d’autres actions explicites.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "99b6a74c3e81ceb3624c6a5664d076b6e93eeaecdce31609db9e913a83fb1cec",
+      "selected": 1,
+      "reason": "Le numéro de ligne n’est unique que dans une commande ; le couple identifie chaque ligne.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "75c90037e56af96aa98aab6340abd392fa002e98a578bd37db76eefc4efedac6",
+      "selected": 3,
+      "reason": "UNIQUE sur la référence client empêcherait plusieurs commandes du même client.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "0951dbf66224aaf465e0b4c082056588c5d9dd5a338dd46d6de69b361e725a93",
+      "selected": 1,
+      "reason": "Séparer les coordonnées courantes évite d’en corriger plusieurs copies incohérentes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "e3fcde7c3fd640be7534e5a69ecb1c672f716ef6518d292c4b8de46c35562371",
+      "selected": 2,
+      "reason": "Le même client peut être référencé dans deux commandes sans doublonner dans sa table propre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "9fa23fa8de9d8e99fc5c5792b86ddd8c4a5bd1b46161954ca3ec7ce168d998f5",
+      "selected": 0,
+      "reason": "Une unicité observée dans un petit échantillon ne garantit pas la propriété métier durable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "9f3fb72e0e0ee9452b57227aaef28bd581d5297dbb4ed53d0b658946105447bd",
+      "selected": 1,
+      "reason": "Les cardinalités et objets reliés expriment la règle de gestion que doit représenter le modèle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "28cdd6ab4c59475193c2cead78c5225b7db3a0f31cceb42df38b3dc7a3efa2cb",
+      "selected": 0,
+      "reason": "L’obligation d’une commande pour créer un client provoque une anomalie d’insertion.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "005e79e0151ac65b09d82c272697a69afab6988238b2dcc4367b5a87c4f0f57f",
+      "selected": 1,
+      "reason": "La séparation des tables doit être complétée par l’intégrité référentielle effective.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ],
+  "checkedSources": [
+    "https://www.postgresql.org/docs/18/ddl-constraints.html"
+  ]
+}

@@ -1,0 +1,560 @@
+{
+  "module": "UE11",
+  "chapter": "ecart-matiere",
+  "sourceHash": "03e6b77f269104a763425756c8f7175ed0480b61d040be4a468c17a5b04def80",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "La consommation réelle est 1 100 kg au prix réel de 6 € par kg. Quel coût réel de matière calcule-t-on ?",
+      "options": [
+        "1 106 €",
+        "6 600 €",
+        "183,33 €",
+        "5 500 €"
+      ],
+      "answer": 1,
+      "explanation": "Le coût réel est quantité réelle × prix réel : 1 100 × 6 = 6 600 €. La référence standard intervient dans les écarts, pas dans la mesure de la dépense réelle de ce dossier.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 1100
+            },
+            {
+              "value": 6
+            }
+          ]
+        },
+        "expected": 6600,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La convention est réel moins standard. Pour 1 100 kg réels, le prix réel est 6 € et le prix standard 5 €. Quel écart sur prix calcule-t-on avec la quantité réelle ?",
+      "options": [
+        "-1 100 €",
+        "100 €",
+        "1 100 €",
+        "6 600 €"
+      ],
+      "answer": 2,
+      "explanation": "L’écart prix vaut 1 100 × (6 − 5) = +1 100 €. Le signe positif correspond ici à un surcoût de prix selon la convention donnée, sans prouver sa cause personnelle.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 1100
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 6
+                },
+                {
+                  "value": 5
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1100,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La consommation réelle est 1 100 kg contre 1 000 kg standards autorisés pour la production réelle. Le prix standard est 5 €/kg. Quel écart sur quantité, réel moins standard, obtient-on ?",
+      "options": [
+        "500 €",
+        "100 €",
+        "600 €",
+        "-500 €"
+      ],
+      "answer": 0,
+      "explanation": "L’écart quantité est (1 100 − 1 000) × 5 = +500 €. La quantité standard doit être celle autorisée pour le volume réel, pas un budget de production différent.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1100
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "value": 5
+            }
+          ]
+        },
+        "expected": 500,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût réel est 6 600 € ; la référence autorisée vaut 1 000 kg à 5 €/kg. Quel écart total de matière obtient-on avec réel moins standard ?",
+      "options": [
+        "11 600 €",
+        "1 100 €",
+        "500 €",
+        "1 600 €"
+      ],
+      "answer": 3,
+      "explanation": "La référence est 1 000 × 5 = 5 000 €. L’écart total vaut 6 600 − 5 000 = +1 600 €, à rapprocher des composantes de prix et de quantité.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 6600
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 1000
+                },
+                {
+                  "value": 5
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1600,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un coût réel de matière est calculé à partir de la quantité réelle mais du prix standard. Quelle distinction manque ?",
+      "options": [
+        "La valorisation au standard mesure le coût effectivement payé dès que la quantité est observée.",
+        "La valorisation standard n’est pas le coût réel ; celui-ci utilise le prix effectivement retenu pour le réel.",
+        "La valorisation standard mesure déjà l’écart de prix, sans qu’il soit nécessaire de comparer deux prix.",
+        "La valorisation standard mesure seulement l’écart quantité, sans qu’il soit nécessaire de retrancher une consommation de référence."
+      ],
+      "answer": 1,
+      "explanation": "La quantité réelle valorisée au standard est utile à une décomposition, mais représente une étape de comparaison. Il faut la distinguer de la valeur réellement consommée aux prix réels du dossier."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La décomposition demandée définit l’écart prix avec quantité réelle. Un étudiant emploie la quantité standard et garde inchangée l’autre composante. Quel contrôle est nécessaire ?",
+      "options": [
+        "Conserver la somme obtenue et présenter l’écart résiduel comme un nouvel effet d’activité sans vérifier ses bases.",
+        "Changer seulement le signe de la composante prix pour retrouver un total plus proche du coût réel.",
+        "Vérifier le schéma de décomposition et sa réconciliation avec l’écart total.",
+        "Pondérer l’écart quantité au prix réel tout en maintenant la nouvelle composante prix à quantité standard, sans vérifier leur somme."
+      ],
+      "answer": 2,
+      "explanation": "Les pondérations doivent être cohérentes dans la décomposition choisie. Mélanger deux schémas peut laisser un terme croisé non expliqué ; la somme des composantes doit retrouver l’écart total."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La production réelle est supérieure au budget initial. Pourquoi la quantité standard autorisée doit-elle être adaptée avant d’analyser le rendement matière ?",
+      "options": [
+        "Une production plus forte justifie normalement une consommation standard plus grande à norme unitaire constante.",
+        "Une norme unitaire fixe impose de comparer toute consommation réelle au même total physique du budget initial.",
+        "La référence doit augmenter du même taux que le prix matière, plutôt que du taux d’activité.",
+        "La référence doit être la consommation réelle, car elle seule correspond à la nouvelle activité."
+      ],
+      "answer": 0,
+      "explanation": "Comparer les consommations à des volumes différents confond activité et rendement. La référence autorisée pour la production réelle place l’analyse sur un champ cohérent."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "L’écart total vaut +1 600 €, mais les deux composantes calculées ne somment qu’à +1 100 €. Que faut-il faire avant de commenter les responsables ?",
+      "options": [
+        "Attribuer les 500 € restants au prix, puisque le prix réel est la première composante de la formule du coût.",
+        "Répartir les 500 € entre les deux composantes au prorata de leurs montants sans rechercher l’origine du solde.",
+        "Présenter les 500 € comme un effet d’arrondi même si les données sont exprimées en euros entiers.",
+        "Contrôler formules, unités, périmètres et calculs pour réconcilier la décomposition."
+      ],
+      "answer": 3,
+      "explanation": "La réconciliation est un contrôle de cohérence essentiel. Un écart non expliqué peut révéler une erreur ou un schéma incomplet ; l’analyse de causes ne doit pas reposer sur des composantes incompatibles."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une partie des matières achetées n’est pas consommée pendant la période. Quel montant faut-il distinguer du coût des matières réellement consommées dans l’exercice d’écarts ?",
+      "options": [
+        "Les achats de la période forment la base de consommation même lorsque le stock physique augmente.",
+        "Les achats et mouvements de stock doivent être distingués de la consommation mesurée.",
+        "Les achats diminués du seul stock final forment la consommation, quel que soit le stock initial.",
+        "Les achats augmentés de la hausse du stock forment la consommation de la période."
+      ],
+      "answer": 1,
+      "explanation": "Le champ d’une analyse de consommation n’est pas forcément celui des achats. Les quantités et valeurs doivent correspondre à l’objet suivi ; les mouvements de stock peuvent expliquer une différence."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour 540 kg réels, le prix réel est 9 €/kg et le standard 10 €/kg. Quel écart prix selon réel moins standard calcule-t-on ?",
+      "options": [
+        "540 €",
+        "19 €",
+        "-540 €",
+        "-5 400 €"
+      ],
+      "answer": 2,
+      "explanation": "La composante prix est 540 × (9 − 10) = −540 €. Selon cette convention de coût, le signe négatif indique une économie de prix, sans garantir la qualité ou l’intérêt global de l’achat.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 540
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 9
+                },
+                {
+                  "value": 10
+                }
+              ]
+            }
+          ]
+        },
+        "expected": -540,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La norme est de 2 kg de matière par unité conforme, sans perte supplémentaire admise. La production réelle est de 500 unités. Quelle quantité standard autorisée doit servir de référence ?",
+      "options": [
+        "1 000 kg",
+        "250 kg",
+        "502 kg",
+        "2 000 kg"
+      ],
+      "answer": 0,
+      "explanation": "La référence autorisée est 500 × 2 = 1 000 kg. Elle applique la norme au volume réellement produit et permet de séparer cet effet d’activité d’un écart de consommation.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 500
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "expected": 1000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une économie de prix et un surcoût de quantité se compensent presque, laissant un faible écart total. Quel usage de la décomposition est pertinent ?",
+      "options": [
+        "Considérer le petit solde comme une preuve que les standards prix et quantité sont tous deux respectés.",
+        "Utiliser la compensation pour attribuer à chaque composante le même faible niveau de priorité.",
+        "Écarter la composante favorable de la réconciliation afin que le total reflète seulement les anomalies défavorables.",
+        "Examiner les effets de sens contraires qui peuvent être masqués par le solde."
+      ],
+      "answer": 3,
+      "explanation": "Un petit écart net peut réunir des évolutions importantes. La décomposition aide à comprendre prix et consommation ; elle ne doit pas être effacée au seul motif qu’elles se compensent."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La quantité est en tonnes et le prix réel en euros par kilogramme. Quel préalable rend le coût réel calculable correctement ?",
+      "options": [
+        "Multiplier les tonnes par le prix en euros par kilogramme, puis diviser le résultat par mille.",
+        "Convertir les unités pour rendre quantité et prix unitaire compatibles.",
+        "Diviser les tonnes et le prix en euros par kilogramme par mille avant de les multiplier.",
+        "Multiplier les tonnes et le prix en euros par kilogramme par mille avant de les multiplier."
+      ],
+      "answer": 1,
+      "explanation": "L’unité du prix détermine celle de la quantité à utiliser. Une conversion cohérente évite un facteur mille ; les calculs d’écarts doivent garder la même base physique."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un écart de prix positif est attribué d’emblée à une mauvaise négociation alors que l’approvisionnement a dû être urgent. Quelle réserve convient ?",
+      "options": [
+        "Le montant de l’écart mesure la part du surcoût que l’acheteur aurait pu éviter dans les mêmes conditions d’urgence.",
+        "L’urgence suffit à classer tout le surcoût comme incontrôlable, sans rechercher pourquoi l’achat est devenu urgent.",
+        "La décomposition signale un surcoût mais n’établit pas seule sa cause ni la responsabilité.",
+        "L’écart doit être attribué à la négociation dès lors que la commande a été signée par le service achats."
+      ],
+      "answer": 2,
+      "explanation": "Les événements et contraintes doivent être documentés. Une composante prix fournit une piste de diagnostic ; elle ne démontre pas que les conditions étaient identiques ou qu’une personne pouvait éviter le coût."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La quantité réelle est inférieure au standard autorisé, mais la conformité du produit n’est pas documentée. Que peut-on dire ?",
+      "options": [
+        "Une économie de consommation est observée sur ce critère, sans preuve complète d’une meilleure performance globale.",
+        "L’économie est déjà une preuve d’amélioration du rendement des produits conformes, même si leur nombre n’a pas été vérifié.",
+        "Le standard doit être abaissé dès maintenant au niveau réel, sans contrôler si les spécifications ont été respectées.",
+        "La qualité peut être déduite de l’absence d’écart prix défavorable, sans observation des produits."
+      ],
+      "answer": 0,
+      "explanation": "Un écart favorable peut venir d’un procédé plus efficace ou d’autres changements. La qualité et le périmètre doivent être examinés avant de considérer la baisse de matière comme un gain sans contrepartie."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le rapport inverse sa convention en cours de tableau et additionne des composantes de signes incompatibles. Quel contrôle manque ?",
+      "options": [
+        "Un arrondi commun des composantes avant addition, sans modifier leurs sens de soustraction.",
+        "Une compensation du total par la moyenne des valeurs absolues des composantes.",
+        "Un classement des composantes par ampleur avant leur addition, en gardant leurs signes respectifs.",
+        "Une convention de signe commune ou un retraitement explicite avant la somme."
+      ],
+      "answer": 3,
+      "explanation": "Les signes dépendent du sens de soustraction. Une décomposition doit utiliser des mesures compatibles pour que la somme et son commentaire gardent un sens économique et arithmétique."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le suivi des achats constate l’écart prix dès réception. L’analyse de production le calcule sur les matières consommées. Sur un lot unique, 2 000 kg sont achetés à 4,20 €/kg, 1 500 kg sont consommés et le prix standard est de 4 €/kg. Quelle part de l’écart prix constaté à l’achat reste liée au stock non consommé ?",
+      "options": [
+        "400 € défavorables.",
+        "100 € défavorables.",
+        "300 € défavorables.",
+        "2 000 € défavorables."
+      ],
+      "answer": 1,
+      "explanation": "Le stock du lot est de 2 000 − 1 500 = 500 kg. L’écart de prix de ces unités est 500 × (4,20 − 4) = 100 €. Les 400 € constatés sur tous les achats ne se rattachent donc pas intégralement à la production consommée, qui porte 300 € dans ce modèle.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 2000
+                },
+                {
+                  "value": 1500
+                }
+              ]
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 4.2
+                },
+                {
+                  "value": 4
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 100,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux qualités de matière sont mélangées alors que le dossier exige une matière homogène pour la décomposition simple. Quelle étape est nécessaire ?",
+      "options": [
+        "Appliquer le prix moyen standard d’une seule qualité à toutes les quantités, sans contrôler leurs proportions.",
+        "Analyser le prix moyen observé comme un pur effet de négociation, même si les parts des qualités ont changé.",
+        "Préciser le mix et réexaminer la comparabilité des quantités et prix.",
+        "Retenir la moyenne simple des prix des qualités, sans tenir compte des quantités consommées."
+      ],
+      "answer": 2,
+      "explanation": "La formule simple repose sur des unités comparables. Un changement de qualité ou de mix peut modifier les prix et rendements ; il faut garder cette limite plutôt que attribuer tout écart à une seule cause."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le standard autorisé reprend les unités fabriquées mais inclut aussi, une seconde fois, la hausse de volume déjà prise en compte. Quel risque apparaît ?",
+      "options": [
+        "Une référence surévaluée qui peut masquer une surconsommation.",
+        "Une référence sous-évaluée qui majore artificiellement l’écart quantité défavorable.",
+        "Un transfert du même montant de l’écart quantité vers l’écart prix, sans effet sur la référence physique.",
+        "Une hausse du coût réel consommé, même si les pièces de sortie de stock n’ont pas changé."
+      ],
+      "answer": 0,
+      "explanation": "La norme doit être appliquée une fois au volume pertinent. Un double ajustement gonfle la référence et peut rendre artificiellement favorable la composante quantité."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les calculs sont réconciliés mais aucune pièce ne permet de départager panne, matière et méthode. Quelle suite est professionnelle ?",
+      "options": [
+        "Attribuer l’écart au service qui engage la dépense, en assimilant engagement du coût et origine de l’anomalie.",
+        "Retenir la panne comme cause dès lors qu’elle est contemporaine de la surconsommation, sans examiner les autres facteurs.",
+        "Réviser le standard au niveau réel pour supprimer le signal avant de rechercher l’origine des différences.",
+        "Présenter les pistes et rechercher les données permettant de les vérifier avant l’action."
+      ],
+      "answer": 3,
+      "explanation": "La cohérence arithmétique n’établit pas la causalité. Les écarts orientent les investigations ; les actions doivent viser une cause étayée plutôt qu’une attribution automatique."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une économie de prix est obtenue en commandant de plus grands lots, qui modifient aussi stockage et risque. Quel commentaire évite une conclusion trop large ?",
+      "options": [
+        "Conclure au gain net en comparant seulement les prix unitaires, puisque les quantités sont commandées pour être consommées.",
+        "L’économie sur ce poste doit être appréciée avec les autres effets documentés de l’achat.",
+        "Comparer la remise au seul coût de passation des commandes, en excluant le stock supplémentaire financé.",
+        "Ajouter au gain de prix le montant total du stock final comme s’il s’agissait d’une économie de consommation."
+      ],
+      "answer": 1,
+      "explanation": "Le calcul de prix reste une mesure partielle. D’autres effets peuvent exister ; ils doivent être analysés sans être inventés ni niés à partir du seul signe d’une composante."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un mélange standard comprend 60 % de A à 2 €/kg et 40 % de B à 5 €/kg. Pour 100 kg consommés, le mélange réel comprend 50 kg de chaque matière. L’effet de composition est défini comme coût du mélange réel aux prix standard moins coût des mêmes 100 kg en proportions standard. Quel est cet effet ?",
+      "options": [
+        "50 € défavorables.",
+        "0 €, car le poids total est inchangé.",
+        "30 € défavorables.",
+        "30 € favorables."
+      ],
+      "answer": 2,
+      "explanation": "Aux prix standard, le mélange réel vaut 50 × 2 + 50 × 5 = 350 €. Les mêmes 100 kg dans les proportions standard valent 60 × 2 + 40 × 5 = 320 €. La part plus forte de B, plus chère, crée donc un effet de composition de 30 € défavorables sans hausse du poids total.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 50
+                    },
+                    {
+                      "value": 2
+                    }
+                  ]
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 50
+                    },
+                    {
+                      "value": 5
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 60
+                    },
+                    {
+                      "value": 2
+                    }
+                  ]
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 40
+                    },
+                    {
+                      "value": 5
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 30,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "ACCA — Materials mix and yield variances",
+          "url": "https://www.accaglobal.com/gb/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/mat-yield.html"
+        }
+      ]
+    }
+  ]
+}

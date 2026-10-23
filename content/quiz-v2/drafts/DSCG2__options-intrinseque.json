@@ -1,0 +1,506 @@
+{
+  "module": "DSCG2",
+  "chapter": "options-intrinseque",
+  "sourceHash": "410154d7da508a873afc0fd2dd30472f22ba6089708a7340dc12d54420477f1f",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "À l’échéance, un call porte sur une unité de sous-jacent cotée 125 €, avec prix d’exercice de 110 €. Quelle valeur intrinsèque par unité a-t-il ?",
+      "options": [
+        "15 €",
+        "125 €",
+        "110 €",
+        "-15 €"
+      ],
+      "answer": 0,
+      "explanation": "Le call permet d’acheter à 110 un bien valant 125 : max(0 ; 125 − 110) = 15 €. La prime n’intervient pas dans cette valeur brute.",
+      "calculation": {
+        "expression": {
+          "op": "max",
+          "args": [
+            {
+              "value": 0
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 125
+                },
+                {
+                  "value": 110
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 15,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un call arrive à échéance avec un cours de 90 € et un prix d’exercice de 100 €. Quelle valeur intrinsèque retenir ?",
+      "options": [
+        "−10 €, car le droit impose une perte d’exercice de ce montant",
+        "Zéro, car acheter au prix d’exercice n’apporte pas d’avantage",
+        "90 €, égal au cours du sous-jacent",
+        "100 €, égal au prix d’exercice"
+      ],
+      "answer": 1,
+      "explanation": "La formule max(0 ; S − K) borne la valeur intrinsèque à zéro. Le droit d’achat n’est pas une obligation d’exercer dans ce modèle."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un call donne une valeur intrinsèque de 12 € par unité à l’échéance. La prime initialement payée était de 5 €, sans frais ni actualisation. Quel résultat net unitaire obtient l’acheteur ?",
+      "options": [
+        "12 €",
+        "17 €",
+        "7 €",
+        "-7 €"
+      ],
+      "answer": 2,
+      "explanation": "Le résultat net est la valeur reçue moins le coût de la prime : 12 − 5 = 7 €. Une valeur intrinsèque positive ne représente pas à elle seule le bénéfice.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 12
+            },
+            {
+              "value": 5
+            }
+          ]
+        },
+        "expected": 7,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un call a une valeur intrinsèque de 4 € pour une prime payée de 6 €. L’étudiant parle d’un bénéfice de 4 €. Quelle confusion faut-il corriger ?",
+      "options": [
+        "La prime doit être ajoutée au gain d’exercice pour mesurer le bénéfice",
+        "La valeur intrinsèque doit être ramenée à zéro dès que le résultat est négatif",
+        "Le prix d’exercice doit être réduit du montant de la prime avant tout calcul",
+        "Le gain brut d’exercice ne couvre pas ici le coût de la prime"
+      ],
+      "answer": 3,
+      "explanation": "Le résultat net est 4 − 6 = −2 €. Le droit conserve une valeur brute à l’échéance même si l’investissement initial reste déficitaire."
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un call couvre 200 unités et produit une perte nette unitaire de 3 €, tous coûts fournis déjà inclus. Quel résultat total faut-il présenter ?",
+      "options": [
+        "-600 €",
+        "600 €",
+        "-3 €",
+        "-197 €"
+      ],
+      "answer": 0,
+      "explanation": "Le résultat total est le résultat unitaire multiplié par les unités : −3 × 200 = −600 €. Il faut conserver le signe de la perte.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": -3
+            },
+            {
+              "value": 200
+            }
+          ]
+        },
+        "expected": -600,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le prix d’exercice d’un call est de 80 € et sa prime de 7 € par unité. Sans autres frais, quel cours à l’échéance annule le résultat net de l’acheteur ?",
+      "options": [
+        "73 €",
+        "87 €",
+        "80 €",
+        "7 €"
+      ],
+      "answer": 1,
+      "explanation": "Lorsque S > K, le résultat vaut S − K − prime. Il s’annule pour S = 80 + 7 = 87 € dans le modèle fourni.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 80
+            },
+            {
+              "value": 7
+            }
+          ]
+        },
+        "expected": 87,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "À l’échéance, le cours du sous-jacent est exactement égal au prix d’exercice du call. La prime a été payée. Quel est le résultat net ?",
+      "options": [
+        "Un résultat nul puisque le cours égale le prix d’exercice",
+        "Un bénéfice égal à la prime",
+        "La perte de la prime payée",
+        "Une perte égale au prix d’exercice"
+      ],
+      "answer": 2,
+      "explanation": "La valeur intrinsèque est nulle quand S = K. Le coût initial de la prime reste supporté, donc le résultat net est son opposé."
+    },
+    {
+      "id": "q08",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le modèle de call utilise min(0 ; S − K) au lieu de max(0 ; S − K). Quel comportement erroné en résulte ?",
+      "options": [
+        "Il calcule le gain net du call après déduction de la prime, sans autre donnée",
+        "Il calcule la valeur intrinsèque du put de même prix d’exercice",
+        "Il calcule la perte maximale du call quelle que soit la prime versée",
+        "Il donne une valeur négative quand le call est défavorable et supprime l’avantage lorsqu’il est favorable"
+      ],
+      "answer": 3,
+      "explanation": "Le maximum retient l’avantage positif ou zéro. Le minimum ferait précisément l’inverse, ce qui ne représente pas le droit d’achat étudié."
+    },
+    {
+      "id": "q09",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La prime est de 4 € par unité. Trois contrats portent chacun sur 100 unités. Quel coût total de prime a été payé, sans frais ?",
+      "options": [
+        "1200 €",
+        "12 €",
+        "400 €",
+        "300 €"
+      ],
+      "answer": 0,
+      "explanation": "Le nombre d’unités est 3 × 100 = 300. Le coût est donc 300 × 4 = 1 200 €, et non trois seules primes unitaires.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 3
+                },
+                {
+                  "value": 100
+                }
+              ]
+            },
+            {
+              "value": 4
+            }
+          ]
+        },
+        "expected": 1200,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un call a une valeur intrinsèque nulle à l’échéance et sa prime était strictement positive. Quel résultat est possible dans ce seul modèle ?",
+      "options": [
+        "Une perte égale à la totalité du cours du sous-jacent",
+        "Une perte limitée à la prime initiale",
+        "Un résultat nul parce que le droit n’est pas exercé",
+        "Un bénéfice égal à la prime conservée par l’acheteur"
+      ],
+      "answer": 1,
+      "explanation": "Ne pas exercer évite un achat défavorable, mais ne récupère pas la prime déjà payée. Le résultat est donc −prime dans les hypothèses sans autres coûts."
+    },
+    {
+      "id": "q11",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux calls ont le même prix d’exercice, mais l’un a coûté une prime plus élevée. Les deux seuils de rentabilité sont présentés comme identiques. Que manque le calcul ?",
+      "options": [
+        "Le nombre d’unités, qui modifierait le seuil unitaire à lui seul",
+        "Le cours historique du sous-jacent, qui remplace la prime",
+        "La prime propre à chaque call dans K + prime",
+        "La division du prix d’exercice par la prime"
+      ],
+      "answer": 2,
+      "explanation": "Le seuil net intègre le coût initial par unité. À K identique, une prime plus élevée exige un cours final plus élevé pour équilibrer le résultat."
+    },
+    {
+      "id": "q12",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "La prime initiale intervient-elle dans max(0 ; S − K), valeur intrinsèque du call à l’échéance ?",
+      "options": [
+        "Oui, elle doit être ajoutée au cours avant ce maximum",
+        "Oui, elle remplace le prix d’exercice",
+        "Non, elle doit être ignorée aussi dans le résultat net",
+        "Non, elle intervient ensuite pour passer au résultat net"
+      ],
+      "answer": 3,
+      "explanation": "La valeur intrinsèque mesure l’avantage d’exercice. Le coût d’acquisition du droit sert à calculer le résultat de l’acheteur, qui est une autre grandeur."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le résultat total net d’un call est de 900 € pour 150 unités identiques. Quel résultat net par unité cela représente-t-il ?",
+      "options": [
+        "6 €",
+        "135000 €",
+        "0,1667 €",
+        "750 €"
+      ],
+      "answer": 0,
+      "explanation": "Le total se répartit sur les 150 unités : 900 / 150 = 6 €. Il faut diviser par les unités couvertes, pas par le nombre de contrats sans leur quotité.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 900
+            },
+            {
+              "value": 150
+            }
+          ]
+        },
+        "expected": 6,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un dossier impose une prime de 5 € et des frais supplémentaires de 1 € par unité, avec prix d’exercice de 100 €. Quel cours final donne un résultat net nul, sans actualisation ?",
+      "options": [
+        "105 €",
+        "106 €",
+        "104 €",
+        "101 €"
+      ],
+      "answer": 1,
+      "explanation": "Le coût unitaire total est 6 €. Le seuil devient 100 + 5 + 1 = 106 €, sous les frais et conventions explicitement fournis.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 100
+                },
+                {
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "value": 1
+            }
+          ]
+        },
+        "expected": 106,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un call est favorable à l’exercice mais son cours final reste inférieur à K + prime. Quel diagnostic est correct ?",
+      "options": [
+        "Le call ne doit avoir aucune valeur intrinsèque",
+        "Le résultat net doit être positif dès que S dépasse K",
+        "Le droit apporte une valeur brute, mais le résultat net reste négatif",
+        "La prime doit être remboursée pour rendre le résultat nul"
+      ],
+      "answer": 2,
+      "explanation": "Entre K et K + prime, l’avantage S − K est positif mais inférieur à la prime. La distinction entre valeur brute et résultat net est essentielle."
+    },
+    {
+      "id": "q16",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une formule prétend donner le prix d’un call avant échéance en utilisant uniquement sa valeur intrinsèque à cette date. Quelle limite du chapitre rappeler ?",
+      "options": [
+        "La valeur intrinsèque suffit avant échéance dès lors que le call est dans la monnaie, sans tenir compte du temps restant",
+        "Le prix avant échéance peut être obtenu en retranchant la prime payée de la seule valeur intrinsèque du jour",
+        "La durée restante peut être prise en compte en multipliant la valeur intrinsèque par la fraction d’année restant à courir",
+        "La formule étudiée porte sur l’échéance, avec valeur temps nulle dans le cas fourni"
+      ],
+      "answer": 3,
+      "explanation": "L’exercice est explicitement daté à l’échéance. Il ne fournit pas à lui seul un modèle complet de prix avant terme, où d’autres facteurs peuvent intervenir."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’étudiant calcule une perte totale en multipliant une perte unitaire par le nombre de contrats, alors que chacun porte sur cent unités. Quelle information a-t-il omise ?",
+      "options": [
+        "La quotité de cent unités par contrat",
+        "Le nombre de contrats détenus",
+        "La perte calculée pour une unité de sous-jacent",
+        "Le caractère négatif du résultat unitaire, présenté comme une perte"
+      ],
+      "answer": 0,
+      "explanation": "Un résultat par unité doit être multiplié par le nombre total d’unités couvertes. Omettre la quotité réduit artificiellement le total par cent."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux positions comportent le même call acheté, au même coût unitaire, mais des quantités différentes. Hors frais fixes, que devient le seuil de rentabilité par unité ?",
+      "options": [
+        "Il augmente proportionnellement au nombre d’unités",
+        "Il reste identique, même si le résultat total change avec la quantité",
+        "Il diminue proportionnellement au nombre d’unités",
+        "Il est remplacé par le coût total des primes"
+      ],
+      "answer": 1,
+      "explanation": "Le seuil K + prime est unitaire. Multiplier la quantité multiplie coûts et gains de la même façon, sans déplacer ce seuil sous les hypothèses données."
+    },
+    {
+      "id": "q19",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un call de prix d’exercice 50 € a coûté 3 €. Le cours final est 58 €. Quel rendement net rapporté à la seule prime initiale donne ce modèle, au centième de pourcentage ?",
+      "options": [
+        "266,67 %",
+        "10 %",
+        "166,67 %",
+        "62,5 %"
+      ],
+      "answer": 2,
+      "explanation": "Le résultat est (58 − 50) − 3 = 5 €. Rapporté à la prime de 3 €, il vaut 5/3 × 100 = 166,67 %. Le dénominateur est explicitement le coût du droit.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "op": "-",
+                      "args": [
+                        {
+                          "value": 58
+                        },
+                        {
+                          "value": 50
+                        }
+                      ]
+                    },
+                    {
+                      "value": 3
+                    }
+                  ]
+                },
+                {
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 166.67,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le cours du sous-jacent baisse davantage sous K, sans autre changement à l’échéance. Comment évolue la valeur intrinsèque du call acheté ?",
+      "options": [
+        "Elle devient de plus en plus négative",
+        "Elle augmente du montant de la baisse du cours",
+        "Elle devient égale au coût de la prime",
+        "Elle reste nulle"
+      ],
+      "answer": 3,
+      "explanation": "Le maximum avec zéro empêche une valeur intrinsèque négative. La prime déjà payée reste toutefois une perte dans le résultat net."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau retranche la prime par unité dans le résultat unitaire, puis retranche encore la prime totale après multiplication par la quantité. Quelle erreur relève-t-on ?",
+      "options": [
+        "La prime est comptée deux fois dans le résultat net total",
+        "Le nombre d’unités est compté deux fois dans le gain brut",
+        "Le prix d’exercice est omis du gain brut",
+        "Le résultat net est confondu avec le cours final"
+      ],
+      "answer": 0,
+      "explanation": "La multiplication du résultat unitaire déjà net inclut déjà toutes les primes unitaires. Une seconde déduction du coût total double ce coût."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que signifie le seuil de rentabilité à l’échéance dans le modèle du call acheté ?",
+      "options": [
+        "Le cours le plus élevé que le sous-jacent puisse atteindre",
+        "Le cours pour lequel gain brut et coût de prime se compensent",
+        "La prime maximale autorisée par la formule",
+        "Le prix auquel l’acheteur récupère nécessairement sa prime avant échéance"
+      ],
+      "answer": 1,
+      "explanation": "Le seuil annule le résultat net sous les coûts du cas. Il n’est ni une prévision du cours, ni une borne du marché, ni une garantie de revente."
+    }
+  ]
+}

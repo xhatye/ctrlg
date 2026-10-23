@@ -1,0 +1,514 @@
+{
+  "module": "DSCG2",
+  "chapter": "change-devises",
+  "sourceHash": "3c749d8a5a1d81727248ee3d694b263d0637dfe4db5e2120408e8afc47ec6c56",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un achat à terme fournit 11 000 USD contre des euros au cours fixé de 1,10 USD/EUR. Sans frais, combien d’euros seront dus à cette échéance ?",
+      "options": [
+        "10000 €",
+        "12100 €",
+        "11000 €",
+        "9000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le contrat fixe 1,10 dollar par euro. Le montant d’euros correspondant vaut 11 000 / 1,10 = 10 000 €, sans préjuger du futur comptant.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 11000
+            },
+            {
+              "value": 1.1
+            }
+          ]
+        },
+        "expected": 10000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un cours de 1,25 USD pour 1 EUR est remplacé par 1,25 EUR pour 1 USD dans le tableau. Quel défaut faut-il corriger ?",
+      "options": [
+        "Une simple différence d’arrondi sans incidence sur la conversion",
+        "L’inversion de l’unité de cotation sans inversion numérique du cours",
+        "La transformation du cours au comptant en cours à terme",
+        "Une variation de volume de la dette étrangère"
+      ],
+      "answer": 1,
+      "explanation": "Les deux cotations sont réciproques : 1,25 USD/EUR correspond à 0,80 EUR/USD. Conserver 1,25 en changeant les unités modifie le taux."
+    },
+    {
+      "id": "q03",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Avec une cotation de 1,15 USD pour 1 EUR, combien de dollars reçoit-on contre 2 000 €, sans frais ?",
+      "options": [
+        "1739,13 USD",
+        "2000 USD",
+        "2300 USD",
+        "300 USD"
+      ],
+      "answer": 2,
+      "explanation": "Le taux exprime des dollars par euro. On multiplie 2 000 EUR par 1,15 USD/EUR pour obtenir 2 300 USD.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 2000
+            },
+            {
+              "value": 1.15
+            }
+          ]
+        },
+        "expected": 2300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût en euros d’une dette est de 10 200 € au terme proposé et de 10 000 € au comptant donné. Quel surcoût relatif au coût comptant mesure-t-on ?",
+      "options": [
+        "1,96 %",
+        "20 %",
+        "102 %",
+        "2 %"
+      ],
+      "answer": 3,
+      "explanation": "L’écart de 200 € se rapporte à 10 000 €, soit 2 %. Cette comparaison porte sur les deux cours fournis, sans prédire le comptant de l’échéance.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 10200
+                    },
+                    {
+                      "value": 10000
+                    }
+                  ]
+                },
+                {
+                  "value": 10000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 2,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’entreprise fixe aujourd’hui un cours à terme pour une dette certaine en devise. Le futur comptant devient finalement plus avantageux. Comment apprécier la couverture ?",
+      "options": [
+        "Elle a fixé le coût convenu, même si une opération non couverte aurait coûté moins dans ce scénario",
+        "Elle était sans effet puisque le futur comptant diffère du terme",
+        "Le contrat doit automatiquement être réécrit au meilleur des deux cours",
+        "Le prix moins favorable prouve que le montant nominal n’était pas couvert"
+      ],
+      "answer": 0,
+      "explanation": "La couverture vise à fixer un coût, pas à battre chaque cours futur possible. Le constat après réalisation ne change pas son objectif initial de réduction d’incertitude."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un cours vaut 0,80 EUR pour 1 USD. Quel cours réciproque, en USD pour 1 EUR, représente la même parité ?",
+      "options": [
+        "0,80 USD/EUR",
+        "1,25 USD/EUR",
+        "1,80 USD/EUR",
+        "0,20 USD/EUR"
+      ],
+      "answer": 1,
+      "explanation": "Le cours réciproque vaut 1 / 0,80 = 1,25 USD/EUR. Changer d’unité sans prendre l’inverse ne conserve pas la même parité.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1
+            },
+            {
+              "value": 0.8
+            }
+          ]
+        },
+        "expected": 1.25,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le cours à terme est moins favorable que le comptant actuel. L’étudiant appelle tout l’écart « commission bancaire facturée ». Que faut-il vérifier ?",
+      "options": [
+        "Assimiler automatiquement chaque écart de cours à une facture de frais",
+        "Déduire l’écart deux fois, dans le cours puis dans une commission présumée",
+        "Distinguer l’écart de cours des frais explicitement prévus au contrat",
+        "Considérer que le terme et le comptant doivent être égaux sans justification"
+      ],
+      "answer": 2,
+      "explanation": "Une différence entre deux cours n’est pas à elle seule une commission séparée. Il faut distinguer cours contractuel, conditions de livraison et frais réellement donnés."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un budget fixe de 5 000 € est consacré à acheter des dollars. La cotation USD/EUR augmente. À frais nuls, que devient la quantité achetable en dollars ?",
+      "options": [
+        "Elle diminue puisque la dette étrangère devient plus lourde",
+        "Elle reste fixe parce que le budget est en euros",
+        "Elle diminue du même nombre d’unités que la hausse du cours",
+        "Elle augmente puisque chaque euro fournit plus de dollars"
+      ],
+      "answer": 3,
+      "explanation": "Pour un budget en euros donné, USD = EUR × cours USD/EUR. Une hausse de ce cours augmente directement les dollars achetables."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Sur une dette de 20 000 USD, 12 000 USD sont achetés à terme à 1,20 USD/EUR et le reste à 1 USD/EUR à l’échéance. Quel coût total en euros résulte de ce scénario, sans frais ?",
+      "options": [
+        "18000 €",
+        "20000 €",
+        "16666,67 €",
+        "22400 €"
+      ],
+      "answer": 0,
+      "explanation": "La part couverte coûte 12 000/1,20 = 10 000 €. La part restante coûte 8 000/1 = 8 000 €, soit 18 000 € au total.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 1.2
+                }
+              ]
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 20000
+                    },
+                    {
+                      "value": 12000
+                    }
+                  ]
+                },
+                {
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 18000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une couverture de 15 000 USD est prise pour une dette finalement confirmée à 10 000 USD. Quel rapprochement manque ?",
+      "options": [
+        "Celui du montant couvert avec le montant de la dette prévu avant sa confirmation, sans tenir compte de sa réduction",
+        "Celui du nominal couvert avec le montant d’exposition effectivement maintenu",
+        "Celui des deux montants convertis à des cours et dates différents, utilisé pour comparer directement leurs notionnels en dollars",
+        "Celui des seuls frais fixes de couverture avec le coût de la facture, sans examiner l’engagement de change restant"
+      ],
+      "answer": 1,
+      "explanation": "L’écart de 5 000 USD peut constituer une surcouverture. Il faut examiner l’engagement restant, pas présumer que la réduction de dette le réduit automatiquement."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux comparaisons de couverture utilisent des dettes et des échéances différentes. Pourquoi leurs seuls écarts en euros sont-ils difficilement comparables ?",
+      "options": [
+        "Un écart en euros ne peut jamais être comparé à un autre écart en euros",
+        "Les cours à terme rendent les coûts indépendants du volume",
+        "Les montants et horizons ne décrivent pas la même exposition",
+        "La conversion en euros supprime toute influence de la date"
+      ],
+      "answer": 2,
+      "explanation": "Le nominal et le calendrier influencent le coût. Une comparaison exige des périmètres cohérents ou une normalisation explicitement justifiée."
+    },
+    {
+      "id": "q12",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise doit payer des dollars et dispose d’euros. Quel sens d’opération doit décrire la couverture ?",
+      "options": [
+        "Vendre les dollars de la dette comme s’il s’agissait d’une créance à recevoir",
+        "Acheter des euros contre des dollars déjà détenus sans les identifier",
+        "Compenser la dette par une vente de dollars non justifiée par ses ressources",
+        "Acheter les dollars nécessaires contre des euros"
+      ],
+      "answer": 3,
+      "explanation": "La couverture doit correspondre à une obligation de livrer des dollars. Confondre dette et créance conduit à choisir un sens contraire à l’exposition."
+    },
+    {
+      "id": "q13",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un fournisseur doit recevoir 9 000 USD. Une première conversion de 6 000 € au cours de 1,20 USD/EUR a été faite. Combien de dollars reste-t-il à acheter ?",
+      "options": [
+        "1800 USD",
+        "3000 USD",
+        "7200 USD",
+        "10800 USD"
+      ],
+      "answer": 0,
+      "explanation": "Les euros convertis ont fourni 6 000 × 1,20 = 7 200 USD. Le besoin restant vaut 9 000 − 7 200 = 1 800 USD.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 9000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 6000
+                },
+                {
+                  "value": 1.2
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1800,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un rapport compare le terme fixé aujourd’hui au comptant d’aujourd’hui et affirme connaître le gain de couverture à l’échéance. Quelle donnée manque ?",
+      "options": [
+        "Le seul écart entre cours à terme et comptant initial, tenu pour gain réalisé à l’échéance",
+        "Le comptant qui prévaudra à l’échéance pour la comparaison réalisée",
+        "Le cours prévu au budget, tenu pour cours effectivement disponible à la date future",
+        "La moyenne des cours comptants passés, tenue pour prix auquel la dette non couverte aurait été réglée"
+      ],
+      "answer": 1,
+      "explanation": "Le terme peut être comparé au comptant actuel pour décrire l’offre. Le gain relatif à l’absence de couverture dépendra du cours effectivement disponible à l’échéance."
+    },
+    {
+      "id": "q15",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une couverture fixe la contrevaleur de la dette en devise, mais le fournisseur risque de ne pas livrer. Quelle limite de périmètre rappeler ?",
+      "options": [
+        "Le risque de livraison modifie automatiquement le cours à terme fixé",
+        "La fixation du cours rend le contrat commercial irrévocable pour le fournisseur",
+        "La couverture du change ne règle pas à elle seule le risque de livraison commerciale",
+        "Le coût fixé démontre que tous les risques de l’achat sont couverts"
+      ],
+      "answer": 2,
+      "explanation": "La protection vise une exposition monétaire. Elle ne remplace pas l’examen des obligations commerciales, de la livraison ou du risque de contrepartie."
+    },
+    {
+      "id": "q16",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût sans couverture est de 12 000 € au comptant réalisé. Le terme impose 11 400 €, frais exclus. Quelle économie réalisée par rapport à ce scénario non couvert calcule-t-on ?",
+      "options": [
+        "-600 €",
+        "11400 €",
+        "23400 €",
+        "600 €"
+      ],
+      "answer": 3,
+      "explanation": "L’économie est le coût évité moins le coût couvert : 12 000 − 11 400 = 600 €. Le signe dépend du sens de comparaison annoncé.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 12000
+            },
+            {
+              "value": 11400
+            }
+          ]
+        },
+        "expected": 600,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau multiplie une dette en dollars par un cours USD/EUR et annonce des euros. Quel contrôle d’unité révèle l’erreur ?",
+      "options": [
+        "USD × USD/EUR ne donne pas EUR ; la dette doit être divisée par ce cours",
+        "La dette peut être multipliée par le cours indiqué parce que ce cours est associé aux deux monnaies",
+        "La dette doit être divisée par le cours inverse, 1 / (USD/EUR), pour obtenir la contre-valeur",
+        "La multiplication initiale peut être conservée si l’on change seulement le libellé du résultat de USD en EUR"
+      ],
+      "answer": 0,
+      "explanation": "Le raisonnement d’unités permet de retrouver l’opération : USD ÷ (USD/EUR) = EUR. Il évite d’appliquer une règle de multiplication universelle."
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que signifie un surcoût positif du terme par rapport au comptant fourni ?",
+      "options": [
+        "Le terme est certain d’être moins favorable que le comptant futur",
+        "Le coût au terme dépasse celui du comptant de comparaison donné",
+        "Le coût de couverture sera remboursé en cas d’évolution favorable",
+        "Le futur comptant est déjà connu au jour de la comparaison"
+      ],
+      "answer": 1,
+      "explanation": "L’écart décrit les données retenues dans la comparaison. Il ne détermine pas le sens de l’évolution du comptant entre aujourd’hui et l’échéance."
+    },
+    {
+      "id": "q19",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le contrat de couverture arrive à échéance une semaine avant le paiement de la dette. Pourquoi la fixation du cours ne suffit-elle pas à décrire le coût final ?",
+      "options": [
+        "Le prix de couverture suffit à déterminer le coût final, même si les devises obtenues doivent être financées pendant la semaine",
+        "Le décalage peut être neutralisé en remplaçant seulement la date de dette dans le budget, sans modifier les engagements",
+        "Les conditions de détention, de financement ou d’ajustement pendant l’écart de dates doivent être examinées",
+        "Le coût peut être fixé en prolongeant d’une semaine le cours contractuel, sans vérifier la possibilité ni le coût de cette prolongation"
+      ],
+      "answer": 2,
+      "explanation": "Un décalage peut créer des besoins de financement ou de conservation des devises. Son traitement dépend des faits et des modalités du contrat."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le budget de change est de 8 000 €. Des frais fixes de 100 € sont prélevés en euros avant conversion ; le cours est de 1,10 USD/EUR. Combien de dollars reçoit-on ?",
+      "options": [
+        "8800 USD",
+        "8910 USD",
+        "7181,82 USD",
+        "8690 USD"
+      ],
+      "answer": 3,
+      "explanation": "La somme convertible est 8 000 − 100 = 7 900 €. Elle fournit 7 900 × 1,10 = 8 690 USD. Il faut respecter la devise et l’ordre du prélèvement.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 8000
+                },
+                {
+                  "value": 100
+                }
+              ]
+            },
+            {
+              "value": 1.1
+            }
+          ]
+        },
+        "expected": 8690,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi inscrire les unités monétaires dans un tableau de change ?",
+      "options": [
+        "Pour vérifier le sens de conversion et la comparabilité des montants",
+        "Pour appliquer une multiplication dès que la dette est étrangère, quel que soit le sens de cotation",
+        "Pour additionner les montants avant conversion dès lors qu’ils concernent la même échéance",
+        "Pour inverser le cours en permutant seulement ses lettres de devise, sans prendre son inverse numérique"
+      ],
+      "answer": 0,
+      "explanation": "Les unités permettent un contrôle dimensionnel indispensable. Elles ne remplacent ni la date, ni le montant, ni l’étude du contrat."
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le terme donne un coût fixe et le budget accepte ce coût pour sécuriser sa marge. Le comptant futur reste incertain. Quelle présentation est fidèle à l’objectif ?",
+      "options": [
+        "Une garantie d’obtenir le cours le plus favorable de tous les scénarios",
+        "Un coût sécurisé sous les clauses, avec comparaison de scénarios plutôt qu’une promesse de meilleur cours",
+        "Une prévision certaine du comptant égale au terme",
+        "Un rendement de placement garanti égal à l’écart entre cours"
+      ],
+      "answer": 1,
+      "explanation": "La couverture peut répondre à un objectif budgétaire même sans maximiser le gain après coup. L’objectif et les coûts doivent être expliqués séparément de toute prévision."
+    }
+  ]
+}

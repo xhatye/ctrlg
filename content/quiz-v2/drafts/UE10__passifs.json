@@ -1,0 +1,531 @@
+{
+  "module": "UE10",
+  "chapter": "passifs",
+  "sourceHash": "6eee03893f7da3bcab38aa8540b0c032bbd0318fc4bd6c21bb3fca3ad1eed80f",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture due fixe précisément 8 000 € à payer le 15 février. Un autre dossier concerne un litige avec montant et date de sortie encore incertains. Quelle distinction est pertinente ?",
+      "options": [
+        "La facture décrit une dette déterminée ; le litige demande une analyse de provision",
+        "Les deux sont nécessairement des réserves de trésorerie",
+        "La facture est une provision seulement parce qu’elle sera payée plus tard",
+        "Le litige est une vente tant que rien n’est payé"
+      ],
+      "answer": 0,
+      "explanation": "La nature du passif dépend notamment du degré de détermination du montant et de l’échéance. L’absence de paiement immédiat ne suffit pas à définir une provision.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une prestation reçue a un prix exact confirmé et une échéance convenue, mais la facture n’est pas encore arrivée. Le préparateur l’appelle provision uniquement à cause du document manquant. Quelle analyse manque-t-il ?",
+      "options": [
+        "La nécessité de considérer tout montant sans facture comme libre de dette",
+        "Le degré réel de détermination de l’obligation, distinct de l’arrivée de la facture",
+        "Le choix d’un pourcentage arbitraire du chiffre d’affaires",
+        "Le remplacement de l’échéance par la date de paiement souhaitée"
+      ],
+      "answer": 1,
+      "explanation": "L’absence de facture n’est pas à elle seule une incertitude de nature identique à un risque. Il faut qualifier l’obligation et ses paramètres connus.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle incertitude caractérise une provision au sens du PCG par rapport à une dette précisément déterminée ?",
+      "options": [
+        "La nécessité que son paiement soit déjà réalisé",
+        "L’absence obligatoire de tiers concerné",
+        "Le montant ou l’échéance non fixé avec précision",
+        "La certitude d’un gain supérieur au paiement"
+      ],
+      "answer": 2,
+      "explanation": "Une provision reste un passif, mais certains paramètres sont incertains. Elle ne constitue ni une liquidité ni une simple intention libre de dépense.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une somme est placée sur un compte bancaire pour anticiper un risque. Le seul placement permet-il de conclure qu’une provision comptable doit exister ?",
+      "options": [
+        "Oui, toute épargne est nécessairement une provision comptable",
+        "Oui, la provision est toujours le solde exact de ce compte",
+        "Non, les entreprises ne peuvent jamais financer un risque",
+        "Non, il faut analyser séparément les conditions du passif"
+      ],
+      "answer": 3,
+      "explanation": "La préparation de liquidités et la reconnaissance d’une obligation sont deux questions différentes. Une affectation bancaire ne démontre pas les critères comptables.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des produits déjà vendus comportent une garantie contractuelle. Le dossier établit une obligation actuelle et une sortie probable pour les défauts couverts. Quel point justifie l’examen d’une provision ?",
+      "options": [
+        "Le lien entre les ventes passées et l’obligation envers les bénéficiaires",
+        "Le seul budget de vente de l’année prochaine",
+        "Le souhait de diminuer la marge affichée",
+        "Le montant d’argent encore disponible en banque"
+      ],
+      "answer": 0,
+      "explanation": "Le passif est relié à un événement passé et à une obligation actuelle dans les faits fournis. Les critères de montant et de sortie doivent ensuite être évalués.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une rénovation envisagée pour améliorer les locaux l’an prochain reste entièrement révocable et n’engage l’entité envers aucun tiers. Pourquoi une provision ne découle-t-elle pas du seul budget ?",
+      "options": [
+        "Toute rénovation est interdite en comptabilité",
+        "Une dépense future souhaitée ne constitue pas à elle seule une obligation actuelle",
+        "Une provision exige toujours une facture déjà payée",
+        "La décision doit simplement être arrondie à un montant supérieur"
+      ],
+      "answer": 1,
+      "explanation": "La volonté de dépenser n’est pas nécessairement un passif. L’analyse doit rechercher un engagement répondant aux conditions du cadre applicable.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un événement passé existe, mais aucune analyse de sortie probable n’est réalisée. Peut-on reconnaître automatiquement toute provision proposée ?",
+      "options": [
+        "Oui, tout événement passé impose une provision de même montant",
+        "Oui, si l’entreprise réalise un bénéfice",
+        "Non, il faut aussi examiner les critères de sortie et d’estimation",
+        "Non, il faut remplacer toute provision par un produit"
+      ],
+      "answer": 2,
+      "explanation": "Le fait générateur ne suffit pas à lui seul. La reconnaissance et la mesure nécessitent les autres conditions pertinentes du dossier et du référentiel.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le bénéfice est insuffisant et la direction refuse une provision remplissant les conditions du PCG. Quel principe faut-il rappeler ?",
+      "options": [
+        "Les conditions deviennent facultatives si le résultat est négatif",
+        "Une provision n’est possible que si elle est payée comptant",
+        "Un passif doit être ignoré jusqu’au retour d’un bénéfice",
+        "L’insuffisance de bénéfice ne supprime pas les provisions nécessaires"
+      ],
+      "answer": 3,
+      "explanation": "La représentation des obligations ne dépend pas d’un objectif de résultat. Le PCG prévoit les provisions requises même en absence ou insuffisance de bénéfice.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pour une provision pour risque, quelle question vient avant le choix du montant ?",
+      "options": [
+        "Quelle obligation actuelle provient des faits déjà survenus ?",
+        "Quel montant avait été provisionné l’an dernier, sans examiner le risque actuel ?",
+        "Quel montant budgétaire est disponible pour absorber une charge ?",
+        "Quel décaissement futur est prévu, sans examiner l’existence d’une obligation actuelle ?"
+      ],
+      "answer": 0,
+      "explanation": "La qualification de l’obligation fonde le passif. Le chiffrage ne doit pas commencer par une réserve de résultat sans fait générateur.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’exercice impose une estimation pondérée : sortie de 3 000 € avec poids 70 % et de 10 000 € avec poids 30 %. Quel montant donne cette convention fournie ?",
+      "options": [
+        "6 500 €",
+        "5 100 €",
+        "13 000 €",
+        "7 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La moyenne pondérée imposée est 3 000 × 0,70 + 10 000 × 0,30 = 5 100 €. Cette convention est donnée pour le cas et n’est pas une règle universelle de toute provision.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 3000
+                },
+                {
+                  "value": 0.7
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 10000
+                },
+                {
+                  "value": 0.3
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 5100,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Trois scénarios ont des probabilités différentes. Le dossier impose une moyenne pondérée, mais le calcul fait une moyenne simple des montants. Que faut-il corriger ?",
+      "options": [
+        "Le seul signe des montants, qui doivent tous devenir négatifs",
+        "Le nombre de bénéficiaires sans examiner les coûts",
+        "Les poids des scénarios selon la convention demandée",
+        "L’obligation de retenir toujours le maximum, quel que soit le cadre"
+      ],
+      "answer": 2,
+      "explanation": "La méthode de mesure annoncée doit être respectée. Une moyenne simple suppose des poids égaux qui ne correspondent pas ici aux hypothèses.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un conseil extérieur fournit une estimation avec ses conditions, mais le comptable ne conserve que le total. Quelle information manque au dossier de contrôle ?",
+      "options": [
+        "La seule identité professionnelle du conseil, considérée comme validation suffisante du total",
+        "Le seul rapprochement du total avec la provision précédente",
+        "La seule confirmation que le total est inférieur à la demande adverse",
+        "Les faits, hypothèses et limites qui justifient ce montant"
+      ],
+      "answer": 3,
+      "explanation": "Une opinion chiffrée doit rester rattachée à son objet et à ses hypothèses. Son origine ne transforme pas une estimation en somme garantie.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une provision existante de 6 000 € doit être portée à 7 400 € selon une estimation documentée, sans autre mouvement. Quelle dotation complémentaire correspond à la révision ?",
+      "options": [
+        "1 400 €",
+        "13 400 €",
+        "7 400 €",
+        "6 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La variation nécessaire est 7 400 − 6 000 = 1 400 €. Le montant cible ne doit pas être ajouté intégralement au stock existant.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 7400
+            },
+            {
+              "value": 6000
+            }
+          ]
+        },
+        "expected": 1400,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une provision est reconnue en comptabilité et le responsable la déclare automatiquement déductible fiscalement. Quel examen distinct manque-t-il ?",
+      "options": [
+        "La seule existence d’une écriture de dotation comme preuve de déductibilité",
+        "Les conditions fiscales applicables à cette provision",
+        "Le seul paiement prévu l’année suivante comme critère fiscal suffisant",
+        "La seule qualification de provision dans le grand livre comme justification fiscale"
+      ],
+      "answer": 1,
+      "explanation": "La reconnaissance comptable et la déductibilité fiscale ne sont pas une seule question. Le dossier fiscal doit être contrôlé selon ses propres conditions.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les faits justifiant une provision ont évolué favorablement et l’estimation nécessaire baisse. Quelle conduite est appropriée ?",
+      "options": [
+        "Conserver toujours le plus grand montant historique par principe",
+        "Ajouter un complément parce qu’un risque a existé autrefois",
+        "Réexaminer le montant existant et l’ajuster selon les nouvelles données pertinentes",
+        "Transformer tout excédent en apport bancaire reçu"
+      ],
+      "answer": 2,
+      "explanation": "Une estimation doit refléter la situation pertinente, pas être reconduite mécaniquement. L’ajustement éventuel doit rester justifié et distinct du cash.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un litige existe à la clôture. Avant l’établissement des comptes, une lettre précise le coût probable du même litige. Quelle relation faut-il examiner ?",
+      "options": [
+        "La seule date de réception comme preuve d’une situation nécessairement nouvelle",
+        "Le montant du chiffre d’affaires de l’année suivante uniquement",
+        "L’obligation de créer un nouveau litige pour chaque courrier",
+        "Le lien de cette information avec la situation déjà existante à la clôture"
+      ],
+      "answer": 3,
+      "explanation": "Une information ultérieure peut éclairer une obligation antérieure. Son traitement dépend de ce lien et des règles de clôture applicables.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un sinistre survenu après clôture crée une situation nouvelle, sans remise en cause de la continuité dans le cas. Peut-on le traiter automatiquement comme un événement existant avant clôture ?",
+      "options": [
+        "Non, il faut distinguer sa naissance et examiner l’information requise",
+        "Oui, toute mauvaise nouvelle reçue après clôture doit modifier les anciennes charges",
+        "Oui, si son montant est important",
+        "Non, il doit toujours être ignoré dans toute communication financière"
+      ],
+      "answer": 0,
+      "explanation": "La date et la nature de l’événement comptent. Une situation nouvelle ne se confond pas avec une preuve complémentaire d’un état antérieur ; son importance peut aussi appeler une information.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un litige antérieur à la clôture est estimé à 4 500 €. Une information rattachée au même litige porte l’estimation pertinente à 5 800 € avant l’établissement des comptes. Quel écart de mesure est donné ?",
+      "options": [
+        "10 300 €",
+        "1 300 €",
+        "4 500 €",
+        "5 800 €"
+      ],
+      "answer": 1,
+      "explanation": "L’écart entre les deux estimations est 5 800 − 4 500 = 1 300 €. Sa prise en compte suit l’analyse du lien avec la clôture et le cadre applicable.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 5800
+            },
+            {
+              "value": 4500
+            }
+          ]
+        },
+        "expected": 1300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une pièce est reçue en janvier et confirme une obligation née en décembre. Quel raisonnement évite une coupure purement documentaire ?",
+      "options": [
+        "Rattacher toujours toute pièce de janvier au seul exercice suivant",
+        "Supprimer la dette parce que le montant n’était pas payé en décembre",
+        "Rechercher la date de naissance de l’obligation, pas seulement celle de la pièce",
+        "Choisir l’exercice donnant le résultat le plus stable"
+      ],
+      "answer": 2,
+      "explanation": "L’information connue après la clôture peut porter sur un passif antérieur. La preuve documentaire et le fait générateur n’ont pas nécessairement la même date.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La note affirme que tout événement postérieur est ignoré tant que la clôture est passée. Quelle catégorie de faits ce principe oublierait-il ?",
+      "options": [
+        "Les seuls achats librement envisagés cinq ans plus tard",
+        "Les seules factures sans lien avec aucune opération",
+        "Les écritures déjà soldées sans aucun fait nouveau",
+        "Les informations précisant des passifs nés avant ou pendant l’exercice clos"
+      ],
+      "answer": 3,
+      "explanation": "Le PCG prévoit la prise en compte de passifs antérieurs connus entre clôture et établissement des comptes. Une interdiction générale serait incorrecte.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une information postérieure mélange des conséquences d’un litige ancien et un nouveau projet. Quelle analyse est la plus rigoureuse ?",
+      "options": [
+        "Séparer les faits pour déterminer le traitement de chaque situation",
+        "Retenir tout le document dans la même période uniquement parce qu’il a une seule date",
+        "Ignorer le document complet pour éviter une ventilation",
+        "Additionner tous les montants comme charge certaine antérieure"
+      ],
+      "answer": 0,
+      "explanation": "Un document peut contenir plusieurs objets comptables. La qualification de chaque fait doit précéder un regroupement de montants et de périodes.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel dossier de passif facilite une clôture contrôlable ?",
+      "options": [
+        "Le seul report de la provision précédente accompagné de sa première écriture",
+        "Fait générateur, obligation, probabilité, estimation et informations de dénouement reliées",
+        "La seule confirmation du montant demandé par le tiers, sans analyse de l’obligation",
+        "Le seul tableau des paiements futurs sans leur lien avec les faits à la clôture"
+      ],
+      "answer": 1,
+      "explanation": "Le contrôle suit la naissance, la nature et la mesure de l’obligation ainsi que les informations pertinentes ultérieures. Un total isolé ne démontre pas ces éléments.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles321-4 à322-3 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    }
+  ]
+}

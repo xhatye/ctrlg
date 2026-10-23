@@ -1,0 +1,248 @@
+{
+  "sourceHash": "11230515c4d4a252248e758c12946812956ebea1066d492309ae9543a6ac5d0f",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "dab76f885ed34f4b62d8e8a73e7985ae1c927394a62313061ca05c1c3ad80c58",
+      "selected": 2,
+      "reason": "Le numéro et la date de la facture corrigée permettent de rattacher l’avoir à son opération d’origine.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "70e2ec153f0dd7aef07b4d02fd8a616be60c54c2a7d2fa33c825f1e95a8d980e",
+      "selected": 2,
+      "reason": "Avant le calcul il faut identifier la facture visée et déterminer si les cent vingt euros sont HT, TTC ou taxe.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "c08f4719d6f359b0081e3df2f8a44707c1573164cb9e511e33418e3831904f6a",
+      "selected": 2,
+      "reason": "La rectification remplace le montant de la même vente par neuf cents HT ; elle ne crée pas une deuxième livraison.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "b374d2a23da54e6dff35216229f1f2b17eebf41ae86e2a43fb1bf07f7674934c",
+      "selected": 3,
+      "reason": "Le remboursement du principal d’un prêt est un financement, sans réduction de prix taxable dans les faits fournis.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "6cb37a3963b148362d2ce3e87af635a1eb4eaf96bf9924bc73cc999e29dbef0b",
+      "selected": 2,
+      "reason": "Le duplicata du même avoir ne constitue pas une nouvelle correction à comptabiliser.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "1fc8db34788d4c5bcfd65289869c26f5d4034f733a21cb50c064623e5be5fb07",
+      "selected": 2,
+      "reason": "Deux cent cinquante HT plus cinquante de TVA donnent trois cents TTC d’avoir.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "ce4c600b59aecdd2b262bdd3c2e75653657e7264aadf89ba525af01986c25497",
+      "selected": 2,
+      "reason": "Cent trente-deux TTC divisés par 1,10 donnent cent vingt euros HT de correction.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "d39111f27cb2d6c85672201fd93791c01859916b175a2cd667c72148ad7b2d33",
+      "selected": 3,
+      "reason": "Trois cents fois vingt pour cent plus deux cents fois dix pour cent font quatre-vingts euros de taxe corrigée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "6494aa64c48d15f413d8390fe29baa43310bd9cc1ff8dc27a239908c5df27491",
+      "selected": 1,
+      "reason": "Le cas impose le taux de dix pour cent pour corriger cette vente ; le taux proposé aujourd’hui par le logiciel ne le remplace pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "dfab6e4a9dea8f567aa56187f03f620487f41e498a81795b9e90a1522782cbcb",
+      "selected": 2,
+      "reason": "Diviser une base déjà HT par 1,20 est une conversion inadaptée ; la taxe se calcule par multiplication par vingt pour cent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "9fb504aef01920c13e8b065e01d8c4efbf3fd358b15ac02d13b79fcbeac83824",
+      "selected": 0,
+      "reason": "Mille huit cents de facture moins deux cent quarante d’avoir laissent mille cinq cent soixante dus.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "d6398aa88f4bfb27f03d37c93443d053fad7a3ba64f61b36931a283cd5f8e637",
+      "selected": 1,
+      "reason": "Mille deux cents moins cinq cents payés moins cent quatre-vingts d’avoir donnent cinq cent vingt restant à payer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "c349aa49d480c7bccd58c27ba5d4254a42df3475a0ea1ae2068708596bf71134",
+      "selected": 1,
+      "reason": "L’avoir imputable de cent cinquante est un droit sur commande future, sans virement déjà reçu.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "b1e2431480eba4578380733fd4d956e2d3a23b363f3f886e0a89939dfca2f5fb",
+      "selected": 1,
+      "reason": "Sur une facture impayée, l’avoir réduit la dette sans démontrer un remboursement bancaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "23607fbdc3a66255f19175ba0669e2a4c329ebcbae63e430a1109ec952e52118",
+      "selected": 0,
+      "reason": "Deux cent quarante d’avoir moins cent restitués laissent cent quarante à rembourser ou imputer selon l’accord.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "3149c9fa3cbe889d1df5e40719d8e1eb93914426243785db600f3316e1d42da3",
+      "selected": 2,
+      "reason": "Une contestation seule ne prouve pas la réduction de prix encore non acceptée ou fondée autrement dans le dossier.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "394ce99b312f0209b70719096fd30aa41358c4442c2337d822d92bc578dfbb53",
+      "selected": 0,
+      "reason": "Quatre cents HT plus quatre-vingts de TVA font quatre cent quatre-vingts TTC, pas quatre cent soixante-dix.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "6a484f74cdcfc2b2e495cc902d639f39ffee64e9ad735963cb390461719f5b75",
+      "selected": 2,
+      "reason": "La taxe initialement déduite doit être réduite des soixante euros supprimés par la rectification.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "67f62be566090e3827d76501933538cdb35d7c91edf0f77b3db229d08fb88bd9",
+      "selected": 2,
+      "reason": "Le cas relève du mois de connaissance de la correction, juin, et non du règlement ou de la déduction d’origine.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "de907a8defd8537e13524bd44955a00aadb9ed397d448b98a121b9b419a43825",
+      "selected": 3,
+      "reason": "La réduction de taxe facturée appelle la correction correspondante du droit du client, sans constituer un nouvel achat.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "11d9c0e2e9ca4b270e573393d78d8bb5948fa583e6151021bb3732364d6049ff",
+      "selected": 0,
+      "reason": "L’égalité arithmétique ne prouve pas le bon rattachement à une facture, une période ou un remboursement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "08bf528c30b88ba541445164ca91d1287f676cd1216c6831064daf99694660db",
+      "selected": 0,
+      "reason": "La taxe finale est mille moins deux cents de base, soit huit cents à vingt pour cent = cent soixante euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

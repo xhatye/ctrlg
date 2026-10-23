@@ -1,0 +1,584 @@
+{
+  "module": "UE10",
+  "chapter": "capitaux",
+  "sourceHash": "1075b025a9003a7314e560f903f994d13c8a3bac981fa5b5f77eabccfb24614c",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un bénéfice est transféré en réserve, sans distribution ni autre opération. Quel effet a ce seul transfert sur le total des capitaux propres ?",
+      "options": [
+        "Il reste inchangé",
+        "Il augmente du montant mis en réserve",
+        "Il diminue du montant mis en réserve",
+        "Il devient égal au solde bancaire"
+      ],
+      "answer": 0,
+      "explanation": "Le bénéfice figurait déjà dans les capitaux propres. Son transfert modifie leur composition et non leur total par lui-même.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les capitaux propres comprennent 50 000 € de capital, 12 000 € de réserves et 8 000 € de résultat. Les 8 000 € sont intégralement transférés en réserve. Quel total subsiste après ce transfert interne ?",
+      "options": [
+        "78 000 €",
+        "70 000 €",
+        "62 000 €",
+        "58 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le total avant et après affectation interne est 50 000 + 12 000 + 8 000 = 70 000 €. Le résultat n’est pas ajouté une deuxième fois.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 50000
+                },
+                {
+                  "value": 12000
+                }
+              ]
+            },
+            {
+              "value": 8000
+            }
+          ]
+        },
+        "expected": 70000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La comptabilité crédite une réserve du bénéfice affecté mais laisse le même montant au compte de résultat à affecter. Quel risque faut-il contrôler ?",
+      "options": [
+        "Un simple reclassement correct sans incidence sur le total des capitaux propres",
+        "Une diminution des réserves du montant affecté",
+        "Un double comptage du bénéfice dans les capitaux propres",
+        "Une dette de dividendes omise alors qu’aucune distribution n’a été décidée"
+      ],
+      "answer": 2,
+      "explanation": "Un transfert doit déplacer le montant entre rubriques. Conserver simultanément le même bénéfice dans les deux postes surévalue le total.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La décision propose seulement une affectation future et n’a pas encore été adoptée. Pourquoi faut-il distinguer proposition et décision effective ?",
+      "options": [
+        "Une proposition crée toujours un paiement immédiat",
+        "Toute proposition augmente automatiquement les ventes",
+        "La proposition remplace à elle seule la preuve des montants",
+        "Le stade juridique et comptable conditionne les écritures à constater"
+      ],
+      "answer": 3,
+      "explanation": "Les états doivent refléter le stade réel de l’opération. Un projet d’affectation n’est pas nécessairement identique à une décision créant les effets retenus.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle nature décrit une réserve issue de bénéfices conservés ?",
+      "options": [
+        "Une rubrique de capitaux propres, pas un compte bancaire réservé du même montant",
+        "Une somme obligatoirement placée sur un compte disponible distinct",
+        "Un montant de dette fournisseur à payer",
+        "Un nouvel encaissement de vente lors de chaque affectation"
+      ],
+      "answer": 0,
+      "explanation": "La réserve est une composante de financement propre. Sa présentation comptable n’identifie pas automatiquement les liquidités conservées ou leur emplacement.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une émission réalisée comporte 2 000 actions de nominal 5 € au prix de 8 €, intégralement payées, sans frais. Quelle prime d’émission totale obtient-on ?",
+      "options": [
+        "16 000 €",
+        "6 000 €",
+        "10 000 €",
+        "3 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La prime unitaire est 8 − 5 = 3 €. Pour 2 000 actions, la prime vaut 2 000 × 3 = 6 000 €, distincte du capital nominal.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 2000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 8
+                },
+                {
+                  "value": 5
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le comptable porte la totalité du prix d’émission au capital nominal alors qu’une prime existe. Quelle ventilation doit-il rétablir ?",
+      "options": [
+        "Le prix d’émission et une réserve d’affectation du bénéfice sans prime",
+        "La prime et un produit financier représentant la part nominale",
+        "La part nominale et la prime liée à l’émission",
+        "Le nominal diminué de la prime et une prime égale au prix d’émission"
+      ],
+      "answer": 2,
+      "explanation": "Le financement reçu se répartit entre capital nominal et prime. L’encaissement total ne se confond pas avec l’augmentation du seul nominal.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une émission de 1 000 titres au nominal de 10 € crée une prime totale de 4 000 €. Quel prix d’émission unitaire correspond à ces données, sans frais ?",
+      "options": [
+        "10 €",
+        "4 €",
+        "40 €",
+        "14 €"
+      ],
+      "answer": 3,
+      "explanation": "La prime unitaire vaut 4 000 / 1 000 = 4 €. Elle s’ajoute aux 10 € de nominal, d’où un prix de 14 €.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 10
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 4000
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 14,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La prime d’émission est encaissée avec le nominal. Constitue-t-elle un produit de vente de l’entreprise ?",
+      "options": [
+        "Non, elle relève du financement en capitaux propres dans cette émission",
+        "Oui, parce qu’elle apporte des liquidités",
+        "Oui, mais uniquement si le prix dépasse le nominal",
+        "Non, elle est nécessairement une dette bancaire remboursable"
+      ],
+      "answer": 0,
+      "explanation": "Une souscription de capital et sa prime ne rémunèrent pas une vente de biens ou services. Un encaissement peut augmenter les ressources propres sans être un produit.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le cours de marché d’une action varie après son émission. Le préparateur veut modifier automatiquement le capital nominal en conséquence. Quelle distinction manque-t-il ?",
+      "options": [
+        "La variation du cours et une nouvelle prime d’émission sans opération d’émission",
+        "Le nominal comptable et la valeur de marché des titres",
+        "La capitalisation boursière et une réévaluation obligatoire des réserves",
+        "La hausse de cours et un apport supplémentaire automatiquement dû par les associés"
+      ],
+      "answer": 1,
+      "explanation": "Le capital nominal découle de l’opération sur les titres. Une variation de prix de marché ne constitue pas à elle seule une nouvelle opération sur ce capital.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le capital est de 40 000 € et les réserves de 25 000 €. Une incorporation de 10 000 € de réserves au capital est réalisée, sans autre mouvement. Quel capital nominal en résulte ?",
+      "options": [
+        "65 000 €",
+        "30 000 €",
+        "50 000 €",
+        "75 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le montant incorporé augmente le capital de 40 000 + 10 000 = 50 000 €. Les réserves diminuent simultanément du même montant.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 40000
+            },
+            {
+              "value": 10000
+            }
+          ]
+        },
+        "expected": 50000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une incorporation de réserves au capital est réalisée. Quel encaissement nouveau provient de ce seul mouvement interne ?",
+      "options": [
+        "Le montant total des réserves incorporées",
+        "Le double du montant incorporé",
+        "La totalité du capital après opération",
+        "Aucun encaissement nouveau"
+      ],
+      "answer": 3,
+      "explanation": "Le mouvement transforme une rubrique de capitaux propres en une autre. Les ressources étaient déjà dans le financement propre avant l’opération.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’opération augmente le capital et conserve intégralement les mêmes réserves en plus. Quel contrôle faut-il effectuer ?",
+      "options": [
+        "Vérifier le retrait des réserves effectivement incorporées pour éviter un double total",
+        "Vérifier seulement que le nouveau capital concorde avec les titres, sans examiner les réserves sources",
+        "Ajouter le même montant au report à nouveau afin de conserver les anciennes réserves",
+        "Compenser le capital augmenté par une nouvelle réserve égale sans diminuer la réserve incorporée"
+      ],
+      "answer": 0,
+      "explanation": "L’incorporation déplace des montants. Ne pas réduire la rubrique d’origine compterait deux fois les mêmes ressources propres.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le capital augmente grâce à une incorporation, mais le total des capitaux propres reste stable. Est-ce contradictoire ?",
+      "options": [
+        "Oui, toute augmentation du capital augmente forcément le total propre",
+        "Non, les réserves diminuent en contrepartie dans ce mouvement interne",
+        "Oui, seule une dette financière peut compenser une hausse de capital",
+        "Non, parce que les réserves sont toujours exclues des capitaux propres"
+      ],
+      "answer": 1,
+      "explanation": "La composition change alors que le total ne change pas. Le mot augmentation du capital ne signifie pas toujours apport de financement nouveau.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel rapprochement sécurise une incorporation simple de réserves ?",
+      "options": [
+        "Augmentation du capital égale au chiffre d’affaires de l’année",
+        "Diminution des réserves égale au nouveau solde bancaire",
+        "Augmentation du capital égale à la diminution des réserves concernées",
+        "Capital final nécessairement égal au résultat distribuable"
+      ],
+      "answer": 2,
+      "explanation": "Le contrôle suit le transfert à l’intérieur des capitaux propres. Les ventes et disponibilités ne sont pas ses contreparties automatiques.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier établit qu’une distribution valide de 6 000 € est devenue due aux associés mais n’est pas payée. Quelle distinction est pertinente à ce stade ?",
+      "options": [
+        "Le paiement a déjà eu lieu parce que la décision est prise",
+        "Le montant constitue un nouvel achat d’exploitation",
+        "Le bénéfice de l’exercice augmente du dividende décidé",
+        "Une dette de dividendes peut exister sans sortie bancaire encore réalisée"
+      ],
+      "answer": 3,
+      "explanation": "Décision et règlement sont deux étapes. Quand les conditions données rendent le montant dû, il faut le suivre comme obligation jusqu’au paiement.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une dette de dividendes de 8 000 € est déjà constatée. Un versement de 5 500 € intervient, sans autre mouvement. Quel montant de cette dette reste à régler ?",
+      "options": [
+        "2 500 €",
+        "13 500 €",
+        "5 500 €",
+        "8 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le paiement réduit l’obligation : 8 000 − 5 500 = 2 500 €. Il ne s’agit pas d’une seconde affectation du bénéfice.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 8000
+            },
+            {
+              "value": 5500
+            }
+          ]
+        },
+        "expected": 2500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Au paiement d’un dividende déjà dû et enregistré en dette, le comptable débite une charge d’exploitation au lieu de solder la dette. Quelle erreur risque-t-il de créer ?",
+      "options": [
+        "Une simple erreur de libellé sans incidence sur le résultat ni les dettes",
+        "Une charge indue et une dette restant ouverte",
+        "Une dette soldée une seconde fois et une reprise de charge excessive",
+        "Une réduction du capital nominal égale au dividende payé"
+      ],
+      "answer": 1,
+      "explanation": "Le paiement dénoue l’obligation reconnue. Il ne constitue pas une nouvelle consommation d’exploitation ni une seconde réduction autonome de résultat.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société a un bénéfice distribuable dans l’hypothèse du dossier, mais sa trésorerie est tendue. Quelle question doit compléter le montant de distribution envisagé ?",
+      "options": [
+        "Le seul signe positif du résultat, qui suffit à garantir le paiement",
+        "La hausse obligatoire de la banque lors de l’affectation",
+        "La capacité à payer les échéances sans compromettre les autres engagements",
+        "La suppression automatique des dettes opérationnelles"
+      ],
+      "answer": 2,
+      "explanation": "Un résultat distribuable et des liquidités disponibles ne sont pas identiques. Le calendrier de paiement et les ressources doivent aussi être examinés.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Avant une distribution devenue due, le total des capitaux propres est de 90 000 €. Le cas retient 12 000 € de dividendes à transférer en dette, sans autre effet. Quel total propre subsiste après cette décision comptabilisée ?",
+      "options": [
+        "102 000 €",
+        "90 000 €",
+        "12 000 €",
+        "78 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le montant sort des capitaux propres vers une dette : 90 000 − 12 000 = 78 000 €. Le paiement futur changera ensuite banque et dette.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 90000
+            },
+            {
+              "value": 12000
+            }
+          ]
+        },
+        "expected": 78000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le budget confond distribution proposée, dette décidée et paiement effectué dans une même ligne non datée. Quelle information manque pour interpréter les comptes et les flux ?",
+      "options": [
+        "Le stade réel et la date de chaque événement",
+        "Le seul montant nominal d’une action",
+        "Le total historique des achats de matériel",
+        "L’hypothèse que tous les événements sont toujours simultanés"
+      ],
+      "answer": 0,
+      "explanation": "Les écritures et la trésorerie dépendent du stade atteint. Une ligne agrégée non datée peut anticiper ou compter deux fois des effets distincts.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle distinction résume les mouvements étudiés sur les capitaux propres ?",
+      "options": [
+        "Tout mouvement de réserve est un encaissement nouveau",
+        "Un transfert interne, un apport nouveau et une distribution n’ont pas les mêmes effets sur total et trésorerie",
+        "Tout dividende est une vente aux associés",
+        "Tout prix d’émission est du capital nominal sans ventilation"
+      ],
+      "answer": 1,
+      "explanation": "Les mouvements doivent être qualifiés avant d’en mesurer les effets. Leur vocabulaire ne remplace pas le suivi des rubriques, dettes et paiements.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, fonctionnement des comptes101,104,106,12 et457",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    }
+  ]
+}

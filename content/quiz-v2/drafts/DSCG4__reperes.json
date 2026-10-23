@@ -1,0 +1,442 @@
+{
+  "module": "DSCG4",
+  "chapter": "reperes",
+  "sourceHash": "e019dde041edd6d2d67c10a75554811ada11cdb0e1c9c126737bffb408398d54",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un achat réel de 7 200 € est enregistré pour 2 700 €, sur le bon compte et le bon exercice. Quelle assertion est directement affectée par l’erreur décrite ?",
+      "options": [
+        "La mesure du montant de l’opération",
+        "L’exhaustivité de l’enregistrement des achats",
+        "Le classement de l’achat dans le bon compte",
+        "Le rattachement de l’achat à la bonne période"
+      ],
+      "answer": 0,
+      "explanation": "L’opération existe et son rattachement est correct selon l’énoncé. C’est son montant enregistré qui est erroné ; il faut distinguer mesure d’une opération et réalité de celle-ci."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un emprunt réel, correctement évalué, est placé dans une rubrique des capitaux propres alors que le référentiel impose une dette. Quel risque décrit ce cas ?",
+      "options": [
+        "Une erreur de date du versement initial nécessairement",
+        "Un classement et une présentation incorrects",
+        "Une absence physique d’un bien comptabilisé",
+        "Une omission totale de l’emprunt dans les comptes"
+      ],
+      "answer": 1,
+      "explanation": "L’emprunt est enregistré et mesuré, mais sa rubrique ne correspond pas à sa nature. Une assertion peut être défaillante alors que la réalité et le montant sont établis."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les états financiers comptabilisent correctement un risque, mais une information significative exigée à son sujet manque dans l’annexe. Le solde correct suffit-il à valider la présentation ?",
+      "options": [
+        "Oui, l’information est satisfaite par la comptabilisation du risque dans le poste concerné",
+        "Oui, le contrôle de présentation peut se limiter aux rubriques chiffrées lorsque le montant est fiable",
+        "Non, les informations requises dans l’annexe doivent aussi être contrôlées",
+        "Non, il faut transférer le montant du bilan vers l’annexe pour éviter une double présentation"
+      ],
+      "answer": 2,
+      "explanation": "Les assertions ne concernent pas uniquement les montants du bilan. L’information fournie et sa présentation doivent répondre au référentiel ; une comptabilisation correcte ne remplace pas une mention requise."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour vérifier la réalité des ventes, l’équipe teste uniquement que les factures portent un numéro dans le format prévu. Quelle limite précise présente ce contrôle ?",
+      "options": [
+        "L’absence de doublon dans les numéros permet de tenir les ventes correspondantes pour réalisées",
+        "La conformité à la numérotation autorisée établit que la prestation facturée a été exécutée",
+        "Une facture au numéro valide peut servir seule de preuve de la livraison correspondant à cette facture",
+        "La conformité d’un identifiant ne démontre pas que l’opération de vente a eu lieu"
+      ],
+      "answer": 3,
+      "explanation": "Un numéro valide décrit une caractéristique formelle du document. La réalité de la transaction exige des éléments adaptés à l’opération, au-delà du seul respect d’un format."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un fournisseur existe et son identité a été vérifiée. Une facture qui porte son nom est cependant soupçonnée d’être fictive. Quelle distinction est utile ?",
+      "options": [
+        "L’existence du tiers n’établit pas la réalité de chaque opération attribuée à ce tiers",
+        "Un tiers réel rend toutes ses factures nécessairement réelles",
+        "Une facture fictive implique que le fournisseur est juridiquement inexistant",
+        "Vérifier un tiers dispense de vérifier les prestations facturées"
+      ],
+      "answer": 0,
+      "explanation": "L’identification du fournisseur et la réalité de la prestation répondent à deux questions différentes. Une identité authentique peut être utilisée pour attribuer une opération qui n’a pas eu lieu."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier prouve que les intérêts d’un emprunt sont correctement calculés. Il affirme donc que tous les emprunts ont été recensés. Quel saut de raisonnement apparaît ?",
+      "options": [
+        "Le recalcul doit être étendu aux autres taux pour établir, par ce seul travail, que tous les contrats sont enregistrés",
+        "L’exactitude d’un calcul ne démontre pas l’exhaustivité des emprunts",
+        "La concordance des intérêts avec le compte de charge permet de conclure au recensement de toutes les dettes",
+        "Le contrôle des échéances des emprunts déjà inscrits dispense de rechercher des contrats absents du fichier"
+      ],
+      "answer": 1,
+      "explanation": "Le contrôle porte sur le calcul des éléments sélectionnés. La recherche des emprunts manquants exige une population et des procédures adaptées ; la justesse arithmétique ne l’établit pas."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’auditeur refait lui-même le calcul d’intérêts à partir du capital, du taux et de la durée prévus au contrat. Quelle technique utilise-t-il principalement ?",
+      "options": [
+        "L’observation d’une procédure réalisée par l’entité",
+        "La demande d’information orale",
+        "Le contrôle arithmétique",
+        "La confirmation d’un tiers"
+      ],
+      "answer": 2,
+      "explanation": "Recalculer un montant vérifie son exactitude mathématique. Cette technique diffère de demander une confirmation ou d’observer une opération ; les données de départ restent aussi à justifier.",
+      "references": [
+        {
+          "title": "H2A, NEP 500 : éléments probants",
+          "url": "https://h2a-france.org/normes/caractere-probant-des-elements-collectes/"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’auditeur exécute à nouveau lui-même un contrôle de rapprochement normalement effectué par l’entité pour vérifier qu’il fonctionne sur les données retenues. Quelle technique décrit le mieux son action ?",
+      "options": [
+        "La seule observation du salarié sans intervenir",
+        "Une demande de confirmation bancaire",
+        "Une simple lecture des comptes annuels",
+        "La réexécution d’un contrôle"
+      ],
+      "answer": 3,
+      "explanation": "La réexécution consiste à refaire une procédure ou un contrôle de l’entité. Elle va au-delà de regarder le salarié travailler ou de recueillir une déclaration sur le fonctionnement attendu.",
+      "references": [
+        {
+          "title": "H2A, NEP 500 : éléments probants",
+          "url": "https://h2a-france.org/normes/caractere-probant-des-elements-collectes/"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le directeur décrit oralement une autorisation obligatoire avant paiement. L’auditeur veut vérifier si ce contrôle a réellement été appliqué pendant l’année. Quel complément répond à cet objectif ?",
+      "options": [
+        "Examiner des traces d’autorisation sur des paiements sélectionnés dans la période",
+        "Rapprocher la procédure écrite d’autorisation et sa dernière version approuvée",
+        "Vérifier les habilitations théoriques de signature du directeur dans le logiciel",
+        "Demander au directeur de confirmer par écrit que cette autorisation est prévue"
+      ],
+      "answer": 0,
+      "explanation": "La description d’un contrôle renseigne sur son fonctionnement prévu. Pour apprécier son application, des éléments relatifs aux paiements et à la période sont nécessaires ; l’entretien ne suffit pas à lui seul.",
+      "references": [
+        {
+          "title": "H2A, NEP 500 : éléments probants",
+          "url": "https://h2a-france.org/normes/caractere-probant-des-elements-collectes/"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’auditeur choisit uniquement les cinq factures exceptionnellement élevées d’une population de milliers de factures. Quelle qualification convient à cette sélection ciblée ?",
+      "options": [
+        "Un sondage monétaire, puisque le critère retenu est la valeur des factures",
+        "Une sélection d’éléments spécifiques, distincte d’un sondage donnant une chance à tous les éléments",
+        "Un sondage stratifié de la population, même si les factures moins élevées ne peuvent pas être retenues",
+        "Un contrôle exhaustif de la population des factures, puisque les plus grands montants ont été examinés"
+      ],
+      "answer": 1,
+      "explanation": "La sélection vise volontairement certains éléments selon leurs caractéristiques. Elle ne se confond pas avec un contrôle intégral ni avec un sondage portant sur une population où chacun peut être choisi.",
+      "references": [
+        {
+          "title": "H2A, NEP 530 : sélection",
+          "url": "https://h2a-france.org/normes/selection-des-elements-a-controler/"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans un sondage d’audit, des anomalies apparaissent sur les éléments testés. Quelle analyse prévoit la NEP 530 avant d’en tirer les conséquences sur la population ?",
+      "options": [
+        "Appliquer immédiatement à toute la population le taux d’écart moyen, avant d’étudier l’origine des erreurs",
+        "Limiter la correction aux éléments sélectionnés, sans examiner les conséquences possibles sur la population",
+        "En apprécier la nature et la cause, notamment leur caractère isolé ou représentatif",
+        "Comparer uniquement le nombre d’erreurs au nombre d’éléments corrects pour décider de leur portée"
+      ],
+      "answer": 2,
+      "explanation": "L’origine des anomalies éclaire leur portée possible au-delà des éléments testés. Le jugement sur la population ne se réduit ni à ignorer les écarts ni à une extrapolation mécanique non justifiée.",
+      "references": [
+        {
+          "title": "H2A, NEP 530 : sélection",
+          "url": "https://h2a-france.org/normes/selection-des-elements-a-controler/"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’équipe teste toutes les opérations d’un compte comprenant quatre opérations. Elle appelle sa sélection un sondage et discute le risque de ne pas avoir choisi certaines opérations de ce même compte. Que faut-il rectifier ?",
+      "options": [
+        "Elle a effectué une sélection spécifique, puisque chaque opération a été identifiée individuellement",
+        "Elle a effectué un sondage non statistique, puisque le faible nombre d’opérations rend le tirage inutile",
+        "Elle a effectué un sondage à taux de sélection élevé, auquel reste attaché un risque d’éléments non sélectionnés",
+        "Elle a contrôlé la totalité de la population définie, et non un échantillon de celle-ci"
+      ],
+      "answer": 3,
+      "explanation": "La méthode dépend de la couverture de la population, pas d’un seuil arbitraire de nombre. Contrôler ses quatre éléments est un examen intégral de cette population ; d’autres risques d’audit peuvent néanmoins subsister.",
+      "references": [
+        {
+          "title": "H2A, NEP 530 : sélection",
+          "url": "https://h2a-france.org/normes/selection-des-elements-a-controler/"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société applique les IFRS et veut mesurer ses stocks ordinaires avec le test IAS 36 au seul motif qu’il existe un risque de dépréciation. Quelle norme doit-elle examiner pour la mesure de ces stocks ?",
+      "options": [
+        "IAS 2, les stocks ordinaires étant exclus du champ de mesure d’IAS 36",
+        "IAS 36, en comparant le coût au maximum de la valeur d’utilité et de la valeur nette de sortie",
+        "IAS 16, en traitant les marchandises destinées à la vente comme des équipements de production",
+        "IFRS 9, en assimilant le droit de vendre les marchandises à un actif financier"
+      ],
+      "answer": 0,
+      "explanation": "Le champ d’IAS 36 comporte des exclusions. Les stocks relèvent de règles spécifiques, notamment IAS 2 ; le mot « dépréciation » ne suffit pas à rendre un test universel.",
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 36",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-36-impairment-of-assets/"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier veut appliquer le maximum entre valeur d’utilité et valeur de sortie à un actif d’impôt différé. Quelle réserve de champ IAS 36 faut-il relever ?",
+      "options": [
+        "La mesure IAS 36 s’applique avant celle d’IAS 12 dès que l’actif est inscrit au bilan",
+        "Les actifs d’impôt différé sont exclus de ce test IAS 36 et demandent l’examen d’IAS 12",
+        "Le test doit retenir la juste valeur nette de sortie du droit à déduction plutôt que son utilisation fiscale",
+        "La récupération de l’actif fiscal est établie dès que la valeur comptable du stock associé est confirmée"
+      ],
+      "answer": 1,
+      "explanation": "IAS 36 ne constitue pas une formule générale pour toute valeur inscrite à l’actif. La récupération d’un actif fiscal différé s’apprécie selon les exigences propres à IAS 12.",
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 36",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-36-impairment-of-assets/"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un groupe teste une marque à durée d’utilité indéfinie, une immobilisation incorporelle pas encore utilisable et du goodwill acquis. Sous IAS 36, que prévoit la fréquence du test pour ces catégories ?",
+      "options": [
+        "Aucun test tant qu’il n’existe pas de dotation aux amortissements",
+        "Un test exclusivement l’année de leur acquisition",
+        "Un test annuel est requis pour ces catégories, même sans indice de perte",
+        "Un test seulement lors d’un projet certain de vente"
+      ],
+      "answer": 2,
+      "explanation": "Ces catégories sont soumises à un examen annuel de leur valeur recouvrable. L’absence d’amortissement ou d’indice de dépréciation ne dispense pas de cette exigence spécifique.",
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 36",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-36-impairment-of-assets/"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une machine amortissable ordinaire ne présente aucun indice de perte de valeur. Le comptable affirme qu’IAS 36 impose le même test annuel systématique que pour le goodwill à toute immobilisation. Que faut-il distinguer ?",
+      "options": [
+        "Le test des seuls indices et le test annuel, ce dernier concernant ici indistinctement toute immobilisation amortissable",
+        "La recherche d’indices, qui n’est nécessaire pour une machine qu’à la fin de sa durée d’amortissement",
+        "Le test annuel de valeur, qui remplace ici la dotation annuelle aux amortissements de la machine",
+        "L’appréciation des indices et les catégories soumises à un test annuel obligatoire"
+      ],
+      "answer": 3,
+      "explanation": "IAS 36 distingue l’examen d’indices et certaines catégories testées annuellement. L’exigence propre au goodwill et à certaines immobilisations incorporelles ne doit pas être généralisée sans nuance.",
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 36",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-36-impairment-of-assets/"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une valeur d’utilité de 200 000 € comprend des flux d’une unité entière, mais le bilan ne retient que 40 000 € pour l’actif isolé examiné. Sans autre rapprochement, quelle difficulté empêche la comparaison ?",
+      "options": [
+        "Les deux valeurs ne portent pas sur le même objet économique",
+        "La valeur d’utilité devrait être ventilée entre les actifs selon leur nombre, sans analyser les flux propres",
+        "Le surplus de valeur de l’unité peut être attribué à l’actif isolé sans rapprochement des autres actifs",
+        "Le test peut comparer ces deux montants en retenant seulement leur devise commune"
+      ],
+      "answer": 0,
+      "explanation": "Un test exige des périmètres cohérents entre le montant comptable et les flux utilisés. La valeur d’un ensemble ne prouve pas directement la récupération de n’importe quel actif pris isolément."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une unité IAS 36 présente 250 000 € de valeur comptable après tous les autres ajustements. Sa valeur recouvrable est validée à 230 000 €. Dans cet exercice, la perte s’impute entièrement sur 35 000 € de goodwill. Quel goodwill subsiste après cette seule imputation ?",
+      "options": [
+        "0 €",
+        "15 000 €",
+        "20 000 €",
+        "35 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La perte de l’unité est de 250 000−230 000=20 000 €. Le cas permet de l’imputer entièrement au goodwill ; son solde devient 35 000−20 000=15 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 35000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 250000
+                },
+                {
+                  "value": 230000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 15000,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "IFRS Foundation, IAS 36",
+          "url": "https://www.ifrs.org/issued-standards/list-of-standards/ias-36-impairment-of-assets/"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un actif a subi une perte de valeur. Il est vendu ensuite pour un montant inférieur à sa valeur comptable après dépréciation. La perte antérieure garantit-elle l’absence de résultat de cession ?",
+      "options": [
+        "Oui, la perte antérieure fixe obligatoirement le prix futur de vente",
+        "Non, il faut comparer uniquement le prix de vente au coût brut sans amortissement",
+        "Non, le prix de cession doit encore être comparé à la valeur comptable au moment de la vente",
+        "Oui, toute cession après dépréciation est nécessairement sans gain ni perte"
+      ],
+      "answer": 2,
+      "explanation": "La dépréciation ajuste la valeur sur la base des estimations du test. Elle ne fixe pas le prix réalisé ultérieurement ; le résultat de cession dépend encore des montants applicables à cette date."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une perte de valeur a été reconnue dans les comptes mais l’analyste la traite comme un remboursement reçu d’un assureur. Aucun droit à indemnisation n’existe dans les faits. Quel point faut-il corriger ?",
+      "options": [
+        "La perte peut être compensée par une indemnité estimée à son montant, même sans droit documenté",
+        "Le montant déprécié peut être inscrit en attente au compte d’indemnisation jusqu’à une réponse de l’assureur",
+        "La présence d’un actif endommagé suffit à constater simultanément une créance d’assurance du même montant",
+        "Une dépréciation ne crée pas en elle-même une créance d’indemnisation"
+      ],
+      "answer": 3,
+      "explanation": "Une perte comptable traduit une réduction de valeur. Un droit à indemnisation dépend de faits et de règles distincts ; il ne peut être déduit du seul constat de dépréciation."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux modèles IAS 36 donnent la même perte finale mais utilisent des hypothèses incompatibles avec des informations disponibles. Le même résultat suffit-il à valider les modèles ?",
+      "options": [
+        "Non, la cohérence des hypothèses doit être vérifiée indépendamment de la seule égalité du résultat",
+        "Oui, la concordance finale peut remplacer la revue des données lorsque les deux modèles sont indépendants",
+        "Oui, le rapprochement des résultats suffit si les deux calculs arithmétiques sont exacts",
+        "Non, il faut retenir la moyenne des deux modèles pour neutraliser les hypothèses incompatibles"
+      ],
+      "answer": 0,
+      "explanation": "Des erreurs ou compensations peuvent conduire au même résultat. La justification porte aussi sur les données et les hypothèses ; une concordance finale ne prouve pas à elle seule la validité des modèles."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un cas isolant l’effet d’une perte de valeur, le résultat avant cette perte est de 48 000 €. La perte de 13 000 € est intégralement au résultat et le dossier exclut impôt et tout autre ajustement. Quel résultat après perte obtenir ?",
+      "options": [
+        "48 000 €",
+        "35 000 €",
+        "61 000 €",
+        "13 000 €"
+      ],
+      "answer": 1,
+      "explanation": "L’effet demandé est une charge de 13 000 € : 48 000−13 000=35 000 €. Le dossier exclut tout effet fiscal et tout autre mouvement pour isoler cette incidence.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 48000
+            },
+            {
+              "value": 13000
+            }
+          ]
+        },
+        "expected": 35000,
+        "digits": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "sourceHash": "fe9fa8cb65c12caec5136e5f0e9a29aca0e3a265624ee52e7e19f0036fb5ab99",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "8b0cb54b33888dd46d734c63106c79f76319126f069db495b7127afcd57d0848",
+      "selected": 2,
+      "reason": "Challenging les hypothèses relève de la revue critique. Collecte, envoi et réception sont des actes de préparation ou exécution.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "55a69ada2766f234064b6ed4a3c7cd4d4dbab0a0f7b5d415b3ee65cbe3e0b86b",
+      "selected": 1,
+      "reason": "La charte maintient explicitement le suivi des décisions déléguées. La délégation opérationnelle ne supprime pas cette règle du cas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "aa056aaf0e6c82719cdf12d5b86dbf36cc9f4a61bc5468778d6b710049990154",
+      "selected": 0,
+      "reason": "Accountable signifie rendre compte et justifier, pas exécuter chaque tâche personnellement ni se dispenser de rapport en déléguant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "310efe075cf5c94e8445b07b0f776027f989e4517b7045b4bac6ca5557e24e30",
+      "selected": 3,
+      "reason": "La relation devait pouvoir être considérée avant la décision. La révélation tardive ne date pas l’origine du lien et ne prouve pas un surprix.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "aa9b85c49aa2d69562b1126108aa1726b1183c5b79ed23af2d030cfdacbf872e",
+      "selected": 1,
+      "reason": "L’autorité ayant approuvé l’exception et la base de cet accord manquent. Auteur général, saisie de facture et acceptation fournisseur ne sont pas cette autorisation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "47503d5e0de16a7a12a6a2b79d98267300103519f0558f876e8d9d94b62978f7",
+      "selected": 3,
+      "reason": "Sans hypothèses sous-jacentes le reviewer ne peut tester les économies ; signature, passé favorable ou approbation ne remplacent pas calculs vérifiables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "876b6a1b12c19eebd3beaf6d01f0d365db0234e6311656975ae3a71d44ca1bc2",
+      "selected": 1,
+      "reason": "Deux checklists identiques n’examinent pas l’hypothèse technique omise. Il faut compétence ciblée et suppression de doublons sans confondre signatures et contrôle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "c97dd5d168bb71effe55335fdb4b31943093f16617c0a69ad874d9ca4ba26180",
+      "selected": 2,
+      "reason": "Préparation, revue qualifiée distincte et décision autorisée mettent en œuvre les trois fonctions ; les autres choix gardent fusion ou revue après engagement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "25a99e8891f2b32642f55c17efc794fc20217835553735f05a19214ac2982c86",
+      "selected": 2,
+      "reason": "Consigner objection et traitement ou escalade réconcilie preuve et décision ; effacement ou simple vote ne démontre pas résolution substantielle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "8c43635f20bb109dd3db5afc3e51bcdacf15eb1930d452b4e5403fae66b81002",
+      "selected": 0,
+      "reason": "La procédure permise exige approbation et motiftracé ; urgence déclarée ou facture finale ne prouve pas ces préalables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "44d465e8e42424180462ac832c0b776768c681981b884fff18c779f6def929e6",
+      "selected": 2,
+      "reason": "Les traces de contrôles, questions et réponses documentent l’exercice. Réception du dossier ou titre formel ne prouve pas l’opération effective.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "f9d055aef802b43f5ed141a1267dd4164b7496a8935d0deebcd2e582605034ca",
+      "selected": 0,
+      "reason": "Pursuant to signifie conformément à et en vertu de autorité déléguée, pas autorité future ou opposition aux limites.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "de1f20b3345a1a4941e44ae3d65eeb4db12eba507943b6e177641ce4e8d1861a",
+      "selected": 1,
+      "reason": "Which renvoie aux propositions non humaines après none of ; whom vise personnes et whose est possessif.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "b8f9f5f3af8d026159ed1da33cbbc0597c314e936ef27f57d716aaffd32c7358",
+      "selected": 0,
+      "reason": "At arm’s length indique indépendance relationnelle du reviewer vis-à-vis des négociateurs ; pas distance physique ni conclusion contrôlée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "374e92fbd434065ecd18ac2c105d8ab87113dd4a3066d8e5b81ef6527bedd0d6",
+      "selected": 3,
+      "reason": "Lister cas urgents en retard et ancienneté rend visibles exceptions cachées par moyenne ; comptes et seules moyennes des dossiers terminés les omettent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "452320fa9d183a89b480f989df646c30ff8ad975e10636801351873ebcc1fbd0",
+      "selected": 1,
+      "reason": "For setting et for monitoring sont parallèles et compatibles avec responsible ; les autres options rompent préposition ou forme verbale.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "bd3466a37e5b27532bda99cd191d1122c5d12e3fa133ab91580fbf644e922ae6",
+      "selected": 0,
+      "reason": "La complétude peut être altérée par sous-déclaration motivée par bonus ; interroger comportement et prévention distingue les deux effets possibles.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "c91c837c32c94f20a167555e325a23f8bf85779f7c563ce5b5ada044821612d9",
+      "selected": 3,
+      "reason": "Cibler selon risque et suivre les délais répond simultanément aux deux objectifs, sans supprimer le contrôle des urgences ou confondre volume et efficacité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "0a80f4276113d697c83a2a003a261cba749745204b33fa9c9b53ab23722fe2b2",
+      "selected": 3,
+      "reason": "Le seuil est une proposition de contrôle à évaluer et non un fait juridique. Usage chez un tiers ne suffit pas à l’adapter ici.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "85643f203dc2ca02d3fb3a57b908a6d7da5be8cac0ba4cd3e11b4583e6fa0a44",
+      "selected": 1,
+      "reason": "Une recommandation doit être réévaluée face aux faits différents. Une spécification standard ne supprime pas toute nécessité d’approbation ou risque technique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "ae53fb18e924743c83ba60c92b0dd38dedb233788121a7fff3db35e2ad423ce7",
+      "selected": 3,
+      "reason": "Résultats, risquesrestants et délais après période définie permettent d’apprécier maintien/modification. Formulairesseuls ou première réussite ne suffisent pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "d38fa6113a33f52ec4117e48ed97cc7e7afc4fde2a5f3a74566abac3e34f72a6",
+      "selected": 1,
+      "reason": "However introduit un inconvénient en contrepoids au bénéfice ; therefore conséquence, for example illustration et in other words reformulation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "955e2ecd483552d7166588910d0723339665bfc07c4c692eed2137b3a6e5b091",
+      "selected": 0,
+      "reason": "Le découpage sous seuil demande l’analyse des petits achats reliés. Un échantillon limité aux grosmontants ne couvre pas ce mécanisme.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

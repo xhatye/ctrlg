@@ -72,7 +72,12 @@ test('progress quota blocks new writes but permits idempotent retries',async()=>
 test('knowledge and application sessions sample unique questions without materialising the bank',()=>{
  const m=MODULES.UE9;assert.ok(m.notions.length<moduleCatalogue('UE9').questionCount/50);
  const knowledge=studyModule('UE9','qcm',Math.random,{focus:'knowledge',count:20});
- assert.ok(knowledge.items.every(i=>i.difficulte==='Compréhension'));assert.equal(new Set(knowledge.items.map(i=>i.id)).size,20);
+ for(const item of knowledge.items){
+  const [,chapter,slot]=item.id.split(':'),canonical=m.chapters.find(c=>c.id===chapter).quiz[Number(slot.slice(1))];
+  assert.equal(canonical.editorialRevision,'quiz-v2-2026-10-20');
+  assert.equal(item.difficulte,{knowledge:'Connaissances',scenario:'Mise en situation',diagnosis:'Analyse',calculation:'Calcul'}[canonical.questionKind]);
+ }
+ assert.equal(new Set(knowledge.items.map(i=>i.id)).size,20);
  const application=studyModule('UE9','cards',Math.random,{focus:'application',count:100});
  assert.equal(new Set(application.items.map(i=>i.id)).size,100);assert.ok(application.items.every(i=>i.kind==='Exercice de calcul'));
 });

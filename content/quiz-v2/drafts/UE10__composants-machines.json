@@ -1,0 +1,631 @@
+{
+  "module": "UE10",
+  "chapter": "composants-machines",
+  "sourceHash": "339021644fedf8e0a4b6affb9876843565e22e3dd09c2dd609d2c5c76672dba8",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une machine coûte au total 50 000 €, dont un composant distinct de 10 000 €. La structure hors composant est amortie sur huit ans, sans valeur résiduelle. Quelle annuité pleine de structure calcule-t-on ?",
+      "options": [
+        "5 000 €",
+        "6 250 €",
+        "7 500 €",
+        "1 250 €"
+      ],
+      "answer": 0,
+      "explanation": "La structure coûte 50 000 − 10 000 = 40 000 €. Son annuité est 40 000 / 8 = 5 000 €, sans reprendre le composant dans sa base.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 50000
+                },
+                {
+                  "value": 10000
+                }
+              ]
+            },
+            {
+              "value": 8
+            }
+          ]
+        },
+        "expected": 5000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le prix global de la machine inclut déjà le composant identifié. Le préparateur amortit le prix global comme structure puis ajoute le plan du composant. Quelle erreur est créée ?",
+      "options": [
+        "La structure n’est jamais amortie",
+        "Le composant est amorti deux fois dans la base totale",
+        "Le coût d’achat réel augmente du montant du composant",
+        "La méthode annule les dotations du composant"
+      ],
+      "answer": 1,
+      "explanation": "La décomposition répartit le coût global. Le coût isolé du composant doit être retiré de la base de structure avant d’appliquer son propre plan.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La structure garde son utilisation et ses estimations, tandis qu’un module est renouvelé plus tôt. Quel suivi évite de modifier sans raison la durée de la structure ?",
+      "options": [
+        "Recommencer automatiquement toute la structure au prix du nouveau module",
+        "Ramener la durée de structure à celle de chaque pièce changée",
+        "Conserver les plans propres et analyser séparément l’élément remplacé",
+        "Ajouter systématiquement une seconde structure au bilan"
+      ],
+      "answer": 2,
+      "explanation": "Des plans séparés permettent de suivre les consommations distinctes. Un événement sur le module ne justifie pas à lui seul de refaire les hypothèses de toute la structure.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une structure sans valeur résiduelle est amortie linéairement. Après trois annuités de 3 000 €, sa VNC est de 15 000 €, sans dépréciation. Quel coût initial de structure correspond à ces données ?",
+      "options": [
+        "18 000 €",
+        "6 000 €",
+        "45 000 €",
+        "24 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le coût est la VNC plus les amortissements : 15 000 + 3 × 3 000 = 24 000 €. Ce calcul ne concerne pas le composant suivi séparément.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 15000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 3
+                },
+                {
+                  "value": 3000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 24000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Le coût de structure et celui du module doivent se rapprocher de quel montant, hors autre élément du dossier ?",
+      "options": [
+        "Le coût total de l’actif ventilé",
+        "Le seul capital restant dû du prêt",
+        "Le total des dotations d’une année",
+        "Le chiffre d’affaires généré par la machine"
+      ],
+      "answer": 0,
+      "explanation": "La somme des coûts affectés doit conserver le coût d’origine de l’ensemble. La décomposition ne crée pas une valeur supplémentaire.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le composant coûte 9 000 €, avec une valeur résiduelle retenue de 1 000 €. Il est utilisé linéairement quatre ans. Quelle annuité pleine lui correspond ?",
+      "options": [
+        "2 250 €",
+        "2 000 €",
+        "2 500 €",
+        "1 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La base consommable est 9 000 − 1 000 = 8 000 €. L’annuité est 8 000 / 4 = 2 000 €, et non le coût brut divisé par quatre.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 9000
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "value": 4
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le composant a épuisé sa base amortissable et reste utilisé pendant l’année suivante, sans révision du plan ni remplacement. Peut-on continuer à répéter une annuité pleine dépassant sa base ?",
+      "options": [
+        "Oui, toute utilisation ajoute obligatoirement une nouvelle base",
+        "Oui, tant que la structure n’est pas totalement amortie",
+        "Non, son cumul ne doit pas dépasser la base prévue",
+        "Non, il faut remonter automatiquement son coût brut"
+      ],
+      "answer": 2,
+      "explanation": "La consommation planifiée ne doit pas devenir un amortissement supérieur à la base. Le suivi peut montrer un élément encore utilisé avec une base déjà répartie.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le composant à usage court est amorti sur la durée longue de structure uniquement pour réduire la dotation. Quelle donnée doit guider son plan ?",
+      "options": [
+        "Le seul niveau de résultat souhaité",
+        "Le nombre d’années restant sur le crédit fournisseur",
+        "La durée de structure même si les usages sont différents",
+        "Son propre rythme et sa durée d’utilisation justifiés"
+      ],
+      "answer": 3,
+      "explanation": "L’objectif de la séparation est de représenter les consommations distinctes. Lui imposer la durée la plus favorable au résultat ne respecte pas cette analyse.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un module remplacé a un nouveau coût et une durée attendue différents du module d’origine. Quelle démarche est appropriée pour le nouveau suivi ?",
+      "options": [
+        "Établir ses propres données d’entrée et d’utilisation justifiées",
+        "Reprendre forcément le coût et la durée de l’ancien module",
+        "Conserver seulement le prix du fournisseur comme dotation annuelle",
+        "Additionner tous les anciens amortissements au coût neuf"
+      ],
+      "answer": 0,
+      "explanation": "Le remplacement constitue un élément à analyser selon ses caractéristiques. Une identité de fonction n’impose pas des montants et estimations inchangés.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un module a une annuité pleine de 2 400 €. Le cas impose un prorata mensuel et son usage ne commence que pour les trois derniers mois de l’exercice. Quelle première dotation du module retenir ?",
+      "options": [
+        "2 400 €",
+        "600 €",
+        "7 200 €",
+        "800 €"
+      ],
+      "answer": 1,
+      "explanation": "Le module est consommé pour 3/12 d’année : 2 400 × 3 / 12 = 600 €. La date de la structure ne remplace pas celle donnée pour le module.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 2400
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 3
+                },
+                {
+                  "value": 12
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 600,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour l’exercice, la dotation de structure est de 4 000 € et celle du module de 1 800 €. Quel total de dotation de cet ensemble obtient-on, sans autre élément ?",
+      "options": [
+        "2 200 €",
+        "7 200 €",
+        "5 800 €",
+        "4 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Les plans séparés alimentent le total de l’actif : 4 000 + 1 800 = 5 800 €. Il ne faut pas appliquer une nouvelle dotation globale en plus.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 4000
+            },
+            {
+              "value": 1800
+            }
+          ]
+        },
+        "expected": 5800,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le total des dotations des composants est calculé puis ajouté à une dotation globale déjà calculée sur le même coût. Quel contrôle doit être effectué ?",
+      "options": [
+        "Augmenter le coût global pour égaler les deux plans",
+        "Transformer le total en encaissement d’exploitation",
+        "Supprimer tout amortissement de l’année",
+        "Éliminer le double plan portant sur les mêmes bases"
+      ],
+      "answer": 3,
+      "explanation": "La somme des plans propres constitue déjà la dotation de l’ensemble. Un plan global additionnel compterait la même consommation une seconde fois.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le module est entièrement amorti après trois ans sans renouvellement et la structure continue son plan. Les hypothèses ne changent pas. Comment évolue la dotation totale au début de la quatrième année ?",
+      "options": [
+        "Elle ne comprend plus de dotation du module épuisé, mais conserve celle de structure",
+        "Elle reste forcément égale au total de première année",
+        "Elle double parce que le module est ancien",
+        "Elle devient nulle pour toute la machine"
+      ],
+      "answer": 0,
+      "explanation": "Les durées différentes produisent un profil annuel différent. Une base de module déjà consommée ne supprime pas la consommation encore prévue pour la structure.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une durée unique reproduit le total des dotations de la première année mais devient fausse dès que le module court est épuisé. Quelle limite cela illustre-t-il ?",
+      "options": [
+        "Le seul montant de première année suffit à valider toutes les années",
+        "Une égalité initiale de total ne prouve pas un profil de consommation identique",
+        "Les composants doivent forcément avoir le même coût",
+        "La durée globale doit toujours être la moyenne arithmétique"
+      ],
+      "answer": 1,
+      "explanation": "Le contrôle d’un plan est pluriannuel. Les dates d’épuisement et de renouvellement peuvent différer même si un montant initial coïncide.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un composant est consommé régulièrement, l’autre selon un rythme documenté différent. Est-il nécessaire d’imposer le même mode aux deux parce qu’ils appartiennent au même actif physique ?",
+      "options": [
+        "Oui, toute machine physique impose un mode unique",
+        "Oui, si les deux éléments sont sur la même facture",
+        "Non, il faut représenter l’utilisation propre des éléments concernés",
+        "Non, mais il faut obligatoirement augmenter la valeur brute"
+      ],
+      "answer": 2,
+      "explanation": "La séparation repose sur les caractéristiques de consommation. L’unité physique ou documentaire ne supprime pas nécessairement les différences de rythme.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel contrôle de total est pertinent pour les dotations d’une machine décomposée ?",
+      "options": [
+        "Faire la moyenne simple des dotations calculées pour les composants",
+        "Ajouter les dotations des composants à celle de l’actif global non corrigé",
+        "Retenir la dotation de la structure pour l’ensemble sans celles des composants",
+        "Additionner les dotations justifiées des éléments sans ajouter un plan doublon"
+      ],
+      "answer": 3,
+      "explanation": "Les plans propres se consolident par addition des consommations de l’exercice. Une moyenne ou un choix arbitraire ne reproduit pas cette somme.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La structure coûte 24 000 € et le module 6 000 €. Les dotations de la première année pleine sont respectivement 3 000 € et 2 000 €, sans autre correction. Quelle VNC totale subsiste ?",
+      "options": [
+        "25 000 €",
+        "35 000 €",
+        "30 000 €",
+        "5 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La VNC est la somme des coûts diminuée du total amorti : 24 000 + 6 000 − 3 000 − 2 000 = 25 000 €.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 24000
+                },
+                {
+                  "value": 6000
+                }
+              ]
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 3000
+                },
+                {
+                  "value": 2000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 25000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les VNC des deux éléments sont de 17 000 € pour la structure et 2 000 € pour le module. Une dépréciation supplémentaire de 1 000 € est imposée sur le module seulement. Quelle VNC totale reste après cette correction ?",
+      "options": [
+        "20 000 €",
+        "18 000 €",
+        "16 000 €",
+        "1 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La structure reste 17 000 € et le module devient 2 000 − 1 000 = 1 000 €. Leur total est 18 000 € dans le périmètre donné.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 17000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 2000
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 18000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le coût du module est inclus dans la structure brute et aussi dans une fiche distincte. Les dotations sont ensuite retranchées de chacune. Quel risque porte aussi sur la VNC totale ?",
+      "options": [
+        "Une VNC forcément exacte si chaque fiche est arithmétiquement correcte",
+        "Une disparition automatique de la structure",
+        "Une base brute comptée deux fois, qui fausse la valeur nette malgré les dotations",
+        "Un rapprochement toujours égal au prix de vente"
+      ],
+      "answer": 2,
+      "explanation": "Les calculs propres peuvent être exacts sur un périmètre de coût erroné. Le rapprochement des valeurs brutes est nécessaire avant celui des corrections.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La VNC totale est plausible, mais aucune fiche ne permet de retrouver le module remplacé. Quel défaut de contrôle subsiste ?",
+      "options": [
+        "La cohérence du total suffit à confirmer le retrait du bon composant",
+        "Le suivi du coût global suffit même sans affectation du coût au module remplacé",
+        "Le plan de la structure permet de reconstituer seul la VNC du module sans ses données",
+        "Le suivi des éléments et de leurs sorties n’est pas traçable"
+      ],
+      "answer": 3,
+      "explanation": "La décomposition sert aussi au suivi des événements propres à chaque élément. Un total seul ne justifie pas les remplacements ni les montants restant au bilan.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un lecteur traite la VNC totale comme la somme certaine qu’un acheteur versera pour la machine. Quelle distinction doit être rappelée ?",
+      "options": [
+        "La valeur comptable nette ne garantit pas un prix de cession",
+        "Une VNC positive interdit toute vente",
+        "Le prix de cession est toujours le coût brut moins une seule annuité",
+        "Le prix de vente doit être égal aux dettes du financement"
+      ],
+      "answer": 0,
+      "explanation": "La VNC résulte des plans et corrections comptables. Le marché, l’état et les conditions de vente déterminent d’autres éléments que cette seule valeur.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel rapprochement complet sécurise la machine décomposée ?",
+      "options": [
+        "Le seul total de première annuité",
+        "Coûts ventilés, plans propres, cumuls, événements et somme des valeurs nettes",
+        "La seule durée du prêt ayant payé la facture",
+        "Une valeur finale choisie pour égaler le bénéfice souhaité"
+      ],
+      "answer": 1,
+      "explanation": "Le contrôle suit le coût et son évolution pour chaque élément puis pour l’ensemble. Il permet de repérer doublons, bases épuisées et événements non traités.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, article214-9 et plans des composants",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    }
+  ]
+}

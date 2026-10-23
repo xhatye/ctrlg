@@ -1,0 +1,500 @@
+{
+  "module": "DSCG2",
+  "chapter": "dossier-synthese",
+  "sourceHash": "0e6f98ec783c8d1963796871b9a10dfb25988ed07c37a98c342784e63d533073",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Trois scénarios exclusifs et exhaustifs ont des probabilités de 25 %, 40 % et p. Quelle valeur de p rend la distribution cohérente ?",
+      "options": [
+        "35 %",
+        "65 %",
+        "15 %",
+        "60 %"
+      ],
+      "answer": 0,
+      "explanation": "Les probabilités couvrent tout le modèle : p = 100 − 25 − 40 = 35 %. Cette cohérence arithmétique ne prouve pas leur réalisme.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 100
+                },
+                {
+                  "value": 25
+                }
+              ]
+            },
+            {
+              "value": 40
+            }
+          ]
+        },
+        "expected": 35,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux scénarios annoncés exclusifs et exhaustifs ont des probabilités de 70 % et 50 %. Que faut-il corriger avant le calcul moyen ?",
+      "options": [
+        "La distribution peut être conservée en considérant les deux probabilités comme des fréquences cumulées, malgré l’exclusivité annoncée",
+        "La distribution ou la définition des scénarios, car leur somme dépasse 100 %",
+        "Les deux probabilités doivent être multipliées pour obtenir les poids de chaque scénario exclusif",
+        "Le total peut dépasser cent pour cent parce que le scénario favorable peut avoir un rendement supérieur à cent pour cent"
+      ],
+      "answer": 1,
+      "explanation": "Des événements exclusifs couvrant tout le cas doivent totaliser 100 %. Il faut rechercher la cause, pas modifier un résultat pour masquer l’incohérence."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un modèle donne un gain de 30 € avec probabilité 40 % et une perte de 10 € avec probabilité 60 %. Quelle espérance de résultat obtient-on ?",
+      "options": [
+        "10 €",
+        "18 €",
+        "6 €",
+        "20 €"
+      ],
+      "answer": 2,
+      "explanation": "L’espérance vaut 0,40 × 30 + 0,60 × (−10) = 12 − 6 = 6 €. Elle ne signifie pas que six euros seront réalisés dans chaque scénario.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.4
+                },
+                {
+                  "value": 30
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.6
+                },
+                {
+                  "value": -10
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 6,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux résultats possibles sont 100 € et −100 €, chacun avec probabilité 50 %. L’espérance est nulle. Que peut-on en déduire ?",
+      "options": [
+        "La réalisation sera nulle puisqu’elle égale la moyenne",
+        "La probabilité de perte est nulle",
+        "Le capital engagé est garanti par l’espérance",
+        "La moyenne pondérée est nulle, alors que chaque réalisation du modèle est non nulle"
+      ],
+      "answer": 3,
+      "explanation": "Une espérance peut ne correspondre à aucun résultat effectivement possible. Ici le modèle conserve une probabilité de perte de moitié."
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A donne soit 1 € soit −1 € ; B donne soit 100 € soit −100 €. Chaque issue est équiprobable. Les deux espérances valent zéro. Quelle différence reste essentielle ?",
+      "options": [
+        "B présente des amplitudes de gains et de pertes bien plus grandes",
+        "Les deux profils ont le même risque du seul fait de la moyenne nulle",
+        "A présente la perte maximale la plus élevée",
+        "B a nécessairement une probabilité de gain supérieure"
+      ],
+      "answer": 0,
+      "explanation": "Une même espérance ne résume pas la dispersion. Les montants des issues défavorables et favorables sont très différents malgré les mêmes probabilités."
+    },
+    {
+      "id": "q06",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une opération rentable en moyenne immobilise les fonds deux ans, mais l’entreprise doit payer une dette certaine dans trois mois. Quel examen manque ?",
+      "options": [
+        "La seule comparaison de l’espérance avec zéro",
+        "La compatibilité du calendrier et des conditions de sortie avec le besoin proche",
+        "Le seul gain total sur deux ans, tenu pour trésorerie disponible dès le troisième mois",
+        "La seule moyenne annuelle de rendement, supposée garantir une sortie au prorata à trois mois"
+      ],
+      "answer": 1,
+      "explanation": "Le résultat attendu ne prouve pas la disponibilité de la trésorerie au bon moment. Échéances, délai de revente et prix de sortie doivent être examinés."
+    },
+    {
+      "id": "q07",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un modèle omet le scénario de rupture d’approvisionnement tout en déclarant ses scénarios exhaustifs. Le total des probabilités vaut 100 %. Cette somme suffit-elle ?",
+      "options": [
+        "Oui, un total de 100 % démontre que tous les événements utiles sont inclus",
+        "Oui, dès que les résultats sont exprimés en euros",
+        "Non, la complétude économique des scénarios reste à examiner",
+        "Non, il faudrait porter la somme au-dessus de 100 % pour intégrer l’incertitude"
+      ],
+      "answer": 2,
+      "explanation": "L’égalité à 100 % est un contrôle interne. Elle ne garantit pas que les événements retenus décrivent correctement les expositions économiques."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un modèle à deux scénarios donne 20 € et −10 €. Quelle probabilité du premier rend l’espérance nulle ?",
+      "options": [
+        "50 %",
+        "66,67 %",
+        "10 %",
+        "33,33 %"
+      ],
+      "answer": 3,
+      "explanation": "Avec p pour le gain, 20p − 10(1 − p) = 0. On trouve p = 10/30, soit 33,33 %, sous la distribution exhaustive donnée.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 10
+                },
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 20
+                    },
+                    {
+                      "value": 10
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 33.33,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un rapport compare uniquement les espérances de deux opérations et affirme que leurs risques sont identiques. Quelle donnée manque ?",
+      "options": [
+        "Les distributions d’issues, leur dispersion et les pertes possibles",
+        "La seule égalité du nombre de scénarios, considérée comme preuve d’un même risque",
+        "La seule égalité des montants investis, considérée comme preuve d’une même distribution",
+        "Le seul rendement du scénario le plus probable, sans les autres issues"
+      ],
+      "answer": 0,
+      "explanation": "Le risque ne se réduit pas au résultat moyen. Probabilités et montants défavorables peuvent différer fortement pour une même espérance."
+    },
+    {
+      "id": "q10",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une revente est dite possible, mais son prix baisse fortement si elle doit être immédiate. Quelle dimension de liquidité faut-il distinguer ?",
+      "options": [
+        "La seule probabilité de remboursement intégral à l’échéance, utilisée comme mesure de la liquidité immédiate",
+        "La possibilité de céder et le prix obtenu dans le délai requis",
+        "La seule volatilité historique à l’échéance finale, tenue pour coût exact d’une cession immédiate",
+        "Le prix moyen des transactions anciennes, tenu pour prix disponible à toute quantité aujourd’hui"
+      ],
+      "answer": 1,
+      "explanation": "Une sortie juridiquement ou techniquement possible n’assure pas une sortie rapide à un prix convenable. Le délai et le coût économique de cession comptent."
+    },
+    {
+      "id": "q11",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des probabilités sont présentées comme des fréquences observées alors qu’elles ont été choisies par la direction pour tester le budget. Que corriger ?",
+      "options": [
+        "Les conserver comme observations dès lors que leur somme vaut un",
+        "Les remplacer par la probabilité du seul scénario favorable",
+        "Identifier explicitement leur caractère hypothétique et leur justification",
+        "Les traiter comme résultats réalisés de l’exercice"
+      ],
+      "answer": 2,
+      "explanation": "La provenance influence la portée de la moyenne calculée. Une hypothèse utile pour explorer des scénarios ne doit pas être présentée comme une observation statistique."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Trois scénarios donnent 50 000 €, 10 000 € et −20 000 €, avec probabilités respectives 20 %, 50 % et 30 %. Quel résultat attendu obtient-on ?",
+      "options": [
+        "13333,33 €",
+        "15000 €",
+        "21000 €",
+        "9000 €"
+      ],
+      "answer": 3,
+      "explanation": "La somme pondérée est 10 000 + 5 000 − 6 000 = 9 000 €. La moyenne simple des trois montants ignorerait les probabilités différentes.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 0.2
+                    },
+                    {
+                      "value": 50000
+                    }
+                  ]
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 0.5
+                    },
+                    {
+                      "value": 10000
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.3
+                },
+                {
+                  "value": -20000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 9000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Quatre scénarios exclusifs et exhaustifs ont des résultats de −8, −2, 4 et 10, avec probabilités 10 %, 20 %, 30 % et 40 %. Quelle est la probabilité totale d’un résultat strictement négatif ?",
+      "options": [
+        "30 %",
+        "10 %",
+        "20 %",
+        "70 %"
+      ],
+      "answer": 0,
+      "explanation": "Les deux premières issues sont négatives et exclusives. Leurs probabilités s’additionnent : 10 + 20 = 30 %. Ce calcul diffère de l’espérance du montant.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 10
+            },
+            {
+              "value": 20
+            }
+          ]
+        },
+        "expected": 30,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un actif peut être vendu quotidiennement en temps normal, mais le scénario défavorable suppose un marché bloqué. Quel contrôle compléter ?",
+      "options": [
+        "La seule liquidité observée hors tension, considérée comme garantie",
+        "Les conditions de sortie et besoins de fonds dans le scénario de tension",
+        "La seule espérance positive du résultat final",
+        "Le maintien du même délai de vente dans tous les scénarios sans justification"
+      ],
+      "answer": 1,
+      "explanation": "La liquidité peut varier selon les conditions. Un scénario cohérent doit examiner les besoins et possibilités de sortie précisément quand la tension survient."
+    },
+    {
+      "id": "q15",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau additionne les probabilités de deux événements qui peuvent se produire ensemble comme s’ils étaient exclusifs. Que faut-il préciser ?",
+      "options": [
+        "La moyenne des probabilités, considérée comme probabilité de leur réunion dans tous les cas",
+        "Le produit des probabilités, utilisé pour toute réunion même sans hypothèse d’indépendance",
+        "Les intersections et la définition des scénarios avant de les additionner",
+        "La seule distinction entre scénario favorable et défavorable, tenue pour preuve que les événements sont exclusifs"
+      ],
+      "answer": 2,
+      "explanation": "Additionner directement les probabilités d’événements qui se recoupent peut compter certaines situations deux fois. Les scénarios doivent être définis sans ambiguïté."
+    },
+    {
+      "id": "q16",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une espérance annuelle est comparée à un résultat total sur cinq ans sans adaptation. Quelle cohérence manque ?",
+      "options": [
+        "La seule présentation des deux montants en euros, considérée comme suffisante",
+        "La seule égalité des probabilités, supposée rendre identiques les horizons",
+        "Le seul classement des scénarios par résultat, sans dater les flux",
+        "Un même horizon et des conventions temporelles comparables"
+      ],
+      "answer": 3,
+      "explanation": "La même unité monétaire ne rend pas deux horizons comparables. Le calendrier et le périmètre des résultats doivent être explicités avant la comparaison."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une opération a une forte espérance grâce à un gain très rare, mais une perte dans la plupart des scénarios. Quel complément est nécessaire ?",
+      "options": [
+        "Présenter la probabilité de perte et l’influence du gain rare sur la moyenne",
+        "Présenter l’espérance comme le résultat le plus fréquent",
+        "Retenir le seul gain rare comme scénario central puisqu’il détermine fortement l’espérance",
+        "Retenir le seul nombre de scénarios de gain, sans tenir compte de leurs probabilités"
+      ],
+      "answer": 0,
+      "explanation": "L’espérance n’est pas le mode de la distribution. Une issue rare peut dominer la moyenne sans décrire ce qui se produit le plus souvent."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La trésorerie disponible immédiatement est de 12 000 €. Une dette de 15 000 € est certaine avant tout encaissement possible de l’opération étudiée. Quel besoin de financement immédiat reste-t-il, sans autre ressource ?",
+      "options": [
+        "27000 €",
+        "3000 €",
+        "12000 €",
+        "15000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le calendrier donne un déficit certain de 15 000 − 12 000 = 3 000 €. Une espérance de gain postérieure ne règle pas cette insuffisance immédiate.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 15000
+            },
+            {
+              "value": 12000
+            }
+          ]
+        },
+        "expected": 3000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les résultats de scénarios sont déjà nets des frais, mais la moyenne attendue est diminuée encore du même forfait inclus dans chacun. Quelle erreur apparaît ?",
+      "options": [
+        "Une sous-estimation des frais parce que leur présence dans chaque scénario les répartirait au lieu de les déduire",
+        "Une différence de calendrier des frais qui serait établie par la seule existence de deux lignes identiques",
+        "Un double comptage des frais dans le résultat attendu",
+        "Une neutralisation correcte des frais, ceux des scénarios s’annulant lors de la pondération"
+      ],
+      "answer": 2,
+      "explanation": "Si les frais sont intégrés à chaque résultat net, la pondération les prend déjà en compte. Une nouvelle déduction répétant le même coût sous-estime l’espérance."
+    },
+    {
+      "id": "q20",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que démontre exactement la somme de 100 % des probabilités d’un modèle exclusif et exhaustif ?",
+      "options": [
+        "La certitude de réalisation du scénario le plus probable",
+        "L’exactitude économique de tous les montants de résultat",
+        "L’absence de risque de liquidité",
+        "Sa cohérence de répartition interne, sans certifier son pouvoir prédictif"
+      ],
+      "answer": 3,
+      "explanation": "Le contrôle vérifie que la distribution annoncée couvre un total un. Il ne garantit ni pertinence des scénarios ni qualité des probabilités estimées."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La direction augmente la probabilité du scénario favorable jusqu’à atteindre l’espérance budgétaire souhaitée, sans nouvel élément. Quelle faiblesse relever ?",
+      "options": [
+        "Les probabilités sont ajustées au résultat désiré plutôt qu’étayées",
+        "Une probabilité positive ne peut intervenir dans une moyenne",
+        "Le budget prouve à lui seul la probabilité réelle du scénario",
+        "Il suffit de réduire la perte du scénario défavorable pour valider le modèle"
+      ],
+      "answer": 0,
+      "explanation": "Un paramètre doit être justifié indépendamment du résultat recherché. Calibrer le modèle pour atteindre le budget masque l’incertitude au lieu de l’analyser."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle information complète le résultat attendu pour juger un besoin de trésorerie à court terme ?",
+      "options": [
+        "Le seul rendement le plus élevé du modèle",
+        "Dates des flux, possibilités de sortie, délais et prix de cession",
+        "Le seul nombre de scénarios favorables",
+        "La moyenne des horizons sans les besoins datés"
+      ],
+      "answer": 1,
+      "explanation": "Une décision de trésorerie dépend de la disponibilité des fonds au moment requis. La moyenne des gains ne suffit pas à établir cette disponibilité."
+    }
+  ]
+}

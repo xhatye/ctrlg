@@ -1,0 +1,362 @@
+{
+  "module": "UE5",
+  "chapter": "marches",
+  "sourceHash": "0adab64b1facdc599e42d1d1e9a51e14d9fa24a38ddc06ba1f8306730f9d8488",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que mesure une élasticité-prix de la demande ?",
+      "options": [
+        "Le nombre total d’acheteurs du marché.",
+        "La différence en euros entre coût et prix.",
+        "Le montant absolu de toutes les ventes.",
+        "La sensibilité de la quantité demandée à une variation du prix."
+      ],
+      "answer": 3,
+      "explanation": "L’élasticité exprime une réaction relative de la demande au prix. Elle ne donne pas directement le niveau des ventes, le nombre d’acheteurs ou la marge en euros."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une usine cause des nuisances à des riverains sans que ce dommage soit intégralement reflété dans le prix de ses ventes. Quel mécanisme est décrit ?",
+      "options": [
+        "Un coût privé d’intrant facturé au producteur dans la transaction.",
+        "Une externalité négative touchant des tiers.",
+        "Une simple redistribution du surplus entre l’usine et ses clients par modification du prix de vente.",
+        "Une incertitude sur les caractéristiques du produit entre vendeur et acheteur."
+      ],
+      "answer": 1,
+      "explanation": "Les riverains supportent un effet de l’activité sans participer directement à l’échange qui le génère et sans compensation intégrale dans son prix. Cela caractérise ici une externalité défavorable."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le vendeur d’une machine d’occasion connaît ses défauts, mais l’acheteur ne peut pas les observer avant l’achat. Quel problème d’information apparaît ?",
+      "options": [
+        "Un aléa moral portant sur une action que l’acheteur cachera après la vente.",
+        "Une incertitude commune aux deux parties sur des défauts qu’aucune ne peut connaître.",
+        "Une asymétrie sur la qualité pertinente de la machine.",
+        "Une externalité touchant des personnes étrangères à l’échange, plutôt qu’un problème de qualité dans cet échange."
+      ],
+      "answer": 2,
+      "explanation": "Le vendeur détient une information pertinente que l’acheteur ne possède pas. Cette différence peut affecter l’évaluation de la qualité et les conditions de l’échange, sans être une externalité par elle-même."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une salle appartenant à l’entreprise peut accueillir un projet interne ou être louée à un tiers. Le projet l’utilise sans décaissement supplémentaire. Quel coût faut-il considérer pour comparer les choix ?",
+      "options": [
+        "Le revenu net de la meilleure location réellement abandonnée.",
+        "Uniquement les sommes payées lors de l’achat ancien de la salle.",
+        "La somme des revenus de toutes les utilisations incompatibles.",
+        "Aucun coût, puisqu’aucun loyer n’est payé par le projet."
+      ],
+      "answer": 0,
+      "explanation": "Le coût d’opportunité correspond à la meilleure alternative sacrifiée. La perte d’un revenu de location peut être pertinente pour la décision même en l’absence d’une nouvelle dépense comptable."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant observe une demande plus forte après une hausse de prix et conclut que le prix a causé cette hausse. Le revenu des clients a aussi augmenté. Quelle réserve est essentielle ?",
+      "options": [
+        "Le sens de la réaction observée suffit à identifier une élasticité-prix positive de la demande.",
+        "La hausse du revenu doit être classée comme un déplacement le long de la même courbe de demande.",
+        "Le prix n’ayant pas baissé, le revenu peut être exclu de l’explication de la quantité demandée.",
+        "L’autre changement empêche d’isoler l’effet du prix sans analyse complémentaire."
+      ],
+      "answer": 3,
+      "explanation": "La relation « toutes choses égales par ailleurs » exige d’examiner les autres facteurs. Une variation simultanée du revenu peut influencer la demande ; une corrélation ne suffit pas à attribuer tout le changement au prix."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un apiculteur améliore la pollinisation des vergers voisins sans être rémunéré pour tout ce bénéfice. Quelle qualification correspond à l’effet décrit ?",
+      "options": [
+        "Un bénéfice privé déjà intégralement payé dans le contrat de vente du miel.",
+        "Une externalité positive pour les exploitants voisins.",
+        "Une baisse du coût privé de l’apiculteur qui épuiserait tout le bénéfice de la pollinisation.",
+        "Un transfert de recette entre vendeurs de miel provoqué seulement par une baisse de leur prix."
+      ],
+      "answer": 1,
+      "explanation": "L’activité produit un bénéfice pour des tiers qui n’est pas intégralement rémunéré dans l’échange. Une externalité peut donc être favorable et pas seulement une nuisance ou un dommage."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans une transaction, les deux parties sont incertaines sur le prix futur, mais aucune ne possède d’information supérieure à l’autre sur ce point. Peut-on conclure à une asymétrie de cette information ?",
+      "options": [
+        "Oui, parce qu’un prix futur inconnu suffit à établir qu’une partie connaît mieux la qualité du bien.",
+        "Oui, parce que des préférences différentes impliquent des informations différentes sur ce prix.",
+        "Non, l’incertitude commune ne démontre pas une différence d’information entre les parties.",
+        "Non, parce que seuls les défauts physiques d’un bien pourraient constituer une information pertinente."
+      ],
+      "answer": 2,
+      "explanation": "L’asymétrie exige une répartition inégale de l’information pertinente. Deux acteurs peuvent partager la même incertitude ; cela ne prouve pas que l’un détient un avantage informationnel sur l’autre."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Parmi plusieurs options incompatibles, à quoi correspond le coût d’opportunité de celle qui est choisie ?",
+      "options": [
+        "À la valeur de la meilleure option abandonnée.",
+        "À la somme de toutes les options abandonnées.",
+        "Au seul prix historique de la ressource utilisée.",
+        "À toutes les dépenses passées, même inchangées par le choix."
+      ],
+      "answer": 0,
+      "explanation": "Une seule meilleure alternative peut être retenue à la place du choix effectué. Additionner toutes les possibilités incompatibles surestimerait le renoncement ; les dépenses anciennes ne le définissent pas à elles seules."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un marché concurrentiel reçoit une taxe unitaire. La demande y est beaucoup moins sensible au prix que l’offre. Sans confondre le redevable légal et l’incidence économique, qui devrait supporter la plus grande part de la taxe dans ce modèle ?",
+      "options": [
+        "Les vendeurs, parce que l’offre réagit davantage au prix que la demande.",
+        "Le seul acteur chargé de verser légalement la taxe, quelle que soit la réaction des quantités.",
+        "Les deux côtés à parts égales, puisque la taxe est fixée par unité échangée.",
+        "Les acheteurs, parce que leur demande se réduit relativement peu face à une hausse du prix."
+      ],
+      "answer": 3,
+      "explanation": "Dans ce modèle, le côté le moins élastique supporte la plus grande part de la charge économique. Les acheteurs réagissent ici moins que les vendeurs. Le partage par les prix ne dépend pas seulement de l’identité de celui qui reverse la taxe.",
+      "references": [
+        {
+          "title": "OpenStax — élasticité et incidence fiscale",
+          "url": "https://openstax.org/books/principles-economics-2e/pages/5-3-elasticity-and-pricing"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans un modèle concurrentiel de pollution, le coût marginal social est égal au coût marginal privé plus un dommage marginal externe. Au volume socialement souhaitable, ce dommage vaut 8 € par unité. Quelle taxe unitaire corrective aligne alors coût privé et coût social à ce volume ?",
+      "options": [
+        "Le montant de tous les dommages passés, réparti sur la production historique.",
+        "8 € par unité, correspondant au dommage marginal externe au volume visé.",
+        "Le coût marginal privé seul, sans ajouter le dommage externe.",
+        "Le bénéfice total du producteur, divisé par le nombre de riverains."
+      ],
+      "answer": 1,
+      "explanation": "La taxe corrective ajoute au coût privé le dommage marginal non payé. Dans le modèle donné, 8 € par unité comblent l’écart entre coûts marginaux privé et social au volume visé. Le raisonnement porte sur le dommage de l’unité supplémentaire, pas sur les dommages passés.",
+      "references": [
+        {
+          "title": "OpenStax — économie de la pollution",
+          "url": "https://openstax.org/books/principles-economics-2e/pages/12-3-market-oriented-environmental-tools"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un acheteur réduit son offre sur toutes les machines d’occasion faute de pouvoir distinguer leurs qualités. Quel lien avec l’information est plausible ?",
+      "options": [
+        "La baisse du prix offert montre une baisse déjà constatée de la qualité de chaque machine.",
+        "Un prix d’offre commun permet d’identifier la qualité de chaque machine même sans examen supplémentaire.",
+        "Une information imparfaite sur la qualité peut modifier la sélection des échanges réalisés.",
+        "La prudence de l’acheteur caractérise surtout une action cachée qu’il accomplira après la livraison."
+      ],
+      "answer": 2,
+      "explanation": "Lorsque l’acheteur ne distingue pas les qualités, il peut ajuster le prix qu’il accepte de payer. Cela peut modifier quelles offres sont échangées ; le constat ne prouve pas que tous les biens sont mauvais."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une machine libre pendant une semaine n’a aucun usage alternatif réalisable et ne peut pas être louée. Quel coût d’opportunité d’usage peut-on retenir sur cette seule base ?",
+      "options": [
+        "Aucun avantage alternatif sacrifié n’est identifié ; il ne faut pas inventer un loyer perdu.",
+        "L’amortissement comptable de la semaine, considéré comme la preuve d’un revenu alternatif perdu.",
+        "Le loyer théorique du marché, même si aucune location n’est réalisable pendant cette semaine.",
+        "Le prix de revente total de la machine, même si son usage une semaine ne modifie pas ce prix."
+      ],
+      "answer": 0,
+      "explanation": "Le coût d’opportunité s’appuie sur une alternative réellement disponible. L’absence d’usage réalisable ne justifie pas un revenu fictif perdu ; cela ne signifie pas que le projet n’a aucune autre charge pertinente."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi préciser « toutes choses égales par ailleurs » lorsqu’on analyse l’effet du prix sur la demande ?",
+      "options": [
+        "Pour garantir que les préférences ne peuvent jamais évoluer.",
+        "Pour assimiler automatiquement quantité demandée et chiffre d’affaires.",
+        "Pour supprimer tout besoin de données sur les ventes.",
+        "Pour isoler l’effet étudié en maintenant constants les autres facteurs pertinents."
+      ],
+      "answer": 3,
+      "explanation": "La précision définit une comparaison où les autres déterminants ne changent pas. Sans elle, l’évolution constatée de la demande pourrait être liée à plusieurs causes simultanées."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un restaurant achète un service de livraison et en paie intégralement le prix convenu au prestataire. Cet achat suffit-il à caractériser une externalité ?",
+      "options": [
+        "Oui, parce que tout fournisseur est un tiers à l’entreprise.",
+        "Non, l’effet décrit relève de l’échange lui-même ; il faut identifier un effet non intégralement reflété sur un tiers.",
+        "Oui, parce que tout paiement constitue un coût social extérieur.",
+        "Non, car les externalités ne peuvent jamais être liées à une activité de service."
+      ],
+      "answer": 1,
+      "explanation": "Un fournisseur participant à l’échange n’est pas un tiers affecté au sens du mécanisme décrit. Il faudrait un effet supplémentaire, favorable ou défavorable, non intégralement reflété dans cet échange."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un vendeur promet une qualité élevée. L’acheteur ne peut ni la vérifier ni obtenir de preuve. Pourquoi la promesse ne suffit-elle pas à supprimer l’asymétrie ?",
+      "options": [
+        "L’intérêt commercial du vendeur à conclure suffit à rendre sa promesse équivalente à une preuve de qualité.",
+        "Le prix demandé suffit à certifier la qualité même si les défauts restent invérifiables.",
+        "Une affirmation non vérifiée ne donne pas à l’acheteur la même information fiable que celle détenue par le vendeur.",
+        "L’absence de défaut immédiatement visible suffit à rendre sans objet toute information privée sur la durabilité."
+      ],
+      "answer": 2,
+      "explanation": "L’avantage d’information peut subsister si la déclaration ne permet pas d’établir la qualité. Il faut distinguer le message commercial d’une information vérifiable, sans supposer qu’une promesse rend les connaissances égales."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une étudiante consacre une soirée à travailler dans un emploi rémunéré plutôt qu’à réviser. Que faut-il identifier pour discuter le coût d’opportunité de ce choix ?",
+      "options": [
+        "La valeur de la meilleure utilisation alternative de cette soirée à laquelle elle renonce.",
+        "Le total de toutes ses dépenses annuelles.",
+        "Le montant du salaire de tous les emplois disponibles, additionnés.",
+        "Les seuls frais déjà payés pour ses études, inchangés par la décision."
+      ],
+      "answer": 0,
+      "explanation": "Le temps est une ressource limitée avec des usages incompatibles. Le coût d’opportunité porte sur la meilleure alternative sacrifiée ; il peut être non monétaire et ne se réduit pas à des factures supplémentaires."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une baisse de prix est accompagnée d’une hausse des quantités. Peut-on conclure que le chiffre d’affaires augmente nécessairement ?",
+      "options": [
+        "Oui, parce que la variation relative des quantités doit être égale à celle du prix.",
+        "Oui, parce qu’une quantité plus élevée suffit à compenser toute baisse proportionnelle du prix.",
+        "Non, parce que le chiffre d’affaires doit diminuer dès que le prix unitaire baisse.",
+        "Non, il faut comparer les effets combinés du prix et des quantités sur la recette."
+      ],
+      "answer": 3,
+      "explanation": "Le chiffre d’affaires dépend du produit prix × quantité. Une hausse des quantités peut ou non compenser le prix plus faible ; constater le sens des deux variations ne suffit pas à conclure sur la recette."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une activité génère à la fois des emplois rémunérés et une nuisance non compensée pour des riverains. Quelle méthode distingue correctement ces effets ?",
+      "options": [
+        "Qualifier tous les paiements et toutes les nuisances d’externalités identiques.",
+        "Séparer les relations d’échange rémunérées et les effets non intégralement reflétés sur les tiers.",
+        "Ignorer la nuisance dès lors que des salaires sont versés.",
+        "Considérer les riverains comme acheteurs même s’ils ne participent pas à l’échange."
+      ],
+      "answer": 1,
+      "explanation": "Il faut identifier chaque acteur et son lien à l’activité. Un salaire résulte d’un échange de travail, tandis qu’une nuisance sur un riverain peut relever d’un effet externe non pris en charge par cet échange."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une partie peut observer l’action qu’elle réalise après un accord, mais l’autre ne peut pas la contrôler directement. Quelle analyse est la plus pertinente ?",
+      "options": [
+        "Il s’agit d’une sélection adverse sur une qualité déjà fixée avant la signature, plutôt que d’une action ultérieure.",
+        "Il s’agit seulement d’une incertitude commune sur le résultat, même si une partie observe son action.",
+        "La différence d’observation peut influencer les comportements et les incitations.",
+        "Il s’agit d’une externalité entre les deux contractants qui dispense d’étudier les incitations prévues par le contrat."
+      ],
+      "answer": 2,
+      "explanation": "L’asymétrie peut concerner non seulement la qualité connue avant l’échange, mais aussi une action difficile à observer. Il faut analyser les comportements possibles sans supposer que la signature égalise toute information."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "À ressources et technologie constantes, une économie produit davantage du bien A en renonçant à des quantités de plus en plus grandes du bien B pour chaque unité supplémentaire de A. Quelle explication correspond à ce coût d’opportunité marginal croissant ?",
+      "options": [
+        "Les ressources transférées sont de moins en moins adaptées à A par rapport à leur usage en B.",
+        "Chaque ressource est aussi productive dans A que dans B, quelle que soit son affectation.",
+        "Le stock total de ressources augmente au fur et à mesure que la production de A s’accroît.",
+        "La frontière des possibilités est une droite dont le taux de transformation reste constant."
+      ],
+      "answer": 0,
+      "explanation": "Des ressources ne sont pas toutes aussi adaptées aux deux productions. Après les transferts les plus faciles, produire encore A peut exiger de sacrifier davantage de B. Des coûts d’opportunité constants correspondraient au contraire à une frontière linéaire.",
+      "references": [
+        {
+          "title": "OpenStax — frontière des possibilités et coûts d’opportunité croissants",
+          "url": "https://openstax.org/books/principles-economics-2e/pages/2-2-the-production-possibilities-frontier-and-social-choices"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Toutes choses égales par ailleurs, une hausse du prix du café accroît la demande de thé. Le prix du thé n’a pas changé. Comment qualifier la relation révélée par cette élasticité-prix croisée positive ?",
+      "options": [
+        "Les deux biens sont complémentaires : la consommation de l’un appelle celle de l’autre.",
+        "Le thé est un bien inférieur : sa demande diminue quand le revenu augmente.",
+        "La demande de thé est parfaitement inélastique à son propre prix.",
+        "Les deux biens sont substituables : les clients peuvent remplacer une partie du café par du thé."
+      ],
+      "answer": 3,
+      "explanation": "L’élasticité croisée relie la demande d’un bien au prix d’un autre. Une réaction positive est compatible avec des substituts : le renchérissement du café favorise le thé. Elle ne renseigne directement ni sur l’élasticité-revenu ni sur la sensibilité au prix propre du thé.",
+      "references": [
+        {
+          "title": "OpenStax — élasticités croisées",
+          "url": "https://openstax.org/books/principles-economics-2e/pages/5-4-elasticity-in-areas-other-than-price"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Quel critère permet de distinguer une externalité d’un simple coût directement inclus dans une transaction ?",
+      "options": [
+        "L’effet doit toujours être négatif et exprimé en euros.",
+        "L’effet touche un tiers et n’est pas intégralement reflété dans le prix de l’échange.",
+        "Le vendeur doit obligatoirement ignorer tous les effets de son activité.",
+        "La transaction doit nécessairement être gratuite."
+      ],
+      "answer": 1,
+      "explanation": "L’externalité repose sur l’effet externe à l’échange et sa prise en compte incomplète dans le prix. Elle peut être favorable ou défavorable, connue ou non du producteur, sans exiger une transaction gratuite."
+    }
+  ]
+}

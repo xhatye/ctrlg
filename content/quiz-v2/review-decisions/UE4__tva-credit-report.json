@@ -1,0 +1,248 @@
+{
+  "sourceHash": "5f92c713f9991fdaf19d1a3a838d702acba97e14222fecd15c29a445e1354d62",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "00c59c30d931da408f9507384ef9baef93831522cc2235f9c6bd83ed44596b09",
+      "selected": 1,
+      "reason": "Seules les dix mille euros de ventes taxables à vingt pour cent donnent deux mille euros de collecte.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "26d2a7a0080de114b3042d2fe6126db7f8bf16336fae7dfaec7dc8b228015717",
+      "selected": 2,
+      "reason": "Le crédit antérieur réduit le solde sans modifier les trois mille euros de TVA collectée courante.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "5bf25a4e2deb7743767368c6dbfaa8390914505570f1407e214c5f02fcf75bef",
+      "selected": 2,
+      "reason": "Un remboursement ancien concerne le crédit et la banque, pas la TVA sur les ventes courantes inchangées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "ed2e1911daf24a65abbf43808b9688689fe7a357c695f8dd1b3fcf19eef41f9f",
+      "selected": 3,
+      "reason": "Six mille fois vingt pour cent moins quatre mille fois dix pour cent donnent huit cents euros avant report.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "1a6e0fa25b7b8a4a746bff601e4300664ad7c8ae3595535e9d4ee4dbfa9b926e",
+      "selected": 3,
+      "reason": "Des frais de lancement ouvrant droit peuvent créer un crédit avant les premières ventes, selon les données.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "06b97c4fa18448e58bcc1ad9bf77e5e7fcf443df53b39e7c389da3ab54ff9bab",
+      "selected": 3,
+      "reason": "Un investissement prévu ne crée pas une déduction actuellement exclue par l’énoncé ; prévision et droit acquis diffèrent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "c1313fa4abc2de9a2d4ae3084d1a330b3ce8f406b12f42cb58e39560dc02507c",
+      "selected": 3,
+      "reason": "La TVA d’immobilisation peut être déductible selon ses conditions même si son coût n’est pas une charge annuelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "a47506ccf5ec45f4ca1e854a4dcafb0d3385e012b2090f00c6da1d899278ad32",
+      "selected": 3,
+      "reason": "Les achats ont déjà créé les droits reportés ; reprendre leur taxe courante et conserver le crédit double la même déduction.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "516c73e316ecb85a98fb89ce5f0563879c3bc7fcfca2858895d88180e760755e",
+      "selected": 0,
+      "reason": "Mille sept cents nets moins six cents de crédit imputable laissent mille cent euros à payer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "64e72af7bfc66d103eb32153f746de9974dc010804a8865db2073f70ec3486d8",
+      "selected": 0,
+      "reason": "Deux mille quatre cents moins mille six cents moins mille cent donnent un solde signé de moins trois cents.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "052b212c81c1056898543b385d6e94373c6a3a347580cace28f8d628222e882f",
+      "selected": 1,
+      "reason": "Le solde nul ne crée ni dette de TVA ni crédit résiduel dans le périmètre simplifié fourni.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "8db26615daa2d2afe98b5ff1b3a1f6720d053dde8ebed8e6943c6938c00b08e6",
+      "selected": 2,
+      "reason": "Deux mille cinq cents moins mille demandés en remboursement laissent mille cinq cents imputables ; mille neuf cents moins mille cinq cents font quatre cents à payer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "499297b669565beb52fbe4f676c358bcfcf49815430fa34637c991202c231623",
+      "selected": 2,
+      "reason": "Le crédit disponible devient mille deux cents moins cinq cents utilisés, soit sept cents pour la période suivante.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "43fca69ca09a2877947c448f04320b46558e3ceee447e23ece39019d946fc29e",
+      "selected": 3,
+      "reason": "La version définitive de sept cents remplace celle de quatre cents pour la même période ; elles ne se cumulent pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "2002a3c2f8fa7a5e3ad46f96d10cbdbe0ea25f610f39de55b398eb4c39727b09",
+      "selected": 0,
+      "reason": "La fraction demandée en remboursement n’est plus utilisable parallèlement en imputation, même avant le virement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "e95604de231830407f2ae529d1359c3581f82d99a2d684829bac7f2b4263a499",
+      "selected": 3,
+      "reason": "Un même solde signé simplifié ne peut produire simultanément une dette et un crédit résiduel de même montant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "c72f6b921797e12a7491cf848863204e7208e7e89358ea90eba495e2f7184d98",
+      "selected": 1,
+      "reason": "Deux mille de crédit moins huit cents imputés laissent mille deux cents à reporter.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "4c958e67230d19ae126415d45bce382a7ae41dc2bfdf2d23c0cc6d87361e73a6",
+      "selected": 0,
+      "reason": "Le crédit courant de trois cent cinquante s’ajoute aux neuf cents disponibles, soit mille deux cent cinquante.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "ef08fc5fed996aa8476cb3f2cf65ce6db66d3c79f11cbf292985a0b5a12a6468",
+      "selected": 1,
+      "reason": "Après février il reste neuf cents de crédit ; les mille deux cents de mars laissent donc trois cents à payer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "f2e7909b02460c0fe3547e3034cf375234ee2d5bedf9ade19ec90fffed05efc2",
+      "selected": 3,
+      "reason": "Deux mille quatre cents moins mille six cents demandés en remboursement laissent huit cents imputables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "8a63323fb1c1a7ad7aeed31bf127dcf8185e0167918a592a86506b151c211981",
+      "selected": 3,
+      "reason": "Au réel normal la demande de remboursement de crédit TVA passe par le formulaire 3519 et non les documents d’IS ou du simplifié.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "082f708a2436d50ff25ed471c81347d4e546e4d3e2830ae3ff2b398539217a6c",
+      "selected": 3,
+      "reason": "Les conditions de restitution et les besoins d’imputation ou de trésorerie guident le choix sans permettre deux usages de la même fraction.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

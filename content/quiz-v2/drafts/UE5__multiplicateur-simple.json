@@ -1,0 +1,491 @@
+{
+  "module": "UE5",
+  "chapter": "multiplicateur-simple",
+  "sourceHash": "010b878e89494c0ae58aaef9c2f1dac309122670a18345ab9ce351b397fbf88a",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Dans le modèle fermé sans impôt, C = C0 + cY. C0 vaut 20, l’investissement autonome 30 et la dépense publique 50, dans une même unité monétaire. Quel est A, la dépense autonome totale ?",
+      "options": [
+        "100",
+        "50",
+        "80",
+        "1 000"
+      ],
+      "answer": 0,
+      "explanation": "A rassemble les termes indépendants du revenu : C0 + I + G = 20 + 30 + 50 = 100. Le terme cY dépend du revenu et ne doit pas être ajouté une seconde fois aux composantes autonomes.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 20
+                },
+                {
+                  "value": 30
+                }
+              ]
+            },
+            {
+              "value": 50
+            }
+          ]
+        },
+        "expected": 100,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Dans le modèle Y = A + cY, la propension marginale c vaut 0,8. Quel multiplicateur k = 1 / (1 − c) obtient-on ?",
+      "options": [
+        "1,25",
+        "0,2",
+        "5",
+        "0,8"
+      ],
+      "answer": 2,
+      "explanation": "Le dénominateur vaut 1 − 0,8 = 0,2, donc k = 1 / 0,2 = 5. Inverser c directement ne respecte pas la formule du multiplicateur dans le modèle.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "value": 0.8
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 5,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une économie simplifiée vérifie Y = A + cY, avec A = 240 et c = 0,6. Les prix sont fixes et les capacités inutilisées. Quel revenu d’équilibre prédit le modèle ?",
+      "options": [
+        "400",
+        "600",
+        "144",
+        "384"
+      ],
+      "answer": 1,
+      "explanation": "En isolant Y, on obtient Y(1 − 0,6) = 240, donc Y = 240 / 0,4 = 600. Le terme induit ne se limite pas à une seule addition de consommation au premier tour.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 240
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "value": 0.6
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 600,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans le modèle à prix fixes sans impôt ni importation, c = 0,75. La dépense autonome diminue de 20, les autres paramètres restant constants. Quelle variation signée du revenu d’équilibre est prévue ?",
+      "options": [
+        "-5",
+        "20",
+        "-20",
+        "-80"
+      ],
+      "answer": 3,
+      "explanation": "Le multiplicateur vaut 1 / 0,25 = 4. Une variation de −20 de la dépense autonome donne donc ΔY = 4 × (−20) = −80, sous les hypothèses du modèle.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": -20
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "value": 0.75
+                }
+              ]
+            }
+          ]
+        },
+        "expected": -80,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans C = C0 + cY, un étudiant traite cY comme une dépense autonome. Quelle correction faut-il apporter ?",
+      "options": [
+        "cY dépend du revenu, contrairement à C0 et aux autres termes autonomes du dossier.",
+        "cY est autonome ; c est le coefficient qui doit être ajouté séparément à A.",
+        "C0 est la composante induite, tandis que cY est la consommation indépendante du revenu.",
+        "Toute la consommation doit être ajoutée à A avant de calculer séparément la consommation induite."
+      ],
+      "answer": 0,
+      "explanation": "Une dépense autonome est indépendante du revenu dans ce modèle. La consommation induite cY évolue avec Y ; la confondre avec A fausse l’isolement du revenu et peut conduire à un double compte."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Toutes choses égales dans Y = A / (1 − c), c augmente en restant strictement entre 0 et 1. Comment évolue le multiplicateur ?",
+      "options": [
+        "Il diminue car une plus grande part du revenu est absorbée par la consommation plutôt que propagée.",
+        "Il diminue car 1 − c doit être placé au numérateur du coefficient de propagation.",
+        "Il augmente car le dénominateur 1 − c diminue.",
+        "Il reste inchangé car seule une variation de A peut modifier le multiplicateur."
+      ],
+      "answer": 2,
+      "explanation": "Le multiplicateur est l’inverse de 1 − c. Dans l’intervalle donné, une hausse de c réduit ce dénominateur positif et accroît le multiplicateur ; l’interprétation reste conditionnelle aux hypothèses du modèle."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un calcul utilise Y = A × (1 − c) au lieu de Y = A / (1 − c). Quelle erreur algébrique est commise ?",
+      "options": [
+        "Il fallait regrouper Y + cY = A puis diviser par 1 + c.",
+        "L’isolement de Y après Y(1 − c) = A exige une division, pas une multiplication.",
+        "Il fallait isoler cY = A − Y puis retenir Y = A/c.",
+        "Il fallait soustraire c à A et retenir Y = A − c, en traitant c comme un montant."
+      ],
+      "answer": 1,
+      "explanation": "À partir de Y = A + cY, on regroupe les termes en Y : Y(1 − c) = A. Pour isoler Y, on divise A par ce coefficient non nul ; le multiplier produit une autre relation."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le modèle prévoit une hausse du revenu après une dépense autonome supplémentaire. Quelle précision évite de transformer cet exercice en prévision certaine ?",
+      "options": [
+        "L’estimation de c dans une enquête réelle suffit à conserver ce résultat sans vérifier les capacités productives.",
+        "Le coefficient permet de prévoir le revenu réel sans examiner si la demande supplémentaire fait monter les prix.",
+        "La propagation prévue reste identique si une part de la dépense supplémentaire se porte sur les importations.",
+        "Le résultat est conditionnel aux prix fixes, capacités et autres hypothèses simplificatrices."
+      ],
+      "answer": 3,
+      "explanation": "Le modèle exclut plusieurs mécanismes et suppose notamment des capacités disponibles. Son résultat donne une implication de ces hypothèses ; il ne constitue pas une mesure garantie des réactions d’une économie réelle."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "C0, I et G sont exprimés en millions d’euros annuels. Un analyste ajoute un investissement mensuel sans le convertir. Quel préalable manque ?",
+      "options": [
+        "Rendre les périodes et unités compatibles avant de calculer A.",
+        "Diviser tous les flux annuels par douze, puis les ajouter au flux mensuel en présentant le total comme annuel.",
+        "Multiplier le total obtenu après addition des flux mensuels et annuels par douze.",
+        "Convertir seulement les millions d’euros en euros, en conservant les périodes mensuelles et annuelles mélangées."
+      ],
+      "answer": 0,
+      "explanation": "Une somme autonome doit réunir des flux mesurés sur la même période et dans la même unité. Mélanger mensuel et annuel crée un montant artificiel que le multiplicateur ne peut pas corriger."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "On remplace c par 1 dans la formule k = 1 / (1 − c). Peut-on annoncer un multiplicateur fini sur cette base ?",
+      "options": [
+        "Oui : ne retenir que le premier tour de dépense donne le multiplicateur total.",
+        "Oui : la propension à épargner nulle donne un multiplicateur nul.",
+        "Non, la formule comporte alors un dénominateur nul.",
+        "Oui : utiliser 1/(1 + c) fournit ici le multiplicateur de remplacement."
+      ],
+      "answer": 2,
+      "explanation": "Lorsque c vaut un, 1 − c vaut zéro et l’expression n’est pas définie comme nombre fini. Il faut reconnaître la limite de la formule plutôt que fabriquer une valeur par arrondi ou substitution."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux économies du modèle ont le même c mais des dépenses autonomes différentes. Que peut-on comparer directement ?",
+      "options": [
+        "Leurs revenus sont obligatoirement égaux.",
+        "Le même multiplicateur s’applique, et l’écart de revenu dépend de l’écart de A.",
+        "Le revenu est indépendant de A dès que c est identique.",
+        "La plus grande dépense autonome implique nécessairement une plus faible valeur de Y."
+      ],
+      "answer": 1,
+      "explanation": "À c fixé, Y est proportionnel à A avec le coefficient k = 1 / (1 − c). Les niveaux de dépense autonome différents produisent donc des niveaux de revenu différents dans ce cadre."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Dans le modèle, le multiplicateur reste fixé à 5. Quelle hausse de dépense autonome faut-il pour obtenir une hausse de revenu de 100 dans la même unité ?",
+      "options": [
+        "500",
+        "5",
+        "100",
+        "20"
+      ],
+      "answer": 3,
+      "explanation": "La relation est ΔY = k × ΔA. Il faut donc ΔA = 100 / 5 = 20. Multiplier par k une seconde fois confondrait le revenu cible et la dépense qui le déclenche.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "value": 5
+            }
+          ]
+        },
+        "expected": 20,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un tableau inclut déjà C0 dans A, puis l’ajoute encore avant d’appliquer le multiplicateur. Quel défaut en résulte ?",
+      "options": [
+        "La consommation autonome est comptée deux fois.",
+        "La consommation autonome est omise, car elle devait être séparée de A avant toute addition.",
+        "La dépense d’investissement est comptée deux fois, car C0 représente les achats de biens de production.",
+        "La consommation induite est comptée deux fois, car C0 désigne la partie proportionnelle au revenu."
+      ],
+      "answer": 0,
+      "explanation": "A contient les composantes autonomes définies dans le dossier. Ajouter de nouveau C0 augmente artificiellement la base multipliée ; il faut distinguer une définition déjà agrégée de ses éléments."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le modèle donne k = 1 / (1 − c). Si k = 4, quelle valeur de c est compatible avec cette égalité ?",
+      "options": [
+        "0,25",
+        "4",
+        "0,75",
+        "1,25"
+      ],
+      "answer": 2,
+      "explanation": "On a 1 − c = 1 / 4 = 0,25, donc c = 0,75. Le multiplicateur et la propension marginale ne sont pas interchangeables : ce sont deux paramètres reliés par la formule.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 1
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "value": 4
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 0.75,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un revenu Y est annoncé comme équilibre dans Y = A + cY. Quel contrôle direct permet de vérifier cette annonce ?",
+      "options": [
+        "Vérifier que Y couvre A, sans contrôler le montant de la consommation induite.",
+        "Réinjecter Y dans A + cY et vérifier l’égalité avec Y.",
+        "Vérifier que Y = A + cA, en limitant la consommation induite au seul premier tour.",
+        "Vérifier que Y − A = c, en comparant une différence de revenus à la seule propension."
+      ],
+      "answer": 1,
+      "explanation": "Une solution doit satisfaire l’équation de départ. La substitution fournit un contrôle indépendant de la manipulation algébrique ; un montant positif ou plausible ne prouve pas à lui seul l’équilibre."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une simulation augmente G et modifie aussi c, mais attribue tout l’écart de Y au seul changement de G. Quelle réserve est nécessaire ?",
+      "options": [
+        "Le revenu ne peut dépendre que de G dans ce modèle.",
+        "Les variations de c n’affectent jamais le multiplicateur.",
+        "La formule ΔY = kΔG utilise automatiquement un k inchangé malgré toute modification de c.",
+        "Deux déterminants changent ; il faut distinguer leurs effets plutôt que tout attribuer à G."
+      ],
+      "answer": 3,
+      "explanation": "La relation simple à multiplicateur constant suppose c inchangé. Si c varie aussi, le coefficient change ; l’écart total ne peut être imputé sans examen au seul mouvement de dépense publique."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que signifie « investissement autonome » dans le modèle simplifié fourni ?",
+      "options": [
+        "Son niveau est traité comme indépendant de Y dans l’équation considérée.",
+        "Il représente le supplément de consommation déclenché par chaque hausse du revenu.",
+        "Son niveau est recalculé à chaque tour en appliquant c au revenu nouvellement créé.",
+        "Il désigne le résidu Y − C après résolution, sans niveau fixé préalablement dans le dossier."
+      ],
+      "answer": 0,
+      "explanation": "Autonome décrit ici une hypothèse de dépendance dans le modèle, pas une absence de coût ni une gratuité. L’investissement est introduit comme un terme donné lorsque l’on résout Y."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans le modèle sans impôt ni importation, c = 0. Que devient le multiplicateur ?",
+      "options": [
+        "Il devient indéfini.",
+        "Il devient nul.",
+        "Il vaut un : la dépense supplémentaire ne déclenche pas de consommation induite.",
+        "Il devient négatif quelle que soit la dépense."
+      ],
+      "answer": 2,
+      "explanation": "Avec c = 0, k = 1 / (1 − 0) = 1. La variation de revenu égale alors la variation autonome ; il n’y a pas de propagation par consommation dépendante du revenu dans ce cas."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un étudiant utilise la formule du modèle sans impôt pour analyser un dossier où une taxe proportionnelle au revenu est introduite, sans changer l’équation. Quelle étape manque ?",
+      "options": [
+        "Retirer la taxe du seul terme G, sans modifier le revenu servant de base à la consommation.",
+        "Reformuler le mécanisme de revenu et de consommation sous les nouvelles hypothèses avant de réutiliser une formule.",
+        "Appliquer la taxe au revenu d’équilibre déjà calculé, en conservant la consommation induite calculée sur ce revenu brut.",
+        "Remplacer c par le taux de taxe, en laissant inchangés les autres termes de consommation."
+      ],
+      "answer": 1,
+      "explanation": "Une formule découle d’hypothèses et d’une équation. L’introduction d’un mécanisme absent peut modifier cette équation ; on doit reconstruire le raisonnement plutôt qu’appliquer mécaniquement le coefficient précédent."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une simulation calcule une variation de revenu d’équilibre, mais ne comporte ni périodes d’ajustement ni calendrier de dépense. Que permet-elle de conclure sur la date de réalisation du résultat ?",
+      "options": [
+        "La date d’annonce de la politique fournit la date à laquelle tout le revenu supplémentaire est réalisé.",
+        "Le nombre de tours nécessaires se déduit directement de la valeur numérique du multiplicateur.",
+        "Chaque tour de consommation dure un mois, même si aucune durée n’apparaît dans les hypothèses.",
+        "Le niveau d’équilibre calculé ne suffit pas à dater sa réalisation ; une dynamique doit être précisée."
+      ],
+      "answer": 3,
+      "explanation": "Une relation d’équilibre ne contient pas automatiquement un calendrier d’ajustement. Il faut distinguer le niveau calculé et la dynamique réelle, que les seules variables du dossier ne suffisent pas à dater."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans C = 40 + 0,5Y, on observe Y = 300. Quelle consommation C cette équation donne-t-elle ?",
+      "options": [
+        "190",
+        "150",
+        "340",
+        "680"
+      ],
+      "answer": 0,
+      "explanation": "La consommation comporte 40 autonomes et 0,5 × 300 = 150 induits, soit C = 190. Ne conserver que le terme induit ferait disparaître la composante constante de l’équation.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 40
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.5
+                },
+                {
+                  "value": 300
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 190,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un résultat du modèle est présenté comme preuve d’une hausse de bien-être de chaque ménage. Quelle limite convient ?",
+      "options": [
+        "Le revenu total supplémentaire doit être divisé également entre les ménages, ce qui établit leur gain individuel.",
+        "Une hausse du revenu agrégé suffit à mesurer une hausse de bien-être individuel sans connaître les prix ni les besoins.",
+        "Le résultat porte sur le revenu d’équilibre agrégé sous hypothèses, pas directement sur la répartition ou le bien-être de chacun.",
+        "L’accroissement du revenu peut être affecté aux ménages proportionnellement à leur nombre, même si sa répartition n’est pas décrite."
+      ],
+      "answer": 2,
+      "explanation": "Le modèle simple décrit un revenu total et ses réactions aux paramètres. Il ne contient pas les informations de répartition et de situation individuelle nécessaires pour conclure sur le bien-être de chaque ménage."
+    }
+  ]
+}

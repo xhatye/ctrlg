@@ -1,0 +1,259 @@
+{
+  "sourceHash": "d423b6d8a3d8bb636238474651727663e91d7f68602480b6a1908322334c7fdf",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "77411694a9855cc74140a82fe855646a839494c53e51c0e94ace65ce9d5f23b5",
+      "selected": 0,
+      "reason": "Les deux virements sont affectés à deux opérations documentées, l’une de capital et l’autre de prêt, malgré un payeur identique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "5f9d485436c49cbe5145eb6cc9e1cfef82acbcd70c7acca8c9d87288dceb237a",
+      "selected": 2,
+      "reason": "Douze mille souscrits moins sept mille libérés laissent cinq mille à libérer pour cette souscription donnée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "95cd89178b05ea4685ec56abc30bb2b87eb99f403d9bec6dc5570822683a80e8",
+      "selected": 1,
+      "reason": "Il faut distinguer souscription, libération effective et banque après dépenses, qui ne sont pas des montants interchangeables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "09cdf8405725e5a88b3f20716e0e31a162421f68b2e188fdb567edac92e33917",
+      "selected": 1,
+      "reason": "Le document de souscription et la décision rattachent le mouvement au capital ; la seule qualité d’associé ou le relevé ne suffisent pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "b0b1a0eec77a57d5fb6e7ff27bb561bec41f0334a7e9222f3eabe8e9dff2fc2e",
+      "selected": 2,
+      "reason": "Le bien transféré appartient à la société tandis que l’apporteur reçoit des droits sociaux dans son propre patrimoine.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "f090b5594531288922d48604624e5f82ce466a722e89f2ef1b37476926ad2d23",
+      "selected": 1,
+      "reason": "Le relevé prouve une entrée, pas sa qualification définitive ; les actes doivent préciser prêt ou apport.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "06dd15091e86e8bbc426d25d4b0e7c0840f792a48699aaa59affce37fbd93ba3",
+      "selected": 2,
+      "reason": "La volonté de nover doit clairement résulter de l’acte ; ni report de terme ni principal inchangé ne l’établit ou l’exclut seul.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "02d62ac12ed44275ee43ad6f7926a2987274b2b90e1eaebec1832cf60830e4f5",
+      "selected": 2,
+      "reason": "L’exigibilité doit respecter le terme et les modalités de l’avance, non l’approbation des comptes ou une cession de titres.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "2f8a495414027c02d207825674361d834883bd6d13798ab5a02f1d5bf20b1ec1",
+      "selected": 2,
+      "reason": "Neuf mille de principal moins deux mille cinq cents remboursés donnent six mille cinq cents restant dus.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "8e46f1e53fa64bc0bef2ee3281f187f2be7bea52e5d53d4d0f450dda70b4fb6d",
+      "selected": 3,
+      "reason": "La société et Alice ne sont pas les mêmes parties que Bernard et la société ; la réciprocité requise entre mêmes personnes manque.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "09d48dc00b74c0ddf622de01fffee8edff03f2ff71143d916ab02ff09d52e33c",
+      "selected": 1,
+      "reason": "La cession de créance devient opposable au débiteur par notification ou prise d’acte, hors consentement déjà acquis.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "ea64edaa18fedf402438891774d4ff619cac1da6bab371838d133f2c044c2c6e",
+      "selected": 0,
+      "reason": "Il faut vérifier l’indicateur entier prévu par la clause et non le seul signe de la banque.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "a17037cbb14226632cd1a3f4b53cc3888e5b8a412d7d34ffb61b71c4310c9f23",
+      "selected": 1,
+      "reason": "La caution qui paie est subrogée dans les droits du créancier contre le débiteur, distincts du recours purement personnel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "5b6dadb7874ee06b895ba9320c11ab486f83a3ea986c11592f802f8bef96afdb",
+      "selected": 3,
+      "reason": "Le principal de sept mille est inférieur au plafond de dix mille ; la garantie couvre donc sept mille selon les seules données.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "2019b043f4e76e05bd4a7e0e824c2a6693ebb3b9d5b243564d1126ae692048de",
+      "selected": 1,
+      "reason": "Les intérêts du recours personnel courent de plein droit du paiement de la caution selon le régime donné.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "999121a1de2f96d0e05a4254ec1ca60a876f32d1c0b26b1b84cbd10e7abd667e",
+      "selected": 1,
+      "reason": "La discussion permet de faire poursuivre le débiteur principal avant la caution, distincte de la division entre cautions.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "44813dcb42c7e0753b73beac5d28511e8e71b53010fcb188659a1034da339836",
+      "selected": 2,
+      "reason": "Le périmètre de garantie doit couvrir la dette invoquée ; même créancier ou plafond disponible ne suffit pas à l’étendre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "77660234c28e1986807495fac4cd7a4787374ce429bcbfe835eabc0281227702",
+      "selected": 2,
+      "reason": "La qualité de chaque signature détermine qui est engagé et sur quel fondement, malgré un même signataire matériel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "1fa7e1d0ac23aa2857dac9be86fdff9a69cb4c791fe812c466188c807c04eef4",
+      "selected": 2,
+      "reason": "Le tiers peut demander par écrit au représenté de confirmer les pouvoirs pour cet acte dans un délai raisonnable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "c5d8463d16d134b612b1ffa4d952dde0b95f3cc023e55a97f52309be25b1d019",
+      "selected": 1,
+      "reason": "La souscription est personnelle et le prêt bancaire engage la société valablement représentée selon les faits.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "3a406806c60c4e60a5d07b1ac99309251c91435f5b6a04e331c2d03ab2249f72",
+      "selected": 3,
+      "reason": "Le mandat de négocier pour autrui et la garantie consentie en nom propre doivent rester distingués dans leur portée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "46b84f20cb3a946e87419099124d6a68028a4cfc1d9413037ba022212fc2c4cd",
+      "selected": 3,
+      "reason": "La société représentée est débitrice de l’avance, pas son dirigeant du seul fait de la réception signée pour elle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "3e6c19ffaa7d97e12dd0fbf59aafe21afea4dc334dacfa1de6801fb445cf4fd4",
+      "selected": 3,
+      "reason": "Le mandat annoncé doit être obtenu et confronté aux limites de l’acte ; présence aux négociations et majorité ne le reconstituent pas seuls.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "sourceHash": "0e90c0567206dca53db25d5a8ac07d9b16017471c049c89e094e8038a160d06f",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "c29c3a9e624b257a01eb0bc17e3b562794ce01f3202cfcb5758457a27f54111c",
+      "selected": 0,
+      "reason": "La base remisée est deux mille fois 0,90 soit mille huit cents ; à vingt pour cent la taxe est trois cent soixante.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "789945c530fa376bc1a7a76bd120ca723fbfa6d3f4ecc3bf2d046bfd4005e00f",
+      "selected": 2,
+      "reason": "Mille de biens plus quatre-vingts de frais taxables font mille quatre-vingts ; vingt pour cent donnent deux cent seize.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "46937d128acc0834758bad8523e100cd0dd2f19e030b5a87767911650ebcc354",
+      "selected": 0,
+      "reason": "Le débours exige une dépense au nom et pour compte du client, une traçabilité et un remboursement exactement justifié.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "73e19313b0942cf7ff6a48efdd251dd69d35842b864769a98a1220079be8d3fb",
+      "selected": 2,
+      "reason": "L’escompte de caisse consenti au client constitue une réduction de prix exclue de la base selon le texte visé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "5c6cb0786ba02c8485d3ea8746adefd4294ded29b9055ad5f8cdc5115b0ff24b",
+      "selected": 1,
+      "reason": "La TVA elle-même doit être exclue de sa propre base, contrairement aux frais accessoires taxables donnés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "f79ce6a55c28150e6e67275eabea6885bd16951eea62fe6547335294c2500bbe",
+      "selected": 3,
+      "reason": "Mille deux cents TTC réduits de dix pour cent font mille quatre-vingts ; divisés par 1,20 ils donnent neuf cents HT.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "8b895a26eb7fedd00a3fa39444310f5c54b9ca27b76ac36b406acd05bfe9c94b",
+      "selected": 2,
+      "reason": "Six cents divisés par 1,20 font cinq cents ; quatre cent quarante divisés par 1,10 font quatre cents ; total neuf cents HT.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "a1907ed752a89ddfdaaa262f3e87e5d7059d39cc0c4c118822960707348bf891",
+      "selected": 1,
+      "reason": "Chaque ligne exige son propre taux ; une moyenne simple des taux n’est pas le taux pondéré de la facture.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "4bf2ed1c8aae03a511f6e4fa4ffce0aa2fb97afb1660b6928ed1277a5c87bd57",
+      "selected": 0,
+      "reason": "Le HT passe de mille trois cent vingt sur 1,10 soit mille deux cents à mille cent sur 1,20 ; diminution cent euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "35059843ed0304fef61ec6b2f2438bedc8fb66b9404264bfb66d8215ad8f71f7",
+      "selected": 1,
+      "reason": "La différence TTC moins HT est la taxe : quatre-vingt-quatre divisés par vingt pour cent donnent quatre cent vingt HT.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "f211dca915f3c91c2432aaea0a959cdbe5cd4ed1b97a67f63afcabb8547f04ac",
+      "selected": 1,
+      "reason": "La seule TVA admise est sept cents ; quatre mille moins sept cents donnent trois mille trois cents à payer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "8f44aac2ccd8a2dc193e50a49947caf984fed347b08679ec1468ce65c684601d",
+      "selected": 2,
+      "reason": "Une déduction dupliquée diminue excessivement le solde signé de la taxe concernée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "cb8363d4b5cd4ffbf1acea4a3fa6d6626570b5c40f4a42d0e4449f8ff18b9e64",
+      "selected": 1,
+      "reason": "Trois mille six cents collectés moins mille cent à payer impliquent deux mille cinq cents de déduction.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "22ed7e72bf71f5096d9837e59d21fb967c8e0afc8023b50938881d764fd7d8a1",
+      "selected": 1,
+      "reason": "L’ajout d’une taxe de vente précédemment omise augmente le solde signé à déduction inchangée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "09e498c0fff0b3b7f6336eae054b648ec94011b51f1f4296a661296a38d6dc42",
+      "selected": 3,
+      "reason": "Les taxes doivent être rattachées à leur période autorisée ; des mois mélangés nécessitent une justification de report ou correction.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "5ca10f832a11cea7eeade73c5f9fa31f442f79916bf4727e92e876ae82e06740",
+      "selected": 3,
+      "reason": "Le coefficient de déduction est le produit des trois coefficients, pas leur somme ni le taux de la vente.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "144c8794f3f75dbb0a8f3a58f1ed7cbfe271b79c13feb0b26f0cfa0705c19725",
+      "selected": 1,
+      "reason": "Mille euros fois 0,80 fois 0,50 fois un donnent quatre cents euros déductibles.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "8f4bcd074532bea9d6d53de92ab7c9bf33bb2608990db1711838538f0c0c2acc",
+      "selected": 3,
+      "reason": "Un coefficient d’admission nul annule tout le produit, même si les autres critères sont satisfaits.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "029767480822a40f870d11b526d0c668bda99adcb8b3d4831170bf0c661e3e28",
+      "selected": 3,
+      "reason": "L’assujettissement mesure l’utilisation pour les opérations dans le champ, indépendamment de l’ouverture du droit propre à la taxation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "d5fd379a5f38389c50750d31f029e436b18ded049f22791e72107365ca94212d",
+      "selected": 2,
+      "reason": "Le coefficient de taxation traduit ici l’absence de droit des opérations imposables concernées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "b72010d8008ac1fa661bb70abdf0f1253d6e8fb39a30394bb1c37d5037cf3ae6",
+      "selected": 1,
+      "reason": "L’affectation exclusive au secteur distinct conduit au rapport pertinent de ce secteur selon les règles données.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "cd99acb50845b51ec774e9b5114b7cec5fd109cc3fc656c77b8dffe02fc6614b",
+      "selected": 3,
+      "reason": "L’assujettissement seul ne donne pas la déduction : il faut encore multiplier par taxation et admission.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

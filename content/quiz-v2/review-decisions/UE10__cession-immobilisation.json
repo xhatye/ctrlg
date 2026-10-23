@@ -1,0 +1,259 @@
+{
+  "sourceHash": "d0059f937061dc3830f746edadfc6f8976b9233c1a5cb0e00aeda56834649b32",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "f743a880e8b819faaed5e6eb7a233338d7792a56343ab75b1863e569b331b7ae",
+      "selected": 0,
+      "reason": "24 000 − 12 000 − 800 = 11 200 euros nets à la date de sortie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "5cbc3bab8371d407518539e46b5ecbec80e7be89c1d47e7510f80ae90407809d",
+      "selected": 3,
+      "reason": "Le cumul donné à la sortie contient déjà la dotation de la période ; l’ajouter encore la compte deux fois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "ccc2673b41f9356d7c6417cb9c51457d876d56840de4736e313ec651c753537c",
+      "selected": 1,
+      "reason": "La valeur comptable de sortie et le prix négocié sont deux composantes distinctes du résultat.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "d0f2d22b733b5807a7cbfc8325fb842b7fc01c85283ec5a178ce3b136e5ad571",
+      "selected": 0,
+      "reason": "30 000 − 18 000 − 2 000 = 10 000 euros nets avant les écritures de sortie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "81b288b24175c10d73f6d8d09579c14ef8737d11a91e50de42bc71bf3e710458",
+      "selected": 3,
+      "reason": "La date fixe les corrections à inclure dans la valeur comptable avant le calcul de cession.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "9dd0cde4dbb4f25abc062085b902ce00f92e660d53f229d8524b08ef1261f888",
+      "selected": 0,
+      "reason": "7 500 HT moins 9 000 de VNC = −1 500 euros de perte hors autres coûts.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "4c2c653b4295ab0364c8387714ad3bd5b418b05244b8039c3fd1fc0de458bd82",
+      "selected": 2,
+      "reason": "Prix HT égal à VNC et sans frais donnent un résultat nul.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "0fdc9f51dc6d7718104b92147ad812492e044be7141548a8125b14c2719394b1",
+      "selected": 0,
+      "reason": "Le résultat du modèle est le prix moins la valeur nette comptable sortie ; les amortissements seuls ou le financement ne la remplacent pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "fba35b6d4d0984f0b2c57dec3e24138a1c58bcd91da94121bce0664ac3a33ab7",
+      "selected": 3,
+      "reason": "Pour prix − 6 000 − 400 = zéro, le prix doit être 6 400 euros HT.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "15e681c9ca17a5eb77dc4de23aa1e6de58db5ea6efd20c3458d5c74b0d71c89a",
+      "selected": 1,
+      "reason": "Avec VNC nulle et aucun frais, le prix HT de 2 000 représente le gain de cession.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "35ebfd7e9260a8f4256baa2436811ac79b779348e28da4312bb5dc96e57c6be1",
+      "selected": 1,
+      "reason": "Le PCG2026 examine le lien avec un événement majeur et inhabituel plutôt que toute cession classée automatiquement exceptionnelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "cb561ff3bf98185f0de195cae87529c84c886bfe6a508265fb887d72133067d3",
+      "selected": 0,
+      "reason": "Le résultat fiscal peut demander des règles et retraitements distincts du calcul comptable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "a8c3e3a058c8ddae7eeadffe1c9917f17e54f92f4e63419e8e793c0c31f1a357",
+      "selected": 1,
+      "reason": "8 000 HT × 20 % = 1 600 euros de taxe donnée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "d7786da36e76444d390204508f1b892937fbcc2618cb10b606ee0293e4791687",
+      "selected": 0,
+      "reason": "L’assiette imposée est le prix HT ; le gain ne remplace pas cette base.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "72e921f085e9f97dc7c349ac757194ee0e5d17db2e0baefced4fc139e87d7ce1",
+      "selected": 0,
+      "reason": "La taxe collectée reste distincte du produit HT et ne constitue pas une marge supplémentaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "ff650e981bb3a0a85a846023d1758c02db1929a4045fde2a32af04f06c662962",
+      "selected": 1,
+      "reason": "12 000 / 1,20 = 10 000 HT et donc 2 000 euros de TVA incluse.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "2da56c1c8926914fa49ac36e9b322c88d3e7bf0a396d30216f99bda9efecc797",
+      "selected": 1,
+      "reason": "L’ancienneté et l’amortissement ne prouvent pas une absence de TVA ; il faut les conditions applicables ou l’hypothèse donnée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "49d63867017f43bd1885fb4d1c943baa3e2382901346c6830ba1bb9d8c60fe3e",
+      "selected": 3,
+      "reason": "5 000 HT plus 1 000 de taxe = 6 000 euros TTC dus.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "32edd085ec67d1f760a53dc203037524ea70cb398f74464c2a02e0c54db9adb8",
+      "selected": 0,
+      "reason": "Le prix non encore réglé est une créance sur l’acheteur ; sa facturation ne prouve aucune rentrée de banque.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "35aedae471f763b2cc456ab407fc590ee4f9f27a78665abf622ee07f7ee8dc1b",
+      "selected": 1,
+      "reason": "Le remboursement du financement concerne les flux de dette, pas le calcul prix moins valeur comptable de cession.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "21e6c35291f4eba4ca9c09806e0eba33e6775913d58edac00c2c7ced9a114666",
+      "selected": 3,
+      "reason": "10 800 encaissés moins 4 000 de principal remboursé donnent 6 800 euros de flux net à la date.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "27ac22d37f965d6ee3b6925076d25f396895c3eadc777d7a7404aaf5cfbf0252",
+      "selected": 3,
+      "reason": "L’actif vendu doit sortir avec son coût et ses amortissements cumulés ; supprimer un seul des deux déforme les comptes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "2356fe7626e44c9a501fd028f353ab14cd77c04ccb2c5b3ae49f5f2c449becf6",
+      "selected": 0,
+      "reason": "Le contrôle réunit date, valeur de sortie, prix HT, taxe, créance et paiement pour relier résultat et flux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

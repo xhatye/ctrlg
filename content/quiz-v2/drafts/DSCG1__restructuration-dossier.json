@@ -1,0 +1,471 @@
+{
+  "module": "DSCG1",
+  "chapter": "restructuration-dossier",
+  "sourceHash": "96f67ed7639c95875bc385c8e54486fda67041460a6deb93dd5e825e78c7107e",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une opération de 2026 est qualifiée de fusion-absorption entrant dans L236-3. Une note prévoit uniquement le transfert des machines en laissant systématiquement toutes les dettes dans la société absorbée. Quelle incohérence de principe relever ?",
+      "options": [
+        "La fusion emporte une cession isolée d’actifs dont le périmètre exclut les dettes non énumérées.",
+        "La transmission universelle porte sur le patrimoine, non sur les seules machines sélectionnées.",
+        "La transmission porte sur l’actif net comptable, les passifs étant éteints à concurrence des actifs transférés.",
+        "Le passif reste dans l’absorbée jusqu’à sa liquidation, tandis que les actifs passent immédiatement à l’absorbante."
+      ],
+      "answer": 1,
+      "explanation": "Le mécanisme légal est une transmission universelle de patrimoine. Un tableau décrivant uniquement une sélection d’actifs ne restitue pas cet objet ; les effets des règles particulières restent à examiner.",
+      "references": [
+        {
+          "title": "Code de commerce, article L236-3, fusion et transmission universelle",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047590799/2024-05-24"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel devenir de la société absorbée accompagne la fusion visée à L236-3 ?",
+      "options": [
+        "Sa liquidation préalable avec vente séparée de chaque bien.",
+        "Sa conservation comme filiale détenant seulement les titres reçus.",
+        "Sa dissolution sans liquidation.",
+        "Sa seule transformation de forme sociale avec maintien du même patrimoine."
+      ],
+      "answer": 2,
+      "explanation": "La fusion entraîne la dissolution sans liquidation des sociétés qui disparaissent. Elle ne se confond ni avec une liquidation par réalisation d’actifs, ni avec une simple transformation.",
+      "references": [
+        {
+          "title": "Code de commerce, article L236-3, fusion et transmission universelle",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047590799/2024-05-24"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une personne physique est seule associée et veut utiliser le mécanisme de transmission universelle sans liquidation du troisième alinéa de 1844-5. Quelle limite le dernier alinéa pose-t-il ?",
+      "options": [
+        "Il reste applicable à une personne physique si celle-ci détient les parts en pleine propriété.",
+        "Il reste applicable à une personne physique sous réserve d’obtenir le consentement de tous les créanciers.",
+        "Il reste applicable à une personne physique lorsqu’elle s’engage à reprendre personnellement tout le passif.",
+        "Ce troisième alinéa ne s’applique pas lorsque l’associé unique est une personne physique."
+      ],
+      "answer": 3,
+      "explanation": "L’exception dépend ici de la nature de l’associé unique. La détention de toutes les parts ne suffit pas à rendre ce mécanisme applicable à une personne physique.",
+      "references": [
+        {
+          "title": "Code civil, article 1844-5, réunion des parts et dissolution",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006444165/2026-04-28"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie affirme que la réunion de toutes les parts sociales en une seule main dissout de plein droit la société selon 1844-5. Quelle correction apporte le premier alinéa ?",
+      "options": [
+        "Cette réunion n’entraîne pas, par elle-même, une dissolution de plein droit.",
+        "Elle entraîne une dissolution à la date de la dernière cession, dont seuls les effets sont différés pendant un an.",
+        "Elle entraîne une dissolution automatique à l’expiration du délai d’un an, sans demande d’un intéressé.",
+        "Elle entraîne une dissolution immédiate si l’associé unique est une personne morale, même sans décision de dissolution."
+      ],
+      "answer": 0,
+      "explanation": "Le premier alinéa exclut une dissolution de plein droit causée par la seule réunion des parts. Il faut distinguer ce fait d’une décision ou d’une demande de dissolution dans son régime propre.",
+      "references": [
+        {
+          "title": "Code civil, article 1844-5, réunion des parts et dissolution",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006444165/2026-04-28"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La dissolution entrant dans le troisième alinéa de 1844-5 a été publiée ; le délai d’opposition est encore en cours. Aucune autre donnée ne permet de le tenir pour expiré. Quelle affirmation sur la transmission serait prématurée ?",
+      "options": [
+        "Le délai d’opposition doit être suivi dans le calendrier.",
+        "La transmission et la disparition de la personne morale seraient déjà réalisées par le seul vote de dissolution.",
+        "La situation des créanciers doit être examinée dans cette procédure.",
+        "Les pièces de publication doivent permettre de vérifier le point de départ du délai."
+      ],
+      "answer": 1,
+      "explanation": "Le texte rattache la réalisation de la transmission à l’issue du délai d’opposition ou au traitement légal de celle-ci. Le seul vote ne prouve pas l’achèvement de cette séquence.",
+      "references": [
+        {
+          "title": "Code civil, article 1844-5, réunion des parts et dissolution",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006444165/2026-04-28"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La société A apporte un ensemble d’actifs à B ; en contrepartie, B émet des titres directement remis à A selon le projet. Qui détient ces nouveaux titres à l’issue du flux décrit ?",
+      "options": [
+        "Les associés de A, comme bénéficiaires directs d’une attribution proportionnelle aux titres qu’ils détiennent dans A.",
+        "B elle-même, les titres émis étant conservés comme contrepartie comptable des actifs reçus.",
+        "A, société apporteuse, selon la contrepartie donnée.",
+        "A et ses associés conjointement, chacun recevant une fraction de la même rémunération de l’apport."
+      ],
+      "answer": 2,
+      "explanation": "Le schéma indique une remise de titres à A. Il faut distinguer les titres détenus par la société apporteuse de ceux qui seraient remis directement à ses associés dans une autre opération."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un acquéreur paie 700 000 € au cédant pour ses actions de la cible. Aucune émission de titres ni versement distinct à la cible n’intervient. Quel flux finance directement la cible dans ce schéma ?",
+      "options": [
+        "Le prix entier, qui devient automatiquement sa trésorerie.",
+        "La différence entre le prix et la valeur nominale des actions.",
+        "La seule part du prix correspondant aux bénéfices antérieurs.",
+        "Aucun versement direct à la cible n’est décrit par ce paiement au cédant."
+      ],
+      "answer": 3,
+      "explanation": "Le bénéficiaire du prix est le cédant. Le paiement pour des actions existantes ne se confond pas avec une souscription ou un autre financement apporté à la cible."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La fusion absorbe une filiale dont toutes les actions sont déjà détenues par l’absorbante. Selon le II de L236-3, quel traitement concerne ces actions détenues par l’absorbante ?",
+      "options": [
+        "Il n’est pas procédé à leur échange contre des actions de l’absorbante.",
+        "Elles sont échangées contre des actions nouvelles de l’absorbante que celle-ci conserve en autocontrôle.",
+        "Elles sont échangées contre des actions nouvelles attribuées aux propres actionnaires de l’absorbante.",
+        "Elles sont échangées contre des actions nouvelles attribuées à l’absorbée avant sa dissolution."
+      ],
+      "answer": 0,
+      "explanation": "Le texte prévoit notamment l’absence d’échange pour les titres détenus par la société bénéficiaire. Il faut tenir compte de la structure de détention, au lieu d’appliquer une parité à tous les titres.",
+      "references": [
+        {
+          "title": "Code de commerce, article L236-3, fusion et transmission universelle",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047590799/2024-05-24"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le projet fournit une parité de deux actions nouvelles de B pour cinq actions A apportées. Un associé apporte 750 actions A ; aucune soulte ni rompu n’intervient. Combien d’actions nouvelles B reçoit-il ?",
+      "options": [
+        "1 875 actions",
+        "300 actions",
+        "750 actions",
+        "150 actions"
+      ],
+      "answer": 1,
+      "explanation": "La parité donne 2/5 action nouvelle par action apportée. L’associé reçoit 750×2/5=300 actions B. Inverser le rapport appliquerait une autre parité.",
+      "calculation": {
+        "expected": 300,
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 750
+                },
+                {
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "value": 5
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Après une opération, un associé détient 120 actions de la société bénéficiaire, dont le total est passé de 800 à 1 000 actions. Tous les droits sont identiques. Quelle part du capital détient-il après l’opération ?",
+      "options": [
+        "15 %",
+        "10 %",
+        "12 %",
+        "20 %"
+      ],
+      "answer": 2,
+      "explanation": "Le pourcentage doit être calculé sur le total après émission : 120/1 000×100=12 %. Le rapport au capital ancien mesurerait une autre situation.",
+      "calculation": {
+        "expected": 12,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 120
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une fusion bénéficie du régime spécial fiscal sous réserve des conditions applicables. Le dossier montre que l’acte ne contient pas les engagements requis par le 3 de 210 A. Quelle conclusion la doctrine citée impose-t-elle d’éviter ?",
+      "options": [
+        "Identifier les engagements à vérifier dans l’acte.",
+        "Signaler la condition non documentée de l’exonération.",
+        "Demander la vérification du régime spécial applicable au dossier.",
+        "Affirmer que le seul nom de fusion suffit à assurer l’exonération des plus-values."
+      ],
+      "answer": 3,
+      "explanation": "Le BOFiP rattache l’exonération aux conditions du régime et aux engagements requis dans l’acte. La qualification de fusion ne remplace pas cette vérification.",
+      "references": [
+        {
+          "title": "BOFiP BOI-IS-FUS-10-20-30, conséquences pour la société absorbée",
+          "url": "https://bofip.impots.gouv.fr/bofip/7250-PGP.html/identifiant=BOI-IS-FUS-10-20-30-20220413"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une fusion a transmis un risque provisionné à l’absorbante, qui doit effectivement l’assumer ; la provision conserve son objet. Selon le traitement décrit par le BOFiP pour les provisions pour risques, quelle analyse est pertinente ?",
+      "options": [
+        "Le maintien de son objet permet son exonération lors de la fusion dans ce cadre.",
+        "Toute provision pour risques devient imposable du seul fait de la disparition de l’absorbée.",
+        "La provision se transforme en plus-value sur titres sans examen du risque.",
+        "L’exonération exige que le risque ait disparu à la date de la fusion."
+      ],
+      "answer": 0,
+      "explanation": "La doctrine distingue les provisions devenues sans objet de celles dont le risque reste assumé par l’absorbante. La disparition de la société ne signifie pas nécessairement disparition du risque.",
+      "references": [
+        {
+          "title": "BOFiP BOI-IS-FUS-10-20-30, conséquences pour la société absorbée",
+          "url": "https://bofip.impots.gouv.fr/bofip/7250-PGP.html/identifiant=BOI-IS-FUS-10-20-30-20220413"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans le régime donné, la plus-value ultérieure d’un terrain reçu par fusion se calcule sur sa valeur fiscale historique de 90 000 €. Sa valeur comptable d’apport est 140 000 € et il est vendu 160 000 €. Quelle plus-value fiscale selon cette règle fournie ?",
+      "options": [
+        "20 000 €",
+        "70 000 €",
+        "50 000 €",
+        "250 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La base de référence imposée est fiscale et historique. La plus-value est 160 000−90 000=70 000 €. Déduire la valeur d’apport comptable donnerait la seule différence comptable.",
+      "calculation": {
+        "expected": 70000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 160000
+            },
+            {
+              "value": 90000
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier établit que les conditions de L1224-1 sont réunies lors d’une modification juridique d’employeur. Que deviennent les contrats de travail en cours selon cet article ?",
+      "options": [
+        "Ils sont remplacés par des contrats nouveaux soumis à une période d’essai.",
+        "Ils prennent fin et les salariés n’ont qu’une créance indemnitaire.",
+        "Ils subsistent entre le nouvel employeur et le personnel concerné.",
+        "Ils deviennent des contrats de prestation du seul fait de la restructuration."
+      ],
+      "answer": 2,
+      "explanation": "Le cas suppose le champ d’application établi. Dans ce cadre, L1224-1 organise la subsistance des contrats de travail, non leur extinction suivie d’une embauche nouvelle.",
+      "references": [
+        {
+          "title": "Code du travail, article L1224-1, subsistance des contrats",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900875/2020-11-04"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un projet présente un changement d’actionnaire et en déduit un changement d’employeur pour chaque salarié, alors que la société signataire des contrats reste la même. Quelle vérification distingue les deux questions ?",
+      "options": [
+        "La personne contrôlant les droits de vote, assimilée à l’employeur dès que la majorité change de titulaire.",
+        "La consolidation comptable dans le groupe acquéreur, assimilée à un transfert des contrats à la société mère.",
+        "La nomination éventuelle d’un nouveau dirigeant, assimilée à un changement de la personne titulaire des contrats.",
+        "L’identité de la personne morale employeur, distincte de celle de son actionnaire."
+      ],
+      "answer": 3,
+      "explanation": "Un changement dans la détention des titres ne décrit pas à lui seul un changement de la personne morale employeur. Il faut cartographier les personnes avant d’annoncer un transfert de contrats."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La restructuration a reçu les approbations juridiques requises. La direction en déduit que le régime fiscal de faveur a été validé, alors qu’aucun contrôle de ses conditions n’est fourni. Quelle séparation rétablir ?",
+      "options": [
+        "La réalisation juridique de l’opération et son traitement fiscal soumis à des conditions propres.",
+        "L’adoption du projet par les associés, assimilée à l’exercice et à la validation de l’option fiscale.",
+        "La qualification juridique de fusion, assimilée à une justification suffisante du bénéfice du régime de faveur.",
+        "La continuité des valeurs comptables prévue au projet, assimilée au contrôle de toutes les conditions fiscales."
+      ],
+      "answer": 0,
+      "explanation": "Les approbations juridiques ne constituent pas une validation générale des conditions fiscales. Chaque conclusion doit être soutenue par le contrôle correspondant à son régime."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une fusion de 2026 crée une seule société nouvelle. Selon le 1° de L236-4, quel événement fixe sa prise d’effet ?",
+      "options": [
+        "L’approbation du projet par la dernière assemblée appelée à statuer sur la fusion.",
+        "L’immatriculation de la société nouvelle au registre du commerce et des sociétés.",
+        "La publication de l’avis de projet de fusion, qui ouvre le délai d’opposition des créanciers.",
+        "La date de clôture du dernier exercice des sociétés participant à la fusion."
+      ],
+      "answer": 1,
+      "explanation": "Pour une fusion créant une société nouvelle, le texte retient l’immatriculation. Il ne faut pas lui substituer la date préparatoire du projet ou du paiement des frais.",
+      "references": [
+        {
+          "title": "Code de commerce, article L236-4, date d’effet des fusions",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047590793/2026-05-01"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une fusion-absorption de 2026 est approuvée par les assemblées des deux sociétés les 10 et 20 septembre. Le contrat ne prévoit aucune autre date d’effet et le cas ne relève d’aucune procédure simplifiée. Quelle date L236-4 retient-il ?",
+      "options": [
+        "Le 10 septembre, première approbation.",
+        "Le 15 septembre, entre les deux décisions.",
+        "Le 20 septembre, date de la dernière assemblée approbatrice.",
+        "Le 31 décembre, date de clôture commune dans tous les cas."
+      ],
+      "answer": 2,
+      "explanation": "En l’absence d’autre date contractuelle dans ce cas, le texte retient la dernière assemblée ayant approuvé la fusion. La première approbation ne suffit pas à satisfaire ce critère.",
+      "references": [
+        {
+          "title": "Code de commerce, article L236-4, date d’effet des fusions",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047590793/2026-05-01"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un projet de fusion daté de mai 2023 n’a été déposé au greffe qu’en août 2023. Une copie choisit l’ancienne version de L236-3 sur la seule date de rédaction. Quel critère d’application de la réforme citée doit être contrôlé ?",
+      "options": [
+        "La signature du traité définitif par les représentants des sociétés participantes.",
+        "L’approbation du projet par la dernière assemblée appelée à statuer.",
+        "La date de prise d’effet juridique de la fusion prévue au traité.",
+        "Le dépôt du projet au greffe à compter du 1er juillet 2023."
+      ],
+      "answer": 3,
+      "explanation": "La disposition transitoire citée rattache la réforme aux opérations dont le projet est déposé à partir du 1er juillet 2023. La seule date de rédaction du projet n’est donc pas le critère donné.",
+      "references": [
+        {
+          "title": "Code de commerce, article L236-3, fusion et transmission universelle",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047590799/2024-05-24"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’opération exige, selon le calendrier contractuel fourni, une autorisation bancaire avant sa réalisation. Les actes sont prêts, mais l’accord bancaire n’est pas reçu. Quelle étape évite de confondre préparation et réalisation autorisée ?",
+      "options": [
+        "Maintenir le contrôle de cette condition avant la réalisation prévue et documenter sa levée.",
+        "Tenir les actes prêts pour preuve de l’accord bancaire.",
+        "Remplacer l’autorisation par une information adressée à la banque après réalisation.",
+        "Déduire l’accord de la banque de l’absence d’observation sur le budget."
+      ],
+      "answer": 0,
+      "explanation": "Le calendrier donné prévoit une condition préalable. La préparation matérielle des actes n’établit pas sa réalisation ; le suivi doit prévoir la pièce et le moment du contrôle."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une évaluation a été préparée pour un transfert de branche d’activité, puis le groupe décide d’acheter seulement les titres de la société qui la possède avec d’autres activités. Quelle reprise du dossier est nécessaire ?",
+      "options": [
+        "Conserver la valeur et modifier uniquement le nom de l’acquéreur.",
+        "Redéfinir le périmètre acquis et les engagements concernés avant de réutiliser l’évaluation.",
+        "Ajouter le prix des machines à la valeur des titres sans autre rapprochement.",
+        "Déduire que les autres activités sont exclues puisqu’elles n’étaient pas évaluées au départ."
+      ],
+      "answer": 1,
+      "explanation": "Le changement d’objet modifie la population d’actifs et d’engagements à étudier. Une valeur exacte sur l’ancienne branche ne vaut pas automatiquement valeur des titres de l’ensemble de la société."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La date de transfert, la date d’arrêté de l’évaluation et la date d’approbation sont différentes dans le dossier. Le rédacteur les remplace par une date unique pour simplifier les calculs. Quelle présentation est plus fidèle ?",
+      "options": [
+        "Retenir seulement la date la plus ancienne pour tous les effets.",
+        "Retenir seulement la date la plus récente pour tous les postes.",
+        "Conserver la fonction de chaque date et les rapprochements nécessaires selon le régime étudié.",
+        "Utiliser une date moyenne pour répartir les écarts entre parties."
+      ],
+      "answer": 2,
+      "explanation": "Ces dates répondent à des objets différents. Les distinguer permet de traiter les mouvements intermédiaires et les conditions de réalisation, sans attribuer arbitrairement tous les effets à une date unique."
+    }
+  ]
+}

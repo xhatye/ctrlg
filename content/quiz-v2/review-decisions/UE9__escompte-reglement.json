@@ -1,0 +1,248 @@
+{
+  "sourceHash": "6605a28cec3507e7a081f911f18f9b9f0920da93f3d83e5b28ffc0fdbdddd39e",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "fee5cfc0bf7e6457c0ba201002ac713d8cfab2486c97d9d252da38fbe458947b",
+      "selected": 1,
+      "reason": "L’escompte de règlement dépend des conditions de paiement anticipé, pas du seul volume commercial.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "e116bd6b75e2150994ef940d28a0f3a6d4bf3f64fe4a33eca3877ec315c2b5bf",
+      "selected": 3,
+      "reason": "3 000 × 2 % = 60 euros HT d’escompte acquis.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "2402e657797e24c11496817d01b63e0cf6a7bf1b90081cccca82eabf3879579b",
+      "selected": 1,
+      "reason": "Une condition de date doit être effectivement satisfaite avant de qualifier l’escompte d’acquis.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "be3047db09fe8a0a3a1041abad89717f7c3b8133cfcb03a21cd90307a223ea04",
+      "selected": 1,
+      "reason": "45 / 1 500 = 3 % de taux d’escompte.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "eb28c40a11be0a0985bf8983793ddc81599fc3b701cf58ed2ee686f6d65110a2",
+      "selected": 2,
+      "reason": "Le contrat fixe comme base le montant après les remises commerciales, pas le brut.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "902cdafc758cf56f00187d13dd7508b41a47f312577b2b520ac8cb48f568afd3",
+      "selected": 0,
+      "reason": "2 400 moins 36 = 2 364 euros de net financier.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "449d9830054bffa1282e963d0908f3092dc1264384016f52e4dd43a84de48cf1",
+      "selected": 1,
+      "reason": "L’escompte est une réduction du montant dû, donc se retranche.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "8ac6aa825aee93619a93a4b1ab538ba785b02bf1dc902582a7d50a9f954c4584",
+      "selected": 2,
+      "reason": "1 960 / 0,98 = 2 000 euros de net commercial avant escompte.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "b1c77b7d60f2e28aff573083724fc4b5febe7b19420c06246a01ddce682d49fc",
+      "selected": 2,
+      "reason": "L’avantage de payer tôt doit être comparé au coût du financement sur la période avancée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "b2ffa7a4585a55edc1fefb903ae392ef4b8e20c5df089fd3289bc6e88e968e1a",
+      "selected": 2,
+      "reason": "80 d’escompte moins 35 de financement donnent 45 euros d’avantage net hors autres effets.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "8376b4a4130801ffc53dc50911eaedbc53b78f0b027db9092027afbc659704bc",
+      "selected": 0,
+      "reason": "Le net déjà réduit ne peut subir une deuxième déduction d’escompte sans accord.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "d38b7a7cb5ea5d99b011df2f04bbf1bab0732d1c5afd43f4b19329b0942c682f",
+      "selected": 2,
+      "reason": "1 470 × 20 % = 294 euros de TVA dans le cas posé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "88f4760411c5e68223f54088ad0576ca4dd60ae73e6db4b52ab91ab10d7ccd94",
+      "selected": 0,
+      "reason": "La TVA doit être recalculée sur le net financier imposé, sans déplacer l’escompte vers le TTC ou le déduire deux fois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "ca85127f33e5e9e8fb0e898d40c845f3d8e52d6034c7dfd962f0ee5beceb5b45",
+      "selected": 1,
+      "reason": "Les mentions et conditions de taxe des factures doivent être lues avant de transposer un traitement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "eed0a16d62f6def6590eb7955da46aed4ba044fc42b291e1e63ee2715a3bfa0b",
+      "selected": 3,
+      "reason": "La base baisse de 40 ; à 20 %, la TVA baisse de 8 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "056cafb8fd61696dce48476a9f8eae064f68029a547e67f60dbff8c6d29210eb",
+      "selected": 2,
+      "reason": "La taxe calculée sur le net ne doit pas être diminuée en plus du montant intégral d’escompte.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "0373a9cb6c72a4c1a7e2ab63c0fa924f05dcb1a8df9f3338c86def76419c1f3d",
+      "selected": 2,
+      "reason": "2 450 plus 490 donnent 2 940 euros TTC à régler.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "f44f8b8ef56a22666836a341172c25d72fe280b307f2cc6937c804c66ad50ab9",
+      "selected": 0,
+      "reason": "2 400 − 40 − 8 = 2 352 euros TTC après réduction et ajustement de taxe.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "b09945a04df51c381a815587343935d88280bc19340ffa2bbd136189d1193f36",
+      "selected": 3,
+      "reason": "Le paiement doit être rapproché de la dette, de la réduction acquise et de son ajustement fiscal éventuel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "c4476409eb421f97d7bae5fec95292b201ebe515f294e749119fa520b7b11468",
+      "selected": 2,
+      "reason": "Virer le TTC avant escompte alors qu’un montant réduit est dû produit un trop-payé à contrôler.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "3b8bf4b4f13f196b258ea519f45572190788a16ef3e74c6c0f689c928c844594",
+      "selected": 1,
+      "reason": "L’avantage doit être comparé à la disponibilité et au coût de couverture du manque de fonds.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "5f3f670bdd4b69df87c752b1f51e77fd980ae2ea58cac7a56dcc2b07eceea121",
+      "selected": 2,
+      "reason": "La chaîne part du net commercial, déduit l’escompte acquis et calcule la taxe sur le net financier selon le cas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

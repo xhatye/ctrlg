@@ -1,0 +1,416 @@
+{
+  "module": "DSCG3",
+  "chapter": "strategie-mise-en-oeuvre",
+  "sourceHash": "5dd93737d652b69b8eee99338966b24567507b15e79b0479087fafbe2a0c4534",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle formulation constitue un objectif stratégique susceptible d’être décliné en actions ?",
+      "options": [
+        "Affecter un budget de transport aux établissements du segment prioritaire.",
+        "Déployer un logiciel de suivi des expéditions auprès des équipes du segment prioritaire.",
+        "Organiser une réunion hebdomadaire entre la production et les transporteurs du segment prioritaire.",
+        "Réduire les délais de livraison sur le segment prioritaire en préservant la qualité."
+      ],
+      "answer": 3,
+      "explanation": "Un objectif doit préciser la dimension de performance et le périmètre visés. La collecte de données ou une intention générale ne suffit pas."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise choisit une différenciation par assistance technique. Quelle priorité traduit le mieux ce choix ?",
+      "options": [
+        "Développer la résolution des problèmes clients et la compétence du support.",
+        "Maximiser les appels très courts indépendamment de leur résolution.",
+        "Réduire uniformément toutes les prestations de support.",
+        "Rémunérer exclusivement le nombre de devis commerciaux transmis."
+      ],
+      "answer": 0,
+      "explanation": "L’assistance différenciante exige une capacité de réponse utile. Une optimisation du temps d’appel peut contredire ce positionnement."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un plan stratégique nomme dix projets, sans préciser les résultats attendus ni leurs destinataires. Quelle lacune faut-il combler ?",
+      "options": [
+        "La ventilation par exercice des paiements des dix projets.",
+        "Le lien entre chaque projet et un objectif clairement attribué.",
+        "Le choix des jalons techniques communs aux dix projets.",
+        "La procédure de passation des contrats avec leurs prestataires."
+      ],
+      "answer": 1,
+      "explanation": "Une liste de projets ne constitue pas une déclinaison stratégique. Chaque action doit être reliée à un résultat attendu et à une responsabilité."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une société poursuit une stratégie de bas coûts. Un projet automatisé semble productif mais impose des investissements et une maintenance élevés. Quel examen est pertinent ?",
+      "options": [
+        "La comparaison des seuls salaires économisés.",
+        "L’approbation dès que le temps unitaire diminue.",
+        "La contribution économique totale du projet, avec ses moyens et ses risques.",
+        "La suppression du projet parce que toute automatisation augmente les coûts fixes."
+      ],
+      "answer": 2,
+      "explanation": "Le positionnement coût concerne l’économie globale du modèle. Le gain local de productivité doit être rapproché des investissements, coûts induits et contraintes."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le siège veut améliorer le service aux grands comptes. Quel déploiement rend cet objectif concret ?",
+      "options": [
+        "Une cible globale de ventes sans distinction de clientèle.",
+        "Un budget de communication commun sans changement de processus.",
+        "Une réduction identique des moyens de tous les services.",
+        "Des engagements de service, responsables et ressources définis sur ce segment."
+      ],
+      "answer": 3,
+      "explanation": "Le périmètre client prioritaire doit se traduire dans des engagements et leviers opérationnels. Une cible générale ne précise pas l’exécution."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel indicateur décrit un résultat plutôt que la réalisation d’un moyen ?",
+      "options": [
+        "La réduction observée des erreurs après formation.",
+        "Le nombre d’heures de formation dispensées.",
+        "Le taux de présence des salariés à la formation.",
+        "Le nombre de modules pédagogiques mis en ligne."
+      ],
+      "answer": 0,
+      "explanation": "Les heures, présences et modules décrivent l’action ou ses moyens. La réduction des erreurs renseigne sur l’effet recherché."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un programme de fidélisation envoie toutes les offres prévues. Quel constat permet d’en apprécier le résultat visé ?",
+      "options": [
+        "La conformité du calendrier d’envoi uniquement.",
+        "L’évolution de la rétention de la clientèle concernée, avec une analyse des autres facteurs.",
+        "Le nombre total de messages expédiés, doublons inclus.",
+        "La dépense de conception des offres rapportée au budget."
+      ],
+      "answer": 1,
+      "explanation": "L’envoi est un livrable ; la fidélité est le résultat attendu. Son évolution doit être interprétée avec le contexte et les effets d’autres actions."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un projet utilise la valeur acquise : EV = valeur budgétée du travail réalisé, PV = valeur du travail prévu, AC = coût réel. À la même date, EV = 80 k€, PV = 100 k€ et AC = 90 k€. Avec SPI = EV/PV et CPI = EV/AC, quel diagnostic est correct ?",
+      "options": [
+        "En avance et efficient en coût, puisque le coût réel est inférieur au montant prévu.",
+        "En avance mais inefficient en coût, car EV est inférieur à AC.",
+        "En retard et inefficient en coût, même si AC reste inférieur à PV.",
+        "En retard mais efficient en coût, car AC reste inférieur à PV."
+      ],
+      "answer": 2,
+      "explanation": "SPI = 80/100 = 0,80 : moins de travail que prévu est réalisé. CPI = 80/90 ≈ 0,89 : le travail réalisé a coûté plus que sa valeur budgétée. Dépenser moins que PV ne suffit donc pas à montrer une économie.",
+      "references": [
+        {
+          "title": "NSF — Earned Value Management Gold Card",
+          "url": "https://www.nsf.gov/od/ori/evm-gold-card"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un objectif est de réduire les accidents. Quel indicateur de moyens complète utilement le résultat accidentologique ?",
+      "options": [
+        "Le nombre d’accidents graves, déjà inclus dans le résultat.",
+        "Le nombre d’accidents légers uniquement.",
+        "La durée d’arrêt consécutive aux accidents.",
+        "La réalisation effective des actions de prévention prévues."
+      ],
+      "answer": 3,
+      "explanation": "Les actions de prévention décrivent un levier, alors que fréquence et gravité décrivent des résultats. Les deux niveaux sont complémentaires."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le nombre d’innovations testées augmente, mais aucune n’est utilisée par les clients. Quelle conclusion est justifiée ?",
+      "options": [
+        "La capacité à tester progresse, mais le résultat d’adoption n’est pas établi.",
+        "La stratégie d’innovation a nécessairement créé des recettes supplémentaires.",
+        "Le résultat doit être mesuré uniquement par le budget de recherche consommé.",
+        "L’absence d’adoption démontre que chaque test était techniquement défaillant."
+      ],
+      "answer": 0,
+      "explanation": "Un test peut être utile sans déboucher sur une adoption. Il faut distinguer l’activité d’expérimentation, ses apprentissages et les résultats commerciaux visés."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une carte stratégique représente des liens entre compétences, processus et résultats. Ces liens sont :",
+      "options": [
+        "Des preuves statistiques suffisantes de causalité.",
+        "Des hypothèses à expliciter et à confronter aux observations.",
+        "Des identités comptables indépendantes du contexte.",
+        "Des relations nécessairement immédiates dès le début du plan."
+      ],
+      "answer": 1,
+      "explanation": "La carte décrit une logique supposée de création de performance. Les mécanismes, conditions et délais doivent être testés."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un projet est achevé deux mois après la date prévue. À sa clôture, toute la valeur budgétée est acquise : EV = PV = budget total. Que signifie alors un SPI = EV/PV égal à 1 ?",
+      "options": [
+        "La durée réelle a été égale à la durée prévue malgré le décalage de date.",
+        "Le projet a absorbé son retard avant la date contractuelle de fin.",
+        "Le SPI monétaire ne révèle plus ce retard à l’achèvement ; il faut consulter les dates réelles.",
+        "Le coût réel final a été égal au budget total du projet."
+      ],
+      "answer": 2,
+      "explanation": "Lorsque tout le travail prévu est achevé, EV et PV rejoignent le même budget total, même après la date prévue. Le ratio vaut alors 1 sans effacer les deux mois de retard. Les dates et le planning restent nécessaires ; SPI ne mesure pas le coût réel.",
+      "references": [
+        {
+          "title": "NASA — définitions EV, PV et SPI",
+          "url": "https://www.nasa.gov/ocfo/ppc-corner/ppc-glossary/"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une action destinée à développer de nouvelles compétences est évaluée seulement une semaine après son lancement. Quel facteur peut fausser la conclusion ?",
+      "options": [
+        "Le décalage entre la date de facturation et la date de paiement de la formation.",
+        "L’écart entre le budget de formation autorisé et son coût d’achat final.",
+        "Le décalage entre la date d’inscription et la première séance de formation.",
+        "Le délai nécessaire à l’apprentissage et à sa traduction dans les résultats."
+      ],
+      "answer": 3,
+      "explanation": "Un effet peut apparaître après un délai. L’évaluation doit respecter le mécanisme attendu sans pour autant différer indéfiniment tout contrôle."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un projet a un budget total BAC de 200 k€, une valeur acquise EV de 80 k€ et un coût réel AC de 100 k€. On prévoit que l’efficience actuelle CPI = EV/AC se maintiendra pour le travail restant. Avec EAC = AC + (BAC − EV)/CPI, quel coût final estime-t-on ?",
+      "options": [
+        "250 k€.",
+        "220 k€.",
+        "200 k€.",
+        "150 k€."
+      ],
+      "answer": 0,
+      "explanation": "CPI = 80/100 = 0,8. Le reste du travail, budgété à 120 k€, coûterait 120/0,8 = 150 k€. En ajoutant les 100 k€ déjà dépensés, EAC vaut 250 k€. L’estimation dépend de la persistance supposée de l’efficience actuelle.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 200
+                    },
+                    {
+                      "value": 80
+                    }
+                  ]
+                },
+                {
+                  "op": "/",
+                  "args": [
+                    {
+                      "value": 80
+                    },
+                    {
+                      "value": 100
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 250,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "NSF — prévision à efficience CPI constante",
+          "url": "https://www.nsf.gov/od/ori/evm-gold-card"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La satisfaction et les ventes progressent ensemble. La direction conclut que chaque hausse de satisfaction cause une hausse équivalente des ventes. Quelle réserve est fondée ?",
+      "options": [
+        "Les ventes et la satisfaction mesurent le même résultat, ce qui rend leur progression redondante.",
+        "Une évolution conjointe ne suffit pas à établir le sens ni l’ampleur du lien causal.",
+        "La progression des ventes constitue ici une mesure directe de l’effet de la satisfaction.",
+        "L’utilisation de pourcentages identiques permet de transformer la relation en proportionnalité causale."
+      ],
+      "answer": 1,
+      "explanation": "D’autres facteurs ou une causalité inverse peuvent intervenir. Le lien stratégique demande un mécanisme plausible et une vérification adaptée."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise suppose que moins de défauts améliorera la fidélité. Les défauts baissent mais la fidélité stagne. Quel examen prolonge utilement la carte stratégique ?",
+      "options": [
+        "Relever la cible de fidélité pour rétablir la cohérence de la carte, en conservant le seul indicateur de défauts.",
+        "Retenir la baisse des défauts comme estimation de la fidélité future sans examiner les départs constatés.",
+        "Étudier délais d’effet et autres déterminants de départ des clients, comme prix ou service.",
+        "Remplacer la mesure de fidélité par la conformité technique afin de ne garder que des résultats favorables."
+      ],
+      "answer": 2,
+      "explanation": "L’hypothèse peut être partielle ou demander du temps. La fidélité dépend d’autres facteurs qui doivent être observés avant de modifier les actions."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Un arbitrage stratégique entre coût et qualité consiste à :",
+      "options": [
+        "Classer les solutions par coût d’achat, puis utiliser la qualité seulement pour départager les ex æquo.",
+        "Transformer chaque dimension en rang et retenir leur somme sans justifier les pondérations implicites.",
+        "Évaluer chaque service sur sa dimension propre puis additionner ses préférences sans arbitrage commun.",
+        "Examiner les conséquences des options au regard des priorités et contraintes explicites."
+      ],
+      "answer": 3,
+      "explanation": "Arbitrer suppose de rendre visibles les effets sur plusieurs dimensions. Il faut ensuite décider selon les priorités, sans confondre des unités différentes."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un projet mesure la valeur acquise selon la règle 0/100 : un lot ne reçoit aucune valeur acquise avant son achèvement, puis reçoit tout son budget à l’achèvement. Chaque lot vaut 400 €. Douze lots sont terminés et trois autres commencés. Quelle valeur acquise doit-on enregistrer ?",
+      "options": [
+        "4 800 €.",
+        "6 000 €.",
+        "5 400 €.",
+        "1 200 €."
+      ],
+      "answer": 0,
+      "explanation": "Seuls les douze lots terminés acquièrent leur budget : 12 × 400 = 4 800 €. Les trois commencés ne reçoivent pas encore de valeur avec la règle 0/100. Leur attribuer 50 % reviendrait à employer une autre convention, non celle annoncée.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 12
+            },
+            {
+              "value": 400
+            }
+          ]
+        },
+        "expected": 4800,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "NASA — techniques de mesure 0/100 et 50/50",
+          "url": "https://www.nasa.gov/pdf/420297main_NASA-SP-2010-3403.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le délai moyen national baisse alors que les clients du segment stratégique subissent davantage de retards. Quel défaut du pilotage apparaît ?",
+      "options": [
+        "Un seuil de retard fixé trop haut, quelle que soit la composition des segments.",
+        "Une agrégation qui masque la performance du segment prioritaire.",
+        "Un écart entre délais de paiement et délais de livraison qui expliquerait à lui seul la moyenne nationale.",
+        "Une amélioration du segment prioritaire déduite de son inclusion dans la moyenne nationale."
+      ],
+      "answer": 1,
+      "explanation": "Une moyenne globale peut évoluer favorablement par composition et masquer une dégradation ciblée. Il faut suivre le segment auquel la stratégie donne priorité."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une réduction du nombre de références simplifie la production mais retire plusieurs offres clés de la clientèle prioritaire. Quelle comparaison est décisive ?",
+      "options": [
+        "La seule économie du service de planification.",
+        "Le nombre de références supprimées, indépendamment des ventes.",
+        "Les économies globales face à la contribution et au service perdus sur le segment visé.",
+        "Le budget commercial inchangé comme preuve d’absence d’effet."
+      ],
+      "answer": 2,
+      "explanation": "La simplification doit être appréciée avec ses conséquences commerciales et stratégiques. Une économie de processus peut coûter davantage de valeur ailleurs."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une direction impose une nouvelle priorité d’innovation sans retirer d’anciens projets, alors que les équipes sont saturées. Quelle action rend la mise en œuvre crédible ?",
+      "options": [
+        "Augmenter les cibles des anciens projets sans revoir les moyens disponibles pour l’innovation.",
+        "Ajouter les nouveaux projets au calendrier existant en conservant toutes les échéances initiales.",
+        "Répartir également les équipes entre tous les projets sans examiner les priorités annoncées.",
+        "Reprioriser le portefeuille et affecter des ressources compatibles avec les choix."
+      ],
+      "answer": 3,
+      "explanation": "Une priorité exige des moyens et parfois des renoncements. Le portefeuille doit refléter la capacité disponible et les arbitrages stratégiques."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un projet réduit le coût unitaire en augmentant le volume produit, mais le stock invendu croît fortement. Quelle mesure complète le coût unitaire ?",
+      "options": [
+        "Le stock, sa rotation et les ventes réellement obtenues.",
+        "Le taux d’absorption des charges fixes par les unités fabriquées, sans intégrer les invendus.",
+        "La cadence maximale atteinte pendant les séries longues, sans suivre les sorties commerciales.",
+        "Le coût standard de fabrication calculé sur la nouvelle capacité, sans intégrer les coûts de stockage."
+      ],
+      "answer": 0,
+      "explanation": "La baisse du coût affecté par unité peut venir d’un volume non vendu. Le stock et les ventes éclairent la valeur réelle et le risque de surproduction."
+    }
+  ]
+}

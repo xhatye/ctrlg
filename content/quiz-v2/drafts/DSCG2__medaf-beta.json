@@ -1,0 +1,514 @@
+{
+  "module": "DSCG2",
+  "chapter": "medaf-beta",
+  "sourceHash": "b33a22baf373d54e8945ab1a57e4d8e1b717410f8958755dc3fd0030ce6e6dbc",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le MEDAF utilise un taux sans risque de 2 % et un rendement espéré de marché de 7 %. Quelle prime de marché ces données impliquent-elles ?",
+      "options": [
+        "5 points",
+        "9 points",
+        "3,5 points",
+        "7 points"
+      ],
+      "answer": 0,
+      "explanation": "La prime de marché est l’excédent attendu sur le taux sans risque : 7 − 2 = 5 points. Le rendement total du marché n’est pas sa seule prime.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 7
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "expected": 5,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant traite le rendement total du marché comme la prime de marché, puis ajoute encore le taux sans risque dans le MEDAF. Que doit-il distinguer ?",
+      "options": [
+        "Le rendement de marché avant frais et le rendement net de frais, considéré comme prime de marché",
+        "Le rendement total et son excédent par rapport au taux sans risque",
+        "Le rendement de marché avant et après le seul ajustement du bêta, sans isoler le taux sans risque",
+        "La prime de risque du titre et le rendement total de marché, tenus pour égaux quel que soit le bêta"
+      ],
+      "answer": 1,
+      "explanation": "La prime est Rm − Rf, pas Rm. Oublier cette soustraction déforme la prime du titre et peut compter deux fois la composante sans risque."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une prime de marché de 6 points est donnée. Pour un titre de bêta 1,2, quelle prime systématique retenir dans le MEDAF ?",
+      "options": [
+        "5 points",
+        "6 points",
+        "7,2 points",
+        "1,2 point"
+      ],
+      "answer": 2,
+      "explanation": "La prime du titre vaut bêta × prime de marché : 1,2 × 6 = 7,2 points. Elle ne comprend pas encore le taux sans risque.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 1.2
+            },
+            {
+              "value": 6
+            }
+          ]
+        },
+        "expected": 7.2,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans le MEDAF, que multiplie le bêta du titre ?",
+      "options": [
+        "Le seul taux sans risque",
+        "La somme du rendement de marché et du taux sans risque",
+        "Le rendement réalisé du titre pendant l’année passée",
+        "La prime de risque du marché"
+      ],
+      "answer": 3,
+      "explanation": "Le modèle rémunère l’exposition systématique par bêta × (Rm − Rf). Le taux sans risque est ensuite ajouté séparément."
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le taux sans risque vaut 3 %, le rendement espéré du marché 9 % et le bêta 0,5. Quel rendement exigé donne le MEDAF ?",
+      "options": [
+        "6 %",
+        "4,5 %",
+        "7,5 %",
+        "3 %"
+      ],
+      "answer": 0,
+      "explanation": "La prime de marché est 6 points ; celle du titre 3 points. Le rendement exigé vaut 3 + 0,5 × (9 − 3) = 6 %.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 3
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.5
+                },
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 9
+                    },
+                    {
+                      "value": 3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 6,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le MEDAF donne un rendement exigé du titre de 11 %, alors que le rendement espéré du marché est de 8 %. Quel écart titre moins marché mesurer ?",
+      "options": [
+        "-3 points",
+        "3 points",
+        "19 points",
+        "1,375 point"
+      ],
+      "answer": 1,
+      "explanation": "L’écart demandé vaut 11 − 8 = 3 points. Il compare deux taux et ne se calcule pas comme leur rapport.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 11
+            },
+            {
+              "value": 8
+            }
+          ]
+        },
+        "expected": 3,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La prime de marché est strictement positive et le bêta est compris entre zéro et un. Où le rendement exigé se situe-t-il selon le MEDAF ?",
+      "options": [
+        "Au-dessus du rendement espéré du marché",
+        "En dessous du taux sans risque",
+        "Entre le taux sans risque et le rendement espéré du marché",
+        "Exactement au rendement espéré du marché quel que soit le bêta"
+      ],
+      "answer": 2,
+      "explanation": "La prime du titre est alors positive mais inférieure à la prime de marché. L’ajout de Rf situe Ke entre Rf et Rm."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une note dit : « bêta 0,7, donc le titre ne peut perdre que 70 % de ce que perd le marché à chaque séance ». Quelle limite manque ?",
+      "options": [
+        "Un bêta inférieur à un rend le rendement du titre indépendant du marché",
+        "Un bêta de 0,7 représente une probabilité de défaut de 70 %",
+        "Un bêta inférieur à un supprime le besoin d’estimer la prime de marché",
+        "Le bêta du modèle ne fixe pas une perte maximale réalisée à chaque séance"
+      ],
+      "answer": 3,
+      "explanation": "Le bêta mesure une sensibilité systématique dans le modèle, pas une borne quotidienne des pertes ni une garantie de performance."
+    },
+    {
+      "id": "q09",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un titre a un bêta nul dans le modèle fourni. Quel rendement exigé donne la formule Ke = Rf + bêta × (Rm − Rf) ?",
+      "options": [
+        "Le taux sans risque",
+        "Le rendement du marché",
+        "Un rendement nul indépendamment de Rf",
+        "La prime de marché seule"
+      ],
+      "answer": 0,
+      "explanation": "La contribution systématique est nulle quand bêta = 0. La formule conserve le taux sans risque ; elle ne prouve pas l’absence de tous les autres risques."
+    },
+    {
+      "id": "q10",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un analyste combine un taux sans risque annuel et un rendement espéré du marché mensuel sans conversion. Quel contrôle manque avant de calculer la prime ?",
+      "options": [
+        "L’égalité des deux taux avant leur soustraction",
+        "L’alignement des périodes et conventions des taux comparés",
+        "La multiplication du rendement mensuel par le bêta pour supprimer la différence de période",
+        "La division du taux annuel composé par douze, tenue pour équivalence mensuelle exacte sans préciser la convention"
+      ],
+      "answer": 1,
+      "explanation": "On ne soustrait pas directement des taux portant sur des horizons différents. La prime doit être construite sur des anticipations cohérentes."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un modèle donne une prime systématique de 4 points pour une prime de marché de 5 points. Quel bêta cela implique-t-il ?",
+      "options": [
+        "1,25",
+        "9",
+        "0,8",
+        "0,2"
+      ],
+      "answer": 2,
+      "explanation": "La relation prime du titre = bêta × prime de marché donne bêta = 4 / 5 = 0,8. Le bêta est ici un coefficient sans unité.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 4
+            },
+            {
+              "value": 5
+            }
+          ]
+        },
+        "expected": 0.8,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’étudiant calcule Ke = bêta × Rm + Rf. Quelle composante manque par rapport au MEDAF donné ?",
+      "options": [
+        "L’addition d’un second rendement total de marché",
+        "La division du taux sans risque par le bêta",
+        "La soustraction du taux d’impôt sur tout le rendement",
+        "La soustraction de bêta × Rf dans la composante risquée"
+      ],
+      "answer": 3,
+      "explanation": "En développant la formule correcte, Ke = Rf + bêta × Rm − bêta × Rf. Le rendement de marché doit être net du taux sans risque avant pondération."
+    },
+    {
+      "id": "q13",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le bêta vaut un et les données de taux sont cohérentes. Que devient l’écart Ke − Rm dans le MEDAF ?",
+      "options": [
+        "Il est nul car le titre reçoit la prime de marché entière",
+        "Il est égal au taux sans risque",
+        "Il est égal à la prime de marché",
+        "Il est égal à l’opposé du rendement du marché"
+      ],
+      "answer": 0,
+      "explanation": "Avec bêta = 1, Ke = Rf + Rm − Rf = Rm. L’écart est donc nul dans ce modèle, sans garantir une performance réalisée identique."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le taux sans risque vaut 2 % et la prime de marché 4 points. Le bêta passe de 0,8 à 1,1, les autres données restant fixes. De combien Ke augmente-t-il ?",
+      "options": [
+        "0,3 point",
+        "1,2 point",
+        "4,4 points",
+        "3,2 points"
+      ],
+      "answer": 1,
+      "explanation": "La variation de Ke est la variation du bêta multipliée par la prime : (1,1 − 0,8) × 4 = 1,2 point.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1.1
+                },
+                {
+                  "value": 0.8
+                }
+              ]
+            },
+            {
+              "value": 4
+            }
+          ]
+        },
+        "expected": 1.2,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier fournit directement une prime de marché de 5 points. L’analyste lui retranche encore Rf pour calculer la prime du titre. Quelle erreur commet-il ?",
+      "options": [
+        "Il omet de convertir la prime en rendement réalisé",
+        "Il transforme correctement une prime en rendement total",
+        "Il soustrait une seconde fois le taux sans risque d’une prime déjà nette",
+        "Il applique deux fois le bêta à la prime de marché"
+      ],
+      "answer": 2,
+      "explanation": "Une prime fournie n’est pas un rendement total. On la multiplie directement par le bêta, puis on ajoute Rf pour obtenir le rendement exigé."
+    },
+    {
+      "id": "q16",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux titres ont le même bêta dans le même MEDAF avec mêmes données de marché. Quelle conclusion le modèle permet-il ?",
+      "options": [
+        "Ils ont nécessairement la même volatilité totale",
+        "Ils verseront le même dividende par action",
+        "Leurs rendements réalisés seront égaux à chaque période",
+        "Ils ont le même rendement exigé systématique, sans identité garantie de leurs performances"
+      ],
+      "answer": 3,
+      "explanation": "Le MEDAF utilise les mêmes entrées pour calculer Ke. Il n’affirme pas l’identité de toutes les caractéristiques de risque ni de toutes les réalisations."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Avec Rf = 4 %, Rm = 10 % et bêta = 1,5, quel est l’écart Ke − Rm selon le modèle ?",
+      "options": [
+        "3 points",
+        "-3 points",
+        "9 points",
+        "6 points"
+      ],
+      "answer": 0,
+      "explanation": "Ke vaut 4 + 1,5 × 6 = 13 %. L’écart au rendement espéré du marché est 13 − 10 = 3 points.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 4
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 1.5
+                    },
+                    {
+                      "op": "-",
+                      "args": [
+                        {
+                          "value": 10
+                        },
+                        {
+                          "value": 4
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 10
+            }
+          ]
+        },
+        "expected": 3,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un rendement exigé de 8 % calculé par MEDAF est présenté comme un intérêt contractuel certain de l’action. Que corriger ?",
+      "options": [
+        "Il s’agit du seul rendement distribué et non de la variation de prix",
+        "Il s’agit d’une exigence de rendement issue d’hypothèses, pas d’un coupon garanti",
+        "Il s’agit de la probabilité que l’action progresse de 8 %",
+        "Il s’agit du taux d’intérêt dû par la société à chaque actionnaire"
+      ],
+      "answer": 1,
+      "explanation": "Le modèle estime une rémunération requise pour le risque systématique. Une action ne devient pas une créance à coupon fixe du fait de ce calcul."
+    },
+    {
+      "id": "q19",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le rendement espéré de marché augmente de 7 % à 9 %, tandis que Rf reste 3 % et bêta 0,75. De combien augmente le rendement exigé du titre ?",
+      "options": [
+        "2 points",
+        "0,75 point",
+        "1,5 point",
+        "3,5 points"
+      ],
+      "answer": 2,
+      "explanation": "La prime de marché augmente de deux points. À bêta constant, Ke augmente de 0,75 × 2 = 1,5 point.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 0.75
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 9
+                },
+                {
+                  "value": 7
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1.5,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un calcul MEDAF est utilisé pour des flux actionnaires d’une entreprise de risque différent du titre ayant servi à estimer le bêta. Quelle justification manque ?",
+      "options": [
+        "La seule concordance des devises de cotation, considérée comme preuve d’un même risque économique",
+        "La seule comparaison des volatilités totales, tenue pour équivalence des bêtas",
+        "La seule appartenance au même indice boursier, considérée suffisante malgré les activités différentes",
+        "La pertinence du bêta pour le risque des flux valorisés"
+      ],
+      "answer": 3,
+      "explanation": "Le taux doit correspondre au risque du périmètre étudié. Un bêta emprunté à un autre titre doit être justifié avant d’être utilisé pour actualiser les flux."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La prime de marché est positive. Le bêta est inférieur à un, mais le fichier donne Ke supérieur à Rm. Quel contrôle est pertinent ?",
+      "options": [
+        "Vérifier la prime utilisée et la formule de Ke, incompatibles avec ces seules hypothèses",
+        "Augmenter Rf jusqu’à obtenir le rendement souhaité",
+        "Remplacer le bêta par son inverse pour conserver la valeur obtenue",
+        "Interpréter l’écart comme une preuve d’un risque spécifique rémunéré par la formule"
+      ],
+      "answer": 0,
+      "explanation": "Avec Ke − Rm = (bêta − 1) × (Rm − Rf), l’écart doit être négatif sous ces hypothèses. Le résultat affiché demande une vérification."
+    },
+    {
+      "id": "q22",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Un bêta de 0,6 est de quelle nature dans la formule du MEDAF ?",
+      "options": [
+        "Un taux sans risque de 60 %",
+        "Un coefficient de sensibilité sans unité",
+        "Une prime annuelle de 0,6 point",
+        "Une probabilité de gain de 60 %"
+      ],
+      "answer": 1,
+      "explanation": "Le bêta multiplie une prime exprimée en taux ; il est sans unité. L’assimiler à un taux ou une probabilité change le sens du modèle."
+    }
+  ]
+}

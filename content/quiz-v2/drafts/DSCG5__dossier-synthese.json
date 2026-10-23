@@ -1,0 +1,373 @@
+{
+  "module": "DSCG5",
+  "chapter": "dossier-synthese",
+  "sourceHash": "acfcac94cf154c74d3ae2b34a0fa923429b2f78e921936c1700779896c6348e3",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après une compromission, l’équipe restaure un serveur sain puis le reconnecte immédiatement à des machines encore compromises. Quel risque de reprise doit-elle traiter ?",
+      "options": [
+        "La restauration réussie rend les connexions à tout système sûr sans vérifier son état.",
+        "L’existence d’une copie saine suffit à neutraliser les logiciels malveillants des autres machines connectées.",
+        "Le retour du service prouve que toute cause de compromission a déjà été supprimée.",
+        "La réinfection de l’environnement restauré par les systèmes non assainis."
+      ],
+      "answer": 3,
+      "explanation": "La récupération doit éviter de réintroduire la menace. Il faut maîtriser l’assainissement et les connexions, pas seulement disposer d’une sauvegarde saine.",
+      "references": [
+        {
+          "title": "CISA — StopRansomware Guide, recovery",
+          "url": "https://www.cisa.gov/stopransomware/ransomware-guide"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le test d’un service commence à 8 h 15 et les fonctions attendues sont rétablies à 13 h 45. L’objectif, mesuré entre ces deux étapes, est de quatre heures. Quel dépassement constate-t-on ?",
+      "options": [
+        "1,5 heure.",
+        "5,5 heures.",
+        "0,5 heure.",
+        "9,5 heures."
+      ],
+      "answer": 0,
+      "explanation": "Le test dure 5,5 heures ; le dépassement est 5,5 − 4 = 1,5 heure. Le point de départ et les critères de fin sont explicitement définis.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 13.75
+                },
+                {
+                  "value": 8.25
+                }
+              ]
+            },
+            {
+              "value": 4
+            }
+          ]
+        },
+        "expected": 1.5,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un exercice sur table parcourt verbalement les étapes du plan, sans restaurer de serveur ni de données. Quelle conclusion respecte son périmètre ?",
+      "options": [
+        "Les temps annoncés oralement sont des durées de restauration techniquement mesurées.",
+        "Il éclaire les rôles et décisions discutés, sans mesurer une durée réelle de restauration exécutée.",
+        "La validation du déroulé verbal prouve la récupérabilité de chaque sauvegarde.",
+        "La participation des experts remplace l’exécution des commandes nécessaires à la reprise."
+      ],
+      "answer": 1,
+      "explanation": "Un exercice de discussion peut tester la coordination. Il ne produit pas les mêmes preuves qu’une restauration technique exécutée et chronométrée."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une activité accepte un mode dégradé pendant deux jours, mais aucun processus ni responsable n’est prévu pour ce mode. Quelle action manque ?",
+      "options": [
+        "La mention du mode dégradé dans le plan suffit à prouver que les équipes savent l’exécuter.",
+        "Le maintien des sauvegardes peut remplacer la définition des opérations manuelles et de leurs responsables.",
+        "Définir, préparer et tester les fonctions réellement réalisables en mode dégradé.",
+        "Le délai admis de deux jours suffit à attribuer les tâches aux personnes sans procédure."
+      ],
+      "answer": 2,
+      "explanation": "Un mode dégradé doit être opérationnel : moyens, rôles, procédures et limites. Sa simple mention n’offre pas de capacité de continuité."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un test réussit de nuit avec tous les experts présents. Le plan doit aussi fonctionner un jour où une partie d’entre eux est indisponible. Quelle limite doit être retenue ?",
+      "options": [
+        "Le résultat avec tous les experts peut être présenté comme acquis dans tout scénario d’absence, sans organiser les remplacements.",
+        "La réussite technique rend la disponibilité des intervenants sans effet sur le temps de reprise.",
+        "Le nombre total d’experts de l’organisation suffit à prouver leur présence à chaque incident.",
+        "La réussite dépend de conditions de ressources dont la représentativité reste à examiner."
+      ],
+      "answer": 3,
+      "explanation": "Les ressources font partie des conditions du test. Le résultat doit être présenté avec ses limites et confronté aux scénarios utiles."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Le même compte administrateur permet de modifier la production et d’effacer toutes les sauvegardes connectées. Quelle amélioration réduit spécifiquement ce risque de perte simultanée ?",
+      "options": [
+        "Protéger des copies ou versions par une séparation d’accès et un dispositif hors ligne ou résistant à l’effacement prévu dans le plan.",
+        "Créer davantage de copies sous le même droit d’effacement sans modifier leur protection.",
+        "Répartir les copies sur plusieurs serveurs tout en conservant pour le compte compromis un droit d’effacement sur chacun.",
+        "Augmenter seulement la fréquence des copies, en gardant tous les points effaçables par le même compte."
+      ],
+      "answer": 0,
+      "explanation": "Multiplier des copies toutes exposées au même droit ne traite pas la cause commune. La protection et la séparation des sauvegardes doivent être adaptées et testées.",
+      "references": [
+        {
+          "title": "CISA — StopRansomware Guide, recovery",
+          "url": "https://www.cisa.gov/stopransomware/ransomware-guide"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des sauvegardes sont chiffrées. Le plan conserve les fichiers mais toutes les clés nécessaires au déchiffrement se trouvent uniquement sur le serveur qui vient d’être détruit. Quel contrôle de reprise a été omis ?",
+      "options": [
+        "Le contrôle du seul volume de fichiers sauvegardés, considéré comme preuve de leur lecture.",
+        "La disponibilité protégée des moyens de déchiffrement nécessaires à l’usage des sauvegardes.",
+        "La connaissance du format et de l’algorithme de chiffrement, supposée remplacer la disponibilité de la clé nécessaire.",
+        "La mesure de la vitesse de copie, prise comme preuve que les données sont déchiffrables."
+      ],
+      "answer": 1,
+      "explanation": "Une copie chiffrée n’est pas utilisable sans les moyens de déchiffrement. Leur protection et leur récupération doivent faire partie du plan, sans les exposer avec les données."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une copie très récente est récupérée, mais certaines transactions de la période qu’elle devrait couvrir manquent. Quelle vérification est indispensable ?",
+      "options": [
+        "La seule date inscrite dans le nom du fichier récupéré.",
+        "La seule durée de copie du fichier vers le secours.",
+        "L’intégrité et la cohérence du point récupéré, pas seulement son horodatage.",
+        "Le seul nombre de supports contenant la copie."
+      ],
+      "answer": 2,
+      "explanation": "L’horodatage ne suffit pas si le contenu est incomplet ou incohérent. Il faut vérifier les transactions et les relations attendues."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans le mécanisme décrit, la sauvegarde complète du dimanche contient l’état initial ; chaque incrément quotidien contient seulement les changements depuis la sauvegarde précédente. Pour reconstituer l’état du mercredi, que faut-il prévoir ?",
+      "options": [
+        "Le seul incrément du mercredi, supposé contenir tout l’état depuis le dimanche.",
+        "La complète et le seul incrément de mercredi, en ignorant les changements de lundi et mardi.",
+        "La complète puis les incréments dans l’ordre inverse, du mercredi au lundi, sans respecter leur succession.",
+        "La complète puis les incréments nécessaires de lundi, mardi et mercredi dans l’ordre prévu."
+      ],
+      "answer": 3,
+      "explanation": "Le cas précise que chaque incrément ne contient que le delta précédent. La reconstitution exige donc la chaîne nécessaire, et non un dernier fichier supposé complet."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux applications liées sont restaurées à des instants différents, sans rapprochement des opérations communes. Quel risque doit être examiné ?",
+      "options": [
+        "Des incohérences entre les états récupérés du processus.",
+        "Les deux restaurations réussies séparément prouvent la cohérence de leurs opérations communes, quelles que soient leurs dates.",
+        "La disponibilité des écrans suffit à établir l’égalité des états entre applications liées.",
+        "Le nombre total de lignes de chaque base remplace le rapprochement des opérations partagées entre les points de reprise."
+      ],
+      "answer": 0,
+      "explanation": "Un processus peut dépendre de données cohérentes entre systèmes. Des points distincts demandent un rapprochement adapté pour éviter des opérations manquantes ou discordantes."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une règle de conservation garde des sauvegardes pendant30jours. Une note en déduit une perte maximale de30jours lors d’un incident. Que faut-il distinguer ?",
+      "options": [
+        "La conservation30jours comme preuve que le dernier point date toujours d’exactement30jours.",
+        "La durée de conservation des points et la fraîcheur du point effectivement récupérable au regard de l’objectif de perte.",
+        "La conservation30jours comme garantie qu’aucune donnée ne peut être perdue.",
+        "Le délai de suppression des copies comme durée nécessairement identique au redémarrage de l’application."
+      ],
+      "answer": 1,
+      "explanation": "La rétention décrit combien de temps les points sont gardés. Elle ne donne pas à elle seule leur fréquence, leur succès ni le point récupérable à l’incident."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Un exercice de reprise représentatif doit vérifier notamment :",
+      "options": [
+        "La seule création de copies, sans leur restauration ni l’essai des accès et fonctions nécessaires.",
+        "Le contrôle du budget du secours, utilisé comme preuve de fonctionnement des dépendances.",
+        "Les données, applications, accès et dépendances nécessaires à l’usage prévu.",
+        "La lecture de la procédure par l’équipe, considérée comme l’exécution de toutes ses étapes."
+      ],
+      "answer": 2,
+      "explanation": "La preuve de reprise vient d’une vérification du service nécessaire. Documents et budget sont utiles mais ne démontrent pas l’usage opérationnel."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pendant la vérification des données restaurées, des utilisateurs commencent déjà à saisir des opérations dans le même environnement sans coordination avec la recette. Quel risque de conduite de reprise faut-il maîtriser ?",
+      "options": [
+        "Les saisies peuvent être ignorées parce qu’un environnement de secours ne contient pas de données métier.",
+        "La réussite de la copie initiale garantit que toute restauration ultérieure conservera ces nouvelles écritures.",
+        "Le simple accès des utilisateurs vaut approbation de l’état restauré et clôture de la recette.",
+        "La modification de l’état examiné et les écritures à rapprocher si une nouvelle restauration devient nécessaire."
+      ],
+      "answer": 3,
+      "explanation": "L’ouverture aux écritures pendant les vérifications doit être organisée. Sinon les changements compliquent la validation et peuvent être perdus ou dupliqués lors d’une reprise supplémentaire."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un test utilise une sauvegarde choisie parce qu’elle est la seule connue comme lisible. Quelle limite présenter ?",
+      "options": [
+        "La réussite ne prouve pas la fiabilité de tous les points de récupération produits couramment.",
+        "La réussite d’un point sélectionné comme lisible suffit à mesurer le taux de succès des copies ordinaires.",
+        "Le choix préalable d’une copie connue comme correcte permet de conclure sur les autres sans contrôle.",
+        "L’ancienneté du point choisi prouve que tous les points plus récents sont au moins aussi récupérables."
+      ],
+      "answer": 0,
+      "explanation": "Le résultat est limité au point choisi. La qualité du dispositif courant et des autres points doit être vérifiée selon une stratégie de test appropriée."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une restauration fonctionne mais le service dépend d’un fournisseur réseau absent du scénario. Comment qualifier la preuve ?",
+      "options": [
+        "Le réseau absent du scénario peut être déclaré testé dès lors que les serveurs locaux ont été restaurés.",
+        "Comme une preuve partielle dont la dépendance réseau doit être intégrée ou explicitement exclue.",
+        "La présence d’un contrat réseau remplace l’essai des connexions nécessaires au scénario métier.",
+        "Le test local suffit à mesurer le temps de reprise de toute la chaîne, sans sa dépendance externe."
+      ],
+      "answer": 1,
+      "explanation": "Les dépendances déterminent la portée du résultat. Un composant exclu du test doit être identifié et couvert par d’autres preuves adaptées."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après un incident, une réinstallation effacerait les journaux nécessaires pour comprendre la compromission. Le dispositif prévoit leur collecte sécurisée avant cette opération. Quelle étape faut-il coordonner avec la reprise ?",
+      "options": [
+        "La réinstallation immédiate considérée comme conservation suffisante des journaux qu’elle remplace.",
+        "Le seul compte rendu oral tenu pour substitut aux événements techniques disponibles.",
+        "La préservation des traces utiles avant leur effacement, selon les responsabilités de réponse à l’incident.",
+        "L’effacement préalable des traces suivi d’une tentative de reconstituer exactement leur contenu de mémoire."
+      ],
+      "answer": 2,
+      "explanation": "La reprise et l’investigation doivent être coordonnées. Préserver les éléments utiles évite que les opérations de rétablissement détruisent les informations nécessaires à l’analyse de l’incident."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le rapport d’exercice conclut « succès » sans préciser les fonctions, données et exclusions testées. Quel défaut réduit sa valeur ?",
+      "options": [
+        "Le mot succès suffit à identifier toutes les fonctions testées sans préciser le scénario.",
+        "La présence d’un responsable d’exercice remplace la description du périmètre et des exclusions.",
+        "Le budget respecté établit que tous les critères métier ont été satisfaits sans résultat documenté.",
+        "L’impossibilité d’apprécier la portée de la conclusion et de la reproduire."
+      ],
+      "answer": 3,
+      "explanation": "Le résultat doit être relié aux critères et au périmètre. Un jugement global sans conditions ne permet pas de savoir ce qui est réellement démontré."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Après un écart de reprise, un plan d’action exploitable comporte :",
+      "options": [
+        "Une cause documentée, une action, un responsable, une échéance et une vérification.",
+        "Le seul classement du rapport dans les archives sans attribution de correction.",
+        "Une cible renommée pour correspondre au temps obtenu, sans expliquer ni traiter l’écart.",
+        "L’annonce d’un prochain exercice sans responsable ni critère de vérification de la correction."
+      ],
+      "answer": 0,
+      "explanation": "Le suivi transforme le constat en correction vérifiable. Il doit préciser qui agit, quand et comment l’efficacité sera confirmée."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un exercice dépasse l’objectif à cause de clés de déchiffrement introuvables. Quelle mesure traite la cause ?",
+      "options": [
+        "Acheter un support de stockage supplémentaire sans revoir les clés.",
+        "Organiser un accès sécurisé aux clés de reprise et tester ce mécanisme.",
+        "Augmenter uniquement la fréquence des copies chiffrées.",
+        "Retirer le délai de recherche des clés du temps de reprise mesuré."
+      ],
+      "answer": 1,
+      "explanation": "Sans les clés nécessaires, la donnée chiffrée peut rester inutilisable. Le dispositif de récupération des clés doit être sécurisé et intégré au test."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "L’action corrective est marquée terminée parce qu’une procédure a été rédigée, sans nouvel essai. Quelle preuve manque ?",
+      "options": [
+        "La seule approbation de la nouvelle procédure avant exécution.",
+        "La présence d’une date de version récente sur le document.",
+        "La vérification que la mesure corrige effectivement le défaut dans les conditions utiles.",
+        "Le respect du budget de rédaction de la procédure."
+      ],
+      "answer": 2,
+      "explanation": "Un document peut être nécessaire mais insuffisant. Le retest doit démontrer que le mécanisme fonctionne et atteint l’effet attendu."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le plan d’alerte de crise n’utilise que la messagerie du système dont il prévoit la panne totale. Quelle préparation manque ?",
+      "options": [
+        "L’envoi d’un message de test par le seul canal principal pendant qu’il fonctionne, tenu pour preuve d’alerte en panne totale.",
+        "Une liste de contacts conservée uniquement dans la messagerie inaccessible, considérée comme disponible à la crise.",
+        "Le doublement du nombre de destinataires sans changer la dépendance au canal indisponible.",
+        "Un canal de communication de secours utilisable par les intervenants lorsque cette messagerie est indisponible."
+      ],
+      "answer": 3,
+      "explanation": "Le moyen d’alerte doit rester utilisable dans le scénario qu’il sert à traiter. Un test en fonctionnement normal ne démontre pas cette indépendance."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le retest réduit le délai mais augmente la perte de données au-delà de la tolérance. Quel bilan présenter ?",
+      "options": [
+        "L’amélioration de temps et la nouvelle non-conformité de données, sans déclarer un succès global.",
+        "Un succès global puisque la mesure corrigée s’est améliorée.",
+        "Une conformité du RPO déduite du meilleur délai.",
+        "L’effacement du premier test pour ne conserver que la durée favorable."
+      ],
+      "answer": 0,
+      "explanation": "Les deux objectifs demeurent distincts. Une amélioration ne doit pas masquer une dégradation sur une autre exigence du plan."
+    }
+  ]
+}

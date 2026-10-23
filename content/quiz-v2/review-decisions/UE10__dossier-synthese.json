@@ -1,0 +1,259 @@
+{
+  "sourceHash": "4cce4eff48986380b46fb9a0c3ec20a5aef1a4997b2db8e3620cc6de468eed92",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "1d745731eaa894986f88060a71417eba7f5e3dd958c659c60f8946f39eba1a14",
+      "selected": 1,
+      "reason": "Le rapport antérieur à la rénovation doit être réévalué pour vérifier sa pertinence actuelle pour cet actif.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "40fb817363789662efbc12cbba6f0993cc1668a24861f17d6c1acee3008cf914",
+      "selected": 0,
+      "reason": "Une addition correcte ne permet pas de distinguer les heures constatées des hypothèses futures si elles sont mélangées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "7db4d3887a3d98c565243ee38c9f25b5682bc86485e4304afd10d1e306c5d7d8",
+      "selected": 2,
+      "reason": "La valeur résiduelle doit être fondée sur la cession attendue et ses coûts, pas sur un résultat prédéfini.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "5c0bb1f20a27bff72da0f4d56aafc3a7b24882f2c50853df44eb5dbb19217708",
+      "selected": 1,
+      "reason": "Les hypothèses d’intensité d’usage et de durée doivent être cohérentes pour représenter la consommation attendue.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "d539cd68996ff55cfc20748c7fd85c94f124017d9b89f4ebd4174361706c41fd",
+      "selected": 3,
+      "reason": "Une modification d’exploitation nouvelle avec des données initialement correctes conduit à examiner une révision d’estimation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "e3fafc0841b10f6876d9971c799995aa957f56b0fedfd638b86c9c8e0dbc0d6f",
+      "selected": 1,
+      "reason": "L’inversion de chiffres d’une facture disponible relève d’une erreur de saisie et non d’une information économique nouvelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "2ef1ab2c21de868d91c18de2e51f50315aa0a9d53be0662348bfdf729ab2d7c2",
+      "selected": 1,
+      "reason": "Sur quatre ans le modèle donne six mille, sur six ans quatre mille : diminution annuelle de deux mille euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "38c47e916a3f4aef3478e6ed5ec65aad61099af5d12e8e4bbfc84db355600496",
+      "selected": 3,
+      "reason": "Pour isoler l’effet de la durée, il faut garder la valeur résiduelle constante, pas partager arbitrairement la variation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "18db59a27bc812d665b9d23f013ae1f2cf7be70b6a4858a30c990389ae85adf1",
+      "selected": 3,
+      "reason": "Les observations, populations et méthodes justifiant les taux permettent un arbitrage fondé, contrairement au seul budget.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "589b02153c600a210facb0dbfaaade5529b6746feb8b8e8cef54d4ed7b7e6871",
+      "selected": 1,
+      "reason": "Expliciter la probabilité permet d’en vérifier le fondement et de tester la sensibilité du coût attendu.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "71098845504866911e45a906df570e91e8341a44af64228d7d6ebef06e4cd908",
+      "selected": 0,
+      "reason": "Le dommage ancien et l’accident nouveau doivent être rattachés à leurs faits sous-jacents et au référentiel applicable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "4e981a240d4d3e97c3cffba273f9e662d5e57c1c07a0e3b7c67fea47dbf1af0d",
+      "selected": 1,
+      "reason": "Toutes les valeurs testées dépassent quatre-vingt-dix ; la robustesse vaut pour ces scénarios, pas pour tout avenir possible.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "cd8a1ff8d9ec9398d9cb79546949250355e0bad43bf883f636fcd502c62cceda",
+      "selected": 3,
+      "reason": "Cinq cents dossiers fois quatre pour cent fois deux cents euros donnent quatre mille euros de coût attendu.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "0d2872cb3bd77afd128249f82fcb472ecd0e667f8e26b2d6c3f701c3c103569d",
+      "selected": 1,
+      "reason": "Une donnée inconnue exige des hypothèses justifiées et une recherche d’information, pas une durée choisie pour rendre le calcul possible.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "3a58d24ac9257ef0f050bf312c4646aa608c200bece6f2053427520fc3878299",
+      "selected": 1,
+      "reason": "Des variations de paramètres peuvent se compenser ; l’égalité du résultat ne valide pas chaque hypothèse.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "ae4b9a2f4e9ffc924a641dc8748d6fa206d7461d0c8b46c9c79ed382eaff590c",
+      "selected": 0,
+      "reason": "Le rapport disponible avant l’estimation peut révéler une information ignorée qui rendait le choix initial manifestement erroné.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "e4c5461aa586a28f57838e3b6bb02fddce57a460764a7eff6ea766016a9638c9",
+      "selected": 2,
+      "reason": "Le dépassement est huit mille sur cinquante mille, soit seize pour cent du montant central.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "da58ba2aa74c91f2a0e7a1fc51e6e65b94108ccb3c566ce1c211c66c5c5ede67",
+      "selected": 3,
+      "reason": "À perte positive fixe, une probabilité moindre doit réduire la perte attendue ; le signe et la formule sont à contrôler.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "9d55518cc166aaa25e4f474be832392666a23fd026778110adb801c76124aca3",
+      "selected": 1,
+      "reason": "Retrancher à nouveau des retours déjà compris dans le volume net traite deux fois le même effet.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "d8b9d2d322953825b31f6fbe68c3b74eb213544a665763b22fb26d6c495abd41",
+      "selected": 0,
+      "reason": "Les données datées, hypothèses et formules permettent à un tiers de reproduire l’estimation et d’en contrôler les étapes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "2ae55e86e4fd19014267a0f506243afab9eb6bf5a95cd92773ad5dc679439899",
+      "selected": 2,
+      "reason": "Une forte sensibilité nécessite une fourchette et de meilleures données pour justifier le taux, sans masquer les scénarios.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "1ec0acea284b28afb83af8be36ae5bc0b6a42b0faa5689fae91e5eff00f6c461",
+      "selected": 0,
+      "reason": "La distinction dépend de la nature de l’écart et des informations disponibles à chaque date, pas du sens de l’effet.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "7ba4e524620ae29dd76c71f22c19f540da047d78da5772d5cc85781b7ee21ef0",
+      "selected": 1,
+      "reason": "Une durée de huit ans est hors des trois à sept ans testés ; elle nécessite une justification et un scénario propres.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

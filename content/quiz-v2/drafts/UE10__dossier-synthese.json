@@ -1,0 +1,438 @@
+{
+  "module": "UE10",
+  "chapter": "dossier-synthese",
+  "sourceHash": "4cce4eff48986380b46fb9a0c3ec20a5aef1a4997b2db8e3620cc6de468eed92",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un expert retient une durée de cinq ans en citant un rapport technique vieux de huit ans, antérieur à une rénovation majeure. Quel contrôle manque principalement ?",
+      "options": [
+        "La pertinence actuelle du rapport pour le matériel rénové",
+        "La concordance du rapport avec le montant arrondi de la dotation",
+        "La présence du rapport dans le dossier du premier exercice",
+        "La stabilité du format du tableau depuis huit ans"
+      ],
+      "answer": 0,
+      "explanation": "La traçabilité ne suffit pas : une source ancienne peut décrire un équipement dont les caractéristiques ont changé. Il faut apprécier sa pertinence actuelle."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau mélange heures réellement travaillées et heures prévues sans les distinguer. Pourquoi cette présentation fragilise-t-elle l’estimation ?",
+      "options": [
+        "Elle rend inexact le total même si les deux séries sont correctement additionnées",
+        "Elle empêche de distinguer preuve observée et hypothèse prévisionnelle",
+        "Elle impose de remplacer les heures prévues par les heures de l’exercice précédent",
+        "Elle interdit de comparer une prévision à une réalisation"
+      ],
+      "answer": 1,
+      "explanation": "Les deux types de données peuvent être utiles, mais n’ont pas la même force probante. Les identifier permet de discuter le modèle et ses écarts."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La direction fixe une valeur résiduelle afin d’obtenir exactement le résultat annoncé aux investisseurs, sans données de revente. Quelle démarche corrige le problème ?",
+      "options": [
+        "Conserver la valeur si le résultat annoncé a déjà été communiqué",
+        "Retenir la moyenne des valeurs qui permettent d’atteindre le résultat cible",
+        "Justifier la valeur résiduelle à partir des conditions de cession attendues",
+        "Choisir une durée qui compense la valeur résiduelle retenue"
+      ],
+      "answer": 2,
+      "explanation": "Une hypothèse doit être étayée indépendamment du résultat souhaité. Modifier un autre paramètre pour compenser le biais ne rend pas l’estimation fiable."
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un modèle prévoit une forte hausse d’utilisation d’une machine, mais conserve une durée fondée sur un usage très faible. Quelle vérification est prioritaire ?",
+      "options": [
+        "La stricte égalité entre durée technique et durée fiscale",
+        "L’égalité des dotations entre machines de prix différents",
+        "La stabilité du résultat avant et après changement d’usage",
+        "La cohérence entre intensité d’usage et durée estimée"
+      ],
+      "answer": 3,
+      "explanation": "Des hypothèses prises isolément peuvent sembler raisonnables tout en se contredisant ensemble. L’usage attendu doit être rapproché de la durée retenue."
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une pièce s’use plus vite après un changement d’exploitation décidé cette année. Les informations initiales étaient correctement exploitées. Que faut-il examiner ?",
+      "options": [
+        "Une modification d’estimation liée aux nouvelles conditions d’usage",
+        "Une erreur initiale démontrée par toute différence avec la durée constatée",
+        "Une erreur de calcul indépendante de l’évolution de l’exploitation",
+        "Un changement de méthode nécessaire parce que la durée varie"
+      ],
+      "answer": 0,
+      "explanation": "L’écart résulte ici de nouvelles conditions, pas d’une donnée initialement ignorée. Le traitement exige la qualification adaptée au référentiel."
+    },
+    {
+      "id": "q06",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une facture disponible à la clôture indiquait 18 000 €, mais le fichier contenait 81 000 € par inversion de chiffres. Quelle qualification faut-il examiner ?",
+      "options": [
+        "Une nouvelle estimation issue de la variation des prix",
+        "Une erreur de saisie portant sur une donnée alors disponible",
+        "Un changement de méthode d’évaluation choisi ultérieurement",
+        "Une révision de durée liée à une information technique nouvelle"
+      ],
+      "answer": 1,
+      "explanation": "Le montant connu a été mal reporté. Cette erreur de transcription se distingue d’une estimation raisonnable révisée après réception de nouvelles informations."
+    },
+    {
+      "id": "q07",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un modèle exploratoire linéaire, une base de 24 000 € est répartie sur six ans plutôt que quatre, sans résiduel. De combien diminue le montant annuel modélisé ?",
+      "options": [
+        "4000 €",
+        "6000 €",
+        "2000 €",
+        "10000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le montant passe de 24 000/4 = 6 000 à 24 000/6 = 4 000 €. La diminution de 2 000 € décrit la sensibilité du modèle, sans décider d’une écriture.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 24000
+                },
+                {
+                  "value": 4
+                }
+              ]
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 24000
+                },
+                {
+                  "value": 6
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La sensibilité fait varier simultanément durée et valeur résiduelle. Le montant annuel baisse. Que peut-on attribuer à la seule durée ?",
+      "options": [
+        "La totalité de la baisse puisque la durée est modifiée en premier",
+        "La moitié de la baisse puisque deux paramètres ont changé",
+        "L’effet observé en divisant la baisse par le nombre d’années",
+        "Son effet isolé reste à mesurer en maintenant la valeur résiduelle constante"
+      ],
+      "answer": 3,
+      "explanation": "Deux modifications simultanées donnent un effet conjoint. L’effet propre d’une hypothèse demande un test où les autres paramètres sont maintenus constants."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux services donnent des probabilités différentes pour un même risque, à la même date. Quel dossier permet de départager les estimations ?",
+      "options": [
+        "Les populations, observations et méthodes ayant conduit à chaque probabilité",
+        "La seule ancienneté du responsable de chaque service",
+        "Le choix du taux produisant la charge la plus proche du budget",
+        "La moyenne simple des deux taux avant examen des données"
+      ],
+      "answer": 0,
+      "explanation": "Comparer les fondements peut expliquer une différence de périmètre ou de méthode. Une moyenne non justifiée ne résout pas un conflit de données."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi expliciter une probabilité dans un modèle d’estimation ?",
+      "options": [
+        "Pour transformer l’événement incertain en événement réalisé",
+        "Pour permettre sa justification et mesurer son influence sur le montant",
+        "Pour rendre inutile la distinction entre scénarios possibles",
+        "Pour donner à la précision décimale une valeur de preuve"
+      ],
+      "answer": 1,
+      "explanation": "Une probabilité est une hypothèse à discuter et à documenter. Son écriture numérique ne prouve ni sa qualité ni la réalisation de l’événement."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un rapport daté de février confirme un dommage existant en décembre ; un autre décrit un accident survenu en janvier. Quel travail précède leur traitement ?",
+      "options": [
+        "Traiter les deux rapports de façon identique puisqu’ils sont reçus après décembre",
+        "Rattacher les deux faits à février, date des documents",
+        "Rattacher chaque fait à sa date d’existence et examiner le référentiel",
+        "Rattacher les deux faits à décembre parce que les comptes sont encore préparés"
+      ],
+      "answer": 2,
+      "explanation": "La date du document et celle du fait ne se confondent pas. Un fait confirmant une situation antérieure diffère d’un événement réellement nouveau."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une valorisation varie de 98 à 102 selon toutes les hypothèses testées. Le seuil de décision fourni est 90. Quelle conclusion est soutenue ?",
+      "options": [
+        "La valeur réelle sera au moins 98 dans chaque situation future",
+        "Le modèle n’a plus besoin de justification des hypothèses",
+        "Le seul montant à retenir est la moyenne des deux bornes",
+        "Le dépassement de 90 résiste aux scénarios effectivement testés"
+      ],
+      "answer": 3,
+      "explanation": "La robustesse porte sur le domaine testé. Elle ne garantit pas les scénarios non examinés et ne remplace pas la justification de l’estimation retenue."
+    },
+    {
+      "id": "q13",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un modèle de coût attendu retient un coût unitaire de 200 € et une probabilité de 4 % pour 500 dossiers. Quel coût attendu calcule-t-il ?",
+      "options": [
+        "4000 €",
+        "2000 €",
+        "20000 €",
+        "100000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le nombre attendu est 500 × 0,04 = 20 dossiers ; multiplié par 200 €, il donne 4 000 €. Il s’agit d’une espérance sous les hypothèses fournies.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 500
+                },
+                {
+                  "value": 0.04
+                }
+              ]
+            },
+            {
+              "value": 200
+            }
+          ]
+        },
+        "expected": 4000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une durée inconnue est remplacée par zéro et le calcul échoue. Quelle correction est la plus appropriée ?",
+      "options": [
+        "Remplacer zéro par un pour obtenir un résultat calculable",
+        "Identifier l’information manquante et tester des durées justifiées",
+        "Supprimer la durée et retenir le coût comme dotation annuelle",
+        "Choisir la durée qui ramène la charge au budget restant"
+      ],
+      "answer": 1,
+      "explanation": "L’absence d’information doit être visible. Une valeur de remplacement qui rend simplement la formule calculable peut fabriquer une fausse précision."
+    },
+    {
+      "id": "q15",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un analyste obtient le même montant que l’an dernier avec des données documentées différentes. Cette égalité démontre-t-elle la qualité des nouvelles hypothèses ?",
+      "options": [
+        "Oui, la stabilité du résultat valide chaque paramètre",
+        "Oui, dès lors que le nombre de paramètres reste inchangé",
+        "Non, des compensations peuvent produire le même montant",
+        "Non, car un montant estimé doit varier chaque année"
+      ],
+      "answer": 2,
+      "explanation": "Un résultat stable peut masquer des effets qui se compensent. Il faut examiner les paramètres et leur cohérence, sans imposer non plus une variation annuelle."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un défaut était signalé dans un rapport interne avant l’estimation, mais ce rapport n’a pas été examiné. Que doit rechercher le réviseur ?",
+      "options": [
+        "Si toute information interne peut être écartée au profit du seul historique",
+        "Si la date de lecture permet de considérer le défaut comme nouveau",
+        "Si une erreur de durée peut être compensée par la valeur résiduelle",
+        "Si l’information disponible rendait l’estimation initiale manifestement erronée"
+      ],
+      "answer": 3,
+      "explanation": "Il faut reconstituer les informations disponibles, pas seulement la date où elles ont été lues. Leur portée permet de distinguer erreur et changement d’estimation."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une estimation centrale vaut 50 000 €. Le scénario défavorable du dossier vaut 58 000 €. Quel dépassement relatif du montant central représente-t-il ?",
+      "options": [
+        "16 %",
+        "13,79 %",
+        "8 %",
+        "116 %"
+      ],
+      "answer": 0,
+      "explanation": "L’écart de 8 000 € se rapporte au montant central de 50 000 €, soit 16 %. Le rapport à 58 000 répondrait à une autre question.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 58000
+                    },
+                    {
+                      "value": 50000
+                    }
+                  ]
+                },
+                {
+                  "value": 50000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 16,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un modèle augmente son estimation quand la probabilité de perte diminue, tous les autres paramètres étant fixes et positifs. Quelle action est justifiée ?",
+      "options": [
+        "Accepter le résultat parce que les cellules sont toutes renseignées",
+        "Vérifier le signe et la formule reliant probabilité et perte attendue",
+        "Changer le montant de perte pour retrouver l’estimation antérieure",
+        "Arrondir davantage pour réduire l’écart entre scénarios"
+      ],
+      "answer": 1,
+      "explanation": "Le sens économique attendu fournit un contrôle de cohérence. Une baisse de probabilité ne devrait pas accroître le produit probabilité × perte fixe positive."
+    },
+    {
+      "id": "q19",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une hypothèse de volume annuel englobe déjà les retours attendus. L’analyste retranche encore ces retours dans le calcul. Quel défaut identifier ?",
+      "options": [
+        "Une omission du volume brut dans le résultat final",
+        "Une absence de précision due aux seuls arrondis",
+        "Un double traitement du même effet dans des paramètres liés",
+        "Un changement de période sans incidence sur le montant"
+      ],
+      "answer": 2,
+      "explanation": "Le volume net incorpore déjà les retours. Les soustraire une seconde fois sous-estime le volume ; la définition de chaque paramètre doit être explicite."
+    },
+    {
+      "id": "q20",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel élément facilite le plus la reproduction d’une estimation par un autre analyste ?",
+      "options": [
+        "Le seul montant final accompagné de son unité",
+        "Une copie du tableau dont les formules ont été remplacées par des valeurs",
+        "Le résultat arrondi au même nombre de décimales que le budget",
+        "La conservation des données datées, des hypothèses et des formules utilisées"
+      ],
+      "answer": 3,
+      "explanation": "Reproduire suppose de reconstituer les entrées et leur transformation. Un résultat seul ou des valeurs figées ne rendent pas la démarche vérifiable."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le résultat change fortement pour une petite variation plausible du taux retenu. Quelle présentation aide le décideur ?",
+      "options": [
+        "Montrer la plage obtenue et les données nécessaires pour mieux justifier le taux",
+        "Masquer les scénarios éloignés du montant central",
+        "Ajouter des décimales au taux pour rendre la fourchette plus précise",
+        "Présenter le scénario médian comme une observation confirmée"
+      ],
+      "answer": 0,
+      "explanation": "La forte sensibilité révèle une dépendance critique au taux. La montrer permet de cibler les travaux complémentaires au lieu de donner une certitude artificielle."
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Sur quoi repose la distinction entre estimation révisée et erreur initiale ?",
+      "options": [
+        "Sur le seul caractère favorable ou défavorable de l’effet sur le résultat",
+        "Sur la nature de l’écart et les informations disponibles à chaque date",
+        "Sur le dépassement d’un pourcentage universel de variation",
+        "Sur la seule décision du service de reprendre le tableau antérieur"
+      ],
+      "answer": 1,
+      "explanation": "La chronologie et la qualité des informations initiales sont déterminantes. Le signe ou l’ampleur de la variation ne suffisent pas à qualifier l’écart."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une sensibilité teste des durées de trois à sept ans ; la direction retient huit ans. Que manque-t-il pour utiliser cette étude comme justification ?",
+      "options": [
+        "Une interpolation entre trois et sept qui garantirait huit ans",
+        "La suppression du scénario à trois ans pour élargir la plage",
+        "Un examen documenté de la durée retenue, située hors de la plage testée",
+        "Une moyenne des montants testés considérée comme celle de huit ans"
+      ],
+      "answer": 2,
+      "explanation": "Une étude n’étaye pas directement une hypothèse hors de son domaine. Huit ans requiert une justification et, si utile, un scénario complémentaire."
+    }
+  ]
+}

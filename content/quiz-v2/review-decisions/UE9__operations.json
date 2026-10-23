@@ -1,0 +1,248 @@
+{
+  "sourceHash": "7cb06483a93920905fea046b6e54a7f7d8e2575ba78ae9dd789acbad4a06ff19",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "a15a498477ac9da8fa9f57a7ea42f5390dbf68f8d13efc8290202fb819dd634d",
+      "selected": 1,
+      "reason": "L’achat et la TVA déductible sont débités pour 1 800 au total, avec une dette fournisseur créditée du TTC.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "112faa38af161a6d385c30d6d19ccce178f6e70f50cb5ba7691b90a9228f7338",
+      "selected": 2,
+      "reason": "2 400 HT plus 480 de TVA donnent 2 880 euros dus au fournisseur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "ce986c19434ba7818f135205c47d550fd13f732e0e1c400f11a80f3f7fcc73a9",
+      "selected": 0,
+      "reason": "La TVA entièrement déductible doit être isolée et ne majore pas le coût d’achat retenu.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "fca128ae1a1282c34e670c52f155759b5f82567857d1600272f63ed8035b8a6c",
+      "selected": 1,
+      "reason": "Le fournisseur porte le TTC tandis que la charge HT et la TVA récupérable sont séparées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "3cbffa289fec49d9c7245c3cfe67ac371df4cd3a90a4f8d11148e035f5f6b17e",
+      "selected": 0,
+      "reason": "La nature durable de l’équipement doit guider le choix d’un actif plutôt que d’une charge.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "1c42d15eaefc2a0d2c4e0b02e37fc4b4e04eb5e6c046c4746b416e0b38262856",
+      "selected": 2,
+      "reason": "Le client est débité de 3 600, contre ventes 3 000 et TVA collectée 600 au crédit.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "1b8de20f5b89843715ab688d0c90539448bef72ab1ea99fa7c06e8053b50245b",
+      "selected": 2,
+      "reason": "La créance inclut HT et TVA : 4 000 + 800 = 4 800 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "ce3a5761d8a9bd4c7beaee9cd980e50033d66e4701e5c8626c952bfeb2f960be",
+      "selected": 3,
+      "reason": "La TVA collectée n’est pas un produit de vente et son inclusion gonfle le chiffre d’affaires.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "8331c0b40cc58ed1b009617a8e46f21afe362ad80768d65270b498c3dbb2571c",
+      "selected": 0,
+      "reason": "Le règlement débite la banque et crédite la créance client déjà enregistrée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "1861a0a185c031e24671ef6033d672350b673f6014e35054b58e944b4dda6412",
+      "selected": 0,
+      "reason": "En l’absence de règlement, le poste à débiter est la créance client et non la banque.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "bb3a5e5e719d323d051c6e689df7c1ecbd4ef2a2c3ab39210825fea1885016b1",
+      "selected": 3,
+      "reason": "Le règlement débite le fournisseur pour éteindre son solde créditeur et crédite la banque de la sortie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "2609da68d75f64681da0b03f814fa2eb3b7e6af846ce06749e3523e18e9f322d",
+      "selected": 0,
+      "reason": "La dette résiduelle est 5 000 − 3 200 = 1 800 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "c09f16870943f4b3f4821e0df8326fb41ae7395c0a9866f9f55eb15882c960f5",
+      "selected": 0,
+      "reason": "Un nouveau crédit fournisseur augmente la dette au lieu de la solder par un débit.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "e91141abc4f8aea5fe686ca2ba8090c8395751004d8131c89726a4bc1119835e",
+      "selected": 0,
+      "reason": "Le second achat double la charge et ne débite pas le fournisseur pour éteindre la dette initiale.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "38e76cfb201c371b7a25ee60c34933131aefd1f859da49ef5082258dfc081734",
+      "selected": 0,
+      "reason": "Une sortie bancaire crédite le compte banque dans les livres de l’entreprise.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "42678b92427610df0d123c0815889f3599b5dbf59789be7977b4f95c3ca006a9",
+      "selected": 1,
+      "reason": "Une balance récapitule mouvements et soldes des comptes du périmètre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "4343bd682a18469508ee772f8598dd832a2fbb7eae3d924ea389e0346c270eb2",
+      "selected": 0,
+      "reason": "Une erreur entre comptes de même montant ne modifie pas l’égalité des totaux débit-crédit.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "6d8723ddd76e8b5d75efe60e008ebea32923b5cbb198f4cb3ab159b5db6f5d2e",
+      "selected": 1,
+      "reason": "La référence des pièces rapprochée des écritures distingue un doublon d’opérations différentes de même montant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "dedc0a912d2725d77b7ff2a111f251581b9427b963e19f4a9416bb5911862588",
+      "selected": 0,
+      "reason": "Il faut contrôler le montant et le compte individuel de règlement ; les vérifications globales seules ne soldent pas ce tiers.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "986c0e6ce8a821f8e514ece1804f37d135b92fa8aeb6daa82913b9856a5d75eb",
+      "selected": 2,
+      "reason": "Un écart de 200 doit être expliqué par les pièces, pas équilibré par une ligne arbitraire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "0a7ccbd2c7ff6c6d9910125f55f30f5fb21449f3ef0e77059ad0e46558a7899a",
+      "selected": 0,
+      "reason": "La cohérence globale des totaux n’atteste pas la justesse du solde de chaque tiers.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "f63186ad8b270b4c53054189ea77e3715f8982644740f27eefdb41d0b9b581d3",
+      "selected": 0,
+      "reason": "Les composantes HT, TVA et TTC doivent être rapprochées séparément de la facture.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

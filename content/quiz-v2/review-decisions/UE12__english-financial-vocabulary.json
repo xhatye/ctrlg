@@ -1,0 +1,248 @@
+{
+  "sourceHash": "f8a29245e9e104f13a3dc18fdb5b9f22a12ae230d27bc98054c616ccf03693ff",
+  "reviewer": "codex-law-tax-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "9462d74e50dc28ac8d298df6a8ca8326714a6fe8df8cc687f49977e7e9b9045b",
+      "selected": 1,
+      "reason": "Recurring désigne une recette appelée à se répéter, sans imposer un encaissement initial ou une marge nette.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "a7214edea97f742af65ae7e96c2b588a9ed70479be0a866f963a385f56886593",
+      "selected": 3,
+      "reason": "La filiale exclue reste hors du périmètre mesuré ; le mot group du résumé ne réintègre pas ses ventes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "19dba4918f4f49e14b87fbf68dc4ab500b1f90dde3f9f891602fc16555b719cb",
+      "selected": 2,
+      "reason": "Revenue ne signifie pas déjà encaissé ; la traduction ajoute cet encaissement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "a3c5a15ce4bc76b884714e4d492850b6d7a6d56db7501ba37f26a1c542bcdc0c",
+      "selected": 0,
+      "reason": "Income tax désigne la charge fiscale du résultat, non les recettes commerciales.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "bab26343256be5fae61a99bfd511d3573f6393af58579c5e9baeb625011268f0",
+      "selected": 3,
+      "reason": "Gross et net of discounts distinguent avant et après remises, pas des volumes ou un bénéfice.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "6d0d0c8aab83465f60dccb0b1e208680658d9d4b99d7619dfcc3c3f69c2e79de",
+      "selected": 1,
+      "reason": "Le credit note réduit la facture antérieure dans ce contexte ; ce n’est pas un prêt ou une relance au montant intégral.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "25c2ed4c6a52fb3e14660841644bed70bf5c6efad6b4c1ce1f164ff1a0d084d3",
+      "selected": 0,
+      "reason": "L’encaissement solde la créance déjà enregistrée et augmente la trésorerie sans créer une seconde vente.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "2fb04b335d4be6e6e9673910b163553a76fe2d4ce9d46e8c3b04c51a5aa46785",
+      "selected": 3,
+      "reason": "Outstanding désigne encore impayée, pas forcément échue ; échéance future rend overdue faux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "2820119dd438b423a1d351d1094262838059df8c1b264d6a8b33b7f7e1d04a7d",
+      "selected": 2,
+      "reason": "Collected indique paiement reçu, contraire aux faits ; outstanding et collectée à distinguer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "13e549c21532a8152cc30d80d85c1aa81678ba86749e85418f7dc63d9cdf12ce",
+      "selected": 0,
+      "reason": "Le stock de créances plus élevé établit plus de montants dus à la clôture, sans mesurer à lui seul retards ou ventes nouvelles.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "ec6c176e64a69b81b8adf60b2237405a5fa78d1321108671f35da17b0376f1dd",
+      "selected": 3,
+      "reason": "L’ageing analysis classe les impayés par ancienneté selon la convention annoncée, et non par devise, plafond ou taille seule.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "e52896ecccfb45d83af42aab9f1b48b8d14c74dc119c0293f7b1d3b2e42dc980",
+      "selected": 3,
+      "reason": "Le remittance advice rattache le paiement annoncé aux factures visées ; il ne certifie pas à lui seul le crédit bancaire réel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "7cdb4b64bc6a53dadf0f68fe2631b35409373a75a170630d7806d6dec63bb4eb",
+      "selected": 3,
+      "reason": "Payer la facture fournisseur solde la dette et diminue la trésorerie, sans enregistrer une seconde charge.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "946dac1c7139f82d209bd9e289ae5dcb7379ae773560dc21c2e1196392911d27",
+      "selected": 1,
+      "reason": "Supplier payment terms décrit comment l’entreprise règle ses fournisseurs, non les encaissements de ses clients.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "5b60fa1bdba3fcd04604e5db32c4ad355f2f0ded9c4a10021e269a4d0725070b",
+      "selected": 3,
+      "reason": "Reporter la date ne paie ni n’annule la dette : elle reste outstanding à l’échéance révisée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "a72af673bee63e68c8150effec1e1ab92bac0af39ac84aabc4929d8fbb753de0",
+      "selected": 3,
+      "reason": "Le solde fournisseur dépend notamment des règlements ; sa baisse n’est pas la baisse des achats de la période.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "41b089d9e2e9f9c17111564064031ed982b8bf7443369f366d7d145716d5e39c",
+      "selected": 2,
+      "reason": "Balance due to you demandé au fournisseur vise ce que notre entreprise lui doit, et non ce qu’il nous doit ou tout achat passé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "54028279679be813487b08581796c2b6e95b987c828be89b43c4f8f95d0c0442",
+      "selected": 2,
+      "reason": "Shortfall désigne le manque entre liquidité disponible et paiements nécessaires, non l’ensemble des paiements ou une perte comptable certaine.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "2b938b8210a0eddd1e69ea1245f7ac7b0cbe99ebd00fc91cd8cae38604232d81",
+      "selected": 0,
+      "reason": "Le paiement d’équipement est une sortie d’investissement ; il ne prouve pas une charge de même montant à la date de paiement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "5afdb59b9ec73584c11ae20661d72f10a50f6d284bf7517b30b427a6a01a7c40",
+      "selected": 0,
+      "reason": "La dotation est une charge sans flux de trésorerie simultané ; elle ne se transforme pas pour autant en recette.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "f1c6ae542c92b755340a094beb5e7c66289a2e6a75fc3102f5f9601440b9756a",
+      "selected": 2,
+      "reason": "Operating activities délimite les flux d’exploitation, distincts de financement, investissement et stock final de trésorerie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "67cd2a5ed3ccfd63929088254736f77f052a69c9099f86dd5d536e9593cb54a7",
+      "selected": 1,
+      "reason": "Un solde est stock daté, un cashflow mouvement sur période ; autres distinctions ne répondent pas à cette erreur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

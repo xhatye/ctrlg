@@ -1,0 +1,350 @@
+{
+  "module": "UE5",
+  "chapter": "asymetrie-information",
+  "sourceHash": "81b204c0915aa0551657483c14aeff24d2571f1e0b3e927e718b289cae2dd6f0",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "foundation",
+      "q": "Un assureur ne distingue pas les risques individuels et propose une prime commune. Les personnes à faible risque trouvent cette prime trop élevée et renoncent. Quel effet sur les adhérents restants peut en résulter ?",
+      "options": [
+        "Une baisse du risque moyen nécessairement provoquée par le départ des personnes les moins risquées.",
+        "Une hausse du risque moyen du groupe assuré par retrait des personnes à faible risque.",
+        "Un changement de comportement préventif de tous les assurés déjà couverts, seul mécanisme décrit.",
+        "Une révélation complète des risques individuels par la seule publication de la prime commune."
+      ],
+      "answer": 1,
+      "explanation": "La sélection modifie la composition du groupe avant souscription : les faibles risques peuvent sortir et laisser un groupe plus risqué. Cela se distingue d’un changement d’effort après assurance.",
+      "references": [
+        {
+          "title": "Royal Swedish Academy — Markets with asymmetric information",
+          "url": "https://www.kva.se/app/uploads/2001/10/globalassets-priser-nobel-2001-scibackeken01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Faute de distinguer les qualités, les acheteurs proposent un prix moyen qui fait se retirer certains bons vendeurs avant la vente. Quel mécanisme est décrit ?",
+      "options": [
+        "Un aléa moral de prévention après contrat.",
+        "Une externalité touchant les riverains.",
+        "Une sélection adverse dans la composition des offres.",
+        "Un signal crédible émis par la partie informée."
+      ],
+      "answer": 2,
+      "explanation": "Les caractéristiques cachées avant l’échange influencent le prix proposé et la participation. Ce mécanisme de sélection se distingue d’un changement d’action difficile à observer après le contrat."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après signature d’une assurance, une entreprise réduit un effort de prévention non observable car elle ne supporte plus tout le coût d’un incident. Quelle analyse correspond ?",
+      "options": [
+        "Un aléa moral lié aux incitations après contrat.",
+        "Une sélection portant uniquement sur la qualité connue avant signature.",
+        "Un signal révélant une qualité avant l’échange.",
+        "Un filtrage par menu de contrats avant souscription."
+      ],
+      "answer": 0,
+      "explanation": "Le comportement privé peut changer après l’accord en fonction du partage des conséquences. C’est une possibilité conditionnelle d’aléa moral, pas une affirmation sur le comportement de tous les assurés."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un vendeur informé propose une garantie vérifiable et applicable pour rendre la qualité de son produit crédible. Quel mécanisme cherche-t-il à utiliser ?",
+      "options": [
+        "Un filtrage initié par l’acheteur avec plusieurs contrats.",
+        "Une sélection adverse par retrait de sa propre offre.",
+        "Un comportement caché après l’achat.",
+        "Un signal venant de la partie informée."
+      ],
+      "answer": 3,
+      "explanation": "Le signal est initié par la partie informée. Sa crédibilité dépend notamment des engagements réels, de leur lien avec la qualité et de la possibilité de vérifier ou faire appliquer ce qui est promis."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un acheteur exige une expertise indépendante avant d’acheter une machine que seul le vendeur connaît bien. Quel coût économique ce dispositif ajoute-t-il à la transaction ?",
+      "options": [
+        "Un coût de fabrication de la machine déjà supporté par le producteur.",
+        "Un coût de production ou de vérification d’information destiné à réduire l’incertitude sur la qualité.",
+        "Un intérêt versé pour financer le prix d’acquisition de la machine.",
+        "Un coût de transport matériel de la machine vers le lieu d’utilisation."
+      ],
+      "answer": 1,
+      "explanation": "L’information pertinente peut demander une vérification coûteuse. Son intérêt doit être apprécié avec ce coût, sans supposer que l’intervention d’un tiers rend tout échange gratuit."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un modèle montre un retrait de vendeurs de bonne qualité. Un commentaire annonce la disparition certaine de tous les marchés d’occasion. Quelle réserve manque ?",
+      "options": [
+        "Étendre le résultat à chaque marché sans examiner les hypothèses de qualité, de prix et de participation.",
+        "Déduire le retrait total des vendeurs du seul départ de certains, sans vérifier les conditions des autres.",
+        "L’issue dépend des hypothèses et dispositifs ; le retrait n’implique pas toujours une disparition totale.",
+        "Écarter l’effet des garanties ou certifications en conservant inchangées les conditions d’information du modèle initial."
+      ],
+      "answer": 2,
+      "explanation": "Le mécanisme peut dégrader la composition du marché mais son issue dépend des prix de réserve et possibilités de rendre la qualité crédible. Sa portée doit rester conditionnelle."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une franchise laisse une partie d’un incident à la charge de l’assuré. Quel arbitrage faut-il examiner ?",
+      "options": [
+        "Elle peut renforcer la prévention mais accroît aussi la charge financière restant à supporter.",
+        "Évaluer la franchise par le seul effet sur la prévention, sans la perte restant à la charge de l’assuré.",
+        "Assimiler une hausse de franchise à une augmentation de l’indemnisation pour un même dommage.",
+        "Juger l’effet incitatif en ignorant la part du dommage que l’assuré continue de supporter."
+      ],
+      "answer": 0,
+      "explanation": "Le partage du coût peut modifier les incitations à prévenir. Mais une franchise élevée réduit la protection et peut créer une charge difficile à supporter ; les effets doivent être comparés ensemble."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La partie moins informée organise plusieurs contrats afin que les choix des participants révèlent leurs caractéristiques. Quel dispositif est décrit ?",
+      "options": [
+        "Un signal initié spontanément par les participants informés, sans menu proposé par l’autre partie.",
+        "Une observation directe de toutes les caractéristiques privées sans choix contractuel révélateur.",
+        "Une uniformisation des contrats qui ne permet aucune différenciation des participants.",
+        "Un filtrage organisé par la partie moins informée."
+      ],
+      "answer": 3,
+      "explanation": "Le filtrage part de la partie moins informée et exploite les choix. Il se distingue d’un signal volontaire émis par la partie informée pour rendre sa propre qualité plus crédible."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un sous-traitant observe son effort réel mais le client ne peut le contrôler directement. Quelle question structure utilement l’analyse ?",
+      "options": [
+        "Quel résultat visible suffit à déduire exactement l’effort fourni, sans examiner les facteurs extérieurs.",
+        "Quelle action est privée, qui l’observe et comment elle influence le résultat ou le contrat.",
+        "Quel prix public suffit à rendre automatiquement observable toute action du prestataire.",
+        "Quelle clause remplace l’examen de son application effective et de la possibilité de contrôler l’effort."
+      ],
+      "answer": 1,
+      "explanation": "Il faut préciser le contenu de l’information et son rôle pour les incitations. Nommer la partie informée et l’action observable ou non permet d’expliquer le problème plutôt que poser une simple étiquette."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un acheteur ne distingue pas les qualités et offre un prix commun. Pourquoi des vendeurs de meilleure qualité peuvent-ils renoncer ?",
+      "options": [
+        "Le prix commun révèle à chaque acheteur toute la qualité individuelle sans autre information.",
+        "La baisse du prix améliore automatiquement la qualité des biens restant proposés.",
+        "Ce prix peut être inférieur à leur valeur de réserve.",
+        "La valeur de réserve des bons vendeurs est nécessairement inférieure à tout prix moyen proposé."
+      ],
+      "answer": 2,
+      "explanation": "Les vendeurs comparent l’offre à l’intérêt de conserver ou d’utiliser autrement leur bien. Un prix commun insuffisant pour les meilleures qualités peut entraîner leur retrait et modifier la composition du marché."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un texte présente l’aléa moral comme la preuve que tous les assurés sont malhonnêtes. Quelle correction est nécessaire ?",
+      "options": [
+        "Il s’agit d’un mécanisme possible d’incitation sous conditions, pas d’un jugement universel sur les personnes.",
+        "Il suffit de qualifier une personne de malhonnête pour expliquer toute variation de prévention.",
+        "Le mécanisme concerne exclusivement la sélection des caractéristiques avant signature.",
+        "L’assurance implique une baisse identique de prévention dans tous les contrats, indépendamment de la franchise."
+      ],
+      "answer": 0,
+      "explanation": "L’analyse porte sur les effets du contrat et de l’observabilité sur les comportements. Elle ne signifie ni que tout assuré modifie son effort ni qu’une explication économique accuse chaque personne de fraude."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une garantie peut être annoncée sans coût et ne peut pas être appliquée en cas de problème. Pourquoi peut-elle fournir peu d’information ?",
+      "options": [
+        "Une promesse inapplicable est aussi informative qu’une garantie effectivement coûteuse à honorer en cas de défaut.",
+        "Le coût d’impression de la garantie suffit à prouver la qualité sans obligation de réparation.",
+        "La répétition de la promesse par tous les vendeurs permet à elle seule de distinguer leurs qualités.",
+        "La promesse peut ne créer aucun engagement crédible différenciant les qualités."
+      ],
+      "answer": 3,
+      "explanation": "Un signal doit révéler une information vérifiable ou modifier les incitations. Une promesse sans conséquence peut être imitée par des vendeurs de qualités différentes et donc renseigner peu."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux parties connaissent des informations différentes sans lien avec la qualité, le prix ou l’exécution du contrat. Que faut-il établir pour parler d’un problème d’asymétrie dans cet échange ?",
+      "options": [
+        "Que le prix public de l’échange est connu des deux parties, même si aucune information pertinente n’est privée.",
+        "Que l’information inégalement répartie est pertinente pour les décisions étudiées.",
+        "Que les deux parties partagent la même incertitude future sans différence d’information utile.",
+        "Que la connaissance privée porte sur un détail sans effet sur les décisions du contrat."
+      ],
+      "answer": 1,
+      "explanation": "La pertinence de l’information pour les choix doit être explicitée. Une différence quelconque de connaissance ne suffit pas à expliquer un problème de prix, sélection ou comportement dans le contrat observé."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Tous les vendeurs affichent honnêtement leurs prix, mais l’acheteur ne peut pas vérifier leurs qualités. La sélection adverse peut-elle subsister ?",
+      "options": [
+        "Non, la publication du prix suffit à rendre vérifiable la qualité même sans contrôle.",
+        "Non, une annonce sincère du prix supprime toute différence de connaissance sur le produit.",
+        "Oui, la difficulté de vérifier les caractéristiques peut subsister malgré une annonce honnête des prix.",
+        "Oui, mais uniquement si le prix affiché est différent du prix effectivement demandé."
+      ],
+      "answer": 2,
+      "explanation": "Le mécanisme peut venir d’une qualité non observable et des incitations de participation sans fraude de prix. Il faut distinguer le problème d’information d’une faute morale ou d’un mensonge supposé général."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat prévoit des contrôles de prévention et un partage des coûts d’incident. Quel objectif ces dispositifs peuvent-ils poursuivre ?",
+      "options": [
+        "Limiter certaines incitations à réduire un effort caché après accord.",
+        "Garantir l’exactitude des caractéristiques annoncées avant contrat sans agir sur les comportements ultérieurs.",
+        "Remplacer tout effort de prévention par la seule annonce publique du prix du contrat.",
+        "Évaluer seulement les préférences de souscription avant l’accord sans modifier le coût d’une action après celui-ci."
+      ],
+      "answer": 0,
+      "explanation": "Les contrôles agissent sur l’observabilité et le partage du coût sur les incitations. Leur efficacité et leur coût doivent être discutés ; ils ne garantissent pas la disparition totale du risque."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une certification est coûteuse mais n’évalue aucune dimension pertinente de qualité. Pourquoi son prix élevé n’en fait-il pas automatiquement un bon signal ?",
+      "options": [
+        "Comparer seulement les coûts des labels sans examiner les dimensions effectivement certifiées.",
+        "Assimiler le montant payé pour le label à une mesure directe de la qualité du produit.",
+        "Retenir le label le plus onéreux comme preuve suffisante de fiabilité, sans lire son périmètre de contrôle.",
+        "Il faut établir ce qu’elle vérifie et son effet sur les incitations, pas seulement son coût."
+      ],
+      "answer": 3,
+      "explanation": "Un coût peut créer une barrière sans résoudre l’information. La crédibilité dépend du lien avec la qualité, de la vérifiabilité et de la possibilité de différencier réellement les offres."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle distinction aide à séparer sélection adverse et aléa moral ?",
+      "options": [
+        "Les actions cachées après accord pour la sélection adverse, les caractéristiques privées avant accord pour l’aléa moral.",
+        "Les caractéristiques cachées avant l’accord et les comportements cachés après celui-ci.",
+        "Les seuls prix publiés avant accord pour la sélection adverse, les prix publiés après pour l’aléa moral.",
+        "Les seules variations de revenus pour la sélection adverse, les variations de prix pour l’aléa moral."
+      ],
+      "answer": 1,
+      "explanation": "Identifier le moment et la nature de l’information oriente l’analyse. Rendre une qualité crédible avant échange et agir sur une action après contrat ne sont pas exactement les mêmes problèmes."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Des preuves contrôlables permettent à des vendeurs de bonne qualité de rester sur un marché. Est-ce incompatible avec un risque initial de sélection adverse ?",
+      "options": [
+        "Oui, parce que le résultat du modèle sans preuves doit rester inchangé même après leur introduction.",
+        "Oui, parce que la participation des vendeurs ne peut dépendre d’une information nouvelle vérifiable.",
+        "Non, les preuves changent les conditions de vérification et peuvent limiter le retrait.",
+        "Non, parce que les preuves suppriment nécessairement tout autre risque ou coût de transaction."
+      ],
+      "answer": 2,
+      "explanation": "La sélection dépend des possibilités d’établir la qualité et des incitations. Améliorer l’information peut modifier le résultat sans invalider le raisonnement effectué dans la situation initiale."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un contrôle de prévention coûte davantage que le bénéfice attendu de réduction du risque. Quelle dimension doit entrer dans la comparaison ?",
+      "options": [
+        "Les coûts du dispositif, les bénéfices et risques résiduels.",
+        "Comparer les dispositifs seulement par le nombre de contrôles effectués, sans leur coût ni leur effet.",
+        "Retenir le contrôle le plus fréquent sans examiner le bénéfice marginal de cette fréquence.",
+        "Présenter le coût du contrôle comme équivalent à une réduction de perte du même montant."
+      ],
+      "answer": 0,
+      "explanation": "Les instruments d’information et d’incitation comportent des coûts. Il faut comparer les effets attendus, leur mise en œuvre et la protection restante plutôt que maximiser le contrôle sans arbitrage."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une petite entreprise de bonne qualité ne peut payer une certification très coûteuse. Quel risque faut-il examiner ?",
+      "options": [
+        "Le défaut de certification établit une qualité insuffisante du produit, indépendamment du financement du label.",
+        "L’exclusion résulte nécessairement d’un refus de rendre la qualité vérifiable plutôt que du coût d’accès.",
+        "La sélection par capacité de paiement du label garantit la sélection des meilleurs produits.",
+        "Une barrière d’accès peut écarter une offre valable sans informer correctement sur sa qualité."
+      ],
+      "answer": 3,
+      "explanation": "Un dispositif peut produire une information utile mais aussi exclure certains acteurs pour des raisons de coût. L’absence d’accès ne doit pas être assimilée sans examen à une mauvaise qualité."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans un modèle de signal, obtenir une certification coûte 2 aux bons producteurs et 8 aux autres. Le supplément de recette qu’elle procure vaut 5. Sans autre effet, quelles incitations séparent les deux types ?",
+      "options": [
+        "Les deux types gagnent 5 car le supplément de recette doit être comparé sans le coût.",
+        "Les bons producteurs gagnent 3 à se certifier ; les autres perdent 3 et préfèrent ne pas le faire.",
+        "Les producteurs de moindre qualité gagnent davantage puisque leur certification coûte plus cher.",
+        "Les deux types perdent autant puisque la certification est la même pour tous."
+      ],
+      "answer": 1,
+      "explanation": "Le gain net vaut supplément de recette moins coût : 5−2=3 pour les bons, 5−8=−3 pour les autres. Ce cas illustre une différence d’incitation, sans en faire une propriété de toute certification.",
+      "references": [
+        {
+          "title": "Royal Swedish Academy — Markets with asymmetric information",
+          "url": "https://www.kva.se/app/uploads/2001/10/globalassets-priser-nobel-2001-scibackeken01.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un employeur ne voit pas directement l’effort d’un salarié, mais rémunère seulement le nombre de ventes. Ce nombre dépend aussi de la conjoncture. Pourquoi le contrat fait-il supporter un risque au salarié ?",
+      "options": [
+        "Le nombre de ventes révèle exactement l’effort individuel indépendamment de la conjoncture.",
+        "Le contrat garantit un revenu identique quel que soit le nombre de ventes.",
+        "Sa rémunération varie avec un résultat qu’il ne contrôle pas entièrement, même à effort inchangé.",
+        "La conjoncture devient contrôlable par le salarié du seul fait que sa rémunération dépend du résultat."
+      ],
+      "answer": 2,
+      "explanation": "Une rémunération liée à un indicateur imparfait peut inciter à l’effort mais transférer aussi un risque externe. Le résultat n’est pas une mesure pure de l’action cachée."
+    }
+  ]
+}

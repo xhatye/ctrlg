@@ -1,0 +1,489 @@
+{
+  "module": "UE11",
+  "chapter": "wilson-stocks",
+  "sourceHash": "6c37d79e802946a161a3f20496795e70883fbb2c4fd79bebe0fd31e2191fff46",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans le modèle de Wilson, D = 10 000 unités/an, S = 40 € par commande et h = 2 € par unité et par an. Avec Q* = racine(2DS/h), quelle quantité économique obtient-on, à deux décimales ?",
+      "options": [
+        "400 unités",
+        "632,46 unités",
+        "200 000 unités",
+        "316,23 unités"
+      ],
+      "answer": 1,
+      "explanation": "Le calcul donne racine(2 × 10 000 × 40 / 2) = racine(400 000) ≈ 632,46 unités. Le résultat théorique reste conditionnel à demande régulière, absence de rupture et autres hypothèses du modèle.",
+      "calculation": {
+        "expression": {
+          "op": "pow",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "op": "*",
+                      "args": [
+                        {
+                          "value": 2
+                        },
+                        {
+                          "value": 10000
+                        }
+                      ]
+                    },
+                    {
+                      "value": 40
+                    }
+                  ]
+                },
+                {
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "value": 0.5
+            }
+          ]
+        },
+        "expected": 632.46,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Une demande annuelle de 10 000 unités est satisfaite par des lots de 500 unités, sans perte. Quel nombre théorique de commandes par an correspond à ce lot ?",
+      "options": [
+        "500",
+        "5",
+        "20",
+        "2 000"
+      ],
+      "answer": 2,
+      "explanation": "Le nombre est D / Q = 10 000 / 500 = 20 commandes par an. Il faut distinguer quantité par commande et fréquence annuelle de passation.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 10000
+            },
+            {
+              "value": 500
+            }
+          ]
+        },
+        "expected": 20,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Avec 20 commandes par an et un coût fixe de passation de 40 € par commande, quel coût annuel de commande obtient-on ?",
+      "options": [
+        "800 €",
+        "60 €",
+        "0,50 €",
+        "40 €"
+      ],
+      "answer": 0,
+      "explanation": "Le coût annuel est nombre de commandes × coût par commande, soit 20 × 40 = 800 €. Le coût de passation doit être distingué du montant de marchandises achetées.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 20
+            },
+            {
+              "value": 40
+            }
+          ]
+        },
+        "expected": 800,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Sans stock de sécurité ni rupture, les lots de 500 unités sont consommés régulièrement avant le réapprovisionnement instantané. À 2 € par unité et par an, quel coût annuel de possession mesure le modèle ?",
+      "options": [
+        "1 000 €",
+        "250 €",
+        "502 €",
+        "500 €"
+      ],
+      "answer": 3,
+      "explanation": "Le stock moyen du cycle vaut Q / 2 = 250 unités. Le coût de possession est donc 250 × 2 = 500 € par an, sous les hypothèses de consommation régulière et livraison instantanée.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 500
+                },
+                {
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "expected": 500,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La demande annuelle est multipliée par quatre, S et h restant identiques. Selon Q* = racine(2DS/h), comment évolue le lot économique ?",
+      "options": [
+        "Il est multiplié par quatre.",
+        "Il est multiplié par deux.",
+        "Il est divisé par quatre.",
+        "Il reste inchangé puisque le coût unitaire ne change pas."
+      ],
+      "answer": 1,
+      "explanation": "La demande est sous la racine. Multiplier D par quatre multiplie Q* par racine(4), soit deux ; le nombre de commandes et les coûts doivent ensuite être recalculés."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le nombre théorique annuel est fractionnaire. Peut-on présenter cette fraction comme une commande physique partiellement passée ?",
+      "options": [
+        "Oui, car la fraction théorique du nombre de commandes donne directement la fraction du forfait qui sera facturée sur la dernière commande.",
+        "Oui, car arrondir le nombre de commandes vers le haut tout en gardant tous les lots inchangés conserve exactement la demande annuelle.",
+        "Non, c’est un repère théorique à traduire en politique réalisable et à comparer selon les coûts.",
+        "Non, il suffit d’arrondir le nombre vers le bas sans ajuster les quantités ni examiner le besoin restant."
+      ],
+      "answer": 2,
+      "explanation": "Le quotient D/Q peut être continu. L’organisation concrète des commandes nécessite un calendrier et éventuellement des quantités ajustées ; il faut distinguer optimum théorique et mise en œuvre."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le lot commandé augmente à demande annuelle et coût de passation identiques. Comment évolue le coût annuel de commande dans le modèle ?",
+      "options": [
+        "Il diminue car les commandes sont moins nombreuses.",
+        "Il augmente car le coût fixe par commande doit être multiplié par les unités contenues dans chaque lot.",
+        "Il reste inchangé car le nombre d’unités annuelles achetées reste identique.",
+        "Il augmente car un délai entre deux commandes plus long est assimilé à davantage de commandes annuelles."
+      ],
+      "answer": 0,
+      "explanation": "À D fixé, augmenter Q réduit D/Q. Le coût de passation dépend ici du nombre de commandes, pas directement du nombre d’unités dans chacune."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le lot augmente à coût de possession unitaire annuel inchangé, sans stock de sécurité. Quel effet sur la possession prévoit Q/2 × h ?",
+      "options": [
+        "Elle baisse avec la fréquence des commandes, même si le stock moyen de cycle augmente.",
+        "Elle reste inchangée car le volume annuel consommé et le coût unitaire de possession restent fixes.",
+        "Elle augmente proportionnellement au nombre de commandes, en prenant D/Q comme stock moyen.",
+        "Elle augmente avec le stock moyen."
+      ],
+      "answer": 3,
+      "explanation": "La possession est proportionnelle au stock moyen du cycle. Le choix du lot oppose donc moins de passations à davantage de stock, ce qui explique l’arbitrage du modèle."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une remise de prix est accordée seulement au-delà d’un lot minimum, alors que la formule initiale supposait un prix inchangé. Quelle démarche est pertinente ?",
+      "options": [
+        "Retenir le lot donnant la remise la plus élevée sans comparer la possession supplémentaire.",
+        "Réexaminer les coûts et contraintes des quantités admissibles au lieu de prolonger mécaniquement le modèle sans remise.",
+        "Recalculer Q avec le nouveau prix, puis appliquer la remise même si ce Q reste inférieur au seuil qui la conditionne.",
+        "Comparer les seuls coûts de commande et de possession en excluant la variation du prix d’achat annuel."
+      ],
+      "answer": 1,
+      "explanation": "Une remise peut modifier la comparaison économique. Les hypothèses du modèle simple ne doivent pas être utilisées comme une recette qui ignorerait un changement documenté de prix et de conditions."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une demande annuelle de 12 000 unités est satisfaite par 24 commandes égales. Quelle quantité par commande ce programme suppose-t-il ?",
+      "options": [
+        "288 000 unités",
+        "24 unités",
+        "500 unités",
+        "12 024 unités"
+      ],
+      "answer": 2,
+      "explanation": "La quantité par commande est D/N = 12 000 / 24 = 500 unités. Cette inversion contrôle la cohérence entre fréquence et lots pour un programme sans autre entrée ni perte.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 12000
+            },
+            {
+              "value": 24
+            }
+          ]
+        },
+        "expected": 500,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le coût de passation fourni est 40 € par commande. Un calcul le multiplie par le nombre d’unités annuelles. Quel défaut d’unité apparaît ?",
+      "options": [
+        "Une charge par commande est appliquée à des unités de produit au lieu des commandes.",
+        "Une charge annuelle de possession est appliquée à un nombre de commandes au lieu du stock moyen.",
+        "Une charge annuelle est divisée par un nombre de commandes mensuel, créant seulement un décalage de période.",
+        "Une charge par commande est correctement appliquée aux unités annuelles ; seul le prix d’achat doit ensuite être déduit."
+      ],
+      "answer": 0,
+      "explanation": "Il faut respecter l’unité du coût. Le volume physique ne devient un nombre de commandes qu’après division par la quantité de lot ; l’oubli peut grossir fortement la charge annuelle."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un stock de sécurité est ajouté alors que la possession avait été évaluée seulement sur Q/2. Quelle adaptation faut-il examiner ?",
+      "options": [
+        "Retenir (Q + sécurité)/2 comme stock moyen, en traitant le stock de sécurité comme un lot entièrement consommé à chaque cycle.",
+        "Ajouter le stock de sécurité à la demande annuelle pour déterminer le nombre de commandes, sans modifier le stock moyen.",
+        "Augmenter seulement le coût de passation de chaque commande, en conservant Q/2 comme unique base de possession.",
+        "Le stock moyen supplémentaire et son coût, en distinguant les hypothèses de la formule initiale."
+      ],
+      "answer": 3,
+      "explanation": "Q/2 décrit le cycle sans stock de sécurité. Un ajout modifie le stock détenu ; il faut l’expliciter et analyser son rôle plutôt que supposer que l’ancienne mesure couvre automatiquement ce nouvel élément."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le coût de possession annuel h est multiplié par quatre, D et S constants. Quel effet la formule prévoit-elle sur Q* ?",
+      "options": [
+        "Il est multiplié par quatre.",
+        "Il est divisé par deux.",
+        "Il est divisé par quatre.",
+        "Il est multiplié par deux."
+      ],
+      "answer": 1,
+      "explanation": "Le lot est inversement proportionnel à la racine de h. Un h quadruplé divise donc Q* par deux, dans le modèle et son domaine de validité."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une demande régulière de 12 000 unités par an est répartie sur 300 jours d’activité. Le fournisseur livre exactement 6 jours d’activité après la commande. Sans stock de sécurité, le seuil de commande doit couvrir la consommation pendant ce délai. À quel stock disponible faut-il déclencher une commande, en l’absence d’autre commande en cours ?",
+      "options": [
+        "40 unités",
+        "2 000 unités",
+        "240 unités",
+        "72 000 unités"
+      ],
+      "answer": 2,
+      "explanation": "La demande journalière est 12 000 / 300 = 40 unités. Pendant les six jours de délai, 40 × 6 = 240 unités seront consommées. Ce seuil indique quand commander ; il ne détermine pas la taille économique du lot à recevoir.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 300
+                }
+              ]
+            },
+            {
+              "value": 6
+            }
+          ]
+        },
+        "expected": 240,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "ACCA — Stock control : constant demand and fixed lead-time",
+          "url": "https://www.accaglobal.com/gb/en/student/exam-support-resources/fundamentals-exams-study-resources/f2/technical-articles/stock-control1.html"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût annuel de commande est 800 € et le coût annuel de possession 500 €. Quel total de ces deux seuls coûts le modèle attribue-t-il à ce lot ?",
+      "options": [
+        "1 300 €",
+        "300 €",
+        "400 000 €",
+        "800 €"
+      ],
+      "answer": 0,
+      "explanation": "Le total étudié est 800 + 500 = 1 300 €. Il ne faut pas le nommer coût complet d’achat si d’autres éléments sont hors périmètre, ni confondre somme des postes et produit de leurs montants.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 800
+            },
+            {
+              "value": 500
+            }
+          ]
+        },
+        "expected": 1300,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "À l’optimum théorique du modèle simple, quelle relation relie les deux coûts variables annuels étudiés ?",
+      "options": [
+        "Le coût annuel de commande est le double du coût de possession, puisque le stock moyen est Q/2.",
+        "Le coût annuel de possession est le double du coût de commande, puisque le lot est entièrement livré.",
+        "Le coût annuel de commande est égal à la valeur d’achat d’un seul lot, indépendamment de la fréquence annuelle.",
+        "Le coût annuel de commande est égal au coût annuel de possession du stock de cycle."
+      ],
+      "answer": 3,
+      "explanation": "L’optimum équilibre les deux composantes dans le modèle de Wilson donné. Cette propriété dépend des hypothèses et ne doit pas être appliquée sans examen à une politique comportant remises, ruptures ou autres contraintes."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le modèle propose un lot plus petit qu’un minimum imposé par le fournisseur. Quel examen devient nécessaire ?",
+      "options": [
+        "Conserver le lot calculé mais annoncer un nombre de commandes arrondi, sans vérifier la taille minimale de chaque livraison.",
+        "Comparer des solutions réalisables en tenant compte de cette contrainte.",
+        "Commander le minimum puis ne valoriser en possession que les unités du lot théorique, en laissant le surplus hors comparaison.",
+        "Réduire la demande retenue jusqu’à rendre le lot théorique égal au minimum fournisseur, sans modifier la prévision réelle."
+      ],
+      "answer": 1,
+      "explanation": "Un optimum sans contrainte n’est pas automatiquement réalisable. La décision doit inclure les conditions de commande effectives et examiner les coûts des options admissibles."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le lot optimum est arrondi avant de calculer les coûts, puis utilisé pour affirmer une égalité parfaite des deux composantes. Quelle précaution convient ?",
+      "options": [
+        "Imposer l’égalité en remplaçant après arrondi le plus petit coût par le plus grand.",
+        "Présenter les deux coûts théoriques égaux comme les coûts exacts de la politique arrondie, sans les recalculer avec le lot retenu.",
+        "Conserver la précision du calcul théorique et distinguer les coûts de la politique arrondie.",
+        "Arrondir séparément les deux coûts à une précision assez faible pour retrouver une égalité affichée, puis en déduire un optimum exact."
+      ],
+      "answer": 2,
+      "explanation": "Une politique arrondie peut s’éloigner légèrement de l’optimum continu. Il faut distinguer ses coûts de l’égalité théorique au point optimal, plutôt que forcer un résultat par l’affichage."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le prix d’achat par unité est constant pour tous les lots, et la demande annuelle fixée. Pourquoi ce coût d’achat annuel ne départage-t-il pas les lots dans ce cas simplifié ?",
+      "options": [
+        "Le montant D × prix reste le même entre les options comparées.",
+        "Le montant Q × prix est identique pour tous les lots, quelle que soit leur taille.",
+        "Le prix d’achat doit être exclu de tout coût global dès lors qu’il est stable, y compris du montant effectivement payé.",
+        "La valeur d’achat est déjà intégralement comptée dans Q/2 × h, même si h ne représente qu’un coût annuel de détention."
+      ],
+      "answer": 0,
+      "explanation": "Un poste identique entre options ne modifie pas leur classement différentiel. Il existe bien dans le coût global, mais sa constance ne remplace pas l’arbitrage entre passation et possession."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La demande varie fortement au fil des mois et les ruptures sont possibles, alors que l’étude suppose demande régulière sans rupture. Quelle limite faut-il exposer ?",
+      "options": [
+        "Le lot calculé sur la demande moyenne suffit pour couvrir chaque pic, indépendamment du délai et de la variabilité.",
+        "La seule modification nécessaire consiste à arrondir Q vers le haut, sans examiner les dates de réapprovisionnement.",
+        "La demande annuelle totale suffit à reconstruire chaque besoin mensuel même si leur répartition est irrégulière.",
+        "Le modèle doit être confronté à ces nouvelles conditions avant d’être utilisé comme politique opérationnelle."
+      ],
+      "answer": 3,
+      "explanation": "Une formule est liée à ses hypothèses. Une demande irrégulière et des risques de rupture demandent une analyse supplémentaire ; le résultat théorique ne constitue pas à lui seul un plan complet."
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel arbitrage le lot économique simple cherche-t-il à éclairer ?",
+      "options": [
+        "Le coût d’achat d’un lot et la valeur de revente du stock final, sans tenir compte de la répétition des commandes.",
+        "Le coût de passations fréquentes et celui de la détention de stocks plus grands.",
+        "Le délai d’approvisionnement et la durée de crédit fournisseur, sans coût de passation ni de possession.",
+        "Le prix de vente et le prix d’achat unitaires, sans effet de la fréquence des commandes."
+      ],
+      "answer": 1,
+      "explanation": "Des petits lots augmentent la fréquence des commandes mais limitent le stock moyen ; de gros lots font l’inverse. Le modèle équilibre ces coûts sous les conditions précisées."
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un coût de commande est obtenu en divisant des charges annuelles par un nombre trimestriel de commandes, sans retraitement. Quel défaut apparaît ?",
+      "options": [
+        "Un coût par commande sous-évalué parce que les charges annuelles sont réparties sur trop de commandes de référence.",
+        "Un simple écart de présentation sans effet sur le taux, puisque les deux données concernent des commandes.",
+        "Un taux par commande fondé sur des périodes incompatibles.",
+        "Un écart de quantité par lot seulement, que corrige l’arrondi de la demande annuelle."
+      ],
+      "answer": 2,
+      "explanation": "Le coût unitaire doit relier charges et activité du même champ. Des périodes incompatibles biaisent le taux et peuvent changer artificiellement le lot économique calculé."
+    }
+  ]
+}

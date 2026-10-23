@@ -1,0 +1,338 @@
+{
+  "module": "UE8",
+  "chapter": "securite",
+  "sourceHash": "3213a59bf80865e9531c390dfbf02b52cc0dc5da2fdfc2308807b0d9ce321a18",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel objectif relève directement de la confidentialité des données ?",
+      "options": [
+        "Autoriser uniquement les personnes habilitées à consulter un dossier.",
+        "Rétablir rapidement un dossier après une panne.",
+        "Assurer l’accès au service au moment nécessaire.",
+        "Vérifier que les données n’ont pas été modifiées indûment."
+      ],
+      "answer": 0,
+      "explanation": "La confidentialité porte sur l’accès et la divulgation autorisés. La disponibilité concerne l’accès au service quand il est nécessaire, et l’intégrité la préservation de données exactes."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "foundation",
+      "q": "Un collaborateur modifie sans autorisation le montant d’une facture. Quel objectif de sécurité est directement atteint ?",
+      "options": [
+        "La disponibilité, puisque le fichier reste consultable.",
+        "La confidentialité, même si aucune divulgation n’est constatée.",
+        "L’intégrité de la facture.",
+        "La continuité, puisque le service fonctionne toujours."
+      ],
+      "answer": 2,
+      "explanation": "L’intégrité est compromise lorsqu’une donnée subit une modification indue. Le document peut rester accessible et lisible : sa disponibilité ne suffit donc pas à garantir son exactitude."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour renforcer un accès protégé par mot de passe, quel dispositif apporte un second facteur distinct ?",
+      "options": [
+        "Demander une seconde fois le même mot de passe.",
+        "Exiger aussi une validation sur un appareil d’authentification détenu par l’utilisateur.",
+        "Exiger un second secret mémorisé en plus du mot de passe.",
+        "Ajouter une seconde question secrète connue de l’utilisateur."
+      ],
+      "answer": 1,
+      "explanation": "La validation sur un appareil détenu combine une possession au secret mémorisé. Répéter un mot de passe ou ajouter une autre connaissance ne crée pas un facteur de nature distincte."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un formulaire sert uniquement à envoyer un reçu électronique. L’équipe propose de demander aussi la profession des parents, sans usage défini. Quelle décision respecte une collecte proportionnée ?",
+      "options": [
+        "Collecter ces informations parce qu’un champ peut être ajouté.",
+        "Rendre ces données obligatoires pour tous les achats.",
+        "Collecter d’abord puis chercher une finalité plus tard.",
+        "Écarter ces champs tant que leur nécessité pour la finalité n’est pas établie."
+      ],
+      "answer": 3,
+      "explanation": "La disponibilité technique d’un champ ne justifie pas sa collecte. Les informations demandées doivent être reliées à une finalité pertinente ; l’envoi du reçu ne démontre pas le besoin de ces données supplémentaires."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un dossier client est stocké dans un espace où tous les salariés disposent du droit de lecture, même ceux qui n’en ont pas l’usage. Quel ajustement répond au risque identifié ?",
+      "options": [
+        "Renforcer seulement le mot de passe sans revoir le périmètre de lecture.",
+        "Limiter la lecture aux fonctions qui en ont effectivement besoin.",
+        "Tracer les consultations mais conserver tous les droits de lecture inutiles.",
+        "Effectuer seulement une sauvegarde supplémentaire."
+      ],
+      "answer": 1,
+      "explanation": "Le problème est la largeur excessive des accès. Les droits doivent correspondre aux usages autorisés ; une sauvegarde peut aider la reprise mais ne corrige pas la consultation par des personnes non habilitées."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise veut repérer les modifications indues de coordonnées bancaires fournisseurs. Quelle combinaison de contrôles est la plus adaptée ?",
+      "options": [
+        "Augmenter seulement la fréquence des sauvegardes de toute la base.",
+        "Chiffrer les fichiers sans contrôler les changements autorisés.",
+        "Rapprocher les modifications avec les justificatifs et tracer leur auteur.",
+        "Renforcer seulement l’authentification sans valider les données modifiées."
+      ],
+      "answer": 2,
+      "explanation": "Les justificatifs permettent de vérifier le bien-fondé d’une modification et les traces d’en attribuer l’origine. Ces contrôles contribuent à l’intégrité des coordonnées, contrairement aux changements de présentation."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après activation d’un second facteur, un responsable affirme qu’il peut supprimer les droits par rôle et les contrôles de partage. Quelle est l’erreur ?",
+      "options": [
+        "L’authentification renforcée complète les autres contrôles sans déterminer les autorisations.",
+        "Un second facteur rend les habilitations automatiquement conformes aux fonctions.",
+        "Les journaux et autorisations ne sont nécessaires qu’aux comptes sans second facteur.",
+        "La validation d’une connexion autorise implicitement toute diffusion ultérieure de données."
+      ],
+      "answer": 0,
+      "explanation": "L’authentification établit plus solidement qui accède au compte. Elle ne décide pas de ce que cet utilisateur doit pouvoir consulter ou modifier et ne neutralise pas une diffusion excessive de fichiers."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une équipe conserve tous les champs disponibles d’un fichier client « au cas où », sans relier chaque champ à un usage. Quel contrôle faut-il engager ?",
+      "options": [
+        "Conserver tous les champs et limiter seulement la durée d’ouverture du fichier.",
+        "Rendre tous les champs obligatoires pour améliorer leur complétude.",
+        "Chiffrer le fichier et considérer que tous les champs deviennent alors nécessaires.",
+        "Examiner la pertinence de chaque donnée au regard des finalités définies."
+      ],
+      "answer": 3,
+      "explanation": "Une collecte proportionnée exige une justification liée aux usages, pas une accumulation indifférenciée. L’examen champ par champ aide à limiter les données conservées à celles dont le besoin est établi."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une assistante doit consulter les factures mais ne doit pas pouvoir modifier les coordonnées fournisseurs. Quel profil d’accès répond au besoin ?",
+      "options": [
+        "Administrateur complet pour éviter les demandes d’aide.",
+        "Lecture et modification des coordonnées, avec contrôle seulement après incident.",
+        "Lecture des factures et absence de droit de modification sur les coordonnées.",
+        "Accès complet aux fournisseurs, car la lecture des factures en dépend toujours."
+      ],
+      "answer": 2,
+      "explanation": "Les droits doivent être suffisants pour la tâche et limités à celle-ci. Le besoin de lecture ne justifie pas des pouvoirs d’administration ou de modification sur un autre ensemble de données."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Tous les techniciens utilisent le même compte administrateur. Une modification suspecte apparaît dans le journal. Quelle limite ce partage crée-t-il ?",
+      "options": [
+        "Il garantit que les droits sont limités au strict nécessaire.",
+        "Il rend difficile l’attribution de l’action à une personne précise.",
+        "Il permet d’identifier l’auteur dès que le nom du compte apparaît dans le journal.",
+        "Il rend inutile toute vérification des modifications enregistrées."
+      ],
+      "answer": 1,
+      "explanation": "Le journal peut identifier le compte commun sans distinguer son utilisateur réel. Des comptes individuels et des droits appropriés améliorent la traçabilité ; un identifiant partagé brouille la responsabilité des actions."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi un second facteur peut-il réduire certains risques d’usurpation ?",
+      "options": [
+        "Parce qu’il limite automatiquement chaque compte aux seules données de son service.",
+        "Parce qu’il garantit que toute demande de connexion reçue est légitime.",
+        "Parce qu’il valide le contenu de toutes les modifications effectuées après connexion.",
+        "Parce que le mot de passe volé peut ne plus suffire pour se connecter."
+      ],
+      "answer": 3,
+      "explanation": "Un attaquant possédant seulement le mot de passe peut être bloqué par le facteur supplémentaire. Cette mesure réduit certains scénarios d’accès frauduleux sans constituer une garantie contre toutes les attaques."
+    },
+    {
+      "id": "q12",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une personne quitte un service et n’a plus besoin des dossiers de cette équipe. Quelle action maintient une gestion cohérente des accès ?",
+      "options": [
+        "Réexaminer et retirer les habilitations devenues inutiles.",
+        "Conserver tous les droits tant que le salarié reste dans l’entreprise.",
+        "Renforcer seulement le mot de passe en conservant le même périmètre de données.",
+        "Archiver un journal des accès sans modifier les autorisations existantes."
+      ],
+      "answer": 0,
+      "explanation": "Les autorisations doivent suivre les fonctions effectivement exercées. Une mobilité peut rendre certains accès inutiles même si le salarié reste dans l’entreprise ; leur maintien accroît le périmètre d’exposition."
+    },
+    {
+      "id": "q13",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une sauvegarde nocturne se termine chaque jour avec le statut « succès », mais aucune restauration n’a été essayée. Quelle affirmation est justifiée ?",
+      "options": [
+        "La reprise complète est démontrée.",
+        "L’enregistrement est annoncé comme réussi, mais la capacité de restauration reste à tester.",
+        "Le délai de reprise est nécessairement inférieur à une heure.",
+        "Les données restaurées seront automatiquement exactes."
+      ],
+      "answer": 1,
+      "explanation": "Un journal de sauvegarde ne démontre ni la lisibilité de la copie ni le délai réel de remise en service. Un test de restauration contrôlé doit vérifier les données récupérées et les étapes nécessaires à la reprise."
+    },
+    {
+      "id": "q14",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un service de rappel de rendez-vous n’utilise que l’adresse électronique. Un responsable veut rendre obligatoire l’adresse postale pour simplifier une analyse future non définie. Quel raisonnement convient ?",
+      "options": [
+        "Tout usage futur imaginé suffit à rendre le champ nécessaire.",
+        "La collecte devient proportionnée dès que le stockage est chiffré.",
+        "La protection technique ne remplace pas la justification du besoin de collecte.",
+        "Rendre un champ facultatif suffit toujours à justifier sa présence, même sans finalité."
+      ],
+      "answer": 2,
+      "explanation": "Chiffrer une donnée peut contribuer à sa protection, mais ne démontre pas qu’il faut la demander. Le besoin de l’adresse postale doit être relié à une finalité définie avant d’en imposer la collecte."
+    },
+    {
+      "id": "q15",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un salarié envoie un export client vers sa messagerie personnelle pour travailler à domicile, alors que cet outil n’est pas autorisé. Quel risque immédiat faut-il traiter ?",
+      "options": [
+        "Une perte nécessaire d’intégrité, même si le contenu n’a pas changé.",
+        "Un problème de disponibilité uniquement, sans enjeu de confidentialité.",
+        "Une amélioration de la traçabilité, puisque la copie possède un destinataire.",
+        "Une diffusion de données hors du périmètre de partage maîtrisé."
+      ],
+      "answer": 3,
+      "explanation": "L’export sort des outils et règles de contrôle prévus. Il faut traiter la diffusion et proposer un accès distant autorisé ; le confort d’usage ne suffit pas à préserver la confidentialité dans une messagerie personnelle."
+    },
+    {
+      "id": "q16",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Comment tester une restauration sans risquer d’écraser les données de production ?",
+      "options": [
+        "Restaurer dans un environnement isolé, puis contrôler les données et le temps nécessaire.",
+        "Remplacer immédiatement la base de production par une ancienne copie.",
+        "Vérifier seulement que le fichier porte la bonne extension.",
+        "Se limiter au message de succès de la sauvegarde."
+      ],
+      "answer": 0,
+      "explanation": "Un environnement isolé permet de vérifier la récupération et l’intégrité sans altérer les opérations en cours. Mesurer la durée et documenter les difficultés transforme le test en preuve exploitable de capacité de reprise."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un utilisateur valide une demande de second facteur qu’il n’a pas initiée. Pourquoi ce comportement est-il problématique ?",
+      "options": [
+        "Il suffit de conserver une trace de validation pour que l’accès soit légitime.",
+        "Il peut autoriser une tentative d’accès par un tiers malgré le facteur supplémentaire.",
+        "La validation garantit que la demande a été initiée par le titulaire.",
+        "Le second facteur permet de valider sans vérifier l’origine de la demande."
+      ],
+      "answer": 1,
+      "explanation": "La validation doit correspondre à une connexion voulue par le titulaire. Approuver une demande inattendue peut aider un tiers à franchir le second contrôle ; la vigilance d’usage reste donc nécessaire."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle question aide à décider si une donnée doit être demandée dans un formulaire ?",
+      "options": [
+        "Peut-on techniquement ajouter cette colonne ?",
+        "Est-elle facile à trouver sur Internet ?",
+        "À quelle finalité définie sert-elle et est-elle pertinente pour celle-ci ?",
+        "La base possède-t-elle assez d’espace libre ?"
+      ],
+      "answer": 2,
+      "explanation": "La pertinence se juge par rapport au service et à la finalité annoncée. La facilité technique de collecte, la disponibilité publique ou le faible coût de stockage ne démontrent pas la nécessité de la donnée."
+    },
+    {
+      "id": "q19",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Des documents sont lisibles uniquement par les personnes habilitées, mais un incident les rend inaccessibles pendant deux jours. Quel objectif est principalement défaillant dans ce constat ?",
+      "options": [
+        "La confidentialité, parce que les droits restreignent les consultations.",
+        "L’intégrité, même si les données n’ont pas été altérées.",
+        "L’authentification, même si les utilisateurs sont reconnus correctement.",
+        "La disponibilité, malgré des restrictions d’accès correctes."
+      ],
+      "answer": 3,
+      "explanation": "Les droits de consultation peuvent être correctement limités alors que le service est inutilisable. Confidentialité et disponibilité sont des objectifs distincts : satisfaire l’un ne démontre pas que l’autre est assuré."
+    },
+    {
+      "id": "q20",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Quel est l’intérêt d’un rapprochement entre une donnée modifiée et sa pièce justificative ?",
+      "options": [
+        "Vérifier que la modification correspond à une information fondée.",
+        "Établir seulement que la donnée reste accessible après le changement.",
+        "Démontrer seulement que le compte connecté possède un mot de passe.",
+        "Garantir seulement qu’une copie du fichier existe dans la sauvegarde."
+      ],
+      "answer": 0,
+      "explanation": "Le rapprochement aide à vérifier l’exactitude et la justification du changement. Il contribue à l’intégrité mais ne remplace pas les autorisations de modification ni la traçabilité de l’auteur et de l’opération."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un compte fortement protégé donne encore à son titulaire accès à tous les dossiers alors que sa tâche ne concerne qu’un service. Quelle mesure faut-il ajouter ?",
+      "options": [
+        "Un second facteur supplémentaire sans changement des ressources accessibles.",
+        "Des habilitations limitées aux ressources nécessaires à sa fonction.",
+        "Une rotation plus fréquente du mot de passe sans changement des droits.",
+        "Une sauvegarde plus fréquente sans révision des accès."
+      ],
+      "answer": 1,
+      "explanation": "Sécuriser la connexion ne réduit pas les droits excessifs du compte. Le contrôle des habilitations complète l’authentification en délimitant les ressources qu’un utilisateur légitime est autorisé à utiliser."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une équipe choisit d’abord une solution de collecte très détaillée puis affirme que toutes les données qu’elle permet d’obtenir sont nécessaires. Quelle démarche manque ?",
+      "options": [
+        "Une augmentation de la fréquence de sauvegarde des données collectées.",
+        "Une attribution des mêmes droits de lecture à tous les responsables.",
+        "Une analyse des usages et des besoins avant le choix du périmètre de données.",
+        "Une amélioration du chiffrement considérée comme justification de tous les champs."
+      ],
+      "answer": 2,
+      "explanation": "Le périmètre doit être guidé par les finalités et non par les seules capacités de l’outil. Identifier les usages avant de définir les champs permet de justifier les données utiles et d’écarter les collectes excessives."
+    }
+  ]
+}

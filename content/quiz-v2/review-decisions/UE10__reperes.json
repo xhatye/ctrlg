@@ -1,0 +1,248 @@
+{
+  "sourceHash": "319728195d90d7509dbe4dfa74d843ab739bcd8c04d88089a6fd9aec20ea005c",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "4e9ace12cc0019dc86e02c49d1233d540770735cb128105697fcece932f33932",
+      "selected": 1,
+      "reason": "Une information nouvelle sur une estimation antérieure raisonnable constitue un changement d’estimation, pas automatiquement une erreur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "aca13521d6c763a0248145fde93ee871adb6269912bde09490b09f427e1bc1b4",
+      "selected": 0,
+      "reason": "Une copie manifestement fausse d’un contrat déjà disponible relève d’une erreur antérieure à examiner.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "e1f51aece20048e993a2d92f3766bdd892d052c3131785c70656b201b59516b0",
+      "selected": 1,
+      "reason": "Le PCG fait porter le changement ordinaire d’estimation sur l’exercice en cours et les exercices futurs concernés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "1c17f5f57a1debe13d9aa39e3e90c7bc76f72037ed69c341cb22f427cef7a433",
+      "selected": 1,
+      "reason": "(12 000 de VNC − 2 000 de résiduel) / 5 années restantes = 2 000 euros de dotation pleine future.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "e0898e4e456f846248b1fabaab53cf347ef595f39a6da97af3d20ac239c2ec54",
+      "selected": 0,
+      "reason": "Le changement doit être justifié par son information nouvelle et ses incidences chiffrées pour rester contrôlable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "c84d2276a1ca0be016d59252c04f22b699693fc921023122fec4da8b766d3427",
+      "selected": 0,
+      "reason": "Un projet libre de publicité ne suffit pas à caractériser une obligation actuelle envers un tiers.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "b612a2be1bee1dcbc05865a3524a7172db3fb5f97f5d376c34ea95c5430b503a",
+      "selected": 1,
+      "reason": "La provision constate un passif estimé et ne crée pas par elle-même un compte bancaire doté.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "45a8d2934968151d88fe1d3143b18ef316f82526f2447278fe9ee5dfd3e983dd",
+      "selected": 1,
+      "reason": "La sortie doit être estimée sur les faits et hypothèses, pas par report historique ou montant demandé sans analyse.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "6f5fbaae5bc73813c9353657a07d00a5d8efae24b8a57c3354cbb368dc42aab4",
+      "selected": 0,
+      "reason": "5 500 nécessaires moins 4 000 existants donnent 1 500 euros de complément.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "31277de19f5e51811e379074199dbdb11eef4dc2ccb05f8862b086a85ce9f191",
+      "selected": 3,
+      "reason": "Une dette de montant et échéance précis se distingue d’une provision, sans cumul de deux passifs pour la même obligation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "e9219687e156985a8644184689b18105574f422be5955b238edefaaef428f6f0",
+      "selected": 1,
+      "reason": "60 000 bruts moins 18 000 amortis donnent 42 000 euros nets avant test.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "374aaf1b6b94e66c563c9abda23f11b1c89c202e60abce15224ce8246e80bb8e",
+      "selected": 3,
+      "reason": "La déduction répétée d’amortissements déjà inclus minore indûment la valeur nette comparée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "64872161f0a44ae1304f22b2e0982607d088480b218db658fb37e8856ca48ef1",
+      "selected": 1,
+      "reason": "50 000 − 20 000 − 4 000 = 26 000 euros nets.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "0c7905733642034101c576d3ed763fd27b4d41ab4d5edd32a201dc2a128b2c49",
+      "selected": 2,
+      "reason": "Le même intitulé peut inclure des corrections différentes : vérifier le contenu avant comparaison.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "1a080d4136a4b730c12121280ab1f71ae22ec7d58e2bbff5eced6a3ac3171d5e",
+      "selected": 1,
+      "reason": "Le test doit partir de la valeur nette pertinente après les corrections déjà reconnues.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "066f15e22fe2c2040fddac30ff1452d9b2810ac7987ed0cfc0e719c165769dc6",
+      "selected": 3,
+      "reason": "32 000 de VNC moins 25 000 de valeur test donnent 7 000 euros de réduction à constater.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "e4620f8f77e2a587ea402831b0ce1cce74dff5f05cc5fa7f7a619884d61b9c2f",
+      "selected": 0,
+      "reason": "Une soustraction exacte ne suffit pas si la valeur utilisée n’a aucune méthode ni hypothèse justifiée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "8c1a08e0badfe1cd84d69d22a8eaa0afd7c65b57fd9d241c1e5cadffd93f64cd",
+      "selected": 3,
+      "reason": "Une valeur test favorable ne crée pas un relèvement automatique ; une éventuelle reprise exige une correction antérieure et ses conditions.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "208baec45efe210fdde0eea2edc583a71132d9f8793569ec723970fb5bcb31d0",
+      "selected": 0,
+      "reason": "40 000 moins 6 000 de perte donnent 34 000 euros nets.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "a0eda5c84231a6ce3010fe5694d03972137f132901097689eab9444319daf950",
+      "selected": 0,
+      "reason": "La perte comptable seule ne constitue ni réalisation du matériel ni second paiement d’investissement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "53f4165e0521d3f055552f5560b8ff3e6c05db9f776841e76d1b93d58a3c863e",
+      "selected": 0,
+      "reason": "Le référentiel détermine la valeur et le traitement ; une soustraction d’exemple ne fixe pas toutes les normes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "64976283a69c0d12ca8b207ee3c719796e35eade1a2b61add0c893ef16a5822e",
+      "selected": 3,
+      "reason": "Le dossier doit relier valeur comptable, conditions de test, hypothèses et calcul de l’ajustement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

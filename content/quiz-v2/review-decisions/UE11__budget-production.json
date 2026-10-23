@@ -1,0 +1,259 @@
+{
+  "sourceHash": "2cdae0fb50f3ddc6588eaaae1ca8e290c021b0c841a67990dc71a776d380559c",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "bfaf41142aab32400bf264f1c5e1dd663b7e696514372c6eb91ad977fb9d9eb5",
+      "selected": 2,
+      "reason": "2000ventes+500cible−300initial exigent2200produits.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "287718a53ccb9244bbf73e9f6ecfbdb15d6e4131dd516dab1c05035c1b55c45b",
+      "selected": 2,
+      "reason": "La cible500moins initial300 donne une variation positive200.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "62050fe8039e3d10c4223205fa948ca0c6d8a6455e8d4ba0c5b14585a9657b84",
+      "selected": 3,
+      "reason": "2200produits à2kg exigent4400kg de matière.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "12a071af72db1df6cb419a922bc90babc8d1ee8001b084b1bdff8af41512738a",
+      "selected": 1,
+      "reason": "4400kg à4euros valent17600euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "b603590a93edbcf2e86cade2155fa5a7ea0caea65c2be82596543ceb9ccfdf2d",
+      "selected": 2,
+      "reason": "La hausse de stock exige fabrication supplémentaire au-delà des ventes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "8f3f4f96c789fcaf18c35c16ba6963cba0f4a7d20a1291cdf7c0eeaf168ec7d7",
+      "selected": 3,
+      "reason": "Le stock initial peut couvrir des ventes et réduire le programme à fabriquer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "df231dc25591e25666c2b7d36adb5edc3ee513a007a2c1e1b826778f1f295d31",
+      "selected": 3,
+      "reason": "La norme matière doit couvrir tous les produits fabriqués, y compris ceux stockés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "ef666252c7cb5c29e433fb92bb0c3f9d61ab12981c26c9209daa48287082f282",
+      "selected": 1,
+      "reason": "La consommation se rattache à l’usage physique ; le paiement suit le crédit fournisseur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "d8803cc90b85edb638703c06c4c9f9f02a5b5a5403030da94f06ad58b5a0f43e",
+      "selected": 3,
+      "reason": "300+2200−2000 retrouvent500unités finales.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "0fa75e12fa00d89e0a112e4bf52821abbbb7051853bbd3ccb4c5a65139b2c5d2",
+      "selected": 3,
+      "reason": "La hausse de stock mobilise moyens physiques et financement avant sa vente.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "5500fc94227b47a01f928224e6809412b156b79b3c8a990f7e34a02b47d25ee3",
+      "selected": 2,
+      "reason": "200 sousensembles nécessaires moins50 initiaux plus10cible =160 à fabriquer ;480+100=580kg.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "b23de076f0ae33bf9011fcda008a9d0ab4a6eb4ed3a8a1e30786648d966765c1",
+      "selected": 3,
+      "reason": "La même consommation physique doit être revalorisée au nouveau prix explicite.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "48f9a3ed454101e8408425e7348ffd55d8b5c1fbc97caefe38284f94f6835d3d",
+      "selected": 1,
+      "reason": "Une fabrication négative indique un surplus disponible, pas un ordre négatif réalisable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "8e51c5f75c66b7f1144296195071520e6462e3df6aa60eb4258feba54e1a0ad3",
+      "selected": 0,
+      "reason": "Les cartons doivent être multipliés par10 pour homogénéiser avec les unités initiales.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "1b538879cb94e028f6feff9714e6a5eb52fcf1798af52a40ef4788671196adeb",
+      "selected": 1,
+      "reason": "Achats égale consommation plus cible matière moins stock initial sous modèle simple.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "00756f5def42ff33cd822eb2c795686f917db64e5af1a8a7260ce1ea7975509c",
+      "selected": 3,
+      "reason": "19800divisés par4400 donnent4,50euros parkg.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "fdb17149b16806628690189447bf24498ee483dbfda6691916d0c924a52a777b",
+      "selected": 2,
+      "reason": "2200fois2 moins4000 laisse400heures de dépassement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "61dc36dbc34a301df81a21da4fbe8a099d7705fb52629155b1299c52ac8a5710",
+      "selected": 1,
+      "reason": "20 disponibles ne couvrent pas50livraisons avant arrivée de la production de troisième semaine.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "b5a843eee82d09ec57bebaf43fc43c2c078d6d27c14b59f05b21edf0d1f51db5",
+      "selected": 3,
+      "reason": "Les pertes consomment des ressources et changent le volume à lancer pour atteindre le conforme.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "164ec9c0bc0e6028d79046d4d8d0f07580291577f4ce5da7b744223fb8ac422a",
+      "selected": 3,
+      "reason": "Un coût de matière excluant travail et centres ne représente pas un coût complet.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "bbe1aa16159f59b30d2e660dfa6028f95dfd7c498f134729f2a41936de19cf54",
+      "selected": 1,
+      "reason": "400achevées plus100 à40% représentent440 unités équivalentes de transformation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "f0e85b8a1a2ad022f9a63d398c41f47d61fac3ed7acd9205ec771c929f96c7d7",
+      "selected": 3,
+      "reason": "À production constante des ventes moindres augmentent le stock final au-delà de la cible.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "e95812e25edf66b40f8326e44f67c2d6ea123d240605562577d6c42888503224",
+      "selected": 1,
+      "reason": "Ajouter matière des ventes puis matière de toute la production recompte les unités vendues.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

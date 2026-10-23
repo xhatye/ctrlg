@@ -1,0 +1,438 @@
+{
+  "module": "DSCG3",
+  "chapter": "prevision-glissante",
+  "sourceHash": "9c20a1d7f8b24f2657a742b0c91ddd6492d0091410e1eabcf68d31c4f0f4048d",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle distinction est correcte entre objectif et prévision ?",
+      "options": [
+        "L’objectif décrit exclusivement le passé ; la prévision fixe les primes.",
+        "L’objectif exprime un résultat souhaité ; la prévision estime le résultat attendu.",
+        "L’objectif doit égaler chaque prévision, même si les hypothèses changent.",
+        "La prévision autorise automatiquement les dépenses nécessaires à l’objectif."
+      ],
+      "answer": 1,
+      "explanation": "Un objectif est une ambition ; une prévision est une estimation fondée sur l’information disponible. Leur écart signale les actions ou arbitrages nécessaires."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La direction vise 10 M€ de ventes, mais les données actualisées rendent 9 M€ plus probables. Que doit montrer la prévision ?",
+      "options": [
+        "10 M€, pour préserver l’ambition sans exposer l’écart.",
+        "La moyenne des deux montants comme règle automatique.",
+        "L’estimation de 9 M€ avec ses hypothèses, distincte de l’objectif de 10 M€.",
+        "Uniquement les ventes déjà facturées, sans projection future."
+      ],
+      "answer": 2,
+      "explanation": "L’estimation doit rester honnête. Maintenir l’objectif séparément permet de préparer des actions plutôt que de cacher le risque d’écart."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un responsable refuse de réviser ses ventes prévues car le budget a déjà été approuvé. Quelle confusion commet-il ?",
+      "options": [
+        "Il traite une prévision commerciale comme une autorisation de dépenses supplémentaires.",
+        "Il traite les ventes prévisionnelles comme une simple reprise des encaissements déjà reçus.",
+        "Il traite une révision d’estimation comme une modification des écritures de ventes passées.",
+        "Il assimile une référence budgétaire à une estimation actualisée du probable."
+      ],
+      "answer": 3,
+      "explanation": "Un budget peut rester une référence alors que l’estimation change. Réviser la prévision ne signifie pas effacer l’engagement ou sa justification."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour deux mois, les erreurs de prévision (prévu moins réalisé) sont +10 et −10 unités. On calcule l’erreur absolue moyenne : moyenne des valeurs absolues des erreurs. Quelle valeur décrit leur ampleur, même si l’erreur signée moyenne est nulle ?",
+      "options": [
+        "10 unités.",
+        "0 unité.",
+        "20 unités.",
+        "100 unités."
+      ],
+      "answer": 0,
+      "explanation": "Les valeurs absolues sont 10 et 10 ; leur moyenne est (10 + 10)/2 = 10 unités. Une moyenne signée nulle peut seulement refléter la compensation d’une surestimation et d’une sous-estimation, sans indiquer des prévisions exactes.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 10
+                },
+                {
+                  "value": 10
+                }
+              ]
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "expected": 10,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un scénario de hausse de ventes implique des recrutements non encore approuvés. Quelle présentation est nécessaire ?",
+      "options": [
+        "Intégrer les ventes supplémentaires comme certaines sans indiquer la condition.",
+        "Distinguer la prévision sous condition de moyens de l’autorisation budgétaire correspondante.",
+        "Considérer les recrutements automatiquement approuvés par le calcul de prévision.",
+        "Exclure définitivement le scénario parce que les recrutements sont futurs."
+      ],
+      "answer": 1,
+      "explanation": "Une estimation peut dépendre d’une décision de moyens. Cette condition doit être visible ; la prévision ne vaut pas autorisation de dépense."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une prévision glissante à horizon constant consiste à :",
+      "options": [
+        "Conserver la fin de l’exercice comme terme, ce qui raccourcit l’horizon chaque mois.",
+        "Prolonger uniquement les chiffres historiques sans intégrer les faits récents.",
+        "Actualiser les périodes restantes et ajouter de nouvelles périodes au fur et à mesure.",
+        "Recommencer chaque année avec un horizon réduit à un mois."
+      ],
+      "answer": 2,
+      "explanation": "Le dispositif maintient un regard sur une durée future constante. Il intègre les informations récentes et ajoute des périodes au-delà du terme précédent."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise veut toujours prévoir les douze prochains mois. En clôturant mars, que doit-elle faire ?",
+      "options": [
+        "Conserver décembre comme seule date de fin de prévision.",
+        "Supprimer mars sans ajouter de nouveau mois futur.",
+        "Ne conserver que les neuf mois non clos de l’exercice.",
+        "Intégrer le réalisé de mars et étendre la vue future jusqu’à mars de l’année suivante."
+      ],
+      "answer": 3,
+      "explanation": "Après mars, la vue des douze prochains mois va d’avril à mars suivant. Une fin systématique à décembre rétrécirait l’horizon."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une équipe actualise chaque semaine des milliers de lignes peu fiables et passe tout son temps à corriger les saisies. Quelle adaptation est pertinente ?",
+      "options": [
+        "Concentrer l’actualisation sur les facteurs importants avec une fréquence adaptée à leur fiabilité.",
+        "Accroître la granularité de toutes les lignes pour compenser les erreurs.",
+        "Remplacer la prévision par le budget initial sans examen des changements.",
+        "Additionner les versions hebdomadaires pour former la prévision mensuelle."
+      ],
+      "answer": 0,
+      "explanation": "Le coût de production doit être proportionné à l’usage. Des facteurs déterminants et fiables peuvent mieux soutenir la décision qu’un détail instable."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les volumes évoluent vite mais les loyers sont contractuellement stables sur l’année. Quelle actualisation est la plus rationnelle ?",
+      "options": [
+        "Actualiser toutes les lignes à la fréquence des volumes, y compris les loyers sans nouvelle information.",
+        "Réviser fréquemment les volumes et contrôler les loyers à une fréquence adaptée aux changements de contrat.",
+        "Actualiser toutes les lignes à la fréquence des loyers pour préserver un calendrier unique.",
+        "Recalculer les loyers proportionnellement aux volumes, même si le contrat fixe un montant stable."
+      ],
+      "answer": 1,
+      "explanation": "La fréquence peut varier selon le moteur économique. Les facteurs volatils demandent plus d’attention que les engagements connus et stables."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les services utilisent des prévisions établies à des dates différentes, avec des hypothèses de prix incompatibles. Quelle étape permet une consolidation cohérente ?",
+      "options": [
+        "Consolider les dernières versions de chaque service même si leurs dates de valeur diffèrent.",
+        "Appliquer un prix moyen aux totaux sans rapprocher les volumes ni les dates d’hypothèse.",
+        "Fixer une date de référence, des hypothèses communes et un rapprochement des exceptions.",
+        "Conserver les prix propres à chaque service et attribuer toute différence au seul effet volume."
+      ],
+      "answer": 2,
+      "explanation": "Une consolidation exige des versions et hypothèses compatibles. Les exceptions justifiées doivent être identifiées, pas absorbées silencieusement."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une nouvelle prévision écrase la précédente, sans conserver les hypothèses. Quel apprentissage devient difficile ?",
+      "options": [
+        "La comparaison entre ventes facturées et ventes encaissées dans la période clôturée.",
+        "La distinction entre ventes aux clients et transferts entre services dans le réalisé comptable.",
+        "Le rapprochement des stocks physiques et des stocks comptables à la dernière clôture.",
+        "L’analyse des raisons pour lesquelles l’estimation précédente s’est écartée du réalisé."
+      ],
+      "answer": 3,
+      "explanation": "La comparaison des versions permet d’identifier erreurs de modèle, hypothèses et chocs. Sans historique, l’apprentissage de la qualité de prévision est affaibli."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une prévision de ventes passe de 100 unités à 50 € à 110 unités à 48 €. Quel est le changement total de chiffre d’affaires ?",
+      "options": [
+        "+280 €.",
+        "+500 €.",
+        "−220 €.",
+        "−280 €."
+      ],
+      "answer": 0,
+      "explanation": "Le chiffre d’affaires passe de 5 000 € à 5 280 €, soit +280 €. Cette variation combine volume et prix.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 110
+                },
+                {
+                  "value": 48
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 100
+                },
+                {
+                  "value": 50
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 280,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un pont de ventes valorise d’abord l’effet volume au prix initial : volume de 200 à 230 unités, prix initial de 40 €, prix nouveau de 38 €. Quel effet volume isole-t-il ?",
+      "options": [
+        "−460 €.",
+        "+1 200 €.",
+        "+740 €.",
+        "+1 140 €."
+      ],
+      "answer": 1,
+      "explanation": "L’effet volume à prix initial est (230 − 200) × 40 = 1 200 €. Le prix nouveau intervient dans l’autre composante du pont.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 230
+                },
+                {
+                  "value": 200
+                }
+              ]
+            },
+            {
+              "value": 40
+            }
+          ]
+        },
+        "expected": 1200,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un pont volume puis prix, le prix passe de 80 € à 77 € et le volume final est de 150 unités. Quel effet prix, calculé au volume final, obtient-on ?",
+      "options": [
+        "−3 €.",
+        "+450 €.",
+        "−450 €.",
+        "−240 €."
+      ],
+      "answer": 2,
+      "explanation": "L’effet prix est (77 − 80) × 150 = −450 €. Il est négatif car le prix baisse sur le volume final retenu.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 77
+                },
+                {
+                  "value": 80
+                }
+              ]
+            },
+            {
+              "value": 150
+            }
+          ]
+        },
+        "expected": -450,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux analystes décomposent la même variation prix-volume dans un ordre différent. Leurs composantes diffèrent, mais les totaux concordent. Quelle explication est correcte ?",
+      "options": [
+        "Une décomposition exacte ne peut jamais dépendre de l’ordre.",
+        "Le prix et le volume doivent avoir le même effet dans les deux méthodes.",
+        "Le total concordant prouve que le changement de prix est causé par le volume.",
+        "L’ordre peut affecter l’attribution de l’interaction entre les deux composantes."
+      ],
+      "answer": 3,
+      "explanation": "Le produit prix-volume comprend une interaction. Selon l’ordre, elle est rattachée à une composante différente ; la convention doit être annoncée."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un pont de prévision attribue 30 000 € de hausse aux volumes. Quelle conclusion dépasserait ce qu’il démontre ?",
+      "options": [
+        "La campagne commerciale a causé exactement ces 30 000 € de hausse.",
+        "Les volumes contribuent arithmétiquement à la variation selon la convention retenue.",
+        "Le total peut être rapproché du chiffre d’affaires révisé.",
+        "La convention de calcul doit être conservée dans le rapport."
+      ],
+      "answer": 0,
+      "explanation": "Un pont décompose une variation, sans prouver son origine causale. L’attribution à une campagne demande une analyse supplémentaire."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise change simultanément le volume et la composition de ses produits. Pourquoi un prix moyen unique peut-il brouiller le pont de ventes ?",
+      "options": [
+        "Parce que le prix moyen mesure uniquement l’inflation générale et ne peut être utilisé pour des produits différents.",
+        "Parce que le prix moyen peut varier par mélange même si les prix de chaque produit sont stables.",
+        "Parce que l’effet de composition est déjà entièrement inclus dans la variation du nombre total d’unités.",
+        "Parce que le prix moyen devrait être la moyenne simple des tarifs, quelle que soit la quantité vendue."
+      ],
+      "answer": 1,
+      "explanation": "Un effet de mélange peut modifier la moyenne. Distinguer les produits ou le mix permet d’éviter de qualifier cette évolution de pur changement tarifaire."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel est l’intérêt principal de plusieurs scénarios de prévision ?",
+      "options": [
+        "Créer plusieurs objectifs interchangeables pour retenir après coup le plus favorable.",
+        "Remplacer l’estimation centrale par la moyenne simple de scénarios extrêmes.",
+        "Explorer les conséquences d’hypothèses différentes et préparer des réponses conditionnelles.",
+        "Garantir qu’un événement prévu dans un scénario se produira."
+      ],
+      "answer": 2,
+      "explanation": "Les scénarios éclairent les risques et options. Ils ne garantissent pas l’avenir et doivent expliciter leurs hypothèses plutôt que servir de références opportunistes."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un scénario de retard fournisseur menace une livraison importante. Quel dispositif transforme cette prévision en préparation opérationnelle ?",
+      "options": [
+        "Chiffrer seulement la marge du scénario de retard sans fixer de date de choix logistique.",
+        "Diffuser la nouvelle prévision à tous les services en laissant chacun supposer qui décide du secours.",
+        "Créer une provision budgétaire de secours sans examiner le délai nécessaire à sa mise en œuvre.",
+        "Une alerte, un responsable et une échéance pour choisir une solution de secours."
+      ],
+      "answer": 3,
+      "explanation": "Le scénario devient utile lorsqu’une décision peut être prise à temps. Les seuils et responsabilités évitent une simple information sans suite."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une prévision sincère est dépassée à cause d’un choc imprévisible. La direction sanctionne l’analyste comme si cette différence était une mauvaise exécution. Quel risque crée-t-elle ?",
+      "options": [
+        "La dissimulation d’incertitudes et la confusion entre qualité d’estimation et performance réalisée.",
+        "Le report de la responsabilité de livraison du responsable opérationnel vers le service de prévision.",
+        "Le remplacement des critères de qualité de méthode par le seul écart au réalisé, ce qui distinguerait mieux erreur et faute.",
+        "La sous-estimation de la demande comme solution préférable dans tous les futurs scénarios, quel que soit le coût du manque."
+      ],
+      "answer": 0,
+      "explanation": "Le réalisé dépend de nombreux facteurs. Une évaluation utile examine les informations disponibles et la méthode, sans assimiler toute erreur à une faute opérationnelle."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un scénario de croissance suppose une capacité supplémentaire disponible dans trois mois, alors que les commandes arrivent le mois prochain. Quelle incohérence faut-il traiter ?",
+      "options": [
+        "Une confusion entre scénario et objectif, même si les recrutements sont déjà approuvés.",
+        "Le décalage entre calendrier de demande et disponibilité effective des moyens.",
+        "Une incohérence de prix entre la capacité existante et la capacité future, déduite du seul calendrier.",
+        "Un double comptage de la capacité existante, déduit du seul fait qu’une extension est planifiée."
+      ],
+      "answer": 1,
+      "explanation": "Les hypothèses doivent être compatibles dans le temps. Une capacité tardive ne permet pas de satisfaire immédiatement des ventes projetées."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les prévisions sous-estiment les ventes chaque mois, alors que les réalisations sont bien enregistrées. Quel travail améliore la méthode ?",
+      "options": [
+        "Relever rétroactivement chaque ancienne prévision au réalisé.",
+        "Considérer chaque écart comme indépendant sans chercher de régularité.",
+        "Examiner le biais récurrent des hypothèses et tester une correction sur de nouvelles périodes.",
+        "Remplacer la prévision par l’objectif pour supprimer l’écart apparent."
+      ],
+      "answer": 2,
+      "explanation": "Une erreur systématique appelle une analyse de biais. L’amélioration doit être testée sans réécrire l’historique ni perdre l’indépendance de l’estimation."
+    }
+  ]
+}

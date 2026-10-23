@@ -1,0 +1,248 @@
+{
+  "sourceHash": "9d2dd555c84d8cb3092ba3f34b2253ede2bce32a2015838e6282b8bf1b9a075c",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "c7122e87f4ce0303f2ba6f0a1585aedacfaf793687f54d6048584deb3d0cbbc1",
+      "selected": 2,
+      "reason": "Le budget de trésorerie enregistre le paiement prévu en mai, distinct de la facture de mars.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "35481d6121bb40b596cbbcd5404911a1e8310a3432aece1b1a9d90b645d568fa",
+      "selected": 1,
+      "reason": "30 000 × 40 % + 5 000 de factures anciennes = 17 000 euros en janvier.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "60812a6b5c08869fdf4cd56d69b1c615f9b8fa920546d10238a689cf4b65a5cd",
+      "selected": 3,
+      "reason": "La TVA déjà comprise dans le règlement TTC ne doit pas être ajoutée une seconde fois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "291349cb8336f7e0c3a7c846affdfd259b765371eb5bc56429ab8a60d2152114",
+      "selected": 3,
+      "reason": "La dotation est une charge calculée sans flux ; seul l’investissement effectivement réglé crée un décaissement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "dc52b80e94c41d9fba9e81601e2638cf89856d93808a9e179fcd7320f3e6185d",
+      "selected": 3,
+      "reason": "Décaler sans accord les dates contractuelles remplace les échéances par une hypothèse non établie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "4235475cf7de235dfa24490e884ab700c85501555661a710929cb8e7b376d227",
+      "selected": 3,
+      "reason": "Le solde final précédent sert de solde initial suivant pour transmettre le cumul.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "043e5be49ee5b35d96c7d0512f3d6e8860fe06bb95666f90ffc17eb079d02e55",
+      "selected": 0,
+      "reason": "2 500 + 9 000 − 13 000 donne un déficit de 1 500 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "5f871be17d09ed363f34fc1d6647100d4ad772b6ae5a8dd4d3799e93f65ab44f",
+      "selected": 2,
+      "reason": "Janvier finit à 1 000 ; février ajoute 2 000 et termine à 3 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "53d72781f0d5e0bb10d5c570fee0f816ae66755ac382cf9d79e51851bf1343e7",
+      "selected": 1,
+      "reason": "Repartir de la même réserve réutilise des fonds déjà dépensés ou efface les déficits cumulés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "932912c08baa60b6437641b9fbf098c5111bf3273c7957054ae77c3d3719f301",
+      "selected": 3,
+      "reason": "Pour passer de −6 000 à +2 000 il faut mobiliser 8 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "fdabe322f80f4a6602464b80859e001b539c1bf7f66643a24f1ae96a516784e9",
+      "selected": 3,
+      "reason": "Un excédent annuel peut coexister avec un découvert mensuel à financer temporairement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "381444d21500e69bd9ed7b1268f97544ff137d2c20d19c33c01d17cdb1454043",
+      "selected": 2,
+      "reason": "La recette reportée doit être retirée du mois initial, sinon elle est comptée deux fois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "5c8e1e59d15ded405432d054df6def1d43f881a1dc46a51fddab05dd6679f4bb",
+      "selected": 0,
+      "reason": "2 000 moins les 5 000 non reçus en avril donne −3 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "7db2b6e68c7dcaab4e1be2bdbcfab0e3e68efe3c1c93f634c48f09c34c2df701",
+      "selected": 3,
+      "reason": "Le report se résorbe à fin février dans le cas sans autre effet ; le cumul final reste identique.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "6b1394bbf7eca3c6cfa2a6bffb49f95fd14b4fe7a40873cb0b65a80385af8012",
+      "selected": 3,
+      "reason": "Le retard réduit le solde de janvier qui doit être transmis à l’ouverture de février.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "3fe3efd21913f743d4215e9fab48e87d9f2507f1cc7fcf80498b32f925dc7d56",
+      "selected": 2,
+      "reason": "L’incertitude de recouvrement demande un scénario de montant non encaissé, distinct d’un simple délai.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "6a039570ab2a466ec6da8dca83d42ac5f221107a868685910008bd26a95e82f7",
+      "selected": 0,
+      "reason": "Le besoin temporaire existe si les paiements sont dus avant la réception des fonds.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "e1b47414c67165b07960229dad349a7df00e18b399f7f74625f0edaac5939e0b",
+      "selected": 2,
+      "reason": "Le besoin est temporaire et daté : il faut chiffrer un financement relais avec son remboursement et son coût.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "a8c8e5bbe50e6bdd821493f6958298eb3840cd52ecaf1c8330d79aebf7b1a1ad",
+      "selected": 2,
+      "reason": "4 000 de principal plus 80 de coût donnent 4 080 euros de paiement en juillet.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "f4fe4213144b939e8516d343453c2ac392bcf4c8dad2a9382a098237a6cfacd1",
+      "selected": 1,
+      "reason": "Le crédit finance une insuffisance de liquidité ; son encaissement ne crée pas une marge d’exploitation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "ee02a17858df827bffbd1c139c6b75fad8d4c89efd493e2a16b645fad22d97f4",
+      "selected": 0,
+      "reason": "Le report non accepté reste une condition à tester avec une solution alternative.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "c295d5edee20e7515401165d32ddec1b12e978e1740b242fd5d1ac39714f2f0e",
+      "selected": 0,
+      "reason": "Omettre remboursement et coût empêche d’apprécier le dénouement complet de la solution de financement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

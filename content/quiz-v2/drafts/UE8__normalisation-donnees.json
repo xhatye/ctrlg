@@ -1,0 +1,338 @@
+{
+  "module": "UE8",
+  "chapter": "normalisation-donnees",
+  "sourceHash": "870a8076d3f18c8dc9d7f20dddf6ac3ac8994db171142233c2e6ad7d99e40506",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que désigne le grain d’une table de données ?",
+      "options": [
+        "Le fait ou l’objet représenté par une ligne.",
+        "Le nombre total de colonnes actuellement renseignées.",
+        "L’ordre physique des enregistrements dans le fichier.",
+        "Le format numérique de la clé primaire."
+      ],
+      "answer": 0,
+      "explanation": "Le grain exprime ce qu’une ligne représente : client, facture ou ligne de facture, par exemple. Il doit être fixé avant de déterminer les clés, les liens et les agrégations pertinentes."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans un modèle, chaque codeProduit détermine un seul libellé officiel. Deux produits peuvent partager le même libellé. Quelle dépendance est garantie ?",
+      "options": [
+        "libelle → codeProduit",
+        "codeProduit → libelle",
+        "libelle → tous les produits d’une même famille",
+        "codeProduit et libelle ne peuvent avoir aucune dépendance"
+      ],
+      "answer": 1,
+      "explanation": "La règle fournie garantit qu’un code détermine un libellé. La réciproque n’est pas vraie puisque des codes différents peuvent porter le même libellé ; une dépendance ne se déduit pas en inversant ses termes."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une adresse actuelle de client figure dans toutes ses factures. Après un déménagement, certaines copies changent et d’autres non. Quelle anomalie apparaît ?",
+      "options": [
+        "Une anomalie d’insertion parce qu’il manque un nouveau client.",
+        "Une anomalie de suppression parce que la dernière facture disparaît.",
+        "Une anomalie de mise à jour parce qu’une même information actuelle diverge.",
+        "Une violation de référence parce que tous les identifiants clients sont absents."
+      ],
+      "answer": 2,
+      "explanation": "Le même fait actuel est conservé en plusieurs endroits et sa modification partielle crée des versions contradictoires. L’exemple concerne une mise à jour, et non la création ou la suppression d’un objet."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Clients et factures sont séparés en deux tables. Chaque facture doit encore appartenir à un client existant. Quel contrôle faut-il préserver ?",
+      "options": [
+        "L’unicité des montants de facture.",
+        "L’égalité des noms de clients dans toutes les factures.",
+        "Une liste de numéros de facture dans chaque nom de client.",
+        "Une référence de Facture.idClient vers la clé de Client."
+      ],
+      "answer": 3,
+      "explanation": "La séparation n’est correcte que si le lien métier reste représenté et contrôlé. Une clé étrangère permet de vérifier que la facture renvoie à un client existant ; l’égalité de montants ou de noms ne remplit pas ce rôle."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Chaque facture possède plusieurs lignes. Le modèle stocke une ligne par produit facturé avec numeroFacture et numeroLigne. Quelle clé convient si le numéro de ligne recommence à 1 sur chaque facture ?",
+      "options": [
+        "Le seul numeroFacture.",
+        "Le couple numeroFacture, numeroLigne.",
+        "Le seul numeroLigne.",
+        "Le seul codeProduit, même si un produit apparaît sur plusieurs factures."
+      ],
+      "answer": 1,
+      "explanation": "Le numéro de facture ne distingue pas ses détails et le numéro de ligne se répète entre factures. Le couple identifie le fait au grain d’une ligne de facture, conformément à la règle donnée."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les dix clients d’un échantillon ont tous un nom différent. Pourquoi cela ne prouve-t-il pas la dépendance nom → idClient pour toute la base future ?",
+      "options": [
+        "Une dépendance doit toujours être fondée sur un montant.",
+        "Toute dépendance observée aujourd’hui disparaît à la prochaine insertion.",
+        "L’échantillon n’établit pas une règle durable interdisant les homonymes.",
+        "Les dépendances fonctionnelles concernent seulement les données numériques."
+      ],
+      "answer": 2,
+      "explanation": "Une dépendance fonctionnelle découle des contraintes que le modèle doit respecter. Un échantillon peut ne comporter aucun homonyme sans que l’organisation interdise à deux clients différents de partager un nom."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une table ne permet de saisir un fournisseur que lorsqu’une facture existe, car ses coordonnées sont stockées uniquement dans les lignes de facture. Quel défaut illustre-t-elle ?",
+      "options": [
+        "Une anomalie d’insertion d’un fournisseur sans opération.",
+        "Une anomalie de suppression du dernier paiement.",
+        "Une duplication nécessaire de la clé de facture.",
+        "Une incohérence de somme due à une jointure multiple."
+      ],
+      "answer": 0,
+      "explanation": "Le modèle confond l’existence d’un fournisseur et celle d’une facture. Il oblige à créer une opération pour représenter le fournisseur ; séparer ces objets permet de les créer indépendamment si le besoin métier l’autorise."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après normalisation, une table autorise encore un montant contraire à une règle métier. Quelle conclusion convient ?",
+      "options": [
+        "La normalisation garantit normalement tous les domaines de valeurs.",
+        "Il faut regrouper les clients et factures dans une seule table.",
+        "Une clé primaire supplémentaire suffit toujours à corriger le signe du montant.",
+        "Des contrôles métier complémentaires restent nécessaires."
+      ],
+      "answer": 3,
+      "explanation": "La normalisation traite des dépendances et de certaines redondances ; elle ne couvre pas toutes les règles de valeur ou d’autorisation. Les contraintes de domaine et validations adaptées restent à définir séparément."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le montant total d’une facture est répété sur chacune de ses lignes. Une somme après jointure devient trop élevée. Quelle confusion explique l’erreur ?",
+      "options": [
+        "La clé du client a été confondue avec son nom.",
+        "Le grain de l’en-tête de facture a été confondu avec celui de ses détails.",
+        "La relation facture-client est nécessairement absente.",
+        "Le montant total aurait dû devenir la clé primaire."
+      ],
+      "answer": 1,
+      "explanation": "Le montant total appartient à la facture et non à chaque détail. La jointure le répète ; le sommer au grain des détails le compte plusieurs fois. Il faut respecter le niveau auquel le fait est défini."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une règle interne fixe une adresse actuelle unique par idClient, mais permet plusieurs clients à une adresse. Quelle dépendance est soutenue par cette règle ?",
+      "options": [
+        "adresseActuelle → idClient",
+        "adresseActuelle → numeroFacture",
+        "idClient → adresseActuelle",
+        "numeroLigne → adresseActuelle"
+      ],
+      "answer": 2,
+      "explanation": "Un client détermine ici une seule adresse actuelle. Une adresse peut en revanche correspondre à plusieurs clients, donc elle ne détermine pas un identifiant client unique et la dépendance ne s’inverse pas."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La dernière facture d’un fournisseur est supprimée ; ses coordonnées disparaissent aussi car elles n’étaient stockées que dans cette facture. Quel risque révèle ce modèle ?",
+      "options": [
+        "Une anomalie de suppression d’une information indépendante de la facture.",
+        "Une anomalie d’insertion d’une nouvelle ligne de facture.",
+        "Un contrôle excessif du domaine des montants.",
+        "Une garantie d’intégrité référentielle entre deux tables séparées."
+      ],
+      "answer": 0,
+      "explanation": "La suppression d’une opération efface une information sur le fournisseur qui devait pouvoir subsister. Le modèle mélange des faits dont les cycles de vie sont différents, ce qui crée une anomalie de suppression."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "On décompose une table en Client et Facture. Quel test vérifie que la décomposition conserve le sens du lien ?",
+      "options": [
+        "Contrôler uniquement que le nombre de colonnes a diminué.",
+        "Vérifier seulement que les noms des tables sont différents.",
+        "Comparer uniquement le temps de chargement des deux tables.",
+        "Vérifier que chaque facture retrouve le bon client par les clés prévues."
+      ],
+      "answer": 3,
+      "explanation": "Une décomposition doit préserver les relations métier, pas seulement réduire la répétition. Tester les références et la reconstruction des informations permet de repérer des liens perdus ou des associations erronées."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi définir le grain avant de choisir les colonnes d’une table ?",
+      "options": [
+        "Pour pouvoir additionner indifféremment les faits de tous les niveaux.",
+        "Pour savoir quelles informations décrivent le même fait et quelle clé peut l’identifier.",
+        "Pour garantir que chaque colonne sera unique.",
+        "Pour éviter d’exprimer toute règle de gestion."
+      ],
+      "answer": 1,
+      "explanation": "Le grain fixe l’unité d’enregistrement. Il guide les attributs qui lui appartiennent et les conditions d’identification ; mélanger différents niveaux dans une même ligne produit des répétitions et des mesures incohérentes."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un développeur affirme : « Deux colonnes ont toujours eu la même valeur dans mes essais, donc l’une détermine forcément l’autre dans toutes les situations ». Que manque-t-il ?",
+      "options": [
+        "Une égalité entre les noms des colonnes.",
+        "Une augmentation automatique de la taille de la clé.",
+        "Une justification par les règles et les situations que le modèle doit autoriser.",
+        "La seule création d’un identifiant artificiel, sans examen des règles entre les colonnes."
+      ],
+      "answer": 2,
+      "explanation": "Des valeurs coïncidentes dans un jeu d’essai peuvent être accidentelles. Il faut établir la dépendance à partir des règles de gestion, puis vérifier que les contraintes la préservent dans les situations autorisées."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une facture émise doit garder l’adresse de livraison utilisée ce jour-là. Le client possède aussi une adresse actuelle. Faut-il supprimer l’adresse de la facture au nom de la normalisation ?",
+      "options": [
+        "Non, si cette adresse historique représente un fait distinct clairement défini.",
+        "Oui, car deux adresses d’un client ne peuvent jamais avoir des rôles différents.",
+        "Oui, car toutes les factures doivent toujours afficher l’adresse la plus récente.",
+        "Non, mais il faut ensuite modifier les deux adresses à chaque déménagement."
+      ],
+      "answer": 0,
+      "explanation": "L’adresse actuelle et l’adresse au moment de la livraison ne décrivent pas le même fait. La normalisation ne justifie pas d’effacer une information historique nécessaire ; il faut clarifier le rôle de chaque donnée."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une équipe a éliminé les adresses dupliquées et considère qu’elle peut laisser tous les utilisateurs modifier les coordonnées clients. Pourquoi ce raisonnement est-il incomplet ?",
+      "options": [
+        "Une table normalisée ne peut contenir aucune adresse.",
+        "La normalisation remplace les contrôles d’identité des utilisateurs.",
+        "Les autorisations se déduisent automatiquement des clés étrangères.",
+        "La structure des données ne détermine pas à elle seule les droits de modification."
+      ],
+      "answer": 3,
+      "explanation": "Réduire les redondances protège contre certaines incohérences de stockage, pas contre des actions non autorisées. Les droits et la traçabilité doivent être conçus en complément du modèle de données."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un modèle contient EnTeteFacture(numeroFacture, date) et LigneFacture(numeroFacture, numeroLigne, produit). Où placer une date commune à toute la facture ?",
+      "options": [
+        "Uniquement dans chaque produit, même si ce produit est vendu à d’autres dates.",
+        "Dans l’en-tête, au grain de la facture.",
+        "Dans la clé de chaque client.",
+        "Uniquement dans une ligne choisie arbitrairement parmi les détails."
+      ],
+      "answer": 1,
+      "explanation": "La date décrite concerne la facture entière. La placer dans l’en-tête évite de la répéter sur chaque détail et de risquer plusieurs dates contradictoires pour une même facture."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Que signifie une dépendance fonctionnelle X → Y dans les règles d’un modèle ?",
+      "options": [
+        "Chaque valeur de Y détermine nécessairement une seule valeur de X.",
+        "X et Y doivent porter la même valeur numérique.",
+        "Une valeur de X détermine une valeur de Y, sans imposer automatiquement la réciproque.",
+        "Y doit forcément être la clé primaire de toutes les tables contenant X."
+      ],
+      "answer": 2,
+      "explanation": "La flèche exprime une détermination dans un sens précis. Plusieurs valeurs de X peuvent déterminer le même Y ; il ne faut donc ni inverser la relation ni la confondre avec une égalité de valeurs."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une table répétitive reçoit un nouvel identifiant artificiel unique, sans changer les autres colonnes ni leurs dépendances. Quelle affirmation est correcte ?",
+      "options": [
+        "L’identification des lignes peut être améliorée, mais les anomalies de données répétées peuvent subsister.",
+        "Toutes les dépendances entre attributs descriptifs disparaissent.",
+        "Les mises à jour partielles de coordonnées deviennent impossibles.",
+        "Les faits clients et factures ont automatiquement été séparés."
+      ],
+      "answer": 0,
+      "explanation": "Une clé artificielle identifie les lignes, mais n’élimine pas la répétition d’informations qui dépendent d’un autre objet. Les anomalies de modification exigent un travail sur les dépendances et le découpage."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel ensemble de contrôles complète utilement la normalisation d’un modèle client-facture ?",
+      "options": [
+        "Un tri et une largeur de colonnes identiques dans tous les exports.",
+        "Une copie des coordonnées dans chaque détail de facture.",
+        "Une suppression de toutes les contraintes pour faciliter les imports.",
+        "Des clés uniques, références valides, règles de valeur et autorisations adaptées."
+      ],
+      "answer": 3,
+      "explanation": "Un modèle cohérent nécessite plusieurs contrôles complémentaires. Les dépendances et le découpage ne suffisent pas à assurer seuls l’unicité, la validité des références, les valeurs autorisées et la légitimité des modifications."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un salarié change de service. Son service actuel est répété dans toutes ses anciennes notes de frais, qui doivent pourtant conserver le service d’imputation d’origine. Quel diagnostic faut-il poser avant une mise à jour globale ?",
+      "options": [
+        "Toutes les occurrences doivent nécessairement devenir le nouveau service.",
+        "Le service actuel et le service d’imputation historique correspondent à deux faits différents.",
+        "La présence de deux services prouve toujours un doublon de salarié.",
+        "Le numéro de note de frais doit devenir la clé du service actuel."
+      ],
+      "answer": 1,
+      "explanation": "Une mise à jour globale pourrait altérer l’historique. Il faut distinguer l’affectation présente du salarié du service auquel une opération passée a été imputée, puis modéliser chaque information selon son rôle."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Après séparation de deux entités, leur jointure produit des associations erronées car elle compare des libellés non uniques. Quelle correction est pertinente ?",
+      "options": [
+        "Conserver les libellés et supprimer toutes les lignes répétées du résultat.",
+        "Remplacer toutes les clés par le premier libellé rencontré.",
+        "Reconstruire le lien sur des clés identifiant correctement les entités et vérifier ses contraintes.",
+        "Ajouter un tri sur les libellés avant de lancer la jointure."
+      ],
+      "answer": 2,
+      "explanation": "Une relation doit utiliser l’identité des objets et non une description qui peut se répéter. Des clés adaptées et une référence contrôlée préservent le sens du lien lors de la reconstruction des informations."
+    }
+  ]
+}

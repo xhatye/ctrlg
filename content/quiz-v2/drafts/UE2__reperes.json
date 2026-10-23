@@ -1,0 +1,350 @@
+{
+  "module": "UE2",
+  "chapter": "reperes",
+  "sourceHash": "5640b93f9717474207e934664f9dc429f246114d687bf17063049e59f2c34639",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle qualité résulte directement de la détention de droits sociaux d’une société ?",
+      "options": [
+        "La qualité d’associé.",
+        "La qualité de représentant de la société pour tous ses actes.",
+        "La qualité de salarié de la société.",
+        "La qualité de créancier du remboursement de tout le capital."
+      ],
+      "answer": 0,
+      "explanation": "Détenir des droits sociaux caractérise l’associé. Un mandat de direction, un contrat de travail ou une créance de prêt sont des fondements distincts."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une personne détient des titres et a aussi été nommée dirigeante. Elle signe un contrat pour la société. Quelle qualité doit être examinée pour analyser sa représentation ?",
+      "options": [
+        "Sa seule participation au capital.",
+        "Sa fonction de direction et les pouvoirs pertinents pour cet acte.",
+        "La propriété personnelle des biens de la société.",
+        "Son droit futur à percevoir un dividende."
+      ],
+      "answer": 1,
+      "explanation": "Le cumul des qualités ne les rend pas interchangeables. La signature pour la société s’analyse à partir de la fonction et des pouvoirs, non du seul nombre de titres."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un associé minoritaire ne participe pas à la gestion quotidienne. Il détient pourtant des titres de la société. Quelle affirmation respecte cette distinction ?",
+      "options": [
+        "L’absence de gestion lui fait perdre les titres détenus.",
+        "La gestion quotidienne appartient à tous les associés par le seul fait de leurs titres.",
+        "La détention de titres et l’exercice de la direction sont deux qualités distinctes.",
+        "Les titres le rendent propriétaire personnel de chaque outil utilisé."
+      ],
+      "answer": 2,
+      "explanation": "La détention de droits sociaux ne suppose pas l’exercice quotidien de la direction. Il faut analyser séparément les droits de l’associé et la fonction de gestion."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie attribue tous les contrats sociaux à l’associé le plus important, sans rechercher de mandat. Quel défaut présente-t-elle ?",
+      "options": [
+        "Elle confond la délégation consentie par le dirigeant et la nomination de celui-ci.",
+        "Elle confond l’autorisation interne d’une opération et sa réalisation envers le cocontractant.",
+        "Elle confond la qualité de bénéficiaire du contrat et celle de signataire au nom d’autrui.",
+        "Elle confond détention des titres et fonction de représentation."
+      ],
+      "answer": 3,
+      "explanation": "L’importance de la participation ne démontre pas seule l’habilitation à agir au nom de la société. Le mandat et les règles de représentation doivent être recherchés."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un changement d’associé est envisagé alors que le dirigeant reste le même. Quelles informations faut-il distinguer ?",
+      "options": [
+        "La titularité des droits sociaux et la personne qui exerce la fonction de direction.",
+        "Le nom de l’associé et celui du dirigeant, nécessairement identiques.",
+        "La propriété des titres et un transfert de tous les actifs au dirigeant.",
+        "La cession des titres et une démission de direction qu’elle démontrerait à elle seule."
+      ],
+      "answer": 0,
+      "explanation": "Les associés et le dirigeant peuvent être des personnes différentes. Un changement dans la détention des titres ne se lit pas comme la preuve automatique d’un changement de direction."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel flux relève du chiffre d’affaires plutôt que d’un apport ?",
+      "options": [
+        "La souscription de titres par un associé.",
+        "Le prix d’une vente de produits réalisée dans l’activité.",
+        "L’argent prêté à la société par un associé.",
+        "La somme déposée pour former le capital."
+      ],
+      "answer": 1,
+      "explanation": "Le chiffre d’affaires provient des ventes et prestations de l’activité. Un apport finance la société et ne constitue pas, par cette seule opération, une vente de l’entreprise."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société reçoit une somme correspondant à une souscription au capital. Comment qualifier cette entrée ?",
+      "options": [
+        "Une vente au souscripteur parce qu’il reçoit des titres.",
+        "Un dividende payé par l’associé à la société.",
+        "Un financement par apport, distinct du chiffre d’affaires.",
+        "Le remboursement d’un prêt fait par la société."
+      ],
+      "answer": 2,
+      "explanation": "L’opération de souscription concerne le financement de la société. L’entrée bancaire ne suffit pas à la classer parmi les recettes commerciales."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le compte bancaire reçoit le même jour le règlement d’une facture client et une avance d’un associé documentée comme prêt. Quel classement convient ?",
+      "options": [
+        "Deux ventes, car les deux opérations augmentent la banque.",
+        "Deux apports au capital, car les deux entrées financent l’activité.",
+        "Une distribution et un apport, en fonction de l’identité des payeurs.",
+        "Une recette commerciale et un financement de nature prêt, selon leurs opérations respectives."
+      ],
+      "answer": 3,
+      "explanation": "La variation de banque est commune, mais les opérations juridiques et économiques diffèrent. Le paiement d’un client et une avance-prêt ne se confondent pas."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant augmente le capital du montant de toutes les ventes de l’année. Quelle confusion commet-il ?",
+      "options": [
+        "Il confond le financement initial ou modifié par apports avec les recettes d’activité.",
+        "Il confond la souscription du capital et sa libération par les associés.",
+        "Il confond le nominal des titres et la prime payée lors de leur émission.",
+        "Il confond une incorporation de réserves au capital et une souscription en numéraire."
+      ],
+      "answer": 0,
+      "explanation": "Le capital et le chiffre d’affaires mesurent des objets différents. Des ventes peuvent modifier la trésorerie sans constituer, par elles-mêmes, de nouveaux apports au capital."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un associé met un matériel à disposition de la société. Le dossier ne précise pas s’il s’agit d’un apport, d’un prêt d’usage ou d’une location. Que vérifier avant de modifier le capital ?",
+      "options": [
+        "La présence matérielle du bien dans les locaux seulement.",
+        "La qualification et les documents de l’opération convenue.",
+        "La valeur de revente du matériel seulement.",
+        "La quantité de produits fabriqués grâce au matériel."
+      ],
+      "answer": 1,
+      "explanation": "La mise à disposition ne prouve pas sa qualification. Il faut le document qui permet de distinguer apport, droit d’usage et location avant d’en tirer un effet sur le capital."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi faut-il identifier la forme sociale avant d’appliquer une règle de décision ?",
+      "options": [
+        "Parce que toute société doit suivre les règles du plus grand groupe du secteur.",
+        "Parce que le dirigeant choisit librement toute règle de vote.",
+        "Parce que le cadre légal et l’organisation statutaire dépendent du régime concerné.",
+        "Parce que le montant du capital impose à lui seul toutes les procédures."
+      ],
+      "answer": 2,
+      "explanation": "Les règles ne se transposent pas indifféremment d’une forme à l’autre. La loi et les statuts pertinents permettent d’identifier l’organe et la procédure de la décision."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise veut appliquer à sa décision les statuts d’une autre société trouvés dans un modèle. Quel document doit servir de base à l’examen interne ?",
+      "options": [
+        "Le modèle le plus récent du secteur.",
+        "Le modèle dont le capital est le plus proche.",
+        "L’ancienne décision d’un concurrent ayant le même dirigeant.",
+        "Les statuts de la société concernée et le cadre légal de sa forme."
+      ],
+      "answer": 3,
+      "explanation": "Un modèle externe ne documente pas l’organisation de la société du dossier. Il faut examiner ses propres statuts dans les limites des règles applicables."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dirigeant envisage une décision et un associé affirme qu’elle revient à la collectivité. Quel contrôle permet de trancher la compétence ?",
+      "options": [
+        "Qualifier la décision puis rechercher sa répartition dans la loi et les statuts.",
+        "Retenir la volonté de la personne qui a proposé la décision.",
+        "Attribuer la compétence à celui qui finance la plus grande dépense.",
+        "Confier toute décision au détenteur du plus grand nombre de titres."
+      ],
+      "answer": 0,
+      "explanation": "La compétence se détermine pour l’opération précise et le régime de la société. Ni l’initiative ni la puissance financière n’établissent seules l’organe compétent."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une clause des statuts est considérée comme suffisante pour écarter toute règle légale. Quelle analyse corrige cette affirmation ?",
+      "options": [
+        "Une clause signée par tous les associés peut écarter aussi bien une règle impérative qu’une règle supplétive.",
+        "Ils organisent la société dans les limites des règles qui lui sont applicables.",
+        "La publication des statuts rend leurs clauses prioritaires sur les règles impératives de la forme sociale.",
+        "La liberté statutaire dispense de distinguer règles impératives et supplétives dans la forme retenue."
+      ],
+      "answer": 1,
+      "explanation": "Les statuts organisent le fonctionnement mais s’inscrivent dans un cadre légal. Leur présence ne permet pas de neutraliser une limite impérative."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des statuts ont été modifiés ; le dossier contient deux versions sans indication de leurs dates d’effet. Quelle pièce compléter avant d’examiner une décision passée ?",
+      "options": [
+        "La version la plus récente, retenue comme applicable à toutes les décisions antérieures.",
+        "La version signée par le plus grand nombre d’associés, sans rechercher la date de son adoption.",
+        "Les actes et dates permettant d’identifier la version applicable à cette décision.",
+        "La version déposée après la décision, tenue pour preuve qu’elle la régissait déjà."
+      ],
+      "answer": 2,
+      "explanation": "Le texte pertinent est celui applicable à la situation examinée. La coexistence de versions exige de vérifier la chronologie plutôt que choisir celle qui conduit au résultat souhaité."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une SARL exerce une activité civile. Un étudiant conclut qu’elle ne peut donc pas être une société commerciale. Que prévoit l’article L210-1 du Code de commerce ?",
+      "options": [
+        "La qualification dépend uniquement de l’activité effectivement exercée, indépendamment de la forme.",
+        "La SARL devient commerciale lorsque ses associés ont eux-mêmes la qualité de commerçant.",
+        "La SARL n’est commerciale que si cette qualité figure expressément dans son objet statutaire.",
+        "La SARL est commerciale à raison de sa forme, quel que soit son objet."
+      ],
+      "answer": 3,
+      "explanation": "L’article L210-1 retient notamment la commercialité par la forme : la SARL figure parmi les formes commerciales quel que soit leur objet. Il ne faut pas confondre la nature civile de l’activité avec la qualification de la société qui l’exerce.",
+      "references": [
+        {
+          "title": "Code de commerce, article L210-1, commercialité par la forme",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006222344/2026-08-27"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une personne a conclu un engagement au nom d’une société commerciale en formation. La société est ensuite immatriculée, mais n’a pas repris cet engagement. Quelle affirmation correspond à L210-6 ?",
+      "options": [
+        "La personne qui a agi reste tenue ; la seule immatriculation ne vaut pas reprise de cet engagement.",
+        "L’immatriculation transfère l’engagement à la société même en l’absence de reprise.",
+        "Chaque associé devient tenu de cet engagement du seul fait qu’il a souscrit les statuts.",
+        "La dette disparaît avec la période de formation, faute de personnalité morale à la signature."
+      ],
+      "answer": 0,
+      "explanation": "Les personnes ayant agi au nom d’une société en formation restent tenues des actes ainsi accomplis, sauf reprise par la société régulièrement constituée et immatriculée. Il faut distinguer l’acquisition de la personnalité morale et la reprise d’un engagement précis.",
+      "references": [
+        {
+          "title": "Cour de cassation, rapport annuel 2023, actes des sociétés en formation",
+          "url": "https://www.courdecassation.fr/publications/rapport-annuel/rapport-annuel-2023/iii-arrets-rendus-par-les-chambres"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un créancier demande si les associés doivent répondre d’une dette sociale ; la forme de la société n’est pas précisée. Quelle donnée doit être obtenue ?",
+      "options": [
+        "Le capital souscrit, pris comme plafond personnel commun à toutes les formes sociales.",
+        "La forme sociale et les éventuels engagements personnels pertinents.",
+        "Le statut majoritaire ou minoritaire des associés, retenu comme critère unique de leur obligation aux dettes.",
+        "La distinction entre associés dirigeants et non dirigeants, retenue comme critère exclusif de recours."
+      ],
+      "answer": 1,
+      "explanation": "Les conséquences sur les associés varient avec le régime et les garanties. La seule présence d’une société ne permet pas une conclusion universelle sur tout risque personnel."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie écrit : « La société est distincte, donc aucun associé ne peut jamais être poursuivi pour quelque fondement que ce soit. » Quelle limite manque ?",
+      "options": [
+        "La substitution de l’associé majoritaire à la société pour ses dettes en raison de son contrôle.",
+        "La responsabilité personnelle de l’ensemble des associés dès qu’un dirigeant a engagé la société.",
+        "L’examen du régime de responsabilité et des engagements personnels distincts.",
+        "La limitation des recours aux seuls apports, considérée comme commune à toute forme de société."
+      ],
+      "answer": 2,
+      "explanation": "La distinction des personnes n’équivaut pas à une immunité personnelle générale. Le régime applicable et les garanties ou responsabilités propres doivent être étudiés."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le gérant paie une dépense personnelle avec le compte de la société. Pour analyser l’opération, quelle séparation doit être conservée ?",
+      "options": [
+        "La dépense est nécessairement sociale parce que la banque sociale l’a payée.",
+        "La société devient titulaire des droits personnels du gérant par ce versement.",
+        "Les deux patrimoines fusionnent pour toutes les dépenses futures.",
+        "L’identité de la personne bénéficiaire et celle dont les fonds ont été utilisés."
+      ],
+      "answer": 3,
+      "explanation": "La source du versement ne détermine pas seule la nature de la dépense. Les sujets et patrimoines doivent rester distincts pour qualifier l’opération et rechercher le fondement pertinent."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société et son associé sont chacun débiteurs d’un fournisseur pour deux opérations différentes. Comment présenter les demandes ?",
+      "options": [
+        "Séparer chaque dette, son débiteur et son fondement.",
+        "Fusionner les dettes parce que le créancier est identique.",
+        "Attribuer les deux dettes à la société parce qu’elle tient une comptabilité.",
+        "Attribuer les deux dettes à l’associé parce qu’il contrôle la société."
+      ],
+      "answer": 0,
+      "explanation": "Un créancier commun ne supprime pas les personnes engagées. Identifier chaque opération permet de rattacher la dette au bon débiteur."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les titres d’une société changent de propriétaire alors que le matériel est toujours détenu par la société. Quelle distinction aide à lire cette opération ?",
+      "options": [
+        "La vente des titres équivaut à la vente directe de chaque matériel à l’acquéreur.",
+        "Le changement d’associé se distingue du titulaire des actifs sociaux.",
+        "Le dirigeant devient propriétaire du matériel au jour de la cession.",
+        "La société perd sa personnalité dès qu’un titre est cédé."
+      ],
+      "answer": 1,
+      "explanation": "La propriété des titres et celle des actifs sociaux portent sur des objets différents. Le changement d’associé ne doit pas être décrit comme un transfert direct de tous les biens sociaux."
+    }
+  ]
+}

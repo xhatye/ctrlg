@@ -1,0 +1,248 @@
+{
+  "sourceHash": "f04383bfa86f9bdec4309e0ab3a32bfe0b30e2724e2d11e9893b7cb320e6f5d0",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "0a9abc8c7fc6813af4b963e647afc341fbde3608ebeed91407cc986a05432311",
+      "selected": 0,
+      "reason": "La nature des titres et la forme sociale déterminent le cadre de transmission, distinct du seul montant ou du statut fiscal personnel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "e07a24850c8bc91b7bca56d0a84aa59ac9a55d560c96adeca378a835c9e12b7f",
+      "selected": 0,
+      "reason": "Il faut connaître le nombre, les catégories et les droits réellement transmis ; le prix global seul ne décrit pas l’objet.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "ae01efca3890e3819dee22a9a15661a9dc2181fd05436400059019e8acb6b596",
+      "selected": 0,
+      "reason": "La négociabilité initiale des actions suppose l’immatriculation selon le premier alinéa de L228-10, non le seul dépôt d’apports.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "b3a1ca0a43a63774643d9393b124cc6088416e3b4e0b15591bf8a09296e97605",
+      "selected": 3,
+      "reason": "Les clauses des catégories déterminent les droits financiers futurs, non le dividende ancien ou le seul pourcentage de capital.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "90d8d510d87daca12677275ea99258ef597d96c858d6dba6a0e3885408e7ed05",
+      "selected": 3,
+      "reason": "Il faut les règles et clauses de SAS ; le modèle de SARL ne devient pas supplétif ni applicable par changement d’intitulés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "d676fc490aaa2426a1f08acaf4d82d003ebe865bba8254124ceabf37e909a50c",
+      "selected": 3,
+      "reason": "L’agrément autorise une transmission et la préemption donne une priorité d’acquisition, deux objets différents.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "55bbc5e27e5e2783b446d8a469e6f9f3ae084deb00d64d7a82ee0a9f3fb2b0d8",
+      "selected": 3,
+      "reason": "Le champ de la clause doit couvrir la donation avant d’étendre une priorité prévue pour des ventes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "8371d39449aeea9514e8a4e093153fc7958f53a7c84f57640f7adcb3f456dd99",
+      "selected": 0,
+      "reason": "La renonciation à une priorité d’achat ne satisfait pas par elle-même la procédure distincte d’agrément.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "ebb6f93e5a49949e4a83e3c6fafd551e0ea828ab32193c3108954a48a38fdb7a",
+      "selected": 0,
+      "reason": "La notification doit contenir l’identité requise de l’acquéreur ; prix et date seuls ne la remplacent pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "1b76f8c5a99b8ebfbdaccb7a2963009e5bdcd32b3ffc7553014ea559bee988d4",
+      "selected": 3,
+      "reason": "Le plafond légal de l’inaliénabilité statutaire en SAS est dix ans, sans prolongation par le seul accord de tous.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "fd97a1e6cbe6d4bd70f4af453edc8fa7afd7d51858bf977a5bd8a1f8c95c00da",
+      "selected": 2,
+      "reason": "Chaque conséquence doit découler du régime et du manquement identifié ; ni sanction maximale ni remboursement universel du prix ne conviennent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "6531450ae9ef7c99724afd632a0a5b6c8d71f683277cc1e8d2e26846c2c1ee83",
+      "selected": 1,
+      "reason": "Un accord de cession et ses effets opposables doivent être contrôlés séparément ; la seule signature ne démontre pas toutes les formalités.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "5e8e3acf9918e713a28dbbdca4993a5d4040a14332a5cee85283829b40abc294",
+      "selected": 2,
+      "reason": "L’acte signé est une étape distincte de la formalité encore à faire et des effets qui dépendent de celle-ci.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "0f65128facdacab14194f573380bb74f571e056ce7ab31846ca771bab2aa2112",
+      "selected": 1,
+      "reason": "L’autorisation doit viser l’opération et l’acquéreur réels ; celle d’une autre opération ne se transpose pas seule.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "5b4336953a5dd75f4f634a666eae1355d363a748b790a58e43375f28fcf88da3",
+      "selected": 0,
+      "reason": "Un projet préparatoire ne démontre pas l’accord définitif ni toutes les étapes de réalisation de la cession.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "225239d3a7dfcb7f330f3cbf68653f391e437f78350bcebbb503cd3010cbb1b9",
+      "selected": 1,
+      "reason": "Chaque date doit être rattachée à l’effet qu’elle produit ; la première ou dernière date ne convient pas à tous les rapports.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "2ebd37bc416567f60f77894c5ef80673bfba4673a4b71318bd01010e30c8b86e",
+      "selected": 0,
+      "reason": "La traçabilité impose les versions finales, droits identifiés, procédures accomplies et garanties, au-delà des seuls projets ou paiement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "f512e99bd8015374ca3a25d0d983c227ef38a5b3a9c260e538f53a22e2c1785e",
+      "selected": 1,
+      "reason": "La formule, ses données et sa date d’application définissent l’ajustement de prix, non le seul prix initial ou nominal.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "55694ee533ac319a82aa9519acb659d0b1c1de0e60bb49739915d2dc1681d149",
+      "selected": 2,
+      "reason": "Il faut les événements couverts, conditions et limites ; le nom de garantie ne prouve pas une couverture universelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "5e00935580d1d734dab272b664ba13c1e0f4a034091029d893020b571b81ba64",
+      "selected": 3,
+      "reason": "Le devoir légal d’information défini par 1112-1 ne peut être écarté par garantie, réduction de prix ou conseils des professionnels.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "cafcba0e61f7464e00b510d7d0161d79d0e6cdaca60c79e0bac53425ef9196ef",
+      "selected": 3,
+      "reason": "L’estimation personnelle de valeur est exclue du devoir légal décrit, même si les évaluations ou prix de réserve diffèrent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "20636b187cb21040e2031fc00c46b528757a764c8333b3b924475af15965eada",
+      "selected": 0,
+      "reason": "Le refus du tiers estimateur permet le recours à un autre tiers selon 1592 ; les parties ne peuvent imposer un prix personnel par défaut.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

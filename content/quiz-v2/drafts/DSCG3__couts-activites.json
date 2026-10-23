@@ -1,0 +1,669 @@
+{
+  "module": "DSCG3",
+  "chapter": "couts-activites",
+  "sourceHash": "67a1446eb71ac7776eaefd100d38217fae0d55773bc294b36375ccdbbc121ead",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans une modélisation par activités, une activité correspond à :",
+      "options": [
+        "Un ensemble de tâches concourant à une finalité identifiable.",
+        "Un regroupement de tous les coûts ayant le même numéro comptable.",
+        "Un produit vendu, quel que soit le processus nécessaire.",
+        "Un service juridique qui coïncide nécessairement avec un centre de coût."
+      ],
+      "answer": 0,
+      "explanation": "L’activité décrit ce que fait l’organisation pour une finalité. Elle ne se confond pas automatiquement avec un compte, un produit ou un service."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un atelier réalise réglage, fabrication et contrôle. Les petites séries demandent beaucoup de réglages. Quel découpage rend mieux compte de cette consommation ?",
+      "options": [
+        "Une activité unique répartie uniquement selon les ventes.",
+        "Une activité de réglage distincte lorsque son coût est significatif.",
+        "Une activité par salarié, indépendamment de ses tâches.",
+        "Une activité de réglage regroupée avec la livraison parce que les deux sont indirectes."
+      ],
+      "answer": 1,
+      "explanation": "Isoler les réglages permet de relier leur coût aux séries qui les provoquent. La pertinence du découpage dépend aussi de la significativité et des données disponibles."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un modèle comporte cinq cents activités, mais les équipes ne savent plus actualiser leurs coûts ni leurs volumes. Quel compromis faut-il rechercher ?",
+      "options": [
+        "Conserver la granularité pour préserver une exactitude supposée.",
+        "Répartir à parts égales les coûts des activités sans données.",
+        "Un niveau de détail utile aux décisions et maintenable avec des données fiables.",
+        "Supprimer toute distinction entre coûts directs et indirects."
+      ],
+      "answer": 2,
+      "explanation": "Une précision théorique qui empêche la mise à jour dégrade l’utilité du modèle. Le détail doit être proportionné aux enjeux et aux moyens de mesure."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La réception des commandes et le traitement des réclamations utilisent la même équipe mais ont des déterminants de charge différents. Quelle analyse est pertinente ?",
+      "options": [
+        "Les fusionner nécessairement parce que les salariés sont communs.",
+        "Affecter tout le coût au traitement des commandes car il intervient en premier.",
+        "Répartir le coût selon les effectifs des clients sans examiner les tâches.",
+        "Examiner deux activités avec une affectation documentée des ressources partagées."
+      ],
+      "answer": 3,
+      "explanation": "Une équipe peut effectuer plusieurs activités. Les distinguer peut éclairer la consommation de ressources si l’affectation des coûts est crédible."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une activité interne n’apporte pas de valeur au client mais demeure nécessaire à un contrôle de risque. Quelle conclusion de gestion est appropriée ?",
+      "options": [
+        "Évaluer sa nécessité et son organisation avant d’envisager une réduction.",
+        "Supprimer le contrôle dès lors que le client ne le demande pas explicitement, sans analyser le risque couvert.",
+        "Conserver le contrôle dans sa forme actuelle au seul motif qu’il existe, sans examiner ses objectifs ni son organisation.",
+        "Déplacer son coût vers une autre activité pour rendre positive la valeur commerciale apparente de celle-ci."
+      ],
+      "answer": 0,
+      "explanation": "L’absence de valeur directement perçue ne prouve pas l’absence d’utilité. Les obligations et risques couverts doivent être examinés."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel est le rôle principal d’un inducteur dans un calcul de coût par activités ?",
+      "options": [
+        "Fixer une répartition égale entre produits même lorsqu’ils sollicitent différemment l’activité.",
+        "Représenter un facteur de consommation des ressources de l’activité.",
+        "Remplacer la consommation de l’activité par la capacité de chaque produit à supporter une charge selon son prix.",
+        "Rendre automatiquement évitable à court terme toute ressource affectée dès qu’un inducteur diminue."
+      ],
+      "answer": 1,
+      "explanation": "L’inducteur cherche à expliquer la consommation de l’activité. Il fournit une base d’allocation sans prouver que tous ses coûts sont évitables à court terme."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le coût de préparation d’une expédition dépend surtout du nombre de colis, et peu de leur valeur. Quel inducteur paraît le plus cohérent ?",
+      "options": [
+        "Le chiffre d’affaires facturé.",
+        "Le prix moyen du produit.",
+        "Le nombre de colis préparés.",
+        "La marge commerciale du destinataire."
+      ],
+      "answer": 2,
+      "explanation": "Le nombre de colis est relié au travail de préparation décrit. La valeur commerciale serait une donnée accessible mais peu explicative de cette consommation."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une activité de gestion des commandes est allouée au chiffre d’affaires uniquement parce que cette donnée existe déjà. Quel contrôle permet de valider ou de remettre en cause le choix de cet inducteur ?",
+      "options": [
+        "Conserver le chiffre d’affaires dès qu’un ratio coût/ventes peut être calculé, sans examiner les tâches.",
+        "Retenir le chiffre d’affaires dès qu’il est suivi plus souvent que les commandes, sans tester leur lien avec le travail.",
+        "Choisir la base qui attribue le coût le plus faible au produit prioritaire, sans analyser sa consommation.",
+        "Étudier le lien entre les caractéristiques des commandes et le travail réellement provoqué, puis comparer les bases possibles."
+      ],
+      "answer": 3,
+      "explanation": "La disponibilité d’une donnée n’établit pas sa pertinence causale. Il faut examiner le nombre et la complexité des commandes notamment."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une équation de temps prévoit 2 minutes de base par commande, 0,5 minute par ligne, 3 minutes si la commande est urgente et 2 minutes supplémentaires si elle est à la fois urgente et exportée. Quelle durée prévoit-elle pour une commande de dix lignes, urgente et exportée ?",
+      "options": [
+        "12 minutes",
+        "10 minutes",
+        "7 minutes",
+        "15 minutes"
+      ],
+      "answer": 0,
+      "explanation": "Le temps prévu est 2 + 0,5 × 10 + 3 + 2 = 12 minutes. La dernière majoration correspond à la combinaison des deux caractéristiques ; l’omettre donne 10 minutes. Le modèle ne consiste pas seulement à compter les commandes avec un poids uniforme.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 2
+                    },
+                    {
+                      "op": "*",
+                      "args": [
+                        {
+                          "value": 0.5
+                        },
+                        {
+                          "value": 10
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "expected": 12,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "Kaplan et Anderson — Time-Driven Activity-Based Costing, HBS working paper",
+          "url": "https://www.hbs.edu/ris/download.aspx?name=04-045.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une forte corrélation historique existe entre ventes et coûts de contrôle, mais les contrôles sont déclenchés par lots, de tailles variables. Quelle prudence retenir ?",
+      "options": [
+        "La stabilité de la corrélation dans le passé suffit à établir un lien de consommation proportionnel pour toutes les tailles de lot.",
+        "Vérifier le mécanisme réel et la stabilité du lien avant de choisir les ventes comme inducteur.",
+        "La conversion des lots en euros de ventes suffit à rendre proportionnel le travail de contrôle, sans mesurer les contrôles.",
+        "La présence de la même croissance moyenne des ventes et des contrôles suffit à écarter le rôle de la taille des lots."
+      ],
+      "answer": 1,
+      "explanation": "Une corrélation peut dépendre du mélange ou de la taille des lots. Le déclenchement du contrôle doit être compris pour choisir une base robuste."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La documentation technique et l’homologation d’une gamme doivent être maintenues tant que cette gamme existe, indépendamment du nombre d’unités ou de lots de la période. Quel niveau de coût décrit le mieux cette activité dans la hiérarchie proposée ?",
+      "options": [
+        "Un coût unitaire, causé de façon proportionnelle par chaque pièce fabriquée.",
+        "Un coût de lot, causé à l’identique par chaque lancement de série.",
+        "Un coût de maintien du produit ou de la gamme, à distinguer des coûts par unité et par lot.",
+        "Un coût de chaque transaction de vente, causé uniquement par le nombre de factures."
+      ],
+      "answer": 2,
+      "explanation": "La ressource décrite est liée au maintien d’une gamme en activité, et non directement à chaque unité ou lancement. La répartir au seul volume peut être une convention d’imputation, sans transformer son niveau de causalité ni démontrer son évitabilité à court terme.",
+      "references": [
+        {
+          "title": "ACCA — Activity-based management",
+          "url": "https://www.accaglobal.com/gb/en/student/exam-support-resources/professional-exams-study-resources/p5/technical-articles/activity-based-management.html"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux dossiers demandent chacun dix minutes, mais l’un mobilise un expert coûteux et l’autre une ressource standard. Un modèle applique le même taux moyen à toutes les minutes. Quelle information supplémentaire permet de représenter l’intensité différente de ressources ?",
+      "options": [
+        "Le seul nombre total de dossiers, sans distinguer la ressource qui intervient.",
+        "Le prix de vente de chaque dossier, supposé mesurer la consommation d’expertise.",
+        "La moyenne simple des deux tarifs, appliquée de nouveau aux deux durées identiques.",
+        "Les minutes consommées par catégorie de ressource et leurs taux de coût appropriés."
+      ],
+      "answer": 3,
+      "explanation": "Une durée identique n’implique pas un coût identique si les ressources mobilisées diffèrent. Distinguer les catégories de ressources et leurs temps permet de représenter cette intensité. Un taux moyen unique peut masquer la différence, même avec une mesure de durée précise.",
+      "references": [
+        {
+          "title": "Kaplan et Anderson — Time-Driven Activity-Based Costing, HBS working paper",
+          "url": "https://www.hbs.edu/ris/download.aspx?name=04-045.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un lot consomme 8 réglages au coût de 150 € et 30 contrôles au coût de 20 €. Quel coût d’activités lui affecter ?",
+      "options": [
+        "1 800 €.",
+        "1 350 €.",
+        "1 200 €.",
+        "600 €."
+      ],
+      "answer": 0,
+      "explanation": "Le coût affecté est 8 × 150 + 30 × 20 = 1 800 €. Les deux consommations doivent être prises en compte.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 8
+                },
+                {
+                  "value": 150
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 30
+                },
+                {
+                  "value": 20
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1800,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une équipe coûte 18 000 € sur le mois. Elle dispose de 4 000 heures rémunérées, dont 400 d’absence planifiée et 600 de tâches internes non disponibles pour les dossiers. La capacité pratique retenue exclut ces deux catégories. Quel taux de coût par heure disponible obtient-on ?",
+      "options": [
+        "4,50 € par heure",
+        "6 € par heure",
+        "5 € par heure",
+        "18 € par heure"
+      ],
+      "answer": 1,
+      "explanation": "La capacité pratique disponible est 4 000 − 400 − 600 = 3 000 heures. Le taux est 18 000/3 000 = 6 € par heure. Employer les 4 000 heures rémunérées confondrait capacité théorique et temps effectivement disponible pour traiter les dossiers selon le modèle.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 18000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 4000
+                    },
+                    {
+                      "value": 400
+                    }
+                  ]
+                },
+                {
+                  "value": 600
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 6,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "Kaplan et Anderson — Time-Driven Activity-Based Costing, HBS working paper",
+          "url": "https://www.hbs.edu/ris/download.aspx?name=04-045.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Pour prévoir une activité, 80 % des demandes suivent un parcours de deux minutes et 20 % un parcours de dix minutes, catégories exclusives couvrant toutes les demandes. Au taux de 3 € par minute, quel coût de capacité moyen attendu par demande prévoir ?",
+      "options": [
+        "6 €",
+        "30 €",
+        "10,80 €",
+        "18 €"
+      ],
+      "answer": 2,
+      "explanation": "Le temps attendu est 0,80 × 2 + 0,20 × 10 = 3,6 minutes par demande. Le coût de capacité attendu est donc 3,6 × 3 = 10,80 €. Une moyenne simple des deux parcours attribuerait à tort la même fréquence à chacun.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 0.8
+                    },
+                    {
+                      "value": 2
+                    }
+                  ]
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 0.2
+                    },
+                    {
+                      "value": 10
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 3
+            }
+          ]
+        },
+        "expected": 10.8,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "Kaplan et Anderson — Time-Driven Activity-Based Costing, HBS working paper",
+          "url": "https://www.hbs.edu/ris/download.aspx?name=04-045.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une activité exige 2 800 minutes par mois. Chaque poste, disponible par bloc entier de 1 000 minutes, coûte 1 000 €. Deux améliorations indépendantes économisent respectivement 500 et 400 minutes. Les postes devenus inutiles peuvent réellement être supprimés dès le mois suivant. Quelle économie mensuelle permet leur mise en œuvre conjointe ?",
+      "options": [
+        "900 €",
+        "0 €, puisque chaque amélioration seule laisse trois postes nécessaires.",
+        "2 000 €",
+        "1 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Avant amélioration, il faut trois postes pour 2 800 minutes. Une seule action laisse 2 300 ou 2 400 minutes, donc toujours trois postes. Ensemble, elles ramènent le besoin à 1 900 minutes : deux postes suffisent. Le coût évitable passe de 3 000 à 2 000 €, soit une économie de 1 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 3
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 2
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1000,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "Kaplan et Anderson — Time-Driven Activity-Based Costing, HBS working paper",
+          "url": "https://www.hbs.edu/ris/download.aspx?name=04-045.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Deux choix donnent les gains suivants : A rapporte 100 en état favorable et −80 en état défavorable ; B rapporte 50 puis 20. Aucune probabilité n’est donnée. Le décideur minimise le regret maximal, le regret étant l’écart au meilleur gain disponible dans chaque état. Quel choix et quel regret maximal ce critère retient-il ?",
+      "options": [
+        "50, avec le choix B",
+        "100, avec le choix A",
+        "0, avec le choix A",
+        "30, avec le choix B"
+      ],
+      "answer": 0,
+      "explanation": "À l’état favorable, le meilleur gain est 100 : les regrets sont 0 pour A et 50 pour B. À l’état défavorable, le meilleur est 20 : les regrets sont 100 pour A et 0 pour B. Les regrets maximaux sont donc 100 et 50 ; le critère retient B, sans inventer de probabilités.",
+      "calculation": {
+        "expression": {
+          "op": "min",
+          "args": [
+            {
+              "op": "max",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 100
+                    },
+                    {
+                      "value": 100
+                    }
+                  ]
+                },
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 20
+                    },
+                    {
+                      "value": -80
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "max",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 100
+                    },
+                    {
+                      "value": 50
+                    }
+                  ]
+                },
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 20
+                    },
+                    {
+                      "value": 20
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 50,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Lancer une activité rapporte 100 si la demande est forte et −80 si elle est faible, avec probabilité 50 % pour chaque état. Ne pas lancer rapporte zéro. Le décideur maximise le gain espéré. Une information parfaite permettrait de connaître l’état avant de choisir. Quel prix maximal espéré serait justifié pour cette information, avant tout autre coût ?",
+      "options": [
+        "10",
+        "40",
+        "50",
+        "90"
+      ],
+      "answer": 1,
+      "explanation": "Sans information, lancer procure 0,5 × 100 − 0,5 × 80 = 10, meilleur que zéro. Avec information parfaite, on lance seulement si la demande est forte : espérance 0,5 × 100 = 50. La valeur supplémentaire de l’information est donc 50 − 10 = 40, et non l’intégralité du gain informé.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.5
+                },
+                {
+                  "value": 100
+                }
+              ]
+            },
+            {
+              "op": "max",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "op": "*",
+                      "args": [
+                        {
+                          "value": 0.5
+                        },
+                        {
+                          "value": 100
+                        }
+                      ]
+                    },
+                    {
+                      "op": "*",
+                      "args": [
+                        {
+                          "value": 0.5
+                        },
+                        {
+                          "value": -80
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "value": 0
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 40,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "ACCA — Decision trees and value of perfect information",
+          "url": "https://www.accaglobal.com/uk/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/decision-trees.html"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un service supprimé libérerait du temps utilisable pour une nouvelle activité rentable. Quel effet mérite d’être étudié ?",
+      "options": [
+        "La valeur comptable du temps libéré, obtenue en multipliant les heures par un taux moyen, sans vérifier l’activité nouvelle.",
+        "La totalité des charges affectées au service supprimé, considérée comme une économie même si les ressources sont réutilisées.",
+        "La contribution accessible grâce à la capacité libérée.",
+        "Le chiffre d’affaires de l’activité nouvelle sans retrancher les autres ressources nécessaires à sa réalisation."
+      ],
+      "answer": 2,
+      "explanation": "Une capacité libérée peut avoir une valeur d’opportunité lorsqu’une utilisation alternative crédible existe. Il faut documenter cette alternative et ses contraintes."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un produit semble déficitaire après répartition du siège. Sa suppression ne réduirait aucune charge du siège et ferait perdre une contribution positive. Quel risque présente sa suppression ?",
+      "options": [
+        "Le siège verrait automatiquement ses dépenses baisser à hauteur de l’allocation.",
+        "La marge sur coût variable des autres produits augmenterait mécaniquement.",
+        "Le coût imputé au produit disparaîtrait nécessairement du résultat consolidé.",
+        "Le résultat global pourrait baisser malgré la disparition de la perte analytique du produit."
+      ],
+      "answer": 3,
+      "explanation": "La contribution perdue est réelle, tandis que les charges communes resteraient. Une perte après allocation ne suffit donc pas à justifier la suppression."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux fournisseurs ont des prix différents. Le moins cher exige davantage de contrôles et de retours. Quel périmètre éclaire le choix ?",
+      "options": [
+        "Le coût différentiel d’achat, de contrôle et de non-qualité attendu.",
+        "Le seul prix unitaire affiché, puisque les contrôles sont internes.",
+        "Le seul coût historique du service achats.",
+        "La part de charges du siège déjà affectée à chaque fournisseur."
+      ],
+      "answer": 0,
+      "explanation": "Les activités induites par la solution font partie de ses conséquences économiques. Le prix d’achat seul peut inverser le classement pertinent."
+    },
+    {
+      "id": "q22",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Après adoption d’une méthode par activités, la somme des coûts affectés change sans variation des dépenses ni du périmètre. Quel contrôle prioritaire effectuer ?",
+      "options": [
+        "Recalculer seulement les prix de vente pour obtenir la marge attendue sans vérifier la somme des charges allouées.",
+        "Réconcilier les ressources incluses, les affectations et les éventuels doubles comptes.",
+        "Répartir le solde inexpliqué au prorata des coûts déjà affectés avant d’en rechercher la nature.",
+        "Présenter l’écart de somme comme une réduction de dépenses issue du nouveau calcul, sans pièce de ressource correspondante."
+      ],
+      "answer": 1,
+      "explanation": "Un changement de méthode modifie normalement la répartition, pas les dépenses du périmètre. La réconciliation révèle omissions, doubles affectations ou différences de champ."
+    }
+  ]
+}

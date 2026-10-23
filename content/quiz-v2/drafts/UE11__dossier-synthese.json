@@ -1,0 +1,465 @@
+{
+  "module": "UE11",
+  "chapter": "dossier-synthese",
+  "sourceHash": "0c136dcaa42d66603a0aeb05b8915b774b7380ce491ae91ee5b649fc7c927df7",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Huit produits distincts sur 400 contrôlés présentent au moins un défaut. Quel taux de produits défectueux mesure-t-on ?",
+      "options": [
+        "50 %",
+        "2 %",
+        "0,02 %",
+        "8 %"
+      ],
+      "answer": 1,
+      "explanation": "Le taux de produits concernés est 8 / 400 × 100 = 2 %. Les produits sont comptés une fois, indépendamment du nombre de défauts éventuels sur chacun.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 8
+                },
+                {
+                  "value": 400
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 2,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Trente reprises sont réalisées à un coût moyen fourni de 25 € par reprise, incluant seulement les ressources de traitement définies. Quel coût de reprises calcule-t-on ?",
+      "options": [
+        "55 €",
+        "1,20 €",
+        "750 €",
+        "25 €"
+      ],
+      "answer": 2,
+      "explanation": "Le coût est 30 × 25 = 750 €. Cette estimation couvre le traitement selon la définition donnée, pas automatiquement une perte de clientèle, une pénalité ou toute conséquence commerciale.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 30
+            },
+            {
+              "value": 25
+            }
+          ]
+        },
+        "expected": 750,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le taux de défaut augmente. Les données ne précisent ni matière, ni réglage, ni contrôle. Quelle conclusion est étayée ?",
+      "options": [
+        "Le signal est à investiguer, sans cause unique démontrée par ce taux.",
+        "Le taux permet d’attribuer d’abord le défaut au fournisseur, parce que toute fabrication commence par un approvisionnement.",
+        "Le taux permet de conclure à un problème de compétence, parce qu’il porte sur la production réalisée par les opérateurs.",
+        "Le taux permet de conclure à un problème de réglage, même si aucun paramètre n’a été suivi."
+      ],
+      "answer": 0,
+      "explanation": "L’indicateur décrit un résultat et oriente le diagnostic. Il faut des éléments complémentaires pour distinguer les mécanismes avant d’attribuer une responsabilité ou choisir une action."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le nombre d’incidents baisse mais le volume traité est divisé par deux. Quel contrôle évite un bilan trop favorable ?",
+      "options": [
+        "Comparer seulement les nombres d’incidents, puisque les unités défectueuses représentent le même événement.",
+        "Comparer les coûts totaux de reprise sans regarder les volumes traités, même si le coût par incident varie.",
+        "Comparer le nombre d’incidents à l’effectif salarié, même si l’exposition pertinente est le nombre de produits traités.",
+        "Comparer les taux sur une population et une période cohérentes."
+      ],
+      "answer": 3,
+      "explanation": "Une baisse de volume peut expliquer moins d’incidents. Le suivi doit rapporter les événements à leur exposition et ne pas confondre un total plus faible avec une meilleure qualité relative."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dix produits présentent chacun deux incidents. Que faut-il distinguer dans le tableau ?",
+      "options": [
+        "Le nombre de produits défectueux est vingt, car chaque incident doit être rattaché à un produit différent.",
+        "Le nombre d’événements et le nombre de produits distincts concernés.",
+        "Le nombre de produits défectueux est cinq, car il faut diviser les dix produits par deux incidents.",
+        "Le nombre d’incidents est dix, car un tableau qualité ne doit conserver qu’un événement par produit."
+      ],
+      "answer": 1,
+      "explanation": "La granularité détermine le ratio. Compter les incidents n’est pas compter les produits ayant au moins un défaut ; le numérateur doit correspondre à la question étudiée."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un coût moyen de reprise exclut les transports. Le rapport l’appelle pourtant « perte totale » sans autre donnée. Quelle limite faut-il signaler ?",
+      "options": [
+        "Le coût moyen de reprise représente la perte totale dès lors qu’il est multiplié par toutes les reprises, même si des postes sont exclus.",
+        "Les transports peuvent être considérés comme déjà intégrés au coût moyen sans vérifier la définition de celui-ci.",
+        "Le montant ne couvre que son périmètre défini, pas toutes les conséquences.",
+        "La perte totale peut être obtenue en ajoutant au coût connu le chiffre d’affaires de tous les produits concernés, même lorsqu’ils restent vendables."
+      ],
+      "answer": 2,
+      "explanation": "Les exclusions doivent rester explicites. Une estimation partielle peut être utile, mais elle ne doit pas être présentée comme la totalité d’un impact sans documents ou hypothèses supplémentaires."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les défauts se concentrent après un réglage identifié et les contrôles documentent une variation de paramètres. Quelle piste est la mieux étayée à ce stade ?",
+      "options": [
+        "Examiner le réglage et sa relation avec les défauts, sans dépasser les preuves disponibles.",
+        "Considérer le changement de fournisseur comme première piste établie, même si aucun changement de lot n’est documenté.",
+        "Considérer la formation comme cause établie, même si les équipes et leurs pratiques sont restées identiques.",
+        "Considérer la hausse du volume comme cause établie, même si la cadence et les volumes n’ont pas changé."
+      ],
+      "answer": 0,
+      "explanation": "La concentration et les paramètres apportent une piste concrète. Ils guident l’investigation et les tests ; le commentaire doit rester lié à ce qui est observé plutôt que généraliser une accusation."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un contrôle supplémentaire diminue les défauts mais demande beaucoup de temps. Quel bilan est plus complet ?",
+      "options": [
+        "Valider le contrôle à partir du nombre de défauts détectés sans mesurer ceux qui atteignent encore les clients.",
+        "Valider le contrôle dès que sa durée est inférieure au temps de fabrication, sans comparer bénéfices et coûts pertinents.",
+        "Rejeter le contrôle sur son seul coût, sans examiner les pertes qu’il permet d’éviter.",
+        "Comparer bénéfice de qualité, coût, délais et contraintes de mise en œuvre."
+      ],
+      "answer": 3,
+      "explanation": "L’action peut améliorer une dimension et mobiliser des moyens. Le suivi doit observer ces effets ensemble pour éclairer un arbitrage, pas seulement constater que la mesure a été installée."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Sur les mêmes 500 produits, 30 ont une rayure et 20 une fissure ; 10 présentent les deux défauts. Le taux demandé porte sur les produits ayant au moins un de ces défauts. Quel taux faut-il afficher ?",
+      "options": [
+        "10 %",
+        "8 %",
+        "6 %",
+        "2 %"
+      ],
+      "answer": 1,
+      "explanation": "Les dix produits présentant les deux défauts figurent déjà dans chacun des deux comptes. Le nombre de produits concernés est 30 + 20 − 10 = 40, soit 40/500 × 100 = 8 %. Additionner les taux bruts compterait ces dix produits deux fois.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "op": "+",
+                      "args": [
+                        {
+                          "value": 30
+                        },
+                        {
+                          "value": 20
+                        }
+                      ]
+                    },
+                    {
+                      "value": 10
+                    }
+                  ]
+                },
+                {
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 8,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le coût de traitement par reprise augmente alors que la complexité des reprises change aussi. Quelle réserve est nécessaire ?",
+      "options": [
+        "La hausse du coût moyen mesure directement une baisse de productivité, même si les reprises sont devenues plus complexes.",
+        "Le coût moyen des reprises simples doit être appliqué à toutes les interventions pour neutraliser la complexité.",
+        "Le coût doit être interprété avec le type et le contenu des interventions.",
+        "Le coût moyen le plus faible doit servir de coût standard de toute reprise, même si elle requiert des opérations supplémentaires."
+      ],
+      "answer": 2,
+      "explanation": "Une moyenne peut évoluer avec le mix des travaux. Il faut définir les éléments comparés pour distinguer un changement de contenu d’une dérive à travail équivalent."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux périodes ne classent pas les incidents de la même manière ; un taux par catégorie change. Quel préalable manque à une comparaison de causes ?",
+      "options": [
+        "Des catégories et conventions comparables, ou une explication de leur modification.",
+        "La conservation du seul total toutes catégories, supposée rendre interprétable chaque variation par catégorie.",
+        "La conversion des effectifs en pourcentages, supposée supprimer à elle seule tout changement de définition.",
+        "Le classement de chaque période par fréquence décroissante, supposé rendre les catégories de même rang identiques."
+      ],
+      "answer": 0,
+      "explanation": "Une rupture de définition peut produire une variation apparente. La stabilité ou le rapprochement des catégories permet d’interpréter les données avant de conclure sur une cause réelle."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un plan d’acceptation par échantillonnage peut parfois rejeter un lot dont le niveau réel de qualité correspond au niveau jugé acceptable. Dans la terminologie des risques de ce plan, à quel risque cette situation correspond-elle ?",
+      "options": [
+        "Au risque du consommateur, défini comme l’acceptation d’un lot de qualité insuffisante.",
+        "À la proportion effective de défauts constatés dans l’échantillon, quelle que soit la décision sur le lot.",
+        "À la probabilité qu’une unité sélectionnée aléatoirement soit défectueuse, indépendamment de l’acceptation du lot.",
+        "Au risque du producteur, lié au rejet d’un lot au niveau de qualité acceptable de référence."
+      ],
+      "answer": 3,
+      "explanation": "Le risque du producteur concerne la probabilité de rejeter un lot au niveau acceptable retenu pour le plan. Le risque du consommateur porte au contraire sur l’acceptation d’un lot au niveau de qualité insuffisante défini. Ces probabilités de décision ne sont pas le seul taux de défaut observé.",
+      "references": [
+        {
+          "title": "NIST — Lot acceptance sampling plans and producer/consumer risks",
+          "url": "https://www.itl.nist.gov/div898/handbook/pmc/section2/pmc22.htm"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un taux utilise les incidents de tous les produits au numérateur mais seulement les produits d’un atelier au dénominateur. Quel problème faut-il corriger ?",
+      "options": [
+        "La conversion du ratio en euros par application du prix moyen, supposée rendre les populations comparables.",
+        "Les populations des deux termes ne correspondent pas.",
+        "Le remplacement du dénominateur par le nombre de salariés de l’atelier, sans lien avec les produits comptés.",
+        "Le remplacement du numérateur par le seul nombre de catégories de défaut, indépendamment du nombre d’événements."
+      ],
+      "answer": 1,
+      "explanation": "Un ratio exige un champ cohérent. Une exposition trop étroite ou différente peut gonfler le taux sans refléter la qualité de l’atelier considéré."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût documenté de 12 reprises est de 360 €, à contenu comparable. Quel coût moyen par reprise ce relevé donne-t-il ?",
+      "options": [
+        "4 320 €",
+        "348 €",
+        "30 €",
+        "0,0333 €"
+      ],
+      "answer": 2,
+      "explanation": "La moyenne est 360 / 12 = 30 € par reprise. Son usage pour d’autres cas doit rester conditionné à un périmètre et une complexité comparables.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 360
+            },
+            {
+              "value": 12
+            }
+          ]
+        },
+        "expected": 30,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un tableau montre moins de défauts après formation, mais une nouvelle matière a été introduite au même moment. Que faut-il éviter ?",
+      "options": [
+        "Attribuer tout le changement exclusivement à la formation sur ce seul tableau.",
+        "Décrire la baisse observée dans son périmètre.",
+        "Rechercher les effets possibles de la matière.",
+        "Examiner les circonstances des deux périodes."
+      ],
+      "answer": 0,
+      "explanation": "Plusieurs modifications peuvent contribuer au résultat. Le constat ne sépare pas leurs effets ; il faut conserver cette limite causale et compléter les données pertinentes."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une correction réduit les reprises mais augmente les réclamations tardives non suivies dans le premier indicateur. Quelle analyse est nécessaire ?",
+      "options": [
+        "Valider l’action sur la baisse des reprises immédiates et considérer les réclamations tardives comme un indicateur sans lien à examiner.",
+        "Comparer les seules dates de clôture des reprises, même si l’action a modifié les délais d’apparition des réclamations.",
+        "Additionner les deux séries directement sans vérifier leur horizon ni si elles décrivent parfois les mêmes produits.",
+        "Examiner les effets et le champ de détection pour éviter de déplacer le problème hors de la mesure."
+      ],
+      "answer": 3,
+      "explanation": "Une mesure peut déplacer les incidents dans le temps ou dans un autre canal. Le bilan doit préciser le périmètre et rechercher les effets secondaires plutôt que retenir uniquement l’indicateur favorable."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un plan de contrôle prévoit : premier échantillon, accepter si aucun défaut, rejeter si au moins trois défauts, prélever un second échantillon si un ou deux défauts. Le premier échantillon présente un défaut. Quelle étape suit le plan ?",
+      "options": [
+        "Accepter le lot puisque le seuil de trois défauts n’est pas atteint.",
+        "Prélever le second échantillon prévu avant de décider selon la règle finale du plan.",
+        "Rejeter le lot dès qu’un défaut apparaît, sans appliquer la zone de poursuite annoncée.",
+        "Ajouter des unités sans protocole jusqu’à ce que le taux observé passe sous un seuil choisi après le résultat."
+      ],
+      "answer": 1,
+      "explanation": "Un défaut place le résultat dans la zone de poursuite, pas dans la zone d’acceptation ni de rejet immédiat. Le second prélèvement doit suivre les règles établies. Modifier à la volée la taille ou le critère changerait le plan et ses propriétés de décision.",
+      "references": [
+        {
+          "title": "NIST — Lot acceptance sampling plans and producer/consumer risks",
+          "url": "https://www.itl.nist.gov/div898/handbook/pmc/section2/pmc22.htm"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une pénalité commerciale est possible mais non documentée. Comment l’intégrer au bilan d’un coût de traitement déjà calculé ?",
+      "options": [
+        "Comptabiliser dans le bilan de gestion la pénalité maximale comme si son montant et son déclenchement étaient déjà établis.",
+        "Exclure toute mention de la pénalité du bilan parce qu’aucune facture n’a encore été reçue.",
+        "La signaler comme conséquence à vérifier, distincte du coût calculé documenté.",
+        "Assimiler le coût de traitement déjà connu au montant de la pénalité, sans vérifier la clause commerciale."
+      ],
+      "answer": 2,
+      "explanation": "Un bilan distingue les faits établis des effets possibles. Cette séparation permet d’examiner le risque sans transformer une hypothèse en montant prétendument constaté."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le contrôle attribue un défaut à une matière mais ne connaît pas les lots concernés. Quel document ou rapprochement est utile ?",
+      "options": [
+        "La traçabilité entre lots de matière, productions et incidents.",
+        "Le rapprochement du seul total mensuel d’achats avec le seul total mensuel de défauts, sans identifier leurs lots.",
+        "Le classement des fournisseurs par chiffre d’affaires annuel, sans suivi des matières utilisées dans les produits défectueux.",
+        "Le rapprochement des factures et paiements fournisseurs uniquement, sans identification des lots entrés en fabrication."
+      ],
+      "answer": 0,
+      "explanation": "La traçabilité aide à tester l’hypothèse de matière. Un agrégat sans lien avec les lots ne suffit pas à établir la cause ou à cibler une action."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une action réduit de 40 les reprises comparables à 20 € de traitement chacune, mais coûte 500 € dans le même périmètre. Quel gain net direct mesure-t-on, sans autre effet ?",
+      "options": [
+        "800 €",
+        "1 300 €",
+        "-300 €",
+        "300 €"
+      ],
+      "answer": 3,
+      "explanation": "L’économie de traitement est 40 × 20 = 800 €. Après 500 € d’action, le gain net direct est 300 €. Le calcul n’inclut pas les conséquences qui ne sont pas fournies.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 40
+                },
+                {
+                  "value": 20
+                }
+              ]
+            },
+            {
+              "value": 500
+            }
+          ]
+        },
+        "expected": 300,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un même incident est saisi par la production et par le service client, puis les deux listes sont additionnées comme événements distincts. Quel contrôle manque ?",
+      "options": [
+        "Une hausse du coût moyen par incident pour absorber la différence, sans revoir le nombre d’événements.",
+        "L’identification des doublons et la définition de l’unité de comptage.",
+        "Le retrait de toute la liste du service client, y compris des événements absents de la production.",
+        "La fusion de tous les signalements du même client, même lorsqu’ils concernent des incidents différents."
+      ],
+      "answer": 1,
+      "explanation": "Deux signalements peuvent décrire le même fait. Le rapprochement des identités et dates évite une hausse artificielle du nombre d’événements sans éliminer des incidents distincts."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une action n’améliore pas le taux malgré sa mise en place conforme. Quelle suite correspond à un pilotage utile ?",
+      "options": [
+        "Maintenir l’action sans réexamen parce que la conformité de son exécution prouve la validité du diagnostic initial.",
+        "Augmenter l’intensité de la même action avant de vérifier si elle agit sur la cause réelle.",
+        "Réexaminer la cause supposée, les mécanismes et les modalités à partir des résultats.",
+        "Abandonner tout suivi du taux parce que l’absence d’amélioration suffit à prouver que cet indicateur ne mesure rien."
+      ],
+      "answer": 2,
+      "explanation": "Le suivi sert à apprendre et ajuster. Une mise en œuvre ne garantit pas la pertinence de l’hypothèse causale ; les observations doivent alimenter la décision suivante."
+    }
+  ]
+}

@@ -1,0 +1,559 @@
+{
+  "module": "UE11",
+  "chapter": "securite-point-mort",
+  "sourceHash": "823919c793868f792cecf1d9ed0b67352c047adb673dd953c1a5881a42dcd7f5",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Le chiffre d’affaires prévu est 120 000 € et le seuil 90 000 €. Quelle marge de sécurité en chiffre d’affaires calcule-t-on ?",
+      "options": [
+        "210 000 €",
+        "30 000 €",
+        "75 %",
+        "90 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La marge de sécurité est CA prévu − seuil : 120 000 − 90 000 = 30 000 €. Elle mesure ici un écart de recettes par rapport à la couverture, pas un solde bancaire.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 120000
+            },
+            {
+              "value": 90000
+            }
+          ]
+        },
+        "expected": 30000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Une marge de sécurité de 30 000 € correspond à 120 000 € de chiffre d’affaires prévu. Quel indice de sécurité obtient-on ?",
+      "options": [
+        "33,33 %",
+        "75 %",
+        "25 %",
+        "4 %"
+      ],
+      "answer": 2,
+      "explanation": "L’indice rapporte la marge de sécurité au CA prévu : 30 000 / 120 000 × 100 = 25 %. Utiliser le seuil au dénominateur fournirait un autre rapport.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 30000
+                },
+                {
+                  "value": 120000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 25,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’activité est uniforme sur 360 jours. Le seuil est 90 000 € pour 120 000 € de chiffre d’affaires annuel prévu. À combien de jours du début d’activité se situe le point mort théorique ?",
+      "options": [
+        "270 jours",
+        "90 jours",
+        "480 jours",
+        "0,75 jour"
+      ],
+      "answer": 0,
+      "explanation": "La fraction d’année est 90 000 / 120 000 = 0,75. Sur la base imposée de 360 jours, le point mort est à 0,75 × 360 = 270 jours, sous l’hypothèse d’uniformité.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 90000
+                },
+                {
+                  "value": 120000
+                }
+              ]
+            },
+            {
+              "value": 360
+            }
+          ]
+        },
+        "expected": 270,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un seuil de 90 000 € correspond à un prix unitaire constant de 75 €, sans autre vente. Quel volume théorique au seuil obtient-on ?",
+      "options": [
+        "6 750 000 unités",
+        "75 unités",
+        "1 200 € par unité",
+        "1 200 unités"
+      ],
+      "answer": 3,
+      "explanation": "Le volume est seuil en valeur / prix unitaire : 90 000 / 75 = 1 200 unités. La quantité se distingue du montant et de la marge ; le prix doit correspondre au même périmètre.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 90000
+            },
+            {
+              "value": 75
+            }
+          ]
+        },
+        "expected": 1200,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La marge de sécurité est positive dans le modèle du dossier. Quelle interprétation est appropriée ?",
+      "options": [
+        "Le chiffre d’affaires peut diminuer du montant de la marge de sécurité sans qu’il soit nécessaire de maintenir le taux de marge.",
+        "Le CA prévu dépasse le seuil de ce montant, sous les hypothèses de marge retenues.",
+        "Ce montant est égal au résultat d’exploitation puisque les deux mesurent un excédent au-delà du seuil.",
+        "Ce montant doit être soustrait des charges fixes avant de recalculer le seuil."
+      ],
+      "answer": 1,
+      "explanation": "La marge de sécurité exprime une distance au seuil. Elle ne renseigne pas directement sur la trésorerie ni ne protège contre une modification des coûts ou prix qui déplacerait le seuil lui-même."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un indice est calculé comme marge de sécurité divisée par seuil, mais présenté selon la définition marge de sécurité / CA prévu. Quelle correction convient ?",
+      "options": [
+        "Diviser la marge par les charges fixes, puis présenter ce résultat comme part du chiffre d’affaires.",
+        "Conserver le rapport au seuil en changeant seulement son libellé pour celui d’un indice sur chiffre d’affaires.",
+        "Utiliser le chiffre d’affaires prévu au dénominateur pour l’indice défini.",
+        "Utiliser le seuil comme numérateur et la marge de sécurité comme dénominateur."
+      ],
+      "answer": 2,
+      "explanation": "Le dénominateur détermine le sens du ratio. La formule retenue rapporte la marge à l’activité prévue ; un rapport au seuil ne doit pas être présenté comme la même mesure."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une activité réalise l’essentiel de ses ventes en fin d’année. Pourquoi seuil / CA annuel × 360 peut-il mal dater le franchissement du seuil ?",
+      "options": [
+        "La formule suppose une activité uniforme, non la saisonnalité décrite.",
+        "Le rythme réel des ventes doit être ignoré dès lors que le chiffre d’affaires annuel est connu.",
+        "La date peut être déduite de la dernière vente sans connaître le cumul des ventes antérieures.",
+        "Le même chiffre d’affaires annuel implique une même date de franchissement quelle que soit sa répartition mensuelle."
+      ],
+      "answer": 0,
+      "explanation": "La règle linéaire transforme une part de CA en une durée à rythme constant. Avec une activité saisonnière, il faut examiner les cumuls au fil du temps pour situer le franchissement."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le seuil est de 60 000 €. Les ventes cumulées atteignent 45 000 € à fin mars. Le budget d’avril prévoit 30 000 €, répartis uniformément sur ses trente jours dans la convention donnée. Quel jour d’avril le seuil est-il atteint ?",
+      "options": [
+        "10 avril",
+        "20 avril",
+        "30 avril",
+        "15 avril"
+      ],
+      "answer": 3,
+      "explanation": "Il manque 60 000 − 45 000 = 15 000 € au début d’avril, soit la moitié des ventes budgétées du mois. La convention uniforme mensuelle situe le franchissement à 30 × 15 000 / 30 000 = 15 jours, donc le 15 avril.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 30
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 60000
+                    },
+                    {
+                      "value": 45000
+                    }
+                  ]
+                },
+                {
+                  "value": 30000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 15,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le seuil reste de 90 000 €. La direction veut un indice de sécurité de 40 %, défini par (CA − seuil) / CA. Quel chiffre d’affaires correspond à cet objectif, à taux de marge inchangé ?",
+      "options": [
+        "126 000 €",
+        "150 000 €",
+        "225 000 €",
+        "54 000 €"
+      ],
+      "answer": 1,
+      "explanation": "L’équation (CA − 90 000) / CA = 0,40 donne 0,60 CA = 90 000. Le chiffre d’affaires visé est donc 150 000 €. Ajouter simplement 40 % au seuil ne donne pas un excédent représentant 40 % du chiffre d’affaires.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 90000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "value": 0.4
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 150000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le CA prévu vaut 100 000 €. Quel seuil correspond exactement à un indice de sécurité de 20 % selon marge / CA ?",
+      "options": [
+        "20 000 €",
+        "120 000 €",
+        "80 000 €",
+        "5 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La marge de sécurité visée est 20 000 €. Comme marge = CA − seuil, le seuil compatible vaut 100 000 − 20 000 = 80 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 100000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "value": 0.2
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 80000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le seuil est 75 000 €. Les ventes cumulées atteignent 20 000 € fin janvier, 50 000 € fin février et 90 000 € fin mars. Quel mois contient le premier franchissement observé ?",
+      "options": [
+        "Mars.",
+        "Janvier.",
+        "Février.",
+        "Le mois ne peut être situé même avec ces cumuls."
+      ],
+      "answer": 0,
+      "explanation": "Le cumul est encore sous 75 000 € fin février et le dépasse fin mars. Le franchissement se trouve donc dans mars ; la date précise dans ce mois demanderait des données plus fines."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le seuil en euros est inchangé mais le prix unitaire augmente, dans la conversion du dossier. Que devient le volume théorique correspondant ?",
+      "options": [
+        "Il augmente parce que le prix plus élevé doit multiplier le seuil au lieu de le diviser.",
+        "Il reste identique parce que la valeur du seuil ne change pas, indépendamment de son prix de conversion.",
+        "Il diminue seulement si les charges fixes changent aussi, même avec un prix de conversion plus élevé.",
+        "Il diminue, le même montant de seuil étant divisé par un prix plus élevé."
+      ],
+      "answer": 3,
+      "explanation": "La conversion valeur/quantité utilise le prix unitaire. Cette relation porte sur un seuil en valeur supposé inchangé ; elle ne prouve pas qu’un changement de prix réel laisserait aussi tous les paramètres de marge inchangés."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un responsable prévoit une baisse de CA tout en conservant la marge de sécurité initiale sans recalcul. Quel élément faut-il ajuster ?",
+      "options": [
+        "La seule durée de l’exercice, considérée comme suffisante pour réviser un excédent de chiffre d’affaires.",
+        "La différence entre le nouveau CA et le seuil pertinent.",
+        "Le seul taux de marge initial, considéré comme garantissant une marge de sécurité inchangée malgré la baisse du CA.",
+        "Le seul seuil antérieur, repris comme montant de sécurité sans le rapprocher du chiffre d’affaires révisé."
+      ],
+      "answer": 1,
+      "explanation": "La marge dépend du CA prévu et du seuil. Un changement de l’une de ces grandeurs demande un recalcul ; une marge historique n’est pas une protection fixe indépendante de l’activité."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le CA prévu est nul. Peut-on obtenir un indice fini en divisant une marge de sécurité par zéro ?",
+      "options": [
+        "Oui, le ratio est nul parce qu’aucune vente n’entre au dénominateur.",
+        "Oui, le ratio vaut cent pour cent parce que toute la marge est rapportée à une activité absente.",
+        "Non, le ratio n’est pas défini avec ce dénominateur nul.",
+        "Oui, l’indice devient le montant signé de la marge de sécurité exprimé directement en pourcentage."
+      ],
+      "answer": 2,
+      "explanation": "Le calcul d’un ratio exige une base non nulle. Il faut décrire la situation et les montants plutôt que donner une valeur artificielle qui masquerait la limite de la formule."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le dossier utilise une base conventionnelle de 360 jours mais un calcul reprend 365 sans le mentionner. Quel défaut apparaît ?",
+      "options": [
+        "La convention temporelle du dossier n’est pas respectée, ce qui change le nombre de jours.",
+        "Le seuil en valeur est modifié dans le même rapport que le changement du nombre de jours, même si marge et fixes restent identiques.",
+        "Le choix de 365 au lieu de 360 démontre que la durée réelle d’activité a augmenté de cinq jours, sans avoir à vérifier la convention.",
+        "L’arrondi final à un jour entier suffit à corriger la différence de base sans recalcul du nombre de jours."
+      ],
+      "answer": 0,
+      "explanation": "La durée totale est une donnée du modèle. Il faut suivre la base imposée ou expliquer une conversion, sans modifier silencieusement un paramètre du calcul."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le dossier emploie un prix moyen constant pour convertir un seuil en volume. La composition des ventes change ensuite fortement. Quelle réserve faut-il examiner ?",
+      "options": [
+        "Le prix moyen du premier mix reste représentatif de tout nouveau mix dès lors que les prix de chaque produit sont constants.",
+        "Le nombre total d’unités suffit à convertir le seuil en euros sans définir le nouveau prix moyen.",
+        "Le nouveau prix moyen doit être la moyenne simple des prix de toutes les références, sans pondération par leurs volumes vendus.",
+        "Le prix moyen et les hypothèses de composition peuvent devoir être réévalués."
+      ],
+      "answer": 3,
+      "explanation": "La conversion utilise une hypothèse de prix représentatif. Si elle n’est plus valable, le volume obtenu peut perdre son sens ; il faut garder la convention plutôt qu’utiliser une moyenne ancienne sans contrôle."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Au niveau étudié, la marge sur coûts variables est de 40 000 € et le résultat de 10 000 €. Le modèle linéaire définit le levier par marge / résultat et conserve prix, coût variable unitaire et fixes. Quelle hausse relative du résultat correspond à une hausse de 5 % des ventes dans ce domaine ?",
+      "options": [
+        "5 %",
+        "20 %",
+        "1,25 %",
+        "4 %"
+      ],
+      "answer": 1,
+      "explanation": "Le levier vaut 40 000 / 10 000 = 4. La variation relative du résultat est donc 4 × 5 % = 20 % dans le modèle donné. Les cinq points de variation des ventes ne se confondent pas avec cinq points de résultat.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 40000
+                },
+                {
+                  "value": 10000
+                }
+              ]
+            },
+            {
+              "value": 5
+            }
+          ]
+        },
+        "expected": 20,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "OpenStax, levier opérationnel",
+          "url": "https://openstax.org/books/principles-managerial-accounting/pages/3-5-calculate-and-interpret-a-companys-margin-of-safety-and-operating-leverage"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux activités ont la même marge de sécurité en euros, mais des CA prévus différents. Ont-elles nécessairement le même indice de sécurité ?",
+      "options": [
+        "Oui, un même excédent en euros représente la même part du chiffre d’affaires quelle que soit sa base.",
+        "Oui, le rapport au chiffre d’affaires est égal au rapport au seuil même si ces bases diffèrent.",
+        "Non, le rapport dépend aussi du CA utilisé comme base.",
+        "Non, parce que l’indice doit diviser le chiffre d’affaires par la marge de sécurité au lieu de suivre la définition inverse."
+      ],
+      "answer": 2,
+      "explanation": "L’indice est un ratio et non un montant. Une même distance absolue au seuil peut représenter des parts différentes de l’activité prévue, d’où l’utilité de préciser les deux mesures."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le point mort calculé dépasse la durée de l’exercice uniforme. Que signifie ce résultat dans le scénario ?",
+      "options": [
+        "Le CA prévu de l’exercice ne permet pas d’atteindre le seuil dans cette période.",
+        "Le dépassement de durée signifie que le seuil sera atteint cette année dès lors que l’activité reprend l’année suivante.",
+        "Le nombre de jours peut être ramené à la durée de l’exercice sans changer la conclusion de couverture.",
+        "La date obtenue prouve une insuffisance d’encaissements, indépendamment des conditions de paiement et de la marge."
+      ],
+      "answer": 0,
+      "explanation": "Le ratio seuil/CA dépasse alors un. Le modèle signale une absence de couverture sur la période prévue ; il ne fournit ni un résultat de trésorerie ni une justification pour supprimer le dépassement."
+    },
+    {
+      "id": "q20",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Les ventes sont de 5 000 unités à 20 €, avec 12 € variables par unité et 30 000 € de fixes. Une remise uniforme sur le prix ne change ni le volume ni les coûts. Quelle remise maximale par unité laisse un résultat nul plutôt qu’une perte ?",
+      "options": [
+        "8 €",
+        "6 €",
+        "10 €",
+        "2 €"
+      ],
+      "answer": 3,
+      "explanation": "Le résultat initial est 5 000 × (20 − 12) − 30 000 = 10 000 €. Chaque euro de remise réduit la marge totale de 5 000 €. La remise maximale est donc 10 000 / 5 000 = 2 € par unité, ce qui laisse un prix de 18 € et couvre les fixes.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 5000
+                    },
+                    {
+                      "op": "-",
+                      "args": [
+                        {
+                          "value": 20
+                        },
+                        {
+                          "value": 12
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "value": 30000
+                }
+              ]
+            },
+            {
+              "value": 5000
+            }
+          ]
+        },
+        "expected": 2,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une hausse de coûts réduit la marge et déplace le seuil alors que le CA prévu ne change pas. Quel suivi est pertinent ?",
+      "options": [
+        "Conserver l’ancienne marge de sécurité au motif que le chiffre d’affaires n’a pas changé.",
+        "Recalculer le seuil et les mesures de sécurité avec les hypothèses révisées.",
+        "Réduire directement la marge de sécurité du montant du surcoût sans recalculer l’effet du taux de marge sur le seuil.",
+        "Modifier uniquement la date du point mort en conservant le seuil malgré la baisse du taux de marge."
+      ],
+      "answer": 1,
+      "explanation": "La distance au seuil n’est pertinente qu’avec des paramètres cohérents. Une modification de coût peut changer la couverture et les indicateurs, sans que leur évolution donne directement celle des flux bancaires."
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un point mort prévisionnel est annoncé. Quel élément doit rester attaché au résultat ?",
+      "options": [
+        "La date seule présentée comme indépendante du rythme mensuel de ventes.",
+        "Le calendrier de règlement des clients, présenté comme la définition de la date économique de couverture.",
+        "La durée, le rythme d’activité supposé et les paramètres qui conditionnent la date.",
+        "Le seul nombre de jours de l’exercice, présenté comme suffisant sans connaître seuil ni ventes."
+      ],
+      "answer": 2,
+      "explanation": "La date est conditionnelle au scénario. L’uniformité, les niveaux de ventes et le seuil doivent rester visibles pour ne pas présenter une projection comme une échéance certaine d’encaissement ou de rentabilité."
+    }
+  ]
+}

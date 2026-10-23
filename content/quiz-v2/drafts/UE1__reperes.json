@@ -1,0 +1,338 @@
+{
+  "module": "UE1",
+  "chapter": "reperes",
+  "sourceHash": "b97303ff67890132470accadf5a62dea192cbe1732be179566ee5985fc83798e",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel effet produit en principe un contrat valablement formé entre ses parties ?",
+      "options": [
+        "Il engage les parties selon les obligations convenues.",
+        "Il n’engage qu’après commencement de l’exécution.",
+        "Il engage seulement la partie qui réclame son exécution.",
+        "Il engage sauf si une partie retire ensuite son consentement sans fondement particulier."
+      ],
+      "answer": 0,
+      "explanation": "La force obligatoire concerne les deux parties au contrat valable. Un changement d’avis ne suffit pas à supprimer les obligations convenues."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un photographe et une entreprise ont valablement convenu de livrer dix portraits retouchés. Il livre dix fichiers bruts. Quel élément faut-il comparer en priorité ?",
+      "options": [
+        "L’intitulé de la commande et le titre de la facture, sans lire leur contenu.",
+        "La prestation promise et la prestation effectivement livrée.",
+        "Le nombre de fichiers seulement, car une quantité conforme suffit.",
+        "Le prix et sa date de paiement, sans vérifier les caractéristiques promises."
+      ],
+      "answer": 1,
+      "explanation": "Le nombre de fichiers ne suffit pas : la retouche faisait partie de la prestation. Comparer le contenu convenu aux fichiers livrés permet d’identifier le manquement discuté."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie conclut : « Le contrat existe, donc il a nécessairement été exécuté. » Quelle est son erreur ?",
+      "options": [
+        "Elle confond l’obligation du créancier avec celle du débiteur.",
+        "Elle déduit la nullité de l’accord de son inexécution.",
+        "Elle confond l’existence de l’engagement avec sa réalisation.",
+        "Elle assimile le retard d’exécution à une modification acceptée."
+      ],
+      "answer": 2,
+      "explanation": "L’existence du contrat établit le cadre des obligations, mais leur exécution demande des faits et des pièces. La livraison ou le paiement ne résultent pas du seul accord."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un imprimeur a livré les brochures conformes au contrat valable. Le client ne souhaite plus organiser son événement. Quel raisonnement adopter ?",
+      "options": [
+        "Le changement de projet rend caduc le prix sans examen complémentaire.",
+        "Le client ne doit payer que s’il utilise les brochures.",
+        "Le contrat doit être réputé inexistant parce que son utilité a disparu pour le client.",
+        "Il faut partir des obligations convenues et examiner les conditions d’une éventuelle sortie du contrat."
+      ],
+      "answer": 3,
+      "explanation": "L’abandon du projet ne fait pas disparaître à lui seul l’engagement. Les obligations convenues restent le point de départ ; un mécanisme de sortie doit être identifié."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat prévoit une livraison à l’adresse A ; le client affirme avoir demandé ensuite l’adresse B. Quelle pièce est la plus utile pour apprécier le manquement allégué ?",
+      "options": [
+        "Les échanges établissant un éventuel accord sur le changement d’adresse.",
+        "La demande d’adresse B rédigée mais non adressée au transporteur.",
+        "Le seul contrat initial, en écartant toute modification ultérieure par principe.",
+        "La seule réclamation après livraison, tenue pour preuve de l’accord antérieur."
+      ],
+      "answer": 0,
+      "explanation": "Avant d’opposer l’adresse B au transporteur, il faut établir le contenu applicable de l’obligation. Les échanges sur la modification sont plus pertinents que des données générales."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un raisonnement de responsabilité extracontractuelle pour faute, quel ensemble doit être établi ?",
+      "options": [
+        "Une faute et une sanction pénale, sans dommage à établir.",
+        "Une faute, un dommage et un lien de causalité.",
+        "Un dommage et un lien contractuel, sans faute à examiner.",
+        "Une faute et un montant demandé, sans lien causal à établir."
+      ],
+      "answer": 1,
+      "explanation": "Le raisonnement étudié exige une faute, un dommage et un lien causal. Une plainte ou une assurance ne remplace pas l’examen de ces conditions civiles."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Sans relation contractuelle, une personne renverse imprudemment du café sur l’ordinateur d’un visiteur. La réparation est documentée. Quel fait représente la faute ?",
+      "options": [
+        "Le coût de remise en état de l’ordinateur.",
+        "L’impossibilité d’utiliser l’ordinateur après le contact.",
+        "Le geste imprudent qui a renversé le café.",
+        "L’enchaînement reliant le café renversé à la panne."
+      ],
+      "answer": 2,
+      "explanation": "Le geste imprudent constitue le comportement reproché. Le devis sert plutôt à étayer le dommage ; il ne décrit pas, à lui seul, la faute."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après une chute causée par une imprudence, une victime présente uniquement le nom du responsable supposé. Que manque-t-il pour soutenir une demande de réparation ?",
+      "options": [
+        "Le montant de la réparation choisi sans justificatif par la victime.",
+        "Une clause d’indemnité dans un contrat à présumer entre les parties.",
+        "Une condamnation pénale remplaçant l’étude des conditions civiles.",
+        "Des éléments sur le dommage et son lien avec l’imprudence."
+      ],
+      "answer": 3,
+      "explanation": "Désigner une personne ne suffit pas. Le préjudice subi et son rattachement au comportement reproché doivent être établis pour construire la responsabilité pour faute."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une vitre est cassée par un passant imprudent. Le propriétaire réclame aussi le remplacement d’une porte déjà défectueuse avant l’incident. Quelle analyse retenir ?",
+      "options": [
+        "Séparer la vitre liée à l’incident et la porte dont le lien causal n’est pas établi.",
+        "Inclure la porte parce que son défaut existait lorsque la vitre a été cassée.",
+        "Écarter les deux postes car un défaut antérieur apparaît dans le bâtiment.",
+        "Retenir ensemble les deux postes dès lors qu’ils sont réclamés par le même propriétaire."
+      ],
+      "answer": 0,
+      "explanation": "Chaque poste de réparation doit correspondre au dommage causé. Le défaut antérieur de la porte ne permet pas de l’imputer au bris de la vitre."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une entreprise demande une somme ronde après un dommage matériel sans produire de devis, facture ou autre élément. Quel conseil méthodologique est adapté ?",
+      "options": [
+        "Prendre le prix d’achat initial de tous les biens concernés comme indemnité sans autre examen.",
+        "Documenter les postes de préjudice et expliquer leur montant.",
+        "Retenir l’estimation de la victime dès lors qu’une faute est alléguée.",
+        "Fixer le montant à partir du seul prix du contrat, sans distinguer les pertes."
+      ],
+      "answer": 1,
+      "explanation": "La réparation se rattache aux préjudices démontrés. Des pièces adaptées et une explication poste par poste sont nécessaires ; une somme ronde ne constitue pas une justification."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un visiteur heurte imprudemment une lampe : elle tombe sans être détériorée et personne n’est blessé. Pour obtenir une réparation pour faute, quelle condition manque ?",
+      "options": [
+        "Une faute, puisque l’absence de casse efface toute imprudence.",
+        "Un fait matériel, puisque la lampe n’a pas été détériorée.",
+        "Un dommage à réparer.",
+        "Une relation extracontractuelle, puisque les personnes étaient dans le même lieu."
+      ],
+      "answer": 2,
+      "explanation": "Une imprudence sans dommage ne suffit pas à justifier une réparation dans ce raisonnement. La faute et le préjudice sont des conditions différentes."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "À quoi sert la qualification juridique des faits ?",
+      "options": [
+        "À présumer les faits nécessaires dès que la catégorie juridique est choisie.",
+        "À déduire la responsabilité du montant demandé par la victime.",
+        "À choisir directement la sanction avant d’examiner la relation.",
+        "À rattacher la situation à une catégorie permettant de rechercher la règle pertinente."
+      ],
+      "answer": 3,
+      "explanation": "La qualification traduit les faits en catégories juridiques. Elle oriente le choix de la règle mais ne dispense ni de vérifier les faits ni de les confronter à cette règle."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une cliente exige la prestation qu’un artisan s’est engagé à fournir dans un contrat valable. Quelle qualification initiale est la plus pertinente ?",
+      "options": [
+        "Une relation contractuelle et une possible inexécution de prestation.",
+        "Un vice de formation du seul fait que la prestation manque.",
+        "Une responsabilité extracontractuelle parce que la prestation n’est pas exécutée.",
+        "Une modification de l’accord déduite de l’absence de prestation."
+      ],
+      "answer": 0,
+      "explanation": "La demande porte sur un engagement convenu entre les parties. Il faut donc commencer par identifier le contrat et la prestation prétendument inexécutée."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un cycliste et un piéton ne se connaissent pas. Le piéton reproche au cycliste un geste imprudent ayant abîmé son sac. Quel cadre correspond aux faits indiqués ?",
+      "options": [
+        "Une responsabilité contractuelle déduite du seul contact entre les personnes.",
+        "La responsabilité extracontractuelle pour faute.",
+        "Une nullité contractuelle parce qu’aucun accord écrit n’est indiqué.",
+        "Une réparation fondée sur le seul prix du sac, sans examiner la faute."
+      ],
+      "answer": 1,
+      "explanation": "Aucun contrat entre les personnes n’est indiqué. L’imprudence, la détérioration et leur lien orientent vers la responsabilité extracontractuelle pour faute."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant qualifie un retard de livraison de « nullité du contrat » sans examiner sa formation. Quelle distinction doit-il rétablir ?",
+      "options": [
+        "Exigibilité du prix et preuve du paiement.",
+        "Preuve du dommage et calcul de la réparation.",
+        "Validité de l’accord et exécution de l’obligation.",
+        "Capacité du signataire et représentation de la société."
+      ],
+      "answer": 2,
+      "explanation": "Le retard concerne d’abord l’exécution d’une obligation. La validité exige un examen différent des conditions de formation ; l’un ne se déduit pas automatiquement de l’autre."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise réclame à un prestataire le remboursement d’un service convenu mais non réalisé. Quel fait permet d’abord de qualifier leur relation ?",
+      "options": [
+        "La facture émise unilatéralement, tenue pour preuve de tous les termes de l’accord.",
+        "La seule demande de remboursement, tenue pour preuve du défaut de prestation.",
+        "La date de la réclamation, tenue pour date de formation du contrat.",
+        "L’accord définissant la prestation entre eux."
+      ],
+      "answer": 3,
+      "explanation": "L’accord permet d’identifier les parties et l’engagement invoqué. Les caractéristiques générales de l’entreprise ne suffisent pas à qualifier la relation litigieuse."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel enchaînement convient à une réponse de cas pratique juridique ?",
+      "options": [
+        "Faits pertinents, problème, règle, application, conclusion.",
+        "Faits pertinents, règle, conclusion sans application individualisée.",
+        "Conclusion choisie, sélection des faits favorables, règle de confirmation.",
+        "Citation de textes, résumé des demandes, conclusion sans qualification."
+      ],
+      "answer": 0,
+      "explanation": "La réponse doit rendre visible le passage des faits au problème, puis de la règle à son application. La conclusion résulte de ce raisonnement et ne le remplace pas."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat de fourniture contient un délai de livraison, un prix et des modalités de paiement. Le client se plaint seulement d’un retard. Quelles données confronter en priorité ?",
+      "options": [
+        "Le prix demandé et la date de facture, sans examiner les échéances.",
+        "Le délai promis et la date réelle de livraison.",
+        "La date de signature seulement, en présumant une livraison immédiate.",
+        "La date de réclamation seulement, tenue pour preuve du délai convenu."
+      ],
+      "answer": 1,
+      "explanation": "Le retard s’apprécie en comparant l’échéance convenue à la livraison réelle. Le prix et les modalités de paiement ne permettent pas, à eux seuls, d’établir ce manquement temporel."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une réponse cite correctement une règle puis conclut « le demandeur gagne », sans citer un fait du dossier. Quelle partie manque principalement ?",
+      "options": [
+        "La formulation d’un montant, même si aucun dommage n’est établi.",
+        "Le choix d’une sanction avant de déterminer le manquement.",
+        "L’application de chaque condition aux faits établis.",
+        "L’énumération d’autres règles sans lien avec les conditions déjà citées."
+      ],
+      "answer": 2,
+      "explanation": "La citation d’une règle ne montre pas que ses conditions sont réunies. L’application doit relier chacune d’elles aux faits et aux éventuelles incertitudes du dossier."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le devis de réparation figure au dossier, mais la cause de la casse reste contestée. Quelle conclusion est la plus rigoureuse ?",
+      "options": [
+        "Le devis établit le montant et démontre par lui-même la faute et la causalité.",
+        "La causalité contestée rend toute pièce sur le montant dépourvue de pertinence.",
+        "La description du dommage suffit à attribuer celui-ci à la personne désignée.",
+        "Le montant est documenté, mais le lien avec le fait reproché reste à démontrer."
+      ],
+      "answer": 3,
+      "explanation": "Une pièce peut soutenir le montant d’un dommage sans en établir la cause. La conclusion doit distinguer l’élément étayé du contrôle causal encore nécessaire."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant ajoute qu’un témoin a vu l’accident, alors qu’aucun témoin n’est mentionné. Pourquoi son raisonnement devient-il fragile ?",
+      "options": [
+        "Il fonde l’application sur un fait absent du dossier.",
+        "Il donne à un témoignage une force supérieure à celle d’un contrat, alors que le témoin est documenté.",
+        "Il applique une règle de validité au lieu d’une règle de preuve du paiement.",
+        "Il écarte un fait certain parce que la partie adverse le conteste."
+      ],
+      "answer": 0,
+      "explanation": "Le cas pratique doit utiliser les faits fournis et signaler les lacunes. Ajouter un témoin modifie artificiellement le dossier et peut changer la conclusion probatoire."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux versions incompatibles décrivent la date de livraison. Quelle démarche permet une réponse utile sans choisir arbitrairement ?",
+      "options": [
+        "Retenir la date alléguée par le créancier parce qu’il demande l’exécution.",
+        "Identifier les pièces datées et expliquer l’incidence de chaque version.",
+        "Retenir la date alléguée par le débiteur parce qu’il conteste le retard.",
+        "Traiter le désaccord comme une preuve de nullité, sans examiner les pièces."
+      ],
+      "answer": 1,
+      "explanation": "L’incertitude se traite en rapprochant les pièces et en explicitant ses conséquences. Elle ne justifie ni un choix arbitraire ni l’effacement de l’obligation contractuelle."
+    }
+  ]
+}

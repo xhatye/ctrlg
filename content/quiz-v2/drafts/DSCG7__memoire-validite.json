@@ -1,0 +1,338 @@
+{
+  "module": "DSCG7",
+  "chapter": "memoire-validite",
+  "sourceHash": "192df28cdf18e991fce92d31c0aa70c59f562d738740f60035cca2ea6a435377",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un questionnaire demande de noter cinq fois presque la même formulation de satisfaction. Son auteur invoque la forte cohérence des réponses pour affirmer que toutes les dimensions de la qualité du service sont couvertes. Quelle limite subsiste ?",
+      "options": [
+        "Des réponses cohérentes à des formulations proches ne démontrent pas la couverture des autres dimensions du service.",
+        "La cohérence des réponses suffit à établir que les dimensions omises auraient reçu les mêmes notes.",
+        "La répétition de formulations proches équivaut à diversifier les dimensions effectivement mesurées.",
+        "Le nombre de formulations suffit à établir la couverture du domaine, indépendamment de leur contenu."
+      ],
+      "answer": 0,
+      "explanation": "L’accord entre items proches peut renseigner leur cohérence, sans établir la validité de contenu. Le périmètre des dimensions couvertes doit être examiné séparément."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Un indicateur donne un résultat très stable à chaque extraction, mais mesure une dimension différente du concept étudié. Quelle distinction faut-il conserver ?",
+      "options": [
+        "L’indicateur devient pertinent dès qu’il comporte suffisamment de valeurs.",
+        "La stabilité de la mesure ne suffit pas à établir sa validité conceptuelle.",
+        "La stabilité de la mesure remplace l’examen de sa pertinence.",
+        "La validité du concept dépend seulement de la fréquence des extractions."
+      ],
+      "answer": 1,
+      "explanation": "La répétabilité renseigne une propriété de mesure ; elle ne prouve pas que la variable représente la notion recherchée."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le champ « dossier terminé » signifie validé par le chef avant juillet, puis simplement transmis au chef après juillet. Quelle menace affecte la comparaison annuelle ?",
+      "options": [
+        "Une variation d’échantillonnage qui rend la définition du champ sans importance.",
+        "Une différence uniquement de présentation, sans incidence possible sur les nombres.",
+        "Une rupture de définition de l’indicateur entre les périodes.",
+        "Une hausse démontrée de l’efficacité après juillet."
+      ],
+      "answer": 2,
+      "explanation": "Le même libellé recouvre ici deux événements. La comparaison demande un rapprochement de définitions ou une limite explicite, pas seulement des totaux."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le nombre d’erreurs baisse, mais le nouveau contrôle ne recense plus les corrections effectuées avant validation. Quelle vérification est nécessaire ?",
+      "options": [
+        "Attribuer toute la baisse à une amélioration du travail parce que le libellé erreur est inchangé.",
+        "Écarter les anciens chiffres pour conserver la série la plus récente comme preuve de progrès.",
+        "Calculer une baisse relative plus précise sans analyser les règles de collecte.",
+        "Comparer les règles de détection et d’enregistrement des erreurs avant d’interpréter la baisse."
+      ],
+      "answer": 3,
+      "explanation": "Une modification du dispositif de mesure peut créer une variation apparente. L’évolution du phénomène doit être distinguée de celle de son enregistrement."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un questionnaire sur une surcharge de travail reçoit surtout des réponses de salariés ayant du temps disponible. Quelle limite faut-il examiner ?",
+      "options": [
+        "La probabilité de réponse peut dépendre du phénomène étudié.",
+        "La participation des salariés disponibles permet de mesurer directement la charge des salariés absents.",
+        "Un taux global de réponse suffit à exclure un lien entre charge de travail et participation.",
+        "Une pondération par service corrige nécessairement la sélection liée à la charge à l’intérieur de chaque service."
+      ],
+      "answer": 0,
+      "explanation": "La participation peut être liée à la charge, ce qui rend plausible une sélection non neutre. Les avis des personnes absentes ne se déduisent pas de ceux des répondants."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le fichier de recrutement exclut les salariés de nuit, alors que la question vise toutes les équipes. Quel problème précède la non-réponse ?",
+      "options": [
+        "Une absence d’intérêt des salariés de nuit démontrée par leur exclusion.",
+        "Un défaut de couverture de la population dans la base de recrutement.",
+        "Une non-réponse volontaire des salariés de nuit déjà contactés.",
+        "Une erreur de calcul du taux parmi les répondants."
+      ],
+      "answer": 1,
+      "explanation": "Ces salariés ne peuvent pas répondre puisqu’ils ne sont pas inclus dans les contacts. Cela relève d’abord de la couverture, pas du refus de participer après contact."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat tire au sort dix personnes parmi ses seuls collègues proches puis présente le groupe comme aléatoire dans tout le cabinet. Quelle précision manque ?",
+      "options": [
+        "Le nombre dix supprime les différences entre base de tirage et population cible.",
+        "Le fait de connaître les participants empêche toute analyse même limitée à ce groupe.",
+        "Le tirage est aléatoire seulement dans cette base restreinte, pas dans tout le cabinet.",
+        "Le tirage parmi des collègues proches garantit la couverture de chaque service."
+      ],
+      "answer": 2,
+      "explanation": "L’aléa de la sélection ne corrige pas la restriction de la liste initiale. La portée de l’enquête doit tenir compte des personnes qui ne pouvaient pas être sélectionnées."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Cinquante dossiers sont tous traités par le même binôme. Le mémoire les utilise pour décrire la diversité des pratiques de tous les binômes du cabinet. Quelle limite est pertinente ?",
+      "options": [
+        "L’effectif de dossiers peut être utilisé comme nombre de binômes observés dans la comparaison des pratiques.",
+        "La variété des clients suffit à établir la diversité des équipes, même lorsque le même binôme traite leurs dossiers.",
+        "La répétition de dossiers du même binôme peut être assimilée à des observations de binômes différents sans modéliser leur regroupement.",
+        "Les dossiers renseignent surtout les pratiques de ce binôme ; leur nombre ne garantit pas une diversité d’équipes."
+      ],
+      "answer": 3,
+      "explanation": "L’effectif de dossiers et la diversité des contextes sont distincts. Les observations peuvent être riches mais concentrées sur une seule configuration d’acteurs."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour décrire les causes d’un rejet, le mémoire recrute volontairement autant de dossiers rejetés qu’acceptés. Il présente ensuite la moitié de dossiers rejetés dans ce corpus comme taux de rejet du cabinet. Quel est le problème ?",
+      "options": [
+        "La proportion de rejets dans le corpus a été fixée par le recrutement et ne mesure pas leur fréquence dans le cabinet.",
+        "Le recrutement équilibré entre résultats garantit que leur fréquence reproduit celle du cabinet.",
+        "Le taux observé devient une estimation de population dès lors que les dossiers sont authentiques.",
+        "La même taille de chaque groupe suffit à mesurer la prévalence des rejets sans connaître leurs effectifs dans la population."
+      ],
+      "answer": 0,
+      "explanation": "Une sélection conditionnée par le résultat peut servir certaines comparaisons, mais sa composition ne mesure pas la fréquence de ce résultat dans la population. Il faudrait les effectifs ou une démarche adaptée pour estimer cette fréquence."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "On demande en décembre le nombre exact de petites interruptions quotidiennes survenues en janvier. Quelle limite de collecte faut-il anticiper ?",
+      "options": [
+        "L’annulation de tout biais dès lors que la question demande un nombre entier.",
+        "La difficulté du rappel rétrospectif et la précision réellement accessible aux répondants.",
+        "La preuve d’une absence d’interruption chez ceux qui ne se souviennent pas.",
+        "La possibilité de traiter une estimation de mémoire comme un journal exhaustif horodaté."
+      ],
+      "answer": 1,
+      "explanation": "Une formulation précise ne garantit pas une mémoire exacte d’événements anciens et fréquents. Des traces contemporaines ou une restitution prudente peuvent être nécessaires."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les délais baissent après le changement d’outil, au même moment qu’un renfort de personnel et une baisse du volume reçu. Que peut-on conclure avec ces seuls éléments ?",
+      "options": [
+        "Le renfort n’a aucun rôle possible dès lors que le logiciel a changé.",
+        "La baisse de volume prouve que l’outil n’a contribué à aucun changement.",
+        "La baisse est observée, mais l’effet propre de l’outil n’est pas isolé.",
+        "L’outil explique toute la baisse parce que sa date précède la mesure finale."
+      ],
+      "answer": 2,
+      "explanation": "Plusieurs facteurs changent simultanément. Les données ne départagent pas leurs contributions, ni ne démontrent l’absence de contribution de l’un d’eux."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les équipes les plus en difficulté reçoivent prioritairement une formation. Après celle-ci, elles restent moins performantes que les autres. Quelle comparaison manque pour évaluer son effet ?",
+      "options": [
+        "La seule différence finale, suffisante pour conclure que la formation dégrade la performance.",
+        "La satisfaction du formateur comme mesure de l’effet sur les dossiers.",
+        "Le coût total de la formation, considéré comme indicateur direct de sa réussite.",
+        "Leur situation initiale et l’évolution de groupes comparables."
+      ],
+      "answer": 3,
+      "explanation": "Les groupes différaient avant le dispositif. Leur écart final ne mesure donc pas seul ce qu’a changé la formation chez les équipes qui l’ont reçue."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les services qui subissent davantage d’erreurs utilisent plus de contrôles. Pourquoi cette association ne prouve-t-elle pas que les contrôles créent les erreurs ?",
+      "options": [
+        "Les erreurs peuvent avoir conduit à renforcer les contrôles ; le sens de la relation reste à étudier.",
+        "Le sens causal est établi par la seule différence de nombre de contrôles entre services.",
+        "Exprimer les erreurs en taux suffit à neutraliser leur influence possible sur la décision de renforcer les contrôles.",
+        "Mesurer contrôles et erreurs à la même date permet à lui seul de déterminer laquelle des deux variables a déclenché l’autre."
+      ],
+      "answer": 0,
+      "explanation": "Une association peut correspondre à une causalité inverse ou à d’autres facteurs. Le dispositif peut être une réponse au problème plutôt que son origine."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une équipe est sélectionnée pour une expérimentation après un mois exceptionnellement mauvais. Le mois suivant est moins mauvais, sans autre comparaison. Quelle prudence est nécessaire ?",
+      "options": [
+        "Une moyenne de ces deux mois suffit à identifier l’effet causal du dispositif.",
+        "Une fluctuation exceptionnelle peut être suivie d’un retour vers un niveau plus habituel, indépendamment du dispositif.",
+        "Le changement de mois prouve que l’amélioration est intégralement due à l’expérimentation.",
+        "La sélection du mois le plus mauvais permet de neutraliser les fluctuations."
+      ],
+      "answer": 1,
+      "explanation": "Choisir un point de départ extrême peut amplifier une amélioration apparente. Un historique ou une comparaison pertinente aide à distinguer fluctuation et effet propre."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un indicateur de retard est comparé entre décembre, période de clôture, et août, période de faible charge. Quelle explication alternative doit être examinée ?",
+      "options": [
+        "Le fait d’exprimer les retards en pourcentage neutralise nécessairement les différences saisonnières de charge.",
+        "Deux mois de la même année forment un groupe de comparaison équivalent, quelles que soient les échéances.",
+        "La saisonnalité de l’activité et de ses contraintes.",
+        "La présence du même logiciel suffit à exclure toute variation liée au calendrier d’activité."
+      ],
+      "answer": 2,
+      "explanation": "Deux mois peuvent présenter des charges et organisations différentes. Une baisse entre ces périodes ne démontre pas à elle seule un progrès durable du processus."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que permet une séquence temporelle dans laquelle un changement précède un résultat ?",
+      "options": [
+        "Elle démontre la causalité dès que l’ordre des deux dates est certain.",
+        "Elle exclut toute influence des variables non mesurées.",
+        "Elle rend inutile l’examen de la situation antérieure au changement.",
+        "Elle est compatible avec une causalité, sans suffire à exclure les autres explications."
+      ],
+      "answer": 3,
+      "explanation": "Une cause supposée doit pouvoir précéder son effet, mais cette condition ne suffit pas à identifier son effet propre parmi d’autres facteurs."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un mémoire identifie un mécanisme de coordination dans un cabinet. Quelle contribution peut-il défendre sans enquête nationale ?",
+      "options": [
+        "Une explication contextualisée dont les conditions de transfert peuvent être discutées.",
+        "La fréquence exacte du mécanisme dans tous les cabinets français.",
+        "Une prédiction chiffrée de son effet dans tout secteur.",
+        "La validation d’une norme générale de performance pour chaque organisation."
+      ],
+      "answer": 0,
+      "explanation": "Un cas peut éclairer comment un mécanisme fonctionne. Mesurer sa fréquence nationale ou prédire un effet partout demanderait d’autres données et une autre démarche."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des volontaires sont répartis au sort entre formation et absence de formation. L’auteur affirme que ce tirage rend les volontaires représentatifs de tous les salariés. Quelle distinction faut-il rétablir ?",
+      "options": [
+        "Le tirage entre groupes donne nécessairement à chaque salarié la même probabilité de participer à l’étude.",
+        "L’allocation aléatoire entre groupes ne constitue pas un échantillonnage aléatoire des volontaires dans l’ensemble des salariés.",
+        "L’équilibrage attendu entre groupes suffit à rendre le recrutement volontaire représentatif de toute l’entreprise.",
+        "La répartition aléatoire permet d’ignorer la manière dont les volontaires ont été recrutés lorsqu’on étend les résultats."
+      ],
+      "answer": 1,
+      "explanation": "Le tirage entre conditions concerne la comparaison des groupes constitués. Il ne supprime pas la sélection préalable des volontaires et ne prouve pas leur représentativité dans la population cible."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une seconde organisation obtient un résultat différent avec un dispositif de même nom. Quelle démarche favorise une généralisation raisonnée ?",
+      "options": [
+        "Faire la moyenne des deux résultats comme effet universel du dispositif.",
+        "Conserver le nom commun comme preuve que les interventions sont strictement identiques.",
+        "Comparer la mise en œuvre et les conditions de fonctionnement avant de conclure à une contradiction de mécanisme.",
+        "Rejeter le second cas parce qu’il n’obtient pas le premier résultat."
+      ],
+      "answer": 2,
+      "explanation": "Un même intitulé peut couvrir des pratiques et contextes différents. Leur comparaison précise les conditions d’une explication plutôt qu’imposer une identité d’effets."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Aucun incident rare n’a été observé pendant trois journées. Quelle restitution est la plus précise ?",
+      "options": [
+        "Le phénomène n’existe pas dans l’organisation.",
+        "Le risque annuel est nul puisque l’observation est directe.",
+        "L’absence d’incident démontre que chaque procédure préventive est efficace.",
+        "Aucun incident de ce type n’a été observé pendant ces trois journées ; sa fréquence générale reste à étudier."
+      ],
+      "answer": 3,
+      "explanation": "Une absence sur une courte fenêtre ne prouve pas une impossibilité ni un taux annuel nul, surtout pour un événement rare."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le terrain porte sur une version d’outil désormais remplacée. Quelle limite concerne une recommandation pour la nouvelle version ?",
+      "options": [
+        "Les fonctionnalités et usages pertinents doivent être réexaminés avant de transposer les conclusions.",
+        "Le maintien du nom commercial suffit à établir la stabilité de chaque fonctionnalité étudiée.",
+        "Toute modification de version impose de rejeter aussi les résultats portant sur des usages effectivement inchangés.",
+        "Le maintien des mêmes colonnes dans les exports suffit à établir la stabilité des pratiques et des règles de traitement."
+      ],
+      "answer": 0,
+      "explanation": "Un changement de version peut modifier certains mécanismes et en laisser d’autres inchangés. L’analyse doit identifier ce qui reste pertinent plutôt que supposer identité ou invalidité totale."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les participants ressemblent à la population sur l’ancienneté, mais aucune comparaison n’est disponible sur la charge ou le métier. Quelle conclusion est justifiée ?",
+      "options": [
+        "Les caractéristiques non mesurées peuvent être tenues pour identiques par compensation.",
+        "Une similarité sur l’ancienneté est documentée, sans preuve d’équivalence sur toutes les caractéristiques pertinentes.",
+        "La ressemblance sur une variable garantit l’absence de tout biais de sélection.",
+        "L’ancienneté doit être supprimée des résultats parce que les autres variables manquent."
+      ],
+      "answer": 1,
+      "explanation": "Une caractéristique commune n’établit pas l’équivalence globale des groupes. Il faut conserver la portée exacte de la comparaison réalisée."
+    }
+  ]
+}

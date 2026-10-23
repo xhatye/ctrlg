@@ -1,0 +1,248 @@
+{
+  "sourceHash": "1410acafb34a245f5d9b34d879296f0bb7a38980c9d13abe67fe6a78a0d4a3a5",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "03248514ac2e5223fb2b59a21c3285e8458f22734d591f2c622080c550bcdb07",
+      "selected": 1,
+      "reason": "NULL représente une absence ou une inconnue selon la convention, distincte du zéro connu.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "d63ce6948a1758fe0b172a3be98f67a35cdd05fe6a07150691bf07b84c5b89c9",
+      "selected": 3,
+      "reason": "IS NULL teste l’absence SQL ; une égalité à NULL ne vaut pas ce prédicat.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "f6b301f9fb1406235de8779b8c69d8dcfdbbf49a4e70a0b9dcba4649199a8527",
+      "selected": 0,
+      "reason": "COUNT(*) compte les trois lignes, même celle dont la référence est absente.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "ae9767e548b447ad6910623757626571f239f0be0bc90c115a5a0afe70865eac",
+      "selected": 1,
+      "reason": "COUNT DISTINCT sur l’identifiant client évite de compter plusieurs fois le même acheteur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "8a6c08ae35abadab480ff121bf4c5279b43fa036f1b79a439a7a361fda6603f7",
+      "selected": 3,
+      "reason": "Le mois filtre les ventes avant la somme ; le seuil filtre ensuite le total de chaque client.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "f25602b0e55a9f71b0e5e8fc6abbbe253bee2308515e69df0d860ddea8bef258",
+      "selected": 3,
+      "reason": "Chaque détail répète le montant d’en-tête, ce qui multiplie indûment la somme.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "8b125d9b1928a6f2d7b7278b2f428bdd166d6dd80dbbea0f9646b8b1516369e6",
+      "selected": 0,
+      "reason": "Convertir NULL en zéro perd la distinction inconnue/valeur nulle et modifie notamment le nombre de valeurs non NULL.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "1d4360c161e8f4fb92874988579e16502514987d3ce3c9b31b99e2476131bbd2",
+      "selected": 0,
+      "reason": "COUNT(montant) exclut NULL, alors que COUNT(*) conserve sa ligne.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "5272cf984cfdfaed1c730d95d85316c4118a9cc28d453076a3520e8d6e61320e",
+      "selected": 2,
+      "reason": "Le filtre sur chaque petite commande les élimine avant qu’elles puissent former un total client important.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "f45917de39bd15b48827db07ea16acd8884447f4a4fe2027f8d68cc375f8ddd9",
+      "selected": 0,
+      "reason": "Le jeu doit inclure plusieurs détails et une absence avec des attendus indépendants.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "23f3bbfffba4ab691e0a804d7058586cf425b556970c591c41dd43cc2bd7afd9",
+      "selected": 0,
+      "reason": "delai = 0 conserve les délais renseignés égaux à zéro, pas les absences.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "ae11ab5ac813f61661fbe709af29c6e873b306d3a5ea9a62fb52279395254703",
+      "selected": 1,
+      "reason": "Les homonymes sont des identités distinctes que COUNT DISTINCT sur le nom fusionne.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "cb0105db94582e3d276b59f733174cd27c968204797c9401d75c3ac329ee4c69",
+      "selected": 0,
+      "reason": "HAVING exprime une condition sur un agrégat de groupe, contrairement à WHERE sur les lignes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "f59549632941e65d15c8ea8edd2ba0fdfaeba78e5575435c72b32b4369a66234",
+      "selected": 0,
+      "reason": "SUM DISTINCT des valeurs 100,100,100,100 vaut 100, alors que les deux factures représentent 200 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "a18c368b5001786acecdcd0c31bd23073022ebb7ff3ce48c77642e7275ce335d",
+      "selected": 1,
+      "reason": "La convention documentée définit la signification de NULL et la conduite à tenir pour les absences.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "26d8427efab31807643493a395be06f91c9d722ef9ad125168d94e05c6f25cf4",
+      "selected": 2,
+      "reason": "COUNT(montant) mesure les valeurs non NULL, sans dédupliquer les montants égaux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "2b7b6dd7284f0122a72879d98a640d6d490be2872c04f0a3d141768f1cd8d234",
+      "selected": 2,
+      "reason": "Filtrer le statut après la somme risque de conserver des montants annulés dans cet agrégat.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "b02f85c8f693e15ae1755b9c3d6937529282818f9e9840f264cd4a7b06417d4b",
+      "selected": 0,
+      "reason": "L’absence d’erreur de syntaxe ne valide pas la conformité du résultat au besoin métier.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "f5c47a9eca299be446146d9750369a5680d458d6c55d98dd6a16227bae7a119e",
+      "selected": 2,
+      "reason": "COUNT(*) conserve trois factures ; COUNT(montant) conserve 100 et zéro, soit deux valeurs connues et une absence.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "f4da620603be3fc4e9eac853f1f3c78e9fa31fe7e7d9a9a79343ffabbfe772a9",
+      "selected": 0,
+      "reason": "Un montant NULL est exclu par COUNT(montant) même si l’identifiant de facture existe.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "4314964a112cd0a706a8aa9f179c01a894ed87d7224b22bddf2f1c560c956d37",
+      "selected": 2,
+      "reason": "GROUP BY client,montant crée un groupe par combinaison, subdivisant un même client par montant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "4898a4855148d6e89edfabbf6ece81d063d573c4111229de38dd208db0bdfc60",
+      "selected": 1,
+      "reason": "La concordance sur un cas simple ne teste pas les absences ni les multiplicités qui n’y figurent pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

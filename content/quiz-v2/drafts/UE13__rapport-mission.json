@@ -1,0 +1,365 @@
+{
+  "module": "UE13",
+  "chapter": "rapport-mission",
+  "sourceHash": "8a8bc6547a5f8e224e45236bfc1da6050ec1b7e57f28178b11dbe6397c4f8d91",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’étudiant a exécuté et documenté un test sur des dossiers autorisés. Aucune anomalie n’a été détectée. Il estime donc n’avoir rien apporté à la mission. Quelle analyse de sa contribution est juste ?",
+      "options": [
+        "L’exécution du test et la documentation de sa portée constituent un travail, même sans anomalie détectée.",
+        "Une contribution au contrôle n’existe que lorsqu’elle aboutit à une correction comptable.",
+        "L’absence d’anomalie permet de présenter son apport comme une certification de tous les dossiers du service.",
+        "Le temps consacré au test démontre son efficacité, sans qu’il soit nécessaire de préciser ce qui a été vérifié."
+      ],
+      "answer": 0,
+      "explanation": "Un contrôle peut fournir un résultat négatif dans son périmètre. L’exécution, les vérifications et leurs limites constituent un apport identifiable. Il ne faut ni les effacer faute d’anomalie ni les transformer en certification générale."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le journal de mission décrit trois interventions sur le dossier A et une sur B. Le candidat veut quantifier son activité. Quelle formulation évite de confondre interventions et dossiers distincts ?",
+      "options": [
+        "Quatre dossiers contrôlés, puisque quatre interventions sont documentées.",
+        "Quatre interventions documentées portant sur deux dossiers distincts.",
+        "Deux interventions au total, puisque seuls deux identifiants de dossier apparaissent.",
+        "Quatre dossiers supplémentaires, dont deux seulement apparaissent dans le journal."
+      ],
+      "answer": 1,
+      "explanation": "Une unité de travail doit être nommée précisément. Plusieurs interventions peuvent concerner un même dossier ; le journal décrit ici quatre interventions sur deux dossiers. Ces mesures n’évaluent pas à elles seules la qualité du travail."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dispositif a été déployé après le départ de l’étudiant. Il écrit avoir observé les résultats du déploiement, sans suivi ultérieur. Que doit-il distinguer ?",
+      "options": [
+        "Les effets annoncés dans le projet, à présenter comme résultats observés dès lors que la date de déploiement est connue.",
+        "La décision de déployer, à utiliser comme preuve de l’ampleur de l’amélioration attendue.",
+        "Ce qu’il a réalisé avant son départ et les résultats ultérieurs qu’il n’a pas observés.",
+        "Les tests préparatoires, à présenter comme une mesure de fonctionnement durable après déploiement."
+      ],
+      "answer": 2,
+      "explanation": "La chronologie limite les observations personnelles possibles. Un travail préparatoire ne prouve pas que l’étudiant ait constaté les effets d’un déploiement ultérieur."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Au début de la mission, chaque dossier est revu avec la tutrice. Ensuite, l’étudiant traite seul les cas courants mais doit lui soumettre les exceptions avant validation. Quelle description de son autonomie est précise ?",
+      "options": [
+        "Une autonomie totale sur tous les dossiers dès qu’il a commencé à traiter seul les cas courants.",
+        "Une absence d’autonomie puisque les exceptions nécessitent encore une validation.",
+        "Une autonomie identique sur toute la mission, la règle de validation des exceptions effaçant la progression.",
+        "Une autonomie progressive et délimitée aux cas courants, avec une procédure d’escalade pour les exceptions."
+      ],
+      "answer": 3,
+      "explanation": "L’autonomie n’est pas nécessairement totale ou absente. Elle peut évoluer et rester bornée par des règles de supervision. Le rapport doit préciser les périodes, les catégories de cas traités seul et ceux nécessitant une intervention."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le logiciel indique qu’un contrôle automatique existe. L’étudiant n’a pas vérifié son exécution sur les dossiers étudiés, mais la présente comme constatée. Quelle preuve manque ?",
+      "options": [
+        "Une trace ou une vérification de l’exécution effective sur le périmètre étudié.",
+        "Une fiche de paramétrage attestant que la fonction existe, sans journal d’exécution sur les dossiers.",
+        "Une capture de l’écran d’accueil montrant l’accès au module, sans résultat d’un contrôle lancé.",
+        "Une procédure demandant ce contrôle, sans rapprochement avec les opérations effectivement traitées."
+      ],
+      "answer": 0,
+      "explanation": "L’existence théorique d’une fonction et son exécution effective sont distinctes. Pour annoncer un contrôle réalisé, il faut une observation ou une trace pertinente."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat affirme avoir acquis une compétence d’analyse. Pendant la mission, il a repéré qu’un tri inadapté masquait des écarts, corrigé la méthode puis testé le résultat sur les mêmes dossiers. Quel élément étaye le mieux cet apprentissage ?",
+      "options": [
+        "La durée totale du stage, utilisée comme preuve suffisante de maîtrise de la méthode.",
+        "L’explication du défaut initial, du raisonnement ayant conduit à la correction et du test effectué.",
+        "Le nombre de logiciels utilisés, indépendamment des analyses réellement faites avec chacun.",
+        "La satisfaction générale du candidat, sans exemple de difficulté ni de changement de méthode."
+      ],
+      "answer": 1,
+      "explanation": "Une compétence devient observable lorsqu’elle est reliée à une situation, à une démarche et à une vérification. Ici, comprendre pourquoi le tri masquait les écarts et tester sa correction étaye un apprentissage précis, sans déduire une maîtrise générale de la seule durée du stage."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La procédure écrite prévoit deux validations, mais l’observation montre un circuit différent. Quelle analyse est utile ?",
+      "options": [
+        "Présenter la procédure écrite comme seule référence des résultats, en traitant les observations différentes comme non pertinentes sans analyse.",
+        "Présenter le circuit observé comme la nouvelle procédure officielle sans vérifier qu’il a été validé.",
+        "Décrire l’écart entre procédure et pratique, puis en examiner les raisons et conséquences.",
+        "Décrire séparément les deux circuits sans rechercher ce qui explique leur différence ni les risques associés."
+      ],
+      "answer": 2,
+      "explanation": "La comparaison entre prescrit et réalisé peut révéler contraintes, adaptations ou risques. L’analyse exige d’examiner cet écart plutôt que de choisir arbitrairement l’une des deux versions."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le rapport décrit une mise en œuvre « complète », alors que seule une étape a été testée. Quelle précision est nécessaire ?",
+      "options": [
+        "Présenter l’étape réussie comme preuve des étapes suivantes, sans examiner leurs données ni leurs validations.",
+        "Employer le taux de réussite de l’étape testée comme taux de mise en œuvre de tout le dispositif.",
+        "Décrire seulement les étapes prévues, sans distinguer dans le rapport celles effectivement testées.",
+        "Identifier l’étape testée et ce qui reste à mettre en œuvre."
+      ],
+      "answer": 3,
+      "explanation": "Un test partiel peut produire des enseignements utiles, mais il ne prouve pas une mise en œuvre complète. Le périmètre réalisé doit être visible."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contournement manuel accélère un traitement, mais supprime une validation prévue. Comment l’analyser ?",
+      "options": [
+        "Mettre en regard le gain observé et le risque créé par la validation absente.",
+        "Apprécier le contournement sur le seul délai, en réservant l’examen de la validation à une autre mission.",
+        "Présumer la validation devenue inutile parce que le traitement a été terminé plus rapidement.",
+        "Comparer seulement le nombre d’étapes avant et après, sans examiner l’erreur que la validation devait prévenir."
+      ],
+      "answer": 0,
+      "explanation": "Une adaptation peut présenter à la fois un avantage et un risque. Le rapport doit relier chaque effet au fonctionnement du processus plutôt que juger sur un seul indicateur."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La mission devait être achevée avant la clôture, ce qui a limité le nombre de dossiers revus. Quel traitement de cette contrainte est pertinent ?",
+      "options": [
+        "Décrire la revue comme exhaustive du service au motif que tous les dossiers disponibles avant clôture ont été traités.",
+        "Expliquer l’arbitrage et son effet sur l’étendue des conclusions.",
+        "Utiliser la date de clôture comme justification suffisante pour attribuer les mêmes résultats aux dossiers non revus.",
+        "Présenter le pourcentage de dossiers revus comme un taux de fiabilité du service, sans distinguer les unités de mesure."
+      ],
+      "answer": 1,
+      "explanation": "La contrainte de temps explique un choix de périmètre. Elle doit être reliée à la portée du travail sans servir à inventer les observations manquantes."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une solution n’a pas produit le résultat attendu. Le rapport remplace l’évaluation par une liste des étapes accomplies. Quel élément manque ?",
+      "options": [
+        "Évaluer la solution sur le nombre d’étapes terminées, en laissant de côté l’effet qu’elles devaient produire.",
+        "Remplacer le résultat attendu par le résultat obtenu dans les seuls passages d’évaluation.",
+        "L’explication de l’écart entre résultat attendu et résultat observé.",
+        "Comparer le volume du compte rendu aux prévisions de rédaction plutôt que l’effet de la solution."
+      ],
+      "answer": 2,
+      "explanation": "L’achèvement des tâches ne démontre pas l’efficacité de la solution. L’analyse doit confronter les attentes et les observations, puis examiner les explications possibles."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une recommandation implique un nouvel outil et du temps de formation. Quelle analyse complète sa justification technique ?",
+      "options": [
+        "Évaluer uniquement les fonctions de l’outil en supposant la disponibilité des agents pour toute formation.",
+        "Comparer le seul abonnement au budget actuel sans intégrer installation, formation ni disponibilité interne.",
+        "Présenter la diminution technique de saisies comme preuve suffisante que le calendrier de déploiement est réalisable.",
+        "Examiner sa faisabilité et les ressources nécessaires dans le contexte de la mission."
+      ],
+      "answer": 3,
+      "explanation": "La faisabilité relie la solution aux contraintes réelles de ressources et d’organisation. Une recommandation n’est ni une décision acquise ni un bénéfice démontré."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux annexes publient les montants exacts d’un même groupe : le total de dix clients, puis celui des neuf mêmes clients sans le client X, dont l’identité est connue. Aucun montant individuel n’est affiché. Quel risque doit être examiné ?",
+      "options": [
+        "La différence entre les deux totaux permet de retrouver le montant de X ; les pièces doivent être évaluées ensemble.",
+        "Chaque annexe étant agrégée, leur combinaison ne peut fournir d’information individuelle supplémentaire.",
+        "Le risque disparaît si les deux totaux sont placés dans des fichiers distincts mais accessibles au même lecteur.",
+        "Seul le nombre de clients dans chaque annexe compte, sans examiner le recoupement des groupes."
+      ],
+      "answer": 0,
+      "explanation": "Le lecteur peut soustraire les deux totaux exacts et isoler le montant du client exclu. La protection doit donc examiner les informations qui peuvent être combinées, pas seulement chaque annexe prise séparément.",
+      "references": [
+        {
+          "title": "CNIL, anonymisation : corrélation et inférence",
+          "url": "https://www.cnil.fr/fr/technologies/lanonymisation-de-donnees-personnelles"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le rapport cherche seulement à expliquer une règle de rapprochement. Quelle pièce limite le mieux l’exposition de données réelles inutiles ?",
+      "options": [
+        "Un extrait réel dont seuls les noms sont retirés, sans vérifier si ses autres détails restent nécessaires ou identifiants.",
+        "Un exemple pédagogique clairement présenté comme fictif et adapté à la méthode.",
+        "La capture d’un dossier de production choisie pour sa lisibilité, sans vérifier les autorisations de présentation.",
+        "Un exemple synthétique ajouté à la série réelle comme s’il constituait un dossier observé supplémentaire."
+      ],
+      "answer": 1,
+      "explanation": "Un exemple fictif peut illustrer une méthode s’il est identifié comme tel. Il ne doit pas être présenté comme une observation de terrain ni remplacer des preuves de résultat."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une autorisation couvre la présentation à un jury, mais le candidat souhaite mettre le fichier sur un site public. Quel point doit-il vérifier ?",
+      "options": [
+        "Si la présence du même contenu dans un fichier PDF suffit à étendre l’usage autorisé pour le jury.",
+        "Si le candidat peut maintenir la publication en ajoutant une mention de confidentialité sur une page accessible à tous.",
+        "Si l’autorisation et les protections couvrent aussi cette nouvelle diffusion.",
+        "Si la connaissance préalable des pièces par le jury suffit à autoriser leur mise à disposition de nouveaux lecteurs."
+      ],
+      "answer": 2,
+      "explanation": "L’audience et la finalité de diffusion comptent. Une permission pour un usage limité ne doit pas être présumée valable pour une publication ouverte."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un extrait visible paraît anonymisé, mais le fichier contient des commentaires et onglets masqués. Quelle vérification est nécessaire ?",
+      "options": [
+        "Vérifier uniquement les cellules visibles dans la feuille retenue pour l’illustration.",
+        "Contrôler le rendu d’impression en supposant qu’il reflète aussi les informations conservées dans le fichier transmis.",
+        "Masquer les onglets secondaires puis considérer qu’ils ne sont plus récupérables par le destinataire.",
+        "Examiner aussi les données et éléments non immédiatement visibles du fichier."
+      ],
+      "answer": 3,
+      "explanation": "La protection ne se limite pas à l’affichage principal. Des éléments masqués ou commentaires peuvent conserver des informations qu’il ne faut pas transmettre."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une moyenne calculée sur deux dossiers très reconnaissables est présentée comme une anonymisation garantie. Quelle réserve est justifiée ?",
+      "options": [
+        "Une agrégation de faible effectif peut encore permettre une identification.",
+        "L’absence de noms dans la moyenne suffit, même lorsque le lecteur connaît déjà la valeur d’un des deux dossiers.",
+        "La moyenne protège chaque dossier dès lors qu’elle conserve deux décimales plutôt que les valeurs sources.",
+        "Le retrait du détail individuel dispense d’examiner les informations que le destinataire connaît déjà."
+      ],
+      "answer": 0,
+      "explanation": "L’agrégation peut réduire l’exposition sans garantir l’anonymat dans tous les contextes. L’effectif et les caractéristiques particulières restent à examiner."
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un exemple autorisé doit illustrer uniquement le nombre de jours entre émission et validation d’une pièce. Pour adapter les dates, quelle transformation conserve exactement cette durée sans prétendre, à elle seule, garantir l’anonymat ?",
+      "options": [
+        "Remplacer séparément chaque date par une date choisie dans le même mois, sans conserver leur écart.",
+        "Décaler la date d’émission et celle de validation du même nombre de jours.",
+        "Remplacer les deux dates par le premier jour de leur mois, même si elles appartiennent au même mois.",
+        "Décaler uniquement la validation tout en conservant la date d’émission initiale."
+      ],
+      "answer": 1,
+      "explanation": "Un décalage commun laisse la différence entre les deux dates inchangée. Des transformations indépendantes ou la suppression des jours peuvent modifier la durée étudiée. Préserver cet invariant analytique ne suffit pas à prouver l’anonymat ni à autoriser une diffusion."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’amélioration a été observée pendant une semaine, sans suivi ultérieur. Quelle conclusion est proportionnée ?",
+      "options": [
+        "La période suffit à garantir la persistance si les agents jugent le nouveau dispositif facile à utiliser.",
+        "L’absence de suivi ultérieur permet de conclure que l’effet n’a concerné que la première semaine.",
+        "Un effet a été observé sur cette semaine, sans preuve de sa persistance à long terme.",
+        "La stabilité du premier jour et du dernier jour de la semaine démontre une tendance durable au-delà de cette période."
+      ],
+      "answer": 2,
+      "explanation": "La durée de suivi limite les conclusions sur la pérennité. Elle n’efface pas le résultat observé mais ne permet pas de garantir sa persistance."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le rapport compare les délais des mêmes types de dossiers. Avant le changement, le délai va de la réception du courrier à la validation ; après, il commence seulement à l’enregistrement informatique. Quelle limite méthodologique doit être traitée ?",
+      "options": [
+        "La différence de définition ne peut influencer la comparaison dès lors que les dossiers sont de même type.",
+        "La précision du chronomètre suffit à compenser les étapes exclues de la seconde mesure.",
+        "La différence observée mesure nécessairement le seul gain lié à la nouvelle procédure.",
+        "Les points de départ diffèrent ; il faut rendre les durées comparables avant d’interpréter leur évolution."
+      ],
+      "answer": 3,
+      "explanation": "Une mesure précise peut porter sur une durée différente. Le second indicateur omet ici le temps précédant l’enregistrement. La comparaison doit isoler cette rupture de définition pour ne pas l’attribuer automatiquement à un progrès du traitement."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le rapport décrit une meilleure fiabilité, mais ne dispose ni de coûts ni d’économies chiffrées. Que peut-il annoncer ?",
+      "options": [
+        "Une amélioration selon les indicateurs étudiés, sans retour financier chiffré démontré.",
+        "Un retour sur investissement égal à la baisse relative des erreurs, sans valoriser les coûts ni leurs conséquences.",
+        "Une économie financière correspondant à chaque anomalie évitée, sans connaître son coût de traitement.",
+        "Une rentabilité déduite du seul nombre d’utilisateurs satisfaits, sans données sur l’investissement ni les gains."
+      ],
+      "answer": 0,
+      "explanation": "La fiabilité et le retour financier sont des dimensions différentes. Sans coûts et gains appropriés, le rapport ne peut pas démontrer un rendement chiffré."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le rapport conclut à l’absence de difficultés parce qu’aucun message n’est arrivé sur une boîte de réclamation. Aucune enquête ni vérification des autres canaux n’a été menée. Quelle limite du recueil faut-il indiquer ?",
+      "options": [
+        "Le silence d’un canal montre que tous les utilisateurs ont pu signaler leurs difficultés par ce canal.",
+        "L’absence de réclamation reçue ne démontre pas l’absence de difficulté ; l’accessibilité et les usages du canal restent à examiner.",
+        "Le nombre de messages nuls permet de calculer directement un taux de satisfaction de 100 % sur l’ensemble des utilisateurs.",
+        "Une boîte dédiée constitue un recueil exhaustif dès lors que son adresse figure dans la procédure."
+      ],
+      "answer": 1,
+      "explanation": "Un recueil passif dépend de la connaissance du canal, de son accessibilité et de la décision de signaler. Le résultat documenté est l’absence de message reçu, pas une mesure exhaustive des difficultés de tous les utilisateurs."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Les agents sont interrogés collectivement sur les difficultés d’une nouvelle procédure, en présence de leur supérieur direct. Tous donnent des réponses favorables. Quelle limite doit accompagner l’analyse de ces entretiens ?",
+      "options": [
+        "La présence du supérieur transforme les avis en vérification objective de la conformité de la procédure.",
+        "L’accord des participants suffit à exclure toute influence des conditions d’entretien.",
+        "Les réponses peuvent être influencées par la situation sociale ; il faut discuter le protocole avant de conclure à l’absence de difficulté.",
+        "Le caractère collectif garantit que les avis défavorables individuels ont tous été exprimés."
+      ],
+      "answer": 2,
+      "explanation": "La situation d’entretien peut influencer ce que les personnes acceptent d’exprimer. Des réponses favorables devant le supérieur ne prouvent ni dissimulation ni absence de difficulté ; le rapport doit examiner ce risque de mesure et les moyens de le limiter.",
+      "references": [
+        {
+          "title": "Insee, multimode : biais de mesure et désirabilité sociale",
+          "url": "https://www.insee.fr/fr/information/6035934?sommaire=6035950"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "sourceHash": "eced1258be60626cada31ef341c5b8d269225a9afa12366d1c1f005d506d313e",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "49e95087bb52b48a3cdc8508cc80e39be9e8e5ee973f8ac0643906ab27d24295",
+      "selected": 2,
+      "reason": "24 factures avec trois détails chacune produisent 24 × 3 = 72 lignes de jointure.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "ae3bb6a9682fdb1599eabe4f434d338f53122a41257bb1bf9653ece7aef00f71",
+      "selected": 1,
+      "reason": "COUNT DISTINCT sur la clé facture compte chaque facture représentée une seule fois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "d53cbfbec44b11eb632d560186598f525e02f385f9fb13fbd28647605ebcd476",
+      "selected": 2,
+      "reason": "Les huit montants de 250 sont répétés trois fois, soit 8 × 250 × 3 = 6 000 euros erronés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "9e1ad0a70443dcb9966843dd238c8ac94c37e2a7c0435b3ecbbc2c7b436f7ed7",
+      "selected": 0,
+      "reason": "Huit factures distinctes de 250 représentent 2 000 euros indépendamment du nombre de détails.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "9069dc6d155e50ce479fe9d0915b65cc1cd467e366eaaab7476b842837cefcf4",
+      "selected": 2,
+      "reason": "Au grain commande, un client réapparaît normalement pour chacune de ses commandes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "79413acb9301ae5a7e02d31e2a528f7b496aa06025b62e56cc7a9f8d6a337bec",
+      "selected": 2,
+      "reason": "La jointure à cinq détails uniques donne cinq occurrences, pas seulement deux factures.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "edc409dfaca9515faa4242ee1cd9f70aab603f2b5415e58f76dc0fae9e4863ae",
+      "selected": 3,
+      "reason": "Une division fixe ne corrige pas des nombres de répétitions différents selon chaque facture.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "c14976aa8c54645fca0d0b09dd786d2f076b34f2e6a6488d9514ad9af07a38d1",
+      "selected": 3,
+      "reason": "Il faut une occurrence par identité de facture, pas par seule valeur du montant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "dc009008ce2465b46e2a5657b05b2c0a036c2d1c65a6cd1177077ba3403d5171",
+      "selected": 2,
+      "reason": "La jointure interne élimine l’en-tête qui ne possède aucune correspondance.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "aabfeb13e5f162c9cac8e34092a5f65f7acdbf3858fe7ae602bff180301cc52f",
+      "selected": 1,
+      "reason": "COUNT sur une colonne renseignée compte chacune de ses occurrences, même répétée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "2665786fed1c1a62f7d955d7c1278fdfd08253604bfa0bfd69bd3a0fafc89719",
+      "selected": 0,
+      "reason": "100 × 2 + 300 × 4 = 1 400 euros dans la somme erronée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "ad9529f09aa3cc24504b986c9941ba520ac4f53ee9c9e132c30b4f4a00f3978f",
+      "selected": 0,
+      "reason": "Les en-têtes seuls suffisent et évitent toute multiplication par les détails non concernés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "a403b92c579bafd77459217e229bc339299dea5bcc9598ab49b140f8e28e3ada",
+      "selected": 0,
+      "reason": "La jointure produit une ligne par association en-tête/détail, répétant les valeurs du parent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "c26c412f858189d0a931a93307b5cd325db16ac4ffa0e586a715b3a3eeadf296",
+      "selected": 1,
+      "reason": "Après filtre produit, le nombre d’identifiants de facture distincts conserve chaque facture contenant P une fois.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "ab951218eef26cf8a4e474e9896bf001fa581f0ea7c69239ebf4a2f13d3140d5",
+      "selected": 0,
+      "reason": "Une moyenne sur les lignes jointes pondère implicitement chaque en-tête par son nombre de détails.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "b4fc31b3416488a2316ab0ee15a6e53aca9a1e20424a2796e81bb2fc2cf078f9",
+      "selected": 0,
+      "reason": "Sommer les détails P mesure P ; le total complet des factures qui contiennent P peut inclure d’autres produits.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "1fdb0a2741e32e445bc61640cba7b5620006dc1dbda02bd68ad087830669b88a",
+      "selected": 0,
+      "reason": "INNER JOIN ne regroupe ni ne déduplique automatiquement ; certaines factures peuvent ne pas avoir de correspondance retenue.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "a1dcdbfe053e41ec1287095646769d68c2b503407dc4826f5c1c731e66fe3b9e",
+      "selected": 2,
+      "reason": "COUNT DISTINCT sur le montant compte les valeurs monétaires distinctes, qui peuvent être communes à plusieurs factures.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "0c2090ee7ea6a68d3caea144177cf0e4ed83023a6e42fb8b2c68d0f0aa6ba944",
+      "selected": 1,
+      "reason": "Des factures aux montants et multiplicités différents exposent l’erreur de répétition avec un total connu.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "058b30c5c663b51c49525dc48d2b19ef5cd3dc61b52efd9c1b60a560c71e99db",
+      "selected": 2,
+      "reason": "Grouper par facture et ligne reste au grain détail, donc répète le montant de facture dans plusieurs groupes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "293c544e7b5b09da8f3f3390595c22cbf293dd198bec9ef9bd5988420ebc888a",
+      "selected": 0,
+      "reason": "Les en-têtes représentent toutes les factures, y compris celles sans détail, au périmètre annoncé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "062a51884af48de8be28d77782ca234aa9b8f8b85b7b33ce1a8cf0037a80c29a",
+      "selected": 1,
+      "reason": "L’accord sur un jeu connu valide ce cas précis, sans certifier tous les filtres et cas futurs.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

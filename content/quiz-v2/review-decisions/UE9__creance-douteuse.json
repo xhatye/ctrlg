@@ -1,0 +1,248 @@
+{
+  "sourceHash": "64ae6e9713a874469a6136e2ddf865ac5d851ea468e51ec9705a083e3cfaf780",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "8a0be6ca84021878457e9c5cebee7b8be71a92444a5d8ac3bf78c183a203421d",
+      "selected": 1,
+      "reason": "9 600 − 2 400 = 7 200 TTC restants ; divisé par 1,20 donne 6 000 HT exposés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "0f9ad93a7a5a908ad8d4e7107a6261f80fb8111dc731f4cce2b8dd875983547a",
+      "selected": 0,
+      "reason": "Le risque sur HT exige de retirer la composante TVA du solde TTC selon le cas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "0d29cc4074c26f2af7261e135e681e54024f18515fd735ad6f4ff3e82314d3ea",
+      "selected": 0,
+      "reason": "Plusieurs taux rendent nécessaire une ventilation ou base HT documentée, pas un facteur unique arbitraire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "25af2b9a066106496089cd7c3f594d80d35d2adae3f12e7bc41df97a55551e7d",
+      "selected": 2,
+      "reason": "Diviser à nouveau un montant déjà HT minore une base dont la TVA était déjà exclue.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "2d7962b9d62246e7920444b681cab9ec6d8e3e5cbb757c2dd5a8d095997fe30a",
+      "selected": 0,
+      "reason": "3 000 × 35 % = 1 050 euros de correction totale nécessaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "e58fc5f9a540b84decd9334ddb27006ed43ca9a7d006bb1d66fe5319b443ebdc",
+      "selected": 3,
+      "reason": "Le taux de perte est une estimation du dossier à étayer, pas un taux universel de taxe ou d’intérêt.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "4cce9657ab1b31ef0759720bcad98934543dbe9c535e94bf63eea0d56b5c4477",
+      "selected": 1,
+      "reason": "Le paiement réduit le montant encore exposé, à traduire dans la convention HT du cas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "0fe9995b16acaf9c658b38877f029b52a708a3d1a5b26805575dd94dec77a534",
+      "selected": 3,
+      "reason": "Le doute justifie une correction de valeur à estimer, pas l’extinction définitive du droit ni un avoir commercial.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "67dcf9d1fc7eaff36f182d782d89518210eba8ac776add6cde9627950dd17299",
+      "selected": 1,
+      "reason": "Une garantie crédible peut changer la récupération ; l’estimation doit être actualisée aux faits de clôture.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "03cc3794ad0654c509c6815d0f72a50b26d21303083e9577cd2e05a58cfd625a",
+      "selected": 1,
+      "reason": "La perte sur cette seule base ne peut excéder 100 % de la base ; le taux de 130 % appelle contrôle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "1a4540e116e6d5d9d323253d5e4b73f42c28a51bc42531838697b939d76ee797",
+      "selected": 0,
+      "reason": "Besoin final 1 800 moins correction existante 700 donne 1 100 euros de dotation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "93116aafb07173f6e7b81ef711c35ff7d993e34dee351cde8bff016c82034378",
+      "selected": 3,
+      "reason": "2 000 existants moins 1 200 nécessaires donnent une reprise de 800 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "a4d26031d0ad3898767850631e79d95ba541abdc657464a948f156de08734b19",
+      "selected": 2,
+      "reason": "Ajouter la perte totale sans comparer l’existant peut surévaluer la correction cumulée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "e955d464528b5dd578e2fdcfb1342e50fc1957c9d2712a6d8cd1ef9822da9b05",
+      "selected": 0,
+      "reason": "L’existant égal au besoin ne nécessite aucun ajustement de montant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "a415fa64cf9155f46ff7a9213da1faf9482eb9d3901ccf017c3f5335be086b81",
+      "selected": 0,
+      "reason": "Le besoin final doit être rapproché du solde de correction encore existant après les éventuelles reprises, pas de la seule dotation initiale.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "857c611f4c77e972077ff0ffc1697e569f4895349e376ea81210067217871e85",
+      "selected": 0,
+      "reason": "La correction doit refléter la perte estimée justifiée plutôt qu’un objectif de résultat.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "a48292001b425b53c67855f0e45774bec52c44d0d440c47fe13382415b1df4af",
+      "selected": 2,
+      "reason": "8 000 × (1 − 25 %) = 6 000 euros HT nets.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "8f48d7fa492ca5def594da25d9f5b9071efd819ea31a303667308f005d9dde2b",
+      "selected": 0,
+      "reason": "Une dépréciation est une correction séparée du droit brut ; son net ne constitue ni un règlement ni un avoir.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "6185d98ded85c2786bd76c25eb9382ac0b020dc9ef3f6cd6719dbf282d042b56",
+      "selected": 0,
+      "reason": "Une valeur nette de recouvrement est estimée, distincte d’un encaissement effectivement observé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "dbbac021911c01f7407efcb8e0eb26d08158895ecafb6fda1d2e77b6e9bfd933",
+      "selected": 3,
+      "reason": "9 600 TTC moins la seule correction de 2 000 donne un poste net de 7 600 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "36524c584549035167ed8890ebf204b27a6a22bc1dc1aa62d774f11994a919b5",
+      "selected": 2,
+      "reason": "À base stable, une perte estimée accrue réduit la valeur nette HT.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "cca35654ab751af1073c5e10e72aecc37fb938e4acd3cf91417634738d9a43ca",
+      "selected": 3,
+      "reason": "L’analyse relie solde, base, risque justifié, existant et net pour contrôler la correction.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

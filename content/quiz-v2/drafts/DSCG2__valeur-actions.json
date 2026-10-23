@@ -1,0 +1,474 @@
+{
+  "module": "DSCG2",
+  "chapter": "valeur-actions",
+  "sourceHash": "de4af0a7630d0e26c4dd7f09d655c297feb3545a59d0c27f130b6d6767d093df",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un dossier donne une VE de 1 200 000 € pour 20 000 actions. Quelle VE par action théorique obtient-on, avant tout passage aux fonds propres ?",
+      "options": [
+        "60 €",
+        "50 €",
+        "70 €",
+        "0,0167 €"
+      ],
+      "answer": 0,
+      "explanation": "Le quotient VE/nombre de titres vaut 60 €. Il s’agit d’un ratio théorique d’activité par titre, pas du prix des capitaux propres après dette nette.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1200000
+            },
+            {
+              "value": 20000
+            }
+          ]
+        },
+        "expected": 60,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une fiche annonce « prix de l’action = VE / nombre d’actions » alors qu’une dette nette positive existe, sans autre ajustement. Quel biais cela introduit-il ?",
+      "options": [
+        "Elle déduit deux fois la dette nette de leur valeur",
+        "Elle attribue aux actionnaires une valeur incluant encore la part de dette nette",
+        "Elle omet toute la valeur d’exploitation des activités",
+        "Elle traite la trésorerie retenue comme un paiement de dividende passé"
+      ],
+      "answer": 1,
+      "explanation": "Le prix des fonds propres se calcule après le passage VE − dette nette. Omettre une dette nette positive surestime la valeur attribuée aux actionnaires."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une dette brute vaut 500 000 € ; la dette nette retenue est de 380 000 €. Quelle trésorerie déductible est impliquée, sans autre poste ?",
+      "options": [
+        "880000 €",
+        "380000 €",
+        "120000 €",
+        "-120000 €"
+      ],
+      "answer": 2,
+      "explanation": "Dette nette = dette − trésorerie implique trésorerie = 500 000 − 380 000 = 120 000 €. Le signe doit traduire un montant retranché de la dette brute.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 500000
+            },
+            {
+              "value": 380000
+            }
+          ]
+        },
+        "expected": 120000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les fonds propres sont valorisés 720 000 € et la dette nette 180 000 €, sans autre ajustement. Quelle VE ces chiffres impliquent-ils ?",
+      "options": [
+        "540000 €",
+        "720000 €",
+        "180000 €",
+        "900000 €"
+      ],
+      "answer": 3,
+      "explanation": "On remonte le passage : VE = fonds propres + dette nette, soit 900 000 €. Soustraire la dette nette ferait deux fois le mouvement vers les actionnaires.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 720000
+            },
+            {
+              "value": 180000
+            }
+          ]
+        },
+        "expected": 900000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une valeur par action de 45 € correspond à 30 000 actions identiques. Quelle valeur totale des fonds propres est impliquée ?",
+      "options": [
+        "1350000 €",
+        "666,67 €",
+        "450000 €",
+        "30000 €"
+      ],
+      "answer": 0,
+      "explanation": "La valeur totale des titres est leur nombre multiplié par la valeur unitaire : 30 000 × 45 = 1 350 000 €. Les unités action se simplifient.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 45
+            },
+            {
+              "value": 30000
+            }
+          ]
+        },
+        "expected": 1350000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le modèle exprime les fonds propres en milliers d’euros mais le nombre d’actions en unités. Le quotient est présenté directement en euros par action. Quelle vérification manque ?",
+      "options": [
+        "La division du nombre d’actions par mille et de la valeur par mille, considérée comme conversion suffisante du quotient en euros",
+        "La conversion des milliers d’euros en euros dans la valeur unitaire",
+        "La division du quotient par mille pour passer de milliers d’euros à euros par action",
+        "La conservation du quotient numérique, en changeant seulement son libellé de milliers d’euros en euros"
+      ],
+      "answer": 1,
+      "explanation": "Diviser des milliers d’euros par des actions donne des milliers d’euros par action. Il faut rendre explicite le facteur mille pour afficher des euros."
+    },
+    {
+      "id": "q07",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une dette de 100 a été remboursée avec 100 de trésorerie déjà incluse dans la dette nette. Dans un modèle sans autre effet, que devient la dette nette ?",
+      "options": [
+        "Elle diminue de 100 puisque seule la dette compte",
+        "Elle augmente de 100 puisque seule la trésorerie compte",
+        "Elle reste inchangée car dette et trésorerie diminuent du même montant",
+        "Elle diminue de 200 car les deux mouvements ont le même signe dans la formule"
+      ],
+      "answer": 2,
+      "explanation": "Dans D − C, diminuer D et C du même montant laisse la différence inchangée. Le paiement ne modifie donc pas ce seul ajustement de valeur."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une nouvelle dette de 200 est encaissée et conservée en trésorerie déductible. VE inchangée, aucun coût ni autre effet. Quel effet ce seul financement a-t-il sur la valeur des fonds propres ?",
+      "options": [
+        "Une hausse de 200 égale à l’emprunt reçu",
+        "Une baisse de 200 égale à la dette brute supplémentaire",
+        "Une baisse de 400 par cumul de dette et de trésorerie",
+        "Aucun dans le passage simplifié, car la dette nette reste inchangée"
+      ],
+      "answer": 3,
+      "explanation": "L’emprunt augmente simultanément dette et trésorerie de 200. Leur différence reste identique ; l’encaissement de financement seul n’est pas une création de valeur."
+    },
+    {
+      "id": "q09",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La valeur totale des fonds propres reste fixée à 1 000 000 €. Le nombre d’actions est mécaniquement doublé de 10 000 à 20 000, sans autre droit ni flux. Quelle valeur unitaire résulte de ce modèle ?",
+      "options": [
+        "50 €",
+        "100 €",
+        "200 €",
+        "25 €"
+      ],
+      "answer": 0,
+      "explanation": "Le même montant total est réparti entre 20 000 titres : 1 000 000 / 20 000 = 50 €. La division des titres ne crée pas à elle seule de valeur totale.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1000000
+            },
+            {
+              "value": 20000
+            }
+          ]
+        },
+        "expected": 50,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La VE vaut 80 € par action et la dette nette 18 € par action, avec un même nombre de titres et aucun autre ajustement. Quelle valeur de fonds propres par action calcule-t-on ?",
+      "options": [
+        "98 €",
+        "62 €",
+        "80 €",
+        "18 €"
+      ],
+      "answer": 1,
+      "explanation": "Avec un dénominateur identique, le passage peut se faire par action : 80 − 18 = 62 €. Les deux valeurs par titre doivent partager le même périmètre.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 80
+            },
+            {
+              "value": 18
+            }
+          ]
+        },
+        "expected": 62,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le calcul de dette nette déduit le même compte de trésorerie deux fois, dans deux fichiers de suivi. Quel effet attendre sur la valeur des fonds propres, VE inchangée ?",
+      "options": [
+        "Une sous-estimation liée à une dette nette artificiellement trop forte",
+        "Aucun effet puisque le doublon serait compensé par une baisse de VE supposée sans justification",
+        "Une surestimation liée à une dette nette artificiellement trop faible",
+        "Une hausse de la dette nette et de la valeur des fonds propres du même montant"
+      ],
+      "answer": 2,
+      "explanation": "Une trésorerie déduite en double abaisse trop D − C. Comme la dette nette est soustraite de VE, les capitaux propres sont alors surévalués."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un rapport donne une valeur des fonds propres négative par simple différence entre VE et dette nette. Quelle prudence d’interprétation est nécessaire ?",
+      "options": [
+        "Présenter cette différence comme une somme automatiquement due par chaque actionnaire",
+        "Remplacer systématiquement la différence par le nominal statutaire",
+        "Augmenter VE du montant nécessaire sans justifier les flux",
+        "Examiner les droits et le modèle avant d’assimiler cette différence à un prix d’action négatif"
+      ],
+      "answer": 3,
+      "explanation": "Le pont arithmétique signale que la dette nette dépasse VE. Il ne suffit pas à déterminer un prix négatif exigible des actionnaires ; les droits et limites du modèle comptent."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dossier exclut toute dilution et valorise uniquement les actions ordinaires existantes. Un analyste divise par un nombre comprenant des titres hypothétiques non retenus. Quel défaut faut-il relever ?",
+      "options": [
+        "Un dénominateur qui ne correspond pas aux droits et au scénario valorisés",
+        "Une dette nette nécessairement omise du numérateur",
+        "Une valeur d’entreprise nécessairement trop faible",
+        "Une trésorerie nécessairement comptée deux fois"
+      ],
+      "answer": 0,
+      "explanation": "La valeur et le nombre de titres doivent couvrir les mêmes droits dans le même scénario. Un nombre hypothétique ne peut être ajouté sans adapter le périmètre."
+    },
+    {
+      "id": "q14",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste rapproche une VE par action calculée avec 10 000 titres et une dette nette par action calculée avec 12 000 titres. Pourquoi leur différence est-elle trompeuse ?",
+      "options": [
+        "Les deux ratios ne peuvent être exprimés dans la même monnaie",
+        "Les ratios n’ont pas le même dénominateur de répartition",
+        "La dette nette ne peut jamais être exprimée par action",
+        "Une valeur par action doit être indépendante du nombre de titres"
+      ],
+      "answer": 1,
+      "explanation": "On peut effectuer le passage par action seulement avec des dénominateurs cohérents. Sinon les parts de valeur retirées ne correspondent pas aux mêmes titres."
+    },
+    {
+      "id": "q15",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La valeur des fonds propres passe de 600 000 à 690 000 € avec un nombre fixe de 15 000 titres. De combien augmente la valeur par action ?",
+      "options": [
+        "90 €",
+        "46 €",
+        "6 €",
+        "40 €"
+      ],
+      "answer": 2,
+      "explanation": "L’augmentation totale de 90 000 € se répartit sur 15 000 titres, soit 6 € par action. Il faut comparer la variation, pas la nouvelle valeur complète.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 690000
+                },
+                {
+                  "value": 600000
+                }
+              ]
+            },
+            {
+              "value": 15000
+            }
+          ]
+        },
+        "expected": 6,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le prix de marché d’une action est comparé à une valeur calculée avec une dette nette antérieure à une distribution importante de trésorerie. Quel contrôle est prioritaire ?",
+      "options": [
+        "Conserver la dette nette ancienne en déduisant la distribution du seul prix de marché déjà observé après distribution",
+        "Conserver la trésorerie antérieure et ajouter la distribution à la valeur des fonds propres après le passage",
+        "Considérer la dette nette historique comme stable du seul fait que VE est inchangée",
+        "Rendre cohérentes la date du prix et les données de passage aux fonds propres"
+      ],
+      "answer": 3,
+      "explanation": "Une distribution peut modifier la trésorerie déductible. Comparer des valeurs sur des dates ou périmètres incompatibles peut créer un écart artificiel."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi faut-il préciser si les actions retenues ont des droits identiques ?",
+      "options": [
+        "Parce qu’une division uniforme de la valeur suppose des droits valorisés comparables",
+        "Parce qu’un nominal identique permet toujours une répartition égale malgré des droits financiers différents",
+        "Parce que le pourcentage de droits de vote suffit à répartir toute la valeur financière, indépendamment des autres clauses",
+        "Parce qu’un même prix d’acquisition historique prouve l’équivalence actuelle de tous les droits"
+      ],
+      "answer": 0,
+      "explanation": "La division simple répartit également une valeur. Des droits différents peuvent demander une allocation adaptée ; il faut expliciter le périmètre étudié."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société sans dette nette est valorisée sans autre ajustement. Quel lien existe alors entre VE par action et valeur des fonds propres par action ?",
+      "options": [
+        "La valeur des fonds propres par action vaut le double",
+        "Elles coïncident dans ce schéma simplifié",
+        "La VE par action vaut zéro",
+        "La valeur des fonds propres par action égale le nominal quelle que soit VE"
+      ],
+      "answer": 1,
+      "explanation": "Lorsque la dette nette est nulle et qu’aucun autre ajustement n’existe, fonds propres = VE. Avec le même nombre de titres, les valeurs unitaires coïncident."
+    },
+    {
+      "id": "q19",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le rapport présente uniquement un prix par action. Pourquoi conserver aussi le passage de VE aux fonds propres ?",
+      "options": [
+        "Pour justifier le prix unitaire en utilisant le nominal à la place des ajustements financiers",
+        "Pour vérifier seulement le nombre d’actions, en tenant la dette et la trésorerie pour déjà incluses dans VE sans vérifier le modèle",
+        "Pour rendre visibles les ajustements financiers qui expliquent la valeur attribuée aux actionnaires",
+        "Pour remplacer le contrôle des données de dette et de trésorerie par la seule comparaison du prix avec le cours actuel"
+      ],
+      "answer": 2,
+      "explanation": "Le passage permet de vérifier dette, trésorerie et autres ajustements retenus. Un prix unitaire seul peut masquer un défaut de périmètre ou un double compte."
+    },
+    {
+      "id": "q20",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "VE = 2 000 000 €, dette financière = 600 000 €, trésorerie retenue = 100 000 € et 25 000 actions identiques, sans autre ajustement. Quel écart VE/action moins fonds propres/action obtient-on ?",
+      "options": [
+        "24 €",
+        "4 €",
+        "80 €",
+        "20 €"
+      ],
+      "answer": 3,
+      "explanation": "L’écart unitaire est la dette nette par action : (600 000 − 100 000)/25 000 = 20 €. Le pont global et le pont unitaire doivent se rapprocher.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 600000
+                },
+                {
+                  "value": 100000
+                }
+              ]
+            },
+            {
+              "value": 25000
+            }
+          ]
+        },
+        "expected": 20,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une participation représente 15 % de titres tous identiques. Le dossier impose une allocation proportionnelle sans prime ni décote. Comment déterminer sa valeur ?",
+      "options": [
+        "Prendre 15 % de la valeur totale des fonds propres retenue",
+        "Prendre 15 % de la VE avant dette nette",
+        "Ajouter 15 % de la dette nette à la valeur totale des fonds propres",
+        "Diviser la valeur totale des fonds propres par 15 sans conversion du pourcentage"
+      ],
+      "answer": 0,
+      "explanation": "L’hypothèse proportionnelle répartit la valeur des droits actionnaires, pas celle des activités avant dette. Une prime ou décote n’est pas à inventer."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un prix unitaire de 72 € est validé parce que son produit par le nombre de titres retrouve VE, alors qu’une dette nette positive est présente. Que manque le contrôle ?",
+      "options": [
+        "Il devrait additionner encore la dette nette à VE avant multiplication",
+        "Il devrait reconstituer les fonds propres après dette nette, pas VE",
+        "Il devrait comparer le prix au seul coût historique d’acquisition des titres",
+        "Il devrait remplacer le nombre de titres par le montant du capital nominal"
+      ],
+      "answer": 1,
+      "explanation": "Le contrôle inverse doit viser le bon agrégat. Prix des actions × nombre de titres reconstitue les capitaux propres, et non VE avant l’ajustement de dette nette."
+    }
+  ]
+}

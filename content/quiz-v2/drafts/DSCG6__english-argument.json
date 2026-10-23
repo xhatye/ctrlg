@@ -1,0 +1,338 @@
+{
+  "module": "DSCG6",
+  "chapter": "english-argument",
+  "sourceHash": "c0baa5beaa28c85e932ff10469ccb4f593de949d45ef3c197025fc1cbd28e2ad",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Complete the committee’s assessment: “We found the business case ___ enough to reconsider our initial position.”",
+      "options": [
+        "persuasive",
+        "persuaded",
+        "persuasion",
+        "persuasively"
+      ],
+      "answer": 0,
+      "explanation": "Persuasive est l’adjectif qui qualifie un argument capable de convaincre. Persuaded décrit une personne convaincue ; persuasion est un nom et persuasively un adverbe. Ici, le complément de found qualifie business case."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A firm can terminate a small office lease next month without a penalty. Which sentence uses that fact as a relevant reason to consider a remote-work trial?",
+      "options": [
+        "A trial is worth considering because the existing lease proves that employees prefer working at home.",
+        "A trial is worth considering because the firm has an opportunity to reduce committed premises costs soon.",
+        "A trial is worth considering because the firm has already demonstrated higher employee output.",
+        "A trial is worth considering because remote work removes the need to assess coordination."
+      ],
+      "answer": 1,
+      "explanation": "Le fait connu crée une possibilité concrète de réduire un coût immobilier engagé. Il ne renseigne pas la productivité, les préférences des salariés ou la disparition des besoins de coordination."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "You want to say that a proposal remains attractive in spite of its implementation cost. Which sentence expresses that reasoning?",
+      "options": [
+        "I support the proposal so that its implementation would be costly.",
+        "I support the proposal unless its implementation would be costly.",
+        "I support the proposal although its implementation would be costly.",
+        "I support the proposal because its implementation would be costly."
+      ],
+      "answer": 2,
+      "explanation": "Although exprime la concession demandée : le coût est une objection admise mais n’empêche pas le soutien. Because en ferait la raison du soutien ; so that un objectif ; unless une condition négative différente."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A student writes, “Because office costs might fall, productivity must have increased.” Which problem affects the argument?",
+      "options": [
+        "A potential fall in office costs proves that output per working hour already rose.",
+        "The word because establishes that the possible saving has actually been measured.",
+        "Uncertain office savings establish that productivity necessarily fell.",
+        "A possible saving in one area does not establish a past productivity increase."
+      ],
+      "answer": 3,
+      "explanation": "Une baisse possible de frais immobiliers ne constitue ni une observation passée ni une mesure de production par unité de travail. Because affirme une relation mais ne fournit pas les données qui permettraient de la démontrer."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which sentence correctly uses evidence as an uncountable noun in a professional argument?",
+      "options": [
+        "The available evidence supports a cautious assessment of the proposal.",
+        "The available evidences support a cautious assessment of the proposal.",
+        "An evidence supports a cautious assessment of the proposal.",
+        "The available evidence support a cautious assessment of the proposal."
+      ],
+      "answer": 0,
+      "explanation": "Evidence s’emploie ici comme un nom indénombrable singulier, avec supports. Pour compter les éléments, on pourrait dire pieces of evidence ; ni an evidence ni le pluriel evidences ne conviennent dans cet usage."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Choose the grammatically correct sentence using although to concede that coordination remains difficult.",
+      "options": [
+        "Although difficult coordination, but the team has met its deadlines.",
+        "Although coordination remains difficult, the team has met its deadlines.",
+        "Although the difficulty of coordination, the team has met its deadlines.",
+        "Although of coordination remaining difficult, the team has met its deadlines."
+      ],
+      "answer": 1,
+      "explanation": "Although introduit une proposition avec sujet et verbe : coordination remains difficult. Les autres constructions emploient un groupe nominal ou ajoutent une structure incorrecte à ce connecteur."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which sentence correctly uses despite followed by a form meaning “even though the team works remotely”?",
+      "options": [
+        "Despite to work remotely, the team meets each delivery deadline.",
+        "Despite of working remotely, the team meets each delivery deadline.",
+        "Despite working remotely, the team meets each delivery deadline.",
+        "Despite the team works remotely, it meets each delivery deadline."
+      ],
+      "answer": 2,
+      "explanation": "Despite peut être suivi d’un nom ou d’une forme en -ing, sans of. Pour employer une proposition conjuguée, on pourrait notamment utiliser despite the fact that, mais cette structure n’est pas celle des distracteurs."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The supplier has in fact missed its latest deadline. You want to concede that known fact, rather than describe a hypothetical future delay. Which sentence fits?",
+      "options": [
+        "Even if the supplier misses the next deadline, the relationship will remain valuable.",
+        "If the supplier were to miss a deadline, the relationship might remain valuable.",
+        "Provided that the supplier meets the next deadline, the relationship will remain valuable.",
+        "Even though the supplier missed the deadline, the relationship remains valuable."
+      ],
+      "answer": 3,
+      "explanation": "Even though introduit ici le fait admis du retard passé. Even if et if ouvrent une hypothèse ; provided that énonce une condition différente portant sur le respect d’une prochaine échéance."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "You have just acknowledged that a proposal is expensive. Which next sentence most clearly signals that you still see an offsetting benefit?",
+      "options": [
+        "Nevertheless, its stronger service continuity may justify the premium.",
+        "Consequently, its stronger service continuity may justify the premium.",
+        "For example, its stronger service continuity may justify the premium.",
+        "In other words, its stronger service continuity may justify the premium."
+      ],
+      "answer": 0,
+      "explanation": "Nevertheless marque le maintien d’un argument favorable malgré l’objection de coût. La continuité n’est ici ni une conséquence du prix élevé, ni un exemple ou une reformulation de son caractère coûteux."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which grammatically correct sentence makes it clear that the directors reviewed the cost estimates before approving a pilot?",
+      "options": [
+        "Having reviewed the cost estimates, the pilot received the directors’ approval.",
+        "Having reviewed the cost estimates, the directors approved the pilot.",
+        "Having reviewed the cost estimates, approval was granted to the pilot by the directors.",
+        "Having reviewed the cost estimates, the approval decision was recorded in the minutes."
+      ],
+      "answer": 1,
+      "explanation": "Le sujet de la proposition principale doit être l’auteur de having reviewed. The directors remplit ce rôle. Un pilote, une approbation ou une décision ne sont pas ici les personnes ayant examiné les estimations."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A response says, “I agree the system is cheaper; however, cheaper systems cost less.” What is missing after however?",
+      "options": [
+        "An attribution of the price comparison to the listener rather than the speaker.",
+        "A statement making the second clause the cause of the first.",
+        "A genuine contrasting point, rather than a restatement of the conceded advantage.",
+        "A more detailed repetition of the same price comparison."
+      ],
+      "answer": 2,
+      "explanation": "However annonce normalement une opposition ou une réserve. La deuxième proposition répète ici l’idée de coût inférieur ; elle n’apporte pas le contrepoint promis par le connecteur."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report estimates a possible fall in office rent but gives no data on output or hours worked. Which limitation specifically concerns a claim of higher productivity?",
+      "options": [
+        "The report has already demonstrated unchanged productivity because it omits the measure.",
+        "The rent estimate can be used as a direct substitute for output per hour.",
+        "The report establishes lower productivity unless employees work longer hours.",
+        "The report does not provide the output and input evidence needed to assess productivity."
+      ],
+      "answer": 3,
+      "explanation": "La productivité demande un rapprochement entre production et ressources, absent ici. L’absence de données ne prouve ni stabilité ni baisse ; un loyer ne remplace pas une mesure de productivité."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An analyst writes, “We found no evidence of a rise in error rates.” Which paraphrase preserves the distinction between lack of evidence and evidence of no change?",
+      "options": [
+        "The analysis did not establish an increase in error rates.",
+        "The analysis established that error rates were unchanged.",
+        "The analysis established that error rates declined.",
+        "The analysis ruled out any increase in error rates."
+      ],
+      "answer": 0,
+      "explanation": "Ne pas trouver de preuve d’une hausse ne signifie pas démontrer une stabilité, une baisse ou l’impossibilité d’une hausse. La bonne reformulation maintient exactement cette limite de connaissance."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Choose the standard mandative subjunctive form: “The consultant recommended that the company ___ the rollout until the review was complete.”",
+      "options": [
+        "postponing",
+        "postpone",
+        "postponed",
+        "postpones"
+      ],
+      "answer": 1,
+      "explanation": "Après recommend that, le subjonctif mandatif utilise la base verbale : the company postpone. Il ne prend pas le s de la troisième personne. Une construction avec should serait également possible, mais elle n’est pas proposée."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The board will approve remote work only if service quality is maintained. Which interpretation correctly preserves the condition?",
+      "options": [
+        "Approval guarantees that service quality will be maintained after implementation.",
+        "Service quality is considered only after approval and cannot affect the decision.",
+        "Maintaining service quality is necessary for approval, but is not stated to be sufficient.",
+        "Maintaining service quality guarantees approval regardless of any other consideration."
+      ],
+      "answer": 2,
+      "explanation": "Only if introduit une condition nécessaire. Le maintien de la qualité doit être rempli pour l’approbation, mais la phrase ne dit pas qu’il suffit à lui seul ni que la décision prouve un résultat futur."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report says, “We cannot yet determine the net saving.” Which paraphrase preserves the time limitation?",
+      "options": [
+        "The report has determined that the net saving is zero.",
+        "The report concludes that net savings cannot be determined in principle.",
+        "The report rejects any further calculation of net savings.",
+        "The net saving remains undetermined with the evidence currently available."
+      ],
+      "answer": 3,
+      "explanation": "Cannot yet situe l’impossibilité à ce stade de l’analyse. Cela n’équivaut ni à un montant nul, ni à une impossibilité définitive, ni à un refus de poursuivre le travail."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The meeting note states, “Not all participants endorsed the proposal.” Which conclusion necessarily follows?",
+      "options": [
+        "At least one participant did not endorse it; the sentence does not specify how many endorsed it.",
+        "No participant endorsed it.",
+        "A majority of participants rejected it.",
+        "Every participant endorsed it, subject to the same qualification."
+      ],
+      "answer": 0,
+      "explanation": "Not all nie l’universalité : au moins une personne n’a pas soutenu la proposition. Cela ne donne ni majorité ni nombre de soutiens et reste compatible avec une absence totale de soutien."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "During a discussion, an analyst says, “I take issue with your assumption that all sites face identical costs.” What is the analyst doing?",
+      "options": [
+        "Accepting the assumption but requesting a clearer timetable for applying it.",
+        "Challenging the assumption about identical costs across sites.",
+        "Accepting the cost assumption and disputing only the wording of the final recommendation.",
+        "Requesting more detail while expressly withholding any disagreement with the assumption."
+      ],
+      "answer": 1,
+      "explanation": "Take issue with signifie contester ou exprimer un désaccord sur un point. Le complément vise ici l’hypothèse d’identité des coûts ; la phrase ne l’accepte pas et ne porte pas uniquement sur le calendrier."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Read: “The supplier denied that it had breached the service agreement.” Which statement reports this accurately without deciding the dispute?",
+      "options": [
+        "The supplier proved that no breach had occurred.",
+        "The supplier admitted a breach after initially denying it.",
+        "The supplier rejected the allegation that it had breached the agreement.",
+        "The supplier acknowledged the breach but disputed the amount of compensation."
+      ],
+      "answer": 2,
+      "explanation": "Denied rapporte une position de contestation ; cela ne démontre pas que la position est vraie. La phrase ne mentionne ni aveu, ni indemnisation discutée, ni changement ultérieur de version."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "In a company statement, management says, “We plan to reduce our office footprint.” When summarising it for an external audience, which wording preserves both the speaker and the planned status of the action?",
+      "options": [
+        "The analyst recommends that management reduce the office footprint.",
+        "Employees report that they have completed the reduction in office space.",
+        "Management reports that the reduction in office space has already been completed.",
+        "Management states that it plans to reduce the office footprint."
+      ],
+      "answer": 3,
+      "explanation": "We désigne la direction dans la source. Le résumé doit conserver ce locuteur et le statut de projet, sans attribuer une recommandation à l’analyste, une décision aux salariés ou un résultat déjà réalisé."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A summary says, “Experts agree that the policy is effective.” Its sole source is one interviewee expressing support. Which revision correctly limits the attribution?",
+      "options": [
+        "The interviewee argues that the policy is effective.",
+        "Experts have reached a consensus that the policy is effective.",
+        "The interview establishes the effectiveness of the policy across firms.",
+        "The policy’s effectiveness is confirmed by independent expert agreement."
+      ],
+      "answer": 0,
+      "explanation": "Une opinion individuelle ne permet pas d’annoncer un consensus ou une efficacité établie. Attribuer la position à la personne interrogée conserve la portée réelle de la source."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Author A argues that hybrid work strengthens retention. Author B argues that its effect depends on job design. Which synthesis preserves both positions?",
+      "options": [
+        "Both authors describe the same completed experiment and its measured retention result.",
+        "A sees a retention benefit, while B makes that effect conditional on how jobs are designed.",
+        "Both authors agree that retention benefits are independent of job design.",
+        "A rejects any retention benefit, whereas B reports a benefit for every job design."
+      ],
+      "answer": 1,
+      "explanation": "Le résumé conserve la thèse favorable de A et la condition apportée par B. Il ne doit ni fabriquer un accord sans réserve, ni inverser les positions, ni attribuer aux auteurs une étude commune absente de l’énoncé."
+    }
+  ]
+}

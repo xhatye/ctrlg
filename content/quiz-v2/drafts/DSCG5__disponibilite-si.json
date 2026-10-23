@@ -1,0 +1,537 @@
+{
+  "module": "DSCG5",
+  "chapter": "disponibilite-si",
+  "sourceHash": "c8fcf45356fff8aac29cbd27807784fac033d606493c7a68ea5d6908a7167c55",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Une fenêtre contractuelle de 200 heures comporte 3 heures d’interruption comptabilisées. Quel est le temps disponible ?",
+      "options": [
+        "197 heures.",
+        "203 heures.",
+        "66,67 heures.",
+        "198,5 heures."
+      ],
+      "answer": 0,
+      "explanation": "Le temps disponible est 200 − 3 = 197 heures. Le calcul doit employer la fenêtre et les interruptions retenues dans le même périmètre.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 200
+            },
+            {
+              "value": 3
+            }
+          ]
+        },
+        "expected": 197,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le service est requis du lundi au vendredi, de 8 h à 18 h. Une panne survient uniquement le dimanche, hors fenêtre contractuelle. Comment la traiter dans le taux défini sur cette fenêtre ?",
+      "options": [
+        "Ajouter toute la durée du dimanche au dénominateur contractuel.",
+        "Ne pas la déduire de la fenêtre définie, tout en examinant séparément ses conséquences.",
+        "La compter comme dix heures d’indisponibilité du vendredi.",
+        "Retirer une journée de la fenêtre de service sans changer les interruptions."
+      ],
+      "answer": 1,
+      "explanation": "Le calcul suit la fenêtre annoncée. Un événement hors fenêtre peut rester pertinent pour le risque, sans être artificiellement intégré à un taux de périmètre différent."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Deux interruptions affectent le même service de 9 h à 11 h et de 10 h à 12 h. Sur une fenêtre de 10 heures, quelle durée totale d’indisponibilité du service faut-il déduire ?",
+      "options": [
+        "4 heures.",
+        "2 heures.",
+        "3 heures.",
+        "1 heure."
+      ],
+      "answer": 2,
+      "explanation": "Le service est interrompu de 9 h à 12 h, soit 3 heures. Additionner 2 + 2 compterait deux fois le chevauchement de 10 h à 11 h.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 12
+            },
+            {
+              "value": 9
+            }
+          ]
+        },
+        "expected": 3,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un rapport retranche seulement les pannes applicatives mais pas les pannes réseau qui empêchent le même usage, sans exclusion prévue. Quel défaut affecte le temps disponible ?",
+      "options": [
+        "L’inclusion du temps où le service fonctionne normalement.",
+        "La mesure de plusieurs incidents sur une même période.",
+        "Le recours à une fenêtre définie en heures.",
+        "L’omission d’interruptions relevant du périmètre de service annoncé."
+      ],
+      "answer": 3,
+      "explanation": "La disponibilité doit représenter le service défini. Une dépendance bloquante ne peut être ignorée sans modifier explicitement le périmètre ou les règles."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un fournisseur exclut la maintenance planifiée de son engagement. Le métier souhaite connaître toute interruption pendant ses heures d’activité. Que faut-il publier ?",
+      "options": [
+        "Des mesures distinctes, avec leurs règles, pour l’engagement contractuel et le besoin métier.",
+        "Un taux unique sans indiquer les exclusions.",
+        "Le seul taux contractuel comme preuve de toutes les heures de service métier.",
+        "La somme des deux taux comme niveau global de disponibilité."
+      ],
+      "answer": 0,
+      "explanation": "Des finalités différentes peuvent justifier deux mesures. La transparence sur les fenêtres et exclusions évite d’assimiler conformité contractuelle et service réel."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Sur 500 heures de service, 5 heures sont indisponibles, sans exclusion. Quel taux de disponibilité observe-t-on ?",
+      "options": [
+        "1 %.",
+        "99 %.",
+        "99,5 %.",
+        "100,01 %."
+      ],
+      "answer": 1,
+      "explanation": "Le taux est (500 − 5) / 500 × 100 = 99 %. La part indisponible de 1 % ne doit pas être présentée comme le taux de disponibilité.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 500
+                    },
+                    {
+                      "value": 5
+                    }
+                  ]
+                },
+                {
+                  "value": 500
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 99,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une équipe calcule l’indisponibilité sur 24 heures par jour alors que son engagement porte uniquement sur 8 heures quotidiennes. Quel risque apparaît ?",
+      "options": [
+        "La fenêtre contractuelle est respectée dès lors que les heures promises sont incluses dans les24heures, quel que soit le dénominateur.",
+        "Les heures supplémentaires doivent être comptées comme disponibles même lorsque le service n’y est pas surveillé.",
+        "Une dilution possible des pannes dans une fenêtre plus large que celle promise.",
+        "Le taux obtenu sur24heures peut être comparé directement à la cible des8heures sans retraiter les incidents et durées."
+      ],
+      "answer": 2,
+      "explanation": "Le dénominateur doit correspondre à l’engagement. Ajouter des heures non requises peut améliorer artificiellement le taux si les interruptions concernent les heures utiles."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux services ont chacun 99 % de disponibilité, mais l’un assure la paie à une échéance critique et l’autre un usage différable. Quelle conclusion est fondée ?",
+      "options": [
+        "Le même pourcentage permet de classer les conséquences sans connaître le moment des interruptions.",
+        "Les deux services doivent recevoir le même plan de continuité parce que leur taux annuel est identique.",
+        "La criticité peut être déterminée par le seul total annuel d’heures, sans examiner les échéances.",
+        "Le même taux ne prouve pas la même criticité ni les mêmes conséquences d’arrêt."
+      ],
+      "answer": 3,
+      "explanation": "Le taux agrège du temps. L’effet dépend aussi de la période des pannes, du processus touché et des solutions de continuité."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Sur une fenêtre de100heures, un service est disponible95heures. Sur une autre fenêtre de900heures, il est disponible895,5heures. Quel est le taux cumulé sur les1000heures réunies ?",
+      "options": [
+        "99,05 %.",
+        "97,25 %.",
+        "95,00 %.",
+        "99,50 %."
+      ],
+      "answer": 0,
+      "explanation": "Les durées disponibles s’additionnent : (95 + 895,5) / (100 + 900) × 100 = 99,05 %. La moyenne simple des taux95%et99,5%donnerait97,25%, en pondérant à tort les deux fenêtres également.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 95
+                    },
+                    {
+                      "value": 895.5
+                    }
+                  ]
+                },
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 100
+                    },
+                    {
+                      "value": 900
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 99.05,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un taux annuel satisfait la cible alors qu’une interruption a bloqué le service le jour d’une clôture déterminante. Quel complément faut-il examiner ?",
+      "options": [
+        "Le seul taux annuel, tenu pour une preuve que chaque échéance critique a été couverte.",
+        "La durée des incidents critiques et leur calendrier par rapport aux besoins métier.",
+        "Le nombre total d’incidents sans leur durée ni leur position par rapport à la clôture.",
+        "Le respect du taux d’un composant technique pris comme substitut à l’usage du service lors de la clôture."
+      ],
+      "answer": 1,
+      "explanation": "Un taux annuel favorable peut masquer un incident concentré au pire moment. La gravité métier et les durées unitaires complètent le pourcentage."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux rapports de disponibilité diffèrent parce qu’un incident à cheval sur minuit est compté différemment. Quel préalable s’impose ?",
+      "options": [
+        "Retenir systématiquement la valeur la plus favorable au fournisseur.",
+        "Répartir la moitié de chaque incident sur chaque rapport sans examiner les dates.",
+        "Harmoniser l’affectation des incidents aux fenêtres et contrôler les horodatages.",
+        "Additionner les taux pour conserver les deux rapports."
+      ],
+      "answer": 2,
+      "explanation": "Le découpage des périodes doit être reproductible. Les instants de début et de fin évitent omissions et doubles comptes autour des frontières."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La cible de disponibilité est de 99,5 % sur une fenêtre de 400 heures. Quel temps maximal d’indisponibilité lui correspond ?",
+      "options": [
+        "398 heures.",
+        "0,5 heure.",
+        "20 heures.",
+        "2 heures."
+      ],
+      "answer": 3,
+      "explanation": "La part indisponible autorisée est 0,5 %, soit 400 × 0,005 = 2 heures. Le taux de disponibilité n’est pas le taux de panne.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 400
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "op": "/",
+                  "args": [
+                    {
+                      "value": 99.5
+                    },
+                    {
+                      "value": 100
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La fenêtre contractuelle double et le taux cible reste identique. Comment évolue le budget de temps d’indisponibilité ?",
+      "options": [
+        "Il double dans le même périmètre de mesure.",
+        "Il reste obligatoirement identique en heures.",
+        "Il est divisé par deux.",
+        "Il devient nul puisque le pourcentage est inchangé."
+      ],
+      "answer": 0,
+      "explanation": "Le budget d’indisponibilité est proportionnel à la fenêtre pour un taux cible donné. Un pourcentage constant n’impose pas un nombre d’heures constant."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un service exige simultanément deux composants disponibles. Sur la même fenêtre de100heures, A est arrêté4heures et B6heures, dont2heures d’arrêt communes. Aucune autre panne n’existe. Quelle durée d’indisponibilité du service faut-il compter ?",
+      "options": [
+        "10 heures.",
+        "8 heures.",
+        "6 heures.",
+        "2 heures."
+      ],
+      "answer": 1,
+      "explanation": "Le service est indisponible dès qu’un composant nécessaire est arrêté. L’union des arrêts vaut4 + 6 − 2 = 8heures ; additionner sans retirer le chevauchement compte deux fois les2heures communes.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 4
+                },
+                {
+                  "value": 6
+                }
+              ]
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "expected": 8,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un fournisseur reprend un budget de panne mensuel de trois heures pour chaque semaine. Quel défaut peut gonfler la tolérance ?",
+      "options": [
+        "La tolérance mensuelle peut être réutilisée chaque semaine sans modifier la somme admise sur le mois.",
+        "Il faut comparer chaque semaine à trois heures puis additionner les marges hebdomadaires comme un budget mensuel inchangé.",
+        "Il applique à une fenêtre courte une tolérance calculée sur une fenêtre plus longue.",
+        "Le nombre de semaines ne compte pas dès lors que chaque incident est mesuré dans la même unité heure."
+      ],
+      "answer": 2,
+      "explanation": "La tolérance doit être recalculée selon la fenêtre et la cible applicables. Réutiliser le montant mensuel par semaine peut multiplier le temps autorisé."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La cible annuelle permet plusieurs heures d’arrêt, mais le métier exige qu’aucun incident ne dépasse trente minutes. Que faut-il préciser ?",
+      "options": [
+        "La cible annuelle remplace automatiquement l’exigence par incident.",
+        "La limite par incident garantit à elle seule le taux annuel.",
+        "Il suffit de diviser la cible annuelle par le nombre de clients.",
+        "Les deux contraintes sont distinctes et doivent être testées séparément."
+      ],
+      "answer": 3,
+      "explanation": "Un budget cumulé et une limite unitaire contrôlent des aspects différents. Plusieurs petites pannes peuvent dépasser le budget, et une seule panne peut violer la limite."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un pourcentage de 99,9 % est proposé sans fenêtre ni définition de panne. Quelle conclusion est justifiée ?",
+      "options": [
+        "Le budget d’interruption et la portée de l’engagement ne peuvent pas être évalués précisément.",
+        "La seule valeur99,9%permet de déduire un délai maximal par incident indépendamment de la fenêtre.",
+        "Un engagement du serveur permet de déduire la même disponibilité de toutes les fonctions sans définir le service mesuré.",
+        "Le taux fixe à lui seul les exclusions de maintenance et les règles de début et fin d’une interruption."
+      ],
+      "answer": 0,
+      "explanation": "Un taux seul ne fixe ni le temps de référence ni ce qui constitue une indisponibilité. L’engagement doit être défini pour être contrôlable."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une fenêtre autorise 3,6 heures d’indisponibilité. Les pannes comptabilisées totalisent 4,1 heures. Avec la convention constaté moins autorisé, quel dépassement signé obtient-on ?",
+      "options": [
+        "−0,5 heure.",
+        "+0,5 heure.",
+        "+7,7 heures.",
+        "−7,7 heures."
+      ],
+      "answer": 1,
+      "explanation": "Le dépassement est 4,1 − 3,6 = +0,5 heure. Un signe positif indique ici que le budget d’indisponibilité est dépassé.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 4.1
+            },
+            {
+              "value": 3.6
+            }
+          ]
+        },
+        "expected": 0.5,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le contrat de l’exercice accorde un crédit fixe de10%du forfait mensuel si la disponibilité mesurée est inférieure à99,9%. Le forfait est1000€et le taux du mois99,8%. Aucun autre crédit n’est prévu. Quel crédit appliquer selon cette règle ?",
+      "options": [
+        "1 €.",
+        "10 €.",
+        "100 €.",
+        "998 €."
+      ],
+      "answer": 2,
+      "explanation": "Le seuil contractuel est franchi :99,8%est inférieur à99,9%. Le crédit fixé est10%de1000€, soit100€. Il ne se calcule pas au prorata de l’écart de0,1point.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 1000
+            },
+            {
+              "value": 0.1
+            }
+          ]
+        },
+        "expected": 100,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Après dépassement du budget de panne, l’équipe requalifie rétroactivement une interruption en maintenance sans justification. Quel contrôle est prioritaire ?",
+      "options": [
+        "Augmenter automatiquement le budget de panne du prochain mois.",
+        "Retenir uniquement la version finale sans trace des corrections.",
+        "Remplacer le taux par le nombre d’incidents ouverts.",
+        "Vérifier les règles d’inclusion et conserver les motifs des reclassements."
+      ],
+      "answer": 3,
+      "explanation": "Un retraitement peut être légitime mais doit respecter les règles et être traçable. Une requalification opportuniste masque la performance observée."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La cible est dépassée mais aucune conséquence métier n’a été constatée sur la période. Quel bilan est correct ?",
+      "options": [
+        "L’écart à l’engagement existe ; l’impact métier constitue une analyse complémentaire.",
+        "L’absence de perte métier suffit à classer le mois conforme au taux, sans reprendre la durée mesurée.",
+        "L’absence de réclamation doit remplacer le taux contractuel comme règle de conformité du mois.",
+        "Le montant d’une perte doit être déduit directement du dépassement de durée, sans donnée sur les conséquences."
+      ],
+      "answer": 0,
+      "explanation": "Conformité au niveau de service et conséquences métier ne se confondent pas. Il faut documenter les deux sans transformer les heures en pertes supposées."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le budget restant d’indisponibilité est presque épuisé. Quelle utilisation de l’indicateur relève du pilotage ?",
+      "options": [
+        "Reporter toute mesure de prévention après la clôture du mois parce que le budget n’est pas encore totalement consommé.",
+        "Renforcer l’analyse et préparer les arbitrages de prévention ou de continuité adaptés.",
+        "Autoriser de nouvelles opérations risquées sur la seule base du faible reliquat, sans examiner les besoins critiques restants.",
+        "Compenser une future interruption par des heures hors fenêtre contractuelle sans règle d’agrégation adaptée."
+      ],
+      "answer": 1,
+      "explanation": "Le suivi peut déclencher des mesures avant la non-conformité. Un budget de panne est une limite, pas un objectif de consommation."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une moyenne de disponibilité est obtenue en faisant la moyenne simple de taux de services ayant des fenêtres très différentes. Quel point doit être examiné ?",
+      "options": [
+        "Attribuer le même poids à chaque taux en affirmant que cela mesure nécessairement le pourcentage de toutes les heures disponibles.",
+        "Pondérer les taux par les seules heures de panne, indépendamment de la durée exposée de chaque service.",
+        "Le sens de l’agrégation et la pondération cohérente avec la mesure recherchée.",
+        "Conserver le meilleur taux comme mesure de l’ensemble dès que ce service couvre la plus longue fenêtre."
+      ],
+      "answer": 2,
+      "explanation": "Une moyenne simple peut ne pas représenter le temps de service global. La pondération doit être explicite et l’agrégation ne doit pas masquer les services critiques."
+    }
+  ]
+}

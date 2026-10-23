@@ -1,0 +1,353 @@
+{
+  "module": "DSCG7",
+  "chapter": "memoire-donnees",
+  "sourceHash": "dedc5408a92e9ba10dd14393616ba3fae218e8234d2aad20e827211165931e99",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le guide demande à un opérateur de décrire ses propres décisions puis celles d’un autre site où il n’a jamais travaillé. Quelle distinction faut-il préserver dans le recueil ?",
+      "options": [
+        "L’expérience directe de l’opérateur et les informations indirectes ou hypothèses qu’il exprime sur l’autre site.",
+        "Les deux réponses comme deux observations directes dès lors que le même participant les formule.",
+        "L’autre site comme une unité directement observée par l’enquêteur du seul fait qu’il est cité.",
+        "Les suppositions sur l’autre site comme une mesure de fréquence calculable sans autre collecte."
+      ],
+      "answer": 0,
+      "explanation": "Une personne peut rapporter son expérience et des propos indirects. Le guide et l’analyse doivent rendre ce statut visible, plutôt qu’attribuer une connaissance de première main à toute réponse."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La personne interrogée emploie le mot « blocage » sans préciser ce qu’il recouvre. Quelle relance clarifie son sens sans lui en imposer un ?",
+      "options": [
+        "Nous allons remplacer ce terme par celui utilisé par la direction.",
+        "Quand vous dites blocage, que se passe-t-il exactement dans le dossier que vous évoquez ?",
+        "Vous parlez donc nécessairement d’une erreur du logiciel ?",
+        "Je retiens blocage comme retard de plus de trois jours ; poursuivez."
+      ],
+      "answer": 1,
+      "explanation": "La relance demande une définition en contexte. Attribuer immédiatement une cause, un seuil ou le vocabulaire d’un tiers risque de changer le propos recueilli."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat commence chaque entretien par une longue liste de causes supposées des retards. Quel ordre réduit l’influence de ses catégories initiales ?",
+      "options": [
+        "Présenter sa conclusion provisoire puis demander des exemples qui la confirment.",
+        "Limiter l’entretien aux rubriques de la liste sans laisser émerger d’autre explication.",
+        "Recueillir d’abord un récit libre, puis approfondir les thèmes utiles par des relances.",
+        "Lire toutes les causes attendues puis demander de choisir celle qui convient."
+      ],
+      "answer": 2,
+      "explanation": "Un récit initial permet de faire apparaître des éléments non prévus. Les relances peuvent ensuite préciser les thèmes sans transformer d’emblée l’enquête en validation d’une liste imposée."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux catégories de salariés sont interrogées pour comparer leurs pratiques. Comment combiner comparabilité et adaptation ?",
+      "options": [
+        "Utiliser des thèmes entièrement différents puis comparer chaque silence comme absence de pratique.",
+        "Imposer chaque formulation identique même lorsqu’elle concerne une tâche que le répondant n’exerce pas.",
+        "Interroger un seul groupe puis lui demander d’estimer les réponses de l’autre.",
+        "Conserver un noyau de thèmes communs et adapter les relances aux responsabilités de chacun."
+      ],
+      "answer": 3,
+      "explanation": "Des thèmes communs fournissent une base de comparaison. Des relances adaptées évitent de traiter des situations non pertinentes comme des réponses équivalentes."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Lors du test du guide, plusieurs participants comprennent « contrôle » comme supervision hiérarchique alors que la recherche vise une vérification de dossier. Que faut-il faire ?",
+      "options": [
+        "Clarifier la formulation puis documenter la version utilisée pour la collecte principale.",
+        "Conserver le terme ambigu et classer les réponses comme si chacun avait compris la même opération.",
+        "Choisir après les entretiens le sens qui soutient le mieux la conclusion.",
+        "Ajouter les réponses du test au corpus principal sans signaler que la question a changé."
+      ],
+      "answer": 0,
+      "explanation": "Le test sert notamment à repérer des ambiguïtés. La modification du guide et le statut des données pilotes doivent rester traçables."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "À quoi correspond un code dans une analyse thématique d’entretiens ?",
+      "options": [
+        "À un résumé attribué à l’entretien entier sans distinguer les segments ni expliciter de règle de classement.",
+        "À une catégorie définie attribuée à un segment pertinent du matériau.",
+        "À un numéro qui remplace nécessairement l’identité d’un participant.",
+        "À une note de satisfaction calculée pour chaque entretien."
+      ],
+      "answer": 1,
+      "explanation": "Un code analytique classe des contenus selon une règle. Il se distingue d’un identifiant de personne, d’une note et d’un décompte bibliographique."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le code « manque de formation » regroupe parfois une absence d’apprentissage et parfois un défaut d’autorisation d’accès au logiciel. Quel travail est nécessaire ?",
+      "options": [
+        "Reclasser tous les défauts d’accès en formation sans relire les extraits.",
+        "Compter le titre du code comme preuve que les mécanismes sont identiques.",
+        "Préciser les critères et distinguer les mécanismes lorsque les extraits ne renvoient pas au même problème.",
+        "Garder une catégorie unique parce que les deux situations gênent le travail."
+      ],
+      "answer": 2,
+      "explanation": "Le regroupement doit conserver une signification analytique. Une conséquence commune ne rend pas identiques un besoin de formation et un problème de droits d’accès."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un extrait décrit à la fois une attente de validation et une mauvaise transmission entre services. Le protocole autorise plusieurs codes par segment. Quel traitement est cohérent ?",
+      "options": [
+        "Compter les deux codes comme deux situations distinctes même si le segment décrit le même épisode.",
+        "Écarter l’extrait parce qu’il n’appartient pas à une seule catégorie.",
+        "Conserver un seul code selon celui qui est le plus fréquent ailleurs, sans examiner les deux dimensions de l’extrait.",
+        "Attribuer les deux codes justifiés en conservant le lien avec le même extrait."
+      ],
+      "answer": 3,
+      "explanation": "Le codage multiple conserve plusieurs dimensions d’une même situation. Il ne crée ni nouveaux participants ni preuves indépendantes."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une nouvelle catégorie apparaît au milieu du codage. Comment éviter que les premiers entretiens soient traités selon des règles incompatibles ?",
+      "options": [
+        "Mettre à jour la définition des codes et réexaminer les passages antérieurs concernés.",
+        "Appliquer la catégorie seulement aux entretiens restants et comparer les fréquences comme si le protocole était constant.",
+        "Renommer les anciens codes sans relire les segments qu’ils contiennent.",
+        "Supprimer les premiers entretiens pour conserver uniquement les données traitées en dernier."
+      ],
+      "answer": 0,
+      "explanation": "Une évolution du codage peut être justifiée. Sa cohérence exige un retour sur les matériaux concernés et une trace des modifications."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux lecteurs attribuent des codes différents au même passage. Quelle démarche améliore la cohérence du codage ?",
+      "options": [
+        "Supprimer le passage du corpus pour éviter toute divergence.",
+        "Examiner leurs critères, relire le contexte et préciser la règle de classement en documentant la décision.",
+        "Retenir systématiquement le premier code saisi sans discuter le désaccord.",
+        "Ajouter les deux codes comme deux observations indépendantes."
+      ],
+      "answer": 1,
+      "explanation": "Le désaccord peut révéler une ambiguïté de définition ou une pluralité de sens. Il demande une résolution argumentée, pas une élimination automatique du matériau."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un participant emploie dix fois le même thème. Le tableau annonce dix salariés concernés. Quel rapprochement manque ?",
+      "options": [
+        "L’absence d’une pondération par durée d’entretien, supposée transformer les occurrences en personnes.",
+        "La répartition des codes entre services, utilisée comme substitut à l’identification des participants qui les expriment.",
+        "La distinction entre nombre de segments codés et nombre de personnes ayant évoqué le thème.",
+        "Le nombre d’entretiens recueillis, supposé permettre de répartir les dix occurrences sans relier chaque segment à son auteur."
+      ],
+      "answer": 2,
+      "explanation": "Des occurrences répétées peuvent provenir d’une seule personne. L’unité de comptage doit être définie avant de présenter une fréquence de participants."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un entretien décrit un dossier problématique et un tableau signale un incident de même montant. Avant de les traiter comme le même cas, que faut-il établir ?",
+      "options": [
+        "L’égalité du montant comme preuve suffisante d’identité du dossier.",
+        "Le même service auteur des deux matériaux comme preuve qu’ils décrivent un cas unique.",
+        "La proximité de leurs dates de collecte comme substitution à l’identification du dossier.",
+        "Leur correspondance au moyen d’identifiants ou d’éléments de contexte suffisamment fiables et autorisés."
+      ],
+      "answer": 3,
+      "explanation": "Des montants ou auteurs communs peuvent concerner plusieurs dossiers. Le rapprochement doit porter sur le cas lui-même avant de croiser les explications."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le tableau constate des traitements achevés dans le délai cible ; les salariés signalent un effort exceptionnel pour atteindre ce résultat. Quelle lecture combine les apports ?",
+      "options": [
+        "Distinguer le résultat de délai et les conditions de travail nécessaires pour l’obtenir.",
+        "Rejeter les témoignages parce que le délai cible est respecté.",
+        "Assimiler le respect du délai à une preuve que les ressources mobilisées sont soutenables en fonctionnement ordinaire.",
+        "Utiliser le seul taux de respect du délai comme mesure complète de la charge de travail vécue."
+      ],
+      "answer": 0,
+      "explanation": "Performance temporelle et coût humain du fonctionnement sont des dimensions différentes. Leur coexistence peut nuancer l’appréciation sans invalider le fait mesuré."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une note interne annonce un objectif de réduction des erreurs. Le mémoire la cite comme preuve que les erreurs ont effectivement diminué. Quel statut faut-il rétablir ?",
+      "options": [
+        "Un objectif chiffré remplace une collecte dès lors que son échéance est passée.",
+        "Un objectif ou une intention n’est pas une observation de résultat.",
+        "Une note interne signée constitue nécessairement un relevé des effets réalisés.",
+        "La validation de la cible par le comité établit que le résultat a été atteint au terme prévu."
+      ],
+      "answer": 1,
+      "explanation": "La fonction du document doit être identifiée. L’annonce d’une cible décrit une attente ; son atteinte nécessite des éléments sur ce qui s’est produit."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Quatre collaborateurs décrivent des reprises fréquentes ; une observation porte seulement sur une journée sans incident. Que faut-il examiner ?",
+      "options": [
+        "La journée observée comme preuve qu’aucune reprise ne survient pendant les autres jours.",
+        "Les entretiens comme preuve chiffrée d’un taux quotidien sans calendrier des incidents.",
+        "La couverture temporelle de l’observation et les épisodes auxquels se rapportent les récits.",
+        "Le nombre de témoignages contre le nombre de journées comme un vote entre sources."
+      ],
+      "answer": 2,
+      "explanation": "Les matériaux ne couvrent pas nécessairement les mêmes épisodes. Une journée peut être atypique sans que les récits donnent automatiquement une fréquence calculable."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une source contredit l’explication principale du mémoire et paraît solide. Quelle intégration est la plus utile ?",
+      "options": [
+        "Le placer hors corpus au seul motif de sa contradiction avec les autres résultats.",
+        "Reformuler la source pour qu’elle devienne compatible avec la conclusion initiale.",
+        "Ajouter seulement son titre à la bibliographie sans analyser son contenu contradictoire.",
+        "Présenter le cas, examiner ses différences et préciser ce qu’il change dans l’explication."
+      ],
+      "answer": 3,
+      "explanation": "Un cas contraire peut révéler une condition ou une limite de l’explication. Le rendre visible et l’analyser est plus informatif que le masquer ou le neutraliser par la présentation."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un thème n’a pas été abordé dans le guide ni évoqué spontanément. Le mémoire traite ce silence comme une confirmation de son absence dans un document. Que faut-il vérifier ?",
+      "options": [
+        "La possibilité réelle qu’avaient les entretiens de renseigner ce thème avant de tenir le silence pour une convergence.",
+        "Le silence comme une réponse négative explicite de chaque participant sur le thème.",
+        "L’absence de citation comme preuve que les participants ont vérifié le document et l’approuvent.",
+        "Le nombre total d’entretiens comme justification suffisante pour interpréter toute absence de propos comme une confirmation."
+      ],
+      "answer": 0,
+      "explanation": "Un matériau qui ne couvre pas une question ne fournit pas nécessairement une réponse négative. La confrontation exige de vérifier ce que chaque source peut effectivement renseigner."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La transcription ne contient plus les noms mais l’enregistrement conserve la voix des participants. Quelle conclusion est correcte ?",
+      "options": [
+        "L’audio devient anonyme dès que le texte correspondant utilise des codes.",
+        "La protection de la transcription ne règle pas à elle seule les accès et risques d’identification du fichier audio.",
+        "La conservation de la voix est sans incidence sur l’identification dès lors que le compte rendu n’est pas nominatif.",
+        "Le retrait des noms dans les métadonnées suffit à supprimer toute possibilité de reconnaître les voix dans l’enregistrement."
+      ],
+      "answer": 1,
+      "explanation": "Les copies et formats doivent être examinés séparément. La pseudonymisation d’un texte ne transforme pas automatiquement un enregistrement vocal en matériau anonyme."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat conserve une clé de correspondance entre codes et noms. Quel choix réduit les accès inutiles à cette clé ?",
+      "options": [
+        "Insérer les noms dans les commentaires du même tableau puis masquer cette colonne.",
+        "Utiliser les initiales réelles comme codes en considérant la clé devenue inutile.",
+        "La conserver séparément avec des accès restreints aux personnes qui en ont besoin.",
+        "La joindre au corpus pseudonymisé partagé avec tous les lecteurs pour faciliter leurs vérifications."
+      ],
+      "answer": 2,
+      "explanation": "Une séparation et une restriction d’accès limitent les possibilités de rattachement. Un masquage visuel ou un code aisément déductible ne fournit pas la même protection."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une capture de dossier a été masquée par un rectangle dans un PDF destiné au mémoire. La recherche et la copie du texte retrouvent encore le nom du client sous ce rectangle. Quel contrôle est nécessaire ?",
+      "options": [
+        "Épaissir uniquement le rectangle en conservant le texte sous-jacent extractible.",
+        "Désactiver seulement l’affichage de la couche de texte sans vérifier ce qui reste dans le fichier transmis.",
+        "Contrôler uniquement l’apparence de la page imprimée, en la tenant pour preuve de suppression du contenu numérique.",
+        "Retirer effectivement le contenu à masquer puis vérifier que le document diffusé ne permet plus de l’extraire."
+      ],
+      "answer": 3,
+      "explanation": "L’énoncé établit que le texte reste présent. Une protection visuelle ne vaut pas suppression du contenu ; la vérification doit porter aussi sur les données extractibles du fichier qui sera diffusé."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un extrait décrit une difficulté intéressante, mais inclut des détails privés sans utilité pour le mécanisme étudié. Quelle restitution est préférable ?",
+      "options": [
+        "Conserver le sens analytique tout en retirant les détails non nécessaires et en examinant le risque d’identification.",
+        "Publier l’extrait entier parce que tout propos recueilli doit être reproduit littéralement.",
+        "Remplacer uniquement le prénom et conserver nécessairement chaque détail privé.",
+        "Supprimer l’ensemble du résultat même lorsqu’une formulation protégée permet de conserver son apport."
+      ],
+      "answer": 0,
+      "explanation": "La fidélité analytique n’exige pas de diffuser des informations inutiles. Il faut arbitrer contenu utile et protection, sans effacement automatique du résultat ni publication intégrale par principe."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le protocole autorise l’entretien mais exige un accord distinct avant tout enregistrement. Cet accord n’a pas été obtenu. Quelle conduite respecte les conditions données ?",
+      "options": [
+        "Déduire l’accord d’enregistrement du seul fait que la personne a accepté de parler.",
+        "Ne pas enregistrer dans ces conditions et convenir d’une modalité de recueil autorisée.",
+        "Enregistrer puis demander l’accord seulement si la citation est retenue.",
+        "Enregistrer sans diffuser, en considérant que l’absence de publication remplace l’accord prévu."
+      ],
+      "answer": 1,
+      "explanation": "L’énoncé distingue expressément participation et enregistrement. Il faut respecter cette condition de collecte, indépendamment d’un projet ultérieur de publication."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une autorisation vise des extraits protégés dans le mémoire. Un collègue demande ensuite le corpus identifiant pour son propre projet commercial. Quelle démarche est justifiée ?",
+      "options": [
+        "Assimiler le collègue à un lecteur du mémoire sans examiner la différence de contenu demandé.",
+        "Remplacer les titres des fichiers par des codes puis tenir tout usage commercial pour autorisé.",
+        "Réexaminer les autorisations, la finalité et les protections avant toute transmission pour ce nouvel usage.",
+        "Transmettre le corpus parce qu’une première autorisation de restitution existe."
+      ],
+      "answer": 2,
+      "explanation": "Un nouvel usage, de nouveaux destinataires et un contenu identifiant ne se déduisent pas de l’autorisation initiale. Leur examen précède la transmission éventuelle."
+    }
+  ]
+}

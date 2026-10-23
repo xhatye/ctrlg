@@ -1,0 +1,371 @@
+{
+  "module": "UE3",
+  "chapter": "relations",
+  "sourceHash": "415a314a39c9f7394dd0637541cb61a244cfe0c1a6006fa35556d790b4350918",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Avant d’appliquer une clause d’une convention collective à une personne, quelle question faut-il résoudre ?",
+      "options": [
+        "La personne et l’entreprise entrent-elles dans son champ pour la période étudiée ?",
+        "Le seul titre du texte suffit-il à l’étendre à toute entreprise du territoire ?",
+        "La simple volonté du salarié suffit-elle à choisir cette convention plutôt qu’une autre ?",
+        "La date de téléchargement suffit-elle à établir la période d’application ?"
+      ],
+      "answer": 0,
+      "explanation": "Une clause pertinente sur le thème peut ne pas viser l’activité, la catégorie ou la période du dossier. Le champ et les dates doivent précéder l’application du contenu."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une convention vise un secteur d’activité déterminé. Le salarié a un métier courant dans plusieurs secteurs et veut appliquer cette convention à partir de son seul intitulé de poste. Que faut-il examiner ?",
+      "options": [
+        "Le seul métier, considéré comme secteur de l’employeur.",
+        "Le champ professionnel de la convention et la situation de l’entreprise et du salarié.",
+        "Le nom de la société contenant le mot services, tenu pour preuve du champ.",
+        "La convention choisie par le salarié dans son précédent emploi, automatiquement maintenue ici."
+      ],
+      "answer": 1,
+      "explanation": "Le métier ne règle pas à lui seul le champ professionnel de l’entreprise. Le texte et les faits pertinents doivent être confrontés pour identifier le régime applicable."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un avenant collectif entre en vigueur après la période de paie contestée ; aucune rétroactivité n’est indiquée. Quelle question doit être traitée avant de l’utiliser ?",
+      "options": [
+        "La seule date de téléchargement du document par le demandeur.",
+        "La seule date de création de l’entreprise, sans rapprochement avec l’avenant.",
+        "Son champ temporel et les éventuelles dispositions transitoires.",
+        "La seule préférence du demandeur pour le nouveau montant."
+      ],
+      "answer": 2,
+      "explanation": "La date d’effet détermine l’analyse de la période. Un texte postérieur ne doit pas être appliqué automatiquement sans vérifier ses dispositions temporelles."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux textes concernent le même thème. Une copie choisit systématiquement celui de niveau supérieur sans lire les règles d’articulation. Quel défaut faut-il corriger ?",
+      "options": [
+        "La copie aurait dû choisir systématiquement le texte le plus récent.",
+        "La copie aurait dû choisir systématiquement la disposition la plus favorable.",
+        "La copie aurait dû privilégier l’accord signé au plus près de l’entreprise.",
+        "La copie remplace l’articulation propre au thème par une maxime unique."
+      ],
+      "answer": 3,
+      "explanation": "Les rapports entre niveaux peuvent dépendre de la matière. Identifier les normes concurrentes ne dispense pas de vérifier la règle d’articulation applicable."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un accord d’établissement vise seulement une catégorie définie. Un salarié d’une autre catégorie invoque son seul rattachement au même employeur. Quel contrôle est déterminant ?",
+      "options": [
+        "La catégorie réellement couverte et les conditions du champ de l’accord.",
+        "Le seul employeur commun, traité comme extension nécessaire à toutes les catégories.",
+        "L’intitulé du bulletin seul, traité comme preuve de l’accord applicable.",
+        "La seule ancienneté du salarié, traitée comme catégorie couverte par tout accord."
+      ],
+      "answer": 0,
+      "explanation": "Le lien au même employeur ne supprime pas toute limite de champ. La population visée doit être rapprochée de la situation exacte de la personne."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier contient un contrat individuel, une convention de branche et un accord d’entreprise. Quelle préparation permet de répondre sur une prime ?",
+      "options": [
+        "Additionner immédiatement les trois montants éventuels.",
+        "Identifier pour chacun champ, date, objet de la prime et règle d’articulation pertinente.",
+        "Écarter le contrat dès qu’un accord d’entreprise existe.",
+        "Retenir le document reçu le plus récemment sans lire les dispositions."
+      ],
+      "answer": 1,
+      "explanation": "Les textes peuvent traiter des objets différents ou s’articuler selon une règle particulière. Leur coexistence n’impose ni cumul ni exclusion automatique."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle distinction aide à analyser une démarche collective dans l’entreprise ?",
+      "options": [
+        "L’information, tenue pour un accord tacite en l’absence de réaction des destinataires.",
+        "La consultation, tenue pour une négociation dès qu’un avis est demandé.",
+        "L’information, la consultation et la négociation, qui ne poursuivent pas le même objet.",
+        "La négociation, tenue pour achevée dès la communication d’un projet aux interlocuteurs."
+      ],
+      "answer": 2,
+      "explanation": "Les démarches ont des objets et acteurs à identifier. Recevoir une information, exprimer un avis ou négocier des engagements ne sont pas des événements interchangeables."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans une situation relevant de L2312-5, des salariés signalent des erreurs de salaire. Quelle mission de la délégation du personnel au CSE est visée ?",
+      "options": [
+        "Prononcer un jugement condamnant l’employeur.",
+        "Remplacer le salarié dans toutes ses décisions personnelles.",
+        "Modifier unilatéralement chaque contrat individuel.",
+        "Présenter à l’employeur des réclamations individuelles ou collectives relatives aux salaires."
+      ],
+      "answer": 3,
+      "explanation": "Le texte prévoit cette mission de présentation des réclamations. Elle ne se confond pas avec une décision juridictionnelle ni une modification directe des contrats.",
+      "references": [
+        {
+          "title": "Code du travail, article L2312-5",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2312-5"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans le champ de L2312-8, un projet introduit une nouvelle technologie avec un aménagement important des conditions de travail. Quelle démarche le texte prévoit-il envers le CSE ?",
+      "options": [
+        "Son information et sa consultation sur les questions concernées.",
+        "La validation automatique de tout le projet par la seule remise d’un document au CSE.",
+        "La conclusion nécessaire d’un accord collectif par toute réunion d’information.",
+        "Le remplacement de la décision de l’employeur par une décision individuelle de chaque élu."
+      ],
+      "answer": 0,
+      "explanation": "Le texte prévoit information et consultation notamment sur ces projets. Leur existence ne transforme pas le comité en employeur ou en partie au contrat individuel.",
+      "references": [
+        {
+          "title": "Code du travail, article L2312-8",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2312-8"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans une entreprise de 200 salariés, le délégué syndical est aussi représentant syndical au CSE de droit selon L2143-22. Quelle conséquence informationnelle le texte prévoit-il ?",
+      "options": [
+        "Il décide seul du résultat de toute consultation du CSE.",
+        "Il est destinataire des informations fournies au CSE à ce titre.",
+        "La qualité syndicale dispense le CSE de recevoir les informations.",
+        "Il reçoit seulement le résultat final des votes, sans les informations fournies au comité."
+      ],
+      "answer": 1,
+      "explanation": "L2143-22 prévoit cette qualité et la réception des informations dans les entreprises du champ indiqué. Les attributions ne doivent pas être confondues avec un pouvoir général de décision.",
+      "references": [
+        {
+          "title": "Code du travail, article L2143-22",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2143-22"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un procès-verbal indique qu’une information a été présentée, mais une synthèse le décrit comme un accord négocié signé. Quelle preuve manque principalement ?",
+      "options": [
+        "La seule mise en circulation du procès-verbal, traitée comme signature de tous les présents.",
+        "La présence de plusieurs interlocuteurs, traitée comme accord conclu.",
+        "Le contenu des engagements et la conclusion de l’accord par les acteurs habilités.",
+        "La remise d’un support d’information, traitée comme preuve de toute procédure de négociation."
+      ],
+      "answer": 2,
+      "explanation": "Une présentation ne démontre pas une négociation conclue. Il faut retrouver les engagements, les acteurs et les pièces de la procédure invoquée."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une réunion collective se termine par des avis divergents et aucune signature d’accord. Quelle formulation respecte le dossier ?",
+      "options": [
+        "L’absence d’accord prouve que l’information n’a jamais été donnée.",
+        "La réunion a modifié automatiquement tous les contrats individuels.",
+        "Un avis défavorable vaut nécessairement décision judiciaire.",
+        "La discussion est documentée, mais un accord conclu n’est pas établi par ces seuls éléments."
+      ],
+      "answer": 3,
+      "explanation": "Un échange peut exister sans produire un accord collectif. La trace de réunion doit être utilisée selon sa portée, sans lui attribuer un effet différent."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une personne est salariée et associée de la même société. Elle réclame un salaire impayé ; un autre différend porte sur la vente de ses titres. Comment examiner la compétence ?",
+      "options": [
+        "Distinguer la relation de travail et le rapport sociétaire selon chaque demande.",
+        "Soumettre les deux litiges au même régime du seul fait des parties communes.",
+        "Transformer le salaire en prix des titres pour fusionner les demandes.",
+        "Écarter tout droit du travail parce que la personne est associée."
+      ],
+      "answer": 0,
+      "explanation": "Une personne peut avoir plusieurs qualités. La nature de chaque prétention détermine l’analyse ; des parties communes ne rendent pas tous les rapports identiques."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un fournisseur indépendant réclame le prix de sa prestation à une entreprise ; aucune relation salariée n’est invoquée. Quel élément empêche de retenir le seul caractère professionnel comme critère prud’homal ?",
+      "options": [
+        "Le seul intitulé facture, tenu pour preuve de contrat de travail.",
+        "Le différend décrit une relation commerciale, à distinguer d’un contrat de travail.",
+        "Le seul fait que l’entreprise a aussi des salariés.",
+        "La seule réalisation professionnelle de la prestation, prise comme critère du champ prud’homal."
+      ],
+      "answer": 1,
+      "explanation": "Le caractère professionnel d’une opération ne la rend pas salariale. Il faut qualifier la relation dont le litige est issu, et non la seule activité de l’entreprise."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un salarié de droit privé demande l’exécution d’une obligation de son contrat à son employeur. Quelle question vient après l’identification du champ prud’homal ?",
+      "options": [
+        "La compétence, tenue pour preuve suffisante de tous les faits.",
+        "L’existence d’un contrat, tenue pour admission de toute demande du salarié.",
+        "Le fondement, les faits et les conditions de la demande individuelle.",
+        "La réception de la requête, tenue pour reconnaissance de l’employeur."
+      ],
+      "answer": 2,
+      "explanation": "La compétence n’est qu’un premier contrôle. La demande individuelle doit ensuite être rapprochée de ses règles et preuves pour en apprécier le bien-fondé."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie déduit la compétence prud’homale du seul fait que la partie adverse emploie du personnel, alors que le contrat litigieux est un bail. Quelle distinction manque ?",
+      "options": [
+        "La preuve d’une rémunération dans un autre contrat et la dette locative.",
+        "Le montant des loyers et le nombre de salariés employés.",
+        "Le champ de la convention collective, substitué au régime du bail litigieux.",
+        "La qualité générale de l’entreprise et la relation précise à l’origine du litige."
+      ],
+      "answer": 3,
+      "explanation": "Une entreprise peut être employeur, locataire ou cliente dans des rapports distincts. La demande de bail ne devient pas salariale parce qu’elle emploie du personnel."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une demande est présentée au nom de plusieurs salariés, mais chacun réclame l’arriéré de sa prime individuelle. Quel point faut-il analyser au lieu de déduire le régime du nombre de personnes ?",
+      "options": [
+        "La nature de chaque droit réclamé et son rattachement au contrat de travail.",
+        "Le seul nombre de personnes, transformé en accord collectif déjà conclu.",
+        "Le seul total des sommes, pris comme règle de compétence universelle.",
+        "La seule présence d’un document commun, traitée comme disparition des droits individuels."
+      ],
+      "answer": 0,
+      "explanation": "Plusieurs demandeurs peuvent invoquer des droits individuels. L’analyse porte sur l’objet des prétentions et leur fondement, pas uniquement sur le nombre de personnes."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel lien doit apparaître dans un dossier de demande sociale utile ?",
+      "options": [
+        "Le volume des annexes et leur ordre d’impression, pris comme justification des demandes.",
+        "Chaque demande avec ses faits datés, sa règle et ses pièces.",
+        "La somme globale et le seul résultat souhaité par le demandeur.",
+        "Le nom de l’employeur et la seule référence au droit du travail."
+      ],
+      "answer": 1,
+      "explanation": "Le dossier doit rendre le raisonnement vérifiable. Les pièces et le calcul sont rattachés aux prétentions au lieu d’être accumulés comme une masse indifférenciée."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un salarié réclame des heures et joint uniquement les bulletins qui montrent sa paie habituelle. Quel complément cible directement le fait discuté ?",
+      "options": [
+        "La seule rémunération d’un collègue, sans ses horaires ni la période du demandeur.",
+        "Le seul intitulé temps complet, pris comme relevé exact de chaque semaine.",
+        "Des éléments sur les horaires effectivement accomplis pour la période demandée.",
+        "Le seul salaire moyen annuel, substitué à l’existence et au nombre d’heures."
+      ],
+      "answer": 2,
+      "explanation": "Les bulletins documentent la paie mais ne reconstituent pas forcément les horaires. Les éléments utiles doivent correspondre à la période et au fait à établir."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une demande chiffre le salaire au moyen d’un taux, mais le dossier ne précise ni son origine ni le texte applicable. Quelle lacune doit être levée ?",
+      "options": [
+        "La seule exactitude de la multiplication, prise comme preuve de la règle.",
+        "Le seul taux utilisé par un collègue d’une autre période.",
+        "La seule ancienneté de l’entreprise, prise comme source du taux.",
+        "Le fondement du taux et son applicabilité à la situation et à la période."
+      ],
+      "answer": 3,
+      "explanation": "Un calcul peut être arithmétiquement juste avec une donnée juridiquement non établie. Il faut identifier la source du taux et vérifier qu’elle gouverne le dossier."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le texte invoqué est applicable depuis une date déterminée, mais la demande couvre des mois antérieurs et postérieurs. Comment structurer le calcul ?",
+      "options": [
+        "Distinguer les périodes et les règles applicables à chacune.",
+        "Appliquer le nouveau montant à tous les mois par commodité.",
+        "Appliquer le montant ancien à toute la demande pour éviter une ventilation.",
+        "Faire une moyenne des montants sans vérifier les périodes."
+      ],
+      "answer": 0,
+      "explanation": "Les dates d’effet peuvent modifier le droit et le calcul. Une ventilation permet de rattacher chaque période à la règle qui lui correspond."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le demandeur souhaite ajouter une perte personnelle à un rappel salarial. Comment présenter ce nouveau poste ?",
+      "options": [
+        "Le confondre avec le brut du salaire afin d’éviter deux justifications.",
+        "L’identifier séparément avec le dommage et le fondement qu’il invoque.",
+        "Le calculer nécessairement au même montant que les salaires demandés.",
+        "L’ajouter comme majoration universelle sans autre pièce."
+      ],
+      "answer": 1,
+      "explanation": "Des objets distincts demandent des justifications distinctes. Le rappel ne prouve pas, à lui seul, l’existence et le montant d’un dommage supplémentaire."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les parties négocient une issue amiable pendant la préparation d’un dossier de demande. Quelle précaution documentaire reste utile ?",
+      "options": [
+        "Reporter le suivi des délais jusqu’à l’issue des pourparlers amiables.",
+        "Ne conserver que la proposition finale, les échanges préparatoires étant devenus inutiles.",
+        "Conserver la chronologie des échanges, les points acceptés et les délais à vérifier.",
+        "Tenir les demandes discutées pour acceptées faute de réponse immédiate."
+      ],
+      "answer": 2,
+      "explanation": "Le dialogue ne fixe pas nécessairement un accord ni tous ses effets. Documenter les échanges et contrôler les délais protège la lisibilité de la situation en cours."
+    }
+  ]
+}

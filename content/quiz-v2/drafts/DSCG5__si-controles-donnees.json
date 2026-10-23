@@ -1,0 +1,374 @@
+{
+  "module": "DSCG5",
+  "chapter": "si-controles-donnees",
+  "sourceHash": "b26b35842f317521496042eb9d3365f1339aa34d673b1af43303f51eaa76ad29",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel test porte directement sur la complétude d’un fichier de factures ?",
+      "options": [
+        "Vérifier que les dates respectent le format attendu.",
+        "Comparer chaque taux de taxe à la règle applicable.",
+        "Vérifier que tous les identifiants de factures attendus depuis la source sont présents.",
+        "Comparer le montant de chaque ligne au justificatif correspondant."
+      ],
+      "answer": 2,
+      "explanation": "La complétude concerne la présence des éléments attendus. Format, règle de taxe et valeur justificative portent sur d’autres propriétés de qualité."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le champ « montant » est obligatoire, mais une valeur de zéro peut être saisie sans justification. Quelle propriété le contrôle obligatoire établit-il directement ?",
+      "options": [
+        "L’exactitude du montant par rapport à la facture.",
+        "La conformité de la taxe associée.",
+        "L’absence de facture manquante dans le transfert.",
+        "La présence d’une valeur, sans garantir son exactitude."
+      ],
+      "answer": 3,
+      "explanation": "Un contrôle de présence évite le champ vide. Il ne vérifie pas que la valeur saisie correspond à l’opération ni que toutes les opérations sont présentes."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une date de naissance du31février passe le contrôle parce que le champ contient dix caractères. Quel contrôle permet de détecter directement cette date impossible ?",
+      "options": [
+        "La validation du sens de la date, au-delà de sa longueur de format.",
+        "La seule vérification du nombre de caractères de la date.",
+        "La seule vérification de la présence des séparateurs dans la chaîne.",
+        "Le seul classement des chaînes de dates dans l’ordre du fichier, sans validation du calendrier."
+      ],
+      "answer": 0,
+      "explanation": "Une chaîne de longueur attendue peut représenter une date impossible. Le contrôle doit vérifier la propriété attendue, pas seulement la forme du champ."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une facture respecte tous les formats, mais son identifiant client ne correspond à aucun client du référentiel utilisé. Quel contrôle détecte directement cette anomalie ?",
+      "options": [
+        "La seule vérification que le champ client contient le nombre de caractères prévu.",
+        "Un contrôle de référence entre l’identifiant client de la facture et le référentiel attendu.",
+        "Le seul calcul de la somme des montants des factures.",
+        "Le tri chronologique des factures, sans vérifier les identifiants clients."
+      ],
+      "answer": 1,
+      "explanation": "La conformité de format ne prouve pas l’existence de l’objet référencé. Il faut rapprocher la valeur du champ avec les identifiants du référentiel prévu."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une base contient l’ancienne adresse de livraison d’un client. Quel contrôle répond le mieux au besoin de livraison actuelle ?",
+      "options": [
+        "Vérifier seulement que le code postal comporte cinq chiffres.",
+        "Vérifier uniquement que le champ adresse n’est pas vide.",
+        "Confronter l’adresse à une source actualisée adaptée au besoin.",
+        "Comparer le nombre de caractères avec l’adresse précédente."
+      ],
+      "answer": 2,
+      "explanation": "Le format et le remplissage peuvent être corrects alors que l’information est obsolète. Le besoin exige une donnée actuelle et fiable."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Un contrôle d’interface doit rapprocher principalement :",
+      "options": [
+        "Les seuls totaux reçus, sans la population émise ni les rejets.",
+        "Les seuls lots terminés avec succès, en excluant les opérations à reprendre.",
+        "Les montants émis et reçus sur des fenêtres différentes sans rapprocher les décalages.",
+        "Les opérations émises, reçues, rejetées et reprises sur un périmètre défini."
+      ],
+      "answer": 3,
+      "explanation": "Le rapprochement doit suivre le parcours des opérations et les exceptions. Les coûts ou effectifs ne démontrent pas l’exhaustivité du transfert."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Cent factures sont émises, 96 reçues et quatre rejetées avec identifiants connus. Quelle action est nécessaire ?",
+      "options": [
+        "Suivre le traitement des quatre rejets et vérifier leur reprise sans doublon.",
+        "Déclarer l’interface conforme parce que 96 + 4 égale 100, puis supprimer les rejets.",
+        "Renvoyer les cent factures sans vérifier celles déjà reçues.",
+        "Ajouter quatre factures fictives au récepteur pour égaliser les compteurs."
+      ],
+      "answer": 0,
+      "explanation": "L’égalité explique les flux mais ne traite pas les rejets. Les opérations concernées doivent être corrigées et reprises avec un contrôle de non-duplication."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux fournisseurs peuvent utiliser le même numéro de facture. Le système rejette tout numéro déjà rencontré, quel que soit le fournisseur. Quel contrôle de conception manque ?",
+      "options": [
+        "Tenir le numéro seul pour unique dans toute l’organisation, malgré les numérotations indépendantes.",
+        "Définir la clé d’unicité au bon niveau, par exemple fournisseur et numéro selon la règle métier.",
+        "Supprimer le contrôle d’unicité pour toutes les factures, y compris au sein d’un fournisseur.",
+        "Remplacer chaque numéro par le montant pour obtenir un identifiant supposé unique."
+      ],
+      "answer": 1,
+      "explanation": "Une unicité doit correspondre à l’objet métier. Une clé trop étroite rejette des factures distinctes ; supprimer tout contrôle laisse passer de vrais doublons."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après une interruption, l’équipe rejoue un lot sans savoir quelles lignes avaient déjà été intégrées. Quelle vérification est prioritaire ?",
+      "options": [
+        "Rejouer toutes les lignes en supposant qu’une interruption annule toujours les écritures déjà reçues.",
+        "Traiter chaque nouvelle tentative comme une nouvelle opération métier sans rapprocher son identifiant.",
+        "L’état de réception par identifiant et le dispositif de prévention des doubles traitements.",
+        "Rapprocher uniquement le nombre total de lignes sans identifier celles qui ont déjà été validées."
+      ],
+      "answer": 2,
+      "explanation": "La reprise doit distinguer opérations déjà reçues et opérations manquantes. Sinon le rejeu peut créer des doublons même avec un fichier source correct."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Les compteurs de source portent sur les factures créées ; ceux du récepteur portent sur les factures validées. Quel préalable manque au rapprochement ?",
+      "options": [
+        "Une réduction du nombre de critères de contrôle.",
+        "Une comparaison des seules moyennes de montant.",
+        "Le remplacement de tous les identifiants par un total.",
+        "La définition de populations et états comparables dans les deux systèmes."
+      ],
+      "answer": 3,
+      "explanation": "Deux compteurs de périmètres différents ne peuvent être comparés directement. Les états, dates et exclusions doivent être réconciliés."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les montants transmis sont convertis dans une autre devise au récepteur. Comment rapprocher les totaux de façon utile ?",
+      "options": [
+        "Documenter devise, taux, date et règles de conversion avant de comparer les valeurs.",
+        "Exiger l’égalité numérique brute des deux totaux dans leurs devises différentes.",
+        "Comparer seulement le nombre de décimales affichées.",
+        "Supprimer les écarts de change du fichier reçu sans conserver la transformation."
+      ],
+      "answer": 0,
+      "explanation": "Les transformations doivent être intégrées au contrôle. Une différence numérique peut être attendue si unités et règles de conversion sont explicites."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel ensemble constitue une trace d’action exploitable ?",
+      "options": [
+        "Un horodatage et un utilisateur, sans l’action ni l’objet permettant de relier la trace au fait examiné.",
+        "L’auteur, l’action, l’objet concerné et le moment, dans un journal protégé.",
+        "Un total de modifications par service, utilisé comme substitut aux événements individuels.",
+        "Le seul montant final du dossier, sans auteur ni séquence de modification."
+      ],
+      "answer": 1,
+      "explanation": "Une trace permet de comprendre qui a fait quoi, sur quel objet et quand. Sa protection et son contexte sont nécessaires pour l’exploiter.",
+      "references": [
+        {
+          "title": "CNIL — Sécurité, tracer les opérations",
+          "url": "https://www.cnil.fr/fr/securite-tracer-les-operations"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’application continue à modifier les dossiers alors que le service de journalisation ne reçoit plus d’événements. Aucune alerte ne signale cet échec. Quel contrôle manque particulièrement ?",
+      "options": [
+        "Le seul contrôle que des journaux existaient avant l’incident.",
+        "La rotation plus rapide des anciens fichiers, sans vérifier l’arrivée de nouveaux événements.",
+        "La surveillance des défauts de journalisation et une conduite définie lorsque les traces ne sont plus produites.",
+        "La lecture du journal vide comme preuve qu’aucune modification n’a été effectuée."
+      ],
+      "answer": 2,
+      "explanation": "L’absence de trace peut provenir d’un défaut du mécanisme d’enregistrement. Il faut rendre ce défaut visible et prévoir son traitement, plutôt que l’interpréter comme une absence d’activité.",
+      "references": [
+        {
+          "title": "CNIL — Sécurité, tracer les opérations",
+          "url": "https://www.cnil.fr/fr/securite-tracer-les-operations"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Les utilisateurs peuvent supprimer leurs propres événements de journal. Quel risque affecte la preuve ?",
+      "options": [
+        "Les droits de modification des données suffisent à autoriser l’effacement des traces de ces mêmes modifications.",
+        "La conservation du journal au même endroit garantit son intégrité même si son auteur peut le supprimer.",
+        "Une longue durée de conservation compense la possibilité de supprimer immédiatement les événements gênants.",
+        "L’auteur d’une opération peut altérer la trace censée permettre son contrôle."
+      ],
+      "answer": 3,
+      "explanation": "La protection du journal contribue à sa valeur probante. Un accès permettant d’effacer ses propres traces compromet cette fonction.",
+      "references": [
+        {
+          "title": "CNIL — Sécurité, tracer les opérations",
+          "url": "https://www.cnil.fr/fr/securite-tracer-les-operations"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un journal conserve l’auteur, le type d’action et l’identifiant de facture, mais aucun horodatage. Quelle investigation devient particulièrement difficile ?",
+      "options": [
+        "Reconstituer la séquence des actions et leur relation avec l’incident.",
+        "Identifier la facture mentionnée par l’identifiant conservé dans la trace.",
+        "Lire le compte auteur explicitement enregistré pour l’événement.",
+        "Distinguer une création d’une validation lorsque le type d’action est enregistré."
+      ],
+      "answer": 0,
+      "explanation": "Le moment de l’action est nécessaire pour comprendre la chronologie. Un identifiant d’objet ne remplace pas l’information temporelle.",
+      "references": [
+        {
+          "title": "CNIL — Sécurité, tracer les opérations",
+          "url": "https://www.cnil.fr/fr/securite-tracer-les-operations"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un projet veut journaliser tout le contenu personnel de chaque dossier sans limite, pour faciliter d’éventuelles recherches futures. Quelle démarche est adaptée ?",
+      "options": [
+        "Considérer la possibilité d’une enquête future comme justification suffisante de tout contenu personnel et toute durée.",
+        "Définir les événements et informations utiles, les accès et une conservation justifiée.",
+        "Remplacer la définition du besoin par un accès intégral aux journaux pour tous les utilisateurs.",
+        "Conserver les dossiers complets dans chaque événement sans examiner les informations réellement nécessaires au contrôle."
+      ],
+      "answer": 1,
+      "explanation": "La traçabilité doit rester proportionnée au besoin et protégée. Une conservation sans limite ni sélection ne constitue pas une réponse universelle.",
+      "references": [
+        {
+          "title": "CNIL — Sécurité, tracer les opérations",
+          "url": "https://www.cnil.fr/fr/securite-tracer-les-operations"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux systèmes journalisent des étapes d’une même opération avec des heures non synchronisées. Quelle limite faut-il traiter ?",
+      "options": [
+        "Interpréter directement les heures locales enregistrées comme un ordre réel certain, sans vérifier leur synchronisation.",
+        "Déduire de la présence de secondes dans les horodatages que les horloges partagent la même référence.",
+        "La comparaison chronologique des événements peut être trompeuse.",
+        "Corriger l’ordre des événements selon l’ordre d’affichage des journaux plutôt que rapprocher leurs horloges."
+      ],
+      "answer": 2,
+      "explanation": "Des horloges incohérentes peuvent inverser artificiellement la séquence. Le rapprochement doit tenir compte des références horaires et des décalages connus.",
+      "references": [
+        {
+          "title": "CNIL — Sécurité, tracer les opérations",
+          "url": "https://www.cnil.fr/fr/securite-tracer-les-operations"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une alerte d’anomalie est utile au contrôle si :",
+      "options": [
+        "Elle est archivée sans être attribuée pour préserver son indépendance.",
+        "Elle remplace la correction puisque le risque a été détecté.",
+        "Elle est retirée du tableau dès qu’un utilisateur la consulte.",
+        "Elle déclenche un traitement défini, avec responsabilité et suivi."
+      ],
+      "answer": 3,
+      "explanation": "Détecter ne corrige pas. Le dispositif doit prévoir l’analyse, la décision, la correction et la vérification de l’issue."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une anomalie est corrigée directement dans la base sans trace du motif ni de l’auteur. Quelle faiblesse demeure ?",
+      "options": [
+        "L’impossibilité de vérifier ultérieurement la justification et l’exécution de la correction.",
+        "L’exactitude apparente du résultat suffit à démontrer l’autorisation et la justification de sa modification.",
+        "Un total final concordant remplace l’identification de l’auteur et du motif de chaque correction importante.",
+        "La nouvelle valeur peut être tenue pour validée uniquement parce qu’elle a remplacé l’ancienne dans la base."
+      ],
+      "answer": 0,
+      "explanation": "Une correction peut être exacte mais non contrôlable. L’auteur, le motif et les éléments de vérification doivent être conservés dans le cadre prévu."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une liste de rejets s’accumule sans responsable désigné. Quel indicateur renseigne directement sur le risque de traitement tardif ?",
+      "options": [
+        "Le seul nombre de rejets nouveaux, sans l’âge des rejets non résolus.",
+        "L’ancienneté des rejets et leur gravité, rapprochées des délais de traitement attendus.",
+        "Le seul taux de lignes acceptées, sans examen des exceptions en attente.",
+        "Le volume cumulé des données traitées, sans comparaison des rejets aux délais attendus."
+      ],
+      "answer": 1,
+      "explanation": "La file d’exceptions doit être suivie selon son âge et ses conséquences. Cela permet de prioriser et d’escalader les anomalies non résolues."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après correction d’une règle de transfert, quel test est nécessaire avant de clôturer l’incident ?",
+      "options": [
+        "La compilation réussie de la correction suffit à prouver le résultat sur l’incident et les cas auparavant fonctionnels.",
+        "Le changement de version peut être accepté sans reproduire l’exception ayant révélé le défaut.",
+        "Rejouer des cas représentatifs, y compris l’exception, et contrôler la non-régression.",
+        "Le seul total final d’un lot suffit sans vérifier les objets concernés et les cas de non-régression."
+      ],
+      "answer": 2,
+      "explanation": "La clôture demande une preuve du traitement correct de l’erreur et de l’absence d’effets indésirables sur les cas nécessaires."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une interface rejette à répétition le même type de code ; chaque ligne est corrigée manuellement, sans action sur la règle. Quelle suite améliore le contrôle ?",
+      "options": [
+        "Augmenter seulement le nombre d’alertes envoyées à tous les salariés.",
+        "Supprimer les rejets des rapports pour réduire la charge visible.",
+        "Réduire les contrôles de format sans examiner le sens des codes.",
+        "Analyser la cause récurrente, corriger le mécanisme et vérifier les reprises déjà effectuées."
+      ],
+      "answer": 3,
+      "explanation": "Le traitement des cas ne remplace pas la résolution de la cause. Une action durable doit aussi vérifier que les corrections passées n’ont pas créé d’autres écarts."
+    }
+  ]
+}

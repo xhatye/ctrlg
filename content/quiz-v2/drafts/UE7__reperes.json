@@ -1,0 +1,359 @@
+{
+  "module": "UE7",
+  "chapter": "reperes",
+  "sourceHash": "b092a09902ab1d66474702688b8b866bb7d2b4f8ef0823d47e1a623cdccd62be",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "foundation",
+      "q": "Une entreprise dispose d’une équipe maîtrisant une technique rare utile à ses clients. Où situer ce fait dans un premier diagnostic ?",
+      "options": [
+        "Dans les ressources et compétences internes à apprécier.",
+        "Dans une opportunité de demande extérieure à l’organisation.",
+        "Dans une menace concurrentielle extérieure à l’organisation.",
+        "Dans une évolution réglementaire commune à tous les acteurs."
+      ],
+      "answer": 0,
+      "explanation": "Une compétence détenue par l’organisation relève du diagnostic interne. Sa valeur doit encore être appréciée au regard des besoins ; la rareté mentionnée n’en fait pas un événement extérieur."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un concurrent lance une offre qui répond mieux à une attente du marché. Quel objet de diagnostic est principalement concerné pour l’entreprise observatrice ?",
+      "options": [
+        "Une ressource qu’elle possède déjà.",
+        "Une évolution externe de concurrence et de demande.",
+        "Un processus interne qu’elle a nécessairement modifié.",
+        "Une cible de productivité qu’elle a déjà atteinte."
+      ],
+      "answer": 1,
+      "explanation": "Le comportement du concurrent et les attentes de marché appartiennent à l’environnement. Ce fait peut appeler une réponse interne, mais il ne devient pas pour autant une ressource déjà disponible."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau de bord affiche « améliorer le service client » sans mesure ni période. Quelle précision manque pour piloter cet objectif ?",
+      "options": [
+        "Le nom du responsable et la liste des réunions prévues, sans résultat à mesurer.",
+        "Le nombre de personnes affectées à l’accueil, pris comme mesure suffisante du service rendu.",
+        "Un indicateur défini, une période et une cible permettant d’évaluer l’évolution.",
+        "Le seul budget de l’accueil, pris comme preuve de la qualité perçue par les clients."
+      ],
+      "answer": 2,
+      "explanation": "L’intention ne suffit pas à juger un progrès. Il faut définir la grandeur suivie, son unité et la période, puis une cible pour interpréter le résultat au regard de l’objectif."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise décide de s’implanter durablement dans un nouveau métier et d’y engager une part importante de ses moyens. Quelle nature de décision est la plus directement décrite ?",
+      "options": [
+        "Une décision de programmation des équipes à l’intérieur du métier existant.",
+        "Une décision d’application d’un barème déjà approuvé aux dossiers courants.",
+        "Une décision d’ordonnancement des livraisons dans le cadre actuel.",
+        "Une décision stratégique d’orientation et d’engagement de ressources."
+      ],
+      "answer": 3,
+      "explanation": "Le choix transforme durablement l’orientation et mobilise des ressources importantes. Il se distingue de l’organisation courante de l’activité, même si sa réalisation entraînera aussi des décisions opérationnelles."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le délai de traitement interne est trop long en raison d’étapes redondantes. Pourquoi le ranger parmi les seules menaces du marché serait-il imprécis ?",
+      "options": [
+        "Le défaut décrit concerne un processus de l’organisation et relève d’abord du diagnostic interne.",
+        "La localisation du problème doit être externe dès lors que les clients en subissent les effets.",
+        "La comparaison avec les concurrents suffit à transformer une faiblesse du processus en menace extérieure.",
+        "La présence de plusieurs services dans le circuit fait du retard un facteur macroéconomique."
+      ],
+      "answer": 0,
+      "explanation": "L’origine décrite du problème est interne, même si ses conséquences touchent les clients. Le diagnostic doit distinguer la localisation du facteur et ses effets plutôt qu’appeler toute difficulté une menace extérieure."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La demande d’un service augmente dans un secteur où l’entreprise n’a pas encore les compétences nécessaires. Quelle distinction faut-il faire ?",
+      "options": [
+        "La croissance de demande suffit à remplacer la construction des compétences manquantes.",
+        "La possibilité externe et les moyens internes pour la saisir sont deux éléments différents.",
+        "Les compétences nécessaires doivent être classées comme déjà détenues dès que le marché les demande.",
+        "L’entreprise doit traiter la demande comme un facteur interne parce qu’elle envisage de la servir."
+      ],
+      "answer": 1,
+      "explanation": "Une évolution externe peut ouvrir une possibilité sans assurer la capacité d’en bénéficier. La réponse doit relier cette possibilité aux ressources internes à développer plutôt que confondre marché et compétence."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un responsable affirme « notre indicateur est de réduire les retards à moins de 3 % ». Quel élément de cette phrase constitue la cible ?",
+      "options": [
+        "Le taux effectivement observé pendant la période précédente.",
+        "La règle définissant les commandes qui entrent dans le dénominateur.",
+        "Le niveau de retards inférieur à3%, à rattacher à une mesure et une période.",
+        "La fréquence à laquelle le tableau de bord est publié."
+      ],
+      "answer": 2,
+      "explanation": "La cible indique un niveau souhaité. L’indicateur mesure le phénomène, par exemple une proportion de dossiers en retard ; il faut encore préciser son périmètre et sa période pour comparer l’observé à la cible."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le directeur valide le planning de livraison de demain, dans les capacités, marchés et règles déjà décidés. Quelle analyse qualifie cet acte ?",
+      "options": [
+        "La signature du directeur suffit à en faire un choix de diversification.",
+        "Le nombre de personnes concernées suffit à en faire une orientation de long terme.",
+        "Toute décision touchant les clients modifie nécessairement le métier de l’entreprise.",
+        "Le contenu organise l’activité courante sans redéfinir ici l’orientation stratégique."
+      ],
+      "answer": 3,
+      "explanation": "L’acte répartit des livraisons dans le cadre existant. La hiérarchie du signataire, le nombre de personnes ou le contact client ne suffisent pas à établir un choix durable de métier ou de positionnement."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une capacité de production existe mais reste inutilisable faute de personnel formé. Quel diagnostic interne est le plus précis ?",
+      "options": [
+        "Distinguer la ressource matérielle disponible de la capacité effective à la mobiliser.",
+        "Mesurer la capacité disponible au seul débit technique nominal, sans intégrer la contrainte de qualification.",
+        "Assimiler le nombre de machines achetées au nombre de postes effectivement exploitables.",
+        "Classer le défaut de formation comme une baisse de demande au lieu d’une limite de mobilisation interne."
+      ],
+      "answer": 0,
+      "explanation": "Le diagnostic interne doit examiner ressources et compétences ensemble. La possession d’un moyen ne garantit pas son usage efficace ; la formation manquante fait partie des contraintes à documenter."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une entreprise attribue une baisse de ventes à son seul accueil client, mais des concurrents et les besoins du marché ont changé. Quelle analyse manque ?",
+      "options": [
+        "Évaluer seulement la formation des agents d’accueil, sans examiner les offres concurrentes.",
+        "L’examen de facteurs externes susceptibles de contribuer à l’évolution.",
+        "Utiliser seulement la satisfaction des clients restants comme preuve sur toutes les causes de la baisse.",
+        "Remplacer l’analyse du marché par le seul suivi des coûts du service d’accueil."
+      ],
+      "answer": 1,
+      "explanation": "L’évolution peut avoir plusieurs facteurs. Le diagnostic externe complète l’interne en examinant concurrence et demande, sans imposer une cause unique avant d’avoir étudié les faits."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux services présentent des taux de retard mais l’un compte les commandes et l’autre les clients. Quel contrôle faut-il faire avant de les comparer ?",
+      "options": [
+        "Comparer directement les taux parce qu’ils sont tous deux exprimés en pourcentage.",
+        "Appliquer la même cible aux deux services en supposant que cela harmonise leurs populations.",
+        "Vérifier la formule, la population et les conventions de mesure.",
+        "Augmenter la fréquence de publication sans revoir les unités de comptage différentes."
+      ],
+      "answer": 2,
+      "explanation": "Un pourcentage ne devient pas comparable du seul fait de son unité. Numérateur, dénominateur et périmètre doivent représenter la même mesure pour interpréter correctement les différences entre services."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un projet stratégique d’implantation est approuvé. La planification des équipes pour ouvrir le premier site est ensuite discutée. Comment relier ces décisions ?",
+      "options": [
+        "La stratégie et le planning représentent le même niveau de décision dès lors qu’ils portent sur le même site.",
+        "L’approbation du projet suffit à déterminer les horaires individuels sans décision complémentaire.",
+        "Le planning des équipes détermine à lui seul le métier dans lequel l’entreprise s’implante.",
+        "Des décisions opérationnelles peuvent mettre en œuvre une orientation stratégique."
+      ],
+      "answer": 3,
+      "explanation": "Les deux niveaux sont liés mais distincts. Le choix stratégique fixe une orientation durable ; sa réalisation demande des décisions de fonctionnement courant, dont la planification des moyens et tâches."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel élément relève du diagnostic interne d’une organisation ?",
+      "options": [
+        "Ses compétences, ressources et processus.",
+        "L’évolution générale de la demande sans action de sa part.",
+        "La nouvelle stratégie d’un concurrent.",
+        "Une modification extérieure du marché des fournisseurs."
+      ],
+      "answer": 0,
+      "explanation": "Le diagnostic interne porte sur les caractéristiques et moyens de l’organisation. Le marché et les comportements des autres acteurs relèvent de l’environnement, même s’ils influencent la valeur des ressources internes."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une organisation constate un changement d’attentes de ses clients. Quelle question aide à transformer ce constat externe en analyse utile ?",
+      "options": [
+        "Comment reproduire l’offre actuelle sans examiner son adéquation à cette attente nouvelle ?",
+        "Quelles possibilités ou difficultés ce changement crée-t-il au regard de notre offre et de nos capacités ?",
+        "Comment considérer l’attente nouvelle comme une compétence déjà détenue ?",
+        "Comment qualifier uniformément ce changement de menace sans examiner les réponses possibles ?"
+      ],
+      "answer": 1,
+      "explanation": "L’environnement doit être relié à la situation de l’entreprise. Un changement n’est pas automatiquement favorable ou défavorable pour tous ; il faut en examiner les effets possibles et les moyens d’y répondre."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le service mesure chaque mois le délai médian et vise trois jours. Le résultat observé est cinq jours. Quelle lecture distingue correctement mesure et cible ?",
+      "options": [
+        "Cinq jours est la cible et trois jours l’observation.",
+        "Le seul fait de mesurer prouve que l’objectif est atteint.",
+        "Cinq jours est le résultat, au-dessus de la cible de trois jours sur cet indicateur.",
+        "Les deux nombres ne peuvent jamais être comparés dans un tableau de bord."
+      ],
+      "answer": 2,
+      "explanation": "Le suivi confronte une mesure observée à un niveau recherché selon une définition commune. Un résultat plus haut n’est pas ici le succès attendu, puisque l’objectif est de réduire le délai à trois jours."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une réparation coûteuse conserve une installation dans le même métier, avec les mêmes capacités et clients. Quel critère évite de confondre cette dépense avec une nouvelle orientation stratégique ?",
+      "options": [
+        "Qualifier toute dépense supérieure au budget d’un service de diversification.",
+        "Qualifier toute intervention technique importante d’entrée sur un nouveau marché.",
+        "Déduire la nature stratégique de la dépense du seul niveau hiérarchique signataire.",
+        "Examiner le contenu du choix : maintien du fonctionnement existant ou modification durable de l’orientation."
+      ],
+      "answer": 3,
+      "explanation": "Un montant élevé peut correspondre au maintien du fonctionnement. Pour qualifier la portée stratégique, il faut aussi examiner l’orientation et les capacités engagées ; coût ou signataire ne suffisent pas seuls."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le diagnostic qualifie de force un stock d’équipements anciens sans examiner leur utilité. Quel complément est nécessaire ?",
+      "options": [
+        "Apprécier l’état et l’adéquation de cette ressource aux besoins, au lieu de confondre possession et atout.",
+        "Assimiler la quantité de machines détenues à une force, sans tenir compte de leur disponibilité.",
+        "Retenir leur valeur historique d’achat comme mesure suffisante de leur avantage actuel.",
+        "Déduire leur adéquation future de leur seule utilité lors des années précédentes."
+      ],
+      "answer": 0,
+      "explanation": "Une ressource détenue relève de l’interne mais n’est pas automatiquement une force. Son état, sa disponibilité et sa pertinence pour l’activité doivent être examinés pour qualifier son rôle."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel élément est principalement observé dans le diagnostic externe ?",
+      "options": [
+        "La méthode interne de traitement des dossiers.",
+        "Les marchés, concurrents et évolutions de la demande.",
+        "L’ensemble des compétences déjà détenues par les salariés.",
+        "La répartition des responsabilités dans le service."
+      ],
+      "answer": 1,
+      "explanation": "Le diagnostic externe concerne les conditions et acteurs de l’environnement. Il complète l’analyse des moyens internes ; les deux doivent être rapprochés sans transformer un événement extérieur en compétence déjà acquise."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un indicateur de productivité augmente mais sa formule a changé entre les périodes. Que faut-il vérifier avant d’annoncer l’atteinte de l’objectif ?",
+      "options": [
+        "Vérifier seulement que les deux résultats sont exprimés dans la même unité finale.",
+        "Vérifier seulement que le titre du ratio reste identique dans les deux tableaux.",
+        "La comparabilité des définitions et l’effet du changement de formule.",
+        "Comparer les seuls résultats arrondis, sans reconstituer la formule antérieure."
+      ],
+      "answer": 2,
+      "explanation": "La cible et la mesure doivent se référer au même phénomène. Une modification de formule peut produire une variation apparente ; il faut la documenter ou reconstruire une série cohérente."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Sans plan initial de diversification, une entreprise accepte successivement des demandes nouvelles, développe les compétences correspondantes puis réalise durablement l’essentiel de ses ventes dans ce nouveau domaine. Quelle lecture rend compte de cette trajectoire ?",
+      "options": [
+        "Une orientation émergente s’est formée par une série d’actions, sans avoir été entièrement planifiée au départ.",
+        "La stratégie réalisée est nécessairement identique au plan initial malgré le changement durable d’activité.",
+        "L’absence de plan initial interdit de qualifier la nouvelle orientation de stratégique.",
+        "Le nouveau domaine reste une simple tâche quotidienne parce qu’aucune diversification n’avait été annoncée."
+      ],
+      "answer": 0,
+      "explanation": "Une orientation réalisée peut aussi résulter d’actions cohérentes développées face aux opportunités. L’absence de plan initial ne supprime pas la portée durable du changement ; elle distingue sa formation émergente d’une stratégie entièrement délibérée.",
+      "references": [
+        {
+          "title": "Virginia Tech — Intended, Emergent and Realized Strategies",
+          "url": "https://pressbooks.lib.vt.edu/strategicmanagement/chapter/1-3-intended-emergent-and-realized-strategies/"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Quelle distinction sépare objectif et indicateur ?",
+      "options": [
+        "L’objectif décrit ce que l’on cherche à atteindre ; l’indicateur sert à mesurer une évolution ou un résultat.",
+        "L’objectif est la valeur déjà observée ; l’indicateur est uniquement le niveau souhaité à l’avenir.",
+        "L’objectif définit seulement la fréquence de publication ; l’indicateur désigne seulement la personne responsable.",
+        "L’objectif désigne les moyens engagés ; l’indicateur garantit le résultat obtenu par ces moyens."
+      ],
+      "answer": 0,
+      "explanation": "Le pilotage relie intention, mesure et cible. Un indicateur peut fournir une information sans que sa hausse soit en soi souhaitable ; il doit être interprété à la lumière de l’objectif défini."
+    },
+    {
+      "id": "q22",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une menace extérieure est identifiée. Le rapport conclut que l’entreprise ne peut rien faire puisqu’elle ne contrôle pas directement ce facteur. Quelle nuance manque ?",
+      "options": [
+        "La qualification externe implique qu’aucune mesure de réduction d’exposition ne peut être envisagée.",
+        "L’absence de maîtrise directe n’empêche pas d’examiner des réponses et adaptations internes.",
+        "Le suivi du risque suffit à le rendre contrôlable sans changement de moyens ou de décisions.",
+        "Le risque ne doit être transmis à la direction que si l’entreprise peut en supprimer la cause."
+      ],
+      "answer": 1,
+      "explanation": "Le diagnostic distingue localisation et possibilité de réponse. Une entreprise peut adapter ses moyens ou ses choix sans contrôler l’événement lui-même ; l’analyse ne doit pas confondre ces deux dimensions."
+    },
+    {
+      "id": "q23",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un bilan mélange faits documentés et avis non vérifiés sur les compétences de l’équipe. Quel principe améliore la qualité du diagnostic ?",
+      "options": [
+        "Remplacer les avis par le seul nombre de salariés pour qualifier toutes les compétences.",
+        "Retenir l’avis le plus favorable comme conclusion définitive sans autre vérification.",
+        "Distinguer preuves disponibles, interprétations et informations à compléter.",
+        "Additionner les opinions favorables sans préciser ce que chaque témoignage permet d’observer."
+      ],
+      "answer": 2,
+      "explanation": "Un diagnostic exploitable garde la trace de ce qui est observé et de ce qui reste hypothèse. Cette distinction permet de vérifier les points importants avant d’engager une décision sur des qualifications fragiles."
+    }
+  ]
+}

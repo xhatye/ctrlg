@@ -1,0 +1,362 @@
+{
+  "module": "UE1",
+  "chapter": "biens-droits",
+  "sourceHash": "022d0186db8eda1b5571b2195ce821abe7d293d989688ab1ba140cf8452e9c1a",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle distinction oppose un droit réel à une créance ?",
+      "options": [
+        "Le droit réel porte directement sur un bien ; la créance permet d’exiger une prestation d’un débiteur.",
+        "Le droit réel permet d’exiger un paiement ; la créance désigne la propriété d’un bien.",
+        "Le droit réel doit être matériel ; une créance ne peut porter que sur un objet corporel.",
+        "Le droit réel appartient aux sociétés ; la créance appartient aux seules personnes physiques."
+      ],
+      "answer": 0,
+      "explanation": "La distinction porte sur la structure du droit, directement sur un bien ou contre un débiteur. Elle ne dépend pas du statut physique ou moral de son titulaire."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise a prêté une somme à son partenaire et attend son remboursement. Quel droit exerce-t-elle lorsqu’elle exige ce remboursement ?",
+      "options": [
+        "Un droit de propriété direct sur tous les biens du partenaire.",
+        "Une créance contre le partenaire.",
+        "Un droit d’usage des locaux du partenaire.",
+        "Un droit de disposition sur les stocks du partenaire."
+      ],
+      "answer": 1,
+      "explanation": "L’entreprise demande une prestation à un débiteur : le remboursement. Cette créance ne se confond pas avec un pouvoir direct sur tous les biens de celui-ci."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un vendeur attend encore le paiement d’un matériel livré. Le dossier ne précise pas les règles ni clauses de transfert de propriété. Quelle conclusion est justifiée ?",
+      "options": [
+        "L’absence de paiement prouve que le vendeur possède encore le matériel.",
+        "La livraison prouve que le prix a été payé.",
+        "La créance de prix doit être distinguée de la question du transfert de propriété.",
+        "La créance de prix autorise à vendre n’importe quel bien du client."
+      ],
+      "answer": 2,
+      "explanation": "Demander le prix et revendiquer la propriété du matériel sont des questions distinctes. Le transfert demande l’examen des termes et règles applicables, qui ne sont pas fournis ici."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie qualifie le droit d’un prêteur au remboursement de « propriété de la maison du débiteur », alors qu’aucun droit sur cette maison n’est indiqué. Quel amalgame commet-elle ?",
+      "options": [
+        "Elle confond usage et jouissance d’un matériel loué.",
+        "Elle confond bien meuble et immeuble selon la valeur.",
+        "Elle confond inventaire et facture acquittée.",
+        "Elle transforme une créance contre une personne en droit direct sur un bien déterminé."
+      ],
+      "answer": 3,
+      "explanation": "La créance porte sur la prestation due par le débiteur. Un droit direct sur sa maison doit avoir un fondement distinct et ne se déduit pas du prêt indiqué."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une association est propriétaire d’un local et créancière du remboursement d’une avance consentie à un partenaire. Comment distinguer ces deux éléments ?",
+      "options": [
+        "Un droit sur le local et un droit d’exiger le remboursement du partenaire.",
+        "Deux droits de propriété sur les biens du partenaire.",
+        "Deux droits d’usage limités à la durée d’un contrat de location.",
+        "Une seule créance, mesurée par la valeur du local."
+      ],
+      "answer": 0,
+      "explanation": "Le local détenu en propriété et la créance d’avance sont des objets différents. Les identifier séparément évite de confondre biens détenus et prestations attendues d’autrui."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pour qualifier un bien de meuble ou d’immeuble, quel critère de méthode retenir ?",
+      "options": [
+        "Sa valeur d’acquisition.",
+        "Ses caractéristiques et le régime juridique pertinent.",
+        "Le chiffre d’affaires de son utilisateur.",
+        "La durée pendant laquelle il apparaît dans l’inventaire."
+      ],
+      "answer": 1,
+      "explanation": "Meuble et immeuble sont des catégories juridiques. La qualification repose sur les caractéristiques et règles applicables, non sur le seul prix ou le temps de détention."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un candidat qualifie un équipement d’immeuble uniquement parce qu’il coûte plus cher que le local qui l’abrite. Quelle correction est adaptée ?",
+      "options": [
+        "Retenir le plus ancien des deux prix comme critère de classement.",
+        "Comparer seulement leurs valeurs nettes comptables.",
+        "Rechercher les caractéristiques et règles de qualification au lieu de comparer les prix.",
+        "Classer l’équipement comme immeuble dès qu’il est amorti sur plusieurs années."
+      ],
+      "answer": 2,
+      "explanation": "Le prix ne détermine pas cette qualification. Il faut examiner le bien et les règles qui gouvernent sa nature ou son affectation."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier mentionne un équipement attaché à un bâtiment, mais ne précise ni les conditions d’attache ni l’affectation. Quelle vérification est utile avant de le qualifier ?",
+      "options": [
+        "La classification comptable en immobilisation, utilisée comme critère unique du caractère immobilier.",
+        "La valeur relative de l’équipement et du bâtiment, utilisée pour qualifier le premier.",
+        "La durée d’amortissement de l’équipement, prise comme durée de son rattachement juridique.",
+        "Les caractéristiques de l’installation et les règles d’attache ou d’affectation pertinentes."
+      ],
+      "answer": 3,
+      "explanation": "La seule présence dans un bâtiment ne suffit pas à résoudre les questions d’attache ou d’affectation. Les faits matériels et le régime du bien doivent être précisés."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie traite une créance comme un bien corporel parce qu’elle figure sur une facture imprimée. Quel objet doit être qualifié ?",
+      "options": [
+        "Le droit au paiement, distinct du support papier qui le documente.",
+        "La propriété du support papier, considérée comme la créance elle-même.",
+        "Le droit de vendre le support, considéré comme le droit au paiement.",
+        "La détention matérielle du document, considérée comme propriété des biens du débiteur."
+      ],
+      "answer": 0,
+      "explanation": "Il faut distinguer le droit incorporel et le document qui le constate. Le caractère matériel du support ne transforme pas la créance en objet corporel."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société commerciale possède principalement des immeubles. Un associé soutient que ses actions sont donc elles-mêmes des biens immeubles. Comment l’article 529 du Code civil qualifie-t-il ces actions pendant l’existence de la société ?",
+      "options": [
+        "Comme des immeubles, car elles suivent la qualification des principaux actifs sociaux.",
+        "Comme des meubles par détermination de la loi, même si la société possède des immeubles.",
+        "Comme des droits immobiliers directs sur une fraction de chaque bâtiment social.",
+        "Comme des immeubles si la valeur des bâtiments dépasse celle des autres actifs."
+      ],
+      "answer": 1,
+      "explanation": "L’article 529 classe les actions ou intérêts dans les sociétés de commerce parmi les meubles, même lorsque la société possède des immeubles. Les titres de l’associé ne se confondent pas avec les biens appartenant à la société.",
+      "references": [
+        {
+          "title": "Code civil, article 529, titres sociaux meubles",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006428718/2026-06-12"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel acte relève d’une prérogative de disposition plutôt que du simple usage d’un matériel ?",
+      "options": [
+        "L’utiliser pour effectuer la prestation autorisée.",
+        "Le conserver pendant la durée du prêt prévu.",
+        "Décider de le vendre dans les limites du droit détenu.",
+        "Le déplacer à l’intérieur du lieu d’utilisation convenu."
+      ],
+      "answer": 2,
+      "explanation": "La disposition concerne notamment le pouvoir de vendre. Le droit d’utiliser ou de détenir un matériel ne donne pas nécessairement cette prérogative."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat autorise une entreprise à utiliser un appareil loué mais exclut sa vente par elle. Quel projet dépasse le droit décrit ?",
+      "options": [
+        "Faire fonctionner l’appareil pour les travaux convenus.",
+        "Conserver l’appareil pendant la location.",
+        "Le restituer au terme indiqué.",
+        "Le céder comme si elle en était propriétaire."
+      ],
+      "answer": 3,
+      "explanation": "Le contrat distingue l’usage permis et la vente exclue. La possibilité matérielle de remettre l’appareil à un acheteur ne constitue pas un pouvoir juridique de disposition."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une personne dispose d’un droit de jouissance sur un bien et veut connaître ses possibilités d’exploitation. Quelle lecture est nécessaire ?",
+      "options": [
+        "Examiner l’étendue du droit détenu et les limites du titre applicable.",
+        "Déduire la propriété de la seule durée d’utilisation.",
+        "Assimiler toute jouissance à un droit de vente du bien.",
+        "Transformer le contrat d’usage en titre d’acquisition."
+      ],
+      "answer": 0,
+      "explanation": "Usage, jouissance et disposition doivent être distingués. L’étendue des prérogatives se détermine à partir du droit et des limites applicables, pas de la seule utilisation."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un responsable affirme : « Nous détenons les clés de ce véhicule, donc nous pouvons le vendre. » Quelle confusion fait-il ?",
+      "options": [
+        "Il confond le droit d’utiliser personnellement le véhicule et celui d’en percevoir les revenus.",
+        "Il confond maîtrise matérielle et pouvoir juridique de disposition.",
+        "Il confond autorisation de vendre au nom du propriétaire et acquisition personnelle du véhicule.",
+        "Il confond engagement de vendre ultérieurement et transfert déjà réalisé de la propriété."
+      ],
+      "answer": 1,
+      "explanation": "La détention des clés permet une maîtrise matérielle, mais ne prouve ni la propriété ni l’habilitation à vendre. Le titre et les pouvoirs doivent être examinés."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un usufruit porte sur une quantité de blé, chose consommable par son usage. Selon l’article 587 du Code civil, quelle obligation accompagne le droit de l’usufruitier de consommer ce blé ?",
+      "options": [
+        "Conserver les mêmes grains et les restituer matériellement à la fin de l’usufruit.",
+        "Remettre au nu-propriétaire les revenus perçus, sans restitution du blé ni de sa valeur.",
+        "Restituer à la fin une quantité et qualité équivalentes ou la valeur estimée à cette date.",
+        "Rembourser uniquement la valeur du blé estimée au jour de la constitution de l’usufruit."
+      ],
+      "answer": 2,
+      "explanation": "Pour les choses consommables, l’article 587 permet l’usage à charge de restitution : choses de même quantité et qualité ou valeur estimée à la date de la restitution. Exiger les mêmes grains serait incompatible avec cet usage ; retenir exclusivement une valeur initiale déplace la date légale.",
+      "references": [
+        {
+          "title": "Code civil, article 587, usufruit de choses consommables",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006429324/2023-12-21"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le propriétaire donne à une mandataire un pouvoir exprès de vendre un matériel déterminé. Comment qualifier son intervention ?",
+      "options": [
+        "La mandataire devient propriétaire par l’effet du mandat.",
+        "La mandataire ne peut agir que si elle utilise personnellement le matériel.",
+        "La mandataire acquiert une créance égale à la valeur du matériel.",
+        "La mandataire exerce le pouvoir autorisé pour le propriétaire, sans devenir propriétaire par ce seul mandat."
+      ],
+      "answer": 3,
+      "explanation": "Un pouvoir d’agir pour le titulaire se distingue de la titularité elle-même. Le mandat fourni autorise l’acte décrit mais ne constitue pas un transfert de propriété à la mandataire."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle fonction remplit un inventaire interne dans un litige de propriété ?",
+      "options": [
+        "Un élément à rapprocher des titres et circonstances, dont la portée doit être appréciée.",
+        "Un transfert de propriété à la date de son établissement.",
+        "Une preuve qui remplace nécessairement les contrats opposés.",
+        "Une autorisation de vendre tout objet recensé."
+      ],
+      "answer": 0,
+      "explanation": "L’inventaire renseigne sur les ressources recensées, mais ne tranche pas seul toute contestation. Il doit être confronté aux contrats, titres et circonstances pertinents."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat de location identifie le bailleur comme propriétaire. L’inventaire interne du locataire classe le même objet parmi « nos équipements ». Quelle analyse retenir ?",
+      "options": [
+        "L’intitulé interne annule la clause du contrat.",
+        "Rapprocher les pièces et distinguer recensement opérationnel et attribution de propriété.",
+        "La propriété est partagée entre bailleur et locataire à parts égales.",
+        "Le dernier document établi transfère la propriété à son rédacteur."
+      ],
+      "answer": 1,
+      "explanation": "Une expression interne peut désigner les moyens utilisés sans leur attribuer juridiquement la propriété. Le contrat et la portée de l’inventaire doivent être confrontés."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société produit une facture d’achat, mais la référence du matériel ne correspond pas à celle du bien revendiqué. Quel contrôle manque ?",
+      "options": [
+        "La concordance du montant de la facture avec la valeur inscrite dans l’inventaire, retenue à la place de l’identification.",
+        "L’appartenance des deux appareils à une même gamme commerciale, retenue comme preuve de leur identité.",
+        "Le rapprochement entre le titre produit et l’objet effectivement en litige.",
+        "La proximité entre la date de facture et celle de mise en service, retenue comme preuve suffisante de l’identité du bien."
+      ],
+      "answer": 2,
+      "explanation": "Un titre portant sur un autre objet ne tranche pas la revendication. Références, caractéristiques et circonstances doivent permettre d’identifier le même bien."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un propriétaire a perdu une montre le 10 janvier 2025. Il la retrouve chez un possesseur le 21 octobre 2026. Sur le seul délai de revendication d’une chose perdue prévu à l’article 2276 du Code civil, quelle analyse retenir ?",
+      "options": [
+        "Le délai court du jour où le propriétaire retrouve le possesseur : il n’a donc pas encore commencé.",
+        "Le délai de trois ans court depuis la perte et n’est pas encore écoulé au 21 octobre 2026.",
+        "Le délai est d’un an depuis la perte : la revendication est déjà tardive.",
+        "Le délai de trois ans court de l’acquisition par le possesseur, dont il faut d’abord connaître la date."
+      ],
+      "answer": 1,
+      "explanation": "L’article 2276 permet la revendication d’une chose perdue ou volée pendant trois ans à compter de la perte ou du vol. Entre janvier 2025 et octobre 2026, ce délai n’est pas écoulé. La question ne tranche pas les autres conditions ou modalités de la restitution.",
+      "references": [
+        {
+          "title": "Code civil, article 2276, chose perdue ou volée",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019017163/2026-09-01"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une clause écrite de réserve de propriété prévoit que le vendeur conserve la propriété d’une machine jusqu’au paiement intégral. La machine est livrée ; 70 % du prix est payé. Quel effet l’article 2367 attache-t-il à cette clause ?",
+      "options": [
+        "La propriété reste au vendeur tant que la contrepartie n’est pas intégralement payée.",
+        "L’acheteur acquiert 70 % de la propriété et le vendeur conserve une quote-part de 30 %.",
+        "La livraison transfère la propriété ; la clause donne seulement un droit au paiement prioritaire.",
+        "La clause cesse à la livraison et devient une garantie personnelle portant sur le solde."
+      ],
+      "answer": 0,
+      "explanation": "La réserve de propriété suspend l’effet translatif jusqu’au complet paiement de la contrepartie. Elle ne divise pas la propriété au prorata des versements et ne se réduit pas à une priorité de paiement ou à une garantie personnelle.",
+      "references": [
+        {
+          "title": "Code civil, article 2367, réserve de propriété",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000020192952/2026-06-12"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat permet à une entreprise d’utiliser du matériel appartenant à une autre et lui impose de le restituer. Comment organiser la conclusion sur ses droits ?",
+      "options": [
+        "Confondre la restitution promise et le remboursement d’une créance.",
+        "Identifier le propriétaire, le fondement de l’usage et l’obligation de restitution.",
+        "Attribuer la propriété au détenteur jusqu’au terme, puis au propriétaire initial.",
+        "Évaluer uniquement la valeur de revente sans examiner le contrat."
+      ],
+      "answer": 1,
+      "explanation": "La conclusion distingue titularité, droit d’usage et obligation envers le propriétaire. Ces trois éléments ne se résument ni à la présence du bien ni à son prix."
+    }
+  ]
+}

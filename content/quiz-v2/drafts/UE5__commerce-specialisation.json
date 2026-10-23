@@ -1,0 +1,492 @@
+{
+  "module": "UE5",
+  "chapter": "commerce-specialisation",
+  "sourceHash": "76de4baa1374d6dd102d0ec1dc3ac0fd06e556ac383bba600ecdb4851b589b1d",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "foundation",
+      "q": "Produire un outil demande deux heures au pays A et trois au pays B, à qualité comparable. Quel constat d’avantage absolu est fondé sur ces seules données ?",
+      "options": [
+        "B, car davantage d’heures incorporées dans chaque outil indique une productivité supérieure.",
+        "A, car ses heures de travail par outil sont plus faibles.",
+        "B, car son plus grand coût d’opportunité supposé lui attribue aussi l’avantage absolu.",
+        "Les deux sont aussi productifs, car la différence d’une heure ne compte qu’après fixation du prix de vente."
+      ],
+      "answer": 1,
+      "explanation": "L’avantage absolu compare les ressources nécessaires par unité comparable. A emploie moins de travail pour l’outil ; cela ne suffit pas à définir sa spécialisation relative sans examiner une autre activité."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un modèle linéaire à un seul facteur travail, un textile exige deux heures et un litre de vin quatre heures dans le pays A. Quel vin doit-il renoncer à produire pour obtenir un textile ?",
+      "options": [
+        "2 litres",
+        "4 litres",
+        "0,5 litre",
+        "8 litres"
+      ],
+      "answer": 2,
+      "explanation": "Les deux heures consacrées au textile permettraient de produire 2 / 4 = 0,5 litre de vin. Ce rapport est le coût d’opportunité du textile en vin, sous les hypothèses de ressources convertibles données.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 2
+            },
+            {
+              "value": 4
+            }
+          ]
+        },
+        "expected": 0.5,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un modèle prévoit des gains de production globaux grâce à l’échange. Un commentaire affirme que chaque travailleur gagne immédiatement. Quelle erreur faut-il corriger ?",
+      "options": [
+        "Un gain agrégé ne garantit pas une répartition favorable et immédiate pour chaque personne.",
+        "Le gain agrégé doit être réparti également entre travailleurs pour mesurer le gain individuel du modèle.",
+        "Le supplément de production représente directement le revenu de chaque travailleur, sans examiner ses revenus antérieurs.",
+        "Le gain productif global permet d’attribuer à chaque travailleur la même variation proportionnelle de revenu."
+      ],
+      "answer": 0,
+      "explanation": "Il faut distinguer possibilités globales et situation des personnes. Des secteurs et travailleurs peuvent supporter des transitions ou pertes même si l’ensemble dispose de gains potentiels."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise réduit ses coûts d’achat en concentrant tous ses approvisionnements chez un seul fournisseur étranger. Quel risque doit-elle aussi examiner ?",
+      "options": [
+        "La variabilité des prix d’achat, en supposant qu’un stock nul assure la continuité pendant l’arrêt du fournisseur.",
+        "Le délai moyen de transport courant, utilisé comme durée maximale de remise en route après une rupture du site.",
+        "La volatilité des commandes, en traitant une seconde ligne du même site comme une source indépendante.",
+        "Sa dépendance et les conséquences d’une rupture sans solution de remplacement."
+      ],
+      "answer": 3,
+      "explanation": "Le coût unitaire n’épuise pas l’analyse d’une chaîne de valeur. La concentration peut accroître la vulnérabilité ; il faut examiner délais, substituts et effets d’une interruption."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le pays A utilise moins de ressources que B pour produire chacun des deux biens étudiés. Peut-on en déduire que B ne peut avoir aucun avantage comparatif ?",
+      "options": [
+        "Oui, les avantages absolu et comparatif sont identiques.",
+        "Non, les coûts d’opportunité peuvent encore différer entre les biens et les pays.",
+        "Oui, le pays le moins productif doit nécessairement arrêter toute production.",
+        "Non, car B détient forcément l’avantage absolu dans les deux biens."
+      ],
+      "answer": 1,
+      "explanation": "Une moins bonne productivité absolue n’exclut pas une comparaison relative favorable dans une activité. Il faut comparer le sacrifice d’un bien pour produire l’autre, pas seulement les ressources unitaires séparées."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans un modèle sans coûts d’échange, le coût d’un textile vaut 0,5 litre de vin dans A et un tiers de litre dans B. Quel pays a l’avantage comparatif en textile ?",
+      "options": [
+        "A, parce que son coût d’opportunité est le plus élevé.",
+        "Les deux, indépendamment des coûts relatifs.",
+        "B, dont le sacrifice de vin par textile est plus faible.",
+        "A, dès lors que son prix de vente nominal est plus élevé."
+      ],
+      "answer": 2,
+      "explanation": "Le critère comparatif est le coût d’opportunité le plus faible. B sacrifie moins de vin pour une unité de textile ; les niveaux de prix monétaires ne remplacent pas cette comparaison productive."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La spécialisation rend certaines compétences moins demandées alors que d’autres secteurs se développent. Quel enjeu faut-il distinguer du seul gain productif global ?",
+      "options": [
+        "Les coûts de transition et les possibilités de reconversion des personnes concernées.",
+        "La seule différence de salaires affichés entre secteurs, en supposant les compétences immédiatement substituables.",
+        "Le gain total de production, utilisé comme mesure de la durée de formation de chaque travailleur déplacé.",
+        "Le taux de croissance du secteur gagnant, utilisé comme taux automatique de reclassement des personnes du secteur perdant."
+      ],
+      "answer": 0,
+      "explanation": "L’ajustement sectoriel peut prendre du temps et imposer des coûts à certains travailleurs. Discuter l’accompagnement et les compétences complète l’analyse agrégée sans nier ni garantir les gains globaux."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une diversification de fournisseurs augmente légèrement le prix d’achat mais réduit l’impact d’une rupture possible. Pourquoi comparer seulement les prix serait-il incomplet ?",
+      "options": [
+        "Le prix d’achat hors rupture, utilisé comme mesure complète du coût attendu de l’approvisionnement.",
+        "Le prix moyen pondéré des deux fournisseurs, sans relier la pondération au volume réellement transférable en cas d’arrêt.",
+        "La dépense de qualification de la seconde source, considérée comme une perte sans contrepartie de continuité.",
+        "La continuité, les délais et les alternatives ont aussi une valeur pour la décision."
+      ],
+      "answer": 3,
+      "explanation": "Un surcoût apparent peut réduire une exposition au risque. La décision doit comparer plusieurs dimensions et hypothèses, plutôt que considérer le prix comme une mesure complète de la performance d’approvisionnement."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une productivité est exprimée en unités produites par heure, contrairement à un tableau en heures par unité. Pour identifier l’avantage absolu, quel sens de comparaison convient ?",
+      "options": [
+        "Le plus faible nombre d’unités par heure est le meilleur.",
+        "Le plus grand nombre d’unités par heure correspond à l’usage le plus efficace du travail, à qualité comparable.",
+        "Les deux présentations imposent de choisir le plus petit nombre sans conversion.",
+        "L’avantage absolu dépend uniquement du total d’heures de la population."
+      ],
+      "answer": 1,
+      "explanation": "Les deux mesures sont inverses. Pour une production par heure, une valeur plus grande décrit une efficacité supérieure ; pour des heures par unité, c’est une valeur plus faible. Les unités doivent être vérifiées."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un textile coûte à B un tiers de litre de vin et à A un demi-litre. Dans le modèle sans frais, B propose un textile contre 0,4 litre de vin. Pourquoi cet échange peut-il bénéficier aux deux ?",
+      "options": [
+        "A paie plus de vin que sa propre production ne lui en coûterait.",
+        "B reçoit moins de vin que ce qu’il sacrifie.",
+        "Le rapport d’échange est compris entre les deux coûts d’opportunité.",
+        "Tous les rapports d’échange donnent les mêmes gains individuels."
+      ],
+      "answer": 2,
+      "explanation": "B reçoit 0,4 litre au lieu d’un coût d’un tiers ; A cède 0,4 au lieu de sacrifier 0,5 en production propre. Le rapport intermédiaire peut donc créer un avantage pour chacun sous les hypothèses données."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un exercice, les indices de prix à l’exportation et à l’importation, de même base 100, valent respectivement 110 et 125. L’indice des termes de l’échange est prix des exportations / prix des importations × 100. Quel résultat obtient-on ?",
+      "options": [
+        "88 : une détérioration par rapport à la base 100.",
+        "113,64 : une amélioration par rapport à la base 100.",
+        "15 : une détérioration mesurée par la différence des deux indices.",
+        "137,5 : une amélioration obtenue en composant les deux indices."
+      ],
+      "answer": 0,
+      "explanation": "Le rapport vaut 110/125 × 100 = 88. Les prix des importations ont davantage augmenté : un même volume d’exportations permet d’acheter moins d’importations qu’en période de base. Cet indice n’est pas le solde commercial, qui dépend aussi des volumes.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 110
+                },
+                {
+                  "value": 125
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 88,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "OCDE — Termes de l’échange",
+          "url": "https://www.oecd.org/en/data/indicators/terms-of-trade.html"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un fournisseur de secours existe sur le papier mais exige un délai de qualification de six mois, alors qu’une rupture doit être compensée en une semaine. Quel diagnostic convient ?",
+      "options": [
+        "Retenir la capacité nominale annoncée du secours comme capacité disponible dès la première semaine.",
+        "Rapprocher la durée de transport du fournisseur de secours du seul délai de rupture, sans inclure sa qualification.",
+        "Compenser les six mois de qualification par le délai contractuel d’une semaine, en calculant une moyenne des deux délais.",
+        "L’alternative n’est pas immédiatement mobilisable au délai requis."
+      ],
+      "answer": 3,
+      "explanation": "La disponibilité pratique d’une solution dépend des délais et conditions d’activation. Une alternative trop lente peut ne pas réduire suffisamment la vulnérabilité à court terme, même si elle apparaît dans un annuaire."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour un produit identique, le coût total du travail est de 40 € par heure dans A et de 24 € dans B. La production est de 8 unités par heure dans A et de 4 dans B. Sans autre coût, quel coût du travail par unité obtient-on, et où est-il inférieur ?",
+      "options": [
+        "10 € dans A contre 6 € dans B : B est moins coûteux.",
+        "5 € dans A contre 6 € dans B : A est moins coûteux.",
+        "320 € dans A contre 96 € dans B : B est moins coûteux.",
+        "5 € dans A contre 3 € dans B : B est moins coûteux."
+      ],
+      "answer": 1,
+      "explanation": "Le coût unitaire rapporte le coût horaire à la production horaire : 40/8 = 5 € dans A, et 24/4 = 6 € dans B. Un coût horaire plus élevé peut être compensé par la productivité ; comparer les seuls salaires n’établit donc pas le classement des coûts par unité.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 40
+            },
+            {
+              "value": 8
+            }
+          ]
+        },
+        "expected": 5,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "BLS — Unit labor cost",
+          "url": "https://www.bls.gov/k12/productivity-101/content/what-is-productivity/what-is-unit-labor-cost.htm"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un pays peut produire au maximum 40 textiles ou 20 litres de vin, avec une frontière de production linéaire. Il produit 40 textiles, en exporte 10 et reçoit 6 litres de vin en échange. Que montre sa consommation finale de 30 textiles et 6 litres de vin ?",
+      "options": [
+        "Elle prouve que sa frontière de production a changé : l’échange a augmenté ses ressources physiques.",
+        "Elle reste sur sa frontière de production initiale, car toute combinaison consommée doit être produite localement.",
+        "Elle est accessible par l’échange alors qu’il ne pourrait pas la produire seul avec ses ressources initiales.",
+        "Elle implique une sous-utilisation du travail, car il produit seulement un des deux biens."
+      ],
+      "answer": 2,
+      "explanation": "Produire 30 textiles mobiliserait trois quarts des ressources ; le quart restant ne donnerait que 5 litres de vin. Le panier de 30 textiles et 6 litres est donc hors des possibilités de production en autarcie, mais accessible par cet échange. La frontière de production n’a pas changé.",
+      "references": [
+        {
+          "title": "OpenStax — Absolute and comparative advantage",
+          "url": "https://openstax.org/books/principles-economics-3e/pages/33-1-absolute-and-comparative-advantage"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un pays fictif applique un droit de douane spécifique de 20 € par unité importée. Après son introduction, 80 unités sont effectivement importées et 50 autres produites localement. Sans exemption, quelles recettes douanières ce droit procure-t-il ?",
+      "options": [
+        "1 600 €.",
+        "2 600 €.",
+        "1 000 €.",
+        "4 €."
+      ],
+      "answer": 0,
+      "explanation": "Le droit porte sur les 80 unités importées, pas sur les 50 unités locales : 20 × 80 = 1 600 €. Cette recette publique est distincte du gain éventuel des producteurs locaux et du coût supporté par les consommateurs.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 20
+            },
+            {
+              "value": 80
+            }
+          ]
+        },
+        "expected": 1600,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "OpenStax — Protectionism and trade barriers",
+          "url": "https://openstax.org/books/principles-economics-2e/pages/34-1-protectionism-an-indirect-subsidy-from-consumers-to-producers"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une chaîne fictive importe des composants pour 70 €, puis ajoute exclusivement 30 € de valeur dans le pays avant d’exporter le produit fini pour 100 €. Sans autre étape, combien de valeur ajoutée du pays cette exportation contient-elle ?",
+      "options": [
+        "100 €.",
+        "170 €.",
+        "70 €.",
+        "30 €."
+      ],
+      "answer": 3,
+      "explanation": "L’exportation brute vaut 100 €, mais elle incorpore 70 € de valeur produite à l’étranger. La valeur ajoutée dans le pays est 100 − 70 = 30 €. Attribuer tout le prix final au dernier pays d’assemblage confond flux commercial brut et contribution productive nationale.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "value": 70
+            }
+          ]
+        },
+        "expected": 30,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "OMC — Chaînes de valeur et mesure des échanges en valeur ajoutée",
+          "url": "https://www.wto.org/english/res_e/statis_e/miwi_e/miwi_e.htm"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que compare l’avantage absolu dans le cadre productif présenté ?",
+      "options": [
+        "Les quantités d’un autre bien auxquelles le pays renonce, plutôt que les ressources unitaires du bien étudié.",
+        "Les ressources nécessaires pour produire une unité comparable d’un bien.",
+        "Le rapport entre les prix de vente des deux biens, sans examiner les ressources utilisées.",
+        "La part de ce bien dans les exportations totales, sans examiner sa technique de production."
+      ],
+      "answer": 1,
+      "explanation": "L’avantage absolu porte sur l’efficacité unitaire d’une production. Le choix relatif entre activités nécessite ensuite les coûts d’opportunité : il ne se déduit pas du seul niveau absolu."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un textile coûte un demi-litre de vin à A. A accepte de céder 0,6 litre pour importer un textile dans un modèle sans autres gains ni coûts. Quel point faut-il soulever ?",
+      "options": [
+        "Le gain de A est de 0,1 litre par textile, en traitant le supplément de vin cédé comme un gain plutôt qu’un coût.",
+        "Le seuil pertinent est le coût du partenaire étranger, même pour mesurer le gain de A sans connaître ce partenaire.",
+        "L’importation lui coûte davantage de vin que la production propre dans ces hypothèses.",
+        "Le gain de A se mesure par 0,6/0,5 ; tout rapport supérieur à un indique ici un achat avantageux."
+      ],
+      "answer": 2,
+      "explanation": "Le coût d’opportunité sert de comparaison avec le rapport d’échange. Ici, céder 0,6 litre est plus coûteux que sacrifier 0,5 litre en produisant soi-même ; le gain pour A n’est pas établi dans le cadre donné."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux pays de productivités et ressources proches exportent et importent simultanément des automobiles de marques différentes. Chaque entreprise fabrique une gamme plus étroite pour un marché élargi. Quel mécanisme peut expliquer cet échange intrabranche ?",
+      "options": [
+        "La différenciation des variétés et les économies d’échelle, sans exiger un fort écart initial de productivité entre pays.",
+        "Un avantage comparatif de chaque pays dans la totalité des automobiles, par rapport au même autre bien.",
+        "Une hausse du coût moyen due à la réduction des débouchés de chaque entreprise après ouverture.",
+        "Une spécialisation complète de l’un des pays dans les seules automobiles et de l’autre dans un autre secteur."
+      ],
+      "answer": 0,
+      "explanation": "Des pays semblables peuvent échanger des variétés différenciées d’une même branche. Un marché élargi permet aux entreprises de concentrer leur production et de bénéficier d’économies d’échelle, tandis que les clients accèdent à davantage de variétés. L’échange n’exige pas une spécialisation interbranche complète.",
+      "references": [
+        {
+          "title": "OpenStax — Intra-industry trade between similar economies",
+          "url": "https://openstax.org/books/principles-economics-3e/pages/33-3-intra-industry-trade-between-similar-economies"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une unité peut être produite localement pour 100 €. Son prix importé est de 80 €, auquel s’ajoutent 10 € de transport. Aucun autre coût ni différence de qualité n’existe. Au maximum, quel coût supplémentaire par unité importée laisserait l’importation aussi avantageuse ou équivalente à la production locale ?",
+      "options": [
+        "20 €.",
+        "30 €.",
+        "0 €.",
+        "10 €."
+      ],
+      "answer": 3,
+      "explanation": "L’importation coûte déjà 80 + 10 = 90 €. Il reste donc 100 − 90 = 10 € avant d’atteindre le coût local. Au-delà, l’importation devient plus coûteuse sous les hypothèses données ; comparer seulement 80 à 100 surestimerait la marge disponible.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 80
+                },
+                {
+                  "value": 10
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 10,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "OpenStax — Absolute and comparative advantage",
+          "url": "https://openstax.org/books/principles-economics-3e/pages/33-1-absolute-and-comparative-advantage"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans un pays fictif, l’administration autorise au plus 10 000 unités d’un produit à entrer chaque année, sans prélever de droit par unité ni pourcentage du prix. Quel instrument commercial cette mesure décrit-elle ?",
+      "options": [
+        "Un droit de douane ad valorem, dont l’assiette est la valeur importée.",
+        "Un contingent ou quota d’importation, qui limite directement la quantité admise.",
+        "Un droit de douane spécifique, fixé en montant par unité importée.",
+        "Une subvention à la production locale, calculée sur les unités fabriquées dans le pays."
+      ],
+      "answer": 1,
+      "explanation": "La contrainte porte ici sur le volume autorisé : c’est un contingent ou quota. Un tarif prélèverait une taxe, par unité ou en pourcentage de la valeur ; une subvention rémunérerait une activité locale. Les effets économiques peuvent se recouper, mais les instruments ne sont pas définis de la même manière.",
+      "references": [
+        {
+          "title": "OpenStax — Protectionism and trade barriers",
+          "url": "https://openstax.org/books/principles-economics-2e/pages/34-1-protectionism-an-indirect-subsidy-from-consumers-to-producers"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une entreprise diversifie ses sources mais les deux fournisseurs dépendent du même site critique de production. Quelle réserve est nécessaire ?",
+      "options": [
+        "La diversification supprime le risque du site, parce que les contrats ont des titulaires juridiquement distincts.",
+        "La continuité se mesure par la somme des capacités nominales des deux fournisseurs, sans examiner le site partagé.",
+        "La dépendance commune peut limiter le bénéfice réel de diversification.",
+        "Les deux probabilités d’interruption doivent être multipliées comme si les arrêts étaient indépendants, sans intégrer leur cause commune."
+      ],
+      "answer": 2,
+      "explanation": "Une diversification nominale peut laisser subsister un point commun de rupture. Examiner les dépendances effectives permet d’évaluer si les sources fournissent réellement des alternatives en cas d’incident."
+    }
+  ]
+}

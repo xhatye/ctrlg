@@ -1,0 +1,356 @@
+{
+  "module": "UE13",
+  "chapter": "rapport-references",
+  "sourceHash": "f67f69ebc1937acec6e834cfc58e2a8862e39a2bf8d2a18984690fcc148ba8d4",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une page mise à jour en 2026 reproduit un tableau explicitement intitulé « données 2022 ». Le rapport doit comparer les observations de 2022. Quelle date qualifie la période des données ?",
+      "options": [
+        "2022, en distinguant cette période de la mise à jour de la page.",
+        "2026, car la mise à jour change la période du tableau.",
+        "La date à laquelle l’étudiant a téléchargé le tableau.",
+        "L’année de rédaction de son propre rapport."
+      ],
+      "answer": 0,
+      "explanation": "La date de mise à jour du support et la période mesurée sont deux métadonnées différentes. Le tableau indique ici explicitement 2022 ; un téléchargement récent n’actualise pas les observations qu’il contient."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La bibliographie indique une édition récente, mais l’étudiant n’a consulté qu’une ancienne édition au contenu différent. Quel contrôle est nécessaire ?",
+      "options": [
+        "Citer l’édition récente en conservant la pagination relevée dans l’ancienne.",
+        "Faire correspondre l’édition citée au texte réellement utilisé.",
+        "Citer l’ancienne pagination avec le titre et l’année de la nouvelle édition.",
+        "Retenir l’édition la plus récente sans contrôler la présence du passage utilisé."
+      ],
+      "answer": 1,
+      "explanation": "L’édition peut modifier le contenu et les repères de lecture. La référence doit correspondre à une consultation réelle et au passage pertinent."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après lecture d’un article, l’étudiant découvre un erratum de l’éditeur corrigeant précisément le tableau utilisé dans son calcul. Quelle démarche convient avant de finaliser la conclusion ?",
+      "options": [
+        "Conserver le calcul initial puisque la première version a été réellement lue.",
+        "Ajouter l’erratum à la bibliographie sans examiner son effet sur le calcul.",
+        "Reprendre le calcul avec la correction et signaler la version corrigée utilisée.",
+        "Faire la moyenne des valeurs initiale et corrigée pour concilier les versions."
+      ],
+      "answer": 2,
+      "explanation": "Une correction éditoriale pertinente doit être prise en compte dans l’usage de la donnée. La citer sans recalculer laisse subsister l’erreur ; moyenner une valeur corrigée et l’erreur qu’elle remplace n’est pas une conciliation justifiée.",
+      "references": [
+        {
+          "title": "Crossref — Crossmark and content updates",
+          "url": "https://www.crossref.org/services/crossmark/"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un guide qualifie de « source primaire » un enregistrement direct d’entretien, par opposition à son résumé ultérieur. Que permet cette qualification à elle seule ?",
+      "options": [
+        "De considérer les déclarations comme des faits vérifiés.",
+        "De conclure à l’absence de biais de mémoire de l’interviewé.",
+        "De considérer que l’enregistrement vaut validation par un tiers.",
+        "De situer le document au plus près de la déclaration recueillie, sans garantir sa véracité."
+      ],
+      "answer": 3,
+      "explanation": "Le caractère primaire décrit ici la proximité avec la collecte initiale. Il ne transforme pas le témoignage en fait établi et n’écarte ni mémoire imparfaite ni besoin de recoupement. La qualification n’est pas un certificat de fiabilité."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le rapport compare un taux recalculé personnellement à partir d’un fichier externe. Le fichier fournit les données brutes, pas ce taux. Quelle légende distingue correctement les deux apports ?",
+      "options": [
+        "Données : organisme X ; calcul du taux : étudiant, selon la formule indiquée.",
+        "Taux publié par l’organisme X, puisque ses données ont été utilisées.",
+        "Données et taux produits par l’étudiant, puisqu’il a construit le tableau final.",
+        "Calcul de l’organisme X adapté par l’étudiant, alors que le fichier ne fournit aucun calcul."
+      ],
+      "answer": 0,
+      "explanation": "L’origine des observations et l’auteur de leur traitement ne se confondent pas. La légende doit attribuer les données à X et le taux au travail effectivement réalisé par l’étudiant, sans prêter à X un indicateur qu’il n’a pas publié."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un document en ligne a été consulté puis devient inaccessible. Quelle réaction préserve l’honnêteté de la référence ?",
+      "options": [
+        "Citer la version encore en ligne la plus récente comme si elle avait été consultée.",
+        "Conserver les éléments d’identification disponibles et signaler la limite d’accès si elle affecte la vérification.",
+        "Remplacer l’URL par celle d’un document de titre proche sans contrôler son contenu.",
+        "Conserver la seule date de consultation en retirant titre et auteur du document inaccessible."
+      ],
+      "answer": 1,
+      "explanation": "L’inaccessibilité ne justifie pas d’inventer un contenu ou une nouvelle consultation. Les éléments conservés et la limite rencontrée doivent rester identifiables."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’étudiant souhaite reprendre une partie d’une analyse qu’il avait déjà diffusée dans un précédent dossier. Quel traitement permet au lecteur de distinguer réutilisation et travail nouveau ?",
+      "options": [
+        "Changer le titre de la partie pour la présenter comme une nouvelle analyse.",
+        "Changer la date de rédaction, sans identifier le dossier précédent.",
+        "Signaler l’origine et la portée de la reprise, puis préciser l’actualisation réellement effectuée.",
+        "Ajouter seulement la source théorique commune aux deux dossiers, sans signaler la reprise personnelle."
+      ],
+      "answer": 2,
+      "explanation": "La transparence porte aussi sur la réutilisation de son propre travail. Le lecteur doit savoir ce qui a déjà été diffusé et ce qui est nouveau ; modifier un titre, une date ou citer seulement le cadre théorique ne distingue pas ces apports.",
+      "references": [
+        {
+          "title": "ORI — Guidelines on ethical writing",
+          "url": "https://ori.hhs.gov/28-guidelines-glance-avoiding-plagiarism"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’étudiant traduit personnellement en français un passage d’un auteur anglophone. Quelle présentation rend l’emprunt et le rôle de l’étudiant transparents ?",
+      "options": [
+        "Attribuer le passage à l’étudiant puisque la formulation française est la sienne.",
+        "Présenter le français comme une citation exacte d’une édition française non consultée.",
+        "Mentionner seulement « traduit de l’anglais » sans identifier le texte traduit.",
+        "Identifier l’auteur et le texte d’origine et indiquer que la traduction est personnelle."
+      ],
+      "answer": 3,
+      "explanation": "Changer de langue ne change pas l’origine du contenu. La référence attribue le passage à son auteur et la mention de traduction personnelle indique l’intervention de l’étudiant sans faire croire à une version française publiée.",
+      "references": [
+        {
+          "title": "ETH Zurich — Prevention of plagiarism",
+          "url": "https://library.ethz.ch/en/scientific-writing/plagiarism-and-academic-integrity/prevention-of-plagiarism.html"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un article cite un dirigeant déclarant « le contrôle est inutile », puis conteste cette déclaration. Le rapport attribue la même phrase à l’auteur de l’article comme sa propre conclusion. Quel défaut apparaît ?",
+      "options": [
+        "Une confusion entre les propos rapportés et la position de l’auteur qui les examine.",
+        "Une simple omission de l’année de publication de l’article.",
+        "Une traduction trop littérale d’une phrase pourtant française.",
+        "Une confusion entre la date de collecte et celle de consultation."
+      ],
+      "answer": 0,
+      "explanation": "La fidélité exige d’identifier qui soutient la proposition. Citer les mots exacts ne suffit pas si l’on attribue à l’auteur une position qu’il rapporte pour la discuter ; le défaut concerne l’énonciateur, pas la seule bibliographie."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une citation est raccourcie, mais la partie retirée contenait une exception essentielle. Quel contrôle est prioritaire ?",
+      "options": [
+        "Vérifier seulement que les mots conservés apparaissent dans le même ordre dans la source.",
+        "Vérifier que l’extrait conservé ne déforme pas le sens du passage.",
+        "Vérifier seulement la présence de la référence complète après la citation.",
+        "Signaler une coupure, sans contrôler si l’exception retirée change la proposition citée."
+      ],
+      "answer": 1,
+      "explanation": "Un extrait doit rester fidèle au sens de la source. Retirer une condition ou une exception peut transformer la proposition même si les mots cités sont exacts."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le rapport utilise un modèle théorique emprunté, puis l’applique à un terrain original. Comment distinguer les apports ?",
+      "options": [
+        "Référencer le modèle sans distinguer les observations de terrain des exemples de son auteur.",
+        "Attribuer l’application à l’auteur du modèle parce qu’elle utilise ses catégories.",
+        "Référencer le modèle et identifier l’analyse de terrain réalisée par l’étudiant.",
+        "Présenter l’analyse de terrain comme une validation par l’auteur du modèle."
+      ],
+      "answer": 2,
+      "explanation": "Le cadre emprunté et son application personnelle sont deux contributions différentes. Une attribution précise permet de valoriser l’analyse sans effacer l’origine du modèle."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une synthèse rapproche deux sources qui ne défendent pas exactement la même position. Quelle rédaction est fidèle ?",
+      "options": [
+        "Résumer les deux positions sous une proposition commune qui efface leur désaccord.",
+        "Attribuer le rapprochement à l’une des sources bien qu’il soit construit dans le rapport.",
+        "Mettre la synthèse entre guillemets comme une formulation littérale commune aux deux textes.",
+        "Identifier leurs positions et expliquer le rapprochement proposé."
+      ],
+      "answer": 3,
+      "explanation": "Une synthèse comporte un travail personnel de mise en relation. Elle doit préserver les différences entre sources et distinguer ce rapprochement d’une citation directe."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un manuel présente une méthode applicable si les opérations sont homogènes. L’étudiant cite le manuel puis affirme que ses propres données sont homogènes, sans les examiner. Que manque-t-il au raisonnement ?",
+      "options": [
+        "Une vérification sur le terrain de la condition d’application, distincte de la référence à la méthode.",
+        "Une seconde citation du même manuel, qui établirait l’homogénéité du terrain.",
+        "Une édition plus récente qui dispenserait d’examiner les données locales.",
+        "Une description plus détaillée du manuel remplaçant le contrôle de la population étudiée."
+      ],
+      "answer": 0,
+      "explanation": "La source justifie la méthode et ses conditions ; elle ne constate pas leur réalisation dans un fichier particulier. L’étudiant doit vérifier l’homogénéité de son terrain avant d’appliquer la méthode sous cette condition."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un outil de rédaction propose une référence qui n’est pas retrouvée. Quelle démarche est rigoureuse ?",
+      "options": [
+        "Retenir la notice bibliographique si le titre correspond exactement au sujet, sans retrouver le texte.",
+        "Vérifier son existence et son contenu avant de l’utiliser, ou l’écarter.",
+        "Retenir la notice si son DOI a une forme plausible sans vérifier sa destination.",
+        "Citer un extrait fourni par l’outil sans vérifier qu’il figure dans le document annoncé."
+      ],
+      "answer": 1,
+      "explanation": "Une référence suggérée doit être contrôlée comme toute autre source. Sa forme plausible ne démontre ni son existence ni son soutien à l’affirmation."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un passage bien rédigé affirme un résultat que les données du stage ne montrent pas. Que faut-il faire ?",
+      "options": [
+        "Remplacer l’affirmation par une formulation plus prudente sans vérifier si le résultat a été observé.",
+        "Associer une source externe générale à l’affirmation de terrain pour la rendre documentée.",
+        "Vérifier la réalité du résultat et réviser ou retirer l’affirmation non étayée.",
+        "Conserver le résultat en le qualifiant d’estimation sans expliciter de méthode d’estimation."
+      ],
+      "answer": 2,
+      "explanation": "La qualité rédactionnelle et la réalité des faits sont distinctes. Une affirmation de terrain doit correspondre à des observations et traitements effectivement réalisés."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour comparer deux outils, le rapport utilise une étude financée par le fournisseur de l’un d’eux. Le financement est déclaré. Quelle conclusion sur cette source est justifiée à ce stade ?",
+      "options": [
+        "Le financement suffit à démontrer que tous les résultats sont faux.",
+        "Le financement garantit que l’étude connaît mieux le produit et suffit à la valider.",
+        "La déclaration de financement élimine la nécessité de contrôler la méthode.",
+        "Ce lien d’intérêt doit être pris en compte avec la méthode et les données ; il ne prouve seul ni vérité ni fausseté."
+      ],
+      "answer": 3,
+      "explanation": "Identifier un intérêt aide à apprécier le contexte de production. Cela motive un examen critique de la sélection des données, des critères et de la méthode, sans autoriser une validation ou une réfutation automatique du seul fait du financement."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La grille critique du rapport privilégie une méthode documentée et des données vérifiables plutôt que le nombre de documents. Trois billets reprennent sans données une opinion ; une étude détaillée la contredit. Quelle conclusion applique cette grille ?",
+      "options": [
+        "Examiner les données et la méthode de l’étude avant de trancher, sans compter les documents comme des votes.",
+        "Retenir l’opinion soutenue par trois documents contre un.",
+        "Écarter l’étude contradictoire pour obtenir une bibliographie cohérente.",
+        "Calculer une position intermédiaire proportionnelle au nombre de textes de chaque camp."
+      ],
+      "answer": 0,
+      "explanation": "La grille donnée évalue la force des éléments, pas une majorité de références. Un texte documenté n’a pas automatiquement raison, mais il doit être examiné sur sa méthode ; trois reprises d’opinion ne constituent pas trois démonstrations."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une source citée dans le corps est absente de la bibliographie. Quel contrôle de relecture est nécessaire ?",
+      "options": [
+        "Vérifier seulement la présence de l’auteur dans la liste finale, sans distinguer ses ouvrages.",
+        "Vérifier la correspondance entre citations et références finales.",
+        "Retirer la citation du corps et conserver l’emprunt non attribué.",
+        "Ajouter l’ouvrage le plus connu de cet auteur sans vérifier que le passage y figure."
+      ],
+      "answer": 1,
+      "explanation": "La relecture doit permettre de retrouver chaque emprunt important. Le nombre de références ne remplace pas leur correspondance avec les passages utilisés."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux sites présentent le même chiffre et citent tous deux une enquête unique. Le rapport les décrit comme deux confirmations indépendantes. Quelle correction s’impose ?",
+      "options": [
+        "Les compter comme deux mesures parce que les adresses web diffèrent.",
+        "Les compter comme deux échantillons parce que deux rédacteurs ont publié le chiffre.",
+        "Reconnaître une même origine de données relayée deux fois, sans double confirmation indépendante.",
+        "Les moyenner pour fabriquer une troisième mesure indépendante."
+      ],
+      "answer": 2,
+      "explanation": "Deux relais éditoriaux peuvent provenir de la même collecte. Leur accord ne vaut pas réplication ; il faut remonter à l’enquête commune et distinguer diversité des supports et indépendance des preuves."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le style retenu distingue deux textes du même auteur et de la même année par les suffixes 2025a et 2025b. Le rapport cite « Martin, 2025 » alors que les deux textes figurent dans la bibliographie. Quelle révision lève précisément l’ambiguïté ?",
+      "options": [
+        "Retirer l’année des citations pour ne conserver que le nom.",
+        "Fusionner les deux titres dans une seule référence sans distinction.",
+        "Conserver « Martin, 2025 » et compter sur le lecteur pour choisir le bon titre.",
+        "Attribuer les suffixes de façon cohérente et utiliser celui du texte mobilisé à chaque citation."
+      ],
+      "answer": 3,
+      "explanation": "Le problème est l’identification de deux œuvres distinctes partageant auteur et année. Selon le style explicitement donné, des suffixes cohérents relient chaque appel à un titre précis ; ni suppression d’année ni fusion ne résout cette correspondance."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le document A affirme un coût et renvoie à B. B renvoie à A pour ce même coût, sans autre donnée. Quel diagnostic documentaire convient ?",
+      "options": [
+        "La chaîne de références est circulaire et ne fournit pas à elle seule une base indépendante au coût.",
+        "Deux renvois réciproques constituent deux estimations indépendantes du coût.",
+        "Le document publié en dernier devient automatiquement l’origine du coût.",
+        "La moyenne des coûts identiques suffit à résoudre l’absence de donnée initiale."
+      ],
+      "answer": 0,
+      "explanation": "Suivre les références doit permettre de retrouver l’origine du résultat. Un renvoi circulaire peut donner une apparence de corroboration sans mesure ou méthode identifiable ; il faut chercher une base extérieure à ce cercle."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une annexe vérifie un chiffre mais contient des données client sensibles inutiles au lecteur. Quelle relecture est complète ?",
+      "options": [
+        "Retirer les identifiants visibles tout en conservant les détails personnels inutiles à la vérification.",
+        "Contrôler à la fois la preuve du chiffre et la protection des informations transmises.",
+        "Transmettre la pièce complète parce que le calcul a été contrôlé.",
+        "Ne transmettre aucune justification chiffrée, même lorsqu’une version expurgée et autorisée est possible."
+      ],
+      "answer": 1,
+      "explanation": "La traçabilité et la confidentialité sont des contrôles complémentaires. Une preuve exacte ne justifie pas automatiquement la transmission de tous ses détails."
+    }
+  ]
+}

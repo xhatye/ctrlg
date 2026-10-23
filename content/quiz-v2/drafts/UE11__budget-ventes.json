@@ -1,0 +1,576 @@
+{
+  "module": "UE11",
+  "chapter": "budget-ventes",
+  "sourceHash": "7ea7eaa46eb82fc9925ed4b95453cbc442e9a8caf8640aec616ab29acce28548",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un budget prévoit 1 000 ventes à 20 € HT chacune. Deux remises successives de 10 % puis 5 % sur le prix déjà remisé s’appliquent à toutes ces ventes. Quel chiffre d’affaires net faut-il prévoir ?",
+      "options": [
+        "17 100 €",
+        "17 000 €",
+        "18 000 €",
+        "19 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Les remises successives se composent : 1 000 × 20 × 0,90 × 0,95 = 17 100 €. Les additionner en une réduction de 15 % donnerait 17 000 €, car la seconde remise porte ici sur un prix déjà réduit.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 1000
+                    },
+                    {
+                      "value": 20
+                    }
+                  ]
+                },
+                {
+                  "value": 0.9
+                }
+              ]
+            },
+            {
+              "value": 0.95
+            }
+          ]
+        },
+        "expected": 17100,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le prix de février diffère de celui de janvier. Quelle donnée permet de chiffrer les ventes de février sans transporter une hypothèse devenue fausse ?",
+      "options": [
+        "Les quantités de février valorisées au tarif de janvier, même si les ventes sont contractées après le changement.",
+        "Les quantités de février et le prix applicable aux ventes de février.",
+        "La moyenne simple des tarifs de janvier et février, sans tenir compte des dates d’application.",
+        "Le prix de février appliqué rétroactivement aux ventes déjà réalisées en janvier."
+      ],
+      "answer": 1,
+      "explanation": "Le budget de chaque mois doit suivre les quantités et conventions de prix pertinentes. Le rythme d’encaissement est un autre élément ; un prix ancien ne doit pas être repris sans vérifier son maintien."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Sans taxe ni impayé, 30 % des ventes sont payés le mois même et 70 % le suivant. Janvier vaut 20 000 € de ventes et février 24 000 €. Quels encaissements ces deux mois de ventes produisent-ils en février ?",
+      "options": [
+        "24 000 €",
+        "13 200 €",
+        "21 200 €",
+        "44 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Février reçoit 24 000 × 0,30 + 20 000 × 0,70 = 7 200 + 14 000 = 21 200 €. Les règlements différés de janvier se cumulent avec la fraction immédiate de février.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 24000
+                },
+                {
+                  "value": 0.3
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 20000
+                },
+                {
+                  "value": 0.7
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 21200,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les ventes de février sont 24 000 €, payables 30 % immédiatement et 70 % en mars. Aucune créance plus ancienne ne subsiste et il n’y a ni taxe ni impayé. Quelles créances restent fin février ?",
+      "options": [
+        "7 200 €",
+        "24 000 €",
+        "21 200 €",
+        "16 800 €"
+      ],
+      "answer": 3,
+      "explanation": "Seule la fraction de février non encore réglée reste due : 24 000 × 0,70 = 16 800 €. Les ventes antérieures sont supposées intégralement apurées dans la question.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 24000
+            },
+            {
+              "value": 0.7
+            }
+          ]
+        },
+        "expected": 16800,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le contrat prévoit une ristourne rétroactive de 3 % sur toutes les ventes annuelles si leur montant brut atteint 100 000 €. Les ventes brutes actuelles sont de 98 000 €. Une vente supplémentaire de 5 000 € déclencherait ce seuil. Quelle augmentation du chiffre d’affaires net en résulterait, sans autre changement ?",
+      "options": [
+        "1 910 €",
+        "5 000 €",
+        "4 850 €",
+        "3 090 €"
+      ],
+      "answer": 0,
+      "explanation": "Avant cette vente, les 98 000 € ne donnent pas droit à ristourne. Après, le net est (98 000 + 5 000) × 0,97 = 99 910 €. L’augmentation nette est donc 1 910 €, car la ristourne porte également sur les ventes antérieures de l’année.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 98000
+                    },
+                    {
+                      "value": 5000
+                    }
+                  ]
+                },
+                {
+                  "value": 0.97
+                }
+              ]
+            },
+            {
+              "value": 98000
+            }
+          ]
+        },
+        "expected": 1910,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Au début du mois, 200 clients ont un contrat à 20 € par mois. Vingt résilient avant le début du service ; cinquante nouveaux clients démarrent pour tout le mois à 25 €. Les anciens contrats conservés restent à 20 €. Quel revenu mensuel de service faut-il prévoir, sans taxe ni autre remise ?",
+      "options": [
+        "5 750 €",
+        "4 850 €",
+        "4 600 €",
+        "5 250 €"
+      ],
+      "answer": 1,
+      "explanation": "Les 180 anciens clients conservés génèrent 180 × 20 = 3 600 €. Les 50 nouveaux génèrent 50 × 25 = 1 250 €. Le total est 4 850 €. Appliquer le nouveau tarif à tout le portefeuille ignorerait le maintien contractuel du tarif des anciens clients.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 200
+                    },
+                    {
+                      "value": 20
+                    }
+                  ]
+                },
+                {
+                  "value": 20
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 50
+                },
+                {
+                  "value": 25
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 4850,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un client doit payer 10 000 € dans un mois mais accepte de régler 9 800 € immédiatement pour solde de tout compte. L’entreprise pourrait obtenir les mêmes 9 800 € auprès d’une banque jusqu’à l’échéance, pour un coût total de 100 €. En comparant seulement ces coûts certains, quelle économie procure le financement bancaire plutôt que la remise client ?",
+      "options": [
+        "200 €",
+        "300 €",
+        "100 €",
+        "0 €, car les deux apportent 9 800 € aujourd’hui."
+      ],
+      "answer": 2,
+      "explanation": "La remise client coûte 10 000 − 9 800 = 200 €. Le financement bancaire coûte 100 € et laisse encaisser les 10 000 € à l’échéance. Le financement bancaire économise donc 100 € dans les conditions indiquées, sans supposer d’autre avantage ou risque.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 10000
+                },
+                {
+                  "value": 9800
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 100,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le solde de créances inclut encore des ventes de janvier fin mars alors que tout leur règlement était prévu en février, sans impayé ni report. Quel traitement rétablit le suivi cohérent des générations ?",
+      "options": [
+        "Conserver le solde de janvier tant que de nouvelles ventes sont réalisées avec les mêmes clients.",
+        "Apurer les créances de janvier en déduisant les nouvelles ventes de mars, sans suivre les règlements.",
+        "Recalculer le solde de janvier en appliquant les fractions de règlement des ventes de mars.",
+        "Rapprocher les règlements et les générations correspondantes, puis apurer les créances réglées."
+      ],
+      "answer": 3,
+      "explanation": "La convention prévoit que les créances de janvier sont réglées en février. Leur maintien sans événement explicatif peut signaler un double compte ou un défaut d’apurement, à contrôler dans le tableau de flux."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le budget de janvier prévoit 20 000 € de ventes, encaissées à 30 % en janvier et 70 % en février. Sans créance initiale, quels encaissements de ventes sont attendus en janvier ?",
+      "options": [
+        "6 000 €",
+        "14 000 €",
+        "20 000 €",
+        "26 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Seule la fraction immédiate de janvier est encaissée dans ce mois : 20 000 × 0,30 = 6 000 €. L’absence de créance initiale exclut ici une entrée provenant de ventes antérieures.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 20000
+            },
+            {
+              "value": 0.3
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La quantité vendue de février dépasse la prévision mais les recettes nominales restent plus faibles à cause d’une remise. Pourquoi la quantité seule ne suffit-elle pas au bilan ?",
+      "options": [
+        "Le chiffre d’affaires doit augmenter si le volume augmente, à condition de garder le tarif catalogue plutôt que le prix remisé.",
+        "Le chiffre d’affaires dépend aussi du prix effectivement retenu.",
+        "Le chiffre d’affaires doit être comparé après remplacement du prix remisé par le coût variable de fabrication.",
+        "Le chiffre d’affaires doit être augmenté du montant de la remise comme si celle-ci était un complément facturé."
+      ],
+      "answer": 1,
+      "explanation": "Le montant est le produit des volumes et prix. Une hausse de quantité peut être compensée par une baisse de prix ; les deux effets doivent être distingués avant d’interpréter la prévision commerciale."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Sans taxe ni impayé, les ventes cumulées sont 44 000 € et les créances finales 16 800 €, avec créances initiales nulles. Quels encaissements cumulés retrouve-t-on ?",
+      "options": [
+        "60 800 €",
+        "16 800 €",
+        "27 200 €",
+        "44 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le rapprochement donne encaissements = ventes − créances finales = 44 000 − 16 800 = 27 200 €. Il contrôle l’articulation du commercial et du financier sous les hypothèses données.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 44000
+            },
+            {
+              "value": 16800
+            }
+          ]
+        },
+        "expected": 27200,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une fraction des ventes de février est encaissée en mars. Comment la présenter fin février avant ce règlement ?",
+      "options": [
+        "Comme un acompte reçu à affecter à une vente future, bien qu’aucun règlement n’ait eu lieu.",
+        "Comme une diminution des ventes de février jusqu’à la date du règlement.",
+        "Comme une créance de mars sans rattachement à la vente qui l’a fait naître.",
+        "Comme une créance client issue de février."
+      ],
+      "answer": 3,
+      "explanation": "La vente existe mais sa fraction n’est pas encore réglée. La créance conserve son origine ; elle ne devient pas une nouvelle vente au moment de l’encaissement."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une annulation de ventes est documentée mais le tableau garde les quantités initiales et ajoute le montant annulé aux encaissements. Quel contrôle est prioritaire ?",
+      "options": [
+        "Revoir les ventes nettes, créances et flux selon les faits, sans traiter l’annulation comme une recette.",
+        "Réduire les ventes nettes mais ajouter tout de même l’annulation aux encaissements, même sans paiement correspondant.",
+        "Retirer seulement la créance client, en conservant les ventes brutes et l’encaissement fictif du tableau.",
+        "Décaler au mois suivant les quantités annulées et l’encaissement supposé, même si aucun remplacement n’est prévu."
+      ],
+      "answer": 0,
+      "explanation": "Une annulation touche le périmètre commercial et potentiellement les créances. Elle ne constitue pas une entrée de trésorerie ; le rapprochement doit suivre ce que les documents établissent."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une hausse de ventes prévue exige des quantités qu’aucun moyen de production ou d’achat n’a été vérifié pouvoir fournir. Quelle limite faut-il signaler ?",
+      "options": [
+        "Le montant calculé peut être validé sans autre budget dès lors que des clients ont manifesté leur intérêt.",
+        "Le budget de vente doit être articulé aux contraintes de réalisation plutôt que présenté comme acquis.",
+        "Le prix doit être relevé jusqu’à compenser le manque d’unités, même sans hypothèse d’acceptation des clients.",
+        "La production doit être fixée au volume demandé sans vérifier ses ressources, puis son budget de coûts doit absorber tout écart."
+      ],
+      "answer": 1,
+      "explanation": "Le calcul de CA ne prouve pas la faisabilité. Les moyens et capacités doivent être examinés pour distinguer un scénario arithmétique d’une activité réalisable."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La somme des fractions de règlement utilisées dépasse 100 % des ventes, sans frais ni autre flux prévu. Quel risque apparaît ?",
+      "options": [
+        "Le dépassement représente une augmentation du prix facturé, même si aucune clause ne prévoit de supplément.",
+        "Le dépassement représente des encaissements de créances initiales, même si les fractions ne concernent que les nouvelles ventes.",
+        "Les mêmes ventes peuvent être encaissées pour un montant supérieur à la créance prévue par erreur de calendrier.",
+        "Le dépassement représente la marge sur les ventes, qui doit être ajoutée aux règlements du principal."
+      ],
+      "answer": 2,
+      "explanation": "Les fractions décrivent la répartition d’une même vente. Sans élément supplémentaire, leur total doit correspondre au montant dû ; un dépassement signale une incohérence ou un double compte."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "À la fin d’un mois, 9 000 € de ventes restent dues. Elles représentent 60 % des ventes de ce mois, sans autre créance. Quel montant de ventes retrouve-t-on ?",
+      "options": [
+        "5 400 €",
+        "9 060 €",
+        "24 000 €",
+        "15 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Si créances = ventes × 0,60, les ventes valent 9 000 / 0,60 = 15 000 €. Il s’agit d’un contrôle inverse du fractionnement, valable seulement avec le périmètre précisé.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 9000
+            },
+            {
+              "value": 0.6
+            }
+          ]
+        },
+        "expected": 15000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le marché prévu représente 12 000 unités avant une croissance attendue de 10 %. L’entreprise vise une part de 30 % du marché après cette croissance. Les ventes de la concurrence ne sont pas une contrainte supplémentaire dans ce modèle. Quel volume d’entreprise est cohérent avec ces deux hypothèses ?",
+      "options": [
+        "3 960 unités",
+        "3 600 unités",
+        "4 800 unités",
+        "360 unités"
+      ],
+      "answer": 0,
+      "explanation": "Le marché devient 12 000 × 1,10 = 13 200 unités. Une part de 30 % correspond à 13 200 × 0,30 = 3 960 unités. La croissance de 10 % porte sur le marché total ; elle ne s’ajoute pas comme dix points à la part visée.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "value": 1.1
+                }
+              ]
+            },
+            {
+              "value": 0.3
+            }
+          ]
+        },
+        "expected": 3960,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux mois présentent le même CA mais des prix moyens différents. Peut-on en déduire des quantités vendues égales ?",
+      "options": [
+        "Oui, dès lors que les montants sont exprimés dans la même monnaie, les quantités sont identiques.",
+        "Non, un même montant peut résulter de combinaisons différentes de prix et quantités.",
+        "Oui, dès lors que le nombre de clients est identique, la variation du prix moyen ne change pas les quantités.",
+        "Non, mais le mois au prix moyen le plus élevé doit alors avoir vendu le plus d’unités."
+      ],
+      "answer": 1,
+      "explanation": "Le chiffre d’affaires ne décrit pas séparément ses facteurs. Une comparaison de volumes demande les prix et leur périmètre, plutôt qu’une conclusion tirée du seul montant."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un client négocie un report du solde au deuxième mois après vente, contrairement au schéma général. Quelle démarche convient ?",
+      "options": [
+        "Décaler le budget de ventes du même montant, même si les biens ont déjà été livrés et que seule l’échéance change.",
+        "Décaler toutes les créances clients de l’entreprise du même délai pour conserver une seule règle moyenne.",
+        "Isoler l’exception documentée et ajuster les encaissements et créances correspondants.",
+        "Réduire le prix de vente du montant différé pour équilibrer le calendrier sans créance supplémentaire."
+      ],
+      "answer": 2,
+      "explanation": "Un fait nouveau modifie le calendrier, pas nécessairement l’existence du produit commercial. L’exception doit rester traçable pour éviter omission ou double compte des règlements."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le tableau de créances utilise les montants TTC alors que ventes et encaissements du rapprochement sont HT, sans retraitement. Quel contrôle manque ?",
+      "options": [
+        "Un retraitement des seules créances finales, en conservant les créances initiales TTC dans le même rapprochement.",
+        "Un retraitement des seules ventes, en conservant les encaissements HT et les créances TTC.",
+        "Un retraitement par un coefficient moyen de taxe, sans vérifier les bases de chaque terme.",
+        "Une convention de valeur compatible dans les trois termes du rapprochement."
+      ],
+      "answer": 3,
+      "explanation": "La relation de flux suppose une même base. Des conventions de taxe différentes peuvent créer un écart apparent ; il faut harmoniser les grandeurs avant de diagnostiquer une anomalie de paiement."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le suivi de trésorerie retient la date du crédit bancaire, non celle de l’ordre de virement. Un client ordonne le paiement le 28 février ; le compte de l’entreprise sera crédité le 2 mars. Quel traitement du budget suit cette convention ?",
+      "options": [
+        "Maintenir le montant dans les créances à encaisser fin février et prévoir l’encaissement en mars.",
+        "Prévoir l’encaissement en février parce que le client a donné un ordre de virement avant la clôture.",
+        "Prévoir une fraction en février et une fraction en mars en partageant le paiement entre les deux dates.",
+        "Retirer la créance en février et prévoir l’entrée bancaire en mars sans faire apparaître le décalage dans le rapprochement."
+      ],
+      "answer": 0,
+      "explanation": "La convention choisie reporte le flux de trésorerie à mars. Le montant n’est donc pas encore encaissé à la fin de février dans ce suivi. La date d’ordre ne doit pas être substituée à la date de crédit ; un rapprochement distinct serait nécessaire pour une autre convention."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Pour vérifier la clôture d’un tableau d’encaissements, quel rapprochement est utile sans taxe, impayé ni autre mouvement ?",
+      "options": [
+        "Créances initiales + encaissements − ventes = créances finales.",
+        "Créances initiales + ventes − encaissements = créances finales.",
+        "Créances initiales − ventes − encaissements = créances finales.",
+        "Créances initiales + ventes + encaissements = créances finales."
+      ],
+      "answer": 1,
+      "explanation": "Le rapprochement suit les créances et leur règlement. Il permet de détecter des générations oubliées ou des paiements comptés deux fois dans un périmètre explicitement simplifié."
+    }
+  ]
+}

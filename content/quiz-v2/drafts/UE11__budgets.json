@@ -1,0 +1,460 @@
+{
+  "module": "UE11",
+  "chapter": "budgets",
+  "sourceHash": "4adf18f1c3f1cbd75e44126c81a1c8c8a54cea0e9ee6a9c417a1e47f5b77a626",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Un budget prévoit la vente de 300 unités à 40 € HT, sans remise. Quel chiffre d’affaires prévu calcule-t-on ?",
+      "options": [
+        "340 €",
+        "12 000 €",
+        "7,50 €",
+        "300 €"
+      ],
+      "answer": 1,
+      "explanation": "Le budget simple de ventes combine quantités et prix : 300 × 40 = 12 000 €. Ce montant ne décrit pas encore les encaissements, qui dépendent des délais et conditions de règlement.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 300
+            },
+            {
+              "value": 40
+            }
+          ]
+        },
+        "expected": 12000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Sans TVA ni impayé, les ventes sont encaissées à 40 % le mois même et 60 % le mois suivant. Les ventes valent 6 000 € en janvier et 8 000 € en février. Quels encaissements de ces ventes sont prévus en février ?",
+      "options": [
+        "8 000 €",
+        "14 000 €",
+        "6 800 €",
+        "3 200 €"
+      ],
+      "answer": 2,
+      "explanation": "Février reçoit 40 % de ses ventes et 60 % de celles de janvier : 8 000 × 0,40 + 6 000 × 0,60 = 3 200 + 3 600 = 6 800 €. Les deux générations de ventes doivent être distinguées.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 8000
+                },
+                {
+                  "value": 0.4
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 6000
+                },
+                {
+                  "value": 0.6
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 6800,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût attendu est 4 000 € fixes plus 8 € par unité, dans un intervalle stable. Quel budget flexible obtient-on pour 1 200 unités réelles ?",
+      "options": [
+        "13 600 €",
+        "14 400 €",
+        "9 600 €",
+        "12 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le budget au volume réel est 4 000 + 8 × 1 200 = 13 600 €. Multiplier tout le budget initial par le rapport de volumes ferait varier aussi la partie fixe alors qu’elle est inchangée dans ce domaine.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 4000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 8
+                },
+                {
+                  "value": 1200
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 13600,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Avec la convention coût réel moins budget flexible, le coût réel est 14 100 € et la référence flexible 13 600 €. Quel écart signé mesure-t-on ?",
+      "options": [
+        "-500 €",
+        "27 700 €",
+        "2 100 €",
+        "500 €"
+      ],
+      "answer": 3,
+      "explanation": "L’écart est 14 100 − 13 600 = +500 €. Sur un coût et selon cette convention, il s’agit d’un dépassement par rapport à la référence, sans que son calcul suffise à établir une cause personnelle.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 14100
+            },
+            {
+              "value": 13600
+            }
+          ]
+        },
+        "expected": 500,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un budget de ventes est repris directement comme budget d’encaissement alors que les clients règlent à trente jours. Quel élément est oublié ?",
+      "options": [
+        "Imputer tous les paiements au mois de facturation parce qu’ils se rapportent aux mêmes ventes.",
+        "Le calendrier de règlement décale une partie des flux par rapport aux ventes.",
+        "Reporter toutes les factures à l’exercice suivant, même si leur échéance survient le mois suivant.",
+        "Soustraire les créances non encaissées des quantités vendues avant d’établir le budget commercial."
+      ],
+      "answer": 1,
+      "explanation": "Vente et encaissement ne sont pas simultanés par définition. Le budget de trésorerie doit tenir compte des conditions clients et des créances déjà existantes au début de la période."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise commence son budget de janvier avec des créances clients qui seront réglées ce mois-là. Où les intégrer pour ne pas sous-estimer les entrées de trésorerie ?",
+      "options": [
+        "Dans les ventes nouvelles de janvier pour rattacher tout encaissement à un nouveau produit commercial.",
+        "Dans une diminution des décaissements de janvier sans les présenter comme entrées clients.",
+        "Dans les encaissements attendus provenant des périodes antérieures.",
+        "Dans le seul solde initial de trésorerie comme si les clients avaient payé avant janvier."
+      ],
+      "answer": 2,
+      "explanation": "Des ventes antérieures peuvent être payées pendant le mois étudié. Les intégrer aux encaissements ne signifie pas enregistrer une nouvelle vente ; il faut conserver la distinction entre les générations et les dates."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le coût total prévu augmente quand l’activité augmente, sans changement de coût variable unitaire ni de charges fixes. Pourquoi ne faut-il pas appeler automatiquement cette hausse une mauvaise maîtrise ?",
+      "options": [
+        "Une partie de l’augmentation peut être l’effet normal du volume dans le modèle.",
+        "Le coût unitaire moyen doit rester identique au budget initial même si les fixes sont répartis sur davantage d’unités.",
+        "Toute la hausse doit être classée en écart de prix sans recalcul au volume réel.",
+        "La comparaison au seul budget initial suffit à isoler la maîtrise des consommations unitaires."
+      ],
+      "answer": 0,
+      "explanation": "Le budget flexible sert à distinguer le niveau d’activité de la maîtrise des coûts à volume comparable. Une dépense totale supérieure n’indique pas seule une dérive de prix ou de consommation unitaire."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un écart positif est annoncé comme favorable sans indiquer s’il concerne un coût ou une recette, ni la convention. Quel préalable manque ?",
+      "options": [
+        "Le seul montant absolu sans sa référence.",
+        "Le seul signe positif, sans examiner le mode de calcul.",
+        "La seule périodicité du tableau, sans préciser la nature de la mesure.",
+        "La nature de la mesure, la référence et le sens de calcul de l’écart."
+      ],
+      "answer": 3,
+      "explanation": "Le signe ne s’interprète pas isolément. Réel moins référence et référence moins réel s’opposent ; une recette plus forte et un coût plus fort n’ont pas le même sens pour le critère suivi."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un budget multiplie les quantités annuelles par un prix mensuel d’abonnement sans préciser le nombre de mois inclus. Que faut-il clarifier ?",
+      "options": [
+        "Le seul nombre de clients annuels, considéré comme nombre de mois-clients sans préciser les mois couverts.",
+        "L’unité vendue et la période de facturation pour ne pas mélanger des bases incompatibles.",
+        "Le nombre de factures, considéré comme quantité d’abonnement indépendamment des durées couvertes.",
+        "La date d’encaissement de chaque facture, considérée comme déterminant à elle seule la quantité d’abonnements vendus."
+      ],
+      "answer": 1,
+      "explanation": "Le produit quantité × prix n’est utile que si les unités et périodes correspondent. Un abonnement peut être mesuré par mois ou par année ; la convention doit être explicite avant de former le budget de ventes."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un budget sans TVA ni impayé, les créances initiales sont 2 000 €, les ventes de période 5 000 € et les encaissements 6 000 €. Quelles créances finales retrouve-t-on par rapprochement ?",
+      "options": [
+        "13 000 €",
+        "3 000 €",
+        "1 000 €",
+        "-1 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le rapprochement donne créances finales = créances initiales + ventes − encaissements = 2 000 + 5 000 − 6 000 = 1 000 €. Il permet de contrôler le calendrier et l’absence de double compte.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 2000
+                },
+                {
+                  "value": 5000
+                }
+              ]
+            },
+            {
+              "value": 6000
+            }
+          ]
+        },
+        "expected": 1000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Quelle distinction un budget flexible conserve-t-il dans un modèle linéaire de domaine stable ?",
+      "options": [
+        "La partie fixe inchangée et la partie variable ajustée au volume de comparaison.",
+        "Toutes les charges varient dans la même proportion sans autre distinction.",
+        "Les coûts fixes sont supprimés dès que l’activité réelle diffère.",
+        "Les coûts variables restent totaux constants pour tout volume."
+      ],
+      "answer": 0,
+      "explanation": "Le modèle sépare les comportements de coût. L’ajustement ne consiste pas à multiplier indifféremment toute la dépense par le volume, mais à appliquer les hypothèses de chaque composante."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un dépassement de coût reste après ajustement au volume réel. Quelle démarche précède une mise en cause d’un responsable ?",
+      "options": [
+        "Attribuer tout l’écart au responsable du centre au seul motif qu’il dépasse la référence ajustée.",
+        "Classer tout le dépassement en consommation excessive sans vérifier les prix d’achat.",
+        "Attribuer l’écart au prix sans consulter les consommations.",
+        "Rechercher les causes avec les données de prix, consommations, qualité et périmètre pertinentes."
+      ],
+      "answer": 3,
+      "explanation": "L’écart constitue un signal, pas une preuve de responsabilité. Plusieurs facteurs peuvent l’expliquer ; le diagnostic doit être étayé avant de choisir l’action et l’attribution éventuelle."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le volume commercial prévu est repris comme production nécessaire sans tenir compte des stocks, alors que leur évolution est connue. Quelle limite faut-il relever ?",
+      "options": [
+        "La production égale les ventes plus le stock initial sans tenir compte du stock final visé.",
+        "Le besoin de production ne coïncide pas forcément avec les seules quantités vendues.",
+        "La production égale les ventes moins le stock final désiré sans tenir compte du stock initial.",
+        "Les variations de stock ne modifient que la trésorerie, jamais le volume du programme de production."
+      ],
+      "answer": 1,
+      "explanation": "Un budget doit respecter ses articulations. Les ventes et la production répondent à des flux différents lorsque les stocks varient ; il faut examiner le besoin plutôt que recopier un volume sans ses hypothèses."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Les créances de janvier sont encaissées en février. Le budget ajoute cet encaissement au chiffre d’affaires de février comme une nouvelle vente. Quel risque apparaît ?",
+      "options": [
+        "Le paiement doit réduire le chiffre d’affaires de février, même si la vente était enregistrée en janvier.",
+        "L’encaissement constitue une vente de février parce que la date bancaire prime le calendrier commercial.",
+        "Une même opération est traitée comme une vente une seconde fois lors de son paiement.",
+        "La créance initiale doit rester au bilan après règlement pour conserver la trace de la vente de janvier."
+      ],
+      "answer": 2,
+      "explanation": "Le règlement d’une créance réalise le flux de trésorerie d’une vente déjà comptée. La génération commerciale et l’encaissement doivent être distingués pour éviter de gonfler le chiffre d’affaires."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une activité dépasse le domaine où les charges fixes étaient supposées stables et impose une équipe supplémentaire. Que faut-il faire avant de comparer le coût réel au budget flexible initial ?",
+      "options": [
+        "Réexaminer le modèle et le niveau de charges pertinent au nouveau volume.",
+        "Conserver les fixes initiaux et classer toute dépense de capacité en surconsommation unitaire.",
+        "Ajouter le coût total de l’équipe au coût variable de chacune des unités produites.",
+        "Retenir le coût moyen initial comme référence invariante pour toute unité au-delà du palier."
+      ],
+      "answer": 0,
+      "explanation": "Un budget flexible est conditionné par son domaine. Une capacité supplémentaire peut changer la structure de coûts ; il faut adapter la référence plutôt qu’attribuer tout l’écart à une dérive d’exécution."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "L’écart d’un rapport utilise réel − budget, celui d’un autre budget − réel. Comment comparer leurs signes ?",
+      "options": [
+        "Comparer les signes sans correction parce que les deux écarts sont exprimés en euros.",
+        "Inverser le signe d’un rapport puis qualifier tout écart positif de favorable, qu’il concerne une charge ou un produit.",
+        "Comparer les valeurs absolues seules pour déterminer quel service présente un écart favorable.",
+        "Harmoniser ou expliciter les conventions et la nature des éléments comparés."
+      ],
+      "answer": 3,
+      "explanation": "Deux conventions peuvent donner des signes opposés pour un même écart économique. La comparaison demande aussi de savoir s’il s’agit de charges ou produits et sur quel périmètre."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les prix prévus changent en cours d’année mais le budget de chiffre d’affaires conserve les anciens prix sans le préciser. Quelle information doit accompagner le suivi ?",
+      "options": [
+        "Le seul prix moyen réalisé, présenté comme prix budgété initial sans distinguer les deux références.",
+        "La référence de prix utilisée et la distinction entre effet de prix et de quantités.",
+        "Le seul montant total de chiffre d’affaires, présenté comme suffisant pour séparer les deux effets.",
+        "La seule variation globale des quantités, présentée comme explication de toute variation du chiffre d’affaires."
+      ],
+      "answer": 1,
+      "explanation": "Une référence peut être conservée pour comparer, mais ses conventions doivent être explicites. Distinguer prix et quantités évite d’expliquer toute variation du chiffre d’affaires par un seul facteur."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un paiement client est incertain alors que le scénario de base suppose absence d’impayé. Quelle présentation respecte le dossier tout en éclairant le risque ?",
+      "options": [
+        "Retirer le montant menacé du chiffre d’affaires et de l’encaissement de base sans tracer le changement de scénario.",
+        "Compenser le paiement menacé par un encaissement attribué aux autres clients sans hypothèse documentée.",
+        "Conserver le scénario sous son hypothèse et distinguer un éventuel scénario de risque documenté.",
+        "Maintenir l’encaissement à sa date initiale parce que son inscription au budget garantirait sa réalisation."
+      ],
+      "answer": 2,
+      "explanation": "Les hypothèses doivent rester identifiables. Un risque nouveau peut justifier une analyse séparée, mais ne doit pas être mêlé sans trace au scénario ni conduire à fabriquer des données absentes."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le budget initial et le coût réel diffèrent à la fois par le volume et le coût unitaire. Quel intérêt a le recalcul de référence au volume réel ?",
+      "options": [
+        "Isoler une partie liée à l’activité pour mieux analyser les autres écarts.",
+        "Neutraliser ensemble les effets de volume, de prix et de rendement sans examiner leurs valeurs réelles.",
+        "Remplacer le volume initial par le réel puis appeler tout l’écart restant un écart de prix.",
+        "Éliminer les fixes du coût réel avant comparaison, même si le modèle conserve les mêmes charges fixes."
+      ],
+      "answer": 0,
+      "explanation": "L’ajustement place la comparaison à un niveau d’activité cohérent. Il n’identifie pas toutes les causes, mais évite de confondre systématiquement un effet normal de volume avec une variation de maîtrise unitaire."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Après une action correctrice, le coût baisse mais le volume aussi. Quelle évaluation est plus rigoureuse que la seule baisse du total ?",
+      "options": [
+        "Comparer les coûts moyens sans examiner l’effet du volume sur la répartition des fixes.",
+        "Attribuer toute la baisse à l’action parce qu’elle est postérieure à sa mise en place.",
+        "Comparer les seules charges variables totales aux charges totales initiales sans harmoniser le périmètre.",
+        "Confronter les coûts à des références de volume et de périmètre comparables."
+      ],
+      "answer": 3,
+      "explanation": "Une baisse d’activité peut faire diminuer les coûts sans amélioration de gestion. Le suivi doit être défini sur des bases cohérentes pour interpréter le résultat de l’action."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une commande de 10 000 € donne lieu à un acompte de 3 000 € encaissé en janvier, puis à la livraison et au règlement des 7 000 € restants en février. Sans TVA, le modèle budgète les ventes à la livraison et les encaissements au paiement. Quelle programmation respecte ces conventions ?",
+      "options": [
+        "Janvier : vente de 3 000 € ; février : vente de 7 000 €, avec les mêmes montants encaissés.",
+        "Janvier : encaissement de 3 000 € sans vente ; février : vente de 10 000 € et encaissement de 7 000 €.",
+        "Janvier : vente et encaissement de 10 000 € ; février : aucun flux commercial ni encaissement.",
+        "Janvier : aucun flux ; février : vente et encaissement de 10 000 €."
+      ],
+      "answer": 1,
+      "explanation": "L’acompte est encaissé avant l’événement retenu pour budgéter la vente. Janvier reçoit 3 000 € de trésorerie ; février porte la vente complète de 10 000 € mais seulement le solde encaissé de 7 000 €. Les conventions sont explicitement données."
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le budget flexible est présenté comme une vérité valable pour n’importe quel volume. Quelle réserve manque ?",
+      "options": [
+        "L’expression linéaire démontre que les coûts unitaires et capacités demeurent identiques à toute échelle.",
+        "Le modèle estimé peut être extrapolé à un volume doublé sans examiner les paliers ni conditions d’achat.",
+        "Le comportement des coûts et le domaine de validité doivent être vérifiés.",
+        "L’écart entre modèle extrapolé et réel doit être attribué à l’exécution avant d’examiner la capacité."
+      ],
+      "answer": 2,
+      "explanation": "Le modèle simplifie la structure de coût dans un intervalle donné. Prix d’achat, moyens et capacités peuvent changer ; la référence doit rester liée à ses hypothèses pour servir une analyse utile."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le tableau d’écarts est exact mais aucune action ni vérification ultérieure n’est prévue. Que manque-t-il au pilotage ?",
+      "options": [
+        "Un lien entre causes étayées, décision et suivi des effets.",
+        "Classer les services par écart défavorable suffit à choisir une action sans rechercher les mécanismes.",
+        "Envoyer le tableau à chaque responsable suffit à établir l’efficacité des décisions sans suivi ultérieur.",
+        "Reconduire la même cible suffit à corriger les causes du dépassement sans action identifiée."
+      ],
+      "answer": 0,
+      "explanation": "Le calcul doit éclairer l’action. Identifier une cause, choisir une réponse et suivre son effet rend le contrôle exploitable ; un compte rendu exact ne garantit pas à lui seul une amélioration."
+    }
+  ]
+}

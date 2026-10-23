@@ -1,0 +1,482 @@
+{
+  "module": "UE7",
+  "chapter": "pilotage-commercial",
+  "sourceHash": "e3fa304ea5ba4a1abc67015f79ce0d244b40f5fb8094d1ced3caef12dfbe656a",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Une cohorte contient 1 000 prospects uniques, dont 80 deviennent acheteurs uniques sur la période. Quel est son taux de conversion ?",
+      "options": [
+        "12,5 %",
+        "80 %",
+        "0,08 %",
+        "8 %"
+      ],
+      "answer": 3,
+      "explanation": "La conversion vaut acheteurs / prospects × 100 = 80 / 1 000 × 100 = 8 %. Les personnes doivent être comptées une fois dans la cohorte, contrairement à un nombre de commandes répétées.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 80
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 8,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Les 80 acheteurs uniques d’une cohorte génèrent 4 800 € de chiffre d’affaires net de retours. Quel panier moyen par acheteur mesure-t-on ?",
+      "options": [
+        "0,0167 €",
+        "60 €",
+        "4,80 €",
+        "80 €"
+      ],
+      "answer": 1,
+      "explanation": "Le panier par acheteur est 4 800 / 80 = 60 €. Utiliser tous les prospects donnerait une recette par prospect, qui est un autre indicateur.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 4800
+            },
+            {
+              "value": 80
+            }
+          ]
+        },
+        "expected": 60,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Un budget de campagne de 1 200 € est intégralement affecté aux 80 nouveaux acheteurs uniques identifiés. Quel coût d’acquisition moyen par acheteur obtient-on ?",
+      "options": [
+        "1,20 €",
+        "96 000 €",
+        "15 €",
+        "0,0667 €"
+      ],
+      "answer": 2,
+      "explanation": "Le coût d’acquisition donné par le modèle est budget affecté / acheteurs : 1 200 / 80 = 15 €. Le coût par prospect utiliserait un autre dénominateur.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1200
+            },
+            {
+              "value": 80
+            }
+          ]
+        },
+        "expected": 15,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Une cohorte de 1 000 prospects génère 4 800 € de chiffre d’affaires net de retours. Quelle recette moyenne par prospect calcule-t-on ?",
+      "options": [
+        "4,80 €",
+        "60 €",
+        "0,2083 €",
+        "48 €"
+      ],
+      "answer": 0,
+      "explanation": "La recette moyenne par prospect est 4 800 / 1 000 = 4,80 €. Elle inclut au dénominateur les personnes qui n’achètent pas, contrairement au panier moyen par acheteur.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 4800
+            },
+            {
+              "value": 1000
+            }
+          ]
+        },
+        "expected": 4.8,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un même acheteur passe trois commandes. Le rapport les compte comme trois acheteurs pour calculer la conversion des prospects uniques. Quel défaut faut-il corriger ?",
+      "options": [
+        "Conserver les trois commandes au numérateur et les prospects uniques au dénominateur.",
+        "Retirer les commandes répétées du chiffre d’affaires, au lieu de dédupliquer les acheteurs du taux.",
+        "Utiliser le nombre de commandes au dénominateur pour conserver trois acheteurs au numérateur.",
+        "Le numérateur doit distinguer les acheteurs uniques et non compter leurs commandes répétées."
+      ],
+      "answer": 3,
+      "explanation": "Le ratio demandé porte sur des personnes. Compter les commandes augmente artificiellement le nombre d’acheteurs ; il faut rapprocher identités et périmètre de cohorte avant le calcul."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un tableau appelle panier moyen un montant calculé par acheteur, alors qu’une autre équipe l’utilise par commande et que certains clients commandent plusieurs fois. Quel préalable est nécessaire ?",
+      "options": [
+        "Comparer les deux indicateurs sous le même intitulé sans préciser le nombre de commandes par acheteur.",
+        "Définir l’unité : achat, commande ou acheteur, puis harmoniser la comparaison.",
+        "Remplacer les acheteurs par les commandes seulement dans une équipe, en conservant les résultats historiques tels quels.",
+        "Comparer les seuls montants de chiffre d’affaires, qui ne permettent pas de distinguer ces deux moyennes."
+      ],
+      "answer": 1,
+      "explanation": "Les paniers moyens peuvent avoir des bases différentes. Si chaque acheteur ne fait plus un seul achat, les unités ne coïncident pas ; la formule doit être précisée pour éviter une comparaison trompeuse."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un coût d’acquisition paraît faible, mais le rapport ne documente pas les frais affectés à la cohorte. Quelle limite faut-il signaler ?",
+      "options": [
+        "Comparer directement le ratio à celui d’une campagne dont tous les frais sont documentés, sans ajustement.",
+        "Retenir seulement le coût d’achat des espaces publicitaires même si d’autres frais de campagne ont été affectés.",
+        "Le périmètre du budget peut être incomplet et fausser le ratio.",
+        "Conclure que le budget est complet parce que le nombre d’acheteurs est connu avec précision."
+      ],
+      "answer": 2,
+      "explanation": "Le coût dépend du budget effectivement attribué et de ses conventions. Sans périmètre documenté, un ratio bas peut refléter une omission plutôt qu’une acquisition plus efficiente."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une campagne affiche un chiffre d’affaires par prospect plus élevé. Pourquoi cela ne prouve-t-il pas une marge plus forte ?",
+      "options": [
+        "La recette ne retranche pas à elle seule les coûts de vente et d’acquisition pertinents.",
+        "La marge se déduit du seul taux de conversion sans connaître les coûts des ventes.",
+        "Le coût d’acquisition est déjà retranché du chiffre d’affaires du seul fait qu’il est rapporté aux prospects.",
+        "Une hausse du chiffre d’affaires par prospect indique une baisse équivalente du coût de chaque vente."
+      ],
+      "answer": 0,
+      "explanation": "Un indicateur de recette ne mesure pas le résultat. Les coûts et conditions de vente peuvent changer ; il faut les intégrer pour conclure à une amélioration de marge plutôt que confondre vente et profit."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une promotion accroît la conversion mais réduit fortement le prix et la marge unitaire. Quel bilan faut-il réaliser ?",
+      "options": [
+        "Comparer seulement les volumes vendus avant et après, sans effet de remise sur la marge.",
+        "Calculer le bilan en conservant le prix antérieur pour toutes les ventes réalisées en promotion.",
+        "Retenir le chiffre d’affaires brut en laissant hors calcul les dépenses de la promotion.",
+        "Relier volume, panier et coûts plutôt qu’utiliser la seule conversion."
+      ],
+      "answer": 3,
+      "explanation": "La conversion est une dimension du pilotage. Des remises peuvent accroître les achats et réduire la contribution ; le bilan doit considérer les différents effets sur la même cohorte."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le chiffre d’affaires du panier est brut de retours, mais le nombre d’acheteurs exclut les personnes remboursées. Quel problème faut-il vérifier ?",
+      "options": [
+        "Valider le panier calculé si le total de chiffre d’affaires brut est exact, sans contrôler les personnes exclues.",
+        "Le numérateur et le dénominateur peuvent ne plus représenter la même population et convention.",
+        "Déduire seulement le nombre de remboursements du nombre de commandes, sans modifier le chiffre d’affaires brut.",
+        "Comparer ce panier à un panier net de retours sans expliquer les conventions différentes."
+      ],
+      "answer": 1,
+      "explanation": "Les conventions de retours doivent être cohérentes dans le ratio. Un montant incluant des ventes retirées de la population peut produire une moyenne artificielle ; il faut définir explicitement le traitement."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une cohorte compte 50 acheteurs. Chaque acheteur apporte une marge avant acquisition de 40 €, et le budget d’acquisition affecté est 750 €. Sans autre coût dans ce calcul, quelle contribution totale reste après ce budget ?",
+      "options": [
+        "2 750 €",
+        "750 €",
+        "1 250 €",
+        "25 €"
+      ],
+      "answer": 2,
+      "explanation": "La contribution avant acquisition est 50 × 40 = 2 000 €. Après le budget de 750 €, il reste 1 250 €. Ce calcul sous périmètre donné ne constitue pas automatiquement le bénéfice net de l’entreprise.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 50
+                },
+                {
+                  "value": 40
+                }
+              ]
+            },
+            {
+              "value": 750
+            }
+          ]
+        },
+        "expected": 1250,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Si la conversion est exprimée en proportion et le panier en euros par acheteur, quel produit retrouve la recette moyenne par prospect sur la même cohorte ?",
+      "options": [
+        "Conversion × panier moyen.",
+        "Conversion + panier moyen.",
+        "Panier moyen / conversion dans tous les cas.",
+        "Nombre de prospects × budget de campagne."
+      ],
+      "answer": 0,
+      "explanation": "Sur un même champ, acheteurs/prospects × CA/acheteurs se simplifie en CA/prospects. Cette relation aide à contrôler la cohérence des indicateurs, à condition de conserver les mêmes unités et populations."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux campagnes ont des tailles de cohortes très différentes. On moyenne simplement leurs deux pourcentages pour obtenir la conversion totale. Quel contrôle est pertinent ?",
+      "options": [
+        "Faire la moyenne arithmétique des deux taux sans tenir compte des effectifs de prospects.",
+        "Pondérer les taux par les budgets publicitaires plutôt que par les effectifs de prospects.",
+        "Calculer le taux global en divisant les acheteurs totaux par les prospects de la plus grande cohorte seulement.",
+        "Rapporter le nombre total d’acheteurs uniques au total de prospects sans chevauchement."
+      ],
+      "answer": 3,
+      "explanation": "Le taux global se calcule sur les effectifs cohérents. Une moyenne simple donne le même poids à deux cohortes de tailles différentes et peut ne pas représenter la conversion de l’ensemble."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un objectif prévoit 120 acheteurs et un panier moyen de 75 € par acheteur sur la même cohorte. Quel chiffre d’affaires cela implique-t-il si l’hypothèse se réalise ?",
+      "options": [
+        "195 €",
+        "9 000 €",
+        "1,60 €",
+        "90 €"
+      ],
+      "answer": 1,
+      "explanation": "Le chiffre d’affaires prévisionnel est acheteurs × panier, soit 120 × 75 = 9 000 €. C’est une conséquence des hypothèses, non une vente déjà réalisée.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 120
+            },
+            {
+              "value": 75
+            }
+          ]
+        },
+        "expected": 9000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Pour une cohorte donnée, le chiffre d’affaires par prospect est égal au taux de conversion exprimé en proportion multiplié par le panier par acheteur. Quelle condition permet cette identité ?",
+      "options": [
+        "Utiliser des acheteurs nets de retours pour la conversion et des acheteurs bruts pour le panier.",
+        "Multiplier directement le taux exprimé en pourcentage par le panier sans conversion en proportion.",
+        "Utiliser le même chiffre d’affaires, les mêmes acheteurs et les mêmes prospects dans les trois indicateurs.",
+        "Calculer le panier sur toutes les ventes de l’entreprise et la conversion sur une seule campagne."
+      ],
+      "answer": 2,
+      "explanation": "Avec un même périmètre, (acheteurs/prospects) × (CA/acheteurs) = CA/prospects. Des populations ou conventions différentes empêchent cette simplification."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une campagne récente est comparée à une ancienne dont la cohorte a disposé de plusieurs mois pour acheter. Quel biais possible faut-il examiner ?",
+      "options": [
+        "Les durées d’observation différentes peuvent modifier conversions et recettes mesurées.",
+        "Comparer la conversion cumulée depuis le lancement sans rendre comparables les durées de suivi.",
+        "Corriger seulement le budget publicitaire tout en conservant des fenêtres d’achat différentes.",
+        "Comparer le panier des acheteurs comme preuve suffisante de conversion équivalente des cohortes."
+      ],
+      "answer": 0,
+      "explanation": "Les indicateurs dépendent de la fenêtre de suivi. Comparer des cohortes ayant des délais de maturation différents peut confondre performance et temps disponible ; les conventions doivent être harmonisées ou expliquées."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une entreprise vise 100 acheteurs avec une hypothèse de conversion de 5 %, sur des prospects uniques comparables. Combien de prospects faut-il prévoir dans ce modèle ?",
+      "options": [
+        "500 prospects",
+        "105 prospects",
+        "20 prospects",
+        "2 000 prospects"
+      ],
+      "answer": 3,
+      "explanation": "Le nombre requis est acheteurs / taux en proportion : 100 / 0,05 = 2 000 prospects. Cette prévision dépend de l’hypothèse de conversion ; elle ne garantit pas le résultat futur.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 5
+                },
+                {
+                  "value": 100
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un panier moyen augmente après l’arrivée de quelques gros achats alors que la majorité des clients achète moins. Quel commentaire est rigoureux ?",
+      "options": [
+        "Conclure que l’achat du client médian a augmenté dans la même proportion que la moyenne.",
+        "La composition des achats peut faire évoluer la moyenne sans amélioration identique pour tous.",
+        "Attribuer la hausse à une augmentation du nombre de clients, sans examiner la valeur de leurs achats.",
+        "Considérer le montant moyen comme représentatif de chaque segment malgré la concentration des gros achats."
+      ],
+      "answer": 1,
+      "explanation": "La moyenne agrège des comportements différents. Sa hausse peut résulter de quelques montants importants ; elle ne décrit pas automatiquement l’évolution de chacun et mérite un examen de la composition."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un acheteur a été touché par plusieurs canaux ; le dossier n’attribue pas leurs budgets. Quel choix évite de fabriquer un coût d’acquisition par canal ?",
+      "options": [
+        "Attribuer systématiquement la totalité des budgets et du client à chaque canal en additionnant les résultats.",
+        "Retenir le dernier contact comme convention implicite sans préciser son usage ni affecter les coûts.",
+        "Documenter une convention d’attribution et les chevauchements avant de comparer les coûts par canal.",
+        "Répartir le budget également entre canaux sans justifier cette convention et présenter le résultat comme une mesure observée."
+      ],
+      "answer": 2,
+      "explanation": "Le coût par canal exige un périmètre et une attribution cohérents. Le dossier ne permet pas de les inventer ; les chevauchements peuvent aussi multiplier artificiellement les acheteurs attribués."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une campagne produit beaucoup de premiers achats avec une forte remise. L’objectif annoncé est toutefois de fidéliser des clients. Quel indicateur complémentaire répond directement à cet objectif ?",
+      "options": [
+        "Le taux de réachat de ces nouveaux clients sur une durée de suivi définie.",
+        "Le nombre d’affichages publicitaires avant le premier achat.",
+        "Le montant total de remise accordée sur les premiers achats.",
+        "La part des prospects ayant ouvert le premier message de campagne."
+      ],
+      "answer": 0,
+      "explanation": "La fidélisation concerne la poursuite de la relation après acquisition. Un taux de réachat défini sur la cohorte et une durée donnée observe cette dimension, contrairement aux seules mesures du premier contact."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "L’objectif est un coût d’acquisition de 12 € au maximum pour 90 acheteurs, tous attribués à la campagne. Quel budget affecté maximal est cohérent avec cette seule contrainte ?",
+      "options": [
+        "7,50 €",
+        "102 €",
+        "90 €",
+        "1 080 €"
+      ],
+      "answer": 3,
+      "explanation": "Budget / acheteurs doit être au plus égal à 12. À 90 acheteurs, le budget maximal est 90 × 12 = 1 080 €. Cette limite n’établit pas à elle seule la rentabilité sans information de marge.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 90
+            },
+            {
+              "value": 12
+            }
+          ]
+        },
+        "expected": 1080,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une campagne transforme davantage de prospects en acheteurs, mais une part importante annule avant livraison. L’objectif est la vente effectivement livrée. Quelle mesure complète le taux de conversion initial ?",
+      "options": [
+        "Le nombre de clics publicitaires, même si la commande est ensuite annulée.",
+        "La part des acheteurs convertis dont la commande est effectivement livrée, selon une fenêtre définie.",
+        "Le panier brut à la commande, sans tenir compte de son exécution.",
+        "Le coût par impression publicitaire, indépendamment du devenir des commandes."
+      ],
+      "answer": 1,
+      "explanation": "Le passage au statut acheteur et l’exécution de la vente sont deux étapes distinctes. Suivre le passage de la conversion à la livraison rend visible la perte après commande."
+    }
+  ]
+}

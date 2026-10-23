@@ -1,0 +1,667 @@
+{
+  "module": "UE5",
+  "chapter": "indices-pouvoir-achat",
+  "sourceHash": "ac528255ebd650b17da5c43a462d44ba31b3be3ad7369da01c7516ebb8607aa5",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un dossier simplifié, un ménage reçoit2600 € de revenus d’activité déjà nets de cotisations,200 € de revenus du patrimoine et300 € de prestations en espèces. Il paie400 € d’impôts directs. Aucun autre flux n’est retenu. Quel revenu disponible obtient-on ?",
+      "options": [
+        "2700 €.",
+        "3100 €.",
+        "2300 €.",
+        "2400 €."
+      ],
+      "answer": 0,
+      "explanation": "Le revenu disponible du dossier est2600 +200 +300 −400 =2700 €. Les cotisations sont déjà déduites du revenu d’activité fourni : on ne les retire pas une seconde fois. Il ne faut ni oublier les prestations ni omettre les impôts directs.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 2600
+                    },
+                    {
+                      "value": 200
+                    }
+                  ]
+                },
+                {
+                  "value": 300
+                }
+              ]
+            },
+            {
+              "value": 400
+            }
+          ]
+        },
+        "expected": 2700,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "Insee — composition du revenu disponible brut",
+          "url": "https://www.insee.fr/fr/statistiques/7666881"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un ménage comprend deux adultes et deux enfants de moins de14 ans. L’échelle donnée attribue1 unité de consommation au premier adulte,0,5 au second et0,3 par enfant. Pour4200 € de revenu disponible mensuel, quel niveau de vie par unité de consommation obtient-on ?",
+      "options": [
+        "1050 €.",
+        "2000 €.",
+        "2800 €.",
+        "4200 €."
+      ],
+      "answer": 1,
+      "explanation": "Le ménage compte1 +0,5 +0,3 +0,3 =2,1 unités de consommation. Son niveau de vie est4200/2,1 =2000 € par UC. Diviser par les quatre personnes ignorerait les économies d’échelle que cette convention cherche à représenter.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 4200
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 1
+                    },
+                    {
+                      "value": 0.5
+                    }
+                  ]
+                },
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 0.3
+                    },
+                    {
+                      "value": 0.3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "Insee — unités de consommation et niveaux de vie",
+          "url": "https://www.insee.fr/fr/statistiques/fichier/7941437/RPM2024-VE1.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le revenu disponible mensuel d’un ménage est2700 €. Le dossier retient1900 € de dépenses pré-engagées, déjà identifiées selon son champ. Le revenu arbitrable est le disponible après ces dépenses. Quel montant reste pour les autres dépenses et l’épargne ?",
+      "options": [
+        "4600 €.",
+        "1900 €.",
+        "800 €.",
+        "2700 €."
+      ],
+      "answer": 2,
+      "explanation": "Le revenu arbitrable est2700 −1900 =800 €. Cette notion retire les dépenses pré-engagées du revenu disponible pour éclairer la marge de choix restante. Ce n’est pas une nouvelle déduction des impôts déjà pris en compte dans le disponible.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2700
+            },
+            {
+              "value": 1900
+            }
+          ]
+        },
+        "expected": 800,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "Insee — Revenu arbitrable",
+          "url": "https://www.insee.fr/fr/metadonnees/definition/c1139"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un revenu initial était de 2 600 €. Le revenu suivant est 2 800 € avec un indice de prix de 112, base 100 au départ. Quel écart mensuel de revenu réel obtient-on, en euros de départ ?",
+      "options": [
+        "200 €",
+        "-200 €",
+        "100 €",
+        "-100 €"
+      ],
+      "answer": 3,
+      "explanation": "Le revenu suivant déflaté vaut 2 800 / 1,12 = 2 500 €. L’écart réel est 2 500 − 2 600 = −100 €, bien que la somme nominale reçue augmente de 200 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 2800
+                },
+                {
+                  "op": "/",
+                  "args": [
+                    {
+                      "value": 112
+                    },
+                    {
+                      "value": 100
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 2600
+            }
+          ]
+        },
+        "expected": -100,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un ménage dispose de3000 € sur la période et consacre2700 € à sa dépense de consommation finale. Le taux d’épargne est la part du revenu disponible non consommée. Quel taux obtient-on dans ce schéma ?",
+      "options": [
+        "90 %.",
+        "10 %.",
+        "11,11 %.",
+        "100 %."
+      ],
+      "answer": 1,
+      "explanation": "L’épargne vaut3000 −2700 =300 €. Rapportée au revenu disponible, elle représente300/3000 =10 %. Diviser par la consommation donnerait un autre ratio ;90 % représente ici la part consommée du revenu.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 3000
+                    },
+                    {
+                      "value": 2700
+                    }
+                  ]
+                },
+                {
+                  "value": 3000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 10,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "Insee — Taux d’épargne",
+          "url": "https://www.insee.fr/fr/metadonnees/definition/c1824"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un ménage reçoit le même revenu nominal alors que les prix de son panier diminuent. Dans le modèle fourni, comment évolue son revenu à prix constants ?",
+      "options": [
+        "Il diminue au même taux que les prix puisque la baisse des prix doit être appliquée au revenu par multiplication.",
+        "Il reste stable parce que le montant versé est inchangé, sans tenir compte du panier moins cher.",
+        "Il augmente, le même revenu permettant d’acheter davantage de panier.",
+        "Il devient égal au revenu nominal multiplié par l’indice des prix, ce qui compenserait la baisse de cet indice."
+      ],
+      "answer": 2,
+      "explanation": "Déflater par un coefficient inférieur à un augmente le montant exprimé aux prix de départ. La somme nominale inchangée peut ainsi correspondre à un pouvoir d’achat supérieur."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans un groupe de cinq ménages, seuls les revenus du ménage le plus riche augmentent ; les quatre autres revenus restent inchangés et leur ordre ne change pas. Que peut-il arriver à la moyenne et à la médiane des revenus ?",
+      "options": [
+        "La moyenne augmente tandis que la médiane reste inchangée.",
+        "La moyenne et la médiane augmentent nécessairement du même montant.",
+        "La médiane augmente tandis que la moyenne reste inchangée.",
+        "La moyenne reste inchangée parce que la majorité des revenus ne change pas."
+      ],
+      "answer": 0,
+      "explanation": "La moyenne tient compte de tous les montants : la hausse du revenu le plus élevé la relève. La médiane est ici le troisième revenu dans l’ordre ; celui-ci ne change pas. Une amélioration moyenne ne signifie donc pas que le revenu situé au milieu de la distribution augmente.",
+      "references": [
+        {
+          "title": "Insee — médiane et niveau de vie",
+          "url": "https://www.insee.fr/fr/statistiques/fichier/3197289/FPORSOC17.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un rapport annonce une perte de pouvoir d’achat de « 40 » sans préciser l’unité. Que faut-il clarifier pour distinguer deux résultats différents ?",
+      "options": [
+        "S’il s’agit du niveau du revenu nominal total ou de la date de son dernier paiement, sans examiner l’unité de la perte.",
+        "S’il s’agit de40 points d’indice, traités comme l’équivalent de40 euros quel que soit le revenu initial.",
+        "S’il s’agit du taux de prix le plus récent, traité comme le montant de la perte du ménage.",
+        "S’il s’agit de40 euros constants ou de40 % par rapport à une base définie."
+      ],
+      "answer": 3,
+      "explanation": "Un écart en euros et un taux d’évolution ne représentent pas la même grandeur. L’unité, la période et la base sont nécessaires pour donner un sens au chiffre et permettre de contrôler l’interprétation."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le revenu de départ est mensuel et le revenu suivant communiqué est annuel. Quelle opération préalable évite une hausse nominale artificielle ?",
+      "options": [
+        "Comparer directement les deux nombres puisqu’ils sont tous deux en euros.",
+        "Mettre les deux revenus sur une périodicité comparable avant de calculer leur évolution.",
+        "Diviser uniquement le taux de prix par douze.",
+        "Ajouter le revenu mensuel au revenu annuel pour créer la base."
+      ],
+      "answer": 1,
+      "explanation": "Les deux niveaux doivent mesurer la même période. Un revenu annuel est mécaniquement plus grand qu’un revenu mensuel sans que cela prouve une hausse du revenu disponible."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans les comptes nationaux, le propriétaire occupant son logement reçoit un service de logement dont la valeur peut être représentée par un « loyer imputé ». Quelle interprétation est correcte ?",
+      "options": [
+        "Il s’agit du remboursement de capital de son emprunt, assimilé à un salaire reçu.",
+        "Il s’agit du prix de vente du logement, réparti sur les dépenses courantes du ménage.",
+        "Il s’agit de l’équivalent estimé du loyer du service qu’il se fournit, sans versement d’un locataire.",
+        "Il s’agit d’un loyer effectivement payé au propriétaire par l’administration."
+      ],
+      "answer": 2,
+      "explanation": "Le loyer imputé estime le service de logement procuré par la propriété occupée par le ménage lui-même. Il ne suppose pas un paiement de locataire ni un versement public. Il permet de représenter un service en comptabilité nationale, distinct de l’achat du logement ou du remboursement du prêt.",
+      "references": [
+        {
+          "title": "Insee — définition du loyer imputé",
+          "url": "https://www.insee.fr/fr/statistiques/7666881"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un ménage souhaite préserver exactement le pouvoir d’achat de 2 700 € mensuels si son panier augmente de 3 %. Quel revenu nominal mensuel cible faut-il prévoir ?",
+      "options": [
+        "2 781 €",
+        "2 703 €",
+        "2 621,36 €",
+        "2 700 €"
+      ],
+      "answer": 0,
+      "explanation": "Préserver le panier exige de multiplier le revenu de départ par le coefficient de prix : 2 700 × 1,03 = 2 781 €. Ajouter trois euros ou diviser par le coefficient ne compenserait pas la hausse.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 2700
+            },
+            {
+              "value": 1.03
+            }
+          ]
+        },
+        "expected": 2781,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le revenu suivant déflaté est inférieur au revenu initial, alors que le revenu nominal suivant lui est supérieur. Quel signe doit avoir l’écart de revenu en euros constants ?",
+      "options": [
+        "Positif parce que la somme nominale a augmenté.",
+        "Nul car la comparaison doit ignorer les prix.",
+        "Indéterminé même si les deux montants réels sont connus.",
+        "Négatif parce que l’on retranche un revenu initial plus élevé que le montant déflaté."
+      ],
+      "answer": 3,
+      "explanation": "L’écart réel compare des montants exprimés aux mêmes prix. Son signe suit cette différence, pas la seule variation nominale ; une hausse en euros courants peut coexister avec une perte réelle."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle information une hausse nominale de revenu suffit-elle à établir ?",
+      "options": [
+        "L’augmentation de la quantité du panier que le revenu permet d’acheter, avant tout examen des prix.",
+        "L’augmentation de la somme monétaire reçue, sans démontrer seule une hausse de pouvoir d’achat.",
+        "L’augmentation du revenu corrigé des prix, obtenue sans avoir besoin de leur évolution.",
+        "L’augmentation de la capacité d’achat de chaque bien dans la même proportion que le revenu nominal."
+      ],
+      "answer": 1,
+      "explanation": "Le nominal décrit un montant monétaire. L’interprétation en pouvoir d’achat nécessite les prix pertinents et un cadre de comparaison cohérent, pas seulement le montant de l’augmentation."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un produit de qualité inchangée passe d’un paquet de500 g à400 g, pour le même prix de2 €. Pour mesurer son renchérissement à quantité comparable, quelle hausse du prix au kilogramme faut-il retenir ?",
+      "options": [
+        "20 %.",
+        "0 %.",
+        "25 %.",
+        "−20 %."
+      ],
+      "answer": 2,
+      "explanation": "Le prix au kilo passe de2/0,5 =4 € à2/0,4 =5 €. La hausse est(5/4 −1) ×100 =25 %. Un prix inchangé par paquet peut donc masquer un renchérissement à quantité comparable ; la baisse de contenance de20 % n’est pas le taux de hausse du prix unitaire.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "/",
+                  "args": [
+                    {
+                      "value": 500
+                    },
+                    {
+                      "value": 400
+                    }
+                  ]
+                },
+                {
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 25,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "Insee — mesure des prix et réduflation",
+          "url": "https://blog.insee.fr/comment-l-insee-mesure-t-il-le-juste-prix/"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le revenu total d’un ménage progresse et sa composition change aussi. Pourquoi le modèle supposant une composition inchangée ne suffit-il plus à décrire exactement le niveau de vie par personne ?",
+      "options": [
+        "La répartition du revenu entre davantage ou moins de personnes exige une analyse supplémentaire.",
+        "Le revenu total peut être traité directement comme un revenu par personne dès lors que les prix sont corrigés.",
+        "La correction par un indice de prix suffit à neutraliser aussi la variation de taille du ménage.",
+        "Le même taux du revenu total s’applique à chaque membre même lorsque leur nombre change."
+      ],
+      "answer": 0,
+      "explanation": "La comparaison initiale porte sur un ménage de composition constante. Une modification de sa taille peut changer ce que le revenu permet à chacun ; le calcul agrégé ne règle pas à lui seul cette question."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un contrat fictif prévoit une indexation du revenu en février sur la hausse de prix de janvier, sans rappel de revenu pour janvier. Les prix augmentent en janvier puis restent stables ; l’indexation de février compense exactement cette hausse. Que devient le pouvoir d’achat sur ces deux mois ?",
+      "options": [
+        "Il est préservé en janvier et diminue en février au moment de l’indexation.",
+        "Il reste stable pendant les deux mois car l’indexation future compense déjà le revenu de janvier.",
+        "Il augmente en janvier puis retrouve son niveau antérieur en février.",
+        "Il diminue en janvier puis est rétabli en février, sans remboursement de la perte du premier mois."
+      ],
+      "answer": 3,
+      "explanation": "Le décalage d’indexation laisse janvier sans compensation alors que les prix ont déjà augmenté. Le revenu indexé de février rétablit ensuite le pouvoir d’achat courant, mais l’absence de rappel ne répare pas la perte du mois précédent. Ce sont les règles fictives du contrat qui fixent ce calendrier."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le revenu disponible retenu dans un exercice exclut toute autre ressource. Un calcul ajoute pourtant un revenu patrimonial non fourni pour améliorer le résultat. Pourquoi est-ce incorrect ?",
+      "options": [
+        "Il suppose que tout revenu patrimonial est déjà inclus dans un salaire net, sans qu’une telle donnée existe ici.",
+        "Il modifie les données et le périmètre du dossier au lieu d’appliquer les hypothèses fournies.",
+        "Il traite un montant hypothétique de patrimoine comme un flux de revenu, même si aucun rendement n’est donné.",
+        "Il convertit le revenu patrimonial supposé en correction de prix sans indice correspondant."
+      ],
+      "answer": 1,
+      "explanation": "Il faut raisonner sur les ressources définies dans le dossier. Ajouter un élément inventé change le numérateur et peut fabriquer une hausse sans fondement dans les informations disponibles."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un indice de prix de Laspeyres conserve les quantités de référence :3 unités de A et1 de B. Les prix passent de10 à12 € pour A et de20 à18 € pour B. Avec indice = coût courant du panier de référence / coût initial de ce panier ×100, quel niveau obtient-on ?",
+      "options": [
+        "100.",
+        "105.",
+        "108.",
+        "120."
+      ],
+      "answer": 2,
+      "explanation": "Le panier initial coûte3 ×10 +20 =50 €. Aux nouveaux prix, les mêmes quantités coûtent3 ×12 +18 =54 €. L’indice vaut54/50 ×100 =108. Une moyenne non pondérée des prix ou de leurs variations ignorerait le poids du panier retenu.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "op": "*",
+                      "args": [
+                        {
+                          "value": 3
+                        },
+                        {
+                          "value": 12
+                        }
+                      ]
+                    },
+                    {
+                      "value": 18
+                    }
+                  ]
+                },
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "op": "*",
+                      "args": [
+                        {
+                          "value": 3
+                        },
+                        {
+                          "value": 10
+                        }
+                      ]
+                    },
+                    {
+                      "value": 20
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 108,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "Insee — indice de Laspeyres et panier de référence",
+          "url": "https://www.insee.fr/fr/information/4254225"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un calcul annonce une hausse réelle de 5 % et affirme que le ménage peut acheter 5 % de plus de tous les biens individuels. Quelle limite faut-il apporter ?",
+      "options": [
+        "Le résultat concerne le panier et les hypothèses retenus, pas une évolution identique du pouvoir d’achat pour chaque produit.",
+        "Le taux réel permet de remplacer chaque prix individuel par le même coefficient, quelle que soit son évolution observée.",
+        "Le taux réel donne la hausse du revenu nominal affectée à chaque produit sans connaître les dépenses du ménage.",
+        "Le taux réel signifie que toutes les quantités effectivement consommées ont augmenté exactement de5 %."
+      ],
+      "answer": 0,
+      "explanation": "Un indice agrégé décrit un panier pondéré. Des prix particuliers peuvent évoluer différemment ; il ne faut pas transformer une variation moyenne de pouvoir d’achat en garantie identique sur chaque produit."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux mesures de ressources des ménages diffèrent parce que la seconde ajoute au revenu disponible les services individualisables d’éducation et de santé pris en charge par la collectivité. Quelle notion décrit cette seconde mesure dans les comptes nationaux ?",
+      "options": [
+        "Le revenu arbitrable après déduction des dépenses pré-engagées.",
+        "Le revenu disponible corrigé uniquement de la variation des prix.",
+        "Le patrimoine net après déduction des emprunts des ménages.",
+        "Le revenu disponible ajusté, augmenté des transferts sociaux en nature."
+      ],
+      "answer": 3,
+      "explanation": "Le revenu disponible ajusté ajoute les transferts sociaux en nature au revenu disponible. Il représente notamment des services individualisables pris en charge par les administrations ou organismes sans but lucratif. Cet ajustement n’est ni une déflation ni le calcul du revenu arbitrable.",
+      "references": [
+        {
+          "title": "Insee — Revenu disponible ajusté des ménages",
+          "url": "https://www.insee.fr/fr/metadonnees/definition/c1049"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans une économie fictive, le prix des biens de consommation importés augmente, tandis que tous les prix de la production intérieure restent inchangés. En ne considérant que cet effet direct et des paniers comparables, pourquoi un indice de prix à la consommation peut-il augmenter alors que le déflateur du PIB ne bouge pas ?",
+      "options": [
+        "Parce que les deux indices ont le même champ, mais le déflateur retire systématiquement toutes les hausses de prix.",
+        "Parce que les biens consommés importés entrent dans le panier de consommation, tandis que le déflateur du PIB porte sur la production intérieure.",
+        "Parce que le déflateur du PIB mesure uniquement les importations et exclut les biens produits dans le pays.",
+        "Parce que le prix des exportations entre dans le panier de tous les ménages même quand ils ne les achètent pas."
+      ],
+      "answer": 1,
+      "explanation": "Les champs diffèrent : la consommation peut inclure des biens produits à l’étranger ; le déflateur du PIB concerne la production intérieure et exclut directement les importations. L’énoncé neutralise les effets indirects sur les prix domestiques, qui pourraient autrement compliquer le résultat.",
+      "references": [
+        {
+          "title": "BEA — champ du déflateur du PIB et autres indices de prix",
+          "url": "https://www.bea.gov/resources/learning-center/quick-guide-some-popular-bea-price-indexes"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Dans un modèle fictif, le revenu avant impôt est entièrement revalorisé au rythme des prix. Le barème d’impôt est progressif et ses seuils nominaux restent inchangés. Le ménage verse alors une part plus élevée de son revenu en impôt. Pourquoi son pouvoir d’achat après impôt peut-il reculer ?",
+      "options": [
+        "La hausse de salaire nominal représente une baisse du revenu avant impôt, même avant correction des prix.",
+        "Les prix du panier doivent être déduits de l’impôt en euros pour mesurer le revenu disponible.",
+        "La revalorisation avant impôt ne compense pas la hausse du taux moyen d’imposition due aux seuils non revalorisés.",
+        "La stabilité des seuils implique que le montant d’impôt est lui aussi fixe quel que soit le revenu."
+      ],
+      "answer": 2,
+      "explanation": "L’indexation du revenu brut peut préserver son pouvoir d’achat avant impôt. Mais si une plus grande part est prélevée du fait du barème nominal inchangé, le revenu disponible progresse moins vite que les prix. L’exercice définit un barème fictif ; il n’affirme aucune règle fiscale en vigueur."
+    },
+    {
+      "id": "q23",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un consommateur accorde beaucoup d’attention aux hausses du café acheté chaque jour et peu aux baisses d’un appareil acheté rarement. Même à panier statistique donné, pourquoi son inflation ressentie peut-elle dépasser l’indice pondéré par les dépenses ?",
+      "options": [
+        "La fréquence et la visibilité des achats peuvent peser dans la perception autrement que leur poids monétaire dans l’indice.",
+        "L’indice officiel compte chaque achat avec le même poids, quel que soit le montant dépensé.",
+        "Tout produit acheté rarement est exclu de l’indice des prix, même s’il représente une forte dépense.",
+        "Une hausse remarquée plus souvent doit mathématiquement avoir le poids le plus élevé dans la dépense totale."
+      ],
+      "answer": 0,
+      "explanation": "La perception peut donner une place particulière aux achats fréquents et aux hausses marquantes, alors que l’indice tient compte de poids de dépense. Cette explication porte sur l’attention et la mémoire, sans supposer que tous les ménages aient le même panier ni que l’indice soit faux.",
+      "references": [
+        {
+          "title": "BCE — inflation ressentie et achats fréquents",
+          "url": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/what_is_inflation.en.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,484 @@
+{
+  "module": "UE11",
+  "chapter": "rentabilite",
+  "sourceHash": "351c5de99609b5a13b3412a466a8a7da15b5284b7ef2853979118f7f3685009c",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Dans un modèle de coûts variables, le chiffre d’affaires vaut 40 000 € et les charges variables 26 000 €. Quelle marge sur coûts variables obtient-on ?",
+      "options": [
+        "66 000 €",
+        "14 000 €",
+        "26 000 €",
+        "0,35 €"
+      ],
+      "answer": 1,
+      "explanation": "La marge sur coûts variables vaut chiffre d’affaires − charges variables : 40 000 − 26 000 = 14 000 €. Ce solde contribue à couvrir les charges fixes avant de former le résultat du modèle.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 40000
+            },
+            {
+              "value": 26000
+            }
+          ]
+        },
+        "expected": 14000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Une activité présente 14 000 € de marge sur coûts variables pour 40 000 € de chiffre d’affaires. Quel taux de marge sur coûts variables calcule-t-on ?",
+      "options": [
+        "53,85 %",
+        "65 %",
+        "35 %",
+        "285,71 %"
+      ],
+      "answer": 2,
+      "explanation": "Le taux est marge / chiffre d’affaires × 100 = 14 000 / 40 000 × 100 = 35 %. Diviser par les charges variables mesurerait un autre rapport, non celui demandé.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 14000
+                },
+                {
+                  "value": 40000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 35,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Les charges fixes de la période sont 12 000 € et le taux de marge sur coûts variables 40 %, supposé constant. Quel seuil de rentabilité en chiffre d’affaires obtient-on ?",
+      "options": [
+        "30 000 €",
+        "4 800 €",
+        "300 €",
+        "12 040 €"
+      ],
+      "answer": 0,
+      "explanation": "Le seuil est charges fixes / taux en proportion : 12 000 / 0,40 = 30 000 €. Le pourcentage 40 % doit être converti en 0,40, sinon le résultat est artificiellement cent fois trop petit.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 12000
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 40
+                },
+                {
+                  "value": 100
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 30000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une activité monoproduit vend chaque unité 50 € pour un coût variable de 30 €. Les charges fixes sont 10 000 €. Quel seuil de couverture des charges fixes en quantité calcule-t-on ?",
+      "options": [
+        "200 unités",
+        "333,33 unités",
+        "20 unités",
+        "500 unités"
+      ],
+      "answer": 3,
+      "explanation": "La marge unitaire vaut 50 − 30 = 20 €. Il faut 10 000 / 20 = 500 unités pour couvrir les charges fixes, sous hypothèses de prix et coûts constants du domaine étudié.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 10000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 50
+                },
+                {
+                  "value": 30
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 500,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une marge sur coûts variables est positive mais inférieure aux charges fixes. Que peut-on conclure sur le résultat de ce modèle ?",
+      "options": [
+        "Il est positif à hauteur de la marge, les charges fixes étant déjà couvertes dans toute marge sur coûts variables.",
+        "Il est négatif : la contribution ne couvre pas entièrement les charges fixes.",
+        "Il est nul, une marge positive étant ramenée au niveau des charges fixes par définition.",
+        "Son signe dépend du calendrier de règlement des clients plutôt que de l’écart entre contribution et charges fixes."
+      ],
+      "answer": 1,
+      "explanation": "La marge n’est pas encore le résultat. Après déduction des charges fixes, une marge insuffisante laisse une perte ; son signe positif indique une contribution, pas une rentabilité déjà démontrée."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant calcule le taux de marge sur coûts variables comme marge divisée par charges variables. Quel dénominateur doit-il utiliser pour l’indicateur demandé ?",
+      "options": [
+        "Les seules charges fixes.",
+        "Le résultat net après toutes les charges.",
+        "Le chiffre d’affaires correspondant.",
+        "Le nombre d’unités sans tenir compte des prix."
+      ],
+      "answer": 2,
+      "explanation": "La définition retenue est marge sur coûts variables / chiffre d’affaires. Des rapports de même numérateur avec d’autres bases ont un sens différent ; les noms et dénominateurs doivent rester explicites."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le seuil en valeur est atteint exactement dans le modèle linéaire donné. Quelle relation existe alors entre marge sur coûts variables et charges fixes ?",
+      "options": [
+        "La marge couvre exactement les charges fixes ; le résultat du modèle est nul.",
+        "La marge couvre les seules charges variables ; il reste encore toutes les charges fixes à financer.",
+        "La marge correspond au bénéfice obtenu une fois les charges fixes couvertes.",
+        "La marge dépasse les charges fixes d’un montant égal au chiffre d’affaires du seuil."
+      ],
+      "answer": 0,
+      "explanation": "Au seuil, la contribution couvre les charges fixes et ne laisse ni bénéfice ni perte dans le périmètre du modèle. Ce seuil n’est ni une recette nette ni une date d’encaissement."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un seuil théorique en quantité n’est pas entier et les unités sont indivisibles. Quelle règle permet d’atteindre au moins la couverture calculée ?",
+      "options": [
+        "Arrondir systématiquement à l’entier inférieur.",
+        "Choisir l’entier le plus proche même s’il reste sous le seuil.",
+        "Conserver une fraction d’unité comme une vente physique réalisable.",
+        "Retenir le plus petit entier supérieur ou égal au seuil théorique."
+      ],
+      "answer": 3,
+      "explanation": "Une quantité inférieure au seuil ne couvre pas encore les charges fixes. Si aucune fraction ne peut être vendue, il faut arrondir au supérieur pour obtenir une quantité réalisable qui atteigne la couverture."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "À quoi sert la marge sur coûts variables dans le modèle étudié ?",
+      "options": [
+        "À calculer le résultat après toutes les charges fixes déjà déduites.",
+        "À couvrir les charges fixes puis contribuer au résultat.",
+        "À mesurer la part du chiffre d’affaires restant après les seules matières, même si d’autres coûts variables existent.",
+        "À déterminer les encaissements disponibles avant règlement des fournisseurs."
+      ],
+      "answer": 1,
+      "explanation": "Le chiffre d’affaires diminué des charges variables constitue une contribution. Le résultat du modèle apparaît ensuite après les charges fixes ; il ne se déduit pas de la seule présence d’une marge positive."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un taux de marge sur coûts variables est positif, mais une remise réduit le prix alors que le coût variable unitaire reste inchangé. Quel contrôle est nécessaire avant de réutiliser ce taux ?",
+      "options": [
+        "Conserver le taux initial parce que le coût variable unitaire ne change pas.",
+        "Appliquer au taux initial la même baisse relative que celle du prix sans recalculer la marge.",
+        "Recalculer la marge et son rapport au nouveau chiffre d’affaires.",
+        "Rapporter la nouvelle marge au chiffre d’affaires calculé avec l’ancien prix."
+      ],
+      "answer": 2,
+      "explanation": "Une variation de prix peut modifier à la fois la marge unitaire et le chiffre d’affaires. L’hypothèse de taux constant doit être vérifiée plutôt que transportée mécaniquement dans un nouveau scénario."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une activité veut un résultat de 3 000 € avec 10 000 € de charges fixes et un taux de marge sur coûts variables constant de 40 %. Quel chiffre d’affaires cible faut-il ?",
+      "options": [
+        "32 500 €",
+        "25 000 €",
+        "7 500 €",
+        "5 200 €"
+      ],
+      "answer": 0,
+      "explanation": "La marge doit couvrir charges fixes et résultat visé : 10 000 + 3 000 = 13 000 €. Le CA requis est 13 000 / 0,40 = 32 500 €, sous les hypothèses linéaires du dossier.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 10000
+                },
+                {
+                  "value": 3000
+                }
+              ]
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 40
+                },
+                {
+                  "value": 100
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 32500,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La marge unitaire est nulle alors que les charges fixes sont strictement positives. Peut-on calculer une quantité finie couvrant ces charges avec charges fixes / marge unitaire ?",
+      "options": [
+        "Oui, la quantité au seuil est nulle puisque la marge unitaire est nulle.",
+        "Oui, une quantité égale aux charges fixes divisées par le prix suffit sans retrancher le coût variable.",
+        "Oui, augmenter le volume finit par couvrir les charges fixes même si chaque unité n’apporte aucune contribution.",
+        "Non, le dénominateur est nul et chaque unité n’apporte ici aucune couverture."
+      ],
+      "answer": 3,
+      "explanation": "Le modèle ne fournit pas un seuil fini dans cette situation. Une quantité supplémentaire à marge nulle ne finance pas les charges fixes ; il faut constater la limite et revoir prix, coûts ou modèle."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le chiffre d’affaires est 60 000 €, le taux de marge sur coûts variables 30 % et les charges fixes 12 000 €. Quel résultat calcule le modèle ?",
+      "options": [
+        "18 000 €",
+        "6 000 €",
+        "48 000 €",
+        "-6 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La marge vaut 60 000 × 0,30 = 18 000 €. Après les charges fixes de 12 000 €, le résultat est 6 000 €. Le taux de marge ne doit pas être appliqué au seul montant des charges fixes.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 60000
+                },
+                {
+                  "op": "/",
+                  "args": [
+                    {
+                      "value": 30
+                    },
+                    {
+                      "value": 100
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 12000
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un taux est stocké sous la valeur 35 au lieu de 0,35 et utilisé directement comme diviseur pour un seuil. Quel risque apparaît ?",
+      "options": [
+        "Le seuil est cent fois trop grand parce qu’un taux stocké en entier accroît le diviseur effectif.",
+        "Le seuil reste correct si le quotient est simplement affiché au format monétaire.",
+        "Le seuil peut être cent fois trop petit si la convention de pourcentage n’est pas convertie.",
+        "Le seuil est transformé en quantité par cette représentation entière du taux."
+      ],
+      "answer": 2,
+      "explanation": "Les formules utilisent un taux en proportion. Une cellule 35 exprimant 35 % demande une division par 100 ; confondre les conventions crée un facteur cent dans le seuil en valeur."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les charges fixes augmentent, le taux de marge restant strictement positif et inchangé. Comment évolue le seuil en valeur ?",
+      "options": [
+        "Il augmente, puisqu’une contribution plus importante est nécessaire pour couvrir les charges.",
+        "Il diminue parce que le ratio doit être calculé comme taux de marge divisé par charges fixes.",
+        "Il reste inchangé puisque la part variable du coût et le taux de marge sont identiques.",
+        "Il augmente seulement du montant supplémentaire de charges fixes, sans tenir compte du taux de marge."
+      ],
+      "answer": 0,
+      "explanation": "Le seuil est proportionnel aux charges fixes pour un même taux de marge. Le commentaire doit toutefois garder l’hypothèse de taux et de domaine constants, qui conditionne cette relation."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La marge unitaire augmente à charges fixes constantes, dans une activité monoproduit comparable. Quel effet le modèle prévoit-il sur la quantité au seuil ?",
+      "options": [
+        "Une hausse du nombre d’unités au seuil parce que chacune apporte davantage de marge.",
+        "Une quantité inchangée parce que les seules charges fixes définissent le nombre d’unités à vendre.",
+        "Une diminution du seuil exactement proportionnelle à la hausse de marge, sans tenir compte du rapport inverse.",
+        "Une diminution du nombre d’unités nécessaires à la couverture."
+      ],
+      "answer": 3,
+      "explanation": "Une contribution plus grande par unité permet de couvrir les mêmes charges avec moins d’unités. Le calcul ne démontre pas que cette quantité sera vendue ni que la capacité ou la demande est suffisante."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un vendeur assimile la marge sur coûts variables au solde bancaire du mois alors qu’une partie des ventes est à crédit. Quelle distinction manque ?",
+      "options": [
+        "La marge devient un encaissement dès l’émission de la facture, même avant son règlement.",
+        "La contribution économique du modèle ne décrit pas le calendrier des encaissements et décaissements.",
+        "Les ventes à crédit doivent être retirées du chiffre d’affaires pour calculer la marge, indépendamment de leur rattachement à la période.",
+        "Le règlement ultérieur doit être ajouté une seconde fois à la marge du mois d’encaissement."
+      ],
+      "answer": 1,
+      "explanation": "La marge est calculée sur un périmètre de produits et charges, pas sur toutes les dates de flux. La rentabilité et la trésorerie nécessitent des analyses distinctes, même si elles sont liées."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une activité vend plusieurs produits et leur part dans les ventes change. Pourquoi le taux global ne doit-il pas être supposé inchangé sans contrôle ?",
+      "options": [
+        "Le taux global est la moyenne simple des taux des produits, indépendamment de leur poids dans le chiffre d’affaires.",
+        "Le taux global reste fixe si les taux individuels ne changent pas, quelles que soient les ventes par produit.",
+        "Les marges différentes et le poids des produits peuvent modifier le taux de l’ensemble.",
+        "Le taux global dépend du seul produit le plus vendu, sans contribution des autres références."
+      ],
+      "answer": 2,
+      "explanation": "Le taux global agrège des contributions. Un changement de composition peut le modifier ; le seuil fondé sur une structure constante doit être réévalué si cette hypothèse n’est plus respectée."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un seuil annuel de chiffre d’affaires est comparé à des ventes d’un seul mois pour conclure à une perte annuelle certaine. Quel contrôle manque ?",
+      "options": [
+        "Un horizon et un périmètre cohérents avant de comparer seuil et activité.",
+        "Diviser le seuil annuel par douze suffit à conclure sur l’année sans examiner la saisonnalité.",
+        "Les seules ventes encaissées dans le mois doivent être comparées au seuil annuel pour apprécier le résultat annuel.",
+        "Multiplier les ventes du premier mois par douze prouve les ventes annuelles même si le calendrier d’activité varie."
+      ],
+      "answer": 0,
+      "explanation": "Les grandeurs doivent porter sur la même période et des hypothèses cohérentes. Une observation mensuelle peut informer une prévision, mais ne démontre pas seule le résultat de toute l’année."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un seuil en quantité dépasse la capacité maximale disponible. Quelle conclusion est la plus utile ?",
+      "options": [
+        "La marge unitaire positive suffit à rendre la couverture possible sans tenir compte du volume maximal.",
+        "La quantité au seuil doit être remplacée par la capacité maximale sans réviser prix ni coûts.",
+        "La production maximale prouve que l’entreprise couvrira ses charges même si elle est inférieure au seuil.",
+        "La couverture n’est pas réalisable dans la capacité et le modèle actuels ; les hypothèses doivent être réexaminées."
+      ],
+      "answer": 3,
+      "explanation": "Un seuil est une exigence économique sous hypothèses, pas une capacité créée automatiquement. La comparaison avec les moyens permet de repérer une incompatibilité et d’envisager prix, coûts, charges ou capacité."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le modèle suppose prix et coût variable unitaires constants, mais le volume visé déclenche une nouvelle équipe fixe. Que faut-il faire avant de reprendre le même seuil ?",
+      "options": [
+        "Conserver les fixes initiaux au-delà du palier et traiter la nouvelle équipe comme un écart d’exécution.",
+        "Réexaminer le domaine et le nouveau niveau de charges, puis recalculer dans un modèle adapté.",
+        "Ajouter le salaire total de l’équipe au coût variable de chaque unité au-delà du palier.",
+        "Reprendre le même seuil en supposant que la hausse du chiffre d’affaires compense exactement le nouveau palier sans calcul."
+      ],
+      "answer": 1,
+      "explanation": "Les coûts linéaires sont valables dans un domaine explicite. Un changement de capacité peut modifier les charges fixes ; la formule reste utile seulement avec les paramètres et hypothèses appropriés."
+    },
+    {
+      "id": "q22",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le seuil est dépassé selon les hypothèses du dossier, mais la demande future reste incertaine. Quelle présentation est rigoureuse ?",
+      "options": [
+        "Présenter le dépassement du seuil dans le scénario central comme preuve que tous les scénarios de demande seront rentables.",
+        "Présenter une marge de sécurité calculée sur prévision comme garantie de maintien du volume réalisé.",
+        "Présenter le résultat conditionnel et distinguer le calcul des risques de réalisation de l’activité.",
+        "Utiliser la rentabilité calculée pour conclure que prix et coût unitaire sont déjà vérifiés pour toute la période future."
+      ],
+      "answer": 2,
+      "explanation": "Le modèle fournit une relation de couverture, non une garantie sur les ventes et paiements. La conclusion doit garder les hypothèses et distinguer le calcul de la réalisation commerciale et financière."
+    }
+  ]
+}

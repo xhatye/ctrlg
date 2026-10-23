@@ -1,0 +1,492 @@
+{
+  "module": "UE4",
+  "chapter": "reperes",
+  "sourceHash": "06dc8f99325f4832d881b114a3ce97a15b3b4ff6538e2bdcc13d277ccde5b82f",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Avec une base hors taxe B et un taux de TVA t exprimé sous forme décimale, quelle formule donne la TVA ?",
+      "options": [
+        "B * t",
+        "B / t",
+        "B * (1 + t)",
+        "B / (1 + t)"
+      ],
+      "answer": 0,
+      "explanation": "La TVA se calcule sur la base hors taxe par multiplication par le taux. Multiplier par 1 + t donne le prix TTC ; diviser un TTC par 1 + t permet de retrouver le HT. Le choix dépend de la grandeur de départ et de celle demandée."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une vente est fixée à 750 € HT. Le taux donné pour cette opération est 20 %. Quel est son prix TTC ?",
+      "options": [
+        "900 €",
+        "150 €",
+        "625 €",
+        "937,50 €"
+      ],
+      "answer": 0,
+      "explanation": "La taxe est 750 × 20 % = 150 €. Le TTC réunit la base et la taxe : 750 + 150 = 900 €. Le montant de 150 € ne représente que la TVA et ne peut être présenté comme le prix total.",
+      "calculation": {
+        "expected": 900,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 750
+            },
+            {
+              "value": 1.2
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un prix est de 660 € TTC avec un taux fourni de 10 %. Quel est son montant HT ?",
+      "options": [
+        "594 €",
+        "600 €",
+        "726 €",
+        "60 €"
+      ],
+      "answer": 1,
+      "explanation": "Le prix TTC comprend déjà la taxe : le montant HT est 660 ÷ 1,10 = 600 €. Retrancher 10 % de 660 retirerait 66 €, alors que la taxe est calculée sur le HT et vaut ici 60 €.",
+      "calculation": {
+        "expected": 600,
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 660
+            },
+            {
+              "value": 1.1
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un règlement de 1 200 € TTC correspond à une opération au taux fourni de 20 %. Quel montant de TVA est inclus dans ce règlement ?",
+      "options": [
+        "240 €",
+        "1 000 €",
+        "200 €",
+        "250 €"
+      ],
+      "answer": 2,
+      "explanation": "Le HT est 1 200 ÷ 1,20 = 1 000 €. La taxe incluse est donc 200 €, ou directement 1 200 × 20/120. Appliquer 20 % au TTC produirait 240 € et utiliserait la mauvaise base.",
+      "calculation": {
+        "expected": 200,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 1200
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 1200
+                },
+                {
+                  "value": 1.2
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une facture indique HT 400 €, TVA 80 € et TTC 480 €. Le client dit avoir supporté une TVA égale à 20 % des 480 € payés. Quelle correction faut-il apporter ?",
+      "options": [
+        "Le taux s’applique aux 400 € HT, non au TTC.",
+        "Le taux s’applique au TTC et l’écart constitue une TVA restant à payer.",
+        "Les 80 € doivent être rapportés au TTC pour retrouver le taux légal annoncé.",
+        "Les 400 € doivent être rapportés au TTC pour calculer le taux de TVA."
+      ],
+      "answer": 0,
+      "explanation": "Les 80 € représentent bien 20 % de la base HT de 400 €. Le rapport au TTC est différent : 80/480. La taxe déjà incluse ne se recalcule pas en appliquant le même taux au total payé."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans un schéma de TVA simple, sans crédit antérieur ni régularisation, quel calcul conduit à la taxe nette ?",
+      "options": [
+        "TVA collectée − TVA déductible.",
+        "Ventes TTC − achats TTC.",
+        "Bénéfice comptable × taux de TVA.",
+        "TVA collectée + TVA déductible."
+      ],
+      "answer": 0,
+      "explanation": "La taxe nette rapproche la TVA due sur les opérations de la période et la TVA dont la déduction est admise. Elle ne se confond ni avec la marge commerciale ni avec le bénéfice. Crédits antérieurs et régularisations demanderaient des lignes supplémentaires."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour une période sans report ni régularisation, la TVA collectée est de 2 800 € et la TVA déductible admise de 1 950 €. Quel montant est à payer ?",
+      "options": [
+        "4 750 €",
+        "850 €",
+        "1 950 €",
+        "−850 €"
+      ],
+      "answer": 1,
+      "explanation": "Le solde est 2 800 − 1 950 = 850 €. Comme il est positif, il correspond ici à la TVA à payer. Additionner les deux taxes ou présenter le droit à déduction comme un paiement supplémentaire inverserait le mécanisme.",
+      "calculation": {
+        "expected": 850,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2800
+            },
+            {
+              "value": 1950
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société a une TVA nette à payer tout en enregistrant une perte comptable. Un étudiant juge ces données contradictoires. Quelle réponse est correcte ?",
+      "options": [
+        "La TVA nette et le résultat comptable mesurent des grandeurs différentes.",
+        "Une perte comptable exclut toute TVA collectée sur les ventes.",
+        "Le déficit fiscal s’impute automatiquement sur la TVA nette du même montant.",
+        "Toute perte comptable crée une TVA déductible égale à son montant."
+      ],
+      "answer": 0,
+      "explanation": "Une perte peut résulter de charges qui ne produisent pas de TVA déductible du même montant ou de la même période. Le solde de TVA n’est pas calculé sur le résultat comptable : les deux situations peuvent donc coexister."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une déclaration soustrait les achats HT de la TVA collectée pour obtenir la TVA à payer. Quelle erreur de grandeur contient-elle ?",
+      "options": [
+        "Elle soustrait une base d’achat à un montant de taxe.",
+        "Elle aurait dû ajouter les achats HT à la TVA collectée.",
+        "Elle utilise à tort une taxe collectée au lieu du résultat comptable.",
+        "Elle devait remplacer les achats HT par tout le prix TTC sans condition."
+      ],
+      "answer": 0,
+      "explanation": "Le droit à déduction porte sur la TVA admise, non sur le montant HT des achats. Le calcul rapproche des montants de même nature. Il faut déterminer la taxe déductible avant de la retrancher de la taxe collectée."
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Sur une période sans report ni régularisation, la TVA collectée est de 900 € et la TVA déductible de 1 450 €. Quel est le montant du crédit de TVA de la période ?",
+      "options": [
+        "−550 €",
+        "550 €",
+        "2 350 €",
+        "900 €"
+      ],
+      "answer": 1,
+      "explanation": "Le solde collectée moins déductible est −550 €. Ce signe exprime un excédent de déduction ; le crédit se présente pour un montant positif de 550 €. Il ne s’agit pas d’un paiement négatif déjà reçu.",
+      "calculation": {
+        "expected": 550,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 1450
+            },
+            {
+              "value": 900
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise constate un crédit de TVA de 2 000 € dans sa déclaration. Aucun remboursement n’a encore été demandé ni reçu. Quel constat de trésorerie peut-elle faire ?",
+      "options": [
+        "La déclaration établit déjà une entrée de banque égale au crédit.",
+        "Le crédit est encaissé dès son inscription dans la déclaration, puis régularisé lors de la demande.",
+        "Le crédit déclaré ne prouve pas un encaissement.",
+        "Le report du crédit équivaut à un remboursement bancaire au titre de la période suivante."
+      ],
+      "answer": 2,
+      "explanation": "La constatation d’un crédit ne constitue pas un mouvement bancaire. Un remboursement éventuel suit une procédure et des conditions propres. Dans ce dossier, aucun encaissement n’est documenté ; il ne faut pas assimiler le crédit déclaré à de la trésorerie reçue."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableur affiche « TVA à payer : −320 € » après soustraction de la TVA déductible. Quelle présentation évite de laisser croire à une dette négative à régler ?",
+      "options": [
+        "TVA à payer : 320 €.",
+        "Crédit de TVA : 320 €, sous réserve des conditions de traitement.",
+        "Chiffre d’affaires négatif : 320 €.",
+        "TVA collectée supplémentaire : 320 €."
+      ],
+      "answer": 1,
+      "explanation": "Un solde négatif traduit ici un excédent de taxe déductible sur la taxe collectée. Le présenter comme un crédit de 320 € distingue le sens économique du solde et le montant positif du crédit. Son report ou remboursement se traite ensuite selon les règles applicables."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un investissement ouvre intégralement droit à déduction et entraîne ponctuellement un crédit de TVA. Quelle conclusion est possible à partir de ce crédit seul ?",
+      "options": [
+        "L’activité est nécessairement déficitaire.",
+        "Le crédit peut résulter du décalage entre TVA déductible d’investissement et TVA collectée.",
+        "Toutes les ventes du mois sont exonérées.",
+        "L’investissement a déjà été remboursé par l’administration."
+      ],
+      "answer": 1,
+      "explanation": "Un achat d’investissement important peut accroître la TVA déductible de la période. Le crédit ne démontre ni une perte, ni une exonération générale des ventes, ni un remboursement intervenu. Il faut distinguer le mécanisme de TVA, la rentabilité et la trésorerie."
+    },
+    {
+      "id": "q14",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pour une facture d’achat ordinaire, la seule présence d’une ligne de TVA suffit-elle à établir son droit à déduction ?",
+      "options": [
+        "Oui, la mention suffit même si l’opération n’a pas été réalisée.",
+        "Oui, le versement de la taxe par le fournisseur garantit à lui seul le droit du client.",
+        "Non, les conditions de fond et de forme doivent également être remplies.",
+        "Non, le client doit toujours attendre que son propre client ait payé pour déduire."
+      ],
+      "answer": 2,
+      "explanation": "L’article 271 et la doctrine officielle exigent une dépense affectée à des opérations ouvrant droit à déduction et une taxe pouvant légalement figurer sur une facture régulière. La mention de TVA ne crée donc pas, à elle seule, le droit.",
+      "references": [
+        {
+          "title": "BOI-TVA-DED-40-10-10, conditions des factures",
+          "url": "https://bofip.impots.gouv.fr/bofip/1111-PGP.html/identifiant=BOI-TVA-DED-40-10-10-20250108"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une opération est légalement exonérée, mais le fournisseur a facturé de la TVA par erreur. L’acheteur veut déduire cette taxe du seul fait de la facture. Quelle analyse correspond au principe exposé au BOFiP ?",
+      "options": [
+        "La taxe facturée à tort n’est pas, pour cette seule raison, déductible par le client.",
+        "La facture erronée rend l’opération légalement taxable pour les deux parties.",
+        "Le client peut déduire n’importe quel montant dès que le fournisseur le déclare.",
+        "Le client peut conserver la déduction s’il promet de la corriger après un remboursement ultérieur."
+      ],
+      "answer": 0,
+      "explanation": "Le BOFiP distingue la dette du fournisseur du fait de la facturation erronée et le droit à déduction du destinataire. Celui-ci ne résulte pas d’une taxe qui ne pouvait légalement être facturée. La régularisation de la facturation doit être examinée séparément.",
+      "references": [
+        {
+          "title": "BOI-TVA-DED-40-10-10, conditions des factures",
+          "url": "https://bofip.impots.gouv.fr/bofip/1111-PGP.html/identifiant=BOI-TVA-DED-40-10-10-20250108"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture présente une omission mineure d’une mention obligatoire. La réalité de l’opération et les autres conditions de déduction sont par ailleurs justifiées. Quelle position expose le BOFiP ?",
+      "options": [
+        "Toute omission supprime systématiquement le droit à déduction.",
+        "Une omission isolée n’entraîne pas nécessairement le rejet du droit.",
+        "Une omission reporte obligatoirement la déduction jusqu’au paiement du fournisseur.",
+        "La régularité de toutes les mentions dispense de justifier la réalité de l’opération."
+      ],
+      "answer": 1,
+      "explanation": "Le BOFiP précise que la seule omission ou inexactitude d’une mention ne remet pas nécessairement en cause la déduction lorsque l’opération est réelle et satisfait aux autres conditions. Il faut apprécier la nature des manquements, sans assimiler tout défaut formel à l’absence de droit.",
+      "references": [
+        {
+          "title": "BOI-TVA-DED-40-10-10, conditions des factures",
+          "url": "https://bofip.impots.gouv.fr/bofip/1111-PGP.html/identifiant=BOI-TVA-DED-40-10-10-20250108"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le justificatif d’une prestation comporte le montant de TVA mais aucun élément ne permet d’établir que la prestation a réellement été rendue. Quel contrôle reste essentiel ?",
+      "options": [
+        "La réalité de l’opération, distincte de la présence d’une ligne de taxe.",
+        "Le seul paiement de la facture, traité comme preuve suffisante de la prestation.",
+        "La mention de TVA, tenue pour preuve suffisante de l’exécution.",
+        "L’enregistrement de la charge, considéré comme validation fiscale définitive."
+      ],
+      "answer": 0,
+      "explanation": "La facture ne dispense pas d’établir la réalité de l’opération ouvrant droit à déduction. Une taxe attachée à une prestation fictive ne devient pas déductible du seul fait de sa facturation. Il faut examiner les faits et les pièces de réalisation.",
+      "references": [
+        {
+          "title": "BOI-TVA-DED-40-10-10, conditions des factures",
+          "url": "https://bofip.impots.gouv.fr/bofip/1111-PGP.html/identifiant=BOI-TVA-DED-40-10-10-20250108"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un achat est exclusivement affecté à une activité que le dossier précise comme n’ouvrant pas droit à déduction. Le fournisseur a correctement facturé la TVA. Quel traitement découle de cette affectation donnée ?",
+      "options": [
+        "Déduire la taxe parce que toute facture régulière suffit.",
+        "Déduire la taxe seulement si elle dépasse le montant collecté.",
+        "Ne pas retenir de déduction pour cet achat dans le périmètre fourni.",
+        "Déduire la taxe parce que l’entreprise possède déjà un crédit sur une autre activité."
+      ],
+      "answer": 2,
+      "explanation": "L’affectation à des opérations ouvrant droit à déduction est une condition distincte de la régularité de la facture. Le cas indique expressément que cette condition fait défaut pour l’achat. La taxe correctement facturée ne doit donc pas être déduite sur cette seule base.",
+      "references": [
+        {
+          "title": "CGI, article 271, version applicable en 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048835114/"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour dater le droit à déduction d’un achat, un étudiant retient la date de commande alors que l’exigibilité chez le fournisseur n’est pas encore intervenue. Quel événement rattache la naissance du droit selon l’article 271 ?",
+      "options": [
+        "La seule date inscrite sur toute facture, quelle que soit la nature de l’opération.",
+        "L’exigibilité de la taxe chez le redevable.",
+        "Le paiement par l’acheteur, dans toutes les opérations sans exception.",
+        "La date de réception physique d’un bien, étendue à toutes les prestations."
+      ],
+      "answer": 1,
+      "explanation": "Le droit à déduction prend naissance lorsque la taxe devient exigible chez le redevable. Son exercice nécessite aussi les conditions documentaires applicables. La commande ou le budget ne remplace pas cette analyse du moment fiscal pertinent.",
+      "references": [
+        {
+          "title": "CGI, article 271, version applicable en 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048835114/"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un fournisseur ne facture légalement aucune TVA pour l’opération fournie. L’acheteur veut calculer lui-même 20 % du prix pour créer une déduction. Quelle réponse est correcte ?",
+      "options": [
+        "Il peut reconstituer une TVA fictive au taux normal.",
+        "Il ne peut pas créer une taxe déductible absente de l’opération et de la facture.",
+        "Il peut déduire la taxe théorique si le prix a été négocié comme un prix TTC.",
+        "Il peut déduire une taxe calculée au taux normal dès lors que l’achat sert à son activité."
+      ],
+      "answer": 1,
+      "explanation": "Le droit à déduction ne consiste pas à estimer une taxe qui n’a pas grevé l’achat. Dans les faits donnés, aucune TVA n’est légalement facturée. L’acheteur ne doit pas modifier la facture ou créer lui-même une taxe destinée à être déduite.",
+      "references": [
+        {
+          "title": "BOI-TVA-DED-40-10-10, conditions des factures",
+          "url": "https://bofip.impots.gouv.fr/bofip/1111-PGP.html/identifiant=BOI-TVA-DED-40-10-10-20250108"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Des achats de 5 000 € HT supportent le taux fourni de 20 %. Le dossier fixe expressément à 60 % la fraction de TVA déductible, sans autre correction. Quel montant déduire ?",
+      "options": [
+        "1 000 €",
+        "600 €",
+        "3 000 €",
+        "400 €"
+      ],
+      "answer": 1,
+      "explanation": "La TVA facturée est 5 000 × 20 % = 1 000 €. La fraction admise donnée est de 60 %, d’où 600 €. Les 400 € restants ne sont pas déductibles selon cette hypothèse ; il ne faut pas appliquer les 60 % au prix HT comme s’il s’agissait de taxe.",
+      "calculation": {
+        "expected": 600,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 5000
+                },
+                {
+                  "value": 0.2
+                }
+              ]
+            },
+            {
+              "value": 0.6
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une taxe d’achat est déduite parce que « le fournisseur l’a encaissée ». Les pièces ne documentent ni l’affectation de la dépense ni les conditions de facturation. Quelle distinction faut-il rétablir ?",
+      "options": [
+        "Le paiement d’une facture et l’ensemble des conditions du droit à déduction.",
+        "La seule différence entre la date du virement et sa date de valeur bancaire.",
+        "La seule correspondance entre le montant payé et le total TTC, indépendamment de l’affectation.",
+        "Le paiement et une présomption irréfragable de déductibilité de la taxe."
+      ],
+      "answer": 0,
+      "explanation": "Un encaissement peut être pertinent pour l’exigibilité selon l’opération, mais ne démontre pas toutes les autres conditions. L’affectation, la réalité et la facturation doivent être examinées. L’argument du paiement ne remplace pas l’analyse complète du droit.",
+      "references": [
+        {
+          "title": "CGI, article 271, version applicable en 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048835114/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "sourceHash": "7fcba6b98b5ef17c2d014170fe6077e699cced09d9aec8850ddf4df795ea0be3",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "7edbf7fe639f1b79113282c13a5c2b036a7f9ab7540767eb8db11fe3509b0fa3",
+      "selected": 2,
+      "reason": "Les ressources stables valent emplois stables plus FRNG : 180 000 + 35 000 = 215 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "726d837f35d330e511e37725afec02a90f9895b7e25e9b35ae318cb32d9a108c",
+      "selected": 0,
+      "reason": "Inclure le crédit fournisseur parmi les ressources stables surestime directement leur excédent sur les emplois stables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "d2133b386de71732ca7759cea1a588519a53205ccba7417880ca6a56447b5181",
+      "selected": 3,
+      "reason": "Un FRNG négatif constate une insuffisance de ressources stables ; son signe seul ne détermine pas celui de la trésorerie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "4252ca45e3cd25edad1373382a77feb1f6f8fb20c21b47570c23593400e5c78a",
+      "selected": 0,
+      "reason": "À ressources stables constantes, diminuer les emplois stables augmente leur différence.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "04ebf3bdedc066680e1341e6772b4b81042f24aa96900b1e10f5f700fce14140",
+      "selected": 1,
+      "reason": "Une diminution des emplois stables améliore le FRNG sans apport nouveau et sans établir l’évolution du BFR.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "9e13e6c05277048211c3a57546dbb443b9f690a27518c248cf7e7776f51f6eb6",
+      "selected": 2,
+      "reason": "74 000 moins 29 000 donne un BFRE de 45 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "61c7002a2c96850cee1e08bcb973e1ea01a1ab0388954783adff56d8cc8422d6",
+      "selected": 0,
+      "reason": "Le reclassement de la banque en clients gonfle les actifs du cycle et donc le besoin mesuré, sans changer les ressources stables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "5763a4e04735ce891391eea7fcfd230e236709481ed76bf8a3a886b2869d1dbb",
+      "selected": 3,
+      "reason": "Le calcul limité au BFRE distingue les dettes d’exploitation de celles hors exploitation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "6154e2d2c6877b88c92d92b4bd6e75162eedb3ac462767718328903332230a44",
+      "selected": 0,
+      "reason": "Une hausse égale d’actifs et de ressources du cycle laisse leur différence inchangée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "6719e7b7f6a5b13383af86fb8dea04ccc9635e4ad6ed0aaa77a67d628089dff9",
+      "selected": 1,
+      "reason": "À actifs constants, réduire les dettes d’exploitation augmente le besoin net ; les actifs seuls ne déterminent pas sa variation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "38450d1a2517bcfc5e581c1c7e266b6f2eff58a26520e3ee59bd4bef8f1c5464",
+      "selected": 3,
+      "reason": "TN = FRNG − BFR ; le BFRE vaut 28 000 − (−12 000) = 40 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "7085fd1016e59cb015792d049fc061f5393743f27c9b5ae6cc33929f6a5f1e37",
+      "selected": 0,
+      "reason": "Une hausse du BFRE supérieure à celle du FRNG dégrade la trésorerie nette.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "2a2358e5c2bb9173bf9b9e63fb3732d5c8a44d14f4eda3f53a77d15d46d92292",
+      "selected": 1,
+      "reason": "Le résultat dépend des produits et charges ; un déficit fonctionnel ne prouve pas une perte comptable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "7dc88c941b640e8fd7446aa486b0add57d167b11f8b8f8ebc226c4dc4d73110c",
+      "selected": 0,
+      "reason": "La différence entre deux nombres négatifs peut avoir l’un ou l’autre signe selon leurs valeurs.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "b87b2406d880ed2d60cbaa1a4eb1caad1e3ad52ccca68ebf96310a6dff1c5f54",
+      "selected": 2,
+      "reason": "La variation de TN est 9 000 − (−4 000) soit 13 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "99d3e215ef39c8eb745438709da467f33013e1f379a364a318ef7845479fec47",
+      "selected": 3,
+      "reason": "Retrancher deux fois un besoin positif réduit une fois de trop la trésorerie calculée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "243f13d35df1729d4047cfabc85a316d5cb6f88589e1a7edd16b69e883a22dbe",
+      "selected": 2,
+      "reason": "Le modèle simplifié retient stocks et créances clients parmi les actifs du cycle, hors banque.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "cec8d465939f5a0a2dc87291e33e95c5a63f22c49e29a80c62011536b947fbca",
+      "selected": 2,
+      "reason": "Les clients représentent 96 000 moins 41 000, soit 55 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "896b231327449f72a06cda2ac1aa3fcf861a38d2ec2c041aefc3829063cb4e45",
+      "selected": 0,
+      "reason": "Le règlement remplace une créance d’exploitation par une disponibilité bancaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "ef8997ed6729cb9d0f34962950f1086701205cc9e3e0c0497e6a6d7039e41d1e",
+      "selected": 2,
+      "reason": "Il faut déduire la variation des dettes d’exploitation de celle des actifs du cycle pour connaître le BFRE.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "034b8668d81bffbe460a0445f54d48263fa066cff906f58781a806364e35e6e7",
+      "selected": 0,
+      "reason": "Les variations opposées ne se neutralisent pas ici : la hausse plus importante des clients fait augmenter la somme.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "fade2ba35cefcaf3941cba4d41609abd533feda883b3a07c82864d22615dab51",
+      "selected": 1,
+      "reason": "Une donnée absente ne vaut pas zéro ; il faut établir le montant des dettes d’exploitation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

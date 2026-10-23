@@ -1,0 +1,259 @@
+{
+  "sourceHash": "16576af35309e71033e08c68c05c6d32a61015fc58bab1eecc9d2c5f3b517893",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "47dd823c2e031a865a0d26676448a56d40ca48e9f0b1304bf6b9d1a55d39a32c",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La population est l’ensemble visé ; l’échantillon réalisé regroupe les unités étudiées. Invitations et répondants sont distincts et ne doivent pas être inversés."
+    },
+    {
+      "id": "q02",
+      "digest": "85a21cc6a39950d25e23e9f3e0e52c706df980f65b1e11bf66d268ed449d577c",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le critère d’activité à fin décembre doit délimiter la base de recrutement ; adresse valide ou message récent n’établissent pas la relation à la date retenue."
+    },
+    {
+      "id": "q03",
+      "digest": "b96faf001847b23ffc7bad9d5ecfcd79a03a66dbb06a0d7ac61a9ac831a3c39b",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le canal des utilisateurs experts peut surreprésenter les personnes engagées ; sa taille ne lui donne pas la couverture ni l’aléa d’une population entière."
+    },
+    {
+      "id": "q04",
+      "digest": "66bf60ca1183d5b9f9f6bd6e09d7b45fb11f5adce7d3b57f59e50d6ebca8d6ac",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le but de présence de chaque service exige de connaître la couverture effective des réponses ; taux global et invitations ne prouvent pas cette présence."
+    },
+    {
+      "id": "q05",
+      "digest": "9d2b42b50013f4c774c85afcdb3ff6f6753d01f034f780cbabed062bba746dc8",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une composition disproportionnée doit être décrite et ses éventuels poids examinés ; suppression totale d’un service ou égalité brute des poids n’établissent pas l’avis de la population."
+    },
+    {
+      "id": "q06",
+      "digest": "04d8121537b44dd4c88ce55252fcec371960007e3666578193278a6dea3af106",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Rapidité et fiabilité peuvent être jugées différemment. Une seule note ne permet pas de reconstituer séparément les deux dimensions après collecte."
+    },
+    {
+      "id": "q07",
+      "digest": "fa772bbdbb959c63f016c3c5883cd9fbecaedb1375232421d540f8879f1afcd2",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les catégories doivent avoir des bornes explicites et exhaustives, sans doubles comptes ; choix personnel des bornes, double rattachement et exclusion changent la grille."
+    },
+    {
+      "id": "q08",
+      "digest": "32d5499edefd90b0c5320137068679bfca9c64fc0a6b4238bbd608caf3d61a01",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Un non-utilisateur peut choisir artificiellement le milieu faute de réponse non concerné ; réponse obligatoire ne crée pas un jugement d’usage disponible."
+    },
+    {
+      "id": "q09",
+      "digest": "5c7126120538e5e02e5aec6d34b8a513c84cc7103dbd600a81ce54e8c56547be",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une période définie rend les nombres comparables. Date de réponse, arrondi et précision de l’échelle ne remplacent pas cette fenêtre de référence."
+    },
+    {
+      "id": "q10",
+      "digest": "3683ceb34630099699a16b43f176acf8501262d31b9e0cbeed4e09b43dbb5cfd",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le filtre doit empêcher la question inapplicable aux non-utilisateurs ; corriger la moyenne après une réponse forcée ne corrige pas l’enchaînement de collecte."
+    },
+    {
+      "id": "q11",
+      "digest": "2339f55e5ddb77d283389c3f7bda366ab26656f870676036852ed0d09c96f7e2",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le prétest signale ce défaut particulier ; compréhension de testeurs ou correction d’une seule consigne ne démontrent pas validité globale et représentativité."
+    },
+    {
+      "id": "q12",
+      "digest": "3c03599e0667fc986147d14278cf44b7f677b37e20e015f924a2c9c1a942f6ef",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le taux annoncé est 55 / 250 × 100 = 22 %. Le dénominateur est celui des invitations valides défini dans l’énoncé."
+    },
+    {
+      "id": "q13",
+      "digest": "b62e75f74ee6fcb6aaba678e0e97c14b2e21700eef809d55202eafd2617d121a",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le questionnaire existe mais certains items sont sans réponse : non-réponse partielle, pas une absence totale ni des notes zéro implicitement exprimées."
+    },
+    {
+      "id": "q14",
+      "digest": "025a3c8571307f6a88d3795cb913df09b582eb128e2c03d57d59393344b76653",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le taux n’évalue pas seul les différences entre répondants et absents. Effectif plus grand ou taux identique ne garantissent pas le même biais, comme l’indique Statistique Canada."
+    },
+    {
+      "id": "q15",
+      "digest": "9d1f68440e4094137a0c734db8c195357534e4a1a2822e095875212e472e8358",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une relance informative reste compatible avec participation libre ; condition de validation de mission, justification hiérarchique ou liste des absents introduisent une pression."
+    },
+    {
+      "id": "q16",
+      "digest": "31bd0cb2f272411bf77b4c2c9dffa95957ccb6de4335331ecaa4a3f712a97996",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le redressement par service corrige cette répartition sous hypothèses sans prouver que les non-répondants sont identiques sur toutes les autres dimensions."
+    },
+    {
+      "id": "q17",
+      "digest": "04a6acad95f72d25797172837abb0152b964c71011a9d681fd4e886774a39b79",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Métier et mode de collecte varient parfaitement ensemble. Le dispositif ne permet pas de séparer leurs effets, même avec un texte de question commun."
+    },
+    {
+      "id": "q18",
+      "digest": "77a2da5ed81f98814b4eca8c1508028506454336dcd5513809a6253e5c04dd74",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Parmi les soixante réponses valides, 45 sont satisfaites : 45 / 60 × 100 = 75 %. Le taux sur tous les 80 questionnaires répondrait à une autre convention."
+    },
+    {
+      "id": "q19",
+      "digest": "33e95d90a4ac2f9d2c52540d9cfeab6037789f2620389a51318e2feeecc5dd09",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une non-réponse n’est pas une note de satisfaction ; zéro est hors de l’échelle 1 à 5 et l’imputation modifie le score sans hypothèse justifiée. Les trois autres propositions sont des confusions distinctes."
+    },
+    {
+      "id": "q20",
+      "digest": "f50ea2a456db81c4c31fcbf3889873461e4584fa61c2c1d1363304e1d69c3217",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les choix multiples peuvent donner plus de cent pour cent de répondants cumulés ; normaliser en parts de citations changerait le sens de l’indicateur annoncé."
+    },
+    {
+      "id": "q21",
+      "digest": "a287fc4106980a4a9041fb6d4cdb044bdd9ab8c99cce8b0f025d29446907a3de",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Deux salariés peuvent permettre une inférence sur un avis individuel ; pourcentages ou annexe ne rendent pas automatiquement ce détail non identifiable."
+    },
+    {
+      "id": "q22",
+      "digest": "2c07e8dfd1f00cfb426e6bf299a395c374d85a5fd4a85623e298a96280186003",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le champ obligatoire peut transformer le refus d’item en abandon du formulaire. Les seuls formulaires envoyés complets ne prouvent pas l’absence de sélection au cours du parcours."
+    },
+    {
+      "id": "q23",
+      "digest": "29e93f7ed91410cd0f3aa17711d8f8681235db625f8af77aa8bcb1041a9c57c9",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les deux échelles doivent partager le même sens avant agrégation ; même plage numérique n’implique pas même signification du score."
+    }
+  ]
+}

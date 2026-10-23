@@ -1,0 +1,438 @@
+{
+  "module": "DSCG5",
+  "chapter": "projets",
+  "sourceHash": "aad96e134bbcc4f1322a15bd6abf977d88ff3b811d70f498a0d5dac00562894c",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel énoncé exprime un besoin plutôt qu’une solution déjà choisie ?",
+      "options": [
+        "Acheter une application mobile proposée par un fournisseur.",
+        "Réduire les ressaisies et erreurs entre la commande et la facturation.",
+        "Remplacer les postes par le dernier modèle disponible.",
+        "Installer une nouvelle base de données avant toute étude du processus."
+      ],
+      "answer": 1,
+      "explanation": "Le besoin décrit un problème ou un résultat à obtenir. L’application, le matériel et l’architecture sont des moyens à confronter à ce besoin."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un service réclame un nouveau logiciel pour corriger des doublons. Leur origine n’a pas été étudiée. Quelle étape est prioritaire ?",
+      "options": [
+        "Choisir l’offre disposant du plus grand nombre de fonctions.",
+        "Reproduire sans examen toutes les pratiques existantes dans le nouveau logiciel.",
+        "Analyser où et pourquoi les doublons apparaissent avant de retenir une réponse.",
+        "Transformer la demande du service en commande ferme sans critère de résultat."
+      ],
+      "answer": 2,
+      "explanation": "Les doublons peuvent venir du processus, des interfaces ou des règles de saisie. Le diagnostic permet de choisir une solution adaptée."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un cahier des charges contient uniquement les fonctions d’un produit déjà sélectionné. Quel risque présente cette démarche ?",
+      "options": [
+        "La disponibilité d’une fonction dans le produit retenu suffit à établir son utilité au regard du problème métier.",
+        "La sélection du produit peut remplacer l’analyse des écarts entre besoins et fonctions proposées.",
+        "La liste commerciale du fournisseur peut être traitée comme liste exhaustive des exigences sans validation du besoin.",
+        "Un cadrage qui justifie le produit au lieu de vérifier sa réponse au problème métier."
+      ],
+      "answer": 3,
+      "explanation": "Décrire une solution ne démontre pas qu’elle traite le besoin. Les résultats attendus et contraintes doivent pouvoir la mettre à l’épreuve."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La direction souhaite « gagner du temps ». Quelle précision aide le mieux à cadrer le projet ?",
+      "options": [
+        "Identifier les opérations, les utilisateurs, les délais actuels et le gain attendu.",
+        "Choisir immédiatement un fournisseur annonçant une automatisation.",
+        "Demander un tableau de bord plus détaillé sans examiner les tâches.",
+        "Fixer le nombre de licences avant d’identifier les utilisateurs."
+      ],
+      "answer": 0,
+      "explanation": "Un objectif général doit être relié à un processus et à des résultats observables. Cela permet ensuite de comparer les solutions et leurs contraintes."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un outil peut automatiser une étape, mais la réglementation interne impose encore une validation manuelle. Quel examen doit précéder le déploiement ?",
+      "options": [
+        "L’achat de toutes les licences pour réserver le tarif.",
+        "L’articulation de la solution avec la validation et les responsabilités du processus.",
+        "La suppression silencieuse de la validation lors du paramétrage.",
+        "La mesure du gain comme si la validation avait déjà disparu."
+      ],
+      "answer": 1,
+      "explanation": "Le gain dépend du processus réellement autorisé. Les responsabilités et contrôles doivent être intégrés au choix et à l’organisation cible."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "La recette d’une application vise principalement à :",
+      "options": [
+        "Remplacer toute expression initiale du besoin.",
+        "Mesurer exclusivement la durée de développement.",
+        "Vérifier la conformité aux critères et usages attendus.",
+        "Confirmer que les factures du fournisseur ont été payées."
+      ],
+      "answer": 2,
+      "explanation": "La recette confronte les résultats à des critères définis. Elle porte sur les exigences pertinentes, y compris les cas d’erreur."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une application de paiement réussit tous les cas valides. Aucun test de refus ou de montant incohérent n’est prévu. Que manque-t-il ?",
+      "options": [
+        "La réussite de plusieurs cas valides prouve que les cas refusés et incohérents sont aussi correctement traités.",
+        "L’absence d’erreur dans les tests actuels permet de supprimer les scénarios d’exception du périmètre de recette.",
+        "Un test de charge remplace la vérification des règles de rejet d’un montant incohérent.",
+        "Des tests d’erreur et d’exception correspondant aux risques et exigences."
+      ],
+      "answer": 3,
+      "explanation": "Le comportement face aux données invalides ou aux opérations non autorisées fait partie de la qualité attendue. Le cas nominal seul est insuffisant."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La recette vérifie la connexion, mais pas le traitement d’une facture de bout en bout. Quelle limite faut-il annoncer ?",
+      "options": [
+        "Le test ne démontre pas la réalisation complète du processus métier.",
+        "La connexion réussie permet de valider le traitement comptable sans exécuter le scénario complet.",
+        "L’accès à l’écran de facturation équivaut à une facture enregistrée, contrôlée et intégrée dans les comptes.",
+        "La disponibilité de l’interface suffit à établir que chaque étape métier et chaque dépendance fonctionnent."
+      ],
+      "answer": 0,
+      "explanation": "Une fonction élémentaire réussie ne valide pas l’enchaînement des étapes. La recette doit couvrir les exigences du processus concerné."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les utilisateurs et le fournisseur ne s’accordent pas sur ce qui constitue une livraison acceptable. Quel préalable a manqué ?",
+      "options": [
+        "La date contractuelle de livraison peut remplacer la définition du résultat à accepter.",
+        "Des critères de recette explicites, partagés et reliés au besoin.",
+        "Le nombre de fonctionnalités livrées suffit à définir leur acceptabilité sans critères sur les usages attendus.",
+        "Le fournisseur peut déclarer seul les critères après livraison sans rapprochement avec les exigences convenues."
+      ],
+      "answer": 1,
+      "explanation": "Des critères convenus permettent de constater objectivement les résultats attendus. Ils réduisent les divergences au moment de l’acceptation."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une anomalie critique bloque un cas indispensable alors que 98 % des tests sont réussis. Comment apprécier la recette ?",
+      "options": [
+        "Accepter automatiquement puisque la majorité des tests passent.",
+        "Additionner les erreurs et les réussites sans examiner leur gravité.",
+        "Évaluer le caractère bloquant de l’exigence et les conditions de correction avant acceptation.",
+        "Retirer le cas critique de la liste pour conserver le taux de réussite."
+      ],
+      "answer": 2,
+      "explanation": "Le pourcentage de tests réussis ne suffit pas. Une exigence indispensable peut interdire l’acceptation même si beaucoup de tests secondaires passent."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les cas de recette sont choisis seulement par les développeurs et ignorent plusieurs usages réels. Quel complément est pertinent ?",
+      "options": [
+        "Retenir seulement les scénarios déjà automatisés par l’équipe technique sans examiner les usages manquants.",
+        "Utiliser la démonstration préparée par le fournisseur comme substitut à des cas représentatifs du processus réel.",
+        "Choisir les scénarios uniquement selon leur facilité d’exécution plutôt que leur couverture du besoin.",
+        "Associer les utilisateurs et responsables du processus aux scénarios représentatifs."
+      ],
+      "answer": 3,
+      "explanation": "La recette doit refléter les usages et contraintes attendus. L’expertise des métiers complète les tests techniques sans les remplacer."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un projet comporte A de 3 jours. Après A, B de 5 jours et C de 2 jours sont parallèles. D de 2 jours commence après B et C. Ressources suffisantes : quelle durée minimale ?",
+      "options": [
+        "10 jours.",
+        "12 jours.",
+        "7 jours.",
+        "8 jours."
+      ],
+      "answer": 0,
+      "explanation": "La durée est 3 + max(5,2) + 2 = 10 jours. Les tâches B et C ne doivent pas être additionnées si elles sont parallèles.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 3
+                },
+                {
+                  "op": "max",
+                  "args": [
+                    {
+                      "value": 5
+                    },
+                    {
+                      "value": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "expected": 10,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux tâches peuvent techniquement être parallèles, mais exigent chacune à plein temps le même expert unique. Quelle hypothèse de planification faut-il revoir ?",
+      "options": [
+        "L’absence de dépendance technique garantit le chevauchement même lorsque les deux tâches exigent le même expert à plein temps.",
+        "La disponibilité des ressources empêche leur exécution simultanée dans ces conditions.",
+        "La charge de l’expert peut être comptée sur les deux tâches simultanément sans modifier sa disponibilité.",
+        "Le planning peut conserver le parallèle et traiter la double affectation comme une simple différence de présentation."
+      ],
+      "answer": 1,
+      "explanation": "L’absence de dépendance technique ne garantit pas la faisabilité du parallèle. Les ressources disponibles peuvent imposer un ordonnancement différent."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un planning additionne toutes les durées sans représenter les dépendances ni les tâches simultanées. Quelle limite majeure présente-t-il ?",
+      "options": [
+        "La somme brute est la durée minimale même si certaines tâches peuvent être exécutées simultanément.",
+        "L’addition des durées suffit à identifier le chemin critique sans représenter les précédences.",
+        "Il ne permet pas d’identifier correctement la durée et les enchaînements déterminants.",
+        "Le total de charge décrit à lui seul le délai réalisable sans tenir compte du réseau de tâches et des ressources."
+      ],
+      "answer": 2,
+      "explanation": "La durée dépend du réseau de tâches et des contraintes. Une simple somme ignore les parallèles possibles et les conditions d’enchaînement."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Après A de 2 jours, B de 6 jours et C de 4 jours sont parallèles ; D de 1 jour attend les deux. B est réduit à 3 jours, sans autre contrainte. Quel gain de durée totale obtient-on ?",
+      "options": [
+        "3 jours.",
+        "1 jour.",
+        "4 jours.",
+        "2 jours."
+      ],
+      "answer": 3,
+      "explanation": "La durée passe de 2 + 6 + 1 = 9 à 2 + 4 + 1 = 7 jours. Après réduction de B, C devient la branche déterminante.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 2
+                    },
+                    {
+                      "op": "max",
+                      "args": [
+                        {
+                          "value": 6
+                        },
+                        {
+                          "value": 4
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 2
+                    },
+                    {
+                      "op": "max",
+                      "args": [
+                        {
+                          "value": 3
+                        },
+                        {
+                          "value": 4
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une tâche non déterminante dispose de deux jours de marge et subit un jour de retard, sans autre changement. Quel effet direct sur le terme du projet est attendu ?",
+      "options": [
+        "Aucun décalage, tant que le retard reste dans la marge disponible.",
+        "Un décalage obligatoire d’un jour de tout le projet.",
+        "Un avancement du projet d’un jour.",
+        "Une réduction automatique de la durée de la tâche suivante."
+      ],
+      "answer": 0,
+      "explanation": "La marge permet d’absorber ce retard dans les hypothèses données. Elle doit être recalculée si d’autres contraintes ou retards interviennent.",
+      "references": [
+        {
+          "title": "NASA — Planification technique, réseau, chemin critique et marges",
+          "url": "https://www.nasa.gov/reference/6-1-technical-planning/"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "La réussite d’une migration de données se juge principalement par :",
+      "options": [
+        "La copie de tous les fichiers valide la migration sans contrôle des correspondances, contenus et usages.",
+        "La reprise correcte et utilisable des données nécessaires selon des contrôles définis.",
+        "L’égalité des tailles des fichiers suffit à établir que les relations métier et les recherches sont conservées.",
+        "La fin du transfert technique vaut acceptation de la reprise sans critères de rapprochement."
+      ],
+      "answer": 1,
+      "explanation": "Une migration doit préserver le sens, les correspondances et l’intégrité utiles. Le transfert physique n’est qu’une étape."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après migration, les totaux de factures concordent, mais certaines factures sont manquantes et d’autres doublées. Quel contrôle complémentaire manque ?",
+      "options": [
+        "Répéter le total monétaire comme unique preuve de l’exhaustivité et de l’unicité des factures.",
+        "Comparer uniquement des sommes par devise sans rapprocher les identifiants des objets omis ou dupliqués.",
+        "Un rapprochement des identifiants, effectifs et exceptions au niveau approprié.",
+        "Valider la migration sur la taille des fichiers même lorsque les anomalies d’identifiants sont déjà connues."
+      ],
+      "answer": 2,
+      "explanation": "Une omission peut être compensée par un doublon du même montant. Les contrôles doivent porter sur les objets et pas seulement le total."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le nouveau système utilise des codes de taxe différents. Les montants sont transférés sans validation des correspondances. Quel risque est central ?",
+      "options": [
+        "L’égalité des montants suffit à établir que les nouveaux codes appliquent le même sens fiscal.",
+        "La conservation du numéro technique du code dispense de vérifier sa signification dans le nouveau système.",
+        "Les correspondances peuvent être choisies selon l’ordre d’apparition des codes sans rapprochement avec les règles qu’ils représentent.",
+        "Des données correctement copiées mais interprétées selon une règle erronée."
+      ],
+      "answer": 3,
+      "explanation": "Les correspondances portent sur le sens et les règles de traitement. Une valeur conservée peut produire un résultat faux si son code est mal traduit."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La bascule échoue après le début de nouvelles saisies. Pourquoi le plan de retour doit-il traiter ces saisies ?",
+      "options": [
+        "Pour éviter leur perte ou leur duplication lors d’une reprise de l’ancien système.",
+        "Restaurer l’état ancien sans rapprocher les écritures enregistrées depuis la bascule.",
+        "Réinjecter toutes les nouvelles saisies sans vérifier celles qui ont déjà été transférées dans l’ancien système.",
+        "Laisser les deux systèmes modifiables après retour sans désigner l’état de référence ni rapprocher leurs nouveaux mouvements."
+      ],
+      "answer": 0,
+      "explanation": "Un retour ne consiste pas seulement à rallumer l’ancien système. Les opérations réalisées pendant la bascule doivent être réconciliées."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une reprise testée porte seulement sur des dossiers récents ; les historiques sont utilisés pour les contrôles de gestion. Quelle décision est pertinente ?",
+      "options": [
+        "Étendre la validation des dossiers récents aux historiques sans vérifier les structures et usages particuliers de ces derniers.",
+        "Étendre le test aux historiques nécessaires et documenter la portée de la validation.",
+        "Exclure les historiques du test au seul motif qu’ils ne changent plus, malgré leur utilisation dans les contrôles.",
+        "Remplacer les historiques détaillés par des totaux sans vérifier les besoins de recherche et de justification."
+      ],
+      "answer": 1,
+      "explanation": "Le périmètre du test doit couvrir les données et usages nécessaires. Une réussite partielle doit être présentée comme telle."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La migration fonctionne techniquement mais les utilisateurs ne retrouvent pas les dossiers selon leurs critères métier. Quel contrôle a été insuffisant ?",
+      "options": [
+        "La copie achevée prouve l’acceptation des fonctions de recherche sans essai avec les critères métier.",
+        "Le rapprochement du nombre de lignes suffit à établir que les dossiers sont retrouvables selon les usages attendus.",
+        "La vérification de l’utilisabilité des données dans les fonctions attendues.",
+        "La disponibilité du moteur de recherche vaut validation de ses filtres et correspondances sans scénario utilisateur."
+      ],
+      "answer": 2,
+      "explanation": "L’intégrité physique ne garantit pas l’utilisabilité. Les recherches, relations et fonctions métier doivent être testées sur les données reprises."
+    }
+  ]
+}

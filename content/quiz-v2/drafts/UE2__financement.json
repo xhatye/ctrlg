@@ -1,0 +1,443 @@
+{
+  "module": "UE2",
+  "chapter": "financement",
+  "sourceHash": "3cfdd3065d77b0ac471101c5d5b72de39467dc5dafabaa3ef7c29631ee0eeb65",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle distinction permet de lire le capital et le solde bancaire d’une société ?",
+      "options": [
+        "Le capital est un montant juridique et comptable ; la banque varie avec les flux de trésorerie.",
+        "Le capital est le solde bancaire recalculé chaque jour.",
+        "Le solde bancaire doit rester égal au capital souscrit pendant toute la vie sociale.",
+        "Le capital correspond à la somme des ventes encaissées depuis la création."
+      ],
+      "answer": 0,
+      "explanation": "Capital et trésorerie n’ont pas le même objet. La trésorerie peut varier avec achats, ventes et financements sans que chaque flux modifie le capital."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une société a un capital de 20 000 €. Son compte contient 8 000 €. Elle reçoit un prêt bancaire de 12 000 €, sans autre flux ni modification du capital. Quel est le nouveau solde bancaire ?",
+      "options": [
+        "8 000 €",
+        "20 000 €",
+        "32 000 €",
+        "12 000 €"
+      ],
+      "answer": 1,
+      "explanation": "La banque augmente du prêt reçu : 8 000 + 12 000 = 20 000 €. Le prêt modifie la trésorerie et l’endettement ; il ne constitue pas ici une augmentation de capital.",
+      "calculation": {
+        "digits": 0,
+        "expected": 20000,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 8000
+            },
+            {
+              "value": 12000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La société achète au comptant un équipement avec des fonds reçus lors de la formation du capital. Quel énoncé décrit ce paiement ?",
+      "options": [
+        "Il réduit le capital du prix d’achat à chaque décaissement.",
+        "Il transforme l’équipement en prêt consenti par les associés.",
+        "Il réduit la trésorerie, sans que ce seul achat modifie le montant du capital.",
+        "Il impose de distribuer aux associés un montant égal au prix."
+      ],
+      "answer": 2,
+      "explanation": "Les fonds reçus peuvent financer l’activité. Un achat payé en banque ne signifie pas qu’une opération juridique de réduction du capital a été décidée."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le solde bancaire est supérieur au capital. Un candidat en déduit que le capital a nécessairement été augmenté. Que doit-il vérifier ?",
+      "options": [
+        "Le dépassement de la banque sur le capital, tenu pour une incorporation de réserves déjà réalisée.",
+        "La mention d’un associé comme émetteur du virement, retenue comme preuve suffisante d’un apport au capital.",
+        "La disponibilité des fonds, retenue comme condition suffisante pour les intégrer au capital.",
+        "L’origine des fonds et l’existence d’une opération de capital distincte."
+      ],
+      "answer": 3,
+      "explanation": "Une hausse de banque peut venir de ventes, de prêts ou d’autres flux. L’augmentation du capital doit être rattachée à une opération et à ses documents propres."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un apport de matériel est retenu pour former le capital selon les documents fournis. Aucune somme n’entre en banque. Quelle lecture est cohérente ?",
+      "options": [
+        "Un apport peut contribuer au capital sans prendre la forme d’une entrée de trésorerie.",
+        "Le matériel ne contribue au capital qu’à compter de sa conversion en liquidités.",
+        "La valeur du matériel doit être ajoutée à la banque pour représenter un capital nécessairement monétaire.",
+        "Le matériel constitue un prêt remboursable tant qu’aucun virement de même montant ne le remplace."
+      ],
+      "answer": 0,
+      "explanation": "Les documents décrivent un apport de matériel. Il faut distinguer l’objet de l’apport et les flux de trésorerie : la formation du capital ne prend pas toujours la forme d’argent en banque."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle relation naît d’une avance en compte courant d’associé documentée comme prêt ?",
+      "options": [
+        "Un droit nouveau de vote proportionnel à l’avance.",
+        "Une créance de l’associé sur la société selon les conditions convenues.",
+        "Une vente par la société à l’associé pour le montant avancé.",
+        "Une distribution de bénéfices par l’associé à la société."
+      ],
+      "answer": 1,
+      "explanation": "L’avance de nature prêt place l’associé en situation de créancier pour cette somme. Elle ne constitue pas, par elle-même, une souscription de titres."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une convention bloque le remboursement de l’avance jusqu’à une date précisée. L’associé demande le lendemain de son versement un remboursement immédiat. Quel élément est décisif pour examiner sa demande ?",
+      "options": [
+        "Le montant de l’avance, pris comme donnant un droit de retrait immédiat sur une somme équivalente en banque.",
+        "La qualité d’associé prêteur, prise comme permettant d’écarter le blocage convenu.",
+        "La clause de remboursement et les restrictions convenues.",
+        "La date de souscription des titres, prise comme date d’exigibilité de toute avance consentie ensuite."
+      ],
+      "answer": 2,
+      "explanation": "La créance de prêt existe dans les conditions convenues. Sa disponibilité immédiate ne se déduit ni du statut d’associé ni de la seule présence de liquidités."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société rembourse le principal d’une avance d’associé conformément à sa convention. Comment distinguer ce versement d’un dividende ?",
+      "options": [
+        "Il rémunère nécessairement les droits de vote détenus.",
+        "Il constitue une nouvelle souscription de titres par le prêteur.",
+        "Il attribue une part du bénéfice à toute personne associée.",
+        "Il règle une créance de prêt, distincte du revenu attaché aux titres."
+      ],
+      "answer": 3,
+      "explanation": "Le remboursement répond à la relation de créancier créée par l’avance. Le dividende relève de la distribution attachée aux titres et d’un autre fondement."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un associé détient une avance-prêt de 12 000 €. Pour l’exercice, une convention valable prévoit l’abandon définitif de 4 000 €, sans retour à meilleure fortune, sans versement et sans émission de titres. Quel effet ces seules clauses produisent-elles ?",
+      "options": [
+        "La créance subsiste pour 8 000 € ; les 4 000 € abandonnés ne sont ni un remboursement encaissé ni une souscription de titres.",
+        "La société a remboursé 4 000 € en numéraire et reste débitrice de 8 000 €.",
+        "Le capital augmente de 4 000 € par le seul abandon, même sans émission de titres.",
+        "Les 4 000 € abandonnés restent exigibles dès que la société retrouve des liquidités."
+      ],
+      "answer": 0,
+      "explanation": "L’abandon définitif éteint la fraction de créance désignée dans les hypothèses : il reste 8 000 €. Aucun paiement ni émission de titres n’est prévu. Une clause de retour à meilleure fortune ferait intervenir une autre condition, expressément exclue ici."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un associé verse une avance-prêt et demande des voix supplémentaires en raison de ce versement seul. Quelle distinction lui opposer ?",
+      "options": [
+        "Le montant prêté s’ajoute au nominal des titres déjà détenus pour mesurer les voix.",
+        "La créance de prêt et les droits attachés aux titres sont distincts.",
+        "Le montant prêté est traité comme un apport donnant des voix jusqu’au remboursement du principal.",
+        "L’intérêt contractuel constitue un dividende ouvrant des voix proportionnelles à son montant."
+      ],
+      "answer": 1,
+      "explanation": "L’avance crée une créance selon sa convention. Des droits nouveaux sur les titres ou les votes exigeraient un fondement distinct de ce seul financement."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un associé cède tous ses titres ; le dossier contient aussi une créance d’avance détenue contre la société et ne précise pas son transfert. Que vérifier ?",
+      "options": [
+        "La créance est éteinte dès que le dernier titre est vendu.",
+        "L’acquéreur reçoit nécessairement la créance avec le prix des titres.",
+        "Le sort contractuel de la créance, distinct de celui des titres cédés.",
+        "La société devient automatiquement créancière de son ancien associé."
+      ],
+      "answer": 2,
+      "explanation": "La qualité de prêteur et celle de titulaire des titres sont différentes. Il faut examiner les actes pour déterminer le sort de la créance, sans présumer son extinction ou son transfert."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une augmentation de capital est envisagée. Quelle information est nécessaire pour en apprécier l’effet sur les droits des associés ?",
+      "options": [
+        "Le seul prix payé par les nouveaux souscripteurs, tenu pour mesure directe de leurs droits de vote.",
+        "Le seul nombre de titres nouveaux, tenu pour suffisant sans connaître leurs catégories et les titres existants.",
+        "Le seul nominal émis, tenu pour déterminant également tous les droits financiers des titres.",
+        "Les modalités de l’émission et les droits attachés aux titres anciens et nouveaux."
+      ],
+      "answer": 3,
+      "explanation": "Un montant de financement ne décrit pas tous les droits attachés aux titres. La répartition et les caractéristiques des titres doivent être prises en compte."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une société a 100 actions de mêmes droits. Une associée en détient 25. Cinquante actions nouvelles de mêmes droits sont émises à un tiers ; l’associée ne souscrit pas. Quel pourcentage du capital détient-elle ensuite, arrondi à deux décimales ?",
+      "options": [
+        "16,67 %",
+        "25 %",
+        "50 %",
+        "33,33 %"
+      ],
+      "answer": 0,
+      "explanation": "Le nombre détenu reste 25 et le total devient 150. Sa participation est 25 / 150 × 100 = 16,67 % ; le maintien du nombre ne garantit pas le maintien du pourcentage.",
+      "calculation": {
+        "digits": 2,
+        "expected": 16.67,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 25
+                },
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 100
+                    },
+                    {
+                      "value": 50
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Tous les associés souscrivent des actions nouvelles de mêmes droits exactement dans leurs proportions initiales. Quel effet décrit leur participation relative dans cette hypothèse ?",
+      "options": [
+        "Chaque associé voit nécessairement sa proportion doubler.",
+        "Les proportions restent les mêmes malgré l’augmentation du nombre de titres.",
+        "L’associé ayant le plus petit nombre de titres devient majoritaire.",
+        "La participation de chaque associé est divisée par le nombre de souscripteurs."
+      ],
+      "answer": 1,
+      "explanation": "L’hypothèse impose une souscription proportionnelle avec droits identiques. Le numérateur de chacun et le total augmentent dans le même rapport, ce qui maintient les proportions."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le projet comporte des catégories de titres donnant des droits financiers différents, décrits dans les clauses fournies. Quelle analyse évite une conclusion trop rapide ?",
+      "options": [
+        "Assimiler le pourcentage du nombre de titres au pourcentage de toute distribution.",
+        "Calculer les droits à partir du seul montant versé en banque.",
+        "Appliquer les droits prévus pour chaque catégorie au lieu de supposer tous les titres identiques.",
+        "Répartir tout droit entre les personnes à parts égales."
+      ],
+      "answer": 2,
+      "explanation": "Les droits attachés aux titres peuvent différer selon les modalités de l’opération. Le nombre de titres seul ne suffit donc pas à décrire les droits financiers du projet."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour un exercice, 80 titres A donnent chacun une voix et 20 titres B donnent chacun trois voix. Un associé détient les 20 titres B et aucun A. Combien de voix détient-il ?",
+      "options": [
+        "20 voix",
+        "40 voix",
+        "80 voix",
+        "60 voix"
+      ],
+      "answer": 3,
+      "explanation": "L’associé détient 20 titres dotés chacun de trois voix selon la convention de l’exercice : 20 × 3 = 60 voix. Nombre de titres et nombre de voix doivent être distingués.",
+      "calculation": {
+        "digits": 0,
+        "expected": 60,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 20
+            },
+            {
+              "value": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un investisseur compare deux augmentations de même montant encaissé, mais l’une attribue plus de droits de vote aux nouveaux titres. Quelle conclusion retenir ?",
+      "options": [
+        "Une même entrée de trésorerie peut avoir des effets différents sur la répartition du pouvoir.",
+        "Les droits de vote sont nécessairement identiques puisque le financement est égal.",
+        "Le nombre de voix dépend seulement du capital avant l’opération.",
+        "Le montant encaissé remplace toute lecture des droits attachés aux titres."
+      ],
+      "answer": 0,
+      "explanation": "Le financement et la répartition des droits sont deux analyses distinctes. Les conditions attachées aux titres peuvent modifier les effets de deux opérations de même montant."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle donnée est insuffisante, à elle seule, pour établir la régularité d’une distribution ?",
+      "options": [
+        "L’existence d’une décision de l’organe compétent.",
+        "Un solde bancaire disponible.",
+        "L’existence de sommes distribuables selon le régime applicable.",
+        "Le respect des conditions de la décision requise."
+      ],
+      "answer": 1,
+      "explanation": "La trésorerie est un moyen de paiement, pas une preuve de sommes distribuables ni de décision régulière. Ces conditions doivent être vérifiées séparément."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La société vient d’encaisser un prêt important. Un associé veut en distribuer le montant en affirmant que « l’argent est disponible ». Quel contrôle manque principalement ?",
+      "options": [
+        "L’accord du prêteur, retenu comme autorisation suffisante d’une distribution aux associés.",
+        "L’existence d’un solde bancaire excédant le capital nominal après le décaissement envisagé.",
+        "L’existence de sommes distribuables et de la décision compétente, distinctes de l’encaissement.",
+        "La seule capacité à régler les échéances du prêt, retenue comme équivalente à une base distribuable."
+      ],
+      "answer": 2,
+      "explanation": "Un financement peut augmenter la banque sans créer de sommes distribuables. Le prêt ne dispense pas du contrôle des conditions propres à la distribution."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des sommes distribuables ont été établies, mais aucune décision de distribution n’est documentée. Quel élément reste à examiner ?",
+      "options": [
+        "Le souhait individuel des associés de percevoir le bénéfice, retenu comme équivalent à la décision collective.",
+        "La mention d’un bénéfice dans les comptes, retenue comme accord de distribuer ce même montant.",
+        "La disponibilité d’une trésorerie suffisante, retenue comme déclenchant le droit au paiement.",
+        "La décision de l’organe compétent et ses conditions."
+      ],
+      "answer": 3,
+      "explanation": "L’existence d’une base distribuable et la décision de distribuer sont deux contrôles différents. Une capacité financière ne prouve pas que la décision requise a été prise."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour une simulation de trésorerie, la société dispose de 30 000 € en banque, doit payer 18 000 € de dettes à l’échéance étudiée et envisage une distribution de 9 000 €. Aucun autre flux n’est prévu. Quel solde resterait après ces deux décaissements ?",
+      "options": [
+        "3 000 €",
+        "12 000 €",
+        "21 000 €",
+        "39 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Le solde projeté vaut 30 000 − 18 000 − 9 000 = 3 000 €. Ce calcul mesure la liquidité après les flux ; il ne valide pas les conditions juridiques de la distribution.",
+      "calculation": {
+        "digits": 0,
+        "expected": 3000,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 30000
+                },
+                {
+                  "value": 18000
+                }
+              ]
+            },
+            {
+              "value": 9000
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une société envisage un acompte sur dividendes avant l’approbation des comptes de l’exercice. Un bilan intermédiaire fait apparaître un bénéfice, mais n’est pas certifié. Quel préalable prévu par L232-12 manque à ce dossier ?",
+      "options": [
+        "L’approbation du bilan intermédiaire par les associés, considérée comme substituant leur vote à sa certification.",
+        "La certification par un commissaire aux comptes du bilan faisant apparaître le bénéfice déterminé selon ce texte.",
+        "La signature de ce bilan par l’associé détenant la majorité des droits de vote à la place du commissaire aux comptes.",
+        "L’approbation des comptes annuels avant toute possibilité de distribuer un acompte."
+      ],
+      "answer": 1,
+      "explanation": "L232-12 permet sous conditions un acompte avant l’approbation annuelle. Il exige notamment un bilan établi au cours ou à la fin de l’exercice et certifié par un commissaire aux comptes, faisant apparaître le bénéfice défini par le texte. Un bilan non certifié ne remplit pas ce préalable.",
+      "references": [
+        {
+          "title": "Code de commerce, article L232-12, acompte sur dividendes",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006229031/2026-04-01"
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux associés souhaitent l’un un remboursement de son avance-prêt, l’autre une distribution sur ses titres. Comment examiner ces demandes ?",
+      "options": [
+        "Les traiter comme deux dividendes parce que les bénéficiaires sont associés.",
+        "Les classer comme deux réductions de capital au montant des versements.",
+        "Séparer la convention de prêt et le régime de la distribution avec leurs conditions respectives.",
+        "Appliquer à chacune la seule disponibilité du compte bancaire."
+      ],
+      "answer": 2,
+      "explanation": "La qualité d’associé peut se cumuler avec celle de créancier. Le remboursement d’une avance et une distribution sur titres obéissent à des fondements distincts."
+    }
+  ]
+}

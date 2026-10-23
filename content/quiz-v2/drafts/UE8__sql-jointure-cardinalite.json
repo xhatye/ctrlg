@@ -1,0 +1,422 @@
+{
+  "module": "UE8",
+  "chapter": "sql-jointure-cardinalite",
+  "sourceHash": "eced1258be60626cada31ef341c5b8d269225a9afa12366d1c1f005d506d313e",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Une base contient 24 factures distinctes. Chacune possède exactement trois détails valides. Combien de lignes produit leur jointure interne sur la clé facture, sans autre table ?",
+      "options": [
+        "24 lignes",
+        "27 lignes",
+        "72 lignes",
+        "8 lignes"
+      ],
+      "answer": 2,
+      "explanation": "Chaque facture trouve trois détails : la jointure produit 24 × 3 = 72 lignes. Les colonnes de l’en-tête sont répétées, mais cela ne crée pas 72 factures différentes.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 24
+            },
+            {
+              "value": 3
+            }
+          ]
+        },
+        "expected": 72,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture apparaît sur plusieurs lignes après jointure à ses détails. Quelle expression mesure le nombre de factures représentées sans les compter plusieurs fois ?",
+      "options": [
+        "COUNT(DISTINCT idFacture)",
+        "COUNT(*)",
+        "COUNT(montantFacture)",
+        "SUM(idFacture)"
+      ],
+      "answer": 0,
+      "explanation": "L’objet à compter est la facture, identifiée par sa clé. COUNT(*) et COUNT(montantFacture) comptent ses occurrences après jointure lorsque le montant est renseigné, pas les identités distinctes."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Huit factures de 250 € HT chacune ont chacune trois lignes. Après jointure, on additionne directement le montant d’en-tête sur chaque ligne. Quel total erroné obtient-on ?",
+      "options": [
+        "2 000 €",
+        "750 €",
+        "2 250 €",
+        "6 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le montant de chaque facture est répété trois fois : 8 × 3 × 250 = 6 000 €. La somme paraît calculable mais surestime les ventes, car elle porte sur des occurrences répétées de l’en-tête.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 8
+                },
+                {
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "value": 250
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un extrait contient huit factures distinctes de 250 € HT chacune, sans annulation. Le nombre de détails varie d’une facture à l’autre. Quel chiffre d’affaires HT total représente l’extrait ?",
+      "options": [
+        "250 €",
+        "2 000 €",
+        "6 000 €",
+        "32 €"
+      ],
+      "answer": 1,
+      "explanation": "Le chiffre d’affaires d’en-tête additionne chaque facture une fois : 8 × 250 = 2 000 €. Le nombre de détails ne modifie pas ces ventes et ne doit donc pas devenir un multiplicateur du montant.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 8
+            },
+            {
+              "value": 250
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une jointure Client-Commande renvoie plusieurs lignes pour un client qui a passé plusieurs commandes. À quelle condition cette répétition est-elle normale ?",
+      "options": [
+        "Lorsque la clé primaire de Client est volontairement dupliquée dans Client.",
+        "Lorsque la condition de lien est omise.",
+        "Lorsque le grain attendu du résultat est la commande liée à son client.",
+        "Lorsque les clients différents portent le même nom."
+      ],
+      "answer": 2,
+      "explanation": "La répétition du client dans le résultat peut traduire correctement ses multiples commandes. Elle ne signifie pas que la table Client doit contenir des clés dupliquées ; le grain du résultat est ici différent."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Trois lignes de détail appartiennent à une facture et deux à une autre. Que mesure COUNT(*) sur leur jointure interne, si les cinq correspondances sont uniques ?",
+      "options": [
+        "Le nombre de détails associés, pas le nombre de factures distinctes.",
+        "Le nombre de factures distinctes, indépendamment de leurs détails.",
+        "Le nombre de clients sans facture.",
+        "Le montant total HT des en-têtes."
+      ],
+      "answer": 0,
+      "explanation": "COUNT(*) compte les lignes du résultat joint. Une ligne correspond ici à une association facture-détail ; il faut compter les identifiants de facture distincts pour mesurer les factures représentées."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une équipe propose de corriger une somme d’en-têtes répétée en la divisant toujours par trois. Les factures n’ont pas toutes trois détails. Quelle objection est correcte ?",
+      "options": [
+        "La division par trois transforme la somme en nombre de clients.",
+        "Chaque facture sera automatiquement dédupliquée par cette opération.",
+        "Le nombre de détails n’intervient jamais dans la somme erronée.",
+        "Un facteur constant ne corrige pas des multiplicités différentes selon les factures."
+      ],
+      "answer": 3,
+      "explanation": "La somme erronée pondère chaque en-tête par son propre nombre de détails. Lorsque ces nombres diffèrent, une division uniforme ne restaure pas nécessairement la somme d’une occurrence de chaque facture."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux factures différentes ont le même montant HT. Comment obtenir une somme correcte des en-têtes après une jointure qui les répète ?",
+      "options": [
+        "Additionner seulement les valeurs de montant différentes.",
+        "Préserver une occurrence par identifiant de facture avant de sommer son montant.",
+        "Compter les clients et multiplier par le montant maximal.",
+        "Conserver une ligne par montant et supprimer les autres opérations."
+      ],
+      "answer": 1,
+      "explanation": "Les factures doivent être distinguées par leur identité, même si leurs montants sont égaux. Une déduplication des valeurs monétaires peut effacer une vente réelle ; il faut d’abord conserver le grain facture."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une table Facture contient aussi une facture sans détail. Avec une jointure interne vers Detail, qu’advient-il de cet en-tête sans correspondance ?",
+      "options": [
+        "Il apparaît autant de fois que les autres factures ont de détails.",
+        "Il apparaît avec un détail fictif automatiquement créé.",
+        "Il est absent du résultat joint.",
+        "Il est fusionné avec la facture de même montant."
+      ],
+      "answer": 2,
+      "explanation": "La jointure interne ne conserve que les correspondances. Le nombre de factures distinctes après jointure peut donc être inférieur au nombre initial si des factures sans détail existent."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une jointure facture-détail comporte 60 lignes, mais seulement 20 identifiants de facture différents. Pourquoi COUNT(idFacture) vaut-il 60 si chaque identifiant est renseigné ?",
+      "options": [
+        "Il compte les occurrences non NULL de la colonne, répétées sur les détails.",
+        "Il reconnaît automatiquement toutes les factures distinctes.",
+        "Il additionne les valeurs des identifiants.",
+        "Il exclut tous les identifiants présents plusieurs fois."
+      ],
+      "answer": 0,
+      "explanation": "COUNT(colonne) compte chaque valeur non NULL, même si elle est égale à une autre. La distinction des identités nécessite DISTINCT ; sans lui, le comptage suit la multiplicité des détails."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "La facture F1, de 100 € HT, possède deux détails ; F2, de 300 € HT, en possède quatre. Quel montant donne SUM(totalFacture) après leur jointure interne aux détails ?",
+      "options": [
+        "400 €",
+        "800 €",
+        "1 600 €",
+        "1 400 €"
+      ],
+      "answer": 3,
+      "explanation": "La jointure répète F1 deux fois et F2 quatre fois : 2 × 100 + 4 × 300 = 1 400 €. Le vrai total est différent ; cet exercice mesure précisément l’effet de multiplicités inégales.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 2
+                },
+                {
+                  "value": 100
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 4
+                },
+                {
+                  "value": 300
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1400,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un rapport cherche uniquement le total des en-têtes de facture, sans condition portant sur les détails. Quelle stratégie évite directement les répétitions des montants ?",
+      "options": [
+        "Joindre tous les détails puis additionner les en-têtes sans contrôle.",
+        "Agréger les montants directement dans la table des en-têtes au périmètre voulu.",
+        "Dédupliquer les montants égaux plutôt que les factures.",
+        "Multiplier chaque total par le nombre de détails correspondant."
+      ],
+      "answer": 1,
+      "explanation": "Si les détails ne servent pas au besoin, on peut calculer le total au grain où le montant est défini. Une jointure inutile introduirait des répétitions qu’il faudrait ensuite corriger."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans une relation un à plusieurs entre facture et détails, pourquoi les colonnes de l’en-tête se répètent-elles après jointure ?",
+      "options": [
+        "Parce que la table Facture doit contenir plusieurs clés primaires identiques.",
+        "Parce que chaque détail devient une nouvelle facture juridiquement distincte.",
+        "Parce qu’une ligne de résultat associe l’en-tête à chaque détail correspondant.",
+        "Parce que les montants identiques interdisent l’utilisation des clés."
+      ],
+      "answer": 2,
+      "explanation": "La jointure produit les associations qui satisfont la condition de lien. Un en-tête lié à plusieurs détails contribue donc à plusieurs lignes du résultat, sans être dupliqué dans sa table d’origine."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un rapport doit mesurer le nombre de factures possédant au moins un détail du produit P. Plusieurs lignes P peuvent appartenir à la même facture. Quel comptage convient après filtre sur P ?",
+      "options": [
+        "Le nombre d’identifiants de facture distincts retenus.",
+        "Le nombre de lignes P, quelles que soient leurs factures.",
+        "La somme des numéros de facture retenus.",
+        "Le nombre de montants unitaires différents de P."
+      ],
+      "answer": 0,
+      "explanation": "Le filtre sélectionne les détails du produit, mais la mesure demandée est le nombre de factures qui en possèdent. Compter leurs identifiants distincts évite de compter plusieurs fois une facture comportant plusieurs lignes P."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Après une jointure à des détails, la moyenne des montants d’en-tête donne plus de poids aux factures ayant beaucoup de lignes. Quel phénomène explique ce résultat ?",
+      "options": [
+        "La moyenne élimine tous les montants non NULL.",
+        "Les factures de même montant sont automatiquement fusionnées.",
+        "Le nombre de clients remplace le nombre de factures au dénominateur.",
+        "Chaque en-tête contribue autant de fois qu’il possède de correspondances."
+      ],
+      "answer": 3,
+      "explanation": "La répétition ne fausse pas seulement les sommes : elle peut pondérer la moyenne par le nombre de détails. Pour une moyenne par facture, chaque facture doit contribuer une seule fois au calcul."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une requête sélectionne d’abord les factures ayant un détail P, puis doit sommer le montant total de ces factures. Pourquoi sommer seulement les montants des détails P répond-il à une autre question ?",
+      "options": [
+        "Les détails P sont nécessairement absents des factures sélectionnées.",
+        "Ce calcul mesure la vente du produit P, pas nécessairement le total des factures qui le contiennent.",
+        "Les montants des détails ne peuvent jamais être agrégés.",
+        "Le filtre sur P garantit que chaque facture ne possède qu’une ligne."
+      ],
+      "answer": 1,
+      "explanation": "Une facture contenant P peut aussi contenir d’autres produits. Le critère de sélection des factures et la mesure à agréger sont distincts ; il faut conserver une occurrence du total de chaque facture retenue."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une jointure interne facture-détail renvoie moins de lignes que le nombre initial de factures. Quelle hypothèse faut-il vérifier avant de conclure à une erreur de comptage ?",
+      "options": [
+        "La jointure interne a automatiquement regroupé les détails par facture sans GROUP BY.",
+        "Les montants égaux ont été dédupliqués automatiquement par INNER JOIN.",
+        "Certaines factures n’ont peut-être aucun détail correspondant au filtre ou à la condition de lien.",
+        "Le moteur applique DISTINCT sur l’identifiant de facture par défaut dans toute jointure."
+      ],
+      "answer": 2,
+      "explanation": "Une jointure interne peut exclure des en-têtes sans correspondance. Le nombre de lignes dépend donc des liens réels et des filtres ; il ne faut pas supposer que toutes les factures sont représentées."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Pourquoi compter les montants distincts ne mesure-t-il pas en général le nombre de factures ?",
+      "options": [
+        "Des factures différentes peuvent avoir le même montant.",
+        "COUNT(DISTINCT montant) compte chaque montant répété autant de fois qu’il apparaît.",
+        "DISTINCT porte par défaut sur toutes les colonnes même si seul montant est indiqué.",
+        "COUNT(DISTINCT montant) additionne les montants au lieu de compter leurs valeurs distinctes."
+      ],
+      "answer": 0,
+      "explanation": "La valeur du montant est descriptive et peut se répéter entre opérations légitimes. Une mesure de nombre de factures doit se fonder sur leur identité, pas sur l’unicité accidentelle de leur valeur monétaire."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Quel jeu d’essai met particulièrement en évidence une erreur de somme d’en-têtes après jointure ?",
+      "options": [
+        "Une seule facture sans détail, avec un total attendu non défini.",
+        "Plusieurs factures ayant chacune un seul détail et aucun autre cas.",
+        "Des détails sans référence facture, ignorés par tout contrôle.",
+        "Des factures de montants différents ayant des nombres de détails différents, avec un total indépendant."
+      ],
+      "answer": 3,
+      "explanation": "Des multiplicités et montants différents rendent visible la pondération indue et empêchent une correction fortuite par un diviseur constant. L’attendu indépendant permet de confronter la requête au vrai total."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un regroupement après jointure porte sur idFacture et numeroLigne, puis le rapport additionne les totaux de ces groupes. Pourquoi le double compte peut-il persister ?",
+      "options": [
+        "La présence de GROUP BY élimine pourtant toutes les répétitions possibles.",
+        "Le groupe reste au niveau du détail et peut conserver plusieurs occurrences du montant de chaque facture.",
+        "Le numéro de ligne devient automatiquement NULL dans tous les groupes.",
+        "L’identifiant facture est nécessairement perdu dès qu’un groupe est formé."
+      ],
+      "answer": 1,
+      "explanation": "GROUP BY ne corrige pas tout : ses colonnes définissent le grain. Inclure le numéro de ligne maintient une séparation des détails, alors que le montant d’en-tête doit être conservé une seule fois par facture."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La table Facture contient des factures avec et sans détail. Pour mesurer toutes les factures émises, quelle source est la plus directe si aucun critère ne concerne les détails ?",
+      "options": [
+        "Les seuls détails, avec un comptage des références répétées.",
+        "Une jointure interne suivie de COUNT(*).",
+        "La table des en-têtes, avec son identifiant unique pour chaque facture.",
+        "Les montants distincts après suppression des factures sans détail."
+      ],
+      "answer": 2,
+      "explanation": "Les en-têtes représentent l’ensemble recherché et possèdent le bon grain. Passer par les détails pourrait exclure les factures sans correspondance ou multiplier les autres ; ce détour n’est pas nécessaire au besoin."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un total de factures calculé sur les en-têtes et un total après déduplication par idFacture concordent sur un jeu connu. Quelle conclusion reste mesurée ?",
+      "options": [
+        "Les deux méthodes concordent sur ce périmètre ; les autres cas et filtres doivent encore être contrôlés.",
+        "Toutes les futures jointures du système sont certifiées.",
+        "Toute suppression de montants égaux est désormais validée.",
+        "L’accord des totaux prouve que les droits de modification sont corrects."
+      ],
+      "answer": 0,
+      "explanation": "La concordance fournit une preuve utile sur le jeu et le périmètre testés, sans garantir tous les traitements futurs. Il faut conserver les hypothèses et élargir les essais aux cas pertinents."
+    }
+  ]
+}

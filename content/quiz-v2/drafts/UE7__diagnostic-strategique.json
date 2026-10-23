@@ -1,0 +1,407 @@
+{
+  "module": "UE7",
+  "chapter": "diagnostic-strategique",
+  "sourceHash": "c82eb9d34d5218a7a22fbc8cf06ec49c8f5d4ae8c3ef1302a292855258df5c71",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise annonce un délai de réponse de deux jours comme une force, mais ses clients attendent une réponse le jour même et les concurrents y parviennent. Quel examen s’impose ?",
+      "options": [
+        "Conserver la qualification de force parce que le délai est plus faible que l’année précédente, sans comparaison externe.",
+        "Comparer seulement le délai à l’objectif interne, sans examiner les attentes du client visé.",
+        "Apprécier ce délai relativement au besoin et aux concurrents pertinents.",
+        "Utiliser le seul coût du service comme mesure suffisante de la supériorité du délai."
+      ],
+      "answer": 2,
+      "explanation": "Un résultat interne n’est pas une force dans l’absolu. Sa pertinence doit être appréciée par rapport aux attentes et alternatives réelles ; une valeur chiffrée ne suffit pas à prouver un atout."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une demande nouvelle favorise des services numériques. Une entreprise maîtrise déjà ces services, une autre dépend d’une offre incompatible. Quelle conclusion respecte cette différence ?",
+      "options": [
+        "Une même évolution extérieure peut constituer une possibilité pour l’une et un risque pour l’autre.",
+        "Une évolution du marché est nécessairement favorable à toutes les entreprises.",
+        "La seconde possède automatiquement les compétences de la première.",
+        "L’événement doit être classé comme une ressource interne commune aux deux."
+      ],
+      "answer": 0,
+      "explanation": "L’effet d’un changement dépend de la situation des organisations. Le diagnostic externe doit être rapproché des capacités et offres, sans attribuer à tous une conséquence identique."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans l’inventaire des ressources, une entreprise distingue un bâtiment, un stock de composants et la réputation de fiabilité de sa marque. Quelle propriété distingue directement cette dernière des deux premières ?",
+      "options": [
+        "Elle constitue une menace extérieure du seul fait qu’elle est connue des clients.",
+        "Elle correspond nécessairement au prix de vente de chaque produit.",
+        "Elle constitue un stock physique compté en unités matérielles.",
+        "Elle est une ressource immatérielle dont la valeur dépend notamment de la perception et de la confiance des clients."
+      ],
+      "answer": 3,
+      "explanation": "La réputation est un actif immatériel, contrairement au bâtiment et au stock physique. Son utilité stratégique peut être examinée, sans assimiler l’image de marque à un objet matériel, au prix de vente ou à un événement extérieur.",
+      "references": [
+        {
+          "title": "OpenStax — The internal environment and VRIO",
+          "url": "https://openstax.org/books/principles-management/pages/8-5-the-internal-environment"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une entreprise vend plus pendant une promotion exceptionnelle et affirme disposer d’un avantage durable. Quel complément faut-il examiner ?",
+      "options": [
+        "Comparer seulement le volume promotionnel au mois précédent sans examiner le prix et les conditions particulières.",
+        "La valeur pour les clients, la comparaison concurrentielle et la persistance des conditions de performance.",
+        "Utiliser la durée d’affichage de la promotion comme mesure de la durée future de l’avantage.",
+        "Assimiler les ventes obtenues sous remise exceptionnelle à une préférence durable au tarif normal."
+      ],
+      "answer": 1,
+      "explanation": "Une performance ponctuelle ne suffit pas à établir la durabilité. Il faut comprendre ce qui apporte une valeur aux clients et si cet écart peut se maintenir face aux alternatives."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une ressource apporte de la valeur aux clients, mais tous les concurrents pertinents la possèdent et l’utilisent aussi bien. Dans le raisonnement VRIO, pourquoi ce seul atout ne suffit-il pas à établir une supériorité relative ?",
+      "options": [
+        "La ressource perd toute utilité dès qu’elle est largement disponible.",
+        "Son caractère répandu prouve qu’elle est impossible à imiter.",
+        "Elle peut être utile sans être rare ; elle peut soutenir la parité plutôt qu’un avantage distinctif.",
+        "L’usage commun prouve que l’entreprise possède déjà une exclusivité durable."
+      ],
+      "answer": 2,
+      "explanation": "VRIO distingue valeur et rareté. Une ressource utile commune peut être nécessaire pour rester au niveau du marché sans différencier l’entreprise. Son utilité ne disparaît pas, mais elle ne démontre pas à elle seule une supériorité.",
+      "references": [
+        {
+          "title": "OpenStax — The internal environment and VRIO",
+          "url": "https://openstax.org/books/principles-management/pages/8-5-the-internal-environment"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le prix du marché d’un intrant augmente, tandis que l’entreprise identifie en interne une consommation excessive de cet intrant. Comment organiser le diagnostic ?",
+      "options": [
+        "Distinguer l’évolution externe du prix et la faiblesse interne de consommation.",
+        "Ranger les deux faits uniquement parmi les compétences.",
+        "Attribuer nécessairement le prix de marché au seul responsable d’atelier.",
+        "Considérer que le fait extérieur empêche d’examiner tout rendement interne."
+      ],
+      "answer": 0,
+      "explanation": "Les facteurs peuvent être liés mais ne relèvent pas du même niveau. Les séparer permet d’envisager des réponses adaptées sans confondre une condition de marché et un processus maîtrisable par l’organisation."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une équipe obtient un résultat fiable grâce à la combinaison d’expérience, de méthodes et d’outils. Que décrit cette capacité collective ?",
+      "options": [
+        "La valeur du logiciel isolé, indépendamment de l’expérience et des méthodes qui permettent le résultat.",
+        "La seule disponibilité de moyens physiques, sans leur combinaison dans le travail.",
+        "La seule évolution favorable du marché, indépendamment des pratiques de l’équipe.",
+        "Une compétence qui mobilise plusieurs ressources et savoir-faire."
+      ],
+      "answer": 3,
+      "explanation": "La compétence porte sur la capacité à agir, pas seulement sur la détention d’un objet. Le résultat dépend ici d’une combinaison et de son usage, qu’il faut observer et documenter."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un service ajoute une fonction coûteuse que ses clients visés n’utilisent pas, tandis que les concurrents satisfont déjà leur besoin principal. Quelle analyse est nécessaire pour qualifier cette fonction d’avantage concurrentiel ?",
+      "options": [
+        "Assimiler le surcoût technique à un supplément de valeur client sans examiner son usage.",
+        "Établir sa valeur pertinente pour la clientèle et la différence utile face aux offres concurrentes.",
+        "Déduire son exclusivité durable du seul montant de l’investissement réalisé.",
+        "Comparer seulement le nombre total de fonctions sans leur importance pour les clients."
+      ],
+      "answer": 1,
+      "explanation": "Le surcoût et la complexité ne mesurent pas directement la valeur perçue. L’avantage demande une différence utile pour les clients face aux alternatives, sans que le nombre de fonctions ou la dépense le démontre."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une ressource était adaptée à l’offre historique, mais les besoins des clients évoluent fortement. Quelle réévaluation est nécessaire ?",
+      "options": [
+        "Conserver l’appréciation historique de force parce que la ressource reste détenue.",
+        "Utiliser le coût d’acquisition comme mesure de sa pertinence pour les nouveaux besoins.",
+        "Sa pertinence actuelle au regard de la nouvelle demande et des moyens concurrents.",
+        "Appliquer le taux d’amortissement comptable comme mesure suffisante de sa valeur pour les clients."
+      ],
+      "answer": 2,
+      "explanation": "Une force est située dans des conditions. Les changements peuvent modifier la valeur des ressources ; il faut réexaminer leur contribution sans conclure automatiquement à leur permanence ou à leur obsolescence totale."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un diagnostic présente une menace comme un échec certain, alors que son occurrence et son impact restent incertains. Quelle correction est nécessaire ?",
+      "options": [
+        "Distinguer le risque identifié de sa réalisation et analyser les conditions d’exposition.",
+        "Présenter le scénario le plus défavorable comme résultat déjà certain sans indication de probabilité.",
+        "Retenir la seule date possible de l’événement sans examiner ses conséquences pour l’entreprise.",
+        "Remplacer l’analyse d’exposition par la fréquence passée, sans vérifier si les conditions ont changé."
+      ],
+      "answer": 0,
+      "explanation": "Le diagnostic peut identifier des risques sans annoncer leur certitude. Il doit préciser les informations et conditions disponibles pour orienter la préparation, sans transformer une possibilité en résultat démontré."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un savoir-faire essentiel n’est maîtrisé que par une personne dont le départ est prévu. Pourquoi la simple mention « compétence détenue » est-elle insuffisante pour le futur ?",
+      "options": [
+        "Conserver la compétence dans le diagnostic futur sur la seule base du contrat encore présent aujourd’hui.",
+        "Assimiler la documentation du poste à la capacité déjà démontrée d’un remplaçant.",
+        "Retenir le nombre total de salariés comme preuve de la transmission de ce savoir-faire particulier.",
+        "La disponibilité et la transmission de la capacité doivent être examinées."
+      ],
+      "answer": 3,
+      "explanation": "Le diagnostic doit considérer les conditions de mobilisation des compétences. Une capacité dépendante d’une personne peut devenir fragile ; la qualifier d’atout ne démontre pas sa disponibilité future."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une entreprise compare sa qualité premium à celle d’offres d’entrée de gamme visant un autre public. Quel préalable améliore la comparaison concurrentielle ?",
+      "options": [
+        "Retenir l’offre la moins élaborée disponible comme unique référence, même si les clients visés ne l’envisagent pas.",
+        "Identifier les alternatives et besoins pertinents pour la clientèle réellement visée.",
+        "Comparer uniquement les coûts de fabrication sans examiner les usages et niveaux de service attendus.",
+        "Classer toutes les offres sur leur seul nombre de fonctionnalités sans tenir compte du public visé."
+      ],
+      "answer": 1,
+      "explanation": "La pertinence du référentiel compte dans l’évaluation d’un avantage. Il faut comparer des offres qui constituent des alternatives pour les clients considérés, sans sélectionner un étalon seulement favorable au diagnostic."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une équipe possède une découverte utile, rare et difficile à imiter. Pourtant, l’entreprise n’a défini ni responsabilités de commercialisation ni moyens pour exploiter cette découverte. Dans VRIO, quelle dimension reste principalement à examiner ?",
+      "options": [
+        "La valeur pour la clientèle visée.",
+        "La rareté de la découverte face aux concurrents.",
+        "L’organisation permettant de mobiliser et de capter la valeur de cette ressource.",
+        "La difficulté de reproduction ou d’imitation de la découverte."
+      ],
+      "answer": 2,
+      "explanation": "Une ressource peut avoir un potentiel sans que l’organisation soit prête à l’exploiter. La dimension organisation de VRIO porte sur les structures, systèmes et moyens cohérents pour mobiliser ce potentiel ; la rareté et l’imitation ne suffisent pas seules.",
+      "references": [
+        {
+          "title": "OpenStax — The internal environment and VRIO",
+          "url": "https://openstax.org/books/principles-management/pages/8-5-the-internal-environment"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise vend des voyages professionnels. Des clients remplacent certains déplacements par la visioconférence, qui répond au besoin de réunion autrement. Dans les cinq forces de Porter, quelle pression est directement décrite ?",
+      "options": [
+        "La menace de produits ou services de substitution.",
+        "La seule rivalité entre deux agences vendant le même voyage.",
+        "Le pouvoir d’un fournisseur unique de chambres d’hôtel.",
+        "La seule entrée d’une nouvelle agence de voyage identique sur le même marché."
+      ],
+      "answer": 0,
+      "explanation": "Un substitut répond au même besoin fondamental par un autre moyen. La visioconférence peut remplacer un déplacement ; elle se distingue ici d’un concurrent offrant le même service de voyage ou d’un fournisseur du secteur.",
+      "references": [
+        {
+          "title": "Harvard Business School ISC — The Five Forces",
+          "url": "https://www.isc.hbs.edu/strategy/business-strategy/Pages/the-five-forces.aspx"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une entreprise ne se contente pas de bien exécuter son activité actuelle : elle repère une rupture technologique, apprend de nouveaux savoir-faire puis reconfigure ses moyens pour une nouvelle offre. Quel type de capacité décrit cette séquence ?",
+      "options": [
+        "La seule capacité opérationnelle à répéter sans modification les routines actuelles.",
+        "Une accumulation de ressources physiques indépendante de tout apprentissage.",
+        "Une simple hausse du nombre de machines à organisation inchangée.",
+        "Une capacité dynamique de détection, mobilisation et reconfiguration face au changement."
+      ],
+      "answer": 3,
+      "explanation": "La capacité décrite transforme les ressources et compétences en réponse à une évolution, au-delà de la bonne exécution des routines existantes. Le raisonnement des capacités dynamiques relie détection des changements, engagement et reconfiguration.",
+      "references": [
+        {
+          "title": "David Teece — Explicating dynamic capabilities",
+          "url": "https://escholarship.org/uc/item/2k86c3mf"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un concurrent reproduit rapidement la caractéristique qui avait différencié une offre. Quelle question faut-il rouvrir ?",
+      "options": [
+        "Retenir l’ancien écart comme exclusivité permanente parce que l’entreprise a été la première à l’offrir.",
+        "La différence utile et sa durabilité face à l’évolution des alternatives.",
+        "Comparer seulement le montant investi avant l’imitation, sans vérifier ce que les clients peuvent désormais obtenir ailleurs.",
+        "Déduire l’absence de concurrence du seul maintien du même nom commercial."
+      ],
+      "answer": 1,
+      "explanation": "L’avantage se juge relativement aux concurrents et peut évoluer. Une bonne performance initiale n’établit pas sa permanence ; il faut réexaminer ce qui demeure distinct et pertinent pour les clients."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un savoir-faire repose sur des relations de confiance, une histoire collective et des routines dont les concurrents ne comprennent pas exactement les effets combinés. Quel obstacle à l’imitation faut-il examiner ?",
+      "options": [
+        "Une protection juridique fondée sur des brevets exclusifs.",
+        "Un coût de copie élevé tenant principalement au prix des équipements matériels.",
+        "La complexité sociale et la difficulté à identifier les combinaisons réellement créatrices de performance.",
+        "Une qualification standardisée accessible à tous par la même formation."
+      ],
+      "answer": 2,
+      "explanation": "Des résultats visibles ne révèlent pas nécessairement comment des relations et routines se combinent. La complexité sociale et l’ambiguïté sur les causes peuvent rendre la reproduction difficile ; cela demande une analyse, sans garantir une protection absolue.",
+      "references": [
+        {
+          "title": "OpenStax — The internal environment and VRIO",
+          "url": "https://openstax.org/books/principles-management/pages/8-5-the-internal-environment"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Trois grands clients concentrent presque toutes les ventes d’un secteur. Ils peuvent changer facilement de fournisseur et mettent régulièrement les vendeurs en concurrence sur des offres peu différenciées. Quelle force ce cas invite-t-il principalement à examiner ?",
+      "options": [
+        "Le pouvoir de négociation des acheteurs.",
+        "Le pouvoir de négociation des fournisseurs d’intrants.",
+        "La menace des produits ou services de substitution.",
+        "La menace d’entrée de nouveaux concurrents."
+      ],
+      "answer": 0,
+      "explanation": "La concentration des acheteurs, les alternatives disponibles et le faible coût de changement renforcent leur possibilité de négocier prix ou services. Les faits portent directement sur leur pouvoir, non sur la concentration des fournisseurs ou une technologie de substitution.",
+      "references": [
+        {
+          "title": "Harvard Business School ISC — The Five Forces",
+          "url": "https://www.isc.hbs.edu/strategy/business-strategy/Pages/the-five-forces.aspx"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans la chaîne de valeur de Porter, une équipe recrute et forme les salariés utilisés dans plusieurs activités. Quelle place occupe directement cette fonction de gestion des ressources humaines ?",
+      "options": [
+        "La logistique aval des produits livrés, du seul fait que certains salariés préparent des expéditions.",
+        "La commercialisation de chaque unité, du seul fait que la formation peut améliorer les ventes.",
+        "La transformation matérielle des composants en produit fini.",
+        "Une activité de soutien qui contribue au fonctionnement de plusieurs activités principales."
+      ],
+      "answer": 3,
+      "explanation": "La gestion des ressources humaines soutient les activités par le recrutement et la formation. Son effet sur opérations ou ventes ne transforme pas cette fonction en logistique aval, en fabrication ou en acte de commercialisation.",
+      "references": [
+        {
+          "title": "Harvard Business School — Value Chain Analysis",
+          "url": "https://online.hbs.edu/blog/post/what-is-value-chain-analysis"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Dans ce modèle simplifié, la valeur totale créée est le consentement maximal à payer du client moins le montant minimal accepté par l’ensemble des apporteurs de ressources. Le premier vaut100€, le second60€ ; le prix payé par le client est80€. Quelle valeur totale est créée, distincte de son partage par le prix ?",
+      "options": [
+        "20 €.",
+        "40 €.",
+        "80 €.",
+        "100 €."
+      ],
+      "answer": 1,
+      "explanation": "La valeur totale définie vaut100−60=40€. Le prix80€ partage cet écart :20€ entre consentement et prix pour le client et20€ entre prix et seuil des ressources. Le prix de transaction ne se confond donc pas avec la valeur totale créée.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "value": 60
+            }
+          ]
+        },
+        "expected": 40,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "Harvard Business School — Value-based strategy and value stick",
+          "url": "https://online.hbs.edu/documents/how-to-formulate-successful-business-strategy.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le meilleur trimestre d’une entreprise est comparé au pire trimestre d’un rival pour annoncer une supériorité stable. Quel biais de comparaison faut-il corriger ?",
+      "options": [
+        "Comparer seulement les valeurs maximales publiées par chacun, sans aligner leurs saisons.",
+        "Convertir les deux résultats en indices base100, puis les comparer sans revoir les périodes retenues.",
+        "Le choix de périodes non comparables peut fabriquer un écart trompeur.",
+        "Remplacer les périodes par leurs seules dates de publication, même si les observations restent décalées."
+      ],
+      "answer": 2,
+      "explanation": "Les conditions de comparaison doivent être cohérentes. Sélectionner des périodes favorables à l’un et défavorables à l’autre ne démontre pas un avantage persistant dans des situations comparables."
+    },
+    {
+      "id": "q22",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un nouveau canal commercial apparaît. Le diagnostic le décrit comme opportunité puis recommande immédiatement un investissement sans examiner les autres dimensions. Quel passage manque ?",
+      "options": [
+        "Relier cette possibilité aux compétences, ressources, risques et objectifs avant la décision.",
+        "Traiter la qualification d’opportunité comme preuve suffisante de rentabilité du projet.",
+        "Déduire le budget à investir de la seule croissance du canal, sans examiner les moyens nécessaires.",
+        "Choisir le canal parce qu’il est nouveau, sans vérifier son adéquation à la clientèle visée."
+      ],
+      "answer": 0,
+      "explanation": "Le diagnostic éclaire une décision mais ne la remplace pas par une étiquette. La possibilité externe doit être mise en relation avec la capacité d’action et les conditions du projet pour argumenter l’investissement."
+    }
+  ]
+}

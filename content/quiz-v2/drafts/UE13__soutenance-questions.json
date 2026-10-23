@@ -1,0 +1,361 @@
+{
+  "module": "UE13",
+  "chapter": "soutenance-questions",
+  "sourceHash": "01a733635a0638837b7eeb93ff2efd570a574478b766f24fb7ae61f740b070d1",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le jury pose deux questions précises : quel risque le contrôle vise-t-il, puis quel coût de mise en œuvre a été mesuré ? Le candidat connaît le risque mais n’a pas mesuré ce coût. Quel début de réponse traite les deux volets ?",
+      "options": [
+        "Le contrôle vise les paiements dupliqués ; son coût de mise en œuvre n’a pas été mesuré dans mon étude.",
+        "Le contrôle vise les paiements dupliqués ; cette réponse suffit également à renseigner le coût demandé.",
+        "Le coût n’ayant pas été mesuré, je ne peux répondre à aucun des deux points.",
+        "Le contrôle a été mis en place ; je présenterai son fonctionnement sans distinguer le risque et le coût."
+      ],
+      "answer": 0,
+      "explanation": "Une question à plusieurs volets demande de rendre visibles les réponses disponibles et les limites propres à chacun. Connaître le risque ne renseigne pas le coût, mais l’absence de coût n’empêche pas de répondre au premier volet."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un graphique cumulé, dont le cumul commence au 1er janvier, affiche 100 dossiers fin janvier, 200 fin février et 300 fin mars. Le jury demande si mars a traité trois fois plus de dossiers que janvier. Quelle réponse corrige directement cette lecture ?",
+      "options": [
+        "Oui, le dernier cumul mesure directement la production du seul mois de mars.",
+        "Non : les cumuls progressent de 100 chaque mois ; mars représente ici le même nombre de dossiers que janvier.",
+        "Non : il faut additionner les trois cumuls pour obtenir l’activité de mars.",
+        "Oui, car un total cumulé ne reprend pas les dossiers des mois précédents."
+      ],
+      "answer": 1,
+      "explanation": "Un cumul inclut les périodes précédentes. L’activité de mars se retrouve par 300−200=100, celle de janvier valant 100 si le cumul démarre alors. Il faut distinguer niveau cumulé et flux de la période avant de commenter une accélération."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La mission consistait à évaluer un outil avant tout achat. L’étude conclut que l’outil ne satisfait pas une exigence critique ; le jury demande si l’absence d’achat signifie un échec. Quelle réponse est directement justifiée ?",
+      "options": [
+        "Oui, une mission d’évaluation n’aboutit que si l’outil étudié est finalement acheté.",
+        "L’absence d’achat démontre une absence de résultat, même si l’exigence critique a été testée.",
+        "Non : identifier l’inadéquation et étayer la décision de ne pas acheter répond à l’objectif d’évaluation.",
+        "Le prix de l’outil suffit à apprécier la mission, indépendamment du résultat du test fonctionnel."
+      ],
+      "answer": 2,
+      "explanation": "La réussite se juge au regard du but confié : évaluer l’adéquation, et non obtenir à tout prix un achat. Un constat négatif étayé peut constituer un résultat utile à la décision."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le jury demande quelle différence existe entre un résultat simplement exact et un résultat reproductible. Quelle réponse précise la seconde exigence ?",
+      "options": [
+        "Il suffit d’annoncer le même nombre une seconde fois, sans conserver les données utilisées.",
+        "La reproductibilité est acquise si le résultat a été affiché dans un logiciel reconnu.",
+        "La présence d’une capture du résultat remplace la description de ses traitements.",
+        "Une autre personne doit pouvoir retrouver le résultat à partir des données, règles et conditions de calcul documentées."
+      ],
+      "answer": 3,
+      "explanation": "Un nombre peut être juste sans que le chemin qui y conduit soit vérifiable. La reproductibilité demande des entrées identifiées, des règles explicites et des conditions documentées ; répéter le nombre ou montrer sa capture ne suffit pas."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une réponse commence par cinq exemples mais n’énonce jamais la conclusion demandée. Quelle amélioration est prioritaire ?",
+      "options": [
+        "Annoncer la réponse centrale puis choisir l’exemple qui l’étaye.",
+        "Regrouper les exemples par date puis laisser au jury le soin d’en déduire la réponse commune.",
+        "Présenter un nouvel exemple plus détaillé sans expliciter le point que tous sont censés démontrer.",
+        "Citer l’annexe où figure la conclusion sans formuler celle-ci dans la réponse orale."
+      ],
+      "answer": 0,
+      "explanation": "Les exemples soutiennent une réponse ; ils ne doivent pas la rendre introuvable. Une idée centrale explicite permet au jury d’évaluer le lien avec la question."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une question porte sur un arbitrage entre délai et fiabilité. Quel début de réponse est le mieux ciblé ?",
+      "options": [
+        "J’ai retenu le délai le plus court sans examiner le risque d’écarts résiduels.",
+        "J’ai privilégié le contrôle des écarts majeurs, en expliquant le délai supplémentaire.",
+        "J’ai multiplié les vérifications en considérant leur seul nombre comme une preuve de fiabilité.",
+        "J’ai comparé les coûts des outils sans expliquer l’effet des options sur le délai et la fiabilité."
+      ],
+      "answer": 1,
+      "explanation": "La réponse doit traiter les deux critères de l’arbitrage. Une présentation générale du stage ou du document ne justifie pas le compromis choisi."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le jury demande : « Quelles sont les limites de votre contrôle ? » Quelle reformulation reste fidèle à la question sans présupposer sa réponse ?",
+      "options": [
+        "Vous confirmez donc que mon contrôle ne comporte aucune limite importante ?",
+        "Vous souhaitez que je démontre pourquoi les autres contrôles sont moins fiables ?",
+        "Souhaitez-vous que je présente les cas non couverts et les conditions qui bornent les résultats de ce contrôle ?",
+        "Vous demandez si les limites signifient que tous mes résultats doivent être abandonnés ?"
+      ],
+      "answer": 2,
+      "explanation": "Une reformulation précise les termes sans transformer la question en accord, en comparaison non demandée ou en jugement global. Les cas exclus et conditions d’application explicitent ici le sens de limites."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le candidat reformule chaque question pendant plusieurs minutes sans jamais répondre. Quel usage de la reformulation est défaillant ?",
+      "options": [
+        "Elle remplace le vocabulaire technique sans changer le périmètre de la question, puis apporte rapidement une réponse.",
+        "Elle délimite la période concernée avant d’expliquer le résultat sur cette période.",
+        "Elle vérifie le sens d’un terme réellement ambigu puis répond à ce terme.",
+        "Elle devient une stratégie d’évitement au lieu d’une clarification brève."
+      ],
+      "answer": 3,
+      "explanation": "La reformulation sert à clarifier un point ambigu. Elle ne doit pas reporter indéfiniment la réponse ou substituer un discours général au sujet posé."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "On demande le « résultat » d’une mission qui a livré un outil mais n’a pas encore mesuré son impact. Quelle clarification aide à répondre ?",
+      "options": [
+        "Distinguer le livrable obtenu et l’effet opérationnel qui n’a pas été mesuré.",
+        "Interpréter la livraison comme une mesure du gain opérationnel, sans observation de l’usage.",
+        "Présenter le nombre de fonctions livrées comme une mesure du gain de temps chez les utilisateurs.",
+        "Utiliser la validation technique du livrable comme preuve de sa rentabilité financière."
+      ],
+      "answer": 0,
+      "explanation": "Le mot résultat peut désigner une production ou un effet. Cette distinction permet de décrire le travail réellement livré sans inventer une amélioration mesurée."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La question utilise un sigle que le candidat ne connaît pas dans ce contexte. Quelle réaction est rigoureuse ?",
+      "options": [
+        "Utiliser la signification connue dans une autre matière sans vérifier qu’elle correspond au contexte de la question.",
+        "Demander brièvement ce que le sigle désigne avant de répondre.",
+        "Interpréter le sigle d’après la rubrique de la diapositive voisine, sans confirmer le terme demandé.",
+        "Retenir le sens le plus proche du logiciel étudié et construire la réponse sur cette supposition."
+      ],
+      "answer": 1,
+      "explanation": "Clarifier le terme évite de répondre à une autre question. Une signification supposée ne constitue pas une base fiable pour l’argumentation."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après la présentation de la méthode, le jury demande : « Avec votre recul, que changeriez-vous si vous recommenciez ? » Que vise cette demande ?",
+      "options": [
+        "Une nouvelle description chronologique du travail identique à celle de l’exposé.",
+        "La seule justification du choix initial, sans envisager d’ajustement.",
+        "Une amélioration de la démarche future fondée sur un enseignement précis de l’expérience.",
+        "Le classement des collègues selon leurs préférences pour la méthode déjà employée."
+      ],
+      "answer": 2,
+      "explanation": "La question sollicite un retour réflexif : tirer de l’expérience un ajustement concret et en expliquer la raison. Elle n’exige ni de renier tout le travail ni de le raconter à nouveau sans apprentissage."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le rapport constate, sur les dossiers étudiés, que tous les dossiers en retard étaient incomplets. Le jury demande si cela prouve que tous les dossiers incomplets étaient en retard. Quelle réponse distingue correctement les deux propositions ?",
+      "options": [
+        "Oui, puisque les deux phrases utilisent les mêmes catégories de dossier.",
+        "Oui, car une caractéristique commune aux retards suffit à prévoir le délai de chaque dossier incomplet.",
+        "Non, car cette observation démontre que les dossiers incomplets étaient tous livrés à temps.",
+        "Non : le constat n’exclut pas des dossiers incomplets traités à temps ; il ne suffit pas à établir la réciproque."
+      ],
+      "answer": 3,
+      "explanation": "Le constat donne une implication dans un sens : un retard observé s’accompagne ici d’incomplétude. Il ne dit pas que l’incomplétude entraîne chaque fois un retard. Des dossiers incomplets traités à temps sont compatibles avec le constat initial."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le candidat affirme que toute anomalie signalée par le contrôle correspond à une erreur. Le jury présente un cas signalé qui est un écart légitime documenté. Quelle révision logique est nécessaire ?",
+      "options": [
+        "Abandonner le caractère universel de l’affirmation et distinguer les signalements des erreurs confirmées.",
+        "Conserver toute anomalie comme synonyme d’erreur parce que la majorité des signalements vérifiés sont erronés.",
+        "Conclure que tous les autres signalements sont légitimes puisque ce cas l’est.",
+        "Déclarer le contrôle sans utilité sans examiner s’il aide à identifier les erreurs parmi les signalements."
+      ],
+      "answer": 0,
+      "explanation": "Un seul contre-exemple suffit à contredire une proposition portant sur tous les cas. Cela ne prouve pas que tous les signalements sont légitimes ni que le contrôle est inutile : il faut distinguer détection et qualification après examen."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une anomalie a été détectée automatiquement puis corrigée manuellement. Le candidat en déduit que la saisie manuelle est sa cause. Quel élément professionnel permettrait réellement de tester cette explication ?",
+      "options": [
+        "Le mode manuel de correction, considéré comme identique au mode de création de l’erreur.",
+        "La comparaison des valeurs et des traces aux étapes précédant la détection, pour localiser où l’écart est apparu.",
+        "Le nom du module qui a affiché l’alerte, considéré comme responsable de l’erreur signalée.",
+        "La date de correction, utilisée comme date présumée de création de l’anomalie."
+      ],
+      "answer": 1,
+      "explanation": "Le mode de détection et celui de correction ne déterminent pas la cause d’origine. Reconstituer les valeurs et transformations antérieures permet de rechercher à quelle étape l’écart est apparu, avant d’attribuer une cause."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Douze dossiers font l’objet d’un contrôle. Huit réussites sont confirmées ; les résultats des quatre autres ne sont pas encore reçus. En rapportant les seules réussites certaines aux douze dossiers, quel taux minimal est déjà établi, arrondi à deux décimales ?",
+      "options": [
+        "100 %",
+        "33,33 %",
+        "66,67 %",
+        "75 %"
+      ],
+      "answer": 2,
+      "explanation": "Les huit réussites confirmées constituent un minimum sur les douze dossiers du contrôle :8/12×100=66,67 %. Les quatre résultats inconnus peuvent encore augmenter ce taux, mais ne doivent être comptés ni comme réussites certaines ni comme échecs démontrés.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 8
+                },
+                {
+                  "value": 12
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 66.67,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour défendre une estimation, le candidat cite un expert identifié et son chiffre, mais l’expert ne décrit ni données ni méthode. Quelle limite de preuve faut-il reconnaître ?",
+      "options": [
+        "La notoriété de l’expert suffit à rendre la méthode contrôlable même lorsqu’elle n’est pas exposée.",
+        "L’identification de l’expert démontre que son estimation correspond exactement au terrain de la mission.",
+        "L’absence de méthode publiée prouve que le chiffre est faux, sans autre investigation.",
+        "L’attribution est possible, mais le calcul et son adéquation au terrain ne peuvent pas encore être vérifiés."
+      ],
+      "answer": 3,
+      "explanation": "Identifier l’auteur permet d’attribuer une estimation. Cela ne fournit pas automatiquement les données et hypothèses nécessaires pour la reproduire ou vérifier son application au cas. Cette limite ne démontre pas, à elle seule, que l’estimation est fausse."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "À service équivalent, A coûte 10000 € plus une formation estimée entre 0 et 2000 € ; B coûte 13000 € tout compris. Aucun autre coût ne varie. Quelle réponse sur le classement de coût reste valable malgré l’incertitude sur la formation ?",
+      "options": [
+        "A reste moins coûteuse dans toute la fourchette donnée, car son total maximal est 12000 €.",
+        "Il faut déclarer les coûts égaux puisque la formation de A est incertaine.",
+        "A ne peut être comparée à B tant que le montant exact de formation n’est pas connu, même avec cette borne.",
+        "B devient moins coûteuse dès que la formation de A dépasse 0 €, sans comparer les totaux."
+      ],
+      "answer": 0,
+      "explanation": "La borne haute de A vaut 12000 €, encore inférieure aux 13000 € de B. L’incertitude n’empêche donc pas ce classement dans les hypothèses données. La conclusion porte sur ces coûts, pas sur des effets ou besoins supplémentaires exclus du cas."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La recommandation dépend d’un plafond de coût fixé à 70000 €. Deux sources non réconciliées estiment le même coût à 68000 € et 72000 €, sur le même périmètre. Quelle réponse montre l’importance de cette incertitude ?",
+      "options": [
+        "La moyenne de 70000 € devient un coût observé qui permet de déclarer la conformité.",
+        "Les deux estimations conduisent à des conclusions différentes face au plafond ; leur origine doit être vérifiée avant de trancher.",
+        "Le plus petit montant doit être retenu puisqu’il permet de respecter la contrainte.",
+        "La différence de 4000 € ne peut pas influencer une décision fondée sur un seuil de coût."
+      ],
+      "answer": 1,
+      "explanation": "L’une des estimations respecte le plafond et l’autre le dépasse. Le désaccord est donc décisif pour la recommandation. Il faut vérifier sources et hypothèses ; une moyenne arithmétique ne transforme pas les deux estimations en coût effectivement constaté."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une question révèle une hypothèse non vérifiée dans le rapport. Quelle réaction améliore la défense du travail ?",
+      "options": [
+        "Conserver la conclusion avec le même niveau de certitude tant que personne n’a démontré l’hypothèse fausse.",
+        "Utiliser le résultat du modèle comme preuve que son hypothèse de départ est vérifiée.",
+        "La distinguer du constat et expliquer son influence possible sur la conclusion.",
+        "Présenter l’hypothèse comme un choix de rédaction sans effet sur la portée des calculs qui en dépendent."
+      ],
+      "answer": 2,
+      "explanation": "Une hypothèse doit rester identifiable et son influence discutée. La transparence sur cette limite permet de mieux évaluer le résultat établi."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une donnée manque pour comparer le coût de deux solutions. Que peut conclure le candidat ?",
+      "options": [
+        "Classer les solutions d’après leurs seuls prix affichés, même si le coût manquant concerne leur adaptation nécessaire.",
+        "Donner la préférence globale à la solution la mieux appréciée en considérant cette préférence comme une comparaison financière.",
+        "Présenter une égalité de coûts parce qu’aucune différence complète n’est actuellement chiffrée.",
+        "Comparer les dimensions documentées et réserver le classement sur le coût."
+      ],
+      "answer": 3,
+      "explanation": "Une comparaison partielle peut être utile si son champ est explicite. Elle ne permet pas de fixer un classement sur une dimension non documentée."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une autre équipe a peut-être testé l’outil, mais le candidat n’a reçu aucun résultat. Quelle formulation est exacte ?",
+      "options": [
+        "Je ne dispose pas de leurs résultats ; je vérifierais le test et son périmètre avant de les utiliser.",
+        "Je peux présenter leur participation annoncée comme une confirmation de mon propre résultat sans connaître leurs observations.",
+        "La compétence de cette équipe suffit à considérer son test supposé comme concluant sur le même périmètre.",
+        "L’absence de résultats reçus permet de conclure que les observations disponibles sont les seules qui existent."
+      ],
+      "answer": 0,
+      "explanation": "Il faut distinguer absence d’information et absence d’événement. Des résultats supposés ne peuvent pas être mobilisés comme une preuve consultée."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le candidat répond avec assurance mais ne peut identifier aucune source à un chiffre important. Que doit-il faire ?",
+      "options": [
+        "Attribuer le montant au tableau final sans rechercher les données qui l’ont produit.",
+        "Retrouver et vérifier la source, ou retirer le chiffre non étayé de son argument.",
+        "Remplacer le montant par une valeur voisine jugée plus prudente sans documenter davantage son origine.",
+        "Conserver le montant comme une estimation personnelle sans expliquer sa méthode alors qu’il sert de preuve décisive."
+      ],
+      "answer": 1,
+      "explanation": "La confiance dans l’énoncé ne remplace pas la traçabilité. Un chiffre décisif doit être soutenu par une source identifiable et effectivement contrôlée."
+    }
+  ]
+}

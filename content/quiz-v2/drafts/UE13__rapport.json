@@ -1,0 +1,338 @@
+{
+  "module": "UE13",
+  "chapter": "rapport",
+  "sourceHash": "2bf54915801c171528082c4e4151a284ebbfa8ef3923ab1acaa2c0df2d1544e5",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle différence distingue un thème d’une question directrice exploitable ?",
+      "options": [
+        "La question délimite ce que le rapport cherche à comprendre ou à expliquer.",
+        "La question désigne les documents disponibles ; le thème indique le résultat à démontrer.",
+        "La question est la liste des étapes du stage ; le thème fournit leur ordre de présentation.",
+        "La question énumère les recommandations ; le thème expose les raisons qui les justifient."
+      ],
+      "answer": 0,
+      "explanation": "Un thème indique un domaine, tandis qu’une question oriente la recherche et la démonstration. Elle ne doit pas présupposer le résultat du travail."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un étudiant possède la liste des écarts de rapprochement bancaire d’une agence sur trois mois et les traitements apportés. Il ne dispose ni de chronométrages, ni de coûts, ni de comparaison entre agences. Quelle question peut-il examiner directement ?",
+      "options": [
+        "Quel gain de temps chaque traitement procure-t-il par rapport à la procédure antérieure ?",
+        "Quels écarts de rapprochement sont observés dans cette agence et comment sont-ils traités ?",
+        "Quelle méthode offre le coût de traitement le plus faible par écart dans cette agence ?",
+        "La procédure de cette agence réduit-elle plus les écarts que celle d’une autre agence ?"
+      ],
+      "answer": 1,
+      "explanation": "La liste des écarts et leurs traitements permet de les décrire et de les analyser sur ce terrain. Elle ne mesure pas les durées, les coûts ni les performances d’autres agences nécessaires aux autres questions."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La question annoncée suppose de comparer deux services, mais l’accès au second est refusé. Quelle adaptation est rigoureuse ?",
+      "options": [
+        "Remplacer les résultats du second service par un scénario théorique tout en maintenant une conclusion comparative sur les deux services.",
+        "Comparer deux périodes du premier service en les interprétant comme les deux services initialement prévus.",
+        "Réviser le périmètre ou chercher des données autorisées compatibles avec la comparaison.",
+        "Conserver la comparaison en supposant les pratiques du second service identiques à celles du premier."
+      ],
+      "answer": 2,
+      "explanation": "La question doit rester compatible avec l’accès réel aux données. Une limite de terrain impose un ajustement explicite, pas l’invention d’une seconde observation."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un titre porte sur le traitement des réclamations, mais la question directrice ne traite que de facturation. Quel contrôle faut-il faire ?",
+      "options": [
+        "Modifier seulement le titre en conservant une conclusion qui porte encore sur les réclamations non étudiées.",
+        "Garder le titre général et utiliser la facturation comme preuve suffisante de tous les types de réclamations.",
+        "Présenter la question de facturation comme une simple sous-rubrique sans revoir l’objet annoncé du rapport.",
+        "Vérifier l’alignement entre le titre, la question et l’analyse effectivement conduite."
+      ],
+      "answer": 3,
+      "explanation": "Le lecteur doit comprendre le même objet dans le titre, la question et la réponse. Une discordance peut signaler un périmètre mal défini."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La question du rapport est « Pourquoi l’outil a-t-il forcément amélioré le contrôle ? », avant tout examen des résultats. Quel défaut présente-t-elle ?",
+      "options": [
+        "Elle présuppose une amélioration et ferme l’examen des résultats contraires.",
+        "Elle est trop ouverte parce qu’elle ne fixe pas l’ampleur de l’amélioration à confirmer.",
+        "Elle décrit seulement une procédure, alors que sa formulation devrait poser une relation de cause à effet.",
+        "Elle est incomplète parce qu’une question d’évaluation doit déjà nommer l’outil de remplacement recommandé."
+      ],
+      "answer": 0,
+      "explanation": "La formulation contient déjà le résultat attendu. Une question ouverte à l’examen doit permettre de constater une amélioration, une absence d’effet ou des limites."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un projet de rapport réunit « comment fiabiliser la facturation ? » et « quel effet du télétravail sur la fidélisation des salariés ? ». Les données existent pour les deux études, mais aucun mécanisme ni enjeu commun n’est identifié. Quel problème de cadrage demeure ?",
+      "options": [
+        "Les deux questions deviennent une seule problématique dès lors que les données proviennent de la même entreprise.",
+        "La disponibilité des données ne suffit pas : il faut justifier un problème commun ou choisir un objet cohérent.",
+        "Une période d’observation identique suffit à relier ces deux questions dans une démonstration unique.",
+        "Une partie par question permet de construire le lien analytique sans devoir préciser ce qui les relie."
+      ],
+      "answer": 1,
+      "explanation": "Une question directrice donne une unité au raisonnement. Deux études faisables ne forment pas nécessairement un même problème. Un même lieu ou une même période ne remplace pas la justification du lien entre les objets."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que doit apporter chaque grande partie d’un plan argumenté ?",
+      "options": [
+        "Une catégorie de documents sans explication de leur utilité.",
+        "Un volume identique de texte indépendamment du raisonnement.",
+        "Un élément de réponse à la question directrice.",
+        "Un mois de stage différent, même sans lien avec l’analyse."
+      ],
+      "answer": 2,
+      "explanation": "Un plan organise une démonstration. La chronologie ou la répartition documentaire ne constitue un fil conducteur que si elle sert la réponse à la question."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La question porte sur les causes d’écarts et leur traitement. Quel plan suit le mieux le raisonnement ?",
+      "options": [
+        "Présenter la procédure attendue, détailler les fonctions du logiciel, puis classer les écarts sans en rechercher les causes.",
+        "Présenter les dossiers par mois et décrire les actions dans cet ordre, sans rapprocher causes et réponses.",
+        "Classer les écarts par montant, présenter les charges du service, puis recommander un outil sans évaluer les traitements.",
+        "Caractériser les écarts, analyser leurs causes, évaluer les réponses apportées."
+      ],
+      "answer": 3,
+      "explanation": "Le plan doit faire progresser l’analyse du problème vers les réponses observées. Les listes ou le calendrier seuls ne construisent pas cette démonstration."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux parties reprennent les mêmes observations et la même conclusion sous des intitulés différents. Quelle correction est prioritaire ?",
+      "options": [
+        "Clarifier la fonction de chaque partie et supprimer la répétition de raisonnement.",
+        "Conserver les mêmes preuves et conclusions dans les deux parties, en différenciant seulement leurs titres.",
+        "Raccourcir les deux passages à longueur égale sans modifier le rôle qu’ils jouent dans la démonstration.",
+        "Déplacer les données communes en annexe tout en conservant deux conclusions présentées comme des résultats distincts."
+      ],
+      "answer": 0,
+      "explanation": "Deux intitulés ne créent pas deux arguments. Il faut distinguer les étapes du raisonnement et éviter de compter plusieurs fois la même preuve."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau de résultats apparaît avant toute explication de sa population et de ses critères. Que doit prévoir le plan ?",
+      "options": [
+        "Présumer que le lecteur connaît déjà la base et les conventions.",
+        "Présenter les choix de mesure nécessaires à la compréhension des résultats.",
+        "Repousser toute définition après la conclusion sans renvoi.",
+        "Remplacer les critères par une appréciation générale de réussite."
+      ],
+      "answer": 1,
+      "explanation": "Les résultats doivent être lisibles à partir de leur méthode de construction. Les choix de mesure pertinents ont donc leur place avant l’interprétation ou à proximité explicite."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La conclusion répond à une question nouvelle qui n’a été examinée dans aucune partie. Quel problème cela révèle-t-il ?",
+      "options": [
+        "Une conclusion peut élargir son objet dès lors que sa nouvelle réponse reste compatible avec l’introduction.",
+        "Le problème se réduit à l’absence d’une référence bibliographique dans la conclusion.",
+        "Une rupture entre la démonstration et la réponse finale.",
+        "La nouvelle réponse est étayée par sa cohérence avec les recommandations, même sans analyse dans le corps."
+      ],
+      "answer": 2,
+      "explanation": "La conclusion doit découler du travail présenté. Introduire une réponse non étayée demande de revoir le périmètre ou d’ajouter une analyse effective, pas seulement une affirmation finale."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une partie établit les causes d’écarts et la suivante présente une nouvelle procédure. Que doit expliciter la transition ?",
+      "options": [
+        "Que la procédure reprend les pratiques habituelles du service, sans relier ce choix aux causes identifiées.",
+        "Que le volume de la nouvelle procédure est suffisant pour répondre à la gravité du problème.",
+        "Que la décision de rédiger une procédure permet de tenir les causes initiales pour résolues.",
+        "Comment les causes observées justifient les choix de la procédure proposée."
+      ],
+      "answer": 3,
+      "explanation": "La transition relie diagnostic et réponse proposée. Le lecteur doit comprendre pourquoi les choix répondent aux causes établies, plutôt que voir deux blocs simplement juxtaposés."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une idée issue d’un ouvrage est reformulée avec des mots personnels. Que faut-il conserver ?",
+      "options": [
+        "Une attribution permettant d’identifier la source de l’idée.",
+        "Des guillemets autour de la reformulation, sans indication de sa source.",
+        "Un renvoi à une annexe générale qui ne permet pas de retrouver l’idée empruntée.",
+        "Une attribution à soi-même puisque les mots employés ont été modifiés."
+      ],
+      "answer": 0,
+      "explanation": "La reformulation modifie la rédaction, pas nécessairement l’origine de l’idée. La référence doit rester pertinente et correspondre au travail réellement consulté."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le rapport reprend exactement une phrase d’un auteur. Quelle présentation distingue clairement cet emprunt ?",
+      "options": [
+        "Une bibliographie sans lien identifiable avec cette phrase.",
+        "Une citation identifiée et attribuée à la source pertinente.",
+        "La phrase intégrée sans indication dans une analyse présentée comme personnelle.",
+        "Le seul titre général du thème dans l’introduction."
+      ],
+      "answer": 1,
+      "explanation": "Une citation doit être reconnaissable comme reprise de formulation et reliée à sa source. Une bibliographie générale ne suffit pas à distinguer le passage emprunté."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une source soutient que certains contrôles peuvent être automatisés. Le rapport lui attribue « tous les contrôles doivent être supprimés ». Que faut-il corriger ?",
+      "options": [
+        "Conserver le texte attribué en ajoutant que sa formulation est plus affirmative que celle de l’auteur.",
+        "Limiter la correction au mot « tous », en conservant l’équivalence entre automatisation et suppression.",
+        "Rétablir la portée limitée à certains contrôles et distinguer leur automatisation de leur suppression.",
+        "Conserver l’attribution et présenter la suppression comme la conséquence implicite que l’auteur aurait nécessairement tirée."
+      ],
+      "answer": 2,
+      "explanation": "L’emprunt a été déformé sur deux points : certains devient tous, et automatiser devient supprimer. Il faut corriger le sens attribué à la source, même si la référence bibliographique est exacte et si le rapport souhaite ensuite discuter une interprétation personnelle."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une idée est connue par un article qui cite un ouvrage non consulté. Quelle démarche favorise la traçabilité ?",
+      "options": [
+        "Affirmer avoir consulté l’ouvrage original pour raccourcir la référence.",
+        "Attribuer l’idée à soi-même parce que l’ouvrage n’a pas été lu.",
+        "Remplacer la référence par un titre supposé de mémoire.",
+        "Identifier la source effectivement lue et vérifier l’original si l’attribution directe est nécessaire."
+      ],
+      "answer": 3,
+      "explanation": "Le rapport doit distinguer la source consultée et l’origine rapportée d’une idée. Il ne faut pas fabriquer une lecture directe ni une référence pour donner une apparence de solidité."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une référence renvoie à l’accueil d’un organisme, sans document ni passage identifiable. Quelle amélioration est la plus utile ?",
+      "options": [
+        "Préciser le document et l’élément qui soutiennent effectivement l’affirmation.",
+        "Ajouter plusieurs liens généraux sans vérifier leur contenu.",
+        "Supprimer l’affirmation de la bibliographie mais la laisser sans preuve dans le texte.",
+        "Remplacer la référence par le nom d’un organisme plus connu."
+      ],
+      "answer": 0,
+      "explanation": "La référence sert à retrouver et contrôler l’information. La notoriété d’un organisme ou la multiplication des liens ne remplace pas une source pertinente et identifiable."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel rôle doit jouer une annexe dans un rapport ?",
+      "options": [
+        "Démontrer une conclusion par sa seule présence dans le dossier.",
+        "Compléter un argument auquel le texte renvoie explicitement.",
+        "Remplacer toute explication de la méthode dans le corps du rapport.",
+        "Augmenter le volume même si aucun passage ne l’utilise."
+      ],
+      "answer": 1,
+      "explanation": "Une annexe est utile si le lecteur comprend ce qu’elle apporte et où elle intervient dans le raisonnement. Elle ne se substitue pas à l’explication principale."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau annexe justifie le calcul d’un taux d’erreur. Quel renvoi permet au lecteur de l’utiliser ?",
+      "options": [
+        "Insérer le tableau sans le mentionner dans l’analyse.",
+        "Présenter le taux comme évident pour éviter tout renvoi.",
+        "Indiquer l’annexe et les lignes ou colonnes utiles au calcul expliqué.",
+        "Écrire seulement « voir les documents » sans identifier le tableau."
+      ],
+      "answer": 2,
+      "explanation": "Un renvoi précis relie la preuve et le calcul. Le lecteur doit pouvoir identifier les données pertinentes sans reconstruire seul l’ensemble du dossier."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une annexe contient des données client non autorisées à la diffusion. Le rapport en a besoin pour illustrer une méthode. Quelle démarche est appropriée ?",
+      "options": [
+        "Conserver l’extrait nominatif en limitant son accès au jury, sans vérifier si l’autorisation initiale couvre ce destinataire.",
+        "Masquer les noms puis diffuser la pièce sans examiner si les autres détails permettent encore d’identifier les clients.",
+        "Joindre uniquement les pages utiles en considérant que leur intérêt analytique suffit à autoriser leur diffusion.",
+        "Rechercher une présentation autorisée et protectrice qui conserve l’utilité méthodologique."
+      ],
+      "answer": 3,
+      "explanation": "Le besoin analytique ne dispense pas de protéger les données et de vérifier l’autorisation. Un exemple adapté ou agrégé peut parfois remplir l’objectif sans exposer la pièce brute."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une annexe essentielle utilise des codes internes inconnus du lecteur. Que faut-il ajouter ?",
+      "options": [
+        "Une légende ou une explication des codes nécessaires à l’argument.",
+        "Le nom du système qui produit ces codes, utilisé comme explication de leur signification dans le tableau.",
+        "Le dictionnaire d’un autre logiciel, en supposant que les mêmes abréviations y ont le même sens.",
+        "La fréquence de chaque code, utilisée à la place de sa définition pour interpréter les catégories."
+      ],
+      "answer": 0,
+      "explanation": "Une preuve devient difficilement exploitable si ses conventions sont opaques. Définir les codes utiles rend le document contrôlable sans en reproduire tous les détails."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le corps du rapport affirme avoir analysé cent dossiers, mais l’annexe n’en documente que vingt et aucune autre source n’est indiquée. Quel contrôle s’impose ?",
+      "options": [
+        "Ramener immédiatement l’effectif annoncé à vingt sans vérifier si l’annexe est un extrait ou la totalité des données.",
+        "Rapprocher les effectifs annoncés des données réellement analysées et expliquer l’écart.",
+        "Conserver cent en estimant que les autres dossiers suivent les mêmes proportions que les vingt documentés.",
+        "Interpréter les vingt lignes comme vingt groupes de cinq dossiers sans vérifier l’unité de chaque ligne."
+      ],
+      "answer": 1,
+      "explanation": "Les effectifs conditionnent la portée de l’analyse. L’écart doit être résolu ou expliqué à partir des données, sans création d’observations supplémentaires."
+    }
+  ]
+}

@@ -1,0 +1,403 @@
+{
+  "module": "UE3",
+  "chapter": "dossier-prudhomal",
+  "sourceHash": "17c7cddf85f05d66dd2b49185d04b237b4f3857eb7c0e4e211abcd2df62e9321",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel différend correspond au champ prud’homal étudié ?",
+      "options": [
+        "Un litige individuel né d’un contrat de travail de droit privé.",
+        "Un désaccord exclusivement commercial entre deux fournisseurs indépendants.",
+        "Un contentieux de l’impôt dû par la société employeuse.",
+        "Une contestation du prix entre un client et un magasin."
+      ],
+      "answer": 0,
+      "explanation": "La compétence se rattache ici à la relation de travail privée et au litige individuel. Le seul fait qu’une entreprise soit partie ne suffit pas à rendre tout litige prud’homal."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une salariée de droit privé réclame une prime contractuelle impayée à son employeur. Quel rattachement justifie l’examen du conseil de prud’hommes ?",
+      "options": [
+        "La demande serait une contestation de cotisations relevant du contentieux de la sécurité sociale.",
+        "La demande concerne l’exécution de son contrat de travail privé.",
+        "La demande serait une contestation de l’impôt prélevé sur la prime.",
+        "La demande relèverait du juge commercial parce que l’employeur est une société."
+      ],
+      "answer": 1,
+      "explanation": "La prétention de prime est reliée au contrat de travail privé. Il faut ensuite examiner son fondement et sa preuve, sans confondre compétence et bien-fondé."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier concerne un agent dont le contrat est expressément soumis au droit public. Pourquoi faut-il éviter de conclure immédiatement à la compétence prud’homale ?",
+      "options": [
+        "La qualité publique de la rémunération suffirait à établir une compétence prud’homale.",
+        "Le demandeur pourrait choisir entre contentieux administratif et prud’homal selon le montant.",
+        "Le régime de la relation doit être pris en compte, les situations de droit public suivant une autre analyse.",
+        "La nature de la prime réclamée suffirait à soumettre le contrat au droit privé."
+      ],
+      "answer": 2,
+      "explanation": "Le champ de la relation commande la recherche de compétence. Il ne suffit pas d’identifier du travail et une rémunération pour appliquer le régime prud’homal privé."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Selon L1411-1, quelle articulation le conseil de prud’hommes met-il en œuvre pour les litiges relevant de son champ ?",
+      "options": [
+        "Une conciliation obligatoire concluant le litige même en l’absence d’accord des parties.",
+        "Une négociation de l’employeur tenant lieu de jugement si le salarié la refuse.",
+        "Un jugement sur le fond suivi d’une tentative de conciliation sur la même demande.",
+        "Une conciliation puis un jugement lorsque la conciliation n’aboutit pas."
+      ],
+      "answer": 3,
+      "explanation": "Le texte organise la conciliation et le jugement en cas d’échec. Cette articulation ne signifie pas qu’un accord est nécessairement trouvé ni que la demande est déjà prouvée.",
+      "references": [
+        {
+          "title": "Code du travail, article L1411-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1411-1"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie affirme que le conseil doit accueillir le rappel de salaire parce qu’il est compétent pour l’examiner. Quelle distinction manque ?",
+      "options": [
+        "La compétence pour connaître du litige et le bien-fondé de la demande.",
+        "L’existence de la juridiction et une reconnaissance obligatoire des faits par l’employeur.",
+        "La réception de la demande et un accord définitif du défendeur sur son montant.",
+        "La qualité de salarié et une dispense générale de prouver tout poste réclamé."
+      ],
+      "answer": 0,
+      "explanation": "Être compétent ne démontre pas les faits ni le droit à la somme demandée. Le fondement, les éléments de preuve et les objections doivent encore être examinés."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un salarié demande un rappel de prime et conteste aussi sa rupture. Comment préparer ses prétentions ?",
+      "options": [
+        "Les fusionner sous un montant rond sans répartition.",
+        "Les séparer avec leurs faits, fondements, pièces et calculs respectifs.",
+        "Appliquer le motif de rupture comme formule de calcul de toute prime.",
+        "Appliquer le nombre de mois de prime comme preuve suffisante de la rupture."
+      ],
+      "answer": 1,
+      "explanation": "Les demandes peuvent obéir à des règles et preuves différentes. Les présenter séparément permet de comprendre ce qui est demandé et ce qui le justifie."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour un exercice, une prime contractuelle de 150 € est due chacun des quatre mois étudiés. Seuls 200 € ont déjà été versés et affectés à cette prime. Quel rappel brut demander selon ces seules données ?",
+      "options": [
+        "600 €",
+        "800 €",
+        "400 €",
+        "200 €"
+      ],
+      "answer": 2,
+      "explanation": "Le total dû est 4 × 150 = 600 €, auquel il faut retrancher les 200 € réglés : 400 €. Ce calcul suppose le droit à la prime déjà posé par l’exercice.",
+      "calculation": {
+        "digits": 0,
+        "expected": 400,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 4
+                },
+                {
+                  "value": 150
+                }
+              ]
+            },
+            {
+              "value": 200
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un salarié joint le contrat donnant droit à une prime mais aucune donnée sur les conditions de son versement pour la période discutée. Quel point reste à établir ?",
+      "options": [
+        "La prime est forcément due intégralement dès qu’elle a un nom.",
+        "Le contrat suffit à prouver tout paiement de la prime.",
+        "La rupture du contrat rend toutes les conditions sans objet.",
+        "La réalisation des conditions de la prime pour la période réclamée."
+      ],
+      "answer": 3,
+      "explanation": "Le fondement d’un droit et la réalisation de ses conditions se distinguent. Le dossier doit rattacher la demande à la période et aux critères pertinents."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une demande additionne un montant brut dû et le net d’un virement sans préciser la relation entre les deux. Quelle correction améliorerait le calcul ?",
+      "options": [
+        "Rapprocher des montants de même nature et expliquer retenues et affectation des paiements.",
+        "Additionner tous les chiffres dès lors qu’ils concernent un salaire.",
+        "Remplacer le brut par le net sans justifier la conversion.",
+        "Écarter les paiements déjà reçus parce qu’ils n’ont pas le même intitulé."
+      ],
+      "answer": 0,
+      "explanation": "Brut, net et versements ne sont pas automatiquement comparables. Le calcul doit être traçable et intégrer correctement les paiements affectés à la demande."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le salarié formule une demande de réparation distincte d’un salaire impayé. Pourquoi le seul montant du salaire ne suffit-il pas à établir cette réparation ?",
+      "options": [
+        "Le salaire impayé et la réparation distincte seraient deux évaluations interchangeables de la même créance.",
+        "Le dommage invoqué et son évaluation doivent être justifiés selon leur propre fondement.",
+        "Le seul montant du salaire dû permettrait d’évaluer automatiquement le préjudice invoqué.",
+        "La reconnaissance de la dette salariale établirait à elle seule tout dommage distinct demandé."
+      ],
+      "answer": 1,
+      "explanation": "Un salaire et un dommage distinct ne répondent pas au même objet. La réparation demande un raisonnement sur son fondement, le dommage et son montant."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un paiement partiel intervient après la première estimation du rappel. Comment actualiser la prétention monétaire ?",
+      "options": [
+        "Conserver nécessairement le total initial malgré le paiement identifié.",
+        "Ajouter le paiement au rappel puisqu’il confirme l’existence de la dette.",
+        "Rapprocher son affectation et le retrancher de la somme encore demandée s’il règle ce poste.",
+        "Supprimer toutes les demandes même si le paiement ne couvre qu’une partie."
+      ],
+      "answer": 2,
+      "explanation": "Le dossier doit refléter les versements réels et leur objet. Un règlement partiel affecté réduit le solde de ce poste, sans éteindre automatiquement tous les autres."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle fonction remplit un bordereau de pièces ?",
+      "options": [
+        "Il rend chaque document nécessairement décisif.",
+        "Il remplace les explications du demandeur.",
+        "Il modifie le délai légal applicable à toutes les demandes.",
+        "Il repère les pièces par des références permettant de les relier au raisonnement."
+      ],
+      "answer": 3,
+      "explanation": "Le bordereau facilite l’identification et la discussion des documents. Il n’attribue pas à lui seul une force probante ou un effet juridique identique à chaque pièce."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La demande cite la pièce 6 comme preuve d’un échange, mais le bordereau nomme en pièce 6 un bulletin de salaire différent. Quel contrôle faut-il faire ?",
+      "options": [
+        "La concordance des numéros, intitulés, documents et citations dans la demande.",
+        "Le numéro de la pièce, pris comme mesure de sa valeur probante.",
+        "L’ordre des pièces, pris comme ordre obligatoire de réalisation des faits.",
+        "Le seul montant inscrit dans le bulletin, substitué au contenu du courriel cité."
+      ],
+      "answer": 0,
+      "explanation": "Une référence incohérente empêche de suivre la démonstration. La correction doit permettre de retrouver le document réellement invoqué pour le fait discuté."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une pièce contient une conversation professionnelle utile et de nombreuses données personnelles étrangères au litige. Comment préparer sa communication dans le dossier ?",
+      "options": [
+        "Transmettre systématiquement toutes les données parce qu’elles sont dans le même fichier.",
+        "Identifier la partie utile et limiter les données sans rapport en conservant le contexte nécessaire.",
+        "Retirer tout contexte même si cela change le sens de l’échange.",
+        "Remplacer le document par une conclusion non documentée."
+      ],
+      "answer": 1,
+      "explanation": "Le dossier doit conserver la portée et la traçabilité des éléments utiles sans diffuser des données inutiles. Le contexte nécessaire ne doit pas être dénaturé."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le demandeur produit les bulletins de toute l’année pour une prime de deux mois sans expliquer quelles lignes sont utiles. Quel ajout rendrait le dossier plus lisible ?",
+      "options": [
+        "Un total de toutes les lignes, sans distinguer périodes et objets.",
+        "La seule affirmation que la prime apparaît quelque part dans les bulletins.",
+        "Un renvoi aux périodes et lignes qui établissent le poste discuté.",
+        "Un classement par taille de fichier, substitué au lien entre pièces et demande."
+      ],
+      "answer": 2,
+      "explanation": "La quantité de pièces ne remplace pas leur rattachement aux faits. Un renvoi précis permet d’examiner le montant et la période de la prime réclamée."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un courriel produit date une proposition de baisse de salaire, mais ne contient aucune réponse du salarié. Quel fait peut-il étayer directement ?",
+      "options": [
+        "L’acceptation certaine de la proposition.",
+        "La régularité de toute procédure de modification.",
+        "La rupture déjà prononcée du contrat.",
+        "La date et le contenu de la proposition de l’employeur."
+      ],
+      "answer": 3,
+      "explanation": "Une proposition et son acceptation sont distinctes. La pièce est utile pour dater et décrire l’offre de modification, mais ne prouve pas une réponse absente."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Quel délai L3245-1 prévoit-il pour l’action en paiement ou en répétition du salaire, à partir du point de départ qu’il définit ?",
+      "options": [
+        "Trois ans.",
+        "Douze mois pour toute demande.",
+        "Deux jours ouvrables.",
+        "La seule durée du préavis du salarié."
+      ],
+      "answer": 0,
+      "explanation": "Le texte pose une prescription de trois ans pour ces actions salariales. Le point de départ et la période de sommes réclamables demandent un examen distinct.",
+      "references": [
+        {
+          "title": "Code du travail, article L3245-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l3245-1"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Hors exceptions et délais particuliers, quel délai L1471-1 prévoit-il pour une action portant sur l’exécution du contrat ?",
+      "options": [
+        "Trois ans dans tous les cas.",
+        "Deux ans à partir de la connaissance réelle ou due des faits permettant l’action.",
+        "Douze mois à partir de l’embauche.",
+        "Le seul mois suivant la première réclamation."
+      ],
+      "answer": 1,
+      "explanation": "L1471-1 prévoit le délai biennal pour ce champ, avec des exclusions. Il faut donc qualifier la demande au lieu d’étendre cette durée à tous les postes.",
+      "references": [
+        {
+          "title": "Code du travail, article L1471-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1471-1"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une action porte sur la rupture du contrat, sans exception particulière dans les faits. Quel point de départ L1471-1 associe-t-il à sa durée de douze mois ?",
+      "options": [
+        "La date de signature initiale du contrat, substituée à la rupture.",
+        "La date du premier courrier demandant des explications, quelle que soit la notification.",
+        "La notification de la rupture.",
+        "La date du dépôt du bordereau, substituée au fait générateur du délai."
+      ],
+      "answer": 2,
+      "explanation": "Le texte rattache ce délai à la notification de la rupture. Une chronologie utile doit établir cet événement plutôt que retenir une autre date par proximité.",
+      "references": [
+        {
+          "title": "Code du travail, article L1471-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1471-1"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une copie applique deux ans à une demande de salaire au seul motif qu’elle concerne l’exécution du contrat. Quelle distinction doit-elle faire ?",
+      "options": [
+        "Le délai de douze mois attaché à certaines contestations de rupture et le délai général de deux ans.",
+        "Le point de départ à la rupture et celui à la notification de la décision contestée.",
+        "La durée du délai général et une prorogation liée au montant de salaire demandé.",
+        "L’exclusion des actions salariales du délai général et leur régime de L3245-1."
+      ],
+      "answer": 3,
+      "explanation": "L1471-1 réserve notamment le régime des actions salariales. La nature de la demande doit être identifiée avant de choisir la prescription.",
+      "references": [
+        {
+          "title": "Code du travail, article L3245-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l3245-1"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un rappel de salaire est demandé à la suite d’une contestation de classification. Selon le principe rappelé par la Cour de cassation, qu’est-ce qui détermine la durée de prescription de cette créance ?",
+      "options": [
+        "La nature salariale de la créance invoquée.",
+        "Le seul nom donné à l’action dans le titre de la requête.",
+        "La date de première utilisation du mot classification par l’employeur, seule déterminante.",
+        "Le nombre de documents démontrant le niveau de qualification."
+      ],
+      "answer": 0,
+      "explanation": "La durée s’analyse d’après la nature de la créance demandée. Une contestation servant de fondement au rappel ne permet pas d’ignorer son caractère salarial.",
+      "references": [
+        {
+          "title": "Cour de cassation, chambre sociale, 4 décembre 2024, 23-12.436",
+          "url": "https://www.courdecassation.fr/decision/674ffa9554dec7f341ee7756"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le contrat est rompu et une demande salariale est envisagée. Quelle distinction de L3245-1 faut-il conserver pour vérifier le dossier ?",
+      "options": [
+        "Le délai salarial de trois ans et un point de départ nécessairement fixé à l’embauche.",
+        "Le délai pour agir et la période des sommes pouvant être réclamées.",
+        "La prescription de la rupture et son application identique à toutes les créances du solde de tout compte.",
+        "La date de versement du dernier salaire et l’effacement des créances antérieures à ce versement."
+      ],
+      "answer": 1,
+      "explanation": "Le texte distingue le délai de l’action et la portée temporelle des sommes réclamables, notamment les trois années précédant la rupture. Une seule date calculée mécaniquement ne résume pas l’analyse.",
+      "references": [
+        {
+          "title": "Code du travail, article L3245-1",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l3245-1"
+        }
+      ]
+    }
+  ]
+}

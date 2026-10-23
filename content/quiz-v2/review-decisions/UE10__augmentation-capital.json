@@ -1,0 +1,248 @@
+{
+  "sourceHash": "7f430acef27284b46042ff71e9cd7bb8833720e612710ca17dc851613ee02fb4",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "e266a4d915b22813422d7695b6f8265920472315261bc01c3b8cff33dc11dc46",
+      "selected": 1,
+      "reason": "1 500 nouveaux titres × 4 de nominal = 6 000 ajoutés aux 25 000 initiaux, soit 31 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "1bb21ce0dbf94a0341b9c5400ecd8973a41157cd4124cd653899266eb283612d",
+      "selected": 2,
+      "reason": "Le prix d’émission multiplié par les titres mesure tout l’apport souscrit ; le nominal seul ne comprend pas la prime.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "22c9028a5a27e37354fb5b22e672383b8af3b8d57ff3c492bae7506d88c7b875",
+      "selected": 1,
+      "reason": "12 000 de nominal créé / 6 par titre = 2 000 nouveaux titres.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "574a0424e07d07d7e975c0a98744b7ebc6463e94bdd66d1d116c35389de2146d",
+      "selected": 1,
+      "reason": "Seuls les titres de l’émission nouvelle génèrent son financement, pas les titres anciens déjà souscrits.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "bda44460936e75a7d999af8aea47519f67889471440a206c7debb21e89e77117",
+      "selected": 3,
+      "reason": "1 000 détenus sur 10 000 + 2 000 titres = 8,3333 %, soit 8,33 % après émission.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "9326d9a54a0fc5437e82a1994c9330c291f63b4f8c00efce64aff60f63a11bf2",
+      "selected": 0,
+      "reason": "800 nouveaux titres × 25 euros versés = 20 000 euros reçus.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "5f49aee2c0e58b419c66bb353ddb452a319bb4d9109b01733d8a8d25b48242f6",
+      "selected": 1,
+      "reason": "La souscription est un engagement ; la réception de fonds doit être prouvée distinctement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "c2ef975ed0c0deb17f64f47cd5793bb229e985f524396459b2071d4a37adb8ca",
+      "selected": 0,
+      "reason": "18 000 de souscription encaissée moins 600 de frais payés = 17 400 euros nets de banque.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "995e46337d77e19ed84c67e4582a424207337dbb284517b3fcf7cb4881128e44",
+      "selected": 0,
+      "reason": "Une souscription finance l’entreprise en capitaux propres ; son encaissement ne constitue pas un produit de vente.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "0b175b1c81811daac682fbf1a712782537a1303c60806d17172d401e9f024398",
+      "selected": 0,
+      "reason": "L’incorporation est un mouvement interne sans nouvelle entrée de liquidité, contrairement à l’apport numéraire versé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "1d2db4f95f6e796b5b56aa473f85eebc2607631850f2b0dca827a218cc7e38a4",
+      "selected": 1,
+      "reason": "36 000 d’apport moins 15 000 de nominal laissent 21 000 euros de prime.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "a20ad1b7400d4601524b43374eef9c6bb66ac5d1baf03b596fe66ea1b378259a",
+      "selected": 2,
+      "reason": "Le nominal créé plus la prime doivent reconstituer l’apport unique ; un excédent exige de rechercher doublon ou erreur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "1122ab027f1e90d9529b6eab2a8c8a89900b4b2ceb7340108e911dcdf6e99202",
+      "selected": 0,
+      "reason": "À quantité et nominal fixes, une hausse du prix augmente seulement la prime par titre et totale.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "2edb0706f6b8c269dc979ae9b71aef9edd50bdaf6ce0b7498463f14835163b4a",
+      "selected": 1,
+      "reason": "La prime isolée ne doit pas aussi rester incluse dans un capital présenté comme nominal.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "71bfefe2cbf2c1b05a5ef489af2decd18c753e91b1a50c8fcf1d7b4bdb025152",
+      "selected": 1,
+      "reason": "La rubrique comptable de prime ne détermine pas à elle seule les conditions juridiques et décisions de distribution.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "102146872fa028ef104abf31dd1335221445429014541d4c3a2af3942ed59b13",
+      "selected": 1,
+      "reason": "Le nominal créé et la prime doivent reconstituer l’apport souscrit au même périmètre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "7c168c0f4e1af0c91c993bce6402ba8fc7d92115c68794b754940b1b39f84c99",
+      "selected": 0,
+      "reason": "17 euros émis moins 5 nominaux = 12 euros de prime par titre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "ba867d2e73f8dccc179674e65da30ec9562da4418b3463a161d45c2b522f65a7",
+      "selected": 2,
+      "reason": "(300 × 4 + 200 × 6) / 500 = 4,80 euros de prime moyenne par titre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "0ba421d4b3707406bb031f0cd986df9db7c667cd70809fa4c19efabc5c166036",
+      "selected": 2,
+      "reason": "Une prime unitaire doit être multipliée par le nombre de titres pour obtenir son total.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "321d2a82dd0165a6a5f8b42dd4f1206aa662513c10b6586dec63cb1be3d5bd57",
+      "selected": 0,
+      "reason": "La prime totale dépend de la prime par titre et du nombre de titres, pas de la seule valeur unitaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "1c82a7eed6b469fb5a9bcf6496980c97aa67b353132722b597867e2f744a2f0d",
+      "selected": 3,
+      "reason": "La variation de cours seule ne justifie pas une réécriture de l’émission passée ; une opération ou correction fondée est nécessaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "3b9959269e90c1e0b79bc796bb0fec32b5f0d51f9446dc89b3b82e95bde37fc4",
+      "selected": 3,
+      "reason": "Le contrôle documente les titres nouveaux, prix et nominal, la prime, le stade et les versements.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

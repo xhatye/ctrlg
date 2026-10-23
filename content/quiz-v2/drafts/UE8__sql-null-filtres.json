@@ -1,0 +1,338 @@
+{
+  "module": "UE8",
+  "chapter": "sql-null-filtres",
+  "sourceHash": "1410acafb34a245f5d9b34d879296f0bb7a38980c9d13abe67fe6a78a0d4a3a5",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une colonne montant contient NULL pour une facture. Quelle interprétation respecte la distinction avec la valeur zéro ?",
+      "options": [
+        "La facture est nécessairement annulée.",
+        "Le montant est absent ou inconnu selon la convention de la table.",
+        "Le montant est connu et égal à zéro.",
+        "Le montant est nécessairement négatif."
+      ],
+      "answer": 1,
+      "explanation": "NULL représente une absence définie par le modèle. Zéro est au contraire une valeur connue. Il faut consulter la convention de la colonne avant d’interpréter l’absence comme une annulation ou un montant particulier."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "foundation",
+      "q": "Quelle condition SQL permet de rechercher les factures dont le montant est absent, représenté par NULL ?",
+      "options": [
+        "WHERE montant = 0",
+        "WHERE montant = 'NULL'",
+        "WHERE montant IS NULL",
+        "WHERE montant = NULL"
+      ],
+      "answer": 2,
+      "explanation": "La recherche d’absence utilise IS NULL. L’égalité ordinaire à NULL ne fournit pas le test recherché ; zéro est une valeur numérique et 'NULL' serait un texte, pas l’absence de valeur."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La table Paiement contient trois lignes, dont une seule avec reference NULL. On veut compter tous les paiements enregistrés, même sans référence. Quelle expression convient ?",
+      "options": [
+        "COUNT(*)",
+        "COUNT(reference)",
+        "COUNT(DISTINCT reference)",
+        "SUM(reference)"
+      ],
+      "answer": 0,
+      "explanation": "COUNT(*) compte les lignes indépendamment des valeurs manquantes. COUNT(reference) exclurait celle dont la référence est NULL, et DISTINCT viserait des valeurs uniques plutôt que les paiements enregistrés."
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client possède deux commandes et un autre en possède une. La jointure comporte donc trois lignes avec leurs identifiants clients. Quelle expression compte les clients acheteurs sans doublon ?",
+      "options": [
+        "COUNT(*)",
+        "COUNT(idClient)",
+        "SUM(idClient)",
+        "COUNT(DISTINCT idClient)"
+      ],
+      "answer": 3,
+      "explanation": "Les deux premières expressions comptent les trois occurrences de clients dans les commandes. COUNT(DISTINCT idClient) mesure les identités différentes et répond donc au nombre de clients acheteurs."
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "On veut les clients dont la somme des ventes de janvier dépasse 2 000 €. Comment répartir les conditions dans une requête regroupée par client ?",
+      "options": [
+        "Filtrer les ventes de janvier avant regroupement, puis le total par client après agrégation.",
+        "Filtrer chaque vente au-dessus de 2 000 €, puis totaliser toutes les périodes.",
+        "Filtrer les clients au-dessus de 2 000 € avant d’additionner leurs ventes.",
+        "Additionner toutes les années puis traiter le mois comme un total."
+      ],
+      "answer": 0,
+      "explanation": "Le mois concerne les lignes de vente et fixe leur périmètre avant la somme. Le seuil de 2 000 € concerne le résultat du groupe client et se contrôle donc après le calcul de ce total."
+    },
+    {
+      "id": "q06",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après jointure d’une facture avec ses détails, le total de son montant d’en-tête augmente alors qu’aucune vente n’a été ajoutée. Quel mécanisme faut-il examiner en premier ?",
+      "options": [
+        "La conversion systématique de NULL en zéro.",
+        "L’ordre d’affichage des groupes.",
+        "La répétition du montant d’en-tête pour chaque détail associé.",
+        "L’exclusion de valeurs par COUNT(montant)."
+      ],
+      "answer": 2,
+      "explanation": "Une relation un à plusieurs peut répéter le même montant d’en-tête sur plusieurs lignes jointes. SUM l’additionne alors plusieurs fois. Il faut contrôler le grain de mesure, pas seulement la syntaxe du calcul."
+    },
+    {
+      "id": "q07",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste remplace les montants NULL par zéro avant d’expliquer le chiffre d’affaires. Quelle réserve doit-il formuler ?",
+      "options": [
+        "Le remplacement garantit que COUNT(montant) restera identique.",
+        "Le remplacement confond une absence de montant et une valeur nulle connue.",
+        "Le remplacement transforme les zéros connus en valeurs absentes pour les agrégations.",
+        "Le remplacement permet de conserver le nombre de valeurs manquantes sans autre indicateur."
+      ],
+      "answer": 1,
+      "explanation": "Le remplacement peut être prévu pour un calcul, mais il ne doit pas masquer le sens d’une donnée manquante. L’analyse doit distinguer les montants connus nuls des montants non renseignés."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans quelles circonstances COUNT(*) et COUNT(montant) peuvent-ils différer sur une même table non jointe ?",
+      "options": [
+        "Quand deux montants connus sont égaux.",
+        "Quand les montants sont triés.",
+        "Quand les identifiants sont numériques.",
+        "Quand au moins une ligne possède montant NULL."
+      ],
+      "answer": 3,
+      "explanation": "COUNT(*) compte toutes les lignes, tandis que COUNT(montant) ne compte que les valeurs renseignées. Deux montants égaux sont néanmoins deux valeurs non NULL : ils restent tous deux comptés par COUNT(montant)."
+    },
+    {
+      "id": "q09",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un client a plusieurs achats inférieurs à 1 000 €, mais leur somme dépasse 1 000 €. Pourquoi WHERE montant > 1000 l’exclut-il d’un rapport recherchant les gros clients par total d’achats ?",
+      "options": [
+        "Le filtre élimine ses lignes avant que leur total soit constitué.",
+        "Le regroupement additionne nécessairement les achats deux fois.",
+        "La fonction SUM exclut toujours les petits montants.",
+        "COUNT DISTINCT supprime les clients ayant plusieurs achats."
+      ],
+      "answer": 0,
+      "explanation": "Le seuil vise une somme par client, pas chaque opération isolée. WHERE montant > 1000 retire les achats plus petits avant agrégation, ce qui empêche de constituer le total attendu de ce client."
+    },
+    {
+      "id": "q10",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Quel jeu d’essai est le plus utile pour vérifier à la fois les doublons de jointure et les montants absents ?",
+      "options": [
+        "Uniquement une facture renseignée avec un seul détail.",
+        "Une table vide, sans résultat attendu.",
+        "Des factures avec plusieurs détails et une facture au montant NULL, avec des attendus calculés séparément.",
+        "Le résultat de la même requête relancée sur les mêmes données."
+      ],
+      "answer": 2,
+      "explanation": "Les cas choisis doivent activer les risques à contrôler. Plusieurs détails testent la multiplication des lignes et un montant absent teste les règles de comptage et d’interprétation ; les attendus doivent être indépendants."
+    },
+    {
+      "id": "q11",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une colonne délai vaut 0 pour une livraison immédiate et NULL lorsque le délai n’est pas connu. Quelle condition retient uniquement les livraisons immédiates connues ?",
+      "options": [
+        "WHERE delai IS NULL",
+        "WHERE delai = 0",
+        "WHERE delai = NULL",
+        "WHERE delai IS NOT NULL"
+      ],
+      "answer": 1,
+      "explanation": "La valeur 0 est explicitement définie comme une livraison immédiate connue. IS NOT NULL retiendrait aussi tous les autres délais renseignés ; IS NULL viserait au contraire les délais inconnus."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux clients distincts portent le même nom. Un rapport compte COUNT(DISTINCT nom) pour mesurer le nombre de clients. Quel défaut peut apparaître ?",
+      "options": [
+        "Chaque commande est nécessairement comptée deux fois.",
+        "Tous les noms NULL sont transformés en zéro.",
+        "Le résultat devient une somme de montants.",
+        "Des clients différents sont fusionnés parce que le comptage distingue leurs noms au lieu de leurs identifiants."
+      ],
+      "answer": 3,
+      "explanation": "L’objet à compter est le client, identifié par sa clé, pas la valeur descriptive de son nom. DISTINCT nom peut réunir plusieurs personnes et sous-estimer le nombre de clients réels."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans une requête SQL regroupée, quelle clause exprime habituellement une condition sur SUM(montant) par groupe ?",
+      "options": [
+        "HAVING",
+        "ORDER BY",
+        "SELECT DISTINCT",
+        "WHERE avant regroupement"
+      ],
+      "answer": 0,
+      "explanation": "HAVING filtre les groupes selon leur résultat agrégé. WHERE détermine les lignes prises en compte avant cette agrégation ; ORDER BY trie le résultat sans remplacer la sélection des groupes."
+    },
+    {
+      "id": "q14",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "F1 et F2 sont deux factures de 100 € chacune. Après jointure à deux détails par facture, chaque montant apparaît deux fois. Quel commentaire est correct sur SUM(DISTINCT montant) ?",
+      "options": [
+        "Il donne 400 €, car DISTINCT ne supprime aucune répétition dans SUM.",
+        "Il donne 200 €, car DISTINCT conserve automatiquement une valeur par identifiant de facture.",
+        "Il donne 100 € et fusionne les valeurs égales de deux factures légitimes.",
+        "Il donne 2, car SUM(DISTINCT montant) compte les identifiants de facture."
+      ],
+      "answer": 2,
+      "explanation": "DISTINCT s’applique ici à la valeur montant, pas à l’identité de facture. Une seule valeur 100 reste dans la somme ; le total attendu des deux factures est pourtant 200 €."
+    },
+    {
+      "id": "q15",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une table emploie NULL pour « montant non encore saisi ». Quelle information complémentaire rend l’analyse de ce champ fiable ?",
+      "options": [
+        "L’affichage des lignes par ordre décroissant.",
+        "La convention documentée sur le sens de NULL et le traitement des montants manquants.",
+        "Une règle imposant que toutes les factures aient des montants différents.",
+        "Le remplacement du nom du champ par total."
+      ],
+      "answer": 1,
+      "explanation": "L’absence a un sens métier qui doit être connu pour interpréter les résultats et décider d’un traitement. Ni le tri ni le renommage ne permettent de distinguer un montant inconnu d’une valeur nulle connue."
+    },
+    {
+      "id": "q16",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour mesurer combien de factures ont un montant renseigné, faut-il choisir un comptage de lignes ou de valeurs de la colonne montant ?",
+      "options": [
+        "COUNT(*) car les valeurs NULL sont toujours des montants renseignés.",
+        "COUNT(DISTINCT montant) car deux factures égales ne doivent compter qu’une fois.",
+        "SUM(montant) car une somme mesure le nombre de saisies.",
+        "COUNT(montant) car il compte les valeurs non NULL de cette colonne."
+      ],
+      "answer": 3,
+      "explanation": "Le besoin concerne les montants effectivement renseignés. COUNT(montant) exclut les absences sans fusionner les montants égaux ; le nombre total de lignes et la somme des montants répondent à d’autres questions."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "On veut les clients dont le total des commandes non annulées dépasse un seuil. Quelle erreur ferait un filtre sur le statut appliqué seulement après avoir additionné toutes les commandes ?",
+      "options": [
+        "Les montants annulés pourraient déjà être inclus dans la somme du client.",
+        "Les montants non annulés deviendraient automatiquement NULL.",
+        "Le nombre de clients distincts augmenterait obligatoirement.",
+        "La requête calculerait seulement le montant moyen."
+      ],
+      "answer": 0,
+      "explanation": "La sélection des commandes non annulées définit les lignes qui doivent alimenter le total. Si la somme inclut d’abord les annulations, un contrôle ultérieur sur le groupe ne reconstitue pas automatiquement le bon périmètre."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Une requête s’exécute sans erreur de syntaxe. Quelle conclusion peut-on en tirer ?",
+      "options": [
+        "Elle mesure nécessairement le bon objet métier.",
+        "Ses jointures ne produisent aucun doublon.",
+        "Elle est exécutable, mais ses résultats nécessitent encore une validation métier.",
+        "Les valeurs absentes ont toutes été traitées correctement."
+      ],
+      "answer": 2,
+      "explanation": "L’acceptation de la syntaxe n’établit ni la justesse des filtres ni celle du grain ou des liens. Des attendus connus et des rapprochements sont nécessaires pour valider la réponse à la question posée."
+    },
+    {
+      "id": "q19",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Trois factures ont les montants 100, 0 et NULL. La convention définit NULL comme un montant non renseigné et zéro comme un montant connu. Quel bilan de complétude est correct ?",
+      "options": [
+        "COUNT(*) = 3 et COUNT(montant) = 3 : les trois montants sont renseignés.",
+        "COUNT(*) = 3 et COUNT(montant) = 2 : un montant n’est pas renseigné.",
+        "COUNT(*) = 2 et COUNT(montant) = 2 : la facture avec NULL est exclue des deux comptages.",
+        "COUNT(*) = 3 et COUNT(montant) = 1 : seul un montant strictement positif est renseigné."
+      ],
+      "answer": 1,
+      "explanation": "COUNT(*) compte les trois lignes. COUNT(montant) compte les deux valeurs non NULL, y compris zéro. Une facture a donc un montant absent ; le zéro connu ne constitue pas une saisie manquante."
+    },
+    {
+      "id": "q20",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste compte les factures avec COUNT(montant) et obtient moins que le nombre d’identifiants uniques. Que faut-il vérifier avant de conclure à une facture perdue ?",
+      "options": [
+        "Si les résultats sont triés par identifiant.",
+        "Si les montants sont tous différents.",
+        "Si les noms des clients ont été regroupés.",
+        "Si certaines factures possèdent un montant NULL, exclu par ce comptage."
+      ],
+      "answer": 3,
+      "explanation": "COUNT(montant) peut exclure des factures présentes mais dépourvues de montant renseigné. La différence de comptage ne prouve donc pas une disparition ; il faut d’abord comparer les populations réellement mesurées."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un rapport groupe les commandes par client et par montant, alors que le besoin exige un total unique par client. Pourquoi le résultat peut-il contenir plusieurs lignes pour un même client ?",
+      "options": [
+        "Le montant ajouté au regroupement subdivise le client en plusieurs groupes.",
+        "SUM impose un groupe distinct pour chaque montant même si le besoin porte sur le seul client.",
+        "HAVING recrée une ligne par commande avant chaque regroupement.",
+        "GROUP BY ajoute implicitement l’identifiant de commande aux colonnes de groupe indiquées."
+      ],
+      "answer": 0,
+      "explanation": "Chaque combinaison client-montant constitue un groupe distinct. Pour obtenir un total unique par client, il faut regrouper au grain du client et additionner les montants de ses commandes dans ce groupe."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un test manuel et une requête donnent le même total, mais le test ne comprend aucune valeur NULL ni relation à plusieurs détails. Quelle conclusion est prudente ?",
+      "options": [
+        "Tous les cas de données futures sont validés.",
+        "La gestion des montants absents est certifiée.",
+        "Le cas testé est cohérent ; il faut encore couvrir les absences et multiplications de lignes.",
+        "Le modèle impose désormais un seul détail par facture."
+      ],
+      "answer": 2,
+      "explanation": "Un test ne démontre que les situations qu’il exerce. Ajouter des données absentes et des relations un à plusieurs permet de vérifier des risques restés invisibles dans le jeu d’essai initial."
+    }
+  ]
+}

@@ -1,0 +1,413 @@
+{
+  "module": "DSCG1",
+  "chapter": "concurrence-entente",
+  "sourceHash": "ff645968aba37c20a424973873430d0053ffac75fa59d6e422f61a1aeee9bf8b",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux concurrents appliquent le même tarif après une hausse commune du coût de la matière première. Le dossier ne montre aucun échange entre eux. Quelle conclusion est étayée par ces seuls faits ?",
+      "options": [
+        "L’identité des tarifs suffit à établir une entente sur leur fixation.",
+        "L’absence d’échange trouvé garantit qu’aucune coordination n’a jamais existé.",
+        "Le parallélisme tarifaire appelle une analyse du contexte mais ne prouve pas à lui seul la coordination.",
+        "La hausse commune des coûts rend toute coordination tarifaire licite."
+      ],
+      "answer": 2,
+      "explanation": "Une ressemblance de prix peut avoir plusieurs explications. Elle ne démontre pas à elle seule une concertation, mais ne vaut pas non plus certificat général d’absence de coordination."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux concurrents s’échangent confidentiellement leurs intentions tarifaires pour le mois suivant. Aucun contrat d’entente n’a été signé. Quel élément doit être examiné ?",
+      "options": [
+        "La signature d’un engagement juridiquement contraignant comme condition de la concertation.",
+        "La seule correspondance entre les prix effectivement appliqués après la réunion.",
+        "Le caractère public ou confidentiel des tarifs appliqués aujourd’hui, sans examiner les intentions transmises.",
+        "Le contenu de l’échange et sa capacité à réduire l’incertitude sur leurs comportements futurs."
+      ],
+      "answer": 3,
+      "explanation": "Le contrôle porte sur la coordination réelle, y compris par échange d’informations. L’absence d’un écrit contractuel n’écarte pas l’analyse d’une pratique concertée."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une association professionnelle recommande à ses entreprises membres un barème minimal à appliquer. Quelle qualification doit être envisagée au titre de 101, sous réserve de son champ ?",
+      "options": [
+        "Une décision d’association d’entreprises susceptible de restreindre la concurrence.",
+        "Une simple décision interne nécessairement étrangère au droit de la concurrence.",
+        "Un contrôle de concentration parce que tous les membres appartiennent à une association.",
+        "Un prix public imposé par la loi du seul fait que le barème est collectif."
+      ],
+      "answer": 0,
+      "explanation": "L’article 101 vise aussi les décisions d’associations d’entreprises. Le caractère professionnel de l’association n’exonère pas les recommandations de barème de leur examen concurrentiel.",
+      "references": [
+        {
+          "title": "Traité sur le fonctionnement de l’Union européenne, article 101",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:12012E101"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des concurrents décident ensemble d’utiliser un algorithme commun qui aligne leurs prix futurs selon une règle convenue. La direction soutient que seul le logiciel, et non les entreprises, détermine les prix. Quelle analyse est pertinente ?",
+      "options": [
+        "La qualification du contrat informatique comme prestation technique plutôt que comme accord entre concurrents.",
+        "La règle commune de fixation des prix peut relever de 101, même mise en œuvre par un outil.",
+        "Le degré d’autonomie de chaque entreprise dans la saisie des prix, indépendamment de la règle commune convenue.",
+        "L’attribution du calcul au fournisseur du logiciel plutôt qu’aux entreprises ayant adopté la règle."
+      ],
+      "answer": 1,
+      "explanation": "Un outil ne neutralise pas le comportement coordonné qui le configure et l’utilise. Les lignes directrices envisagent précisément les règles de prix intégrées à un algorithme partagé.",
+      "references": [
+        {
+          "title": "Commission européenne, lignes directrices horizontales de 2023, échanges d’informations",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:52023XC0721(01)"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un projet collecte des informations de coûts. Le fichier est dit « agrégé », mais une catégorie ne contient qu’une entreprise identifiable. Quelle vérification est pertinente avant de le tenir pour non individualisé ?",
+      "options": [
+        "Le nombre total de participants à l’étude, sans contrôler la composition de chaque catégorie.",
+        "L’effacement des noms dans le fichier, même si les catégories permettent de retrouver chaque participant.",
+        "La possibilité de reconstituer les données d’un participant et leur sensibilité concurrentielle.",
+        "L’ancienneté moyenne des données de l’ensemble du fichier, sans isoler la donnée identifiable et récente."
+      ],
+      "answer": 2,
+      "explanation": "L’agrégation doit être appréciée dans les faits. Une catégorie composée d’un seul opérateur peut révéler sa donnée ; l’intitulé du fichier ne suffit pas à apprécier le risque d’échange.",
+      "references": [
+        {
+          "title": "Commission européenne, lignes directrices horizontales de 2023, échanges d’informations",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:52023XC0721(01)"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des prix futurs ont été échangés une seule fois entre concurrents. Un rapport écarte toute restriction au seul motif que les rencontres ne sont pas répétées. Quelle correction correspond à la jurisprudence C-298/22 ?",
+      "options": [
+        "Deux réunions sont toujours le minimum nécessaire pour former une concertation.",
+        "La fréquence remplace l’examen du contenu de chaque échange.",
+        "Une réunion unique serait licite si elle ne donne pas lieu à un procès-verbal.",
+        "Un contact unique peut suffire ; sa rareté ne suffit pas à exclure l’objet anticoncurrentiel."
+      ],
+      "answer": 3,
+      "explanation": "La Cour rappelle qu’une seule prise de contact peut éliminer des incertitudes sur les comportements futurs. La fréquence n’est donc pas, à elle seule, un critère d’exclusion.",
+      "references": [
+        {
+          "title": "CJUE, affaire C-298/22, échanges d’informations entre concurrents",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELLAR:cb391d1e-4d8d-11ef-acbc-01aa75ed71a1"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour une coordination dont le champ de l’article 101 §1 et la restriction par objet sont établis dans leur contexte, quelle proposition énonce correctement la règle relative aux effets ?",
+      "options": [
+        "Des effets restrictifs concrets n’ont pas à être établis en plus pour retenir cette restriction au titre de 101 §1.",
+        "Une hausse effective des prix doit encore être démontrée pour compléter la qualification par objet.",
+        "Une baisse des ventes des concurrents doit encore être démontrée, même si aucun effet sur les prix n’est requis.",
+        "Un préjudice déjà subi par des utilisateurs doit encore être chiffré pour que la restriction relève de 101 §1."
+      ],
+      "answer": 0,
+      "explanation": "Lorsque la restriction par objet est caractérisée, la preuve d’effets concrets n’est pas une condition supplémentaire de cette voie d’analyse. Le contexte reste nécessaire pour qualifier cet objet.",
+      "references": [
+        {
+          "title": "CJUE, affaire C-298/22, échanges d’informations entre concurrents",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELLAR:cb391d1e-4d8d-11ef-acbc-01aa75ed71a1"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier révèle des échanges de données commerciales mais ne permet pas d’identifier une nocivité suffisante par objet. Quelle suite méthodologique reste possible ?",
+      "options": [
+        "Clore le contrôle au titre de 101 §1 dès que la qualification par objet est écartée.",
+        "Examiner ses effets restrictifs possibles dans le contexte du marché.",
+        "Passer directement à l’exemption de 101 §3 en présumant une restriction par effets.",
+        "Limiter l’analyse restante aux accords portant explicitement sur le prix final."
+      ],
+      "answer": 1,
+      "explanation": "Objet et effets sont deux voies distinctes. L’absence de qualification par objet ne dispense pas d’examiner, lorsque pertinent, les effets de l’échange dans son contexte."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une copie conclut à l’application de 101 sur le seul fait que les deux entreprises sont françaises. Quelle condition de champ demande encore une analyse ?",
+      "options": [
+        "L’existence d’une vente transfrontalière effectivement réalisée par chacune des deux entreprises.",
+        "L’exercice de leur activité dans deux États membres différents comme préalable territorial.",
+        "L’affectation du commerce entre États membres dans les conditions du droit de l’Union.",
+        "L’existence d’une clause visant expressément des clients étrangers dans l’accord."
+      ],
+      "answer": 2,
+      "explanation": "La nationalité française des participants ne tranche pas le critère d’affectation du commerce entre États membres. Inversement, une implantation dans tous les États n’est pas une condition requise par le texte.",
+      "references": [
+        {
+          "title": "Traité sur le fonctionnement de l’Union européenne, article 101",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:12012E101"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier ne suffit pas à établir l’affectation du commerce entre États membres. Une copie en déduit qu’aucun droit des ententes ne peut jamais viser les pratiques sur le marché français. Quelle distinction rétablir ?",
+      "options": [
+        "L’absence d’une condition européenne vaut exemption de tout droit national.",
+        "La conformité nationale résulte nécessairement de la seule implantation française.",
+        "Le droit national ne concerne que les concentrations, jamais les ententes.",
+        "Les conditions du droit de l’Union et l’analyse nationale, notamment au regard de L420-1."
+      ],
+      "answer": 3,
+      "explanation": "L’incertitude sur le champ du droit de l’Union ne crée pas une immunité nationale. L420-1 vise notamment les actions concertées, ententes et répartitions de marchés dans son propre champ.",
+      "references": [
+        {
+          "title": "Code de commerce, article L420-1, ententes",
+          "url": "https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006231970/2021-05-05"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux concurrents conviennent de ne pas solliciter chacun les clients attribués à l’autre. Ils qualifient cela de « courtoisie commerciale ». Quel comportement doit être examiné ?",
+      "options": [
+        "Une répartition de clientèle entre concurrents, malgré le nom donné à l’accord.",
+        "Une répartition décidée unilatéralement, chaque entreprise restant libre de solliciter les clients réservés à l’autre.",
+        "Une simple coopération de prospection, les clients réservés restant activement démarchés par les deux entreprises.",
+        "Une limitation des modalités publicitaires uniquement, chaque concurrent conservant le droit de répondre aux clients de l’autre."
+      ],
+      "answer": 0,
+      "explanation": "L’objet matériel de la coordination est une répartition de clients. Le nom favorable choisi par les participants ne dispense pas d’examiner cette restriction dans son contexte."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des concurrents échangent confidentiellement une composante de leur prix futur, mais gardent d’autres frais distincts. Quelle portée donner à l’absence d’échange du prix final complet selon C-298/22 ?",
+      "options": [
+        "Elle suffit à exclure toute information stratégique.",
+        "Elle ne suffit pas à écarter une restriction : une seule composante peut être un paramètre concurrentiel.",
+        "Elle rend l’échange équivalent à une donnée historique publique.",
+        "Elle transforme l’échange en simple comptabilisation des coûts internes."
+      ],
+      "answer": 1,
+      "explanation": "L’échange n’a pas à couvrir toutes les composantes du prix pour porter sur un paramètre de concurrence. Il faut analyser la composante en cause et son rôle dans le contexte.",
+      "references": [
+        {
+          "title": "CJUE, affaire C-298/22, échanges d’informations entre concurrents",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELLAR:cb391d1e-4d8d-11ef-acbc-01aa75ed71a1"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les participants à un accord restrictif invoquent uniquement une économie de leurs coûts internes. Quelle démonstration supplémentaire fait notamment partie de 101 §3 ?",
+      "options": [
+        "La compensation des pertes des concurrents non participants par les membres de l’accord.",
+        "La transmission aux utilisateurs de l’intégralité des économies réalisées par les participants.",
+        "Une partie équitable du profit réservée aux utilisateurs, avec les autres conditions cumulatives.",
+        "L’accord individuel de tous les utilisateurs sur le montant des économies annoncé."
+      ],
+      "answer": 2,
+      "explanation": "Le gain des participants ne suffit pas à démontrer l’exemption. Le bénéfice équitable des utilisateurs est une condition distincte, à articuler avec les autres conditions de 101 §3."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une coopération produit un gain vérifiable, mais la même efficacité peut être obtenue par une solution moins restrictive également réalisable. Quel critère de 101 §3 soulève principalement cette alternative ?",
+      "options": [
+        "L’absence d’élimination de la concurrence, déduite ici du seul nombre de participants.",
+        "La part équitable des gains réservée aux utilisateurs, appréciée uniquement par le coût de cette alternative.",
+        "L’amélioration de la distribution, considérée comme exclue dès qu’une autre méthode est réalisable.",
+        "Le caractère indispensable des restrictions pour obtenir les gains invoqués."
+      ],
+      "answer": 3,
+      "explanation": "Les restrictions ne doivent pas dépasser ce qui est indispensable aux gains. Une alternative moins restrictive réalisable oblige donc à justifier le choix de la restriction proposée."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les participants démontrent un gain de production et un avantage pour les utilisateurs. L’accord leur permet cependant d’éliminer la concurrence pour une partie substantielle des produits concernés. Que commande le caractère cumulatif de 101 §3 ?",
+      "options": [
+        "La condition relative au maintien de la concurrence reste à satisfaire ; les deux gains ne la remplacent pas.",
+        "Les gains démontrés permettent d’écarter cette dernière condition.",
+        "La condition peut être remplacée par le consentement des participants.",
+        "La seule bonne foi des entreprises suffit à valider l’élimination de la concurrence."
+      ],
+      "answer": 0,
+      "explanation": "Les conditions sont cumulatives. L’efficacité et le bénéfice des utilisateurs n’autorisent pas, à eux seuls, à éliminer la concurrence dans les termes interdits par la condition restante."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dossier d’exemption affirme que les coûts baisseront de 15 %, sans étude, hypothèse expliquée ni pièce permettant d’apprécier l’effet pour les utilisateurs. Quelle réponse est appropriée ?",
+      "options": [
+        "Retenir la prévision interne de baisse des coûts comme preuve de la part équitable revenant aux utilisateurs.",
+        "Documenter les gains allégués et leur transmission avant de tenir les conditions pour remplies.",
+        "Déduire l’existence des gains de l’augmentation de marge attendue par les seuls participants.",
+        "Considérer que l’absence de contestation des clients démontre la transmission des gains allégués."
+      ],
+      "answer": 1,
+      "explanation": "Une prévision non étayée reste une hypothèse. La démonstration doit permettre d’apprécier les gains et les conditions de l’exemption, pas seulement reprendre l’affirmation commerciale."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise invoque l’exemption individuelle de 101 §3 mais soutient que l’autorité doit établir à sa place les gains qu’elle allègue. Quelle répartition de preuve est rappelée dans l’arrêt cité ?",
+      "options": [
+        "Le demandeur à l’exemption peut se limiter à nommer le gain.",
+        "L’absence de réponse d’un concurrent prouve les conditions de l’exemption.",
+        "L’entreprise qui invoque le bénéfice de l’exemption doit en établir les conditions.",
+        "La preuve des gains doit être fournie uniquement par les clients."
+      ],
+      "answer": 2,
+      "explanation": "L’arrêt rappelle la charge pesant sur l’entreprise invoquant 101 §3. Cela se distingue de la charge d’établir l’infraction ; une affirmation d’efficacité ne vaut pas sa démonstration.",
+      "references": [
+        {
+          "title": "Cour d’appel de Paris, 31 janvier 2013, examen de 101 §3 et charge de la preuve",
+          "url": "https://www.autoritedelaconcurrence.fr/sites/default/files/docs/ca_pierrefabre_jan13.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les entreprises affirment n’avoir voulu que comparer leurs pratiques, sans intention subjective de nuire. Une coordination tarifaire restrictive est néanmoins à examiner. Quel rôle donner à cette intention annoncée ?",
+      "options": [
+        "Elle exclut l’analyse de l’objet dès lors qu’elle est commune aux dirigeants.",
+        "Elle remplace la preuve des conditions de l’exemption.",
+        "Elle exclut la concurrence comme sujet du dossier puisque le mot comparer est employé.",
+        "Elle ne dispense pas d’examiner le contenu et le contexte de la coordination."
+      ],
+      "answer": 3,
+      "explanation": "La présentation d’un objectif légitime ou d’une bonne intention ne neutralise pas à elle seule l’analyse concurrentielle. La Cour distingue ces affirmations du contenu objectif de la coordination.",
+      "references": [
+        {
+          "title": "CJUE, affaire C-298/22, échanges d’informations entre concurrents",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELLAR:cb391d1e-4d8d-11ef-acbc-01aa75ed71a1"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une alerte interne porte sur un fichier de prix futurs échangé avec un concurrent. Quelle première mesure de conservation soutient utilement la revue du comportement passé ?",
+      "options": [
+        "Préserver le fichier, ses versions, les destinataires et la chronologie des échanges pour l’analyse habilitée.",
+        "Remplacer le fichier par une synthèse sans conserver l’original.",
+        "Ne conserver que les prix finalement publiés et supprimer les intentions antérieures.",
+        "Archiver uniquement les messages qui présentent l’échange comme utile."
+      ],
+      "answer": 0,
+      "explanation": "Le contenu, les participants et la chronologie sont nécessaires à la qualification. La conservation doit permettre l’analyse des faits et des versions, sans sélection destinée à effacer les éléments gênants."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un compte rendu de réunion mentionne une répartition de zones, mais le texte s’interrompt avant la discussion des propositions. Le rapport affirme qu’un accord complet a été adopté. Quelle vérification manque ?",
+      "options": [
+        "La seule rédaction de la proposition par l’animateur, tenue pour preuve de son acceptation par les participants.",
+        "Le contenu complet des échanges, les positions des participants et les suites données à la proposition.",
+        "L’existence d’accords similaires dans le secteur, utilisée comme preuve de l’adoption de celui-ci.",
+        "La mention de zones dans l’ordre du jour, interprétée comme un engagement final de chaque participant."
+      ],
+      "answer": 1,
+      "explanation": "Une proposition rapportée dans un extrait ne suffit pas à établir à elle seule la portée de la coordination. La revue doit rechercher la suite des échanges et le comportement des participants."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le risque identifié est l’échange de données tarifaires futures pendant des réunions techniques utiles. Quelle mesure cible ce risque sans interdire par principe toute réunion professionnelle ?",
+      "options": [
+        "Conserver les échanges de prix sous une rubrique intitulée technique.",
+        "Limiter uniquement la durée des réunions, sans traiter leur contenu.",
+        "Définir et faire appliquer un périmètre de sujets, avec contrôle des données sensibles et procédure d’alerte.",
+        "Autoriser les prix futurs dès qu’un ordre du jour a été diffusé."
+      ],
+      "answer": 2,
+      "explanation": "La mesure doit viser le contenu sensible et son contrôle effectif. Un changement d’intitulé ou une réduction de durée ne traite pas l’échange de prix futurs."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise observe seule les tarifs publics actuellement pratiqués pour décider son propre prix, sans contact ni dispositif d’échange avec ses concurrents selon les faits établis. Quelle différence avec l’échange confidentiel de prix futurs faut-il conserver ?",
+      "options": [
+        "Les prix publics actuels prouvent eux aussi un accord privé sur les prix futurs.",
+        "L’observation publique dispense de toute analyse d’un autre comportement ultérieur.",
+        "Le tarif adopté devient un prix collectif s’il ressemble à celui d’un concurrent.",
+        "Les faits décrivent une observation autonome, distincte d’une coordination des intentions futures."
+      ],
+      "answer": 3,
+      "explanation": "L’observation des conditions présentes publiquement disponibles et l’échange coordonné d’intentions ne sont pas les mêmes comportements. La conclusion doit rester limitée aux faits fournis."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une revue conseille de faire passer les mêmes échanges sensibles par une association professionnelle pour les « sécuriser ». Quelle faiblesse de cette mesure faut-il relever ?",
+      "options": [
+        "Changer d’intermédiaire ne remplace pas le contrôle du contenu et du fonctionnement de l’échange.",
+        "L’association devient automatiquement une autorité fixant les prix.",
+        "Le changement de destinataire efface la nature stratégique des informations.",
+        "Les données deviennent publiques du seul fait de leur centralisation par l’association."
+      ],
+      "answer": 0,
+      "explanation": "La voie de transmission ne suffit pas à rendre l’échange licite. L’analyse porte encore sur la sensibilité des informations, les participants, le contexte et les conditions d’usage."
+    }
+  ]
+}

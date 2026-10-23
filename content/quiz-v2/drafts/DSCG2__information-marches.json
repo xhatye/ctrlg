@@ -1,0 +1,384 @@
+{
+  "module": "DSCG2",
+  "chapter": "information-marches",
+  "sourceHash": "e7efedf6afae4f68e91850584c1ac8e757b89c77ea4ff614417981758213706f",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une société annonce un bénéfice de 8 millions alors que le marché en attendait 12. Le cours baisse. Quelle explication est compatible avec ces seules informations ?",
+      "options": [
+        "Le bénéfice positif peut représenter une surprise défavorable par rapport aux attentes",
+        "Un bénéfice positif impose une hausse immédiate du cours",
+        "La baisse prouve que le bénéfice publié est faux",
+        "Les anticipations n’interviennent pas dans la réaction du cours"
+      ],
+      "answer": 0,
+      "explanation": "Le niveau positif du bénéfice ne dit pas s’il dépasse les attentes déjà intégrées. Une surprise défavorable peut expliquer une baisse, sans établir à elle seule toute la cause."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste compare uniquement le bénéfice annoncé à zéro pour prédire la réaction boursière. Quelle comparaison manque ?",
+      "options": [
+        "Celle avec le bénéfice de l’année précédente, considéré comme l’unique attente intégrée au prix",
+        "Celle avec les anticipations et informations déjà reflétées dans le prix",
+        "Celle avec le bénéfice comptable de sociétés voisines, sans prendre en compte les prévisions propres à l’émetteur",
+        "Celle avec le dividende distribué, tenu pour traduction intégrale des nouvelles perspectives"
+      ],
+      "answer": 1,
+      "explanation": "La réaction peut porter sur une information nouvelle relative aux attentes. Comparer au seul seuil zéro ignore la surprise éventuellement contenue dans l’annonce."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une hypothèse d’efficience doit préciser quel élément ?",
+      "options": [
+        "Le seul niveau moyen des rendements réalisés par les investisseurs sur la période",
+        "Le seul nombre d’intervenants au marché, sans définir les données qu’ils peuvent utiliser",
+        "L’ensemble d’informations dont on étudie l’intégration dans les prix",
+        "Le seul volume quotidien des transactions, tenu pour mesure directe de toute information disponible"
+      ],
+      "answer": 2,
+      "explanation": "L’efficience concerne un mécanisme d’intégration d’informations dans un cadre donné. Elle n’est pas une garantie générale de performance ou de prix parfait."
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une étude conclut que les prix reflètent rapidement les annonces publiques étudiées. Quelle extrapolation n’est pas justifiée ?",
+      "options": [
+        "Limiter la conclusion aux annonces et au marché étudiés",
+        "Distinguer vitesse de réaction et rendement futur",
+        "Examiner les coûts de mise en œuvre d’une stratégie",
+        "En déduire une garantie contre toute perte sur ces titres"
+      ],
+      "answer": 3,
+      "explanation": "Le résultat porte sur un ensemble d’informations observé. Il ne garantit ni l’absence de risque ni l’obtention certaine d’un gain futur."
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une stratégie affiche 150 € de gain brut par opération. Les frais d’achat sont 40 €, ceux de vente 50 € et le financement 30 €. Quel gain net calcule-t-on selon ces seuls coûts ?",
+      "options": [
+        "30 €",
+        "150 €",
+        "60 €",
+        "120 €"
+      ],
+      "answer": 0,
+      "explanation": "Le résultat net est 150 − 40 − 50 − 30 = 30 €. Un gain brut ne mesure pas à lui seul l’intérêt économique de l’opération.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 150
+                    },
+                    {
+                      "value": 40
+                    }
+                  ]
+                },
+                {
+                  "value": 50
+                }
+              ]
+            },
+            {
+              "value": 30
+            }
+          ]
+        },
+        "expected": 30,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux prix affichés permettraient un gain brut, mais le titre le moins cher ne peut être acheté dans la quantité voulue. Quel obstacle doit être examiné ?",
+      "options": [
+        "L’écart entre prix médians de la séance, utilisé à la place des prix réellement accessibles aux quantités voulues",
+        "La liquidité et la quantité réellement exécutable aux prix observés",
+        "Le rendement historique moyen du titre, utilisé pour décider si les deux ordres peuvent être exécutés",
+        "La quantité nominale totale émise, tenue pour quantité immédiatement négociable au prix affiché"
+      ],
+      "answer": 1,
+      "explanation": "Un prix affiché ne garantit pas une transaction à toute taille. L’exécution et la profondeur du marché peuvent limiter un gain théorique."
+    },
+    {
+      "id": "q07",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une règle est choisie après essai de centaines de paramètres sur les mêmes dix années. Elle est ensuite évaluée uniquement sur ces données. Quelle limite souligner ?",
+      "options": [
+        "La validité hors échantillon, considérée comme acquise dès lors que les paramètres ont été optimisés simultanément",
+        "Le seul nombre d’années observées, tenu pour suffisant sans distinguer sélection de règle et validation",
+        "Le risque d’adapter la règle à l’échantillon sans démontrer sa robustesse hors de celui-ci",
+        "L’erreur de mesure de chaque cours, considérée comme l’unique cause possible de performance exceptionnelle"
+      ],
+      "answer": 2,
+      "explanation": "Choisir puis évaluer sur les mêmes observations peut favoriser les règles chanceuses de l’échantillon. Un protocole de validation distinct aide à apprécier la robustesse."
+    },
+    {
+      "id": "q08",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une perte annoncée est moins importante que celle anticipée, et le cours monte. Quelle lecture est cohérente ?",
+      "options": [
+        "La hausse prouve que l’entreprise a dégagé un bénéfice",
+        "Une perte interdit toute hausse dans un marché reflétant les informations",
+        "Le prix ne peut réagir qu’aux chiffres déjà réalisés l’année précédente",
+        "La surprise peut être favorable malgré un résultat comptable négatif"
+      ],
+      "answer": 3,
+      "explanation": "Le signe du résultat et le signe de la surprise sont différents. Une perte moins forte qu’attendue peut améliorer les anticipations relatives au prix précédent."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un élève définit l’efficience comme « aucun titre ne peut jamais être surévalué selon aucun modèle ». Quelle réserve apporter ?",
+      "options": [
+        "La notion doit être définie par rapport à un ensemble d’informations et à ses hypothèses",
+        "La notion peut être validée par la seule égalité entre cours observé et valeur fournie par un modèle choisi",
+        "La notion se définit par l’absence de volatilité après chaque publication d’information",
+        "La notion est établie dès lors qu’une stratégie passée a procuré une performance moyenne positive"
+      ],
+      "answer": 0,
+      "explanation": "Une définition absolue confond information dans les prix et valeur parfaite universelle. Les conclusions demandent un modèle et un périmètre explicités."
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une stratégie suppose de vendre un titre non détenu, mais l’accès requis n’est pas disponible dans le cas. Quel effet cela a-t-il sur la conclusion de gain ?",
+      "options": [
+        "Le gain net devient égal au gain brut puisque l’achat est évité",
+        "La stratégie théorique ne peut être considérée comme directement réalisable",
+        "La restriction ne compte pas si le prix est observé publiquement",
+        "Le rendement historique finance automatiquement l’accès manquant"
+      ],
+      "answer": 1,
+      "explanation": "Les contraintes d’accès font partie des conditions d’exécution. Une stratégie arithmétiquement attractive peut être irréalisable sous les contraintes du dossier."
+    },
+    {
+      "id": "q11",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une étude conserve uniquement les sociétés encore cotées en fin de période et ignore celles qui ont disparu. Quel biais possible faut-il examiner ?",
+      "options": [
+        "Un biais d’anticipation lié à l’utilisation d’informations publiées après les décisions étudiées",
+        "Une sous-estimation des coûts de rotation, qui expliquerait à elle seule l’exclusion des sociétés disparues",
+        "Une sélection qui peut omettre les performances des entreprises disparues",
+        "Un biais neutralisé par le seul allongement de la période observée, sans réintégrer les sociétés exclues"
+      ],
+      "answer": 2,
+      "explanation": "La population finale peut exclure des échecs survenus pendant la période. Il faut reconstruire l’univers pertinent avant de généraliser la performance."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une corrélation historique entre un indicateur et les cours est présentée comme une preuve que l’indicateur cause leur évolution. Que manque-t-il ?",
+      "options": [
+        "Le seul maintien du même signe de corrélation sur plusieurs périodes, tenu pour démonstration d’un lien causal",
+        "La seule antériorité chronologique de l’indicateur, tenue pour preuve suffisante de causalité",
+        "La seule augmentation du nombre d’observations, tenue pour exclusion de toute cause commune",
+        "Une analyse des mécanismes, autres facteurs et limites de l’identification causale"
+      ],
+      "answer": 3,
+      "explanation": "Une relation statistique peut refléter des causes communes ou une sélection de période. Elle n’établit pas à elle seule un lien causal."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un écart de prix brut vaut 20 € par unité. Les coûts totaux de l’opération sont de 25 € par unité. Quel résultat net unitaire en découle ?",
+      "options": [
+        "-5 €",
+        "5 €",
+        "45 €",
+        "20 €"
+      ],
+      "answer": 0,
+      "explanation": "L’écart brut doit couvrir les coûts. Ici 20 − 25 = −5 € : l’écart apparent ne donne pas un gain net dans les conditions fournies.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 20
+            },
+            {
+              "value": 25
+            }
+          ]
+        },
+        "expected": -5,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un chiffre d’affaires dépasse les attentes, mais la société annonce en même temps une forte baisse de marge future. Pourquoi la seule surprise de ventes ne suffit-elle pas ?",
+      "options": [
+        "La surprise relative de chiffre d’affaires suffit à fixer le sens du cours, même si les flux attendus diminuent",
+        "Le prix peut intégrer plusieurs informations nouvelles affectant les flux attendus",
+        "La marge future ne doit être intégrée qu’à la date où elle est effectivement constatée dans les comptes",
+        "Le signe de l’annonce principale doit être retenu sans pondérer l’incidence des autres informations sur les flux"
+      ],
+      "answer": 1,
+      "explanation": "Les annonces peuvent avoir des effets opposés sur les perspectives. Le sens du cours ne se déduit pas d’un indicateur isolé sans examiner le reste de l’information."
+    },
+    {
+      "id": "q15",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un modèle suppose une diffusion immédiate et sans coût de l’information. Que faire avant d’appliquer sa conclusion à un marché réel ?",
+      "options": [
+        "Vérifier seulement que les cours sont disponibles, en tenant cette disponibilité pour information complète de tous les acteurs",
+        "Conserver le rendement brut comme estimation du rendement net tant que le marché est supposé efficient",
+        "Examiner les écarts entre ces hypothèses et les conditions observées",
+        "Utiliser le délai moyen de publication comme preuve d’un délai de réaction identique pour chaque investisseur"
+      ],
+      "answer": 2,
+      "explanation": "Une hypothèse facilite le raisonnement mais ne prouve pas sa réalisation. Les frictions réelles peuvent modifier la portée pratique de la conclusion."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une simulation utilise pour une décision de janvier une information publiée seulement en mars. Quel défaut du protocole apparaît ?",
+      "options": [
+        "Une simple différence de fréquence sans effet sur le réalisme",
+        "Une absence de diversification due au calendrier",
+        "Une diminution du nombre d’observations sans autre biais",
+        "L’utilisation d’une information indisponible au moment où la décision est supposée prise"
+      ],
+      "answer": 3,
+      "explanation": "Le test doit respecter la disponibilité chronologique des données. Anticiper une information future dans les décisions donne une performance irréalisable telle quelle."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le gain théorique repose sur deux transactions simultanées, mais l’une est exécutée bien avant l’autre. Quelle exposition supplémentaire examiner ?",
+      "options": [
+        "La variation des prix pendant le décalage d’exécution",
+        "Le risque d’un écart acheteur-vendeur, considéré comme l’unique coût même si le prix évolue entre les deux ordres",
+        "Le taux de rendement historique moyen, tenu pour prix d’exécution probable de la seconde transaction",
+        "L’écart initial coté, tenu pour gain déjà verrouillé dès la seule exécution de la première transaction"
+      ],
+      "answer": 0,
+      "explanation": "Un décalage peut laisser une position ouverte et modifier l’écart réalisable. La simultanéité supposée ne doit pas être confondue avec l’exécution observée."
+    },
+    {
+      "id": "q18",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle distinction aide à interpréter une annonce financière ?",
+      "options": [
+        "Le seul signe du résultat, considéré comme suffisant pour déterminer le sens de réaction",
+        "Le niveau annoncé et l’écart par rapport à ce qui était attendu",
+        "La seule croissance par rapport à l’exercice précédent, sans examiner les attentes",
+        "Le seul objectif interne de la direction, assimilé aux attentes de l’ensemble du marché"
+      ],
+      "answer": 1,
+      "explanation": "Les attentes peuvent déjà être intégrées dans les prix. La surprise d’information compte donc en plus du niveau ou du signe du chiffre annoncé."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une stratégie fonctionne sur une courte période de hausse continue. Quel test complète utilement son examen ?",
+      "options": [
+        "La déclarer valable pour tous les marchés puisque sa moyenne est positive",
+        "Retirer les périodes défavorables pour prolonger la série de gains",
+        "L’étudier sur d’autres périodes et conditions, en conservant un protocole explicite",
+        "Remplacer les pertes possibles par la moyenne passée"
+      ],
+      "answer": 2,
+      "explanation": "La période choisie peut dominer les résultats. Des conditions différentes et un protocole transparent aident à évaluer la robustesse, sans garantir le futur."
+    },
+    {
+      "id": "q20",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une étude d’efficience porte sur des prix quotidiens. Un commentaire affirme qu’elle démontre l’absence de tout délai intrajournalier. Que manque cette extrapolation ?",
+      "options": [
+        "La clôture quotidienne peut être utilisée comme preuve d’un ajustement complet à l’heure exacte de chaque annonce",
+        "La fréquence quotidienne permet de mesurer un délai inférieur à la minute dès lors que la période étudiée est longue",
+        "Un résultat quotidien non significatif prouve que tous les écarts intrajournaliers sont trop petits pour exister",
+        "La fréquence d’observation ne permet pas directement de conclure sur tous les délais plus courts"
+      ],
+      "answer": 3,
+      "explanation": "Une observation à la journée peut masquer des ajustements à l’intérieur de la séance. La portée temporelle d’une étude doit être respectée."
+    },
+    {
+      "id": "q21",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un backtest gagne avant frais, mais les achats et ventes sont très fréquents. Quelle donnée devient particulièrement importante ?",
+      "options": [
+        "Les coûts par transaction et leur accumulation avec la rotation",
+        "Le seul taux de frais annuel de conservation, utilisé comme approximation de tous les achats et ventes",
+        "Le coût d’un seul aller-retour, déduit une fois du rendement total quelle que soit la rotation",
+        "La moyenne des frais unitaires en pourcentage, déduite sans tenir compte des volumes négociés"
+      ],
+      "answer": 0,
+      "explanation": "Une rotation forte multiplie les coûts et contraintes d’exécution. Le résultat net peut différer fortement du résultat brut affiché."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel compte rendu rend une performance historique contrôlable ?",
+      "options": [
+        "Le seul pourcentage final de gain",
+        "Période, univers, données disponibles, règle, coûts et méthode de calcul",
+        "La seule meilleure année retenue dans l’échantillon",
+        "Le seul cours final du titre le plus performant"
+      ],
+      "answer": 1,
+      "explanation": "Une performance dépend d’un protocole. Les données et conventions permettent d’en examiner la portée au lieu de généraliser un chiffre isolé."
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "module": "UE2",
+  "chapter": "associe-dirigeant",
+  "sourceHash": "dd3f489da4f4dcb053bfcdbe72f95df20268f9670f3a3a41f2ddacceb6fb29cb",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un associé minoritaire est écarté de toute réunion au seul motif qu’il détient peu de titres. Quel droit énoncé par l’article 1844 faut-il examiner ?",
+      "options": [
+        "Le droit de participer aux décisions collectives.",
+        "Le droit de disposer d’un nombre minimal de voix fixé indépendamment des titres.",
+        "Le droit de disposer d’un veto en raison de sa seule position minoritaire.",
+        "Le droit d’obtenir l’adoption d’une résolution dès qu’il demande son inscription."
+      ],
+      "answer": 0,
+      "explanation": "Le faible poids au capital n’efface pas le droit de participer aux décisions collectives. Ce droit doit être distingué du pouvoir d’imposer le résultat d’un vote.",
+      "references": [
+        {
+          "title": "Code civil, article 1844",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038799283"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une part sociale est indivise. Sans dérogation statutaire, plusieurs indivisaires veulent chacun se présenter comme son représentant pour la même décision. Quel dispositif de l’article 1844 s’applique ?",
+      "options": [
+        "Chaque indivisaire exerce une fraction du vote attaché à la part en proportion de ses droits indivis.",
+        "Un mandataire unique pour représenter les copropriétaires de la part.",
+        "L’indivisaire détenant la plus grande quote-part représente de plein droit les autres.",
+        "La représentation de la part est réservée au gérant même si aucun mandat ne lui est confié."
+      ],
+      "answer": 1,
+      "explanation": "L’article 1844 prévoit une représentation par mandataire unique en l’absence de dérogation. La pluralité de copropriétaires ne multiplie pas les titres détenus.",
+      "references": [
+        {
+          "title": "Code civil, article 1844",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038799283"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une part est grevée d’usufruit ; il n’existe ni clause dérogatoire ni convention particulière. La décision concerne l’affectation des bénéfices. À qui l’article 1844 réserve-t-il le vote pour cette décision ?",
+      "options": [
+        "Conjointement au nu-propriétaire et à l’usufruitier, avec division du vote entre eux.",
+        "Au nu-propriétaire pour toute décision sans distinction.",
+        "À l’usufruitier pour l’affectation des bénéfices.",
+        "À l’usufruitier seulement après accord préalable du nu-propriétaire pour ce vote."
+      ],
+      "answer": 2,
+      "explanation": "Dans le régime posé par l’article 1844 et sous les hypothèses indiquées, le vote sur l’affectation des bénéfices revient à l’usufruitier. La participation et la répartition du vote sont distinctes.",
+      "references": [
+        {
+          "title": "Code civil, article 1844",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038799283"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une copie refuse au nu-propriétaire le droit de participer à une décision au seul motif que le vote y revient à l’usufruitier. Quelle distinction doit-elle faire ?",
+      "options": [
+        "L’attribution du droit de voter et le nombre de voix attachées à une catégorie de titres.",
+        "La représentation par un mandataire et l’exercice personnel du vote par le titulaire.",
+        "Le calcul du quorum et le calcul de la majorité sur les suffrages exprimés.",
+        "Le droit de participer et l’attribution du droit de vote pour la décision."
+      ],
+      "answer": 3,
+      "explanation": "L’article 1844 reconnaît le droit de participation au nu-propriétaire et à l’usufruitier. L’attribution du vote ne suffit pas à exclure l’autre de la participation.",
+      "references": [
+        {
+          "title": "Code civil, article 1844",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038799283"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une part est grevée d’usufruit. Pour une décision autre que l’affectation des bénéfices, nu-propriétaire et usufruitier conviennent que le second votera. Sans autre difficulté, quel mécanisme de l’article 1844 est mis en œuvre ?",
+      "options": [
+        "La convention permise entre eux pour confier à l’usufruitier le vote sur les autres décisions.",
+        "Une dérogation qui nécessiterait dans tous les cas une modification des statuts par les associés.",
+        "Une convention admise seulement pour l’affectation des bénéfices, sans extension possible aux autres décisions.",
+        "Une convention qui nécessiterait l’unanimité des associés pour chaque vote exercé par l’usufruitier."
+      ],
+      "answer": 0,
+      "explanation": "Pour les décisions autres que l’affectation des bénéfices, 1844 permet au nu-propriétaire et à l’usufruitier de convenir que le droit de vote sera exercé par l’usufruitier. Cette organisation du vote ne transfère pas la propriété et n’efface pas le droit de participer.",
+      "references": [
+        {
+          "title": "Code civil, article 1844, convention sur le vote",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000038799283/2020-12-16"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Dans une SARL, une personne qui ne détient aucune part peut-elle être choisie comme gérante selon l’article L223-18 ?",
+      "options": [
+        "Non, tout gérant doit au moins détenir une part, même sans majorité.",
+        "Oui, les gérants peuvent être choisis en dehors des associés.",
+        "Oui, sous condition de recevoir une part lors de sa nomination avant de pouvoir agir.",
+        "Non, la nomination d’un non-associé est réservée aux formes par actions."
+      ],
+      "answer": 1,
+      "explanation": "Le texte permet de choisir le gérant en dehors des associés. La nomination et l’acquisition de parts sont des opérations distinctes.",
+      "references": [
+        {
+          "title": "Code de commerce, article L223-18",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031013015"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le projet d’une SARL prévoit de nommer une société comme gérante. Quel point de l’article L223-18 doit être contrôlé ?",
+      "options": [
+        "La détention d’une majorité des parts par la personne morale, considérée comme levant cette restriction.",
+        "La désignation d’un représentant permanent de la personne morale, considérée comme équivalente à sa nomination personnelle.",
+        "La gérance d’une SARL doit être assurée par une ou plusieurs personnes physiques.",
+        "La seule qualité de personne morale commerciale de la candidate, considérée comme la rendant éligible."
+      ],
+      "answer": 2,
+      "explanation": "Le régime de la SARL prévoit des gérants personnes physiques. La forme du candidat à la fonction doit être examinée indépendamment de ses compétences ou de sa participation.",
+      "references": [
+        {
+          "title": "Code de commerce, article L223-18",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031013015"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans une SARL à plusieurs gérants, l’un s’oppose à un acte de l’autre ; le tiers connaissait cette opposition avant de conclure. Quel fait est spécialement pertinent selon L223-18 ?",
+      "options": [
+        "La détention d’une majorité de capital par le gérant qui s’oppose, retenue comme condition exclusive d’effet externe.",
+        "L’inscription de l’opposition dans un document interne, retenue comme suffisante même sans connaissance du tiers.",
+        "L’accord postérieur du second gérant, retenu comme remplaçant l’examen de la connaissance lors du contrat.",
+        "La connaissance de l’opposition par le tiers."
+      ],
+      "answer": 3,
+      "explanation": "Le texte distingue l’opposition interne et sa portée envers le tiers selon sa connaissance. Il faut établir la chronologie et ce que le cocontractant savait.",
+      "references": [
+        {
+          "title": "Code de commerce, article L223-18",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031013015"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dirigeant sollicite une autorisation interne prévue par les statuts puis signe avec un fournisseur. Quels plans d’analyse distinguer ?",
+      "options": [
+        "La répartition interne des pouvoirs et l’engagement de la société envers le tiers.",
+        "L’autorisation interne et une ratification externe, considérées comme le même acte du dirigeant.",
+        "La compétence pour autoriser et la compétence pour représenter, considérées comme nécessairement attribuées à la même personne.",
+        "La preuve de l’autorisation et la validité du contrat, considérées comme se démontrant réciproquement."
+      ],
+      "answer": 0,
+      "explanation": "Un contrôle interne et la portée d’un acte envers les tiers ne sont pas toujours identiques. La forme et les règles de représentation doivent être examinées pour chacun."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie applique au gérant d’une SARL une clause propre à la présidence d’une SAS tirée d’un autre dossier. Quel contrôle manque ?",
+      "options": [
+        "La correspondance entre prix de l’opération et montant du capital, retenue comme fixant les pouvoirs dans les deux formes.",
+        "La correspondance entre fonction, forme sociale et régime applicable.",
+        "La similarité des activités des deux sociétés, retenue comme autorisant la transposition de leurs règles de direction.",
+        "La même personne occupant les deux fonctions, retenue comme rendant les clauses interchangeables."
+      ],
+      "answer": 1,
+      "explanation": "Une fonction de direction ne se transpose pas sans vérifier la forme et les textes pertinents. La règle d’une SAS ne documente pas à elle seule la gérance d’une SARL."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "En 2026, une personne physique souscrit un cautionnement envers un créancier professionnel. Sa disproportion manifeste aux revenus et au patrimoine lors de la conclusion est établie. Quelle conséquence prévoit l’article 2300 ?",
+      "options": [
+        "La nullité de la totalité du cautionnement, sans examiner le montant soutenable à la conclusion.",
+        "La réduction au montant que la caution pourrait supporter au jour de la demande de paiement.",
+        "La réduction au montant à hauteur duquel la caution pouvait s’engager lors de la conclusion.",
+        "Le maintien du montant signé si la caution détient aussi des titres de la société débitrice."
+      ],
+      "answer": 2,
+      "explanation": "Depuis le 1er janvier 2022, l’article 2300 prévoit pour cette disproportion une réduction au montant supportable lors de la conclusion. Il ne retient ni une nullité intégrale de principe ni un montant apprécié au jour de l’appel en paiement. La date de l’acte donnée rend ce régime applicable.",
+      "references": [
+        {
+          "title": "Code civil, article 2300, disproportion du cautionnement",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044071221/2026-04-28"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une personne signe un prêt comme dirigeante pour la société et, sur un acte distinct, une garantie en son nom. Quelle lecture du risque est adaptée ?",
+      "options": [
+        "La signature au nom de la société vaut engagement personnel dans le prêt et rend la garantie distincte sans objet.",
+        "La garantie doit être traitée comme une nouvelle dette principale, sans distinguer son caractère de sûreté.",
+        "L’acte personnel remplace l’emprunteur social par le dirigeant, même si le prêt désigne toujours la société.",
+        "Les qualités et obligations doivent être identifiées dans chacun des deux actes."
+      ],
+      "answer": 3,
+      "explanation": "Le cumul des qualités ne permet pas de fusionner les engagements. Il faut distinguer dette sociale et garantie personnelle selon leurs documents et conditions."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le président quitte ses fonctions ; une garantie personnelle qu’il avait signée reste au dossier sans clause relative à ce départ. Comment examiner le sort de la garantie ?",
+      "options": [
+        "Distinguer fin du mandat et conditions d’extinction de l’engagement personnel.",
+        "Déduire de la fin du mandat la libération de toute garantie signée antérieurement.",
+        "Considérer que la garantie subsiste seulement jusqu’à la nomination du successeur, sans clause le prévoyant.",
+        "Considérer que la fin de toute période de couverture éteint aussi les obligations de règlement déjà nées, sans distinguer les dettes concernées."
+      ],
+      "answer": 0,
+      "explanation": "La fin d’une fonction ne prouve pas à elle seule le sort d’un engagement distinct. Celui-ci doit être analysé selon son contenu et les règles pertinentes."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un financement proposé au dirigeant contient une garantie dont la durée et les dettes couvertes ne sont pas communiquées. Quel contrôle permet de mesurer le risque ?",
+      "options": [
+        "Le contrat de prêt, considéré comme établissant à lui seul toutes les dettes couvertes par une garantie non communiquée.",
+        "L’obtention des clauses définissant le périmètre et la durée de l’engagement.",
+        "Le solde actuel du financement, retenu comme plafond définitif de toute obligation future du garant.",
+        "Le terme du mandat du dirigeant, retenu comme terme de la garantie en l’absence de son texte."
+      ],
+      "answer": 1,
+      "explanation": "Le risque d’une garantie dépend de ce qu’elle couvre et de ses conditions. Capital et dividendes ne permettent pas de reconstituer les clauses manquantes."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un candidat attribue la garantie signée par un associé à tous les associés parce qu’ils bénéficient du financement social. Quel point doit-il corriger ?",
+      "options": [
+        "La répartition des droits de vote, considérée comme fixant aussi la quote-part de garantie de chaque associé.",
+        "Le bénéfice économique du prêt pour la société, considéré comme preuve d’un consentement personnel collectif.",
+        "L’identité du garant et le caractère distinct de son engagement.",
+        "La décision autorisant le prêt social, considérée comme engagement de caution de chaque votant favorable."
+      ],
+      "answer": 2,
+      "explanation": "L’intérêt économique commun ne prouve pas un engagement de chacun. La garantie doit être rattachée à son signataire et à son contenu, sans extension présumée."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un associé a limité son apport dans une forme à risque limité, mais une faute personnelle lui est aussi reprochée. Comment organiser la réponse ?",
+      "options": [
+        "Fixer la responsabilité personnelle au plafond de l’apport, même si le dommage allégué dépasse ce montant.",
+        "Considérer l’approbation des comptes comme preuve que toute faute personnelle a été couverte.",
+        "Examiner seulement la dette sociale impayée, en tenant la faute alléguée pour sans effet sur un risque distinct.",
+        "Séparer le risque lié aux titres et le fondement éventuel relatif à la faute propre."
+      ],
+      "answer": 3,
+      "explanation": "La limitation du régime des dettes sociales ne remplace pas l’analyse d’un comportement personnel. Il faut identifier le fondement et les faits requis pour chaque demande."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une activité affiche un résultat inférieur aux prévisions. Que faut-il établir avant de conclure à une responsabilité juridique du dirigeant ?",
+      "options": [
+        "Un fondement et les faits nécessaires à ses conditions.",
+        "Le seul écart entre résultat prévu et résultat réel.",
+        "La seule existence d’un associé mécontent.",
+        "Le seul versement d’une rémunération au dirigeant."
+      ],
+      "answer": 0,
+      "explanation": "Une mauvaise performance ne démontre pas toutes les conditions d’une responsabilité. Le comportement reproché, le dommage et le régime pertinent doivent être précisés."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La société n’a pas payé un fournisseur. Celui-ci demande au dirigeant de payer personnellement en invoquant seulement sa fonction. Quel contrôle manque ?",
+      "options": [
+        "Le montant des apports du dirigeant, retenu comme preuve suffisante qu’il garantit les dettes sociales.",
+        "Le fondement d’une demande contre le dirigeant distinct de la dette sociale.",
+        "La seule inscription de la dette au bilan, tenue pour dette du dirigeant.",
+        "Le pouvoir du dirigeant de signer le contrat, retenu comme équivalent à une obligation personnelle de payer."
+      ],
+      "answer": 1,
+      "explanation": "La dette sociale ne devient pas personnelle par la seule qualité de dirigeant. Un engagement ou un fondement de responsabilité distinct doit être identifié et établi."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une décision de gestion a été suivie d’une perte, mais le dossier décrit aussi une cause extérieure indépendante. Quel point exige une analyse avant d’imputer toute la perte au dirigeant ?",
+      "options": [
+        "Le montant total de la perte, retenu comme imputable à la dernière décision prise avant sa constatation.",
+        "L’importance de la participation du dirigeant, retenue comme mesure de sa contribution causale au dommage.",
+        "Le comportement reproché et son lien avec le dommage allégué.",
+        "La chronologie seule, retenue comme preuve que la cause extérieure est sans incidence sur l’imputation."
+      ],
+      "answer": 2,
+      "explanation": "La succession d’une décision et d’une perte ne suffit pas à déterminer la responsabilité. Le fondement et le lien avec le dommage doivent être examinés en tenant compte des autres causes."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une réponse traite un prêt personnel garanti et une responsabilité pour gestion fautive comme deux noms du même risque. Quelle distinction rétablir ?",
+      "options": [
+        "Le montant plafonné d’une garantie et une réparation, considérés comme deux mesures interchangeables du même fondement.",
+        "La notification d’un appel en garantie, considérée comme établissant par elle-même une faute de gestion.",
+        "L’existence d’une garantie, considérée comme remplaçant la preuve des conditions de toute demande de responsabilité.",
+        "L’engagement contractuel de garantie et la responsabilité fondée sur des faits propres."
+      ],
+      "answer": 3,
+      "explanation": "Les demandes ont des fondements et conditions différents. Les traiter séparément permet de comprendre ce que chaque acte et chaque fait permettent d’établir."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un associé exerce l’action sociale contre le gérant sur le fondement de l’article 1843-5. Il demande la réparation d’un préjudice subi par la société. À qui les dommages et intérêts doivent-ils être alloués en cas de condamnation ?",
+      "options": [
+        "À la société, même si l’action sociale a été exercée par un associé.",
+        "À l’associé demandeur personnellement, puisqu’il a engagé l’action.",
+        "À tous les associés directement, à proportion de leurs droits dans le capital.",
+        "Au seul associé demandeur pour sa quote-part, le reste demeurant à réclamer par le gérant."
+      ],
+      "answer": 0,
+      "explanation": "L’action sociale exercée par l’associé poursuit le préjudice de la société : 1843-5 prévoit que les dommages et intérêts lui sont alloués. Il faut distinguer cette action d’une demande réparant un préjudice personnel distinct de l’associé.",
+      "references": [
+        {
+          "title": "Code civil, article 1843-5, action sociale",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006444156/2023-10-06"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dirigeant affirme avoir été autorisé en interne à effectuer une opération ; une responsabilité reste discutée en raison de faits précis. Que faut-il examiner ?",
+      "options": [
+        "La seule autorisation, traitée comme exonération générale de tout comportement ultérieur.",
+        "La portée de l’autorisation et les conditions du fondement de responsabilité invoqué.",
+        "La seule perte de l’opération, traitée comme preuve suffisante de faute malgré l’autorisation.",
+        "L’autorisation, traitée comme reportant sur les votants toute responsabilité pour les faits d’exécution du dirigeant."
+      ],
+      "answer": 1,
+      "explanation": "L’autorisation interne et la responsabilité ne se confondent pas nécessairement. Il faut déterminer ce que l’autorisation couvre et les conditions de la demande réellement formée."
+    }
+  ]
+}

@@ -1,0 +1,428 @@
+{
+  "module": "DSCG6",
+  "chapter": "documents",
+  "sourceHash": "03064afa4b05bde7b1d4a3a0122ca2ce0ac4fc7a43894f9309dce6769698fecb",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Read this original extract: “Digital invoicing can reduce administrative work, but smaller suppliers may face substantial setup costs.” Which statement best captures its main claim?",
+      "options": [
+        "Digital invoicing offers administrative benefits, while setup costs may be a barrier for smaller suppliers.",
+        "The extract mainly recommends that small suppliers outsource their administrative departments.",
+        "The extract mainly establishes that setup costs outweigh benefits for most suppliers.",
+        "The extract compares the administrative quality of large and small suppliers."
+      ],
+      "answer": 0,
+      "explanation": "La thèse combine un bénéfice potentiel et une difficulté de mise en place. Le texte ne recommande pas une externalisation, ne mesure pas un solde coûts-avantages et ne compare pas la qualité des entreprises."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Read: “Not until the reconciliation was complete did the director authorise payment.” Which sequence does this emphatic construction state?",
+      "options": [
+        "Payment was authorised before the reconciliation was complete.",
+        "Payment was authorised only once the reconciliation was complete.",
+        "The reconciliation was completed only after payment was authorised.",
+        "The director authorised payment while stating that reconciliation was unnecessary."
+      ],
+      "answer": 1,
+      "explanation": "Not until place la fin du rapprochement comme borne avant laquelle l’autorisation n’avait pas été donnée. L’inversion did the director authorise est liée à cette mise en tête négative ; elle ne change pas l’ordre des événements."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report says, “Although demand increased, operating profit fell as delivery costs rose.” Which summary preserves the relationship between the ideas?",
+      "options": [
+        "Lower demand explains the fall in operating profit and delivery costs.",
+        "The report argues that delivery costs fell despite increased demand.",
+        "Stronger demand coincided with lower operating profit amid higher delivery costs.",
+        "Higher operating profit financed the delivery capacity needed for stronger demand."
+      ],
+      "answer": 2,
+      "explanation": "Although marque le contraste entre demande accrue et résultat en baisse. La proposition correcte conserve ces mouvements et le contexte des coûts ; les autres inversent les données ou ajoutent un mécanisme absent."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A survey note reports that “no fewer than 60 suppliers responded”. What lower bound does this wording establish?",
+      "options": [
+        "At most 60 suppliers responded; a smaller count is allowed by the wording.",
+        "Exactly 60 suppliers responded; a larger count is excluded.",
+        "Fewer than 60 suppliers responded, despite the emphasis.",
+        "At least 60 suppliers responded; the wording does not give a smaller count."
+      ],
+      "answer": 3,
+      "explanation": "No fewer than fixe un minimum de 60 et le souligne. Cela n’impose pas exactement 60 ; at most inverse la borne et fewer than retire la négation essentielle."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Read: “The main issue is not whether forecasting software is available, but whether staff trust and use its outputs.” Which heading best reflects the document’s central focus?",
+      "options": [
+        "Adoption and use of forecasting outputs by staff.",
+        "The availability of forecasting software on the market.",
+        "The purchase price of forecasting licences.",
+        "The replacement of staff by forecasting software."
+      ],
+      "answer": 0,
+      "explanation": "Not whether… but whether déplace la question de la disponibilité vers la confiance et l’usage. Ni le prix ni le remplacement des salariés ne sont l’objet central affirmé dans cet extrait."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which record directly supports the descriptive claim that observed invoice-payment delays were shorter after a new collection process?",
+      "options": [
+        "Forecast delays from the new workflow’s business case, presented as the measured post-rollout result.",
+        "Observed payment-delay records before and after rollout, using comparable invoices and the same date convention.",
+        "Time taken to issue invoices after delivery, used as the measure of customers’ subsequent payment delays.",
+        "The year-end value of unpaid invoices, without invoice or payment dates."
+      ],
+      "answer": 1,
+      "explanation": "Il faut observer les délais de règlement selon la même convention sur des factures comparables. Une prévision, le délai d’émission ou un stock d’impayés ne mesure pas ce délai observé. Cette comparaison descriptive n’isole pas, à elle seule, une cause."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Read: “The suppliers who passed the security audit received access to the portal.” With no commas around who passed the security audit, what does that clause do?",
+      "options": [
+        "It asserts that every supplier passed the audit before adding an incidental detail.",
+        "It identifies the auditors as the people who received supplier access.",
+        "It identifies the subset of suppliers to which the access statement applies.",
+        "It says passing the audit occurred after access had been granted."
+      ],
+      "answer": 2,
+      "explanation": "La relative sans virgules restreint le groupe visé aux fournisseurs ayant satisfait à l’audit. Elle n’affirme pas que tous les fournisseurs l’ont réussi et ne fournit pas l’ordre inversé des événements."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "During an interview, a controller asks, “Would you mind sending the supporting schedule?” The supplier replies, “Not at all; I will send it today.” How should the reply be reported?",
+      "options": [
+        "The supplier objected to sending the schedule and asked for the request to be withdrawn.",
+        "The supplier said the schedule did not exist and could not be supplied.",
+        "The supplier asked the controller to send a schedule instead.",
+        "The supplier agreed to the request and said it would send the schedule that day."
+      ],
+      "answer": 3,
+      "explanation": "Not at all répond négativement à would you mind : la personne ne s’y oppose pas. La suite explicite son accord d’envoi ; il ne faut pas traiter cette formule de politesse comme un refus de la demande."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A source permits a report to quote a supplier employee on condition of anonymity. Which attribution respects that stated condition without inventing a different source role?",
+      "options": [
+        "An unnamed employee of the supplier said that the rollout was difficult.",
+        "The supplier’s authorised spokesperson announced the company’s official position on the rollout.",
+        "An independent auditor concluded that the supplier’s rollout had failed.",
+        "The report names the employee and identifies the comment as an anonymous statement."
+      ],
+      "answer": 0,
+      "explanation": "L’anonymat conserve l’origine pertinente du témoignage sans publier l’identité. Il ne transforme pas l’employé en porte-parole autorisé ni en auditeur indépendant ; nommer la personne contredirait la condition fournie."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The note states, “The manager allegedly bypassed the approval process.” What does allegedly indicate about that proposition?",
+      "options": [
+        "It is presented as a breach proved by a completed investigation.",
+        "It is presented as an allegation rather than as a fact established by that wording alone.",
+        "It is presented as a finding that no bypass occurred.",
+        "It is presented as an instruction to bypass approval in a future transaction."
+      ],
+      "answer": 1,
+      "explanation": "Allegedly attribue une affirmation qui n’est pas établie par ce seul énoncé. Le mot ne prouve pas davantage sa fausseté ; il faut distinguer allégation, constat vérifié et instruction future.",
+      "references": [
+        {
+          "title": "Cambridge Dictionary — Allegedly",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/allegedly"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Three departments have average processing times of 10, 10 and 70 minutes and handle equal numbers of cases. The overall mean is 30 minutes. Which interpretation is supported?",
+      "options": [
+        "Each department processes most cases between 25 and 35 minutes.",
+        "The three departments have similar distributions because they share one overall mean.",
+        "The high value in one department pulls the overall mean above the values in the other two.",
+        "Thirty minutes is the processing time of a typical case in each department."
+      ],
+      "answer": 2,
+      "explanation": "Les données montrent l’effet du département à 70 sur la moyenne globale. Elles ne donnent pas la distribution des cas dans les départements ni une durée commune à chaque cas ou service."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A dataset contains payment delays of 2, 3, 4, 5 and 86 days. The last value is corrected to 186 days. Which summary is unchanged by that correction?",
+      "options": [
+        "The arithmetic mean delay.",
+        "The maximum delay.",
+        "The range of delays.",
+        "The median delay."
+      ],
+      "answer": 3,
+      "explanation": "Le troisième délai reste 4 jours, donc la médiane ne change pas. L’augmentation de la valeur maximale modifie la somme et la moyenne, ainsi que le maximum et l’étendue."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Team A’s mean delay rises by four days and team B’s falls by four days. Both teams handle the same number of cases before and after. The combined mean is unchanged. What can you conclude?",
+      "options": [
+        "The unchanged combined mean conceals opposite movements in the two teams.",
+        "Neither team’s performance changed because the combined mean is stable.",
+        "Every individual delay remained unchanged within each team.",
+        "The fall in B shows that the rise in A was a reporting error."
+      ],
+      "answer": 0,
+      "explanation": "Une moyenne agrégée stable peut résulter de mouvements opposés qui se compensent. Elle ne prouve ni l’absence de changement local, ni la stabilité individuelle, ni une erreur sur une équipe."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A supplier survey reports a lower average delivery time this year. Last year it covered mainly overseas deliveries; this year mainly local deliveries. What limits a claim that suppliers themselves became faster?",
+      "options": [
+        "The larger local share makes the two samples directly equivalent.",
+        "The mix of delivery types changed between the samples.",
+        "The surveys use days as the unit in both years.",
+        "The lower average necessarily measures the same improvement within each delivery type."
+      ],
+      "answer": 1,
+      "explanation": "La composition peut faire varier la moyenne sans amélioration dans chaque catégorie. La même unité ne suffit pas à rendre comparables des ensembles dont la répartition local/international change."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report gives only the mean salary of a group. Which additional information would most directly show whether salaries are closely clustered or widely spread?",
+      "options": [
+        "The median salary of the same group.",
+        "The most frequently paid salary in the same group.",
+        "A measure of dispersion, such as the standard deviation or an appropriate range.",
+        "The total payroll divided by the number of employees in the group."
+      ],
+      "answer": 2,
+      "explanation": "La dispersion décrit l’étalement des salaires. Médiane et mode sont des repères centraux qui ne mesurent pas directement cet étalement ; diviser la masse salariale par l’effectif redonne la moyenne déjà disponible."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report asks the analyst to “disaggregate the complaint figures by product line”. Which presentation fulfils disaggregate by in this instruction?",
+      "options": [
+        "One overall complaint total for all product lines combined, with the labels removed.",
+        "Complaint figures sorted only by calendar date, without identifying product lines.",
+        "A reduction of the overall complaint total in proportion to each product line’s sales.",
+        "Separate complaint figures for each product line, preserving the stated counting convention."
+      ],
+      "answer": 3,
+      "explanation": "Disaggregate by demande de décomposer les données selon la catégorie indiquée, ici la gamme. Ce n’est ni conserver le seul total, ni remplacer le classement demandé par la date, ni diminuer artificiellement les effectifs."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A note describes “a procedure whereby each payment receives an independent check”. What relationship does whereby express?",
+      "options": [
+        "The procedure is the means by which the independent check is carried out.",
+        "The independent check is contrasted with the procedure as an opposing practice.",
+        "The procedure is the physical place where the reviewers are located.",
+        "The independent check is an exception that the procedure excludes."
+      ],
+      "answer": 0,
+      "explanation": "Whereby signifie ici par lequel ou au moyen duquel : la proposition explique le mécanisme de la procédure. Whereas introduirait plutôt un contraste ; la phrase ne nomme pas un lieu ou une exception."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Read: “The recommendation is justified only insofar as the data are representative.” Which limitation does insofar as express?",
+      "options": [
+        "The recommendation itself establishes that the data are representative.",
+        "The data’s representativeness limits how far the recommendation can be justified.",
+        "The recommendation remains equally justified whether or not the data are representative.",
+        "Representativeness need be examined only after the recommendation has been adopted."
+      ],
+      "answer": 1,
+      "explanation": "Only insofar as limite la justification à la mesure où les données sont représentatives. La recommandation ne prouve pas cette condition et son adoption ne dispense pas de l’examiner.",
+      "references": [
+        {
+          "title": "Cambridge Dictionary — Insofar as",
+          "url": "https://dictionary.cambridge.org/us/dictionary/english/insofar-as"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Late invoices represent 8% of 1,000 invoices in year one and 6% of 2,000 invoices in year two. How did the number of late invoices change?",
+      "options": [
+        "2 fewer late invoices.",
+        "80 more late invoices.",
+        "40 more late invoices.",
+        "20 fewer late invoices."
+      ],
+      "answer": 2,
+      "explanation": "Les effectifs sont 1 000 × 8 % = 80 puis 2 000 × 6 % = 120 : il y a 40 factures tardives de plus malgré un taux inférieur. L’évolution du pourcentage ne détermine pas l’évolution de l’effectif quand le total varie.",
+      "calculation": {
+        "digits": 0,
+        "expected": 40,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 2000
+                },
+                {
+                  "value": 0.06
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 1000
+                },
+                {
+                  "value": 0.08
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report identifies a “material discrepancy” but gives no conclusion about its cause. What does material mean in this professional use?",
+      "options": [
+        "Relating only to physical inventory rather than to other financial figures.",
+        "Already confirmed as a cash loss equal to the discrepancy.",
+        "Established as a deliberate misstatement by the person who prepared the figures.",
+        "Significant enough to matter to the assessment."
+      ],
+      "answer": 3,
+      "explanation": "Material qualifie ici l’importance pertinente de l’écart. Le terme ne le limite pas aux biens matériels et ne prouve, à lui seul, ni perte de trésorerie ni intention de fausser les chiffres."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "A report combines 100 invoices with a 20% late rate and 900 invoices with a 10% late rate. What is the late rate across all 1,000 invoices?",
+      "options": [
+        "11%.",
+        "15%.",
+        "30%.",
+        "19%."
+      ],
+      "answer": 0,
+      "explanation": "Il faut agréger les effectifs : 100 × 20 % + 900 × 10 % = 110 factures tardives sur 1 000, soit 11 %. La moyenne simple des deux taux donnerait le même poids à deux groupes de tailles différentes.",
+      "calculation": {
+        "digits": 0,
+        "expected": 11,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "op": "*",
+                      "args": [
+                        {
+                          "value": 100
+                        },
+                        {
+                          "value": 0.2
+                        }
+                      ]
+                    },
+                    {
+                      "op": "*",
+                      "args": [
+                        {
+                          "value": 900
+                        },
+                        {
+                          "value": 0.1
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "value": 1000
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A business indicator rises by 50% and then falls by 50% of its new level. An article says the two changes cancel out. Which interpretation corrects that claim?",
+      "options": [
+        "The indicator ends 25% above its initial level because the first change uses the smaller base.",
+        "The final indicator is 25% below its initial level because the second change uses the higher base.",
+        "The indicator returns to its initial level because the two percentages have opposite signs.",
+        "The final indicator is 50% below its initial level because only the second change counts."
+      ],
+      "answer": 1,
+      "explanation": "En prenant une base 100, on obtient 150 puis 75. Les variations successives n’ont pas la même base ; +50 % puis −50 % ne s’annulent donc pas et la baisse totale est de 25 %."
+    }
+  ]
+}

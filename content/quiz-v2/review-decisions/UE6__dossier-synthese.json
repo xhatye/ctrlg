@@ -1,0 +1,248 @@
+{
+  "sourceHash": "39478245e1560b5d702e722d2828fa323a9a7abddba0a9b31a7b8a47cff91770",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "266f14adc859cb9df46b1e53a8d3a4a3899be646a1bbaf654037d495c1b9b1cd",
+      "selected": 3,
+      "reason": "Les commandes et factures ne fixent pas le moment d’encaissement : il faut les échéances et comportements de paiement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "54805c8afba5d58e999306658f73e4e0f3cb36dc99eb6dccdb3304f056070c62",
+      "selected": 1,
+      "reason": "À croissance proportionnelle des ventes et encours, seuls les délais et l’ancienneté comparables permettent de conclure sur les retards.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "9bf9fd51ddef3f9e2483b2cf8129b9dbb034d1567e18452792b811e886693b07",
+      "selected": 0,
+      "reason": "La promesse est une hypothèse d’encaissement à suivre, et non des liquidités déjà présentes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "5644c429ae4e97e06583ee9e5b548d0a0b27dd4a27e42fc4bd25db485ce3b25b",
+      "selected": 2,
+      "reason": "Le bénéfice comptabilisé avant paiement client ne couvre pas nécessairement les décaissements : le décalage demande un financement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "7e83060a5e5b45a80248f268baafb1f6bdd1730930652439445144758a33dd73",
+      "selected": 0,
+      "reason": "Stocks plus clients valent 70 000 ; moins fournisseurs doit donner 30 000, donc fournisseurs 40 000.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "e16e9b044cf0347b645883278a17357f7cdba86b285c7e6db995653d105c0030",
+      "selected": 1,
+      "reason": "Le BFRE limité ne représente pas tous les autres besoins ; le périmètre doit rester annoncé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "9a9e7eb1a3782117d181bfbe6eb3d44ea629cf1a1d147dd62f38d78f7781d024",
+      "selected": 0,
+      "reason": "Un remboursement d’emprunt est financier et ne constitue pas une dette fournisseur d’exploitation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "7d8e58404e3b6bf04275d585de627bd850466704e81d6df02a01cd6e73b7086d",
+      "selected": 0,
+      "reason": "La composition et la qualité du dénouement peuvent différencier la liquidité de deux BFR égaux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "581b6af82b224175997f734be77fc78a7fbb4813427a67b34f83dbdc4a35612b",
+      "selected": 0,
+      "reason": "46 000 moins 5 000 moins 3 000 donne 38 000 euros de BFR.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "b33d006aae3944507bd4d32182378084701a65770692adda5ceb2f61de478930",
+      "selected": 1,
+      "reason": "La variation du besoin est 6 000 + 9 000 − 4 000 = 11 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "3d737ddde16ea3b3b8496f845f39639faac22f7b40b6c8e4fd6fdf1142e47ac7",
+      "selected": 1,
+      "reason": "Les fournisseurs financent une partie de la hausse des stocks et clients ; ils réduisent le besoin plutôt qu’ils ne l’augmentent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "67680975901ebc5b61bdc7a7c6aa80241683e18a7a486984b6506fa0faebbcd8",
+      "selected": 3,
+      "reason": "Le niveau stable exige des ressources maintenues, tandis que sa variation mesure le financement additionnel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "46d70b1cf6f96632c708c0a08b670c62e097037ce5cda46364e7d4e5eff0baaa",
+      "selected": 1,
+      "reason": "Le passage de −7 000 à +5 000 constitue une hausse de 12 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "ca9bc1bde7252b449ecb74ffacacc8cebac625166996d4e935f06f26c7a74acb",
+      "selected": 1,
+      "reason": "Une variation mesurée sur l’année ne doit pas être multipliée par douze comme si elle était mensuelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "0fe7f2308c2aadebb9daa2f19d4b170212e36c92e38f3059098a1bfcca97c1a3",
+      "selected": 0,
+      "reason": "Le cycle en croissance peut consommer des ressources malgré le bénéfice ; le besoin exige son propre examen.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "70b07783f858e4b23987835744cded132ec647c207168b3d6cf896a216bff025",
+      "selected": 2,
+      "reason": "Une baisse de stock doit être confrontée au risque de rupture et à la continuité des ventes ou de la production.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "32d065a7f582f489e75ada13b0817da281c0d1d5a02feae27f6e076823a149fe",
+      "selected": 1,
+      "reason": "Les conditions des contrats et la réponse commerciale des clients déterminent la faisabilité du raccourcissement proposé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "91d2363f5f47a7fea92d0afa0179ef951b388264e881a067ad8ebea76e4c99dc",
+      "selected": 1,
+      "reason": "Sans accord fournisseur, l’allongement du crédit demeure une hypothèse conditionnelle à tester.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "0c6dc617bff942fd6763a80e82871d31895002120cf8e6ceac4835d0d17c635f",
+      "selected": 3,
+      "reason": "10 000 × (1 − 2 %) = 9 800 euros après remise.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "01c56b4a85b110e0497b681dae2ace16dfaeb8762bb939d627e7ec86da615e6f",
+      "selected": 2,
+      "reason": "La libération est ponctuelle ; la croissance future des volumes et délais peut reconstituer le besoin.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "efc8f6ae06bf0b0b3a2c55864fb4ef053075979ac646d0adfd57367f4951e61d",
+      "selected": 3,
+      "reason": "Les règlements, impayés échus et délais comparables mesurent l’effet réel sur le financement du cycle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "faffb6ae612c0ef4724911ff9eda73d7c769dbc7297c77b3725ed7fd4b231b67",
+      "selected": 1,
+      "reason": "Une recommandation précise l’effet attendu, les hypothèses, les limites et la mesure du résultat.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "sourceHash": "4adf18f1c3f1cbd75e44126c81a1c8c8a54cea0e9ee6a9c417a1e47f5b77a626",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "7d86ff63dd701ffd879be3386b6864023839e8bc0df688ed87d5f20e4ad7a537",
+      "selected": 0,
+      "reason": "Trois cents unités fois quarante euros donnent douze mille euros de chiffre d’affaires prévu.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "0ffc21977da8d138539dfe6678425977d034423f767d5f5c78fc8f93defea92f",
+      "selected": 2,
+      "reason": "Soixante pour cent des six mille de janvier plus quarante pour cent des huit mille de février donnent six mille huit cents encaissés en février.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "35c8b18b9d3ef261bad536eea72e880aa6ac2fe12412330048ffc997d8f2ef15",
+      "selected": 1,
+      "reason": "Quatre mille fixes plus huit euros fois mille deux cents unités donnent treize mille six cents de budget flexible.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "017e3fceef75c9065507962b3e065e53acbc9343de60cc35be5cccc5c7451685",
+      "selected": 3,
+      "reason": "Quatorze mille cent moins treize mille six cents donnent un écart de coût positif de cinq cents euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "e25ec29c05ce068f3a847ceac85c13b63c41bac7ea6953670ddf656961d40980",
+      "selected": 1,
+      "reason": "La vente et son encaissement sont décalés par le crédit client.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "99d8f8bdc0b268f4e388af9a361ac8e34412b8f272fad2ede84f56e924e33968",
+      "selected": 1,
+      "reason": "Les créances antérieures alimentent les encaissements de janvier.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "abf9402a1e3c700bd1b684b28eace9b5376c8cc9684eabcff5f44cfc73661d98",
+      "selected": 3,
+      "reason": "Un volume accru augmente normalement les charges variables totales.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "bbda98b82ad339b66434efea719df8cf7a43756920683cea554d6309382fd81f",
+      "selected": 0,
+      "reason": "Le signe n’est interprétable qu’avec nature de mesure, référence et convention de soustraction.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "dba2914bc207e74ee963c58adcec002530e9df12d205e368d134ae861db69634",
+      "selected": 0,
+      "reason": "Le prix mensuel exige une quantité de mois-clients cohérente.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "9f16034ae442a84cbe7a4b0b5944827bcbf55d6d2789faac2bd91e332ba9b36b",
+      "selected": 1,
+      "reason": "Deux mille initiales plus cinq mille vendues moins six mille encaissées laissent mille euros de créances finales.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "59ddde5ad73dd267ccc6a97eaf6423d75e51cbddc30269a28f3bd6c3968ca2ea",
+      "selected": 0,
+      "reason": "Le modèle linéaire conserve les fixes et ajuste les variables au volume, dans son domaine de validité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "02babcc9c7015caea60027022e7652d2645b8550bb78b3547ab0bd733d1816d0",
+      "selected": 3,
+      "reason": "Le diagnostic doit distinguer prix, consommation, qualité et périmètre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "4e710b5104b9b20b84f2836a0097e5f5244a2abefa50a09622a5991848704f52",
+      "selected": 2,
+      "reason": "Le programme de production dépend de la variation des stocks.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "7cc7f395444e864de13acc979dfdb62a0a14510ecc9212fdade3919df5c8be83",
+      "selected": 3,
+      "reason": "La vente de janvier serait comptée à nouveau au paiement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "128b6892830bfae0949c55722dc1c7134554f637eededa8d7bc9a0a5e7ee22c3",
+      "selected": 2,
+      "reason": "Le nouveau palier de capacité requiert une nouvelle référence de coût.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "e8fe455526ceaece96ee430eec71e0686a04e9c1449fea0b4cdb9fd686ce5f83",
+      "selected": 2,
+      "reason": "Les signes dépendent de la convention et de la nature charge ou produit.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "a73d3dc528066b26c276dd7f097f164d3be91ca95169852d3f4a992ea99343c2",
+      "selected": 0,
+      "reason": "Les références de prix doivent être tracées pour isoler effets prix et volume.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "1d6e7e08f177b196e5e6823c479b1587ad9535099ccc5ec078f26ae9315d06b1",
+      "selected": 1,
+      "reason": "Le scénario central doit rester tracé et le risque être étudié séparément.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "20cf96d9edc0656393f99fe7e3c194aa922f6e1f615d8ef333f74f4b2af1aece",
+      "selected": 1,
+      "reason": "Le budget ajusté au réel distingue le volume des autres écarts.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "76f34c9d6075d461716b160246a87516152f8dad6411b7261063642c36609616",
+      "selected": 3,
+      "reason": "La baisse totale ne prouve rien sans volume et périmètre comparables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "94f85f7feb80636b83b9d39ca83f449cf88b2fd567d679c02ddc17ab1f3f01a2",
+      "selected": 1,
+      "reason": "L’acompte est encaissé avant la vente, puis seul le solde en février.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "3313dca4fc8335c07f5e343eca533ba54cc545bd08593caa3b34907b6f0a9168",
+      "selected": 2,
+      "reason": "Un modèle flexible reste limité par sa capacité et ses hypothèses.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "9b39833681be0851c2786874a509fe3c2f4600da91a96b5df8e570a3d54c7a07",
+      "selected": 3,
+      "reason": "Le pilotage relie diagnostic causal, décision puis contrôle des effets.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

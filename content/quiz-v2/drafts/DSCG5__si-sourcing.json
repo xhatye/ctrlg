@@ -1,0 +1,361 @@
+{
+  "module": "DSCG5",
+  "chapter": "si-sourcing",
+  "sourceHash": "482c55a6c8782ed0da5c4cf61673e22b8427994f3fbe552fe342414c8d4c46f5",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel contenu permet de définir le périmètre d’un service applicatif externalisé ?",
+      "options": [
+        "Les fonctions, utilisateurs, données et interfaces couverts, avec leurs limites.",
+        "La liste de fonctions commerciales sans les utilisateurs, interfaces et exclusions couverts.",
+        "Le niveau de prix pris comme définition implicite de toutes les prestations attendues.",
+        "Les seules caractéristiques du serveur, sans les opérations applicatives promises."
+      ],
+      "answer": 0,
+      "explanation": "Le périmètre précise ce qui est fourni et à qui. Un tarif ou une référence commerciale ne remplace pas la description du service attendu."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le contrat de l’exercice fixe un abonnement annuel de10000€, révisé l’année suivante par multiplication par110/100. Aucun autre terme ne change. Quel abonnement résulte de cette clause ?",
+      "options": [
+        "10 100 €.",
+        "11 000 €.",
+        "9 090,91 €.",
+        "1 000 €."
+      ],
+      "answer": 1,
+      "explanation": "Le coefficient d’indexation fourni vaut1,10. Le nouveau prix est10000 × 110 / 100 = 11000€.1000€est l’augmentation, non le prix révisé.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 10000
+                },
+                {
+                  "value": 110
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 11000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’offre autorise40sessions simultanées pour une population de120utilisateurs, selon le contrat fourni. Les pointes mesurées atteignent55sessions simultanées. Quel écart doit être traité ?",
+      "options": [
+        "Le contrat est nécessairement limité à40personnes nommées, quel que soit le nombre de sessions.",
+        "Les120utilisateurs peuvent tous se connecter en même temps sans autre droit puisque la facturation est simultanée.",
+        "La capacité simultanée prévue est inférieure à la pointe, même si le nombre total de personnes n’est pas la base de facturation.",
+        "Le besoin de55sessions est couvert dès lors que chaque utilisateur ne possède qu’un compte."
+      ],
+      "answer": 2,
+      "explanation": "Le modèle donné porte sur la concurrence des sessions, pas sur le nombre total de comptes. La pointe55dépasse la capacité40et doit être rapprochée du dimensionnement et des droits nécessaires."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La matrice contractuelle confie au prestataire l’infrastructure physique et au client les habilitations de son application. Une revue constate des comptes clients trop permissifs. Quelle action respecte ce partage ?",
+      "options": [
+        "Clore le constat parce que l’hébergement externalisé transfère nécessairement tous les contrôles au prestataire.",
+        "Demander uniquement une preuve de sécurité du bâtiment en remplacement de la revue des droits applicatifs.",
+        "Traiter le contrôle des habilitations comme non attribué malgré la matrice fournie.",
+        "Faire corriger les habilitations par le responsable client prévu, avec l’appui technique nécessaire."
+      ],
+      "answer": 3,
+      "explanation": "L’externalisation ne doit pas effacer le partage de responsabilités explicitement convenu dans le cas. La sécurité physique ne remplace pas ici le contrôle applicatif attribué au client."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La migration est facturée au forfait, mais aucun critère de qualité des données reprises n’existe. Quel risque faut-il traiter ?",
+      "options": [
+        "Une acceptation fondée sur l’exécution technique plutôt que sur une reprise exploitable.",
+        "Le forfait de transfert suffit à établir la qualité des objets repris, même sans critères d’acceptation.",
+        "La facturation achevée vaut recette des données sans rapprochement avec le besoin.",
+        "Le volume de fichiers copiés peut remplacer tout contrôle de cohérence et d’usage."
+      ],
+      "answer": 0,
+      "explanation": "Le périmètre doit inclure des critères d’acceptation pertinents. Le transfert de fichiers ne prouve pas que les données sont complètes, cohérentes et utilisables."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "La clause fournie prévoit qu’un crédit de service doit être demandé dans les30jours suivant l’incident, avec ses mesures justificatives. Le client pense que tout crédit sera versé automatiquement. Que faut-il préparer selon cette clause ?",
+      "options": [
+        "Le seul montant du forfait, en supposant que le prestataire déposera toujours la demande à la place du client.",
+        "Un suivi des incidents, des pièces de mesure et du délai de dépôt des demandes.",
+        "Une demande annuelle unique indépendante du délai30jours annoncé.",
+        "Le remplacement des mesures par une estimation de perte financière, sans les justificatifs exigés."
+      ],
+      "answer": 1,
+      "explanation": "La question applique uniquement les conditions fournies : la demande, le délai et les preuves ne sont pas remplacés par une attente de paiement automatique."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La DSI vise en interne99,95%de disponibilité, mais le contrat du fournisseur ne promet que99,5%. Que doit distinguer le tableau de pilotage ?",
+      "options": [
+        "La cible interne comme engagement automatiquement accepté par le fournisseur.",
+        "Le niveau du contrat comme réalisation déjà observée chaque mois.",
+        "La cible interne recherchée et le niveau effectivement engagé par le fournisseur.",
+        "Le meilleur des deux taux comme preuve que les deux engagements sont satisfaits."
+      ],
+      "answer": 2,
+      "explanation": "Un objectif interne ne modifie pas à lui seul le contrat. Les deux valeurs doivent garder leur statut pour apprécier besoin, responsabilité et résultat."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le fournisseur annonce que95%des requêtes observées répondent en2secondes ou moins. Que cette mesure permet-elle d’affirmer sans hypothèse supplémentaire ?",
+      "options": [
+        "Chaque requête répond en2secondes ou moins.",
+        "Le délai maximal de toute requête est nécessairement2secondes.",
+        "La moyenne de tous les délais est nécessairement2secondes.",
+        "La proportion annoncée respecte le seuil ; les5%restantes ne sont pas décrites par cette seule affirmation."
+      ],
+      "answer": 3,
+      "explanation": "Un seuil couvrant95%des observations ne décrit ni toutes les requêtes ni leur maximum ni leur moyenne. La queue de distribution doit être examinée séparément si elle est importante."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des pénalités sont prévues en cas de panne. Quelle limite faut-il conserver dans l’analyse de continuité ?",
+      "options": [
+        "Une compensation financière ne remplace pas la capacité de maintenir ou reprendre l’activité.",
+        "Le montant des pénalités peut être traité comme capacité technique de reprise sans dispositif de secours.",
+        "L’existence d’un crédit financier dispense de vérifier les dépendances nécessaires à l’activité.",
+        "Une indemnité prévue prouve que la perte réelle sera entièrement couverte et le service rétabli dans le délai métier."
+      ],
+      "answer": 0,
+      "explanation": "Le contrat peut compenser une partie du dommage sans rétablir les fonctions. Les plans opérationnels restent nécessaires au regard du besoin."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le contrat prévoit un support joignable24h/24, mais ne définit aucun délai de résolution. Quelle promesse ne peut pas être déduite de la seule plage de contact ?",
+      "options": [
+        "La possibilité de contacter le support pendant la plage indiquée.",
+        "Une résolution de chaque incident dans un délai déterminé.",
+        "Une couverture de contact incluant les heures de nuit selon la clause.",
+        "Une plage de contact qui n’est pas limitée aux seules heures de bureau."
+      ],
+      "answer": 1,
+      "explanation": "La joignabilité décrit l’accès au support. Elle ne fixe pas, à elle seule, une durée de diagnostic ou de rétablissement."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une maintenance planifiée est exclue du calcul de disponibilité, mais aucune limite ni prévenance n’est définie. Quelle vérification est pertinente ?",
+      "options": [
+        "La conformité au taux publié suffit à garantir l’usage métier pendant les maintenances exclues.",
+        "Les maintenances exclues ne doivent jamais apparaître dans le bilan de continuité de l’organisation.",
+        "L’effet possible des exclusions sur la continuité réellement nécessaire au métier.",
+        "L’absence de panne comptée pendant les maintenances suffit à prouver la disponibilité de l’application pour les métiers."
+      ],
+      "answer": 2,
+      "explanation": "Une exclusion large peut rendre le taux favorable tout en perturbant l’activité. Ses conditions doivent être rapprochées du besoin réel."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Le fournisseur transmet un rapport d’assurance portant sur janvier à juin. L’organisation veut s’appuyer sur ce rapport pour apprécier des changements majeurs intervenus en septembre. Quelle limite expliciter ?",
+      "options": [
+        "La remise du rapport en octobre étend automatiquement les observations de janvier-juin jusqu’à septembre.",
+        "Le nom du fournisseur suffit à rendre le rapport valable pour toute période et tout changement ultérieur.",
+        "La date du contrat remplace la période effectivement examinée dans le rapport.",
+        "La période couverte ne documente pas à elle seule le fonctionnement des contrôles après ces changements."
+      ],
+      "answer": 3,
+      "explanation": "La date de réception d’une preuve ne change pas sa couverture. Il faut examiner la période, le périmètre et les éléments pertinents pour les changements postérieurs."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’export des données est disponible, mais les règles de calcul essentielles ne sont décrites nulle part. Quel obstacle subsiste ?",
+      "options": [
+        "La difficulté à reconstruire les fonctions et le sens des résultats dans un autre outil.",
+        "Le transfert des données remplace la documentation des règles nécessaires à produire les mêmes résultats.",
+        "Le nombre de lignes exportées suffit à reconstituer les règles de calcul non décrites.",
+        "La propriété des fichiers donne automatiquement une connaissance complète des transformations internes du logiciel."
+      ],
+      "answer": 0,
+      "explanation": "Le changement demande plus que les valeurs stockées. Les règles de calcul et transformations peuvent être nécessaires pour reprendre les fonctions utiles."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une interface repose sur un paramétrage détenu seulement par un salarié du fournisseur. Quelle mesure réduit cette dépendance ?",
+      "options": [
+        "Multiplier les comptes d’accès sans transmettre les règles de paramétrage détenues par la personne clé.",
+        "Obtenir une documentation utilisable et organiser la transmission de connaissances adaptée.",
+        "Considérer le faible préavis de résiliation comme une preuve de transfert des connaissances.",
+        "Conserver seulement les résultats de l’interface en supposant qu’ils permettent toujours d’en reconstruire le paramétrage."
+      ],
+      "answer": 1,
+      "explanation": "La connaissance d’un composant critique doit être accessible dans un cadre adapté. La documentation et la transmission réduisent le risque lié à une compétence unique."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’offre la moins chère exige un format propriétaire que le futur système ne sait pas importer. Quel examen est nécessaire ?",
+      "options": [
+        "Le volume de données, sans vérifier le sens des codes et relations exportés.",
+        "Le seul niveau de remise sur la première année.",
+        "Le coût et la faisabilité de conversion vers un format exploitable.",
+        "La disponibilité du fichier brut, supposée prouver sa reprise sans conversion."
+      ],
+      "answer": 2,
+      "explanation": "Un format peut créer des travaux de conversion et des risques. Ces conséquences font partie de la dépendance et de l’économie de la solution."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le prestataire annonce confier une partie du traitement à un nouveau sous-traitant. La procédure convenue exige une information et une revue des conditions avant ce changement. Quel contrôle manque si le changement est réalisé sans cette étape ?",
+      "options": [
+        "La seule vérification du prix du prestataire principal, tenue pour une validation de tous les intervenants.",
+        "La seule mesure du nombre d’utilisateurs, sans examen du nouvel intervenant.",
+        "L’assimilation de l’accord initial sur le prestataire à une approbation préalable de chaque changement ultérieur prévu à revue.",
+        "La maîtrise de la chaîne de sous-traitance selon la procédure convenue."
+      ],
+      "answer": 3,
+      "explanation": "Le cas fournit une règle de maîtrise des changements d’intervenants. Il faut la contrôler au moment du changement sans supposer une approbation générale illimitée."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Les serveurs sont hébergés en France, mais le support situé dans un autre pays accède aux données. Que faut-il distinguer dans la cartographie du service ?",
+      "options": [
+        "Le lieu de stockage et les lieux ou conditions d’accès des intervenants.",
+        "L’hébergement en France comme preuve qu’aucun accès ne peut avoir lieu depuis un autre pays.",
+        "La langue du support comme substitut au lieu depuis lequel il accède aux données.",
+        "L’adresse du siège fournisseur comme description suffisante de tous les lieux de stockage et d’accès."
+      ],
+      "answer": 0,
+      "explanation": "La localisation du stockage ne décrit pas à elle seule les accès à distance. La cartographie doit conserver les deux dimensions avant les examens contractuels ou réglementaires adaptés."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le client reçoit une copie du code source. La clause fournie lui permet de le consulter mais ne lui accorde pas le droit de le modifier. Que faut-il éviter de déduire de sa seule possession ?",
+      "options": [
+        "Que le client dispose matériellement d’une copie à consulter.",
+        "Qu’elle autorise nécessairement une modification du code par le client.",
+        "Que l’usage de cette copie doit être examiné au regard des droits concédés.",
+        "Que consulter et modifier sont deux usages distincts dans la clause donnée."
+      ],
+      "answer": 1,
+      "explanation": "L’accès matériel à un code et les droits d’usage concédés sont distincts. La question applique les limites explicites de la clause, sans inventer une licence plus large."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un plan prévoit de récupérer les données le dernier jour du contrat, sans période de chevauchement ni test préalable. Quel risque est central ?",
+      "options": [
+        "La remise des données le dernier jour laisse nécessairement le temps de corriger les anomalies après fermeture sans interruption métier.",
+        "Le droit de recevoir l’export remplace une période de rapprochement et d’essai dans le calendrier de sortie.",
+        "Une impossibilité de valider et corriger la reprise avant la fin du service existant.",
+        "Une extraction complète au dernier instant suffit à prouver son usage dans le nouvel outil avant extinction de l’ancien."
+      ],
+      "answer": 2,
+      "explanation": "La sortie exige du temps de test et de correction. Une récupération trop tardive peut exposer l’activité à une rupture sans solution encore vérifiée."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une répétition de sortie échoue sur les pièces jointes, indispensables au traitement. Quelle suite est appropriée ?",
+      "options": [
+        "Valider la sortie parce que les montants principaux sont présents.",
+        "Supprimer les pièces jointes du besoin après le test sans décision métier.",
+        "Augmenter le taux de disponibilité contractuel pour compenser.",
+        "Corriger le mécanisme, attribuer les actions et retester le périmètre nécessaire."
+      ],
+      "answer": 3,
+      "explanation": "Une reprise partielle ne satisfait pas un besoin incluant les pièces. Les écarts doivent être traités puis vérifiés sur le périmètre défini."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le contrat autorise la récupération des données, mais aucun responsable interne ne coordonne la sortie. Quel dispositif manque ?",
+      "options": [
+        "Un pilotage du transfert, avec rôles, calendrier et critères d’acceptation.",
+        "Le droit contractuel suffit à organiser les décisions et rapprochements sans responsable interne.",
+        "Le fournisseur peut fixer seul les critères de réussite de la sortie sans accord sur les besoins repris.",
+        "La copie des fichiers vaut coordination de toutes les interfaces et responsabilités de transfert."
+      ],
+      "answer": 0,
+      "explanation": "La sortie est une opération à organiser. Le droit d’export doit se traduire par des moyens, des responsabilités et une validation de reprise."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une reprise a été testée il y a trois ans. Depuis, de nouvelles applications et de nouveaux flux sont devenus critiques. Quelle conclusion est justifiée ?",
+      "options": [
+        "La réussite du test ancien couvre chaque nouveau flux au seul motif que le fournisseur est inchangé.",
+        "La preuve doit être réexaminée et les dépendances nouvelles intégrées à des tests adaptés.",
+        "Le même nom de plateforme garantit la stabilité de toutes les dépendances malgré les applications ajoutées.",
+        "La date d’expiration du contrat suffit à établir que les nouveaux flux sont inclus dans le test historique."
+      ],
+      "answer": 1,
+      "explanation": "Une preuve reste liée à un périmètre et à une configuration. Les évolutions critiques peuvent rendre nécessaire un nouvel exercice ciblé."
+    }
+  ]
+}

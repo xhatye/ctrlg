@@ -1,0 +1,587 @@
+{
+  "module": "UE5",
+  "chapter": "croissance-reelle",
+  "sourceHash": "114cdbbea03c707f62abe42be5257234394c4f1fdc821476d9a4b59b523b6244",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un agrégat additif simplifié, une composante pèse 60 % de la valeur initiale et progresse de 4 %. Sa contribution à la croissance totale est son poids initial multiplié par son taux de croissance. Quelle contribution apporte-t-elle ?",
+      "options": [
+        "2,4 points de pourcentage.",
+        "4 points de pourcentage.",
+        "6,67 points de pourcentage.",
+        "0,6 point de pourcentage."
+      ],
+      "answer": 0,
+      "explanation": "La contribution est 0,60 × 4 = 2,4 points. Le taux de croissance propre de 4 % ne doit pas être confondu avec son effet sur l’ensemble, qui dépend aussi du poids initial. Les contributions des autres composantes complètent cette contribution.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 0.6
+            },
+            {
+              "value": 4
+            }
+          ]
+        },
+        "expected": 2.4,
+        "digits": 1
+      },
+      "references": [
+        {
+          "title": "Insee — Contribution à la croissance du PIB",
+          "url": "https://www.insee.fr/fr/metadonnees/definition/c1207"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La valeur courante d’une production est de 115 000 €. L’indice de prix pertinent est 115, base 100 lors de la période de référence. Quelle valeur obtient-on aux prix de cette période de référence ?",
+      "options": [
+        "132 250 €",
+        "100 000 €",
+        "114 885 €",
+        "15 000 €"
+      ],
+      "answer": 1,
+      "explanation": "On déflate en divisant la valeur courante par 1,15 : 115 000 / 1,15 = 100 000 €. Multiplier par cet indice renforcerait au contraire l’effet des prix.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 115000
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 115
+                },
+                {
+                  "value": 100
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 100000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Dans l’approche par la demande, le PIB s’écrit consommation + investissement + dépenses publiques + exportations − importations. Pourquoi retranche-t-on les importations ?",
+      "options": [
+        "Parce qu’elles constituent une baisse de prix qu’il faut retirer de la croissance nominale.",
+        "Parce que toute consommation de produit étranger représente une production nationale négative.",
+        "Parce que la demande intérieure et les exportations peuvent contenir des biens importés qui ne sont pas une production intérieure.",
+        "Parce que la valeur des importations est déjà comptée dans les impôts sur les produits."
+      ],
+      "answer": 2,
+      "explanation": "Les dépenses de consommation ou d’investissement peuvent porter sur une production étrangère ; les exportations peuvent aussi inclure des réexportations. La soustraction corrige le périmètre pour mesurer la production intérieure. Elle ne signifie pas que toute importation détruit mécaniquement du PIB.",
+      "references": [
+        {
+          "title": "Insee — approches du PIB",
+          "url": "https://www.insee.fr/fr/statistiques/8744463"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "L’indice des prix pertinent passe de 100 à 108 entre les deux dates étudiées. Quelle hausse de prix mesure-t-on sur cette base ?",
+      "options": [
+        "108 %",
+        "0,08 %",
+        "-8 %",
+        "8 %"
+      ],
+      "answer": 3,
+      "explanation": "Sur une base initiale 100, l’écart 108 − 100 correspond à une hausse de 8 %. L’indice 108 décrit le niveau relatif des prix, pas une hausse de 108 %. ",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 108
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 8,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un pays affiche un PIB annuel positif. Un commentaire en conclut que son patrimoine net à la fin de l’année est forcément supérieur à celui du début. Quelle distinction manque ?",
+      "options": [
+        "Le PIB mesure un flux de production pendant une période, pas le stock de patrimoine net à une date.",
+        "Le PIB mesure déjà le stock de tous les terrains, bâtiments et actifs financiers détenus à la fin de l’année.",
+        "Un patrimoine est une somme de revenus annuels ; le PIB positif suffit donc à en déduire sa variation.",
+        "Le signe positif du PIB mesure directement le solde net des réévaluations des actifs."
+      ],
+      "answer": 0,
+      "explanation": "Un flux de production et un stock de patrimoine sont deux mesures distinctes. L’évolution du patrimoine dépend notamment de l’épargne, de l’usure et des variations de valeur des actifs et passifs. Un PIB positif ne donne pas à lui seul le sens de cette évolution.",
+      "references": [
+        {
+          "title": "Insee — Comptes de patrimoine : articulation avec les comptes de flux",
+          "url": "https://www.insee.fr/fr/statistiques/8988859?sommaire=8988934"
+        },
+        {
+          "title": "Insee — Patrimoine national",
+          "url": "https://www.insee.fr/fr/metadonnees/definition/c1596"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour retrouver une valeur à prix constants, un analyste multiplie la valeur courante par un indice de prix supérieur à 100 divisé par 100. Quel défaut commet-il ?",
+      "options": [
+        "Il emploie le coefficient de prix comme coefficient de volume, ce qui serait une déflation correcte.",
+        "Il applique de nouveau l’effet des prix au lieu de le neutraliser par une division.",
+        "Il conserve correctement la hausse nominale en traitant le coefficient de prix comme une quantité.",
+        "Il effectue une conversion de base qui laisserait toute la hausse de prix inchangée dans une valeur dite constante."
+      ],
+      "answer": 1,
+      "explanation": "Avec une hausse des prix, la valeur à prix constants est inférieure à la valeur courante comparable. Il faut diviser par le coefficient de prix ; le multiplier accroît la composante que l’on souhaite retirer."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "La croissance nominale est de 20 % et la hausse des prix de 10 %. Un étudiant donne 10 % comme croissance réelle exacte. Quel raisonnement est correct ?",
+      "options": [
+        "La différence des deux taux est toujours l’égalité exacte.",
+        "Il faut additionner les deux taux pour obtenir le volume.",
+        "Le calcul exact utilise le rapport 1,20 / 1,10, puis retranche 1.",
+        "La croissance réelle est égale à 20 / 10 sans autre transformation."
+      ],
+      "answer": 2,
+      "explanation": "Les effets se composent multiplicativement : 1 + croissance nominale = (1 + hausse de prix) × (1 + croissance réelle). La soustraction des taux n’est qu’une approximation dans certains cas."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les ventes brutes d’une activité touristique augmentent chaque été. Pour apprécier son évolution conjoncturelle de mai à juin sans confondre reprise et saison habituelle, quel traitement est pertinent ?",
+      "options": [
+        "Déflater les ventes par les prix uniquement, ce qui supprimerait aussi toute saisonnalité.",
+        "Convertir les ventes en indice base100, ce qui retirerait l’effet de l’été.",
+        "Diviser les ventes de juin par leur montant de mai sans analyser le profil saisonnier.",
+        "Utiliser une série corrigée des variations saisonnières, en connaissant les limites de cette correction."
+      ],
+      "answer": 3,
+      "explanation": "La désaisonnalisation cherche à retirer les fluctuations récurrentes liées aux saisons pour rendre l’évolution sous-jacente plus lisible. Une déflation corrige les prix ; un simple changement de base ne retire pas la saisonnalité.",
+      "references": [
+        {
+          "title": "Insee — Correction des variations saisonnières",
+          "url": "https://www.insee.fr/fr/metadonnees/definition/c1599"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un chiffre d’affaires augmente de 10 % une année puis baisse de 10 % l’année suivante, à périmètre constant. Quelle évolution nominale cumulée obtient-on ?",
+      "options": [
+        "-1 %",
+        "0 %",
+        "1 %",
+        "-10 %"
+      ],
+      "answer": 0,
+      "explanation": "Les coefficients successifs se multiplient : 1,10 × 0,90 = 0,99. Le niveau final représente 99 % du départ, soit une baisse de 1 % ; additionner simplement les taux masque le changement de base.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 1.1
+                    },
+                    {
+                      "value": 0.9
+                    }
+                  ]
+                },
+                {
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": -1,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une valeur à prix constants est libellée « en euros de la période 0 ». Que décrit cette unité ?",
+      "options": [
+        "Un montant effectivement encaissé à la date de référence, sans comparaison des prix.",
+        "Un montant évalué avec les prix de référence, permettant une comparaison neutralisant leur évolution.",
+        "Un montant nominal courant converti dans une autre monnaie au seul taux de change actuel.",
+        "Un montant en euros actuels après déduction des impôts, quelle que soit l’évolution des prix."
+      ],
+      "answer": 1,
+      "explanation": "Une évaluation à prix constants conserve une unité monétaire mais emploie les prix de référence. Elle ne doit être confondue ni avec un encaissement historique ni avec un bénéfice ou un nombre d’unités."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La croissance en valeur est positive mais moins forte que la hausse de l’indice de prix pertinent. Que devient le volume dans le modèle fourni ?",
+      "options": [
+        "Il augmente au même taux que la valeur parce que les deux taux observés sont positifs.",
+        "Il reste stable puisque l’effet prix absorbe seulement une partie de la hausse nominale.",
+        "Il diminue car le coefficient nominal est inférieur au coefficient de prix.",
+        "Il augmente au taux de hausse des prix parce que celui-ci est le plus élevé des deux taux."
+      ],
+      "answer": 2,
+      "explanation": "Le coefficient de volume est le quotient du coefficient nominal par celui des prix. Lorsque le numérateur est plus faible, ce quotient est inférieur à un : le volume recule malgré la hausse nominale."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un indice est de base 100 en janvier, mais la comparaison porte sur avril et décembre. Pourquoi soustraire 100 au niveau de décembre ne donne-t-il pas nécessairement la hausse des prix d’avril à décembre ?",
+      "options": [
+        "Il faut retrancher la somme des indices de janvier et avril au niveau de décembre.",
+        "Il faut diviser seulement le niveau de décembre par 100, quelle que soit la date choisie comme départ.",
+        "Il suffit de soustraire l’indice d’avril à celui de décembre pour obtenir directement le pourcentage depuis avril.",
+        "La référence de départ d’avril doit être prise en compte dans le rapport des niveaux."
+      ],
+      "answer": 3,
+      "explanation": "Le calcul « indice − 100 » utilise la période qui vaut 100 comme départ. Si la période initiale change, il faut rapporter les indices de décembre et d’avril plutôt qu’ignorer cette nouvelle base."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise rachète une activité et présente la hausse totale de ses ventes comme une accélération organique à périmètre identique. Quel contrôle est nécessaire ?",
+      "options": [
+        "Séparer l’effet du changement de périmètre avant de qualifier l’évolution sur un champ constant.",
+        "Déflater l’ensemble des ventes acquises par un indice de prix, sans isoler le changement du champ consolidé.",
+        "Comparer les ventes après acquisition aux seules ventes de la société initiale comme si le périmètre était inchangé.",
+        "Retenir uniquement le taux total de croissance en valeur, en supposant qu’il correspond déjà au taux organique."
+      ],
+      "answer": 0,
+      "explanation": "L’extension du champ peut augmenter les ventes sans évolution comparable des activités déjà présentes. Il faut expliciter ou neutraliser cet effet avant d’annoncer une croissance sur un périmètre constant."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un calcul utilise la valeur nominale d’une année et un indice de prix arrêté l’année précédente. Quel défaut de cohérence peut apparaître ?",
+      "options": [
+        "Le recours à l’année antérieure transforme la déflation en un calcul de taux de change.",
+        "La correction peut couvrir une autre période que celle de la valeur à déflater.",
+        "L’indice antérieur devient adapté par le seul fait qu’il utilise la même unité monétaire.",
+        "Le décalage de date remplace les prix courants par les quantités courantes, sans besoin d’ajustement."
+      ],
+      "answer": 1,
+      "explanation": "La valeur et l’indice doivent correspondre aux mêmes périodes et références. Un décalage temporel peut laisser un effet de prix non neutralisé ou corriger une variation qui ne concerne pas le montant étudié."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quand croissance réelle et croissance nominale coïncident-elles dans le modèle simple à périmètre constant ?",
+      "options": [
+        "Dès que la production en valeur reste positive, même si son prix unitaire change.",
+        "Dès que l’indice de volume dépasse 100, même si l’indice de prix augmente.",
+        "Lorsque le niveau de prix pertinent ne change pas entre les dates.",
+        "Lorsque les prix et les volumes augmentent au même taux non nul."
+      ],
+      "answer": 2,
+      "explanation": "Si les prix sont stables, leur coefficient vaut un. La correction n’altère alors pas le coefficient d’évolution de la valeur, qui correspond à celui du volume dans le modèle retenu."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Les prix passent d’un indice 120 à un indice 126 de même base. Quelle est leur hausse entre ces deux observations ?",
+      "options": [
+        "6 %",
+        "26 %",
+        "20 %",
+        "5 %"
+      ],
+      "answer": 3,
+      "explanation": "Le changement se calcule sur le niveau initial 120 : (126 / 120 − 1) × 100 = 5 %. L’écart de six points d’indice n’est pas directement une hausse de 6 % sur cette nouvelle période.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "/",
+                  "args": [
+                    {
+                      "value": 126
+                    },
+                    {
+                      "value": 120
+                    }
+                  ]
+                },
+                {
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 5,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "On remplace partout une série en euros par la même série en milliers d’euros. Quel effet cela doit-il avoir sur son taux de croissance correctement calculé ?",
+      "options": [
+        "Aucun : la même conversion au numérateur et au dénominateur ne change pas le rapport.",
+        "Le taux est divisé par mille parce que le niveau initial est divisé par mille.",
+        "Le taux est multiplié par mille parce que le montant final utilise une unité plus grande.",
+        "Le taux change de signe parce que les niveaux deviennent inférieurs à leur ancienne valeur numérique."
+      ],
+      "answer": 0,
+      "explanation": "Un taux relatif est invariant à une conversion cohérente de l’unité des deux niveaux. Mélanger euros et milliers d’euros, au contraire, créerait une évolution artificielle."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau additionne des valeurs courantes et des valeurs à prix constants pour former un total présenté comme homogène. Quelle réserve convient ?",
+      "options": [
+        "Le total devient homogène si toutes les colonnes portent le mot euro, quelle que soit la référence des prix.",
+        "Le total mélange des conventions de prix et doit être harmonisé avant interprétation.",
+        "Il suffit de déflater les seules composantes dont le montant courant augmente pour harmoniser le total.",
+        "Il suffit de renommer le total en euros constants sans corriger les composantes restées en prix courants."
+      ],
+      "answer": 1,
+      "explanation": "Les conventions d’évaluation doivent être compatibles. Additionner directement des montants dont les prix de référence diffèrent peut créer un total dépourvu de signification économique claire."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "On vise une croissance réelle de 5 % avec une hausse des prix de 2 %, dans le modèle multiplicatif exact. Quelle croissance nominale faut-il atteindre ?",
+      "options": [
+        "7 %",
+        "3 %",
+        "7,10 %",
+        "10 %"
+      ],
+      "answer": 2,
+      "explanation": "Le coefficient nominal doit être 1,05 × 1,02 = 1,071, soit 7,10 %. L’addition 5 + 2 omet le terme croisé et fournit seulement une approximation du résultat exact.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 1.05
+                    },
+                    {
+                      "value": 1.02
+                    }
+                  ]
+                },
+                {
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 7.1,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "L’indice moyen de production de l’année précédente vaut100. Cette année, il vaut102 au premier trimestre et104 au deuxième. S’il reste104 aux deux derniers trimestres, quel acquis de croissance annuel obtient-on par rapport à la moyenne précédente ?",
+      "options": [
+        "4 %.",
+        "2 %.",
+        "6 %.",
+        "3,5 %."
+      ],
+      "answer": 3,
+      "explanation": "La moyenne hypothétique de l’année est (102 +104 +104 +104)/4 =103,5. Comparée à100, elle représente une croissance de3,5 %. L’acquis est conditionnel au maintien du dernier niveau connu ; il n’est pas une prévision certaine des trimestres à venir.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "op": "/",
+                  "args": [
+                    {
+                      "op": "/",
+                      "args": [
+                        {
+                          "op": "+",
+                          "args": [
+                            {
+                              "op": "+",
+                              "args": [
+                                {
+                                  "value": 102
+                                },
+                                {
+                                  "value": 104
+                                }
+                              ]
+                            },
+                            {
+                              "op": "+",
+                              "args": [
+                                {
+                                  "value": 104
+                                },
+                                {
+                                  "value": 104
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "value": 4
+                        }
+                      ]
+                    },
+                    {
+                      "value": 100
+                    }
+                  ]
+                },
+                {
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 3.5,
+        "digits": 1
+      },
+      "references": [
+        {
+          "title": "Insee — Acquis de croissance",
+          "url": "https://www.insee.fr/fr/metadonnees/definition/c1524"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un ménage remplace des heures de ménage qu’il réalisait lui-même gratuitement par un service acheté à une entreprise. La quantité de service ménager peut rester la même. Que révèle cet exemple sur le PIB ?",
+      "options": [
+        "Le passage d’un service domestique non rémunéré à un service marchand peut augmenter la production comptabilisée sans hausse équivalente du service total réalisé.",
+        "Tout service domestique gratuit était déjà valorisé dans le PIB au même tarif que l’entreprise.",
+        "Le paiement d’un service ménager est exclu du PIB parce qu’il s’agit d’une dépense de consommation.",
+        "Le changement de prestataire fait diminuer le PIB du montant des heures gratuites auparavant réalisées."
+      ],
+      "answer": 0,
+      "explanation": "Les services domestiques réalisés gratuitement pour soi ne sont généralement pas comptabilisés dans le PIB, alors que leurs équivalents achetés le sont. La frontière de la mesure change ici la production enregistrée sans démontrer une hausse identique du bien-être ou du service total.",
+      "references": [
+        {
+          "title": "Insee — travail domestique et PIB",
+          "url": "https://www.insee.fr/fr/statistiques/2123967"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le taux réel est arrondi au pourcentage entier avant d’être utilisé dans un calcul ultérieur précis. Quel risque crée cet arrondi prématuré ?",
+      "options": [
+        "L’arrondi prématuré rend le résultat final plus exact parce qu’il réduit le nombre de décimales à reporter.",
+        "Il peut propager une erreur évitable ; il faut conserver la précision utile et appliquer l’arrondi demandé au bon stade.",
+        "L’arrondi du taux intermédiaire conserve exactement tous les produits et quotients dans les étapes suivantes.",
+        "L’arrondi prématuré n’a d’effet que sur l’affichage même lorsque la valeur arrondie remplace la valeur de calcul."
+      ],
+      "answer": 1,
+      "explanation": "Un arrondi intermédiaire peut modifier le résultat final alors que les données autorisent un calcul plus précis. Il faut annoncer la convention, conserver les valeurs utiles et contrôler le résultat avant l’arrondi de présentation."
+    }
+  ]
+}

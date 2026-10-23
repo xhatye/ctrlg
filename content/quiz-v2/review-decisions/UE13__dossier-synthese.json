@@ -1,0 +1,248 @@
+{
+  "sourceHash": "95b09ab58df3d445488ec10dbcb93ceef2cac22c26c8830a73cc76887c1067d4",
+  "reviewer": "codex-law-tax-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "666646f4ea1a75c2724b799e23ff1efdce4f63bba83f58b3114a642b3e4adebb",
+      "selected": 1,
+      "reason": "Le périmètre des erreurs recherchées a changé ; un taux de signalements élargi ne mesure pas directement une hausse des erreurs réelles.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "a2fffed79f7a4f041db834347b70b377d4b0e9eaf05c4dd0fa16225fa8136cd7",
+      "selected": 0,
+      "reason": "L’arrondi à cinq peut représenter plusieurs proportions exactes ; ni égalité exacte ni identité des effectifs ne découle de cet affichage.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "244143bdfaaccc30deb42984e74887a3320d2fca614ff8568b943dc869fb4920",
+      "selected": 0,
+      "reason": "Le rapport huit sur quarante vaut un cinquième, donc vingt pour cent. Les distracteurs renvoient au compte brut, à la différence ou à l’inversion.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "b5911bd1fe844b05a2ba98a6b698713499b915dd0366cddbb78d04a0a222fabf",
+      "selected": 0,
+      "reason": "Il faut sommer les erreurs et effectifs : cinq sur quarante, soit douze et demi pour cent. La moyenne simple des taux donnerait quinze, sans pondération.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "d1f2e6d51c84af47018069d7f2591f93689c7e149d714ce57f6d33de2ea4d43b",
+      "selected": 0,
+      "reason": "Vingt moins dix donne dix points ; cinquante correspond à la baisse relative. Même points/pourcentages que UE12 donnees q12, mais ici calcul explicite simple.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "dac2952b669935f96a49f2d6a2cfd276058c2bd2ad184f414e8c71440237d1f2",
+      "selected": 1,
+      "reason": "La convention donne dix points pour dix mineures et dix pour deux majeures, soit vingt points au total.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "170b30d6e9347acc823c216ea8acfb154347fe6859340a65f7326d9692223ba4",
+      "selected": 0,
+      "reason": "Les opérateurs rapportent une attention liée à l’observateur ; ce changement peut limiter le transfert du résultat à une situation sans observation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "a2867989b666778b0504ee062078232c124fb0b4d0268425b5dccda95333cc9d",
+      "selected": 0,
+      "reason": "Des classements divergents sur les mêmes dossiers révèlent un problème d’application de grille avant toute comparaison de performances des services.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "a60daaf6543ce0a0327d8d55e63a1baf92bfec74a00ac5f209fe62e1f5b8ef79",
+      "selected": 3,
+      "reason": "Un historique des versions et une description précise relient changements et contribution ; propriétaire du fichier et dernier expéditeur ne sont pas chaque auteur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "426381a83ea315d249cd4c16cc80f9bcb06bfc8e5b8ab01553de35636abe4499",
+      "selected": 3,
+      "reason": "La correction modifie une recommandation déjà reçue ; il faut informer le décideur, identifier la version remplacée et expliquer ce qui change.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "042a293e4a720b20f7d8877176a7d8ade8e5302dfc252fe494a19eeeba8c4d43",
+      "selected": 2,
+      "reason": "Changer après observation la priorité d’un critère doit être transparent ; les résultats initial et secondaire doivent rester visibles sans réécriture du protocole passé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "83b1a6ce48b2027135ae5cf51afed95f2d3f0c95352dbb9b7ef7e2b70071b7a8",
+      "selected": 1,
+      "reason": "La baisse test est de quatre jours et celle de comparaison de deux ; leur différence donne deux jours supplémentaires selon la formule fournie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "ee2fc6184be9d08a7af3d0f8a768b6bfd78fe682c277063518451b9af299c8d3",
+      "selected": 2,
+      "reason": "Un changement des poids entre dossiers simples et complexes peut inverser l’évolution globale malgré une amélioration dans chaque type.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "0853edc3d3a506fddcb8551f732af2a4594f9dab0ca417d87ed235b66fa9d7d0",
+      "selected": 3,
+      "reason": "Un départ exceptionnellement mauvais peut être suivi d’un retour habituel ; une comparaison plus large doit distinguer ce mécanisme de l’effet propre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "26656d61f5dd45e4a2fbe10ad2c4a3618feaa1104810fcc35966a104280793ee",
+      "selected": 1,
+      "reason": "Le délai médian s’améliore mais la contrainte de non-hausse des incidents est violée ; la réussite complète ne peut être affirmée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "d7243f716928f60e78b88b99400659c95b1d16ab4630cbd030b27cda8ebbd426",
+      "selected": 1,
+      "reason": "Le recrutement est postérieur au problème ; l’ordre temporel doit être examiné avant d’attribuer aux renforts la hausse qui les a motivés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "263e2df6c3fb6d891c88204f938940266fe7924714662019feca3f8962b1e6a5",
+      "selected": 2,
+      "reason": "Les deux groupes utilisent maintenant la grille ; la contamination supprime le contraste prévu avec une pratique sans grille.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "a43ba6b6196893589b205011a23ad224ed363fd6701fb0580a2e4d5cd854a7c7",
+      "selected": 0,
+      "reason": "Les seules alertes permettent d’examiner les positifs mais pas les erreurs parmi les négatifs ; il faut un examen de ces dossiers pour estimer les faux négatifs.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "8d59523baaf7764b0e558f64ecc67fe569289224ca4879c01c6d3fe38231c705",
+      "selected": 2,
+      "reason": "L’abandon exclut quarante utilisateurs de la mesure finale ; leur satisfaction n’est ni mesurée négative ni manquante indépendamment de l’usage.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "eb31c9f867ed30ba87fce6db5a924ff336639d0939cace1d4b79533713d23d72",
+      "selected": 3,
+      "reason": "Euros par dossier et euros par anomalie ont des dénominateurs différents ; une unité d’objet commune est nécessaire pour comparer les coûts.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "5822d88d40212cae2523e9549a26aae61076d67db51711d3e5949d5487273fac",
+      "selected": 0,
+      "reason": "La règle distingue espace interne réservé et diffusion agrégée ; des annexes nominales ou un lien libre dans le rapport dépasseraient le champ permis.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "7a4dff853121a8bfb22c3849ff27e5b0d132f7a517733552d2c3e812ce0cc942",
+      "selected": 3,
+      "reason": "Une division par zéro ne donne ni zéro ni cent pour cent ; l’absence de dossiers impose un taux non calculable explicite.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

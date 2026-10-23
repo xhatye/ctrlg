@@ -1,0 +1,338 @@
+{
+  "module": "UE8",
+  "chapter": "requetes",
+  "sourceHash": "a9d5590f07b73fc4949cf8398d76e59ba4d8761f1db49980ef1b8c3443ed553a",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans une requête SQL, quel est le rôle de la clause WHERE ?",
+      "options": [
+        "Choisir l’ordre de présentation des lignes retenues.",
+        "Imposer une condition sur le total de chaque groupe après agrégation.",
+        "Retenir les lignes satisfaisant une condition.",
+        "Fusionner automatiquement les lignes ayant des montants égaux."
+      ],
+      "answer": 2,
+      "explanation": "WHERE sélectionne les lignes selon une condition logique. Il faut distinguer cette sélection d’un tri et d’un filtre sur un résultat déjà regroupé."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "foundation",
+      "q": "On cherche les commandes dont le montant est au moins égal à 100 €. Quelle condition traduit exactement ce besoin ?",
+      "options": [
+        "WHERE montant >= 100",
+        "WHERE montant > 100",
+        "WHERE montant < 100",
+        "WHERE montant = 100"
+      ],
+      "answer": 0,
+      "explanation": "« Au moins » inclut la frontière 100. Le signe strict > exclurait les commandes de 100 €, tandis que l’égalité ne conserverait pas celles dont le montant est supérieur."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une requête doit fournir le chiffre d’affaires par client, avec une ligne de résultat pour chaque client ayant acheté. Quel regroupement correspond à cette granularité ?",
+      "options": [
+        "Un groupe unique pour tous les clients.",
+        "Un groupe par montant distinct de commande.",
+        "Un groupe par numéro de ligne de commande.",
+        "Un groupe par identifiant client."
+      ],
+      "answer": 3,
+      "explanation": "Le groupe doit correspondre à l’objet du résultat : ici le client. Regrouper par montant fusionnerait des clients différents ; regrouper par détail conserverait un grain trop fin."
+    },
+    {
+      "id": "q04",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une requête relie Client et Commande sans condition entre leurs clés. Chaque commande est alors associée à tous les clients. Quelle erreur explique le résultat ?",
+      "options": [
+        "Un filtre de date plus large que la période voulue.",
+        "L’absence de condition de jointure représentant le lien métier.",
+        "Un regroupement limité à l’identifiant client.",
+        "L’utilisation de COUNT DISTINCT au lieu de COUNT."
+      ],
+      "answer": 1,
+      "explanation": "Sans lien sur les clés pertinentes, les associations ne représentent plus le propriétaire réel de la commande. Le nombre de lignes peut exploser et les agrégats devenir faux même avec une syntaxe acceptée."
+    },
+    {
+      "id": "q05",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans un tableur, chaque montant de la colonne B doit être multiplié par le taux stocké en F1. La formule est recopiée vers le bas. Quelle formule placée en C2 conserve le taux ?",
+      "options": [
+        "=B2*F1",
+        "=B2*$F$1",
+        "=$B$2*F1",
+        "=$B$2*$F$1"
+      ],
+      "answer": 1,
+      "explanation": "B2 doit suivre la ligne du montant, tandis que F1 doit rester fixe. La référence $F$1 fige sa colonne et sa ligne ; fixer B2 ferait réutiliser le premier montant à chaque recopie."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une facture de 400 € est reliée à quatre lignes de détail ; SUM(montant_facture) renvoie 1 600 €. Quelle correction respecte le fait à mesurer ?",
+      "options": [
+        "Multiplier le total par le nombre de lignes.",
+        "Supprimer trois lignes de détail de la base.",
+        "Remplacer systématiquement tous les montants identiques par une seule valeur.",
+        "Agréger les montants au niveau des factures uniques."
+      ],
+      "answer": 3,
+      "explanation": "Le montant est défini à l’en-tête et se répète après la jointure. Il faut préserver une occurrence par facture pour le sommer ; supprimer des détails ou des montants égaux peut détruire des faits valides."
+    },
+    {
+      "id": "q07",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un analyste veut les clients dont le total des commandes dépasse 5 000 €. Pourquoi filtrer chaque commande avec montant > 5000 ne répond-il pas au besoin ?",
+      "options": [
+        "Le critère vise le total par client, pas le montant de chaque commande.",
+        "Le critère vise seulement le montant maximal d’une commande de chaque client.",
+        "Le critère doit être remplacé par le nombre de commandes, indépendamment des montants.",
+        "Le résultat deviendrait correct en triant les commandes avant le filtre."
+      ],
+      "answer": 0,
+      "explanation": "Plusieurs petites commandes peuvent ensemble dépasser le seuil. Un filtre appliqué aux lignes avant la somme éliminerait ces achats et changerait la population ; la condition doit porter sur le groupe client."
+    },
+    {
+      "id": "q08",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "foundation",
+      "q": "Client.idClient est la clé primaire et Commande.idClient désigne le client acheteur. Quelle condition relie correctement les deux tables ?",
+      "options": [
+        "Client.nom = Commande.idClient",
+        "Client.idClient = Commande.idCommande",
+        "Client.idClient = Commande.idClient",
+        "Client.idClient > Commande.idClient"
+      ],
+      "answer": 2,
+      "explanation": "La jointure doit comparer l’identifiant client à la référence client de la commande. Une égalité avec le numéro de commande pourrait coïncider par hasard, sans traduire le lien réel."
+    },
+    {
+      "id": "q09",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une formule =B2*F1 est recopiée de la ligne 2 à la ligne 3. Le taux doit rester en F1, mais la formule devient =B3*F2. Quel défaut faut-il corriger ?",
+      "options": [
+        "La référence au montant devrait être figée à B2.",
+        "La référence au taux n’est pas figée.",
+        "La référence au taux devrait être relative pour suivre la ligne du montant.",
+        "Le calcul devrait utiliser le taux de la ligne située sous la formule."
+      ],
+      "answer": 1,
+      "explanation": "La référence F1 est relative et se décale lors de la recopie. En utilisant $F$1 pour le taux, on conserve la même cellule tout en laissant le montant suivre la nouvelle ligne."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que faut-il fixer avant d’interpréter un total obtenu avec SUM ?",
+      "options": [
+        "Uniquement le nombre de décimales affichées.",
+        "L’ordre des lignes avant addition, sans examiner les filtres.",
+        "Le montant maximal du périmètre, sans vérifier les autres lignes.",
+        "Le périmètre retenu et l’absence de duplication des faits additionnés."
+      ],
+      "answer": 3,
+      "explanation": "Une somme est correcte pour le périmètre des lignes qu’elle reçoit. Des filtres inadéquats ou des doublons issus d’une jointure peuvent produire un total numériquement calculé sans erreur mais économiquement faux."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux factures distinctes ont chacune un montant de 250 €. Pour éliminer la répétition due à leurs lignes de détail, un analyste utilise SUM(DISTINCT montant). Pourquoi ce choix est-il risqué ?",
+      "options": [
+        "Il peut fusionner les montants égaux de factures pourtant différentes.",
+        "Il conserve chaque facture une fois dès que son montant est renseigné.",
+        "Il distingue automatiquement les numéros de facture associés au même montant.",
+        "Il élimine uniquement les répétitions produites par une mauvaise jointure."
+      ],
+      "answer": 0,
+      "explanation": "DISTINCT appliqué au montant distingue les valeurs numériques, pas les factures. Deux opérations légitimes de même montant seraient réduites à une seule ; la déduplication doit porter sur l’identité du fait."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une cellule contient =$B2*C$1. Lors d’une recopie d’une colonne vers la droite, quelles références sont obtenues ?",
+      "options": [
+        "=$C2*D$1",
+        "=$B2*C$1",
+        "=$B2*D$1",
+        "=$B3*C$2"
+      ],
+      "answer": 2,
+      "explanation": "$B fige la colonne du premier facteur. La colonne C du second reste relative et devient D ; $1 maintient sa ligne. Le déplacement horizontal ne change pas la ligne 2 du premier facteur."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un rapport doit retenir les commandes de statut « payée » ET d’un montant supérieur à 200 €. Le filtre utilise OR. Quel achat indésirable peut alors apparaître ?",
+      "options": [
+        "Une commande payée de 250 €, qui satisfait les deux critères.",
+        "Une commande non payée de 300 €, qui ne satisfait que le critère de montant.",
+        "Une commande non payée de 100 €, qui ne satisfait aucun critère.",
+        "Une commande non payée de 200 €, exclue par le seuil strict."
+      ],
+      "answer": 1,
+      "explanation": "OR retient une ligne dès qu’un des critères est vrai. Une commande chère mais non payée peut donc être incluse ; AND est nécessaire pour imposer simultanément les deux conditions du besoin."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour calculer un prix moyen sur des achats de volumes très différents, pourquoi une moyenne simple des prix unitaires peut-elle être trompeuse ?",
+      "options": [
+        "Une moyenne de prix doit toujours être remplacée par le prix maximal.",
+        "Elle donne davantage de poids aux lignes les moins chères, quel que soit leur volume.",
+        "Elle mesure directement le prix moyen de chaque unité achetée.",
+        "Elle donne le même poids à une petite ligne et à une grosse ligne."
+      ],
+      "answer": 3,
+      "explanation": "La moyenne simple traite chaque prix comme une observation de même poids. Pour représenter le prix moyen par unité achetée, on rapporte le montant total aux quantités totales, donc on tient compte des volumes."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après l’ajout d’une table de détails, le nombre de lignes d’un rapport augmente fortement. Quel premier contrôle aide à comprendre cette hausse ?",
+      "options": [
+        "Comparer les clés de jointure et la cardinalité attendue des correspondances.",
+        "Supprimer systématiquement toute ligne dont le montant se répète.",
+        "Diviser tous les totaux par deux sans autre vérification.",
+        "Trier les montants par ordre croissant."
+      ],
+      "answer": 0,
+      "explanation": "Une hausse peut être normale si chaque parent possède plusieurs détails, ou anormale si la condition de lien est fausse. Vérifier les correspondances attendues permet de distinguer ces situations avant de corriger."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que signifie la référence $D$4 dans une formule de tableur ?",
+      "options": [
+        "Seule la colonne D reste fixe.",
+        "Seule la ligne 4 reste fixe.",
+        "La colonne D et la ligne 4 restent fixes lors d’une recopie.",
+        "La colonne et la ligne restent relatives malgré les signes $."
+      ],
+      "answer": 2,
+      "explanation": "Chaque signe $ fixe l’élément qu’il précède : le premier concerne la colonne D et le second la ligne 4. Cette cellule demeure donc la même lors des recopies horizontales ou verticales."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le besoin est de conserver les ventes de janvier avant de calculer leur total par vendeur. À quel niveau appliquer la sélection sur le mois ?",
+      "options": [
+        "Seulement au total général après suppression des dates.",
+        "Aux lignes de vente avant leur regroupement.",
+        "Uniquement aux groupes dont le total ressemble à celui de janvier.",
+        "Au tri final des vendeurs, sans filtrer les ventes."
+      ],
+      "answer": 1,
+      "explanation": "Le mois caractérise chaque vente. Sélectionner d’abord les lignes de janvier fournit le bon périmètre aux sommes par vendeur ; une fois les dates supprimées par agrégation, ce filtre ne peut plus être appliqué correctement."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un total SQL est inférieur au calcul manuel. Les deux calculs n’utilisent pas la même période. Quelle vérification est prioritaire ?",
+      "options": [
+        "Augmenter le nombre de décimales SQL.",
+        "Remplacer SUM par COUNT pour obtenir le même périmètre.",
+        "Trier les lignes manuelles dans le même ordre que les lignes SQL.",
+        "Aligner les périodes et les autres filtres des deux calculs."
+      ],
+      "answer": 3,
+      "explanation": "Des totaux calculés sur des populations différentes ne constituent pas un rapprochement valide. Il faut d’abord harmoniser le périmètre, puis rechercher un éventuel défaut de requête ou de données."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un jeu d’essai comprend un client avec deux commandes et un autre avec une commande. Quel résultat doit avoir une jointure interne correcte, avec une ligne par commande et sans autre duplication ?",
+      "options": [
+        "Une ligne pour chacune des trois commandes, le premier client apparaissant deux fois.",
+        "Une seule ligne regroupant tous les clients.",
+        "Deux lignes obligatoirement, quel que soit le nombre de commandes.",
+        "Six lignes associant chaque client à chaque commande."
+      ],
+      "answer": 0,
+      "explanation": "La jointure reproduit le lien client-commande. Elle ne regroupe pas les commandes et ne réalise pas un produit cartésien ; le client possédant deux achats apparaît logiquement sur deux lignes."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une formule doit garder la colonne A tout en suivant la ligne quand elle est recopiée vers le bas et vers la droite. Quelle référence utiliser pour la ligne initiale 2 ?",
+      "options": [
+        "A$2",
+        "$A$2",
+        "$A2",
+        "A2"
+      ],
+      "answer": 2,
+      "explanation": "$A bloque uniquement la colonne, tandis que 2 reste relatif et suit le déplacement vertical. A$2 ferait l’inverse et $A$2 figerait les deux coordonnées, ce qui ne correspond pas au besoin."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Pourquoi définir la granularité d’un résultat avant d’écrire ses agrégats ?",
+      "options": [
+        "Pour garantir que tous les montants seront différents.",
+        "Pour savoir si chaque ligne doit représenter un client, une commande ou un autre objet.",
+        "Pour choisir l’ordre de tri sans avoir à définir le regroupement.",
+        "Pour savoir combien de décimales afficher avant de définir les objets comptés."
+      ],
+      "answer": 1,
+      "explanation": "La granularité exprime l’unité représentée par une ligne. Elle guide les regroupements, comptages et sommes ; sans elle, on risque de compter des commandes en prétendant compter des clients."
+    },
+    {
+      "id": "q22",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une requête s’exécute sans erreur et affiche un total plausible. Quel contrôle permet réellement d’en vérifier la logique ?",
+      "options": [
+        "Vérifier uniquement qu’elle ne renvoie pas une table vide.",
+        "Relancer la même requête sans changer les données.",
+        "Comparer seulement son temps d’exécution à celui du rapport précédent.",
+        "Comparer son résultat à un attendu manuel sur un petit jeu de données connu."
+      ],
+      "answer": 3,
+      "explanation": "Une syntaxe valide et un résultat plausible ne prouvent pas la conformité au besoin. Un jeu connu, avec attendu indépendant et cas de jointure pertinents, permet de détecter des erreurs de logique."
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "module": "UE8",
+  "chapter": "dossier-synthese",
+  "sourceHash": "32716df431094192fe9a21344b5f921c35edbb80263e4880f5df7f90c6647b04",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un rapport est intitulé « clients ayant acheté », mais chaque ligne affiche une commande. Quelle unité doit être clarifiée avant d’en compter les lignes ?",
+      "options": [
+        "Le nombre de colonnes du résultat.",
+        "Le nombre de montants différents.",
+        "Le fait de compter des clients distincts ou des commandes.",
+        "Le tri choisi entre dates de commande et dates de paiement."
+      ],
+      "answer": 2,
+      "explanation": "Un client peut posséder plusieurs commandes. Le nombre de lignes d’un résultat au grain de la commande ne mesure donc pas nécessairement le nombre de clients acheteurs."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "On veut afficher tous les clients, y compris ceux sans commande, avec leurs achats éventuels. Quel choix de jointure correspond à ce besoin ?",
+      "options": [
+        "Une jointure externe conservant toutes les lignes de Client.",
+        "Une jointure interne conservant seulement les correspondances.",
+        "Un produit de tous les clients par toutes les commandes.",
+        "Une jointure sur les seuls montants égaux."
+      ],
+      "answer": 0,
+      "explanation": "Une jointure externe depuis Client conserve les clients sans correspondance. La jointure interne les éliminerait, alors que leur présence est explicitement exigée par le rapport."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après association de chaque facture à ses détails, SUM(totalFacture) dépasse le total comptable. Quel contrôle est le plus pertinent ?",
+      "options": [
+        "Trier les détails par montant croissant.",
+        "Compter les noms de clients différents.",
+        "Arrondir tous les montants à l’euro.",
+        "Vérifier combien de fois chaque en-tête de facture est répété."
+      ],
+      "answer": 3,
+      "explanation": "Le total de l’en-tête peut apparaître une fois par détail puis être additionné plusieurs fois. Le contrôle des répétitions par facture permet d’identifier cet effet de grain avant toute correction."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "À quel moment faut-il écrire le résultat attendu d’un jeu d’essai pour valider une requête ?",
+      "options": [
+        "Après avoir copié le résultat calculé par la requête.",
+        "Avant la requête, à partir du besoin et des données connues.",
+        "Seulement lorsque la requête renvoie une erreur de syntaxe.",
+        "Après avoir supprimé toutes les lignes non conformes au résultat obtenu."
+      ],
+      "answer": 1,
+      "explanation": "L’attendu doit être indépendant du traitement testé. Le construire à partir de la sortie observée ou modifier les données pour y correspondre rendrait le contrôle circulaire et masquerait les erreurs."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une requête retourne plusieurs lignes pour un client ayant plusieurs achats. Peut-on en déduire une erreur de doublon ?",
+      "options": [
+        "Oui, car un client ne doit jamais apparaître plusieurs fois dans un résultat.",
+        "Non, il faut d’abord savoir si le résultat attendu représente des clients ou leurs commandes.",
+        "Oui, car toutes les jointures doivent préserver le nombre de clients.",
+        "Non, car une jointure ne peut jamais créer de répétition indésirable."
+      ],
+      "answer": 1,
+      "explanation": "La répétition peut être normale au grain des commandes ou indésirable dans une liste de clients distincts. Le besoin et la signification de chaque ligne déterminent le diagnostic."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une jointure externe conserve les clients sans commande. Un filtre impose ensuite une date non NULL sur la commande. Quel effet faut-il surveiller ?",
+      "options": [
+        "Tous les clients apparaîtront obligatoirement deux fois.",
+        "Les montants de facture seront automatiquement additionnés.",
+        "Les clients sans commande peuvent être éliminés par ce filtre.",
+        "Les clients acheteurs perdront leur identifiant."
+      ],
+      "answer": 2,
+      "explanation": "Les colonnes de commande sont absentes pour les clients sans correspondance. Un filtre qui exige une date de commande peut les exclure, annulant l’objectif de conservation poursuivi par la jointure externe."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux commandes différentes possèdent le même montant de 80 €. Quelle information permet de les distinguer lors d’un contrôle de doublons ?",
+      "options": [
+        "Leur identifiant de commande, associé au fait qu’elles représentent deux opérations.",
+        "La seule valeur 80, qui suffit à décider qu’il s’agit d’un doublon.",
+        "Leur position actuelle dans le tri du résultat.",
+        "La moyenne des montants de toutes les commandes."
+      ],
+      "answer": 0,
+      "explanation": "L’égalité d’un montant ne prouve pas l’identité de deux opérations. Le contrôle doit porter sur les identifiants et le sens métier des enregistrements afin de ne pas supprimer une commande légitime."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Quel ensemble de clients permet de tester les correspondances zéro, une et plusieurs commandes ?",
+      "options": [
+        "Trois clients ayant chacun une commande.",
+        "Un seul client dont toutes les commandes ont le même montant.",
+        "Trois clients n’ayant aucune commande.",
+        "Un client sans commande, un avec une commande et un avec plusieurs commandes."
+      ],
+      "answer": 3,
+      "explanation": "Ces cas exercent les principales cardinalités du lien. Un jeu ne comportant que des clients acheteurs avec une seule commande ne teste ni l’absence de lien ni la multiplication des lignes."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau affiche une ligne par client et par mois, mais le responsable compte ses lignes comme des clients annuels distincts. Quelle confusion apparaît ?",
+      "options": [
+        "Une confusion entre montants HT et TTC.",
+        "Une confusion entre clients mensuels et identités de clients sur l’année.",
+        "Une confusion entre date de facture et date de paiement uniquement.",
+        "Une confusion entre montants absents et montants nuls uniquement."
+      ],
+      "answer": 1,
+      "explanation": "Un même client peut occuper plusieurs lignes mensuelles. Le comptage annuel des identités nécessite de considérer ce grain client-mois et de distinguer les clients au niveau de l’année."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Un client sans commande disparaît après une jointure interne. Quelle conclusion est justifiée ?",
+      "options": [
+        "Son enregistrement a été supprimé de la table Client.",
+        "Son identifiant est nécessairement invalide.",
+        "Il n’a pas de correspondance retenue par cette jointure ; le besoin décide si cela convient.",
+        "Le modèle interdit forcément les clients sans commande."
+      ],
+      "answer": 2,
+      "explanation": "Une absence dans un résultat n’est pas une preuve de suppression dans la base. La jointure interne retient les correspondances ; il faut vérifier si l’exclusion des clients sans achat répond à la question."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux factures F1 et F2 du même client portent chacune 100 €. Elles sont répétées par une jointure avec leurs détails. Quelle clé permet de garder une occurrence de chaque facture avant d’additionner les en-têtes ?",
+      "options": [
+        "L’identifiant de facture.",
+        "Le montant de facture.",
+        "L’identifiant du client.",
+        "Le couple identifiant client et montant."
+      ],
+      "answer": 0,
+      "explanation": "Les deux factures ont le même client et le même montant mais des identifiants différents. Dédupliquer sur leur clé conserve chaque opération ; les autres critères peuvent fusionner des factures légitimes."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un jeu d’essai a un attendu manuel de deux clients acheteurs ; la requête en annonce trois car l’un possède deux commandes. Quel diagnostic est prioritaire ?",
+      "options": [
+        "Une valeur manquante dans le montant.",
+        "Une erreur d’arrondi dans le total.",
+        "Une suppression du client sans achat.",
+        "Un comptage des lignes de commande à la place des clients distincts."
+      ],
+      "answer": 3,
+      "explanation": "Le nombre trois correspond aux occurrences de commandes plutôt qu’aux deux identités de clients acheteurs. Le test met en évidence une confusion de granularité dans le comptage."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle définition de résultat est suffisamment précise pour guider une requête de comptage ?",
+      "options": [
+        "Compter les données présentes.",
+        "Compter une fois chaque identifiant de client ayant au moins une commande retenue.",
+        "Compter les lignes et décider ensuite de ce qu’elles représentent.",
+        "Compter les montants différents pour approximer les clients."
+      ],
+      "answer": 1,
+      "explanation": "La définition précise l’objet, l’unicité attendue et la condition d’appartenance à la population. Elle permet de choisir un comptage adapté plutôt que de donner une interprétation a posteriori aux lignes obtenues."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un client sans achat doit apparaître dans un rapport de prospection mais pas dans un rapport des clients acheteurs. Que faut-il en déduire sur les jointures ?",
+      "options": [
+        "Il faut supprimer ce client de la base pour harmoniser les rapports.",
+        "Les deux rapports doivent obligatoirement avoir la même population.",
+        "Le traitement des absences de correspondance dépend de la finalité de chaque rapport.",
+        "Un client sans achat doit être rattaché à une commande fictive."
+      ],
+      "answer": 2,
+      "explanation": "La même absence de lien peut être pertinente dans un rapport et hors périmètre dans un autre. Il faut choisir et tester les jointures selon le besoin, sans altérer les faits pour uniformiser les résultats."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client a plusieurs commandes ; chaque commande a plusieurs détails. Pour compter les commandes après les deux jointures, quel objet faut-il distinguer ?",
+      "options": [
+        "Les identifiants de commande, sans confondre leurs détails avec de nouvelles commandes.",
+        "Les montants unitaires distincts de chaque produit.",
+        "Les seuls identifiants clients, même si plusieurs commandes leur appartiennent.",
+        "Les positions des détails dans le résultat trié."
+      ],
+      "answer": 0,
+      "explanation": "Le grain final peut être le détail, mais la mesure demandée porte sur les commandes. Il faut identifier celles-ci une seule fois, plutôt que compter les occurrences produites par leurs lignes ou seulement leurs clients."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une requête doit lister les clients ayant au moins une commande. Quel test confronte réellement sa logique à un résultat attendu indépendant ?",
+      "options": [
+        "Relancer deux fois la même requête et vérifier que les sorties sont identiques.",
+        "Vérifier uniquement que la requête s’exécute sans erreur de syntaxe.",
+        "Construire l’attendu en recopiant la même jointure et les mêmes filtres dans une seconde requête.",
+        "Déterminer manuellement les clients attendus sur un petit jeu connu, puis comparer la sortie à cette liste."
+      ],
+      "answer": 3,
+      "explanation": "La liste manuelle fondée sur les faits fournit une référence indépendante. Une exécution stable ou sans erreur ne démontre pas la conformité ; recopier les mêmes jointures et filtres peut reproduire le même défaut."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une requête regroupe par client et par commande alors que le rapport exige une seule ligne de total par client. Quelle conséquence est probable ?",
+      "options": [
+        "Une fusion de tous les clients dans un seul groupe.",
+        "Plusieurs groupes pour un client ayant plusieurs commandes.",
+        "Une transformation automatique des montants en NULL.",
+        "Une suppression de toutes les commandes ayant le même client."
+      ],
+      "answer": 1,
+      "explanation": "Le groupe est défini par la combinaison des deux clés. Ajouter la commande conserve un niveau plus fin que le client et empêche d’obtenir directement une seule ligne de total pour chacun."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client absent du résultat devrait avoir une commande. Quel contrôle distingue un effet normal de jointure d’un défaut des données ?",
+      "options": [
+        "Vérifier seulement le nombre de colonnes affichées.",
+        "Supprimer le filtre et considérer tout résultat comme valide.",
+        "Vérifier l’existence de sa commande, sa référence client et les filtres appliqués.",
+        "Ajouter le client manuellement au résultat sans examiner les liens."
+      ],
+      "answer": 2,
+      "explanation": "L’absence peut venir d’une référence erronée, d’une commande non enregistrée ou d’un filtre légitime. Examiner les faits et les conditions permet d’expliquer le résultat au lieu de supposer une cause unique."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Pourquoi une suppression générale de doublons n’est-elle pas une solution universelle aux erreurs de jointure ?",
+      "options": [
+        "Elle peut effacer des faits distincts si les colonnes choisies ne définissent pas leur identité.",
+        "Elle garantit toujours le même total que la comptabilité.",
+        "Elle conserve nécessairement une ligne pour chaque clé primaire d’origine.",
+        "Elle répare automatiquement les références aux clients absents."
+      ],
+      "answer": 0,
+      "explanation": "La déduplication dépend du critère retenu. Si ce critère est un montant ou une description non unique, des opérations légitimes peuvent être réunies ; la correction doit respecter l’identité et le grain des faits."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un test couvrant les clients sans achat, avec un achat et avec plusieurs achats réussit. Quelle affirmation décrit sa portée ?",
+      "options": [
+        "Toute requête future sur la base est désormais valide.",
+        "La qualité de toutes les données réelles est certifiée.",
+        "Les futurs changements de règle métier n’exigeront aucun contrôle.",
+        "Ces situations sont vérifiées ; d’autres cas comme des valeurs absentes restent à examiner selon le besoin."
+      ],
+      "answer": 3,
+      "explanation": "Un test réussi fournit une preuve limitée aux entrées et règles exercées. Il faut conserver cette limite et compléter les cas pertinents, notamment les absences de valeur ou les futurs changements de traitement."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un rapport et un attendu manuel donnent des totaux différents, mais l’un porte sur les commandes payées et l’autre sur toutes les commandes. Que faire d’abord ?",
+      "options": [
+        "Supprimer les lignes répétées sans examiner leur identité.",
+        "Aligner les populations comparées avant de rechercher une erreur de calcul.",
+        "Remplacer le total par la moyenne des deux résultats.",
+        "Choisir systématiquement le total le plus faible."
+      ],
+      "answer": 1,
+      "explanation": "Des résultats calculés sur des périmètres différents ne sont pas directement comparables. Un rapprochement valable exige les mêmes filtres et le même grain avant d’examiner les écarts de logique ou de calcul."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Quel document rend un test de requête reproductible par un autre analyste ?",
+      "options": [
+        "Le seul total final sans les données utilisées.",
+        "Une capture du résultat sans description du besoin.",
+        "Les données d’entrée, le besoin, les résultats attendus et observés, puis l’explication des écarts.",
+        "Le seul temps d’exécution sur l’ordinateur du concepteur."
+      ],
+      "answer": 2,
+      "explanation": "La reproductibilité exige de savoir ce qui est testé et comment la sortie doit être interprétée. Les entrées, attendus et observations permettent à un tiers de refaire le contrôle et de comprendre les écarts."
+    }
+  ]
+}

@@ -1,0 +1,386 @@
+{
+  "module": "UE3",
+  "chapter": "modification-remuneration",
+  "sourceHash": "d99d56554c07b70c4b9507594f487b7974993f2802df457609d251da11cda7d3",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi faut-il lire les composantes du salaire et pas seulement son total lors d’une modification envisagée ?",
+      "options": [
+        "Le montant et la structure peuvent constituer des éléments contractuels à examiner.",
+        "Seul le virement bancaire détermine tout le contenu du contrat.",
+        "Une somme totale inchangée rend toute structure imposable par l’employeur.",
+        "Les composantes ne concernent que les cotisations patronales."
+      ],
+      "answer": 0,
+      "explanation": "La structure peut être contractuelle comme le montant. Une comparaison du total ne décrit pas à elle seule la transformation proposée et les droits concernés."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un contrat prévoit un fixe indépendant de toute ancienneté ; l’employeur réduit ce fixe et y intègre une prime d’ancienneté pour maintenir le total. Quel objet doit être analysé ?",
+      "options": [
+        "La seule date de paiement, indépendante du fixe.",
+        "La modification de la structure contractuelle, distincte du maintien apparent du total.",
+        "Une simple variation des retenues fiscales à taux inchangé.",
+        "La suppression de toute rémunération contractuelle du seul fait d’une prime."
+      ],
+      "answer": 1,
+      "explanation": "Intégrer une prime en diminuant le fixe peut modifier la structure convenue. Le maintien du total ne dispense pas d’examiner l’accord et le régime du changement.",
+      "references": [
+        {
+          "title": "Cour de cassation, chambre sociale, pourvoi 19-15.732",
+          "url": "https://www.courdecassation.fr/decision/61418c41217ec50512d41592"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le brut convenu reste inchangé ; le net versé baisse uniquement parce qu’une retenue fournie dans le dossier augmente. Que faut-il distinguer ?",
+      "options": [
+        "Le seul net versé, traité comme montant contractuel brut.",
+        "La seule hausse de retenue, traitée comme accord sur une baisse de salaire.",
+        "Le montant contractuel brut et les effets distincts des retenues sur le versement.",
+        "La date de versement, traitée comme preuve du changement du montant brut."
+      ],
+      "answer": 2,
+      "explanation": "Une variation du net n’établit pas toujours une décision de réduire le brut convenu. Il faut rapprocher les composantes et les retenues pour qualifier ce qui a réellement changé."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’employeur présente une clause de prime comme « seulement informative », mais le contrat précise un montant garanti. Quel point doit être examiné ?",
+      "options": [
+        "Le titre du courriel de l’employeur, seul déterminant.",
+        "La seule répétition du mot informative, tenue pour modification de l’engagement initial.",
+        "La seule absence de prime dans un bulletin, tenue pour accord sur sa suppression.",
+        "Le contenu de l’engagement et la portée de la garantie contractuelle."
+      ],
+      "answer": 3,
+      "explanation": "La qualification d’une composante dépend de son fondement et de ses termes. L’appellation donnée après coup ne remplace pas la lecture de l’engagement garanti."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une copie affirme qu’une rémunération contractuelle peut être réorganisée sans accord dès lors que l’employeur promet un résultat plus avantageux. Quelle analyse corrige cette affirmation ?",
+      "options": [
+        "L’avantage annoncé ne remplace pas l’examen de la modification de structure et de l’accord requis.",
+        "Toute promesse avantageuse supprime le caractère contractuel du salaire.",
+        "L’avantage annoncé transforme la prime en remboursement de frais.",
+        "Un total supérieur prouve nécessairement une acceptation écrite du salarié."
+      ],
+      "answer": 0,
+      "explanation": "L’intérêt économique allégué ne suffit pas à modifier le mode contractuel. La structure et le régime de consentement doivent être étudiés séparément de l’avantage promis.",
+      "references": [
+        {
+          "title": "Cour de cassation, chambre sociale, pourvoi 19-15.732",
+          "url": "https://www.courdecassation.fr/decision/61418c41217ec50512d41592"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Pour une modification essentielle fondée sur un motif économique relevant de L1222-6, quel mode de proposition ce texte prévoit-il ?",
+      "options": [
+        "Une mention dans le planning seulement.",
+        "Une lettre recommandée avec avis de réception.",
+        "Une annonce verbale collective comme seul formalisme.",
+        "Une ligne nouvelle du bulletin de paie comme seule proposition."
+      ],
+      "answer": 1,
+      "explanation": "L1222-6 prévoit la lettre recommandée avec avis de réception dans son champ. Il faut identifier ce régime avant de lui attribuer ses délais et effets.",
+      "references": [
+        {
+          "title": "Code du travail, article L1222-6",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1222-6"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Selon L1222-6, hors redressement ou liquidation judiciaire, quel délai annoncé au salarié lui permet de faire connaître son refus ?",
+      "options": [
+        "Deux jours ouvrables après la proposition.",
+        "Six mois après la première paie modifiée.",
+        "Un mois à compter de la réception de la notification.",
+        "La seule journée de signature du projet."
+      ],
+      "answer": 2,
+      "explanation": "Le texte prévoit un mois à partir de la réception dans le cadre indiqué. Le départ du délai ne se confond pas avec la rédaction de la lettre ou le premier bulletin modifié.",
+      "references": [
+        {
+          "title": "Code du travail, article L1222-6",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1222-6"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans le champ de L1222-6, l’entreprise est en redressement judiciaire. Quel délai spécifique le texte prévoit-il pour faire connaître le refus ?",
+      "options": [
+        "Deux mois à compter du premier paiement.",
+        "Un an à compter du changement proposé.",
+        "Deux jours ouvrables suivant la réunion.",
+        "Quinze jours à compter de la réception."
+      ],
+      "answer": 3,
+      "explanation": "L1222-6 prévoit quinze jours en redressement ou liquidation judiciaire. L’hypothèse doit être identifiée, sans appliquer indistinctement le délai ordinaire d’un mois.",
+      "references": [
+        {
+          "title": "Code du travail, article L1222-6",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1222-6"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une proposition économique relève bien de L1222-6 ; la notification et le délai légal sont réguliers selon les faits, et aucune réponse n’est donnée dans ce délai. Quel effet le texte prévoit-il ?",
+      "options": [
+        "Le salarié est réputé avoir accepté la modification proposée.",
+        "Le salarié est réputé avoir démissionné.",
+        "La modification devient automatiquement un licenciement.",
+        "Le salaire est nécessairement augmenté du montant refusé par silence."
+      ],
+      "answer": 0,
+      "explanation": "Le texte organise ici un effet particulier du silence au terme du délai régulier. Cette règle ne doit pas être généralisée à toutes les propositions contractuelles.",
+      "references": [
+        {
+          "title": "Code du travail, article L1222-6",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l1222-6"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un employeur invoque l’acceptation par silence prévue pour une proposition économique, mais aucun fait ne précise le motif ni la procédure. Quelle vérification manque ?",
+      "options": [
+        "Le nombre de collègues silencieux, pris comme régime universel de consentement.",
+        "L’appartenance au régime invoqué et le respect de ses conditions.",
+        "La seule baisse proposée, prise comme preuve d’un motif économique établi.",
+        "L’émission de la nouvelle paie, prise comme preuve de notification régulière."
+      ],
+      "answer": 1,
+      "explanation": "Un effet spécial du silence suppose d’identifier son champ et ses conditions. Le dossier incomplet ne permet pas de l’importer comme principe universel."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le salarié signe uniquement un accusé de réception du projet de rémunération. Quel élément faut-il distinguer avant de conclure à son accord ?",
+      "options": [
+        "La présence d’une signature, prise comme accord à tous les projets futurs.",
+        "La date de remise, prise comme date de fin du contrat.",
+        "La reconnaissance de réception et l’acceptation du contenu proposé.",
+        "La seule rédaction de l’employeur, prise comme expression du consentement du salarié."
+      ],
+      "answer": 2,
+      "explanation": "Recevoir une proposition et l’accepter n’ont pas le même objet. La formule signée et le régime applicable doivent être lus pour déterminer sa portée."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel effet le refus d’une modification contractuelle de rémunération produit-il à lui seul ?",
+      "options": [
+        "Une démission nécessaire.",
+        "Une faute disciplinaire nécessaire.",
+        "Une extinction automatique de toute rémunération.",
+        "Ni démission ni faute ne se déduisent automatiquement de ce seul refus."
+      ],
+      "answer": 3,
+      "explanation": "Le refus doit être étudié dans son cadre et son motif. Il n’équivaut pas, par principe, à une volonté de rompre ni à un manquement disciplinaire."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le salarié refuse une baisse proposée ; l’employeur retire la proposition et confirme les conditions initiales. Quel fait permet de lire la suite de la relation ?",
+      "options": [
+        "Le maintien annoncé du contrat initial, distinct d’une rupture présumée.",
+        "Le refus initial, pris comme démission irrévocable.",
+        "Le retrait de la proposition, pris comme paiement d’une indemnité non convenue.",
+        "La proposition passée, prise comme modification déjà acquise."
+      ],
+      "answer": 0,
+      "explanation": "Le refus et la décision de maintenir les conditions initiales sont deux faits à dater. Ils ne documentent pas, à eux seuls, une rupture du contrat."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un APC entre dans le champ de L2254-2 et le salarié a reçu l’information requise. Sous quelle forme doit-il faire connaître son refus dans le délai prévu ?",
+      "options": [
+        "Par simple non-présentation au travail.",
+        "Par écrit à l’employeur.",
+        "Par silence, considéré comme refus écrit.",
+        "Par le seul refus de signer le bulletin de paie."
+      ],
+      "answer": 1,
+      "explanation": "L2254-2 prévoit un refus écrit dans le délai qu’il fixe. Il faut distinguer ce mécanisme particulier d’une absence ou d’un comportement dont la portée serait supposée.",
+      "references": [
+        {
+          "title": "Code du travail, article L2254-2",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2254-2"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un salarié a refusé l’application d’un APC. Quelle articulation de L2254-2 faut-il examiner pour une éventuelle rupture ?",
+      "options": [
+        "Le refus vaut directement démission sans procédure.",
+        "Le refus supprime le droit au salaire antérieur à la rupture.",
+        "Le délai d’engagement de la procédure et le motif spécifique prévus par le texte.",
+        "Tout licenciement consécutif est nécessairement une sanction disciplinaire."
+      ],
+      "answer": 2,
+      "explanation": "Le texte organise une procédure et un motif spécifiques ; le refus ne constitue pas lui-même une rupture immédiate. Les conditions de mise en œuvre doivent être vérifiées.",
+      "references": [
+        {
+          "title": "Code du travail, article L2254-2",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l2254-2"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie qualifie de faute le seul refus d’une modification de salaire, sans rechercher le motif ni le régime. Quelle démarche faut-il reprendre ?",
+      "options": [
+        "Calculer une pénalité à partir de la baisse proposée.",
+        "Déduire l’accord de la présence du salarié après son refus.",
+        "Confondre le refus du projet avec un refus d’exécuter le contrat inchangé.",
+        "Qualifier la modification et examiner son cadre avant d’analyser les suites."
+      ],
+      "answer": 3,
+      "explanation": "Une modification du contrat et une instruction dans son cadre ne se confondent pas. Le refus ne se traite qu’après la qualification et l’identification du régime."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier annonce « difficultés de l’entreprise » et une baisse, sans aucune pièce sur le motif ni la procédure. Quelle conclusion est adaptée ?",
+      "options": [
+        "Le motif et le cadre procédural restent à documenter avant d’affirmer la régularité de la modification.",
+        "Le seul intérêt financier de l’entreprise établit toutes les conditions.",
+        "Le salaire est nécessairement modifié dès la première difficulté annoncée.",
+        "La mention difficultés vaut consentement du salarié."
+      ],
+      "answer": 0,
+      "explanation": "L’affirmation générale n’établit pas toutes les conditions du mécanisme utilisé. La réserve utile précise les documents et étapes à rechercher."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’employeur invoque un accord collectif, mais seule une présentation résumée est fournie. Quelle pièce est directement nécessaire pour apprécier son effet sur le salaire ?",
+      "options": [
+        "La seule présentation interne, traitée comme texte intégral opposable.",
+        "Le texte de l’accord, son champ, sa date d’effet et les éléments de procédure pertinents.",
+        "Le contrat d’un collègue d’un autre établissement, substitué à l’accord.",
+        "La seule mention accord collectif, traitée comme preuve de tout mécanisme applicable."
+      ],
+      "answer": 1,
+      "explanation": "Un résumé ne définit pas nécessairement les clauses et effets. Il faut établir le texte réellement applicable à la personne et à la période étudiées."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux projets successifs proposent des structures de rémunération différentes ; le salarié a accepté le premier seulement. Quel contrôle doit précéder l’application du second ?",
+      "options": [
+        "La seule réception des deux projets, considérée comme acceptation des deux.",
+        "La version choisie par l’employeur, tenue pour version acceptée sans rapprochement.",
+        "L’objet exact de l’accord donné et sa correspondance avec la version appliquée.",
+        "L’absence de réponse au second projet, tenue pour preuve universelle de son acceptation."
+      ],
+      "answer": 2,
+      "explanation": "L’accord porte sur des termes identifiables. Accepter une version ne prouve pas une acceptation de toute évolution ultérieure ; il faut rapprocher réponse et projet."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un bulletin montre le nouveau salaire, mais aucun échange sur sa modification n’est fourni. Quelle portée peut-on lui attribuer ?",
+      "options": [
+        "La preuve nécessaire de toutes les négociations préalables.",
+        "La preuve d’une démission lorsque la somme baisse.",
+        "La preuve que toutes les règles collectives ont été respectées.",
+        "Un élément sur la paie appliquée, à distinguer du fondement de la modification."
+      ],
+      "answer": 3,
+      "explanation": "Le bulletin renseigne la rémunération mise en paie. Il ne constitue pas à lui seul la preuve du consentement ou du respect d’un mécanisme particulier."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le salarié conteste une prime supprimée. Le contrat, un avenant et un accord collectif semblent donner des fondements différents. Comment préparer l’analyse ?",
+      "options": [
+        "Identifier la source et le champ de chaque composante avant de traiter la suppression.",
+        "Retenir exclusivement l’avenant le plus récent, sans distinguer l’objet des différentes primes.",
+        "Traiter toutes les primes comme une composante variable librement révocable.",
+        "Cumuler les montants des trois textes avant de déterminer s’ils couvrent le même objet."
+      ],
+      "answer": 0,
+      "explanation": "Le fondement d’une composante conditionne l’analyse de son évolution. Les textes doivent être rapprochés pour comprendre les engagements sans cumul ou suppression automatique."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La modification entre en paie deux mois avant la date d’effet prévue par l’avenant signé. Quel point permet de cibler la contestation ?",
+      "options": [
+        "La valeur de l’accord d’entreprise le plus ancien sans lien avec la modification.",
+        "La concordance entre date convenue et date d’application, distincte de l’existence de l’accord.",
+        "Le nombre total de virements de l’année seulement.",
+        "La seule signature de l’avenant, qui rend toutes les dates interchangeables."
+      ],
+      "answer": 1,
+      "explanation": "L’accord et sa date d’effet sont deux éléments à respecter dans l’analyse. Une acceptation peut être prouvée alors que l’application anticipée reste discutée."
+    }
+  ]
+}

@@ -1,0 +1,344 @@
+{
+  "module": "UE8",
+  "chapter": "donnees",
+  "sourceHash": "378d4b72ea404b21b8d4f658972c6f571d562e5160cab99f9854b59bebe6f413",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle propriété est indispensable à une clé primaire dans une table relationnelle ?",
+      "options": [
+        "Elle doit être unique dans chaque export, même si elle se répète dans la table.",
+        "Elle identifie chaque ligne sans doublon ni valeur NULL.",
+        "Elle identifie obligatoirement une ligne dans toutes les tables du système.",
+        "Elle autorise NULL si aucune autre ligne ne porte NULL."
+      ],
+      "answer": 1,
+      "explanation": "La clé primaire distingue chaque ligne et exclut les valeurs NULL. Son format peut être numérique, textuel ou composé : c’est son rôle d’identification qui compte."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux clients différents portent le même nom et peuvent habiter à la même adresse. Quel choix identifie durablement chacun dans la base ?",
+      "options": [
+        "Le nom seul, puisqu’il décrit le client.",
+        "Le nom associé au code postal, même si des homonymes cohabitent.",
+        "Un identifiant client unique et non NULL.",
+        "L’adresse actuelle, remplacée lors de chaque déménagement."
+      ],
+      "answer": 2,
+      "explanation": "Les règles données autorisent des noms et adresses identiques. Un identifiant client unique évite ces collisions sans dépendre d’une donnée descriptive susceptible de changer."
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "foundation",
+      "q": "Commande(idCommande, idClient) référence Client(idClient). Le client 48 n’existe pas. Quel contrôle empêche d’enregistrer une commande pour ce client ?",
+      "options": [
+        "Une contrainte de clé étrangère sur Commande.idClient.",
+        "Une contrainte UNIQUE sur Commande.idClient.",
+        "Une clé primaire sur Commande.idCommande seulement.",
+        "Une contrainte de saisie obligatoire sur le montant."
+      ],
+      "answer": 0,
+      "explanation": "La clé étrangère impose une référence à une clé existante. Le tri et l’unicité d’un nom ne contrôlent pas l’existence du client désigné par la commande."
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans Commande, pourquoi plusieurs lignes peuvent-elles porter la même clé étrangère idClient ?",
+      "options": [
+        "Parce que idClient constitue aussi la clé primaire de chaque commande.",
+        "Parce qu’une clé étrangère n’est contrôlée que lors des suppressions.",
+        "Parce que la clé primaire de Client est alors répétée dans Client.",
+        "Parce qu’un client peut être associé à plusieurs commandes."
+      ],
+      "answer": 3,
+      "explanation": "La répétition de idClient dans Commande traduit la relation un à plusieurs. L’unicité porte ici sur idCommande, pas sur la référence commune à plusieurs achats du même client."
+    },
+    {
+      "id": "q05",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Chaque commande appartient à un seul client ; un client peut passer plusieurs commandes. Où placer la référence au client dans un modèle à deux tables ?",
+      "options": [
+        "Dans Client, sous forme d’une liste de numéros de commande dans un même champ.",
+        "Dans Commande, avec un idClient pour chaque commande.",
+        "Dans Commande, en remplaçant idCommande par idClient comme clé unique.",
+        "Dans Client, avec une colonne idCommande supplémentaire pour chaque nouvel achat."
+      ],
+      "answer": 1,
+      "explanation": "La référence se place du côté des nombreuses commandes. Chaque ligne Commande porte ainsi une référence simple au client concerné, sans liste variable de colonnes dans Client."
+    },
+    {
+      "id": "q06",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une adresse actuelle est copiée dans dix commandes du même client. Après un déménagement, seules six copies sont corrigées. Quel défaut révèle cette situation ?",
+      "options": [
+        "Une anomalie de suppression due à l’absence de commande.",
+        "Une violation nécessaire de la clé primaire de Commande.",
+        "Une anomalie de mise à jour causée par une donnée répétée.",
+        "Une référence orpheline créée par le nouveau code postal."
+      ],
+      "answer": 2,
+      "explanation": "Une seule information actuelle possède désormais plusieurs versions contradictoires. Stocker l’adresse actuelle dans Client limite cette répétition ; l’adresse historique exige un besoin distinct explicite."
+    },
+    {
+      "id": "q07",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un logiciel attribue le même idCommande à deux achats différents. Pourquoi ce comportement viole-t-il le rôle de la clé primaire ?",
+      "options": [
+        "Une valeur de clé n’identifie plus une seule ligne.",
+        "Une clé primaire ne peut pas identifier des opérations de dates différentes.",
+        "La clé étrangère client devient nécessairement NULL.",
+        "Les deux achats deviennent automatiquement une seule opération métier."
+      ],
+      "answer": 0,
+      "explanation": "Une clé primaire doit distinguer sans ambiguïté les lignes. Réutiliser le même identifiant pour deux achats détruit cette identification, indépendamment du type choisi pour la clé."
+    },
+    {
+      "id": "q08",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La règle métier exige exactement un client existant pour chaque commande. Quelle combinaison convient à Commande.idClient ?",
+      "options": [
+        "Autoriser NULL et imposer une valeur unique.",
+        "Imposer une valeur unique sans référence à Client.",
+        "Rendre le champ obligatoire sans vérifier son existence dans Client.",
+        "Interdire NULL et référencer la clé de Client."
+      ],
+      "answer": 3,
+      "explanation": "La référence garantit l’existence du client ; l’interdiction de NULL impose qu’il soit renseigné. L’unicité de idClient serait inadaptée puisqu’un client peut passer plusieurs commandes."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une clé étrangère relie les commandes aux clients, mais une commande peut encore afficher un montant négatif contraire aux règles internes. Quelle conclusion est correcte ?",
+      "options": [
+        "La clé étrangère devrait également imposer le signe du montant.",
+        "Le contrôle de référence ne remplace pas le contrôle du montant.",
+        "Une clé primaire composée du client et du montant suffirait à interdire cette valeur.",
+        "Supprimer la clé étrangère permettrait de contrôler correctement le montant."
+      ],
+      "answer": 1,
+      "explanation": "L’intégrité référentielle vérifie le lien entre les tables. Une règle de domaine ou un contrôle métier supplémentaire reste nécessaire pour imposer les valeurs autorisées du montant."
+    },
+    {
+      "id": "q10",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une facture doit conserver l’adresse utilisée lors de son émission, même si le client déménage ensuite. Comment modéliser ce besoin avec son adresse actuelle ?",
+      "options": [
+        "Remplacer toutes les anciennes adresses de facturation par la nouvelle adresse du client.",
+        "Conserver uniquement l’adresse actuelle et l’utiliser pour réafficher toutes les factures.",
+        "Distinguer l’adresse actuelle du client et l’adresse historique de facturation.",
+        "Conserver toutes les adresses dans un même champ sans date ni rôle."
+      ],
+      "answer": 2,
+      "explanation": "Les deux adresses n’ont pas le même sens temporel. Conserver une adresse historique peut être légitime ; ce n’est pas une duplication inutile de l’adresse actuelle lorsque le besoin est défini."
+    },
+    {
+      "id": "q11",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Une clé primaire doit-elle nécessairement être un numéro généré automatiquement ?",
+      "options": [
+        "Non : une autre clé est possible si elle est unique, non NULL et adaptée aux règles métier.",
+        "Oui : une clé métier ne peut jamais garantir une identification.",
+        "Oui : l’existence de plusieurs colonnes rend une clé invalide.",
+        "Non : l’unicité observée sur un échantillon suffit sans contrainte durable."
+      ],
+      "answer": 0,
+      "explanation": "Un numéro automatique est une solution pratique, pas une propriété imposée par la notion de clé primaire. Une clé métier ou composée convient si ses contraintes d’identification sont garanties."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans un modèle Client-Commande, un client vient d’être créé mais n’a encore rien acheté. Quelle règle faut-il préciser pour savoir si cette situation est admise ?",
+      "options": [
+        "Le nombre maximal de caractères du nom.",
+        "La possibilité de partager une adresse entre plusieurs clients.",
+        "La possibilité de rattacher une commande à plusieurs clients.",
+        "Le nombre minimal de commandes autorisé pour un client."
+      ],
+      "answer": 3,
+      "explanation": "La cardinalité minimale indique notamment si un client peut n’avoir aucune commande. La seule expression « un client peut avoir plusieurs commandes » ne suffit pas à imposer un achat dès sa création."
+    },
+    {
+      "id": "q13",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une équipe ajoute un numéro unique à chaque ligne d’une table qui répète toujours l’adresse actuelle dans toutes les commandes. Quel problème subsiste ?",
+      "options": [
+        "Les lignes ne peuvent plus être identifiées individuellement.",
+        "La mise à jour partielle des adresses reste possible.",
+        "La référence à un client existant est garantie par ce seul numéro de ligne.",
+        "La nouvelle clé élimine automatiquement les dépendances entre les autres colonnes."
+      ],
+      "answer": 1,
+      "explanation": "Ajouter un identifiant résout l’identification des lignes, pas la répétition d’une information commune. Il faut aussi placer les données du client au niveau approprié pour limiter les incohérences."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans PostgreSQL, Commande.idClient référence Client.idClient avec ON DELETE RESTRICT. Le client est encore référencé par des commandes. Quel comportement est attendu lors de sa suppression ?",
+      "options": [
+        "Supprimer automatiquement ses commandes pour permettre la suppression du client.",
+        "Remplacer automatiquement les références par NULL puis supprimer le client.",
+        "Refuser la suppression du client tant que des commandes le référencent.",
+        "Archiver automatiquement le client et ses commandes dans des tables historiques."
+      ],
+      "answer": 2,
+      "explanation": "RESTRICT bloque la suppression de la ligne référencée. CASCADE supprimerait les lignes liées ; SET NULL modifierait leur référence sous réserve des autres contraintes. Un archivage historique demande un mécanisme explicite, il ne découle pas de cette clé étrangère.",
+      "references": [
+        {
+          "title": "PostgreSQL — Foreign Keys and ON DELETE actions",
+          "url": "https://www.postgresql.org/docs/18/ddl-constraints.html#DDL-CONSTRAINTS-FK"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une table LigneCommande stocke plusieurs produits par commande ; chaque numéro de ligne n’est unique qu’à l’intérieur de sa commande. Quelle clé composée convient sous cette règle ?",
+      "options": [
+        "Le couple idCommande, numeroLigne.",
+        "Le seul numeroLigne.",
+        "Le seul idCommande.",
+        "Le couple idClient, numeroLigne, même si un client possède plusieurs commandes."
+      ],
+      "answer": 0,
+      "explanation": "Le numéro de ligne peut se répéter entre commandes, mais le couple désigne une ligne précise. Ni le client ni le libellé ne garantissent cette unicité au grain d’une ligne de commande."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un concepteur impose idClient UNIQUE dans Commande alors que les clients doivent pouvoir acheter plusieurs fois. Quelle conséquence obtient-il ?",
+      "options": [
+        "Il empêche seulement deux commandes d’un même client à la même date.",
+        "Il autorise une seconde commande si son montant est différent.",
+        "Il contrôle uniquement l’existence du client dans Client.",
+        "Il interdit une seconde commande portant le même client."
+      ],
+      "answer": 3,
+      "explanation": "La contrainte UNIQUE rend chaque référence client utilisable une seule fois dans Commande. Elle contredit donc la relation un à plusieurs voulue, même si les identifiants de commande sont différents."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi séparer les coordonnées actuelles des clients des informations propres à chaque commande ?",
+      "options": [
+        "Pour supprimer le besoin de vérifier les références aux clients.",
+        "Pour modifier une information client à un emplacement cohérent.",
+        "Pour transformer toutes les commandes d’un client en une seule ligne.",
+        "Pour garantir automatiquement la validité de tous les montants de commande."
+      ],
+      "answer": 1,
+      "explanation": "Les coordonnées actuelles dépendent du client et les détails d’achat de la commande. Les séparer réduit les copies d’une même information tout en conservant une relation explicite entre les objets."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Client.idClient contient 12 et 19. Commande.idClient contient 12, 12 et 19. Que montrent ces références si chaque commande possède son propre identifiant unique ?",
+      "options": [
+        "Une violation automatique de la clé primaire de Client.",
+        "La nécessité de dupliquer le client 12 dans Client.",
+        "Une structure compatible avec plusieurs commandes pour un même client.",
+        "Une relation où idClient doit aussi être la clé unique de Commande."
+      ],
+      "answer": 2,
+      "explanation": "La référence 12 peut apparaître dans plusieurs commandes sans être dupliquée dans Client. Cette répétition est normale du côté des commandes et ne constitue pas une duplication de la clé primaire du client."
+    },
+    {
+      "id": "q19",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Dans un échantillon de vingt salariés, tous les prénoms sont différents. Cela suffit-il à choisir le prénom comme clé primaire durable ?",
+      "options": [
+        "Non : l’unicité doit être garantie par les règles, pas seulement observée dans l’échantillon.",
+        "Oui : l’absence de doublon dans cet échantillon garantit l’unicité future.",
+        "Oui : une contrainte technique interdisant les homonymes suffit toujours à refléter le réel.",
+        "Non : toute clé métier doit obligatoirement être remplacée par une date de création."
+      ],
+      "answer": 0,
+      "explanation": "Un constat provisoire ne démontre pas une règle d’unicité durable. Des homonymes futurs sont possibles ; l’identifiant doit rester compatible avec les faits que la base est censée représenter."
+    },
+    {
+      "id": "q20",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que doit décrire une règle de gestion avant le choix des relations entre tables ?",
+      "options": [
+        "Uniquement les attributs à recopier dans toutes les tables.",
+        "Seulement les noms des colonnes choisis par le développeur.",
+        "Le nombre de lignes observé aujourd’hui, sans examiner les situations futures.",
+        "Les objets reliés et le nombre de liens autorisés entre leurs occurrences."
+      ],
+      "answer": 3,
+      "explanation": "Le modèle doit traduire les liens réels et leurs limites : par exemple une commande appartient à un client tandis qu’un client peut passer plusieurs commandes. L’apparence des écrans ne définit pas ces relations."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour créer un nouveau client avant son premier achat, une table unique exige un numéro de commande non NULL. Quel défaut de conception apparaît ?",
+      "options": [
+        "Une anomalie de suppression d’un achat existant.",
+        "Une anomalie d’insertion liée au mélange des objets client et commande.",
+        "Une violation nécessaire de l’unicité des identifiants clients.",
+        "Une dépendance du montant de chaque achat envers l’adresse du client."
+      ],
+      "answer": 1,
+      "explanation": "La création d’un client dépend artificiellement de l’existence d’une commande. Séparer les deux objets permet de représenter un client sans achat, si cette situation est admise par les règles de gestion."
+    },
+    {
+      "id": "q22",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Après la séparation de Client et Commande, le logiciel accepte encore des références client inexistantes car aucune contrainte n’a été créée. Quelle étape manque ?",
+      "options": [
+        "Dupliquer de nouveau les coordonnées dans Commande suffit à garantir les liens.",
+        "Rendre idClient unique dans Commande suffit à garantir l’existence du client.",
+        "Définir et vérifier l’intégrité référentielle du lien.",
+        "Ajouter seulement une clé primaire à Commande suffit à contrôler idClient."
+      ],
+      "answer": 2,
+      "explanation": "Le découpage logique n’impose pas à lui seul les liens valides. La clé étrangère et ses règles de modification doivent être mises en place et testées pour empêcher les références inexistantes."
+    }
+  ]
+}

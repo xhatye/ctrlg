@@ -1,0 +1,248 @@
+{
+  "sourceHash": "6c37d79e802946a161a3f20496795e70883fbb2c4fd79bebe0fd31e2191fff46",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "bc4a49abe10503590122c33a862e3fab3e558d05f83db292b3412a87af3992b8",
+      "selected": 3,
+      "reason": "La racine de400000 vaut632,46unités.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "d6362be1b695426b6f61d382a2f2a02c9d6522a964bdb6f3da6a027bd201eb83",
+      "selected": 1,
+      "reason": "10000unités divisées par500 donnent20commandes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "9fc468397260188bddf64996659a1abc22136c78eaf9f1675f9efaf2c023c716",
+      "selected": 3,
+      "reason": "20commandes à40 valent800euros par an.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "c35c32987b97cac630055c7f1228c8216653b256d068b1f4f927de093a916bf7",
+      "selected": 2,
+      "reason": "Un stock moyen250 à2 donne500euros de possession.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "b9b7aef939e5d5a4a8a3da7316021a7f0147082e14dbc18bf8c5103a56969a0c",
+      "selected": 1,
+      "reason": "La racine de quatre multiplie le lot optimal par deux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "05484e223dfd9de1231743628858cbbc68ee8a70f2eb0bbcba3c31c4fde2b730",
+      "selected": 0,
+      "reason": "Une fréquence théorique fractionnaire ne mesure pas le forfait réellement facturé par bon.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "94640fe61e4c6d62a2edec5ae125c9812d899280aca90659956716246fb95290",
+      "selected": 2,
+      "reason": "D/Q diminue quand Q augmente, à coût fixe par commande inchangé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "43ce7b3be1d856a505aead9586a8c8eb83f6d8ca617c25b05c854027c81d552a",
+      "selected": 0,
+      "reason": "La possession vaut Q/2*h et augmente avec la taille du lot.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "183503f5b772d1b28b3dafdc0d7224b027222772b6cbda17e96953770e37f009",
+      "selected": 2,
+      "reason": "Une remise modifie achat et éventuellement possession ; il faut comparer des lots admissibles.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "d878156b0d7952a028ad0b9171b0457bc8510cda7f9a57d71d4b5a9f92f721e6",
+      "selected": 3,
+      "reason": "12000divisés par24 donnent500unités parcommande.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "66817c7cf8043f1f83be678bee78fc2d874372f8b2e8d715c48153fd16110ebc",
+      "selected": 2,
+      "reason": "Euros par commande doit multiplier un nombre de commandes, non unités de produits.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "03833b1b097a91508786943f81a223091cd53f2ab109130ec2b9c927b2e7b188",
+      "selected": 2,
+      "reason": "Le stock sécurité permanent s’ajoute au stock moyen, non sa moitié.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "eaaaac697dca8532cd457deb49bfed725cb9dc5c4edb2b3bf95a8dfef9043776",
+      "selected": 0,
+      "reason": "La racine du coût de possession quadruplé divise Qpar2.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "40b13ca8fafe56d1b74139784cc50a118e0c686fdf88a2cfe7093614debb1384",
+      "selected": 1,
+      "reason": "12000/300=40par jour et40*6=240unités à couvrir pendant délai.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "de6a2b62f0c7639f1cf12ac03953c2e84cc1185250a2817e9e69ffc9cc72d526",
+      "selected": 0,
+      "reason": "800euros de commande plus500 de possession font1300.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "95605c14ef9ee3e2eb878b2fd05cdab8b5f8380bfa7dedc25895927fb1a0fc9b",
+      "selected": 1,
+      "reason": "L’optimum Wilson égalise coût annuel de passation et possession de cycle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "faa840f6f24c61b1eff794f2ed87b99ee72956250102514a33b6e65fc063e59c",
+      "selected": 1,
+      "reason": "Un lot théorique hors minimum fournisseur doit être confronté aux options réalisables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "fc62cdffda997f4a6d0b74b44fb5e1bbc6f11eb8d74ab4f8b38f1d56ba2646ed",
+      "selected": 1,
+      "reason": "Après arrondi le coût exact de chaque composante doit être recalculé, égalité non garantie.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "06d9aefcf06dada0cf0c015652a0bee5ac519ed4420056f0fdef2878bb88bc96",
+      "selected": 1,
+      "reason": "D fois prix est inchangé entre tailles de lots et ne les départage donc pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "74dd30818b314d40f73b06e0fad35cc2622629c798a4f0ee3f1019d0f35aee29",
+      "selected": 3,
+      "reason": "Une demande saisonnière avec rupture dépasse les hypothèses régulières de Wilson.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "b6d439e6835616266413903406c129e6adcecc5332c11b315451d244ad56472b",
+      "selected": 1,
+      "reason": "Augmenter Q réduit fréquence des commandes et augmente stock moyen détenu.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "f37b73b94bdc92d5c0c5a4eca85cebab6e2ad4912211c6c7fc048ff781e4c3a4",
+      "selected": 3,
+      "reason": "Charges annuelles et nombre trimestriel doivent être ramenés à même période.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

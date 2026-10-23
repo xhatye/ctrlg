@@ -1,0 +1,489 @@
+{
+  "module": "UE9",
+  "chapter": "escompte-reglement",
+  "sourceHash": "6605a28cec3507e7a081f911f18f9b9f0920da93f3d83e5b28ffc0fdbdddd39e",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel élément distingue l’escompte de règlement d’une remise commerciale dans le cas étudié ?",
+      "options": [
+        "Il est lié aux conditions de paiement anticipé",
+        "Il est nécessairement lié à la quantité commandée",
+        "Il supprime automatiquement toute TVA",
+        "Il correspond au remboursement du capital d’un prêt"
+      ],
+      "answer": 0,
+      "explanation": "L’escompte rémunère ici une modalité de règlement. Il ne doit pas être confondu avec une réduction commerciale liée au prix ou à la commande."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le net commercial HT est de 3 000 €. Un escompte de 2 % est expressément acquis. Quel montant HT d’escompte obtient-on ?",
+      "options": [
+        "2 940 €",
+        "60 €",
+        "3 060 €",
+        "6 €"
+      ],
+      "answer": 1,
+      "explanation": "L’escompte est calculé sur la base annoncée : 3 000 × 0,02 = 60 €. Le net financier est un montant différent.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 3000
+            },
+            {
+              "value": 0.02
+            }
+          ]
+        },
+        "expected": 60,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La facture propose un escompte seulement si le paiement intervient avant une date précise. Le préparateur le déduit sans vérifier cette condition. Quel contrôle manque-t-il ?",
+      "options": [
+        "L’application automatique d’un deuxième taux de remise",
+        "Le remplacement du TTC par le montant brut du stock",
+        "La confirmation que le paiement satisfait la condition d’acquisition",
+        "La preuve que tout client bénéficie nécessairement d’un escompte"
+      ],
+      "answer": 2,
+      "explanation": "Un avantage conditionnel n’est pas automatiquement acquis. Il faut rapprocher les conditions de la facture et la date effective ou prévue du règlement."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un escompte de 45 € est accordé sur un net commercial de 1 500 € HT. Quel taux d’escompte représente-t-il ?",
+      "options": [
+        "30 %",
+        "0,03 %",
+        "97 %",
+        "3 %"
+      ],
+      "answer": 3,
+      "explanation": "Le taux est 45 / 1 500 × 100 = 3 %. Diviser l’assiette par la réduction produirait une autre grandeur.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 45
+                },
+                {
+                  "value": 1500
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 3,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le brut HT a déjà été diminué de remises commerciales. Le contrat fixe l’escompte comme un pourcentage du net commercial. Quelle assiette faut-il utiliser ?",
+      "options": [
+        "Le montant après remises commerciales",
+        "Le brut initial avant remises",
+        "La seule TVA facturée",
+        "Le seul montant des remises déjà déduites"
+      ],
+      "answer": 0,
+      "explanation": "L’assiette est expressément définie dans le cas. Revenir au brut ferait porter l’escompte sur un montant qui n’est plus le net commercial."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le net commercial est de 2 400 € HT et l’escompte acquis de 36 € HT. Quel est le net financier ?",
+      "options": [
+        "2 436 €",
+        "2 364 €",
+        "36 €",
+        "2 400 €"
+      ],
+      "answer": 1,
+      "explanation": "Le net financier retranche l’escompte du net commercial : 2 400 − 36 = 2 364 €, avant le traitement de taxe du dossier.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2400
+            },
+            {
+              "value": 36
+            }
+          ]
+        },
+        "expected": 2364,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau ajoute l’escompte acquis au net commercial pour déterminer le net financier dû. Quel signe doit être corrigé ?",
+      "options": [
+        "L’escompte doit être ajouté seulement si le paiement est rapide",
+        "Le net commercial doit toujours être remplacé par le brut",
+        "L’escompte réduit le montant dû et doit être retranché",
+        "La réduction doit être enregistrée deux fois au débit"
+      ],
+      "answer": 2,
+      "explanation": "Une réduction acquise ne majore pas la dette de règlement. Le net financier correspond au net commercial diminué de cet avantage."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le net financier HT est de 1 960 € après un escompte de 2 % calculé sur le net commercial. Quel était ce net commercial ?",
+      "options": [
+        "1 999,20 €",
+        "1 920,80 €",
+        "40 €",
+        "2 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le net financier vaut net commercial × 0,98. Le montant avant escompte est donc 1 960 / 0,98 = 2 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1960
+            },
+            {
+              "value": 0.98
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un paiement anticipé donnerait droit à un escompte, mais l’entreprise devrait emprunter pour payer plus tôt. Quelle comparaison complète utilement l’avantage annoncé ?",
+      "options": [
+        "Le gain d’escompte et le coût du financement sur le décalage",
+        "Le seul montant de l’escompte, en supposant le financement gratuit",
+        "Le chiffre d’affaires historique sans lien avec la facture",
+        "L’hypothèse que toute dette nouvelle améliore le résultat"
+      ],
+      "answer": 0,
+      "explanation": "L’avantage de règlement peut être réduit par le coût des liquidités mobilisées. Il faut comparer des flux et une durée cohérents."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’exercice exclut toute TVA. Un paiement anticipé procure 80 € d’escompte et exige un financement temporaire coûtant 35 €. Quel avantage net chiffré reste-t-il, sans autre effet ?",
+      "options": [
+        "115 €",
+        "45 €",
+        "80 €",
+        "35 €"
+      ],
+      "answer": 1,
+      "explanation": "Le gain est diminué du coût directement nécessaire : 80 − 35 = 45 €. Les contraintes de paiement restent à apprécier séparément.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 80
+            },
+            {
+              "value": 35
+            }
+          ]
+        },
+        "expected": 45,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La facture affiche déjà un net financier calculé après escompte. Le préparateur retranche à nouveau la réduction pour payer. Quel risque introduit-il ?",
+      "options": [
+        "Une taxe comptée deux fois en recettes",
+        "Un paiement nécessairement supérieur à la dette",
+        "Un double escompte non autorisé",
+        "Une annulation du net commercial initial"
+      ],
+      "answer": 2,
+      "explanation": "Le montant final doit être lu avec ses composantes. Une réduction déjà comprise ne se retranche pas une seconde fois."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La facture impose une TVA de 20 % calculée sur un net financier de 1 470 € HT, après escompte acquis. Quel montant de TVA retenir ?",
+      "options": [
+        "300 €",
+        "1 764 €",
+        "245 €",
+        "294 €"
+      ],
+      "answer": 3,
+      "explanation": "Dans l’hypothèse donnée, l’assiette est le net financier : 1 470 × 0,20 = 294 €. Il ne faut pas revenir au net avant escompte.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 1470
+            },
+            {
+              "value": 0.2
+            }
+          ]
+        },
+        "expected": 294,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier prévoit une TVA sur le net financier, mais l’étudiant la calcule sur le net commercial avant escompte. Que faut-il corriger ?",
+      "options": [
+        "L’assiette de taxe pour respecter les conditions explicites du cas",
+        "Le montant de l’escompte en le calculant sur le TTC au lieu du net commercial",
+        "Le montant de la taxe en ajoutant l’escompte à son assiette",
+        "Le TTC en déduisant deux fois l’escompte pour compenser la taxe calculée"
+      ],
+      "answer": 0,
+      "explanation": "Les conditions fiscales du cas sont données. Le calcul doit utiliser cette assiette et ne pas généraliser une autre convention."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux factures comportent un escompte mais leurs mentions relatives à la TVA diffèrent. Quelle démarche est appropriée avant de reprendre un même calcul ?",
+      "options": [
+        "Supposer qu’un escompte impose universellement le même traitement de taxe",
+        "Lire les conditions de chacune et vérifier l’assiette autorisée",
+        "Appliquer le taux de remise commerciale à la place de la TVA",
+        "Supprimer toute taxe dès qu’un paiement est anticipé"
+      ],
+      "answer": 1,
+      "explanation": "L’escompte seul ne suffit pas à choisir automatiquement une assiette dans tous les dossiers. Les conditions de facture et le cadre applicable doivent être vérifiés."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le net commercial est 2 000 € HT ; l’escompte acquis est 40 € HT. Le cas impose une TVA de 20 % sur le net financier. De combien la TVA baisse-t-elle par rapport au calcul sans escompte ?",
+      "options": [
+        "40 €",
+        "48 €",
+        "8 €",
+        "392 €"
+      ],
+      "answer": 2,
+      "explanation": "La réduction d’assiette vaut 40 €. Son incidence sur la taxe est 40 × 20 % = 8 €, distincte de l’escompte HT.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 40
+            },
+            {
+              "value": 0.2
+            }
+          ]
+        },
+        "expected": 8,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La TVA est calculée sur le net financier puis l’escompte est encore soustrait à son montant. Quelle erreur faut-il relever ?",
+      "options": [
+        "Un oubli du brut commercial comme seule assiette autorisée",
+        "L’absence obligatoire de TVA déductible dans toute facture",
+        "Une hausse correcte du total à régler",
+        "Une déduction supplémentaire sans lien avec la formule de taxe donnée"
+      ],
+      "answer": 3,
+      "explanation": "La réduction d’assiette a déjà été intégrée avant l’application du taux. Retrancher encore le montant HT d’escompte de la taxe mélange deux composantes."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le net financier est de 2 450 € HT et la TVA donnée de 490 €. Sans acompte ni autre frais, quel règlement TTC est dû ?",
+      "options": [
+        "2 940 €",
+        "2 450 €",
+        "1 960 €",
+        "490 €"
+      ],
+      "answer": 0,
+      "explanation": "Le règlement du cas réunit net financier et taxe : 2 450 + 490 = 2 940 €. L’escompte est déjà intégré au net fourni.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 2450
+            },
+            {
+              "value": 490
+            }
+          ]
+        },
+        "expected": 2940,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Sans escompte, une facture est payable 2 400 € TTC. Dans les conditions fournies, l’escompte acquis réduit le HT de 40 € et la taxe de 8 €. Quel paiement TTC reste dû ?",
+      "options": [
+        "2 360 €",
+        "2 352 €",
+        "2 448 €",
+        "2 400 €"
+      ],
+      "answer": 1,
+      "explanation": "La diminution totale est 40 + 8 = 48 €. Le règlement devient 2 400 − 48 = 2 352 €, avec le traitement de taxe expressément fourni.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 2400
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 40
+                },
+                {
+                  "value": 8
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2352,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le paiement réalisé est inférieur au TTC initial en raison d’un escompte acquis correctement documenté. Comment contrôler le solde fournisseur ?",
+      "options": [
+        "Conserver toujours une dette égale à l’escompte même s’il est acquis",
+        "Créer une nouvelle facture d’achat du montant payé",
+        "Rapprocher la facture, l’escompte et l’ajustement de taxe éventuel avec le paiement",
+        "Ignorer toute différence car elle est forcément un écart d’arrondi"
+      ],
+      "answer": 2,
+      "explanation": "Le solde doit être expliqué par les composantes réellement admises. Le paiement réduit seul ne suffit pas à identifier la nature de l’écart."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une facture doit être réglée à 1 176 € TTC après escompte, mais le virement reprend le TTC avant réduction. Quel point faut-il vérifier ?",
+      "options": [
+        "Une insuffisance automatique du virement",
+        "La nécessité d’ajouter encore l’escompte au net financier",
+        "L’obligation de traiter la différence comme une seconde vente",
+        "La surévaluation du paiement par rapport au montant final autorisé"
+      ],
+      "answer": 3,
+      "explanation": "Les modalités acquises fixent le montant dû. Reprendre le total antérieur peut créer un trop-payé qu’il faut rapprocher et régulariser."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’entreprise souhaite régler avant l’échéance pour obtenir une réduction mais son budget montre un déficit à cette date. Que doit-elle vérifier avant de décider ?",
+      "options": [
+        "La disponibilité des fonds, le coût de couverture et l’avantage net du paiement anticipé",
+        "Le seul fait qu’un escompte existe, qui impose de l’accepter",
+        "L’égalité du taux d’escompte et du taux de marge",
+        "La possibilité de supprimer la facture du budget après escompte"
+      ],
+      "answer": 0,
+      "explanation": "Un gain théorique doit être rapproché des liquidités et coûts nécessaires. Un escompte n’efface pas le décaissement ni les contraintes du calendrier."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle chaîne respecte les conditions du cas où la taxe est calculée après escompte ?",
+      "options": [
+        "Brut TTC, remise de taxe, escompte calculé sur les seuls intérêts",
+        "Net commercial, escompte acquis, net financier, taxe sur ce net, paiement TTC",
+        "Net commercial, taxe sur le brut, second retrait de toutes les remises",
+        "Escompte, principal emprunté, amortissement de machine, règlement"
+      ],
+      "answer": 1,
+      "explanation": "Les étapes distinguent prix commercial, avantage financier et traitement de taxe. La lecture du périmètre évite double réduction ou assiette erronée."
+    }
+  ]
+}

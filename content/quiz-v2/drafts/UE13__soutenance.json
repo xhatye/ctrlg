@@ -1,0 +1,338 @@
+{
+  "module": "UE13",
+  "chapter": "soutenance",
+  "sourceHash": "0a7f2c9df8f0c9c576bd3e2f5953f637b7e95534a1a9284ee4ec915ec328e452",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La soutenance porte sur une difficulté de rapprochement résolue pendant la mission. Quelle ouverture donne le fil conducteur ?",
+      "options": [
+        "Présenter le problème, son enjeu et la démarche suivie pour l’étudier.",
+        "Présenter les résultats puis les outils, en laissant l’enjeu du rapprochement à la discussion finale.",
+        "Présenter les outils de contrôle puis leur historique, sans préciser quelle difficulté a motivé le travail.",
+        "Présenter les tâches dans leur ordre de réalisation, en réservant la question étudiée à la conclusion."
+      ],
+      "answer": 0,
+      "explanation": "L’ouverture doit permettre au jury de comprendre ce que l’exposé cherche à montrer. Les détails de contexte sont utiles s’ils éclairent ce problème."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’exposé suit le calendrier du stage, mais ne montre aucun lien entre actions et résultats. Quel changement améliore sa cohérence ?",
+      "options": [
+        "Conserver le calendrier comme structure principale et regrouper tous les résultats en fin d’exposé, sans rappeler les actions correspondantes.",
+        "Organiser les étapes autour de la question et des résultats à expliquer.",
+        "Remplacer les dates par des noms de services tout en conservant la même séparation entre actions et résultats.",
+        "Présenter successivement chaque outil, puis un résultat global sans relier ses composantes aux choix de méthode."
+      ],
+      "answer": 1,
+      "explanation": "Un fil analytique explique pourquoi certaines actions ont été conduites et ce qu’elles permettent de conclure. La chronologie seule ne fournit pas ces liens."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le temps d’exposé est limité dans les consignes reçues. Le rapport contient plusieurs analyses secondaires. Quelle sélection est justifiée ?",
+      "options": [
+        "Supprimer la méthode tout en gardant tous les détails secondaires.",
+        "Ne présenter que les succès, indépendamment de la question étudiée.",
+        "Conserver ce qui est nécessaire pour comprendre et discuter la réponse centrale.",
+        "Lire chaque partie à la même vitesse, même si cela dépasse le temps."
+      ],
+      "answer": 2,
+      "explanation": "La sélection doit servir la démonstration et les contraintes de l’épreuve. Elle ne consiste ni à tout lire ni à supprimer les éléments qui rendent les résultats évaluables."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’exposé annonce une étude des délais, puis présente uniquement des avis de satisfaction. Quelle clarification est nécessaire ?",
+      "options": [
+        "Utiliser le taux de satisfaction comme estimation directe du nombre de jours gagnés, sans règle de conversion.",
+        "Présenter les avis comme un contrôle de la baisse de délai annoncée, sans disposer d’une mesure de durée.",
+        "Reconstituer une durée moyenne à partir du classement des répondants du plus satisfait au moins satisfait.",
+        "Expliquer ce que ces avis permettent réellement de dire sur la question des délais."
+      ],
+      "answer": 3,
+      "explanation": "Des avis et des mesures de durée ne fournissent pas le même type de preuve. Le fil conducteur doit rendre explicite cette limite ou adapter la question."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le jury interrompt la présentation du diagnostic pour demander le détail d’un tableau placé en annexe. Après avoir répondu, comment préserver le fil conducteur de l’exposé ?",
+      "options": [
+        "Rappeler brièvement le point que le tableau étaye, puis annoncer la reprise de l’étape du raisonnement interrompue.",
+        "Reprendre l’introduction complète afin de rétablir tous les éléments déjà présentés.",
+        "Poursuivre les annexes dans leur ordre de classement, puis revenir aux conclusions sans reprendre le diagnostic.",
+        "Passer directement aux recommandations en considérant que la question sur le tableau a achevé toute l’analyse."
+      ],
+      "answer": 0,
+      "explanation": "L’échange peut approfondir une preuve sans changer le plan de la démonstration. Une courte phrase de repérage permet de rattacher la réponse au diagnostic puis de reprendre le raisonnement, sans recommencer tout l’exposé ni sauter une étape."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le jury demande pourquoi une étape a été ajoutée au contrôle. Quelle transition soutient le fil de l’exposé ?",
+      "options": [
+        "Justifier le contrôle par sa présence dans les autres services sans expliquer le risque propre à la mission.",
+        "Relier cette étape au risque identifié, puis au résultat de sa mise à l’essai.",
+        "Présenter le paramétrage technique de l’étape comme preuve suffisante de son utilité pour le risque considéré.",
+        "Décrire l’ajout de l’étape comme une amélioration en soi sans rapprocher ses effets du défaut recherché."
+      ],
+      "answer": 1,
+      "explanation": "La réponse doit expliquer le lien problème-choix-résultat. Le seul nom de l’outil ou une règle générale sur le nombre de contrôles ne justifie pas la décision."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un graphique montre une baisse de délai, mais son axe ne précise aucune unité. Quelle correction est prioritaire ?",
+      "options": [
+        "Présenter la baisse relative seule, sans indiquer si les valeurs mesurent des heures, des jours ou une autre durée.",
+        "Déduire l’unité du nom du service sans vérifier les conventions de la mesure.",
+        "Indiquer l’unité, la période et le périmètre nécessaires à sa lecture.",
+        "Ajouter une cible exprimée en jours tout en laissant inconnue l’unité des valeurs observées."
+      ],
+      "answer": 2,
+      "explanation": "Une tendance ne s’interprète pas correctement sans savoir ce qui est mesuré. Le support doit conserver les éléments nécessaires à la compréhension des données."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableau complet est illisible une fois projeté. Comment préserver sa valeur pour l’exposé ?",
+      "options": [
+        "Projeter seulement le total général et maintenir une conclusion qui dépend de plusieurs lignes absentes de la projection.",
+        "Répartir le tableau sur plusieurs vues sans répéter les intitulés qui permettent d’identifier les colonnes.",
+        "Renvoyer tout le tableau en annexe et annoncer la conclusion sans montrer aucune des données qui la fondent.",
+        "Projeter les éléments décisifs et prévoir le détail dans une annexe autorisée."
+      ],
+      "answer": 3,
+      "explanation": "Sélectionner les données utiles améliore la lisibilité sans supprimer la preuve complète. Les intitulés et conventions nécessaires doivent rester compréhensibles."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat lit intégralement des diapositives contenant son discours. Quelle adaptation rend le support plus utile ?",
+      "options": [
+        "Réserver le support aux repères et preuves, puis développer les liens à l’oral.",
+        "Remplacer les phrases par une suite d’abréviations non expliquées, puis les lire dans le même ordre.",
+        "Conserver le texte intégral affiché et présenter oralement une autre analyse qui n’est pas reliée aux éléments visibles.",
+        "Limiter l’intervention orale à la lecture des chiffres, en laissant au jury les liens entre ces chiffres et la conclusion."
+      ],
+      "answer": 0,
+      "explanation": "Le support doit aider à suivre le raisonnement, sans se substituer à l’explication. Les liens entre données, choix et conclusion doivent être rendus intelligibles à l’oral."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le message à transmettre concerne les étapes et points de validation d’un processus. Quel visuel répond le plus directement à cet objectif ?",
+      "options": [
+        "Une matrice des responsabilités qui indique les acteurs sans décrire l’enchaînement ni les conditions de validation.",
+        "Un schéma du flux et de ses décisions.",
+        "Un calendrier des durées qui indique les dates mais pas le cheminement selon les résultats des contrôles.",
+        "Un tableau des temps moyens par service qui résume les ressources sans représenter les passages entre étapes."
+      ],
+      "answer": 1,
+      "explanation": "Un schéma de processus représente les étapes et validations. Un chiffre d’activité ou une courbe sans rapport ne montre pas le mécanisme étudié."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux séries d’un graphique ne se distinguent que par leur couleur. Quelle amélioration facilite leur identification ?",
+      "options": [
+        "Conserver les courbes sans étiquette directe et utiliser des teintes plus proches dans la légende.",
+        "Remplacer la légende par le seul numéro des observations sans lier ce numéro à chaque série.",
+        "Ajouter des libellés ou des formes qui distinguent aussi les séries.",
+        "Distinguer les séries uniquement par leur ordre de superposition, même là où leurs valeurs se croisent."
+      ],
+      "answer": 2,
+      "explanation": "La lecture ne doit pas dépendre d’une seule différence visuelle potentiellement difficile à percevoir. Des libellés ou formes apportent un repère supplémentaire."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le jury demande pourquoi le candidat a abandonné le contrôle automatique. Or la mission a conservé ce contrôle pour les cas courants et ajouté un examen manuel des seules exceptions. Quelle réponse traite correctement cette question ?",
+      "options": [
+        "Justifier l’abandon complet afin de répondre directement au verbe utilisé dans la question.",
+        "Comparer les coûts d’une procédure entièrement manuelle comme si elle était la solution effectivement mise en place.",
+        "Présenter les contrôles automatiques et manuels comme deux solutions successives qui ne peuvent pas coexister.",
+        "Rectifier brièvement la prémisse en décrivant le dispositif hybride, puis expliquer pourquoi les exceptions sont traitées séparément."
+      ],
+      "answer": 3,
+      "explanation": "La question repose sur un abandon qui n’a pas eu lieu. Il faut corriger ce point sans esquiver l’enjeu : le choix porte sur le partage entre traitement automatique et examen des exceptions. Répondre à une prémisse fausse déformerait la mission."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "On demande un gain de temps que la mission n’a jamais mesuré. Quelle réponse est rigoureuse ?",
+      "options": [
+        "Dire qu’il n’a pas été mesuré et proposer comment le vérifier.",
+        "Présenter la différence entre les temps estimés par les agents comme un gain effectivement chronométré.",
+        "Déduire le temps gagné de la baisse du nombre d’erreurs sans connaître les durées de traitement.",
+        "Utiliser la durée totale du stage comme base de calcul du gain par dossier sans disposer des temps de contrôle."
+      ],
+      "answer": 0,
+      "explanation": "Reconnaître la donnée manquante protège l’exactitude de la réponse. Une méthode de mesure peut être proposée sans inventer un résultat absent du travail."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le jury propose un autre outil qui aurait pu être utilisé. Quelle réponse montre une analyse critique ?",
+      "options": [
+        "Comparer les seuls nombres de fonctions proposées, sans examiner celles nécessaires à la mission.",
+        "Comparer les critères de choix, les contraintes et les limites des deux options.",
+        "Présenter la maîtrise actuelle de l’outil retenu comme preuve suffisante qu’une autre solution ne serait pas pertinente.",
+        "Comparer les prix d’achat sans intégrer les adaptations, les usages et les moyens de déploiement."
+      ],
+      "answer": 1,
+      "explanation": "Discuter une alternative suppose des critères et des arbitrages. La défense du choix ne consiste ni à exclure toute autre solution ni à dévaloriser automatiquement le travail."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une question souligne une limite réelle de l’échantillon. Comment répondre sans effacer les résultats établis ?",
+      "options": [
+        "Restreindre toutes les conclusions au seul descriptif, même lorsque des résultats précis restent établis sur les dossiers observés.",
+        "Présenter la limite comme un simple problème de formulation sans examiner les conclusions qu’elle affecte.",
+        "Reconnaître la limite et préciser les conclusions qui restent soutenues.",
+        "Maintenir les conclusions générales en considérant que la précision des calculs compense la limite d’échantillonnage."
+      ],
+      "answer": 2,
+      "explanation": "Une limite réduit la portée de certaines conclusions, pas nécessairement la valeur de toutes les observations. La réponse doit distinguer ces niveaux."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat découvre qu’un montant affiché comporte une erreur de recopie. Quelle réaction est appropriée ?",
+      "options": [
+        "Corriger seulement l’affichage en conservant la conclusion initiale sans vérifier si son calcul utilisait aussi le montant erroné.",
+        "Présenter le montant correct sans indiquer qu’il remplace celui sur lequel le jury fondait sa question.",
+        "Retirer le montant de la discussion tout en conservant la même conclusion chiffrée dans la synthèse.",
+        "Signaler la correction et expliquer son effet éventuel sur le résultat."
+      ],
+      "answer": 3,
+      "explanation": "Corriger explicitement permet au jury d’évaluer le raisonnement sur des données exactes. Il faut vérifier si l’erreur affecte seulement l’affichage ou également la conclusion."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La question du jury peut viser soit la collecte soit le contrôle des données. Quelle première réaction est utile ?",
+      "options": [
+        "Demander brièvement lequel de ces deux aspects doit être précisé.",
+        "Répondre sur la collecte parce qu’elle est chronologiquement antérieure, sans vérifier si c’est le point demandé.",
+        "Répondre sur le contrôle en interprétant le mot données comme désignant nécessairement leur validation.",
+        "Présenter une synthèse des deux étapes en les traitant comme une seule opération, sans distinguer leurs objectifs."
+      ],
+      "answer": 0,
+      "explanation": "Une reformulation courte peut lever une ambiguïté réelle. Elle doit servir une réponse ciblée, pas devenir une manière d’éviter le sujet."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que démontre l’appropriation d’un travail présenté à l’oral ?",
+      "options": [
+        "Retrouver la formulation exacte du rapport, sans pouvoir expliquer comment les données produisent le résultat.",
+        "Expliquer ses choix, ses données et les limites de son raisonnement.",
+        "Identifier le collègue qui a fourni le calcul, sans pouvoir en préciser les entrées ni les contrôles.",
+        "Présenter le résultat obtenu par le logiciel, sans pouvoir distinguer une hypothèse d’une donnée observée."
+      ],
+      "answer": 1,
+      "explanation": "L’appropriation se manifeste dans la compréhension et la justification du travail. La mémorisation ou le vocabulaire technique seuls ne suffisent pas."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une formule a été intégrée au rapport avec l’aide d’un collègue. Que doit pouvoir faire le candidat ?",
+      "options": [
+        "Expliquer le résultat par la seule confirmation du collègue sans pouvoir identifier les données qui l’alimentent.",
+        "Décrire les boutons utilisés pour insérer la formule sans pouvoir préciser la grandeur qu’elle mesure.",
+        "En expliquer le sens, les données utilisées et la vérification réalisée.",
+        "Réciter la formule générale sans vérifier que son numérateur et son dénominateur correspondent aux données du rapport."
+      ],
+      "answer": 2,
+      "explanation": "Une aide peut être reconnue sans retirer la contribution personnelle. Le candidat doit comprendre le calcul qu’il mobilise et les contrôles qui l’étayent."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour illustrer une règle interne fictive, le candidat explique qu’une double validation est requise à partir de 1 000 € inclus. Il veut vérifier qu’il comprend la borne de déclenchement. Quel cas teste directement cette borne ?",
+      "options": [
+        "Un dossier de 900 €, traité sans double validation.",
+        "Un dossier de 1 100 €, traité avec double validation.",
+        "Un dossier de 999 €, traité sans double validation.",
+        "Un dossier de 1 000 €, qui doit recevoir la double validation."
+      ],
+      "answer": 3,
+      "explanation": "La règle inclut exactement le montant de 1 000 €. Tester cette valeur distingue une condition « supérieur ou égal à » d’une condition strictement supérieure. Les cas éloignés ou juste inférieurs ne vérifient pas directement ce traitement de la borne."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le candidat a utilisé un contrôle qui signale uniquement les identifiants de facture répétés. Deux lignes ont même fournisseur, date et montant, mais des identifiants distincts ; elles ne sont pas signalées. Quelle limite doit-il expliquer à l’oral ?",
+      "options": [
+        "Le contrôle recherche la répétition d’identifiants ; il ne démontre pas l’absence de deux écritures relatives à une même opération.",
+        "Le contrôle vérifie déjà l’unicité économique de l’opération puisque les deux identifiants sont différents.",
+        "L’absence de signal prouve que le fournisseur a nécessairement émis deux factures distinctes et légitimes.",
+        "Les deux lignes doivent être supprimées sans vérification puisque leurs date et montant sont identiques."
+      ],
+      "answer": 0,
+      "explanation": "Comprendre le contrôle suppose d’identifier ce qu’il compare réellement. Deux identifiants différents peuvent concerner une même opération ou deux opérations légitimes ; l’outil décrit ne les départage pas. Un rapprochement complémentaire des pièces est nécessaire avant de conclure."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Trois catégories comptent chacune un dossier sur trois. Le support arrondit chaque part de 33,333… % à 33 % et affiche un total de 99 %. Le jury demande si un dossier manque. Quelle explication est correcte ?",
+      "options": [
+        "Le point de pourcentage manquant représente nécessairement une quatrième catégorie non documentée.",
+        "L’écart vient des arrondis de présentation ; les trois effectifs couvrent bien la totalité des dossiers.",
+        "Le dénominateur doit passer de trois à quatre pour que le total affiché retrouve 100 %.",
+        "Les trois catégories doivent recevoir des pourcentages égaux à leurs effectifs exprimés directement en unités."
+      ],
+      "answer": 1,
+      "explanation": "Les fractions exactes totalisent trois tiers, soit 100 %. Additionner les valeurs arrondies à 33 % donne 99 % sans omission d’un dossier. Il faut expliquer la convention d’affichage et contrôler les effectifs sources, plutôt que modifier les données pour obtenir artificiellement 100 %."
+    }
+  ]
+}

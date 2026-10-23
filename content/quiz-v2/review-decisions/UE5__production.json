@@ -1,0 +1,259 @@
+{
+  "sourceHash": "8b4a18d36a506fe23b55c659bdc3c15c84b5b5acfd57cc80612847eb3a7a7549",
+  "reviewer": "codex-law-tax-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "a3a8e840347d1afada24d519a0862343e0ea5703e5cce52d44ee36ddbc6d09a6",
+      "selected": 2,
+      "reason": "La valeur ajoutée retranche les consommations intermédiaires de la production ; elle ne déduit pas encore toutes les charges de résultat.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "f1fbe29702d3e0de694668f8b6b5365c5ff12900a7a51bee7dd05e500b61f0f9",
+      "selected": 2,
+      "reason": "La variation vaut trente sur la base initiale de deux cents, soit quinze pour cent ; diviser par la valeur finale inverse la convention de base.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "5da35e237b973673972817fdf7d66b774210204080b40d5b1d30c170e6aaa11f",
+      "selected": 0,
+      "reason": "Les quantités sont constantes ; la hausse de valeur provient du prix et ne démontre pas une hausse de volume.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "fea3b592140d6af3bcc3e6a10e60055b0d9e166a7af8c59deb60088f40732674",
+      "selected": 1,
+      "reason": "La productivité horaire rapporte la production aux heures réellement utilisées ; les autres choix donnent un coût horaire, un inverse ou un ratio par personne.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "406a193ba0467a134497267fda39dec277c6c74e25a78e5ae89e53f8164e3e76",
+      "selected": 0,
+      "reason": "Cent quatre-vingt mille moins soixante-dix mille donnent cent dix mille de valeur ajoutée dans le modèle fourni.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "fc5867afd1d402c1b8dd8ec2215105444b64985c996124999fd0702edbebb0fd",
+      "selected": 2,
+      "reason": "Le taux usuel rapporte la variation à sa base initiale, et non à la valeur finale, à la moyenne ou à un logarithme.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "d11082c73ffb5700989b1d7cd718bb976c424919ae454c68590ffec223f1931a",
+      "selected": 0,
+      "reason": "Le volume corrigé vaut cent vingt-six divisé par cent cinq, puis multiplié par cent, soit cent vingt.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "063108d2f9207921dd18463f836e4b87b779e2fbf64c2c740c20e004aeaff26e",
+      "selected": 1,
+      "reason": "À production constante, moins d’heures augmentent le quotient par heure, sans égalité générale avec le pourcentage de baisse des heures.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "2f4ab83a22ef491106ae0de5b1fcedaab62a98edc3b14ac3d4b571677bf2594e",
+      "selected": 1,
+      "reason": "Le passage du produit intérieur brut au net retranche la consommation de capital fixe de la période, non le stock entier ni l’investissement brut.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "3d05e618b3aa0802e1d8b0c66070488cc9efb04b15f7bfd28b5ca23135ee2fb5",
+      "selected": 2,
+      "reason": "Six moins quatre vaut deux points, et non une variation relative de deux pour cent. L’unité points distingue les deux taux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "9979b8b6a9922083ec98d005a174750f9037438106024bbe0aa41d05372d756f",
+      "selected": 1,
+      "reason": "Si la valeur reste stable pendant une hausse de prix, le volume doit diminuer dans la décomposition cohérente donnée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "910c8aba06ffddc1472352c7f342dd521e02a3178357ff5844483b3251439def",
+      "selected": 3,
+      "reason": "Mille huit cents pièces divisées par trois cents heures donnent six pièces par heure ; l’inversion aurait une autre unité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "a1b7ef3a8b72061936eec77e7db6b47cc811d06052091dc9689ba015297f8f22",
+      "selected": 1,
+      "reason": "À production identique, moins de consommations intermédiaires signifie davantage de valeur ajoutée, par soustraction.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "686d769b2ea321ffb3dbd5aba3f263bb73ee6b1f7c57cb94b8ba71a85fd4a1cb",
+      "selected": 3,
+      "reason": "Un taux de croissance dépend de la base initiale ; les variations absolues ne donnent pas un classement des variations relatives sans ces bases.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "c0e28e1d84885f812e797b881f9a00d4b77da8bdafa904fbfc961a0f6a0bc72c",
+      "selected": 1,
+      "reason": "Déflater la valeur avec un indice pertinent isole le volume de l’effet des prix ; cela ne change pas seulement l’unité monétaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "a9643df1d0556864f736b513ce2e705e93035075a0393b67e37081792d84a255",
+      "selected": 0,
+      "reason": "Une machine peut expliquer une partie du résultat rapporté au travail ; le ratio apparent n’isole pas causalement le seul effort humain.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "74b5f8b37d8bfaaf457b5c4210a50eed79f87e4d3c8609655ddcadb8edd5c681",
+      "selected": 0,
+      "reason": "La valeur ajoutée ne retranche pas tous les éléments du résultat net et ne constitue ni trésorerie ni bénéfice distribuable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "76f5282026f9f26a89e91b51f9b3e183aaa436acfb8c6949eecbe80ceeac2000",
+      "selected": 0,
+      "reason": "PIB au prix du marché égal valeurs ajoutées de neuf cents plus cent vingt d’impôts moins vingt de subventions, soit mille.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "834b71f4cd21172a706c0fe60640a4077ea2d96c1ba9129bb6133f141d95b30f",
+      "selected": 2,
+      "reason": "Un indice d’une autre activité peut refléter d’autres prix ; unité ou base communes ne rendent pas les paniers interchangeables.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "0791f317c92b6e53b085061539ca40d90e4cfffa75638ea82c5046294fb26175",
+      "selected": 1,
+      "reason": "Des pièces de complexité et qualité différentes ne sont pas des volumes directement comparables ; le plus fort quotient ne prouve pas toute la performance.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "cc8a971ea0d2941ce99de68d591dbefb377f50e806f336710b4a10fdcb90d97f",
+      "selected": 3,
+      "reason": "Un effectif stable peut masquer davantage d’heures si les temps partiels deviennent pleins ; les deux dénominateurs ne mesurent pas la même quantité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "a08e91b1c5da24e7d0e80a46095769ef4c9568375a9378aaa6fb3310b99b3c0f",
+      "selected": 2,
+      "reason": "Le produit prix par quantités combine les deux effets lorsque les deux augmentent ; les attributuer au seul prix ou volume efface un facteur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "4ccbccaea49192eb5a43b888f0d2c0320c7b25f7c597f5845b2c2d229d06d519",
+      "selected": 0,
+      "reason": "La base nulle interdit cette division du taux usuel. Positivité finale ne signifie pas une croissance calculable de cent pour cent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

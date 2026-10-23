@@ -1,0 +1,453 @@
+{
+  "module": "UE9",
+  "chapter": "stocks",
+  "sourceHash": "fd92d1d4951b375ada33138ecf4ad3cdfcc102e424b70202d49157174e003469",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Dans un exercice simplifié au même coût, le stock initial est de 8 000 €, les achats de 35 000 € et le stock final de 11 000 €. Quelle consommation de marchandises calcule-t-on ?",
+      "options": [
+        "32 000 €",
+        "54 000 €",
+        "38 000 €",
+        "24 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La consommation est stock initial + achats − stock final : 8 000 + 35 000 − 11 000 = 32 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 8000
+                },
+                {
+                  "value": 35000
+                }
+              ]
+            },
+            {
+              "value": 11000
+            }
+          ]
+        },
+        "expected": 32000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un étudiant calcule la consommation en ajoutant stock initial, achats et stock final. Quel élément de signe doit-il corriger ?",
+      "options": [
+        "Le stock initial doit être retranché au lieu du stock final",
+        "Le stock final doit être retranché car il n’a pas été consommé",
+        "Les achats doivent tous être exclus du calcul",
+        "Les trois montants doivent être multipliés"
+      ],
+      "answer": 1,
+      "explanation": "Le stock final représente des marchandises encore présentes. L’ajouter les compte comme consommées alors qu’elles restent en stock."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "À stock initial et achats identiques, un stock final plus élevé a quel effet sur la consommation calculée ?",
+      "options": [
+        "Il l’augmente du même montant",
+        "Il ne peut pas la modifier",
+        "Il la réduit",
+        "Il la rend obligatoirement négative"
+      ],
+      "answer": 2,
+      "explanation": "La formule retranche le stock final. Plus de marchandises restant à la clôture signifie moins de consommation sur le même disponible."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le stock initial vaut 6 000 €, les achats 24 000 € et la consommation 22 000 €, selon les mêmes coûts. Quel stock final reconstitue ces montants ?",
+      "options": [
+        "52 000 €",
+        "−8 000 €",
+        "16 000 €",
+        "8 000 €"
+      ],
+      "answer": 3,
+      "explanation": "Le stock final est stock initial + achats − consommation : 6 000 + 24 000 − 22 000 = 8 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 6000
+                },
+                {
+                  "value": 24000
+                }
+              ]
+            },
+            {
+              "value": 22000
+            }
+          ]
+        },
+        "expected": 8000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le calcul utilise le stock initial au coût mais le stock final au prix de vente. Pourquoi faut-il revoir la méthode ?",
+      "options": [
+        "Les bases de valorisation ne sont pas cohérentes",
+        "Le stock final doit être systématiquement nul",
+        "Le prix de vente représente toujours la consommation",
+        "La cohérence dépend seulement de l’égalité des quantités"
+      ],
+      "answer": 0,
+      "explanation": "La formule suppose des conventions de coût homogènes. Inclure une marge dans un seul stock déforme la consommation calculée."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quand une charge constatée d’avance doit-elle être examinée dans le cas d’une dépense déjà enregistrée ?",
+      "options": [
+        "Quand la prestation est reçue mais pas encore facturée",
+        "Quand une partie de la prestation concerne une période future",
+        "Quand le fournisseur est payé après la clôture pour une charge passée",
+        "Quand tout le service a été consommé avant la clôture"
+      ],
+      "answer": 1,
+      "explanation": "La régularisation retire des charges la part qui concerne l’avenir. Elle ne se définit pas par la seule date de paiement ou de facture."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une assurance de 2 400 € est comptabilisée le 1er novembre pour douze mois. Clôture au 31 décembre, répartition mensuelle uniforme hors TVA. Quelle part concerne l’exercice clos ?",
+      "options": [
+        "2 000 €",
+        "2 400 €",
+        "400 €",
+        "200 €"
+      ],
+      "answer": 2,
+      "explanation": "Deux mois sur douze concernent l’exercice clos : 2 400 × 2 / 12 = 400 €. Les dix mois restants concernent la période suivante.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 2400
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 2
+                },
+                {
+                  "value": 12
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 400,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une prime couvrant en partie l’année suivante a été intégralement portée en charge parce qu’elle est déjà payée. Quel raisonnement faut-il corriger ?",
+      "options": [
+        "Une dépense payée ne peut jamais être comptabilisée",
+        "L’intégralité doit être rattachée à l’année suivante dans tous les cas",
+        "Le paiement transforme nécessairement la prime en dette",
+        "Le paiement intégral ne détermine pas la période de consommation du service"
+      ],
+      "answer": 3,
+      "explanation": "Le rattachement se fonde sur la couverture économique. La fraction future doit être isolée même si l’argent a déjà été versé."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un abonnement est payé d’avance, mais sa période de service est intégralement terminée avant la clôture. Faut-il une charge constatée d’avance au seul motif du paiement anticipé ?",
+      "options": [
+        "Non, aucune prestation future ne reste dans cette hypothèse",
+        "Oui, tout paiement antérieur à la prestation reste une avance à la clôture",
+        "Oui, le montant payé doit toujours être réparti sur deux exercices",
+        "Non, mais il faut annuler toute la charge consommée"
+      ],
+      "answer": 0,
+      "explanation": "La situation à la clôture est déterminante. Si tout le service a déjà été consommé, aucune fraction future ne justifie cette régularisation."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une dépense de 1 800 € a été entièrement enregistrée. L’exercice établit que les deux tiers de sa couverture concernent la période suivante. Quel montant faut-il retirer des charges de l’exercice clos ?",
+      "options": [
+        "600 €",
+        "1 200 €",
+        "1 800 €",
+        "2 700 €"
+      ],
+      "answer": 1,
+      "explanation": "La part future à isoler vaut 1 800 × 2 / 3 = 1 200 €. La charge de la période close demeure pour le tiers consommé.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 1800
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 2
+                },
+                {
+                  "value": 3
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1200,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une réparation est réalisée et acceptée en décembre. La facture n’arrive qu’en janvier après la clôture. Quel traitement faut-il examiner pour l’exercice clos ?",
+      "options": [
+        "Une charge constatée d’avance pour un service futur",
+        "Aucune charge avant paiement, quelle que soit la prestation",
+        "Une charge et une dette correspondant à la prestation déjà reçue",
+        "Une nouvelle immobilisation uniquement parce que la facture est tardive"
+      ],
+      "answer": 2,
+      "explanation": "L’absence de facture ne supprime pas le service déjà reçu. Le rattachement exige d’examiner une facture non parvenue et son évaluation."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une facture datée de janvier concerne une prestation consommée en décembre. Le comptable se fonde uniquement sur la date du document pour choisir l’exercice de charge. Que faut-il vérifier ?",
+      "options": [
+        "Uniquement le mois du paiement futur",
+        "Le seul numéro séquentiel de la facture",
+        "Le solde annuel du compte bancaire",
+        "La date et la réalité de la prestation économique"
+      ],
+      "answer": 3,
+      "explanation": "La date d’émission du document peut différer de la période de consommation. La pièce doit être rapprochée du service pour décider du rattachement."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une commande de service est passée en décembre, mais la prestation débutera en février et aucune partie n’est reçue avant la clôture. La seule commande justifie-t-elle une facture non parvenue de charge consommée ?",
+      "options": [
+        "Non, le service n’a pas encore été reçu dans l’hypothèse donnée",
+        "Oui, toute commande équivaut à une consommation complète",
+        "Oui, dès que le fournisseur a communiqué un prix",
+        "Non, car une facture non parvenue concerne uniquement les stocks"
+      ],
+      "answer": 0,
+      "explanation": "Le critère du cas est la prestation reçue avant clôture. Une commande future n’établit pas à elle seule une consommation déjà réalisée."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une prestation déjà consommée n’est pas enregistrée parce que la facture manque. Quels éléments risquent d’être sous-estimés à la clôture ?",
+      "options": [
+        "La banque et le chiffre d’affaires",
+        "La charge et la dette correspondante",
+        "Le capital social et les créances clients",
+        "Les seules disponibilités reçues du fournisseur"
+      ],
+      "answer": 1,
+      "explanation": "La consommation et l’obligation de paiement existent malgré le retard documentaire. Leur omission peut minorer simultanément charges et dettes."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’équipe cherche à chiffrer une réparation reçue avant clôture mais non encore facturée. Quel document apporte l’appui le plus directement pertinent ?",
+      "options": [
+        "Le prix de la dernière réparation, repris sans vérifier l’étendue de la nouvelle prestation",
+        "Le devis initial seul, sans vérifier que les travaux prévus ont été exécutés",
+        "Un bon d’intervention et une estimation ou un devis rapprochés du service effectué",
+        "Le montant moyen des réparations de l’année, sans identifier l’intervention concernée"
+      ],
+      "answer": 2,
+      "explanation": "La constatation doit être étayée par la réalisation et une évaluation fiable de la prestation. Des données sans lien avec le service ne justifient pas son montant."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La facture définitive arrive après qu’une charge et une dette estimées ont déjà été constatées pour la même prestation. Quel risque faut-il prévenir lors de son traitement ?",
+      "options": [
+        "Oublier nécessairement toute variation de banque",
+        "Transformer automatiquement l’estimation en produit de vente",
+        "Classer le règlement comme une charge constatée d’avance future",
+        "Comptabiliser deux fois la même charge sans rapprocher l’estimation"
+      ],
+      "answer": 3,
+      "explanation": "La facture doit être rapprochée de l’écriture d’inventaire existante et des éventuels écarts. Une nouvelle charge indépendante pourrait doubler l’opération."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel est l’objectif direct de la confrontation entre inventaire physique et enregistrements de stock ?",
+      "options": [
+        "Repérer des écarts de quantités à expliquer et à évaluer",
+        "Valider le coût unitaire d’achat à partir du seul dénombrement des articles",
+        "Justifier les écarts de stock par la seule égalité des totaux de la balance",
+        "Déterminer les quantités consommées sans examiner achats et mouvements de sortie"
+      ],
+      "answer": 0,
+      "explanation": "Le comptage vérifie la présence et les quantités observées. Les écarts nécessitent une recherche de cause et un traitement adapté."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le fichier de stock indique 100 unités ; le comptage confirmé en trouve 92. L’exercice demande de valoriser l’écart au coût unitaire de 15 €. Quel montant d’écart manquant obtient-on ?",
+      "options": [
+        "1 380 €",
+        "120 €",
+        "1 500 €",
+        "8 €"
+      ],
+      "answer": 1,
+      "explanation": "Le manque est de 100 − 92 = 8 unités. Sa valorisation au coût donné est 8 × 15 = 120 €, avant recherche et traitement de la cause.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 100
+                },
+                {
+                  "value": 92
+                }
+              ]
+            },
+            {
+              "value": 15
+            }
+          ]
+        },
+        "expected": 120,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une différence apparaît pendant un premier comptage de stock. Le responsable la qualifie immédiatement de vol sans recontrôle. Quelle démarche est préférable ?",
+      "options": [
+        "Enregistrer tout écart comme une hausse du capital",
+        "Supprimer la référence de stock pour fermer le contrôle",
+        "Recompter et rechercher mouvements non saisis, erreurs ou autres causes documentées",
+        "Conclure qu’un écart physique n’a aucun effet possible"
+      ],
+      "answer": 2,
+      "explanation": "Un écart peut avoir plusieurs origines. La recherche de preuve doit précéder la conclusion et l’évaluation de son impact."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les quantités physiques correspondent au fichier, mais certains articles sont abîmés. Peut-on en déduire que leur valorisation est correcte sans autre examen ?",
+      "options": [
+        "Oui, une quantité exacte garantit tout prix comptable",
+        "Oui, les articles abîmés valent toujours leur prix de vente initial",
+        "Non, car tout article abîmé doit être vendu immédiatement",
+        "Non, le contrôle des quantités ne suffit pas à valider leur valeur"
+      ],
+      "answer": 3,
+      "explanation": "Existence, quantité et valeur sont des dimensions différentes. L’état des articles peut demander une analyse complémentaire de valorisation."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entrée de marchandises a été comptée physiquement mais son mouvement n’est pas encore saisi. Quel rapprochement aide à comprendre l’écart ?",
+      "options": [
+        "Comparer comptage, bons de réception et dates des enregistrements",
+        "Comparer uniquement le bénéfice annuel au nombre d’unités",
+        "Additionner deux fois toutes les entrées de la semaine",
+        "Ignorer les réceptions proches de la clôture"
+      ],
+      "answer": 0,
+      "explanation": "La traçabilité des mouvements autour de l’inventaire permet d’identifier un écart de saisie ou de date, plutôt qu’une différence inexpliquée de stock."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier précise que certains biens présents appartiennent à un tiers et sont exclus du stock de l’entreprise. Le comptage les inclut pourtant dans la valorisation finale. Que faut-il corriger ?",
+      "options": [
+        "Le prix de vente des seules marchandises déjà vendues",
+        "Le périmètre des biens inclus selon les indications du dossier",
+        "La durée d’assurance de l’ensemble du magasin",
+        "La totalité des dettes fournisseurs sans examiner les biens"
+      ],
+      "answer": 1,
+      "explanation": "La présence physique ne suffit pas à définir le périmètre retenu par le dossier. Les biens explicitement exclus doivent être identifiés dans le rapprochement."
+    }
+  ]
+}

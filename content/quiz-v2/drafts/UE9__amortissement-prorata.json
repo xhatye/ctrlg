@@ -1,0 +1,659 @@
+{
+  "module": "UE9",
+  "chapter": "amortissement-prorata",
+  "sourceHash": "fbf1abcaf115fec9ec1af64eff6d4a06e769d6fc1975abb1dca9ef3a0f7b62a2",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût retenu est de 22 000 € et la base amortissable de 18 000 €. Aucune autre correction n’intervient. Quelle valeur résiduelle a été retenue ?",
+      "options": [
+        "4 000 €",
+        "40 000 €",
+        "18 000 €",
+        "22 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La base est coût moins valeur résiduelle. La valeur résiduelle implicite est donc 22 000 − 18 000 = 4 000 €.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 22000
+            },
+            {
+              "value": 18000
+            }
+          ]
+        },
+        "expected": 4000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une base amortissable tient déjà compte d’une valeur résiduelle. Le préparateur retranche encore cette valeur avant de calculer l’annuité. Quel défaut faut-il corriger ?",
+      "options": [
+        "L’absence d’un prix de vente à ajouter au coût",
+        "La double déduction de la valeur résiduelle",
+        "Le fait qu’une base soit toujours égale au prix payé",
+        "La nécessité de doubler le prorata mensuel"
+      ],
+      "answer": 1,
+      "explanation": "Il faut distinguer coût d’entrée et base déjà calculée. Une valeur résiduelle intégrée à la base ne s’enlève pas une seconde fois.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le plan d’amortissement conserve une valeur résiduelle expressément donnée. À la fin de la consommation complète de la base, sans dépréciation, quelle valeur comptable subsiste ?",
+      "options": [
+        "Toujours zéro, même avec une valeur résiduelle retenue",
+        "La totalité du coût initial",
+        "Cette valeur résiduelle",
+        "La dernière annuité pleine"
+      ],
+      "answer": 2,
+      "explanation": "L’amortissement cumulé porte sur coût moins valeur résiduelle. Après consommation de toute la base, la fraction résiduelle reste dans la VNC.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle limite s’applique au cumul des amortissements d’un plan à base définie, sans changement d’estimation ?",
+      "options": [
+        "Il doit toujours dépasser le coût pour couvrir l’inflation",
+        "Il est limité au capital restant dû de l’emprunt",
+        "Il doit être égal chaque année au prix de vente estimé",
+        "Il ne doit pas dépasser la base amortissable"
+      ],
+      "answer": 3,
+      "explanation": "Le plan répartit une base définie sur l’utilisation. Un dépassement signale un calcul ou un nombre de dotations à contrôler.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une base amortissable de 27 000 € est consommée linéairement sur six ans. Quel est le montant d’une annuité pleine avant prorata ?",
+      "options": [
+        "4 500 €",
+        "162 000 €",
+        "6 000 €",
+        "27 000 €"
+      ],
+      "answer": 0,
+      "explanation": "L’annuité pleine est 27 000 / 6 = 4 500 €. La première fraction annuelle sera calculée séparément selon sa durée d’utilisation.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 27000
+            },
+            {
+              "value": 6
+            }
+          ]
+        },
+        "expected": 4500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une dotation de première année couvre trois mois d’utilisation. L’étudiant la prend comme annuité pleine de toutes les années suivantes. Quelle confusion fait-il ?",
+      "options": [
+        "Il retient nécessairement une valeur résiduelle trop haute",
+        "Il confond la fraction initiale avec la dotation d’une année entière",
+        "Il doit utiliser la même fraction chaque année, quel que soit l’usage",
+        "Il a forcément commencé l’amortissement trop tôt"
+      ],
+      "answer": 1,
+      "explanation": "Le prorata adapte une année incomplète. Les exercices entiers suivants reprennent l’annuité pleine si le plan et les estimations restent inchangés.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une consommation linéaire est répartie sur cinq ans. Quel taux annuel de consommation de la base correspond à une année pleine ?",
+      "options": [
+        "5 %",
+        "25 %",
+        "20 %",
+        "0,2 %"
+      ],
+      "answer": 2,
+      "explanation": "Une année représente un cinquième de la base : 1 / 5 × 100 = 20 %. Ce taux ne dispense pas du prorata pour une première année partielle.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "value": 5
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 20,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un actif utilisé quatre ans est mis en service le 1er octobre ; clôture au 31 décembre et prorata mensuel. Sur combien d’exercices civils le plan s’étale-t-il, sans changement ni cession ?",
+      "options": [
+        "Quatre exercices obligatoirement pleins",
+        "Trois exercices parce que le premier compte seulement trois mois",
+        "Huit exercices parce qu’il faut doubler toute durée partielle",
+        "Cinq exercices, avec deux exercices partiels aux extrémités"
+      ],
+      "answer": 3,
+      "explanation": "Quatre années d’usage à partir d’octobre se terminent en septembre quatre ans plus tard. Le plan traverse cinq clôtures d’exercices, sans allonger l’usage total.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le prêt finançant une machine dure sept ans, mais son usage prévu est de quatre ans. Le préparateur amortit sur sept ans pour suivre les échéances. Quelle durée doit guider le plan ?",
+      "options": [
+        "La durée d’utilisation de quatre ans dans les hypothèses du cas",
+        "La durée du prêt de sept ans dans tous les cas",
+        "Le délai du premier règlement fournisseur uniquement",
+        "La moyenne obligatoire des deux durées"
+      ],
+      "answer": 0,
+      "explanation": "Le plan suit la consommation de l’actif. L’étalement de son financement ne fixe pas sa durée d’usage.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’annuité pleine est de 6 000 €. Le matériel est utilisé six mois pendant le premier exercice, avec prorata mensuel imposé. Quelle première dotation retenir ?",
+      "options": [
+        "6 000 €",
+        "3 000 €",
+        "1 000 €",
+        "36 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le prorata est 6 / 12 : 6 000 × 6 / 12 = 3 000 €. Il ajuste la dotation à la fraction d’année d’usage.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 6000
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 6
+                },
+                {
+                  "value": 12
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 3000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’actif est payé en janvier mais la consommation de ses avantages commence à sa mise en service en avril. Quelle date guide normalement le début d’amortissement selon le PCG et ces faits ?",
+      "options": [
+        "Le premier paiement de janvier dans tous les cas",
+        "La date de signature du prêt uniquement",
+        "Le début de consommation en avril",
+        "La première vente réalisée après avril, même si l’usage a commencé"
+      ],
+      "answer": 2,
+      "explanation": "Le PCG fait commencer l’amortissement au début de consommation des avantages, généralement la mise en service. La date de paiement ne s’y substitue pas.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un exercice impose un prorata mensuel de neuf mois. L’étudiant applique un décompte journalier différent sans expliquer son choix. Quelle correction de méthode est attendue ?",
+      "options": [
+        "Conserver systématiquement le résultat journalier, même hors consigne",
+        "Remplacer le prorata par le taux de TVA",
+        "Retenir obligatoirement une année entière",
+        "Respecter la convention de prorata donnée par l’exercice"
+      ],
+      "answer": 3,
+      "explanation": "Plusieurs conventions temporelles peuvent donner des valeurs légèrement différentes. La résolution doit appliquer celle explicitement demandée.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’annuité pleine est de 7 200 €. Le cas impose un prorata de 90 jours sur une année de 360 jours. Quelle dotation correspond à cette période ?",
+      "options": [
+        "1 800 €",
+        "600 €",
+        "7 200 €",
+        "6 480 €"
+      ],
+      "answer": 0,
+      "explanation": "Le prorata imposé vaut 90 / 360 = 1/4. La dotation est 7 200 × 1/4 = 1 800 €.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 7200
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 90
+                },
+                {
+                  "value": 360
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 1800,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La mise en service est retardée alors que le coût, la durée et la méthode restent identiques. Quel effet sur la première dotation avec une clôture inchangée ?",
+      "options": [
+        "Elle augmente parce que le fournisseur a livré plus tôt",
+        "Elle diminue si la période de consommation dans l’exercice se raccourcit",
+        "Elle reste automatiquement une annuité pleine",
+        "Elle devient égale à la dette fournisseur"
+      ],
+      "answer": 1,
+      "explanation": "La dotation initiale dépend du temps de consommation avant clôture. Un démarrage plus tardif réduit cette fraction de l’année dans les hypothèses données.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le dossier donne coût, durée et valeur résiduelle mais aucune date de début ni durée d’usage du premier exercice. Peut-on chiffrer exactement son prorata ?",
+      "options": [
+        "Oui, il est toujours de six mois",
+        "Oui, il est toujours d’une année entière",
+        "Non, cette donnée temporelle manque",
+        "Non, car aucune annuité pleine ne peut être calculée non plus"
+      ],
+      "answer": 2,
+      "explanation": "La base et l’annuité pleine sont calculables, mais la fraction de première année nécessite une information de date ou de durée.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une première dotation de 1 250 € a été calculée avec une annuité pleine de 5 000 € et un prorata mensuel. Combien de mois d’utilisation cela représente-t-il ?",
+      "options": [
+        "4 mois",
+        "5 mois",
+        "12 mois",
+        "3 mois"
+      ],
+      "answer": 3,
+      "explanation": "La fraction d’année est 1 250 / 5 000 = 1/4. Multipliée par douze mois, elle représente trois mois d’utilisation.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 1250
+                },
+                {
+                  "value": 5000
+                }
+              ]
+            },
+            {
+              "value": 12
+            }
+          ]
+        },
+        "expected": 3,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût d’entrée est de 18 000 € et la première dotation de 1 800 €. Il n’y a aucune dépréciation. Quelle VNC obtient-on après cette dotation ?",
+      "options": [
+        "16 200 €",
+        "19 800 €",
+        "1 800 €",
+        "18 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La VNC part du coût d’entrée et déduit l’amortissement comptabilisé : 18 000 − 1 800 = 16 200 €.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 18000
+            },
+            {
+              "value": 1800
+            }
+          ]
+        },
+        "expected": 16200,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour calculer la VNC, un étudiant part de la base amortissable, déjà nette de valeur résiduelle, et retire les dotations. Quelle valeur de départ devait-il prendre ?",
+      "options": [
+        "Le seul montant de valeur résiduelle",
+        "Le coût d’entrée brut, avant déduction des corrections cumulées",
+        "Le prix de vente futur garanti",
+        "Le capital restant dû au prêteur"
+      ],
+      "answer": 1,
+      "explanation": "La base sert au calcul des dotations ; la VNC est le coût diminué des corrections cumulées. Partir de la base retirerait à tort la valeur résiduelle de la VNC.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un actif coûte 24 000 €, sans valeur résiduelle ni dépréciation. L’annuité pleine est 4 000 €, et la première dotation partielle 1 000 €. Après cette première période puis deux années pleines, quelle VNC reste-t-il ?",
+      "options": [
+        "12 000 €",
+        "19 000 €",
+        "15 000 €",
+        "9 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le cumul amorti est 1 000 + 2 × 4 000 = 9 000 €. La VNC vaut 24 000 − 9 000 = 15 000 €.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 24000
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 1000
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 2
+                    },
+                    {
+                      "value": 4000
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 15000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le plan est proche de son terme et l’annuité théorique ferait dépasser la base encore amortissable. Que faut-il contrôler pour la dernière dotation ?",
+      "options": [
+        "Reprendre la dotation annuelle théorique en corrigeant seulement la VNC affichée",
+        "Calculer la dernière dotation sur le coût brut sans retrancher le cumul antérieur",
+        "Ajouter au reliquat la valeur résiduelle exclue de la base amortissable",
+        "La limiter au reliquat de base à répartir dans le plan applicable"
+      ],
+      "answer": 3,
+      "explanation": "Le cumul doit rester cohérent avec la base et le temps d’usage. Le dernier exercice partiel ou les arrondis peuvent demander un ajustement du reliquat.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’entreprise est en perte et veut omettre la dotation prévue pour éviter d’aggraver son résultat. Que prévoit le PCG pour un actif amortissable ?",
+      "options": [
+        "La dotation conforme au plan reste à constater même sans bénéfice suffisant",
+        "La dotation devient facultative en présence de perte",
+        "La charge est remplacée par un remboursement de prêt",
+        "La VNC doit augmenter du montant non comptabilisé"
+      ],
+      "answer": 0,
+      "explanation": "L’amortissement traduit la consommation de l’actif. Le manque de bénéfice ne supprime pas cette consommation ni la dotation du plan.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’usage futur de la machine est significativement révisé après deux ans. Selon le PCG, comment traiter le plan à partir de cette nouvelle estimation ?",
+      "options": [
+        "Réécrire automatiquement tous les résultats passés comme si l’estimation avait toujours été connue",
+        "Le réviser pour l’avenir selon l’utilisation actualisée",
+        "Maintenir forcément la durée ancienne malgré tout changement",
+        "Supprimer tous les amortissements déjà comptabilisés"
+      ],
+      "answer": 1,
+      "explanation": "Une modification significative de l’utilisation entraîne une révision prospective. Elle ne transforme pas automatiquement l’ancienne estimation en erreur passée.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel ensemble permet de contrôler un plan linéaire avec première année partielle ?",
+      "options": [
+        "Le seul prix d’achat, sans date ni durée",
+        "La seule échéance annuelle de l’emprunt",
+        "Base, annuité pleine, date de départ, prorata et cumul final",
+        "Le montant de la première dotation répété sans limite"
+      ],
+      "answer": 2,
+      "explanation": "Le contrôle relie les hypothèses économiques, le calendrier et la conservation de la base. Une première dotation isolée ne valide pas tout le plan.",
+      "references": [
+        {
+          "title": "ANC — PCG 2026, articles 214-11 à 214-14",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    }
+  ]
+}

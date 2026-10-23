@@ -1,0 +1,248 @@
+{
+  "sourceHash": "08bd908a1c68284ce1d01c42e65816c7f763157db3727ac5b433f287f1187d38",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "557d65ca0431d588ab4a0be9154d82b9703139e84462d6b622628f1a5a123f5b",
+      "selected": 0,
+      "reason": "2 800 de brut moins 560 de retenues donnent 2 240 euros avant prélèvement fiscal.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "74e50724d10fcc59da3417a0e12eecf47efd688c24bccaf402f751f9582c195c",
+      "selected": 0,
+      "reason": "Les retenues salariales sont déjà incluses dans le brut ; les ajouter majore à tort la charge de rémunération.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "84d0bdaa6bdad1fe15e3766cb136b3ced83bb942391108547f37114a56de4584",
+      "selected": 2,
+      "reason": "2 400 de net avant PAS plus 600 de retenues reconstituent 3 000 euros de brut.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "909581d341ed1f3bc8338eaeaf4344498cd7857637b69535e43d06d060a92bb6",
+      "selected": 1,
+      "reason": "La différence brut-virement comprend des montants dus à d’autres destinataires et n’est pas une économie de coût.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "8e2f0645a03deadc88779d75a2aa3c51ccc4ebfcf7d42c538af0f2cd60da0c85",
+      "selected": 0,
+      "reason": "La charge de rémunération avant cotisations patronales correspond au brut.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "f08a75f93ffe5a968134eac5a52c51df46b7007e4931f34113d2a406227fe61c",
+      "selected": 3,
+      "reason": "4 000 de brut + 1 200 patronaux donnent 5 200 euros de coût de personnel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "7ca08cb800712852834a099189a1c300472809adfc36582be8aa090d4bf006f1",
+      "selected": 0,
+      "reason": "650 de retenues salariales + 950 patronales donnent 1 600 euros de dette sociale dans ce cas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "b9c02a73aff4855ca6e5b3b8259eff5fb5c02b9d34e66cefa94041b340d74d27",
+      "selected": 1,
+      "reason": "La part salariale a été retenue sur le brut mais reste à reverser à l’organisme.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "27a5a35d5880cfe07aba3f7deccf05acc9662b59159bfdaae8979c9b39023396",
+      "selected": 3,
+      "reason": "Brut et cotisations patronales constants fixent le même coût ; une variation de retenues change la répartition des dettes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "1972ef5c5f6229e65d483116893dff666218de86cbcd7aad18bf3bb627fcd803",
+      "selected": 1,
+      "reason": "La part salariale est comprise dans le brut ; la part patronale constitue une charge en plus.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "f24c73920f38605869877f636781ce37aa5c8ef931a92c4e51cb1e9fc0b0bdba",
+      "selected": 1,
+      "reason": "2 500 − 120 = 2 380 euros à verser au salarié.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "e0c3eb3697c50dadc131f2972aabf3df1401dcf10a816eadd1d82ac9e79e0e8a",
+      "selected": 3,
+      "reason": "Le PAS est retenu au salarié puis dû à l’administration, pas ajouté comme coût patronal.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "8255dd9fd20664e62acc62725d201784ac136f5de574f4dd312945e4a1321dac",
+      "selected": 0,
+      "reason": "Des montants égaux ne rendent pas identiques les destinataires des dettes sociales et fiscales.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "adfc488e35fdc34042412fe241b79443e5f1e6262918fe191bfaea115e7db65b",
+      "selected": 0,
+      "reason": "3 200 − 640 − 160 = 2 400 euros nets dus au salarié.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "2fe30937a7e10f9fb66b0b0321ce371a7f479e87c701aa57c089c9f7e8582b47",
+      "selected": 3,
+      "reason": "Un taux supposé pour un autre salarié ne remplace pas un montant fiscal directement donné dans le cas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "61eee1fe4b540d114bd73a94b839bb1b5b86f46f6ea360300687b4e3f1291b91",
+      "selected": 1,
+      "reason": "Le paiement du salarié débite uniquement sa dette et crédite la banque.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "804a018a73657703e4de15e322586e26a81f9f318af7b37751af3d2984e44b05",
+      "selected": 1,
+      "reason": "Après paiement des 2 300 au salarié, 1 500 sociaux plus 100 fiscaux restent dus, soit 1 600 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "74d574371d7790a4fc57cb563cc97596d71b67e1fa303554b9c314ee95083feb",
+      "selected": 3,
+      "reason": "Le net salarié est 3 000 − 600 − 200 = 2 200 ; créditer 3 000 au salarié plus 800 aux autres crée 3 800 de dettes au lieu de 3 000, soit 800 de trop.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "dcc4963fd30450baa8612452a3a787a54ea7cf774acda81c0856eddc07bd1c1a",
+      "selected": 3,
+      "reason": "3 500 de brut + 1 000 patronaux donnent 4 500 euros de dettes et décaissements dans le modèle complet.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "58d4144340aad11c3a678bcb4e7ab1872093918f50ffd1c2d8ac6d1b9d418d55",
+      "selected": 1,
+      "reason": "Chaque paiement doit être affecté au destinataire et diminuer sa dette résiduelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "692dd362f957c5c472fd5a73618743045d2f2d3164951ac99053273c424a6470",
+      "selected": 2,
+      "reason": "Débiter de nouveau les charges au lieu des comptes de dettes double la charge et laisse ces dernières ouvertes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "24513541704033fb3b4c7eb8dcf3a89fb7d2256039797d8f3dfd05007470076d",
+      "selected": 0,
+      "reason": "L’égalité de l’écriture agrégée contrôle la répartition pédagogique, sans certifier les règles sociales et fiscales d’une paie réelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

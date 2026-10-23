@@ -1,0 +1,248 @@
+{
+  "sourceHash": "e73d416cb63997400695ee1d5141c89d0bc0c594f62c024e7d65b88f25d527a2",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "6bede3e90aa5b142cdce3249006d4bdf215574838912f7ce6e39a64a25460b5a",
+      "selected": 0,
+      "reason": "Le BFR couvre stocks et créances nets des dettes d’exploitation, distinct du bénéfice et des emprunts.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "49be2a671c9f9ea4d2e76357a6830cf82c3868e53ba9e372eda49670505a1b59",
+      "selected": 1,
+      "reason": "Une marge positive ne supprime pas le décalage entre paiement des achats et encaissement des ventes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "2791ca27856ed883a3de6984bf2d77b5efb355bdce966386ba7dbe33bb6bbabc",
+      "selected": 2,
+      "reason": "Les dettes fournisseurs financent le cycle : elles sont soustraites, non ajoutées, aux besoins.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "556632400786405972bc2ba3bcac40fdcd2704661ba503049282f4f6c4de01dd",
+      "selected": 3,
+      "reason": "18 000 + 27 000 − 20 000 = 25 000 euros ; les autres montants traduisent omissions ou mauvais signes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "0f1017587395f681bfee97e60eaf8f152afa03556c33e226fc801f338b7459ee",
+      "selected": 0,
+      "reason": "Le stock entre positivement dans le BFR. Sa baisse, autres postes constants, réduit le besoin.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "7e1cc424280d632d9ca7fb4e0d6911a073e28a637581535da0a23f53767f838a",
+      "selected": 1,
+      "reason": "Des dettes d’exploitation supérieures aux actifs du cycle donnent une ressource de financement, pas une perte.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "abbece7fc52f892d5931e83fa2b5fe66e9d748327766ba9d4eadee0026de26e7",
+      "selected": 2,
+      "reason": "La relation fonctionnelle est TN = FRNG − BFR, et non la somme ou un rapport de ces agrégats.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "71ea1ac438789a23fbef13be36f50f430db52c5b5eb5a0583b4d4cff379d8a50",
+      "selected": 3,
+      "reason": "La différence n’a de sens que si FRNG et BFR emploient des périmètres et classements cohérents.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "8fdcd8c223f71e8066c746df0d9fd83dbf39864ee62c9be4d20711fc7a99e505",
+      "selected": 0,
+      "reason": "42 000 − 50 000 = −8 000 euros. Le signe négatif est essentiel au diagnostic.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "84e9ea68d4fa0be0c0663c1aba2a70e75ca34b4313ff67419515666d4d546131",
+      "selected": 1,
+      "reason": "Le ralentissement des règlements accroît les créances et le BFR ; à FRNG constant, la TN baisse.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "a3709af342b47d691d782612f8da6dc5c8c0ac91afdf36994fe5abdcdfe7fe71",
+      "selected": 2,
+      "reason": "Une trésorerie nette positive peut coexister avec des dettes fournisseurs. Elle ne signifie pas leur absence.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "d11cf0f71c89663363d71c887397c63eb93c9d2da423fbaae176577a9be1b3ad",
+      "selected": 3,
+      "reason": "L’actualisation divise par (1 + taux)^n ; multiplier par ce facteur serait capitaliser.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "e53853ca4d0f44cdfcd7789b5fd1b734e3e8bf553152a1851f8b04e7fdc7df38",
+      "selected": 0,
+      "reason": "1 210 / 1,10² = 1 000 euros. La durée de deux ans exclut le calcul à une seule période.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "b5132cdead00b63fde36d740274350347ac26656c20a7841c18bcd988ddabef9",
+      "selected": 1,
+      "reason": "À taux positif et montant nominal égal, la créance encaissée le plus tôt a la valeur actuelle supérieure.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "1dbc3c00fcf96629a4d79929acda029fd5f6792506936e57f6bb14aa560fbf61",
+      "selected": 2,
+      "reason": "La fraction d’année et la périodicité du taux doivent être cohérentes ; six mois ne représentent pas six ans.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "ac338b6ed2620d0aa5fd0052c57e8f36bb179e4511c9b0ef04362d6563d602b4",
+      "selected": 3,
+      "reason": "Un taux supérieur augmente le dénominateur d’actualisation, donc réduit la valeur actuelle du flux positif.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "4409d74c9a67a684439b789c99e26a36caaf6a20f3a62d6ed45bceaaa9898f5e",
+      "selected": 0,
+      "reason": "Une VAN positive signifie que la somme actualisée dépasse le décaissement initial sous les hypothèses retenues.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "20c6133a9be4d2177c6e04d40e8d8976f68ae2a6e4cc93827bddc4c5b21aaeb7",
+      "selected": 1,
+      "reason": "8 750 − 8 000 = 750 euros. Les flux sont déjà actualisés, aucun second retraitement n’est requis.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "f12ebbff3149707c20ad2575f319908242c4855616bfbd55d58cf988c7ca85c2",
+      "selected": 2,
+      "reason": "Le résultat comprend des éléments sans effet de trésorerie et ne reprend pas tous les flux d’investissement et de BFR.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "5222cbee12f55b3a6d98f56afaa8cd6cab7e327c330056cc1968dd65b7b0c867",
+      "selected": 3,
+      "reason": "Tester des ventes moins favorables examine la robustesse de la VAN face à l’incertitude commerciale.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "0de3a61bba30aaef9b58d103a2df1164212e07c92ceb3674f262825e0f031a99",
+      "selected": 0,
+      "reason": "Entre projets exclusifs comparables sans contrainte additionnelle, la VAN de 5 000 crée plus de valeur que celle de 2 000.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "3ba8bca5de64ddce7471d2ad611c1222e6a83a4c135629f8f27b8fdf79f917c7",
+      "selected": 1,
+      "reason": "Une VAN négative peut résulter d’encaissements existants mais insuffisants après actualisation et coût initial.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

@@ -21,7 +21,7 @@ test('every chapter has a developed lesson, separate recall cards, and usable gu
    for(const q of cas.questions){assert.ok(q.guide);const response=q.guide.type==='number'?String(parseStudyNumber(new Intl.NumberFormat('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2}).format(q.guide.expected))):String(q.guide.answer);assert.equal(checkCaseStep(q,response).correct,true);}
   }
  }
- assert.equal(quizzes,1183);assert.equal(cards,4325);
+ assert.equal(quizzes,5000);assert.equal(cards,4325);
  assert.notEqual(quizzes,cards);
 });
 test('theory-only mixed card series fill their requested length without duplicates',()=>{

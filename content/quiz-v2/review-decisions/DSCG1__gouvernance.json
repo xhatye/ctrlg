@@ -1,0 +1,259 @@
+{
+  "sourceHash": "8bf52fde86804dd18592e0c0c0deeadb033830e71ad14ff26f1cd134705fbde3",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "0b00a315c658dfa00944193e5af223b3851f145c5f790b1319f4c77c0cb4016e",
+      "selected": 3,
+      "reason": "Le président présente le rapport en l’absence de commissaire aux comptes ; le texte ne lui substitue pas le directeur général ou l’expert-comptable.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "61208f48275ad9799df2b357d2ce589f832745e84455650588d6993d2f098351",
+      "selected": 2,
+      "reason": "Le caractère courant et les conditions normales sont cumulatifs ; la livraison ou acceptation d’un prix anormal ne suffit pas.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "996b1def8925f48487eac8c022a47ea65a5c9c39bd1e1171d13eabd9e47c5b22",
+      "selected": 0,
+      "reason": "Le défaut d’approbation n’efface pas les effets ; les conséquences dommageables peuvent incomber aux personnes visées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "0a36d72d1dfb86444ed7e405288c82b1d12036b7c335512fe3ae5cecb823c22c",
+      "selected": 3,
+      "reason": "La modalité unipersonnelle est une mention au registre des décisions, sans reproduire la procédure du rapport pluripersonnel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "1cc0f69b167e61598dcd34efb134e706090473840055c638e941afe4d8a4490d",
+      "selected": 0,
+      "reason": "Le seuil concerne une fraction des droits de vote supérieure à dix pour cent ; douze pour cent y entre même sans mandat.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "130542e812ad0cb484e04ab999580d4b82a31c080a5fc79f0a2371547f6296ca",
+      "selected": 3,
+      "reason": "Une avance en compte courant sans émission de titres crée une créance et non une augmentation des droits sociaux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "9fe8d6eecf4d7a01c0cdcfad68d97c7d841cadf1a3a092bbb6a63faeff399d26",
+      "selected": 3,
+      "reason": "Capital et compte courant correspondent à des droits sociaux et une créance de remboursement distincts, pas à deux catégories de titres.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "e8b1f796f3c69df43a8ee1137957cc13f9a8ba3a83a3456ce6a32214dc03eb5b",
+      "selected": 2,
+      "reason": "Le principal éteint la dette avancée tandis que l’intérêt rémunère sa mise à disposition ; l’échéance ne transforme pas le principal en revenu.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "a09e9a1cedbd32ac7c70c8c877f30ede4f9d3fd9a59c62f30170104febab7ef2",
+      "selected": 0,
+      "reason": "La créance conservée reste à l’ancien associé ; la vente des titres ne la transfère pas lorsqu’elle est expressément retenue.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "723d2769aeb61424ca908b08b31dd54b115df1f32289309f8ca1ddd93eb4a45a",
+      "selected": 0,
+      "reason": "Le blocage contractuel reste la référence ; trésorerie disponible ou qualité d’associé ne rendent pas le remboursement exigible avant terme.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "7a3d8aa5fe6a4cd087bacb7be8912a293f2ffcbb020f2730509ebc366f3006f7",
+      "selected": 2,
+      "reason": "L’engagement exprès de caution personnelle est distinct de la représentation de la société, même lorsque le président contrôle son capital.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "767b4e3db8f94c4bc98c1d1a9ffe12de2cfa0e0745f751462be9a1290255dbee",
+      "selected": 3,
+      "reason": "Un plafond inutilisé ou une activité commune ne permet pas d’ajouter le prêt B exclu des limites du cautionnement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "efa3cd3721566b4e2ce8f2a547fa569906c8c8ffa788a1fd9f5e215a5f278441",
+      "selected": 2,
+      "reason": "L2296 autorise une couverture partielle de la dette ; quarante mille sur cent mille est possible.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "64dab1f08fb8f215d6037e204f84d01d185a416c6a871c1c59fa9c7f0a9fd101",
+      "selected": 0,
+      "reason": "L’engagement ne peut dépasser la dette due de dix-huit mille, même avec un plafond supérieur de vingt-cinq mille.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "48da9374b2c3db0df8eaff2076b8af89e217b0333207ab3420ddcd930d335922",
+      "selected": 0,
+      "reason": "L2297 fait prévaloir vingt mille en lettres ; la discordance seule ne crée ni nullité totale ni substitution du montant du prêt.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "9c89bdfcbc365453be320bb85e415dcd29c956fa9e407800e4b4811e747a2ea7",
+      "selected": 0,
+      "reason": "Le défaut relatif à la renonciation conserve les bénéfices concernés, sans entraîner la nullité de tout l’engagement valablement mentionné.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "1b500bca5bcfd35c8ebf46afeebf21f1e9b3a63b961d3f736f10c3f9fef306a0",
+      "selected": 2,
+      "reason": "Deux visas postérieurs prouvent leur existence tardive, pas l’exécution d’un contrôle devant précéder le décaissement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "7214c19fb919977ca57cc12309851677d7f5567032e5009ff98f2b92107c290e",
+      "selected": 1,
+      "reason": "Le seuil vise un cumul trimestriel : deux prêts de trente mille représentent soixante mille, au-delà de cinquante mille.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "90c7e104ab95c1f5d2fafce836697b22781704eea1d8d8d9a9b4e1056f404467",
+      "selected": 1,
+      "reason": "Sans identité du cocontractant, le contrôle des liens avec les personnes visées est empêché.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "9cc38e3137c67cc6fee3db0a602b5ea47534efa18c8c413725ce6f1a1b040091",
+      "selected": 1,
+      "reason": "Le suivi doit recenser les garanties toujours en vigueur, pas seulement les dettes propres ou garanties déjà appelées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "fccf69458bc9d7f2c325352366a34fc72017bbf2be3b74929ba5ca98a246f33a",
+      "selected": 2,
+      "reason": "La conclusion doit couvrir les seuls prêts réellement revus et identifier les filiales hors périmètre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "ae0f0aba04707bf60498194c91842d86b62b007bd9cc78ece94bd48a01d24c35",
+      "selected": 3,
+      "reason": "Trois anomalies sont établies sur dix tests ; le résultat ne prouve ni la conformité du reste ni une fréquence exacte dans cinquante.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q23",
+      "digest": "54bdd80c0c4d0fcf379b8ce3aa9e5ec5709f442efc40326990df8a93efefd020",
+      "selected": 0,
+      "reason": "La confirmation annuelle de l’emprunteur rapprochée aux écritures répond au contrôle exigé, contrairement à une seconde extraction interne.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

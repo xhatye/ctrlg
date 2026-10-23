@@ -1,0 +1,338 @@
+{
+  "module": "UE12",
+  "chapter": "dossier-synthese",
+  "sourceHash": "27408acf0c67ff523fb8a6c4660f85ddec0768850a82569e23a768c7c9704520",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "A status note says \"The proposal is under review\". Which summary preserves the status stated?",
+      "options": [
+        "The proposal is being examined; the wording does not say that the review is complete.",
+        "The proposal has passed its completed review and is approved.",
+        "The proposal was rejected after its completed review.",
+        "The proposal has not been submitted for review and cannot yet be examined."
+      ],
+      "answer": 0,
+      "explanation": "Under review describes a current examination. It does not state its outcome or completion."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report says “operating costs decreased during the pilot”. Which summary stays within that evidence?",
+      "options": [
+        "The cost reduction measured during the pilot is an established reduction for later periods that were not observed.",
+        "The pilot period showed lower operating costs.",
+        "The pilot’s operating-cost result also establishes an identical saving in unmeasured investment costs.",
+        "The pilot’s lower costs establish the same result for departments that did not participate."
+      ],
+      "answer": 1,
+      "explanation": "Le constat porte sur la période pilote. Il ne garantit ni une poursuite automatique de la baisse ni son extension à tous les services."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Which completion is grammatically appropriate: \"___ invoices were overdue this month than last month\"?",
+      "options": [
+        "Less",
+        "Little",
+        "Fewer",
+        "Much"
+      ],
+      "answer": 2,
+      "explanation": "Invoices is a plural count noun. Fewer is the standard comparative quantifier here; less normally accompanies uncountable quantities in this construction."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An internal note says “the figures are preliminary and may be revised”. How should a summary describe them?",
+      "options": [
+        "As final audited results that cannot change",
+        "As guarantees of next year’s revenue",
+        "As targets that have not been observed at all",
+        "As preliminary observations subject to possible revision"
+      ],
+      "answer": 3,
+      "explanation": "Des données provisoires restent des observations, mais leur statut doit être conservé. Elles ne sont ni nécessairement auditées ni transformées en objectifs futurs."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Read: \"In addition to reviewing prices, the team will examine delivery reliability.\" Which summary preserves the relation?",
+      "options": [
+        "The team will examine delivery reliability as well as reviewing prices.",
+        "The team will examine delivery reliability instead of reviewing prices.",
+        "The team will review prices only if delivery reliability improves first.",
+        "The team will review prices but will not examine delivery reliability."
+      ],
+      "answer": 0,
+      "explanation": "In addition to adds an item to the work described. It does not replace the first item, deny the second or introduce a prerequisite."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report states \"Neither the French branch nor the Belgian branch met its target.\" What does this establish about those two branches?",
+      "options": [
+        "The French branch met its target while the Belgian branch did not.",
+        "Both named branches failed to meet their respective targets.",
+        "The Belgian branch met its target while the French branch did not.",
+        "At least one of the two named branches met its target."
+      ],
+      "answer": 1,
+      "explanation": "Neither…nor denies the stated predicate for both named items. It does not provide any result for branches not mentioned."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "What does “demand may recover next quarter” communicate?",
+      "options": [
+        "A legally binding purchase commitment",
+        "A guarantee that recovery will occur",
+        "A possible future recovery",
+        "A recovery already completed"
+      ],
+      "answer": 2,
+      "explanation": "May exprime ici une possibilité. Il ne transforme pas le scénario en fait observé, engagement ferme ou résultat garanti."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A forecast assumes stable exchange rates. The summary removes that assumption and calls the forecast unconditional. What should be restored?",
+      "options": [
+        "The projection is independent of exchange rates because a forecast value has been calculated.",
+        "The initial exchange-rate assumption can be replaced by any later rate without changing the projection’s stated basis.",
+        "The stable-rate assumption is an observed outcome merely because it appears in the forecasting note.",
+        "The dependence of the projection on the exchange-rate assumption"
+      ],
+      "answer": 3,
+      "explanation": "Une prévision dépend de ses hypothèses. Retirer une hypothèse importante rend la reformulation plus certaine que le document initial."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A management note says “we aim to reduce processing time”. Which rewrite incorrectly presents the target as achieved?",
+      "options": [
+        "We have reduced processing time.",
+        "We intend to reduce processing time.",
+        "Our objective is to reduce processing time.",
+        "We are seeking a reduction in processing time."
+      ],
+      "answer": 0,
+      "explanation": "Aim to décrit une intention ou un objectif. Have reduced annonce une réalisation, qui nécessiterait des observations supplémentaires."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report gives a range for next year’s demand. Which wording preserves the uncertainty expressed by a range?",
+      "options": [
+        "The projection is guaranteed to equal the upper limit because that is one value inside the range.",
+        "Demand is projected to fall within the stated range, under the assumptions used.",
+        "The midpoint is a single outcome already established, replacing the range without further evidence.",
+        "The lower limit can be presented as a guaranteed minimum independently of the assumptions supporting the projection."
+      ],
+      "answer": 1,
+      "explanation": "Une fourchette de prévision ne garantit pas sa borne haute ni sa valeur centrale. La formulation doit conserver les hypothèses et le statut estimatif des valeurs."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A forecast is revised down because an expected contract has not been signed. Which statement is accurate?",
+      "options": [
+        "The reduction in the forecast necessarily reduces sales previously recorded for completed periods by the same amount.",
+        "The unsigned contract remains a confirmed component of actual sales solely because it appeared in the earlier forecast.",
+        "The expectation changed; this does not itself revise past recorded sales.",
+        "The original forecast becomes an observed sales result once the expectation has been revised."
+      ],
+      "answer": 2,
+      "explanation": "La révision porte sur une attente future. Elle n’entraîne pas, par elle-même, une modification identique des ventes déjà constatées dans les périodes passées."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "An email asks “Could you confirm the delivery date?” No reply is available. Which conclusion is justified?",
+      "options": [
+        "The recipient has accepted the proposed date.",
+        "The goods have already been delivered.",
+        "The sender has received a binding guarantee of delivery.",
+        "The sender has requested confirmation of the date."
+      ],
+      "answer": 3,
+      "explanation": "Une demande de confirmation ne vaut pas réponse positive. Elle ne démontre donc ni accord obtenu, ni livraison réalisée, ni garantie déjà donnée."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A manager writes “Could you approve the proposed expenditure?” Which action is being requested?",
+      "options": [
+        "A decision authorising the proposed expenditure",
+        "Confirmation that the proposed spending has already been paid.",
+        "A check of whether the supplier received a transfer, rather than authorisation to incur the spending.",
+        "A notification that the purchase was already authorised, with no decision requested."
+      ],
+      "answer": 0,
+      "explanation": "Approve sollicite une validation. Le mot proposed signale une dépense envisagée, et non une dépense nécessairement effectuée ou réglée."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A meeting invitation asks “Shall we discuss outsourcing on Tuesday?” A summary says “Outsourcing was approved”. What has been altered?",
+      "options": [
+        "An agreed outsourcing contract has been cancelled by the invitation.",
+        "A proposed discussion has been turned into an approval.",
+        "An approval has merely been translated into a different tense.",
+        "A completed purchase has been turned into a delivery request."
+      ],
+      "answer": 1,
+      "explanation": "Proposer de discuter d’une option ne prouve pas qu’elle soit adoptée. La synthèse doit conserver la distinction entre ordre du jour et décision prise."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A supplier sends a \"revised quotation\" after changing its proposed prices. Which description follows from revised in this context?",
+      "options": [
+        "The quotation is necessarily an invoice for goods already delivered.",
+        "The quotation has necessarily become a signed customer contract.",
+        "The quotation has been amended; the word alone does not say that the customer accepted it.",
+        "The quotation is unchanged from the earlier version despite the amended prices."
+      ],
+      "answer": 2,
+      "explanation": "Revised means changed or amended. It describes the version of the quotation, not a customer’s acceptance or a completed delivery."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "An instruction asks for \"supporting documents, such as invoices and delivery notes\". How are invoices and delivery notes presented by such as?",
+      "options": [
+        "As documents expressly excluded from the requested support.",
+        "As the only possible supporting documents, with every other type expressly prohibited.",
+        "As documents that must replace the underlying transaction records rather than support them.",
+        "As examples of supporting documents, rather than an expressly exhaustive list."
+      ],
+      "answer": 3,
+      "explanation": "Such as introduces examples. It does not by itself make the list exhaustive or exclude the examples from the request."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Which statement is a reasoned recommendation rather than an observed fact alone?",
+      "options": [
+        "We recommend reviewing the forecast because demand remains uncertain.",
+        "The report lists demand figures for the previous year.",
+        "Demand was measured during the pilot period.",
+        "The dataset contains monthly observations."
+      ],
+      "answer": 0,
+      "explanation": "La formulation \"We recommend reviewing the forecast because demand remains uncertain\" propose une action et lui associe une raison. Les autres propositions décrivent des observations ou la nature des données, sans recommander une action."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A note recommends reviewing unit costs \"rather than relying on the total spend alone\". What relationship does rather than express here?",
+      "options": [
+        "The two approaches are required together with no distinction in preference.",
+        "The recommended approach is preferred to relying only on total spend.",
+        "Reviewing unit costs is forbidden while total spending must be the sole measure.",
+        "Reviewing unit costs is reported as a completed event caused by total spending."
+      ],
+      "answer": 1,
+      "explanation": "Rather than contrasts the recommended approach with the alternative. The wording does not establish completion, prohibition or a causal observation."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "The instruction says \"Check both the invoice date and the payment date.\" Which action fulfils the specified scope?",
+      "options": [
+        "Check either date and omit the other because one check is sufficient.",
+        "Check the invoice date only if the payment date is missing.",
+        "Check the invoice date and also the payment date.",
+        "Check neither date unless a separate request is received."
+      ],
+      "answer": 2,
+      "explanation": "Both…and includes the two stated items. It differs from either…or, which presents alternatives in this context."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The report says demand is uncertain. The summary’s author recommends a review next month. How should the recommendation be presented?",
+      "options": [
+        "As the report’s own recommendation even though the source did not propose a review.",
+        "As an approved management decision rather than the summary writer’s proposal.",
+        "As evidence that the proposed review has already determined next month’s demand.",
+        "As the author’s proposal grounded in the reported uncertainty"
+      ],
+      "answer": 3,
+      "explanation": "La synthèse doit séparer l’information de la source et l’avis de son auteur. La recommandation peut être justifiée sans être attribuée à tort au document."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A proposed saving may reduce costs but could lengthen customer response times. Which recommendation recognises that trade-off?",
+      "options": [
+        "Assess the savings alongside the potential service delay before deciding.",
+        "Treat the expected saving as the only decision criterion without assessing the stated response-time effect.",
+        "Treat the possible delay as an observed deterioration before its likelihood or size has been examined.",
+        "Value the saving as a confirmed benefit while assigning zero weight to the explicitly identified service risk."
+      ],
+      "answer": 0,
+      "explanation": "La recommandation met en regard deux effets possibles sans en effacer un ni présenter le risque comme certain. Le choix doit tenir compte des objectifs pertinents."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A draft says \"The company sent the subsidiary its forecast\", but does not make clear whose forecast its refers to. Which revision resolves the ambiguity if the company prepared the forecast?",
+      "options": [
+        "The company sent the subsidiary its forecast, leaving the same possessive unchanged.",
+        "The company sent its own forecast to the subsidiary.",
+        "The company sent the subsidiary’s forecast to the subsidiary.",
+        "The subsidiary sent its own forecast to the company."
+      ],
+      "answer": 1,
+      "explanation": "Its own ties the forecast to the company as the subject in the revised sentence. The other rewrites either retain the ambiguity or change the author or direction of the transfer."
+    }
+  ]
+}

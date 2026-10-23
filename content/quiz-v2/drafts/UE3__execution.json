@@ -1,0 +1,374 @@
+{
+  "module": "UE3",
+  "chapter": "execution",
+  "sourceHash": "23730d9a238727f4fd74f357df5f348673a92521970ecd4521474512592a3866",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le salaire contractuel fixe doit être abaissé selon un courriel de la direction, sans accord du salarié ni mécanisme dérogatoire invoqué. Quel contrôle est central ?",
+      "options": [
+        "La recherche de l’accord requis à cette modification de rémunération.",
+        "La seule notification de la direction, qui remplace l’accord.",
+        "Le seul intérêt financier de l’employeur, qui modifie le montant convenu.",
+        "Le niveau du salaire moyen du service, qui remplace le salaire contractuel."
+      ],
+      "answer": 0,
+      "explanation": "La rémunération contractuelle n’est pas une simple consigne de travail. Dans le cadre décrit, la décision unilatérale ne dispense pas de rechercher l’accord nécessaire."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie assimile l’ordre de modifier une tâche dans la qualification et la baisse du salaire convenu. Quelle distinction faut-il rétablir ?",
+      "options": [
+        "Le changement d’employeur et le changement de lieu de travail.",
+        "Le pouvoir d’organiser certaines tâches et la modification d’un élément contractuel de rémunération.",
+        "La rémunération contractuelle et les remboursements de frais professionnels.",
+        "La qualification professionnelle et la seule appellation du poste."
+      ],
+      "answer": 1,
+      "explanation": "Le pouvoir de direction n’a pas le même objet que la modification du salaire convenu. Il faut qualifier précisément ce qui change avant d’analyser l’accord et les règles pertinentes."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La somme totale annoncée reste stable, mais le projet remplace une partie de fixe contractuel par une part variable. Que faut-il comparer ?",
+      "options": [
+        "Le montant actuel seulement, réputé exclure toute modification.",
+        "La seule fréquence des virements.",
+        "Le contenu et la structure de la rémunération avant et après la proposition.",
+        "Le nombre de salariés qui préfèrent une rémunération variable."
+      ],
+      "answer": 2,
+      "explanation": "Le montant total n’épuise pas l’analyse. La substitution d’une composante variable à du fixe touche la structure, qu’il faut confronter aux engagements et au cadre applicable."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un avenant est présenté comme accepté, mais le dossier contient seulement une signature de l’employeur et la poursuite du travail. Quelle conclusion est rigoureuse ?",
+      "options": [
+        "Le maintien au travail prouve en toute hypothèse la signature du salarié.",
+        "La seule rédaction de l’avenant suffit à établir l’accord des deux parties.",
+        "La paie du mois suivant efface toute question sur l’accord.",
+        "L’accord du salarié reste à rechercher selon les règles applicables au projet."
+      ],
+      "answer": 3,
+      "explanation": "La rédaction de l’employeur et la poursuite du travail ne démontrent pas automatiquement un accord à toute modification. Il faut les rapprocher des manifestations de volonté et de la procédure pertinentes."
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "Un salarié reçoit une tâche nouvelle correspondant à sa qualification. Que peut-on déduire de sa seule nouveauté ?",
+      "options": [
+        "Elle ne suffit pas à caractériser une modification du contrat.",
+        "Elle exige un avenant du seul fait qu’elle n’avait encore jamais été confiée.",
+        "Elle modifie la qualification contractuelle même si elle lui correspond.",
+        "Elle permet au salarié d’imposer une révision du salaire convenu."
+      ],
+      "answer": 0,
+      "explanation": "Une tâche différente peut relever du pouvoir de direction lorsqu’elle correspond à la qualification. Son caractère nouveau ne tranche pas, à lui seul, la nature du changement.",
+      "references": [
+        {
+          "title": "Cour de cassation, chambre sociale, pourvoi 07-45.266",
+          "url": "https://www.courdecassation.fr/decision/61372706cd58014677429cf7"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une nouvelle mission est contestée. Le dossier fournit seulement son intitulé, sans les activités réelles ni la qualification contractuelle. Quel rapprochement faut-il préparer ?",
+      "options": [
+        "La seule fréquence des changements, considérée comme modification automatique.",
+        "La qualification et les tâches réellement confiées avant et après le changement.",
+        "Le seul nom du service, considéré comme définition de toutes les fonctions.",
+        "La seule absence d’avenant, considérée comme preuve que rien n’a changé."
+      ],
+      "answer": 1,
+      "explanation": "La dénomination ne suffit pas à qualifier le changement. Les fonctions, responsabilités et obligations convenues doivent être rapprochées des tâches effectivement demandées."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une entreprise renomme un poste alors que ses activités, sa qualification et ses responsabilités restent identiques selon les faits. Une copie en déduit une modification contractuelle du seul titre. Quel est le défaut ?",
+      "options": [
+        "La copie aurait dû retenir la seule classification affichée sur l’organigramme.",
+        "La copie aurait dû examiner exclusivement l’intitulé du bulletin de paie.",
+        "La copie remplace la comparaison des fonctions par le changement d’appellation.",
+        "La copie aurait dû déduire une baisse de qualification du seul nouveau titre."
+      ],
+      "answer": 2,
+      "explanation": "Le changement d’appellation doit être confronté aux fonctions réelles. Il ne démontre pas, à lui seul, une transformation de la qualification ou des obligations."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un salarié conserve son intitulé, mais le dossier décrit un retrait de ses principales responsabilités. Quelle donnée doit être étudiée au lieu du seul titre inchangé ?",
+      "options": [
+        "La seule conservation de l’intitulé, tenue pour absence de changement.",
+        "La seule conservation du nombre de tâches, tenue pour équivalence des responsabilités.",
+        "La seule préférence de l’employeur, tenue pour qualification des nouvelles fonctions.",
+        "Le contenu réel des responsabilités et son rapport à la qualification convenue."
+      ],
+      "answer": 3,
+      "explanation": "L’étiquette stable ne prouve pas l’absence de changement réel. L’analyse doit porter sur les fonctions et responsabilités, puis sur leur qualification juridique."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour comparer deux affectations, on dispose de fiches de poste incompatibles et de courriels décrivant les tâches réellement exercées. Quelle méthode est adaptée ?",
+      "options": [
+        "Confronter les pièces et préciser les tâches établies plutôt que choisir le seul document le plus récent.",
+        "Retenir la fiche portant l’intitulé le plus élevé, quelle que soit la réalité.",
+        "Tenir l’envoi d’une fiche nouvelle pour accord du salarié sur tout son contenu.",
+        "Compter les tâches au lieu d’en comparer la nature et les responsabilités."
+      ],
+      "answer": 0,
+      "explanation": "Les pièces peuvent renseigner des objets ou périodes différents. La comparaison doit identifier les fonctions réelles, leurs sources et les incertitudes utiles au raisonnement."
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel axe doit guider l’analyse de la prévention au travail ?",
+      "options": [
+        "La seule existence d’une note générale sans lien avec les postes.",
+        "Les risques concrets et les mesures adaptées à leur prévention.",
+        "Le seul nombre d’années sans plainte reçue.",
+        "La seule signature d’une clause de responsabilité par le salarié."
+      ],
+      "answer": 1,
+      "explanation": "La prévention s’apprécie au regard des risques et des mesures effectivement adaptées. Une formule générale ne démontre pas à elle seule leur identification et leur traitement."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un atelier dispose de protections individuelles, mais une mesure de protection collective réalisable est identifiée. Quel principe de L4121-2 faut-il intégrer à l’analyse ?",
+      "options": [
+        "La priorité aux équipements personnels parce qu’ils sont plus faciles à distribuer.",
+        "La priorité à l’absence de toute formation si un équipement existe.",
+        "La priorité des mesures de protection collective sur les mesures individuelles.",
+        "La priorité à une décharge signée par chaque salarié."
+      ],
+      "answer": 2,
+      "explanation": "Le principe de prévention visé donne priorité à la protection collective. La remise d’équipements individuels ne dispense pas d’examiner les solutions collectives adaptées.",
+      "references": [
+        {
+          "title": "Code du travail, article L4121-2",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033019913"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une réorganisation modifie l’implantation des machines et les déplacements. Selon L4121-3, quel objet doit notamment être pris en compte dans l’évaluation des risques ?",
+      "options": [
+        "Le seul coût des machines, considéré comme évaluation complète de leurs risques.",
+        "Le seul nombre de salariés, considéré comme description suffisante des postes.",
+        "Le seul classement initial des anciens locaux, sans tenir compte de la réorganisation.",
+        "Le nouvel aménagement et l’organisation du travail."
+      ],
+      "answer": 3,
+      "explanation": "L’évaluation concerne aussi les aménagements et l’organisation. Le changement matériel du travail doit être relié aux risques concrets, pas seulement au budget du projet.",
+      "references": [
+        {
+          "title": "Code du travail, article L4121-3",
+          "url": "https://code.travail.gouv.fr/code-du-travail/l4121-3"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un employeur produit une consigne « soyez prudents » pour démontrer la prévention d’un risque de coupure identifié. Que manque-t-il à sa démonstration ?",
+      "options": [
+        "Les mesures concrètes adaptées au risque et leur mise en œuvre.",
+        "Un second exemplaire du même message général, tenu pour protection supplémentaire.",
+        "La seule absence de plainte antérieure, tenue pour preuve de prévention effective.",
+        "La seule acceptation du poste par le salarié, tenue pour transfert de la prévention."
+      ],
+      "answer": 0,
+      "explanation": "La consigne générale ne décrit pas les protections, l’organisation ou les autres actions adaptées. Il faut rapprocher le risque identifié des mesures effectives."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après une série d’incidents, l’entreprise conserve la même évaluation sans examiner leurs causes ni l’organisation du poste. Quel axe de contrôle est prioritaire ?",
+      "options": [
+        "Le maintien de la liste initiale, considéré comme réponse suffisante aux incidents.",
+        "L’adaptation de l’analyse des risques et des mesures aux faits observés.",
+        "La seule sanction des personnes blessées, sans examen du poste.",
+        "Le seul paiement des coûts d’accident, considéré comme prévention du risque futur."
+      ],
+      "answer": 1,
+      "explanation": "Les incidents apportent des faits utiles à l’analyse de prévention. Il faut examiner les risques révélés et l’adéquation des mesures, plutôt que se limiter à un document inchangé."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une liste de risques existe, mais aucune pièce ne permet de savoir si la mesure de protection prévue a été installée. Quelle distinction faut-il garder ?",
+      "options": [
+        "L’information générale sur les risques et l’évaluation de leur gravité.",
+        "La programmation d’une action et son financement prévisionnel.",
+        "L’identification d’un risque et la réalisation effective des mesures retenues.",
+        "L’achat d’un équipement et la formation de son utilisateur."
+      ],
+      "answer": 2,
+      "explanation": "Le diagnostic n’est pas sa mise en œuvre. Il faut établir si la protection décidée existe et fonctionne dans la situation analysée."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une entreprise achète un nouvel outil et considère l’analyse de prévention close parce qu’il est neuf. Quel point reste à examiner ?",
+      "options": [
+        "La seule nouveauté de l’outil, tenue pour suppression de tous les risques.",
+        "La seule conformité du bon de livraison au bon de commande.",
+        "Le seul prix plus élevé, tenu pour preuve d’une prévention supérieure.",
+        "Les risques de son utilisation réelle et les mesures adaptées au poste."
+      ],
+      "answer": 3,
+      "explanation": "La nouveauté n’établit pas l’adéquation à tous les usages. L’outil doit être étudié dans l’activité concrète et l’organisation de prévention."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "advanced",
+      "q": "En litige sur les heures accomplies, quelle démarche L3171-4 impose-t-il notamment à l’employeur ?",
+      "options": [
+        "Fournir les éléments de nature à justifier les horaires effectivement réalisés.",
+        "Produire uniquement le planning théorique, décisif dans tous les cas.",
+        "Exiger du salarié qu’il reconstitue seul tout le système de contrôle.",
+        "Remplacer les horaires par le seul montant du salaire forfaitaire mensuel."
+      ],
+      "answer": 0,
+      "explanation": "Le texte vise des éléments justifiant les horaires réellement accomplis. Le juge apprécie l’ensemble avec les éléments présentés par le salarié.",
+      "references": [
+        {
+          "title": "Code du travail, article L3171-4",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006902808"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le planning prévisionnel indique une fin à 17 h ; les relevés et échanges professionnels montrent des interventions après cette heure. Comment apprécier le temps invoqué ?",
+      "options": [
+        "Le planning suffit à exclure les éléments postérieurs.",
+        "Rapprocher les données sur les horaires réels, les interventions et le régime applicable.",
+        "Le dernier courriel impose de compter toute la nuit comme travail.",
+        "Le salaire mensuel prouve que la question des heures ne peut se poser."
+      ],
+      "answer": 1,
+      "explanation": "Prévision et réalisation doivent être distinguées. Les éléments d’activité et de suivi se confrontent pour examiner le temps effectif, sans mécanisme automatique dans un sens ou l’autre."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le système automatique de décompte permet de modifier les horaires sans conserver de trace. Quel critère de L3171-4 est particulièrement en cause ?",
+      "options": [
+        "La seule rémunération versée, prise comme preuve de fiabilité du pointage.",
+        "La seule présence d’un relevé imprimé, prise comme impossibilité de modifier les données.",
+        "La fiabilité et le caractère infalsifiable de l’enregistrement automatique.",
+        "La possibilité du salarié de lire l’écran, prise comme garantie suffisante d’intégrité."
+      ],
+      "answer": 2,
+      "explanation": "L’article vise un système fiable et infalsifiable. Une possibilité de modification non tracée appelle un contrôle de la qualité et de la conservation des données.",
+      "references": [
+        {
+          "title": "Code du travail, article L3171-4",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006902808"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une copie affirme que l’absence de pointage fourni par le salarié suffit à écarter toute demande d’heures. Quelle approche de L3171-4 manque ?",
+      "options": [
+        "L’exigence que le salarié présente un décompte signé par l’employeur avant tout examen.",
+        "La présomption que le contrat écrit établit tous les horaires effectivement réalisés.",
+        "La substitution de la durée collective affichée aux éléments des deux parties.",
+        "L’examen des éléments des deux parties et des horaires que l’employeur doit justifier."
+      ],
+      "answer": 3,
+      "explanation": "La preuve des horaires ne se réduit pas à exiger un seul document du salarié. Le juge examine les éléments des parties selon le cadre du texte.",
+      "references": [
+        {
+          "title": "Code du travail, article L3171-4",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006902808"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des connexions informatiques sont produites pour prouver du travail. Le dossier ne précise pas si l’application reste ouverte sans activité. Quelle vérification est utile ?",
+      "options": [
+        "Le lien entre les connexions observées, le travail réellement accompli et la définition des temps retenus.",
+        "Le seul total des connexions, tenu pour égal au travail effectif dans tous les cas.",
+        "Le dernier horaire de déconnexion, tenu pour preuve d’une activité continue depuis le matin.",
+        "La présence d’une connexion, tenue pour preuve d’un accord de l’employeur sur tout montant demandé."
+      ],
+      "answer": 0,
+      "explanation": "Une connexion peut être un indice sans mesurer toute l’activité. Il faut comprendre le fonctionnement de la donnée et la rapprocher du travail et du régime étudiés."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le relevé contient une plage présentée comme pause, mais la personne affirme devoir y exécuter des consignes. Comment la traiter avant le calcul ?",
+      "options": [
+        "La retrancher nécessairement parce que le tableau l’appelle pause.",
+        "Examiner les conditions réelles de cette plage et sa qualification dans le régime applicable.",
+        "L’ajouter nécessairement parce qu’elle a été payée.",
+        "La répartir à parts égales entre temps de travail et temps personnel."
+      ],
+      "answer": 1,
+      "explanation": "L’intitulé ne détermine pas seul la qualification. Les contraintes réelles et la possibilité d’occupations personnelles doivent être examinées avant de calculer le total."
+    }
+  ]
+}

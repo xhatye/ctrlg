@@ -1,0 +1,541 @@
+{
+  "module": "DSCG3",
+  "chapter": "cout-cible",
+  "sourceHash": "2710ca95452b9a3e0c01b1c8a8dec5d1b7dbb43aa7e3a1af47ca43122362c51d",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le prix de vente envisagé est 120 € et la marge cible 25 % de ce prix. Quelle marge unitaire doit être réservée ?",
+      "options": [
+        "480 €",
+        "30 €",
+        "90 €",
+        "25 €"
+      ],
+      "answer": 1,
+      "explanation": "La marge cible vaut prix × taux sur prix : 120 × 0,25 = 30 €. Le dénominateur de la convention est le prix, pas le coût estimé.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 120
+            },
+            {
+              "value": 0.25
+            }
+          ]
+        },
+        "expected": 30,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un prix de marché de 120 € doit laisser 25 % de marge sur prix de vente. Quel coût cible unitaire en découle ?",
+      "options": [
+        "150 €",
+        "30 €",
+        "90 €",
+        "96 €"
+      ],
+      "answer": 2,
+      "explanation": "Le coût admissible est 120 × (1 − 0,25) = 90 €. Il correspond au prix diminué de la marge demandée, pas à un coût historique majoré.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 120
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "value": 0.25
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 90,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût estimé du produit est 100 € et le coût cible 90 € par unité. Quel écart unitaire doit être réduit pour rejoindre la cible ?",
+      "options": [
+        "10 €",
+        "190 €",
+        "90 %",
+        "-10 €"
+      ],
+      "answer": 0,
+      "explanation": "L’écart est coût estimé − coût cible = 100 − 90 = 10 €. Il décrit une réduction à rechercher, et non une économie déjà réalisée.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 100
+            },
+            {
+              "value": 90
+            }
+          ]
+        },
+        "expected": 10,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Il faut réduire un coût estimé de 100 € à 90 €. Quel effort relatif au coût estimé représente cette baisse ?",
+      "options": [
+        "11,11 %",
+        "90 %",
+        "1 %",
+        "10 %"
+      ],
+      "answer": 3,
+      "explanation": "L’effort est (100 − 90) / 100 × 100 = 10 %. Utiliser le coût cible au dénominateur répondrait à une autre base de comparaison.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 100
+                    },
+                    {
+                      "value": 90
+                    }
+                  ]
+                },
+                {
+                  "value": 100
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 10,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Le dossier exige 20 % de marge sur prix. Un calcul ajoute 20 % au coût pour retrouver ce prix. Quelle convention doit être vérifiée ?",
+      "options": [
+        "Une majoration de 20 % sur coût donne déjà 20 % de marge sur prix, puisque les pourcentages sont identiques.",
+        "Le pourcentage doit être appliqué à la base indiquée ; une majoration sur coût n’est pas le même taux.",
+        "Il suffit de garder le même pourcentage et de remplacer le mot majoration par marge sans modifier la formule.",
+        "Il suffit de retrancher le pourcentage obtenu du taux d’impôt, sans convertir la base de calcul."
+      ],
+      "answer": 1,
+      "explanation": "Le nom du taux et son dénominateur sont essentiels. Une marge égale à 20 % du prix ne se reconstitue pas en majorant un coût de 20 % sans conversion appropriée."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le coût cible calculé est inférieur au coût estimé. Quel statut faut-il donner au chiffre cible ?",
+      "options": [
+        "Un coût acquis qui peut remplacer l’estimation avant toute solution de réduction.",
+        "Un engagement de prix des fournisseurs même si aucun accord n’a été obtenu.",
+        "Une exigence à rechercher par des actions et une vérification de faisabilité.",
+        "Un nouveau coût comptable observé, obtenu en abaissant la valeur des consommations dans le budget."
+      ],
+      "answer": 2,
+      "explanation": "La cible traduit prix et marge souhaités. Sa présence dans le tableau ne démontre pas la capacité à fabriquer à ce coût ; les solutions de conception, processus ou achat doivent être étudiées."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Pour réduire le coût, une option supprime une fonction essentielle aux clients alors que l’usage requis doit rester constant. Quelle analyse est nécessaire ?",
+      "options": [
+        "Rejeter l’idée que tout écart chiffré autorise une dégradation des exigences et rechercher des solutions compatibles.",
+        "Accepter l’option dès que la cible de coût est atteinte, en considérant l’usage essentiel comme une préférence facultative.",
+        "Conserver le prix de marché initial tout en retirant la fonction qui justifiait une partie de ce prix, sans nouvelle étude client.",
+        "Présenter l’économie à qualité constante alors que la fonction requise a été supprimée du périmètre."
+      ],
+      "answer": 0,
+      "explanation": "Le dossier conditionne la comparaison à une qualité et un usage donnés. Réduire le coût ne justifie pas d’effacer ces contraintes ; l’arbitrage doit préserver ce qui est requis."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un rapport annonce l’effort comme écart / coût cible, alors que la définition retenue utilise le coût estimé. Quel contrôle convient ?",
+      "options": [
+        "Conserver le taux calculé sur la cible sous le même intitulé, puisque le numérateur est inchangé.",
+        "Inverser seulement le sens de soustraction, sans corriger le dénominateur utilisé.",
+        "Faire la moyenne des taux sur estimé et sur cible pour obtenir le taux défini au départ.",
+        "Recalculer sur la base estimée ou nommer explicitement la mesure différente."
+      ],
+      "answer": 3,
+      "explanation": "Les deux rapports n’ont pas le même dénominateur. La définition doit être suivie pour comparer les efforts ; une proportion sans base explicite peut amplifier ou réduire artificiellement la lecture."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le prix de marché baisse tandis que le taux de marge sur prix souhaité reste identique. Que devient le montant de marge cible unitaire ?",
+      "options": [
+        "Le montant en euros reste inchangé car le taux reste identique, même si sa base baisse.",
+        "Il diminue avec le prix, à taux inchangé.",
+        "Le montant de marge augmente de la baisse de prix, pour maintenir le même coût admissible sans changer le taux.",
+        "Le montant de marge baisse seulement si le volume vendu diminue, indépendamment du prix unitaire."
+      ],
+      "answer": 1,
+      "explanation": "La marge cible en euros est proportionnelle au prix dans la convention donnée. Une même proportion sur un prix plus faible laisse un montant plus faible, ce qui peut aussi déplacer le coût admissible."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un produit doit coûter au plus 90 € et laisser une marge de 25 % sur prix. Quel prix compatible retrouve-t-on par inversion de coût = prix × 75 % ?",
+      "options": [
+        "67,50 €",
+        "112,50 €",
+        "120 €",
+        "360 €"
+      ],
+      "answer": 2,
+      "explanation": "Le prix est 90 / 0,75 = 120 €. L’inversion respecte la marge sur prix ; majorer 90 de 25 % ne conduirait pas à la même structure de répartition.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 90
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "value": 0.25
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 120,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le coût estimé devient inférieur au coût cible avec les mêmes exigences et hypothèses. Quelle conclusion le seul écart permet-il ?",
+      "options": [
+        "Le coût prévisionnel respecte le plafond, sans prouver la réalisation future ni toutes les conséquences.",
+        "Le respect de l’estimation permet de retirer toute provision de suivi des hypothèses de coût et de qualité.",
+        "Le respect du plafond garantit le prix de marché prévu, même si ce prix était une hypothèse.",
+        "Le respect du plafond prouve que les économies estimées ont déjà été constatées dans les consommations réelles."
+      ],
+      "answer": 0,
+      "explanation": "La comparaison indique une compatibilité prévisionnelle sous hypothèses. Elle ne supprime pas l’incertitude d’estimation, les risques de réalisation ou les contrôles de qualité."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une réduction ciblée de 10 € par unité porte sur 3 000 unités prévues, sans changement de volume ni de périmètre. Quel effort total théorique cela représente-t-il ?",
+      "options": [
+        "300 €",
+        "3 010 €",
+        "300 000 €",
+        "30 000 €"
+      ],
+      "answer": 3,
+      "explanation": "L’effort total est 10 × 3 000 = 30 000 €. Il reste théorique tant que les solutions et les volumes ne sont pas réalisés ; il ne constitue pas une économie constatée.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 10
+            },
+            {
+              "value": 3000
+            }
+          ]
+        },
+        "expected": 30000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un produit vendu 100 € laisse 20 € de marge. Quel taux de marge sur prix de vente cela représente-t-il ?",
+      "options": [
+        "25 %",
+        "20 %",
+        "80 %",
+        "5 %"
+      ],
+      "answer": 1,
+      "explanation": "Le taux sur prix est 20 / 100 × 100 = 20 %. Le rapport 20 / 80 = 25 % utiliserait le coût au dénominateur et ne décrit pas la convention demandée.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 20
+                },
+                {
+                  "value": 100
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 20,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La direction accroît le taux de marge exigé à prix de vente inchangé. Quel effet la formule prévoit-elle sur le coût cible ?",
+      "options": [
+        "Il augmente du supplément de marge exigé, la marge étant ajoutée au coût admissible.",
+        "Il reste égal au coût estimé initial, puisque seul l’objectif de résultat a changé.",
+        "Il diminue, une plus grande part du prix étant réservée à la marge.",
+        "Il reste inchangé si le volume prévu est stable, même si la marge unitaire exigée augmente."
+      ],
+      "answer": 2,
+      "explanation": "Prix et marge se partagent le montant disponible. À prix constant, demander une marge plus élevée réduit le coût admissible et peut accroître l’effort de conception ou remettre la faisabilité en question."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux équipes additionnent des économies de conception et d’achat qui portent sur la même pièce remplacée. Quel contrôle évite un gain surestimé ?",
+      "options": [
+        "Identifier les recouvrements et compter chaque effet une seule fois.",
+        "Additionner tous les gains dès qu’ils figurent dans deux plans d’action signés par des équipes distinctes.",
+        "Conserver la somme et la répartir ensuite sur les autres pièces pour éviter un écart apparent sur celle remplacée.",
+        "Utiliser le gain le plus élevé pour chaque équipe puis additionner leurs totaux, sans identifier les ressources supprimées."
+      ],
+      "answer": 0,
+      "explanation": "Les actions peuvent se chevaucher. Le rapprochement des effets permet de distinguer économies complémentaires et mêmes ressources supprimées, sans gonfler le plan de réduction."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le calcul d’effort est arrondi à un pourcentage entier avant de reconstituer le nouveau coût. Quelle précaution est utile ?",
+      "options": [
+        "Reconstituer le coût à partir du seul taux entier et supposer que l’écart à la cible est nul par construction.",
+        "Ajuster la cible en euros pour retrouver le taux arrondi annoncé, sans modifier le coût réel prévu.",
+        "Arrondir séparément chaque économie avant leur somme sans mesurer l’incidence sur le coût final.",
+        "Conserver une précision suffisante et rapprocher le coût final de la cible avant l’arrondi de présentation."
+      ],
+      "answer": 3,
+      "explanation": "L’arrondi peut modifier un calcul de retour. Il faut vérifier les montants et la convention de présentation, plutôt que laisser une approximation intermédiaire décider de la couverture de la cible."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un fournisseur propose un prix de composant inférieur mais une qualité différente non évaluée. Quelle limite doit accompagner le gain de marge annoncé ?",
+      "options": [
+        "La baisse du tarif fournisseur suffit à prouver une économie à service équivalent, même si les spécifications ont changé.",
+        "La compatibilité de qualité et les effets associés restent à vérifier.",
+        "La validation technique peut être remplacée par l’écart de prix dès lors que le coût cible reste respecté.",
+        "L’ancien prix de marché du produit peut être conservé sans étude même si la qualité qui le soutenait a changé."
+      ],
+      "answer": 1,
+      "explanation": "La méthode ne consiste pas à réduire un poste sans conditions. Les exigences d’usage font partie du périmètre ; l’économie ne doit pas être considérée acquise à service équivalent avant vérification."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel ordre décrit le raisonnement du coût cible fourni ?",
+      "options": [
+        "Coût historique → majoration souhaitée → prix réputé accepté par le marché → constat automatique de faisabilité.",
+        "Économies souhaitées → suppression de fonctions → prix initial conservé sans validation de l’usage.",
+        "Prix envisagé et marge souhaitée, puis coût admissible et écart avec l’estimation.",
+        "Coût estimé → coût cible rendu égal à l’estimé → marge souhaitée supposée obtenue au prix initial."
+      ],
+      "answer": 2,
+      "explanation": "La cible part d’un prix et d’une exigence de marge pour contraindre le coût du projet. Le rapprochement avec l’estimé guide les actions, sans démontrer leur réalisation."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "L’effort chiffré paraît faible, mais aucun processus ni achat ne permet la réduction avec l’usage requis. Quel problème faut-il exposer ?",
+      "options": [
+        "La faisabilité de l’écart, même si son montant est réduit.",
+        "La seule présentation du faible pourcentage suffit à démontrer qu’une solution opérationnelle existe.",
+        "Le coût estimé peut être réduit du petit écart sans action, parce que l’arrondi constitue une économie.",
+        "La cible peut être déclarée atteinte dès que l’écart est inférieur à celui d’un autre produit, sans solution technique."
+      ],
+      "answer": 0,
+      "explanation": "L’ampleur numérique ne remplace pas une solution opérationnelle. La réduction doit être reliée à des moyens et contraintes ; sinon le projet peut rester incompatible avec sa cible."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "L’analyse fonctionnelle attribue à la fonction A 50 % de l’importance client et 20 % du coût estimé ; à B, 20 % de l’importance et 50 % du coût. Le ratio de valeur proposé est importance/coût relatif. Quelle première piste ce critère suggère-t-il, sans supprimer d’emblée une fonction requise ?",
+      "options": [
+        "Réduire d’abord A parce que son importance élevée prouve qu’elle coûte trop cher.",
+        "Répartir le même taux de réduction sur toutes les fonctions, sans examiner leurs ratios.",
+        "Conserver B sans examen parce que son coût relatif élevé démontre une importance client élevée.",
+        "Examiner en priorité la conception et le coût de B, dont le ratio de valeur est plus faible."
+      ],
+      "answer": 3,
+      "explanation": "Le ratio proposé vaut 50/20 = 2,5 pour A et 20/50 = 0,4 pour B. B mobilise une part de coût forte au regard de l’importance client mesurée : c’est une piste d’analyse de valeur, pas une autorisation de supprimer une fonction nécessaire ni une preuve de faisabilité de toute réduction.",
+      "references": [
+        {
+          "title": "ACCA — Target costing and life-cycle costing",
+          "url": "https://www.accaglobal.com/hk/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/target-lifestyle.html"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le prix de lancement retenu devient incertain. Comment présenter le coût cible plutôt que comme un plafond définitivement connu ?",
+      "options": [
+        "Retenir le prix favorable comme plafond certain de coût et ne montrer aucun scénario moins favorable.",
+        "Relier la cible aux scénarios de prix et de marge avec leurs conditions.",
+        "Conserver la cible en euros malgré toute baisse de prix, en maintenant simultanément le même taux de marge sans recalcul.",
+        "Moyenner les prix possibles et annoncer la cible correspondante comme certaine sans hypothèse de probabilité."
+      ],
+      "answer": 1,
+      "explanation": "La cible est une conséquence des hypothèses commerciales et de marge. Si celles-ci changent, les scénarios permettent de discuter la faisabilité sans transformer une prévision en certitude."
+    },
+    {
+      "id": "q22",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le coût initial prévu est de 100 € par unité et la cible de 95 €. Une reconception coûte 9 000 € une seule fois et économise 8 € de fabrication par unité. Ce coût de reconception doit être réparti sur tout le volume futur prévu, sans actualisation. Quel volume minimal permet au coût complet de cycle ainsi recalculé de ne pas dépasser 95 € ?",
+      "options": [
+        "1 125 unités",
+        "1 800 unités",
+        "3 000 unités",
+        "9 000 unités"
+      ],
+      "answer": 2,
+      "explanation": "Le coût de fabrication devient 92 €. Il reste donc 3 € par unité pour absorber les 9 000 € de reconception sans dépasser 95 €. Il faut au moins 9 000/3 = 3 000 unités. Diviser par les seuls 8 € d’économie brute ignorerait le maintien du gain net de 5 € exigé par la cible.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 9000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 95
+                },
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 100
+                    },
+                    {
+                      "value": 8
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 3000,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "ACCA — Target costing and life-cycle costing",
+          "url": "https://www.accaglobal.com/hk/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/target-lifestyle.html"
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une réduction de coût d’achat de 15 € est obtenue mais impose 4 € de traitement supplémentaire documenté par unité. Quel principe doit guider le suivi de l’effort ?",
+      "options": [
+        "Examiner le gain net de périmètre cohérent plutôt que le seul poste d’achat.",
+        "Retenir 15 € de gain final parce que le traitement supplémentaire dépend d’un autre service.",
+        "Compter les 4 € de traitement comme une économie complémentaire au gain d’achat.",
+        "Affecter les 4 € aux autres produits sans examiner leur consommation pour préserver le gain annoncé sur ce produit."
+      ],
+      "answer": 0,
+      "explanation": "Un déplacement de ressources peut compenser une partie de l’économie. Le plan doit suivre les coûts et contreparties pertinents pour vérifier le rapprochement réel avec la cible."
+    }
+  ]
+}

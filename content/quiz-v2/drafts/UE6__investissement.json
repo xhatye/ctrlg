@@ -1,0 +1,445 @@
+{
+  "module": "UE6",
+  "chapter": "investissement",
+  "sourceHash": "20b3675f842c5371786f7d0cab49029452e01405015d74d4a59775c8f3855a25",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pour comparer des flux d’investissement reçus à des dates différentes, quelle étape est indispensable ?",
+      "options": [
+        "Les exprimer à une même date avec une convention temporelle cohérente",
+        "Comparer uniquement leur somme nominale",
+        "Retenir uniquement le dernier encaissement",
+        "Transformer chaque flux en chiffre d’affaires"
+      ],
+      "answer": 0,
+      "explanation": "L’actualisation rend comparables des flux datés. Leur simple addition nominale ignore le coût du temps et les hypothèses de taux."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un flux de 6 050 € intervient à la fin de la deuxième année. Le taux annuel fourni est 10 %. Quelle valeur actuelle retenir, arrondie à l’euro ?",
+      "options": [
+        "5 500 €",
+        "5 000 €",
+        "6 655 €",
+        "3 025 €"
+      ],
+      "answer": 1,
+      "explanation": "La puissance correspond à deux années : 6 050 / 1,10² = 5 000 €. Ne retenir qu’une période surévalue ce flux.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 6050
+            },
+            {
+              "op": "pow",
+              "args": [
+                {
+                  "value": 1.1
+                },
+                {
+                  "value": 2
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 5000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une dépense est payée aujourd’hui, mais le tableur la divise par 1 + taux comme si elle intervenait dans un an. Le taux est strictement positif. Quel effet cela produit-il ?",
+      "options": [
+        "La dépense est correctement traitée puisqu’elle est certaine",
+        "La dépense est surévaluée du fait de son actualisation",
+        "La dépense initiale est sous-évaluée dans le calcul de valeur actuelle",
+        "La date n’a aucun effet sur un décaissement"
+      ],
+      "answer": 2,
+      "explanation": "Un flux à la date initiale n’a pas à être actualisé. Le diviser par un facteur supérieur à un réduit indûment son poids négatif."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le versement final d’un projet est reporté d’un an, sans changement de montant ; le taux est positif. Quel effet isolé a ce report ?",
+      "options": [
+        "Il augmente sa valeur actuelle",
+        "Il laisse sa valeur actuelle inchangée",
+        "Il rend nécessairement le projet non rentable",
+        "Il réduit la valeur actuelle du versement"
+      ],
+      "answer": 3,
+      "explanation": "Un encaissement plus lointain subit une période d’actualisation supplémentaire. L’effet sur la décision finale dépend toutefois de tous les flux."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une évaluation est réalisée avec un taux d’actualisation nul. Comment sont traités les flux datés dans le calcul de la VAN ?",
+      "options": [
+        "Leur valeur actuelle égale leur montant nominal",
+        "Ils sont tous ramenés à zéro",
+        "Seuls les flux immédiats sont conservés",
+        "Chaque flux est multiplié par sa durée"
+      ],
+      "answer": 0,
+      "explanation": "Avec un taux nul, le facteur (1 + taux) puissance période vaut un. Les flux ne subissent donc aucune réduction temporelle."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le modèle utilise un taux mensuel fourni mais place chaque encaissement annuel à la période 1, 2 puis 3 sans conversion. Quelle correction est nécessaire ?",
+      "options": [
+        "Conserver ce modèle car les taux sont toujours annuels",
+        "Harmoniser l’échelle des périodes et celle du taux",
+        "Diviser chaque flux par le nombre de mois uniquement",
+        "Ajouter le taux mensuel à chacun des montants"
+      ],
+      "answer": 1,
+      "explanation": "Un taux mensuel suppose des périodes mensuelles ou une conversion cohérente en taux annuel. Numéroter les années ne suffit pas."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une machine coûte 12 000 € immédiatement ; elle produit 5 000 € à la fin de chacune des deux années suivantes. Les facteurs d’actualisation fournis sont 0,95 et 0,90. Quelle est la VAN ?",
+      "options": [
+        "−2 000 €",
+        "9 250 €",
+        "−2 750 €",
+        "21 250 €"
+      ],
+      "answer": 2,
+      "explanation": "Les flux actualisés sont 5 000 × 0,95 + 5 000 × 0,90 = 9 250 €. La VAN vaut 9 250 − 12 000 = −2 750 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 5000
+                    },
+                    {
+                      "value": 0.95
+                    }
+                  ]
+                },
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 5000
+                    },
+                    {
+                      "value": 0.9
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 12000
+            }
+          ]
+        },
+        "expected": -2750,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La VAN d’un projet est exactement nulle au taux exigé et avec les flux prévus. Quelle interprétation est correcte ?",
+      "options": [
+        "Le projet ne génère aucun flux positif",
+        "Le bénéfice comptable est nul chaque année",
+        "L’investissement initial est inutile dans la décision",
+        "Le projet couvre l’investissement et la rémunération correspondant au taux retenu"
+      ],
+      "answer": 3,
+      "explanation": "Une VAN nulle est un équilibre en valeur actualisée. Elle ne signifie ni absence de flux ni résultat comptable nul année par année."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un investissement coûte 20 000 € et sa VAN calculée est 3 000 €. Un étudiant annonce une valeur actuelle des flux de 3 000 €. Quelle confusion commet-il ?",
+      "options": [
+        "Il confond le solde net avec la valeur actuelle des encaissements nets futurs",
+        "Il confond le taux annuel et la durée",
+        "Il applique une actualisation excessive au seul investissement",
+        "Il suppose que tout investissement est payé à crédit"
+      ],
+      "answer": 0,
+      "explanation": "La VAN est obtenue après déduction du coût initial. La valeur actuelle des flux futurs est ici de 23 000 €, et non le seul excédent de 3 000 €."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux projets exclusifs ont la même durée et le même risque. Leurs flux nets sont évalués au même taux ; A a une VAN de 4 000 € et B de 6 000 €. Sans autre contrainte, que privilégie le critère VAN ?",
+      "options": [
+        "A, car une VAN plus faible suppose moins de risque",
+        "B, car sa création de valeur actualisée est supérieure",
+        "A et B simultanément même s’ils sont exclusifs",
+        "Le projet ayant le plus fort chiffre d’affaires, non fourni"
+      ],
+      "answer": 1,
+      "explanation": "La comparaison sur le critère VAN favorise B avec les hypothèses données. Une VAN plus faible ne démontre pas un risque plus faible."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un projet annonce une VAN positive à partir d’une croissance des ventes jamais justifiée. Quelle faiblesse faut-il traiter en premier ?",
+      "options": [
+        "L’impossibilité pour une VAN d’être positive",
+        "La nécessité de supprimer les flux les plus éloignés sans justification",
+        "La crédibilité des flux prévisionnels qui déterminent le résultat",
+        "L’égalité obligatoire de tous les encaissements annuels"
+      ],
+      "answer": 2,
+      "explanation": "Le calcul peut être exact tout en reposant sur des prévisions fragiles. La décision demande d’examiner et de tester ces hypothèses."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux projets créent la même VAN, mais l’un nécessite davantage de liquidités immédiates. Quel élément doit compléter leur comparaison ?",
+      "options": [
+        "Uniquement le signe commun de leur VAN",
+        "L’hypothèse que toute VAN positive finance automatiquement le départ",
+        "La suppression du projet au coût initial le plus faible",
+        "La capacité à financer les décaissements aux dates nécessaires"
+      ],
+      "answer": 3,
+      "explanation": "La création de valeur ne garantit pas la disponibilité des ressources initiales. Les contraintes de financement complètent le critère de VAN."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle dépense correspond à un coût irrécupérable à exclure des flux différentiels d’une décision actuelle ?",
+      "options": [
+        "Une étude déjà payée, non remboursable et inchangée quel que soit le choix",
+        "Une maintenance future déclenchée uniquement par le projet",
+        "Un recrutement futur nécessaire à l’exploitation du projet",
+        "Un achat supplémentaire encore évitable si le projet est refusé"
+      ],
+      "answer": 0,
+      "explanation": "Un coût déjà engagé et identique dans tous les choix ne change plus la décision. Les dépenses futures évitables peuvent, elles, être pertinentes."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une étude de faisabilité payée l’an dernier n’est remboursable dans aucun cas. Le dirigeant souhaite investir « pour ne pas la perdre ». Quel raisonnement financier est approprié ?",
+      "options": [
+        "Ajouter deux fois l’étude au coût futur pour compenser son paiement",
+        "Comparer seulement ce que l’acceptation ou le refus change encore",
+        "Accepter tout projet couvrant seulement le montant de l’étude",
+        "Considérer le paiement historique comme un encaissement futur"
+      ],
+      "answer": 1,
+      "explanation": "L’étude est un coût irrécupérable. Poursuivre un mauvais projet ne récupère pas ce coût ; la comparaison doit porter sur les conséquences encore modifiables."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un budget impute au nouveau projet une part du loyer du siège, pourtant inchangé avec ou sans ce projet. Pourquoi cette imputation n’est-elle pas automatiquement un flux différentiel ?",
+      "options": [
+        "Toute charge de siège est forcément encaissée",
+        "Tout loyer est toujours un investissement initial",
+        "Une répartition comptable ne prouve pas une variation de décaissement",
+        "Seules les dépenses passées entrent dans une VAN"
+      ],
+      "answer": 2,
+      "explanation": "La pertinence vient de la différence entre scénarios. Une quote-part de coût fixe inchangé ne représente pas une sortie de trésorerie supplémentaire."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le projet entraînerait l’achat d’une licence logicielle qui peut encore être évité en cas de refus. Comment traiter cette licence dans l’analyse différentielle ?",
+      "options": [
+        "L’exclure car elle figure dans un devis",
+        "La traiter comme un coût déjà irrécupérable",
+        "L’ajouter uniquement si le résultat comptable devient positif",
+        "Retenir le décaissement futur au moment où il interviendra"
+      ],
+      "answer": 3,
+      "explanation": "Une dépense encore évitable et causée par le projet change les flux futurs. Son inscription dans un devis ne la rend pas irrécupérable."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une étude déjà payée de 3 000 € est irrécupérable. Accepter le projet exige encore 10 000 € immédiatement et 2 000 € de BFR initial, tous deux évitables si le projet est refusé. Quel décaissement différentiel initial retenir ?",
+      "options": [
+        "12 000 €",
+        "15 000 €",
+        "10 000 €",
+        "9 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Les flux encore modifiés sont l’investissement de 10 000 € et le besoin du cycle de 2 000 €. L’étude passée ne change pas entre les scénarios.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 10000
+            },
+            {
+              "value": 2000
+            }
+          ]
+        },
+        "expected": 12000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Dans les flux d’un projet, comment se traduit une hausse du BFR à une date donnée ?",
+      "options": [
+        "Par un encaissement égal au chiffre d’affaires",
+        "Par une consommation de ressources à cette date",
+        "Par une diminution automatique du coût de la machine",
+        "Par un résultat comptable négatif de même montant"
+      ],
+      "answer": 1,
+      "explanation": "L’augmentation du BFR immobilise du financement dans le cycle. Elle constitue un emploi de trésorerie, pas directement une perte comptable."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un analyste prévoit une récupération totale du BFR final, alors qu’une partie des stocks sera invendable et que certaines créances sont compromises. Quelle correction s’impose ?",
+      "options": [
+        "Maintenir la récupération intégrale car elle est obligatoire dans toute VAN",
+        "Supprimer tout BFR initial pour équilibrer le calcul",
+        "Justifier une récupération réaliste poste par poste",
+        "Assimiler tous les stocks à des disponibilités certaines"
+      ],
+      "answer": 2,
+      "explanation": "Le dénouement du cycle n’assure pas la récupération intégrale de chaque poste. La valeur finale doit refléter les encaissements réellement attendus."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le BFR nécessaire passe de 4 000 € à 6 500 € au début de la deuxième année du projet. Quel emploi de trésorerie supplémentaire faut-il retenir à cette date ?",
+      "options": [
+        "6 500 €",
+        "10 500 €",
+        "4 000 €",
+        "2 500 €"
+      ],
+      "answer": 3,
+      "explanation": "Seule la variation est un nouveau flux à cette date : 6 500 − 4 000 = 2 500 €. Retenir le BFR total compterait à nouveau le besoin antérieur.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 6500
+            },
+            {
+              "value": 4000
+            }
+          ]
+        },
+        "expected": 2500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les créances générées par le projet seront encaissées après l’arrêt de la production. Comment les prendre en compte dans les prévisions ?",
+      "options": [
+        "Placer leur récupération à la date attendue d’encaissement",
+        "Les considérer encaissées immédiatement au début du projet",
+        "Les omettre uniquement parce que la production est arrêtée",
+        "Les traiter comme une deuxième vente lors du paiement"
+      ],
+      "answer": 0,
+      "explanation": "La fin de production n’est pas nécessairement la fin du cycle de trésorerie. Les créances se dénouent à leurs échéances prévues, sans nouvelle vente."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau déduit chaque année la totalité du BFR alors que seul son accroissement doit être financé. Quelle erreur en résulte ?",
+      "options": [
+        "Il oublie systématiquement les décaissements initiaux",
+        "Il compte plusieurs fois le financement d’un besoin déjà constitué",
+        "Il transforme toute créance en bénéfice",
+        "Il surestime toujours les encaissements clients"
+      ],
+      "answer": 1,
+      "explanation": "Le BFR est un stock ; son financement supplémentaire correspond à une variation. Déduire le stock complet à répétition double compte le besoin existant."
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un projet saisonnier crée un BFR élevé au printemps, récupéré en été. Une VAN annuelle masque ce pic. Quel contrôle complémentaire faut-il effectuer ?",
+      "options": [
+        "Une suppression du pic puisque la récupération est prévue",
+        "Une comparaison des seuls résultats comptables annuels",
+        "Un calendrier plus fin des besoins et des encaissements",
+        "Une répartition égale de tous les encaissements sans justification"
+      ],
+      "answer": 2,
+      "explanation": "Une valeur annuelle nette peut masquer un déficit temporaire. Un calendrier mensuel ou saisonnier vérifie si les besoins peuvent être financés avant récupération."
+    }
+  ]
+}

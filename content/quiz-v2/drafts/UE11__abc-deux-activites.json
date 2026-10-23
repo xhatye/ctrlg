@@ -1,0 +1,565 @@
+{
+  "module": "UE11",
+  "chapter": "abc-deux-activites",
+  "sourceHash": "1d407a27757ec9152c4853b814a4b67d143d777bb34bea84f4edbd31a362623e",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux produits ont le même volume mais l’un nécessite de nombreuses petites commandes. Pourquoi une activité de traitement des commandes peut-elle les charger différemment ?",
+      "options": [
+        "Les coûts de traitement sont répartis également dès lors que les volumes de pièces sont identiques.",
+        "Le nombre de pièces par commande doit remplacer le nombre de commandes sans examiner le travail administratif.",
+        "La même quantité physique implique le même nombre de lignes et de validations administratives.",
+        "Les consommations de commandes peuvent différer malgré un même volume physique."
+      ],
+      "answer": 3,
+      "explanation": "L’ABC relie les charges aux activités consommées. Le nombre de pièces ne résume pas forcément les tâches de commande ; deux produits de même volume peuvent solliciter différemment ces ressources."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "L’activité de commande coûte 12 000 €. Le modèle compte une commande simple pour une unité équivalente et une complexe pour trois. Il y a 30 simples et 10 complexes. Quel coût imputer à une seule commande complexe ?",
+      "options": [
+        "300 €",
+        "600 €",
+        "200 €",
+        "1 200 €"
+      ],
+      "answer": 1,
+      "explanation": "Le volume équivalent est 30 × 1 + 10 × 3 = 60. Son coût est 12 000 / 60 = 200 € par unité équivalente. Une commande complexe en consomme trois et reçoit 600 €. Compter les quarante commandes comme homogènes ignore la pondération fournie.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 12000
+                },
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 30
+                    },
+                    {
+                      "op": "*",
+                      "args": [
+                        {
+                          "value": 10
+                        },
+                        {
+                          "value": 3
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 3
+            }
+          ]
+        },
+        "expected": 600,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un salarié coûte 10 000 € sur la période. Le relevé de temps affecte 60 % de sa ressource au traitement des commandes, le reste aux réglages. Les commandes totalisent 20 unités équivalentes, dont 3 pour A. Quel coût de ce salarié est imputé à A au titre des commandes ?",
+      "options": [
+        "1 500 €",
+        "1 800 €",
+        "900 €",
+        "300 €"
+      ],
+      "answer": 2,
+      "explanation": "Il faut d’abord affecter la ressource à l’activité : 10 000 × 60 % = 6 000 €. Les vingt unités de commandes reçoivent donc 300 € chacune. A en consomme trois, soit 900 €. Affecter tout le salaire aux commandes ignorerait la première étape.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 10000
+                    },
+                    {
+                      "value": 0.6
+                    }
+                  ]
+                },
+                {
+                  "value": 20
+                }
+              ]
+            },
+            {
+              "value": 3
+            }
+          ]
+        },
+        "expected": 900,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "OpenStax, calcul des coûts par activités",
+          "url": "https://openstax.org/books/principles-managerial-accounting/pages/6-3-calculate-activity-based-product-costs"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un produit consomme 30 commandes à 40 € chacune et huit réglages à 100 € chacun. Quel total de ces deux activités lui est affecté ?",
+      "options": [
+        "2 000 €",
+        "1 200 €",
+        "800 €",
+        "5 320 €"
+      ],
+      "answer": 0,
+      "explanation": "La charge des commandes est 30 × 40 = 1 200 € et celle des réglages 8 × 100 = 800 €. Le total des deux activités est donc 2 000 €, sans préjuger des éventuelles charges directes hors périmètre.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 30
+                },
+                {
+                  "value": 40
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 8
+                },
+                {
+                  "value": 100
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une commande très complexe demande beaucoup plus de travail qu’une commande simple, mais le modèle les suppose équivalentes sans examen. Quel risque faut-il étudier ?",
+      "options": [
+        "Le nombre de commandes suffit à mesurer exactement le travail, même si la durée de traitement diffère fortement.",
+        "Le chiffre d’affaires de la commande doit remplacer sa complexité sans vérifier leur relation.",
+        "Le coût moyen de traitement peut être retenu comme coût individuel exact de chaque commande, simple ou complexe.",
+        "L’hétérogénéité peut fragiliser l’inducteur simple ; une mesure ou pondération justifiée peut être nécessaire."
+      ],
+      "answer": 3,
+      "explanation": "Un coût par occurrence suppose une homogénéité ou équivalence pertinente. Des poids peuvent améliorer la représentation, mais ils doivent être définis et vérifiés plutôt qu’attribués sans données."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le modèle indique qu’un demi-réglage représente un poids d’activité équivalent, non une opération physique fractionnée. Comment interpréter une consommation de 2,5 ?",
+      "options": [
+        "Comme l’affirmation que 2,5 opérations physiques distinctes ont été réalisées, indépendamment de leur durée.",
+        "Comme 2,5 unités équivalentes selon la convention de mesure donnée.",
+        "Comme deux opérations, en arrondissant toute consommation pondérée à l’entier inférieur.",
+        "Comme 2,5 heures de travail, même si aucune durée horaire n’est fournie par la convention."
+      ],
+      "answer": 1,
+      "explanation": "Les inducteurs peuvent être des unités équivalentes pondérées. La convention du dossier précise leur sens ; il ne faut pas confondre ce poids de ressources avec une opération physique indivisible."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le même numéro de commande est importé deux fois dans les consommations d’un produit. Quel effet faut-il contrôler ?",
+      "options": [
+        "Une hausse du taux par commande, calculée en ajoutant le duplicat au volume total et en conservant les charges.",
+        "Une baisse de l’imputation parce qu’un même identifiant doit répartir son coût entre les deux lignes sans autre contrôle.",
+        "Une possible double imputation de l’activité de commande.",
+        "Une augmentation des commandes réelles, le nombre de lignes importées faisant foi même avec un identifiant répété."
+      ],
+      "answer": 2,
+      "explanation": "Si le taux est appliqué à une consommation dupliquée, le produit reçoit deux fois la charge liée à la même occurrence. Il faut contrôler les identifiants et la population avant l’affectation."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les charges ABC de commandes et de réglages sont ajoutées aux matières directes. Quelle vérification garantit un périmètre cohérent ?",
+      "options": [
+        "S’assurer que les matières ne sont pas déjà incluses dans les charges d’activités additionnées.",
+        "Vérifier seulement que les matières sont directes, sans examiner les charges comprises dans les activités.",
+        "Ajouter les matières en direct même si elles sont déjà dans une activité, au motif que les deux présentations sont différentes.",
+        "Retirer toutes les matières directes parce que les activités contiennent des frais indirects."
+      ],
+      "answer": 0,
+      "explanation": "L’addition demande des composantes définies sans double compte. Un coût d’activités ne comprend pas automatiquement toutes les charges ; il faut connaître ce qui est déjà incorporé et ce qui reste à ajouter."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un produit reçoit 1 200 € de charges de commandes à un taux de 40 € par unité équivalente. Quelle consommation de commandes le calcul suppose-t-il ?",
+      "options": [
+        "48 000 commandes",
+        "1 160 commandes",
+        "0,0333 commande",
+        "30 commandes"
+      ],
+      "answer": 3,
+      "explanation": "On inverse l’imputation : consommation = charge affectée / taux = 1 200 / 40 = 30 unités équivalentes. Ce contrôle vérifie les données sans confondre montant monétaire et nombre d’occurrences.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 1200
+            },
+            {
+              "value": 40
+            }
+          ]
+        },
+        "expected": 30,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une baisse du nombre de réglages réduit les charges imputées au produit avec un taux donné. Peut-on en déduire une économie de trésorerie immédiate du même montant ?",
+      "options": [
+        "Oui, la baisse d’imputation permet de réduire du même montant le budget de décaissement sans examiner les contrats.",
+        "Non, il faut examiner les ressources et dépenses réellement modifiées.",
+        "Oui, un coût d’activité par réglage est nécessairement un tarif fournisseur décaissé à chaque réglage.",
+        "Non, une baisse d’activité ne peut affecter aucun paiement, même si certains frais sont facturés à l’opération."
+      ],
+      "answer": 1,
+      "explanation": "Une imputation moyenne décrit un coût selon un modèle. La dépense réellement évitée dépend des ressources et engagements ; la réduction d’un inducteur ne prouve pas une économie monétaire immédiate identique."
+    },
+    {
+      "id": "q11",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "L’ABC montre un déficit sur X. Certains clients achètent X uniquement dans une offre groupée avec Y, qui est rentable. Les coûts évitables de X ont déjà été examinés. Quelle autre limite faut-il traiter avant d’utiliser son seul déficit pour décider son arrêt ?",
+      "options": [
+        "La marge actuelle de Y prouve que ses ventes resteront identiques après suppression de X.",
+        "Le déficit de X mesure déjà la perte éventuelle des ventes de Y, même si aucun effet commercial n’a été modélisé.",
+        "La demande de Y peut dépendre du maintien de X ; l’effet sur les ventes liées et leur contribution doit être évalué.",
+        "La perte de chiffre d’affaires de X suffit à représenter tout effet commercial sur le reste de la gamme."
+      ],
+      "answer": 2,
+      "explanation": "Un produit peut contribuer à une offre globale et soutenir les ventes d’autres références. Son coût propre n’intègre pas automatiquement les conséquences commerciales de sa suppression. Il faut donc analyser les ventes liées en plus des économies réellement évitables.",
+      "references": [
+        {
+          "title": "ACCA, activity-based management : limites des décisions d’abandon",
+          "url": "https://www.accaglobal.com/gb/en/student/exam-support-resources/professional-exams-study-resources/p5/technical-articles/activity-based-management.html"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un produit est arrêté pour supprimer toutes les charges d’activités qu’il recevait, sans analyse des ressources partagées. Quel préalable manque ?",
+      "options": [
+        "Distinguer charges imputées et coûts réellement évitables si le produit disparaît.",
+        "Retrancher du résultat toutes les charges imputées au produit comme économies certaines, y compris les ressources maintenues.",
+        "Réaffecter les charges aux produits restants puis traiter cette réaffectation comptable comme une économie globale.",
+        "Écarter du diagnostic les effets sur les autres ventes puisque le coût ABC du produit est calculé séparément."
+      ],
+      "answer": 0,
+      "explanation": "Le calcul décrit une consommation attribuée. Une décision d’arrêt exige de déterminer ce qui est effectivement supprimé, transféré ou maintenu ; l’allocation ne prouve pas seule l’évitabilité."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une fabrication de 20 unités peut être organisée en deux lots de 10 ou un lot de 20. Chaque lot déclenche un réglage imputé 100 €, tandis que l’usinage coûte 2 € par unité. À ces taux inchangés, quelle réduction du coût imputé obtient-on en regroupant les lots ?",
+      "options": [
+        "40 €",
+        "140 €",
+        "200 €",
+        "100 €"
+      ],
+      "answer": 3,
+      "explanation": "Le volume total reste de vingt unités : le coût d’usinage ne change pas. Le nombre de réglages passe de deux à un, d’où une baisse d’imputation de (2 − 1) × 100 = 100 €. Cette baisse d’imputation n’établit pas seule une économie décaissée.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 2
+                },
+                {
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 100,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "OpenStax, calcul des coûts par activités",
+          "url": "https://openstax.org/books/principles-managerial-accounting/pages/6-3-calculate-activity-based-product-costs"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Un réglage doit être effectué une fois au lancement de chaque série, que celle-ci comporte dix ou cent unités. À quel niveau d’activité ce réglage correspond-il le plus directement ?",
+      "options": [
+        "Au niveau de chaque unité produite.",
+        "Au niveau du lot ou de la série lancée.",
+        "Au niveau de la référence produit indépendamment du nombre de séries.",
+        "Au niveau du site entier indépendamment des fabrications."
+      ],
+      "answer": 1,
+      "explanation": "Le déclencheur décrit est le lancement d’une série : le coût relève du niveau lot. Il n’est pas engagé pour chacune des unités ni seulement une fois par référence ou par site. Cette distinction évite de confondre volume physique et fréquence des lancements.",
+      "references": [
+        {
+          "title": "OpenStax, calcul des coûts par activités",
+          "url": "https://openstax.org/books/principles-managerial-accounting/pages/6-3-calculate-activity-based-product-costs"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un client dégage une contribution de 500 € après les coûts des produits achetés, mais avant son assistance dédiée. L’ABC lui attribue huit interventions à 70 € chacune, non comprises dans les 500 €. Quelle contribution reste après cette assistance ?",
+      "options": [
+        "500 €",
+        "60 €",
+        "−60 €",
+        "−560 €"
+      ],
+      "answer": 2,
+      "explanation": "Le service dédié consomme 8 × 70 = 560 €. La contribution après assistance est 500 − 560 = −60 €. Une contribution positive sur produits n’implique donc pas une contribution positive après prise en compte des activités spécifiques au client.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 500
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 8
+                },
+                {
+                  "value": 70
+                }
+              ]
+            }
+          ]
+        },
+        "expected": -60,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "ACCA, activity-based management",
+          "url": "https://www.accaglobal.com/gb/en/student/exam-support-resources/professional-exams-study-resources/p5/technical-articles/activity-based-management.html"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un produit de 100 unités reçoit 1 200 € d’activité commandes et 800 € d’activité réglages, sans autre coût dans cette question. Quel coût d’activités par unité représente ce total ?",
+      "options": [
+        "20 € par unité",
+        "12 € par unité",
+        "8 € par unité",
+        "2 000 € par unité"
+      ],
+      "answer": 0,
+      "explanation": "Le total d’activités est 2 000 € ; rapporté aux 100 unités, il vaut 20 € par unité. Ce résultat ne doit pas être appelé coût complet de tout périmètre si d’autres charges restent hors calcul.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 1200
+                },
+                {
+                  "value": 800
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 20,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "L’analyse des activités révèle de nombreuses doubles saisies dans un service. La direction veut une action d’ABM opérationnel, portant sur l’efficience du processus existant plutôt que sur le portefeuille de clients. Quelle action correspond à ce choix ?",
+      "options": [
+        "Abandonner un segment de clients dont le coût de service paraît élevé.",
+        "Modifier la gamme de produits offerte aux seuls clients rentables.",
+        "Fixer une majoration commerciale pour sélectionner les clients à conserver.",
+        "Réorganiser le flux de données pour éviter les saisies répétées, puis suivre le temps et la qualité du traitement."
+      ],
+      "answer": 3,
+      "explanation": "L’ABM opérationnel vise l’amélioration de la manière de réaliser les activités. Supprimer des ressaisies et suivre leurs effets relève de cette logique. Choisir les clients ou la gamme relève plutôt de décisions stratégiques de portefeuille.",
+      "references": [
+        {
+          "title": "ACCA, activity-based management",
+          "url": "https://www.accaglobal.com/gb/en/student/exam-support-resources/professional-exams-study-resources/p5/technical-articles/activity-based-management.html"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un modèle ABC prévoit deux étapes : répartir d’abord les salaires entre activités selon le temps consacré, puis les activités entre produits selon les commandes consommées. Quelle utilisation des mesures respecte ces deux niveaux ?",
+      "options": [
+        "Utiliser les commandes des produits pour répartir les salaires entre activités sans relever les temps.",
+        "Utiliser les temps pour affecter les salaires aux activités, puis les commandes pour affecter le coût de ces activités aux produits.",
+        "Utiliser uniquement les temps consacrés aux activités pour attribuer le même coût à tous les produits.",
+        "Répartir les salaires directement entre produits puis ajouter à nouveau le coût complet des activités."
+      ],
+      "answer": 1,
+      "explanation": "Les mesures n’ont pas le même rôle : le temps décrit la consommation d’une ressource par les activités, tandis que les commandes décrivent ici la consommation des activités par les produits. Inverser ou ignorer un niveau modifie le modèle annoncé.",
+      "references": [
+        {
+          "title": "OpenStax, calcul des coûts par activités",
+          "url": "https://openstax.org/books/principles-managerial-accounting/pages/6-3-calculate-activity-based-product-costs"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux modèles donnent des coûts de produit différents, l’un par heures de production, l’autre par commandes et réglages. Quelle démarche est rigoureuse ?",
+      "options": [
+        "Choisir le taux le plus faible en supposant qu’il correspond au modèle le plus efficient.",
+        "Retenir le modèle avec le plus d’activités comme preuve suffisante de sa validité économique.",
+        "Comparer les activités, hypothèses et consommations représentées avant d’interpréter l’écart.",
+        "Imputer la différence à la seule productivité du personnel sans examiner les clés des deux modèles."
+      ],
+      "answer": 2,
+      "explanation": "Des conventions différentes peuvent répartir différemment les mêmes ressources. L’analyse doit examiner ce qu’elles représentent et leur pertinence ; une différence de résultat n’est pas à elle seule une faute de calcul."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le coût d’un produit augmente après une mesure plus fine de ses nombreuses petites séries. Que peut-on affirmer sans autre donnée ?",
+      "options": [
+        "Le nouveau modèle peut révéler une consommation auparavant masquée, sans prouver une hausse réelle de dépense de l’entreprise.",
+        "La hausse du coût imputé prouve que les ressources totales décaissées ont augmenté dans la même proportion.",
+        "La réaffectation du coût impose une hausse identique de prix avant toute analyse de demande ou de marge.",
+        "Les autres produits conservent nécessairement toutes leurs imputations initiales même si le total des charges est inchangé."
+      ],
+      "answer": 0,
+      "explanation": "Une réallocation peut changer les coûts attribués sans changer les ressources totales. Il faut distinguer effet de méthode, consommation réelle et décision de tarification, qui exige d’autres éléments."
+    },
+    {
+      "id": "q21",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une activité comprend des commandes non attribuées à un produit et le modèle ne décrit pas leur traitement. Quelle information faut-il rendre explicite ?",
+      "options": [
+        "Le traitement des coûts des commandes non attribuées comme coût nul, au seul motif de leur absence de code produit.",
+        "Le seul total monétaire des activités, considéré suffisant pour conclure que toute consommation est imputée.",
+        "L’affectation des commandes non identifiées aux autres produits au prorata de leur coût déjà calculé, sans préciser la convention.",
+        "Le périmètre des charges et volumes, ainsi que la convention appliquée aux consommations non affectées."
+      ],
+      "answer": 3,
+      "explanation": "Une affectation incomplète peut modifier les coûts des produits et le rapprochement total. La convention doit être documentée pour savoir ce qui est couvert ou laissé à part, sans l’effacer silencieusement."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une analyse de coût ABC est prête mais les volumes d’inducteurs reposent sur des estimations très incertaines. Quelle présentation convient ?",
+      "options": [
+        "Présenter uniquement le scénario central parce que l’exactitude des formules supprimerait l’incertitude des volumes.",
+        "Conserver les hypothèses, expliquer les incertitudes et examiner la sensibilité des conclusions pertinentes.",
+        "Reprendre les estimations historiques sans préciser que les volumes actuels peuvent être différents.",
+        "Choisir la moyenne des volumes envisagés et la présenter comme consommation réellement mesurée."
+      ],
+      "answer": 1,
+      "explanation": "Une opération arithmétique correcte ne supprime pas l’incertitude des entrées. La portée des conclusions doit rester proportionnée à la qualité des mesures et aux hypothèses de consommation retenues."
+    }
+  ]
+}

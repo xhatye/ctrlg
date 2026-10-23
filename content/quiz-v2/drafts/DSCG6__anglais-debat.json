@@ -1,0 +1,338 @@
+{
+  "module": "DSCG6",
+  "chapter": "anglais-debat",
+  "sourceHash": "7c080cca4733e0a07664dc07e57d24c70868836dccfbfda46627ed2e699a5fb6",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A panel prioritises accurate and timely payroll over a small saving. A bidder is cheaper, but its error-correction procedure has not been reviewed. Which position addresses the stated priority?",
+      "options": [
+        "I would defer selection until we assess how payroll errors would be corrected within the payment deadline.",
+        "I would select on fees alone, treating correction after payday as equivalent to timely payroll.",
+        "I would assess only error prevention and omit the process for correcting errors that still arise.",
+        "I would use average processing speed as sufficient evidence that all corrections would meet payday."
+      ],
+      "answer": 0,
+      "explanation": "La priorité concerne exactitude et échéance, y compris lorsqu’une erreur subsiste. Prix seul, prévention seule et vitesse moyenne ne vérifient pas les corrections avant la paie."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The proposal moves payroll from employees of the firm to an external provider in the same city. Which description uses the terms accurately?",
+      "options": [
+        "The firm proposes moving payroll abroad because the employer changes.",
+        "The firm proposes outsourcing; the facts do not indicate offshoring to another country.",
+        "The firm proposes offshoring because any external provider is offshore.",
+        "The firm proposes insourcing because the provider remains in the same city."
+      ],
+      "answer": 1,
+      "explanation": "Outsourcing désigne le recours à un prestataire externe ; offshoring implique une localisation à l’étranger. La proximité géographique ne transforme pas l’externalisation en internalisation."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A bidder offers a named payroll contact with a two-hour response commitment during payday incidents. The internal team currently has no incident contact. Which reason supports considering this feature?",
+      "options": [
+        "It makes the company’s approval of payroll inputs unnecessary.",
+        "It shows that the bidder’s standard fee covers each potential compensation claim.",
+        "It provides a defined route for escalating time-critical payroll incidents.",
+        "It establishes that payroll calculations will contain no errors before submission."
+      ],
+      "answer": 2,
+      "explanation": "Un contact nommé assorti d’un engagement de réponse rend l’escalade identifiable. Il ne prouve ni l’absence d’erreur, ni la disparition de la validation interne, ni une couverture indemnitaire non indiquée."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The draft says, “We should outsource payroll so that internal managers no longer need to approve employee changes.” The proposal explicitly leaves approval with those managers. Which revision is supported?",
+      "options": [
+        "We should outsource approval even though the proposal leaves it internal.",
+        "We should describe processing and approval as one transferred task without distinction.",
+        "We may treat the external provider as having approved changes once it receives the file.",
+        "We may outsource processing while retaining internal approval of employee changes."
+      ],
+      "answer": 3,
+      "explanation": "La position doit respecter le partage des responsabilités donné. Externaliser le traitement ne transfère pas par lui-même l’approbation des modifications, expressément conservée en interne."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A response says, “In my view, the provider has passed a security audit,” but no audit result is available. What should change?",
+      "options": [
+        "Treat the audit result as a factual claim requiring evidence, not as a matter of opinion.",
+        "Keep the statement because in my view converts an unknown fact into a supported opinion.",
+        "Replace in my view with certainly to make the missing evidence clearer.",
+        "Treat the existence of the proposal as equivalent to a completed security audit."
+      ],
+      "answer": 0,
+      "explanation": "Un marqueur d’opinion ne permet pas d’inventer un résultat factuel. La réussite à un audit doit être établie ; la proposition commerciale ne remplace pas cette preuve."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A colleague says, “I am concerned about access to salary data, not calculation accuracy.” Which reply addresses the actual objection?",
+      "options": [
+        "We should explain why the payment amounts are checked before submission.",
+        "We should review who can access salary data and how that access is authorised and monitored.",
+        "We should show that the provider calculates tax deductions accurately.",
+        "We should compare the provider’s error rates with last year’s payroll errors only."
+      ],
+      "answer": 1,
+      "explanation": "L’objection porte sur l’accès à des données, pas sur le calcul des montants. Les contrôles d’habilitation et de suivi répondent directement au point exprimé ; les autres réponses traitent la précision de paie."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "The panel objects that payroll could stop if the provider’s service fails. Which paraphrase checks that concern faithfully?",
+      "options": [
+        "Are you concerned about errors introduced when data are transferred to the provider?",
+        "Are you concerned about access rights to confidential records while the service operates?",
+        "Are you concerned about maintaining payroll if the provider becomes unavailable?",
+        "Are you concerned about who approves adjustments before the file is processed?"
+      ],
+      "answer": 2,
+      "explanation": "L’objection porte sur la continuité en cas d’indisponibilité. Transfert, habilitations et approbation sont d’autres risques de paie mais ne reformulent pas celui soulevé."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A panel member says, “Let me put it another way: I am asking who can authorise an emergency payroll run.” What is the opening phrase doing?",
+      "options": [
+        "Withdrawing the original question and accepting the proposal without a response.",
+        "Announcing an answer on behalf of the authorising manager.",
+        "Changing the subject from payroll authority to the annual contract price.",
+        "Signalling a reformulation intended to make the same concern clearer."
+      ],
+      "answer": 3,
+      "explanation": "Put it another way annonce une reformulation. Le membre précise son interrogation sans la retirer, répondre à la place du responsable ni passer au prix."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A colleague asks whether the provider can handle an unusually complex monthly payroll. You reply with its average number of clients. Why is the reply incomplete?",
+      "options": [
+        "Client count does not show its capability for the complexity of this payroll.",
+        "Client count is irrelevant to any assessment of an outsourcing provider.",
+        "An average client count proves a maximum payroll complexity.",
+        "The question concerns annual fees rather than the capacity to process payroll."
+      ],
+      "answer": 0,
+      "explanation": "Le nombre de clients peut informer la taille, mais pas directement la capacité à traiter les particularités visées. Le qualifier d’inutile dans tout contexte serait excessif ; il ne répond simplement pas au test de complexité demandé."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which reply tests a disagreement about the proposed payroll cut-off time without putting words in the other person’s mouth?",
+      "options": [
+        "Would you accept the deadline if we stopped discussing late changes?",
+        "Which part of the proposed cut-off would make it difficult for your team to submit changes?",
+        "So you are saying that your team cannot meet any deadline?",
+        "Do you agree that the deadline is reasonable because the provider proposed it?"
+      ],
+      "answer": 1,
+      "explanation": "La question ouverte cherche la difficulté précise. Les autres formulations exagèrent la position adverse, demandent l’accord au motif de l’auteur ou ferment le débat au lieu de clarifier l’objection."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A board member asks, “Who remains accountable for checking the employee data we send?” Which answer is directly responsive?",
+      "options": [
+        "The provider calculates payroll, so no input-check responsibility needs to be assigned.",
+        "The input checker can be inferred solely from who holds the software licence.",
+        "The draft assigns that input check to the HR manager before the file is sent.",
+        "The provider checks calculated outputs, making that review identical to checking inputs before transmission."
+      ],
+      "answer": 2,
+      "explanation": "La question vise le contrôle du fichier d’entrée et son responsable dans le projet. Cette tâche se distingue du calcul externalisé, de la licence et du contrôle des sorties."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A colleague says the portal is easy to use. You agree, but access logging has not been checked. Which response makes a focused concession?",
+      "options": [
+        "I agree the portal is easy to use. Therefore, its access monitoring has been verified.",
+        "I agree the portal is easy to use. In other words, access logs are not needed.",
+        "I agree the portal is easy to use. For instance, monitoring has already prevented unauthorised access.",
+        "I agree the portal is easy to use. However, we still need to examine its access logs and monitoring."
+      ],
+      "answer": 3,
+      "explanation": "La concession sur l’ergonomie ne démontre pas la surveillance des accès. However ajoute cette vérification manquante ; les autres liens présentent une déduction ou une preuve absente."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A reviewer says, “I accept the cost estimate, but not the proposed service level.” What is the extent of the reviewer’s agreement?",
+      "options": [
+        "The reviewer accepts one element while disputing another.",
+        "The reviewer approves the outsourcing proposal as a whole.",
+        "The reviewer rejects the cost estimate and service level together.",
+        "The reviewer treats the service level as already tested successfully."
+      ],
+      "answer": 0,
+      "explanation": "L’accord porte sur l’estimation de coût seulement. But marque une réserve explicite sur le niveau de service ; on ne peut pas transformer cet accord partiel en approbation globale."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "“For the sake of argument, let us assume migration takes one week.” What status is given to the one-week duration?",
+      "options": [
+        "It is accepted as an audited fact already measured by the speaker.",
+        "It is provisionally assumed to explore the reasoning, without being established as a fact.",
+        "It becomes a binding contractual commitment by being discussed.",
+        "It is dismissed as impossible and excluded from the discussion."
+      ],
+      "answer": 1,
+      "explanation": "For the sake of argument admet provisoirement une hypothèse pour examiner ses conséquences. Ce n’est ni une observation auditée, ni un engagement contractuel, ni le rejet de cette hypothèse."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A participant begins, “Granted, the migration would be demanding.” In this discussion, what does granted signal?",
+      "options": [
+        "The participant confirms that the migration has already been completed.",
+        "The participant rejects the existence of any migration difficulty.",
+        "The participant concedes a valid difficulty before developing the rest of the argument.",
+        "The participant announces that funding for migration has formally been awarded."
+      ],
+      "answer": 2,
+      "explanation": "Employé ainsi en tête de phrase, granted signifie que le locuteur admet un point. Il ne décrit pas ici une subvention accordée, une réalisation passée ou le rejet de l’objection."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Asked who would own payroll data on exit, a bidder replies that its annual fee is low. A panel member responds, “That is beside the point.” What is being challenged?",
+      "options": [
+        "The grammatical form of the answer, irrespective of relevance.",
+        "The truth of the fee amount, regardless of the question asked.",
+        "The legality of charging an annual fee under the contract.",
+        "The relevance of the fee answer to the question about data ownership."
+      ],
+      "answer": 3,
+      "explanation": "Beside the point signifie hors du sujet pertinent. Le membre ne réfute pas nécessairement le tarif ; il souligne qu’il ne répond pas à la question sur les données."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A manager asks, “If we were to shorten the contract, how would that affect your fee?” What is the manager doing?",
+      "options": [
+        "Exploring a hypothetical contract change and asking about its consequence.",
+        "Confirming that the contract has already been shortened.",
+        "Instructing the supplier to reduce the fee by a specified amount.",
+        "Reporting that a shorter contract previously caused a fee reduction."
+      ],
+      "answer": 0,
+      "explanation": "If we were to présente une éventualité à examiner. La question demande son effet possible sur le tarif, sans constater de modification réalisée ni imposer une baisse chiffrée."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Read: “Do not transfer live payroll unless access controls have been verified.” Which action is consistent with that instruction when verification is still pending?",
+      "options": [
+        "Transfer live payroll if the supplier’s fee has been approved, regardless of access verification.",
+        "Keep live payroll untransferred while completing access-control verification.",
+        "Transfer live payroll now and treat subsequent verification as satisfying the instruction retrospectively.",
+        "Treat a planned verification date as equivalent to completed verification."
+      ],
+      "answer": 1,
+      "explanation": "Unless introduit ici une condition qui doit être remplie avant le transfert. Une vérification à venir ou une validation du prix ne remplace pas une vérification des accès accomplie."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A director says, “I would have thought the exit clause deserved closer scrutiny.” What stance does this wording most naturally convey?",
+      "options": [
+        "A firm instruction that no further scrutiny may occur.",
+        "Confirmation that an independent review has approved the clause.",
+        "A tactfully expressed view that the clause merits closer examination.",
+        "An unconditional promise that the clause will be removed."
+      ],
+      "answer": 2,
+      "explanation": "I would have thought peut atténuer un avis ou une critique. Le directeur suggère un examen plus attentif ; la tournure ne prouve pas qu’une revue a eu lieu et ne promet pas une suppression."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "“Let us not conflate the provider’s responsibility with our own oversight duties.” What does conflate mean here?",
+      "options": [
+        "Allocate separate responsibilities explicitly between the parties.",
+        "Remove one party’s duties once the other accepts a task.",
+        "Disclose the existence of the responsibilities to a third party.",
+        "Treat two distinct responsibilities as if they were the same."
+      ],
+      "answer": 3,
+      "explanation": "Conflate signifie confondre ou fondre des notions distinctes. L’invitation préserve la distinction entre responsabilité et supervision, sans supprimer l’une ni simplement la divulguer."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Both bidders have left and no further questions can be answered today. “We may as well review the written proposals now.” What does may as well suggest?",
+      "options": [
+        "Reviewing them now is a reasonable course given the lack of a better available alternative.",
+        "A new legal permission has been obtained after an earlier refusal.",
+        "The review is compulsory under a rule quoted by the speaker.",
+        "The review is only a remote possibility that the speaker recommends avoiding."
+      ],
+      "answer": 0,
+      "explanation": "May as well propose une action raisonnable dans les circonstances, notamment faute de meilleure alternative. Il ne marque ni une nouvelle autorisation, ni une obligation, ni un conseil d’éviter l’action."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Before a pilot, the panel wants an explicit rule for when to proceed, stop or seek remediation. Which proposal best makes the recommendation assessable?",
+      "options": [
+        "Treat completion of the pilot as the sole evidence that each required outcome has been achieved.",
+        "Define accuracy and deadline criteria, record results against them, and specify the decision route for a failed criterion.",
+        "Wait until results are known before choosing the criteria that best fit them.",
+        "Use the provider’s preferred success description without agreeing how it will be measured."
+      ],
+      "answer": 1,
+      "explanation": "Des critères préalables et une conduite à tenir en cas d’échec rendent la recommandation vérifiable. Choisir les critères après résultat ou confondre achèvement du test et réussite ne permet pas d’évaluer la décision de façon cohérente."
+    }
+  ]
+}

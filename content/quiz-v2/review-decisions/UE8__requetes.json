@@ -1,0 +1,248 @@
+{
+  "sourceHash": "a9d5590f07b73fc4949cf8398d76e59ba4d8761f1db49980ef1b8c3443ed553a",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "feb9b97858f0e4a0105c672528a4b3c4aafc058359597520518cc7231484dd26",
+      "selected": 3,
+      "reason": "WHERE sélectionne les lignes qui respectent un prédicat avant l’agrégation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "ab1838f4f186662292eca6e1c0054f56ec3d3189b797eb4460cb729f08883a78",
+      "selected": 3,
+      "reason": "Au moins cent inclut la borne cent : le comparateur est supérieur ou égal.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "a77a99692d84c17989a46adee6aa3a4327e17d57fba0585572c5c40be87bbda8",
+      "selected": 0,
+      "reason": "Une ligne par client correspond à un regroupement sur son identifiant.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "b2af22abc559934f74cdf77c2d0d25f7e46b3a46cb299a6734178ee5c3493dad",
+      "selected": 0,
+      "reason": "Sans lien de jointure, chaque commande est combinée avec tous les clients.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "f916a534e936a4293e81fefbeb6668a3caaddc6445a37de799fce731bff5bb22",
+      "selected": 2,
+      "reason": "B2 doit suivre la ligne tandis que $F$1 fige la cellule du taux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "6a36e40407e54147810068ac9f4ce2f5ed186945077b878de5faa15d6606a117",
+      "selected": 0,
+      "reason": "Le montant appartient à la facture et doit être compté une fois par facture, non une fois par détail.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "34eb674c6b825e7d46aa699e536ccb8d8706c341d3d475e6618c952ade14d9ee",
+      "selected": 1,
+      "reason": "Un seuil sur le total client s’applique aux groupes, pas à chaque commande individuelle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "18b5892cbe4f18de11dc1257902e579ba392982f8eeac8b9d39cf9756ecda863",
+      "selected": 0,
+      "reason": "La clé primaire client correspond à la référence client de la commande.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "75365ddd6054bbf275cba40e079eb62589777020bfde90e535b1b80d7d09bde4",
+      "selected": 2,
+      "reason": "La référence F1 relative devient F2 ; il faut fixer la cellule de taux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "84e83acdb9eb4d59ebbce96a43b0d311c5d092c44aac4cee0c8633966c6473db",
+      "selected": 2,
+      "reason": "Le total n’est interprétable qu’après définition des faits et vérification de leur non-duplication.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "eccbc9e4ca357eda1c6cb3fe01dd6108a510b44eb7ce50db03241eb0a4797cc1",
+      "selected": 3,
+      "reason": "DISTINCT sur les valeurs supprime aussi deux montants égaux provenant de factures différentes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "edba32657dec79a015f07b63db36488204918acb665026415e7475c04754b057",
+      "selected": 1,
+      "reason": "À droite, la colonne B figée reste B et C non figée devient D ; les lignes restent 2 et 1.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "3f33089cda82b5998fc37261b63946fe6398c323b656c6731cfcdcad261b6900",
+      "selected": 2,
+      "reason": "Avec OR, une commande impayée de 300 satisfait le seuil et entre à tort dans le résultat.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "825a1495951187451651fc95db64f31242feff9f3b7bbfccbc1041de21a3543a",
+      "selected": 1,
+      "reason": "La moyenne simple donne le même poids à chaque ligne indépendamment de la quantité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "90d750018490c9c112f765e50096eb128c88ab7b988cff5a9e2b70d8cc6f9a44",
+      "selected": 0,
+      "reason": "Une multiplication des correspondances selon les clés explique une hausse de lignes après jointure.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "b5d81dbc6970aa825153dd6c9db15aafcf99747c46e8df3342186ffab9b4355b",
+      "selected": 0,
+      "reason": "Les deux signes dollar figent la colonne D et la ligne 4.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "4bc45bfe43ae46b955fac690ddf97cbdb0082c02640e4f0a6bf06db1ec5514d6",
+      "selected": 1,
+      "reason": "Le mois doit filtrer les lignes de vente avant le total par vendeur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "53ef63021694e74d7e34134779997ccfc7aaf40b23e930d348e20b16740bc9c5",
+      "selected": 0,
+      "reason": "Les calculs doivent utiliser le même périmètre temporel avant comparaison.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "52d6f279a2442854ea6d49161978f6ffcdabb861adbd5bd221fccdb4d638c3f0",
+      "selected": 2,
+      "reason": "Les trois commandes donnent trois lignes, dont deux portant le premier client.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "113d3729bdf7e877e5338c8f911d771d03b01653618ff3743400a8a3c770655d",
+      "selected": 1,
+      "reason": "$A2 bloque la colonne A et conserve la ligne relative.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "c88fc4a7eb71e8adabcab186b4f56086f67a8b0b65a1cba5052b407a66440c7c",
+      "selected": 3,
+      "reason": "La granularité définit l’objet représenté par chaque ligne, donc le regroupement et les faits additionnés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "6ae67eb3ede63658a3b35fc41bfd5af3bbe976a0aaca31bf8f88713ae01df6db",
+      "selected": 1,
+      "reason": "Un petit jeu connu avec un attendu indépendant vérifie réellement la logique de la requête.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

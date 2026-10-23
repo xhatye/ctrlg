@@ -1,0 +1,248 @@
+{
+  "sourceHash": "e718895d0011dee4e1d6953de9a7acea26a3447e9c769f24579dfad2073d6e4c",
+  "reviewer": "codex-accounting-finance-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "a0923da87222223f8a1179375fd489ef03aa2abfbf0315450f91948e0ac74ef6",
+      "selected": 1,
+      "reason": "L’activité implicite est dix-huit mille divisés par quinze euros par heure, soit mille deux cents heures.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "078de81a4d107cc819064441338cc8f2993ea0d58b1c7977cbdc10ea4d4c157d",
+      "selected": 0,
+      "reason": "Le lot consomme un dixième des neuf cents heures et reçoit donc mille huit cents sur dix-huit mille de charges.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "cdc803e18307b463f0365cd4f5aa00055543d5e957553e71af1449d8135e7948",
+      "selected": 3,
+      "reason": "Le coût direct est le total douze mille six cents moins trois mille six cents indirects, soit neuf mille euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "3893af2aa376d938983a5e44c357e33fab80a4ed56c034b1d24f6036564cb34a",
+      "selected": 2,
+      "reason": "Les douze mille de coût de lot divisés par quatre cents unités donnent trente euros par unité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "d76f1879ccb230e26ba864ea825808859e15362e9c79dca2162ea984968beedc",
+      "selected": 0,
+      "reason": "Le taux doit conserver son unité horaire ou expliquer sa conversion par produit.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "a38a34c721f8c30503d27b8ad25b0fa34e84be50a3ca50e385cff4871f864e3b",
+      "selected": 1,
+      "reason": "Les pièces de durées différentes ne remplacent pas les heures consommées.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "55434903e1674ca738a6e6959c78ce00700d16db6d639d4c0aa4f14cb7ef2648",
+      "selected": 1,
+      "reason": "Un coût unitaire de50 pour80vendues attribue4000euros aux ventes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "d708b028bc1a08f222bf9c69a71e4ec2f534c4807439932d29bad0486699ee63",
+      "selected": 0,
+      "reason": "À taux positif fixé, davantage de temps augmente le coût indirect unitaire.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "7fbac0749f248d1476dfc06d4134cf14c35a13050780b03da41bd8966dafc6e1",
+      "selected": 2,
+      "reason": "Le taux normal9000/300 vaut30, imputé sur200heures donc6000.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "90bebd6a1a600dd30c1d251daca477a4d39cb0bae244117bf4ab41590c3e94c0",
+      "selected": 2,
+      "reason": "Cent quatre-vingts minutes valent trois heures ; trois fois vingt donnent soixante euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "b4b7f6e7b1c67569e9d4ff2528306bbbb2195d6e5dc0bc1f8f7278b3bfc3b07f",
+      "selected": 2,
+      "reason": "Des heures différentes créent une part indirecte différente malgré directs égaux.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "efb465e2add765fc3c331a5b00fc36a70440915b20ea2b8e87d4f8ad1007d5f4",
+      "selected": 1,
+      "reason": "Le coût et le nombre d’unités doivent correspondre au même lot.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "5bd3a219137b53ecc1496a93fea2f9034616f5db0b9d7baa4b4676de62266d89",
+      "selected": 0,
+      "reason": "A=980+0,1(196+0,2A), donc0,98A=999,6 etA=1020.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "07f22aedba2a41ab138e74ebea62c2ce86e1441e0b4407df7ed59c4582d688d8",
+      "selected": 2,
+      "reason": "La consommation totale excédentaire impose rapprochement des relevés.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "79e3da9cead3ae468074cae1d8d3dd79d60940bcbe56a1b91b80896f8a587a7a",
+      "selected": 0,
+      "reason": "Le prix de vente ne modifie pas seul les ressources de fabrication.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "ef49cd59e87e98b4421e7bca24eca4c47f77446776dca31a089f96ba4cda6c19",
+      "selected": 0,
+      "reason": "Deux cents fois trente donnent six mille de total ; moins mille six cents indirects laissent quatre mille quatre cents directs.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "baf3c357497f9b4e837c3fecfb45bfd1ce2de23640c9a298f7c814e453b954ba",
+      "selected": 3,
+      "reason": "Le coût d’unité d’œuvre est une moyenne par activité du centre.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "a6f1f14d03dcbdaa9507dead8a73b6396e7d5130056b78c450408a2488054ca6",
+      "selected": 3,
+      "reason": "Les400 non imputés ne déterminent seuls ni prix ni sous-activité ; coût moyen et coût marginal diffèrent.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "23718a7f715ea03a18135bb24bab6b8155ab99e76854f8f25bc053fa379f0358",
+      "selected": 2,
+      "reason": "L’égalité de répartition ne démontre pas la causalité de la clé retenue.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "fbe7fbe513d17eb555fa9eacb38e33fd066c1a9e1924aa8a21d877b6cee25c07",
+      "selected": 1,
+      "reason": "À total constant, un plus petit dénominateur accroît le coût par unité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "2ba15e5aaef8fe6444c7e326deed15801a4d4ec80828a38b2d99b6e1b0ab2e48",
+      "selected": 3,
+      "reason": "La comparaison exige des périmètres de charges cohérents.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "94e33decab5d7dcceee2bcdec48ccd45443e365ebb5bdaec1c76e0fa79bfb5dd",
+      "selected": 1,
+      "reason": "Une réorganisation peut rendre la clé ancienne moins représentative.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "sourceHash": "de4af0a7630d0e26c4dd7f09d655c297feb3545a59d0c27f130b6d6767d093df",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "e6153987a6d0189c892d49e3ad81329f9b591fc4b1033f8cd16bdba4b32b82b4",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "VE par action théorique = 1 200 000 / 20 000 = 60, sans dette nette retranchée."
+    },
+    {
+      "id": "q02",
+      "digest": "64e547366b0908a6abffccca3dce37358bfa34d72ff97c8ce1bfaa8df5a30cf0",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "VE inclut les apporteurs de dette nette ; diviser directement surestime le prix actionnaire dans ce schéma."
+    },
+    {
+      "id": "q03",
+      "digest": "8464e14280ba4904b5d8dfbfafb779a8b8b76a03959fce17319e2afdbe9507c6",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Trésorerie = dette brute 500 000 − dette nette 380 000 = 120 000."
+    },
+    {
+      "id": "q04",
+      "digest": "94d43f50558e6c4e5dcf2bd0211a049ffeadce31f3910d6378039774407fc19d",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "VE = fonds propres 720 000 + dette nette 180 000 = 900 000."
+    },
+    {
+      "id": "q05",
+      "digest": "22d63404337278e95d6998eefd8aa585a2baa3cedd0cbf0c974feee2f50c0ff7",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Valeur totale = 45 × 30 000 = 1 350 000."
+    },
+    {
+      "id": "q06",
+      "digest": "b41d22b87fb60df4257b6abe0e99175b077d3b1dc09073116adfef94e9ca340a",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Il faut convertir les milliers en euros avant un prix par action. Dette ajoutée aux actions et actions en rendement sont des distracteurs absurdement incompatibles en unités. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q07",
+      "digest": "d0af18fcfb48d80c97bab20d39a407cf5fd0fe314de2f8ade9a581a9d425380f",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Dette et cash baissent ensemble de cent ; leur différence reste inchangée."
+    },
+    {
+      "id": "q08",
+      "digest": "fee87cd7bdce630e08afcd80811034ea2a6bf0f992f7ba305a792a60cae9da64",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Dette et cash augmentent de deux cents ; dette nette et passage simplifié aux fonds propres inchangés."
+    },
+    {
+      "id": "q09",
+      "digest": "9ad8add5e9821d9c1c4039ab8dad4b2069fd4b80d70d5bc5a16b444223286da6",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Valeur totale fixe divisée par 20 000 donne 50 par action."
+    },
+    {
+      "id": "q10",
+      "digest": "ff993258f70d456870d2e42e76fd79ab01a9e902f03c418205c38fefaf26028c",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Valeur actionnaire unitaire = 80 − 18 = 62."
+    },
+    {
+      "id": "q11",
+      "digest": "4f23ad44b392d1ec78a5e69566e635f352198bc48b9f0a31cc96b513060ed5fb",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Cash déduit deux fois minore la dette nette et gonfle les fonds propres. Nombre d’actions réduit d’un montant est absurde. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q12",
+      "digest": "6539cbfa3f3b1b621f5a15676fd6b1c15a89b23c3b65b3e9e4dea45f55d52fef",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La différence négative du modèle ne suffit pas à fixer un prix d’action négatif ; examiner droits et conventions."
+    },
+    {
+      "id": "q13",
+      "digest": "4794bcb285d305fa2f2fdffb2ea6bdeaed26b6024ccf20f07dba4acbe64fada4",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Il faut le même périmètre de droits au numérateur et au dénominateur ; les titres hypothétiques sont exclus."
+    },
+    {
+      "id": "q14",
+      "digest": "23a9a8b4f52d20f79dbb1ecdd7c3c83bc7fbd5a5c3beaac7143975abba18f425",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "VE et dette nette unitaires doivent être ramenées au même nombre de titres avant soustraction."
+    },
+    {
+      "id": "q15",
+      "digest": "c05da1c8ae8674dc6ca449ac1dcd3a646461dabea42159406f91156d6087c398",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Hausse par action = (690 000 − 600 000)/15 000 = 6."
+    },
+    {
+      "id": "q16",
+      "digest": "6e4e2a1cdc03cffda0f81c8c946da0e83502b5d056015aaaf77f5d09c60f9169",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le prix et la dette nette doivent être contemporains de la distribution. Retrancher la distribution du nombre d’actions confond unités. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q17",
+      "digest": "46e7da0194a62cfc7601ba3902728915ff39310368baa41c08d4d3f50f43614c",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une allocation uniforme suppose des droits comparables. Dette nette nulle et nombre de titres fixant l’actualisation sont des distracteurs hors raisonnement. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q18",
+      "digest": "1161065dbd06e2ffb1148963d48f9d2d12ebc4ea37919a29a9fd6e49074ed941",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Sans dette nette ni autre ajustement, VE et fonds propres coïncident, y compris par action."
+    },
+    {
+      "id": "q19",
+      "digest": "eef542fbfb0fa52799867968aeec76bf7f30fae10814126a1e244c760550b5ce",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le passage montre les ajustements financiers. Garantie de transaction future et flux remplacés par seuls remboursements sont des alternatives éloignées. Révision résolue de nouveau : les alternatives restent dans le périmètre du calcul, de ses unités ou de l’interprétation financière et présentent des erreurs distinctes."
+    },
+    {
+      "id": "q20",
+      "digest": "47e473950c3e16f557e589f273779d7359caccf9892c9abd1a54e9603a587b10",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Écart unitaire = dette nette/action = (600 000−100 000)/25 000 = 20."
+    },
+    {
+      "id": "q21",
+      "digest": "d734bd54f298684bfc45ec1fdc02e74b39fc2391d5125ee1afcdc479ac75bdbc",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Dans la convention proportionnelle donnée, participation = 15 % des fonds propres."
+    },
+    {
+      "id": "q22",
+      "digest": "f01dc13a56bb2855f8a644d76c45242c73741bf7237032c21ff240765cc1a3b5",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le prix actionnaire fois titres doit reconstituer les fonds propres, pas VE avec dette nette positive."
+    }
+  ]
+}

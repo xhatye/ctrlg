@@ -1,0 +1,515 @@
+{
+  "module": "UE10",
+  "chapter": "estimations-evenements",
+  "sourceHash": "02227fb1452b42d624a0d84c9387f04530fe29b25d82c148b862549e977a4f91",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier observe 30 réclamations confirmées mais prévoit 45 réclamations futures. Les deux nombres sont saisis sans distinction comme faits acquis. Quel classement est plus rigoureux ?",
+      "options": [
+        "Séparer la donnée observée de la prévision et de ses hypothèses",
+        "Traiter toute cellule numérique comme une observation certaine",
+        "Remplacer les réclamations confirmées par le budget",
+        "Supprimer la prévision dès qu’elle diffère du passé"
+      ],
+      "answer": 0,
+      "explanation": "Une estimation utilise faits et hypothèses de natures différentes. Leur identification permet de discuter le risque et la pertinence du modèle.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une estimation de perte est copiée d’une activité ancienne dont la population et les conditions diffèrent. Quel contrôle de pertinence manque ?",
+      "options": [
+        "La seule validation formelle du montant ancien sans mise à jour du périmètre",
+        "L’adéquation des données et hypothèses au risque actuel",
+        "La moyenne des taux anciens sans comparer les populations",
+        "Le seul rapprochement du montant proposé avec celui provisionné l’année précédente"
+      ],
+      "answer": 1,
+      "explanation": "Des données passées peuvent être utiles sans être directement transposables. Le périmètre et les changements de circonstances doivent être examinés.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le modèle pédagogique d’un risque prévoit 40 dossiers à un coût moyen de 75 € par dossier. Quel montant résulte de ces seules hypothèses ?",
+      "options": [
+        "115 €",
+        "40 €",
+        "3 000 €",
+        "1 875 €"
+      ],
+      "answer": 2,
+      "explanation": "La mesure du modèle est quantité prévue × coût moyen : 40 × 75 = 3 000 €. Cette arithmétique ne démontre pas la validité des deux hypothèses.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 40
+            },
+            {
+              "value": 75
+            }
+          ]
+        },
+        "expected": 3000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux experts donnent des montants différents fondés sur des horizons et populations différents. Quelle étape doit précéder une moyenne de leurs conclusions ?",
+      "options": [
+        "Faire immédiatement la moyenne arithmétique des deux chiffres",
+        "Retenir systématiquement le plus grand montant",
+        "Choisir celui qui permet le meilleur bénéfice",
+        "Rendre comparables les périmètres et comprendre leurs hypothèses"
+      ],
+      "answer": 3,
+      "explanation": "Une moyenne de mesures d’objets différents peut être trompeuse. La comparabilité du champ et de l’horizon précède la combinaison d’estimations.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Une estimation exacte à l’euro près est-elle nécessairement une mesure certaine ?",
+      "options": [
+        "Non, la précision affichée ne supprime pas l’incertitude des hypothèses",
+        "Oui, si les données incertaines ont été intégralement intégrées dans une formule exacte",
+        "Oui, dès lors que deux analystes reprennent les mêmes hypothèses sans les réexaminer",
+        "Non, seule la valeur centrale doit être remplacée par le maximum possible sans autre examen"
+      ],
+      "answer": 0,
+      "explanation": "Un modèle peut produire un nombre précis à partir de paramètres incertains. Il faut distinguer précision de calcul et degré de confiance.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client a déjà accumulé des impayés à la clôture. Sa procédure collective est annoncée en janvier. Quelle recherche précède la qualification de cette information ?",
+      "options": [
+        "La seule date de l’annonce supposée définir une difficulté entièrement nouvelle",
+        "Le lien avec les difficultés existant à la date de clôture",
+        "Le seul total des ventes de janvier",
+        "La suppression de toutes les créances antérieures sans analyse"
+      ],
+      "answer": 1,
+      "explanation": "Une annonce postérieure peut éclairer une condition déjà présente. Les faits et leur chronologie doivent être reliés avant de choisir le traitement.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un jugement reçu avant l’établissement des comptes fixe le coût d’un litige né avant clôture. Le préparateur l’écarte uniquement car il est daté après clôture. Que manque-t-il ?",
+      "options": [
+        "La création d’un nouveau litige pour chaque document reçu",
+        "La preuve que tout événement ultérieur peut être ignoré",
+        "L’examen de l’obligation antérieure que le jugement précise",
+        "Le remplacement du coût par les seuls frais déjà payés"
+      ],
+      "answer": 2,
+      "explanation": "La date du document ne décide pas seule de la naissance du passif. Le PCG prévoit la prise en compte de passifs antérieurs connus avant l’établissement des comptes.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le courrier tardif décrit des faits remontant à décembre, mais aucune date d’exécution n’est confirmée. Quel document aide à établir le lien avec la clôture ?",
+      "options": [
+        "Le seul cachet de réception du courrier, assimilé à la date des faits",
+        "La seule date de rédaction du courrier, sans examen de l’exécution",
+        "Le seul calendrier prévu initialement, sans vérifier la réalisation effective",
+        "Les pièces de réalisation ou échanges datés concernant les faits décrits"
+      ],
+      "answer": 3,
+      "explanation": "Le rattachement nécessite une chronologie probante. Des documents en lien avec l’événement aident à distinguer un fait antérieur d’une situation nouvelle.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une obligation antérieure est estimée à 6 000 €. Une information pertinente reçue avant établissement des comptes porte cette estimation à 6 800 €. Quel changement de montant faut-il analyser ?",
+      "options": [
+        "800 €",
+        "12 800 €",
+        "6 000 €",
+        "6 800 €"
+      ],
+      "answer": 0,
+      "explanation": "La nouvelle mesure dépasse l’ancienne de 6 800 − 6 000 = 800 €. La qualification de cette information détermine le traitement applicable.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 6800
+            },
+            {
+              "value": 6000
+            }
+          ]
+        },
+        "expected": 800,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une hausse de coût révélée en janvier est attribuée sans preuve à décembre parce que cela paraît plus prudent. Quel contrôle est nécessaire ?",
+      "options": [
+        "Choisir toujours l’exercice où le résultat est le plus élevé",
+        "Établir la date et la cause des conditions qui ont changé",
+        "Traiter toute hausse comme un paiement déjà effectué",
+        "Additionner la hausse aux deux exercices pour éviter une omission"
+      ],
+      "answer": 1,
+      "explanation": "La prudence ne justifie pas un rattachement arbitraire. Le dossier doit montrer ce qui existait déjà et ce qui résulte d’un événement ultérieur.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client solvable à la clôture subit après celle-ci un sinistre nouveau sans indice antérieur, dans le cas fourni. Quelle distinction est importante ?",
+      "options": [
+        "La date du sinistre doit être déplacée à la clôture pour être prudente",
+        "Tout événement nouveau efface l’évaluation antérieure",
+        "La situation nouvelle ne prouve pas une perte déjà existante à la clôture",
+        "Le sinistre n’appelle jamais aucune information supplémentaire"
+      ],
+      "answer": 2,
+      "explanation": "Il faut distinguer preuve d’une condition antérieure et naissance d’un risque nouveau. L’information à fournir peut demander un examen même sans ajustement automatique passé.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un événement nouveau important ne conduit pas à ajuster un montant de clôture dans le cadre retenu. Le rapport le déclare donc sans aucune importance pour les comptes. Quelle erreur de raisonnement apparaît ?",
+      "options": [
+        "L’absence d’écriture permet de conclure à l’absence de fait à documenter",
+        "Le caractère nouveau suffit à écarter toute information sur les circonstances",
+        "La date postérieure de l’événement suffit à valider les explications déjà rédigées avant sa survenue",
+        "L’absence d’ajustement ne tranche pas à elle seule l’information à communiquer"
+      ],
+      "answer": 3,
+      "explanation": "Mesure comptabilisée et information sont distinctes. Un fait peut rester pertinent pour la compréhension de la situation malgré l’absence de modification automatique du montant arrêté.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’événement survient après clôture mais avant l’établissement des comptes et peut affecter fortement l’activité future. Quelle démarche est adaptée ?",
+      "options": [
+        "Identifier sa nature, son importance et les règles de traitement ou d’information applicables",
+        "L’écarter sans lecture parce qu’il ne porte pas la date de clôture",
+        "Comptabiliser toute sa prévision future comme perte certaine de l’ancien exercice",
+        "Le remplacer par une moyenne sectorielle sans faits propres"
+      ],
+      "answer": 0,
+      "explanation": "Le traitement demande une analyse de l’événement et du cadre. Ni l’ignorance générale ni l’anticipation de tous les coûts futurs n’est une méthode suffisante.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux événements sont regroupés : l’un confirme un défaut ancien et l’autre résulte d’une décision commerciale nouvelle. Pourquoi faut-il les séparer ?",
+      "options": [
+        "Un document unique impose un traitement identique à tous ses objets",
+        "Leur relation avec la clôture et donc leur analyse comptable diffèrent",
+        "La décision nouvelle doit être ajoutée deux fois au défaut ancien",
+        "Le défaut ancien devient nouveau parce qu’il figure dans une note tardive"
+      ],
+      "answer": 1,
+      "explanation": "Le regroupement administratif ne supprime pas la nature distincte des faits. L’analyse doit préserver leur date et leur lien avec la situation de clôture.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel élément distingue principalement une information confirmant une condition existante d’un événement réellement nouveau ?",
+      "options": [
+        "La seule date de réception du document annonçant les faits",
+        "La seule date de chiffrage du montant par l’expert",
+        "L’origine temporelle et causale de la situation concernée",
+        "La seule date à laquelle la direction prend connaissance du dossier"
+      ],
+      "answer": 2,
+      "explanation": "La date d’annonce peut être identique alors que les conditions sous-jacentes sont différentes. Il faut reconstruire les faits, pas seulement lire la date du courrier.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’estimation ancienne était fondée sur des données raisonnables ; une technologie nouvelle modifie l’usage attendu. Quelle qualification doit être examinée ?",
+      "options": [
+        "Une erreur de saisie initiale déduite du seul écart avec l’usage désormais prévu",
+        "Un changement de méthode alors que seule la durée d’usage estimée varie",
+        "Une correction rétrospective d’une faute initiale présumée du seul fait de la nouvelle technologie",
+        "Un changement d’estimation lié à de nouvelles circonstances"
+      ],
+      "answer": 3,
+      "explanation": "Une nouvelle circonstance peut modifier une estimation sans révéler une faute dans les données initiales. La qualification guide le traitement dans le cadre applicable.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La facture d’origine indiquait 20 000 €, mais un coût de 2 000 € a été saisi par erreur. Une note qualifie la correction de simple révision d’usage. Quel fait contredit cette qualification ?",
+      "options": [
+        "L’erreur de saisie porte sur une information déjà disponible à l’origine",
+        "La simple modification d’un montant suffit à prouver un changement d’estimation",
+        "Le fait que la correction soit découverte plus tard rend la donnée initiale nouvelle",
+        "Le changement de période de calcul transforme la faute de copie en révision d’usage"
+      ],
+      "answer": 0,
+      "explanation": "Une donnée observée mal saisie diffère d’une hypothèse raisonnable révisée. Le dossier doit qualifier le changement à partir de sa cause.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une facture exacte de 18 500 € a été saisie à 15 800 €, sans autre élément du cas. Quel écart de donnée initiale doit être expliqué ?",
+      "options": [
+        "34 300 €",
+        "2 700 €",
+        "18 500 €",
+        "15 800 €"
+      ],
+      "answer": 1,
+      "explanation": "La différence de saisie est 18 500 − 15 800 = 2 700 €. Elle provient d’une donnée antérieure erronée, pas d’une nouvelle prévision de consommation.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 18500
+            },
+            {
+              "value": 15800
+            }
+          ]
+        },
+        "expected": 2700,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La durée d’un actif est révisée. Quel élément permet de distinguer estimation nouvelle et correction d’erreur ?",
+      "options": [
+        "Le seul fait que la nouvelle annuité soit plus faible",
+        "La préférence pour un résultat stable",
+        "Les informations connues lors du premier choix et celles apparues ensuite",
+        "Le nombre de fichiers contenant le nouveau chiffre"
+      ],
+      "answer": 2,
+      "explanation": "Le motif du changement et l’état d’information à chaque date sont essentiels. Le sens favorable ou défavorable au résultat ne suffit pas à qualifier l’événement.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le rédacteur applique un traitement IFRS de correction d’erreur à des comptes PCG sans examiner leurs règles. Quel préalable manque ?",
+      "options": [
+        "Appliquer IFRS au seul motif que l’erreur est significative sans examiner le PCG",
+        "Conserver le traitement IFRS dès lors que le montant corrigé est le même",
+        "Déduire de la qualification commune d’erreur que les effets de présentation sont identiques",
+        "Identifier le référentiel et ses dispositions sur l’erreur concernée"
+      ],
+      "answer": 3,
+      "explanation": "Les règles de traitement doivent correspondre au cadre des comptes. Une similitude de vocabulaire ne prouve pas que toutes les écritures et présentations sont identiques.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une nouvelle estimation est retenue, mais son effet n’est pas isolé de celui d’une erreur de facture corrigée en même temps. Quel suivi améliorer ?",
+      "options": [
+        "Séparer les causes et les calculs pour appliquer les traitements pertinents",
+        "Traiter l’écart net comme une seule estimation parce que les corrections sont simultanées",
+        "Appliquer à l’ensemble le traitement de l’erreur parce qu’une facture est concernée",
+        "Classer l’ensemble selon le seul écart le plus élevé, sans ventilation"
+      ],
+      "answer": 0,
+      "explanation": "Des causes différentes peuvent produire des écarts simultanés. Leur ventilation permet de contrôler qualification, calcul et portée des corrections.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel compte rendu rend un changement de mesure intelligible ?",
+      "options": [
+        "Le seul tableau des montants avant et après sans décrire la cause de l’écart",
+        "Les données anciennes, les informations nouvelles, le motif, le cadre et l’effet chiffré",
+        "La seule date de découverte, considérée comme suffisante pour qualifier l’écart",
+        "Le seul traitement de l’exercice courant sans identifier les informations initialement disponibles"
+      ],
+      "answer": 1,
+      "explanation": "La justification relie la variation à ses causes et à ses règles. Un chiffre nouveau isolé ne démontre ni erreur passée ni estimation correctement révisée.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles122-4 à122-6 et513-4",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    }
+  ]
+}

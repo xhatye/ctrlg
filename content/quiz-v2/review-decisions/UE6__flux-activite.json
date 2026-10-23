@@ -1,0 +1,248 @@
+{
+  "sourceHash": "e18225a4d308000db5e817520b460c75a74bbd82d2874fc822021c8536ce938c",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "7265bb0ecb9cf4f22fd08e8c52b3fde5f36b38616dd812322750ad9115deda2f",
+      "selected": 2,
+      "reason": "Le résultat incorpore des charges et produits non monétaires ainsi que des décalages de paiement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "472971178b6027ac9eeecdd21bc6759fec747b4ce0c8ea64a8e8a01ab393f2c3",
+      "selected": 2,
+      "reason": "La dotation sans paiement se neutralise par ajout au résultat, et non par une seconde déduction.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "79459aad275caacf2c9f9db562448cced496276db69def3ce454e565957c4ed8",
+      "selected": 1,
+      "reason": "La variation des créances explique le passage d’une vente comptabilisée à un encaissement différé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "15b56e0bbca9e35cbb5c7bf86a7f5ee1ca6662e533177c85fb35deb8793d34d1",
+      "selected": 2,
+      "reason": "Une hausse du BFR consomme de la trésorerie ; le flux d’activité simplifié doit la retrancher de la CAF.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "48c2ad75c5933564cf8871e0f5383bcb99205b0da4db6eb3ac9766cd2dea426b",
+      "selected": 2,
+      "reason": "Un produit non encaissable présent dans le résultat doit être soustrait pour ne pas créer de recette fictive.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "1d21a7c49c1c5cbb5348f0da70b78524d5a6f9da157a13b7df31868a6378515a",
+      "selected": 0,
+      "reason": "45 000 − 9 000 = 36 000 euros de flux d’activité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "e63043755d8e6dc594ea62b0d4c1299ae066def6ba7d6da4c708f42fb0803c9c",
+      "selected": 2,
+      "reason": "Le BFR baisse de 6 000 ; 28 000 − (−6 000) donne 34 000 euros.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "65163381820ffb8dfb06f080555660d5be85a8e44b271a8384d8142a607b7794",
+      "selected": 1,
+      "reason": "La hausse du besoin est 20 000 − 17 000 = 3 000 euros, distincte de son stock final.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "143aa4b4ceabbdab15aa8782b6ce8bffabe9b8bb81bf1c732ee2bce0da514829",
+      "selected": 2,
+      "reason": "Un besoin moins négatif augmente numériquement ; cette réduction de ressource consomme des fonds.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "bce33af56c7e3a23a8f88b7c110d2286f0f669cd2497ccfcc18984d0ede0e3ee",
+      "selected": 1,
+      "reason": "La convention initial moins final est l’opposé de final moins initial ; il faut coordonner définition et signe.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "832ca24a91f4fc28fb8870de8857b0ae8a15f7d74b2fc0c8b3169951d7218be7",
+      "selected": 3,
+      "reason": "Le cadre donné distingue paiement de machine en investissement et prêt reçu en financement.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "a974a330ef0f8e3ae1fb72ea783b24a604b54b451164f6dd8c8f7f27b6cc00d8",
+      "selected": 3,
+      "reason": "La classification imposée doit être suivie ; on ne peut déduire une interdiction universelle de toute autre convention.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "5ebbc4af605971e88e3839d2bb5ed90ee33511b9bba05cdaf2f77e650af09ed1",
+      "selected": 2,
+      "reason": "Sans règlement durant la période, aucun paiement ne doit être créé dans les mouvements de trésorerie ; l’opération non monétaire se documente.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "2229ef1f139a25da4afa6bd0becd21145fc2d6514970dcdaa636aea0b81a2a93",
+      "selected": 0,
+      "reason": "Les flux d’emprunt appartiennent au financement dans le cadre annoncé, et non aux ventes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "96a53ca8a29dfe88e42872a97d921d82b892214c057fd03a0c697b2b45166231",
+      "selected": 1,
+      "reason": "Le prêt unique ajouté dans deux catégories gonfle deux fois les ressources ; un simple reclassement conserverait une seule occurrence.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "7695cccf169d20371f16e930bafccebf33d62d120309c38b788175f940176d9d",
+      "selected": 2,
+      "reason": "30 000 − 42 000 + 18 000 = 6 000 euros de variation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "7927e6ec6cf8bcf09b9e10e64b6b93f8986054a31237e11d8c7e2183a6890f57",
+      "selected": 1,
+      "reason": "7 000 − 11 000 = −4 000 euros de solde final.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "132a1227e943c0a3a3e8743e1fd82a007d8bafd16c471f01537c5fa45c113787",
+      "selected": 2,
+      "reason": "La variation observée est 14 000 − 5 000 = 9 000 ; les 7 000 connus laissent +2 000 à expliquer.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "6f1e9982ba79c13c4f97f7d1cc44e5e9f2f543cbabff77915ddb1be46858d156",
+      "selected": 1,
+      "reason": "Une erreur de classement peut déplacer un flux sans changer la somme qui réconcilie les soldes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "1560980023ffc8b75fdd6b54ac5916dd54029d729b179135a5d062bf3ff96db7",
+      "selected": 3,
+      "reason": "Un écart impose de rechercher les mouvements et hypothèses qui l’expliquent avant de modifier les soldes.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "3054d40c6eb4369f68e5ac4f366b6f7c0631f3fed3d5eeca89b9fd8fb1776355",
+      "selected": 2,
+      "reason": "La variation est la différence solde final moins solde initial ; sommer les positions ou inverser l’ordre serait incorrect.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "b6e6e821e4b90ab984949edc7f31c38ff40e2bb33ce61e257bb3f096fc084348",
+      "selected": 0,
+      "reason": "Une réserve initiale supérieure à la baisse laisse un solde final positif.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

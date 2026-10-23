@@ -1,0 +1,338 @@
+{
+  "module": "DSCG7",
+  "chapter": "memoire-problematique",
+  "sourceHash": "aa5dff86e0aaa6d8e2ea9df2b5d630a0e07a53fd538ccda3cb3fe9605ea6a3ae",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La direction veut diminuer le coût de traitement, tandis que les équipes craignent une hausse des reprises. Le mémoire doit étudier cet arbitrage. Quelle question met cette tension au centre ?",
+      "options": [
+        "Dans quelles conditions la réduction du coût de traitement reste-t-elle compatible avec la maîtrise des reprises ?",
+        "Comment atteindre le coût minimal en tenant la qualité pour inchangée avant de l’avoir mesurée ?",
+        "Quels arguments permettent de défendre le contrôle le plus approfondi sans examiner son coût ?",
+        "Quelle procédure la direction préfère-t-elle adopter, sans analyser ses conséquences sur les reprises ?"
+      ],
+      "answer": 0,
+      "explanation": "La question retient les deux objectifs dont l’articulation pose problème. Choisir un seul critère ou recueillir une préférence ne suffit pas à analyser cet arbitrage."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une problématique demande si le dispositif est « conforme ». Aucun référentiel ni périmètre de conformité n’est désigné. Quel préalable manque ?",
+      "options": [
+        "Retenir l’avis majoritaire des utilisateurs comme définition suffisante de la conformité.",
+        "Identifier les exigences et le champ auxquels la conformité sera confrontée.",
+        "Assimiler conformité et baisse du délai sans examiner les exigences applicables.",
+        "Tenir la présence d’une procédure écrite pour preuve qu’elle respecte les exigences, quelles qu’elles soient."
+      ],
+      "answer": 1,
+      "explanation": "Une question normative doit préciser par rapport à quoi elle juge le dispositif. Satisfaction, rapidité ou formalisation ne définissent pas seuls le référentiel de conformité."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une sous-question sur le recrutement n’apporte aucun élément à une problématique centrée sur le traitement des écarts de facturation. Que faut-il décider ?",
+      "options": [
+        "La déplacer dans la conclusion sans examiner son lien avec la question.",
+        "Élargir le titre à toute la gestion du cabinet afin de rendre chaque développement pertinent par définition.",
+        "Établir son lien analytique avec ces écarts ou retirer ce développement du raisonnement central.",
+        "La conserver parce qu’elle permet d’équilibrer la longueur des deux parties."
+      ],
+      "answer": 2,
+      "explanation": "Une section doit établir ou préparer un élément de réponse. Un élargissement opportuniste du titre ou un simple déplacement ne crée pas ce lien."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat présente comme problématique « Faut-il réaliser des entretiens ou un questionnaire ? ». Quelle étape doit guider ce choix de méthode ?",
+      "options": [
+        "Choisir l’outil permettant le plus grand nombre de réponses, puis maintenir la question quel que soit leur contenu.",
+        "Retenir la méthode la plus utilisée dans les mémoires disponibles, sans examiner son adéquation au terrain.",
+        "Choisir la méthode préférée du candidat et considérer ce choix comme la conclusion de recherche.",
+        "Préciser le phénomène à comprendre et les données nécessaires pour répondre à la question de fond."
+      ],
+      "answer": 3,
+      "explanation": "Le choix d’un instrument ne remplace pas la question de recherche. Il doit être justifié par l’objet et les matériaux permettant de l’étudier."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel critère rend une sous-question utile dans une problématique ?",
+      "options": [
+        "La possibilité d’expliquer quel élément de réponse elle établira et à partir de quels matériaux.",
+        "L’existence de données faciles à compter, même si elles ne renseignent pas le mécanisme recherché.",
+        "La présence d’un entretien disponible sur le thème, sans préciser ce qu’il permet d’établir.",
+        "La reprise d’une rubrique du rapport de stage, considérée comme une justification suffisante de son rôle analytique."
+      ],
+      "answer": 0,
+      "explanation": "La cohérence vient de la contribution au raisonnement et de sa possibilité d’enquête, plutôt que d’une variété de vocabulaire ou d’un équilibre formel."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le projet demande une comparaison sur cinq ans, mais seuls six mois de données sont accessibles. Quelle décision préserve sa faisabilité ?",
+      "options": [
+        "Tenir la période accessible pour représentative des cinq ans sans examiner les changements du processus.",
+        "Redéfinir la question ou obtenir un accès complémentaire, en tenant compte de ce que six mois permettent réellement d’étudier.",
+        "Compléter les années absentes par des objectifs budgétaires en les présentant comme des résultats observés.",
+        "Conserver la comparaison historique annoncée en remplaçant les dates manquantes par une période moyenne non documentée."
+      ],
+      "answer": 1,
+      "explanation": "L’horizon empirique doit correspondre aux matériaux disponibles. Une extrapolation arithmétique ou des souvenirs ne reconstituent pas une série historique absente."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le mémoire prévoit des entretiens avec des clients, mais l’accord d’accès couvre uniquement les salariés. Quelle étape précède leur recrutement ?",
+      "options": [
+        "Demander aux salariés de répondre au nom de leurs clients puis conserver la présentation « entretiens clients ».",
+        "Remplacer les noms des clients avant de vérifier les conditions de contact.",
+        "Examiner les autorisations et conditions nécessaires à cette extension du terrain.",
+        "Considérer l’accord du cabinet comme couvrant nécessairement tout client cité dans ses dossiers."
+      ],
+      "answer": 2,
+      "explanation": "L’accès à un terrain ne s’étend pas automatiquement à une autre population. Anonymiser ou déléguer une réponse ne remplace pas l’examen des conditions de collecte."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une question vise les motifs des abandons de dossier, mais le système n’enregistre que les dossiers achevés. Quel matériau complémentaire répond au manque ?",
+      "options": [
+        "Davantage de dossiers achevés sélectionnés dans le même export.",
+        "Les motifs de clôture des dossiers terminés, présentés comme équivalents aux raisons d’abandon des dossiers absents.",
+        "Une analyse des seuls délais de clôture, utilisée pour attribuer les causes des abandons sans matériau sur ceux-ci.",
+        "Des traces d’abandon ou des entretiens ciblés sur ces situations, si leur collecte est possible et autorisée."
+      ],
+      "answer": 3,
+      "explanation": "La population manquante est celle des abandons. Augmenter les cas achevés ne fournit pas leurs motifs ; un accès aux situations concernées doit être recherché."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’enquête exige vingt entretiens d’une heure avant la semaine prochaine, alors que quatre personnes seulement sont disponibles. Quel arbitrage est défendable ?",
+      "options": [
+        "Ajuster le protocole et la portée de la question en explicitant les contraintes et les compléments possibles.",
+        "Conserver vingt entretiens dans le protocole comme s’ils étaient acquis, même après refus des personnes indisponibles.",
+        "Traiter un entretien collectif des quatre personnes comme vingt entretiens individuels en comptant leurs prises de parole.",
+        "Maintenir la même couverture de profils annoncée en supposant que les quatre personnes disponibles représentent les seize absentes."
+      ],
+      "answer": 0,
+      "explanation": "Durée et nombre de personnes ne sont pas interchangeables. Une réduction transparente du terrain vaut mieux qu’un effectif fabriqué ou un protocole irréalisable."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat dispose d’un accès large à des données commerciales, mais sa question porte sur un processus social qui n’y figure pas. Quelle conclusion est pertinente ?",
+      "options": [
+        "Une analyse de ventes peut être présentée comme une observation directe des relations sociales.",
+        "L’abondance des données accessibles ne prouve pas leur adéquation à la question.",
+        "Le volume de données garantit que la question sociale y trouvera une réponse.",
+        "Le choix de la question doit rester inchangé dès lors que les fichiers sont complets."
+      ],
+      "answer": 1,
+      "explanation": "La faisabilité ne se réduit pas à la quantité de documents. Leur contenu doit permettre d’étudier les phénomènes visés par la question."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’organisation refusera tout enregistrement audio, mais autorise des notes d’entretien avec un protocole convenu. Quelle adaptation est méthodologiquement possible ?",
+      "options": [
+        "Annoncer une restitution verbatim complète reposant sur le seul souvenir du candidat après chaque échange.",
+        "Présenter les notes comme une transcription exacte sans avoir conservé la formulation des propos.",
+        "Prévoir une prise de notes structurée et expliciter ses conditions et limites dans la méthode.",
+        "Utiliser le guide prévu comme substitut au contenu réellement recueilli, puis décrire les questions comme des réponses."
+      ],
+      "answer": 2,
+      "explanation": "Une collecte sans audio peut être exploitée si elle est décrite fidèlement. Elle ne permet pas de revendiquer automatiquement la précision d’une transcription enregistrée."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une théorie explique la coordination par les règles formelles, une autre par les échanges informels. Comment les mobiliser dans un cas d’entreprise ?",
+      "options": [
+        "Choisir uniquement celle dont le vocabulaire apparaît le plus souvent dans le projet initial.",
+        "Cumuler leurs noms dans l’introduction sans les distinguer dans l’analyse.",
+        "Attribuer chaque entretien à une théorie selon le seul service de son auteur.",
+        "Définir les observations qui permettraient d’examiner ce qu’explique chaque perspective."
+      ],
+      "answer": 3,
+      "explanation": "Les cadres doivent produire des questions ou interprétations confrontables au terrain. Leur juxtaposition bibliographique ne constitue pas une comparaison analytique."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "À quoi sert une revue de littérature centrée sur la question ?",
+      "options": [
+        "À préciser les concepts, les explications existantes et la contribution que l’étude peut examiner.",
+        "Sélectionner uniquement les textes qui annoncent déjà la conclusion préférée, sans examiner les désaccords.",
+        "Retenir les textes les plus cités comme validation suffisante de leur adéquation à la question.",
+        "Utiliser les résultats publiés comme substitut aux observations de son terrain, sans examiner leurs conditions de transposition."
+      ],
+      "answer": 0,
+      "explanation": "La littérature structure ce qui sera étudié et discuté. Elle ne préjuge pas les observations du cas ni ne rend inutile une enquête annoncée."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le modèle proposé est : formation, puis meilleure maîtrise de l’outil, puis réduction des erreurs. Dans cette chaîne explicative, quel rôle la maîtrise de l’outil occupe-t-elle ?",
+      "options": [
+        "Le résultat final à expliquer, à la place de l’évolution des erreurs.",
+        "Un mécanisme intermédiaire proposé entre la formation et l’évolution des erreurs.",
+        "Une condition extérieure à la chaîne, supposée ne pas être affectée par la formation.",
+        "L’intervention initiale elle-même, sans distinction avec les moyens de formation."
+      ],
+      "answer": 1,
+      "explanation": "La maîtrise représente ici une étape intermédiaire du mécanisme proposé. Le schéma formule une hypothèse explicative ; il ne prouve pas que ces liens ont été établis par les données."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une notion provient d’études sur de grandes usines ; le terrain est un petit cabinet. Que faut-il justifier avant sa transposition ?",
+      "options": [
+        "Reprendre les mêmes indicateurs sans examiner si les pratiques qu’ils représentent existent dans le cabinet.",
+        "Conserver les conclusions de l’étude initiale comme prédictions certaines, malgré les différences de contexte.",
+        "La pertinence du mécanisme et les adaptations liées aux différences de contexte.",
+        "Écarter la notion au seul motif de son secteur d’origine, sans examiner le mécanisme qu’elle pourrait éclairer."
+      ],
+      "answer": 2,
+      "explanation": "Un transfert conceptuel demande un examen des conditions d’application. Ni une simple substitution de mots ni l’interdiction de tout rapprochement ne répondent à cette question."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’hypothèse indique que la formation réduit les erreurs davantage pour les dossiers simples que complexes. La complexité est définie avant la formation et n’en est pas un résultat. Quel rôle joue-t-elle dans cette proposition ?",
+      "options": [
+        "Le mécanisme produit par la formation qui expliquerait ensuite la baisse des erreurs.",
+        "Le résultat final que la formation cherche ici à réduire à la place des erreurs.",
+        "Un autre nom de l’intervention, interchangeable avec la participation à la formation.",
+        "Une condition qui modifie le lien attendu entre formation et erreurs."
+      ],
+      "answer": 3,
+      "explanation": "La proposition porte sur une variation de relation selon une condition préalable. La complexité n’est décrite ni comme conséquence intermédiaire de la formation ni comme résultat final de la chaîne."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat reprend un modèle à trois dimensions mais n’en observe que deux pour des raisons d’accès. Quelle restitution est correcte ?",
+      "options": [
+        "Préciser les dimensions étudiées et laisser ouverte la conclusion sur la troisième.",
+        "Utiliser les deux dimensions observées comme substituts à la troisième sans justifier leur correspondance.",
+        "Annoncer la validation du modèle complet parce que deux dimensions sont renseignées.",
+        "Définir après analyse la troisième dimension comme identique à la mieux renseignée pour conserver le modèle complet."
+      ],
+      "answer": 0,
+      "explanation": "Une utilisation partielle peut être utile si son périmètre est assumé. Des observations sur deux dimensions ne valent pas mesure de la troisième."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une hypothèse prévoit moins de reprises après formation. Quel protocole de résultat reste compatible avec son examen critique ?",
+      "options": [
+        "Reclasser les reprises nouvelles comme des incidents hors périmètre pour maintenir la baisse.",
+        "Définir avant analyse les cas et critères permettant aussi de constater une absence de baisse ou une hausse.",
+        "Conserver uniquement les dossiers des personnes ayant déclaré apprécier la formation.",
+        "Choisir la période montrant la baisse la plus forte après examen de toutes les périodes."
+      ],
+      "answer": 1,
+      "explanation": "Une hypothèse doit pouvoir rencontrer des éléments défavorables. Les critères de mesure et de sélection ne doivent pas être ajustés uniquement pour obtenir le résultat attendu."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle différence distingue une hypothèse d’un résultat dans une recherche ?",
+      "options": [
+        "L’hypothèse constitue déjà un résultat empirique dès qu’un auteur en propose une justification théorique.",
+        "Le résultat peut être fixé avant collecte par le commanditaire puis utilisé pour sélectionner les observations compatibles.",
+        "L’hypothèse propose une relation à examiner ; le résultat présente ce que l’analyse des matériaux permet d’établir.",
+        "L’hypothèse désigne les réponses recueillies tandis que le résultat désigne seulement le protocole prévu."
+      ],
+      "answer": 2,
+      "explanation": "Leur différence tient au statut dans le raisonnement. Une idée théoriquement argumentée reste à confronter aux données de l’étude."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les données soutiennent l’hypothèse dans les dossiers simples mais pas dans les dossiers complexes. Quelle conclusion est la plus précise ?",
+      "options": [
+        "Déclarer l’hypothèse pleinement confirmée en ne conservant que les dossiers simples.",
+        "Déclarer les résultats inutilisables parce qu’une même relation ne se vérifie pas à l’identique dans chaque catégorie.",
+        "Classer les dossiers complexes comme données manquantes sans examiner ce qu’ils révèlent sur les conditions de l’hypothèse.",
+        "Décrire cette condition de validité et examiner les mécanismes propres aux dossiers complexes."
+      ],
+      "answer": 3,
+      "explanation": "Une différence par catégorie peut être un résultat substantiel. Elle précise les conditions de l’explication plutôt qu’imposer une confirmation ou un rejet indifférencié."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat modifie son hypothèse après avoir exploré les données. Quelle transparence est nécessaire ?",
+      "options": [
+        "Distinguer l’hypothèse initiale de l’hypothèse issue de l’exploration et préciser comment cette dernière pourrait être éprouvée.",
+        "Présenter la nouvelle hypothèse comme prévue dès le départ.",
+        "Supprimer la chronologie des analyses pour garder une narration plus simple.",
+        "Qualifier les mêmes données de test indépendant de toute hypothèse qu’elles ont permis de construire."
+      ],
+      "answer": 0,
+      "explanation": "Une exploration peut produire une hypothèse utile. Elle ne doit pas être présentée comme une prévision antérieure ni comme déjà éprouvée indépendamment par les mêmes opérations."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat écrit « un dispositif est efficace lorsqu’il produit de bons résultats », puis conclut qu’il est efficace parce que les résultats sont bons, sans critères définis. Quel défaut doit être corrigé ?",
+      "options": [
+        "Un désaccord de vocabulaire que suffirait à résoudre le remplacement du mot efficace par performant.",
+        "Un raisonnement circulaire qui exige des critères observables distincts de la conclusion.",
+        "Un défaut de taille d’échantillon que résoudrait seul un entretien supplémentaire.",
+        "Une erreur de période que corrigerait le déplacement de l’étude à l’année suivante."
+      ],
+      "answer": 1,
+      "explanation": "La conclusion répète ici sa propre définition sans critère de confrontation. Modifier l’étiquette ou l’effectif ne rend pas la proposition testable à lui seul."
+    }
+  ]
+}

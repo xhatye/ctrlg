@@ -1,0 +1,338 @@
+{
+  "module": "DSCG7",
+  "chapter": "memoire-plan-analyse",
+  "sourceHash": "1e17af1c4c57df9c7aadaff4cddb6a5928a369bf00348c3d74261866d952547e",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le plan suit uniquement l’ordre des tâches du stage, alors que la question porte sur les causes des reprises de dossier. Quel principe de réorganisation est pertinent ?",
+      "options": [
+        "Regrouper les éléments selon les étapes du raisonnement nécessaires pour expliquer les reprises.",
+        "Regrouper les tâches par service, en supposant que cette répartition établit à elle seule les causes des reprises.",
+        "Conserver l’ordre des tâches comme ordre de démonstration, sans distinguer succession des événements et explication.",
+        "Construire les parties selon les logiciels utilisés, même lorsque les mécanismes de reprise traversent plusieurs outils."
+      ],
+      "answer": 0,
+      "explanation": "Le plan d’un mémoire analytique sert la réponse à une question. Une chronologie peut apporter des faits, mais elle n’est pas à elle seule une démonstration."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle fonction une transition entre deux parties doit-elle remplir ?",
+      "options": [
+        "Annoncer l’intitulé suivant sans préciser son lien avec le résultat de la partie précédente.",
+        "Expliquer ce qui a été établi et pourquoi l’étape suivante est nécessaire au raisonnement.",
+        "Reprendre la conclusion générale attendue à chaque changement de partie sans montrer les étapes qui restent à établir.",
+        "Introduire une nouvelle hypothèse dans la transition en la tenant pour déjà démontrée par les parties précédentes."
+      ],
+      "answer": 1,
+      "explanation": "La transition rend le fil argumentatif explicite. Elle ne se limite pas à un changement de titre et ne doit pas ouvrir un développement sans rapport."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux chapitres démontrent séparément la même proposition avec les mêmes extraits. Quel travail de plan est justifié ?",
+      "options": [
+        "Séparer les mêmes extraits entre les deux chapitres sans distinguer les propositions qu’ils sont censés soutenir.",
+        "Conserver les deux démonstrations comme deux confirmations indépendantes malgré leur matériau identique.",
+        "Fusionner ou différencier leur contribution pour éviter de compter la même démonstration deux fois.",
+        "Réserver un titre théorique au premier et un titre pratique au second sans changer le raisonnement qu’ils développent."
+      ],
+      "answer": 2,
+      "explanation": "La répétition d’un matériau et d’une inférence ne crée pas une contribution supplémentaire. Le plan doit préciser ce que chaque chapitre apporte de distinct."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La partie I compare des scores de coordination, mais leur définition et leurs règles de calcul n’apparaissent qu’en partie III. Le lecteur ne peut pas interpréter les scores sans ces informations. Quel ajustement répond directement au problème ?",
+      "options": [
+        "Conserver les définitions en partie III puisque la présence des scores en partie I suffit à leur donner un sens commun.",
+        "Déplacer les règles uniquement dans la conclusion, après que les scores ont servi à établir les résultats.",
+        "Présenter les règles après l’interprétation des scores, en supposant que les expliquer auparavant empêcherait toute comparaison indépendante.",
+        "Présenter les définitions et règles nécessaires avant la première comparaison qui s’appuie sur elles."
+      ],
+      "answer": 3,
+      "explanation": "Le plan doit respecter les dépendances du raisonnement : un résultat fondé sur une mesure doit pouvoir être compris à partir des notions et conventions déjà exposées. Il n’existe pas pour autant un ordre universel imposé à tous les mémoires."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une longue description du secteur est conservée dans le corps du mémoire. Quel critère détermine les éléments à y maintenir ?",
+      "options": [
+        "Leur utilité pour comprendre le problème, la méthode ou les conditions des résultats.",
+        "Conserver tout élément décrivant le secteur dès lors qu’une source institutionnelle permet de le documenter.",
+        "Maintenir les descriptions présentes dans le premier plan en les tenant pour nécessaires du seul fait de leur validation initiale.",
+        "Développer prioritairement les éléments les plus faciles à documenter, même s’ils n’éclairent pas les conditions de l’enquête."
+      ],
+      "answer": 0,
+      "explanation": "Le contexte est utile lorsqu’il éclaire l’analyse. La disponibilité d’un texte ou un équilibre de pages ne suffit pas à justifier son développement central."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La méthode indique « dix entretiens », sans décrire le recrutement ni le traitement des propos. Quel complément rend la démarche appréciable ?",
+      "options": [
+        "Indiquer uniquement la durée moyenne des échanges, en la tenant pour description suffisante de la sélection et de l’analyse.",
+        "Préciser sélection, conduite des entretiens, analyse et limites du corpus.",
+        "Présenter le guide d’entretien comme substitut à l’explication du recrutement et du traitement des réponses.",
+        "Donner le nom du logiciel de codage en supposant qu’il détermine à lui seul les catégories et les critères d’interprétation."
+      ],
+      "answer": 1,
+      "explanation": "L’effectif ne décrit pas comment le matériau a été construit et interprété. La traçabilité méthodologique demande des éléments sur ces différentes étapes."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux évaluateurs classent les dossiers selon une grille commune. Ils connaissent d’avance la solution préférée du commanditaire et le groupe de chaque dossier. Le protocole peut masquer ces informations sans retirer les données nécessaires au classement. Quel intérêt présente ce masquage ?",
+      "options": [
+        "Équilibrer les conditions de travail initiales entre les groupes, comme le ferait une allocation aléatoire.",
+        "Rendre le recrutement représentatif en corrigeant la sélection initiale des dossiers.",
+        "Réduire l’influence possible des attentes des évaluateurs sur l’application de la grille.",
+        "Mesurer l’accord entre les évaluateurs à partir du seul fait qu’ils ignorent le groupe, sans comparer leurs classements."
+      ],
+      "answer": 2,
+      "explanation": "Masquer des informations non nécessaires à l’évaluation peut limiter une influence des attentes sur le jugement. Cela ne remplace ni la validité de la grille, ni le contrôle du recrutement, ni le traitement des données manquantes."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un lecteur doit pouvoir comprendre comment un extrait a conduit à une catégorie, puis à un résultat. Quel dispositif l’aide ?",
+      "options": [
+        "La seule liste des titres des entretiens.",
+        "Un tableau final sans définition des catégories.",
+        "Une citation de méthode qui remplace l’explication des opérations effectuées.",
+        "Un exemple de cheminement reliant matériau, codage et interprétation."
+      ],
+      "answer": 3,
+      "explanation": "La méthode gagne à montrer son application sur un exemple. Cela rend les opérations compréhensibles sans se limiter à nommer un outil ou un auteur."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’auteur exclut les dossiers incomplets de l’analyse. Quel élément doit figurer dans la méthode ?",
+      "options": [
+        "La règle d’exclusion, son effectif et ses conséquences possibles pour les résultats.",
+        "Le seul total des dossiers finalement conservés.",
+        "Une déclaration que les dossiers absents ressemblent nécessairement aux autres.",
+        "Le remplacement de chaque dossier exclu par un dossier complet choisi après lecture de son résultat."
+      ],
+      "answer": 0,
+      "explanation": "Les exclusions déterminent le corpus analysé. Les décrire permet de juger la sélection et ses limites, plutôt que de présenter l’effectif final comme une population complète."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle distinction sépare l’outil de collecte de la méthode d’analyse ?",
+      "options": [
+        "L’outil désigne le protocole d’interprétation ; la méthode d’analyse désigne seulement le format de recueil.",
+        "L’un recueille le matériau ; l’autre décrit comment ce matériau est traité pour répondre à la question.",
+        "L’outil détermine automatiquement les conclusions ; la méthode consiste à retenir la synthèse proposée par le logiciel.",
+        "L’outil désigne uniquement le support informatique ; une méthode d’analyse qualitative exclut toute opération de classement."
+      ],
+      "answer": 1,
+      "explanation": "Un guide ou un fichier sert au recueil ou à l’organisation. Il reste à expliquer les opérations intellectuelles et techniques qui soutiennent les conclusions."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le texte invoque un entretien « représentatif », choisi après coup car il est particulièrement clair. Quel statut faut-il expliciter ?",
+      "options": [
+        "Un cas statistiquement moyen, puisque sa clarté le rend plus facile à comparer aux autres.",
+        "Un tirage probabiliste, puisque l’auteur a examiné plusieurs entretiens avant de sélectionner celui-ci.",
+        "Une illustration sélectionnée pour sa clarté, dont la représentativité ne découle pas de ce seul choix.",
+        "Un résultat couvrant tous les participants, puisque l’extrait a été retenu pour résumer leur position sans règle de comparaison."
+      ],
+      "answer": 2,
+      "explanation": "Clarté d’exposition et représentativité sont différentes. Un extrait illustratif peut être utile si l’auteur ne lui attribue pas des propriétés non établies."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un paragraphe accumule cinq citations sur une difficulté mais ne dit pas ce qu’elles établissent ensemble. Quel ajout manque ?",
+      "options": [
+        "Une addition des citations comme autant de confirmations indépendantes, sans examiner leurs auteurs ou contextes.",
+        "La sélection du seul extrait le plus convaincant, considéré comme une synthèse suffisante des divergences.",
+        "Un résumé de chaque citation séparément, sans préciser la proposition commune ou les différences qu’elles soutiennent.",
+        "Une proposition analytique reliant les extraits, leurs convergences et leurs différences à la question."
+      ],
+      "answer": 3,
+      "explanation": "Les citations constituent des matériaux, pas un raisonnement complet. Le lecteur doit comprendre le résultat que leur confrontation soutient et ses conditions."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une proposition générale repose sur un seul épisode atypique. Comment en présenter l’apport ?",
+      "options": [
+        "Décrire ce qu’il révèle et examiner si d’autres cas ou éléments soutiennent l’extension proposée.",
+        "Le présenter comme un cas fréquent parce qu’il permet une description approfondie du mécanisme.",
+        "Tenir la richesse documentaire du cas pour une estimation de sa fréquence dans la population.",
+        "Étendre immédiatement sa conclusion à l’ensemble des situations puisque le cas a été choisi pour son caractère remarquable."
+      ],
+      "answer": 0,
+      "explanation": "Un cas singulier peut être explicatif sans être fréquent. Son rôle et les éléments nécessaires pour étendre l’inférence doivent être distingués."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un graphique montre le volume total de corrections tandis que le commentaire parle du risque d’erreur par dossier. Quelle révision est nécessaire ?",
+      "options": [
+        "Rapporter les corrections aux heures du service puis présenter le résultat comme une probabilité par dossier, sans rapprocher ces unités.",
+        "Ajouter ou analyser le dénominateur pertinent avant de commenter une fréquence par dossier.",
+        "Comparer les volumes comme des risques identiques en supposant les effectifs de dossiers égaux sans les connaître.",
+        "Rebaptiser la série en taux tout en conservant les volumes bruts comme valeurs du graphique."
+      ],
+      "answer": 1,
+      "explanation": "Un nombre total n’est pas un taux par dossier. La conclusion doit utiliser la population exposée, ou rester formulée en volume."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un tableau détaille les résultats par service ; le texte le répète cellule par cellule. Quel commentaire ajoute le plus de valeur analytique ?",
+      "options": [
+        "Supprimer les effectifs pour rendre le commentaire plus court.",
+        "Remplacer le tableau par un classement sans expliciter les critères.",
+        "Expliquer les écarts pertinents et les rapprocher des conditions observées sans répéter tous les nombres.",
+        "Reprendre les nombres dans un autre ordre sans les interpréter."
+      ],
+      "answer": 2,
+      "explanation": "Le texte doit guider la lecture du résultat et de son sens. La répétition exhaustive des cellules n’explique pas les différences."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une annexe contient un élément décisif pour l’argument, mais aucune référence dans le corps ne l’indique. Que faut-il améliorer ?",
+      "options": [
+        "Considérer que la présence en annexe suffit à démontrer toute affirmation du corps.",
+        "Déplacer la conclusion entière dans l’annexe sans lien avec le texte.",
+        "Remplacer la référence précise par « voir les annexes » pour chaque proposition.",
+        "Rendre explicite le lien entre la proposition centrale et la pièce pertinente de l’annexe."
+      ],
+      "answer": 3,
+      "explanation": "La localisation du support doit permettre de suivre une inférence précise. Une annexe présente mais non reliée à la démonstration peut rester inexploitable pour le lecteur."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quand un mémoire distingue résultats et discussion, quel contenu relève principalement de la discussion ?",
+      "options": [
+        "La portée des résultats, leur relation aux cadres mobilisés et les explications alternatives.",
+        "La description du recrutement et du déroulement de la collecte, utilisée à la place de l’interprétation des résultats.",
+        "La présentation des tableaux de résultats, limitée à leur lecture sans examen de leur portée.",
+        "L’énoncé des hypothèses initiales, repris comme conclusions sans confrontation avec les résultats obtenus."
+      ],
+      "answer": 0,
+      "explanation": "La discussion prend appui sur les résultats pour en examiner le sens, la contribution et les limites. Elle ne remplace pas cette analyse par un inventaire."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La recommandation exige un contrôle quotidien, mais les résultats signalent déjà une surcharge qui empêche son exécution. Quel examen faut-il mener dans la discussion ?",
+      "options": [
+        "Déduire la disponibilité des ressources de l’accord de principe donné par le responsable au contrôle proposé.",
+        "La faisabilité de la recommandation et les arbitrages de ressources qu’elle suppose.",
+        "Retenir la fréquence quotidienne comme preuve qu’elle réduit aussi la charge nécessaire à son exécution.",
+        "Traiter le temps de contrôle comme déjà absorbé par les équipes sans examiner les tâches concurrentes relevées dans l’enquête."
+      ],
+      "answer": 1,
+      "explanation": "Une recommandation découle d’un diagnostic mais doit aussi être praticable. Un accord de principe ne crée pas le temps ou les ressources nécessaires."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le candidat propose un déploiement complet sur la base d’un seul essai court. Quelle suite renforce la prudence opérationnelle ?",
+      "options": [
+        "Supprimer la phase de suivi pour éviter de retarder la décision.",
+        "Multiplier le gain observé par le nombre de sites sans examiner leurs différences.",
+        "Définir un test élargi, des critères de suivi et des conditions de décision sur le déploiement.",
+        "Présenter l’essai court comme une garantie de résultat à grande échelle."
+      ],
+      "answer": 2,
+      "explanation": "Un prolongement peut transformer un résultat préliminaire en programme d’évaluation. Il ne doit pas convertir mécaniquement un essai local en effet garanti partout."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "L’estimation de l’effet sur le délai est proche de zéro, mais les données restent compatibles avec une diminution comme avec une augmentation importantes. Quelle formulation de discussion est justifiée ?",
+      "options": [
+        "L’estimation centrale proche de zéro établit l’équivalence pratique des dispositifs, quelle que soit son incertitude.",
+        "L’absence de résultat nettement favorable démontre que le dispositif augmente les délais.",
+        "Les seules valeurs favorables encore compatibles peuvent être retenues comme effet établi, puisque les données ne les excluent pas.",
+        "L’étude ne départage pas suffisamment les effets compatibles avec les données pour établir une absence d’effet important."
+      ],
+      "answer": 3,
+      "explanation": "Une estimation imprécise ne démontre pas une absence d’effet substantiel. Il faut distinguer le résultat central, l’incertitude et les valeurs que l’étude permet réellement d’écarter."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une limite concerne la période observée. Comment formuler une piste future qui lui répond réellement ?",
+      "options": [
+        "Étudier le même mécanisme pendant une autre période pertinente avec des définitions comparables.",
+        "Prolonger uniquement la rédaction sur le même matériau en présentant cet approfondissement comme une observation d’une nouvelle période.",
+        "Ajouter une comparaison de périodes utilisant des définitions différentes sans examiner leur raccordement.",
+        "Généraliser la stabilité du mécanisme à partir de la seule répétition du calcul sur le même fichier temporel."
+      ],
+      "answer": 0,
+      "explanation": "La piste doit traiter la limite identifiée. Une nouvelle période observée peut éprouver la stabilité du mécanisme ; renommer un matériau ne change pas sa couverture temporelle."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La conclusion introduit une recommandation sur la rémunération alors qu’aucune donnée ne l’examine et qu’elle ne découle pas du cadre présenté. Quel traitement est défendable ?",
+      "options": [
+        "La conserver comme résultat parce qu’elle a été évoquée par le commanditaire, sans analyse de son rapport avec les données.",
+        "La retirer de la réponse établie ou la présenter comme une question distincte nécessitant une analyse propre.",
+        "La présenter comme conséquence nécessaire de la baisse des délais, sans étudier le lien avec la rémunération.",
+        "La joindre à la recommandation principale en supposant que leur proximité dans la conclusion leur donne le même niveau de preuve."
+      ],
+      "answer": 1,
+      "explanation": "Une conclusion synthétise ce que le travail soutient. Une idée nouvelle peut ouvrir une piste, sans être présentée comme une recommandation validée par une analyse qui ne la couvre pas."
+    }
+  ]
+}

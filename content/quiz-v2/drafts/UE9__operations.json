@@ -1,0 +1,383 @@
+{
+  "module": "UE9",
+  "chapter": "operations",
+  "sourceHash": "7cb06483a93920905fea046b6e54a7f7d8e2575ba78ae9dd789acbad4a06ff19",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture d’achat de marchandises à crédit indique 1 500 € HT et 300 € de TVA entièrement déductible. Quelle écriture traduit correctement l’opération ?",
+      "options": [
+        "Débit achats 1 500 €, débit TVA déductible 300 €, crédit fournisseur 1 800 €",
+        "Débit achats 1 800 €, crédit fournisseur 1 800 €, sans compte de TVA",
+        "Débit fournisseur 1 800 €, crédit achats 1 500 € et crédit TVA déductible 300 €",
+        "Débit achats 1 500 €, crédit TVA déductible 300 € et crédit fournisseur 1 200 €"
+      ],
+      "answer": 0,
+      "explanation": "L’achat et la TVA récupérable sont distingués au débit ; la dette envers le fournisseur comprend le total TTC au crédit."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une facture d’achat comporte 2 400 € HT et 480 € de TVA, supposée intégralement déductible. Aucun acompte ni autre élément. Quel montant est dû au fournisseur ?",
+      "options": [
+        "2 400 €",
+        "2 880 €",
+        "1 920 €",
+        "480 €"
+      ],
+      "answer": 1,
+      "explanation": "La dette est TTC : 2 400 + 480 = 2 880 €. La déduction de TVA ne dispense pas de payer cette taxe au fournisseur.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 2400
+            },
+            {
+              "value": 480
+            }
+          ]
+        },
+        "expected": 2880,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une TVA est entièrement récupérable selon les hypothèses données. Le comptable l’ajoute pourtant au coût d’achat et ne la comptabilise dans aucun compte distinct. Quelle correction est attendue ?",
+      "options": [
+        "Réduire la dette TTC du montant de TVA sans autre écriture",
+        "Transformer la TVA déductible en produit de vente",
+        "Isoler la TVA déductible au lieu de l’inclure dans le coût retenu",
+        "Supprimer la TVA de la facture et du règlement fournisseur"
+      ],
+      "answer": 2,
+      "explanation": "La taxe récupérable est distinguée de la charge ou de l’actif. Elle reste toutefois comprise dans le montant TTC à payer au fournisseur."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Lors d’un achat à crédit, pourquoi le montant de la dette fournisseur peut-il différer de la charge HT ?",
+      "options": [
+        "La dette exclut toujours toute TVA facturée",
+        "La charge est obligatoirement égale aux intérêts de retard",
+        "La dette ne naît qu’après son règlement",
+        "La dette comprend la TVA facturée alors qu’une TVA déductible est isolée"
+      ],
+      "answer": 3,
+      "explanation": "Le fournisseur attend le montant TTC. La charge et, lorsque ses conditions sont remplies, la TVA déductible sont suivies séparément."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture d’achat porte sur un équipement utilisé durablement, sans TVA dans le cas. Quel élément faut-il déterminer avant de choisir le compte débité ?",
+      "options": [
+        "La nature de l’achat : actif ou charge selon l’opération",
+        "Uniquement la date du virement futur",
+        "Uniquement le total de la balance",
+        "Le fait que le fournisseur préfère un règlement bancaire"
+      ],
+      "answer": 0,
+      "explanation": "L’écriture traduit d’abord la nature économique. Le choix entre actif et charge ne découle pas du seul mode ou délai de paiement."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une vente à crédit est facturée 3 000 € HT avec 600 € de TVA collectée fournie. Quelle écriture convient ?",
+      "options": [
+        "Débit client 3 000 €, débit TVA collectée 600 € et crédit ventes 3 600 €",
+        "Débit client 3 600 €, crédit ventes 3 000 € et crédit TVA collectée 600 €",
+        "Débit ventes 3 000 €, débit TVA collectée 600 € et crédit client 3 600 €",
+        "Débit banque 3 600 €, crédit ventes 3 600 €, malgré l’absence de paiement"
+      ],
+      "answer": 1,
+      "explanation": "La créance représente le TTC à encaisser. Le produit de vente reste distinct de la TVA collectée, sans mouvement bancaire avant paiement."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une vente comprend un produit HT de 4 000 € et une TVA collectée de 800 €. Elle est entièrement à crédit. Quel montant faut-il inscrire en créance client ?",
+      "options": [
+        "4 000 €",
+        "3 200 €",
+        "4 800 €",
+        "800 €"
+      ],
+      "answer": 2,
+      "explanation": "Le client doit le total de la facture : 4 000 + 800 = 4 800 €. La distinction du produit et de la taxe ne réduit pas cette créance.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 4000
+            },
+            {
+              "value": 800
+            }
+          ]
+        },
+        "expected": 4800,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un vendeur comptabilise toute sa facture TTC dans le produit de vente, alors que le montant de TVA collectée est identifié. Quelle erreur faut-il corriger ?",
+      "options": [
+        "La créance est forcément sous-estimée du montant HT",
+        "Le produit doit contenir seulement la TVA",
+        "La vente doit être annulée jusqu’au virement client",
+        "Le produit est surestimé par l’inclusion de la TVA collectée"
+      ],
+      "answer": 3,
+      "explanation": "Le produit et la TVA collectée ont des natures distinctes. Comptabiliser le TTC en ventes gonfle le produit du montant de taxe."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client paie par virement la totalité d’une créance de vente déjà enregistrée. Quelle écriture solde le compte client ?",
+      "options": [
+        "Débit banque et crédit client du montant reçu",
+        "Débit client et crédit banque du montant reçu",
+        "Débit banque et crédit ventes du montant déjà facturé",
+        "Débit ventes et crédit client du montant reçu"
+      ],
+      "answer": 0,
+      "explanation": "L’augmentation de banque est au débit et la diminution de créance au crédit du client. Le produit n’est pas enregistré une seconde fois."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une vente à crédit est enregistrée au débit de la banque avant tout encaissement. Quel poste faut-il normalement utiliser à cette date ?",
+      "options": [
+        "Le compte fournisseur représentant une dette",
+        "Le compte client représentant la créance",
+        "Le compte de TVA déductible pour tout le TTC",
+        "Le compte de charge d’achat pour le produit vendu"
+      ],
+      "answer": 1,
+      "explanation": "L’absence de paiement laisse un montant à recevoir du client. Le débit bancaire anticiperait une entrée de fonds qui n’a pas encore eu lieu."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel est le sens de l’écriture lors d’un virement réglant une dette fournisseur déjà comptabilisée ?",
+      "options": [
+        "Crédit fournisseur et débit banque",
+        "Débit achats et crédit ventes",
+        "Débit fournisseur et crédit banque",
+        "Débit banque et crédit achats"
+      ],
+      "answer": 2,
+      "explanation": "Le débit du fournisseur éteint son solde créditeur ; le crédit bancaire constate la sortie de liquidités. L’achat initial reste inchangé."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une dette fournisseur de 5 000 € est déjà enregistrée. Un virement de 3 200 € est effectué, sans escompte ni autre écriture. Quel solde reste dû ?",
+      "options": [
+        "8 200 €",
+        "3 200 €",
+        "5 000 €",
+        "1 800 €"
+      ],
+      "answer": 3,
+      "explanation": "Le paiement partiel diminue la dette : 5 000 − 3 200 = 1 800 €. Le reliquat reste à régler au fournisseur.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 5000
+            },
+            {
+              "value": 3200
+            }
+          ]
+        },
+        "expected": 1800,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le fournisseur est déjà crédité du montant de la facture. Lors du paiement, le comptable le crédite à nouveau au lieu de le débiter. Quel effet cette erreur produit-elle sur ce compte ?",
+      "options": [
+        "La dette augmente au lieu d’être éteinte",
+        "La dette devient correctement nulle",
+        "Le compte fournisseur se transforme automatiquement en produit",
+        "Le crédit bancaire est automatiquement annulé"
+      ],
+      "answer": 0,
+      "explanation": "Une dette fournisseur présente normalement un solde créditeur. La créditer encore accroît le montant dû au lieu de constater son règlement au débit."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le paiement d’une facture d’achat déjà enregistrée est comptabilisé une seconde fois en achats. Quel effet faut-il prévenir ?",
+      "options": [
+        "Une charge correctement constatée mais une dette soldée au mauvais exercice seulement",
+        "Le double comptage de l’achat et le maintien injustifié de la dette initiale",
+        "Un double crédit de la dette fournisseur et aucune sortie de banque",
+        "Une charge inchangée et un fournisseur débiteur à hauteur du paiement"
+      ],
+      "answer": 1,
+      "explanation": "Le règlement doit viser le fournisseur. Débiter une nouvelle charge peut doubler l’achat et laisser la dette d’origine non soldée."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un virement fournisseur figure au débit de la banque dans les comptes de l’entreprise. Le paiement est bien une sortie de fonds. Quelle inversion faut-il corriger ?",
+      "options": [
+        "La banque doit être supprimée de tout règlement",
+        "Le fournisseur doit être crédité à la place de la banque sans autre modification",
+        "La banque doit être créditée pour cette sortie",
+        "Le montant doit être enregistré comme une vente au comptant"
+      ],
+      "answer": 2,
+      "explanation": "Dans les comptes de l’entreprise, une sortie bancaire diminue le compte banque au crédit. Il faut la distinguer du sens utilisé sur un relevé bancaire externe."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que présente une balance comptable ?",
+      "options": [
+        "La liste détaillée des seules factures clients impayées",
+        "Uniquement les charges et produits de trésorerie",
+        "Les seuls paiements à venir par date d’échéance",
+        "Les mouvements et les soldes des comptes sur le périmètre considéré"
+      ],
+      "answer": 3,
+      "explanation": "La balance synthétise les mouvements et soldes de comptes. Elle ne remplace ni les pièces ni un échéancier détaillé des règlements."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une facture d’entretien est enregistrée dans un autre compte de charges pour le même montant, avec la bonne dette fournisseur. Pourquoi la balance peut-elle rester équilibrée ?",
+      "options": [
+        "L’erreur d’imputation ne modifie pas l’égalité débit-crédit",
+        "Toute erreur de compte annule automatiquement la facture",
+        "La balance vérifie uniquement les factures avec TVA",
+        "Les comptes de charges n’entrent pas dans les totaux"
+      ],
+      "answer": 0,
+      "explanation": "Des montants identiques dans un mauvais compte conservent l’équilibre arithmétique. La nature de la dépense doit être contrôlée avec la pièce."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une écriture équilibrée de vente est enregistrée deux fois. Quel contrôle est le plus adapté pour repérer le doublon ?",
+      "options": [
+        "Vérifier uniquement l’égalité des totaux débit et crédit",
+        "Rapprocher les références des factures et les écritures correspondantes",
+        "Supprimer toutes les écritures ayant le même montant",
+        "Présumer que deux écritures équilibrées sont deux opérations distinctes"
+      ],
+      "answer": 1,
+      "explanation": "Un doublon complet conserve les totaux équilibrés. Les références documentaires et la traçabilité permettent d’établir s’il existe une seule opération réelle."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La balance est équilibrée mais un compte fournisseur reste créditeur après un paiement censé le solder. Que faut-il vérifier en priorité ?",
+      "options": [
+        "La seule présence du débit sur le relevé bancaire, sans vérifier le tiers soldé",
+        "La seule concordance de la facture avec le journal des achats, sans examiner le règlement",
+        "L’imputation du règlement au bon compte fournisseur et son montant",
+        "Le solde global de tous les fournisseurs, sans rapprocher ce compte individuel"
+      ],
+      "answer": 2,
+      "explanation": "Un paiement peut être omis ou imputé au mauvais tiers tout en laissant des totaux équilibrés. Le lettrage et les pièces permettent de contrôler le solde."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une écriture d’achat a des débits totaux de 1 200 € et des crédits totaux de 1 000 €. Que faut-il faire avant de la valider ?",
+      "options": [
+        "Ajouter 200 € dans un compte quelconque afin d’équilibrer",
+        "Considérer l’écart comme un bénéfice automatique",
+        "Reporter uniquement les crédits à l’exercice suivant",
+        "Rechercher le montant manquant ou erroné pour rétablir une écriture justifiée"
+      ],
+      "answer": 3,
+      "explanation": "L’écart signale une écriture non équilibrée. Le rétablissement doit être justifié par l’opération et les pièces, pas par un poste arbitraire."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un compte client présente un solde inhabituel. La balance globale étant équilibrée, le responsable refuse tout contrôle. Quelle réponse est appropriée ?",
+      "options": [
+        "L’équilibre global n’exclut pas une erreur ou une situation particulière du compte",
+        "Un solde inhabituel est toujours une preuve de fraude",
+        "L’équilibre prouve que chaque tiers est soldé correctement",
+        "Le solde doit être effacé directement sans examiner les pièces"
+      ],
+      "answer": 0,
+      "explanation": "La balance permet de repérer un compte à examiner. La vérification de ses opérations et justificatifs reste nécessaire avant de conclure ou de corriger."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une pièce indique le bon montant TTC, mais l’écriture répartit mal le HT et la TVA tout en gardant le même total. Quelle vérification permet de détecter cette erreur ?",
+      "options": [
+        "Contrôler seulement le total du compte fournisseur",
+        "Comparer séparément les bases HT, la TVA et le TTC avec la facture",
+        "Vérifier uniquement que le débit égale le crédit",
+        "Conclure que toute répartition est acceptable si la banque est juste"
+      ],
+      "answer": 1,
+      "explanation": "L’équilibre des totaux ne garantit pas la ventilation. Les composantes de la facture doivent être rapprochées des comptes correspondants."
+    }
+  ]
+}

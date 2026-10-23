@@ -1,0 +1,338 @@
+{
+  "module": "UE12",
+  "chapter": "redaction",
+  "sourceHash": "6e1e5da96e5dcc9953fdb3f55c8f3e28e54975a2cd66663f07a044ad66498f58",
+  "authoredBy": "codex-root-editorial",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Which sentence correctly forms a polite request for a document?",
+      "options": [
+        "Could you send the invoice?",
+        "Could you to send the invoice?",
+        "Could you sending the invoice?",
+        "Could you sent the invoice?"
+      ],
+      "answer": 0,
+      "explanation": "Après could you, on utilise la base verbale send. La politesse de la formule ne change pas cette construction grammaticale."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "You need the signed contract, rather than any information about the project. Which request is the clearest?",
+      "options": [
+        "Could you send any document that seems useful?",
+        "Could you send the signed contract for project Atlas?",
+        "Could you send something about project Atlas?",
+        "Could you let us know about the project when possible?"
+      ],
+      "answer": 1,
+      "explanation": "La demande identifie le livrable et le projet. Les autres formulations obligent le destinataire à deviner quel document est réellement attendu."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "An email says: “We would appreciate if you send it.” Which revision is grammatically appropriate?",
+      "options": [
+        "We would appreciate if could you send the report.",
+        "We would appreciate you could sending the report.",
+        "We would appreciate it if you could send the report.",
+        "We would appreciate it if you could to send the report."
+      ],
+      "answer": 2,
+      "explanation": "La construction attendue est appreciate it if, suivie d’une proposition. Could send constitue une formulation polie et grammaticalement correcte."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A colleague can either send a report or confirm that it is unavailable. Which request makes both expected responses clear?",
+      "options": [
+        "Please confirm whether the report is available.",
+        "Please send the report if it is available, without replying otherwise.",
+        "Please confirm the date on which the report was prepared.",
+        "Please send the report or let me know if it is unavailable."
+      ],
+      "answer": 3,
+      "explanation": "La demande retenue prévoit l’envoi du rapport ou une réponse négative explicite. Confirmer sa disponibilité, sa date ou ne répondre qu’en cas de disponibilité ne spécifie pas ces deux réponses attendues."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A message reads: “Could you deal with this?” No earlier email or attachment identifies the task. What is the main weakness?",
+      "options": [
+        "The action and object of the request are unspecified.",
+        "The request incorrectly uses the base form after could.",
+        "The request necessarily commits the recipient to a deadline.",
+        "The request states that the task has already been completed."
+      ],
+      "answer": 0,
+      "explanation": "La phrase est grammaticalement possible mais inutilisable sans contexte : this n’identifie aucune tâche. Il faut préciser l’action et le dossier concernés."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "You want to ask whether a colleague is available for a call, without claiming that the call is already arranged. Which wording fits?",
+      "options": [
+        "The call has already been scheduled for tomorrow.",
+        "Would you be available for a call tomorrow?",
+        "Thank you for confirming tomorrow’s call.",
+        "As agreed, the call will take place tomorrow."
+      ],
+      "answer": 1,
+      "explanation": "La question sollicite une disponibilité. Les autres phrases présentent à tort la réunion comme confirmée ou déjà convenue."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "In an email, what does “I have attached the signed agreement” mean?",
+      "options": [
+        "The recipient is being asked to sign an unidentified document.",
+        "The agreement has been accepted by every party to the contract.",
+        "The signed agreement is intended to accompany the email as a file.",
+        "The signed agreement will be discussed during a future meeting."
+      ],
+      "answer": 2,
+      "explanation": "Attached indique la présence annoncée d’un fichier joint. La formule ne démontre ni la validité du contrat ni l’accord de toutes les parties."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "You are sending two files: a draft budget and an approved timetable. Which sentence identifies their status accurately?",
+      "options": [
+        "I have attached the approved budget and the draft timetable.",
+        "I have attached the two approved documents.",
+        "I have attached the final versions of both documents.",
+        "I have attached the draft budget and the approved timetable."
+      ],
+      "answer": 3,
+      "explanation": "Le statut de chaque pièce doit être préservé. Inverser draft et approved ou déclarer les deux fichiers définitifs change l’information transmise."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "An email says “Please find attached the report”, but only a spreadsheet of raw data is attached. What should be corrected?",
+      "options": [
+        "The stated attachment and the actual file should be reconciled.",
+        "Keep the wording because raw data necessarily constitute the completed report.",
+        "Rename the spreadsheet Final report without checking that it contains the report described.",
+        "Ask for acknowledgement of the report without correcting the mismatch between the message and the file."
+      ],
+      "answer": 0,
+      "explanation": "La formule ne remplace pas la vérification du fichier envoyé. Il faut joindre le rapport annoncé ou décrire correctement le tableur réellement transmis."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A report is available only through a secure web link, with no file attached. Which sentence is accurate?",
+      "options": [
+        "The full report is attached to this message; no web access is needed.",
+        "You can access the report using the secure link below.",
+        "The report has been downloaded to your computer as part of this email.",
+        "Please use the printed copy enclosed with this email."
+      ],
+      "answer": 1,
+      "explanation": "Un lien d’accès n’est pas une pièce jointe. La phrase doit décrire le mode de transmission réel pour éviter que le destinataire cherche un fichier absent."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "You have just corrected a draft and want the recipient to use the new attachment. Which sentence best identifies the replacement?",
+      "options": [
+        "Please combine the old and new drafts without identifying which revisions replace earlier text.",
+        "Please treat the new draft as approved without further review.",
+        "Please use the attached revised draft instead of the earlier draft.",
+        "Please keep using the earlier draft even where its content conflicts with the replacement supplied."
+      ],
+      "answer": 2,
+      "explanation": "La phrase identifie explicitement la version à utiliser sans la présenter comme approuvée. Une révision et une validation sont deux statuts différents."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "What does “Please reply by Monday” normally express?",
+      "options": [
+        "The reply must be sent only on Monday.",
+        "The reply should be withheld until Monday has ended.",
+        "The reply is expected every Monday indefinitely.",
+        "Monday is the latest permitted day for the reply."
+      ],
+      "answer": 3,
+      "explanation": "By introduit une échéance : la réponse peut arriver avant lundi. On Monday désignerait le jour précis de l’action, sans cette même marge."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which completion is grammatically appropriate in a business request: “Could you provide us with ___ about the delivery?”",
+      "options": [
+        "the requested information",
+        "an information",
+        "the requested informations",
+        "an requested informations"
+      ],
+      "answer": 0,
+      "explanation": "Information est normalement indénombrable dans ce sens : the requested information convient, sans article indéfini an ni pluriel informations."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A translator changes “The review takes place on Friday” to “The review must be completed no later than Friday”. What has changed?",
+      "options": [
+        "A scheduled event date has become the earliest date on which work may begin.",
+        "A scheduled event date has become a completion deadline.",
+        "A completion deadline has become a scheduled review appointment.",
+        "A one-day appointment has become a period during which reviews take place every day."
+      ],
+      "answer": 1,
+      "explanation": "On Friday situe l’événement. No later than Friday impose une date limite d’achèvement : cette obligation supplémentaire n’est pas contenue dans la phrase initiale."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A team works across several countries and needs a precise submission deadline. Which addition removes a potential time ambiguity?",
+      "options": [
+        "The weekday alone, without a calendar date.",
+        "The sender’s local clock time without identifying the time zone.",
+        "The calendar date, time and relevant time zone",
+        "The recipient’s usual office opening time, without a submission date."
+      ],
+      "answer": 2,
+      "explanation": "Une heure sans fuseau et une mention relative du jour peuvent être ambiguës. La date complète, l’heure et le fuseau rendent l’échéance opérationnelle."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which completion correctly follows the expression “look forward to” in a professional email?",
+      "options": [
+        "I look forward to receive your reply.",
+        "I look forward to received your reply.",
+        "I look forward receive your reply.",
+        "I look forward to receiving your reply."
+      ],
+      "answer": 3,
+      "explanation": "Dans look forward to, to est une préposition suivie ici de la forme en -ing : receiving. Ce n’est pas le to d’un infinitif receive."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "An email asks for a reply “as soon as possible” although a review meeting starts at 10:00 on 8 April. What revision best supports planning?",
+      "options": [
+        "State the required reply date and time explicitly.",
+        "Keep as soon as possible and mark the subject line urgent, without specifying the reply deadline.",
+        "Ask only for acknowledgement of the email, without stating when the substantive reply is needed.",
+        "Copy a supervisor while leaving the required reply time unstated."
+      ],
+      "answer": 0,
+      "explanation": "As soon as possible exprime une urgence mais ne fixe pas une limite commune. Une date et une heure explicites permettent d’organiser la réponse avant la réunion."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Which English adjective normally means “actuel” when describing a position held now?",
+      "options": [
+        "Previous",
+        "Current",
+        "Actual",
+        "Eventual"
+      ],
+      "answer": 1,
+      "explanation": "Current désigne ici la situation présente. Actual signifie plutôt réel ou effectif ; previous renvoie à une situation antérieure."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A budget report compares planned costs with the costs really incurred. Which expression identifies the latter?",
+      "options": [
+        "Standard costs",
+        "Budgeted costs",
+        "Actual costs",
+        "Forecast costs"
+      ],
+      "answer": 2,
+      "explanation": "Actual costs désigne les coûts réellement constatés, par opposition aux montants budgétés. Forecast, standard et budgeted ne désignent pas la réalisation constatée."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Which word naturally completes this neutral status update: “We have not received your signed agreement ___.”",
+      "options": [
+        "since",
+        "still",
+        "during",
+        "yet"
+      ],
+      "answer": 3,
+      "explanation": "Yet se place naturellement en fin de cette phrase négative au present perfect. Since introduit un point de départ, during une période nominale ; still ne s’emploie pas ici à cette place."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Which sentence correctly uses word order in an indirect question?",
+      "options": [
+        "Could you tell me when the meeting starts?",
+        "Could you tell me when does the meeting start?",
+        "Could you tell me when starts the meeting?",
+        "Could you tell me when the meeting does starts?"
+      ],
+      "answer": 0,
+      "explanation": "La question indirecte conserve ici l’ordre sujet-verbe : when the meeting starts. On n’y reprend pas l’inversion ni le does d’une question directe."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Read: “Send the invoice and the delivery note to Accounts and Logistics, respectively.” According to this instruction, who should receive the invoice?",
+      "options": [
+        "Logistics",
+        "Accounts",
+        "Both departments must receive both documents.",
+        "The sender may choose either department for each document."
+      ],
+      "answer": 1,
+      "explanation": "Respectively associe les éléments dans le même ordre : invoice avec Accounts, delivery note avec Logistics. Il ne signifie ni envoi de tout à tous ni choix libre des destinataires."
+    }
+  ]
+}

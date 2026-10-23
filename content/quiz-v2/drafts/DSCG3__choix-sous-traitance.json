@@ -1,0 +1,546 @@
+{
+  "module": "DSCG3",
+  "chapter": "choix-sous-traitance",
+  "sourceHash": "2fd1b69f6e76a26e865ebfa260c564da1f65ecdb6ad36b1a72c58bb92a91a23a",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Pour tout le volume futur Q, fabriquer coûte 10 000 € de frais spécifiques plus 12 € par unité. Acheter coûte 2 000 € de qualification spécifique plus 16 € par unité. Ces deux frais sont encore évitables avant le choix ; aucune autre différence n’existe. À quel volume les deux options ont-elles le même coût ?",
+      "options": [
+        "2 000 unités",
+        "2 500 unités",
+        "500 unités",
+        "3 000 unités"
+      ],
+      "answer": 0,
+      "explanation": "L’égalité est 10 000 + 12Q = 2 000 + 16Q. L’écart de frais spécifiques de 8 000 € est compensé par 4 € d’économie variable par unité : Q = 2 000. Il s’agit de l’indifférence entre deux structures de coûts, non du seuil de résultat d’un produit.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 10000
+                },
+                {
+                  "value": 2000
+                }
+              ]
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 16
+                },
+                {
+                  "value": 12
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "ACCA — Relevant costs",
+          "url": "https://www.accaglobal.com/sg/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/relevant-costs.html"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La fabrication comporte 12 000 € variables et 3 000 € fixes entièrement évitables si l’achat externe est retenu. Quel coût interne pertinent obtient-on ?",
+      "options": [
+        "9 000 €",
+        "15 000 €",
+        "36 000 000 €",
+        "12 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le coût interne pertinent comprend les deux montants qui disparaissent en cas d’achat : 12 000 + 3 000 = 15 000 €. Une charge commune inchangée demanderait un traitement différent.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 12000
+            },
+            {
+              "value": 3000
+            }
+          ]
+        },
+        "expected": 15000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le fournisseur propose les 1 000 unités nécessaires à 16 € l’unité. Aucun autre coût externe n’intervient dans ce calcul. Quel coût d’achat retient-on ?",
+      "options": [
+        "1 016 €",
+        "62,50 €",
+        "16 000 €",
+        "16 €"
+      ],
+      "answer": 2,
+      "explanation": "Le coût externe est 1 000 × 16 = 16 000 €. Les conditions excluent d’autres postes dans ce calcul ; elles doivent être vérifiées avant d’étendre le résultat à un cas réel.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 1000
+            },
+            {
+              "value": 16
+            }
+          ]
+        },
+        "expected": 16000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "L’achat coûte 16 000 € contre 15 000 € pertinents pour fabriquer. Avec économie interne = coût externe − coût interne, quelle valeur obtient-on ?",
+      "options": [
+        "31 000 €",
+        "-1 000 €",
+        "15 000 €",
+        "1 000 €"
+      ],
+      "answer": 3,
+      "explanation": "L’économie de fabrication est 16 000 − 15 000 = 1 000 €. Le signe positif favorise ici fabriquer sur ce seul critère et sous les hypothèses du périmètre.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 16000
+            },
+            {
+              "value": 15000
+            }
+          ]
+        },
+        "expected": 1000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le coût variable de fabrication exclut une consommation qui disparaîtrait en cas d’achat. Quelle correction est pertinente ?",
+      "options": [
+        "Inclure cette consommation documentée dans le coût interne pertinent.",
+        "La répartir sur les autres produits pour préserver le coût unitaire interne annoncé, sans modifier le total comparé.",
+        "La laisser hors calcul au motif que les consommations déjà listées sont toutes variables.",
+        "L’ajouter aux deux options même si le fournisseur la prend déjà en charge dans son prix."
+      ],
+      "answer": 0,
+      "explanation": "La comparaison doit couvrir les ressources réellement modifiées. Une omission documentée doit être corrigée sans être comptée dans les deux options par défaut."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Maintenir la fabrication pendant l’horizon exige 9 000 € de coûts variables et 6 000 € d’un contrat de machine. En cas de sous-traitance, l’achat externe coûte 5 000 € ; le contrat peut alors être résilié contre 2 000 € qui remplacent intégralement les 6 000 €. Quel gain total procure l’option externe dans ce modèle ?",
+      "options": [
+        "4 000 €",
+        "8 000 €",
+        "10 000 €",
+        "2 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le maintien interne coûte 9 000 + 6 000 = 15 000 €. L’option externe coûte 5 000 + 2 000 = 7 000 €. Le gain est de 8 000 €. L’évitabilité du contrat doit être appréciée nette de la pénalité de sortie, non confondue avec une disparition gratuite ni un paiement maintenu de 6 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 9000
+                },
+                {
+                  "value": 6000
+                }
+              ]
+            },
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 5000
+                },
+                {
+                  "value": 2000
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 8000,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "ACCA — Relevant costs",
+          "url": "https://www.accaglobal.com/sg/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/relevant-costs.html"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le prix fournisseur exclut un transport spécifiquement nécessaire et chiffré. Quelle comparaison est cohérente ?",
+      "options": [
+        "Comparer seulement les prix unitaires affichés.",
+        "Retirer le transport du coût interne sans lien causal.",
+        "Ajouter ce coût à l’option externe pour comparer des périmètres complets.",
+        "Le traiter comme une charge commune inchangée sans examen."
+      ],
+      "answer": 2,
+      "explanation": "Le dossier modifie le périmètre initial sans logistique. Une dépense propre à l’achat doit être prise en compte dans cette option, au lieu d’en masquer la contrepartie."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "L’achat est moins cher mais crée une dépendance à une source unique. Quelle décision le calcul seul permet-il ?",
+      "options": [
+        "Une acceptation définitive dès lors que le prix est plus faible, sans examen de la continuité du service.",
+        "Un refus définitif fondé seulement sur le nombre de sources, sans comparer les mesures de protection possibles.",
+        "Une preuve que les clauses de prix couvrent déjà la qualité et la conservation du savoir-faire.",
+        "Une préférence de coût à rapprocher de continuité, qualité et savoir-faire."
+      ],
+      "answer": 3,
+      "explanation": "Les coûts éclairent un critère, sans épuiser les effets de l’externalisation. Les risques doivent être étudiés sans leur attribuer arbitrairement un montant absent."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "La norme interne est 1,5 heure par unité à 20 € variables par heure. Pour 200 unités sans autre coût variable, quel montant retient-on ?",
+      "options": [
+        "6 000 €",
+        "4 000 €",
+        "300 €",
+        "6 200 €"
+      ],
+      "answer": 0,
+      "explanation": "La fabrication demande 200 × 1,5 = 300 heures, valorisées à 20 €, soit 6 000 €. Les unités de temps et de coût doivent être cohérentes.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 200
+                },
+                {
+                  "value": 1.5
+                }
+              ]
+            },
+            {
+              "value": 20
+            }
+          ]
+        },
+        "expected": 6000,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un contrat fixe subsiste douze mois après l’arrêt interne. Quel point faut-il examiner avant d’annoncer son économie immédiate ?",
+      "options": [
+        "La qualification de charge fixe suffit à la traiter comme supprimée dès la première unité achetée.",
+        "Le calendrier et les engagements réellement supprimables dans l’horizon choisi.",
+        "Le transfert d’activité suffit à mettre fin à l’obligation contractuelle sans vérifier les conditions de sortie.",
+        "La baisse de charge imputée par produit suffit à prouver une baisse de paiement pendant les douze mois restants."
+      ],
+      "answer": 1,
+      "explanation": "L’évitabilité est liée au scénario et à l’horizon. Une charge peut rester due malgré l’arrêt ; le calcul doit suivre les conditions effectives plutôt que son libellé fixe."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux devis couvrent des niveaux de qualité différents. Quel préalable manque à leur classement par coût ?",
+      "options": [
+        "Retenir le tarif facial le plus bas en supposant qu’une même unité facturée garantit le même service.",
+        "Comparer seulement le nombre d’unités livrées, sans contrôler les caractéristiques ou adaptations nécessaires.",
+        "La comparaison du besoin effectivement satisfait et des éventuelles adaptations.",
+        "Retenir la qualité supérieure comme une économie certaine, sans vérifier son utilité pour le besoin."
+      ],
+      "answer": 2,
+      "explanation": "Le coût n’est comparable que pour un service défini. Une différence de qualité ou de prestation peut exiger des moyens supplémentaires et modifier l’intérêt de l’option."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "La demande est de 1 000 unités. La capacité interne disponible permet au plus 600 unités à 12 € de coût variable, sans coût fixe additionnel. Le fournisseur peut compléter librement à 16 € par unité, sans minimum ni autre coût. Quel coût minimal pertinent permet de satisfaire toute la demande ?",
+      "options": [
+        "12 000 €",
+        "16 000 €",
+        "7 200 €",
+        "13 600 €"
+      ],
+      "answer": 3,
+      "explanation": "Il est moins cher de fabriquer dans la capacité disponible, puis d’acheter le solde : 600 × 12 + 400 × 16 = 13 600 €. Fabriquer les mille unités serait impossible ici, et ne compter que les 600 internes laisserait une partie de la demande non satisfaite.",
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 600
+                },
+                {
+                  "value": 12
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "-",
+                  "args": [
+                    {
+                      "value": 1000
+                    },
+                    {
+                      "value": 600
+                    }
+                  ]
+                },
+                {
+                  "value": 16
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 13600,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "ACCA — Relevant costs",
+          "url": "https://www.accaglobal.com/sg/en/student/exam-support-resources/fundamentals-exams-study-resources/f5/technical-articles/relevant-costs.html"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le volume demandé augmente, avec coût variable interne unitaire inchangé. Quel montant change directement dans le modèle ?",
+      "options": [
+        "Le total variable de fabrication.",
+        "Le coût variable unitaire, qui augmente nécessairement au même taux que le volume dans ce modèle proportionnel.",
+        "Le montant des charges fixes supposé stable dans le domaine étudié.",
+        "Le coût fournisseur unitaire contractuel, supposé varier même si le tarif ne prévoit aucun palier."
+      ],
+      "answer": 0,
+      "explanation": "Le coût variable total suit le volume dans le domaine donné. Le modèle doit ensuite être confronté aux capacités et paliers, sans assimiler cette proportionnalité à une validité illimitée."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une entreprise externalise une fabrication et observe une baisse des émissions de ses propres installations. Elle annonce que l’empreinte du produit a baissé d’autant, sans données de fabrication du fournisseur. Quel contrôle manque à cette conclusion ?",
+      "options": [
+        "Vérifier seulement les factures d’énergie des anciens locaux, comme si les émissions du fournisseur étaient nulles.",
+        "Comparer un périmètre cohérent incluant les émissions transférées à la chaîne d’approvisionnement avant d’affirmer un gain global.",
+        "Traiter toute externalisation comme une hausse certaine des émissions, indépendamment des procédés du fournisseur.",
+        "Convertir la baisse de coût d’achat en baisse d’émissions avec le même pourcentage, sans facteur d’émission."
+      ],
+      "answer": 1,
+      "explanation": "La baisse sur les installations de l’entreprise peut refléter un déplacement de l’activité. Les émissions des opérations externalisées doivent être étudiées selon les frontières et catégories pertinentes, notamment indirectes, pour comparer l’empreinte globale ; le seul changement de propriétaire ne prouve pas leur disparition.",
+      "references": [
+        {
+          "title": "GHG Protocol — Accounting for outsourced operations",
+          "url": "https://ghgptechassistance.zendesk.com/hc/en-us/articles/27680428302228-How-do-I-account-for-and-report-outsourced-operations"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "La fabrication coûte 18 000 € pertinents pour 600 unités. Quel prix fournisseur unitaire égalise les deux options si aucun autre coût externe n’existe ?",
+      "options": [
+        "10 800 000 €",
+        "600 €",
+        "30 €",
+        "0,0333 €"
+      ],
+      "answer": 2,
+      "explanation": "Le prix d’équivalence est 18 000 / 600 = 30 € par unité. Cette limite ne prend pas en compte les différences qui seraient absentes des hypothèses, comme logistique ou qualité.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 18000
+            },
+            {
+              "value": 600
+            }
+          ]
+        },
+        "expected": 30,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un rapport définit économie interne = externe − interne, puis lit une valeur négative comme un gain à fabriquer. Quelle correction convient ?",
+      "options": [
+        "Une valeur négative démontre une économie à fabriquer parce que le rapport emploie le mot économie.",
+        "Une valeur négative indique que le fournisseur est plus cher, même si externe moins interne est inférieur à zéro.",
+        "Une valeur négative doit être ramenée à zéro pour conserver un indicateur d’économie positif.",
+        "Avec cette convention, une valeur négative indique un coût interne supérieur."
+      ],
+      "answer": 3,
+      "explanation": "La convention doit guider le commentaire. Le mot économie ne garantit pas un signe favorable ; les deux coûts doivent être rapprochés avant de choisir."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le coût variable interne baisse grâce à un procédé, mais un coût de formation spécifique est nécessaire. Quel traitement convient ?",
+      "options": [
+        "Comparer l’économie variable et le coût spécifique sur l’horizon cohérent.",
+        "Retenir seulement l’économie unitaire en excluant la formation parce qu’elle n’est pas proportionnelle au volume.",
+        "Ajouter le coût de formation au coût fournisseur même s’il est propre à la fabrication avec le nouveau procédé.",
+        "Comparer l’économie annuelle au coût cumulé de plusieurs années sans harmoniser leurs horizons."
+      ],
+      "answer": 0,
+      "explanation": "Une baisse de coefficient peut avoir une contrepartie. Le périmètre et l’horizon doivent relier les coûts de mise en œuvre aux économies attendues."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une partie seulement des charges fixes disparaît avec l’achat. Le modèle initial les traitait comme entièrement évitables. Quelle modification est nécessaire ?",
+      "options": [
+        "Conserver le total entièrement évitable au motif que cette hypothèse figurait dans le premier modèle.",
+        "Séparer part évitable et part maintenue selon les faits.",
+        "Exclure aussi la part annulable parce que toutes les charges fixes seraient nécessairement communes.",
+        "Retirer la part maintenue de la seule option externe pour obtenir un coût plus faible sans justification."
+      ],
+      "answer": 1,
+      "explanation": "L’hypothèse initiale ne peut pas remplacer une information nouvelle. Seules les différences effectives doivent être comparées, avec traçabilité des montants maintenus."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le fournisseur prévoit une quantité minimale supérieure au besoin. Que faut-il examiner ?",
+      "options": [
+        "Multiplier seulement le besoin utile par le tarif même si le contrat impose de payer une quantité supérieure.",
+        "Considérer la quantité minimale comme une livraison fictive n’engageant aucun paiement.",
+        "Les achats, stocks et coûts réellement induits par la condition minimale.",
+        "Répartir le surplus sur les années futures sans vérifier sa conservation ni ses usages possibles."
+      ],
+      "answer": 2,
+      "explanation": "Une contrainte de lot change les quantités achetées et éventuellement le stockage. La comparaison doit suivre les engagements réels plutôt que le seul besoin physique initial."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le coût favorise l’achat mais le dossier ne décrit pas la possibilité de récupérer le savoir-faire ensuite. Quel point de décision reste ouvert ?",
+      "options": [
+        "Le maintien du même budget de production interne suffirait à garantir le retour des compétences.",
+        "La seule possibilité juridique de résiliation suffirait à garantir la reprise opérationnelle sans délai.",
+        "Le coût fournisseur unitaire suffirait à déterminer les moyens nécessaires à un retour interne.",
+        "La dépendance, la conservation des capacités et la réversibilité de l’option."
+      ],
+      "answer": 3,
+      "explanation": "L’externalisation peut avoir des effets durables non mesurés par le coût immédiat. Le diagnostic doit les expliciter sans leur attribuer un résultat certain en l’absence de données."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un coût commun inchangé est retiré de la fabrication mais ajouté au coût externe. Quel biais peut apparaître ?",
+      "options": [
+        "Une asymétrie de périmètre qui charge une option d’un montant supporté dans les deux cas.",
+        "Une économie réelle due au fait qu’une charge commune a changé de colonne dans le tableau.",
+        "Une correction de prix fournisseur, même si le contrat et les dépenses externes sont inchangés.",
+        "Une amélioration de précision qui rend automatiquement les deux périmètres comparables."
+      ],
+      "answer": 0,
+      "explanation": "Les éléments communs doivent être traités de manière cohérente. Les déplacer dans une seule colonne peut fabriquer une préférence sans modifier les ressources consommées."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le prix externe est estimé et le volume très incertain. Quelle présentation soutient la décision ?",
+      "options": [
+        "Une option unique retenue sur le seul coût moyen historique.",
+        "Des hypothèses et scénarios de coût avec leurs limites et points de contrôle.",
+        "Une prévision centrale présentée sans sensibilité aux coûts incertains.",
+        "Un classement sur le seul prix du fournisseur, sans les conséquences internes."
+      ],
+      "answer": 1,
+      "explanation": "La précision arithmétique ne supprime pas l’incertitude des entrées. Une analyse conditionnelle aide à identifier les seuils de bascule et informations utiles à vérifier."
+    }
+  ]
+}

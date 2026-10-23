@@ -1,0 +1,554 @@
+{
+  "module": "UE10",
+  "chapter": "cout-entree-actif",
+  "sourceHash": "af872103fd9b39c0a2b29b2a839ac8e1568c0847d2fd7304fa1787ac38c3a24c",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une dépense a été payée, mais l’entreprise ne peut identifier la ressource qu’elle contrôlerait ni les avantages économiques attendus. Quelle conclusion sur l’actif est la plus justifiée ?",
+      "options": [
+        "Le paiement seul ne démontre pas les critères de reconnaissance d’un actif",
+        "Toute dépense payée doit être immobilisée",
+        "La banque détermine automatiquement la durée d’amortissement",
+        "Le montant doit être placé en valeur résiduelle par défaut"
+      ],
+      "answer": 0,
+      "explanation": "Le décaissement prouve un paiement, pas tous les critères d’actif. La nature de la ressource et ses avantages doivent être examinés selon le cadre.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une prestation de maintenance courante consommée est ajoutée au coût initial d’une machine seulement parce que le même fournisseur l’a facturée. Quel élément manque à cette qualification ?",
+      "options": [
+        "La seule identité du fournisseur, qui suffirait toujours",
+        "La justification de sa nature et de son lien éligible au coût de l’actif",
+        "Le simple fait qu’un paiement reste à effectuer",
+        "Une hausse du prix de vente des produits de la machine"
+      ],
+      "answer": 1,
+      "explanation": "Une relation commerciale commune ne transforme pas une consommation courante en acquisition d’actif. Chaque prestation conserve son analyse propre.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture regroupe un équipement durable identifié et une assistance courante déjà consommée ; les deux montants sont distincts. Quelle démarche est adaptée ?",
+      "options": [
+        "Immobiliser le total parce que l’équipement figure en première ligne",
+        "Passer tout en charge parce qu’une assistance est incluse",
+        "Analyser séparément les éléments au regard des critères d’actif et de charge",
+        "Affecter le total à chaque poste pour ne rien omettre"
+      ],
+      "answer": 2,
+      "explanation": "La pièce peut documenter plusieurs natures. Leur regroupement sur une facture n’impose pas un traitement unique ni une double affectation.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle séquence est la plus solide avant de déterminer le montant d’un actif ?",
+      "options": [
+        "Choisir le montant souhaité au bilan puis rechercher un justificatif",
+        "Prendre tous les paiements du fournisseur comme actifs identiques",
+        "Fixer la durée du prêt comme seul critère de qualification",
+        "Identifier la ressource et son usage puis vérifier les critères et coûts admissibles"
+      ],
+      "answer": 3,
+      "explanation": "La reconnaissance précède le chiffrage des dépenses admissibles. Le financement ou un objectif de résultat ne remplace pas l’analyse de l’opération.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le cas retient un prix net de 26 000 €, un transport nécessaire de 900 € et une installation nécessaire de 1 600 €. Une campagne publicitaire de 700 € est exclue du coût. Quel coût d’entrée est retenu ?",
+      "options": [
+        "28 500 €",
+        "29 200 €",
+        "26 000 €",
+        "27 600 €"
+      ],
+      "answer": 0,
+      "explanation": "Les dépenses retenues totalisent 26 000 + 900 + 1 600 = 28 500 €. La publicité exclue n’est pas ajoutée du seul fait qu’elle accompagne le lancement.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 26000
+                },
+                {
+                  "value": 900
+                }
+              ]
+            },
+            {
+              "value": 1600
+            }
+          ]
+        },
+        "expected": 28500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un coût de transport déjà inclus dans le prix livré est ajouté une seconde fois à partir du devis détaillé. Quel risque faut-il contrôler ?",
+      "options": [
+        "Une omission de la totalité du prix d’achat",
+        "Le double comptage d’un coût directement attribuable déjà compris",
+        "La nécessité de traiter tout transport en produit",
+        "Une baisse obligatoire du coût total de taxe"
+      ],
+      "answer": 1,
+      "explanation": "Un coût peut être admissible mais déjà intégré à une donnée agrégée. Il faut rapprocher prix global et détail avant toute addition.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un coût d’installation est nécessaire à l’usage prévu, mais la facture arrive après la mise en service. La seule arrivée tardive du document exclut-elle automatiquement ce coût d’entrée ?",
+      "options": [
+        "Oui, toute facture tardive est étrangère à l’actif",
+        "Oui, le paiement doit précéder toute livraison pour être admissible",
+        "Non, il faut analyser la nature, la réalisation et la justification du coût",
+        "Non, il faut ajouter toutes les dépenses ultérieures sans limite"
+      ],
+      "answer": 2,
+      "explanation": "La date du document ne remplace pas l’analyse du service et des conditions de coût. Une pièce reçue ensuite peut justifier une opération antérieure.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les frais généraux du siège sont répartis forfaitairement sur la machine sans lien direct établi. Quelle justification manque ?",
+      "options": [
+        "La seule volonté de réduire les charges de l’année",
+        "Le fait que le siège dispose d’un compte bancaire",
+        "Le nombre de paiements fournisseurs de la période",
+        "Le lien admissible entre ces coûts et la mise en état de l’actif"
+      ],
+      "answer": 3,
+      "explanation": "Une clé forfaitaire ne suffit pas à rendre tout coût directement attribuable. Le rattachement doit être étayé dans le cadre applicable.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le dossier limite explicitement les coûts admissibles au transport et à l’installation nécessaires. Quelle information rend l’évaluation contrôlable ?",
+      "options": [
+        "Les pièces et le rôle de chaque dépense dans la mise en état prévue",
+        "La somme de tous les achats annuels du fournisseur",
+        "Le seul montant global sans description des services",
+        "Le prix de revente souhaité par le dirigeant"
+      ],
+      "answer": 0,
+      "explanation": "Le contrôle vérifie à la fois les montants et leur admissibilité. Le rôle concret des dépenses permet d’éviter une capitalisation arbitraire.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un équipement coûte 10 000 € HT et porte 2 000 € de taxe. Dans l’exercice, 1 500 € de cette taxe sont récupérables et 500 € ne le sont pas ; aucun autre coût. Quel coût d’acquisition résulte de ces hypothèses ?",
+      "options": [
+        "12 000 €",
+        "10 500 €",
+        "10 000 €",
+        "8 500 €"
+      ],
+      "answer": 1,
+      "explanation": "La partie récupérable est distincte du coût ; la partie non récupérable retenue le majore : 10 000 + 500 = 10 500 €.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "value": 10000
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 2000
+                },
+                {
+                  "value": 1500
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 10500,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La TVA est intégralement récupérable selon le dossier, mais le coût enregistré est le TTC. Quel effet faut-il examiner ?",
+      "options": [
+        "Un coût réduit du seul nominal du prêt",
+        "Une créance client systématiquement plus élevée",
+        "Un coût d’actif surévalué par la taxe récupérable incluse",
+        "Une valeur résiduelle automatiquement égale à la taxe"
+      ],
+      "answer": 2,
+      "explanation": "Les taxes récupérables sont distinguées dans l’hypothèse. Les intégrer au coût peut aussi fausser les amortissements calculés ensuite sur cette base.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le PCG prévoit une option pour certains frais externes de formation nécessaires à la mise en service. Quelle présentation respecte cette possibilité ?",
+      "options": [
+        "Affirmer que toute formation est toujours immobilisable sans conditions",
+        "Affirmer que tout coût externe de formation est toujours interdit à l’actif",
+        "Ajouter la formation à la fois au coût et à la charge pour couvrir les deux options",
+        "Identifier et appliquer l’option admissible entre rattachement au coût et charges"
+      ],
+      "answer": 3,
+      "explanation": "L’article213-8 prévoit cette option sous ses conditions. L’existence d’un choix ne permet ni une généralisation à toute formation ni une double comptabilisation.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des honoraires liés à l’acquisition relèvent de l’option prévue dans les comptes individuels par le PCG. Quelle démarche convient ?",
+      "options": [
+        "Déterminer le choix applicable et le documenter plutôt que supposer une règle unique",
+        "Capitaliser les honoraires au seul motif que la facture a été payée avant clôture",
+        "Les passer en charges au seul motif qu’ils sont facturés séparément du bien",
+        "Changer de traitement à chaque acquisition selon le résultat recherché"
+      ],
+      "answer": 0,
+      "explanation": "Le cadre peut prévoir des options particulières. Le dossier doit indiquer le traitement retenu et son application cohérente, sans inventer de contrepartie étrangère.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un coût de financement est capitalisé uniquement parce qu’un emprunt existe, sans examiner les conditions du cadre. Quel contrôle manque ?",
+      "options": [
+        "La preuve que tout prêt réduit automatiquement le coût brut",
+        "L’éligibilité de cette catégorie de coût et les conditions ou choix applicables",
+        "Le remplacement de l’actif par son capital restant dû",
+        "Le classement de tous les intérêts en valeur résiduelle"
+      ],
+      "answer": 1,
+      "explanation": "L’existence d’un financement ne suffit pas à décider de tout rattachement. Les règles spécifiques doivent être analysées avant d’ajouter le coût.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une erreur a intégré 1 200 € de taxe récupérable dans un coût d’actif annoncé de 13 200 €. Aucun autre écart n’existe. Quel coût corrigé faut-il retenir ?",
+      "options": [
+        "14 400 €",
+        "1 200 €",
+        "12 000 €",
+        "13 200 €"
+      ],
+      "answer": 2,
+      "explanation": "La correction retire la composante récupérable indûment incluse : 13 200 − 1 200 = 12 000 €. Il faut ensuite examiner les effets sur le suivi de l’actif.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 13200
+            },
+            {
+              "value": 1200
+            }
+          ]
+        },
+        "expected": 12000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi préciser la récupération d’une taxe dans un dossier de coût d’entrée ?",
+      "options": [
+        "Elle détermine toujours la durée du prêt",
+        "Elle transforme une charge courante en machine durable",
+        "Elle supprime la nécessité d’identifier le prix HT",
+        "Elle peut modifier la part incluse dans le coût selon le cadre"
+      ],
+      "answer": 3,
+      "explanation": "Le traitement du coût dépend notamment de la nature récupérable ou non de la taxe. Cette donnée doit être distinguée des autres critères d’actif.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le coût d’achat est confirmé par la facture, mais la durée d’usage reste estimée. Peut-on traiter ces deux chiffres comme deux données observées de même certitude ?",
+      "options": [
+        "Non, coût documenté et hypothèse de consommation doivent être distingués",
+        "Oui, tout chiffre présent dans un fichier est un fait confirmé",
+        "Oui, la durée est égale au montant du coût divisé par mille",
+        "Non, le coût devient une prévision dès qu’un amortissement existe"
+      ],
+      "answer": 0,
+      "explanation": "Une preuve de prix n’établit pas l’usage futur. Le suivi doit indiquer l’origine et le degré d’incertitude de chaque donnée.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "L’entreprise paie un entretien courant et allonge automatiquement toute la durée d’amortissement de la machine. Quelle justification manque ?",
+      "options": [
+        "Le seul montant payé, supposé fixer la durée supplémentaire sans analyse technique",
+        "Une révision étayée de l’utilisation future, distincte du simple paiement d’entretien",
+        "La seule périodicité des paiements d’entretien, assimilée à la durée d’usage restante",
+        "Le seul maintien du coût brut, supposé prouver que la durée peut être prolongée"
+      ],
+      "answer": 1,
+      "explanation": "L’entretien peut modifier certaines perspectives, mais son paiement ne démontre pas un allongement de tout l’usage. Les faits doivent soutenir l’estimation révisée.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un coût net admissible de 21 500 € est amorti linéairement sur cinq ans avec une valeur résiduelle retenue de 1 500 €. Quelle annuité pleine découle de ces données ?",
+      "options": [
+        "4 300 €",
+        "4 600 €",
+        "4 000 €",
+        "20 000 €"
+      ],
+      "answer": 2,
+      "explanation": "La base est 21 500 − 1 500 = 20 000 €. Sur cinq années, l’annuité pleine est 4 000 €. Coût d’entrée et base amortissable sont distincts.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ],
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 21500
+                },
+                {
+                  "value": 1500
+                }
+              ]
+            },
+            {
+              "value": 5
+            }
+          ]
+        },
+        "expected": 4000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une donnée de coût a été mal saisie à l’origine alors que la facture exacte était disponible. Une autre donnée de durée évolue après une nouvelle expertise. Quelle distinction doit guider le suivi ?",
+      "options": [
+        "Toute modification de chiffre est forcément une simple estimation",
+        "Toute nouvelle expertise prouve une erreur passée",
+        "Les deux montants doivent être corrigés en banque sans analyse",
+        "Erreur de donnée initiale et changement d’estimation ne sont pas la même situation"
+      ],
+      "answer": 3,
+      "explanation": "La qualification dépend des informations disponibles et de la raison du changement. Une correction de saisie ne se traite pas automatiquement comme une estimation nouvelle.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le tableau modifie le coût brut pour reproduire une nouvelle valeur de marché sans appliquer de règle ou test défini. Quelle confusion faut-il relever ?",
+      "options": [
+        "La valeur d’entrée, l’estimation d’usage et les corrections ultérieures ont des fonctions distinctes",
+        "Toute valeur de marché remplace automatiquement le coût historique",
+        "La seule durée de financement décide du nouveau coût",
+        "L’entretien courant détermine le prix de marché"
+      ],
+      "answer": 0,
+      "explanation": "Le suivi doit identifier les règles de mesure à chaque étape. Une nouvelle valeur observée ne suffit pas à réécrire arbitrairement le coût initial.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel dossier assure la traçabilité d’un actif après sa mise en service ?",
+      "options": [
+        "Le seul montant payé au fournisseur principal",
+        "Coût justifié, composantes éventuelles, usage estimé, corrections et événements suivis",
+        "La première annuité répétée sans examen des événements",
+        "Le prix de marché choisi chaque année sans cadre"
+      ],
+      "answer": 1,
+      "explanation": "Le suivi conserve le lien entre origine et évolutions de valeur. Les événements et estimations doivent être documentés, pas seulement le paiement initial.",
+      "references": [
+        {
+          "title": "ANC — PCG2026, articles211-1 et213-8",
+          "url": "https://www.anc.gouv.fr/files/anc/files/1_Normes_fran%C3%A7aises/Reglements/Recueils/PCG_janvier2026/PCG--1er-janvier-2026.pdf"
+        }
+      ]
+    }
+  ]
+}

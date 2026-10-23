@@ -1,0 +1,248 @@
+{
+  "sourceHash": "e019dde041edd6d2d67c10a75554811ada11cdb0e1c9c126737bffb408398d54",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "aa640b86a962b2ef64f51a3677d61d9eb8bae8726ba40c94b70340cde3cb0813",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La réalité et la période sont données correctes ; le montant enregistré est faux. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q02",
+      "digest": "829937b979a6c716681be4c91b2c87b922dd1423d0e46ae557cef5e4b22f7cdf",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une dette réelle et évaluée correctement est mal rangée : le défaut porte sur classement et présentation."
+    },
+    {
+      "id": "q03",
+      "digest": "643327cec2846ab67a0e6be8eb460f2216b8e24e6610affc4326f34787d56a78",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une annexe obligatoire doit être contrôlée même si le solde est correct. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q04",
+      "digest": "22cb0d55c7b3ef89919ddcddc2d060a0aa63089b8cd61b84192cbf49a68a6074",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le format de numérotation ne prouve pas la livraison. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q05",
+      "digest": "94dbe6ddf41c67b31634bfdde4d34d88160b564fa1d4573ab36b14d22f5d61f8",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’existence du fournisseur ne démontre pas la réalité d’une opération particulière portée à son nom."
+    },
+    {
+      "id": "q06",
+      "digest": "ee2fa0784621babb0c6deea8d643b1080a30eb852954d8c8dac6558fc8d90e57",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le recalcul couvre une mesure, non la recherche de dettes absentes. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q07",
+      "digest": "08bcd4d6f216d067058a96c593636be89442673bc92cd31a9a9607eb8963938e",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Recalculer capital multiplié par taux et durée est un contrôle arithmétique, distinct d’observer ou de confirmer."
+    },
+    {
+      "id": "q08",
+      "digest": "5842e4a2d781ad5fc564b4c9424bd00b000d7a311d83e76f1153aca3df56de19",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’auditeur exécute lui-même à nouveau le rapprochement : réexécution, plutôt qu’observation ou simple information."
+    },
+    {
+      "id": "q09",
+      "digest": "4e4e732f3e5978821de605e9d41bda7e94e937126c676ac2c1b06110d7f212a5",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les traces sur des paiements de la période peuvent montrer l’exécution réelle. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q10",
+      "digest": "0696319e7f09a39e3b1f6ae82aee28c9513a889d0780023fb72f7e42703c4564",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les cinq montants élevés sont des éléments spécifiques. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q11",
+      "digest": "a7333328db2fc302c925ad0c919e2da28fbcdcb36befdd531c8b7046c9b5a24f",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La NEP 530 exige analyse de la nature et de la cause. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q12",
+      "digest": "718e15c52cb50cdc191dca3d33b097680b9d4fd9007e4f93cc542fc672d41573",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le compte défini est contrôlé intégralement. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q13",
+      "digest": "3926626ebd740f4060dfc07b914fe016b965b72048be77f46358c0a9f9b8be1e",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les stocks ordinaires relèvent d’IAS 2, pas du test IAS 36. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q14",
+      "digest": "a0042a12e0ef96441d31fa701a9d06b6f7cfc3f020bdf292c71c180d7695c149",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les actifs d’impôt différé sont exclus d’IAS 36 et relèvent d’IAS 12. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q15",
+      "digest": "29ebce41d9190e401dc5af920d63277ba97c98a06be58b29d3939f1bf2d8e9e8",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les trois catégories données sont soumises au test annuel IAS 36 même sans indice. Acquisition seulement ou projet certain de vente donnent des erreurs de fréquence possibles."
+    },
+    {
+      "id": "q16",
+      "digest": "3772e4fd24f29d94dc9840df569161f002954c6b0c3ba17cc4ff6dd2356832a3",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "IAS 36 distingue revue des indices et test annuel des catégories particulières. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q17",
+      "digest": "b330bf0ad4e3fe6039890baa02cd3cb66ca1c068123b1d7ad94d29cb28a63bcd",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Flux de toute une unité et valeur d’un seul actif ne couvrent pas le même objet. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q18",
+      "digest": "a2cce96ef66b7381cf0afe999f07b9078f51155a0f601a5000defc7f9a1af42c",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La perte est 250 000 − 230 000 = 20 000, entièrement sur le goodwill ; il reste 35 000 − 20 000 = 15 000."
+    },
+    {
+      "id": "q19",
+      "digest": "b8ee039cbfa61b73139212a21f25868e94333e703596d569a82840ba866457cf",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une vente se compare à la valeur comptable au moment de cession. La dépréciation antérieure ne fixe pas le prix futur."
+    },
+    {
+      "id": "q20",
+      "digest": "b3be5f523e422ec1569d4eb0d9ef86c96cb24266d0542777495ea828acfa3550",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une perte de valeur n’est pas une indemnisation. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q21",
+      "digest": "1fc169fe157dc9a522dc861f6d741852ab67b8c4e046794951c9f60175705046",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’égalité du résultat ne justifie pas des hypothèses contraires aux informations disponibles. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q22",
+      "digest": "f1fbc857688c171cbdc207a02ea1b5cefb22f0f62cf6ed78881d32b0dae2a547",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "48 000 − 13 000 = 35 000, sans impôt ni ajustement supplémentaire dans le cas donné."
+    }
+  ]
+}

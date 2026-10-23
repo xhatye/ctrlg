@@ -1,0 +1,248 @@
+{
+  "sourceHash": "0406829bcb5a70584817c8ee0f897ea5663bef4283f05e4b6e8f4d10ea0ef115",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "f9d831f1b4c85194ef6dbf55f6343fb060063329765812bfb3118ad8994509b1",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Juste valeur nette : 87 000 − 4 500 = 82 500."
+    },
+    {
+      "id": "q02",
+      "digest": "fef740b195387340130b6ddaf5fea44d7b87b7be6f217c4bb6314945c838b823",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une valeur déjà nette ne doit pas supporter deux fois les mêmes frais. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    },
+    {
+      "id": "q03",
+      "digest": "f5d472781b4a0b2e4267a6b07e6dff19c16f991fcdf9da972cdf0e26bfb7e968",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’offre reste conditionnelle ; proximité de date, prix concordant et solvabilité ne dispensent pas d’étudier la condition. Alternatives désormais distinctes et plausibles."
+    },
+    {
+      "id": "q04",
+      "digest": "0a58bbc7850769ab91a80eb32bf375170564a3fcc053e304de0a8770db396a12",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les deux valeurs doivent être comparables dans une même monnaie cohérente ; aucun choix brut des nombres ne suffit."
+    },
+    {
+      "id": "q05",
+      "digest": "abc3dea7c1dfe1b0fffd2247eae47fa8b4cc02287a75dd4d6e4ebc3d7b89721c",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Valeur isolée et coûts de toute usine ne couvrent pas le même objet. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    },
+    {
+      "id": "q06",
+      "digest": "213b796ae2d980ac3c5570177ed82db62a9575d183410160fd36afda1a1be1a4",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le maximum sera au moins 58 000, au-dessus de 50 000 : aucune perte même sans deuxième mesure."
+    },
+    {
+      "id": "q07",
+      "digest": "054d51192acd6ea42a8527bfe449ae1ed18df79f45e899fb5bcd90b2bf88675d",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La sortie nette inconnue pourrait excéder 35 000 ou 40 000 ; impossible de fixer la perte certaine de 5 000 sur cette seule donnée."
+    },
+    {
+      "id": "q08",
+      "digest": "4e299d9ff569450c247946efe3bc704f63d8bca4772e77dcba16a858b0a52467",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les experts ne mesurent pas le même périmètre ; il faut rendre leurs bases comparables avant de les utiliser."
+    },
+    {
+      "id": "q09",
+      "digest": "82087727b326e6761511f6e7aec5d92f92396c03e6c2edca5a277f522162ca8b",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une facture ancienne prouve le coût, pas la récupération actuelle. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    },
+    {
+      "id": "q10",
+      "digest": "3a466f39e55be4a1a8c5c7cac56e375609b3f3aab5c2f76d395163f9278427a2",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le maximum de deux montants égaux vaut 64 000 ; ne pas cumuler deux voies alternatives."
+    },
+    {
+      "id": "q11",
+      "digest": "548902ca53aa1b88085b52d0ae2bb7de0299bd157a33f998165635d463dba63e",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Sortie nette : 132 000 − 7 000 = 125 000 ; maximum avec 118 000 = 125 000 ; perte 15 000."
+    },
+    {
+      "id": "q12",
+      "digest": "5d9e75e504dd45cfef3ad2c76337b76473c94760965a5140bd2ddcf985d8d96c",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "18 000 / 120 000 = 15 % de la base initiale, pas de la base après perte."
+    },
+    {
+      "id": "q13",
+      "digest": "b0de8573b933eae307a81e1da964551b0cc442d2d04afb88414c8e31bdf68568",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La valeur nette donnée inclut déjà l’amortissement ; une deuxième déduction le compte deux fois."
+    },
+    {
+      "id": "q14",
+      "digest": "1f885c93587ec17586d12af744c426ae4ce5f217458e9e6c270539c93e94f01d",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Dans la zone positive de perte, à valeur comptable fixe, la perte baisse quand la valeur recouvrable augmente."
+    },
+    {
+      "id": "q15",
+      "digest": "b9bc712726dfb29206d9bcd16810356808cebc412016256eaeea45ba9cfb12e4",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’effet fiscal ne découle pas automatiquement de la perte comptable ; le cas ne donne ni régime ni situation fiscale."
+    },
+    {
+      "id": "q16",
+      "digest": "2ed83a75614b26a78b5369fcea2c47170e44b5b9d696c32998ecfb8f6a2ee2e4",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La perte d’UGT touche d’abord le goodwill puis les autres actifs selon les règles. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    },
+    {
+      "id": "q17",
+      "digest": "a1043d53b9b98b36079cd4b4433861092938c4d4b506d9007eca9136a7ee287c",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "36 000 / 3 = 12 000 par an pour la base, durée et résiduel imposés."
+    },
+    {
+      "id": "q18",
+      "digest": "8fef5edda037747f2f0dc005f8a5750cc44135d5b9d9fbac05bc645394ae2a9b",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La reprise ne peut dépasser la valeur sans perte antérieure : ici plafond 45 000."
+    },
+    {
+      "id": "q19",
+      "digest": "8d78c2175816b034f7695981009fd931ebaa353d2c2f18824cf5dbddb601cb9f",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La reprise maximale est min(44 000,39 000) − 30 000 = 9 000."
+    },
+    {
+      "id": "q20",
+      "digest": "0964859ed60eef94c81641825e2688b8db6451796647b1cbef66dd8f85f7ee9b",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "IAS 36 interdit la reprise de goodwill. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    },
+    {
+      "id": "q21",
+      "digest": "fda7f667bac11fd5c90158588ff5f6380f64b114a190b9752143c26d24cbfeb9",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La base nette diminuée nécessite un nouvel amortissement prospectif sur la durée restante."
+    },
+    {
+      "id": "q22",
+      "digest": "340e29639976b203ae98ff9d4ff507a5581744a3ab4e2efd325856020f834e02",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La base nette doit inclure les pertes antérieures encore présentes. Nouvelle résolution des alternatives révisées : erreurs du domaine distinctes, sans ambiguïté restante."
+    }
+  ]
+}

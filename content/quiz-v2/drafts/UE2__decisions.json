@@ -1,0 +1,392 @@
+{
+  "module": "UE2",
+  "chapter": "decisions",
+  "sourceHash": "4c60a78e48ba44b83ac98503b3d8e8688a51287811b410de8548905f6663878d",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Dans une SNC, une décision dépasse les pouvoirs des gérants. Les statuts ne prévoient aucune majorité dérogatoire pour cette décision. Quelle règle de L221-6 s’applique ?",
+      "options": [
+        "La décision doit être prise à l’unanimité des associés.",
+        "La décision revient aux associés représentant plus de la moitié du capital.",
+        "La décision revient à la majorité des gérants, même sans vote des associés.",
+        "La décision revient à la majorité des seuls associés présents à la consultation."
+      ],
+      "answer": 0,
+      "explanation": "L221-6 pose l’unanimité des associés pour les décisions excédant les pouvoirs des gérants. Il permet aux statuts de prévoir certaines décisions à une majorité fixée ; l’énoncé exclut ici cette dérogation. Une majorité de capital ou de présents ne peut donc être présumée.",
+      "references": [
+        {
+          "title": "Code de commerce, article L221-6, décisions de SNC",
+          "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000005634379/LEGISCTA000006133176/2026-03-01/"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans une SAS à plusieurs associés, le président veut approuver seul les comptes annuels au titre de ses pouvoirs de gestion. Quel organe doit exercer cette attribution selon l’article L227-9 ?",
+      "options": [
+        "Le seul président, parce qu’il prépare les comptes.",
+        "Les associés collectivement dans les conditions statutaires.",
+        "Le commissaire aux comptes en substitution des associés.",
+        "Le directeur financier, dès lors qu’il établit les documents."
+      ],
+      "answer": 1,
+      "explanation": "L’approbation des comptes relève ici des attributions exercées collectivement par les associés. Préparer les comptes et décider de leur approbation sont deux fonctions distinctes.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-9, version depuis le 1er octobre 2025",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051322706"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une SAS a un président et un associé unique distinct. Le président arrête les comptes puis veut déléguer à un salarié le pouvoir de les approuver à la place de l’associé unique. Quelle distinction retenir ?",
+      "options": [
+        "Arrêter et approuver les comptes constituent la même décision du président.",
+        "Le salarié approuve les comptes dès qu’un mandat lui est donné par le président.",
+        "L’associé unique exerce l’approbation et ne peut déléguer ses pouvoirs.",
+        "Le commissaire aux comptes exerce seul l’approbation lorsqu’il a établi son rapport."
+      ],
+      "answer": 2,
+      "explanation": "Dans cette organisation, l’arrêté par le président ne remplace pas l’approbation par l’associé unique. L’article L227-9 interdit à ce dernier de déléguer ses pouvoirs.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-9, version depuis le 1er octobre 2025",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051322706"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans une SAS, les statuts limitent les achats du président à une somme donnée. Il dépasse cette limite en concluant avec un tiers. Quelle affirmation correspond à l’article L227-6 sur cette seule limitation statutaire ?",
+      "options": [
+        "Le dépassement rend le contrat inopposable à la société, la clause interne limitant aussi les rapports externes.",
+        "Le tiers doit obtenir une ratification des associés pour que le prix convenu soit dû.",
+        "Le dépassement entraîne la nullité du contrat au seul motif que la limite figure dans les statuts publiés.",
+        "La limitation statutaire des pouvoirs du président est inopposable aux tiers."
+      ],
+      "answer": 3,
+      "explanation": "Il faut distinguer organisation interne et rapports externes. L’article L227-6 prévoit l’inopposabilité aux tiers des limitations statutaires de pouvoirs du président.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-6",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006227034"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le président d’une SAS conclut un acte hors objet social avec un tiers. Aucun autre fait n’est fourni. Quelle question probatoire particulière l’article L227-6 rend-il pertinente ?",
+      "options": [
+        "La connaissance par le tiers du dépassement ou les circonstances excluant qu’il l’ignore.",
+        "La seule publication des statuts, tenue pour preuve suffisante de cette connaissance.",
+        "La seule existence d’un objet social, tenue pour preuve du refus d’engagement.",
+        "L’absence de vote préalable des associés, tenue pour preuve que le tiers connaissait le dépassement."
+      ],
+      "answer": 0,
+      "explanation": "Le dépassement de l’objet et l’engagement envers le tiers ne se confondent pas. La règle exige un examen de ce que le tiers savait ou ne pouvait ignorer.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-6",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006227034"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Pourquoi examiner les documents communiqués avant une décision des associés ?",
+      "options": [
+        "Ils établissent l’accord des associés destinataires dès qu’aucune observation écrite n’est reçue.",
+        "Ils permettent d’apprécier l’information requise pour la décision dans le régime concerné.",
+        "Ils prouvent la régularité de la consultation dès lors que le projet a été adopté.",
+        "Ils dispensent de vérifier le texte des résolutions si les données financières sont complètes."
+      ],
+      "answer": 1,
+      "explanation": "L’information soutient la décision éclairée selon les exigences applicables. La réception des documents ne constitue ni un vote ni un transfert de compétence."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pour l’exercice, une clause valable impose l’envoi d’un rapport avec la convocation. La convocation est prouvée, mais aucune pièce n’établit l’envoi du rapport. Quel point reste à contrôler ?",
+      "options": [
+        "La seule date de réception de la convocation, tenue pour preuve de toutes ses annexes.",
+        "Le contenu du rapport, tenu pour communiqué parce qu’il figure ensuite au procès-verbal.",
+        "L’exécution de l’obligation d’information jointe à cette convocation.",
+        "Le résultat du vote, retenu comme preuve de l’envoi préalable du rapport."
+      ],
+      "answer": 2,
+      "explanation": "La preuve d’une convocation ne démontre pas toutes ses annexes. Le contrôle doit viser la communication du rapport exigé, sans présumer son envoi ni une sanction."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un dossier de décision porte sur un investissement immobilier, mais les associés reçoivent seulement un relevé de trésorerie. Quel complément répond directement à l’objet de leur décision ?",
+      "options": [
+        "La capacité à payer le prix comptant, retenue comme substitut à l’analyse du coût et des risques du projet.",
+        "Le rendement d’un investissement comparable, retenu à la place des conditions précises de celui soumis au vote.",
+        "La valeur comptable actuelle des immeubles sociaux, retenue comme description des engagements du nouveau projet.",
+        "Les caractéristiques, conditions financières et risques du projet soumis au vote."
+      ],
+      "answer": 3,
+      "explanation": "L’information doit se rapporter à la décision envisagée. La trésorerie disponible renseigne un aspect du financement, sans décrire le projet ni ses engagements."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une copie affirme que le droit d’information est satisfait parce que tous les associés ont voté. Quel élément omet-elle ?",
+      "options": [
+        "La vérification des documents et modalités d’information exigés.",
+        "La vérification du seul résultat favorable, retenu comme preuve de la suffisance des informations préalables.",
+        "La présence physique des associés, retenue comme dispensant de communiquer les pièces requises.",
+        "La signature du procès-verbal, retenue comme remplaçant les documents préparatoires."
+      ],
+      "answer": 0,
+      "explanation": "Participer à un vote ne démontre pas, à lui seul, la communication des informations exigées. Ce contrôle doit être distingué du résultat du vote."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux versions d’un projet sont diffusées : les comptes sont calculés sur la première mais le vote porte sur la seconde, plus coûteuse. Quelle vérification est nécessaire ?",
+      "options": [
+        "La seule date d’envoi de la première version, tenue pour information sur le projet nouveau.",
+        "La correspondance entre les informations reçues et le projet effectivement soumis à décision.",
+        "L’identité du rédacteur, tenue pour garantie que les données sont restées identiques.",
+        "Le seul résultat favorable du vote, tenu pour preuve que les changements étaient connus."
+      ],
+      "answer": 1,
+      "explanation": "Les associés doivent pouvoir apprécier la décision réelle. Une information sur une version différente peut laisser de côté les conditions et risques du projet finalement soumis."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Que permet principalement la traçabilité d’une décision sociale ?",
+      "options": [
+        "Remplacer la compétence de l’organe par une preuve de signature.",
+        "Prouver automatiquement sa conformité à toutes les règles.",
+        "Documenter le contenu, la participation et le résultat de la décision.",
+        "Rendre les absents participants du seul fait que leur nom figure dans un document."
+      ],
+      "answer": 2,
+      "explanation": "La formalisation contribue à établir ce qui a été décidé et par qui. Elle ne remplace pas l’examen des conditions de régularité."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un procès-verbal indique « décision approuvée » mais ne reproduit pas le texte soumis aux associés. Quel contrôle devient difficile ?",
+      "options": [
+        "L’identification de la version simplement envisagée dans le rapport préparatoire.",
+        "L’identification des seules hypothèses financières étudiées avant la réunion.",
+        "L’identification du contenu du projet initial, même s’il a pu être amendé en séance.",
+        "L’identification exacte du contenu qui a reçu l’approbation."
+      ],
+      "answer": 3,
+      "explanation": "Un résultat sans contenu précis laisse incertain l’objet de l’accord. La trace doit permettre de rapprocher résolution, participants et résultat."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le relevé de vote contient 40 voix pour et 35 contre ; le procès-verbal annonce 75 voix pour. Comment traiter cette divergence ?",
+      "options": [
+        "Rapprocher les pièces et expliquer la rectification nécessaire avant de retenir un résultat.",
+        "Retenir 75 voix pour parce que le procès-verbal a un titre officiel.",
+        "Retenir l’unanimité parce que 75 correspond au total des voix relevées.",
+        "Faire une moyenne entre 40 et 75 pour fixer les voix favorables."
+      ],
+      "answer": 0,
+      "explanation": "Les pièces documentent une contradiction réelle. La traçabilité doit permettre d’identifier les votes exprimés, pas de convertir le total des participants en approbation."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une décision a été prise par un organe incompétent mais fait l’objet d’un procès-verbal détaillé. Que démontre cette formalisation ?",
+      "options": [
+        "La régularisation de la compétence par la seule signature du procès-verbal par son rédacteur.",
+        "La trace de la décision, sans faire disparaître la question de compétence.",
+        "La ratification par l’organe compétent, déduite de la seule conservation du procès-verbal au siège.",
+        "L’accord des associés absents, déduit de la mention détaillée des débats."
+      ],
+      "answer": 1,
+      "explanation": "Une trace peut prouver un acte irrégulier. Elle ne corrige pas à elle seule le défaut de compétence, dont les conséquences demandent un examen propre."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un associé conteste avoir participé. La feuille de présence et le mandat de représentation sont absents. Quel aspect de la décision doit être complété ?",
+      "options": [
+        "Le capital total seulement, même si les personnes ayant voté ne sont pas identifiées.",
+        "Le résultat final seul, indépendamment de la qualité des votants.",
+        "L’identité et la qualité des participants ou représentants au vote.",
+        "La seule affirmation du rédacteur selon laquelle les associés étaient d’accord."
+      ],
+      "answer": 2,
+      "explanation": "La participation et la représentation doivent être documentées avec des pièces adaptées. Le capital ou la valeur des titres ne prouve pas la présence ni un mandat pour ce vote."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une décision datée est jointe au dossier, mais aucune pièce ne documente les formalités de convocation. Quel énoncé est justifié ?",
+      "options": [
+        "La date de décision peut être retenue comme preuve du respect du délai de convocation.",
+        "La signature du procès-verbal peut remplacer le contrôle des destinataires de la convocation.",
+        "L’adoption de la résolution permet de considérer que les conditions de convocation ont été respectées.",
+        "La décision est tracée, mais les conditions de convocation restent à vérifier."
+      ],
+      "answer": 3,
+      "explanation": "La preuve de la décision et celle des étapes préparatoires ne se confondent pas. Il faut nommer le contrôle manquant sans inventer le résultat ni la sanction."
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel fait justifie d’examiner une procédure liée à un conflit d’intérêts ?",
+      "options": [
+        "Une personne participe à une opération avec la société dans laquelle elle a un intérêt personnel pertinent.",
+        "Un dirigeant signe un contrat pour la société avec un fournisseur indépendant, sans autre lien indiqué.",
+        "Un associé vote une décision qui concerne l’ensemble des associés dans les mêmes conditions, sans autre intérêt identifié.",
+        "Une société effectue un règlement conforme au contrat conclu avec un tiers sans lien personnel indiqué."
+      ],
+      "answer": 0,
+      "explanation": "Il faut identifier les personnes et les intérêts en présence. Une dépense ou une formalisation ne constitue pas, par elle-même, un conflit d’intérêts."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une SAS à plusieurs associés n’a pas de commissaire aux comptes. Une convention relevant de l’article L227-10 doit être présentée aux associés. Qui présente le rapport dans cette situation ?",
+      "options": [
+        "L’associé intéressé à la convention en sa seule qualité de cocontractant.",
+        "Le président de la SAS.",
+        "Le salarié qui comptabilise la convention en sa qualité de teneur des comptes.",
+        "L’ensemble des associés, comme auteurs obligatoires du rapport qu’ils doivent examiner."
+      ],
+      "answer": 1,
+      "explanation": "En l’absence de commissaire aux comptes, l’article L227-10 confie au président la présentation du rapport. Les associés statuent ensuite sur ce rapport.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-10",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034584108"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une SAS examine une convention avec un actionnaire détenant 12 % des droits de vote et seulement 8 % du capital. Les autres conditions du champ de L227-10 sont remplies et l’exception de L227-11 est exclue. Quel indicateur commande le seuil visé ici ?",
+      "options": [
+        "Les 8 % du capital.",
+        "La moyenne des deux pourcentages.",
+        "Les 12 % des droits de vote.",
+        "La part de chiffre d’affaires apportée par l’actionnaire."
+      ],
+      "answer": 2,
+      "explanation": "Le seuil visé par L227-10 pour l’actionnaire est une fraction des droits de vote supérieure à 10 %. Il ne se calcule pas par moyenne avec la part de capital.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-10",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034584108"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une convention relevant de L227-10 n’est pas approuvée par les associés de la SAS. Quel effet cet article prévoit-il pour la convention ?",
+      "options": [
+        "Elle est suspendue jusqu’à une nouvelle approbation, même si les parties ont commencé à l’exécuter.",
+        "Elle est annulée du seul fait du refus d’approbation, sans examen d’un autre fondement.",
+        "Elle est résolue pour l’avenir par le vote, les prestations déjà réalisées restant acquises.",
+        "Elle produit néanmoins ses effets, avec un examen des conséquences dommageables à supporter."
+      ],
+      "answer": 3,
+      "explanation": "Le texte ne fait pas du défaut d’approbation une disparition automatique de la convention. Il prévoit notamment la prise en charge de conséquences dommageables pour la société.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-10",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000034584108"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une SAS soutient qu’une convention échappe à L227-10 parce que l’opération est courante. Pour bénéficier de L227-11, quelle autre condition faut-il vérifier ?",
+      "options": [
+        "Qu’elle est conclue à des conditions normales.",
+        "Que le président en est l’unique bénéficiaire.",
+        "Qu’elle représente plus de 10 % des ventes.",
+        "Qu’elle est réglée avant la prochaine assemblée."
+      ],
+      "answer": 0,
+      "explanation": "L’exception de L227-11 associe caractère courant et conditions normales. Vérifier un seul de ces deux éléments ne suffit pas à l’appliquer.",
+      "references": [
+        {
+          "title": "Code de commerce, article L227-11",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000024039876"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une opération entre une société et une personne intéressée figure dans le dossier, mais la forme sociale est absente. Quelle première recherche évite une transposition erronée ?",
+      "options": [
+        "Le montant des ventes de la personne intéressée.",
+        "La forme, le régime et les parties de l’opération pour identifier la procédure pertinente.",
+        "Le seuil utilisé dans une SAS voisine, à appliquer immédiatement.",
+        "Le calendrier de paiement, tenu pour seul critère de conflit."
+      ],
+      "answer": 1,
+      "explanation": "Les procédures ne sont pas uniformes selon les formes et personnes concernées. Il faut identifier le régime du dossier avant de transposer seuils ou conséquences."
+    }
+  ]
+}

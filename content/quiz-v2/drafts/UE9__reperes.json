@@ -1,0 +1,383 @@
+{
+  "module": "UE9",
+  "chapter": "reperes",
+  "sourceHash": "9b08d868eb8cb9445b0315bf662f4c4dd224f7c25bf34a6d67ae395335c6b5fc",
+  "authoredBy": "codex-accounting-finance",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle égalité doit respecter une écriture comptable en partie double ?",
+      "options": [
+        "Le total des débits doit égaler le total des crédits",
+        "Chaque compte doit avoir un solde nul après l’écriture",
+        "Chaque écriture doit comprendre exactement deux comptes",
+        "Les charges doivent égaler les produits pour chaque opération"
+      ],
+      "answer": 0,
+      "explanation": "La partie double impose l’équilibre des montants de l’écriture. Plusieurs comptes peuvent être utilisés et leurs soldes individuels n’ont pas à être nuls."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une facture oubliée n’a été enregistrée ni au débit ni au crédit. Une balance équilibrée permet-elle de repérer automatiquement cet oubli ?",
+      "options": [
+        "Oui, tout oubli rend nécessairement les crédits supérieurs aux débits",
+        "Non, l’absence complète d’une écriture peut laisser les totaux égaux",
+        "Oui, l’équilibre démontre aussi l’exhaustivité des pièces",
+        "Non, car une facture ne doit jamais être enregistrée dans deux comptes"
+      ],
+      "answer": 1,
+      "explanation": "Une opération entièrement omise n’introduit aucun déséquilibre arithmétique. Le rapprochement avec les pièces reste nécessaire pour contrôler l’exhaustivité."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une écriture comporte un débit de 800 € et deux crédits de 500 € et 300 €. Que peut-on conclure de ces seuls montants ?",
+      "options": [
+        "Elle est invalide car elle utilise trois comptes",
+        "Elle démontre que l’entreprise a réalisé 800 € de bénéfice",
+        "L’écriture est arithmétiquement équilibrée, sans preuve de bonne imputation",
+        "Elle prouve que toutes les pièces du mois ont été enregistrées"
+      ],
+      "answer": 2,
+      "explanation": "Les débits et crédits totalisent chacun 800 €. Cet équilibre ne valide ni la nature des comptes ni l’exhaustivité des opérations."
+    },
+    {
+      "id": "q04",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une machine a une base amortissable de 15 000 €, une consommation constante et une durée d’utilisation de cinq ans. Quelle est l’annuité linéaire d’une année complète ?",
+      "options": [
+        "75 000 €",
+        "5 000 €",
+        "15 000 €",
+        "3 000 €"
+      ],
+      "answer": 3,
+      "explanation": "L’annuité linéaire d’une année complète est la base amortissable divisée par la durée : 15 000 / 5 = 3 000 €.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 15000
+            },
+            {
+              "value": 5
+            }
+          ]
+        },
+        "expected": 3000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un exercice impose de retenir une valeur résiduelle de 2 000 € pour un actif acquis 12 000 €. L’étudiant amortit les 12 000 €. Quelle correction de base faut-il faire ?",
+      "options": [
+        "Retenir le coût diminué de la valeur résiduelle, soit une base de 10 000 €",
+        "Ajouter la valeur résiduelle au coût pour obtenir une base de 14 000 €",
+        "Amortir uniquement la valeur résiduelle de 2 000 €",
+        "Conserver toujours le coût brut, quelle que soit l’hypothèse"
+      ],
+      "answer": 0,
+      "explanation": "Lorsque la valeur résiduelle doit être retenue, elle se déduit du coût pour déterminer la base amortissable. La durée s’applique à cette base."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le paiement d’une machine a lieu immédiatement, mais sa consommation est répartie régulièrement sur plusieurs exercices. Quel rôle joue l’amortissement ?",
+      "options": [
+        "Reproduire chaque année le paiement intégral initial",
+        "Répartir sa base amortissable selon cette consommation dans le temps",
+        "Mesurer automatiquement le prix auquel elle pourrait être vendue",
+        "Rembourser chaque année le fournisseur initial"
+      ],
+      "answer": 1,
+      "explanation": "L’amortissement décrit une consommation d’actif, distincte du calendrier de paiement. Il ne fixe pas automatiquement une valeur de marché."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Sans dépréciation, comment détermine-t-on la valeur nette comptable d’une immobilisation amortissable ?",
+      "options": [
+        "Valeur brute augmentée des dotations de l’année",
+        "Prix de vente estimé diminué des dettes fournisseurs",
+        "Valeur brute diminuée des amortissements cumulés",
+        "Valeur brute diminuée des seuls règlements effectués"
+      ],
+      "answer": 2,
+      "explanation": "La VNC résulte des corrections de valeur cumulées. Le paiement et la valeur de marché ne remplacent pas les amortissements dans ce calcul."
+    },
+    {
+      "id": "q08",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un équipement figure pour 20 000 € bruts avec 8 000 € d’amortissements cumulés. Il n’existe aucune dépréciation. Quelle est sa VNC ?",
+      "options": [
+        "28 000 €",
+        "8 000 €",
+        "20 000 €",
+        "12 000 €"
+      ],
+      "answer": 3,
+      "explanation": "La VNC est 20 000 − 8 000 = 12 000 €. Les amortissements cumulés se retranchent du montant brut.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 20000
+            },
+            {
+              "value": 8000
+            }
+          ]
+        },
+        "expected": 12000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q09",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une machine a une VNC de 6 000 €. Le dirigeant affirme qu’il pourra forcément la vendre à ce prix. Que faut-il lui expliquer ?",
+      "options": [
+        "La valeur comptable n’est pas une garantie de prix de marché",
+        "La VNC correspond toujours au prix d’une offre d’achat ferme",
+        "La machine doit être cédée pour la valeur brute initiale",
+        "Le prix de marché est nécessairement nul dès qu’un amortissement existe"
+      ],
+      "answer": 0,
+      "explanation": "La VNC découle du coût et des corrections comptables. Le prix négociable dépend du marché et de l’état du bien, sans égalité automatique."
+    },
+    {
+      "id": "q10",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une vente est facturée à crédit et le client paiera le mois suivant. Quel élément apparaît avant l’encaissement ?",
+      "options": [
+        "Une disponibilité bancaire du même montant",
+        "Une créance client liée à la vente",
+        "Une dette envers le client pour toute la facture",
+        "Un produit obligatoirement différé jusqu’à l’encaissement"
+      ],
+      "answer": 1,
+      "explanation": "Une vente à crédit fait naître une créance à encaisser ultérieurement. Il faut distinguer reconnaissance de la vente et réception des fonds."
+    },
+    {
+      "id": "q11",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une entreprise conclut que toute hausse du chiffre d’affaires a déjà augmenté sa banque du même montant. Quelle information lui manque-t-il notamment ?",
+      "options": [
+        "Le seul montant total TTC facturé",
+        "Le seul bénéfice d’exploitation",
+        "Les conditions et dates de règlement des clients",
+        "Le seul solde bancaire au début de l’exercice"
+      ],
+      "answer": 2,
+      "explanation": "Des ventes à crédit peuvent accroître les créances plutôt que les disponibilités. Le calendrier de paiement est indispensable au lien avec la trésorerie."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture de vente est correcte mais le client bénéficie d’un délai de paiement. Faut-il attendre son règlement pour reconnaître l’existence de la créance ?",
+      "options": [
+        "Oui, une créance n’existe que lorsque la banque reçoit l’argent",
+        "Oui, si le délai dépasse la clôture",
+        "Non, mais il faut enregistrer une nouvelle vente à chaque relance",
+        "Non, la vente à crédit crée la créance avant le paiement"
+      ],
+      "answer": 3,
+      "explanation": "La créance représente précisément le droit au règlement avant encaissement. Le délai accordé ne transforme pas une relance en nouvelle vente."
+    },
+    {
+      "id": "q13",
+      "basis": 4,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle distinction sépare le bilan du compte de résultat ?",
+      "options": [
+        "Le bilan décrit une situation à une date, le compte de résultat les produits et charges d’une période",
+        "Le bilan décrit les charges et produits d’une période, le compte de résultat les actifs à une date",
+        "Les deux documents décrivent uniquement des situations à une date",
+        "Le compte de résultat décrit les produits encaissés et charges payées exclusivement"
+      ],
+      "answer": 0,
+      "explanation": "Le bilan est une photographie des actifs et financements. Le compte de résultat mesure les produits et charges d’un intervalle donné."
+    },
+    {
+      "id": "q14",
+      "basis": 4,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un lecteur veut connaître le montant des créances clients restant à une date de clôture. Quel document répond le plus directement à cette recherche ?",
+      "options": [
+        "Le seul compte de résultat annuel",
+        "Le bilan à cette date",
+        "Le seul total des ventes encaissées depuis la création",
+        "Le plan d’amortissement d’une machine"
+      ],
+      "answer": 1,
+      "explanation": "La créance restant à recevoir est un élément de situation patrimoniale à une date. Le total des produits d’une période ne donne pas cet encours."
+    },
+    {
+      "id": "q15",
+      "basis": 5,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un compte de résultat simplifié présente 82 000 € de produits et 74 000 € de charges. Quel résultat obtient-on ?",
+      "options": [
+        "156 000 € de bénéfice",
+        "74 000 € de perte",
+        "8 000 € de bénéfice",
+        "82 000 € de bénéfice"
+      ],
+      "answer": 2,
+      "explanation": "Le résultat est produits moins charges : 82 000 − 74 000 = 8 000 €. Il s’agit d’un bénéfice car le solde est positif.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 82000
+            },
+            {
+              "value": 74000
+            }
+          ]
+        },
+        "expected": 8000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 5,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une société réalise un bénéfice tout en achetant une machine payée comptant et en accordant du crédit à ses clients. Peut-elle manquer de liquidités ?",
+      "options": [
+        "Non, un bénéfice garantit un solde bancaire positif",
+        "Non, l’achat de la machine est toujours payé par la dotation",
+        "Oui, mais seulement si les charges excèdent les produits",
+        "Oui, bénéfice et trésorerie peuvent diverger du fait de ces opérations"
+      ],
+      "answer": 3,
+      "explanation": "L’investissement mobilise des liquidités et les créances retardent les encaissements. Ces mouvements ne suivent pas le résultat comptable à l’identique."
+    },
+    {
+      "id": "q17",
+      "basis": 6,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client règle une facture déjà enregistrée en totalité le mois précédent. Quel mouvement traduit le règlement ?",
+      "options": [
+        "La banque augmente et la créance diminue",
+        "La banque et le chiffre d’affaires augmentent une seconde fois",
+        "La banque augmente mais la créance reste inchangée",
+        "La banque diminue et la créance augmente"
+      ],
+      "answer": 0,
+      "explanation": "L’encaissement transforme une créance en disponibilités. La vente a déjà été reconnue et ne doit pas être comptabilisée une nouvelle fois."
+    },
+    {
+      "id": "q18",
+      "basis": 6,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un comptable enregistre à nouveau une vente au moment de recevoir le paiement d’une facture déjà comptabilisée. Quelle conséquence faut-il corriger ?",
+      "options": [
+        "Une créance correctement soldée, mais un produit enregistré à la mauvaise date seulement",
+        "Un double enregistrement du produit et une créance qui risque de rester non soldée",
+        "Une banque créditée à tort et une diminution des produits",
+        "Un simple reclassement entre comptes clients sans effet sur les produits"
+      ],
+      "answer": 1,
+      "explanation": "Le règlement doit solder le client. Créer une seconde vente surestime les produits et ne traite pas correctement la créance initiale."
+    },
+    {
+      "id": "q19",
+      "basis": 6,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture client déjà comptabilisée est réglée seulement pour moitié. Sans autre opération, quelle situation reste après le paiement ?",
+      "options": [
+        "Une nouvelle vente égale à la moitié encaissée",
+        "Une créance nulle parce qu’un premier paiement est intervenu",
+        "Une créance résiduelle pour la moitié non réglée",
+        "La créance initiale conservée intégralement et un produit pour le paiement"
+      ],
+      "answer": 2,
+      "explanation": "Le règlement partiel réduit la créance à concurrence des fonds reçus. Le solde demeure à encaisser sans créer de nouvelle vente."
+    },
+    {
+      "id": "q20",
+      "basis": 7,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle distinction est correcte entre une charge et un paiement ?",
+      "options": [
+        "La charge et le paiement ont obligatoirement la même date",
+        "Tout paiement crée une charge nouvelle identique",
+        "Une charge représente toujours un remboursement de dette bancaire",
+        "La charge traduit une consommation de période ; le paiement un mouvement de trésorerie"
+      ],
+      "answer": 3,
+      "explanation": "Ces notions peuvent correspondre à des dates et des objets différents. Un paiement peut notamment éteindre une dette déjà enregistrée."
+    },
+    {
+      "id": "q21",
+      "basis": 7,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une facture de prestation a été correctement rattachée à l’exercice précédent. Elle est réglée pendant l’exercice courant. Quel traitement économique décrit ce règlement ?",
+      "options": [
+        "L’extinction d’une dette antérieure sans nouvelle consommation de prestation",
+        "Une seconde charge de prestation identique",
+        "Un produit du nouvel exercice",
+        "Une augmentation de la créance client"
+      ],
+      "answer": 0,
+      "explanation": "La consommation appartient à l’exercice antérieur. Son paiement ultérieur affecte la dette et la trésorerie, pas une nouvelle charge de même nature."
+    },
+    {
+      "id": "q22",
+      "basis": 7,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour établir les charges d’un mois, un étudiant reprend uniquement les sorties du compte bancaire. Quel risque de méthode présente ce choix ?",
+      "options": [
+        "Reconnaître exactement les charges du mois dès que les paiements sont justifiés",
+        "Inclure des règlements de dettes antérieures et omettre des consommations non encore payées",
+        "Négliger uniquement les charges non monétaires, sans autre décalage possible",
+        "Neutraliser automatiquement les règlements de factures des mois précédents"
+      ],
+      "answer": 1,
+      "explanation": "Les sorties bancaires suivent les paiements. Le rattachement des charges exige d’identifier les consommations de la période, payées ou non."
+    }
+  ]
+}

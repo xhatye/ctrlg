@@ -1,0 +1,259 @@
+{
+  "sourceHash": "96bde5b342f1076b17badb91680ec30a790580458e5b2427a32e40d0650543c6",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "0403f898f14dac751e1355684abcbc55d03a051ab4519b44f96064bef2f613bb",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Partir du registre vers les biens présents vise l’existence des éléments déjà enregistrés."
+    },
+    {
+      "id": "q02",
+      "digest": "2f2313eb24137fd092de06ac33b901305e581aa757baf1129c231193ba64bd59",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une machine louée peut être présente sans propriété. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q03",
+      "digest": "1279db757ef32e96348eb7213271a806811dc77b52f75a360329a7f6a67805d4",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Il faut rapprocher les mouvements entre le 30 novembre confirmé et la clôture du 31 décembre."
+    },
+    {
+      "id": "q04",
+      "digest": "a4fc2b82ae62261692ecdbf360f0b3ee44619004aa9f6cdfc47c03ad7b6f9d80",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une confirmation de solde renseigne sur son existence mais ne garantit pas le recouvrement face au risque de défaillance ou de litige."
+    },
+    {
+      "id": "q05",
+      "digest": "69114210c9442b95cd13270dfc03fa5d425c57204e9aedd6ba4524e7f8018ff3",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La provenance annoncée doit être authentifiée. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q06",
+      "digest": "0dec799ecb3ef58961466b4b587fb6fae06b6038e76c2b09865919e1bd912101",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les paiements et factures postérieurs peuvent révéler une obligation née avant clôture non enregistrée ; le seul registre ne couvre pas les omissions."
+    },
+    {
+      "id": "q07",
+      "digest": "6846dcba785f225091c89996d16641f8ad7c0056c1f3d91e8622d6f30c80eaeb",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une opération absente du registre ne peut y être sélectionnée. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q08",
+      "digest": "33e25962c2ed293e2170a344a0780f407864453361455821f79c8412cf5c4698",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une réception avant clôture appelle la recherche du rattachement de charge et dette. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q09",
+      "digest": "ad313625e61761d75a1d93f58ece73e6c6b0063cf6b5ae15b4d73d4eb69366be",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Un numéro manquant déclenche une investigation, pas une vente certaine. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q10",
+      "digest": "20314df519c731869520481a5e8f237740ff4b9e2e1ee4f3f3313cb60d04d49d",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Des mouvements de comptes soldés peuvent éclairer le rattachement. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q11",
+      "digest": "57d60b56e5148e4101de48cc6f566c73cb74b75ec773fe36fea7585dcfe336c7",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le parcours entrepôt vers état de stock permet de rechercher des biens présents non enregistrés."
+    },
+    {
+      "id": "q12",
+      "digest": "c4ea5641ac91138624a0ac14f5512859f0693006beffd232aa03836402d28845",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’obsolescence demande examen de la valeur selon le référentiel. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q13",
+      "digest": "95f3633d37a35011eb333ad9ad094e02fccf3c3712cc3fc5a7b4cd06c2904e6d",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les transactions récentes comparables contredisent l’hypothèse ; il faut expliquer l’écart plutôt que reprendre aveuglément le budget."
+    },
+    {
+      "id": "q14",
+      "digest": "00862e185e95bec3509f91cb9771ded8523d146f5ce8b4a53198c1d7869b0cef",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Un calcul exact ne compense pas l’absence de la gamme risquée. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q15",
+      "digest": "4fd9c1f518de871bb54a0b14fffcea34319aad1b3d0044aa2eecd4267229a6dd",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le litige met en cause la valeur recouvrable de la créance, même si la facture est confirmée."
+    },
+    {
+      "id": "q16",
+      "digest": "1518e7a6944997a410893aab2efef9fd5f5515fcfa446aecd4965a70e77ecaef",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La lettre doit être confrontée aux stocks endommagés. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q17",
+      "digest": "83b280906d4527d2a171fd7b377ada92ac274e6bb342ffd7d33dce9f6f64054d",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Sans mouvement, les deux quantités exigent un rapprochement. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q18",
+      "digest": "3cd0ff5092f2ffab1cd7b14068dc609f8419498dc5f355c03bf3f2b316e8b2eb",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La prestation achevée en décembre doit être examinée selon la règle de rattachement du cas, indépendamment de la seule facture de janvier."
+    },
+    {
+      "id": "q19",
+      "digest": "59c4a556bb0d6c9e9ed436371fc6304b324149105db964e9b5c56347554e1c1f",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le transfert pertinent est postérieur à la clôture ; la facture antérieure peut donc entraîner un produit prématuré."
+    },
+    {
+      "id": "q20",
+      "digest": "08c5ee59e5c328580093dcfb146565b60b269e1f8700ce4090390bfaa8ee7949",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les entrées et sorties entre 28 et 31 décembre relient l’inventaire physique à la clôture."
+    },
+    {
+      "id": "q21",
+      "digest": "a82360a45fc64574bc5549864cbb532b0c65e9fdebc931ef9afc8aefd0c5ba04",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La même opération en deux périodes révèle un risque de double enregistrement même sans erreur de prix."
+    },
+    {
+      "id": "q22",
+      "digest": "49595ccc76e7d772418cfc8d23ab5c76c3e4df0e4e7c80ee4306ee5f26a1765e",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Des opérations de décembre peuvent être facturées après clôture. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    },
+    {
+      "id": "q23",
+      "digest": "24259c08516054081a4ccfac0ec8700fa16e847e78c2621da797e377392790a9",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Pièces, dates, règle et conclusion rendent le travail vérifiable. Nouvelle résolution sur les choix révisés : erreurs concurrentes de même domaine, sans ambiguïté restante."
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "sourceHash": "8cf0fd416554e2273a1329a265cd22363434464c363cbcf115cc9ac1eae047b4",
+  "reviewer": "codex-root-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "5b36a39a965675d3a5bdac29b9ede66cb2c05e1c30ab37a67c4e239832197030",
+      "selected": 2,
+      "reason": "Un encours TTC doit être rapporté à des ventes TTC du même périmètre pour mesurer les jours de crédit client.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q02",
+      "digest": "e40eea60f17c0021a31a16cfb7bbc4c6f093e2cf6f90e333b7f04840e641326d",
+      "selected": 2,
+      "reason": "36 000 / 288 000 × 360 = 45 jours de délai client.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q03",
+      "digest": "638184f2755ce202a0d9c1650c9c6fdf59513171eccfb38f1b6c3a602d1fbf63",
+      "selected": 3,
+      "reason": "Le délai rapporte un stock d’encours au flux annuel ; le rapport inverse exprime une rotation.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q04",
+      "digest": "3e1b7d8531f00211e87be62f197808b00b1ec3155d0d7070ac7efa9a14168d1f",
+      "selected": 1,
+      "reason": "Une moyenne ne décrit pas chaque facture ; des délais individuels différents peuvent produire 40 jours.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q05",
+      "digest": "436c3e3933df9188cb8e48017b592380d9b208aa679f98e641bd63ca8e6566d2",
+      "selected": 0,
+      "reason": "Le quotient zéro divisé par zéro n’est pas défini et ne mesure aucun délai.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q06",
+      "digest": "23817ad5ec2dc431d8f58d5a6ac763a6c94893821ef8574d0940d163ade5bd15",
+      "selected": 1,
+      "reason": "Le crédit fournisseur rapporte les dettes TTC aux achats TTC correspondants.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q07",
+      "digest": "b10d8841a698d3863c690f4847c50fbb6f76339adeb64456ca53cab1cbc92c59",
+      "selected": 1,
+      "reason": "24 000 / 216 000 × 360 = 40 jours de crédit fournisseur.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q08",
+      "digest": "97630d998acb0b7380fbc4f7ee3acef7f06bec07b65c2622294b8183bfbf9de6",
+      "selected": 2,
+      "reason": "À achats fixes, un encours plus élevé correspond à un crédit plus long.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q09",
+      "digest": "e72afd5ef73c0439ffa1f1b401e0b409ed6c3e58ecb5cd5508dce1e77b5811a4",
+      "selected": 1,
+      "reason": "Le flux et l’encours doivent porter sur les mêmes entités et opérations.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q10",
+      "digest": "19e694b8877493c8a6c0c8a0006dbc58b5378149a38a73ef2b3223e51df93701",
+      "selected": 1,
+      "reason": "À encours égal, davantage d’achats augmente le dénominateur et réduit le nombre de jours.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q11",
+      "digest": "1cff820bad7c7b93ecbd9c0350530419519ebd136ae0af4c35b13760fd90808d",
+      "selected": 0,
+      "reason": "Le stock valorisé au coût doit être rapporté à une consommation valorisée au même coût.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q12",
+      "digest": "d96b298441200a724164a5b2b241491b633a44b60937a9b70ffabf9ce143d420",
+      "selected": 1,
+      "reason": "15 000 / 180 000 × 360 = 30 jours de stockage.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q13",
+      "digest": "860e6ec93d45386265cfacf65be804e6c39d2512744aa4172519cbd1234ddeb9",
+      "selected": 2,
+      "reason": "Une valeur au coût et un flux au prix de vente ont des bases différentes, qui biaisent la durée.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q14",
+      "digest": "293890899b684245fce16f299b9964cd5ca4a16f62c134d32af8fb5a9a64e74a",
+      "selected": 0,
+      "reason": "La saisonnalité ou une politique de stock stratégique peut expliquer une durée accrue avant de conclure à une inefficacité.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q15",
+      "digest": "ebd47ea4dfcedce29ed151f6fd057a125f9618686d0a7f69d9e4b26b7bb06d7b",
+      "selected": 3,
+      "reason": "Un stock moyen sur des dates représentatives limite le biais d’un seul point de clôture saisonnier.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q16",
+      "digest": "b32e0c2d642a213a751681901a24e552b5558ee79763f5fe3112206d44ae25b3",
+      "selected": 2,
+      "reason": "Le cycle est stockage + clients − fournisseurs : 35 + 50 − 40 = 45 jours.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q17",
+      "digest": "a64526778df7527445997f0f5068de15a1dd5652fd1c4a6d7110763d84a67cba",
+      "selected": 3,
+      "reason": "Un crédit fournisseur plus long que stockage et crédit client combinés place le paiement fournisseur après les encaissements moyens.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q18",
+      "digest": "41f8e72174554ef05e43a78c2ce7121b8c8b5995e7db899ea1c7c6780aaea852",
+      "selected": 2,
+      "reason": "Le crédit fournisseur reporte le paiement ; il doit être retranché, pas ajouté au besoin temporel.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q19",
+      "digest": "b0ccad4fe664c3341e00d6a4c0980bcc50ff22782cce872ceb91b32e19cb5d71",
+      "selected": 2,
+      "reason": "Réduire les jours de stockage réduit isolément le cycle ; les autres délais sont fixés par l’énoncé.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q20",
+      "digest": "96405a1ae088b0b32cde5bf2ed3bee18b9b701681fbd15016b83f8ceebc1ffc0",
+      "selected": 1,
+      "reason": "Diminuer clients et fournisseurs de dix jours produit −10 − (−10), donc aucun effet net sur le cycle.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q21",
+      "digest": "6afc10e4547d109e2eb0bb40cb4612e9f3312c38558201045847de109525392b",
+      "selected": 0,
+      "reason": "Un même cycle en jours peut concerner des volumes et montants différents, donc des BFR différents.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    },
+    {
+      "id": "q22",
+      "digest": "23e0e67231e422dbc09b32ee2f73304695f194ae8d8a9614887122005fda3881",
+      "selected": 2,
+      "reason": "Une pointe saisonnière impose une observation des encours et liquidités aux dates du besoin.",
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true
+    }
+  ]
+}

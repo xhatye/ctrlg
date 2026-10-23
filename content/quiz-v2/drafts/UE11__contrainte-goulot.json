@@ -1,0 +1,444 @@
+{
+  "module": "UE11",
+  "chapter": "contrainte-goulot",
+  "sourceHash": "4c1fbb33dcc653e9ed5c9c1244b67128970bce995342337c16760ea013a94792",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "foundation",
+      "q": "Le produit A se vend 80 € avec 50 € de coût variable. Quelle marge unitaire apporte-t-il avant charges fixes ?",
+      "options": [
+        "130 €",
+        "30 €",
+        "62,5 €",
+        "1,60 €"
+      ],
+      "answer": 1,
+      "explanation": "La contribution unitaire vaut prix − coût variable : 80 − 50 = 30 €. Cette marge doit encore être rapportée à la ressource rare pour comparer A à des produits qui en consomment autrement.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 80
+            },
+            {
+              "value": 50
+            }
+          ]
+        },
+        "expected": 30,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "A mobilise 2 heures de découpe et 1 heure de finition par unité ; B mobilise respectivement 1 et 2 heures. Les capacités sont de 100 heures de découpe et 80 de finition. Quel programme respecte les deux capacités ?",
+      "options": [
+        "40 A et 25 B.",
+        "20 A et 35 B.",
+        "30 A et 25 B.",
+        "45 A et 15 B."
+      ],
+      "answer": 2,
+      "explanation": "Pour 30 A et 25 B, la découpe utilise 30 × 2 + 25 = 85 heures et la finition 30 + 25 × 2 = 80 heures. Les autres programmes dépassent au moins une capacité : 105/90, 75/90 et 105/75 heures. La disponibilité d’une ressource ne compense pas le dépassement de l’autre."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le produit A apporte 30 € de marge et consomme trois heures de la ressource rare par unité. Quel rendement de cette ressource obtient-on ?",
+      "options": [
+        "10 € par heure",
+        "90 € par heure",
+        "0,10 € par heure",
+        "30 € par heure"
+      ],
+      "answer": 0,
+      "explanation": "Le rendement est 30 / 3 = 10 € par heure rare. Multiplier la marge par le temps favoriserait à tort les produits les plus consommateurs au lieu de mesurer la contribution de chaque heure.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 30
+            },
+            {
+              "value": 3
+            }
+          ]
+        },
+        "expected": 10,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une capacité de 7 heures permet de produire A, marge de 10 € pour 3 heures, ou B, marge de 7 € pour 2 heures. Les unités sont indivisibles, la demande illimitée et les charges fixes inchangées. Quel programme maximise la marge totale ?",
+      "options": [
+        "3 B, soit 21 € de marge.",
+        "2 A, soit 20 € de marge.",
+        "1 A et 1 B, soit 17 € de marge.",
+        "1 A et 2 B, soit 24 € de marge."
+      ],
+      "answer": 3,
+      "explanation": "Le programme A + 2 B consomme exactement 3 + 2 × 2 = 7 heures et apporte 10 + 2 × 7 = 24 €. Malgré le meilleur ratio horaire de B, produire seulement B laisse une heure inutilisée et rapporte 21 €. Avec des unités indivisibles, il faut vérifier les combinaisons réalisables."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "A a une marge unitaire de 30 € contre 20 € pour B, mais consomme trois fois plus d’heures rares. Pourquoi le seul classement unitaire peut-il être trompeur ?",
+      "options": [
+        "Il ignore la fraction des charges fixes comptables affectée à chaque produit.",
+        "Il ignore la quantité de ressource rare nécessaire pour produire chaque marge.",
+        "Il ignore la marge rapportée au chiffre d’affaires, qui suffit à mesurer le rendement de la capacité.",
+        "Il ignore la durée d’encaissement, qui définit ici la quantité d’heures consommée."
+      ],
+      "answer": 1,
+      "explanation": "Le goulot limite ce que l’on peut produire. Une marge unitaire plus forte peut mobiliser beaucoup plus de capacité ; le modèle compare la contribution par unité de cette capacité."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "B offre le meilleur rendement horaire mais sa demande est limitée. Quelle règle de programme est pertinente dans le modèle à une ressource ?",
+      "options": [
+        "Affecter d’abord à B toutes les heures disponibles, puis traiter sa limite de demande lors du calcul du résultat.",
+        "Répartir les heures au prorata des demandes maximales, sans tenir compte des rendements horaires.",
+        "Satisfaire au plus sa demande utile, puis réexaminer l’affectation de la capacité restante.",
+        "Produire d’abord le produit dont la demande maximale en unités est la plus élevée, puis affecter le solde."
+      ],
+      "answer": 2,
+      "explanation": "Le classement ne crée pas la demande. La capacité consacrée au produit prioritaire reste bornée par les ventes possibles ; les heures restantes doivent être affectées en tenant compte des autres limites."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le produit A utilise 120 minutes de goulot par unité tandis que B est mesuré en heures. Que faut-il faire avant de comparer leurs marges par heure ?",
+      "options": [
+        "Convertir les consommations dans la même unité de temps.",
+        "Calculer marge/120 pour A et marge/heures pour B, puis comparer directement ces deux résultats.",
+        "Diviser la marge horaire de B par 60 et la comparer à la marge de A divisée par 2 heures.",
+        "Conserver les durées brutes, mais exprimer toutes les marges en centimes avant la comparaison."
+      ],
+      "answer": 0,
+      "explanation": "Un ratio de rendement dépend de l’unité de capacité. Les durées doivent être harmonisées pour éviter un classement dû à une différence d’écriture plutôt qu’à l’usage réel de la ressource."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "L’usine dispose en réalité de deux ressources rares qui limitent les produits différemment. Peut-on déduire l’optimum du seul classement sur la première ?",
+      "options": [
+        "Oui, à condition de choisir d’abord le produit de meilleur rendement sur la première, puis de réduire proportionnellement toutes les quantités en cas de dépassement.",
+        "Oui, à condition de faire la moyenne simple des rendements calculés séparément sur chacune des ressources.",
+        "Oui, à condition de retenir le classement sur la ressource dont la capacité totale est numériquement la plus faible.",
+        "Non, il faut intégrer l’ensemble des contraintes pertinentes au modèle de décision."
+      ],
+      "answer": 3,
+      "explanation": "Le classement simple correspond au cadre d’une seule ressource rare. Plusieurs limites peuvent modifier la solution ; il faut reformuler le problème plutôt que étendre la règle sans ses hypothèses."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La marge unitaire de A augmente à temps rare inchangé. Quel paramètre du choix mérite d’être recalculé ?",
+      "options": [
+        "Le taux de marge sur prix de vente, pris comme seul critère de rendement de la capacité.",
+        "Sa marge par heure rare et sa position relative aux autres produits.",
+        "Le coût complet unitaire incluant les charges fixes réparties, pris comme numérateur du rendement.",
+        "Le volume de ventes passé, pris comme plafond de capacité même si la demande prévisionnelle diffère."
+      ],
+      "answer": 1,
+      "explanation": "La priorité dépend des contributions rapportées à la ressource. Une variation de marge peut changer le classement ; l’ancien programme ne reste pas optimal par simple inertie."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un produit a le meilleur ratio horaire mais nécessite un lot minimum important, absent du modèle initial. Quelle vérification devient nécessaire ?",
+      "options": [
+        "Vérifier seulement que le lot entier est vendable, puisque le meilleur ratio suffit pour garantir la capacité nécessaire.",
+        "Remplacer le lot minimum par sa moyenne mensuelle et appliquer le classement comme si les unités étaient divisibles.",
+        "La faisabilité des quantités et les contraintes de lot doivent être intégrées.",
+        "Comparer les ratios sur une seule unité et réserver la vérification des lots au calcul du coût complet."
+      ],
+      "answer": 2,
+      "explanation": "Les hypothèses de divisibilité et d’absence de lots conditionnent la règle simple. Une contrainte supplémentaire peut rendre un programme irréalisable et demande une analyse adaptée."
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "A apporte 30 € en consommant trois heures rares. Ces mêmes heures permettraient de produire une activité B rapportant 20 € par heure, avec demande suffisante. Quelle contribution est sacrifiée si ces trois heures vont à A plutôt qu’à B ?",
+      "options": [
+        "60 €",
+        "30 €",
+        "10 €",
+        "6,67 €"
+      ],
+      "answer": 0,
+      "explanation": "L’alternative B aurait apporté 3 × 20 = 60 € avec ces heures. Cette contribution sacrifiée éclaire l’opportunité ; elle doit être distinguée de la marge effectivement obtenue avec A.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 3
+            },
+            {
+              "value": 20
+            }
+          ]
+        },
+        "expected": 60,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une ressource rare dispose de 40 heures. Le meilleur produit apporte 20 € par heure, sans autre limite ni coût fixe additionnel. Quelle contribution maximale du modèle cette capacité permet-elle ?",
+      "options": [
+        "2 €",
+        "60 €",
+        "20 €",
+        "800 €"
+      ],
+      "answer": 3,
+      "explanation": "La contribution est capacité × rendement horaire : 40 × 20 = 800 €. Ce résultat dépend de la demande suffisante et de l’absence d’autres contraintes indiquées.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 40
+            },
+            {
+              "value": 20
+            }
+          ]
+        },
+        "expected": 800,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un devis annonce une marge supérieure pour A, mais ses coûts variables omettent une matière nécessaire. Quel contrôle précède le classement ?",
+      "options": [
+        "Contrôler les seuls dénominateurs horaires, puisque les écarts de matière ne peuvent modifier le classement horaire.",
+        "Vérifier le périmètre des marges comparées et les ressources additionnelles.",
+        "Ajouter aux deux marges le même coût moyen de matière pour conserver leur écart initial.",
+        "Répartir le coût de la matière omise entre tous les produits au prorata du chiffre d’affaires, sans vérifier sa consommation."
+      ],
+      "answer": 1,
+      "explanation": "Les ratios ne corrigent pas des numérateurs incomplets. Le classement exige des contributions de même périmètre, incluant les coûts pertinents fournis ou à vérifier."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La capacité du goulot est augmentée et une autre étape devient limitante. Quelle démarche est pertinente ?",
+      "options": [
+        "Conserver l’ancienne marge par heure de goulot en remplaçant seulement le volume total d’heures disponibles.",
+        "Classer les produits selon leur marge par heure cumulée de toutes les étapes, sans distinguer les étapes saturées.",
+        "Identifier la nouvelle ressource rare et recalculer les rendements appropriés.",
+        "Classer les produits selon leur marge unitaire puisque l’ancienne étape limitante a été renforcée."
+      ],
+      "answer": 2,
+      "explanation": "Le critère est lié à ce qui limite réellement le programme. Une modification des capacités peut déplacer le goulot ; le modèle doit suivre la nouvelle situation au lieu de figer l’ancien ratio."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un calcul exprime heures par unité puis le présente comme euros par heure. Quel défaut apparaît ?",
+      "options": [
+        "Les unités du ratio ne correspondent pas à la marge rapportée au temps.",
+        "Le ratio mesure déjà un rendement monétaire ; seule la conversion des heures en minutes manque.",
+        "Le ratio mesure déjà la marge horaire ; il faut seulement inverser l’ordre du classement des produits.",
+        "Le ratio mesure déjà la marge horaire ; il faut seulement diviser le temps par la marge unitaire supplémentaire."
+      ],
+      "answer": 0,
+      "explanation": "Le rendement exige euros de marge divisés par heures rares. Une inversion ou une autre grandeur ne se lit pas avec la même unité ; contrôler les dimensions aide à détecter l’erreur."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une commande prioritaire pour des raisons non chiffrées doit être réalisée même avec un ratio inférieur. Quel commentaire est exact ?",
+      "options": [
+        "Conserver le classement sans réserver de capacité et présenter la commande prioritaire seulement comme une variante commerciale du résultat.",
+        "Augmenter fictivement la marge de cette commande jusqu’à ce qu’elle devienne première dans le classement.",
+        "Répartir à parts égales la capacité entre cette commande et chaque autre produit pour représenter la priorité.",
+        "Le programme réel doit intégrer cette exigence explicitement, avec la limite du critère de marge."
+      ],
+      "answer": 3,
+      "explanation": "Le modèle éclaire un objectif sous contraintes données. Une exigence documentée peut modifier le programme ; elle doit être explicitée plutôt que niée ou transformée en coût inventé."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle grandeur est recherchée au numérateur du rendement de la ressource rare dans ce dossier ?",
+      "options": [
+        "Le chiffre d’affaires sans retrancher aucune consommation.",
+        "La marge unitaire sur les coûts variables pertinents.",
+        "Le seul nombre d’heures disponibles.",
+        "Le total des charges fixes inchangées de toute l’entreprise."
+      ],
+      "answer": 1,
+      "explanation": "Le rendement compare la contribution apportée par les produits à leur consommation de capacité. Le prix seul ignorerait les coûts variables ; les charges fixes inchangées n’expliquent pas le différentiel entre unités."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Deux produits ont le même rendement de marge par heure rare et aucune autre différence de contrainte dans le modèle. Que peut conclure ce seul critère ?",
+      "options": [
+        "Le produit à marge unitaire supérieure doit passer en tête, même si cette marge exige proportionnellement plus de temps.",
+        "Le produit utilisant le moins de temps par unité doit passer en tête, même si sa marge diminue dans la même proportion.",
+        "Il ne les départage pas sur la contribution horaire ; d’autres critères ou contraintes doivent être précisés.",
+        "Le produit au plus fort taux de marge sur chiffre d’affaires doit passer en tête, même si la contribution horaire reste égale."
+      ],
+      "answer": 2,
+      "explanation": "Un critère identique ne crée pas un classement strict. Il faut conserver cette indifférence du modèle et examiner les autres informations pertinentes sans inventer une supériorité."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un produit apporte 24 € de marge et demande 90 minutes de goulot. Quelle marge par heure rare calcule-t-on ?",
+      "options": [
+        "16 € par heure",
+        "36 € par heure",
+        "0,2667 € par heure",
+        "2 160 € par heure"
+      ],
+      "answer": 0,
+      "explanation": "Quatre-vingt-dix minutes valent 1,5 heure. Le rendement est 24 / 1,5 = 16 € par heure ; diviser directement par les minutes donnerait une autre unité.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 24
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 90
+                },
+                {
+                  "value": 60
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 16,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une livraison exige 120 unités conformes. Dans le modèle de planification, 80 % des unités lancées sont conformes et les rejets apparaissent après le goulot. Chaque unité lancée utilise 2 minutes de goulot. Combien de minutes faut-il réserver pour cette livraison ?",
+      "options": [
+        "240 minutes.",
+        "192 minutes.",
+        "288 minutes.",
+        "300 minutes."
+      ],
+      "answer": 3,
+      "explanation": "Il faut lancer 120 / 0,80 = 150 unités, chacune mobilisant le goulot avant le contrôle final. La charge est donc 150 × 2 = 300 minutes. Réserver seulement 240 minutes traiterait les unités conformes comme si les rejets n’avaient consommé aucune capacité.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 120
+                },
+                {
+                  "value": 0.8
+                }
+              ]
+            },
+            {
+              "value": 2
+            }
+          ]
+        },
+        "expected": 300,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "On envisage une heure rare supplémentaire contre une dépense spécifique. Quel raisonnement permet d’évaluer cette extension ?",
+      "options": [
+        "Comparer le coût de l’heure au coût fixe moyen historique d’une heure de machine, indépendamment de ce qui pourra être vendu.",
+        "Examiner la contribution additionnelle réalisable, les limites de demande et le coût de l’heure ajoutée.",
+        "Comparer le coût de l’heure au chiffre d’affaires du produit prioritaire sans retrancher ses coûts variables.",
+        "Utiliser le rendement du premier produit du classement même si sa demande est déjà entièrement satisfaite."
+      ],
+      "answer": 1,
+      "explanation": "La décision porte sur ce que l’heure permet réellement de produire et vendre, puis sur son coût. Les rendements donnent un repère mais les contraintes et effets additionnels doivent rester explicites."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un rapport arrondit tôt deux ratios proches et les classe à égalité, puis arrête la comparaison. Quel contrôle est utile ?",
+      "options": [
+        "Calculer le programme à partir des ratios arrondis et utiliser davantage de décimales uniquement pour présenter son résultat.",
+        "Départager les ratios arrondis par la marge unitaire, sans consulter leur valeur avant arrondi.",
+        "Conserver une précision suffisante avant le classement et expliciter l’arrondi de présentation.",
+        "Arrondir séparément chaque marge et chaque temps avant division, sans contrôler l’écart créé sur le ratio."
+      ],
+      "answer": 2,
+      "explanation": "Un arrondi peut masquer une différence pertinente. Le calcul de décision doit conserver la précision utile, sans laisser les conventions d’affichage modifier silencieusement le classement."
+    }
+  ]
+}

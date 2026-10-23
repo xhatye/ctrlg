@@ -1,0 +1,455 @@
+{
+  "module": "DSCG5",
+  "chapter": "reperes",
+  "sourceHash": "d24a52099ce1b980f12248e2bcca0297b80b90112b6eedbe12da3ff4b3bb7b72",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel principe décrit le mieux l’attribution des habilitations ?",
+      "options": [
+        "Accorder tous les droits aux salariés permanents et aucun aux prestataires.",
+        "Conserver les droits antérieurs dès que le salarié reste dans l’entreprise.",
+        "Accorder les droits nécessaires à la fonction et retirer ceux devenus inutiles.",
+        "Accorder l’administration dès que l’utilisateur a suivi une formation."
+      ],
+      "answer": 2,
+      "explanation": "Les habilitations doivent suivre le besoin réel. Le statut ou une formation ne justifie pas, à lui seul, des droits étendus ou devenus inutiles.",
+      "references": [
+        {
+          "title": "CNIL — Gérer les habilitations",
+          "url": "https://www.cnil.fr/fr/securite-gerer-les-habilitations"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une comptable change de poste et conserve le droit de modifier les coordonnées des fournisseurs, dont elle n’a plus besoin. Que faire ?",
+      "options": [
+        "Le conserver jusqu’à la prochaine modification de logiciel.",
+        "Le remplacer par un droit administrateur pour faciliter sa mobilité.",
+        "Le conserver si aucun incident n’a encore été signalé.",
+        "Retirer ce droit et adapter ses habilitations à sa nouvelle mission."
+      ],
+      "answer": 3,
+      "explanation": "Les changements de fonction doivent déclencher une adaptation des accès. L’absence d’incident ne justifie pas le maintien d’un droit sans besoin.",
+      "references": [
+        {
+          "title": "CNIL — Gérer les habilitations",
+          "url": "https://www.cnil.fr/fr/securite-gerer-les-habilitations"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Tous les membres d’un service utilisent le même compte pour modifier des dossiers. Quel contrôle est affaibli ?",
+      "options": [
+        "L’attribution fiable de chaque action à un utilisateur déterminé.",
+        "La présence d’un identifiant de compte dans chaque trace suffit à distinguer les personnes utilisant ce même compte.",
+        "La diversité des mots de passe personnels est démontrée par la seule présence du compte commun dans le journal.",
+        "La date des modifications permet à elle seule d’identifier la personne physique derrière le compte partagé."
+      ],
+      "answer": 0,
+      "explanation": "Un journal lié au seul compte partagé ne permet pas d’identifier directement la personne ayant agi. Des comptes individuels soutiennent la traçabilité.",
+      "references": [
+        {
+          "title": "CNIL — Gérer les habilitations",
+          "url": "https://www.cnil.fr/fr/securite-gerer-les-habilitations"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un technicien doit exceptionnellement administrer une application pendant une intervention. Quel dispositif respecte le mieux le moindre privilège ?",
+      "options": [
+        "Un compte administrateur permanent utilisé aussi pour ses courriels.",
+        "Une élévation limitée au besoin, autorisée, tracée et retirée après intervention.",
+        "Le partage du mot de passe du directeur avec l’ensemble de son équipe.",
+        "L’ajout permanent de tous les techniciens au groupe administrateur."
+      ],
+      "answer": 1,
+      "explanation": "Un besoin ponctuel appelle un droit ponctuel encadré. La durée et le périmètre doivent rester proportionnés et les actions traçables.",
+      "references": [
+        {
+          "title": "CNIL — Gérer les habilitations",
+          "url": "https://www.cnil.fr/fr/securite-gerer-les-habilitations"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un responsable demande un export détaillé alors qu’un tableau agrégé suffit à sa mission. Quelle réponse est la plus appropriée ?",
+      "options": [
+        "Autoriser toutes les sources parce qu’il appartient à la direction.",
+        "Refuser tout indicateur au motif que les sources contiennent des données personnelles.",
+        "Fournir le niveau agrégé utile et justifier séparément tout accès au détail.",
+        "Créer une copie personnelle complète pour éviter l’accès au système central."
+      ],
+      "answer": 2,
+      "explanation": "Le besoin de consulter un résultat agrégé ne justifie pas automatiquement l’accès aux données détaillées. Les droits doivent correspondre à l’usage.",
+      "references": [
+        {
+          "title": "CNIL — Gérer les habilitations",
+          "url": "https://www.cnil.fr/fr/securite-gerer-les-habilitations"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une revue de droits rapproche uniquement la liste des comptes de celle des salariés présents. Quelle anomalie peut-elle manquer ?",
+      "options": [
+        "Un compte appartenant à un salarié parti.",
+        "Un compte désactivé après un départ.",
+        "Un salarié sans compte dans l’application.",
+        "Des droits excessifs détenus par un salarié toujours présent."
+      ],
+      "answer": 3,
+      "explanation": "La présence de la personne ne suffit pas à valider ses habilitations. La revue doit aussi confronter les droits à ses fonctions actuelles.",
+      "references": [
+        {
+          "title": "CNIL — Gérer les habilitations",
+          "url": "https://www.cnil.fr/fr/securite-gerer-les-habilitations"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel risque cherche à réduire la séparation entre création d’un fournisseur et validation de son paiement ?",
+      "options": [
+        "La réalisation d’un paiement indu par une personne agissant seule sur toute la chaîne.",
+        "Le refus de tout paiement à un fournisseur créé dans le même exercice, y compris lorsque la création est justifiée.",
+        "La suppression de toute erreur de calcul de facture par le seul changement des rôles de validation.",
+        "L’impossibilité pour deux personnes de se concerter, même si elles contrôlent ensemble création et paiement."
+      ],
+      "answer": 0,
+      "explanation": "Séparer les étapes sensibles réduit la possibilité d’organiser et de valider seul une opération indue. Cela ne dispense pas des autres contrôles."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux comptes individuels appartiennent à la même personne : l’un crée le fournisseur, l’autre autorise le paiement. Le contrôle est-il satisfaisant ?",
+      "options": [
+        "Oui, deux comptes garantissent deux décideurs indépendants.",
+        "Non, deux comptes d’une même personne ne réalisent pas une séparation effective des acteurs.",
+        "Oui, si les opérations sont effectuées à des heures différentes.",
+        "Oui, si chaque opération apparaît dans un journal, même sans autre acteur."
+      ],
+      "answer": 1,
+      "explanation": "La séparation porte sur les personnes et responsabilités, pas uniquement les identifiants. Un même acteur garde la maîtrise des deux étapes."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La règle impose deux validateurs, mais le second approuve sans consulter le dossier. Quelle action améliore réellement ce contrôle ?",
+      "options": [
+        "Compter les signatures comme preuve suffisante du contrôle, sans examiner leur contenu.",
+        "Augmenter les montants autorisés pour réduire le nombre de dossiers à valider.",
+        "Définir et vérifier l’examen attendu du second valideur avant son approbation.",
+        "Remplacer l’examen de la seconde personne par une approbation automatique sous son compte."
+      ],
+      "answer": 2,
+      "explanation": "La double validation ne réduit le risque que si un contrôle pertinent est exercé. Il faut définir les vérifications et examiner leur réalisation effective."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans une petite équipe, une absence conduit temporairement à cumuler création et paiement. Quelle mesure atténue ce risque sans prétendre le supprimer ?",
+      "options": [
+        "Renommer le compte de l’agent pour distinguer les opérations.",
+        "Reporter toute journalisation après le retour du salarié absent.",
+        "Déclarer la procédure conforme car le cumul est temporaire.",
+        "Faire approuver l’exception et organiser une revue indépendante des opérations concernées."
+      ],
+      "answer": 3,
+      "explanation": "Un contrôle compensatoire doit être défini et exécuté. Il atténue le risque du cumul, mais ne transforme pas celui-ci en séparation préventive."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un utilisateur ne valide pas les paiements, mais peut modifier seul l’IBAN juste après leur validation. Quel contrôle doit être examiné ?",
+      "options": [
+        "La maîtrise des changements de coordonnées jusqu’à l’exécution du paiement.",
+        "La seule revue des coordonnées au moment de la création, sans contrôle de leur modification après approbation.",
+        "Le montant validé seul, en supposant que l’IBAN peut être remplacé sans affecter la destination approuvée.",
+        "La seule absence de droit de valider les paiements, considérée comme suffisante malgré le droit de changer le bénéficiaire après validation."
+      ],
+      "answer": 0,
+      "explanation": "La séparation peut être contournée si une donnée essentielle change après autorisation. Le contrôle doit couvrir les modifications et leur revalidation."
+    },
+    {
+      "id": "q12",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une séparation des tâches est correctement configurée dans l’application, mais un administrateur peut changer les rôles sans revue. Quel risque résiduel apparaît ?",
+      "options": [
+        "La séparation métier suffit même si une personne peut s’attribuer les deux rôles sans revue.",
+        "La modification des habilitations peut neutraliser le contrôle métier.",
+        "Le contrôle des paiements remplace le contrôle des changements de droits, même quand ces droits déterminent qui approuve.",
+        "La présence d’une matrice de rôles documentée garantit que les droits restent inchangés sans suivi des modifications."
+      ],
+      "answer": 1,
+      "explanation": "La maîtrise des droits d’administration complète les règles métier. Les changements de rôles doivent être encadrés et surveillés."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quelle preuve démontre le mieux l’utilité d’une sauvegarde pour la reprise ?",
+      "options": [
+        "La présence d’un fichier portant une date récente.",
+        "Le nombre de supports achetés pour les copies.",
+        "Une restauration vérifiée, utilisable et réalisée dans le délai attendu.",
+        "La taille du dossier de sauvegarde comparée au disque initial."
+      ],
+      "answer": 2,
+      "explanation": "Une copie peut être illisible, incomplète ou trop longue à rétablir. Le test doit vérifier la récupération et l’usage réel, pas seulement l’existence du fichier.",
+      "references": [
+        {
+          "title": "CNIL — Sauvegarder",
+          "url": "https://www.cnil.fr/fr/securite-sauvegarder"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le logiciel annonce « sauvegarde terminée ». Aucun fichier restauré n’a été ouvert. Que peut-on conclure ?",
+      "options": [
+        "La reprise métier est démontrée pour tout incident.",
+        "Le délai maximal de reprise est nécessairement respecté.",
+        "Toutes les dépendances applicatives ont été rétablies.",
+        "L’exécution de la copie est signalée, mais la capacité de restauration reste à tester."
+      ],
+      "answer": 3,
+      "explanation": "Le message de fin de copie est une information utile mais insuffisante. L’intégrité et l’utilisabilité de la restauration doivent être constatées.",
+      "references": [
+        {
+          "title": "CNIL — Sauvegarder",
+          "url": "https://www.cnil.fr/fr/securite-sauvegarder"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un test restaure une base, mais l’application ne fonctionne plus faute de paramètres et de droits. Quelle limite révèle-t-il ?",
+      "options": [
+        "La sauvegarde des données ne suffit pas à rétablir le service avec ses dépendances.",
+        "Le redémarrage de la base suffit à établir la reprise de l’application sans les paramètres et accès manquants.",
+        "L’intégrité des fichiers restaurés remplace les essais des fonctions applicatives et des droits nécessaires.",
+        "Le nombre de tables récupérées est une mesure suffisante du service utilisable par les métiers."
+      ],
+      "answer": 0,
+      "explanation": "La reprise inclut les composants et accès nécessaires au service. Le succès du transfert de données ne démontre pas la récupération complète.",
+      "references": [
+        {
+          "title": "CNIL — Sauvegarder",
+          "url": "https://www.cnil.fr/fr/securite-sauvegarder"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une restauration d’essai doit être réalisée sans affecter le service courant. Quel choix est adapté ?",
+      "options": [
+        "Restaurer directement sur la base active sans plan de protection, en supposant que le simple nom test empêche l’écrasement.",
+        "Utiliser un environnement approprié isolé et contrôler le résultat du test.",
+        "Isoler seulement le poste du testeur tout en conservant une connexion d’écriture non contrôlée vers la production.",
+        "Exécuter le test avec les mêmes destinations et droits de production sans vérifier les effets possibles des opérations de restauration."
+      ],
+      "answer": 1,
+      "explanation": "Un environnement de test maîtrisé permet de vérifier la restauration sans détruire le service courant. Les résultats et limites doivent être consignés.",
+      "references": [
+        {
+          "title": "CNIL — Sauvegarder",
+          "url": "https://www.cnil.fr/fr/securite-sauvegarder"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une restauration réussit en six heures alors que l’activité doit reprendre en trois heures. Quelle conclusion est correcte ?",
+      "options": [
+        "Déclarer le besoin satisfait parce que les données sont récupérables, sans tenir compte de la durée observée.",
+        "Présenter les trois heures souhaitées comme durée obtenue à la place des six heures mesurées.",
+        "La récupération fonctionne, mais le délai testé ne satisfait pas l’objectif.",
+        "Conclure à la conformité du délai à partir du taux de réussite de copie sans mesurer la reprise de l’activité."
+      ],
+      "answer": 2,
+      "explanation": "Il faut distinguer possibilité de restaurer et respect du délai attendu. L’écart doit conduire à des actions et à une vérification ultérieure.",
+      "references": [
+        {
+          "title": "CNIL — Sauvegarder",
+          "url": "https://www.cnil.fr/fr/securite-sauvegarder"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La restauration est testée après chaque évolution importante, mais les résultats ne sont jamais conservés. Quelle faiblesse subsiste ?",
+      "options": [
+        "La réussite annoncée oralement permet de démontrer les mêmes conditions à chaque exercice sans autre trace.",
+        "La programmation régulière des tests remplace la preuve de leur résultat effectif.",
+        "La date de dernière sauvegarde suffit à reconstituer les durées et anomalies constatées pendant l’essai de restauration.",
+        "La preuve des conditions, résultats et actions correctives n’est pas disponible."
+      ],
+      "answer": 3,
+      "explanation": "La documentation permet d’apprécier la portée du test et de suivre les corrections. Elle complète l’exercice technique sans s’y substituer.",
+      "references": [
+        {
+          "title": "CNIL — Sauvegarder",
+          "url": "https://www.cnil.fr/fr/securite-sauvegarder"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Le principe de minimisation demande principalement de :",
+      "options": [
+        "Limiter les données personnelles à ce qui est nécessaire à la finalité définie.",
+        "Collecter le maximum de données disponibles puis fixer les usages une fois le fichier constitué.",
+        "Évaluer la nécessité d’un champ selon son seul coût de stockage plutôt que la finalité.",
+        "Confondre la limitation des destinataires avec la justification de chaque donnée collectée."
+      ],
+      "answer": 0,
+      "explanation": "La pertinence s’apprécie selon la finalité, et non selon un volume universel ni le seul coût technique de stockage.",
+      "references": [
+        {
+          "title": "CNIL — Principes du RGPD, article 5",
+          "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un formulaire d’inscription à une conférence exige l’adresse postale alors qu’aucun envoi ni besoin d’adresse n’existe. Quel examen faut-il mener ?",
+      "options": [
+        "Considérer la présence du champ dans un formulaire antérieur comme justification suffisante de sa nécessité actuelle.",
+        "La nécessité de cette donnée au regard de l’organisation de la conférence.",
+        "Justifier l’adresse par sa facilité de collecte sans identifier l’usage prévu dans cette conférence.",
+        "Traiter le caractère obligatoire du champ comme la preuve que sa collecte est nécessaire."
+      ],
+      "answer": 1,
+      "explanation": "Un champ techniquement valide peut rester inutile. Le besoin doit être justifié par la finalité avant d’imposer sa collecte.",
+      "references": [
+        {
+          "title": "CNIL — Principes du RGPD, article 5",
+          "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une organisation collecte des détails personnels « au cas où un futur projet en aurait besoin ». Quelle faiblesse du raisonnement apparaît ?",
+      "options": [
+        "La possibilité d’un futur usage tient lieu de finalité actuelle définie, sans description de cet usage.",
+        "La collecte initiale justifie la conservation pour tous les projets ultérieurs sans nouvel examen.",
+        "Elle justifie la collecte actuelle par un usage hypothétique non défini.",
+        "L’existence d’une équipe capable d’analyser les données suffit à justifier leur collecte avant tout besoin déterminé."
+      ],
+      "answer": 2,
+      "explanation": "La possibilité vague d’un usage futur ne suffit pas à établir la nécessité actuelle. La finalité et les données utiles doivent être définies.",
+      "references": [
+        {
+          "title": "CNIL — Principes du RGPD, article 5",
+          "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un service a seulement besoin du nombre de participants par tranche d’âge. Quelle collecte doit être examinée en priorité ?",
+      "options": [
+        "La date de naissance complète avec une copie d’identité pour chacun.",
+        "Toutes les informations du profil personnel déjà disponibles.",
+        "Une liste nominative détaillée diffusée à tous les intervenants.",
+        "Une donnée de tranche adaptée au besoin, en évitant le détail inutile."
+      ],
+      "answer": 3,
+      "explanation": "Le niveau de détail doit être proportionné à l’objectif statistique. Une date exacte et des justificatifs demandent une nécessité supplémentaire.",
+      "references": [
+        {
+          "title": "CNIL — Principes du RGPD, article 5",
+          "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2"
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une équipe invoque le chiffrement de sa base pour conserver de nouveaux champs personnels sans utilité déterminée. Quelle réponse est correcte ?",
+      "options": [
+        "La sécurité du stockage ne dispense pas de justifier la nécessité des données collectées.",
+        "Le chiffrement rend toute information non personnelle.",
+        "Le chiffrement permet automatiquement toute nouvelle finalité.",
+        "La minimisation concerne seulement les bases non chiffrées."
+      ],
+      "answer": 0,
+      "explanation": "Sécuriser et minimiser sont complémentaires. Une donnée protégée reste soumise à l’examen de sa pertinence et de sa nécessité.",
+      "references": [
+        {
+          "title": "CNIL — Principes du RGPD, article 5",
+          "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre2"
+        }
+      ]
+    }
+  ]
+}

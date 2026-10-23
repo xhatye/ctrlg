@@ -1,0 +1,413 @@
+{
+  "module": "UE5",
+  "chapter": "monnaie-credit",
+  "sourceHash": "6ec376700ca3db4ea1cc7847e5e91a59a74dd1d62b6a496c4a306f8893de2b60",
+  "authoredBy": "codex-economics-systems-with-root-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "foundation",
+      "q": "Un catalogue exprime tous ses prix en euros pour permettre leur comparaison. Quelle fonction monétaire est principalement utilisée ?",
+      "options": [
+        "La réserve de valeur.",
+        "Le remboursement d’un crédit.",
+        "La garantie de solvabilité.",
+        "L’unité de compte."
+      ],
+      "answer": 3,
+      "explanation": "L’unité de compte fournit une échelle commune pour exprimer les valeurs. Ce rôle ne signifie pas que la monnaie est actuellement transférée, ni qu’elle conserve parfaitement son pouvoir d’achat dans le temps."
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une entreprise reçoit un prêt sur son compte et souhaite l’inclure dans ses ventes du mois. Quelle qualification du versement est correcte ?",
+      "options": [
+        "Classer le principal reçu parmi les ventes parce qu’il augmente le solde bancaire.",
+        "Un financement avec obligation de remboursement n’est pas, par sa seule réception, un produit d’exploitation.",
+        "Comptabiliser le principal entier comme un intérêt gagné au moment du versement.",
+        "Inclure le principal dans les recettes commerciales puis déduire seulement les intérêts de l’année."
+      ],
+      "answer": 1,
+      "explanation": "Le crédit apporte une ressource de financement mais crée aussi une obligation contractuelle. La liquidité obtenue ne prouve pas une vente ou une création de résultat d’exploitation du même montant."
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une banque propose un taux inférieur mais refuse le prêt en raison de garanties insuffisantes. Que montre cette situation sur l’accès au crédit ?",
+      "options": [
+        "Un taux affiché plus bas suffit à établir que tout demandeur obtiendra le financement.",
+        "Une baisse du taux remplace l’examen du risque de remboursement de l’emprunteur.",
+        "Le prix du crédit et la décision d’octroi sont deux dimensions distinctes de l’accès au financement.",
+        "Le refus prouve que le prêt a été accordé mais à un coût plus élevé que celui affiché."
+      ],
+      "answer": 2,
+      "explanation": "Un coût attractif ne constitue pas un engagement de financement. L’octroi dépend aussi des conditions acceptées par le prêteur et de son appréciation du risque."
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un client règle avec une carte de débit qui mobilise le solde de son compte courant. Quelle distinction est correcte ?",
+      "options": [
+        "La carte est un instrument de paiement ; le dépôt bancaire mobilisé constitue la monnaie utilisée.",
+        "La carte crée nécessairement une nouvelle quantité de monnaie à chaque paiement.",
+        "La carte elle-même est le dépôt inscrit au bilan de la banque.",
+        "Le dépôt ne devient de la monnaie que si le client retire préalablement des billets."
+      ],
+      "answer": 0,
+      "explanation": "Il faut distinguer le moyen d’initier le paiement et l’avoir monétaire transféré. Un paiement par carte de débit n’est pas, à lui seul, une création de crédit.",
+      "references": [
+        {
+          "title": "BCE — What is money?",
+          "url": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/what_is_money.en.html"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client utilise la monnaie pour régler un fournisseur, qui peut ensuite payer un autre agent. Quelle fonction est ici au premier plan ?",
+      "options": [
+        "L’unité de compte.",
+        "La réserve de valeur.",
+        "L’étalon de paiement différé.",
+        "L’intermédiaire d’échange."
+      ],
+      "answer": 3,
+      "explanation": "La monnaie permet ici de réaliser les paiements et de relier les échanges. Ce rôle doit être distingué de l’expression des prix en unité commune et de la conservation du pouvoir d’achat dans le temps."
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un prêt améliore la trésorerie du jour, mais des remboursements importants sont prévus sans recettes suffisantes identifiées. Quelle conclusion est prudente ?",
+      "options": [
+        "Juger la couverture des échéances par le seul solde juste après versement du prêt.",
+        "Il faut examiner le calendrier des paiements futurs ; le solde actuel ne démontre pas leur couverture.",
+        "Comparer uniquement le principal initial au total des ventes passées, sans calendrier futur.",
+        "Considérer le budget équilibré sur l’année comme preuve de couverture à chaque date d’échéance."
+      ],
+      "answer": 1,
+      "explanation": "La capacité de paiement ne se réduit pas au solde au jour du versement. Le contrat impose des échéances futures qu’il faut confronter aux flux attendus, à leur calendrier et à leurs incertitudes."
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un client paie un fournisseur qui détient son compte dans une autre banque. Dans un règlement interbancaire en monnaie de banque centrale, quel avoir les banques utilisent-elles entre elles ?",
+      "options": [
+        "Les actions détenues par le client dans une entreprise non bancaire.",
+        "Le solde du compte courant du fournisseur considéré comme réserve de sa banque à la banque centrale.",
+        "Leurs réserves détenues auprès de la banque centrale.",
+        "Les créances commerciales du fournisseur transférées comme si elles étaient des réserves centrales."
+      ],
+      "answer": 2,
+      "explanation": "Le transfert entre banques mobilise la monnaie de banque centrale ; les dépôts de clientèle sont une autre couche du système monétaire.",
+      "references": [
+        {
+          "title": "BCE — What is excess liquidity?",
+          "url": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/excess_liquidity.en.html"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Après une baisse de taux, certaines entreprises n’investissent pas parce qu’elles anticipent une demande faible. Quelle interprétation respecte le mécanisme monétaire ?",
+      "options": [
+        "Une amélioration du financement ne suffit pas à garantir l’investissement lorsque d’autres contraintes persistent.",
+        "Conclure que le coût du crédit détermine seul l’investissement, sans examiner les recettes anticipées.",
+        "Déduire de l’absence d’investissement que les conditions de financement n’ont pas changé.",
+        "Traiter la baisse du taux comme une obligation de réaliser le projet indépendamment de ses débouchés."
+      ],
+      "answer": 0,
+      "explanation": "Le coût du crédit est un déterminant parmi d’autres. Les anticipations de débouchés et les contraintes peuvent limiter la réaction ; une relation attendue ne doit pas devenir une obligation mécanique pour chaque entreprise."
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Les prix augmentent et une somme conservée achète moins de biens. Cela signifie-t-il que la monnaie a perdu simultanément toutes ses fonctions ?",
+      "options": [
+        "La dégradation du pouvoir d’achat supprime nécessairement l’usage de la monnaie pour comparer les prix.",
+        "Une monnaie utilisée pour payer ne peut pas perdre de pouvoir d’achat entre deux dates.",
+        "La fonction d’unité de compte suffit à garantir une valeur réelle inchangée de la somme conservée.",
+        "Non, la réserve de pouvoir d’achat peut se dégrader tandis que d’autres usages subsistent."
+      ],
+      "answer": 3,
+      "explanation": "Les fonctions doivent être distinguées. Une perte de pouvoir d’achat affecte la qualité de réserve de valeur, sans démontrer que la monnaie cesse d’être utilisée pour compter ou payer."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une entreprise reçoit 6 000 € de principal emprunté et en utilise aussitôt 4 000 € pour un achat. Sans autre mouvement, quel accroissement net de trésorerie reste à ce stade ?",
+      "options": [
+        "10 000 €",
+        "2 000 €",
+        "6 000 €",
+        "4 000 €"
+      ],
+      "answer": 1,
+      "explanation": "Le flux net de trésorerie est 6 000 − 4 000 = 2 000 €. Ce solde ne constitue pas un bénéfice net : le financement reste assorti d’un remboursement et l’achat possède son propre traitement.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 6000
+            },
+            {
+              "value": 4000
+            }
+          ]
+        },
+        "expected": 2000,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Un ménage prête à un autre 1 000 € déjà disponibles sur son compte, sans intervention de crédit bancaire. Quel effet décrit le transfert sur le total des dépôts de ces deux ménages, sans autre opération ?",
+      "options": [
+        "Il crée 1 000 € supplémentaires au total dès qu’un contrat de prêt entre ménages existe.",
+        "Il détruit nécessairement 1 000 € de dépôts parce que le prêteur débite son compte.",
+        "Il redistribue les dépôts existants entre les deux ménages sans en créer au total.",
+        "Il accroît le dépôt du prêteur et celui de l’emprunteur du même montant."
+      ],
+      "answer": 2,
+      "explanation": "Le dépôt transféré quitte un compte et arrive sur l’autre. Un prêt d’avoirs existants par un non-banquier se distingue de la création d’un dépôt par un nouveau crédit bancaire.",
+      "references": [
+        {
+          "title": "Bank of England — Money creation in the modern economy",
+          "url": "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "standard",
+      "q": "Dans le mécanisme simplifié d’un crédit bancaire ayant créé un dépôt, l’emprunteur rembourse le principal avec son dépôt. Quel effet cette opération produit-elle, toutes choses égales par ailleurs ?",
+      "options": [
+        "La créance de crédit et le dépôt correspondant diminuent ; ce remboursement détruit de la monnaie scripturale.",
+        "La créance de crédit diminue mais le dépôt remboursé reste intégralement disponible à l’emprunteur.",
+        "Le remboursement du principal crée un nouveau crédit de même montant dans le même instant.",
+        "Le principal remboursé augmente mécaniquement la richesse nette de l’emprunteur du même montant."
+      ],
+      "answer": 0,
+      "explanation": "Le principal remboursé réduit l’actif de crédit de la banque et son passif de dépôt. Cette opération se distingue d’un simple transfert entre comptes et du paiement d’intérêts.",
+      "references": [
+        {
+          "title": "Bank of England — Money creation in the modern economy",
+          "url": "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Quel usage illustre la monnaie comme réserve de valeur ?",
+      "options": [
+        "Afficher le prix actuel d’un bien pour le comparer aux autres.",
+        "Régler immédiatement un achat par transfert au vendeur.",
+        "Utiliser l’euro comme unité de libellé d’un contrat sans détenir une somme pour plus tard.",
+        "Conserver une somme pour disposer d’un pouvoir d’achat ultérieur."
+      ],
+      "answer": 3,
+      "explanation": "La réserve de valeur concerne le transfert de pouvoir d’achat dans le temps. Elle se distingue de l’unité de compte et du paiement effectif ; sa qualité peut être affectée par l’évolution des prix."
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une banque finance des prêts de longue durée par des dépôts dont une partie peut être retirée à vue. Quel risque cette transformation des échéances fait-elle apparaître ?",
+      "options": [
+        "Une concordance parfaite des échéances puisque dépôts et prêts figurent au même bilan.",
+        "Un besoin de liquidité si les retraits surviennent avant les rentrées liées aux prêts.",
+        "Une absence de besoin de règlement tant que les prêts ont une échéance lointaine.",
+        "Une disparition du droit des déposants à retirer leur argent du seul fait que la banque a prêté à long terme."
+      ],
+      "answer": 1,
+      "explanation": "Les actifs peuvent produire des flux plus tard que les sorties exigibles. Leur détention ne garantit pas la liquidité nécessaire à chaque date.",
+      "references": [
+        {
+          "title": "BCE — What is excess liquidity?",
+          "url": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/excess_liquidity.en.html"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une banque accorde un crédit et inscrit simultanément le montant sur le compte de l’emprunteur. Quel bilan simplifié correspond à cette création monétaire ?",
+      "options": [
+        "Le dépôt du client est inscrit comme une dette de l’emprunteur dans l’actif de la banque.",
+        "Le crédit augmente uniquement les fonds propres de la banque sans créance ni dépôt.",
+        "Une créance de crédit à l’actif et un dépôt de clientèle au passif augmentent simultanément.",
+        "Le dépôt apparaît seulement après qu’un épargnant distinct a versé exactement le même montant sur ce compte."
+      ],
+      "answer": 2,
+      "explanation": "Le nouveau prêt et le dépôt sont deux écritures de bilan liées. La banque ne se contente pas, dans cette opération, de transférer un dépôt préexistant d’un autre client.",
+      "references": [
+        {
+          "title": "Bank of England — Money creation in the modern economy",
+          "url": "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy"
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un rapport distingue une réaction prévue de consommation et une réaction effectivement observée. Pourquoi conserver cette séparation ?",
+      "options": [
+        "Une hypothèse de mécanisme ne constitue pas à elle seule une preuve de résultat réalisé.",
+        "Présenter la réaction annoncée comme réalisée parce que son mécanisme économique est plausible.",
+        "Retenir la date de l’annonce comme preuve que la consommation a déjà évolué.",
+        "Omettre les données observées dès lors que le sens de la prévision est connu."
+      ],
+      "answer": 0,
+      "explanation": "Le mécanisme donne une implication conditionnelle alors que l’observation décrit ce qui est mesuré. Les confronter permet d’examiner les écarts et autres facteurs, plutôt que présenter une anticipation comme déjà réalisée."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un contrat est libellé dans une même monnaie et son règlement est prévu plus tard. Quelles fonctions peuvent être distinguées dans cette description ?",
+      "options": [
+        "La réserve de valeur au seul moment du libellé et l’unité de compte exclusivement lors du règlement.",
+        "L’intermédiaire d’échange lors du seul affichage du montant, puis la réserve de valeur lors du paiement immédiat.",
+        "Une création de crédit dans chaque libellé contractuel, même sans prêt ni dépôt nouveau.",
+        "L’unité de compte pour exprimer le contrat et l’intermédiaire d’échange lors du paiement."
+      ],
+      "answer": 3,
+      "explanation": "Une même monnaie peut remplir plusieurs fonctions à des moments différents. Nommer précisément chacune évite de confondre l’expression d’un montant, son règlement et la conservation de pouvoir d’achat."
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un emprunteur reçoit une ressource et doit restituer le principal selon un contrat. Pourquoi l’expression « argent gratuit » est-elle insuffisante pour analyser ce prêt ?",
+      "options": [
+        "Le seul taux nominal suffit à comparer tous les coûts et obligations du prêt.",
+        "Elle masque les obligations, le calendrier et les éventuels coûts définis au contrat.",
+        "Un taux d’intérêt nul dispense l’emprunteur de restituer le principal.",
+        "Le principal versé constitue un gain définitif sans remboursement à prévoir."
+      ],
+      "answer": 1,
+      "explanation": "Le financement doit être examiné avec ses contreparties contractuelles. Le versement apporte de la liquidité mais ne supprime ni l’obligation de remboursement ni les conditions et risques attachés au prêt."
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une banque dispose d’avoirs liquides pour régler les paiements du jour, mais subit des pertes durables sur ses prêts qui érodent ses fonds propres. Quelle distinction est nécessaire ?",
+      "options": [
+        "La possession de liquidités garantit que toutes les créances de crédit seront recouvrées à leur valeur initiale.",
+        "Des réserves liquides empêchent par définition toute perte de valeur des prêts.",
+        "La disponibilité immédiate de liquidités ne démontre pas une solvabilité suffisante face aux pertes.",
+        "La solvabilité se mesure uniquement au nombre de paiements réalisés aujourd’hui."
+      ],
+      "answer": 2,
+      "explanation": "Liquidité et capacité à absorber des pertes ne sont pas synonymes. Un règlement possible aujourd’hui ne suffit pas à établir la solidité du bilan.",
+      "references": [
+        {
+          "title": "Bank of England — Money creation in the modern economy",
+          "url": "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un client retire 100 € de billets de son compte courant. Sans frais ni autre opération, comment décrire ce mouvement pour ce client ?",
+      "options": [
+        "Une conversion d’un dépôt bancaire en monnaie fiduciaire, sans hausse de ses avoirs monétaires totaux.",
+        "Une hausse de 100 € de ses avoirs monétaires totaux, le dépôt restant inchangé.",
+        "Une destruction intégrale de ses 100 € de pouvoir d’achat dès le retrait.",
+        "Un nouveau prêt de 100 € nécessairement accordé par la banque à chaque retrait."
+      ],
+      "answer": 0,
+      "explanation": "Le dépôt diminue tandis que les billets détenus augmentent du même montant. La forme change, pas le total détenu par le client.",
+      "references": [
+        {
+          "title": "BCE — What is money?",
+          "url": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/what_is_money.en.html"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Pour un ménage, un solde créditeur de compte courant est un avoir. Où figure le dépôt correspondant au bilan de la banque ?",
+      "options": [
+        "À l’actif comme si le client devait ce solde à la banque.",
+        "Uniquement dans les fonds propres de la banque, sans obligation envers le client.",
+        "Hors de toute obligation bancaire tant que le client ne demande pas de retrait.",
+        "Au passif, car la banque doit cette somme à son client."
+      ],
+      "answer": 3,
+      "explanation": "La même relation a deux faces : créance du déposant et dette de la banque. Le crédit du compte client ne doit pas être confondu avec les fonds propres bancaires.",
+      "references": [
+        {
+          "title": "Bank of England — Money creation in the modern economy",
+          "url": "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une banque peut créer des dépôts en accordant des prêts. Pourquoi cela ne signifie-t-il pas qu’elle peut prêter sans limite économique ?",
+      "options": [
+        "Chaque dépôt créé apporte automatiquement autant de fonds propres nouveaux à la banque.",
+        "Elle doit notamment maîtriser ses risques, financer ses règlements et respecter ses contraintes prudentielles.",
+        "La création du dépôt garantit que tout emprunteur remboursera intégralement.",
+        "Les paiements vers d’autres banques ne nécessitent aucune ressource de règlement."
+      ],
+      "answer": 1,
+      "explanation": "La faculté de création de dépôts n’efface pas risques de crédit, besoins de liquidité ou contraintes de capital. Les décisions de crédit restent donc limitées.",
+      "references": [
+        {
+          "title": "Bank of England — Money creation in the modern economy",
+          "url": "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "module": "UE13",
+  "chapter": "communication-destinataire",
+  "sourceHash": "a62b3688dc1df5ce76cd5319ed58d0a9894057b74aa2d618c0c436dc2df44e09",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une directrice doit choisir entre deux solutions avant demain. Quel début de note répond à son besoin ?",
+      "options": [
+        "Présenter le choix à faire, les critères et la recommandation motivée.",
+        "Présenter les caractéristiques des deux solutions en laissant les critères de choix implicites.",
+        "Présenter la solution préférée sans expliciter les conséquences de l’autre option.",
+        "Décrire les risques des deux solutions sans préciser la décision attendue."
+      ],
+      "answer": 0,
+      "explanation": "Le message doit permettre la décision. La chronologie et les détails restent utiles s’ils éclairent les critères, les conséquences et la recommandation."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une note destinée aux opérateurs annonce un changement de contrôle. Quelle information est prioritaire ?",
+      "options": [
+        "Le bénéfice attendu et le bilan du test, en renvoyant la date de bascule à une prochaine réunion.",
+        "Ce qui change dans leur action, à partir de quand et avec quel interlocuteur.",
+        "La date de bascule et les décideurs, en conservant les anciennes consignes de traitement.",
+        "Les nouvelles consignes de contrôle, en laissant chaque opérateur choisir leur date d’application."
+      ],
+      "answer": 1,
+      "explanation": "Un destinataire opérationnel doit savoir quoi faire et à quelle échéance. Une intention générale ou le détail des discussions ne remplace pas cette information."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une alerte exigeant une décision rapide figure uniquement dans la dernière annexe d’un message long. Le corps détaille la chronologie sans mentionner l’alerte ou l’action attendue. Quel défaut est établi ?",
+      "options": [
+        "La justification de l’alerte est absente des pièces disponibles.",
+        "Le destinataire n’a pas le pouvoir de prendre la décision.",
+        "Le point qui appelle une action n’est pas identifiable assez tôt.",
+        "La date des faits est absente de la chronologie."
+      ],
+      "answer": 2,
+      "explanation": "Le défaut constaté porte sur la hiérarchie du message. Rien ne permet de conclure que les pièces ne justifient pas l’alerte, que le destinataire ne peut pas décider ou que les dates manquent."
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le destinataire souhaite contrôler un calcul, pas décider d’un nouvel investissement. Quel contenu répond directement ?",
+      "options": [
+        "Le résultat final et sa comparaison avec une moyenne, sans convention de calcul.",
+        "Le total des données d’entrée et le résultat, sans leur articulation dans une formule.",
+        "La formule et le résultat, avec des données d’entrée non identifiées.",
+        "La formule, les données et les conventions permettant de refaire le calcul."
+      ],
+      "answer": 3,
+      "explanation": "Le besoin de contrôle exige de la traçabilité et des conventions explicites. Une recommandation ne permet pas à elle seule de vérifier le résultat."
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une synthèse courte renvoie à une annexe détaillée. Quelle condition permet de conserver un message autonome ?",
+      "options": [
+        "Le corps présente la conclusion, ses raisons essentielles et les limites décisives.",
+        "Le corps présente la conclusion et les avantages ; toutes les limites sont réservées à l’annexe.",
+        "Le corps présente les données principales ; la conclusion apparaît seulement dans l’annexe.",
+        "Le corps présente une recommandation ; ses raisons sont accessibles uniquement dans l’annexe."
+      ],
+      "answer": 0,
+      "explanation": "La concision est compatible avec un raisonnement complet si ses éléments décisifs restent visibles. L’annexe apporte le détail, pas une justification introuvable."
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un courriel demande de valider avant le 15 mars le budget du projet Atlas. Quel objet identifie le dossier, l’action attendue et l’échéance ?",
+      "options": [
+        "Projet Atlas — suivi du budget au 15 mars.",
+        "Projet Atlas — budget à valider avant le 15 mars.",
+        "Budget — validation attendue avant le 15 mars.",
+        "Projet Atlas — budget validé le 15 mars."
+      ],
+      "answer": 1,
+      "explanation": "L’objet utile réunit le dossier Atlas, la validation attendue et son échéance. Un suivi ne formule pas la demande ; un budget générique ne nomme pas le dossier ; annoncer une validation acquise change son statut."
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les réclamations de livraison diminuent, celles de facturation augmentent. Le directeur veut connaître les domaines à traiter, pas un solde global. Quelle synthèse préserve l’information utile ?",
+      "options": [
+        "La satisfaction est stable, car les deux mouvements se compensent qualitativement.",
+        "Les réclamations augmentent ; la facturation résume donc les deux domaines.",
+        "La livraison s’améliore sur cet indicateur ; la facturation appelle une analyse distincte.",
+        "La livraison s’améliore ; on peut donc reporter l’examen de la facturation."
+      ],
+      "answer": 2,
+      "explanation": "La synthèse doit préserver les évolutions divergentes pour orienter les actions par domaine. Un bilan global sans pondération ou un constat favorable masquant l’autre domaine ne répond pas au besoin."
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une note attribue les retards à la charge de travail, mais ne présente que des dates de réception et de réponse. Quel statut donner à cette explication ?",
+      "options": [
+        "Une cause établie, dès lors que les dates montrent un retard.",
+        "Une cause écartée, puisque la charge ne figure pas dans les dates.",
+        "Une estimation chiffrée de l’effet de la charge sur chaque retard.",
+        "Une hypothèse à examiner avec des informations complémentaires."
+      ],
+      "answer": 3,
+      "explanation": "Les dates peuvent établir des délais sans en prouver la cause. La charge de travail doit être étayée avant d’être présentée comme explication démontrée."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une instruction remplace « transmettre le dossier à Léa, sauf les litiges, qui vont à Sami » par « transmettre le dossier à Léa sauf les litiges à Sami ». Quel contrôle teste directement sa compréhension ?",
+      "options": [
+        "Faire reformuler par un opérateur le circuit d’un dossier ordinaire et celui d’un litige.",
+        "Demander si le texte paraît plus court que l’ancien.",
+        "Vérifier que les deux prénoms figurent dans la phrase.",
+        "Demander si l’opérateur connaît les fonctions de Léa et Sami."
+      ],
+      "answer": 0,
+      "explanation": "Le risque concerne l’attribution des deux circuits. Faire appliquer la consigne aux deux types de dossiers teste son interprétation ; la brièveté ou la reconnaissance des acteurs ne vérifie pas cette compréhension."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un formulaire demande « Le nouvel outil est-il rapide et fiable ? » avec une seule réponse oui/non. Un utilisateur le trouve rapide mais peu fiable. Quel problème apparaît ?",
+      "options": [
+        "La question mesure exclusivement la rapidité de l’outil.",
+        "Une seule réponse regroupe deux appréciations qui peuvent diverger.",
+        "La question distingue séparément les deux appréciations.",
+        "Le choix oui/non mesure directement la fréquence des incidents."
+      ],
+      "answer": 1,
+      "explanation": "La formulation combine deux dimensions. Un refus ne permet pas de savoir s’il concerne la rapidité, la fiabilité ou les deux ; deux questions séparées rendraient les appréciations interprétables."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Deux sources donnent des résultats différents sur le même délai. Quelle communication permet au lecteur d’évaluer le désaccord ?",
+      "options": [
+        "Présenter leur moyenne comme le résultat observé dans chacune des deux sources.",
+        "Rapprocher les résultats après conversion dans la même unité, sans examiner les champs.",
+        "Présenter les périmètres et méthodes afin d’expliquer ou de signaler la divergence.",
+        "Retenir la source la plus récente sans examiner si elle mesure le même délai."
+      ],
+      "answer": 2,
+      "explanation": "Le désaccord peut venir des définitions ou des données. Le lecteur doit pouvoir comprendre ces différences plutôt que recevoir un chiffre sélectionné arbitrairement."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une note pour un responsable non financier utilise « BFR » sans explication. Quelle définition aide sans déformer ?",
+      "options": [
+        "Le bénéfice net déjà disponible sur le compte bancaire.",
+        "La somme de toutes les ventes encaissées immédiatement.",
+        "Le montant total du capital détenu par les associés.",
+        "Le besoin de financement du cycle, lié notamment aux stocks, créances et dettes d’exploitation."
+      ],
+      "answer": 3,
+      "explanation": "La simplification doit conserver la distinction entre financement du cycle, bénéfice et trésorerie. Développer le sigle seul ne suffit pas toujours à rendre son rôle compréhensible."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Pour raccourcir une note, le rédacteur retire « sous réserve de validation des données » d’un résultat encore provisoire. Quel risque crée cette simplification ?",
+      "options": [
+        "Elle présente comme plus certain un résultat dont la condition reste pertinente.",
+        "Elle modifie seulement le périmètre de population étudié.",
+        "Elle transforme une conclusion conditionnelle en description de méthode.",
+        "Elle conserve la même certitude dès lors que le montant présenté reste inchangé."
+      ],
+      "answer": 0,
+      "explanation": "Une simplification ne doit pas supprimer une réserve qui affecte l’interprétation. La concision doit préserver le statut de preuve disponible."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une note numérique explique un circuit uniquement par un schéma-image. Un destinataire utilise un lecteur d’écran. Quel complément transmet les mêmes informations essentielles ?",
+      "options": [
+        "Le seul titre « circuit de validation » comme description.",
+        "Une description textuelle des étapes, responsables et embranchements du schéma.",
+        "La liste des responsables sans les relations entre étapes.",
+        "La même image agrandie sans contenu textuel équivalent."
+      ],
+      "answer": 1,
+      "explanation": "L’alternative d’un schéma complexe doit transmettre les informations de l’image : étapes, rôles et relations. Son titre ou la seule liste des acteurs ne restitue pas le circuit.",
+      "references": [
+        {
+          "title": "W3C WAI — Images tutorial",
+          "url": "https://www.w3.org/WAI/tutorials/images/"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une équipe française lit les dates jour/mois, une équipe américaine mois/jour. Le lancement est prévu le 4 mai 2027. Quelle formulation évite leur interprétation divergente ?",
+      "options": [
+        "Lancement le 04/05/2027.",
+        "Lancement le 05/04/2027.",
+        "Lancement le 4 mai 2027, avec le mois en toutes lettres.",
+        "Lancement au début du deuxième trimestre 2027."
+      ],
+      "answer": 2,
+      "explanation": "Les deux formats numériques proposés changent de sens selon la convention indiquée. Écrire le mois conserve la date précise tout en retirant cette ambiguïté ; une période plus large perd l’échéance exacte."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une note conclut seulement « le processus est mauvais ». Quelle révision rend l’information utilisable ?",
+      "options": [
+        "Remplacer l’appréciation par le seul nombre d’écarts, sans nature ni conséquence.",
+        "Décrire les effets supposés sans les relier aux observations.",
+        "Présenter une solution choisie avant de décrire les écarts auxquels elle répond.",
+        "Décrire les écarts observés, leurs conséquences et les pistes d’action étayées."
+      ],
+      "answer": 3,
+      "explanation": "Une appréciation globale n’identifie ni le problème ni l’action. Les faits, conséquences et limites permettent au destinataire d’évaluer la situation."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un client demande pourquoi une pièce est nécessaire au contrôle de son dossier. Quelle réponse est adaptée ?",
+      "options": [
+        "Expliquer sa fonction dans le contrôle et l’information à fournir, avec des termes accessibles.",
+        "Citer le code interne de procédure comme explication de la nécessité de la pièce.",
+        "Décrire le délai de traitement sans préciser ce que la pièce permet de vérifier.",
+        "Expliquer le fonctionnement général du service sans relier la pièce au dossier."
+      ],
+      "answer": 0,
+      "explanation": "L’explication doit être compréhensible par le client et reliée à son dossier. La technicité peut être conservée si les termes indispensables sont définis."
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un responsable doit comparer les délais moyens de trois équipes. Il est autorisé à recevoir cette synthèse, mais n’a pas besoin du détail individuel. Quelle transmission applique la minimisation ?",
+      "options": [
+        "Les délais de chaque salarié, en retirant seulement les noms des équipes.",
+        "Les trois délais moyens par équipe, accompagnés de leur période et méthode de calcul.",
+        "Les moyennes avec les identifiants des salariés ayant le délai le plus long.",
+        "L’extraction de tous les délais individuels pour lui laisser calculer les moyennes."
+      ],
+      "answer": 1,
+      "explanation": "Les moyennes, leur période et leur méthode répondent à la comparaison souhaitée sans ajouter d’informations individuelles inutiles. Retirer les noms des équipes ne réduit pas le détail sur les salariés."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une note existe en version détaillée pour le contrôleur et synthétique pour les équipes. La version détaillée contient des données individuelles réservées au contrôleur. Le directeur propose un seul document contenant les deux versions envoyé à tous. Quelle organisation convient ?",
+      "options": [
+        "Mettre la version détaillée après la synthèse dans le document commun.",
+        "Envoyer la pièce commune en indiquant à chacun les pages à lire.",
+        "Séparer les envois et limiter la version détaillée au destinataire habilité.",
+        "Mettre les données individuelles dans une annexe commune."
+      ],
+      "answer": 2,
+      "explanation": "Des consignes de lecture ne restreignent pas l’accès au contenu reçu. Les versions adaptées doivent aussi être distribuées selon les habilitations ; déplacer les détails en annexe ne limite pas leur diffusion."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un email destiné au client A contient par erreur une annexe du client B. Quelle priorité s’impose avant envoi ?",
+      "options": [
+        "Conserver la pièce de B après remplacement de son nom dans le titre du fichier.",
+        "Déplacer la pièce de B dans un dossier compressé joint au même courriel.",
+        "Retirer B du corps du message sans contrôler la pièce jointe.",
+        "Rétablir la cohérence du destinataire et des pièces jointes."
+      ],
+      "answer": 3,
+      "explanation": "Une annexe inappropriée peut divulguer des informations à un tiers. Le contrôle destinataire-document est distinct de la seule vérification technique du fichier."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un fichier de données personnelles doit être envoyé chiffré à un destinataire autorisé. Celui-ci a convenu de recevoir le mot de passe par téléphone. Quelle transmission protège le secret si le courriel est intercepté ?",
+      "options": [
+        "Envoyer le fichier chiffré par courriel et le mot de passe par l’appel convenu.",
+        "Joindre au même courriel le fichier chiffré et un document contenant le mot de passe.",
+        "Écrire le mot de passe dans le nom du fichier chiffré joint.",
+        "Mettre le mot de passe dans la signature du courriel portant le fichier."
+      ],
+      "answer": 0,
+      "explanation": "Séparer le canal du fichier et celui du secret évite qu’une interception du seul courriel fournisse les deux. Le mot de passe dans une autre pièce, le nom du fichier ou la signature reste transmis par le même canal.",
+      "references": [
+        {
+          "title": "CNIL — Sécuriser les échanges avec l’extérieur",
+          "url": "https://www.cnil.fr/fr/securite-securiser-les-echanges-avec-lexterieur"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La consigne autorise un fichier uniquement à trois personnes nommées. L’outil propose « toute personne ayant le lien », accessible sans identification, ou « personnes désignées », vérifiant les comptes choisis. Quel réglage applique la consigne ?",
+      "options": [
+        "Toute personne ayant le lien, envoyé seulement aux trois personnes.",
+        "Personnes désignées, en sélectionnant les trois comptes autorisés.",
+        "Toute personne ayant le lien, avec un message interdisant de le transférer.",
+        "Tous les comptes de l’organisation puisque les trois personnes en font partie."
+      ],
+      "answer": 1,
+      "explanation": "Le contrôle doit porter sur l’accès, pas seulement sur l’envoi initial. L’option nominative vérifie les trois comptes ; un lien libre peut être retransmis et un accès à toute l’organisation dépasse la consigne."
+    }
+  ]
+}

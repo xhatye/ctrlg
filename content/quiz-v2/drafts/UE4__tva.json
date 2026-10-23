@@ -1,0 +1,617 @@
+{
+  "module": "UE4",
+  "chapter": "tva",
+  "sourceHash": "0e90c0567206dca53db25d5a8ac07d9b16017471c049c89e094e8038a160d06f",
+  "authoredBy": "codex-quiz-law-tax",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une vente de 2 000 € HT bénéficie immédiatement d’une remise de 10 % consentie au client. Le taux fourni est 20 % et la remise réduit la base taxable. Quelle TVA facturer ?",
+      "options": [
+        "400 €",
+        "360 €",
+        "40 €",
+        "440 €"
+      ],
+      "answer": 1,
+      "explanation": "La remise de 200 € réduit la base HT à 1 800 €. La TVA est donc 1 800 × 20 % = 360 €. Calculer sur le tarif avant remise surestime la taxe ; les 40 € représentent la réduction de TVA, pas la taxe restant sur la vente.",
+      "calculation": {
+        "expected": 360,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 2000
+                },
+                {
+                  "value": 0.9
+                }
+              ]
+            },
+            {
+              "value": 0.2
+            }
+          ]
+        },
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "CGI, article 267, base imposable, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042910064/2025-04-01"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une vente comprend 1 000 € HT de marchandises et 80 € HT de transport accessoire facturé par le même vendeur. L’ensemble relève, pour ce cas, du taux de 20 %. Quelle est la TVA totale ?",
+      "options": [
+        "200 €",
+        "16 €",
+        "216 €",
+        "256 €"
+      ],
+      "answer": 2,
+      "explanation": "Les frais accessoires de transport demandés au client entrent dans la base avec la vente. Ici, la base est 1 080 € HT et la taxe 1 080 × 20 % = 216 €. Retenir la seule marchandise omettrait 16 € de taxe.",
+      "calculation": {
+        "expected": 216,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "+",
+              "args": [
+                {
+                  "value": 1000
+                },
+                {
+                  "value": 80
+                }
+              ]
+            },
+            {
+              "value": 0.2
+            }
+          ]
+        },
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "CGI, article 267, base imposable, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042910064/2025-04-01"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un intermédiaire prétend exclure un remboursement de sa base de TVA comme débours. Quel ensemble de faits correspond aux conditions de l’article 267 II-2° ?",
+      "options": [
+        "Dépense engagée en son propre nom, majorée d’une marge.",
+        "Dépense engagée au nom et pour le compte du client, tracée en compte de passage et exactement justifiée.",
+        "Facturation forfaitaire sans compte rendu des dépenses.",
+        "Frais accessoires propres au vendeur simplement nommés débours."
+      ],
+      "answer": 1,
+      "explanation": "L’exclusion des débours exige notamment une intervention au nom et pour le compte du commettant, un compte rendu, un enregistrement en compte de passage et une justification de la nature ou du montant exact. L’intitulé remboursement ne suffit pas à distinguer le débours d’un élément du prix.",
+      "references": [
+        {
+          "title": "CGI, article 267, base imposable, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042910064/2025-04-01"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un fournisseur consent un escompte de caisse au client sur le prix de sa vente. Dans le régime de l’article 267 II-1°, comment cette réduction s’analyse-t-elle pour la base de TVA ?",
+      "options": [
+        "Comme une réduction de prix exclue de la base.",
+        "Comme une TVA déductible supplémentaire du vendeur.",
+        "Comme une augmentation du prix HT facturé.",
+        "Comme une diminution de règlement sans effet possible sur la base de la vente."
+      ],
+      "answer": 0,
+      "explanation": "Les escomptes de caisse consentis directement aux clients figurent parmi les réductions exclues de la base d’imposition. Leur traitement en TVA concerne donc la base du prix réduit ; il ne se confond pas avec une dette d’emprunt ou la déduction de la taxe d’achat.",
+      "references": [
+        {
+          "title": "CGI, article 267, base imposable, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042910064/2025-04-01"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Un tableur additionne le prix HT, les frais accessoires taxables et la TVA elle-même pour constituer la base à laquelle il applique 20 %. Quel défaut faut-il corriger ?",
+      "options": [
+        "La TVA est incluse à tort dans sa propre base.",
+        "Les frais accessoires devraient tous être traités comme des débours.",
+        "Le prix HT devrait être remplacé par le bénéfice.",
+        "La base doit reprendre tout le TTC dès que les frais accessoires sont taxables."
+      ],
+      "answer": 0,
+      "explanation": "La TVA elle-même n’entre pas dans la base taxable définie par l’article 267. L’ajouter puis taxer le total produit une taxe sur la taxe. Les frais accessoires sont une question différente et peuvent, eux, entrer dans la base.",
+      "references": [
+        {
+          "title": "CGI, article 267, base imposable, version 2026",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042910064/2025-04-01"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un prix initial de 1 200 € TTC au taux fourni de 20 % est réduit de 10 %, taxe comprise. Quel est le nouveau prix HT, le taux restant inchangé ?",
+      "options": [
+        "900 €",
+        "1 080 €",
+        "880 €",
+        "1 000 €"
+      ],
+      "answer": 0,
+      "explanation": "Après la remise, le TTC est 1 200 × 90 % = 1 080 €. Le HT correspondant est 1 080 ÷ 1,20 = 900 €. Il faut appliquer la réduction au total concerné puis retirer la taxe par division, sans soustraire 20 % du TTC.",
+      "calculation": {
+        "expected": 900,
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 1200
+                },
+                {
+                  "value": 0.9
+                }
+              ]
+            },
+            {
+              "value": 1.2
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une facture indépendante comprend 600 € TTC au taux fourni de 20 % et 440 € TTC au taux fourni de 10 %. Quel est le total HT ?",
+      "options": [
+        "866,67 €",
+        "945,45 €",
+        "900 €",
+        "1 040 €"
+      ],
+      "answer": 2,
+      "explanation": "Chaque total doit être converti avec son propre taux : 600/1,20 = 500 € et 440/1,10 = 400 €. Le total HT est donc 900 €. Diviser tout le TTC par un taux unique ou une moyenne non justifiée fausserait les bases.",
+      "calculation": {
+        "expected": 900,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 600
+                },
+                {
+                  "value": 1.2
+                }
+              ]
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 440
+                },
+                {
+                  "value": 1.1
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux lignes d’une facture supportent des taux différents. Le comptable divise le TTC total par 1,15 parce que 15 % est la moyenne arithmétique des taux 10 % et 20 %. Quelle méthode fiabilise le retour au HT ?",
+      "options": [
+        "Reconstituer séparément la base de chaque ligne avec son taux.",
+        "Utiliser systématiquement le taux le plus élevé.",
+        "Utiliser systématiquement le taux le plus faible.",
+        "Déduire du TTC la moyenne simple des montants HT."
+      ],
+      "answer": 0,
+      "explanation": "Une moyenne arithmétique des taux ne tient pas compte des poids respectifs des bases. La conversion ligne par ligne, ou par groupes de taux, conserve les données nécessaires. Le même TTC total peut recouvrir des répartitions de bases différentes."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un vendeur maintient contractuellement un prix de 1 320 € TTC. Pour l’exercice, le taux passe de 10 % à 20 %, avec prix TTC inchangé. De combien son prix HT diminue-t-il ?",
+      "options": [
+        "100 €",
+        "110 €",
+        "120 €",
+        "132 €"
+      ],
+      "answer": 0,
+      "explanation": "L’ancien HT est 1 320/1,10 = 1 200 € ; le nouveau est 1 320/1,20 = 1 100 €. Le HT baisse de 100 €. Le maintien du TTC fait supporter l’effet du changement au montant HT, sans qu’il suffise de soustraire dix points du prix total.",
+      "calculation": {
+        "expected": 100,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 1320
+                },
+                {
+                  "value": 1.1
+                }
+              ]
+            },
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 1320
+                },
+                {
+                  "value": 1.2
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Sur une facture au taux fourni de 20 %, la différence entre TTC et HT est exactement de 84 €. Quelle est la base HT ?",
+      "options": [
+        "420 €",
+        "504 €",
+        "70 €",
+        "100,80 €"
+      ],
+      "answer": 0,
+      "explanation": "La différence TTC−HT est le montant de taxe, soit 84 €. Puisque TVA=HT×20 %, la base est 84/0,20=420 €. Diviser par 1,20 supposerait à tort que les 84 € représentent un prix TTC.",
+      "calculation": {
+        "expected": 420,
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 84
+            },
+            {
+              "value": 0.2
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le dossier donne une TVA collectée de 4 000 €. Sur les achats de la période, 700 € de TVA sont intégralement déductibles et 300 € ne le sont pas. Aucun crédit ni régularisation. Quelle TVA nette payer ?",
+      "options": [
+        "3 000 €",
+        "3 300 €",
+        "3 700 €",
+        "4 300 €"
+      ],
+      "answer": 1,
+      "explanation": "Seule la taxe dont la déduction est admise réduit le solde : 4 000−700=3 300 €. Les 300 € exclus ne doivent pas être soustraits. Le montant de taxe sur les factures ne se confond donc pas avec le montant déductible.",
+      "calculation": {
+        "expected": 3300,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 4000
+            },
+            {
+              "value": 700
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La TVA collectée d’une période est correcte. Le tableur déduit deux fois la même facture d’achat, sans autre erreur. Quel effet cette double déduction produit-elle sur le solde signé collectée moins déductible ?",
+      "options": [
+        "Il est trop élevé du montant de la taxe dupliquée.",
+        "Il est trop faible du montant de la taxe dupliquée.",
+        "Il ne change pas, puisque la facture est identique.",
+        "Il augmente du double du prix HT de la facture."
+      ],
+      "answer": 1,
+      "explanation": "La répétition augmente artificiellement la taxe déductible soustraite une seconde fois. Le solde signé est donc sous-évalué du montant de TVA dupliqué : une dette peut être minorée ou un crédit surévalué. La correction concerne la taxe, non le prix HT."
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Sans crédit ni régularisation, une déclaration comporte 3 600 € de TVA collectée et un solde net à payer de 1 100 €. Quel montant de TVA déductible ce rapprochement suppose-t-il ?",
+      "options": [
+        "4 700 €",
+        "2 500 €",
+        "1 100 €",
+        "3 600 €"
+      ],
+      "answer": 1,
+      "explanation": "L’équation est 3 600−TVA déductible=1 100. Il en résulte une déduction de 2 500 €. Ce rapprochement reconstitue une grandeur manquante, mais la déduction doit toujours être justifiée par les opérations et pièces.",
+      "calculation": {
+        "expected": 2500,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 3600
+            },
+            {
+              "value": 1100
+            }
+          ]
+        },
+        "digits": 2
+      }
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Les ventes sont inchangées et aucune TVA d’achat n’est modifiée. Une facture de vente taxable, omise de la déclaration, est ensuite ajoutée dans la même période. Quel effet a sa TVA sur le solde signé ?",
+      "options": [
+        "Elle l’augmente de son montant.",
+        "Elle le diminue de son montant.",
+        "Elle reste sans effet parce que le prix HT est inchangé.",
+        "Elle augmente simultanément la TVA déductible du vendeur du même montant."
+      ],
+      "answer": 0,
+      "explanation": "L’ajout augmente la TVA collectée sans modifier la déduction. Le solde collectée−déductible augmente donc du montant de cette taxe. Cela ne crée pas une taxe déductible identique chez le vendeur ; les deux côtés d’une vente ne doivent pas être confondus."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le calcul d’une TVA nette utilise les taxes de vente de juin et les taxes d’achat de mai, sans justification d’un report ou d’une correction. Quel contrôle est prioritaire ?",
+      "options": [
+        "Le rattachement de chaque taxe à la période autorisée.",
+        "L’égalité entre les montants HT de ventes et d’achats.",
+        "L’égalité entre la TVA nette et le bénéfice de juin.",
+        "La substitution de tous les décaissements aux taxes d’achat."
+      ],
+      "answer": 0,
+      "explanation": "La déduction et la collecte doivent être rattachées aux périodes applicables. Un mélange de mois ne se justifie pas par la seule disponibilité des factures. Il faut vérifier le calendrier fiscal de chaque élément et documenter tout report ou régularisation."
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Selon l’article 206 de l’annexe II au CGI, comment se construit le coefficient de déduction ?",
+      "options": [
+        "Par addition des trois coefficients d’assujettissement, de taxation et d’admission.",
+        "Par multiplication des trois coefficients d’assujettissement, de taxation et d’admission.",
+        "En retenant le plus élevé des trois coefficients.",
+        "En retenant uniquement le taux de TVA de la vente."
+      ],
+      "answer": 1,
+      "explanation": "Le coefficient de déduction résulte du produit des coefficients d’assujettissement, de taxation et d’admission. Chacun répond à une condition différente. Leur somme ou le seul taux de TVA ne donne pas la fraction de taxe déductible.",
+      "references": [
+        {
+          "title": "CGI annexe II, article 206, coefficients de déduction",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049904359"
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Une TVA d’achat de 1 000 € est assortie des coefficients définitifs fournis : assujettissement 0,80, taxation 0,50 et admission 1. Quel montant est déductible ?",
+      "options": [
+        "800 €",
+        "500 €",
+        "400 €",
+        "1 300 €"
+      ],
+      "answer": 2,
+      "explanation": "Le coefficient de déduction vaut 0,80×0,50×1=0,40. La taxe déductible est donc 1 000×0,40=400 €. Retenir isolément un seul coefficient ignore une autre restriction ; les additionner ne correspond pas au mécanisme prévu.",
+      "calculation": {
+        "expected": 400,
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 1000
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 0.8
+                    },
+                    {
+                      "value": 0.5
+                    }
+                  ]
+                },
+                {
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "CGI annexe II, article 206, coefficients de déduction",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049904359"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un bien sert intégralement à des opérations ouvrant droit à déduction, mais le coefficient d’admission applicable au cas est nul. Quel effet a cette exclusion ?",
+      "options": [
+        "Le coefficient de déduction est nul malgré l’affectation ouvrant droit.",
+        "L’affectation à l’activité annule automatiquement le coefficient d’admission nul.",
+        "Le coefficient de déduction devient égal au taux de TVA.",
+        "Le coefficient d’admission doit être ajouté aux deux autres."
+      ],
+      "answer": 0,
+      "explanation": "Le mécanisme est multiplicatif : un coefficient d’admission nul annule le produit, même si les autres valent un. L’affectation professionnelle et les exclusions légales ne sont pas des tests interchangeables. Le cas fixe expressément le coefficient d’admission.",
+      "references": [
+        {
+          "title": "CGI annexe II, article 206, coefficients de déduction",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049904359"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "knowledge",
+      "difficulty": "foundation",
+      "q": "Le coefficient d’assujettissement apprécie quelle proportion d’utilisation d’un bien ou service ?",
+      "options": [
+        "Son utilisation à des opérations situées dans le champ de la TVA, même si certaines sont exonérées.",
+        "La part des opérations effectivement taxées, en excluant toujours les opérations exonérées du champ.",
+        "La fraction de chiffre d’affaires ouvrant droit à déduction, sans distinguer l’utilisation hors champ.",
+        "La proportion de taxe restant après les exclusions légales d’admission."
+      ],
+      "answer": 0,
+      "explanation": "L’article 206 II définit ce coefficient par l’utilisation à des opérations imposables au sens de situées dans le champ, qu’elles soient effectivement taxées ou légalement exonérées. L’ouverture du droit à déduction est ensuite examinée par le coefficient de taxation.",
+      "references": [
+        {
+          "title": "CGI annexe II, article 206, coefficients de déduction",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049904359"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un service est exclusivement utilisé à des opérations imposables n’ouvrant pas droit à déduction. Les autres coefficients sont égaux à un. Quel coefficient traduit spécifiquement cette absence d’ouverture du droit ?",
+      "options": [
+        "Le coefficient d’assujettissement, nécessairement nul.",
+        "Le coefficient de taxation, nul dans cette situation.",
+        "Le taux de TVA de l’achat, nul dès que l’activité du client est exonérée.",
+        "Le coefficient d’admission, nécessairement nul du seul fait de cette affectation."
+      ],
+      "answer": 1,
+      "explanation": "Une opération peut être dans le champ de la TVA sans ouvrir droit à déduction. Dans ce cas d’affectation exclusive, l’article 206 III prévoit un coefficient de taxation nul. Il ne faut pas traduire cette absence de droit par une opération hors champ.",
+      "references": [
+        {
+          "title": "CGI annexe II, article 206, coefficients de déduction",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049904359"
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Une dépense mixte est utilisée seulement par un secteur d’activité distinct régulièrement constitué. Pour le coefficient de taxation forfaitaire prévu à l’article 206 III, quel chiffre d’affaires est pertinent ?",
+      "options": [
+        "Le chiffre d’affaires du secteur concerné, selon les règles du rapport applicable.",
+        "Le chiffre d’affaires global de tous les secteurs, quelle que soit l’affectation de la dépense.",
+        "Les seules recettes ouvrant droit à déduction, placées à la fois au numérateur et au dénominateur.",
+        "Le chiffre d’affaires du secteur augmenté de la TVA facturée aux clients."
+      ],
+      "answer": 0,
+      "explanation": "L’article 206 III rattache le rapport de chiffre d’affaires au ou aux secteurs pour lesquels le bien ou service est utilisé lorsqu’il existe des secteurs distincts. Le périmètre de calcul doit donc suivre l’affectation prévue, et non n’importe quel montant disponible.",
+      "references": [
+        {
+          "title": "CGI annexe II, article 206, coefficients de déduction",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049904359"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Une dépense a un coefficient d’assujettissement de 0,80. Un étudiant explique que cela prouve que 80 % de la TVA est déductible, sans examiner taxation et admission. Quel contrôle manque ?",
+      "options": [
+        "Le produit avec les coefficients de taxation et d’admission.",
+        "La présomption que toute facture régulière fixe automatiquement la taxation à un.",
+        "La présomption que l’utilisation professionnelle écarte toutes les exclusions d’admission.",
+        "La moyenne simple des trois coefficients, à substituer au produit."
+      ],
+      "answer": 0,
+      "explanation": "Le coefficient d’assujettissement ne constitue qu’un facteur du coefficient de déduction. Une restriction d’ouverture du droit ou d’admission peut encore réduire la fraction déductible. Le taux de TVA et le prix ne remplacent pas ces deux contrôles.",
+      "references": [
+        {
+          "title": "CGI annexe II, article 206, coefficients de déduction",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000049904359"
+        }
+      ]
+    }
+  ]
+}

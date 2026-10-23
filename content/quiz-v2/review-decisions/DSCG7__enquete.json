@@ -1,0 +1,248 @@
+{
+  "sourceHash": "0152a6950285c6973c3b5454e9780181414d4ba87cff8a3a06bf7b81f3786eb1",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "3c91fa47d05abb277998f0835227ab54736d050a46d700d281ecbc647e9dbe9f",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les récits de situations et observations éclairent les arbitrages réels. Ancienneté seule, catégories de dossiers seules et prescriptions du manuel ne documentent pas ces décisions."
+    },
+    {
+      "id": "q02",
+      "digest": "dfd9ea8375f9f009f0ef3dbe10aa9c780c31240337ebc692ae8b01407030de4d",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La sélection raisonnée recherche des expériences pertinentes. Elle ne garantit pas les proportions de population, l’équiprobabilité ou la pertinence automatique des personnes disponibles."
+    },
+    {
+      "id": "q03",
+      "digest": "a5c4166e0659df94180432bfbed64e0707e14fc8b1de8f73a152120069a89f3a",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les non-adoptants manquent au terrain. Diversifier seulement les adoptants ou leurs thèmes ne couvre pas cette expérience absente ; il faut chercher des participants non adoptants."
+    },
+    {
+      "id": "q04",
+      "digest": "41339f483648d04d03f76c23ff5b0b4d29f2e528cce1350015899837507bb7c6",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Un récit de dossier récent ouvre la description sans en imposer le résultat. L’échelle présupposant amélioration, la présentation des attentes et l’inventaire du manuel ne remplissent pas cette fonction."
+    },
+    {
+      "id": "q05",
+      "digest": "3b9a4475f9125e908ab03cd024ff8ac4053399132e082a599ca78bcd14089ae7",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Un exemple documente le contexte de l’appréciation sans convertir une opinion en fréquence populationnelle ni remplacer les autres données."
+    },
+    {
+      "id": "q06",
+      "digest": "fa4fdeba8855475f298d00bd594b991c27318c734ac2ca90a086a1955ef550fc",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La présence du supérieur évaluateur peut favoriser des propos conformes aux attentes perçues ; elle ne remplace pas l’observation ni la sélection de participants."
+    },
+    {
+      "id": "q07",
+      "digest": "6c3933e34b41bcc42a3822a6ff711f3b8be223b7ffe22c667d818122c1d74c74",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une définition du numérateur et du dénominateur rend le taux interprétable. Une seule valeur finale ou des conventions variables non documentées ne suffisent pas."
+    },
+    {
+      "id": "q08",
+      "digest": "cbb62c6f6fe3b3d32f275c40aec11d7977d70343603518810e9558f2d8ca8587",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les dossiers encore ouverts peuvent être précisément les plus longs. Le délai des seuls dossiers achevés ne mesure pas directement celui de toute la cohorte."
+    },
+    {
+      "id": "q09",
+      "digest": "6e9c7533c81c4e79b32e021582bab270da0c7ae007bbc3256816830cc2d052d9",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les événements doivent être rattachés par identifiant aux dossiers. Compter les lignes, supprimer selon leur position ou traiter une date de création comme durée achevée fausse l’unité statistique."
+    },
+    {
+      "id": "q10",
+      "digest": "cc31698d38abd0e41d03273b4fc27bc9503161be84b03b8a6d76448442d66b2c",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La conversion doit respecter la durée d’un jour ouvré et les calendriers retenus. Classements bruts, addition de valeurs hétérogènes et règle automatique de vingt-quatre heures ne garantissent pas la cohérence."
+    },
+    {
+      "id": "q11",
+      "digest": "e03c9266939507ff2b28ef1a56d8f5bb82c93ee61fb6e360c3e33dd234207777",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "L’extraction élimine les dossiers incomplets avant le contrôle ; rapprocher la population source permet de repérer les exclusions invisibles dans les 500 lignes."
+    },
+    {
+      "id": "q12",
+      "digest": "db15ea7f66d575b08526819ee7627aa83006ec798690af21779ea8546af49e68",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Trianguler signifie confronter plusieurs sources ou méthodes et non voter, moyenner les opinions ou multiplier des copies communes."
+    },
+    {
+      "id": "q13",
+      "digest": "5872802ad7eb5fe513daee9d74ac4de50da0e0cb48aaf41e286a1c98634a9d7d",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le prescrit à deux visas et les dossiers à un visa fournissent un écart à expliquer. Ni vote de sources ni primauté automatique du guide ne décrivent la pratique."
+    },
+    {
+      "id": "q14",
+      "digest": "acd8cde2b3bcf37ad4a497d9d62c4a9cf48942fd7fbb1b9305d84117664ce981",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les deux supports ont une provenance commune. Dates, nombre de rapports et signataires ne prouvent pas des collectes indépendantes."
+    },
+    {
+      "id": "q15",
+      "digest": "03d7acdc68ef7181c7b082af61478e95012787bf176e53e888e80c8a44ed320b",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La chronologie des versions peut expliquer le désaccord. Une règle nouvelle ne doit pas être appliquée rétrospectivement pour réécrire les anciennes pratiques ; majorité de récits et récence ne suffisent pas."
+    },
+    {
+      "id": "q16",
+      "digest": "abf771e70d7a471409728f2b84337ba13c8a485ce2862e24b0cde5a346d0624f",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les salariés indiquent adapter leur travail à l’observation annoncée : la réactivité de l’observation peut expliquer le contraste avec les journaux habituels. Cet objectif est distinct du point de départ des mesures de délai."
+    },
+    {
+      "id": "q17",
+      "digest": "3a5127dcbfc8c11863fa4624944d2bc93dca5a958810ab0b3072db30a0579334",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La table de correspondance conserve la réidentification possible. Le remplacement des identités est une pseudonymisation, pas une suppression ni une anonymisation irréversible ; CNIL vérifiée."
+    },
+    {
+      "id": "q18",
+      "digest": "2028a93a63835e8e7a6c5fbff753fd026278cc93c3a8b0011738566516ff41f7",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une fonction unique et le contexte peuvent identifier indirectement malgré l’absence de nom. L’adaptation de la restitution doit prendre en compte cette combinaison ; CNIL vérifiée."
+    },
+    {
+      "id": "q19",
+      "digest": "a07b2ca3a5f9eb351e63ead3fcde979b5f323e7afbe8375f5f82d21a0d33abdf",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une adresse privée sans nécessité démontrée n’est pas pertinente pour analyser les factures. Minimiser porte sur la collecte, pas seulement l’endroit de publication ; CNIL vérifiée."
+    },
+    {
+      "id": "q20",
+      "digest": "f1eb9c93ddc39348a2117f0966064bd061d1eddf87f98bb36143d395d7e8a3d9",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Consultation et diffusion sont distinctes. Suppression des seuls noms et annexe restreinte ne remplacent ni l’examen des détails identifiants ni l’autorisation de restitution."
+    },
+    {
+      "id": "q21",
+      "digest": "50270fd3f96068f4a7bc9e55817101b8eb126a69300060ecd57770bebcaa1aca",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une restriction de lecture effective doit remplacer l’accès de tout le personnel. Lecture seule, titre codé ou promesse de ne pas imprimer ne limitent pas les lecteurs."
+    },
+    {
+      "id": "q22",
+      "digest": "29ae28f5411aa5781f1c616d89b048a73c565a5231fae4fb9abaf56a46d6d118",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Une conservation prolongée exige un examen des finalités, nécessité et garanties ; chiffrement et absence de demande ne dispensent pas de cette analyse. Sources CNIL sur durées vérifiées."
+    }
+  ]
+}

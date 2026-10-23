@@ -1,0 +1,594 @@
+{
+  "module": "DSCG3",
+  "chapter": "tableau-bord-qualite",
+  "sourceHash": "87a05426cb67c0d5d715efbac730fbf5c9922817e94e87e59b294fd33afa653a",
+  "authoredBy": "codex-economics-systems",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le tableau de maintenance définit le taux de rendement synthétique comme disponibilité × performance de cadence × qualité. Les trois taux sont respectivement 90 %, 80 % et 95 %, sur des bases compatibles. Quel TRS ce modèle donne-t-il ?",
+      "options": [
+        "88,33 %",
+        "68,4 %",
+        "76 %",
+        "72 %"
+      ],
+      "answer": 1,
+      "explanation": "Le produit est 0,90 × 0,80 × 0,95 = 0,684, soit 68,4 %. La moyenne des trois taux ne décrit pas ce rendement. Les pertes de disponibilité, de cadence et de qualité s’enchaînent dans la décomposition retenue.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "op": "*",
+                  "args": [
+                    {
+                      "value": 0.9
+                    },
+                    {
+                      "value": 0.8
+                    }
+                  ]
+                },
+                {
+                  "value": 0.95
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 68.4,
+        "digits": 1
+      },
+      "references": [
+        {
+          "title": "ASQ — Overall equipment effectiveness",
+          "url": "https://asq.org/quality-resources/quality-glossary"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Une AMDEC utilise l’indice de priorité G × O × D : gravité, occurrence et difficulté de détection, les notes élevées étant défavorables. Pour un mode de défaillance, les notes sont 8, 3 et 5. Quel indice faut-il calculer avant la discussion des actions ?",
+      "options": [
+        "120",
+        "16",
+        "24",
+        "40"
+      ],
+      "answer": 0,
+      "explanation": "L’indice du modèle vaut 8 × 3 × 5 = 120. Additionner les notes donnerait 16 et ne suivrait pas la règle définie. L’indice aide à structurer la priorité ; il ne dispense pas d’examiner la gravité et les contraintes propres à chaque défaillance.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 8
+                },
+                {
+                  "value": 3
+                }
+              ]
+            },
+            {
+              "value": 5
+            }
+          ]
+        },
+        "expected": 120,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "ASQ — Failure mode and effects analysis",
+          "url": "https://asq.org/quality-resources/fmea"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "La cible est 1 % de défaut sur 5 000 unités. Chaque reprise coûte 30 €, à une reprise par unité défectueuse. Quel coût de reprise théorique correspond à cette cible ?",
+      "options": [
+        "1 500 €",
+        "150 000 €",
+        "50 €",
+        "3 000 €"
+      ],
+      "answer": 0,
+      "explanation": "La cible représente 5 000 × 0,01 = 50 unités puis 50 × 30 = 1 500 €. Ce montant est conditionnel à l’atteinte du taux et au coût moyen donné.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 5000
+                },
+                {
+                  "value": 0.01
+                }
+              ]
+            },
+            {
+              "value": 30
+            }
+          ]
+        },
+        "expected": 1500,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Le coût de reprise observé est 3 000 € et celui au taux cible 1 500 €, à même volume et coût moyen. Quelle économie brute théorique mesure-t-on ?",
+      "options": [
+        "4 500 €, en additionnant le coût observé et la référence.",
+        "1 500 €, différence de coût sur les bases comparables données.",
+        "3 000 €, totalité du coût actuel même si une part subsiste à la cible.",
+        "50 €, écart de coût rapporté à une seule reprise sans préciser ce changement d’unité."
+      ],
+      "answer": 1,
+      "explanation": "L’économie brute est 3 000 − 1 500 = 1 500 €. Le coût de la démarche qualité n’est pas encore déduit ; ce n’est donc pas automatiquement son bénéfice net.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 3000
+            },
+            {
+              "value": 1500
+            }
+          ]
+        },
+        "expected": 1500,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une pièce peut être montée à l’envers. La nouvelle fixation empêche physiquement l’assemblage dans le mauvais sens au lieu de compter sur le contrôle final. Quel principe décrit le plus directement cette solution ?",
+      "options": [
+        "Un échantillonnage d’acceptation du lot après fabrication.",
+        "Un dispositif de prévention d’erreur de type poka-yoke.",
+        "Une estimation statistique du taux de défaut restant chez les clients.",
+        "Une correction après assemblage consistant à démonter les produits montés à l’envers."
+      ],
+      "answer": 1,
+      "explanation": "Le dispositif agit sur la possibilité même de commettre l’erreur d’assemblage. Il se distingue du tri a posteriori, de l’estimation d’un taux et du traitement comptable des conséquences. La vérification de son fonctionnement demeure nécessaire.",
+      "references": [
+        {
+          "title": "ASQ — Mistake-proofing / poka-yoke",
+          "url": "https://asq.org/quality-resources/quality-tools"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Pour un processus stable, l’indice Cp compare la largeur des tolérances à la dispersion, tandis que Cpk tient aussi compte du centrage. Le tableau donne Cp = 1,67 et Cpk = 0,83. Quelle piste cette différence désigne-t-elle directement ?",
+      "options": [
+        "Le processus est centré ; la différence entre indices provient du seul changement d’unité de mesure.",
+        "La position de la moyenne est sans incidence ; seul Cp doit être retenu pour juger la proximité des limites.",
+        "Un décentrage à examiner, malgré un potentiel de dispersion plus favorable.",
+        "Les deux indices sont interchangeables ; leur moyenne supprime la nécessité d’examiner le centrage."
+      ],
+      "answer": 2,
+      "explanation": "Cpk tient compte de la distance de la moyenne à la limite la plus proche. Un Cpk nettement inférieur au Cp signale ici un problème de centrage à examiner ; un bon potentiel de dispersion ne suffit pas si la distribution est décalée vers une limite.",
+      "references": [
+        {
+          "title": "NIST — Assessing process capability : Cp and Cpk",
+          "url": "https://www.itl.nist.gov/div898/handbook/ppc/section4/ppc46.htm"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "La cible est atteinte en pourcentage mais le volume fabriqué augmente fortement. Que peut devenir le coût total de reprise à coût moyen inchangé ?",
+      "options": [
+        "Il restera identique, puisque le pourcentage ne change pas, même si le volume augmente.",
+        "Il diminuera dans la proportion du taux cible sans tenir compte du nombre de produits.",
+        "Il peut augmenter avec le nombre de reprises, malgré le maintien du taux cible.",
+        "Il sera limité au même montant initial dès que le taux ne dépasse pas sa cible, indépendamment du volume."
+      ],
+      "answer": 2,
+      "explanation": "Le montant dépend du volume, du taux et du coût de traitement. L’atteinte d’un taux ne suffit pas à comparer les totaux de deux activités de tailles différentes."
+    },
+    {
+      "id": "q08",
+      "basis": 3,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un modèle de perte qualité retient L = k(y−cible)². Une déviation de 2 unités par rapport à la cible représente une perte de 100 €. Quel montant le même modèle attribue-t-il à une déviation de 1 unité ?",
+      "options": [
+        "100 €",
+        "50 €",
+        "0 €, si la pièce reste dans une tolérance.",
+        "25 €"
+      ],
+      "answer": 3,
+      "explanation": "Le coefficient vaut 100/2² = 25. Pour une déviation de 1, la perte modélisée vaut 25 × 1² = 25 €. La perte quadratique ne diminue donc pas linéairement avec la déviation et ne devient pas automatiquement nulle à l’intérieur d’une tolérance.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 100
+                },
+                {
+                  "op": "pow",
+                  "args": [
+                    {
+                      "value": 2
+                    },
+                    {
+                      "value": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "pow",
+              "args": [
+                {
+                  "value": 1
+                },
+                {
+                  "value": 2
+                }
+              ]
+            }
+          ]
+        },
+        "expected": 25,
+        "digits": 2
+      },
+      "references": [
+        {
+          "title": "ASQ — Use of the Taguchi loss function",
+          "url": "https://asq.org/quality-resources/articles/case-studies/case-study-use-of-the-taguchi-loss-function?id=1a41b834b36d47b488079499d1bc3219"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Deux défaillances obtiennent le même indice AMDEC G × O × D = 120 : A a des notes 10, 2, 6 ; B des notes 4, 5, 6. Une note de gravité élevée décrit une conséquence plus sérieuse. Pourquoi ce produit identique ne suffit-il pas à déclarer leurs priorités de traitement identiques ?",
+      "options": [
+        "L’égalité des produits n’efface pas la gravité beaucoup plus élevée de A, qu’il faut examiner avec les conséquences.",
+        "Un même produit implique une même probabilité d’occurrence des deux défaillances.",
+        "L’égalité des produits indique une moindre détectabilité de B que de A.",
+        "La gravité ne contribue à la priorité que lorsque le produit des trois notes est différent."
+      ],
+      "answer": 0,
+      "explanation": "Un produit peut être identique pour des combinaisons très différentes. La gravité de 10 pour A n’est pas équivalente à celle de 4 pour B. L’AMDEC analyse les effets, l’occurrence et la détection pour discuter les actions ; un score résumé ne remplace pas cet examen.",
+      "references": [
+        {
+          "title": "ASQ — analyse des modes de défaillance et de leurs effets",
+          "url": "https://asq.org/quality-resources/fmea"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Un flux sans reprise comporte deux étapes. À la première, 90 % des pièces passent directement. Parmi ces pièces, 80 % passent directement la seconde. Quel pourcentage des pièces lancées franchit les deux étapes sans reprise ?",
+      "options": [
+        "72 %",
+        "85 %",
+        "80 %",
+        "90 %"
+      ],
+      "answer": 0,
+      "explanation": "Le rendement du parcours sans reprise vaut 0,90 × 0,80 = 0,72, soit 72 %. Les 80 % sont définis parmi les pièces ayant franchi la première étape : il ne faut ni moyenner les taux ni retenir seulement celui du dernier poste.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 0.9
+                },
+                {
+                  "value": 0.8
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 72,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "ASQ — Yield and quality measurement",
+          "url": "https://asq.org/quality-resources/quality-glossary"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un calcul de coût cible multiplie 5 000 unités par le nombre 1 pour un taux cible de 1 %, sans conversion. Quelle erreur produit-il ?",
+      "options": [
+        "Un arrondi du taux qui n’affecte pas le nombre de défauts théoriques.",
+        "Une sous-estimation par cent, car le taux de 1 % devrait être multiplié par 100.",
+        "Un changement correct de base vers le taux de reprises par produit.",
+        "Une surestimation par cent, car 1 % doit être écrit 0,01 dans cette multiplication."
+      ],
+      "answer": 3,
+      "explanation": "Un pourcentage doit être exprimé en proportion dans cette multiplication. La convention 0,01 est distincte de 1 ; les unités et formats doivent être contrôlés."
+    },
+    {
+      "id": "q12",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Le gain brut est positif mais l’investissement et le coût de fonctionnement de la démarche ne sont pas connus. Quelle conclusion est justifiée ?",
+      "options": [
+        "Le gain net est établi dès que l’économie brute est positive, même si le coût de l’action est inconnu.",
+        "L’économie brute constitue un premier élément, mais le gain net demande les coûts et effets manquants.",
+        "Le gain net est égal au gain brut diminué du coût moyen historique de toutes les autres actions qualité.",
+        "La rentabilité est prouvée si le taux cible est atteint, sans qu’il soit nécessaire de connaître l’investissement."
+      ],
+      "answer": 1,
+      "explanation": "Les ressources de prévention et contrôle peuvent modifier l’arbitrage. Il faut distinguer économie de reprise et valeur nette de la démarche sans attribuer de chiffres absents."
+    },
+    {
+      "id": "q13",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Sur un périmètre et une période stables, le stock moyen de dossiers en cours est de 30 et le débit moyen de sortie de 6 dossiers par jour. La relation retenue est en-cours moyen = débit moyen × délai moyen de traversée. Quel délai moyen retrouve-t-on ?",
+      "options": [
+        "180 jours",
+        "0,2 jour",
+        "5 jours",
+        "24 jours"
+      ],
+      "answer": 2,
+      "explanation": "Le délai moyen est 30/6 = 5 jours. Cette relation de flux exige des périmètres et unités cohérents. Elle ne dit pas que chaque dossier prend exactement cinq jours ni que le temps de travail effectif représente toute cette durée.",
+      "calculation": {
+        "expression": {
+          "op": "/",
+          "args": [
+            {
+              "value": 30
+            },
+            {
+              "value": 6
+            }
+          ]
+        },
+        "expected": 5,
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "MIT OpenCourseWare — Lean Thinking and Little’s Law",
+          "url": "https://ocw.mit.edu/courses/16-660j-introduction-to-lean-six-sigma-methods-january-iap-2012/f044431285fe865dd395b27f5d3c83ce_MIT16_660JIAP12_1-3part2.pdf"
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Sur les mêmes pièces et avec le même appareil, chaque opérateur obtient des mesures très proches lorsqu’il répète son essai. Les mesures diffèrent cependant de façon systématique entre opérateurs. Quel aspect du système de mesure faut-il examiner en priorité ?",
+      "options": [
+        "La seule dispersion entre pièces, supposée expliquer les décalages entre opérateurs sur les mêmes pièces.",
+        "La seule répétabilité de chaque opérateur, supposée suffisante pour valider tout le système malgré leurs décalages.",
+        "La variabilité entre opérateurs et leurs méthodes, distincte de la bonne répétabilité observée chez chacun.",
+        "Un biais identique de l’appareil pour tous les opérateurs, supposé expliquer à lui seul leurs décalages respectifs."
+      ],
+      "answer": 2,
+      "explanation": "Les répétitions d’un même opérateur sont cohérentes, mais le changement d’opérateur introduit un décalage. Le protocole doit donc étudier cette composante de reproductibilité et ses conditions, sans confondre stabilité chez une personne et accord entre personnes.",
+      "references": [
+        {
+          "title": "NIST — Measurement terminology : repeatability and reproducibility",
+          "url": "https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-appendix-d1-terminology"
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "advanced",
+      "q": "Le volume prévu est 8 000 unités et la cible 0,5 % de défectueux, tous repris une fois. Combien de reprises théoriques faut-il budgéter ?",
+      "options": [
+        "40 reprises",
+        "4 000 reprises",
+        "160 reprises",
+        "80 reprises"
+      ],
+      "answer": 0,
+      "explanation": "La cible en quantité est 8 000 × 0,005 = 40 reprises. Le pourcentage peut être fractionnaire, ce qui impose de vérifier soigneusement sa conversion.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "value": 8000
+            },
+            {
+              "value": 0.005
+            }
+          ]
+        },
+        "expected": 40,
+        "digits": 2
+      }
+    },
+    {
+      "id": "q16",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Une économie calculée à volume constant est comparée à un coût d’action sur plusieurs années sans préciser les horizons. Quel préalable manque ?",
+      "options": [
+        "Mettre coûts et économies sur des horizons et conventions comparables avant de les rapprocher.",
+        "Comparer l’économie annuelle directement au coût cumulé de plusieurs années sans préciser la durée.",
+        "Multiplier seulement le coût de l’action par le taux de défaut pour le rendre comparable au gain annuel.",
+        "Ignorer les années postérieures à l’action, même si des coûts et gains y sont prévus."
+      ],
+      "answer": 0,
+      "explanation": "Des périodes incompatibles peuvent fausser le bilan. Il faut présenter le calendrier et les conventions avant de comparer potentiel d’économie et ressources engagées."
+    },
+    {
+      "id": "q17",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Dans une démarche DMAIC, les causes ont été étudiées et les améliorations testées ont réduit les défauts. L’équipe formalise désormais les règles de suivi et la réaction aux dérives pour maintenir le gain. À quelle phase ces travaux se rattachent-ils principalement ?",
+      "options": [
+        "Définir : reformuler uniquement le problème initial sans suivi du processus amélioré.",
+        "Contrôler : maintenir la performance obtenue avec un suivi et des règles de réaction.",
+        "Mesurer : établir uniquement la situation initiale avant tout changement.",
+        "Analyser : rechercher seulement les causes initiales sans organiser la pérennité du résultat."
+      ],
+      "answer": 1,
+      "explanation": "La phase de contrôle vise la tenue du processus amélioré dans la durée. Le suivi, les responsabilités et les réactions aux dérives servent à éviter que les résultats du test ne se perdent après le déploiement. Il ne s’agit plus seulement du diagnostic initial.",
+      "references": [
+        {
+          "title": "ASQ — DMAIC and improvement tools",
+          "url": "https://asq.org/quality-resources/quality-tools"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "Un opérateur mesure plusieurs fois un étalon de 10,00 mm avec le même appareil. Les résultats sont très resserrés autour de 10,40 mm. L’étalon a été vérifié indépendamment. Quel aspect faut-il examiner en priorité ?",
+      "options": [
+        "Un manque de répétabilité des mesures.",
+        "Une différence de mesure entre opérateurs.",
+        "Une variabilité des dimensions des pièces fabriquées.",
+        "Un biais systématique de l’appareil par rapport à l’étalon."
+      ],
+      "answer": 3,
+      "explanation": "Des mesures proches entre elles peuvent rester éloignées de la référence. Les résultats décrivent ici une bonne répétabilité apparente, mais un biais d’environ +0,40 mm à examiner par l’étalonnage. Ils ne mesurent ni un effet entre opérateurs ni la dispersion des pièces produites.",
+      "references": [
+        {
+          "title": "NIST — terminologie de mesure et correction systématique",
+          "url": "https://www.nist.gov/pml/nist-technical-note-1297/nist-tn-1297-appendix-d1-terminology"
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Une baisse de coût de reprise est obtenue en changeant le contenu du traitement, avec risque de défaut résiduel. Quelle conclusion évite une fausse réussite ?",
+      "options": [
+        "La baisse du poste suffit à prouver le même service à moindre coût, même si le contenu de reprise a changé.",
+        "La baisse du poste doit être attribuée à la seule productivité, sans examiner les défauts qui subsistent.",
+        "Le gain doit être confronté au contenu du traitement, à la qualité résiduelle et aux effets sur les clients.",
+        "L’ancien coût moyen doit être utilisé pour présenter un gain plus élevé, sans réévaluer le traitement modifié."
+      ],
+      "answer": 2,
+      "explanation": "Une baisse de poste peut déplacer le problème. Le pilotage doit observer les conséquences et le service obtenu, pas seulement une dépense moyenne plus faible."
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "L’action est proposée sur une cause supposée mais non vérifiée du défaut. Quel suivi aide à éviter une conclusion trop rapide ?",
+      "options": [
+        "Comparer les faits avant et après sur un champ cohérent et rechercher les éléments qui confirment ou contredisent le mécanisme supposé.",
+        "Retenir seulement les indicateurs qui s’améliorent après l’action, sans suivre les autres changements.",
+        "Considérer la mise en œuvre conforme comme une preuve suffisante de la cause initiale.",
+        "Conclure à la cause la plus facile à traiter avant d’observer les défauts et le processus."
+      ],
+      "answer": 0,
+      "explanation": "Une démarche qualité doit relier cause, action et observations. Le suivi doit permettre de corriger le plan si les effets attendus ne se produisent pas."
+    },
+    {
+      "id": "q21",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "advanced",
+      "q": "Les clients demandent un produit « facile à entretenir ». L’équipe veut traduire ce besoin en caractéristiques techniques mesurables, par exemple un temps de démontage et un accès aux pièces. Quel usage du QFD correspond à cet objectif ?",
+      "options": [
+        "Classer les coûts comptables par nature sans relier les besoins clients aux caractéristiques.",
+        "Retenir uniquement les solutions déjà faciles à fabriquer, puis en déduire les besoins que les clients devraient avoir.",
+        "Relier la voix du client aux caractéristiques de conception, avec des cibles techniques discutées.",
+        "Remplacer les besoins qualitatifs par le seul prix de vente et ignorer les exigences d’usage."
+      ],
+      "answer": 2,
+      "explanation": "Le QFD aide à traduire les besoins des clients en caractéristiques et priorités de conception. Le travail ne consiste ni à supposer qu’un besoin vague est déjà une spécification technique, ni à choisir seulement selon les facilités internes ou les comptes de coûts.",
+      "references": [
+        {
+          "title": "ASQ — Quality function deployment",
+          "url": "https://asq.org/quality-resources/qfd-quality-function-deployment"
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "advanced",
+      "q": "L’économie théorique est présentée comme un paiement reçu. Quelle distinction faut-il rappeler ?",
+      "options": [
+        "Une économie théorique représente une créance nouvelle sur les clients, même si aucune facture n’a changé.",
+        "Une économie théorique représente déjà une entrée de trésorerie, même si les dépenses n’ont pas encore été évitées.",
+        "Une économie théorique annule toutes les dépenses de reprise déjà payées dans les périodes passées.",
+        "Un coût potentiellement évité ne constitue pas, par lui-même, un paiement reçu ni une économie déjà réalisée."
+      ],
+      "answer": 3,
+      "explanation": "La comparaison décrit un scénario de ressources. Les flux et réalisations effectifs demandent des données complémentaires ; il faut garder la différence entre potentiel et constat."
+    }
+  ]
+}

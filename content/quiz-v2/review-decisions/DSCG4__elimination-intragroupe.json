@@ -1,0 +1,248 @@
+{
+  "sourceHash": "c7faa1136cde3fe33cbea62bd349c304f54261d8562d66da27a4a89e515d3638",
+  "reviewer": "codex-economics-systems-independent-review",
+  "answers": [
+    {
+      "id": "q01",
+      "digest": "20606ac62bdd4e5bfb2f32149f87b6017b03d2aa12eb986e2dac324381811f2d",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La marge interne est 24 000 − 18 000 = 6 000, indépendamment de l’élimination du chiffre d’affaires."
+    },
+    {
+      "id": "q02",
+      "digest": "352728a40a35d9da9df1e80bc77fd0fe4606102a2c082da72849a7714e55f7ce",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le profit est 10 000 − 8 000 = 2 000, soit 25 % du coût et non du prix."
+    },
+    {
+      "id": "q03",
+      "digest": "bc8d59d88c3f935bb9be47e1b576de287c357c906f9daf521fd2ed972819cbf8",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Prix interne et marge ne sont pas identiques. Choix révisés résolus avant comparaison : les erreurs de méthode concurrentes restent distinctes et plausibles."
+    },
+    {
+      "id": "q04",
+      "digest": "7f2e00b82c4bd92d9e36ef153b274983d6e4bc3abd4b003fb9a6a9853aca6251",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le prix égal au coût ne contient aucun profit à éliminer ; le stock subsiste au coût groupe."
+    },
+    {
+      "id": "q05",
+      "digest": "dd62d6d51303e36346f293c79191a937dd1853f78159450dcb53cafd8c0abe3c",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le stock non revendu à un tiers ne réalise pas encore le profit groupe. Choix révisés résolus avant comparaison : les erreurs de méthode concurrentes restent distinctes et plausibles."
+    },
+    {
+      "id": "q06",
+      "digest": "bd62e13057d48f715b7c936fde999b854e776003a9be974f36bcd6cb219176d7",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Stock au prix interne : 32 000 × 30 % = 9 600 dans les comptes de l’acheteur."
+    },
+    {
+      "id": "q07",
+      "digest": "bf6c2dd6504ddcfb11a86dceba3d820939ae93577ced67f7ac90f4ff1f686dfe",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La fraction restante est 100 % − 65 % = 35 % ; c’est elle qui contient le profit non réalisé."
+    },
+    {
+      "id": "q08",
+      "digest": "4e1609b13e53fe972efaa3f005a515bf15e5d9697f64bacfc3e36310cc3ea2dd",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "200 / 800 = 25 % du lot homogène reste détenu."
+    },
+    {
+      "id": "q09",
+      "digest": "d5a243f10650adda7cfc7ff0749f4b707842ff25adbb739a97a27de365ffb9b5",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La marge du sous-lot doit correspondre aux produits réellement restants, pas à une moyenne non représentative."
+    },
+    {
+      "id": "q10",
+      "digest": "f92a966a63bedcd713c6e7f338d9f55ebe1c5038ea09641b81f7e01e02d1b04c",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les unités vendues à des tiers ne font plus partie du stock final. Choix révisés résolus avant comparaison : les erreurs de méthode concurrentes restent distinctes et plausibles."
+    },
+    {
+      "id": "q11",
+      "digest": "18c177e1d107249fa464b6979d3278a16de7e45aaed9789f3a51c430ddf21ee8",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le profit non réalisé est 9 000 × 40 % = 3 600, hors effets explicitement exclus."
+    },
+    {
+      "id": "q12",
+      "digest": "8901d35c1f64eed767947a047a1becde8cdcb06cd48c1a9ebbc7d996336d0a05",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Toutes les unités sont sorties vers des tiers ; il ne reste aucun profit dans ce stock final."
+    },
+    {
+      "id": "q13",
+      "digest": "409bb5dfe119cbd120d37b9b31ef204b2fc762f5c3faa5bbcd09c97b055bd50c",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "En intégration globale la totalité du profit est éliminée, avant son attribution. Le pourcentage de détention ne remplace pas cette élimination."
+    },
+    {
+      "id": "q14",
+      "digest": "c627e2fde0ed96dda3007a9c5e82553107b1581cc08f356eebcedcc104a5daf6",
+      "selected": 3,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La marge explicitement rapportée au prix est 15 000 × 20 % = 3 000."
+    },
+    {
+      "id": "q15",
+      "digest": "0e10ee0340998c5cff8921a42075769a2752df7befbb78ab010d65d70bf6fffa",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le coût est 12 000 / 1,25 = 9 600 ; la marge est 2 400."
+    },
+    {
+      "id": "q16",
+      "digest": "1ec1517306f564200a8fccc718267c2c32f0b9c39a0978634c1db2bff51e73a9",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le profit restant est 2 000. Éliminer 4 000 réduit trop stock et résultat de 2 000."
+    },
+    {
+      "id": "q17",
+      "digest": "f2e1e1d527fa4befd6d4b29e171684eb0631f7d67205b62266352c1d8664a628",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le stock consolidé simple est 7 500 − 1 500 = 6 000."
+    },
+    {
+      "id": "q18",
+      "digest": "9c5fc06e31bb075b21c4fc088f3f5243ef9caf97f38290ca8d947d4fa7855278",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le coût groupe du quart restant est 20 000 × 25 %, sans marge interne."
+    },
+    {
+      "id": "q19",
+      "digest": "62f8a1a43608079109f308ecd6b60164760d12a230449a00fdf31567bf7f39bf",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "La correction du stock doit aussi supprimer la marge du résultat de l’année dans ce cas simple."
+    },
+    {
+      "id": "q20",
+      "digest": "ae5543ddf9cc86ede429ea7afc50b40142b5cc396ea328a7641014126bbd8d4d",
+      "selected": 1,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Le coût groupe peut encore excéder la valeur recouvrable du stock selon le référentiel ; éliminer la marge ne traite pas l’endommagement."
+    },
+    {
+      "id": "q21",
+      "digest": "724f4080d16e2ba1b984fa765bfe9a1f166e87e44da8e3ea32c2f7c02f216bcb",
+      "selected": 0,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les mêmes 800 € de marge sont retranchés deux fois. Choix révisés résolus avant comparaison : les erreurs de méthode concurrentes restent distinctes et plausibles."
+    },
+    {
+      "id": "q22",
+      "digest": "82f3a6a0ab5b5767f0be4321ec2145ac15857227462f000953ebd4e42a79f78a",
+      "selected": 2,
+      "unambiguous": true,
+      "supported": true,
+      "distractorsPlausible": true,
+      "independentObjective": true,
+      "explanationSound": true,
+      "reason": "Les calculs n’établissent ni fiscalité différée ni attribution minoritaire. Choix révisés résolus avant comparaison : les erreurs de méthode concurrentes restent distinctes et plausibles."
+    }
+  ]
+}

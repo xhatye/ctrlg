@@ -1,0 +1,501 @@
+{
+  "module": "UE13",
+  "chapter": "dossier-synthese",
+  "sourceHash": "95b09ab58df3d445488ec10dbcb93ceef2cac22c26c8830a73cc76887c1067d4",
+  "authoredBy": "codex-root-editorial-with-accounting-revisions",
+  "questions": [
+    {
+      "id": "q01",
+      "basis": 0,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le contrôle initial cherchait seulement les signatures manquantes ; le nouveau recherche aussi les erreurs de date et de montant. Le taux de dossiers signalés augmente. Quelle réserve concerne directement la définition de l’indicateur ?",
+      "options": [
+        "Le champ de détection a été élargi ; la hausse des signaux ne mesure pas à elle seule une hausse de la fréquence réelle des erreurs.",
+        "Toute hausse des signaux prouve une détérioration de la qualité réelle, indépendamment des erreurs recherchées.",
+        "L’ajout de catégories de contrôle réduit nécessairement le nombre de dossiers pouvant être signalés.",
+        "Les deux taux restent directement comparables parce que leur libellé « dossiers signalés » est identique."
+      ],
+      "answer": 0,
+      "explanation": "Un indicateur de signalement dépend des erreurs recherchées et de la capacité de détection. Élargir le contrôle peut augmenter les signaux sans changement de la qualité sous-jacente ; il faut harmoniser le champ ou expliquer cette rupture de mesure."
+    },
+    {
+      "id": "q02",
+      "basis": 0,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux taux sont affichés « 5 % » après arrondi à l’unité. Les valeurs exactes ne sont pas disponibles dans la note. Quelle conclusion est justifiée ?",
+      "options": [
+        "Les proportions exactes sont nécessairement égales.",
+        "L’affichage arrondi identique ne suffit pas à établir l’égalité des taux exacts.",
+        "Les effectifs bruts d’erreurs sont nécessairement identiques.",
+        "Le taux exact de chaque période est nécessairement de 5,00 %."
+      ],
+      "answer": 1,
+      "explanation": "L’arrondi peut masquer des valeurs différentes proches de 5 %. L’égalité des libellés affichés ne démontre ni égalité des taux exacts ni égalité des nombres d’erreurs, qui dépendent aussi des volumes."
+    },
+    {
+      "id": "q03",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Sur 40 dossiers contrôlés, 8 présentent une erreur. Le taux est défini par dossiers en erreur / dossiers contrôlés × 100. Quel taux obtient-on ?",
+      "options": [
+        "32 %",
+        "5 %",
+        "20 %",
+        "8 %"
+      ],
+      "answer": 2,
+      "explanation": "Le taux est 8 / 40 × 100 = 20 %. Huit est un nombre de dossiers, pas directement un pourcentage de la population contrôlée.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "value": 8
+                },
+                {
+                  "value": 40
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 20,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q04",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un site compte 2 dossiers en erreur sur 10 ; un autre 3 sur 30. Pour l’ensemble, le taux est total en erreur / total contrôlé × 100. Quel est-il ?",
+      "options": [
+        "15 %",
+        "5 %",
+        "20 %",
+        "12,5 %"
+      ],
+      "answer": 3,
+      "explanation": "Il faut agréger les effectifs : (2 + 3) / (10 + 30) × 100 = 12,5 %. La moyenne simple des deux taux donnerait 15 % et ignorerait les tailles différentes.",
+      "calculation": {
+        "expression": {
+          "op": "*",
+          "args": [
+            {
+              "op": "/",
+              "args": [
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 2
+                    },
+                    {
+                      "value": 3
+                    }
+                  ]
+                },
+                {
+                  "op": "+",
+                  "args": [
+                    {
+                      "value": 10
+                    },
+                    {
+                      "value": 30
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "value": 100
+            }
+          ]
+        },
+        "expected": 12.5,
+        "digits": 1
+      }
+    },
+    {
+      "id": "q05",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un taux d’erreur passe de 20 % à 10 %. Quelle est la baisse exprimée en points de pourcentage, définie ici par taux initial moins taux final ?",
+      "options": [
+        "10 points de pourcentage",
+        "50 points de pourcentage",
+        "30 points de pourcentage",
+        "2 points de pourcentage"
+      ],
+      "answer": 0,
+      "explanation": "La baisse en points est 20 − 10 = 10 points. La baisse relative est 50 %, ce qui correspond à un autre indicateur et ne doit pas être appelé 50 points.",
+      "calculation": {
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "value": 20
+            },
+            {
+              "value": 10
+            }
+          ]
+        },
+        "expected": 10,
+        "digits": 0
+      }
+    },
+    {
+      "id": "q06",
+      "basis": 0,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Pour comparer la gravité des anomalies, le dossier fixe un indice fictif : 1 point par anomalie mineure et 5 par anomalie majeure. Une période compte 10 mineures et 2 majeures. Quel indice résulte de cette convention ?",
+      "options": [
+        "12 points.",
+        "20 points.",
+        "60 points.",
+        "7 points."
+      ],
+      "answer": 1,
+      "explanation": "L’indice pondéré vaut 10 × 1 + 2 × 5 = 20 points. Douze est le nombre d’anomalies sans pondération ; cet indice conventionnel ne doit pas être présenté comme un coût monétaire ou comme un taux.",
+      "calculation": {
+        "expected": 20,
+        "expression": {
+          "op": "+",
+          "args": [
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 10
+                },
+                {
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "op": "*",
+              "args": [
+                {
+                  "value": 2
+                },
+                {
+                  "value": 5
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 0
+      }
+    },
+    {
+      "id": "q07",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Pendant le test, les opérateurs savent qu’un observateur suit chacun de leurs contrôles. Ils signalent travailler plus attentivement en sa présence. Quelle limite distincte faut-il examiner avant un déploiement sans observateur ?",
+      "options": [
+        "La présence de l’observateur démontre une falsification des résultats.",
+        "Les résultats du test décrivent nécessairement le fonctionnement habituel sans surveillance.",
+        "L’attention liée à l’observation peut contribuer au changement de comportement constaté.",
+        "Une attention accrue démontre que le nouveau contrôle est sans effet propre."
+      ],
+      "answer": 2,
+      "explanation": "La participation à un test observé peut modifier les comportements. Cette possibilité n’annule pas les résultats et ne prouve pas l’inefficacité du contrôle, mais elle invite à distinguer son fonctionnement durable de l’attention particulière reçue pendant le test.",
+      "references": [
+        {
+          "title": "Impact Canada — Guide des méthodes de mesure des impacts",
+          "url": "https://impact.canada.ca/fr/rapports/modeles-de-mesure-des-impacts"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Deux évaluateurs appliquent la même grille de classement à 20 dossiers identiques et divergent sur 9. Avant de comparer deux services à partir de leurs classements respectifs, quel problème faut-il résoudre ?",
+      "options": [
+        "La différence de classement prouve que les services ont des performances différentes.",
+        "Le nombre identique de dossiers suffit à rendre leurs résultats comparables.",
+        "La moyenne des deux totaux supprime les désaccords de codage de chaque dossier.",
+        "L’application de la grille n’est pas assez concordante ; les critères doivent être clarifiés et les désaccords examinés."
+      ],
+      "answer": 3,
+      "explanation": "La population est ici identique : les divergences viennent donc du classement, non des services. Une mesure comparable exige des critères appliqués de façon suffisamment cohérente ; moyenner les scores ne résout pas la définition des cas."
+    },
+    {
+      "id": "q09",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Un fichier partagé a été modifié par plusieurs personnes. Quelle trace aide à justifier la contribution personnelle ?",
+      "options": [
+        "Un historique de versions et une description des modifications effectivement réalisées.",
+        "Le nom du propriétaire du dossier partagé, assimilé à l’auteur de tous les changements.",
+        "L’auteur du dernier envoi par courriel, assimilé à l’auteur de chaque modification antérieure.",
+        "La date de création du fichier, assimilée à la date et à l’auteur de toutes ses révisions."
+      ],
+      "answer": 0,
+      "explanation": "Un historique et des tâches identifiées donnent des éléments de provenance. L’accès ou l’envoi du document ne démontre pas qui a réalisé chaque changement."
+    },
+    {
+      "id": "q10",
+      "basis": 1,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Après avoir envoyé sa note d’analyse, l’étudiant corrige une erreur qui change la recommandation. Le responsable utilise encore la version reçue pour préparer sa décision. Quelle action complète la correction du fichier personnel ?",
+      "options": [
+        "Renommer seulement la version corrigée conservée sur son poste.",
+        "Transmettre une correction explicite identifiant l’ancienne note, le résultat modifié et la recommandation à réexaminer.",
+        "Attendre la prochaine mission pour intégrer le nouveau raisonnement dans un autre rapport.",
+        "Supprimer sa propre copie de l’ancienne note sans informer le destinataire."
+      ],
+      "answer": 1,
+      "explanation": "Corriger le fichier local ne corrige pas l’information déjà reçue. Puisque l’erreur affecte une décision en préparation, le destinataire doit identifier la note remplacée et les conséquences de la correction, avec une version révisée clairement repérée."
+    },
+    {
+      "id": "q11",
+      "basis": 1,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Avant l’étude, l’étudiant avait retenu le taux d’erreurs comme critère principal de réussite. Après avoir constaté qu’il ne baisse pas, il présente seulement un gain de délai, mesuré comme critère secondaire. Quelle restitution rend son choix analytique transparent ?",
+      "options": [
+        "Présenter le délai comme critère principal initial sans mentionner le protocole de départ.",
+        "Retirer le taux d’erreurs de la restitution parce qu’il ne mesure pas le gain recherché après coup.",
+        "Présenter les résultats du critère initial et du critère secondaire, en signalant tout changement de priorité décidé après observation.",
+        "Conclure à la réussite du critère initial à partir de la baisse du délai, sans comparer les deux définitions."
+      ],
+      "answer": 2,
+      "explanation": "Choisir après observation le seul critère favorable peut transformer la portée du bilan. La restitution doit conserver le critère annoncé et distinguer l’amélioration secondaire, puis expliquer tout changement de priorité au lieu de réécrire le protocole comme s’il avait toujours été celui-là."
+    },
+    {
+      "id": "q12",
+      "basis": 2,
+      "kind": "calculation",
+      "difficulty": "standard",
+      "q": "Un exercice définit l’estimation comparative comme baisse du délai du groupe test moins baisse du groupe de comparaison. Le délai passe de 10 à 6 jours dans le test, de 9 à 7 jours dans la comparaison. Sous cette définition, quelle baisse supplémentaire obtient-on ?",
+      "options": [
+        "4 jours.",
+        "6 jours.",
+        "1 jour.",
+        "2 jours."
+      ],
+      "answer": 3,
+      "explanation": "La baisse est de 4 jours dans le test et de 2 jours dans la comparaison. La différence des baisses est donc 2 jours. L’interprétation causale exige en plus les hypothèses de comparabilité et de tendance commune ; le seul calcul ne les démontre pas.",
+      "calculation": {
+        "expected": 2,
+        "expression": {
+          "op": "-",
+          "args": [
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 10
+                },
+                {
+                  "value": 6
+                }
+              ]
+            },
+            {
+              "op": "-",
+              "args": [
+                {
+                  "value": 9
+                },
+                {
+                  "value": 7
+                }
+              ]
+            }
+          ]
+        },
+        "digits": 0
+      },
+      "references": [
+        {
+          "title": "Impact Canada — Guide des méthodes de mesure des impacts",
+          "url": "https://impact.canada.ca/fr/rapports/modeles-de-mesure-des-impacts"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le délai diminue dans chacun des deux types de dossier, simples et complexes. Le délai global augmente pourtant lorsque les dossiers complexes deviennent très majoritaires. Quel examen est pertinent ?",
+      "options": [
+        "Distinguer évolution dans chaque type et modification de leur poids dans le total.",
+        "Conclure que le délai global est faux parce que les deux délais par type diminuent.",
+        "Conclure qu’au moins un délai par type a forcément augmenté.",
+        "Remplacer le délai global par la moyenne simple des deux types, indépendamment de leurs volumes."
+      ],
+      "answer": 0,
+      "explanation": "La moyenne globale dépend des valeurs par type et de leurs poids. Une part accrue de dossiers complexes peut augmenter la moyenne d’ensemble malgré une amélioration de chaque type ; il faut séparer performance interne et composition."
+    },
+    {
+      "id": "q14",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le mois de départ a été choisi parce qu’il était exceptionnellement mauvais. Quelle prudence est justifiée face à l’amélioration suivante ?",
+      "options": [
+        "Le mois extrême constitue à lui seul une référence normale suffisante pour toute comparaison future.",
+        "Vérifier si une partie du retour à un niveau habituel peut expliquer la baisse.",
+        "Utiliser seulement le mois extrême et le mois final permet de mesurer la tendance habituelle antérieure.",
+        "L’amplitude de la baisse observée mesure directement l’effet propre du dispositif, sans autre référence."
+      ],
+      "answer": 1,
+      "explanation": "Un niveau initial atypique peut être suivi d’un retour vers des valeurs plus habituelles. Le dispositif n’est pas automatiquement l’unique explication de l’écart."
+    },
+    {
+      "id": "q15",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Après une formation, le délai médian passe durablement de 10 à 9 jours tandis que les incidents critiques deviennent plus fréquents. Le projet visait à réduire les délais sans augmenter ces incidents. Quelle conclusion respecte les deux critères ?",
+      "options": [
+        "Le gain de délai suffit à conclure à la réussite complète du projet.",
+        "La hausse des incidents démontre que le délai médian n’a pas réellement baissé.",
+        "Le critère de délai s’améliore, mais la condition relative aux incidents n’est pas satisfaite.",
+        "Le moindre délai et les incidents supplémentaires se compensent sans convention d’évaluation."
+      ],
+      "answer": 2,
+      "explanation": "Un objectif assorti d’une condition doit être évalué sur ses deux dimensions. Le gain de délai existe, mais ne suffit pas à remplir la condition de sécurité ; aucune compensation automatique n’est prévue entre ces critères."
+    },
+    {
+      "id": "q16",
+      "basis": 2,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Des renforts sont recrutés après une forte hausse des retards. Une note conclut que les renforts ont causé cette hausse antérieure. Quel contrôle manque ?",
+      "options": [
+        "Vérifier si la corrélation positive entre renforts et retards suffit, indépendamment de leur ordre d’apparition.",
+        "Attribuer la hausse antérieure aux renforts parce que leur recrutement a été motivé par ces mêmes retards.",
+        "Traiter les dates de recrutement comme des dates de début du problème sans examiner les relevés antérieurs.",
+        "L’ordre temporel entre le problème et la décision de recrutement."
+      ],
+      "answer": 3,
+      "explanation": "Une décision peut être une réponse au problème plutôt que sa cause. La chronologie fait partie des éléments nécessaires à l’interprétation causale."
+    },
+    {
+      "id": "q17",
+      "basis": 2,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le protocole compare une équipe utilisant une nouvelle grille à une équipe censée ne pas l’utiliser. Pendant le test, la seconde reçoit et utilise la même grille. Quelle conséquence faut-il discuter ?",
+      "options": [
+        "Le contraste entre les pratiques des deux groupes n’est plus celui prévu au protocole.",
+        "L’utilisation commune garantit une estimation plus précise de l’effet propre de la grille.",
+        "Le groupe de comparaison devient une seconde mesure indépendante d’absence de grille.",
+        "La taille des groupes suffit à maintenir le contraste initial malgré leur pratique commune."
+      ],
+      "answer": 0,
+      "explanation": "L’exposition de la comparaison à la même grille réduit ou supprime la différence de traitement prévue. Les observations restent réelles, mais leur comparaison ne mesure plus simplement le contraste grille contre absence de grille.",
+      "references": [
+        {
+          "title": "Impact Canada — Guide des méthodes de mesure des impacts",
+          "url": "https://impact.canada.ca/fr/rapports/modeles-de-mesure-des-impacts"
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "Le contrôle a été appliqué à 100 dossiers. La même extraction ne contient que les alertes positives et ne conserve aucune trace des dossiers déclarés sans anomalie. Peut-elle mesurer à elle seule le taux d’erreurs non détectées ?",
+      "options": [
+        "Oui, car chaque alerte positive représente également les dossiers négatifs.",
+        "Non, il faut aussi examiner des dossiers déclarés sans anomalie pour repérer d’éventuels faux négatifs.",
+        "Oui, il suffit de retrancher le nombre d’alertes de 100 pour connaître les erreurs manquées.",
+        "Non, mais la fréquence d’alertes positives suffit à remplacer la mesure des erreurs manquées."
+      ],
+      "answer": 1,
+      "explanation": "Une extraction des seuls signaux ne montre pas les erreurs qui n’ont pas déclenché d’alerte. Les dossiers négatifs doivent être examinés pour distinguer absence réelle d’erreur et défaut de détection."
+    },
+    {
+      "id": "q19",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "Le suivi commence avec 100 utilisateurs. À la fin, 60 répondent au questionnaire ; les 40 autres ont abandonné l’outil. La note présente la satisfaction des 60 répondants comme celle des 100 utilisateurs initiaux. Quel biais faut-il examiner ?",
+      "options": [
+        "Une simple différence de taille d’échantillon qui ne change pas la composition des répondants.",
+        "Une non-réponse répartie indépendamment de l’usage de l’outil, puisque seuls les réponses reçues comptent dans la moyenne.",
+        "Une sélection des utilisateurs encore présents, qui exclut du bilan ceux ayant abandonné.",
+        "Une baisse certaine de satisfaction mesurée chez tous les abandonnants, en les comptant comme réponses négatives observées."
+      ],
+      "answer": 2,
+      "explanation": "Les répondants finaux ne représentent pas sans examen la cohorte initiale : les utilisateurs ayant abandonné sont absents de la mesure. Leur situation peut modifier le bilan ; il faut documenter cette attrition plutôt que généraliser les seules réponses restantes.",
+      "references": [
+        {
+          "title": "INSEE — Le multimode dans les enquêtes",
+          "url": "https://www.insee.fr/fr/information/6035934?sommaire=6035950"
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La conclusion compare un coût par dossier avant le test à un coût par anomalie après le test, alors qu’un dossier peut comporter plusieurs anomalies. Quelle correction rend la comparaison interprétable ?",
+      "options": [
+        "Conserver les deux unités puisque leurs montants sont tous deux exprimés en euros.",
+        "Appliquer un même arrondi aux deux montants suffit à rendre les dénominateurs équivalents.",
+        "Diviser chacun par le nombre de mois sans revoir l’objet compté.",
+        "Reconstruire les deux coûts pour une même unité d’objet ou expliquer qu’ils mesurent des grandeurs différentes."
+      ],
+      "answer": 3,
+      "explanation": "Des euros par dossier et des euros par anomalie ont des dénominateurs différents. Une comparaison temporelle doit maintenir l’objet du coût ou séparer explicitement les deux mesures ; une même devise ne suffit pas."
+    },
+    {
+      "id": "q21",
+      "basis": 3,
+      "kind": "diagnosis",
+      "difficulty": "standard",
+      "q": "La règle interne fournie autorise les données nominatives dans un espace de contrôle réservé, mais uniquement des résultats agrégés dans le rapport diffusé au jury. Quel dispositif respecte cette règle tout en permettant le contrôle interne ?",
+      "options": [
+        "Conserver les pièces détaillées dans l’espace réservé et ne placer que les agrégats autorisés dans le rapport.",
+        "Mettre les pièces nominatives dans le rapport en les désignant comme annexes internes.",
+        "Laisser un lien libre depuis le rapport vers l’espace détaillé pour faciliter la vérification du jury.",
+        "Diffuser le fichier détaillé au jury en lui demandant de ne pas lire les colonnes nominatives."
+      ],
+      "answer": 0,
+      "explanation": "Les deux niveaux d’accès ont des finalités et des autorisations distinctes explicitement données. Le contrôle interne peut garder les pièces détaillées sans rendre ces données accessibles dans le rapport au jury ; une étiquette ou consigne de lecture ne restreint pas l’accès."
+    },
+    {
+      "id": "q22",
+      "basis": 3,
+      "kind": "scenario",
+      "difficulty": "standard",
+      "q": "La formule d’un taux est nombre d’erreurs divisé par nombre de dossiers contrôlés. Une période ne comporte aucun dossier contrôlé. Quel affichage préserve le sens de l’indicateur ?",
+      "options": [
+        "0 %, ce qui prouve l’absence de dossiers erronés dans l’activité.",
+        "Non calculable sur cette période, avec un dénominateur nul signalé.",
+        "100 %, puisque tous les dossiers contrôlés sont absents.",
+        "Le taux de la période précédente, présenté comme une mesure de la nouvelle période."
+      ],
+      "answer": 1,
+      "explanation": "La division par zéro ne définit pas un taux. L’absence de dossiers contrôlés est une absence de base de mesure, et non un taux d’erreur nul ou total ; reprendre l’ancien taux doit rester une hypothèse distincte, pas une observation."
+    }
+  ]
+}
