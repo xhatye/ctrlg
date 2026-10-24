@@ -1,4 +1,5 @@
-import LandingReviews from './LandingReviews';
+import {RefinedLanding,RefinedFeatures} from './RefinedPublic';
+import './refined-ui.css';
 import GizmoDashboard from './GizmoDashboard';
 import PlayfulHeading from './PlayfulHeading';
 import { GizmoShell } from './gizmo-ui';
@@ -10,14 +11,9 @@ import ExamCountdown from "./ExamCountdown";
 import { ChapterLibrary } from './chapter-navigation';
 import { curriculumFor } from '../lib/curriculum.mjs';
 import catalogue from './catalogue.json';
-import { HeroAtmosphere } from './interactions';
 import ProgressJourney from './ProgressJourney';
-import HomeStudyPath from './HomeStudyPath';
-import PreviewGallery from './PreviewGallery';
-import {useLandingMotion} from './landing-motion';
 import './landing-motion.css';
 import './pricing.css';
-import { PublicEvidence } from './PublicStudySite';
 import { publicSubjectPath } from '../lib/public-study-pages.mjs';
 
 const paths = {
@@ -288,154 +284,8 @@ function PreviewCard() {
     </div>
   );
 }
-export function Marketing({ onAuth, onNav, ues }) {
-  const landingRef=useLandingMotion();
-  return (
-    <div className="marketing landing-motion" ref={landingRef}>
-      <PublicNav onNav={onNav} onAuth={onAuth} />
-      <main>
-        <section className="container hero hero-campus"><HeroAtmosphere />
-          <div className="hero-copy">
-            <span className="pill">
-              <i /> VOS RÉVISIONS DCG & DSCG
-            </span>
-            <PlayfulHeading as="h1" lines={['DCG & DSCG.', 'Vos UE, votre rythme.']} />
-            <p>
-              Cours, QCM expliqués, flashcards et cas corrigés.
-              Préparez les UE que vous présentez, à votre rythme.
-            </p>
-            <div className="hero-actions">
-              <Button onClick={() => onNav("pricing")}>
-                Accéder aux révisions <Icon name="arrow" size={18} />
-              </Button>
-              <Button
-                secondary
-                onClick={() =>
-                  document
-                    .getElementById("methode")
-                    .scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? "auto" : "smooth" })
-                }
-              >
-                Voir la méthode
-              </Button>
-            </div>
-            <div className="hero-reassurance">
-              <span>
-                <Icon name="check" size={15} /> 13 UE DCG · 7 UE DSCG
-              </span>
-              <span>
-                <Icon name="check" size={15} /> Pro à 15 € / mois
-              </span>
-            </div>
-
-          </div>
-          <div className="landing-stage">
-            <img className="landing-companion" src="/illustrations/study-companion-v1.webp" alt="" width="220" height="220" decoding="async" />
-            <img className="landing-object landing-object-book" src="/navigation-3d-v1/library.webp" alt="" width="76" height="76" />
-            <img className="landing-object landing-object-calendar" src="/navigation-3d-v1/planning.webp" alt="" width="76" height="76" />
-            <div className="landing-stage-halo" aria-hidden="true"/>
-            <span className="landing-float landing-float-top" aria-hidden="true"><span>✦</span> Un peu chaque jour.</span>
-            <HomeStudyPath ues={ues} onNav={onNav}/>
-            <span className="landing-float landing-float-bottom" aria-hidden="true"><Icon name="check" size={17}/> Comprendre. Pratiquer. Retenir.</span>
-          </div>
-        </section>
-        <section className="container landing-annal-promo"><div><span className="eyebrow">LES VRAIES ÉPREUVES</span><h2>Le sujet sous les yeux.<br/>Le temps entre vos mains.</h2><p>139 PDF DCG et DSCG, un chronomètre par UE et votre brouillon.</p><a className="btn btn-secondary" href="/annales">Découvrir les annales →</a></div>            <figure className="landing-people">
-              <img src="/landing/study-people-v5.webp" alt="Trois adultes dessinés en tenue élégante révisent ensemble : un homme en costume croisé rayé et deux femmes." width="1536" height="1024" decoding="async" />
-              <figcaption><strong>Vos UE.<br/>Votre rythme.</strong><span>Un espace pour garder le cap.</span></figcaption>
-            </figure></section>
-        <PublicEvidence />
-        <section className="container library-numbers" aria-label="Contenu de la bibliothèque">{[[catalogue.totals.subjects,'matières DCG et DSCG'],[catalogue.totals.chapters,'chapitres de cours'],[catalogue.totals.curatedQuestions,'QCM expliqués'],[catalogue.totals.cards,'flashcards'],[catalogue.totals.curatedCases,'cas et ateliers corrigés']].map(([count,label])=><div key={label}><strong>{count.toLocaleString('fr-FR')}</strong><span>{label}</span></div>)}<p>Contenus originaux. Variantes chiffrées comptées séparément.</p></section>
-        <div className="container exam-home"><ExamCountdown /></div>
-        <div className="subject-strip">
-          <div className="container">
-            <span>VOS ÉPREUVES DCG / DSCG</span>
-            {[
-              "Comptabilité",
-              "Droit",
-              "Finance",
-              "Fiscalité",
-              "Management",
-            ].map((x) => (
-              <strong key={x}>{x}</strong>
-            ))}
-          </div>
-        </div>
-        <PreviewGallery onSubscribe={()=>onNav('pricing')}/>
-        <section id="methode" className="container section">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">
-                VOTRE MÉTHODE DE RÉVISION
-              </span>
-              <h2>Comprendre. Pratiquer. Retenir.</h2>
-            </div>
-          </div>
-          <div className="feature-grid">
-            {features.map(([icon, title, desc, tag], i) => (
-              <article className={`feature-card feature-${i}`} key={title}>
-                <div className="icon-tile">
-                  <Icon name={icon} size={26} />
-                </div>
-                <span className="card-tag">{tag}</span>
-                <h3>{title}</h3>
-                <p>{[
-                  'Cours illustrés, méthodes et applications.',
-                  'Cartes de rappel et révisions espacées.',
-                  'Questions expliquées et corrigés détaillés.',
-                  'Un coup de pouce facultatif, à usage limité.',
-                ][i]}</p>
-                <span className="card-number">0{i + 1}</span>
-              </article>
-            ))}
-          </div>
-        </section>
-        <section className="container section">
-          <div className="section-heading">
-            <div>
-              <span className="eyebrow">VOTRE DIPLÔME, VOTRE PARCOURS</span>
-              <h2>
-                Choisissez vos UE.
-              </h2>
-            </div>
-            <div className="landing-diploma-links"><a className="btn btn-secondary" href="/dcg">13 UE DCG <Icon name="arrow" /></a><a className="btn btn-secondary" href="/dscg">7 UE DSCG <Icon name="arrow" /></a></div>
-          </div>
-          <div className="marketing-subjects">
-            {[...ues.filter(ue=>!ue.id.startsWith('DSCG')).slice(0,3),...ues.filter(ue=>ue.id.startsWith('DSCG')).slice(0,3)].map((ue) => (
-              <a
-                key={ue.id}
-                href={publicSubjectPath(ue.id)}
-              >
-                <div className="programme-identity"><SubjectIcon id={ue.id} size={54}/><span className="ue-code">{ue.id}</span></div>
-                <h3>{ue.label}</h3>
-                <span>
-                  Voir les chapitres
-                  <Icon name="arrow" size={17} />
-                </span>
-              </a>
-            ))}
-          </div>
-        </section>
-        <LandingReviews />
-        <section className="container cta-band">
-          <span className="icon-tile">
-            <Icon name="spark" size={30} />
-          </span>
-          <div>
-            <span className="eyebrow">VOTRE ACCÈS AUX RÉVISIONS</span>
-            <h2>
-              Préparez votre prochaine UE.
-            </h2>
-            <p>Pro à 15 € / mois ou Pack Examen à 29 € pour 90 jours.</p>
-          </div>
-          <Button onClick={() => onNav("pricing")}>
-            Choisir mon offre <Icon name="arrow" />
-          </Button>
-        </section>
-        <FAQ />
-      </main>
-      <PublicFooter onNav={onNav} />
-    </div>
-  );
+export function Marketing({onAuth,onNav,ues}) {
+ return <RefinedLanding Nav={PublicNav} Footer={PublicFooter} Faq={FAQ} onNav={onNav} onAuth={onAuth} ues={ues}/>;
 }
 
 export function ProductShell(props) { return <GizmoShell {...props}/>; }
@@ -1386,6 +1236,7 @@ export function LearningProgress({ user, ues, onNav, learning={},learningError,o
 }
 export function PublicInfo({ page, onNav, onAuth, ues }) {
   const [programme,setProgramme]=useState('2027');
+  if(page==='features')return <RefinedFeatures Nav={PublicNav} Footer={PublicFooter} onNav={onNav} onAuth={onAuth}/>;
   ues=curriculumFor(programme);
   const isDiploma = ["dcg", "dscg"].includes(page),
     level = page.toUpperCase();

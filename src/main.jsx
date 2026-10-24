@@ -7,6 +7,7 @@ import './gizmo-pages.css';
 import './public-nav.css';
 import './fonts.css';
 import './public-landing.css';
+import './refined-ui.css';
 import { findPublicPage } from '../lib/public-study-pages.mjs';
 import { applyPageMetadata } from '../lib/public-seo.mjs';
 import { Analytics } from '@vercel/analytics/react';
