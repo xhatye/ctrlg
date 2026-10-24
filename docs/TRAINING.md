@@ -43,7 +43,7 @@ La notice du formulaire et la politique de confidentialité décrivent les nouve
 
 ## Captures publiques
 
-Trois images montrent de vrais écrans de cours, de dossier et de corrigé, avec une copie illustrative. Il s’agit d’extraits statiques ; aucun parcours d’essai gratuit n’est ajouté. Les captures s’agrandissent dans une fenêtre accessible au clavier et défilable sur téléphone.
+Trois images montrent de vrais écrans de cours, de dossier et de corrigé, avec une copie illustrative. Il s’agit d’extraits statiques. Le chapitre interactif offert est décrit dans la section suivante. Les captures s’agrandissent dans une fenêtre accessible au clavier et défilable sur téléphone.
 
 Chaque copie d’examen conserve la version de son sujet et de son corrigé au début de la session. Un ajout de chapitres ou une modification ultérieure de la banque ne change donc pas une copie en cours ou terminée. Le corrigé conservé n’est jamais inclus dans la réponse API d’une session active.
 

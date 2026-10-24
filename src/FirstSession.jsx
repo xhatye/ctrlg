@@ -13,7 +13,8 @@ export default function FirstSession({user,ues,onNav,onComplete}){
  const heading=useRef(null),mounted=useRef(true);
  useEffect(()=>{mounted.current=true;return()=>{mounted.current=false;};},[]);
  useEffect(()=>{if(result)heading.current?.focus();},[result]);
- const ue=available.find(u=>u.id===module),chapter=catalogue.modules[module].chapters[0];
+ const ue=available.find(u=>u.id===module)||available[0],chapter=catalogue.modules[ue.id].chapters[0];
+ useEffect(()=>{if(!user.isPro&&module!=='UE9'){setModule('UE9');setQuestions(null);setResult(null);setError('Votre accès actif a changé. Le chapitre offert reste disponible.');}},[user.isPro,module]);
  const start=async()=>{
   setBusy(true);setError('');
   try{const items=user.isPro?(await loadStudy(module,'qcm',{chapter:chapter.id,count:5,focus:'knowledge'})).items:sample.questions.slice(0,5);if(items?.length!==5)throw Error('incomplete');if(mounted.current)setQuestions(items);}
