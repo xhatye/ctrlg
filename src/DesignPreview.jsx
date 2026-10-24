@@ -1,3 +1,5 @@
+import FirstSession from './FirstSession';
+import SamplePage from './SamplePage';
 import AnnalsPreview from './AnnalsLibrary';
 // Development-only route. No real user account, payment or Firestore write.
 import { useState } from "react";
@@ -85,7 +87,7 @@ export default function DesignPreview() {
     page === "oral_summary" ? <OralSummary data={{topic:'Comptabilité',answers:[],duration:55}} onBack={()=>nav('dashboard')} /> :
     page === "forgot_password" ? <ForgotPasswordScreen onBack={()=>nav('auth')} /> :
     ["cgu","confidentialite"].includes(page) ? <LegalScreen type={page} onBack={()=>nav('landing')} /> :
-    page === "landing" ? (
+    page === "sample" ? <SamplePage/> : page === "first_session" ? <FirstSession user={student} ues={ues} onNav={nav} onComplete={async data=>{const events=data.answers.map((a,i)=>({receipt:data.sessionId+'_review_'+i,kind:'quiz',itemId:a.itemId,selected:a.selected}));await trainingRequest('review',{events});await onLearning([{id:data.sessionId+'_0',module:data.ue,chapter:data.answers[0].chapter,type:'quiz',total:data.total,correct:data.score}]);setStudent(old=>({...old,history:[...old.history,{...data,type:'qcm',dateISO:new Date().toISOString()}]}));return {...data,historySaved:true};}}/> : page === "landing" ? (
       <Marketing onAuth={mode=>{setAuthMode(mode || "login");nav("auth");}} onNav={nav} ues={ues} />
     ) : page === "pricing" ? (
       <OfferPage user={student} onCheckout={() => nav("account")} onNav={nav} />
@@ -177,7 +179,7 @@ export default function DesignPreview() {
       <StudentHome user={student} ues={ues} onNav={nav} onSelect={select} learning={learning} learningError={learningError} learningLoading={previewState==='loading'} onRetry={()=>setLearningError(false)} onOpen={(ue,chapter,target)=>{setUE({...ue,chapter});nav(target);}} />
     );
   const isPublic = [
-    "landing",
+    "sample", "landing",
     "pricing",
     "auth",
     "features",

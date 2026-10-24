@@ -177,7 +177,7 @@ const features = [
 const faq = [
   [
     "Peut-on essayer les exercices avant de s’abonner ?",
-    "Il n’y a pas d’essai gratuit. Les titres des chapitres et les volumes de la bibliothèque sont consultables avant l’achat. Les cours, QCM, flashcards, cas corrigés et le tuteur nécessitent un accès Pro actif ou un Pack Examen.",
+    "Un chapitre de DCG UE9 est offert : cours complet, fiche et dix QCM expliqués, sans compte ni carte bancaire. Retrouvez-le sur la page Exemple gratuit. Les autres contenus interactifs nécessitent un accès Pro actif ou un Pack Examen.",
   ],
   [
     "Les exercices sont-ils des annales officielles ?",
@@ -787,7 +787,7 @@ export function OfferPage({ user, onCheckout, onNav }) {
           <ul>{['Cours, fiches et textes à trous','QCM expliqués et flashcards','Cas corrigés et mode examen','Planning et suivi de progression'].map(item=><li key={item}><Icon name="check" size={18}/><span>{item}</span></li>)}</ul>
         </section>
         <div className="pricing-library" aria-label="Contenus disponibles">{[[catalogue.totals.chapters,'chapitres'],[catalogue.totals.curatedQuestions,'QCM expliqués'],[catalogue.totals.cards,'flashcards'],[catalogue.totals.curatedCases,'cas corrigés']].map(([value,label])=><div key={label}><strong>{value.toLocaleString('fr-FR')}</strong><span>{label}</span></div>)}</div>
-        <details className="pricing-details"><summary>Avant de choisir votre accès</summary><p>Consultez les chapitres <a href="/dcg">DCG</a> et <a href="/dscg">DSCG</a> : la couverture du programme est partielle. Les exercices nécessitent un accès payant, sans essai gratuit. Les cas SIMDCG sont originaux et distincts des annales officielles.</p><p>Les deux offres comprennent le tuteur IA, avec un maximum de 20 demandes par jour et 300 par mois, sous réserve du budget de génération disponible. Les cours et exercices enregistrés restent accessibles sans génération IA.</p></details>
+        <p className="pricing-sample-link"><a href="/exemple-gratuit">Essayer un chapitre et ses 10 QCM avant de choisir</a></p><details className="pricing-details"><summary>Avant de choisir votre accès</summary><p>Consultez les chapitres <a href="/dcg">DCG</a> et <a href="/dscg">DSCG</a> : la couverture du programme est partielle. Les exercices nécessitent un accès payant, sans essai gratuit. Les cas SIMDCG sont originaux et distincts des annales officielles.</p><p>Les deux offres comprennent le tuteur IA, avec un maximum de 20 demandes par jour et 300 par mois, sous réserve du budget de génération disponible. Les cours et exercices enregistrés restent accessibles sans génération IA.</p></details>
         <div className="recovery-link">
           <Icon name="lock" />
           <span>Vous avez déjà payé ?</span>

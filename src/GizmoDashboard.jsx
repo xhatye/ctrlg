@@ -1,3 +1,5 @@
+import {FIRST_SESSION_KEY} from '../lib/first-session.mjs';
+import './starter.css';
 import { useState } from 'react';
 import { dashboardSummary } from '../lib/dashboard-summary.mjs';
 import { restorePlan } from '../lib/study-plan.mjs';
@@ -13,6 +15,8 @@ function savedPlan(ues,uid) {
 export default function GizmoDashboard(props) { return <Dashboard key={props.user.uid} {...props}/>; }
 function Dashboard({user,ues,onNav,onSelect,onOpen,learning={},learningError,learningLoading,onRetry}) {
   const search = useStudySearch();
+  const [starterDismissed,setStarterDismissed]=useState(()=>{try{return !!localStorage.getItem(FIRST_SESSION_KEY+user.uid);}catch{return false;}});
+  const dismissStarter=()=>{setStarterDismissed(true);try{localStorage.setItem(FIRST_SESSION_KEY+user.uid,'dismissed');}catch{}};
   const [plan] = useState(()=>savedPlan(ues,user.uid));
   const stats = dashboardSummary(user,ues,catalogue,learning);
   const lastUE = ues.find(ue=>ue.id===stats.latest?.ue);
@@ -35,6 +39,7 @@ function Dashboard({user,ues,onNav,onSelect,onOpen,learning={},learningError,lea
 
   return <div className="g-dashboard g-dashboard-refresh">
     <div className="g-home-heading"><h1>Bonjour {user.name?.split(' ')[0] || 'à vous'}.</h1><span>Votre espace DCG & DSCG</span></div>
+    {!learningLoading&&!learningError&&!stats.history.length&&!stats.chaptersStarted&&!starterDismissed&&<section className="g-first-session-card" aria-label="Commencer ma première révision"><img src="/navigation-3d-v1/library.webp" width="54" height="54" alt=""/><div><h2>Cinq questions pour commencer.</h2><p>{user.isPro?'Choisissez votre UE, comprenez vos réponses et retrouvez la suite de votre parcours.':'Découvrez la méthode avec cinq questions offertes de comptabilité DCG UE9.'}</p></div><button className="btn" onClick={()=>onNav('first_session')}>Ma première révision</button><button className="text-button" onClick={dismissStarter}>Plus tard</button></section>}
     <section className="g-study-start" aria-labelledby="g-start-title">
       <div className="g-start-intro"><div><span className="eyebrow">UNE NOTION À LA FOIS</span><PlayfulHeading id="g-start-title" text="Qu’allez-vous réviser ?"/><p>Retrouvez un chapitre, reprenez votre parcours<br/>ou choisissez un entraînement.</p></div><img className="g-floating-companion" src="/illustrations/study-companion-v1.webp" alt="" width="116" height="116" fetchpriority="high"/></div>
       <button className="g-study-search" onClick={search}><StudyIcon name="search" size={23}/><span>Une UE, un chapitre, une notion…</span></button>

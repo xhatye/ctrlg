@@ -1,3 +1,4 @@
+import FirstSession from './FirstSession';
 import AnnalsPreview from './AnnalsLibrary';
 import { useState, useRef, useEffect } from "react";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInWithPopup, sendPasswordResetEmail } from "firebase/auth";
@@ -35,6 +36,7 @@ const SCREEN_TO_URL = {
   testimonials:       "/avis",
   auth:               "/connexion",
   dashboard:          "/interface",
+  first_session:      "/premiere-session",
   subject_hub:        "/matiere",
   qcm:                "/qcm",
   flashcards:         "/flashcards",
@@ -307,7 +309,6 @@ export default function App() {
   const [interviewCfg, setInterviewCfg] = useState(null);
   const [result, setResult] = useState(null);
   const [loadingAuth, setLoadingAuth] = useState(true);
-  const [showOnboarding, setShowOnboarding] = useState(false);
   useEffect(()=>{applyPageMetadata(window.location.pathname);},[screen]);
   const [learning,setLearning]=useState({chapters:{}}),[learningError,setLearningError]=useState(false),[learningLoading,setLearningLoading]=useState(false);
   useEffect(()=>{
@@ -387,7 +388,7 @@ export default function App() {
     toast.success("Entretien terminé ! Résultats disponibles.");
     setResult(entry); nav("results_interview");
   };
-  const onQCMDone = async (data) => {
+  const onQCMDone = async (data, {stay=false} = {}) => {
     const pct = Math.round(data.score / data.total * 100);
     const entry = { ...data, type: "qcm", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
     const groups={};for(const answer of data.answers){if(!answer.chapter)continue;const group=groups[answer.chapter] ||= {total:0,correct:0};group.total++;if(answer.correct)group.correct++;}
@@ -405,7 +406,9 @@ export default function App() {
     incrementStat("totalQCMs");
     if(saved) toast.success("QCM terminé ! Voir les résultats.");
     else toast.error('Le résultat est affiché, mais l’enregistrement dans votre historique a échoué.');
-    setResult(entry); nav("results_qcm");
+    entry.historySaved=saved;
+    setResult(entry); if(!stay)nav("results_qcm");
+    return entry;
   };
   const onCasDone = async (data) => {
     const entry = { ...data, cas:{titre:data.cas.titre,contexte:data.cas.contexte,questions:data.cas.questions},type: "cas", date: new Date().toLocaleString("fr-FR"), dateISO: new Date().toISOString() };
@@ -432,7 +435,8 @@ export default function App() {
     if (screen === 'review_today') return <ReviewToday key={user.uid} onExams={()=>nav('exams')} onOpen={(module,chapter,target)=>openLearning(ALL_UES.find(u=>u.id===module),chapter,target)}/>;
     if (screen === 'annals') return <AnnalsPreview key={user?.uid} user={user} onNav={nav}/>;
     if (screen === 'feedback') return <FeedbackForm key={user.uid}/>;
-    if (screen === 'auth') return <Auth onForgot={()=>nav('forgot_password')} mode={authMode} setMode={setAuthMode} onDone={u => { setUser(u); if (u.isNew) setShowOnboarding(true); const plan = sessionStorage.getItem('simdcg-plan'); sessionStorage.removeItem('simdcg-plan'); nav('dashboard'); if (plan) upgrade(plan); }} onBack={() => nav('landing')} />;
+    if (screen === 'auth') return <Auth onForgot={()=>nav('forgot_password')} mode={authMode} setMode={setAuthMode} onDone={u => { setUser(u); let plan=null; try{plan=sessionStorage.getItem('simdcg-plan');sessionStorage.removeItem('simdcg-plan');}catch{} nav(u.isNew&&!plan?'first_session':'dashboard'); if (plan) upgrade(plan); }} onBack={() => nav('landing')} />;
+    if (screen === 'first_session') return <FirstSession key={user.uid} user={user} ues={ALL_UES} onNav={nav} onComplete={data=>onQCMDone(data,{stay:true})}/>;
     if (screen === 'dashboard') return <StudentHome user={user} ues={ALL_UES} onNav={nav} onSelect={selectUE} onOpen={openLearning} learning={learning} learningError={learningError} learningLoading={learningLoading} onRetry={reloadLearning} />;
     if (screen === 'library') return <LibraryPage ues={ALL_UES} user={user} onSelect={selectUE} />;
     if (screen === 'subject_hub') return <CourseHome ue={selectedUE} user={user} onNav={nav} learning={learning} />;
@@ -456,7 +460,7 @@ export default function App() {
     if (screen === 'cgu' || screen === 'confidentialite') return <LegalScreen type={screen} onBack={() => nav('landing')} />;
     return null;
   };
-  return <><ToastContainer />{showOnboarding && <OnboardingModal onClose={() => setShowOnboarding(false)} onUpgrade={() => upgrade()} />}{privateScreen && user ? <ProductShell variant={screen === 'dashboard' ? 'gizmo' : undefined} screen={screen} user={user} onNav={nav} onLogout={logout}>{renderScreen()}</ProductShell> : renderScreen()}</>;
+  return <><ToastContainer />{privateScreen && user ? <ProductShell variant={screen === 'dashboard' ? 'gizmo' : undefined} screen={screen} user={user} onNav={nav} onLogout={logout}>{renderScreen()}</ProductShell> : renderScreen()}</>;
 }
 
 // ── AUTH ──────────────────────────────────────────────────────────────────────
@@ -1016,7 +1020,7 @@ function LegalScreen({ type, onBack }) {
   const cguContent = [
     { title: "1. Objet", body: `Les présentes Conditions Générales d'Utilisation (CGU) régissent l'accès et l'utilisation de la plateforme SIMDCG (simdcg.com), éditée par Marcus Bonnafis, entrepreneur individuel. En accédant à SIMDCG, vous acceptez sans réserve les présentes CGU.` },
     { title: "2. Description du service", body: `SIMDCG est une plateforme de préparation aux examens DCG (Diplôme de Comptabilité et de Gestion) et DSCG (Diplôme Supérieur de Comptabilité et de Gestion). Le service propose une bibliothèque de cours par chapitre, QCM, flashcards et cas originaux avec corrigés, un planning et une préparation écrite à l’oral autonomes. Le contenu couvre partiellement les matières affichées. Un tuteur IA optionnel est soumis à des limites : 20 demandes par jour et 300 par mois, ainsi qu’un budget de génération et aux disponibilités du fournisseur.` },
-    { title: "3. Accès et compte", body: `L'accès au service nécessite la création d'un compte via adresse email ou compte Google. L'utilisateur est responsable de la confidentialité de ses identifiants. Les titres et volumes de la bibliothèque sont consultables avant l'achat. Les cours et exercices nécessitent un accès payant actif, sans essai gratuit. Le plan Pro à ${PRO_PRICE}/mois donne accès aux contenus effectivement disponibles, au planning et au tuteur dans les limites indiquées. Le Pack Examen donne accès pendant 90 jours, sans renouvellement.` },
+    { title: "3. Accès et compte", body: `Le chapitre gratuit est accessible sans compte. L’espace personnel nécessite la création d’un compte via adresse email ou compte Google. L'utilisateur est responsable de la confidentialité de ses identifiants. Les titres et volumes de la bibliothèque sont consultables avant l'achat. Un chapitre de comptabilité avec sa fiche et dix QCM est offert. Les autres cours et exercices nécessitent un accès payant actif. Le plan Pro à ${PRO_PRICE}/mois donne accès aux contenus effectivement disponibles, au planning et au tuteur dans les limites indiquées. Le Pack Examen donne accès pendant 90 jours, sans renouvellement.` },
     { title: "4. Abonnement Pro", body: `Le plan Pro est facturé mensuellement via Stripe, prestataire de paiement sécurisé. L'abonnement est sans engagement et résiliable à tout moment depuis votre espace client Stripe. Aucun remboursement ne sera effectué pour la période en cours au moment de la résiliation.` },
     { title: "5. Propriété intellectuelle", body: `Les fiches et exercices originaux sont des supports de révision complémentaires. Les réponses du tuteur IA peuvent contenir des erreurs et doivent être comparées aux références applicables à votre session. L'interface, le logo et les éléments visuels sont la propriété exclusive de Marcus Bonnafis.` },
     { title: "6. Limitation de responsabilité", body: `SIMDCG est un outil de préparation et ne constitue pas un engagement de réussite aux examens. Les parcours couvrent partiellement les programmes et complètent les cours et annales de votre formation. SIMDCG ne saurait être tenu responsable des décisions prises sur la base des informations fournies.` },
@@ -1031,7 +1035,7 @@ function LegalScreen({ type, onBack }) {
     { title: "5. Sous-traitants", body: `SIMDCG utilise les prestataires suivants : Firebase (Google) pour l’authentification et la base de données, Stripe pour les paiements et Groq pour le tuteur IA et le retour optionnel sur les cas écrits. Lorsque vous demandez une analyse de cas, votre réponse et le corrigé de référence sont transmis à Groq. Lorsque vous utilisez le tuteur, le texte de votre question et le contexte récent de la conversation sont transmis à Groq. Le traitement par chaque prestataire suit ses conditions et sa politique de confidentialité.` },
     { title: "6. Conservation des données", body: `Vos données sont conservées pendant la durée de vie de votre compte. En cas de suppression de compte, vos données personnelles sont effacées sous 30 jours. Les données de facturation sont conservées 10 ans conformément aux obligations comptables légales.` },
     { title: "7. Vos droits", body: `Conformément au RGPD, vous disposez des droits d'accès, de rectification, d'effacement, de portabilité et d'opposition au traitement de vos données. Pour exercer ces droits : contact.simdcg@gmail.com. Vous pouvez également introduire une réclamation auprès de la CNIL (cnil.fr).` },
-    { title: "8. Cookies", body: `SIMDCG utilise uniquement les cookies techniques nécessaires au fonctionnement du service (authentification, session). Aucun cookie publicitaire ou de tracking tiers n'est utilisé.` },
+    { title: "8. Cookies", body: `SIMDCG utilise uniquement les cookies techniques nécessaires au fonctionnement du service (authentification, session). Aucun cookie publicitaire ou de tracking tiers n'est utilisé. Le navigateur peut conserver localement le choix de masquer ou de terminer le parcours de première révision, séparément pour chaque compte. Ce repère ne mesure pas la maîtrise des cours.` },
   ];
   const content = isCgu ? cguContent : confidentialiteContent;
   return (

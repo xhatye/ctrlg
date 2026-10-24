@@ -1,3 +1,4 @@
+import {Block,Table,Application,Sheet} from './CourseDocument';
 import {useEffect,useRef,useState} from 'react';
 import catalogue from './catalogue.json';
 import {loadStudy} from './study-client';
@@ -8,22 +9,6 @@ import LessonVisuals from './LessonVisuals';
 import './course-workbench.css';
 const validFormats=new Set(['reading','sheet','cloze','visuals']);
 const fromURL=()=>{const f=new URLSearchParams(location.search).get('format');return validFormats.has(f)?f:'reading';};
-function Text({value}){return Array.isArray(value)?value.map((run,i)=>run.strong?<strong key={i}>{run.text}</strong>:run.mark?<mark key={i}>{run.text}</mark>:<span key={i}>{run.text}</span>):value;}
-function Table({caption,headers,rows}){return <div className="reading-table-wrap" role="region" aria-label={caption} tabIndex="0"><table><caption>{caption}</caption><thead><tr>{headers.map((h,i)=><th key={i} scope="col">{h}</th>)}</tr></thead><tbody>{rows.map((row,i)=><tr key={i}>{row.map((cell,j)=>j===0?<th key={j} scope="row"><Text value={cell}/></th>:<td key={j}><Text value={cell}/></td>)}</tr>)}</tbody></table></div>;}
-function ReadingChart({data}){
- const min=Math.floor(Math.min(...data.points.map(p=>p.y))/20)*20-20,max=Math.ceil(Math.max(...data.points.map(p=>p.y))/20)*20+20,x=p=>60+(p.x-data.points[0].x)/(data.points.at(-1).x-data.points[0].x)*400,y=p=>220-(p.y-min)/(max-min)*170;
- return <figure className="reading-chart"><figcaption>{data.caption}</figcaption><svg viewBox="0 0 500 270" role="img" aria-label={data.caption+' : '+data.notes}><title>{data.caption}</title><desc>{data.notes}</desc>{[min,(min+max)/2,max].map(v=><g key={v}><line x1="60" x2="460" y1={y({y:v})} y2={y({y:v})}/><text x="52" y={y({y:v})+4} textAnchor="end">{v}</text></g>)}<polyline points={data.points.map(p=>x(p)+','+y(p)).join(' ')}/>{data.points.map(p=><g key={p.x}><circle cx={x(p)} cy={y(p)} r="4"/><text x={x(p)} y="240" textAnchor="middle">{p.x} %</text></g>)}<text x="60" y="25">{data.yLabel}</text><text x="260" y="264" textAnchor="middle">{data.xLabel}</text></svg><p>{data.notes}</p><details><summary>Voir les données du graphique</summary><Table caption="Valeurs calculées dans le modèle" headers={[data.xLabel,data.yLabel]} rows={data.points.map(p=>[String(p.x),p.y.toLocaleString('fr-FR',{minimumFractionDigits:2})])}/></details></figure>;
-}
-function Block({block}){
- if(block.type==='chart')return <ReadingChart data={block}/>;
- if(block.type==='table')return <Table {...block}/>;
- if(block.type==='list')return <ul>{block.items.map((item,i)=><li key={i}><Text value={item}/></li>)}</ul>;
- if(block.type==='callout')return <aside className={'reading-callout reading-callout-'+block.kind}><strong>{block.title}</strong><p><Text value={block.text}/></p></aside>;
- if(block.type==='formula')return <figure className="reading-formula"><figcaption>{block.title}</figcaption><p><Text value={block.text}/></p>{block.caption&&<small>{block.caption}</small>}</figure>;
- return <p><Text value={block.text}/></p>;
-}
-function Application({data}){return <section className="reading-application" id="reading-application"><span className="eyebrow">APPLICATION COMMENTÉE</span><h2>{data.title}</h2><div className="reading-case-context">{data.context}</div>{data.steps.map((s,i)=><section key={i}><h3>{i+1}. {s.question}</h3><p>{s.answer}</p></section>)}</section>;}
-function Sheet({data,sources,module,programmeNote}){return <article className="sheet-paper reading-print"><header><span className="eyebrow">SIMDCG · FICHE DE RÉVISION</span><h2>{data.title}</h2><p>Relisez les conditions et hypothèses dans le cours avant d’appliquer un repère à une autre situation.</p></header><section><h3>L’essentiel</h3><dl>{data.essentials.map((e,i)=><div key={i}><dt>{e.label}</dt><dd><Text value={e.text}/></dd></div>)}</dl></section><section><h3>La méthode</h3><ol>{data.method.map((m,i)=><li key={i}>{m}</li>)}</ol></section>{data.table&&<Table {...data.table}/>}<section className="reading-callout reading-callout-pitfall"><h3>Les confusions à éviter</h3><ul>{data.pitfalls.map((p,i)=><li key={i}>{p}</li>)}</ul></section>{data.example&&<Application data={{title:'Un exemple pour appliquer',...data.example}}/>}<footer className="sheet-provenance"><strong>SIMDCG · {module} · support original</strong>{programmeNote&&<p>{programmeNote}</p>}<p>Couverture partielle du programme. Validation indépendante par un enseignant non réalisée.</p>{sources.map(([title,url])=><p key={url}><a href={url}>{title}</a></p>)}</footer></article>;}
 export default function CourseWorkbench({ue,user,onBack,onLearning,learning={},onNav,onReload}){
  const first=catalogue.modules[ue.id].chapters[0].id,[chapter,setChapter]=useState(ue.chapter&&ue.chapter!=='all'?ue.chapter:first),[format,setFormat]=useState(fromURL),[data,setData]=useState(null),[error,setError]=useState(''),[retry,setRetry]=useState(0),[saved,setSaved]=useState(''),[toc,setToc]=useState(false),[revision,setRevision]=useState(0);const receipt=useRef(crypto.randomUUID());
  useEffect(()=>{setChapter(ue.chapter&&ue.chapter!=='all'?ue.chapter:first);setFormat(fromURL());},[ue.id,ue.chapter,first]);

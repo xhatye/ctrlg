@@ -48,3 +48,11 @@ Trois images montrent de vrais écrans de cours, de dossier et de corrigé, avec
 Chaque copie d’examen conserve la version de son sujet et de son corrigé au début de la session. Un ajout de chapitres ou une modification ultérieure de la banque ne change donc pas une copie en cours ou terminée. Le corrigé conservé n’est jamais inclus dans la réponse API d’une session active.
 
 Les rappels portent une empreinte du contenu pédagogique. Lorsqu’une question change, le suivi est repris sans attribuer à la nouvelle question les erreurs de l’ancienne. Les références retirées sont archivées sans supprimer leur historique et cessent de bloquer la file des rappels.
+
+## Chapitre offert et première révision
+
+La page publique /exemple-gratuit offre uniquement le chapitre UE9/reperes : cours complet, fiche et dix QCM issus de la banque relue. Le fichier public est construit avec une sélection fixe ; aucun paramètre ne peut étendre cette sélection. Les API de cours et de progression conservent leurs contrôles de compte et d’accès actif. Le test public ne crée aucun historique étudiant et ne déclenche aucun appel IA.
+
+La page privée /premiere-session propose cinq questions avec correction immédiate. Un compte sans accès actif retrouve cinq questions de ce même exemple UE9 ; un membre actif choisit parmi les vingt UE. Les membres actifs enregistrent les réponses avec les mécanismes existants de suivi et de rappels ; un échec partiel reste signalé. Les dates des rappels suivent la logique existante, sans promettre que toute erreur est due immédiatement. La prochaine étape ouvre la fiche du bon chapitre ou les rappels.
+
+Les nouvelles inscriptions accèdent à ce parcours, sauf si un paiement déjà choisi doit être ouvert. Le tableau de bord propose aussi le parcours aux comptes sans activité. Un repère local, séparé par compte, mémorise le choix de masquer ou de terminer cette introduction. Il ne modifie jamais les droits payants ni les résultats scolaires.

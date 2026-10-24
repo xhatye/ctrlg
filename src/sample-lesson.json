@@ -1,0 +1,394 @@
+{
+  "version": 1,
+  "module": "UE9",
+  "chapter": "reperes",
+  "title": "Premiers mécanismes comptables",
+  "intro": "Les repères essentiels pour commencer cette matière.",
+  "method": "Expliquez chaque notion avec vos propres mots, puis vérifiez votre compréhension dans les exercices.",
+  "sections": [
+    {
+      "id": "part-0",
+      "title": "Partie double",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Pour une écriture, le total des montants au débit doit égaler le total au crédit. Cela ne garantit pas à lui seul que les bons comptes sont utilisés."
+        }
+      ]
+    },
+    {
+      "id": "part-1",
+      "title": "Amortissement linéaire",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Avec une consommation constante, l’annuité d’une année complète est la base amortissable divisée par la durée. La base tient compte de la valeur résiduelle lorsqu’elle doit être retenue."
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": "Valeur nette comptable",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dans le cas simplifié sans dépréciation, VNC = valeur brute − amortissements cumulés. Si une dépréciation existe, elle doit aussi être prise en compte."
+        }
+      ]
+    },
+    {
+      "id": "part-3",
+      "title": "Vente à crédit",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Une vente à crédit crée une créance avant l’encaissement. Le résultat et la trésorerie ne suivent donc pas nécessairement le même calendrier."
+        }
+      ]
+    },
+    {
+      "id": "part-4",
+      "title": "Bilan",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Le bilan présente les actifs et les sources de financement à une date. Le compte de résultat décrit les produits et charges d’une période."
+        }
+      ]
+    },
+    {
+      "id": "part-5",
+      "title": "Résultat",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Dans un calcul simplifié, résultat = produits − charges. Un bénéfice n’est pas le solde bancaire, notamment en présence de crédits et d’investissements."
+        }
+      ]
+    },
+    {
+      "id": "part-6",
+      "title": "Encaissement client",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’encaissement d’une créance déjà enregistrée augmente la banque et diminue la créance ; il ne crée pas une seconde vente."
+        }
+      ]
+    },
+    {
+      "id": "part-7",
+      "title": "Charge et paiement",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Une charge décrit une consommation rattachée à une période ; un paiement décrit un mouvement de trésorerie. Un règlement peut porter sur une dette antérieure."
+        }
+      ]
+    },
+    {
+      "id": "part-8",
+      "title": "Construire le raisonnement dans cette matière",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "L’écriture comptable traduit une opération économique documentée. Repérez sa nature, sa date et les comptes concernés avant de déterminer les montants. La partie double garantit l’égalité entre débit et crédit, mais une écriture équilibrée peut néanmoins utiliser un compte ou une période incorrects. Les pièces, les journaux, le grand livre et la balance forment une chaîne de traçabilité. La vérification ne se réduit donc pas à l’équilibre arithmétique."
+        },
+        {
+          "type": "paragraph",
+          "text": "À la clôture, rattachez les opérations à l’exercice auquel elles se rapportent et contrôlez les évaluations. Distinguez une charge de son paiement, un produit de son encaissement et une immobilisation d’une dépense d’entretien. L’inventaire rapproche les informations comptables de la réalité et des pièces justificatives. Pour commenter une écriture, expliquez ce qu’elle modifie dans le bilan et le résultat ; ne déduisez pas un mouvement de trésorerie lorsqu’aucun règlement n’a lieu."
+        },
+        {
+          "type": "paragraph",
+          "text": "Pour ce chapitre, le raisonnement attendu suit cette démarche : Expliquez chaque notion avec vos propres mots, puis vérifiez votre compréhension dans les exercices."
+        }
+      ]
+    }
+  ],
+  "application": {
+    "title": "Une machine sur deux ans",
+    "context": "Une machine coûte 12 000 €. Elle est mise en service le premier jour de l’exercice et utilisée quatre ans. La consommation est constante, la valeur résiduelle est nulle et aucune dépréciation n’est constatée. On ignore la TVA et les financements.",
+    "steps": [
+      {
+        "question": "Calculez l’annuité linéaire d’un exercice complet.",
+        "answer": "Base 12 000 € / 4 ans = 3 000 € par exercice complet."
+      },
+      {
+        "question": "Calculez les amortissements cumulés après deux exercices complets.",
+        "answer": "2 × 3 000 = 6 000 €."
+      },
+      {
+        "question": "Calculez la VNC et distinguez-la d’un prix de vente.",
+        "answer": "VNC = 12 000 − 6 000 = 6 000 €. Cette valeur comptable n’est pas nécessairement la valeur de marché de la machine."
+      }
+    ]
+  },
+  "comparison": {
+    "caption": "Les repères du chapitre",
+    "headers": [
+      "Notion",
+      "Explication",
+      "Question de contrôle"
+    ],
+    "rows": [
+      [
+        "Partie double",
+        "Pour une écriture, le total des montants au débit doit égaler le total au crédit. Cela ne garantit pas à lui seul que les bons comptes sont utilisés.",
+        "Quelle égalité doit respecter une écriture ?"
+      ],
+      [
+        "Amortissement linéaire",
+        "Avec une consommation constante, l’annuité d’une année complète est la base amortissable divisée par la durée. La base tient compte de la valeur résiduelle lorsqu’elle doit être retenue.",
+        "Un équipement de 12 000 €, valeur résiduelle nulle, utilisé 4 ans : quelle annuité linéaire complète ?"
+      ],
+      [
+        "Valeur nette comptable",
+        "Dans le cas simplifié sans dépréciation, VNC = valeur brute − amortissements cumulés. Si une dépréciation existe, elle doit aussi être prise en compte.",
+        "Valeur brute 12 000 €, amortissements cumulés 6 000 €, sans dépréciation : quelle VNC ?"
+      ],
+      [
+        "Vente à crédit",
+        "Une vente à crédit crée une créance avant l’encaissement. Le résultat et la trésorerie ne suivent donc pas nécessairement le même calendrier.",
+        "Une vente à crédit signifie-t-elle que le client a déjà payé ?"
+      ],
+      [
+        "Bilan",
+        "Le bilan présente les actifs et les sources de financement à une date. Le compte de résultat décrit les produits et charges d’une période.",
+        "Quel document décrit principalement le patrimoine à une date ?"
+      ],
+      [
+        "Résultat",
+        "Dans un calcul simplifié, résultat = produits − charges. Un bénéfice n’est pas le solde bancaire, notamment en présence de crédits et d’investissements.",
+        "Produits 25 000 € et charges 21 000 € : quel résultat ?"
+      ],
+      [
+        "Encaissement client",
+        "L’encaissement d’une créance déjà enregistrée augmente la banque et diminue la créance ; il ne crée pas une seconde vente.",
+        "Un client règle une facture déjà comptabilisée : que devient la créance ?"
+      ],
+      [
+        "Charge et paiement",
+        "Une charge décrit une consommation rattachée à une période ; un paiement décrit un mouvement de trésorerie. Un règlement peut porter sur une dette antérieure.",
+        "Charge et paiement ont-ils nécessairement la même date ?"
+      ]
+    ]
+  },
+  "sheet": {
+    "title": "Fiche de révision · Premiers mécanismes comptables",
+    "essentials": [
+      {
+        "label": "Partie double",
+        "text": "Pour une écriture, le total des montants au débit doit égaler le total au crédit. Cela ne garantit pas à lui seul que les bons comptes sont utilisés."
+      },
+      {
+        "label": "Amortissement linéaire",
+        "text": "Avec une consommation constante, l’annuité d’une année complète est la base amortissable divisée par la durée. La base tient compte de la valeur résiduelle lorsqu’elle doit être retenue."
+      },
+      {
+        "label": "Valeur nette comptable",
+        "text": "Dans le cas simplifié sans dépréciation, VNC = valeur brute − amortissements cumulés. Si une dépréciation existe, elle doit aussi être prise en compte."
+      },
+      {
+        "label": "Vente à crédit",
+        "text": "Une vente à crédit crée une créance avant l’encaissement. Le résultat et la trésorerie ne suivent donc pas nécessairement le même calendrier."
+      },
+      {
+        "label": "Bilan",
+        "text": "Le bilan présente les actifs et les sources de financement à une date. Le compte de résultat décrit les produits et charges d’une période."
+      },
+      {
+        "label": "Résultat",
+        "text": "Dans un calcul simplifié, résultat = produits − charges. Un bénéfice n’est pas le solde bancaire, notamment en présence de crédits et d’investissements."
+      },
+      {
+        "label": "Encaissement client",
+        "text": "L’encaissement d’une créance déjà enregistrée augmente la banque et diminue la créance ; il ne crée pas une seconde vente."
+      },
+      {
+        "label": "Charge et paiement",
+        "text": "Une charge décrit une consommation rattachée à une période ; un paiement décrit un mouvement de trésorerie. Un règlement peut porter sur une dette antérieure."
+      }
+    ],
+    "method": [
+      "Expliquez chaque notion avec vos propres mots, puis vérifiez votre compréhension dans les exercices."
+    ],
+    "pitfalls": [
+      "Distinguez les hypothèses du cas des règles générales.",
+      "Justifiez chaque résultat."
+    ],
+    "example": {
+      "context": "Une machine coûte 12 000 €. Elle est mise en service le premier jour de l’exercice et utilisée quatre ans. La consommation est constante, la valeur résiduelle est nulle et aucune dépréciation n’est constatée. On ignore la TVA et les financements.",
+      "steps": [
+        {
+          "question": "Calculez l’annuité linéaire d’un exercice complet.",
+          "answer": "Base 12 000 € / 4 ans = 3 000 € par exercice complet."
+        },
+        {
+          "question": "Calculez les amortissements cumulés après deux exercices complets.",
+          "answer": "2 × 3 000 = 6 000 €."
+        },
+        {
+          "question": "Calculez la VNC et distinguez-la d’un prix de vente.",
+          "answer": "VNC = 12 000 − 6 000 = 6 000 €. Cette valeur comptable n’est pas nécessairement la valeur de marché de la machine."
+        }
+      ]
+    }
+  },
+  "sources": [
+    [
+      "Programmes officiels DCG et DSCG",
+      "https://www.enseignementsup-recherche.gouv.fr/fr/bo/2025/Hebdo32/MENS2523324A"
+    ],
+    [
+      "Programmes applicables à la session 2026",
+      "https://www.enseignementsup-recherche.gouv.fr/fr/bo/19/Hebdo26/ESRS1900135A.htm"
+    ],
+    [
+      "Plan comptable général — ANC",
+      "https://www.anc.gouv.fr/plan-comptable-general-0"
+    ]
+  ],
+  "programmeNote": null,
+  "questions": [
+    {
+      "id": "UE9:reperes:n48",
+      "q": "Le paiement d’une machine a lieu immédiatement, mais sa consommation est répartie régulièrement sur plusieurs exercices. Quel rôle joue l’amortissement ?",
+      "options": [
+        "Mesurer automatiquement le prix auquel elle pourrait être vendue",
+        "Répartir sa base amortissable selon cette consommation dans le temps",
+        "Rembourser chaque année le fournisseur initial",
+        "Reproduire chaque année le paiement intégral initial"
+      ],
+      "answer": 1,
+      "expl": "L’amortissement décrit une consommation d’actif, distincte du calendrier de paiement. Il ne fixe pas automatiquement une valeur de marché.",
+      "difficulte": "Mise en situation",
+      "chapter": "reperes"
+    },
+    {
+      "id": "UE9:reperes:n56",
+      "q": "Un lecteur veut connaître le montant des créances clients restant à une date de clôture. Quel document répond le plus directement à cette recherche ?",
+      "options": [
+        "Le seul compte de résultat annuel",
+        "Le seul total des ventes encaissées depuis la création",
+        "Le bilan à cette date",
+        "Le plan d’amortissement d’une machine"
+      ],
+      "answer": 2,
+      "expl": "La créance restant à recevoir est un élément de situation patrimoniale à une date. Le total des produits d’une période ne donne pas cet encours.",
+      "difficulte": "Mise en situation",
+      "chapter": "reperes"
+    },
+    {
+      "id": "UE9:reperes:n52",
+      "q": "Une vente est facturée à crédit et le client paiera le mois suivant. Quel élément apparaît avant l’encaissement ?",
+      "options": [
+        "Un produit obligatoirement différé jusqu’à l’encaissement",
+        "Une dette envers le client pour toute la facture",
+        "Une disponibilité bancaire du même montant",
+        "Une créance client liée à la vente"
+      ],
+      "answer": 3,
+      "expl": "Une vente à crédit fait naître une créance à encaisser ultérieurement. Il faut distinguer reconnaissance de la vente et réception des fonds.",
+      "difficulte": "Mise en situation",
+      "chapter": "reperes"
+    },
+    {
+      "id": "UE9:reperes:n63",
+      "q": "Une facture de prestation a été correctement rattachée à l’exercice précédent. Elle est réglée pendant l’exercice courant. Quel traitement économique décrit ce règlement ?",
+      "options": [
+        "Une augmentation de la créance client",
+        "L’extinction d’une dette antérieure sans nouvelle consommation de prestation",
+        "Un produit du nouvel exercice",
+        "Une seconde charge de prestation identique"
+      ],
+      "answer": 1,
+      "expl": "La consommation appartient à l’exercice antérieur. Son paiement ultérieur affecte la dette et la trésorerie, pas une nouvelle charge de même nature.",
+      "difficulte": "Mise en situation",
+      "chapter": "reperes"
+    },
+    {
+      "id": "UE9:reperes:n53",
+      "q": "Une entreprise conclut que toute hausse du chiffre d’affaires a déjà augmenté sa banque du même montant. Quelle information lui manque-t-il notamment ?",
+      "options": [
+        "Le seul solde bancaire au début de l’exercice",
+        "Les conditions et dates de règlement des clients",
+        "Le seul montant total TTC facturé",
+        "Le seul bénéfice d’exploitation"
+      ],
+      "answer": 1,
+      "expl": "Des ventes à crédit peuvent accroître les créances plutôt que les disponibilités. Le calendrier de paiement est indispensable au lien avec la trésorerie.",
+      "difficulte": "Analyse",
+      "chapter": "reperes"
+    },
+    {
+      "id": "UE9:reperes:n47",
+      "q": "Un exercice impose de retenir une valeur résiduelle de 2 000 € pour un actif acquis 12 000 €. L’étudiant amortit les 12 000 €. Quelle correction de base faut-il faire ?",
+      "options": [
+        "Conserver toujours le coût brut, quelle que soit l’hypothèse",
+        "Ajouter la valeur résiduelle au coût pour obtenir une base de 14 000 €",
+        "Retenir le coût diminué de la valeur résiduelle, soit une base de 10 000 €",
+        "Amortir uniquement la valeur résiduelle de 2 000 €"
+      ],
+      "answer": 2,
+      "expl": "Lorsque la valeur résiduelle doit être retenue, elle se déduit du coût pour déterminer la base amortissable. La durée s’applique à cette base.",
+      "difficulte": "Analyse",
+      "chapter": "reperes"
+    },
+    {
+      "id": "UE9:reperes:n61",
+      "q": "Une facture client déjà comptabilisée est réglée seulement pour moitié. Sans autre opération, quelle situation reste après le paiement ?",
+      "options": [
+        "Une créance nulle parce qu’un premier paiement est intervenu",
+        "Une créance résiduelle pour la moitié non réglée",
+        "Une nouvelle vente égale à la moitié encaissée",
+        "La créance initiale conservée intégralement et un produit pour le paiement"
+      ],
+      "answer": 1,
+      "expl": "Le règlement partiel réduit la créance à concurrence des fonds reçus. Le solde demeure à encaisser sans créer de nouvelle vente.",
+      "difficulte": "Mise en situation",
+      "chapter": "reperes"
+    },
+    {
+      "id": "UE9:reperes:n51",
+      "q": "Une machine a une VNC de 6 000 €. Le dirigeant affirme qu’il pourra forcément la vendre à ce prix. Que faut-il lui expliquer ?",
+      "options": [
+        "La machine doit être cédée pour la valeur brute initiale",
+        "Le prix de marché est nécessairement nul dès qu’un amortissement existe",
+        "La VNC correspond toujours au prix d’une offre d’achat ferme",
+        "La valeur comptable n’est pas une garantie de prix de marché"
+      ],
+      "answer": 3,
+      "expl": "La VNC découle du coût et des corrections comptables. Le prix négociable dépend du marché et de l’état du bien, sans égalité automatique.",
+      "difficulte": "Analyse",
+      "chapter": "reperes"
+    },
+    {
+      "id": "UE9:reperes:n55",
+      "q": "Quelle distinction sépare le bilan du compte de résultat ?",
+      "options": [
+        "Les deux documents décrivent uniquement des situations à une date",
+        "Le bilan décrit une situation à une date, le compte de résultat les produits et charges d’une période",
+        "Le compte de résultat décrit les produits encaissés et charges payées exclusivement",
+        "Le bilan décrit les charges et produits d’une période, le compte de résultat les actifs à une date"
+      ],
+      "answer": 1,
+      "expl": "Le bilan est une photographie des actifs et financements. Le compte de résultat mesure les produits et charges d’un intervalle donné.",
+      "difficulte": "Connaissances",
+      "chapter": "reperes"
+    },
+    {
+      "id": "UE9:reperes:n64",
+      "q": "Pour établir les charges d’un mois, un étudiant reprend uniquement les sorties du compte bancaire. Quel risque de méthode présente ce choix ?",
+      "options": [
+        "Négliger uniquement les charges non monétaires, sans autre décalage possible",
+        "Neutraliser automatiquement les règlements de factures des mois précédents",
+        "Reconnaître exactement les charges du mois dès que les paiements sont justifiés",
+        "Inclure des règlements de dettes antérieures et omettre des consommations non encore payées"
+      ],
+      "answer": 3,
+      "expl": "Les sorties bancaires suivent les paiements. Le rattachement des charges exige d’identifier les consommations de la période, payées ou non.",
+      "difficulte": "Analyse",
+      "chapter": "reperes"
+    }
+  ]
+}

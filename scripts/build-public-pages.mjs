@@ -15,7 +15,8 @@ const manifest=JSON.parse(await readFile(resolve(dist,'.vite/manifest.json'),'ut
 const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function cssFor(entry,seen=new Set()){if(seen.has(entry)||!manifest[entry])return [];seen.add(entry);return [...(manifest[entry].css||[]),...(manifest[entry].imports||[]).flatMap(key=>cssFor(key,seen))];}
 const publicEntry=Object.entries(manifest).find(([,item])=>item.name==='PublicStudySite')?.[0];
-const allCss=[...new Set([...cssFor('index.html'),...cssFor(publicEntry)])];
+const sampleEntry=Object.entries(manifest).find(([,item])=>item.name==='SamplePage')?.[0];
+const allCss=[...new Set([...cssFor('index.html'),...cssFor(publicEntry),...cssFor(sampleEntry)])];
 const extraStyles=allCss.filter(file=>!template.includes('/'+file)).map(file=>`<link rel="stylesheet" crossorigin href="/${file}">`).join('\n');
 function htmlFor(path,body=''){
  const meta=seoForPath(path);
@@ -34,6 +35,7 @@ function htmlFor(path,body=''){
 const server=await createServer({root:process.cwd(),mode:'production',server:{middlewareMode:true},optimizeDeps:{noDiscovery:true,include:[]},appType:'custom'});
 let rewrites=[];
 try{
+ const {default:SamplePage}=await server.ssrLoadModule('/src/SamplePage.jsx');
  const {default:PublicStudySite}=await server.ssrLoadModule('/src/PublicStudySite.jsx');
  const {Marketing,OfferPage,PublicInfo,StudentReviews}=await server.ssrLoadModule('/src/modern.jsx');
  const {LegalScreen}=await server.ssrLoadModule('/src/App.jsx');
@@ -41,7 +43,8 @@ try{
  for(const page of PUBLIC_PAGES){const file=page.path.slice(1).replaceAll('/','__')+'.html';await writeFile(resolve(dist,'public-pages',file),htmlFor(page.path,renderToString(React.createElement(PublicStudySite,{page}))));rewrites.push({source:page.path,destination:'/public-pages/'+file});}
  for(const path of Object.keys(CORE_PUBLIC_META)){
   let element;
-  if(path==='/')element=React.createElement(Marketing,{ues:curriculumFor('2027'),onAuth:noop,onNav:noop});
+  if(path==='/exemple-gratuit')element=React.createElement(SamplePage);
+  else if(path==='/')element=React.createElement(Marketing,{ues:curriculumFor('2027'),onAuth:noop,onNav:noop});
   else if(path==='/tarifs')element=React.createElement(OfferPage,{user:null,onCheckout:noop,onNav:noop});
   else if(path==='/cgu'||path==='/confidentialite')element=React.createElement(LegalScreen,{type:path==='/cgu'?'cgu':'confidentialite',onBack:noop});
   else if(path==='/avis')element=React.createElement(StudentReviews,{load:async()=>[],onNav:noop});
