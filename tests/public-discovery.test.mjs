@@ -6,7 +6,7 @@ import { INDEXABLE_PATHS,APP_PATHS,seoForPath,structuredData } from '../lib/publ
 import { publicAnalyticsEvent } from '../lib/public-analytics.mjs';
 test('public pages cover 20 distinct subjects and original guides without changing chapter access',async()=>{
  const bank=JSON.parse(await readFile(new URL('../src/catalogue.json',import.meta.url),'utf8'));
- assert.equal(PUBLIC_SUBJECTS.length,20);assert.equal(PUBLIC_GUIDES.length,6);assert.equal(new Set(PUBLIC_PAGES.map(p=>p.path)).size,PUBLIC_PAGES.length);
+ assert.equal(PUBLIC_SUBJECTS.length,20);assert.equal(PUBLIC_GUIDES.length,10);assert.equal(new Set(PUBLIC_PAGES.map(p=>p.path)).size,PUBLIC_PAGES.length);
  for(const subject of PUBLIC_SUBJECTS){assert.ok(bank.modules[subject.id]);assert.ok(subject.intro.length>200);assert.equal(subject.practice.length,3);assert.equal(subject.pitfalls.length,3);assert.equal(subject.approach.steps.length,4);assert.equal(findPublicPage(subject.path+'/')?.id,subject.id);for(const id of subject.sources)assert.ok(OFFICIAL_SOURCES.some(s=>s.id===id));}
  for(const guide of PUBLIC_GUIDES){assert.equal(guide.sections.length,5);assert.ok(guide.sections.every(([title,text])=>title.length>10&&text.length>200));for(const id of guide.ues)assert.ok(PUBLIC_SUBJECTS.some(s=>s.id===id));}
 });

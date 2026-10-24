@@ -26,7 +26,7 @@ function htmlFor(path,body=''){
   .replace(/<meta name="robots"[^>]*>/,`<meta name="robots" content="${meta.index?'index, follow':'noindex, follow'}">`)
   .replace(/<link rel="canonical"[^>]*>/,`<link rel="canonical" href="${escape(meta.canonical)}">`)
   .replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g,'');
- for(const [key,value]of Object.entries({'og:title':meta.title,'og:description':meta.description,'og:url':meta.canonical,'og:type':meta.page?.kind==='guide'?'article':'website','twitter:title':meta.title,'twitter:description':meta.description})){
+ for(const [key,value]of Object.entries({'og:title':meta.title,'og:description':meta.description,'og:url':meta.canonical,'og:type':meta.page?.kind==='guide'?'article':'website','og:image':meta.image,'twitter:image':meta.image,'og:image:alt':meta.title,'twitter:image:alt':meta.title,'twitter:title':meta.title,'twitter:description':meta.description})){
   const attr=key.startsWith('og:')?'property':'name';html=html.replace(new RegExp(`<meta ${attr}="${key}"[^>]*>`),`<meta ${attr}="${key}" content="${escape(value)}">`);
  }
  html=html.replace('</head>',extraStyles+'\n'+structuredData(path).map(data=>`<script type="application/ld+json">${JSON.stringify(data).replace(/</g,'\\u003c')}</script>`).join('\n')+'\n</head>');
@@ -35,6 +35,7 @@ function htmlFor(path,body=''){
 const server=await createServer({root:process.cwd(),mode:'production',server:{middlewareMode:true},optimizeDeps:{noDiscovery:true,include:[]},appType:'custom'});
 let rewrites=[];
 try{
+ const {default:PublicPresentation}=await server.ssrLoadModule('/src/PublicPresentation.jsx');
  const {default:SamplePage}=await server.ssrLoadModule('/src/SamplePage.jsx');
  const {default:PublicStudySite}=await server.ssrLoadModule('/src/PublicStudySite.jsx');
  const {Marketing,OfferPage,PublicInfo,StudentReviews}=await server.ssrLoadModule('/src/modern.jsx');
@@ -44,7 +45,7 @@ try{
  for(const path of Object.keys(CORE_PUBLIC_META)){
   let element;
   if(path==='/exemple-gratuit')element=React.createElement(SamplePage);
-  else if(path==='/')element=React.createElement(Marketing,{ues:curriculumFor('2027'),onAuth:noop,onNav:noop});
+  else if(path==='/'||path==='/fonctionnalites')element=React.createElement(PublicPresentation,{path});
   else if(path==='/tarifs')element=React.createElement(OfferPage,{user:null,onCheckout:noop,onNav:noop});
   else if(path==='/cgu'||path==='/confidentialite')element=React.createElement(LegalScreen,{type:path==='/cgu'?'cgu':'confidentialite',onBack:noop});
   else if(path==='/avis')element=React.createElement(StudentReviews,{load:async()=>[],onNav:noop});
@@ -63,4 +64,4 @@ const config=JSON.parse(await readFile(resolve(process.cwd(),'vercel.json'),'utf
 config.rewrites=[...rewrites,...APP_PATHS.map(source=>({source,destination:'/app.html'}))];
 await writeFile(resolve(process.cwd(),'vercel.json'),JSON.stringify(config,null,2)+'\n');
 await writeFile(resolve(dist,'public-page-manifest.json'),JSON.stringify({origin:PUBLIC_ORIGIN,pages:INDEXABLE_PATHS.map(path=>({path,...seoForPath(path),page:undefined})),rewrites},null,2));
-console.log(JSON.stringify({publicPages:INDEXABLE_PATHS.length,subjects:20,guides:6,initialHtml:true,privateShellNoindex:true,sitemap:true}));
+console.log(JSON.stringify({publicPages:INDEXABLE_PATHS.length,subjects:20,guides:PUBLIC_PAGES.filter(p=>p.kind==='guide').length,initialHtml:true,privateShellNoindex:true,sitemap:true}));

@@ -9,6 +9,7 @@ import './fonts.css';
 import './public-landing.css';
 import './refined-ui.css';
 import './starter.css';
+import './growth.css';
 import { findPublicPage } from '../lib/public-study-pages.mjs';
 import { applyPageMetadata } from '../lib/public-seo.mjs';
 import { Analytics } from '@vercel/analytics/react';
@@ -19,6 +20,7 @@ const publicPage = !preview && findPublicPage(window.location.pathname);
 if (!preview) applyPageMetadata(window.location.pathname);
 async function loadPage() {
   if (preview) return import('./DesignPreview.jsx');
+  if (['/','/fonctionnalites'].includes(window.location.pathname)) return import('./PublicPresentation.jsx');
   if (window.location.pathname==='/exemple-gratuit') return import('./SamplePage.jsx');
   if (publicPage) {
     const {default:Page} = await import('./PublicStudySite.jsx');
