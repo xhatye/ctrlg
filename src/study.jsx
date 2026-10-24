@@ -24,7 +24,7 @@ function SourceLinks({ sources = [] }) {
         <strong>Références pour approfondir</strong>
         {sources.map(([title, url]) => (
           <a key={url} href={url} target="_blank" rel="noreferrer">
-            {title} ↗
+            {title}
           </a>
         ))}
       </aside>

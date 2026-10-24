@@ -23,7 +23,6 @@ const paths = {
   chart: "M4 4v16h16 M8 16v-4 M12 16V8 M16 16V5",
   calendar: "M4 6h16v14H4z M4 10h16 M8 3v5 M16 3v5",
   check: "m5 12 4 4L19 6",
-  arrow: "M4 12h16 m-6-6 6 6-6 6",
   cards: "M5 7h14v14H5z M8 3h13v14",
   user: "M8 7a4 4 0 1 0 8 0 4 4 0 0 0-8 0 M4 21v-2a8 8 0 0 1 16 0v2",
   search: "M10 3a7 7 0 1 0 0 14 7 7 0 0 0 0-14 m5 12 6 6",
@@ -121,7 +120,7 @@ function PublicNav({ onNav, onAuth }) {
             Connexion
           </button>
           <Button onClick={() => (onAuth ? onAuth("signup") : onNav("auth", {authMode:"signup"}))}>
-            Créer mon compte <Icon name="arrow" size={16} />
+            Créer mon compte
           </Button>
         </nav>
       </div>
@@ -205,7 +204,7 @@ function FAQ() {
         </h2>
         <p>Un doute ? Nous sommes là pour vous aider.</p>
         <a href="mailto:contact.simdcg@gmail.com">
-          Contacter le support <Icon name="arrow" size={16} />
+          Contacter le support
         </a>
       </div>
       <div>
@@ -247,9 +246,9 @@ function PreviewCard() {
           <div>
             <small>DCG · UE9</small>
             <strong>Les amortissements</strong>
-            <span>Comprendre → s’entraîner → retenir</span>
+            <span>Comprendre · s’entraîner · retenir</span>
           </div>
-          <span className="round-arrow">↗</span>
+
         </div>
         <div className="preview-mini-grid">
           <div>
@@ -347,7 +346,7 @@ export function LegacyProductShell({ children, screen, user, onNav, onLogout, va
           </div>
           {!user.isPro && (
             <Button onClick={() => onNav("pricing")}>
-              Découvrir Pro <Icon name="arrow" size={16} />
+              Découvrir Pro
             </Button>
           )}
           <button className="logout" onClick={()=>onNav('feedback')}>Partager mon retour</button>
@@ -430,7 +429,7 @@ function UECard({ ue, mastery, onClick, reveal=false, order=0 }) {
           {ue.id.replace("DSCG", "UE")}
           <small>{ue.level}</small>
         </span>
-        <span className="ue-arrow">↗</span>
+
       </div>
       {reveal?<PlayfulHeading as="h3" text={ue.label}/>:<h3>{ue.label}</h3>}
       <p>{ue.desc}</p>
@@ -488,7 +487,7 @@ export function LegacyStudentHome({ user, ues, onNav, onSelect }) {
           <div>
             <Button onClick={() => onSelect(next)}>
               {last ? "Reprendre ma matière" : "Commencer ma révision"}
-              <Icon name="arrow" />
+
             </Button>
             <span>
               <Icon name="clock" size={16} /> À votre rythme
@@ -523,8 +522,8 @@ export function LegacyStudentHome({ user, ues, onNav, onSelect }) {
               <span>3</span>Vos cartes difficiles à revoir
             </li>
           </ol>
-          <button className="text-button" onClick={() => onNav("review_today")}>À revoir aujourd’hui <Icon name="arrow" size={16} /></button>
-          <button className="text-button" onClick={() => onNav("exams")}>Travailler un sujet d’examen <Icon name="arrow" size={16} /></button>
+          <button className="text-button" onClick={() => onNav("review_today")}>À revoir aujourd’hui </button>
+          <button className="text-button" onClick={() => onNav("exams")}>Travailler un sujet d’examen </button>
         </section>
       </div>
       <ExamCountdown defaultLevel={next.level} />
@@ -609,7 +608,7 @@ export function LegacyStudentHome({ user, ues, onNav, onSelect }) {
           secondary
           onClick={() => onNav(user.isPro ? "tutor" : "pricing")}
         >
-          Ouvrir le tuteur <Icon name="arrow" size={16} />
+          Ouvrir le tuteur
         </Button>
       </section>
     </div>
@@ -739,10 +738,7 @@ export function CourseHome({ ue, user, onNav, learning }) {
             <p>{desc}</p>
             <span className="tool-link">
               {user.isPro ? "Commencer" : "Accéder avec Pro"}
-              <Icon
-                name={user.isPro ? "arrow" : "lock"}
-                size={18}
-              />
+              {!user.isPro && <Icon name="lock" size={18} />}
             </span>
           </button>
         ))}
@@ -781,7 +777,7 @@ export function OfferPage({ user, onCheckout, onNav }) {
             <p className="price-detail">{plan.terms}</p>
             <ul>{plan.benefits.map(item=><li key={item}><Icon name="check" size={18}/><span>{item}</span></li>)}</ul>
             <Button secondary={plan.id==='subscription'} disabled={!!pendingPlan} aria-busy={pendingPlan===plan.id} onClick={()=>user?.isPro&&plan.id==='subscription'?onNav('account'):checkout(plan.id)}>
-              {pendingPlan===plan.id?'Ouverture du paiement…':user?.isPro&&plan.id==='subscription'?'Voir mon accès':plan.button}<Icon name="arrow" size={18}/>
+              {pendingPlan===plan.id?'Ouverture du paiement…':user?.isPro&&plan.id==='subscription'?'Voir mon accès':plan.button}
             </Button>
           </article>)}
         </div>
@@ -796,7 +792,7 @@ export function OfferPage({ user, onCheckout, onNav }) {
           <Icon name="lock" />
           <span>Vous avez déjà payé ?</span>
           <button onClick={() => onNav("account")}>
-            Retrouver mon accès →
+            Retrouver mon accès
           </button>
         </div>
       </main>
@@ -883,7 +879,7 @@ export function AccountPage({ user, onNav, onCheckout, request }) {
           </p>
           <Button onClick={() => onNav(user.isPro ? "library" : "pricing")}>
             {user.isPro ? "Reprendre mes révisions" : "Voir les offres"}
-            <Icon name="arrow" />
+
           </Button>
           {user.proType === "subscription" && (
             <div className="cancel-sub">
@@ -916,7 +912,7 @@ export function AccountPage({ user, onNav, onCheckout, request }) {
           </p>
           <Button secondary disabled={busy} onClick={() => recover()}>
             {busy ? "Vérification en cours…" : "Retrouver mon achat"}
-            <Icon name="arrow" />
+
           </Button>
           {!auth.currentUser?.emailVerified && (
             <button
@@ -1099,7 +1095,7 @@ export function TutorPage({ ues, call, user, onNav }) {
                   onClick={() => send(x)}
                 >
                   {x}
-                  <Icon name="arrow" size={16} />
+
                 </button>
               ))}
             </div>
@@ -1112,7 +1108,7 @@ export function TutorPage({ ues, call, user, onNav }) {
                   {m.role === "user" ? "Vous" : "SIMDCG · Tuteur IA"}
                 </strong>
                 <p>{m.content}</p>
-                {!!m.references?.length&&<div className="source-chips" aria-label="Chapitres associés">{m.references.map(ref=><a key={ref.url} href={ref.url}>{ref.title} ↗</a>)}</div>}
+                {!!m.references?.length&&<div className="source-chips" aria-label="Chapitres associés">{m.references.map(ref=><a key={ref.url} href={ref.url}>{ref.title} </a>)}</div>}
               </article>
             ))}
             {busy && <p>Le tuteur prépare son explication…</p>}
@@ -1142,7 +1138,7 @@ export function TutorPage({ ues, call, user, onNav }) {
             disabled={busy || !input.trim() || available !== true}
             type="submit"
           >
-            <Icon name="arrow" />
+            Envoyer
           </Button>
         </form>
         <p className="helper">
@@ -1193,7 +1189,7 @@ export function LearningProgress({ user, ues, onNav, learning={},learningError,o
           <h2>Votre premier résultat commence ici.</h2>
           <p>Terminez un QCM pour voir votre progression par matière.</p>
           <Button onClick={() => onNav("library")}>
-            Choisir une matière <Icon name="arrow" />
+            Choisir une matière
           </Button>
         </section>
       ) : (
@@ -1280,7 +1276,7 @@ export function PublicInfo({ page, onNav, onAuth, ues }) {
               disponibles. Les chapitres couvrent une partie du programme.
             </p>
             <Button onClick={() => onAuth("signup")}>
-              Créer mon espace <Icon name="arrow" />
+              Créer mon espace
             </Button>
           </>
         ) : page === "features" ? (
@@ -1307,7 +1303,7 @@ export function PublicInfo({ page, onNav, onAuth, ues }) {
               contact.simdcg@gmail.com
             </a>
             <button className="text-button" onClick={() => onNav("account")}>
-              J’ai payé : vérifier mon accès →
+              J’ai payé : vérifier mon accès
             </button>
           </section>
         ) : (

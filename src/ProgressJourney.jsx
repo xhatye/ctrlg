@@ -22,7 +22,7 @@ export default function ProgressJourney({ues,learning={},onOpen}){
    <span className="eyebrow">{ue.id} · {status.done}/4 étapes</span><h3>{c.title}</h3>
    <ul>{labels.map((label,i)=><li className={status.steps[i]?'step-done':''} key={label}><span aria-hidden="true">{status.steps[i]?'✓':'○'}</span><button onClick={()=>onOpen?.(ue,c.id,screens[i])}>{label}</button></li>)}</ul>
    <p className="helper">QCM : {c.progress.quizAttempts||0} série(s){c.progress.quizAttempts?' · meilleur score '+c.progress.quizBest+' %':''}. Cartes révisées : {c.progress.cardsReviewed||0}.</p>
-   <button className="btn btn-secondary" onClick={()=>onOpen?.(ue,c.id,screens[next<0?1:next])}>{status.done===4?'Entretenir les acquis':'Continuer ce chapitre'} <span aria-hidden="true">↗</span></button>
+   <button className="btn btn-secondary" onClick={()=>onOpen?.(ue,c.id,screens[next<0?1:next])}>{status.done===4?'Entretenir les acquis':'Continuer ce chapitre'} </button>
   </article>})}</div>
   {!shown.length&&<p className="empty-state">Aucun chapitre dans cet état. Changez le filtre ou commencez une étape.</p>}
  </section>;

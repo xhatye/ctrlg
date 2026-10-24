@@ -266,10 +266,10 @@ function ToastContainer() {
 
 // ── ONBOARDING ────────────────────────────────────────────────────────────────
 const ONBOARDING_STEPS = [
-  { icon: "🎓", title: "Mode Diplôme", desc: "Choisissez une matière DCG ou DSCG et lancez un QCM, des flashcards ou un cas pratique, disponibles sans génération IA.", cta: "Suivant →" },
-  { icon: "◈", title: "Vos fiches de révision", desc: "Chaque matière dispose d'un cours original avec exemples, méthodes et pièges fréquents, accessible avec Pro.", cta: "Suivant →" },
-  { icon: "💼", title: "Préparer l’oral par écrit", desc: "Entraînez-vous à structurer une réponse, puis comparez-la aux éléments attendus. Cet entraînement autonome ne dépend pas du tuteur IA.", cta: "Suivant →" },
-  { icon: "✦", title: "Pro pour aller plus loin", desc: `Débloquez les 20 matières, cours par chapitre et QCM expliqués, cas avec corrigés, reprise des cartes difficiles et planning sans IA pour ${PRO_PRICE}/mois. Résiliation en 1 clic.`, cta: "Commencer →" },
+  { icon: "🎓", title: "Mode Diplôme", desc: "Choisissez une matière DCG ou DSCG et lancez un QCM, des flashcards ou un cas pratique, disponibles sans génération IA.", cta: "Suivant" },
+  { icon: "◈", title: "Vos fiches de révision", desc: "Chaque matière dispose d'un cours original avec exemples, méthodes et pièges fréquents, accessible avec Pro.", cta: "Suivant" },
+  { icon: "💼", title: "Préparer l’oral par écrit", desc: "Entraînez-vous à structurer une réponse, puis comparez-la aux éléments attendus. Cet entraînement autonome ne dépend pas du tuteur IA.", cta: "Suivant" },
+  { icon: "✦", title: "Pro pour aller plus loin", desc: `Débloquez les 20 matières, cours par chapitre et QCM expliqués, cas avec corrigés, reprise des cartes difficiles et planning sans IA pour ${PRO_PRICE}/mois. Résiliation en 1 clic.`, cta: "Commencer" },
 ];
 
 function OnboardingModal({ onClose, onUpgrade }) {
@@ -522,7 +522,7 @@ function Auth({ mode, setMode, onDone, onBack, onForgot }) {
         <FInput label="Mot de passe" value={pass} set={setPass} ph="••••••••" type="password" />
         {err && <p style={{ fontSize: 12, color: "var(--danger)" }}>{err}</p>}
         <button style={{ ...S.ctag, width: "100%", opacity: loading ? .6 : 1, marginTop: 4 }} onClick={submit} disabled={loading}>
-          {loading ? <Spinner /> : mode === "signup" ? "Créer mon compte →" : "Se connecter →"}
+          {loading ? <Spinner /> : mode === "signup" ? "Créer mon compte" : "Se connecter"}
         </button>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <p style={{ fontSize: 12, color: "var(--muted)" }}>
@@ -624,7 +624,7 @@ function QCMSession({ ue, user, onDone, onBack }) {
               })}
             </div>
             {sel !== null && <div className="qcm-explanation" role="status" style={{ background: "var(--surface)", border: "1px solid var(--line)", padding: "12px 16px", marginBottom: 14 }}><strong>{sel===q.answer?"Bonne réponse !":"Une notion à revoir."}</strong><p style={{ fontSize: 10, color: "var(--muted)", margin: "0 0 4px", letterSpacing: ".1em" }}>EXPLICATION</p><p style={{ fontSize: 13, color: "var(--ink)", margin: 0, lineHeight: 1.6 }}>{q.expl}</p>{q.optionExplanations&&<details className="qcm-alternatives"><summary>Pourquoi les autres choix ne conviennent pas</summary><ul>{q.options.map((o,i)=>i!==q.answer&&<li key={o}><strong>{o}</strong> {q.optionExplanations[i]}</li>)}</ul></details>}</div>}
-            {sel !== null && <button disabled={finishing} style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={next}>{finishing?'Enregistrement…':qi + 1 >= questions.length ? "Voir les résultats →" : "Question suivante →"}</button>}
+            {sel !== null && <button disabled={finishing} style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={next}>{finishing?'Enregistrement…':qi + 1 >= questions.length ? "Voir les résultats" : "Question suivante"}</button>}
           </div>
         )}
       </div>
@@ -690,7 +690,7 @@ function FlashcardsSession({ ue, user, onBack, onUpgrade, onLearning }) {
           <div style={{ display: "flex", gap: 10 }}>
             {reviewIdx > 0 && <button style={{ ...S.ctagh, flex: 1 }} onClick={() => { setReviewFlipped(false); setReviewIdx(i => i - 1); }}>← Précédente</button>}
             {reviewIdx < difficult.length - 1
-              ? <button style={{ ...S.ctag, flex: 1 }} onClick={() => { setReviewFlipped(false); setReviewIdx(i => i + 1); }}>Suivante →</button>
+              ? <button style={{ ...S.ctag, flex: 1 }} onClick={() => { setReviewFlipped(false); setReviewIdx(i => i + 1); }}>Suivante</button>
               : <button style={{ ...S.ctag, flex: 1 }} onClick={onBack}>Terminer ✓</button>
             }
           </div>
@@ -714,13 +714,13 @@ function FlashcardsSession({ ue, user, onBack, onUpgrade, onLearning }) {
           {difficult.length > 0 && (
             isPro ? (
               <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={() => { setReviewMode(true); setReviewIdx(0); }}>
-                Réviser les {difficult.length} cartes difficiles →
+                Réviser les {difficult.length} cartes difficiles
               </button>
             ) : (
               <div style={{ background: "rgba(226,201,126,.04)", border: "1px solid rgba(226,201,126,.2)", padding: "16px 20px", width: "100%" }}>
                 <p style={{ fontSize: 13, color: "var(--ink)", margin: "0 0 8px", fontWeight: 700 }}>✦ Cartes difficiles · Pro</p>
                 <p style={{ fontSize: 12, color: "var(--muted)", margin: "0 0 12px" }}>Passez Pro pour revoir automatiquement vos {difficult.length} cartes difficiles et consolider votre mémoire.</p>
-                <button style={{ ...S.ctag, width: "100%", padding: 10, fontSize: 12 }} onClick={onUpgrade}>Passer Pro · {PRO_PRICE}/mois →</button>
+                <button style={{ ...S.ctag, width: "100%", padding: 10, fontSize: 12 }} onClick={onUpgrade}>Passer Pro · {PRO_PRICE}/mois</button>
               </div>
             )
           )}
@@ -757,7 +757,7 @@ function FlashcardsSession({ ue, user, onBack, onUpgrade, onLearning }) {
                 ) : (
                   <div style={{ display: "flex", gap: 10 }}>
                     <button style={{ ...S.ctagh, flex: 1 }} onClick={prev}>← Précédente</button>
-                    <button style={{ ...S.ctag, flex: 1 }} onClick={next}>Suivante →</button>
+                    <button style={{ ...S.ctag, flex: 1 }} onClick={next}>Suivante</button>
                   </div>
                 )}
                 {isPro && difficult.length > 0 && <p style={{ fontSize: 11, color: "var(--danger)", textAlign: "center" }}>{difficult.length} carte{difficult.length > 1 ? "s" : ""} marquée{difficult.length > 1 ? "s" : ""} difficile{difficult.length > 1 ? "s" : ""}</p>}
@@ -796,7 +796,7 @@ function ResultsInterview({ data, onNew, onDash }) {
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, width: "100%" }}>
           <div style={S.ec}><p style={{ ...S.et, color: "var(--success)" }}>✦ POINTS FORTS</p>{ev.points_forts?.map((p, i) => <p key={i} style={S.ei}>· {p}</p>)}</div>
-          <div style={S.ec}><p style={{ ...S.et, color: "var(--gold-text)" }}>↗ À AMÉLIORER</p>{ev.axes_amelioration?.map((a, i) => <p key={i} style={S.ei}>· {a}</p>)}</div>
+          <div style={S.ec}><p style={{ ...S.et, color: "var(--gold-text)" }}> À AMÉLIORER</p>{ev.axes_amelioration?.map((a, i) => <p key={i} style={S.ei}>· {a}</p>)}</div>
         </div>
         <div style={{ display: "flex", gap: 10, width: "100%" }}>
           <button style={{ ...S.ctagh, flex: 1, fontSize: 12 }} onClick={() => { navigator.clipboard.writeText(transcript?.map(m => `[${m.role === "user" ? "VOUS" : "RECRUTEUR"}]\n${m.content}`).join("\n\n---\n\n") || "").then(() => { setCopied(true); setTimeout(() => setCopied(false), 2000); }); }}>
@@ -934,7 +934,7 @@ function Paywall({ onUpgrade, onBack }) {
           <div style={{ display: "flex", flexDirection: "column", gap: 7, margin: "14px 0 20px" }}>
             {["13 matières DCG + 7 matières DSCG", "Cas pratiques avec corrigés à comparer soi-même", "Flashcards enregistrées et reprise des cartes difficiles", "Planning de révision sans IA", "Préparer l’oral par écrit autonome et tuteur IA limité", "Historique complet & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "var(--ink)", margin: 0 }}>✓ {f}</p>)}
           </div>
-          <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={onUpgrade}>Passer à Pro →</button>
+          <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={onUpgrade}>Passer à Pro</button>
         </div>
         <button style={S.back} onClick={onBack}>← Retour</button>
       </div>
@@ -991,7 +991,7 @@ function ForgotPasswordScreen({ onBack }) {
             <p style={{ fontSize: 13, color: "var(--muted)", lineHeight: 1.7, margin: 0 }}>
               Un lien de réinitialisation a été envoyé à <strong style={{ color: "var(--ink)" }}>{email}</strong>. Vérifiez vos spams si vous ne le voyez pas.
             </p>
-            <button style={{ ...S.ctag, marginTop: 8 }} onClick={onBack}>Retour à la connexion →</button>
+            <button style={{ ...S.ctag, marginTop: 8 }} onClick={onBack}>Retour à la connexion</button>
           </div>
         ) : (
           <>
@@ -1000,7 +1000,7 @@ function ForgotPasswordScreen({ onBack }) {
             <FInput label="Email" value={email} set={setEmail} ph="jean@exemple.fr" type="email" />
             {err && <p style={{ fontSize: 12, color: "var(--danger)" }}>{err}</p>}
             <button style={{ ...S.ctag, width: "100%", opacity: loading ? .6 : 1 }} onClick={submit} disabled={loading}>
-              {loading ? <Spinner /> : "Envoyer le lien →"}
+              {loading ? <Spinner /> : "Envoyer le lien"}
             </button>
           </>
         )}

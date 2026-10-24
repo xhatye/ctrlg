@@ -12,7 +12,7 @@ const paths = {
   home:'M3 11 12 3l9 8v10h-7v-7h-4v7H3z', book:'M12 5v16M3 4h5a4 4 0 0 1 4 2 4 4 0 0 1 4-2h5v15h-5a4 4 0 0 0-4 2 4 4 0 0 0-4-2H3z',
   cards:'M5 7h14v14H5zM8 3h13v14', clock:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18M12 7v5l4 2',
   chart:'M4 4v16h16M8 16v-4M12 16V8M16 16V5', calendar:'M4 6h16v14H4zM4 10h16M8 3v5M16 3v5',
-  arrow:'M4 12h16m-6-6 6 6-6 6', check:'m5 12 4 4L19 6', user:'M8 7a4 4 0 1 0 8 0 4 4 0 0 0-8 0M4 21v-2a8 8 0 0 1 16 0v2',
+  check:'m5 12 4 4L19 6', user:'M8 7a4 4 0 1 0 8 0 4 4 0 0 0-8 0M4 21v-2a8 8 0 0 1 16 0v2',
   spark:'m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z', search:'M10 3a7 7 0 1 0 0 14 7 7 0 0 0 0-14m5 12 6 6',
   menu:'M4 6h16M4 12h16M4 18h16', close:'m6 6 12 12M18 6 6 18', logout:'M10 4H4v16h6M13 8l4 4-4 4M8 12h12',
   moon:'M20.5 14.5A9 9 0 0 1 9.5 3.5a9 9 0 1 0 11 11Z',
@@ -81,7 +81,7 @@ export function GizmoShell({children,screen,user,onNav,onLogout}) {
       <details className="g-more-tools" open={moreOpen} onToggle={e=>setMoreOpen(e.currentTarget.open)}><summary>Autres outils <span aria-hidden="true">⌄</span></summary><div>{links.filter(([key])=>secondaryKeys.includes(key)).map(([key,icon,label])=><button key={key} aria-current={screen===key?'page':undefined} className={screen===key?'active':''} onClick={()=>go(key)}><span className="g-nav-icon"><StudyIcon name={icon}/></span><span>{label}</span></button>)}</div></details>
       </nav>
       <div className="g-sidebar-footer">
-        <button onClick={()=>go('feedback')}>Partager mon retour <StudyIcon name="arrow" size={16}/></button>
+        <button onClick={()=>go('feedback')}>Partager mon retour </button>
         <button onClick={onLogout}><StudyIcon name="logout" size={16}/>Se déconnecter</button>
       </div>
     </aside>

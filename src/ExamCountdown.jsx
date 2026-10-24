@@ -18,7 +18,7 @@ export default function ExamCountdown({ defaultLevel = 'DSCG' }) {
       <span className="eyebrow">LE CAP À GARDER EN VUE</span>
       <h2 id={titleId}>{title}</h2>
       <p>{exam.phase === 'upcoming' || exam.phase === 'ongoing' ? <>DSCG 2026 · premières épreuves écrites le <time dateTime={exam.startsAt}>20 octobre à 9 h 30</time> (heure de Paris).</> : `${level} ${exam.phase === 'finished' ? exam.year + 1 : exam.year} · calendrier officiel à venir.`}</p>
-      <a href={exam.source} target="_blank" rel="noreferrer">Voir le calendrier officiel ↗</a>
+      <a href={exam.source} target="_blank" rel="noreferrer">Voir le calendrier officiel </a>
       <small>Votre convocation précise la date et l’heure de vos épreuves.</small>
     </div>
     <div className="exam-display">
