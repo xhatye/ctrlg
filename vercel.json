@@ -8,6 +8,10 @@
   ],
   "rewrites": [
     {
+      "source": "/a-propos",
+      "destination": "/public-pages/a-propos.html"
+    },
+    {
       "source": "/dcg",
       "destination": "/public-pages/dcg.html"
     },
@@ -150,6 +154,10 @@
     {
       "source": "/guides/bilan-compte-resultat-difference",
       "destination": "/public-pages/guides__bilan-compte-resultat-difference.html"
+    },
+    {
+      "source": "/guides/choisir-plateforme-revision-dcg-dscg",
+      "destination": "/public-pages/guides__choisir-plateforme-revision-dcg-dscg.html"
     },
     {
       "source": "/outils",

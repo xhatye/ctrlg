@@ -6,9 +6,20 @@ import { INDEXABLE_PATHS,APP_PATHS,seoForPath,structuredData } from '../lib/publ
 import { publicAnalyticsEvent } from '../lib/public-analytics.mjs';
 test('public pages cover 20 distinct subjects and original guides without changing chapter access',async()=>{
  const bank=JSON.parse(await readFile(new URL('../src/catalogue.json',import.meta.url),'utf8'));
- assert.equal(PUBLIC_SUBJECTS.length,20);assert.equal(PUBLIC_GUIDES.length,10);assert.equal(new Set(PUBLIC_PAGES.map(p=>p.path)).size,PUBLIC_PAGES.length);
+ assert.equal(PUBLIC_SUBJECTS.length,20);assert.equal(PUBLIC_GUIDES.length,11);assert.equal(new Set(PUBLIC_PAGES.map(p=>p.path)).size,PUBLIC_PAGES.length);
  for(const subject of PUBLIC_SUBJECTS){assert.ok(bank.modules[subject.id]);assert.ok(subject.intro.length>200);assert.equal(subject.practice.length,3);assert.equal(subject.pitfalls.length,3);assert.equal(subject.approach.steps.length,4);assert.equal(findPublicPage(subject.path+'/')?.id,subject.id);for(const id of subject.sources)assert.ok(OFFICIAL_SOURCES.some(s=>s.id===id));}
  for(const guide of PUBLIC_GUIDES){assert.equal(guide.sections.length,5);assert.ok(guide.sections.every(([title,text])=>title.length>10&&text.length>200));for(const id of guide.ues)assert.ok(PUBLIC_SUBJECTS.some(s=>s.id===id));}
+});
+
+test('publisher identity resolves consistently without fabricated endorsements or credentials',()=>{
+ for(const path of INDEXABLE_PATHS){const data=structuredData(path);const org=data.find(s=>s['@type']==='Organization');const site=data.find(s=>s['@type']==='WebSite');const page=data.find(s=>s.url===PUBLIC_ORIGIN+path&&s['@type']!=='WebSite'&&s['@type']!=='Organization');assert.equal(org['@id'],PUBLIC_ORIGIN+'/#organization');assert.equal(site.publisher['@id'],org['@id']);assert.equal(page.publisher['@id'],org['@id']);assert.equal(page.isPartOf['@id'],site['@id']);assert.equal(org.sameAs,undefined);assert.equal(org.award,undefined);assert.equal(org.aggregateRating,undefined);}
+ const about=structuredData('/a-propos').find(s=>s['@type']==='AboutPage');assert.equal(about.about['@id'],PUBLIC_ORIGIN+'/#organization');
+});
+
+test('verification and editorial information are present in initial public HTML',async()=>{
+ const home=await readFile(new URL('../dist/index.html',import.meta.url),'utf8');assert.ok(home.includes('name="google-site-verification"'));assert.ok(home.includes('href="/a-propos"'));
+ const about=await readFile(new URL('../dist/public-pages/a-propos.html',import.meta.url),'utf8');for(const text of ['contact.simdcg@gmail.com','validation pédagogique indépendante','couverture','href="/sources"','href="/test-gratuit"'])assert.ok(about.toLowerCase().includes(text.toLowerCase()),text);
+ const guide=await readFile(new URL('../dist/public-pages/guides__choisir-plateforme-revision-dcg-dscg.html',import.meta.url),'utf8');assert.ok(guide.includes('Comment choisir une plateforme'));assert.ok(guide.includes('href="/exemple-gratuit"'));assert.ok(guide.includes('garantir votre réussite'));
 });
 test('indexable URLs have distinct canonical metadata; private routes and unknown paths do not get indexed',()=>{
  const titles=new Set();for(const path of INDEXABLE_PATHS){const meta=seoForPath(path);assert.equal(meta.index,true);assert.equal(meta.canonical,PUBLIC_ORIGIN+path);assert.ok(meta.description.length>70);assert.ok(!titles.has(meta.title),path);titles.add(meta.title);for(const data of structuredData(path)){assert.ok(data['@context']);assert.equal(data.aggregateRating,undefined);}}
