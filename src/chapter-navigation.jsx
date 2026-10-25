@@ -39,8 +39,9 @@ export function StudySession({ue,kind,children,onNav}) {
   useEffect(()=>setChapter(ue.chapter || 'all'),[ue.id,ue.chapter]);
   const stats=catalogue.modules[ue.id];
   const selected=stats?.chapters.find(c=>c.id===chapter);
-  const knowledge=(selected?selected.comprehensionCount:stats?.comprehensionCount)>0;
-  const applications=(selected?selected.applicationCount:stats?.applicationCount)>0;
+  const scope=selected||stats;
+  const knowledge=(kind==='cards'?scope?.recallCardCount:scope?.comprehensionCount)>0;
+  const applications=((scope?.applicationCount||0)+(kind==='cards'?scope?.calculationCardCount||0:0))>0;
   const effectiveFocus=focus==='knowledge'&&!knowledge?'application':focus==='application'&&!applications?'knowledge':focus;
   const changeChapter=c=>{setChapter(c);const u=new URL(location.href);u.searchParams.set('ue',ue.id);if(c==='all')u.searchParams.delete('chapter');else u.searchParams.set('chapter',c);history.replaceState(history.state,'',u);};
   return <div className="chapter-session">

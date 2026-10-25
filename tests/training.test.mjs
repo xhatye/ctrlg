@@ -9,6 +9,7 @@ import {trainingDay} from '../lib/training-time.mjs';
 import {MODULES,studyModule} from '../lib/study-content.mjs';
 import handler from '../api/training.js';
 const now=Date.parse('2026-10-14T12:00:00Z');
+const activeCardId='UE9:reperes:card'+MODULES.UE9.chapters[0].cardIndices[0];
 function memory(profile={isPro:true}){
  const records=new Map([['users/owner',profile],['users/other',{isPro:true}]]);
  const snapshot=path=>({exists:records.has(path),id:path.split('/').at(-1),data:()=>structuredClone(records.get(path)),ref:{update:async patch=>records.set(path,{...records.get(path),...patch})}});
@@ -56,7 +57,7 @@ test('exam copies are private, idempotent, versioned, timed by the server and co
 });
 
 test('free or expired accounts cannot start, save, retrieve private exams or record revisions',async()=>{
- for(const profile of [{isPro:false},{isPro:true,proExpiresAt:'2000-01-01'}]){const deps=memory(profile);await assert.rejects(startExam('owner',{examId:'UE9-sujet-1',requestId:'receipt_123456',mode:'timed'},deps,now),{status:403});await assert.rejects(getAttempt('owner','receipt_123456',deps,now),{status:403});await assert.rejects(recordReviews('owner',[{receipt:'review_123456',kind:'card',itemId:'UE9:reperes:card0',known:false}],deps,now),{status:403});assert.equal(deps.records.size,2);}
+ for(const profile of [{isPro:false},{isPro:true,proExpiresAt:'2000-01-01'}]){const deps=memory(profile);await assert.rejects(startExam('owner',{examId:'UE9-sujet-1',requestId:'receipt_123456',mode:'timed'},deps,now),{status:403});await assert.rejects(getAttempt('owner','receipt_123456',deps,now),{status:403});await assert.rejects(recordReviews('owner',[{receipt:'review_123456',kind:'card',itemId:activeCardId,known:false}],deps,now),{status:403});assert.equal(deps.records.size,2);}
 });
 
 test('spaced revision checks actual quiz answers, persists dates, deduplicates retries and schedules 1/3/7/14/30/60 days',async()=>{
@@ -116,7 +117,7 @@ test('the most recent self-comparison supersedes older missing criteria for the 
 
 test('review identifiers are canonical, concurrent sessions preserve item counts, and quotas allow idempotent retries',async()=>{
  for(const id of ['UE9:reperes:n00','UE9:reperes:card00','UE9:cmp-periodique:v00:0'])for(const kind of ['quiz','card'])assert.throws(()=>resolveReviewItem(kind,id),{status:400});
- const deps=memory(),first={receipt:'unique_review_1234',kind:'card',itemId:'UE9:reperes:card0',known:false};
+ const deps=memory(),first={receipt:'unique_review_1234',kind:'card',itemId:activeCardId,known:false};
  await Promise.all([recordReviews('owner',[first],deps,now),recordReviews('owner',[{...first,receipt:'other_review_12345',known:true}],deps,now)]);
  assert.equal(deps.records.get('userReview/owner').totalItems,1);const record=[...deps.records.entries()].find(([p])=>p.startsWith('userReview/owner/items/'))[1];assert.equal(record.attempts,2);
  deps.records.get('userReview/owner').today=500;await recordReviews('owner',[first],deps,now);
@@ -141,7 +142,7 @@ test('an attempt preserves its subject version without leaking the stored correc
 });
 
 test('changed or retired questions cannot produce stale weakness signals or block the due queue',async()=>{
- const deps=memory(),event={receipt:'content_changed_1234',kind:'card',itemId:'UE9:reperes:card0',known:false};await recordReviews('owner',[event],deps,now);
+ const deps=memory(),event={receipt:'content_changed_1234',kind:'card',itemId:activeCardId,known:false};await recordReviews('owner',[event],deps,now);
  const [key,state]=[...deps.records.entries()].find(([p])=>p.startsWith('userReview/owner/items/'));state.contentSignature='old-content';state.dueAt=new Date(now-1000).toISOString();
  let queue=await reviewQueue('owner',deps,now);assert.equal(queue.items[0].updatedContent,true);assert.equal(queue.mistakeItems.length,0);
  await recordReviews('owner',[{...event,receipt:'current_content_1234',known:true}],deps,now);assert.equal(deps.records.get(key).streak,1);
@@ -149,4 +150,7 @@ test('changed or retired questions cannot produce stale weakness signals or bloc
  queue=await reviewQueue('owner',deps,now);assert.equal(deps.records.get('userReview/owner/items/retired').archived,true);assert.equal(queue.mistakeItems.length,0);
  deps.records.set('userReview/owner/items/bad_heading',{kind:'quiz',itemId:'UE1:offre-acceptation:n4',lastCorrect:false,dueAt:new Date(now-1000).toISOString()});
  queue=await reviewQueue('owner',deps,now);assert.equal(deps.records.get('userReview/owner/items/bad_heading').archived,true);assert.ok(queue.items.every(i=>i.id!=='UE1:offre-acceptation:n4'));assert.ok(queue.weakChapters.every(c=>c.module!=='UE1'));
+ const oldCard={kind:'card',itemId:'UE1:reperes:card0',lastCorrect:false,attempts:7,mistakes:3,streak:2,dueAt:new Date(now-1000).toISOString()};
+ deps.records.set('userReview/owner/items/old_card',oldCard);deps.records.set('userLearning/owner',{chapters:{'UE1/reperes':{cardsReviewed:12,cardsKnown:9}}});
+ queue=await reviewQueue('owner',deps,now);const archived=deps.records.get('userReview/owner/items/old_card');assert.equal(archived.archived,true);assert.equal(archived.attempts,7);assert.equal(archived.mistakes,3);assert.equal(archived.streak,2);assert.ok(!queue.items.some(i=>i.itemId===oldCard.itemId));assert.ok(!queue.weakChapters.some(c=>c.module==='UE1'));assert.equal(deps.records.get('userLearning/owner').chapters['UE1/reperes'].cardsReviewed,12);
 });

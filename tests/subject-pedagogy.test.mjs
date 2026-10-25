@@ -14,7 +14,8 @@ test('all existing review item prefixes remain identical after course enrichment
   const c=MODULES[id].chapters.find(c=>c.id===chapter);assert.ok(c,id+'/'+chapter);
   assert.equal(hash(c.quiz.slice(0,b.quizLength)),b.quizHash,id+'/'+chapter+' old quiz changed');
   assert.equal(hash(c.cards.slice(0,b.cardLength)),b.cardHash,id+'/'+chapter+' old cards changed');
-  assert.equal(resolveReviewItem('card',id+':'+chapter+':card0').q,c.cards[0].q);
+  assert.throws(()=>resolveReviewItem('card',id+':'+chapter+':card0'),{status:410});
+  assert.equal(resolveReviewItem('card',id+':'+chapter+':card'+c.cardIndices[0]).q,c.cards[c.cardIndices[0]].q);
  }
 });
 test('all 205 chapters receive a discipline approach, and all 20 UEs have an authored workshop',()=>{
@@ -44,7 +45,8 @@ test('new explained alternatives survive shuffling and enriched cards survive mi
    }
   }
   const cards=studyModule(id,'cards',()=>.2,{chapter:c.id,count:100,focus:'all'}).items;
-  for(const card of w.cards){const item=cards.find(n=>n.q===card.q);assert.ok(item,id+' missing recall item');assert.equal(item.example,card.example);assert.equal(item.pitfall,card.pitfall);assert.equal(resolveReviewItem('card',item.id).example,card.example);}
+  for(const card of w.cards){const old=c.cards.findIndex(n=>n.q===card.q);assert.ok(old>=0,id+' missing archived workshop');assert.throws(()=>resolveReviewItem('card',id+':'+c.id+':card'+old),{status:410});}
+  assert.ok(cards.length);for(const item of cards){const canonical=resolveReviewItem('card',item.id);assert.equal(canonical.a,item.a);assert.equal(canonical.explanation,item.explanation);assert.ok(!item.q.includes('Deux repères'));}
   for(const n of w.quiz){assert.equal(new Set([n.correct,...n.wrong]).size,4);assert.equal(n.wrongReasons.length,3);assert.ok(n.wrongReasons.every(s=>s.length>12));assert.ok(!/[—–]/.test(n.q+n.body));}
  }
 });

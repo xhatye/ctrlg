@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { EXAM_CATALOGUE } from '../lib/exam-bank.mjs';
 import { startExam, getAttempt, listAttempts, updateAttempt } from '../lib/exam-service.mjs';
 import { reviewQueue, recordReviews } from '../lib/review-service.mjs';
+import {MODULES} from '../lib/study-content.mjs';
 import { ownFeedback, saveFeedback, withdrawFeedback, publishedFeedback } from '../lib/feedback-service.mjs';
 
 const uid='local-design-student';
@@ -25,7 +26,8 @@ const deps={db:{collection,runTransaction:fn=>{const run=chain.then(async()=>{
   for(const [path,value]of writes)records.set(path,value);return result;
 });chain=run.catch(()=>{});return run;}}};
 const catalogue=JSON.parse(await readFile(new URL('../src/catalogue.json',import.meta.url),'utf8'));
-await recordReviews(uid,[{receipt:'preview_reminder_card',kind:'card',itemId:`UE9:${catalogue.modules.UE9.chapters[0].id}:card0`,known:false}],deps,Date.now()-2*86400000);
+const firstChapter=MODULES.UE9.chapters[0];
+await recordReviews(uid,[{receipt:'preview_reminder_card',kind:'card',itemId:`UE9:${firstChapter.id}:card${firstChapter.cardIndices[0]}`,known:false}],deps,Date.now()-2*86400000);
 // Public-looking dummy configuration initializes imported UI modules only.
 Object.assign(process.env,{VITE_FIREBASE_API_KEY:'local-preview-no-real-key',VITE_FIREBASE_PROJECT_ID:'local-design-preview',VITE_FIREBASE_AUTH_DOMAIN:'localhost',VITE_FIREBASE_APP_ID:'local-design-preview'});
 const server=await createServer({root:fileURLToPath(new URL('../',import.meta.url)),server:{host:'127.0.0.1',port:5175,strictPort:true},plugins:[{

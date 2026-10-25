@@ -6,7 +6,7 @@ import { readStudy } from '../lib/study-access.mjs';
 import { curriculumFor } from '../lib/curriculum.mjs';
 import { retrieveLessons } from '../lib/study-retrieval.mjs';
 import { reserveCost } from '../lib/ai-budget.mjs';
-import {chapterQuestionCount,chapterCardCount} from '../lib/question-pool.mjs';
+import {chapterQuestionCount,chapterCardCount,cardPool} from '../lib/question-pool.mjs';
 import {sourceQuestion} from './question-source.mjs';
 
 test('every chapter provides original prose, a complete correction, provenance and unique options',()=>{
@@ -24,7 +24,7 @@ test('every chapter provides original prose, a complete correction, provenance a
       assert.equal(quiz.items.length,Math.min(20,chapterQuestionCount(c)));
       for(const n of pool){assert.ok(n.body.length>60);assert.equal(n.wrong.length,3);assert.equal(new Set([n.correct,...n.wrong]).size,4);assert.ok(!questions.has(n.q),'Duplicate question: '+n.q);questions.add(n.q);}
       for(const q of quiz.items){assert.equal(q.chapter,c.id);const n=sourceQuestion(q);assert.equal(q.q,n.q);assert.equal(q.options[q.answer],n.correct);}
-      assert.equal(studyModule(id,'cards',Math.random,{chapter:c.id}).items.length,Math.min(40,chapterCardCount(c)));
+      assert.equal(studyModule(id,'cards',Math.random,{chapter:c.id}).items.length,Math.min(40,cardPool([c],'knowledge').total));
       assert.equal(studyModule(id,'summary',Math.random,{chapter:c.id}).example.contexte,c.cas.contexte);
     }
   }
@@ -37,7 +37,7 @@ test('public catalogue contains counts and titles, never premium answers or less
     assert.deepEqual(meta,published.modules[id]);
     const json=JSON.stringify(meta);for(const n of m.notions){assert.ok(!json.includes(n.q));assert.ok(!json.includes(n.body));}
   }
-  assert.equal(published.totals.subjects,20);assert.equal(published.totals.chapters,225);assert.equal(published.totals.applications,636000);assert.equal(published.totals.concepts,904);assert.equal(published.totals.curatedCases,450);assert.equal(published.totals.questions,published.totals.curatedQuestions+published.totals.applications);assert.notEqual(published.totals.curatedQuestions,published.totals.cards);
+  assert.equal(published.totals.subjects,20);assert.equal(published.totals.chapters,225);assert.equal(published.totals.applications,636000);assert.equal(published.totals.concepts,904);assert.equal(published.totals.curatedCases,450);assert.equal(published.totals.questions,published.totals.curatedQuestions+published.totals.applications);assert.equal(published.totals.cards,5000);
 });
 test('new premium chapters remain protected, and invalid chapters never read user data',async()=>{
   const noAuth={authenticate:async()=>{throw Object.assign(new Error('Connexion requise'),{status:401})}};

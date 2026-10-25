@@ -4,7 +4,7 @@ import {MODULES,studyModule,moduleCatalogue} from '../lib/study-content.mjs';
 import {checkCaseStep,parseStudyNumber} from '../lib/case-checks.mjs';
 import {caseReviewPrompt,validateCaseFeedback} from '../lib/case-review.mjs';
 import handler from '../api/case-review.js';
-import {quizIndices} from '../lib/question-pool.mjs';
+import {quizIndices,cardIndices} from '../lib/question-pool.mjs';
 
 test('every chapter has a developed lesson, separate recall cards, and usable guided cases',()=>{
  const quizTexts=new Set(),cardTexts=new Set();let quizzes=0,cards=0;
@@ -15,14 +15,13 @@ test('every chapter has a developed lesson, separate recall cards, and usable gu
   assert.ok(lesson.methodSteps.length>=4);assert.ok(lesson.glossary.length>=4);assert.ok(lesson.checklist.length>=2);
   assert.ok(quizIndices(c).length>=1);assert.ok(c.cards.length>=8);
   for(const i of quizIndices(c)){const n=c.quiz[i];assert.equal(new Set([n.correct,...n.wrong]).size,4);assert.ok(n.body);const key=n.q.trim().toLocaleLowerCase('fr').replace(/\s+/g,' ');assert.ok(!quizTexts.has(key),'Repeated curated question '+key);quizTexts.add(key);quizzes++;}
-  for(const card of c.cards){assert.ok(card.q&&card.a);const key=card.q.trim().toLocaleLowerCase('fr').replace(/\s+/g,' ');assert.ok(!cardTexts.has(key),'Repeated recall card '+key);cardTexts.add(key);cards++;}
+  for(const i of cardIndices(c)){const card=c.cards[i];assert.ok(card.q&&card.a);const key=card.q.trim().toLocaleLowerCase('fr').replace(/\s+/g,' ');assert.ok(!cardTexts.has(key),'Repeated recall card '+key);cardTexts.add(key);cards++;}
   for(let variant=0;variant<(c.variantAt?1:c.cases.length);variant++){
    const cas=studyModule(id,'case',()=>.2,{chapter:c.id,variant});
    for(const q of cas.questions){assert.ok(q.guide);const response=q.guide.type==='number'?String(parseStudyNumber(new Intl.NumberFormat('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2}).format(q.guide.expected))):String(q.guide.answer);assert.equal(checkCaseStep(q,response).correct,true);}
   }
  }
- assert.equal(quizzes,5000);assert.equal(cards,4325);
- assert.notEqual(quizzes,cards);
+ assert.equal(quizzes,5000);assert.equal(cards,5000);
 });
 test('theory-only mixed card series fill their requested length without duplicates',()=>{
  for(const seed of [0,.37,.99]){
