@@ -1,3 +1,4 @@
+import Diagnostic from './Diagnostic';
 import FirstSession from './FirstSession';
 import SamplePage from './SamplePage';
 import AnnalsPreview from './AnnalsLibrary';
@@ -78,7 +79,7 @@ export default function DesignPreview() {
     page === "paywall" ? <Paywall onUpgrade={()=>nav('pricing')} onBack={()=>nav('dashboard')}/> :
     page === "results_cas" ? <ResultsCas data={{ue:'UE9',duration:0,evaluation:null}} onDash={()=>nav('history')}/> :
     page === "results_qcm" ? <ResultsQCM data={{score:1,total:2,duration:55,ue:'UE9',ueName:'Comptabilité',answers:[{correct:true,q:'Une écriture équilibrée',expl:'Le débit égale le crédit.'},{correct:false,q:'Une charge est-elle un actif ?',right:'Non',expl:'Une charge affecte le résultat.'}]}} onNew={()=>nav('qcm')} onDash={()=>nav('dashboard')} /> :
-    page === "exams" ? <ExamPage user={student} ues={ues} onOpen={(module,chapter,target)=>{setUE({...ues.find(u=>u.id===module),chapter});nav(target);}}/> :
+    page === "diagnostic" ? <Diagnostic ues={ues} onNav={nav} onComplete={async data=>{await onLearning(data.answers.map((a,i)=>({id:data.sessionId+"_"+i,module:data.ue,chapter:a.chapter,type:"quiz",total:1,correct:a.correct?1:0})));return {historySaved:true};}}/> : page === "exams" ? <ExamPage user={student} ues={ues} onOpen={(module,chapter,target)=>{setUE({...ues.find(u=>u.id===module),chapter});nav(target);}}/> :
     page === "review_today" ? <ReviewToday onExams={()=>nav('exams')} onOpen={(module,chapter,target)=>{setUE({...ues.find(u=>u.id===module),chapter});nav(target);}}/> :
     page === "feedback" ? <FeedbackForm/> :
     page === "history" ? <History user={student} onBack={()=>nav('dashboard')} /> :

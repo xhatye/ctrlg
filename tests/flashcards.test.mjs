@@ -59,7 +59,7 @@ test('recall and numerical card pools are separated, including chapters without 
  assert.ok(!c.variantAt);assert.ok(knowledge.total&&numbers.total);assert.equal(knowledge.total+numbers.total,c.cardIndices.length);
  for(let i=0;i<knowledge.total;i++)assert.notEqual(knowledge.at(i).cardKind,'calculation');
  for(let i=0;i<numbers.total;i++)assert.equal(numbers.at(i).cardKind,'calculation');
- assert.ok(studyModule('UE9','cards',()=>.2,{chapter:c.id,focus:'application'}).items.every(item=>item.kind==='Calcul court'));
+ assert.ok(studyModule('UE9','cards',()=>.2,{chapter:c.id,focus:'application'}).items.every(item=>item.kind==='Exercice de calcul'));
  const catalogue=moduleCatalogue('UE9'),meta=catalogue.chapters.find(x=>x.id===c.id);assert.equal(meta.calculationCardCount,numbers.total);assert.equal(meta.recallCardCount,knowledge.total);assert.equal(catalogue.recallCardCount+catalogue.calculationCardCount,catalogue.cardCount);assert.equal(catalogue.cardRevision,FLASHCARD_VERSION);
  assert.throws(()=>studyModule('UE9','cards',()=>.2,{focus:'typo'}),{status:400});
 });

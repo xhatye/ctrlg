@@ -60,6 +60,7 @@ function Planner({ ues, user, onBack }) {
       <div><span className="eyebrow">VOTRE PARCOURS · VOTRE RYTHME</span><h1>Mon planning par UE</h1></div>
       <button className="btn btn-secondary" onClick={onBack}>← Retour</button>
     </header>
+    <p><a href="/outils/planning-revision" target="_blank" rel="noopener noreferrer">Créer un calendrier daté et télécharger son PDF</a></p>
     <p>Vous préparez une seule UE, une année ou plusieurs matières ? Choisissez uniquement les épreuves que vous travaillez cette session.</p>
     <form onSubmit={create}>
       <section className="panel plan-settings" aria-label="Paramètres du planning">

@@ -12,6 +12,7 @@ import ExamCountdown from "./ExamCountdown";
 import { ChapterLibrary } from './chapter-navigation';
 import { curriculumFor } from '../lib/curriculum.mjs';
 import catalogue from './catalogue.json';
+import './audit-improvements.css';
 import ProgressJourney from './ProgressJourney';
 import './landing-motion.css';
 import './pricing.css';

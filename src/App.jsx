@@ -1,3 +1,5 @@
+import Diagnostic from './Diagnostic';
+import AnswerFeedback from './AnswerFeedback';
 import FirstSession from './FirstSession';
 import AnnalsPreview from './AnnalsLibrary';
 import { useState, useRef, useEffect } from "react";
@@ -36,6 +38,7 @@ const SCREEN_TO_URL = {
   testimonials:       "/avis",
   auth:               "/connexion",
   dashboard:          "/interface",
+  diagnostic:         "/diagnostic",
   first_session:      "/premiere-session",
   subject_hub:        "/matiere",
   qcm:                "/qcm",
@@ -371,7 +374,7 @@ export default function App() {
     let url = SCREEN_TO_URL[s] || "/";
     if (['dcg','dscg','resources'].includes(s)) { window.location.assign(url); return; }
     if (s === "auth") url = (opts.mode === "signup") ? "/inscription" : "/connexion";
-    if (["subject_hub", "qcm", "flashcards", "resume_cours", "cas_pratique"].includes(s) && nextUE) url += `?ue=${nextUE.id}${chapter?"&chapter="+encodeURIComponent(chapter):""}${opts.format?"&format="+encodeURIComponent(opts.format):""}`;
+    if (["diagnostic", "subject_hub", "qcm", "flashcards", "resume_cours", "cas_pratique"].includes(s) && nextUE) url += `?ue=${nextUE.id}${chapter?"&chapter="+encodeURIComponent(chapter):""}${opts.format?"&format="+encodeURIComponent(opts.format):""}`;
     window.history.pushState({}, "", url);
     setScreen(s);
     if(s === "annals") window.dispatchEvent(new PopStateEvent("popstate"));
@@ -424,7 +427,7 @@ export default function App() {
   const renderScreen = () => {
     if (privateScreen && !user) return <Auth onForgot={()=>nav('forgot_password')} mode="login" setMode={setAuthMode} onDone={u => { setUser(u); nav(screen); }} onBack={() => nav('landing')} />;
     if (['subject_hub', 'qcm', 'flashcards', 'resume_cours', 'cas_pratique'].includes(screen) && !selectedUE) return <LibraryPage ues={ALL_UES} user={user} onSelect={selectUE} />;
-    if (['interview', 'interview_config', 'tutor', 'qcm', 'flashcards', 'resume_cours', 'cas_pratique','exams','review_today'].includes(screen) && !isPro) return <Paywall onUpgrade={() => upgrade()} onBack={() => nav('dashboard')} />;
+    if (['interview', 'interview_config', 'tutor', 'qcm', 'flashcards', 'resume_cours', 'cas_pratique','exams','review_today','diagnostic'].includes(screen) && !isPro) return <Paywall onUpgrade={() => upgrade()} onBack={() => nav('dashboard')} />;
     if (screen === 'interview' && !interviewCfg) return <InterviewConfig user={user} onStart={cfg => { setInterviewCfg(cfg); nav('interview'); }} onBack={() => nav('dashboard')} />;
     if (screen.startsWith('results_') && !result) return <History user={user} onBack={() => nav('dashboard')} />;
     if (screen === 'landing') return <Marketing onAuth={toAuth} onNav={nav} ues={ALL_UES} />;
@@ -436,6 +439,7 @@ export default function App() {
     if (screen === 'annals') return <AnnalsPreview key={user?.uid} user={user} onNav={nav}/>;
     if (screen === 'feedback') return <FeedbackForm key={user.uid}/>;
     if (screen === 'auth') return <Auth onForgot={()=>nav('forgot_password')} mode={authMode} setMode={setAuthMode} onDone={u => { setUser(u); let plan=null; try{plan=sessionStorage.getItem('simdcg-plan');sessionStorage.removeItem('simdcg-plan');}catch{} nav(u.isNew&&!plan?'first_session':'dashboard'); if (plan) upgrade(plan); }} onBack={() => nav('landing')} />;
+    if (screen === 'diagnostic') return <Diagnostic defaultModule={selectedUE?.id} ues={ALL_UES} onNav={nav} onComplete={data=>onQCMDone(data,{stay:true})}/>;
     if (screen === 'first_session') return <FirstSession key={user.uid} user={user} ues={ALL_UES} onNav={nav} onComplete={data=>onQCMDone(data,{stay:true})}/>;
     if (screen === 'dashboard') return <StudentHome user={user} ues={ALL_UES} onNav={nav} onSelect={selectUE} onOpen={openLearning} learning={learning} learningError={learningError} learningLoading={learningLoading} onRetry={reloadLearning} />;
     if (screen === 'library') return <LibraryPage ues={ALL_UES} user={user} onSelect={selectUE} />;
@@ -570,7 +574,7 @@ function QCMSession({ ue, user, onDone, onBack }) {
     const gen = async () => {
       setLoading(true);
       try {
-        const {items:data} = await loadStudy(ue.id, 'qcm', {chapter:ue.chapter,count:ue.count,focus:ue.focus});
+        const {items:data} = await loadStudy(ue.id, 'qcm', {chapter:ue.chapter,chapters:ue.chapters,count:ue.count,focus:ue.focus});
         if (cancelled) return;
         if (Array.isArray(data) && data.length > 0 && data.every(q => typeof q.q === "string" && Array.isArray(q.options) && Number.isInteger(q.answer) && q.answer >= 0 && q.answer < q.options.length)) { setQuestions(data); timerRef.current = setInterval(() => setTimer(t => t + 1), 1000); }
         else setError(true);
@@ -627,7 +631,7 @@ function QCMSession({ ue, user, onDone, onBack }) {
                 return <button key={i} onClick={() => pick(i)} className={`answer-option${sel!==null?(i===q.answer?" answer-correct":i===sel?" answer-incorrect":""):""}`} disabled={sel!==null} aria-pressed={sel===i} style={{ background: bg, border: `1px solid ${border}`, color, padding: "12px 16px", textAlign: "left", cursor: sel === null ? "pointer" : "default", fontSize: 13, transition: "all .2s", fontFamily: "inherit" }}>{String.fromCharCode(65 + i)}. {opt}</button>;
               })}
             </div>
-            {sel !== null && <div className="qcm-explanation" role="status" style={{ background: "var(--surface)", border: "1px solid var(--line)", padding: "12px 16px", marginBottom: 14 }}><strong>{sel===q.answer?"Bonne réponse !":"Une notion à revoir."}</strong><p style={{ fontSize: 10, color: "var(--muted)", margin: "0 0 4px", letterSpacing: ".1em" }}>EXPLICATION</p><p style={{ fontSize: 13, color: "var(--ink)", margin: 0, lineHeight: 1.6 }}>{q.expl}</p>{q.optionExplanations&&<details className="qcm-alternatives"><summary>Pourquoi les autres choix ne conviennent pas</summary><ul>{q.options.map((o,i)=>i!==q.answer&&<li key={o}><strong>{o}</strong> {q.optionExplanations[i]}</li>)}</ul></details>}</div>}
+            {sel !== null && <AnswerFeedback question={q} choice={sel}/>}
             {sel !== null && <button disabled={finishing} style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={next}>{finishing?'Enregistrement…':qi + 1 >= questions.length ? "Voir les résultats" : "Question suivante"}</button>}
           </div>
         )}

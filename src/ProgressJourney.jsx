@@ -1,3 +1,4 @@
+import {themeProgress} from '../lib/study-guidance.mjs';
 import {useState} from 'react';
 import catalogue from './catalogue.json';
 import {learningSteps,chapterKey} from '../lib/learning-progress.mjs';
@@ -17,6 +18,7 @@ export default function ProgressJourney({ues,learning={},onOpen}){
    <label className="chapter-select">Matière<select aria-label="Matière du parcours" value={ue.id} onChange={e=>setId(e.target.value)}>{options.map(u=><option key={u.id} value={u.id}>{u.id} · {u.label}</option>)}</select></label>
    <label className="chapter-select">Afficher<select aria-label="État des chapitres" value={filter} onChange={e=>setFilter(e.target.value)}><option value="all">Tous les chapitres</option><option value="new">À commencer</option><option value="started">En cours</option><option value="finished">4 étapes réalisées</option></select></label>
   </div>
+  <section className="audit-theme-progress" aria-label="Mes résultats par thème"><h3>Les thèmes à travailler</h3><p className="helper">Moyenne des derniers résultats par chapitre évalué (au moins 4 réponses). Ce n’est ni un taux global de bonnes réponses, ni une note de maîtrise. La lecture et les cartes déclarées connues restent séparées.</p><div className="theme-summary">{themeProgress(catalogue.modules[ue.id].chapters,learning,ue.id).map(g=><article key={g.id}><h4>{g.title}</h4><strong>{g.average===null?'À évaluer':g.average+' %'}</strong><p>{g.evaluated}/{g.chapters} chapitres évalués · {g.answered} réponses enregistrées</p>{g.needsReview.length>0?<button className="text-button" onClick={()=>onOpen?.(ue,g.needsReview[0],'qcm')}>Retravailler une difficulté</button>:<span className="helper">{g.average===null?'Répondez à une série dans ce thème.':'À entretenir avec de nouveaux exercices.'}</span>}</article>)}</div></section>
   <div className="progress-track journey-track" aria-label="Avancement des étapes"><i style={{width:Math.round(totalDone/possible*100)+'%'}} /></div>
   <div className="journey-grid">{shown.map(c=>{const status=learningSteps(c.progress),next=status.steps.indexOf(false);return <article className="panel journey-chapter" key={c.id}>
    <span className="eyebrow">{ue.id} · {status.done}/4 étapes</span><h3>{c.title}</h3>

@@ -1,3 +1,4 @@
+import {recommendSession} from '../lib/study-guidance.mjs';
 import {FIRST_SESSION_KEY} from '../lib/first-session.mjs';
 import './starter.css';
 import { useState } from 'react';
@@ -33,6 +34,7 @@ function Dashboard({user,ues,onNav,onSelect,onOpen,learning={},learningError,lea
   const nextUE = lastUE || ues.find(ue=>plan?.selectedIds.includes(ue.id)) || available[0];
   const module = catalogue.modules[nextUE.id];
   const chapter = module.chapters.find(c=>c.id===stats.latest?.chapter) || module.chapters[0];
+  const recommendation = recommendSession(nextUE.id,module.chapters,learning);
   const open = target => onOpen ? onOpen(nextUE,chapter.id,target) : onSelect(nextUE);
   const goalPercent = Math.min(100,Math.round(stats.todayQuestions/goal*100));
   const changeGoal = value => {setGoal(value);try{localStorage.setItem('simdcg-daily-goal-'+user.uid,String(value));setGoalMessage('Objectif enregistré.');}catch{setGoalMessage('Objectif ajusté pour cette visite. La sauvegarde locale est indisponible.');}};
@@ -40,14 +42,7 @@ function Dashboard({user,ues,onNav,onSelect,onOpen,learning={},learningError,lea
   return <div className="g-dashboard g-dashboard-refresh">
     <div className="g-home-heading"><h1>Bonjour {user.name?.split(' ')[0] || 'à vous'}.</h1><span>Votre espace DCG & DSCG</span></div>
     {!learningLoading&&!learningError&&!stats.history.length&&!stats.chaptersStarted&&!starterDismissed&&<section className="g-first-session-card" aria-label="Commencer ma première révision"><img src="/navigation-3d-v1/library.webp" width="54" height="54" alt=""/><div><h2>Cinq questions pour commencer.</h2><p>{user.isPro?'Choisissez votre UE, comprenez vos réponses et retrouvez la suite de votre parcours.':'Découvrez la méthode avec cinq questions offertes de comptabilité DCG UE9.'}</p></div><button className="btn" onClick={()=>onNav('first_session')}>Ma première révision</button><button className="text-button" onClick={dismissStarter}>Plus tard</button></section>}
-    <section className="g-study-start" aria-labelledby="g-start-title">
-      <div className="g-start-intro"><div><span className="eyebrow">UNE NOTION À LA FOIS</span><PlayfulHeading id="g-start-title" text="Qu’allez-vous réviser ?"/><p>Retrouvez un chapitre, reprenez votre parcours<br/>ou choisissez un entraînement.</p></div><img className="g-floating-companion" src="/illustrations/study-companion-v1.webp" alt="" width="116" height="116" fetchpriority="high"/></div>
-      <button className="g-study-search" onClick={search}><StudyIcon name="search" size={23}/><span>Une UE, un chapitre, une notion…</span></button>
-      <div className="g-start-actions" aria-label="Choisir un entraînement">{[
-        ['book','Cours','resume_cours'],['check','QCM','qcm'],['cards','Flashcards','flashcards'],['calendar','Cas pratique','cas_pratique'],
-      ].map(([icon,label,target])=><button key={target} onClick={()=>open(target)} aria-label={`${label} · ${nextUE.label}`}><StudyIcon name={icon} size={20}/>{label}</button>)}</div>
-      <p className="g-study-context">{nextUE.level} {nextUE.id.replace('DSCG','UE')} · {nextUE.label} <button onClick={()=>onNav('library')}>Changer</button></p>
-    </section>
+    <section className="g-study-start audit-next-session" aria-labelledby="g-start-title"><div className="g-start-intro"><div><span className="eyebrow">VOTRE PROCHAINE SÉANCE</span><h2 id="g-start-title">{recommendation?.title||'Une notion à la fois'}</h2><p>{nextUE.level} {nextUE.id.replace('DSCG','UE')} · {nextUE.label}</p></div><img className="g-floating-companion" src="/illustrations/study-companion-v1.webp" width="104" height="104" alt=""/></div>{learningLoading?<p role="status">Recherche de votre prochaine étape…</p>:learningError?<p>Choisissez une activité pendant le chargement de votre suivi.</p>:<><p className="audit-next-reason">{recommendation?.reason}</p><div className="audit-next-actions"><button className="btn" onClick={()=>onNav(recommendation.target,{module:nextUE.id,chapter:recommendation.chapter,format:recommendation.format})}>{recommendation.action}</button><span>Environ {recommendation.minutes} min</span><button className="text-button" onClick={()=>onNav('library')}>Changer d’UE</button></div></>}<div className="g-start-actions" aria-label="Choisir un entraînement">{[['check','QCM','qcm'],['cards','Flashcards','flashcards'],['book','Cours','resume_cours']].map(([icon,label,target])=><button key={target} onClick={()=>open(target)} aria-label={label+' · '+nextUE.label}><StudyIcon name={icon} size={20}/>{label}</button>)}<button onClick={()=>onNav(user.isPro?'diagnostic':'first_session',{module:nextUE.id})}><StudyIcon name="chart" size={20}/>Faire le point</button></div></section>
     <section className="g-today-strip" aria-label="Mes révisions du jour">
       <button className="g-review-link" onClick={()=>onNav('review_today')}><span className="g-nav-icon"><StudyIcon name="cards"/></span><span><strong>À revoir aujourd’hui</strong><small>Retrouver les notions à consolider</small></span></button>
       <details className="g-daily-goal"><summary><span className="g-mini-ring" style={{'--goal-angle':goalPercent*3.6+'deg'}} aria-hidden="true"/><span><strong>{stats.todayQuestions}/{goal} questions</strong><small>Mon objectif du jour</small></span><span aria-hidden="true">⌄</span></summary><div className="g-goal-options"><label>Objectif quotidien<select aria-label="Objectif quotidien en questions" value={goal} onChange={e=>changeGoal(Number(e.target.value))}>{[5,10,20].map(n=><option key={n} value={n}>{n} questions</option>)}</select></label><small>QCM enregistrés aujourd’hui, heure de Paris.</small>{goalMessage&&<p role="status">{goalMessage}</p>}</div></details>

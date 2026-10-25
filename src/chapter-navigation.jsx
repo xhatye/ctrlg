@@ -35,15 +35,16 @@ export function ChapterSelect({id,value,onChange,all=false,disabled=false}) {
 
 export function StudySession({ue,kind,children,onNav}) {
   const [settingsOpen,setSettingsOpen]=useState(()=>window.innerWidth>760);
-  const [chapter,setChapter]=useState(ue.chapter || 'all'),[count,setCount]=useState(kind==='cards'?40:8),[focus,setFocus]=useState('knowledge');
-  useEffect(()=>setChapter(ue.chapter || 'all'),[ue.id,ue.chapter]);
+  const [chapter,setChapter]=useState(ue.chapter || 'all'),[count,setCount]=useState(kind==='cards'?40:10),[focus,setFocus]=useState('knowledge');
+  const [topics,setTopics]=useState([]);
+  useEffect(()=>{setChapter(ue.chapter || 'all');setTopics([]);},[ue.id,ue.chapter]);
   const stats=catalogue.modules[ue.id];
   const selected=stats?.chapters.find(c=>c.id===chapter);
-  const scope=selected||stats;
+  const scope=topics.length?{recallCardCount:stats.chapters.filter(c=>topics.includes(c.id)).reduce((n,c)=>n+c.recallCardCount,0),comprehensionCount:stats.chapters.filter(c=>topics.includes(c.id)).reduce((n,c)=>n+c.comprehensionCount,0),applicationCount:stats.chapters.filter(c=>topics.includes(c.id)).reduce((n,c)=>n+c.applicationCount,0)}:selected||stats;
   const knowledge=(kind==='cards'?scope?.recallCardCount:scope?.comprehensionCount)>0;
   const applications=((scope?.applicationCount||0)+(kind==='cards'?scope?.calculationCardCount||0:0))>0;
   const effectiveFocus=focus==='knowledge'&&!knowledge?'application':focus==='application'&&!applications?'knowledge':focus;
-  const changeChapter=c=>{setChapter(c);const u=new URL(location.href);u.searchParams.set('ue',ue.id);if(c==='all')u.searchParams.delete('chapter');else u.searchParams.set('chapter',c);history.replaceState(history.state,'',u);};
+  const changeChapter=c=>{setTopics([]);setChapter(c);const u=new URL(location.href);u.searchParams.set('ue',ue.id);if(c==='all')u.searchParams.delete('chapter');else u.searchParams.set('chapter',c);history.replaceState(history.state,'',u);};
   return <div className="chapter-session">
     {onNav&&chapter!=='all'&&<div className="page chapter-exercise-tabs"><ChapterFormats ue={{...ue,chapter}} active={kind==='cards'?'flashcards':'qcm'} onNav={onNav}/></div>}
     <details className="session-settings" open={settingsOpen} onToggle={e=>setSettingsOpen(e.currentTarget.open)}>
@@ -51,10 +52,11 @@ export function StudySession({ue,kind,children,onNav}) {
     <div className="session-controls">
       <ChapterSelect id={ue.id} value={chapter} onChange={changeChapter} all />
       <label className="chapter-select">Objectif de la série<select aria-label="Objectif de la série" value={effectiveFocus} onChange={e=>setFocus(e.target.value)}><option value="knowledge" disabled={!knowledge}>Comprendre les notions</option><option value="application" disabled={!applications}>Appliquer les calculs</option><option value="all">Mixer les deux</option></select></label>
-      <label className="chapter-select">Longueur de la série<select aria-label="Longueur de la série" value={count} onChange={e=>setCount(Number(e.target.value))}>{(kind==='cards'?[4,20,40,60,100]:[4,8,12,20]).map(n=><option key={n} value={n}>{n} {kind==='cards'?'cartes':'questions'} maximum</option>)}</select></label>
+      <label className="chapter-select">Longueur de la série<select aria-label="Longueur de la série" value={count} onChange={e=>setCount(Number(e.target.value))}>{(kind==='cards'?[4,20,40,60,100]:[5,10,20]).map(n=><option key={n} value={n}>{n} {kind==='cards'?'cartes':'questions'} maximum</option>)}</select></label>
+      {kind==='qcm'&&<details className="audit-topic-picker"><summary>Choisir plusieurs thèmes {topics.length?'('+topics.length+')':''}</summary><div>{stats.chapters.map(c=><label key={c.id}><input type="checkbox" checked={topics.includes(c.id)} onChange={()=>setTopics(old=>old.includes(c.id)?old.filter(id=>id!==c.id):[...old,c.id])}/>{c.title}</label>)}</div><p className="helper">Sans sélection, le chapitre choisi ci-dessus s’applique. Modifier la sélection redémarre la série.</p></details>}<span className="helper">Environ {Math.max(1,Math.ceil(count*.7))} minutes, selon votre rythme.</span>
       <span className="helper">Séries de notions et exercices de calcul sont séparés. Changer le choix relance la série.</span>
     </div></details>
-    <div key={[ue.id,chapter,count,effectiveFocus].join('-')}>{children({...ue,chapter,count,focus:effectiveFocus})}</div>
+    <div key={[ue.id,chapter,topics.join(','),count,effectiveFocus].join('-')}>{children({...ue,chapter,chapters:topics.length?topics:undefined,count,focus:effectiveFocus})}</div>
   </div>;
 }
 

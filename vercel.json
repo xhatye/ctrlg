@@ -8,6 +8,74 @@
   ],
   "rewrites": [
     {
+      "source": "/annales/dscg-2025",
+      "destination": "/public-pages/annales__dscg-2025.html"
+    },
+    {
+      "source": "/annales/dscg-2024",
+      "destination": "/public-pages/annales__dscg-2024.html"
+    },
+    {
+      "source": "/annales/dscg-2023",
+      "destination": "/public-pages/annales__dscg-2023.html"
+    },
+    {
+      "source": "/annales/dscg-2022",
+      "destination": "/public-pages/annales__dscg-2022.html"
+    },
+    {
+      "source": "/annales/dscg-2021",
+      "destination": "/public-pages/annales__dscg-2021.html"
+    },
+    {
+      "source": "/annales/dscg-2020",
+      "destination": "/public-pages/annales__dscg-2020.html"
+    },
+    {
+      "source": "/annales/dcg-2026",
+      "destination": "/public-pages/annales__dcg-2026.html"
+    },
+    {
+      "source": "/annales/dcg-2025",
+      "destination": "/public-pages/annales__dcg-2025.html"
+    },
+    {
+      "source": "/annales/dcg-2024",
+      "destination": "/public-pages/annales__dcg-2024.html"
+    },
+    {
+      "source": "/annales/dcg-2023",
+      "destination": "/public-pages/annales__dcg-2023.html"
+    },
+    {
+      "source": "/annales/dcg-2022",
+      "destination": "/public-pages/annales__dcg-2022.html"
+    },
+    {
+      "source": "/annales/dcg-2021",
+      "destination": "/public-pages/annales__dcg-2021.html"
+    },
+    {
+      "source": "/annales/dcg-2020",
+      "destination": "/public-pages/annales__dcg-2020.html"
+    },
+    {
+      "source": "/documents-examen",
+      "destination": "/public-pages/documents-examen.html"
+    },
+    {
+      "source": "/fiches",
+      "destination": "/public-pages/fiches.html"
+    },
+    {
+      "source": "/fiches/dcg-ue9-achats-reglements",
+      "destination": "/public-pages/fiches__dcg-ue9-achats-reglements.html"
+    },
+    {
+      "source": "/fiches/dscg-ue2-valeur-entreprise-actions",
+      "destination": "/public-pages/fiches__dscg-ue2-valeur-entreprise-actions.html"
+    },
+    {
       "source": "/a-propos",
       "destination": "/public-pages/a-propos.html"
     },
@@ -206,6 +274,10 @@
     {
       "source": "/confidentialite",
       "destination": "/public-pages/confidentialite.html"
+    },
+    {
+      "source": "/diagnostic",
+      "destination": "/app.html"
     },
     {
       "source": "/premiere-session",

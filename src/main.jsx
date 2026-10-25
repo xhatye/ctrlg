@@ -10,6 +10,7 @@ import './public-landing.css';
 import './refined-ui.css';
 import './starter.css';
 import './growth.css';
+import './audit-improvements.css';
 import { findPublicPage } from '../lib/public-study-pages.mjs';
 import { applyPageMetadata } from '../lib/public-seo.mjs';
 import { Analytics } from '@vercel/analytics/react';
