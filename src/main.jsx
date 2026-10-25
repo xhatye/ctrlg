@@ -22,6 +22,7 @@ async function loadPage() {
   if (preview) return import('./DesignPreview.jsx');
   if (['/','/fonctionnalites'].includes(window.location.pathname)) return import('./PublicPresentation.jsx');
   if (window.location.pathname==='/exemple-gratuit') return import('./SamplePage.jsx');
+  if (window.location.pathname==='/test-gratuit') return import('./TrialPage.jsx');
   if (publicPage) {
     const {default:Page} = await import('./PublicStudySite.jsx');
     return {default:Page};

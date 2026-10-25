@@ -16,8 +16,10 @@ const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;'
 function cssFor(entry,seen=new Set()){if(seen.has(entry)||!manifest[entry])return [];seen.add(entry);return [...(manifest[entry].css||[]),...(manifest[entry].imports||[]).flatMap(key=>cssFor(key,seen))];}
 const publicEntry=Object.entries(manifest).find(([,item])=>item.name==='PublicStudySite')?.[0];
 const sampleEntry=Object.entries(manifest).find(([,item])=>item.name==='SamplePage')?.[0];
+const trialEntry=Object.entries(manifest).find(([,item])=>item.name==='TrialPage')?.[0];
 const allCss=[...new Set([...cssFor('index.html'),...cssFor(publicEntry),...cssFor(sampleEntry)])];
 const extraStyles=allCss.filter(file=>!template.includes('/'+file)).map(file=>`<link rel="stylesheet" crossorigin href="/${file}">`).join('\n');
+const trialStyles=cssFor(trialEntry).filter(file=>!allCss.includes(file)).map(file=>`<link rel="stylesheet" crossorigin href="/${file}">`).join('\n');
 function htmlFor(path,body=''){
  const meta=seoForPath(path);
  let html=template.replace(/<title>[\s\S]*?<\/title>/,`<title>${escape(meta.title)}</title>`)
@@ -29,7 +31,7 @@ function htmlFor(path,body=''){
  for(const [key,value]of Object.entries({'og:title':meta.title,'og:description':meta.description,'og:url':meta.canonical,'og:type':meta.page?.kind==='guide'?'article':'website','og:image':meta.image,'twitter:image':meta.image,'og:image:alt':meta.title,'twitter:image:alt':meta.title,'twitter:title':meta.title,'twitter:description':meta.description})){
   const attr=key.startsWith('og:')?'property':'name';html=html.replace(new RegExp(`<meta ${attr}="${key}"[^>]*>`),`<meta ${attr}="${key}" content="${escape(value)}">`);
  }
- html=html.replace('</head>',extraStyles+'\n'+structuredData(path).map(data=>`<script type="application/ld+json">${JSON.stringify(data).replace(/</g,'\\u003c')}</script>`).join('\n')+'\n</head>');
+ html=html.replace('</head>',extraStyles+(path==='/test-gratuit'?trialStyles:'')+'\n'+structuredData(path).map(data=>`<script type="application/ld+json">${JSON.stringify(data).replace(/</g,'\\u003c')}</script>`).join('\n')+'\n</head>');
  return html.replace('<div id="root"></div>',`<div id="root">${body}</div>`);
 }
 const server=await createServer({root:process.cwd(),mode:'production',server:{middlewareMode:true},optimizeDeps:{noDiscovery:true,include:[]},appType:'custom'});
@@ -37,6 +39,7 @@ let rewrites=[];
 try{
  const {default:PublicPresentation}=await server.ssrLoadModule('/src/PublicPresentation.jsx');
  const {default:SamplePage}=await server.ssrLoadModule('/src/SamplePage.jsx');
+ const {default:TrialPage}=await server.ssrLoadModule('/src/TrialPage.jsx');
  const {default:PublicStudySite}=await server.ssrLoadModule('/src/PublicStudySite.jsx');
  const {Marketing,OfferPage,PublicInfo,StudentReviews}=await server.ssrLoadModule('/src/modern.jsx');
  const {LegalScreen}=await server.ssrLoadModule('/src/App.jsx');
@@ -44,7 +47,8 @@ try{
  for(const page of PUBLIC_PAGES){const file=page.path.slice(1).replaceAll('/','__')+'.html';await writeFile(resolve(dist,'public-pages',file),htmlFor(page.path,renderToString(React.createElement(PublicStudySite,{page}))));rewrites.push({source:page.path,destination:'/public-pages/'+file});}
  for(const path of Object.keys(CORE_PUBLIC_META)){
   let element;
-  if(path==='/exemple-gratuit')element=React.createElement(SamplePage);
+  if(path==='/test-gratuit')element=React.createElement(TrialPage);
+  else if(path==='/exemple-gratuit')element=React.createElement(SamplePage);
   else if(path==='/'||path==='/fonctionnalites')element=React.createElement(PublicPresentation,{path});
   else if(path==='/tarifs')element=React.createElement(OfferPage,{user:null,onCheckout:noop,onNav:noop});
   else if(path==='/cgu'||path==='/confidentialite')element=React.createElement(LegalScreen,{type:path==='/cgu'?'cgu':'confidentialite',onBack:noop});

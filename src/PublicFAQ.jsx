@@ -1,7 +1,7 @@
 const faq = [
   [
     "Peut-on essayer les exercices avant de s’abonner ?",
-    "Un chapitre de DCG UE9 est offert : cours complet, fiche et dix QCM expliqués, sans compte ni carte bancaire. Retrouvez-le sur la page Exemple gratuit. Les autres contenus interactifs nécessitent un accès Pro actif ou un Pack Examen.",
+    "Oui. La page Tester mon UE propose cinq QCM expliqués et trois flashcards dans chacune des 20 UE, sans compte ni carte bancaire. Un chapitre complet de DCG UE9, sa fiche et dix QCM sont également offerts sur Exemple gratuit. Les autres contenus et le suivi personnalisé nécessitent un accès Pro actif ou un Pack Examen.",
   ],
   [
     "Les exercices sont-ils des annales officielles ?",

@@ -1,0 +1,2025 @@
+{
+  "version": "2026-10-25",
+  "subjects": [
+    {
+      "id": "UE1",
+      "level": "DCG",
+      "label": "Fondamentaux du droit",
+      "chapter": "reperes",
+      "chapterTitle": "Contrat et responsabilité",
+      "path": "/dcg/ue-1-fondamentaux-du-droit",
+      "questions": [
+        {
+          "id": "UE1:trial:q01",
+          "chapter": "reperes",
+          "q": "Quel effet produit en principe un contrat valablement formé entre ses parties ?",
+          "options": [
+            "Il engage les parties selon les obligations convenues.",
+            "Il n’engage qu’après commencement de l’exécution.",
+            "Il engage seulement la partie qui réclame son exécution.",
+            "Il engage sauf si une partie retire ensuite son consentement sans fondement particulier."
+          ],
+          "answer": 0,
+          "expl": "La force obligatoire concerne les deux parties au contrat valable. Un changement d’avis ne suffit pas à supprimer les obligations convenues."
+        },
+        {
+          "id": "UE1:trial:q04",
+          "chapter": "reperes",
+          "q": "Un imprimeur a livré les brochures conformes au contrat valable. Le client ne souhaite plus organiser son événement. Quel raisonnement adopter ?",
+          "options": [
+            "Le changement de projet rend caduc le prix sans examen complémentaire.",
+            "Le client ne doit payer que s’il utilise les brochures.",
+            "Le contrat doit être réputé inexistant parce que son utilité a disparu pour le client.",
+            "Il faut partir des obligations convenues et examiner les conditions d’une éventuelle sortie du contrat."
+          ],
+          "answer": 3,
+          "expl": "L’abandon du projet ne fait pas disparaître à lui seul l’engagement. Les obligations convenues restent le point de départ ; un mécanisme de sortie doit être identifié."
+        },
+        {
+          "id": "UE1:trial:q07",
+          "chapter": "reperes",
+          "q": "Sans relation contractuelle, une personne renverse imprudemment du café sur l’ordinateur d’un visiteur. La réparation est documentée. Quel fait représente la faute ?",
+          "options": [
+            "Le coût de remise en état de l’ordinateur.",
+            "L’impossibilité d’utiliser l’ordinateur après le contact.",
+            "Le geste imprudent qui a renversé le café.",
+            "L’enchaînement reliant le café renversé à la panne."
+          ],
+          "answer": 2,
+          "expl": "Le geste imprudent constitue le comportement reproché. Le devis sert plutôt à étayer le dommage ; il ne décrit pas, à lui seul, la faute."
+        },
+        {
+          "id": "UE1:trial:q11",
+          "chapter": "reperes",
+          "q": "Un visiteur heurte imprudemment une lampe : elle tombe sans être détériorée et personne n’est blessé. Pour obtenir une réparation pour faute, quelle condition manque ?",
+          "options": [
+            "Une faute, puisque l’absence de casse efface toute imprudence.",
+            "Un fait matériel, puisque la lampe n’a pas été détériorée.",
+            "Un dommage à réparer.",
+            "Une relation extracontractuelle, puisque les personnes étaient dans le même lieu."
+          ],
+          "answer": 2,
+          "expl": "Une imprudence sans dommage ne suffit pas à justifier une réparation dans ce raisonnement. La faute et le préjudice sont des conditions différentes."
+        },
+        {
+          "id": "UE1:trial:q16",
+          "chapter": "reperes",
+          "q": "Une entreprise réclame à un prestataire le remboursement d’un service convenu mais non réalisé. Quel fait permet d’abord de qualifier leur relation ?",
+          "options": [
+            "La facture émise unilatéralement, tenue pour preuve de tous les termes de l’accord.",
+            "La seule demande de remboursement, tenue pour preuve du défaut de prestation.",
+            "La date de la réclamation, tenue pour date de formation du contrat.",
+            "L’accord définissant la prestation entre eux."
+          ],
+          "answer": 3,
+          "expl": "L’accord permet d’identifier les parties et l’engagement invoqué. Les caractéristiques générales de l’entreprise ne suffisent pas à qualifier la relation litigieuse."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Un photographe et une entreprise ont valablement convenu de livrer dix portraits retouchés. Il livre dix fichiers bruts. Quel élément faut-il comparer en priorité ?",
+          "a": "La prestation promise et la prestation effectivement livrée.",
+          "explanation": "Le nombre de fichiers ne suffit pas : la retouche faisait partie de la prestation. Comparer le contenu convenu aux fichiers livrés permet d’identifier le manquement discuté.",
+          "exampleAnswer": false,
+          "tag": "Contrat et responsabilité",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Une vitre est cassée par un passant imprudent. Le propriétaire réclame aussi le remplacement d’une porte déjà défectueuse avant l’incident. Quelle analyse retenir ?",
+          "a": "Séparer la vitre liée à l’incident et la porte dont le lien causal n’est pas établi.",
+          "explanation": "Chaque poste de réparation doit correspondre au dommage causé. Le défaut antérieur de la porte ne permet pas de l’imputer au bris de la vitre.",
+          "exampleAnswer": false,
+          "tag": "Contrat et responsabilité",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Une réponse cite correctement une règle puis conclut « le demandeur gagne », sans citer un fait du dossier. Quelle partie manque principalement ?",
+          "a": "L’application de chaque condition aux faits établis.",
+          "explanation": "La citation d’une règle ne montre pas que ses conditions sont réunies. L’application doit relier chacune d’elles aux faits et aux éventuelles incertitudes du dossier.",
+          "exampleAnswer": false,
+          "tag": "Contrat et responsabilité",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "UE2",
+      "level": "DCG",
+      "label": "Droit des affaires",
+      "chapter": "reperes",
+      "chapterTitle": "Société et gouvernance",
+      "path": "/dcg/ue-2-droit-des-affaires",
+      "questions": [
+        {
+          "id": "UE2:trial:q01",
+          "chapter": "reperes",
+          "q": "Quelle qualité résulte directement de la détention de droits sociaux d’une société ?",
+          "options": [
+            "La qualité d’associé.",
+            "La qualité de représentant de la société pour tous ses actes.",
+            "La qualité de salarié de la société.",
+            "La qualité de créancier du remboursement de tout le capital."
+          ],
+          "answer": 0,
+          "expl": "Détenir des droits sociaux caractérise l’associé. Un mandat de direction, un contrat de travail ou une créance de prêt sont des fondements distincts."
+        },
+        {
+          "id": "UE2:trial:q04",
+          "chapter": "reperes",
+          "q": "Une copie attribue tous les contrats sociaux à l’associé le plus important, sans rechercher de mandat. Quel défaut présente-t-elle ?",
+          "options": [
+            "Elle confond la délégation consentie par le dirigeant et la nomination de celui-ci.",
+            "Elle confond l’autorisation interne d’une opération et sa réalisation envers le cocontractant.",
+            "Elle confond la qualité de bénéficiaire du contrat et celle de signataire au nom d’autrui.",
+            "Elle confond détention des titres et fonction de représentation."
+          ],
+          "answer": 3,
+          "expl": "L’importance de la participation ne démontre pas seule l’habilitation à agir au nom de la société. Le mandat et les règles de représentation doivent être recherchés."
+        },
+        {
+          "id": "UE2:trial:q07",
+          "chapter": "reperes",
+          "q": "Une société reçoit une somme correspondant à une souscription au capital. Comment qualifier cette entrée ?",
+          "options": [
+            "Une vente au souscripteur parce qu’il reçoit des titres.",
+            "Un dividende payé par l’associé à la société.",
+            "Un financement par apport, distinct du chiffre d’affaires.",
+            "Le remboursement d’un prêt fait par la société."
+          ],
+          "answer": 2,
+          "expl": "L’opération de souscription concerne le financement de la société. L’entrée bancaire ne suffit pas à la classer parmi les recettes commerciales."
+        },
+        {
+          "id": "UE2:trial:q11",
+          "chapter": "reperes",
+          "q": "Pourquoi faut-il identifier la forme sociale avant d’appliquer une règle de décision ?",
+          "options": [
+            "Parce que toute société doit suivre les règles du plus grand groupe du secteur.",
+            "Parce que le dirigeant choisit librement toute règle de vote.",
+            "Parce que le cadre légal et l’organisation statutaire dépendent du régime concerné.",
+            "Parce que le montant du capital impose à lui seul toutes les procédures."
+          ],
+          "answer": 2,
+          "expl": "Les règles ne se transposent pas indifféremment d’une forme à l’autre. La loi et les statuts pertinents permettent d’identifier l’organe et la procédure de la décision."
+        },
+        {
+          "id": "UE2:trial:q16",
+          "chapter": "reperes",
+          "q": "Une SARL exerce une activité civile. Un étudiant conclut qu’elle ne peut donc pas être une société commerciale. Que prévoit l’article L210-1 du Code de commerce ?",
+          "options": [
+            "La qualification dépend uniquement de l’activité effectivement exercée, indépendamment de la forme.",
+            "La SARL devient commerciale lorsque ses associés ont eux-mêmes la qualité de commerçant.",
+            "La SARL n’est commerciale que si cette qualité figure expressément dans son objet statutaire.",
+            "La SARL est commerciale à raison de sa forme, quel que soit son objet."
+          ],
+          "answer": 3,
+          "expl": "L’article L210-1 retient notamment la commercialité par la forme : la SARL figure parmi les formes commerciales quel que soit leur objet. Il ne faut pas confondre la nature civile de l’activité avec la qualification de la société qui l’exerce."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Une personne détient des titres et a aussi été nommée dirigeante. Elle signe un contrat pour la société. Quelle qualité doit être examinée pour analyser sa représentation ?",
+          "a": "Sa fonction de direction et les pouvoirs pertinents pour cet acte.",
+          "explanation": "Le cumul des qualités ne les rend pas interchangeables. La signature pour la société s’analyse à partir de la fonction et des pouvoirs, non du seul nombre de titres.",
+          "exampleAnswer": false,
+          "tag": "Société et gouvernance",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Un étudiant augmente le capital du montant de toutes les ventes de l’année. Quelle confusion commet-il ?",
+          "a": "Il confond le financement initial ou modifié par apports avec les recettes d’activité.",
+          "explanation": "Le capital et le chiffre d’affaires mesurent des objets différents. Des ventes peuvent modifier la trésorerie sans constituer, par elles-mêmes, de nouveaux apports au capital.",
+          "exampleAnswer": false,
+          "tag": "Société et gouvernance",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Une copie écrit : « La société est distincte, donc aucun associé ne peut jamais être poursuivi pour quelque fondement que ce soit. » Quelle limite manque ?",
+          "a": "L’examen du régime de responsabilité et des engagements personnels distincts.",
+          "explanation": "La distinction des personnes n’équivaut pas à une immunité personnelle générale. Le régime applicable et les garanties ou responsabilités propres doivent être étudiés.",
+          "exampleAnswer": false,
+          "tag": "Société et gouvernance",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "UE3",
+      "level": "DCG",
+      "label": "Droit social",
+      "chapter": "reperes",
+      "chapterTitle": "Relation de travail",
+      "path": "/dcg/ue-3-droit-social",
+      "questions": [
+        {
+          "id": "UE3:trial:q01",
+          "chapter": "reperes",
+          "q": "Le responsable impose chaque matin l’ordre des tâches et leur méthode d’exécution. Quel aspect de la subordination ces faits illustrent-ils directement ?",
+          "options": [
+            "Le pouvoir de direction.",
+            "Le pouvoir de sanction déjà exercé.",
+            "La liberté de fixer ses propres prix.",
+            "Le seul risque économique d’un prestataire."
+          ],
+          "answer": 0,
+          "expl": "Les consignes sur les tâches et leur réalisation illustrent la direction. Elles doivent être distinguées du contrôle de leur exécution et de la sanction des manquements."
+        },
+        {
+          "id": "UE3:trial:q04",
+          "chapter": "reperes",
+          "q": "Le dossier prouve des directives et un suivi, mais ne renseigne pas le pouvoir de sanction. Quelle présentation de la qualification est rigoureuse ?",
+          "options": [
+            "La seule rémunération suffit désormais à conclure définitivement.",
+            "Le contrat est nécessairement indépendant faute de sanction déjà prononcée.",
+            "Une sanction doit avoir été exécutée pour qu’un pouvoir de sanction puisse exister.",
+            "Les indices documentés sont exposés et le pouvoir de sanction restant à éclaircir est identifié."
+          ],
+          "answer": 3,
+          "expl": "L’analyse porte sur les pouvoirs et les conditions réelles. Il faut éviter de transformer une lacune en certitude ou d’exiger qu’un pouvoir ait déjà été exercé pour l’examiner."
+        },
+        {
+          "id": "UE3:trial:q07",
+          "chapter": "reperes",
+          "q": "Un contrat prévoit une facturation à la mission. Le travailleur soutient pourtant qu’il exécute son activité sous autorité. Quel raisonnement convient ?",
+          "options": [
+            "Le mode de facturation suffit à fermer toute discussion sur le salariat.",
+            "Le paiement à la mission démontre nécessairement une subordination.",
+            "Le mode de paiement doit être confronté aux conditions d’exercice plutôt que tenir lieu de qualification définitive.",
+            "La présence d’une facture transforme automatiquement les directives en simple conseil."
+          ],
+          "answer": 2,
+          "expl": "Le document et le mode de règlement sont des éléments à apprécier. Ils ne remplacent pas l’examen de l’organisation effective et des pouvoirs en présence."
+        },
+        {
+          "id": "UE3:trial:q11",
+          "chapter": "reperes",
+          "q": "Le bulletin d’exercice indique 2 400 € bruts, 480 € de retenues salariales et 800 € de cotisations patronales. Un candidat déduit les 800 € du brut pour calculer le net. Quelle distinction manque ?",
+          "options": [
+            "Le net salarial et le coût total supporté par l’employeur sont une même base.",
+            "Le brut doit être diminué des cotisations patronales et augmenté des retenues salariales.",
+            "Les retenues salariales et les charges supplémentaires supportées par l’employeur.",
+            "Les cotisations patronales sont comprises dans les 480 € de retenues annoncées."
+          ],
+          "answer": 2,
+          "expl": "Les cotisations patronales ne sont pas, dans ces données, des retenues salariales à soustraire du brut. Le net et le coût pour l’employeur sont des objets différents."
+        },
+        {
+          "id": "UE3:trial:q16",
+          "chapter": "reperes",
+          "q": "Une clause annonce que le travailleur choisit ses horaires, mais les plannings révèlent une présence imposée chaque jour. Quel élément doit guider la vérification ?",
+          "options": [
+            "La seule déclaration de liberté contenue dans le titre.",
+            "La seule préférence personnelle du travailleur pour ces horaires.",
+            "La seule durée prévue de la mission.",
+            "L’organisation réellement observée et son rapport aux pouvoirs du donneur d’ordre."
+          ],
+          "answer": 3,
+          "expl": "L’écart entre clause et pratique doit être analysé. Une liberté annoncée ne suffit pas à décrire les conditions effectivement imposées."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Une application permet au responsable de vérifier en temps réel l’exécution des consignes données au travailleur. Quel aspect de la relation est directement documenté ?",
+          "a": "Un contrôle de l’exécution du travail.",
+          "explanation": "Les données décrivent le suivi de l’exécution. Ce contrôle doit être relié aux autres éléments de la relation pour apprécier la subordination, sans être confondu avec la propriété d’un outil.",
+          "exampleAnswer": false,
+          "tag": "Relation de travail",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Dans un exercice de paie, le brut comprend 2 300 € de base et une prime brute de 180 €. Aucun autre élément n’entre dans le brut. Quel brut total retenir ?",
+          "a": "2 480 €",
+          "explanation": "Les composantes brutes fournies s’additionnent : 2 300 + 180 = 2 480 €. Les retenues éventuelles s’appliqueraient ensuite selon les seules données de l’exercice.",
+          "exampleAnswer": false,
+          "tag": "Relation de travail",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Une entreprise exige un résultat conforme au cahier des charges et un autre dispositif contrôle chaque geste et sanctionne tout écart à ses instructions. Quelle comparaison est utile ?",
+          "a": "L’objet et l’intensité des pouvoirs exercés, plutôt que le seul mot contrôle.",
+          "explanation": "Contrôler un résultat contractuel et exercer une autorité sur l’exécution ne se confondent pas. Les faits doivent être reliés aux fonctions de direction, contrôle et sanction.",
+          "exampleAnswer": false,
+          "tag": "Relation de travail",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "UE4",
+      "level": "DCG",
+      "label": "Droit fiscal",
+      "chapter": "reperes",
+      "chapterTitle": "Calculs de TVA",
+      "path": "/dcg/ue-4-droit-fiscal",
+      "questions": [
+        {
+          "id": "UE4:trial:q01",
+          "chapter": "reperes",
+          "q": "Avec une base hors taxe B et un taux de TVA t exprimé sous forme décimale, quelle formule donne la TVA ?",
+          "options": [
+            "B * t",
+            "B / t",
+            "B * (1 + t)",
+            "B / (1 + t)"
+          ],
+          "answer": 0,
+          "expl": "La TVA se calcule sur la base hors taxe par multiplication par le taux. Multiplier par 1 + t donne le prix TTC ; diviser un TTC par 1 + t permet de retrouver le HT. Le choix dépend de la grandeur de départ et de celle demandée."
+        },
+        {
+          "id": "UE4:trial:q04",
+          "chapter": "reperes",
+          "q": "Un règlement de 1 200 € TTC correspond à une opération au taux fourni de 20 %. Quel montant de TVA est inclus dans ce règlement ?",
+          "options": [
+            "240 €",
+            "1 000 €",
+            "200 €",
+            "250 €"
+          ],
+          "answer": 2,
+          "expl": "Le HT est 1 200 ÷ 1,20 = 1 000 €. La taxe incluse est donc 200 €, ou directement 1 200 × 20/120. Appliquer 20 % au TTC produirait 240 € et utiliserait la mauvaise base."
+        },
+        {
+          "id": "UE4:trial:q07",
+          "chapter": "reperes",
+          "q": "Pour une période sans report ni régularisation, la TVA collectée est de 2 800 € et la TVA déductible admise de 1 950 €. Quel montant est à payer ?",
+          "options": [
+            "4 750 €",
+            "850 €",
+            "1 950 €",
+            "−850 €"
+          ],
+          "answer": 1,
+          "expl": "Le solde est 2 800 − 1 950 = 850 €. Comme il est positif, il correspond ici à la TVA à payer. Additionner les deux taxes ou présenter le droit à déduction comme un paiement supplémentaire inverserait le mécanisme."
+        },
+        {
+          "id": "UE4:trial:q11",
+          "chapter": "reperes",
+          "q": "Une entreprise constate un crédit de TVA de 2 000 € dans sa déclaration. Aucun remboursement n’a encore été demandé ni reçu. Quel constat de trésorerie peut-elle faire ?",
+          "options": [
+            "La déclaration établit déjà une entrée de banque égale au crédit.",
+            "Le crédit est encaissé dès son inscription dans la déclaration, puis régularisé lors de la demande.",
+            "Le crédit déclaré ne prouve pas un encaissement.",
+            "Le report du crédit équivaut à un remboursement bancaire au titre de la période suivante."
+          ],
+          "answer": 2,
+          "expl": "La constatation d’un crédit ne constitue pas un mouvement bancaire. Un remboursement éventuel suit une procédure et des conditions propres. Dans ce dossier, aucun encaissement n’est documenté ; il ne faut pas assimiler le crédit déclaré à de la trésorerie reçue."
+        },
+        {
+          "id": "UE4:trial:q16",
+          "chapter": "reperes",
+          "q": "Une facture présente une omission mineure d’une mention obligatoire. La réalité de l’opération et les autres conditions de déduction sont par ailleurs justifiées. Quelle position expose le BOFiP ?",
+          "options": [
+            "Toute omission supprime systématiquement le droit à déduction.",
+            "Une omission isolée n’entraîne pas nécessairement le rejet du droit.",
+            "Une omission reporte obligatoirement la déduction jusqu’au paiement du fournisseur.",
+            "La régularité de toutes les mentions dispense de justifier la réalité de l’opération."
+          ],
+          "answer": 1,
+          "expl": "Le BOFiP précise que la seule omission ou inexactitude d’une mention ne remet pas nécessairement en cause la déduction lorsque l’opération est réelle et satisfait aux autres conditions. Il faut apprécier la nature des manquements, sans assimiler tout défaut formel à l’absence de droit."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Une vente est fixée à 750 € HT. Le taux donné pour cette opération est 20 %. Quel est son prix TTC ?",
+          "a": "900 €",
+          "explanation": "La taxe est 750 × 20 % = 150 €. Le TTC réunit la base et la taxe : 750 + 150 = 900 €. Le montant de 150 € ne représente que la TVA et ne peut être présenté comme le prix total.",
+          "exampleAnswer": false,
+          "tag": "Calculs de TVA",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Une déclaration soustrait les achats HT de la TVA collectée pour obtenir la TVA à payer. Quelle erreur de grandeur contient-elle ?",
+          "a": "Elle soustrait une base d’achat à un montant de taxe.",
+          "explanation": "Le droit à déduction porte sur la TVA admise, non sur le montant HT des achats. Le calcul rapproche des montants de même nature. Il faut déterminer la taxe déductible avant de la retrancher de la taxe collectée.",
+          "exampleAnswer": false,
+          "tag": "Calculs de TVA",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Pour dater le droit à déduction d’un achat, un étudiant retient la date de commande alors que l’exigibilité chez le fournisseur n’est pas encore intervenue. Quel événement rattache la naissance du droit selon l’article 271 ?",
+          "a": "L’exigibilité de la taxe chez le redevable.",
+          "explanation": "Le droit à déduction prend naissance lorsque la taxe devient exigible chez le redevable. Son exercice nécessite aussi les conditions documentaires applicables. La commande ou le budget ne remplace pas cette analyse du moment fiscal pertinent.",
+          "exampleAnswer": false,
+          "tag": "Calculs de TVA",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "UE5",
+      "level": "DCG",
+      "label": "Économie contemporaine",
+      "chapter": "production",
+      "chapterTitle": "Production, valeur ajoutée et croissance",
+      "path": "/dcg/ue-5-economie-contemporaine",
+      "questions": [
+        {
+          "id": "UE5:trial:q01",
+          "chapter": "production",
+          "q": "Dans un schéma simple, comment détermine-t-on la valeur ajoutée ?",
+          "options": [
+            "Production moins consommations intermédiaires.",
+            "Production moins tous les salaires, intérêts et impôts.",
+            "Production additionnée aux consommations intermédiaires.",
+            "Chiffre d’affaires rapporté au nombre de salariés."
+          ],
+          "answer": 0,
+          "expl": "La valeur ajoutée mesure la contribution productive après déduction des biens et services consommés dans la production. Le bénéfice net tient compte d’autres charges et produits : ce n’est pas le même solde."
+        },
+        {
+          "id": "UE5:trial:q04",
+          "chapter": "production",
+          "q": "Que mesure une productivité apparente du travail calculée par heure ?",
+          "options": [
+            "Une valeur ajoutée rapportée au nombre de personnes employées, quel que soit leur temps de travail.",
+            "Une masse salariale rapportée aux heures rémunérées sur la période.",
+            "Une quantité d’heures de travail rapportée au volume de production obtenu.",
+            "Une production rapportée aux heures de travail utilisées."
+          ],
+          "answer": 3,
+          "expl": "Le ratio relie un résultat productif à une quantité de travail. Le terme « apparente » rappelle que d’autres facteurs, tels que l’équipement et l’organisation, peuvent contribuer au résultat mesuré."
+        },
+        {
+          "id": "UE5:trial:q07",
+          "chapter": "production",
+          "q": "Deux indices cohérents de base 100 valent 126 pour la valeur et 105 pour les prix. Quel est l’indice de volume ?",
+          "options": [
+            "120",
+            "21",
+            "131,3",
+            "83,33"
+          ],
+          "answer": 0,
+          "expl": "L’indice de volume vaut 126 / 105 × 100 = 120. La division neutralise l’effet multiplicatif des prix ; soustraire les deux indices ne reconstitue pas l’indice de volume."
+        },
+        {
+          "id": "UE5:trial:q11",
+          "chapter": "production",
+          "q": "La valeur des ventes reste stable alors que l’indice des prix augmente. Dans un modèle prix-volume cohérent, quelle évolution du volume explique ce constat ?",
+          "options": [
+            "Une diminution du volume compensant la hausse des prix.",
+            "Une hausse du volume parce que des prix plus élevés augmentent la valeur de chaque unité.",
+            "Une stabilité du volume puisque le chiffre d’affaires total est inchangé.",
+            "Une diminution des prix de vente, déduite de la stabilité de leur produit avec les quantités."
+          ],
+          "answer": 0,
+          "expl": "À valeur stable, un indice de prix plus élevé implique un indice de volume plus faible, sous les hypothèses de cohérence données. Une stabilité nominale peut donc masquer une baisse des quantités."
+        },
+        {
+          "id": "UE5:trial:q16",
+          "chapter": "production",
+          "q": "La production par heure augmente après l’installation d’une machine. Pourquoi cette hausse ne prouve-t-elle pas un gain dû au seul travail humain ?",
+          "options": [
+            "Le ratio horaire isole déjà l’effet causal du travail parce que les heures figurent au dénominateur.",
+            "La contribution de la machine n’intervient que dans un ratio par salarié, pas dans un ratio par heure.",
+            "Une hausse du ratio horaire démontre à elle seule que chaque salarié a augmenté son effort à équipement constant.",
+            "L’équipement peut contribuer au résultat rapporté au travail dans ce ratio apparent."
+          ],
+          "answer": 3,
+          "expl": "Le ratio rapporte la production à un facteur sans isoler toutes ses causes. La machine ou l’organisation peut expliquer une partie de la hausse, ce que le qualificatif « apparente » invite à rappeler."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Une production passe de 200 à 230 unités à périmètre identique. Quel est son taux de croissance ?",
+          "a": "15 %",
+          "explanation": "Le taux rapporte la variation à la valeur initiale : (230 − 200) / 200 × 100 = 15 %. Trente représente la variation absolue en unités ; utiliser la valeur finale changerait la base demandée.",
+          "exampleAnswer": false,
+          "tag": "Production, valeur ajoutée et croissance",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Le PIB est dit « brut ». Un analyste veut mesurer le produit intérieur net, c’est-à-dire après prise en compte de l’usure du capital fixe pendant la période. Quel ajustement convient ?",
+          "a": "Retrancher la consommation de capital fixe du PIB.",
+          "explanation": "Le produit intérieur net est le PIB diminué de la consommation de capital fixe, estimation de l’usure du capital durant la période. Cette consommation n’est ni le stock total de machines ni leur acquisition annuelle. Les consommations intermédiaires ont déjà été prises en compte.",
+          "exampleAnswer": false,
+          "tag": "Production, valeur ajoutée et croissance",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Un chiffre d’affaires local est corrigé par un indice de prix d’une autre activité sans vérifier les paniers. Quelle limite faut-il signaler ?",
+          "a": "La correction peut ne pas neutraliser les prix du périmètre réellement étudié.",
+          "explanation": "La méthode prix-volume requiert des indices cohérents. Un autre panier peut évoluer différemment et ne pas représenter les prix des ventes étudiées, ce qui fragilise la conclusion en volume.",
+          "exampleAnswer": false,
+          "tag": "Production, valeur ajoutée et croissance",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "UE6",
+      "level": "DCG",
+      "label": "Finance d’entreprise",
+      "chapter": "reperes",
+      "chapterTitle": "Équilibre financier et investissement",
+      "path": "/dcg/ue-6-finance-entreprise",
+      "questions": [
+        {
+          "id": "UE6:trial:q01",
+          "chapter": "reperes",
+          "q": "Que mesure le besoin en fonds de roulement dans un cycle d’exploitation simplifié ?",
+          "options": [
+            "Le financement des stocks et créances, net des dettes d’exploitation",
+            "Le bénéfice réalisé sur les ventes",
+            "Le montant de tous les emprunts",
+            "La valeur de marché des immobilisations"
+          ],
+          "answer": 0,
+          "expl": "Le BFR mesure les décalages de financement du cycle. Il ne mesure ni une performance comptable ni la valeur des équipements."
+        },
+        {
+          "id": "UE6:trial:q04",
+          "chapter": "reperes",
+          "q": "Stocks : 18 000 € ; créances clients : 27 000 € ; dettes fournisseurs : 20 000 €. Aucun autre poste d’exploitation. Quel est le BFR ?",
+          "options": [
+            "65 000 €",
+            "9 000 €",
+            "45 000 €",
+            "25 000 €"
+          ],
+          "answer": 3,
+          "expl": "Les emplois représentent 18 000 + 27 000 = 45 000 €. Les fournisseurs financent 20 000 €, d’où un besoin net de 25 000 €."
+        },
+        {
+          "id": "UE6:trial:q07",
+          "chapter": "reperes",
+          "q": "Quelle relation relie FRNG, BFR et trésorerie nette dans un cadre fonctionnel cohérent ?",
+          "options": [
+            "La somme du FRNG et du BFR",
+            "La différence du BFR moins le FRNG",
+            "Trésorerie nette = FRNG − BFR",
+            "Le rapport du FRNG au BFR"
+          ],
+          "answer": 2,
+          "expl": "Le fonds de roulement finance le besoin du cycle. Le solde entre FRNG et BFR constitue la trésorerie nette."
+        },
+        {
+          "id": "UE6:trial:q11",
+          "chapter": "reperes",
+          "q": "Un dirigeant affirme : « Notre trésorerie nette est positive, nous n’avons donc aucune dette fournisseur. » Quelle rectification est correcte ?",
+          "options": [
+            "Une trésorerie positive interdit de détenir des stocks",
+            "La trésorerie nette mesure uniquement les fournisseurs",
+            "Un solde positif reste compatible avec des dettes fournisseurs",
+            "Les fournisseurs sont des emplois stables"
+          ],
+          "answer": 2,
+          "expl": "La trésorerie nette est un solde global. Des dettes fournisseurs peuvent financer le cycle alors que ce solde demeure positif."
+        },
+        {
+          "id": "UE6:trial:q16",
+          "chapter": "reperes",
+          "q": "Le taux d’actualisation augmente tandis que le montant et la date d’un encaissement futur positif restent fixes. Comment évolue sa valeur actuelle ?",
+          "options": [
+            "Elle augmente dans la même proportion",
+            "Elle ne change pas",
+            "Elle devient obligatoirement négative",
+            "Elle diminue"
+          ],
+          "answer": 3,
+          "expl": "L’augmentation du taux accroît le dénominateur d’actualisation. La valeur actuelle baisse sans devenir négative pour ce flux positif."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Une entreprise paie ses marchandises avant d’encaisser leur vente. Pourquoi peut-elle manquer de trésorerie malgré une marge positive ?",
+          "a": "Le décalage entre décaissement et encaissement doit être financé",
+          "explanation": "La rentabilité d’une vente ne détermine pas sa date d’encaissement. Le cycle immobilise des ressources avant que le client ne paie.",
+          "exampleAnswer": false,
+          "tag": "Équilibre financier et investissement",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Un FRNG de 42 000 € et un BFR de 50 000 € sont calculés avec les mêmes conventions. Quelle est la trésorerie nette ?",
+          "a": "−8 000 €",
+          "explanation": "La trésorerie nette est égale à 42 000 − 50 000 = −8 000 €. Le besoin du cycle dépasse ici la ressource durable.",
+          "exampleAnswer": false,
+          "tag": "Équilibre financier et investissement",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Un étudiant remplace les flux nets de trésorerie par les bénéfices comptables sans aucun retraitement pour calculer une VAN. Pourquoi est-ce incorrect ?",
+          "a": "Résultat comptable et trésorerie ne mesurent pas les mêmes flux",
+          "explanation": "Charges non décaissées et décalages de paiement distinguent résultat et trésorerie. La VAN nécessite des flux nets datés pertinents.",
+          "exampleAnswer": false,
+          "tag": "Équilibre financier et investissement",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "UE7",
+      "level": "DCG",
+      "label": "Management",
+      "chapter": "reperes",
+      "chapterTitle": "Diagnostic et décisions",
+      "path": "/dcg/ue-7-management",
+      "questions": [
+        {
+          "id": "UE7:trial:q01",
+          "chapter": "reperes",
+          "q": "Une entreprise dispose d’une équipe maîtrisant une technique rare utile à ses clients. Où situer ce fait dans un premier diagnostic ?",
+          "options": [
+            "Dans les ressources et compétences internes à apprécier.",
+            "Dans une opportunité de demande extérieure à l’organisation.",
+            "Dans une menace concurrentielle extérieure à l’organisation.",
+            "Dans une évolution réglementaire commune à tous les acteurs."
+          ],
+          "answer": 0,
+          "expl": "Une compétence détenue par l’organisation relève du diagnostic interne. Sa valeur doit encore être appréciée au regard des besoins ; la rareté mentionnée n’en fait pas un événement extérieur."
+        },
+        {
+          "id": "UE7:trial:q04",
+          "chapter": "reperes",
+          "q": "Une entreprise décide de s’implanter durablement dans un nouveau métier et d’y engager une part importante de ses moyens. Quelle nature de décision est la plus directement décrite ?",
+          "options": [
+            "Une décision de programmation des équipes à l’intérieur du métier existant.",
+            "Une décision d’application d’un barème déjà approuvé aux dossiers courants.",
+            "Une décision d’ordonnancement des livraisons dans le cadre actuel.",
+            "Une décision stratégique d’orientation et d’engagement de ressources."
+          ],
+          "answer": 3,
+          "expl": "Le choix transforme durablement l’orientation et mobilise des ressources importantes. Il se distingue de l’organisation courante de l’activité, même si sa réalisation entraînera aussi des décisions opérationnelles."
+        },
+        {
+          "id": "UE7:trial:q07",
+          "chapter": "reperes",
+          "q": "Un responsable affirme « notre indicateur est de réduire les retards à moins de 3 % ». Quel élément de cette phrase constitue la cible ?",
+          "options": [
+            "Le taux effectivement observé pendant la période précédente.",
+            "La règle définissant les commandes qui entrent dans le dénominateur.",
+            "Le niveau de retards inférieur à3%, à rattacher à une mesure et une période.",
+            "La fréquence à laquelle le tableau de bord est publié."
+          ],
+          "answer": 2,
+          "expl": "La cible indique un niveau souhaité. L’indicateur mesure le phénomène, par exemple une proportion de dossiers en retard ; il faut encore préciser son périmètre et sa période pour comparer l’observé à la cible."
+        },
+        {
+          "id": "UE7:trial:q11",
+          "chapter": "reperes",
+          "q": "Deux services présentent des taux de retard mais l’un compte les commandes et l’autre les clients. Quel contrôle faut-il faire avant de les comparer ?",
+          "options": [
+            "Comparer directement les taux parce qu’ils sont tous deux exprimés en pourcentage.",
+            "Appliquer la même cible aux deux services en supposant que cela harmonise leurs populations.",
+            "Vérifier la formule, la population et les conventions de mesure.",
+            "Augmenter la fréquence de publication sans revoir les unités de comptage différentes."
+          ],
+          "answer": 2,
+          "expl": "Un pourcentage ne devient pas comparable du seul fait de son unité. Numérateur, dénominateur et périmètre doivent représenter la même mesure pour interpréter correctement les différences entre services."
+        },
+        {
+          "id": "UE7:trial:q16",
+          "chapter": "reperes",
+          "q": "Une réparation coûteuse conserve une installation dans le même métier, avec les mêmes capacités et clients. Quel critère évite de confondre cette dépense avec une nouvelle orientation stratégique ?",
+          "options": [
+            "Qualifier toute dépense supérieure au budget d’un service de diversification.",
+            "Qualifier toute intervention technique importante d’entrée sur un nouveau marché.",
+            "Déduire la nature stratégique de la dépense du seul niveau hiérarchique signataire.",
+            "Examiner le contenu du choix : maintien du fonctionnement existant ou modification durable de l’orientation."
+          ],
+          "answer": 3,
+          "expl": "Un montant élevé peut correspondre au maintien du fonctionnement. Pour qualifier la portée stratégique, il faut aussi examiner l’orientation et les capacités engagées ; coût ou signataire ne suffisent pas seuls."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Un concurrent lance une offre qui répond mieux à une attente du marché. Quel objet de diagnostic est principalement concerné pour l’entreprise observatrice ?",
+          "a": "Une évolution externe de concurrence et de demande.",
+          "explanation": "Le comportement du concurrent et les attentes de marché appartiennent à l’environnement. Ce fait peut appeler une réponse interne, mais il ne devient pas pour autant une ressource déjà disponible.",
+          "exampleAnswer": false,
+          "tag": "Diagnostic et décisions",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Une capacité de production existe mais reste inutilisable faute de personnel formé. Quel diagnostic interne est le plus précis ?",
+          "a": "Distinguer la ressource matérielle disponible de la capacité effective à la mobiliser.",
+          "explanation": "Le diagnostic interne doit examiner ressources et compétences ensemble. La possession d’un moyen ne garantit pas son usage efficace ; la formation manquante fait partie des contraintes à documenter.",
+          "exampleAnswer": false,
+          "tag": "Diagnostic et décisions",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Un indicateur de productivité augmente mais sa formule a changé entre les périodes. Que faut-il vérifier avant d’annoncer l’atteinte de l’objectif ?",
+          "a": "La comparabilité des définitions et l’effet du changement de formule.",
+          "explanation": "La cible et la mesure doivent se référer au même phénomène. Une modification de formule peut produire une variation apparente ; il faut la documenter ou reconstruire une série cohérente.",
+          "exampleAnswer": false,
+          "tag": "Diagnostic et décisions",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "UE8",
+      "level": "DCG",
+      "label": "Systèmes d’information de gestion",
+      "chapter": "donnees",
+      "chapterTitle": "Structurer une base de données",
+      "path": "/dcg/ue-8-systemes-information-gestion",
+      "questions": [
+        {
+          "id": "UE8:trial:q01",
+          "chapter": "donnees",
+          "q": "Quelle propriété est indispensable à une clé primaire dans une table relationnelle ?",
+          "options": [
+            "Elle doit être unique dans chaque export, même si elle se répète dans la table.",
+            "Elle identifie chaque ligne sans doublon ni valeur NULL.",
+            "Elle identifie obligatoirement une ligne dans toutes les tables du système.",
+            "Elle autorise NULL si aucune autre ligne ne porte NULL."
+          ],
+          "answer": 1,
+          "expl": "La clé primaire distingue chaque ligne et exclut les valeurs NULL. Son format peut être numérique, textuel ou composé : c’est son rôle d’identification qui compte."
+        },
+        {
+          "id": "UE8:trial:q04",
+          "chapter": "donnees",
+          "q": "Dans Commande, pourquoi plusieurs lignes peuvent-elles porter la même clé étrangère idClient ?",
+          "options": [
+            "Parce que idClient constitue aussi la clé primaire de chaque commande.",
+            "Parce qu’une clé étrangère n’est contrôlée que lors des suppressions.",
+            "Parce que la clé primaire de Client est alors répétée dans Client.",
+            "Parce qu’un client peut être associé à plusieurs commandes."
+          ],
+          "answer": 3,
+          "expl": "La répétition de idClient dans Commande traduit la relation un à plusieurs. L’unicité porte ici sur idCommande, pas sur la référence commune à plusieurs achats du même client."
+        },
+        {
+          "id": "UE8:trial:q07",
+          "chapter": "donnees",
+          "q": "Un logiciel attribue le même idCommande à deux achats différents. Pourquoi ce comportement viole-t-il le rôle de la clé primaire ?",
+          "options": [
+            "Une valeur de clé n’identifie plus une seule ligne.",
+            "Une clé primaire ne peut pas identifier des opérations de dates différentes.",
+            "La clé étrangère client devient nécessairement NULL.",
+            "Les deux achats deviennent automatiquement une seule opération métier."
+          ],
+          "answer": 0,
+          "expl": "Une clé primaire doit distinguer sans ambiguïté les lignes. Réutiliser le même identifiant pour deux achats détruit cette identification, indépendamment du type choisi pour la clé."
+        },
+        {
+          "id": "UE8:trial:q11",
+          "chapter": "donnees",
+          "q": "Une clé primaire doit-elle nécessairement être un numéro généré automatiquement ?",
+          "options": [
+            "Non : une autre clé est possible si elle est unique, non NULL et adaptée aux règles métier.",
+            "Oui : une clé métier ne peut jamais garantir une identification.",
+            "Oui : l’existence de plusieurs colonnes rend une clé invalide.",
+            "Non : l’unicité observée sur un échantillon suffit sans contrainte durable."
+          ],
+          "answer": 0,
+          "expl": "Un numéro automatique est une solution pratique, pas une propriété imposée par la notion de clé primaire. Une clé métier ou composée convient si ses contraintes d’identification sont garanties."
+        },
+        {
+          "id": "UE8:trial:q16",
+          "chapter": "donnees",
+          "q": "Un concepteur impose idClient UNIQUE dans Commande alors que les clients doivent pouvoir acheter plusieurs fois. Quelle conséquence obtient-il ?",
+          "options": [
+            "Il empêche seulement deux commandes d’un même client à la même date.",
+            "Il autorise une seconde commande si son montant est différent.",
+            "Il contrôle uniquement l’existence du client dans Client.",
+            "Il interdit une seconde commande portant le même client."
+          ],
+          "answer": 3,
+          "expl": "La contrainte UNIQUE rend chaque référence client utilisable une seule fois dans Commande. Elle contredit donc la relation un à plusieurs voulue, même si les identifiants de commande sont différents."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Deux clients différents portent le même nom et peuvent habiter à la même adresse. Quel choix identifie durablement chacun dans la base ?",
+          "a": "Un identifiant client unique et non NULL.",
+          "explanation": "Les règles données autorisent des noms et adresses identiques. Un identifiant client unique évite ces collisions sans dépendre d’une donnée descriptive susceptible de changer.",
+          "exampleAnswer": false,
+          "tag": "Structurer une base de données",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Une clé étrangère relie les commandes aux clients, mais une commande peut encore afficher un montant négatif contraire aux règles internes. Quelle conclusion est correcte ?",
+          "a": "Le contrôle de référence ne remplace pas le contrôle du montant.",
+          "explanation": "L’intégrité référentielle vérifie le lien entre les tables. Une règle de domaine ou un contrôle métier supplémentaire reste nécessaire pour imposer les valeurs autorisées du montant.",
+          "exampleAnswer": false,
+          "tag": "Structurer une base de données",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Dans un échantillon de vingt salariés, tous les prénoms sont différents. Cela suffit-il à choisir le prénom comme clé primaire durable ?",
+          "a": "Non : l’unicité doit être garantie par les règles, pas seulement observée dans l’échantillon.",
+          "explanation": "Un constat provisoire ne démontre pas une règle d’unicité durable. Des homonymes futurs sont possibles ; l’identifiant doit rester compatible avec les faits que la base est censée représenter.",
+          "exampleAnswer": false,
+          "tag": "Structurer une base de données",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "UE9",
+      "level": "DCG",
+      "label": "Comptabilité",
+      "chapter": "reperes",
+      "chapterTitle": "Premiers mécanismes comptables",
+      "path": "/dcg/ue-9-comptabilite",
+      "questions": [
+        {
+          "id": "UE9:trial:q01",
+          "chapter": "reperes",
+          "q": "Quelle égalité doit respecter une écriture comptable en partie double ?",
+          "options": [
+            "Le total des débits doit égaler le total des crédits",
+            "Chaque compte doit avoir un solde nul après l’écriture",
+            "Chaque écriture doit comprendre exactement deux comptes",
+            "Les charges doivent égaler les produits pour chaque opération"
+          ],
+          "answer": 0,
+          "expl": "La partie double impose l’équilibre des montants de l’écriture. Plusieurs comptes peuvent être utilisés et leurs soldes individuels n’ont pas à être nuls."
+        },
+        {
+          "id": "UE9:trial:q04",
+          "chapter": "reperes",
+          "q": "Une machine a une base amortissable de 15 000 €, une consommation constante et une durée d’utilisation de cinq ans. Quelle est l’annuité linéaire d’une année complète ?",
+          "options": [
+            "75 000 €",
+            "5 000 €",
+            "15 000 €",
+            "3 000 €"
+          ],
+          "answer": 3,
+          "expl": "L’annuité linéaire d’une année complète est la base amortissable divisée par la durée : 15 000 / 5 = 3 000 €."
+        },
+        {
+          "id": "UE9:trial:q07",
+          "chapter": "reperes",
+          "q": "Sans dépréciation, comment détermine-t-on la valeur nette comptable d’une immobilisation amortissable ?",
+          "options": [
+            "Valeur brute augmentée des dotations de l’année",
+            "Prix de vente estimé diminué des dettes fournisseurs",
+            "Valeur brute diminuée des amortissements cumulés",
+            "Valeur brute diminuée des seuls règlements effectués"
+          ],
+          "answer": 2,
+          "expl": "La VNC résulte des corrections de valeur cumulées. Le paiement et la valeur de marché ne remplacent pas les amortissements dans ce calcul."
+        },
+        {
+          "id": "UE9:trial:q11",
+          "chapter": "reperes",
+          "q": "Une entreprise conclut que toute hausse du chiffre d’affaires a déjà augmenté sa banque du même montant. Quelle information lui manque-t-il notamment ?",
+          "options": [
+            "Le seul montant total TTC facturé",
+            "Le seul bénéfice d’exploitation",
+            "Les conditions et dates de règlement des clients",
+            "Le seul solde bancaire au début de l’exercice"
+          ],
+          "answer": 2,
+          "expl": "Des ventes à crédit peuvent accroître les créances plutôt que les disponibilités. Le calendrier de paiement est indispensable au lien avec la trésorerie."
+        },
+        {
+          "id": "UE9:trial:q16",
+          "chapter": "reperes",
+          "q": "Une société réalise un bénéfice tout en achetant une machine payée comptant et en accordant du crédit à ses clients. Peut-elle manquer de liquidités ?",
+          "options": [
+            "Non, un bénéfice garantit un solde bancaire positif",
+            "Non, l’achat de la machine est toujours payé par la dotation",
+            "Oui, mais seulement si les charges excèdent les produits",
+            "Oui, bénéfice et trésorerie peuvent diverger du fait de ces opérations"
+          ],
+          "answer": 3,
+          "expl": "L’investissement mobilise des liquidités et les créances retardent les encaissements. Ces mouvements ne suivent pas le résultat comptable à l’identique."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Une facture oubliée n’a été enregistrée ni au débit ni au crédit. Une balance équilibrée permet-elle de repérer automatiquement cet oubli ?",
+          "a": "Non, l’absence complète d’une écriture peut laisser les totaux égaux",
+          "explanation": "Une opération entièrement omise n’introduit aucun déséquilibre arithmétique. Le rapprochement avec les pièces reste nécessaire pour contrôler l’exhaustivité.",
+          "exampleAnswer": false,
+          "tag": "Premiers mécanismes comptables",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Une machine a une VNC de 6 000 €. Le dirigeant affirme qu’il pourra forcément la vendre à ce prix. Que faut-il lui expliquer ?",
+          "a": "La valeur comptable n’est pas une garantie de prix de marché",
+          "explanation": "La VNC découle du coût et des corrections comptables. Le prix négociable dépend du marché et de l’état du bien, sans égalité automatique.",
+          "exampleAnswer": false,
+          "tag": "Premiers mécanismes comptables",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Une facture client déjà comptabilisée est réglée seulement pour moitié. Sans autre opération, quelle situation reste après le paiement ?",
+          "a": "Une créance résiduelle pour la moitié non réglée",
+          "explanation": "Le règlement partiel réduit la créance à concurrence des fonds reçus. Le solde demeure à encaisser sans créer de nouvelle vente.",
+          "exampleAnswer": false,
+          "tag": "Premiers mécanismes comptables",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "UE10",
+      "level": "DCG",
+      "label": "Comptabilité approfondie",
+      "chapter": "reperes",
+      "chapterTitle": "Estimation et dépréciation",
+      "path": "/dcg/ue-10-comptabilite-approfondie",
+      "questions": [
+        {
+          "id": "UE10:trial:q01",
+          "chapter": "reperes",
+          "q": "Une machine est mieux entretenue que prévu et une expertise récente allonge sa durée d’utilisation restante. L’ancienne estimation était raisonnable au vu des informations de l’époque. Comment qualifier cette nouvelle appréciation ?",
+          "options": [
+            "Un changement d’estimation fondé sur de nouvelles informations",
+            "Une erreur passée nécessairement frauduleuse",
+            "Un changement automatique du coût d’achat historique",
+            "Une vente fictive du matériel"
+          ],
+          "answer": 0,
+          "expl": "Une information nouvelle peut faire évoluer une estimation sans rendre la précédente erronée. La qualification dépend aussi des données disponibles à l’origine."
+        },
+        {
+          "id": "UE10:trial:q04",
+          "chapter": "reperes",
+          "q": "La VNC au début de la révision est 12 000 €. La valeur résiduelle reste de 2 000 € et cinq années d’usage restent prévues, avec consommation linéaire. Quelle annuité future pleine résulte de ces hypothèses ?",
+          "options": [
+            "2 400 €",
+            "10 000 €",
+            "400 €",
+            "2 000 €"
+          ],
+          "answer": 3,
+          "expl": "La base encore à répartir est 12 000 − 2 000 = 10 000 €. Sur cinq années restantes, l’annuité devient 2 000 €, sans recalculer mécaniquement le passé."
+        },
+        {
+          "id": "UE10:trial:q07",
+          "chapter": "reperes",
+          "q": "Une provision comptable garantit-elle que l’argent correspondant est placé sur un compte disponible ?",
+          "options": [
+            "Oui, toute dotation déclenche un versement bancaire",
+            "Oui, si le montant est estimé correctement",
+            "Non, sa constatation ne crée pas une réserve de trésorerie",
+            "Non, car elle rembourse automatiquement une dette"
+          ],
+          "answer": 2,
+          "expl": "La provision traduit une obligation estimée et une charge dans le cadre applicable. Le financement futur du paiement reste une question distincte."
+        },
+        {
+          "id": "UE10:trial:q11",
+          "chapter": "reperes",
+          "q": "Un actif vaut 60 000 € bruts et cumule 18 000 € d’amortissements. Aucune dépréciation n’existe avant le test. Quelle VNC faut-il comparer à la valeur test ?",
+          "options": [
+            "78 000 €",
+            "18 000 €",
+            "42 000 €",
+            "60 000 €"
+          ],
+          "answer": 2,
+          "expl": "La VNC avant test est 60 000 − 18 000 = 42 000 €. Les amortissements sont déduits une seule fois avant la comparaison."
+        },
+        {
+          "id": "UE10:trial:q16",
+          "chapter": "reperes",
+          "q": "Le cadre de l’exercice impose de ramener une VNC avant nouvelle dépréciation de 32 000 € à une valeur test de 25 000 €. Aucune dépréciation antérieure n’existe. Quelle réduction faut-il constater ?",
+          "options": [
+            "25 000 €",
+            "57 000 €",
+            "32 000 €",
+            "7 000 €"
+          ],
+          "answer": 3,
+          "expl": "La réduction est 32 000 − 25 000 = 7 000 €. Le calcul applique la valeur test fournie ; il ne démontre pas à lui seul sa pertinence."
+        }
+      ],
+      "cards": [
+        {
+          "q": "La durée retenue initialement reposait sur une mauvaise copie manifeste du contrat déjà disponible. Le préparateur présente la correction comme une simple information nouvelle. Quel point faut-il examiner ?",
+          "a": "L’existence d’une erreur dans les données antérieures plutôt qu’un changement d’estimation ordinaire",
+          "explanation": "Une estimation antérieure fondée sur des données manifestement erronées peut relever d’une correction d’erreur. Il faut étudier ce qui était connu au moment du traitement.",
+          "exampleAnswer": false,
+          "tag": "Estimation et dépréciation",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Le dossier retient une obligation probable évaluée à 5 500 €. La provision existante correspondante est 4 000 €. Sans autre mouvement, quel complément d’estimation faut-il examiner ?",
+          "a": "1 500 €",
+          "explanation": "Le nouveau besoin dépasse le montant déjà constitué de 5 500 − 4 000 = 1 500 €. Il ne faut pas ajouter à nouveau tout le montant cible.",
+          "exampleAnswer": false,
+          "tag": "Estimation et dépréciation",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Après un test, une valeur nette de 40 000 € est réduite de 6 000 €. Quelle valeur nette subsiste, sans autre mouvement ?",
+          "a": "34 000 €",
+          "explanation": "La correction diminue la valeur nette : 40 000 − 6 000 = 34 000 €. Elle ne modifie pas à elle seule un paiement ou un encaissement bancaire.",
+          "exampleAnswer": false,
+          "tag": "Estimation et dépréciation",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "UE11",
+      "level": "DCG",
+      "label": "Contrôle de gestion",
+      "chapter": "couts",
+      "chapterTitle": "Coûts directs et indirects",
+      "path": "/dcg/ue-11-controle-gestion",
+      "questions": [
+        {
+          "id": "UE11:trial:q01",
+          "chapter": "couts",
+          "q": "Une matière utilisée par un produit est mesurée directement pour ce produit, sans répartition intermédiaire. Comment qualifier cette charge pour cet objet de coût ?",
+          "options": [
+            "Directe, car son affectation au produit est identifiable.",
+            "Indirecte, parce que toute matière doit passer par une clé commune.",
+            "Nécessairement fixe, indépendamment de son mode d’affectation.",
+            "Supplétive, parce qu’elle est mesurée en quantité."
+          ],
+          "answer": 0,
+          "expl": "Le caractère direct est relatif à l’objet et à la possibilité d’affectation sans répartition pertinente. Il ne se déduit pas du seul type de dépense ou du comportement fixe ou variable."
+        },
+        {
+          "id": "UE11:trial:q04",
+          "chapter": "couts",
+          "q": "Un lot comporte 900 € de charges directes et 600 € de charges indirectes imputées, dans un périmètre sans autre charge. Quel coût complet du lot obtient-on ?",
+          "options": [
+            "300 €",
+            "540 000 €",
+            "900 €",
+            "1 500 €"
+          ],
+          "answer": 3,
+          "expl": "Le coût complet du périmètre combine les deux catégories : 900 + 600 = 1 500 €. Il ne faut ni exclure la part indirecte ni la retrancher de la part directe."
+        },
+        {
+          "id": "UE11:trial:q07",
+          "chapter": "couts",
+          "q": "Les charges d’un centre sont annuelles mais son activité au dénominateur couvre un seul mois. Quelle correction est prioritaire ?",
+          "options": [
+            "Diviser toutes les charges annuelles par douze sans examiner leur saisonnalité.",
+            "Utiliser le mois le plus actif comme s’il représentait l’activité annuelle entière.",
+            "Faire correspondre la période des charges et celle de l’activité.",
+            "Conserver les périodes différentes puis répartir le taux obtenu également sur tous les mois."
+          ],
+          "answer": 2,
+          "expl": "Un coût unitaire d’activité exige un numérateur et un dénominateur de même champ temporel. Le mélange des périodes crée un taux artificiel et fausse ensuite l’imputation aux objets."
+        },
+        {
+          "id": "UE11:trial:q11",
+          "chapter": "couts",
+          "q": "Le centre ne réalise aucune unité d’œuvre pendant une période mais présente des charges. Peut-on calculer un coût unitaire fini en divisant par zéro ?",
+          "options": [
+            "Oui, il vaut zéro puisque l’activité servant à l’imputation est nulle.",
+            "Oui, le dernier coût unitaire connu devient le quotient de cette période sans autre convention.",
+            "Non, le quotient est indéfini ; la sous-activité et la convention de traitement doivent être explicitées.",
+            "Oui, les charges divisées par les unités vendues donnent ce quotient même si celles-ci proviennent d’un autre centre."
+          ],
+          "answer": 2,
+          "expl": "Le taux charges/activité ne se calcule pas comme nombre fini avec une activité nulle. Il faut décrire la situation et ses conventions, plutôt que fabriquer un dénominateur ou assimiler absence d’activité et coût nul."
+        },
+        {
+          "id": "UE11:trial:q16",
+          "chapter": "couts",
+          "q": "Un lot de 100 unités comparables supporte un coût complet total de 1 500 €, sans rebut ni autre quantité. Quel coût unitaire obtient-on ?",
+          "options": [
+            "150 000 € par unité",
+            "1 400 € par unité",
+            "0,0667 € par unité",
+            "15 € par unité"
+          ],
+          "answer": 3,
+          "expl": "Le coût unitaire vaut 1 500 / 100 = 15 €. L’hypothèse précise la quantité au dénominateur ; il ne faut pas multiplier le total par le nombre d’unités."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Un atelier commun fabrique plusieurs produits et son énergie n’est pas mesurée par produit. Quelle étape permet de construire leur coût dans le modèle retenu ?",
+          "a": "Choisir une répartition ou un modèle d’activité cohérent avec la consommation de ressources.",
+          "explanation": "Une charge commune nécessite une convention explicable pour les objets servis. La clé ne doit pas être arbitraire ; sa pertinence dépend du lien avec l’activité et des données disponibles.",
+          "exampleAnswer": false,
+          "tag": "Coûts directs et indirects",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Un technicien travaille exclusivement sur un produit. Son salaire reste constant quand le volume varie dans le domaine étudié. Comment classer cette charge selon son affectation et son comportement ?",
+          "a": "La charge peut être directe à ce produit tout en étant fixe dans ce domaine.",
+          "explanation": "Le mode d’affectation et le comportement par rapport au volume sont deux questions distinctes. L’affectation exclusive permet ici un coût direct ; elle ne démontre pas un caractère variable.",
+          "exampleAnswer": false,
+          "tag": "Coûts directs et indirects",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Les heures d’activité diminuent et les mêmes charges sont divisées par moins d’heures. Le coût de l’heure augmente. Que faut-il éviter d’en déduire automatiquement ?",
+          "a": "Le centre a nécessairement dépensé davantage en euros.",
+          "explanation": "Un coût unitaire peut varier avec l’activité même si les charges totales ne changent pas. Il faut séparer la variation du taux et celle de la dépense pour interpréter correctement l’évolution.",
+          "exampleAnswer": false,
+          "tag": "Coûts directs et indirects",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "UE12",
+      "level": "DCG",
+      "label": "Anglais des affaires",
+      "chapter": "vocabulaire",
+      "chapterTitle": "Lire les chiffres d’une entreprise en anglais",
+      "path": "/dcg/ue-12-anglais-des-affaires",
+      "questions": [
+        {
+          "id": "UE12:trial:q01",
+          "chapter": "vocabulaire",
+          "q": "In a company income statement, which term normally describes sales before deducting expenses?",
+          "options": [
+            "Revenue",
+            "Net profit",
+            "Retained earnings",
+            "Operating margin"
+          ],
+          "answer": 0,
+          "expl": "Revenue désigne les ventes ou revenus selon le contexte. Le bénéfice et la marge sont des résultats obtenus après prise en compte de certaines charges."
+        },
+        {
+          "id": "UE12:trial:q04",
+          "chapter": "vocabulaire",
+          "q": "A human resources report states: “Staff turnover fell following the retention programme.” What does turnover refer to here?",
+          "options": [
+            "Sales made during the financial year",
+            "Inventories sold during the month",
+            "Profit retained within the company",
+            "Employees leaving and being replaced"
+          ],
+          "answer": 3,
+          "expl": "Le contexte des ressources humaines et de la fidélisation désigne la rotation du personnel. Turnover ne signifie chiffre d’affaires que dans certains contextes commerciaux."
+        },
+        {
+          "id": "UE12:trial:q07",
+          "chapter": "vocabulaire",
+          "q": "Which English term normally refers to costs recognised in an income statement?",
+          "options": [
+            "Equity",
+            "Borrowings",
+            "Expenses",
+            "Receipts"
+          ],
+          "answer": 2,
+          "expl": "Expenses correspond ici aux charges du compte de résultat. Les receipts sont des encaissements, les borrowings des emprunts et equity les capitaux propres."
+        },
+        {
+          "id": "UE12:trial:q11",
+          "chapter": "vocabulaire",
+          "q": "A note says “expenses were incurred in March and paid in April”. Which French summary is accurate?",
+          "options": [
+            "Les ventes concernent mars et leur règlement intervient en avril.",
+            "Les dépenses ont été annulées avant tout paiement.",
+            "Les charges concernent mars et le paiement intervient en avril.",
+            "Les charges et le paiement concernent uniquement avril."
+          ],
+          "answer": 2,
+          "expl": "Incurred décrit ici le rattachement de la charge, tandis que paid désigne le règlement. Les confondre effacerait le décalage entre résultat et trésorerie."
+        },
+        {
+          "id": "UE12:trial:q16",
+          "chapter": "vocabulaire",
+          "q": "A business buys equipment that will serve for several years. In a balance-sheet description, which heading is relevant to that equipment?",
+          "options": [
+            "Revenue",
+            "Trade payables only",
+            "Share capital only",
+            "Assets"
+          ],
+          "answer": 3,
+          "expl": "Le matériel reconnu au bilan constitue un actif. La façon dont il est financé peut créer une dette, mais cette dette ne remplace pas le classement du matériel lui-même."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Profit is defined as revenue minus total expenses. Both revenue and expenses rose, but profit fell. Which relationship must hold?",
+          "a": "The absolute increase in expenses exceeded the absolute increase in revenue.",
+          "explanation": "La variation du résultat est la hausse absolue des revenus moins la hausse absolue des charges. Pour que le résultat baisse, la seconde doit dépasser la première ; comparer seulement les taux ne suffit pas.",
+          "exampleAnswer": false,
+          "tag": "Lire les chiffres d’une entreprise en anglais",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "A cash budget labels every outgoing payment “expense”, including repayment of loan principal. Which approach correctly distinguishes cash from accounting?",
+          "a": "Separate cash payments from expenses; loan principal repayment reduces a debt.",
+          "explanation": "Un décaissement n’est pas nécessairement une charge : le principal remboursé réduit une dette. Il faut aussi distinguer la date de paiement d’une facture de la reconnaissance de la charge.",
+          "exampleAnswer": false,
+          "tag": "Lire les chiffres d’une entreprise en anglais",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "A company reports a profit but many customers have not paid their invoices. Which conclusion is most appropriate?",
+          "a": "Profit does not by itself prove that cash is available.",
+          "explanation": "Le résultat peut intégrer des ventes encore non encaissées. Un bénéfice positif ne suffit donc pas à démontrer que l’entreprise dispose de liquidités immédiatement.",
+          "exampleAnswer": false,
+          "tag": "Lire les chiffres d’une entreprise en anglais",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "UE13",
+      "level": "DCG",
+      "label": "Communication professionnelle",
+      "chapter": "experience",
+      "chapterTitle": "Analyser une expérience professionnelle",
+      "path": "/dcg/ue-13-communication-professionnelle",
+      "questions": [
+        {
+          "id": "UE13:trial:q01",
+          "chapter": "experience",
+          "q": "Une mission cherche à localiser le blocage du circuit de validation des factures. Quel ensemble de données répond le plus directement à cet objectif ?",
+          "options": [
+            "Les dates de passage par étape, les responsables et les durées de validation.",
+            "Les volumes mensuels de factures et leurs montants cumulés.",
+            "Les conditions commerciales et remises négociées avec les fournisseurs.",
+            "Les marges par produit et la répartition du chiffre d’affaires par secteur."
+          ],
+          "answer": 0,
+          "expl": "Les données du circuit permettent de localiser l’étape qui prend du temps. Le volume peut éclairer la charge, mais ne localise pas seul un blocage ; conditions commerciales et marges décrivent d’autres dimensions."
+        },
+        {
+          "id": "UE13:trial:q04",
+          "chapter": "experience",
+          "q": "Une amélioration n’a été testée que dans une agence pilote. Comment présenter le périmètre de l’expérience ?",
+          "options": [
+            "Présenter les résultats comme observés dans toutes les agences.",
+            "Assimiler le pilote à un déploiement national achevé.",
+            "Supprimer la mention du pilote pour simplifier le contexte.",
+            "Identifier cette agence et expliquer les limites de généralisation."
+          ],
+          "answer": 3,
+          "expl": "Le périmètre pilote fait partie de l’information nécessaire à l’interprétation. Le supprimer donnerait au résultat une portée plus large que celle de l’expérience."
+        },
+        {
+          "id": "UE13:trial:q07",
+          "chapter": "experience",
+          "q": "L’étudiant a assisté à la présentation d’un contrôle conçu par sa tutrice. Quelle formulation décrit exactement son rôle ?",
+          "options": [
+            "J’ai dirigé l’équipe responsable de ce contrôle.",
+            "J’ai autorisé sa mise en production pour tout le cabinet.",
+            "J’ai observé la présentation du contrôle conçu par ma tutrice.",
+            "J’ai conçu et validé seul le contrôle présenté."
+          ],
+          "answer": 2,
+          "expl": "Observer une présentation ne signifie ni concevoir le contrôle ni en autoriser le déploiement. La précision du rôle permet de valoriser honnêtement ce qui a été appris."
+        },
+        {
+          "id": "UE13:trial:q11",
+          "chapter": "experience",
+          "q": "Le rapport indique seulement « utilisation d’un tableur » pour justifier la contribution. Quel complément est le plus utile ?",
+          "options": [
+            "Attribuer au logiciel toutes les décisions prises par l’équipe.",
+            "Déduire de son nom que le travail est exact sans vérification.",
+            "Préciser les traitements réalisés et les contrôles de leur résultat.",
+            "Allonger la liste des fonctions du logiciel sans indiquer celles utilisées."
+          ],
+          "answer": 2,
+          "expl": "Le nom d’un outil ne prouve ni le travail ni sa qualité. Les opérations et contrôles réalisés rendent la contribution concrète et vérifiable."
+        },
+        {
+          "id": "UE13:trial:q16",
+          "chapter": "experience",
+          "q": "Un rapprochement a échoué parce que deux extractions utilisaient des dates différentes. Quel enseignement découle directement de cette expérience ?",
+          "options": [
+            "Conclure que tout rapprochement informatique est impossible.",
+            "Conclure que le logiciel est fautif sans examiner les extractions.",
+            "Retenir le fichier le plus volumineux comme preuve de cohérence.",
+            "Vérifier la cohérence des dates et périmètres avant de rapprocher les données."
+          ],
+          "answer": 3,
+          "expl": "Le problème identifié porte sur la comparabilité des extractions. L’enseignement doit viser cette cause, sans généraliser l’échec à tous les outils ou rapprochements."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Un rapport consacre dix pages à l’organigramme, mais n’identifie pas le service qui valide les factures étudiées. Quelle révision est prioritaire ?",
+          "a": "Sélectionner les rôles qui expliquent le circuit de validation.",
+          "explanation": "La pertinence du contexte dépend de son rapport avec la mission. Le lecteur doit comprendre les responsabilités utiles, pas reconstruire le processus depuis un document général.",
+          "exampleAnswer": false,
+          "tag": "Analyser une expérience professionnelle",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Un étudiant écrit « j’ai décidé de modifier le circuit », alors qu’il a seulement rédigé une proposition soumise au responsable. Que faut-il corriger ?",
+          "a": "Distinguer la proposition personnelle de la décision prise par le responsable.",
+          "explanation": "Une proposition peut être une contribution réelle et utile sans être une décision autonome. Le rapport doit conserver la répartition effective des responsabilités.",
+          "exampleAnswer": false,
+          "tag": "Analyser une expérience professionnelle",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Une capture ne précise pas la période des données. L’auteur affirme que la date de création du fichier suffit à l’établir. Quelle analyse est correcte ?",
+          "a": "La période des observations doit être établie ; elle peut différer de la date du fichier.",
+          "explanation": "Les dates du fichier, de l’export, de l’impression et des opérations ne sont pas interchangeables. Une comparaison de résultats doit identifier la période réellement observée.",
+          "exampleAnswer": false,
+          "tag": "Analyser une expérience professionnelle",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "DSCG1",
+      "level": "DSCG",
+      "label": "Gestion juridique, fiscale et sociale",
+      "chapter": "reperes",
+      "chapterTitle": "Analyse d’un dossier transversal",
+      "path": "/dscg/ue-1-gestion-juridique-fiscale-sociale",
+      "questions": [
+        {
+          "id": "DSCG1:trial:q01",
+          "chapter": "reperes",
+          "q": "Une personne est dirigeante de la société mère et signe en parallèle un contrat de mission avec une filiale distincte. Quelle cartographie est nécessaire avant de qualifier ses droits ?",
+          "options": [
+            "Distinguer le mandat dans la mère et la relation contractuelle avec la filiale.",
+            "Attribuer les deux relations à une personne morale unique du seul fait du groupe.",
+            "Considérer tout contrat avec la filiale comme une décision des associés de la mère.",
+            "Déduire l’existence d’un contrat de travail de la seule facture de mission."
+          ],
+          "answer": 0,
+          "expl": "Une même personne physique peut intervenir dans plusieurs relations avec des personnes morales distinctes. Il faut identifier, pour chacune, les parties, l’objet, les pouvoirs et les conditions d’exercice. La seule appartenance au groupe ne donne pas une qualification unique à toutes les relations."
+        },
+        {
+          "id": "DSCG1:trial:q04",
+          "chapter": "reperes",
+          "q": "Dans l’examen d’un cumul entre mandat social et contrat de travail, quels éléments doivent notamment être caractérisés pour les fonctions salariées ?",
+          "options": [
+            "Un emploi réel distinct du mandat, rémunéré comme tel et exercé dans un lien de subordination.",
+            "La seule inscription du dirigeant dans un organigramme.",
+            "Le seul versement d’un revenu mensuel au dirigeant.",
+            "La seule qualité d’associé minoritaire."
+          ],
+          "answer": 0,
+          "expl": "La qualification repose sur les fonctions effectivement exercées, leur distinction et leur subordination, avec la rémunération correspondante. La jurisprudence ne se satisfait pas d’un libellé de contrat ou d’un indice isolé. Les règles propres à la forme sociale doivent aussi être vérifiées."
+        },
+        {
+          "id": "DSCG1:trial:q07",
+          "chapter": "reperes",
+          "q": "Un mandat social est expressément gratuit. Un emploi technique réel, distinct et subordonné est établi, avec une rémunération salariale propre ; les autres conditions sont remplies. Le fait qu’une seule rémunération soit versée exclut-il à lui seul le cumul ?",
+          "options": [
+            "Oui, deux versements rémunérés sont impératifs même pour un mandat gratuit.",
+            "Non, le mandat gratuit n’exige pas la création d’une rémunération de mandat pour rendre le salaire identifiable.",
+            "Oui, un mandat gratuit empêche tout emploi technique.",
+            "Non, parce qu’une rémunération unique prouve toujours toutes les autres conditions."
+          ],
+          "answer": 1,
+          "expl": "La rémunération des fonctions techniques doit être identifiable, mais cela n’impose pas de rémunérer un mandat expressément gratuit. Les autres critères ne disparaissent pas pour autant ; le cas les établit. La jurisprudence distingue l’identification du salaire et l’exigence artificielle d’un double revenu."
+        },
+        {
+          "id": "DSCG1:trial:q11",
+          "chapter": "reperes",
+          "q": "Un contrat de travail antérieur a été régulièrement suspendu pendant un mandat, sans novation ni convention contraire. Le mandat prend fin. Quelle analyse du contrat faut-il effectuer selon la jurisprudence ?",
+          "options": [
+            "Examiner la reprise de ses effets à la fin du mandat.",
+            "Le considérer automatiquement rompu depuis la nomination initiale.",
+            "Le transformer sans accord en prestation indépendante.",
+            "Refuser toute reprise parce qu’aucun salaire n’était versé pendant la suspension."
+          ],
+          "answer": 0,
+          "expl": "La jurisprudence rattache à la fin du mandat la reprise des effets du contrat suspendu, sous les réserves précisées. Une suspension n’est pas une rupture. L’absence de salaire durant la période suspendue ne suffit donc pas à effacer le contrat antérieur."
+        },
+        {
+          "id": "DSCG1:trial:q16",
+          "chapter": "reperes",
+          "q": "Un dossier de cumul prévoit 40 000 € de rémunération annuelle de mandat et une mission salariée distincte, mais ne fournit aucun régime fiscal ni taux applicable aux bénéficiaires. Que peut-on chiffrer sans inventer une imposition définitive ?",
+          "options": [
+            "Les montants bruts contractuels documentés, puis les scénarios fiscaux seulement sous hypothèses explicites.",
+            "Un net fiscal définitif en appliquant à tous les revenus le seul taux d’une simulation non rattachée au bénéficiaire.",
+            "Un revenu imposable total égal à la seule rémunération de mandat, en omettant la mission salariée distincte.",
+            "Un impôt personnel exact en appliquant le taux d’imposition de la société au brut du mandat."
+          ],
+          "answer": 0,
+          "expl": "Les droits bruts et leur qualification doivent être distingués des effets fiscaux. Sans régime, situation et paramètres applicables, un montant d’impôt personnel définitif ne peut être déduit du seul revenu de mandat. Une simulation conditionnelle doit annoncer les données retenues."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Une rémunération est versée à une dirigeante « au titre du mandat social ». Aucun emploi distinct n’est documenté. Un tableau la classe comme salaire dû au titre d’un contrat de travail. Quelle question doit être traitée avant ce classement ?",
+          "a": "L’existence et les conditions d’une relation salariée distincte du mandat.",
+          "explanation": "La rémunération du mandat ne démontre pas par elle-même un contrat de travail. Le classement doit reposer sur une relation salariée réelle et ses conditions propres, plutôt que sur le versement ou sa fréquence. Les deux fondements doivent être séparés avant d’étudier les droits correspondants.",
+          "exampleAnswer": false,
+          "tag": "Analyse d’un dossier transversal",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Un salarié devient mandataire social et cesse d’exercer des fonctions techniques subordonnées. Aucune novation ni convention contraire n’est établie. Selon la jurisprudence rappelée en 2025, quel est le sort de son contrat de travail ?",
+          "a": "Il est suspendu pendant la durée du mandat.",
+          "explanation": "La Cour de cassation rappelle qu’en l’absence de novation ou convention contraire, le contrat est suspendu lorsque le salarié devenu mandataire cesse les fonctions techniques subordonnées. La nomination ne suffit pas à prouver une volonté de mettre fin au contrat.",
+          "exampleAnswer": false,
+          "tag": "Analyse d’un dossier transversal",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Une personne physique exerce déjà cinq mandats d’administrateur dans cinq SA ayant leur siège en France. Aucun régime dérogatoire n’est applicable. Elle veut accepter un sixième mandat de même nature en 2026. Quel contrôle de L225-21 doit guider la recommandation ?",
+          "a": "Le plafond de cinq mandats simultanés serait dépassé par ce sixième mandat.",
+          "explanation": "L225-21 limite en principe la personne physique à cinq mandats d’administrateur de SA ayant leur siège en France. Le cas exclut les dérogations : la seule acceptation d’une société ne permet pas un sixième cumul simultané.",
+          "exampleAnswer": false,
+          "tag": "Analyse d’un dossier transversal",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "DSCG2",
+      "level": "DSCG",
+      "label": "Finance",
+      "chapter": "reperes",
+      "chapterTitle": "Actualisation et coût du capital",
+      "path": "/dscg/ue-2-finance",
+      "questions": [
+        {
+          "id": "DSCG2:trial:q01",
+          "chapter": "reperes",
+          "q": "Un analyste actualise des flux disponibles pour tous les financeurs au seul rendement exigé par les actionnaires. Quel point doit-il corriger ?",
+          "options": [
+            "La cohérence entre destinataires des flux et taux d’actualisation",
+            "Le seul choix entre valeur comptable et valeur de marché des fonds propres",
+            "La seule répartition du taux actionnarial entre les années de prévision",
+            "Le seul classement des intérêts versés dans la valeur terminale"
+          ],
+          "answer": 0,
+          "expl": "Les flux pour l’entreprise et ceux pour les actionnaires n’ont pas le même périmètre. Le taux doit correspondre au risque et aux financeurs concernés."
+        },
+        {
+          "id": "DSCG2:trial:q04",
+          "chapter": "reperes",
+          "q": "Dans un modèle de CMPC avec dette et fonds propres, quelle distinction est essentielle ?",
+          "options": [
+            "Les poids sont les taux d’intérêt de chaque financement",
+            "Les coûts sont les montants comptables des financements",
+            "Les parts de financement sont les échéances de paiement des intérêts",
+            "Les poids mesurent les parts de financement et les coûts les rendements requis"
+          ],
+          "answer": 3,
+          "expl": "Un poids et un coût ont des rôles différents : le premier pondère, le second rémunère le risque et le financement. Les confondre déforme le CMPC."
+        },
+        {
+          "id": "DSCG2:trial:q07",
+          "chapter": "reperes",
+          "q": "Dans VT = F suivant / (r − g), quelle condition sur les taux est requise par le modèle de croissance perpétuelle ?",
+          "options": [
+            "r doit être égal à g",
+            "g doit dépasser r pour représenter une croissance",
+            "r doit être strictement supérieur à g",
+            "r et g doivent être tous deux égaux à zéro"
+          ],
+          "answer": 2,
+          "expl": "Le modèle impose r > g pour converger et donner une valeur finie avec un flux positif. Une égalité annule le dénominateur."
+        },
+        {
+          "id": "DSCG2:trial:q11",
+          "chapter": "reperes",
+          "q": "À flux futurs strictement positifs et fixes, une hausse du taux d’actualisation accroît la valeur calculée. Que vérifier d’abord ?",
+          "options": [
+            "La ventilation de la valeur totale entre valeur terminale et flux détaillés, à taux inchangé",
+            "Le choix de poids de financement historiques au lieu de poids de marché, sans modifier le taux utilisé",
+            "Le sens de la formule et les facteurs d’actualisation",
+            "Le classement de certains flux positifs entre exploitation et investissement, sans changer leurs dates ni montants"
+          ],
+          "answer": 2,
+          "expl": "Avec des flux positifs inchangés, relever le taux diminue les facteurs de valeur actuelle. Le résultat inverse suggère une erreur de formule ou de saisie."
+        },
+        {
+          "id": "DSCG2:trial:q16",
+          "chapter": "reperes",
+          "q": "Une analyse présente une fourchette de valeur issue de trois scénarios. Quelle information la rend interprétable ?",
+          "options": [
+            "La moyenne des trois valeurs, sans conserver les scénarios qui la composent",
+            "La fréquence historique des scénarios, tenue pour probabilité future sans justification",
+            "La seule hypothèse de chiffre d’affaires, même lorsque taux et marge changent aussi",
+            "Les hypothèses, leurs combinaisons et la date de valeur de chaque scénario"
+          ],
+          "answer": 3,
+          "expl": "Une fourchette n’est informative que si l’on sait ce qui varie et ce qui reste fixe. Les hypothèses permettent de juger sa portée économique."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Des flux en dollars sont actualisés à un taux associé à des flux en euros, sans conversion ni justification. Quelle réserve est prioritaire ?",
+          "a": "L’incohérence possible entre devise des flux et devise du taux",
+          "explanation": "La devise fait partie de la cohérence de valorisation. Une conversion ou un modèle cohérent doit être explicité, plutôt que mélanger directement taux et flux.",
+          "exampleAnswer": false,
+          "tag": "Actualisation et coût du capital",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Une valeur terminale est calculée à la fin de l’année 5, puis ajoutée sans actualisation aux flux ramenés à aujourd’hui. Quel problème cela pose-t-il ?",
+          "a": "Des valeurs de dates différentes sont additionnées",
+          "explanation": "La valeur terminale à cinq ans doit elle aussi être ramenée à la date de valorisation. Les montants additionnés doivent être datés de façon cohérente.",
+          "exampleAnswer": false,
+          "tag": "Actualisation et coût du capital",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Un étudiant additionne directement coût des fonds propres et coût net de dette pour déterminer le CMPC. Que manque-t-il ?",
+          "a": "La pondération de chaque coût par sa part de financement",
+          "explanation": "Le CMPC est une moyenne pondérée, pas une addition brute des coûts. Les poids reflètent les valeurs de financement retenues et totalisent un.",
+          "exampleAnswer": false,
+          "tag": "Actualisation et coût du capital",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "DSCG3",
+      "level": "DSCG",
+      "label": "Contrôle de gestion et stratégie",
+      "chapter": "reperes",
+      "chapterTitle": "Marges, seuil et pilotage",
+      "path": "/dscg/ue-3-controle-gestion-strategie",
+      "questions": [
+        {
+          "id": "DSCG3:trial:q01",
+          "chapter": "reperes",
+          "q": "Une activité gagne des ventes mais son taux de marge sur coût variable diminue. Que faut-il examiner en priorité ?",
+          "options": [
+            "La seule marge unitaire du produit le plus vendu, sans vérifier les autres produits ni leurs poids.",
+            "Le prix net, le coût variable unitaire et le mélange des ventes.",
+            "La seule hausse du chiffre d’affaires total, supposée préserver le taux de contribution historique.",
+            "La moyenne simple des prix catalogue, sans vérifier les remises ni la structure des ventes."
+          ],
+          "answer": 1,
+          "expl": "Le taux de marge dépend des prix, coûts variables et produits vendus. Une croissance du chiffre d’affaires ne garantit donc pas une meilleure contribution."
+        },
+        {
+          "id": "DSCG3:trial:q04",
+          "chapter": "reperes",
+          "q": "Un centre réalise un résultat opérationnel annuel de 84 000 €. Son capital employé est de 300 000 € au début de l’année et de 400 000 € à la fin ; la convention retient leur moyenne simple. Quel ROI, défini par résultat opérationnel/capital moyen, obtient-on ?",
+          "options": [
+            "21 %",
+            "28 %",
+            "84 %",
+            "24 %"
+          ],
+          "answer": 3,
+          "expl": "Le capital moyen est (300 000 + 400 000)/2 = 350 000 €. Le ROI vaut 84 000/350 000 = 24 %. Employer le seul capital initial ou final donnerait 28 % ou 21 %, sans suivre la convention de moyenne annoncée."
+        },
+        {
+          "id": "DSCG3:trial:q07",
+          "chapter": "reperes",
+          "q": "Deux centres de tailles très différentes sont classés sur leur seul résultat résiduel en euros. Le plus grand présente le montant le plus élevé. Pourquoi ce classement ne suffit-il pas à conclure qu’il utilise mieux chaque euro de capital ?",
+          "options": [
+            "Le résultat résiduel devrait être divisé par le nombre de salariés sans examiner les actifs.",
+            "Un résultat résiduel positif démontre nécessairement un ROI supérieur à celui de tout centre plus petit.",
+            "Une mesure absolue peut être plus élevée en raison de la taille ; l’efficience relative du capital demande d’autres éléments comparables.",
+            "Le résultat résiduel doit être identique pour tous les centres dès que le taux de capital est commun."
+          ],
+          "answer": 2,
+          "expl": "Le résultat résiduel mesure un montant au-delà de la rémunération exigée, non directement un rendement relatif. La taille des bases engagées peut expliquer des écarts absolus. Une comparaison de performance doit expliciter ce qu’elle cherche à classer et contrôler les différences pertinentes."
+        },
+        {
+          "id": "DSCG3:trial:q11",
+          "chapter": "reperes",
+          "q": "Un modèle de performance économique part d’un résultat opérationnel après impôt de 60 000 €, où 20 000 € de recherche ont été intégralement déduits. Pour ce modèle seulement, la recherche est capitalisée et une consommation économique de 5 000 € remplace la charge de 20 000 €. Le capital ajusté est déjà fixé à 500 000 €, au taux fictif de 10 %. Quelle valeur économique ajoutée obtient-on, résultat ajusté moins charge de capital ?",
+          "options": [
+            "10 000 €",
+            "30 000 €",
+            "25 000 €",
+            "75 000 €"
+          ],
+          "answer": 2,
+          "expl": "Le résultat ajusté vaut 60 000 + 20 000 − 5 000 = 75 000 €. La charge du capital ajusté vaut 500 000 × 10 % = 50 000 €. La valeur ajoutée du modèle est 25 000 €. Le capital de 500 000 € est fourni déjà ajusté : il ne faut pas lui ajouter une seconde fois la recherche."
+        },
+        {
+          "id": "DSCG3:trial:q16",
+          "chapter": "reperes",
+          "q": "Le prix d’une matière augmente à cause d’un contrat négocié par le siège. Le responsable d’atelier ne choisit que les quantités consommées. Comment analyser son dépassement ?",
+          "options": [
+            "Lui imputer l’écart de prix du siège en supposant que la consommation locale prouve son influence sur la négociation.",
+            "Retenir son seul coût total par unité en mélangeant prix imposé et consommation locale.",
+            "Écarter aussi l’écart de quantité, au motif qu’un prix échappe à sa responsabilité.",
+            "Distinguer l’effet prix imposé de l’effet de consommation qu’il peut influencer."
+          ],
+          "answer": 3,
+          "expl": "L’écart global reste utile au pilotage, mais l’évaluation du responsable doit distinguer ses leviers de ceux du siège."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Un analyste rapporte la marge sur coût variable française au chiffre d’affaires mondial. Quel défaut affecte son ratio ?",
+          "a": "Il mélange des périmètres différents.",
+          "explanation": "Le numérateur et le dénominateur doivent correspondre à la même activité et période pour que le taux soit interprétable.",
+          "exampleAnswer": false,
+          "tag": "Marges, seuil et pilotage",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Le résultat opérationnel reste stable tandis que la valeur nette comptable des actifs baisse par amortissement, sans investissement ni amélioration documentée des processus. Le ROI calculé sur cette valeur nette augmente. Quelle interprétation est prudente ?",
+          "a": "La hausse peut provenir de la diminution de la base comptable, sans prouver une amélioration économique de l’exploitation.",
+          "explanation": "À numérateur stable, un dénominateur comptable qui diminue augmente mécaniquement le ratio. L’âge et la valorisation des actifs peuvent donc affecter le classement ; la hausse du ROI ne démontre pas ici une meilleure performance opérationnelle.",
+          "exampleAnswer": false,
+          "tag": "Marges, seuil et pilotage",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Un suivi des flux attribue aux déchets 20 % du coût de matière de 10 000 € et 20 % du coût d’énergie de 4 000 €. L’élimination de ces déchets coûte encore 500 €, non inclus dans ces deux postes. Quel coût total des déchets ce modèle met-il en évidence ?",
+          "a": "3 300 €",
+          "explanation": "Les déchets ont consommé 2 000 € de matière et 800 € d’énergie, auxquels s’ajoutent 500 € d’élimination : total 3 300 €. Le seul poste visible de traitement ne représente donc pas toutes les ressources affectées au flux perdu.",
+          "exampleAnswer": false,
+          "tag": "Marges, seuil et pilotage",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "DSCG4",
+      "level": "DSCG",
+      "label": "Comptabilité et audit",
+      "chapter": "reperes",
+      "chapterTitle": "Audit et valeur recouvrable",
+      "path": "/dscg/ue-4-comptabilite-audit",
+      "questions": [
+        {
+          "id": "DSCG4:trial:q01",
+          "chapter": "reperes",
+          "q": "Un achat réel de 7 200 € est enregistré pour 2 700 €, sur le bon compte et le bon exercice. Quelle assertion est directement affectée par l’erreur décrite ?",
+          "options": [
+            "La mesure du montant de l’opération",
+            "L’exhaustivité de l’enregistrement des achats",
+            "Le classement de l’achat dans le bon compte",
+            "Le rattachement de l’achat à la bonne période"
+          ],
+          "answer": 0,
+          "expl": "L’opération existe et son rattachement est correct selon l’énoncé. C’est son montant enregistré qui est erroné ; il faut distinguer mesure d’une opération et réalité de celle-ci."
+        },
+        {
+          "id": "DSCG4:trial:q04",
+          "chapter": "reperes",
+          "q": "Pour vérifier la réalité des ventes, l’équipe teste uniquement que les factures portent un numéro dans le format prévu. Quelle limite précise présente ce contrôle ?",
+          "options": [
+            "L’absence de doublon dans les numéros permet de tenir les ventes correspondantes pour réalisées",
+            "La conformité à la numérotation autorisée établit que la prestation facturée a été exécutée",
+            "Une facture au numéro valide peut servir seule de preuve de la livraison correspondant à cette facture",
+            "La conformité d’un identifiant ne démontre pas que l’opération de vente a eu lieu"
+          ],
+          "answer": 3,
+          "expl": "Un numéro valide décrit une caractéristique formelle du document. La réalité de la transaction exige des éléments adaptés à l’opération, au-delà du seul respect d’un format."
+        },
+        {
+          "id": "DSCG4:trial:q07",
+          "chapter": "reperes",
+          "q": "L’auditeur refait lui-même le calcul d’intérêts à partir du capital, du taux et de la durée prévus au contrat. Quelle technique utilise-t-il principalement ?",
+          "options": [
+            "L’observation d’une procédure réalisée par l’entité",
+            "La demande d’information orale",
+            "Le contrôle arithmétique",
+            "La confirmation d’un tiers"
+          ],
+          "answer": 2,
+          "expl": "Recalculer un montant vérifie son exactitude mathématique. Cette technique diffère de demander une confirmation ou d’observer une opération ; les données de départ restent aussi à justifier."
+        },
+        {
+          "id": "DSCG4:trial:q11",
+          "chapter": "reperes",
+          "q": "Dans un sondage d’audit, des anomalies apparaissent sur les éléments testés. Quelle analyse prévoit la NEP 530 avant d’en tirer les conséquences sur la population ?",
+          "options": [
+            "Appliquer immédiatement à toute la population le taux d’écart moyen, avant d’étudier l’origine des erreurs",
+            "Limiter la correction aux éléments sélectionnés, sans examiner les conséquences possibles sur la population",
+            "En apprécier la nature et la cause, notamment leur caractère isolé ou représentatif",
+            "Comparer uniquement le nombre d’erreurs au nombre d’éléments corrects pour décider de leur portée"
+          ],
+          "answer": 2,
+          "expl": "L’origine des anomalies éclaire leur portée possible au-delà des éléments testés. Le jugement sur la population ne se réduit ni à ignorer les écarts ni à une extrapolation mécanique non justifiée."
+        },
+        {
+          "id": "DSCG4:trial:q16",
+          "chapter": "reperes",
+          "q": "Une machine amortissable ordinaire ne présente aucun indice de perte de valeur. Le comptable affirme qu’IAS 36 impose le même test annuel systématique que pour le goodwill à toute immobilisation. Que faut-il distinguer ?",
+          "options": [
+            "Le test des seuls indices et le test annuel, ce dernier concernant ici indistinctement toute immobilisation amortissable",
+            "La recherche d’indices, qui n’est nécessaire pour une machine qu’à la fin de sa durée d’amortissement",
+            "Le test annuel de valeur, qui remplace ici la dotation annuelle aux amortissements de la machine",
+            "L’appréciation des indices et les catégories soumises à un test annuel obligatoire"
+          ],
+          "answer": 3,
+          "expl": "IAS 36 distingue l’examen d’indices et certaines catégories testées annuellement. L’exigence propre au goodwill et à certaines immobilisations incorporelles ne doit pas être généralisée sans nuance."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Un emprunt réel, correctement évalué, est placé dans une rubrique des capitaux propres alors que le référentiel impose une dette. Quel risque décrit ce cas ?",
+          "a": "Un classement et une présentation incorrects",
+          "explanation": "L’emprunt est enregistré et mesuré, mais sa rubrique ne correspond pas à sa nature. Une assertion peut être défaillante alors que la réalité et le montant sont établis.",
+          "exampleAnswer": false,
+          "tag": "Audit et valeur recouvrable",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Le directeur décrit oralement une autorisation obligatoire avant paiement. L’auditeur veut vérifier si ce contrôle a réellement été appliqué pendant l’année. Quel complément répond à cet objectif ?",
+          "a": "Examiner des traces d’autorisation sur des paiements sélectionnés dans la période",
+          "explanation": "La description d’un contrôle renseigne sur son fonctionnement prévu. Pour apprécier son application, des éléments relatifs aux paiements et à la période sont nécessaires ; l’entretien ne suffit pas à lui seul.",
+          "exampleAnswer": false,
+          "tag": "Audit et valeur recouvrable",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Un actif a subi une perte de valeur. Il est vendu ensuite pour un montant inférieur à sa valeur comptable après dépréciation. La perte antérieure garantit-elle l’absence de résultat de cession ?",
+          "a": "Non, le prix de cession doit encore être comparé à la valeur comptable au moment de la vente",
+          "explanation": "La dépréciation ajuste la valeur sur la base des estimations du test. Elle ne fixe pas le prix réalisé ultérieurement ; le résultat de cession dépend encore des montants applicables à cette date.",
+          "exampleAnswer": false,
+          "tag": "Audit et valeur recouvrable",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "DSCG5",
+      "level": "DSCG",
+      "label": "Management des systèmes d’information",
+      "chapter": "reperes",
+      "chapterTitle": "Contrôle et sécurité du SI",
+      "path": "/dscg/ue-5-management-systemes-information",
+      "questions": [
+        {
+          "id": "DSCG5:trial:q01",
+          "chapter": "reperes",
+          "q": "Quel principe décrit le mieux l’attribution des habilitations ?",
+          "options": [
+            "Accorder tous les droits aux salariés permanents et aucun aux prestataires.",
+            "Conserver les droits antérieurs dès que le salarié reste dans l’entreprise.",
+            "Accorder les droits nécessaires à la fonction et retirer ceux devenus inutiles.",
+            "Accorder l’administration dès que l’utilisateur a suivi une formation."
+          ],
+          "answer": 2,
+          "expl": "Les habilitations doivent suivre le besoin réel. Le statut ou une formation ne justifie pas, à lui seul, des droits étendus ou devenus inutiles."
+        },
+        {
+          "id": "DSCG5:trial:q04",
+          "chapter": "reperes",
+          "q": "Un technicien doit exceptionnellement administrer une application pendant une intervention. Quel dispositif respecte le mieux le moindre privilège ?",
+          "options": [
+            "Un compte administrateur permanent utilisé aussi pour ses courriels.",
+            "Une élévation limitée au besoin, autorisée, tracée et retirée après intervention.",
+            "Le partage du mot de passe du directeur avec l’ensemble de son équipe.",
+            "L’ajout permanent de tous les techniciens au groupe administrateur."
+          ],
+          "answer": 1,
+          "expl": "Un besoin ponctuel appelle un droit ponctuel encadré. La durée et le périmètre doivent rester proportionnés et les actions traçables."
+        },
+        {
+          "id": "DSCG5:trial:q07",
+          "chapter": "reperes",
+          "q": "Quel risque cherche à réduire la séparation entre création d’un fournisseur et validation de son paiement ?",
+          "options": [
+            "La réalisation d’un paiement indu par une personne agissant seule sur toute la chaîne.",
+            "Le refus de tout paiement à un fournisseur créé dans le même exercice, y compris lorsque la création est justifiée.",
+            "La suppression de toute erreur de calcul de facture par le seul changement des rôles de validation.",
+            "L’impossibilité pour deux personnes de se concerter, même si elles contrôlent ensemble création et paiement."
+          ],
+          "answer": 0,
+          "expl": "Séparer les étapes sensibles réduit la possibilité d’organiser et de valider seul une opération indue. Cela ne dispense pas des autres contrôles."
+        },
+        {
+          "id": "DSCG5:trial:q11",
+          "chapter": "reperes",
+          "q": "Un utilisateur ne valide pas les paiements, mais peut modifier seul l’IBAN juste après leur validation. Quel contrôle doit être examiné ?",
+          "options": [
+            "La maîtrise des changements de coordonnées jusqu’à l’exécution du paiement.",
+            "La seule revue des coordonnées au moment de la création, sans contrôle de leur modification après approbation.",
+            "Le montant validé seul, en supposant que l’IBAN peut être remplacé sans affecter la destination approuvée.",
+            "La seule absence de droit de valider les paiements, considérée comme suffisante malgré le droit de changer le bénéficiaire après validation."
+          ],
+          "answer": 0,
+          "expl": "La séparation peut être contournée si une donnée essentielle change après autorisation. Le contrôle doit couvrir les modifications et leur revalidation."
+        },
+        {
+          "id": "DSCG5:trial:q16",
+          "chapter": "reperes",
+          "q": "Une restauration d’essai doit être réalisée sans affecter le service courant. Quel choix est adapté ?",
+          "options": [
+            "Restaurer directement sur la base active sans plan de protection, en supposant que le simple nom test empêche l’écrasement.",
+            "Utiliser un environnement approprié isolé et contrôler le résultat du test.",
+            "Isoler seulement le poste du testeur tout en conservant une connexion d’écriture non contrôlée vers la production.",
+            "Exécuter le test avec les mêmes destinations et droits de production sans vérifier les effets possibles des opérations de restauration."
+          ],
+          "answer": 1,
+          "expl": "Un environnement de test maîtrisé permet de vérifier la restauration sans détruire le service courant. Les résultats et limites doivent être consignés."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Une comptable change de poste et conserve le droit de modifier les coordonnées des fournisseurs, dont elle n’a plus besoin. Que faire ?",
+          "a": "Retirer ce droit et adapter ses habilitations à sa nouvelle mission.",
+          "explanation": "Les changements de fonction doivent déclencher une adaptation des accès. L’absence d’incident ne justifie pas le maintien d’un droit sans besoin.",
+          "exampleAnswer": false,
+          "tag": "Contrôle et sécurité du SI",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "La règle impose deux validateurs, mais le second approuve sans consulter le dossier. Quelle action améliore réellement ce contrôle ?",
+          "a": "Définir et vérifier l’examen attendu du second valideur avant son approbation.",
+          "explanation": "La double validation ne réduit le risque que si un contrôle pertinent est exercé. Il faut définir les vérifications et examiner leur réalisation effective.",
+          "exampleAnswer": false,
+          "tag": "Contrôle et sécurité du SI",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Le principe de minimisation demande principalement de :",
+          "a": "Limiter les données personnelles à ce qui est nécessaire à la finalité définie.",
+          "explanation": "La pertinence s’apprécie selon la finalité, et non selon un volume universel ni le seul coût technique de stockage.",
+          "exampleAnswer": false,
+          "tag": "Contrôle et sécurité du SI",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "DSCG6",
+      "level": "DSCG",
+      "label": "Anglais des affaires",
+      "chapter": "presenter",
+      "chapterTitle": "Présenter une analyse en anglais",
+      "path": "/dscg/ue-6-anglais-des-affaires",
+      "questions": [
+        {
+          "id": "DSCG6:trial:q01",
+          "chapter": "presenter",
+          "q": "You must give a three-minute presentation about whether automatic reminders could shorten invoice payment delays. Which opening states the question directly?",
+          "options": [
+            "Today I will compare reminder software by purchase price and staff training requirements.",
+            "This presentation asks whether automatic reminders could help customers pay sooner.",
+            "Today I will assess whether customers should receive longer payment terms before reminders start.",
+            "This presentation asks how invoice approval can be completed faster before bills are issued."
+          ],
+          "answer": 1,
+          "expl": "L’ouverture retenue énonce exactement le sujet et la question, sans annoncer une causalité ni une garantie absentes du dossier. Les autres propositions changent le périmètre ou imposent une conclusion."
+        },
+        {
+          "id": "DSCG6:trial:q04",
+          "chapter": "presenter",
+          "q": "A speaker opens with two minutes of software history in a three-minute talk about choosing a reminder procedure. What change would most improve the opening?",
+          "options": [
+            "Briefly state the decision to be discussed and keep only background needed to understand it.",
+            "Start with a detailed comparison of software versions before identifying the procedure to choose.",
+            "State the preferred procedure immediately, reserving the question it answers for the final summary.",
+            "Replace the software history with a catalogue of reminder features before introducing the decision."
+          ],
+          "answer": 0,
+          "expl": "Une introduction courte doit rendre la question de décision identifiable. L’historique n’est utile que s’il éclaire cette question ; sa longueur ne remplace pas une orientation claire."
+        },
+        {
+          "id": "DSCG6:trial:q07",
+          "chapter": "presenter",
+          "q": "Complete the link: “The system sends reminders automatically. ___, it records each response.” The second benefit is additional, not a result of the first.",
+          "options": [
+            "Consequently",
+            "Instead",
+            "Nevertheless",
+            "Furthermore"
+          ],
+          "answer": 3,
+          "expl": "Furthermore ajoute un deuxième avantage. Le dossier précise qu’il ne s’agit ni d’une conséquence, ni d’un remplacement, ni d’une opposition à la première caractéristique."
+        },
+        {
+          "id": "DSCG6:trial:q11",
+          "chapter": "presenter",
+          "q": "A speaker says, “The pilot reduced processing time. Therefore, it required an expensive licence.” The licence cost is a separate drawback, not a consequence of the reduction. Which revision best fixes the logic?",
+          "options": [
+            "Replace therefore with consequently.",
+            "Replace therefore with for instance.",
+            "Replace therefore with in other words.",
+            "Replace therefore with however."
+          ],
+          "answer": 3,
+          "expl": "However oppose l’avantage du pilote à un inconvénient distinct. Consequently conserve le lien causal erroné ; for instance présente le coût comme exemple de baisse du temps ; in other words suggère une reformulation, alors qu’une nouvelle idée est ajoutée."
+        },
+        {
+          "id": "DSCG6:trial:q16",
+          "chapter": "presenter",
+          "q": "A speaker gives a detailed example, then immediately changes topic without linking it to the claim about clearer responsibilities. What short addition would help?",
+          "options": [
+            "This illustrates how assigning an owner prevents the same invoice from being left between two teams.",
+            "The example also raises a separate question about which invoice software should be purchased.",
+            "This example completes the background; I will now introduce the recommendation on responsibilities.",
+            "The case gives useful operational detail, which I will leave the audience to relate to the recommendation."
+          ],
+          "answer": 0,
+          "expl": "L’ajout rend explicite le lien entre l’exemple et l’argument précis. Il ne faut ni laisser l’auditoire deviner ce lien, ni étendre l’exemple à tous les problèmes de l’organisation."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Your presentation will cover the problem, the proposed change and its limitations, in that order. Which roadmap matches this structure?",
+          "a": "First, I will outline the problem; next, I will assess the proposal; finally, I will discuss its limits.",
+          "explanation": "Le plan annonce les trois étapes dans l’ordre donné. Il aide l’auditoire à suivre le raisonnement, sans déplacer le problème après la recommandation ni rendre l’examen des limites facultatif.",
+          "exampleAnswer": false,
+          "tag": "Présenter une analyse en anglais",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Write a transition from a completed cost analysis to a discussion of implementation.",
+          "a": "Having reviewed the costs, I will now turn to implementation.",
+          "explanation": "“Having reviewed” présente l’analyse des coûts comme terminée ; “turn to” annonce le nouveau sujet.",
+          "exampleAnswer": true,
+          "tag": "Présenter une analyse en anglais",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Recommend a controlled trial for next month without presenting its outcome as already established.",
+          "a": "I recommend a controlled trial next month to assess whether the improvement can be sustained.",
+          "explanation": "“Recommend” et “to assess” présentent une action à venir et son objectif de vérification, sans anticiper le résultat du test.",
+          "exampleAnswer": true,
+          "tag": "Présenter une analyse en anglais",
+          "kind": "Rappel actif"
+        }
+      ]
+    },
+    {
+      "id": "DSCG7",
+      "level": "DSCG",
+      "label": "Mémoire professionnel",
+      "chapter": "problematique",
+      "chapterTitle": "Construire une problématique de mémoire",
+      "path": "/dscg/ue-7-memoire-professionnel",
+      "questions": [
+        {
+          "id": "DSCG7:trial:q01",
+          "chapter": "problematique",
+          "q": "Quelle différence distingue principalement un thème de mémoire d’une problématique ?",
+          "options": [
+            "Le thème désigne un domaine ; la problématique organise une question à analyser.",
+            "Le thème expose des résultats ; la problématique en fournit le résumé.",
+            "Le thème définit une population ; la problématique fixe la taille de son échantillon.",
+            "Le thème fournit une hypothèse ; la problématique désigne son indicateur."
+          ],
+          "answer": 0,
+          "expl": "Un domaine comme la digitalisation ne précise pas encore le phénomène à comprendre. La question donne une direction à l’analyse ; elle ne se réduit ni à un indicateur ni à une rubrique."
+        },
+        {
+          "id": "DSCG7:trial:q04",
+          "chapter": "problematique",
+          "q": "Le projet de mémoire énumère la paie, la cybersécurité et les achats, sans lien identifié entre ces thèmes. Quel défaut faut-il traiter d’abord ?",
+          "options": [
+            "L’insuffisance d’une description technique détaillée de chaque outil évoqué.",
+            "L’absence d’un indicateur chiffré unique destiné à remplacer toute question sur ces activités.",
+            "Le manque d’une présentation chronologique de l’entreprise avant de retenir ces thèmes.",
+            "L’absence d’une question directrice reliant les développements."
+          ],
+          "answer": 3,
+          "expl": "Le problème n’est pas d’équilibrer des rubriques sans rapport, mais de construire un fil d’analyse. Un tableau ou un nouvel ordre ne justifierait pas leur présence commune."
+        },
+        {
+          "id": "DSCG7:trial:q07",
+          "chapter": "problematique",
+          "q": "L’enquête compare des dossiers, mais plusieurs entretiens sont menés avec le même responsable. Quel élément doit rester distinct ?",
+          "options": [
+            "Chaque citation comme unité d’analyse et le dossier comme simple support de stockage.",
+            "Chaque entretien comme dossier indépendant, même lorsqu’il concerne le même cas.",
+            "Le dossier comme unité d’analyse et le responsable comme source d’information.",
+            "Le responsable comme unité d’analyse et chaque entretien comme nouveau dossier."
+          ],
+          "answer": 2,
+          "expl": "Le nombre d’interviews ne multiplie pas le nombre de dossiers étudiés. Distinguer unité et source empêche de présenter des témoignages répétés comme des cas supplémentaires."
+        },
+        {
+          "id": "DSCG7:trial:q11",
+          "chapter": "problematique",
+          "q": "Le titre annonce une étude de toutes les filiales, mais les accès autorisés portent sur une seule filiale. Quelle révision est la plus cohérente ?",
+          "options": [
+            "Présenter les données de la filiale accessible comme des données consolidées du groupe.",
+            "Remplacer les observations manquantes par les objectifs budgétaires du groupe.",
+            "Délimiter l’étude au cas accessible et indiquer ce qu’il permet d’examiner.",
+            "Conserver le titre large en présentant les autres filiales dans l’organigramme."
+          ],
+          "answer": 2,
+          "expl": "Un organigramme ou un budget ne remplace pas des observations des autres filiales. Une délimitation explicite permet de conduire une étude de cas sans lui attribuer un terrain fictif."
+        },
+        {
+          "id": "DSCG7:trial:q16",
+          "chapter": "problematique",
+          "q": "Un concept est défini dans le cadre théorique mais n’intervient ni dans le guide d’entretien ni dans l’analyse finale. Quel complément lui donnerait un rôle effectif dans la démarche ?",
+          "options": [
+            "Ajouter une seconde synthèse de sa définition dans la conclusion sans la rapprocher des données.",
+            "Le remplacer par la variable la plus facile à extraire, sans vérifier son rapport avec la question étudiée.",
+            "Reprendre les sens différents donnés par chaque participant sans expliciter comment ils seront analysés.",
+            "Définir ses dimensions observables puis relier les matériaux et leur interprétation à ces dimensions."
+          ],
+          "answer": 3,
+          "expl": "La mobilisation d’un concept suppose un lien entre définition, observations et interprétation. Répéter une définition, choisir une variable par commodité ou juxtaposer les usages sans règle ne construit pas ce lien."
+        }
+      ],
+      "cards": [
+        {
+          "q": "Un candidat constate que deux équipes utilisant le même outil traitent différemment les exceptions de facturation. Quelle question transforme le mieux ce constat en problème à étudier ?",
+          "a": "Comment les règles de traitement des exceptions expliquent-elles les pratiques différentes des deux équipes ?",
+          "explanation": "Le problème à expliquer est la différence de pratiques malgré un outil commun. La question doit porter sur les mécanismes de traitement des exceptions.",
+          "exampleAnswer": false,
+          "tag": "Construire une problématique de mémoire",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Un projet étudie le délai entre réception et validation d’une facture. Pour un second service, les données commencent seulement à sa saisie comptable. Que faut-il préciser avant la comparaison ?",
+          "a": "Le point de départ effectivement mesuré dans chaque service et la comparabilité des délais.",
+          "explanation": "Réception et saisie peuvent être séparées dans le temps. Même unité ou effectif connu ne rendent pas identiques les événements mesurés ; un délai cible ne remplace pas une observation.",
+          "exampleAnswer": false,
+          "tag": "Construire une problématique de mémoire",
+          "kind": "Rappel actif"
+        },
+        {
+          "q": "Quelle question étudie les effets d’une nouvelle procédure en laissant possible un résultat favorable, défavorable ou absent ?",
+          "a": "Quels changements de délai et de qualité observe-t-on après son introduction dans l’équipe étudiée ?",
+          "explanation": "Une question non orientée permet d’observer une amélioration, une dégradation ou une absence de changement, sans imposer le succès de la procédure.",
+          "exampleAnswer": false,
+          "tag": "Construire une problématique de mémoire",
+          "kind": "Rappel actif"
+        }
+      ]
+    }
+  ]
+}
