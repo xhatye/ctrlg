@@ -1,3 +1,4 @@
+import RecruitmentPractice from './RecruitmentPractice';
 import CourseWorkbench from './CourseWorkbench';
 import {ChapterFormats} from './ChapterFormats';
 import { useEffect, useState, useRef } from "react";
@@ -144,9 +145,10 @@ export function CasePractice({ ue, user, onDone, onBack, onLearning, onNav }) {
 export { buildPlan } from '../lib/study-plan.mjs';
 export { default as StudyPlanner } from './StudyPlanner';
 export function OralSetup({ onStart, onBack }) {
-  const [topic, setTopic] = useState("Comptabilité");
+  const [topic, setTopic] = useState("Comptabilité"),[recruitment,setRecruitment]=useState(false);
+  if(recruitment)return <RecruitmentPractice onBack={()=>setRecruitment(false)}/>;
   return (
-    <Frame title="Préparer l’oral par écrit" onBack={onBack}>
+    <Frame title="Préparer l’oral par écrit" onBack={onBack}><section className="panel"><h2>Vous préparez un stage ou une alternance ?</h2><p>Un parcours distinct avec six thématiques, des questions de recrutement et un retour IA sur votre réponse écrite.</p><button className="btn btn-secondary" onClick={()=>setRecruitment(true)}>Préparer un entretien de recrutement</button></section>
       <section className="panel">
         <p>
           Un exercice de départ, trois questions et des éléments de réponse pour

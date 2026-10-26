@@ -1,3 +1,6 @@
+import catalogue from './catalogue.json';
+import {revisionPriorities,adaptiveMinutes} from '../lib/revision-priorities.mjs';
+import RevisionPriorities from './RevisionPriorities';
 import { useEffect, useState } from 'react';
 import { buildPlan, restorePlan } from '../lib/study-plan.mjs';
 
@@ -5,12 +8,14 @@ export default function StudyPlanner(props) {
   return <Planner key={props.user?.uid || 'preview'} {...props} />;
 }
 
-function Planner({ ues, user, onBack }) {
+function Planner({ ues, user, onBack,learning={} }) {
   const [weeks, setWeeks] = useState(4);
   const [level, setLevel] = useState('DCG');
   const [hours, setHours] = useState(3);
   const [selectedIds, setSelectedIds] = useState([]);
   const [plan, setPlan] = useState(null);
+  const [adaptive,setAdaptive]=useState(()=>{try{return localStorage.getItem(`simdcg-plan-${user?.uid || 'preview'}-adaptive`)==='true';}catch{return false;}});
+  const priorities=revisionPriorities(catalogue.modules,learning,selectedIds);
   const [message, setMessage] = useState('');
   const scheduleKey = `simdcg-plan-${user?.uid || 'preview'}`;
   const available = ues.filter(ue => ue.level === level);
@@ -97,6 +102,7 @@ function Planner({ ues, user, onBack }) {
       </div>
     </form>
     {message && <p role="status" className="helper">{message}</p>}
+<RevisionPriorities learning={learning} ids={selectedIds.length?selectedIds:available.map(ue=>ue.id)}/>{plan&&<label className="panel adaptive-toggle"><input type="checkbox" checked={adaptive} onChange={e=>{setAdaptive(e.target.checked);try{localStorage.setItem(scheduleKey+'-adaptive',String(e.target.checked));}catch{setMessage('La répartition est affichée mais ne peut pas être sauvegardée dans ce navigateur.');}}}/> Donner davantage de temps aux UE à reprendre, à durée hebdomadaire identique.</label>}
     {plan && <section className="planner-result" aria-label="Votre planning de révision">
       <h2>{level} · {selected.length} UE · {weeks} semaines</h2>
       <p>Chaque UE suit le même parcours : comprendre, s’entraîner, puis consolider. Le temps indiqué est une suggestion ; adaptez les chapitres à vos échéances.</p>
@@ -105,7 +111,7 @@ function Planner({ ues, user, onBack }) {
         <h3>{week.task}</h3>
         <ul className="planner-sessions">{week.subjects.map((ue, i) => <li key={ue.id}>
           <span><strong>{ue.id.replace('DSCG', 'UE')}</strong> · {ue.label}</span>
-          <span>{week.sessions[i].minutes} min</span>
+          <span>{(adaptive?adaptiveMinutes(week.sessions,priorities):week.sessions)[i].minutes} min</span>
         </li>)}</ul>
       </article>)}</div>
     </section>}

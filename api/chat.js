@@ -32,7 +32,7 @@ export default async function handler(req, res) {
       content:tutorInstructions(help?.module || (typeof body.module==='string'&&Object.hasOwn(MODULES,body.module)?body.module+' '+MODULES[body.module].title:'DCG et DSCG'),retrieved.context),
     });
     const remaining = await reserveTutor(deps.db, user.uid, data);
-    const response = await requestTutor(data);
+    const response = await requestTutor(data,{json:help?.purpose==='quiz-card'});
     if (!response.ok) {
       console.error("SIMDCG tutor provider", response.status);
       throw Object.assign(
@@ -55,8 +55,13 @@ export default async function handler(req, res) {
         ),
         { status: 503 },
       );
+    let card=null;
+    if(help?.purpose==='quiz-card'){
+      try{const parsed=JSON.parse(rawText);if(typeof parsed.front!=='string'||!parsed.front.trim()||parsed.front.length>400||typeof parsed.back!=='string'||!parsed.back.trim()||parsed.back.length>1500)throw Error();card={front:parsed.front.trim(),back:parsed.back.trim(),module:help.module,chapter:help.chapter};text=card.front+'\n'+card.back;}
+      catch{throw Object.assign(new Error('La carte n’a pas pu être préparée. Le corrigé reste disponible.'),{status:503});}
+    }
     let helpSource='ai';
-    try{validateTutorReply(text,retrieved.context+'\n'+lastQuestion);}
+    try{validateTutorReply(text,help?retrieved.context:retrieved.context+'\n'+lastQuestion);}
     catch(error){if(help?.purpose!=='case-hint')throw error;text=help.fallback;helpSource='support';}
     return res
       .status(200)
@@ -65,6 +70,7 @@ export default async function handler(req, res) {
         role: "assistant",
         ...remaining,
         references:retrieved.references,
+        ...(card?{card}:{}),
         ...(help?{helpSource}:{}),
       });
   } catch (error) {

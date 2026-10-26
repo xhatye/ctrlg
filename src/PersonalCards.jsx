@@ -1,0 +1,15 @@
+import {useEffect,useState} from 'react';
+import {readPersonalCards,savePersonalCard} from '../lib/personal-cards.mjs';
+export function PersonalCardEditor({card,uid,id,onSaved}){
+ const [front,setFront]=useState(card.front),[back,setBack]=useState(card.back),[message,setMessage]=useState(''),[saved,setSaved]=useState(false),[cardId]=useState(()=>id||crypto.randomUUID());
+ const save=()=>{try{savePersonalCard(localStorage,uid,{...card,front,back},cardId);setSaved(true);setMessage('Carte enregistrée dans ce navigateur.');window.dispatchEvent(new Event('simdcg-personal-cards'));onSaved?.();}catch(e){setMessage(e.message);}};
+ return <div className="personal-card-editor"><h3>Votre carte, à relire avant de la garder</h3><p>Vérifiez la formulation et les conditions avec le corrigé. Vous pouvez modifier les deux faces.</p><label>Question<textarea rows={3} maxLength={400} value={front} onChange={e=>{setFront(e.target.value);setSaved(false);}}/></label><label>Réponse<textarea rows={5} maxLength={1500} value={back} onChange={e=>{setBack(e.target.value);setSaved(false);}}/></label><button type="button" className="btn btn-secondary" disabled={saved||!front.trim()||!back.trim()} onClick={save}>{saved?'Carte enregistrée':'Garder cette carte'}</button><p className="helper">Stockage dans ce navigateur pour ce compte uniquement, sans synchronisation entre appareils. Effacer les données du navigateur efface ces cartes.</p>{message&&<p role="status">{message}</p>}</div>;
+}
+export default function PersonalCards({uid,module,chapter}){
+ return uid?<PersonalCardList key={uid+':'+module+':'+(chapter||'all')} uid={uid} module={module} chapter={chapter}/>:null;
+}
+function PersonalCardList({uid,module,chapter}){
+ const [cards,setCards]=useState([]),[error,setError]=useState(''),[editing,setEditing]=useState(null);
+ useEffect(()=>{const load=()=>{try{setCards(readPersonalCards(localStorage,uid).filter(c=>c.module===module&&(!chapter||chapter==='all'||c.chapter===chapter)));setError('');}catch(e){setError(e.message);}};load();window.addEventListener('simdcg-personal-cards',load);window.addEventListener('storage',load);return()=>{window.removeEventListener('simdcg-personal-cards',load);window.removeEventListener('storage',load);};},[uid,module,chapter]);
+ return <details className="panel personal-cards"><summary>Mes cartes personnelles · {cards.length}</summary><p>Gardez une carte depuis une correction de QCM avec « Créer une carte de cette notion ». Vos cartes restent dans ce navigateur, pour ce compte.</p>{error&&<p role="alert">{error}</p>}{cards.map(card=><article key={card.id}><details><summary>{card.front}</summary><p className="preserve-lines">{card.back}</p><a href={'/resume-cours?ue='+card.module+'&chapter='+encodeURIComponent(card.chapter)}>Revoir le chapitre source</a></details><button type="button" className="text-button" onClick={()=>setEditing(editing===card.id?null:card.id)}>{editing===card.id?'Fermer la modification':'Modifier cette carte'}</button>{editing===card.id&&<PersonalCardEditor card={card} uid={uid} id={card.id} onSaved={()=>setEditing(null)}/>}</article>)}</details>;
+}

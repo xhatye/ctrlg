@@ -1,3 +1,4 @@
+import {revisionPriorities} from '../lib/revision-priorities.mjs';
 import {recommendSession} from '../lib/study-guidance.mjs';
 import {FIRST_SESSION_KEY} from '../lib/first-session.mjs';
 import './starter.css';
@@ -31,7 +32,8 @@ function Dashboard({user,ues,onNav,onSelect,onOpen,learning={},learningError,lea
   const visible = available.filter(ue=>(!mine || !plan || plan.selectedIds.includes(ue.id))
     && `${ue.id.replace('DSCG','UE')} ${ue.label} ${ue.desc}`.toLocaleLowerCase('fr').includes(query.toLocaleLowerCase('fr')));
   const subjects = expanded || query ? visible : visible.slice(0,6);
-  const nextUE = lastUE || ues.find(ue=>plan?.selectedIds.includes(ue.id)) || available[0];
+  const priority=revisionPriorities(catalogue.modules,learning,plan?.selectedIds)[0];
+  const nextUE = ues.find(ue=>ue.id===priority?.module) || lastUE || ues.find(ue=>plan?.selectedIds.includes(ue.id)) || available[0];
   const module = catalogue.modules[nextUE.id];
   const chapter = module.chapters.find(c=>c.id===stats.latest?.chapter) || module.chapters[0];
   const recommendation = recommendSession(nextUE.id,module.chapters,learning);

@@ -1,3 +1,4 @@
+import PersonalCards,{PersonalCardEditor} from './PersonalCards';
 import Diagnostic from './Diagnostic';
 import FirstSession from './FirstSession';
 import SamplePage from './SamplePage';
@@ -74,6 +75,7 @@ export default function DesignPreview() {
     nav("subject_hub");
   };
   const content =
+    page === 'personal_cards' ? <section className="page panel"><h1>Cartes personnelles · aperçu local</h1><PersonalCardEditor uid="design-preview" card={{module:'UE9',chapter:'reperes',front:'Que vérifie la partie double ?',back:'L’égalité du total des débits et des crédits.'}}/><PersonalCards uid="design-preview" module="UE9"/></section> :
     page === "annals" ? <AnnalsPreview user={student} onNav={nav}/> :
     page === "testimonials" ? <StudentReviews load={previewReviews} onNav={nav}/> :
     page === "paywall" ? <Paywall onUpgrade={()=>nav('pricing')} onBack={()=>nav('dashboard')}/> :
@@ -117,7 +119,7 @@ export default function DesignPreview() {
         }
       />
     ) : page === "planning" ? (
-      <PlanningScreen
+      <PlanningScreen learning={learning}
         ues={ues}
         user={student}
         onBack={() => nav("dashboard")}
