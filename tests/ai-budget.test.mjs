@@ -58,7 +58,7 @@ test('concurrent requests cannot cross either last monetary slot',async()=>{
     {'aiUsage/global_2026-10':{reservedMicros:GLOBAL_BUDGET-cost}},
   ]){
     const db=database(override);
-    const results=await Promise.allSettled([reserveTutor(db,'u',data,now),reserveTutor(db,'u',data,now)]);
+    const results=await Promise.allSettled([reserveTutor(db,'u',data,now),reserveTutor(db,'u',data,new Date(now.getTime()+5000))]);
     assert.equal(results.filter(r=>r.status==='fulfilled').length,1);
     assert.ok(db.store.get('aiUsage/u_month_2026-10').reservedMicros<=USER_BUDGET);
     assert.ok(db.store.get('aiUsage/global_2026-10').reservedMicros<=GLOBAL_BUDGET);

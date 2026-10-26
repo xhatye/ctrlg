@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {requestTutor} from '../lib/tutor-provider.mjs';
+import {tutorInstructions,validateTutorReply} from '../lib/tutor-grounding.mjs';
 const data={messages:[{role:'user',content:'Expliquez le bilan.'}],max_tokens:1600};
 test('both tutoring formats use exactly one bounded on-demand GPT-OSS 120B call without tools',async()=>{
   for(const json of [false,true]){
@@ -18,6 +19,15 @@ test('both tutoring formats use exactly one bounded on-demand GPT-OSS 120B call 
     }});
     assert.equal(response.status,429);assert.equal(calls,1);
   }
+});
+test('unsupported monetary illustrations and invented legal references are withheld',()=>{
+  const evidence='[1] UE9, Bilan. Le bilan est une situation à une date. [2] Le compte de résultat porte sur une période.';
+  assert.equal(validateTutorReply('Le bilan décrit une situation à une date [1], le compte de résultat une activité sur une période [2].',evidence).includes('[1]'),true);
+  assert.throws(()=>validateTutorReply('Actif de 100 k€, capital de 60 k€ et résultat de 20 k€.',evidence),{status:503});
+  assert.throws(()=>validateTutorReply('Selon le PCG, UE9 § 2.',evidence),{status:503});
+  assert.throws(()=>validateTutorReply('Selon l’article 121-1 du PCG.',evidence),{status:503});
+  assert.equal(validateTutorReply('Selon l’article 121-1 du PCG.',evidence+' article 121-1'), 'Selon l’article 121-1 du PCG.');
+  assert.match(tutorInstructions('UE9',''),/Aucun extrait pertinent/);
 });
 test('invalid request and missing credentials never make a provider call; network failures are never retried',async()=>{
   let calls=0;const options={apiKey:'test-only',fetchImpl:async()=>{calls++;throw new Error('network');}};
