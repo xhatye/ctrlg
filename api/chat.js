@@ -62,7 +62,7 @@ export default async function handler(req, res) {
     }
     let helpSource='ai';
     try{validateTutorReply(text,help?retrieved.context:retrieved.context+'\n'+lastQuestion);}
-    catch(error){if(help?.purpose!=='case-hint')throw error;text=help.fallback;helpSource='support';}
+    catch(error){if(!['case-hint','lesson-coach'].includes(help?.purpose))throw error;text=help.fallback;helpSource='support';}
     return res
       .status(200)
       .json({
