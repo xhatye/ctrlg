@@ -1,4 +1,5 @@
 import FAQ from './PublicFAQ';
+import PublicAI, {AILimits} from './PublicAI';
 import {RefinedLanding,RefinedFeatures} from './RefinedPublic';
 import './refined-ui.css';
 import GizmoDashboard from './GizmoDashboard';
@@ -106,7 +107,7 @@ function PublicNav({ onNav, onAuth }) {
           aria-label="Navigation principale"
         >
           {[
-            ["features", "La méthode"],
+            ["features", "Méthode & IA"],
             ["dcg", "DCG"],
             ["dscg", "DSCG"],
             ["pricing", "Tarifs"],
@@ -710,9 +711,10 @@ export function OfferPage({ user, onCheckout, onNav }) {
     try { await onCheckout(plan); }
     finally { setPendingPlan(null); }
   };
+  const includedBenefits=[`${catalogue.totals.curatedQuestions.toLocaleString('fr-FR')} QCM expliqués, cours, fiches et flashcards`,'Cas corrigés, mode examen et annales PDF','Tuteur IA : cours, erreurs et cartes personnelles','Retours IA sur les cas, l’oral écrit et le recrutement','Planning adapté à vos résultats et suivi'];
   const plans = [
-    {id:'subscription',name:'SIMDCG Pro',tag:'À votre rythme',price:'15',period:'/ mois',description:'Pour réviser au fil des semaines.',terms:'Renouvellement mensuel. Résiliation depuis votre compte.',benefits:['Accès pendant votre abonnement','Renouvellement automatique chaque mois'],button:'Choisir Pro'},
-    {id:'pack_examen',name:'Pack Examen',tag:'90 jours pour vous préparer',price:'29',period:'/ 90 jours',description:'Pour une période de révision intensive.',terms:'Un seul paiement. Aucun renouvellement automatique.',benefits:['90 jours d’accès dès le paiement','L’accès prend fin automatiquement'],button:'Choisir le Pack Examen'},
+    {id:'subscription',name:'SIMDCG Pro',tag:'À votre rythme',price:'15',period:'/ mois',description:'Pour réviser au fil des semaines.',terms:'Renouvellement mensuel. Résiliation depuis votre compte.',benefits:includedBenefits,button:'Choisir Pro'},
+    {id:'pack_examen',name:'Pack Examen',tag:'90 jours pour vous préparer',price:'29',period:'/ 90 jours',description:'Pour une période de révision intensive.',terms:'Un seul paiement. Aucun renouvellement automatique.',benefits:includedBenefits,button:'Choisir le Pack Examen'},
   ];
   return (
     <div className="marketing pricing-marketing">
@@ -721,7 +723,7 @@ export function OfferPage({ user, onCheckout, onNav }) {
         <Title
           eyebrow="LES TARIFS SIMDCG"
           title="Vos révisions, à votre rythme."
-          desc="Les mêmes outils pour le DCG et le DSCG. Choisissez votre durée."
+          desc="Cours, entraînements et aides IA incluses dans les deux offres. Seule la durée d’accès change."
         />
         <div className="pricing-grid" aria-label="Choisir une offre">
           {plans.map(plan=><article className={'pricing-card'+(plan.id==='pack_examen'?' pricing-card-pack':'')} key={plan.id}>
@@ -730,19 +732,23 @@ export function OfferPage({ user, onCheckout, onNav }) {
             <p className="pricing-description">{plan.description}</p>
             <div className="price"><strong>{plan.price} €</strong><span>{plan.period}</span></div>
             <p className="price-detail">{plan.terms}</p>
+            <p className="pricing-includes-label">13 UE DCG + 7 UE DSCG · Dans votre accès</p>
             <ul>{plan.benefits.map(item=><li key={item}><Icon name="check" size={18}/><span>{item}</span></li>)}</ul>
+            <a className="pricing-ai-terms" href="#limites-ia">IA incluse · Voir les limites communes</a>
             <Button secondary={plan.id==='subscription'} disabled={!!pendingPlan} aria-busy={pendingPlan===plan.id} onClick={()=>user?.isPro&&plan.id==='subscription'?onNav('account'):checkout(plan.id)}>
               {pendingPlan===plan.id?'Ouverture du paiement…':user?.isPro&&plan.id==='subscription'?'Voir mon accès':plan.button}
             </Button>
           </article>)}
         </div>
         <p className="pricing-secure"><Icon name="lock" size={16}/> Paiement sécurisé par Stripe · Accès lié à votre compte</p>
+        <AILimits id="limites-ia"/>
         <section className="pricing-included" aria-labelledby="pricing-included-title">
-          <div><span className="eyebrow">DANS LES DEUX OFFRES</span><h2 id="pricing-included-title">Tout votre espace de révision.</h2><p>13 matières DCG et 7 matières DSCG.</p></div>
-          <ul>{['Cours, fiches et textes à trous','QCM expliqués et flashcards','Cas corrigés et mode examen','Planning et suivi de progression'].map(item=><li key={item}><Icon name="check" size={18}/><span>{item}</span></li>)}</ul>
+          <div><span className="eyebrow">DANS LES DEUX OFFRES</span><h2 id="pricing-included-title">Des outils pour chaque étape.</h2><p>Les mêmes contenus et les mêmes aides IA. Choisissez le rythme qui vous convient.</p></div>
+          <ul>{['Cours, fiches, textes à trous et visuels','QCM expliqués et flashcards de la bibliothèque','Cas corrigés, annales PDF avec chrono et mode examen','Planning, rappels et suivi par chapitre'].map(item=><li key={item}><Icon name="check" size={18}/><span>{item}</span></li>)}</ul>
         </section>
         <div className="pricing-library" aria-label="Contenus disponibles">{[[catalogue.totals.chapters,'chapitres'],[catalogue.totals.curatedQuestions,'QCM expliqués'],[catalogue.totals.cards,'flashcards'],[catalogue.totals.curatedCases,'cas corrigés']].map(([value,label])=><div key={label}><strong>{value.toLocaleString('fr-FR')}</strong><span>{label}</span></div>)}</div>
-        <p className="pricing-sample-link"><a href="/exemple-gratuit">Essayer un chapitre et ses 10 QCM avant de choisir</a></p><details className="pricing-details"><summary>Avant de choisir votre accès</summary><p>Consultez les chapitres <a href="/dcg">DCG</a> et <a href="/dscg">DSCG</a> : la couverture du programme est partielle. Le chapitre offert peut être essayé sans compte. Les autres exercices nécessitent un accès payant actif. Les cas SIMDCG sont originaux et distincts des annales officielles.</p><p>Les deux offres comprennent le tuteur IA, avec un maximum de 20 demandes par jour et 300 par mois, sous réserve du budget de génération disponible. Les cours et exercices enregistrés restent accessibles sans génération IA.</p></details>
+        <PublicAI compact showLimits={false}/>
+        <p className="pricing-sample-link"><a href="/exemple-gratuit">Essayer un chapitre et ses 10 QCM avant de choisir</a></p><details className="pricing-details"><summary>Avant de choisir votre accès</summary><p>Consultez les chapitres <a href="/dcg">DCG</a> et <a href="/dscg">DSCG</a> : la couverture du programme est partielle. Le chapitre offert peut être essayé sans compte. Les autres exercices nécessitent un accès payant actif. Les cas SIMDCG sont originaux et distincts des annales officielles.</p><p>Le tuteur, les aides de cours, les explications d’erreurs, les cartes proposées et les retours écrits partagent les limites affichées ci-dessus. Les essais gratuits ne comprennent pas de génération IA. Les cartes personnelles sont conservées dans le navigateur, sans synchronisation entre appareils. Les cours et exercices enregistrés restent accessibles sans génération IA.</p></details>
         <div className="recovery-link">
           <Icon name="lock" />
           <span>Vous avez déjà payé ?</span>

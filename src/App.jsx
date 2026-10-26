@@ -941,7 +941,7 @@ function Paywall({ onUpgrade, onBack }) {
           <div style={S.pb}>SIMDCG PRO</div>
           <p style={{ fontSize: 40, fontWeight: 900, color: "var(--ink)", margin: "12px 0 4px" }}>{PRO_PRICE}<span style={{ fontSize: 14, color: "var(--muted)" }}>/mois</span></p>
           <div style={{ display: "flex", flexDirection: "column", gap: 7, margin: "14px 0 20px" }}>
-            {["13 matières DCG + 7 matières DSCG", "Cas pratiques avec corrigés à comparer soi-même", "Flashcards enregistrées et reprise des cartes difficiles", "Planning de révision sans IA", "Préparer l’oral par écrit autonome et tuteur IA limité", "Historique complet & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "var(--ink)", margin: 0 }}>✓ {f}</p>)}
+            {["13 matières DCG + 7 matières DSCG", "Cas pratiques avec corrigés à comparer soi-même", "Flashcards enregistrées et reprise des cartes difficiles", "Planning adapté aux résultats", "Tuteur, aides de cours et retours écrits IA inclus, avec limites", "Historique complet & progression"].map(f => <p key={f} style={{ fontSize: 12, color: "var(--ink)", margin: 0 }}>✓ {f}</p>)}
           </div>
           <button style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={onUpgrade}>Passer à Pro</button>
         </div>

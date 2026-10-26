@@ -1,6 +1,6 @@
 .pricing-marketing {font-family:'Nunito Sans',system-ui,sans-serif;}
-.pricing-marketing .pricing-page {max-width:980px;padding-block:68px 48px;}
-.pricing-marketing .pricing-page .page-title {margin-bottom:36px;}
+.pricing-marketing .pricing-page {max-width:980px;padding-block:44px 48px;}
+.pricing-marketing .pricing-page .page-title {margin-bottom:28px;}
 .pricing-marketing .pricing-page h1 {font-size:clamp(32px,4vw,46px);line-height:1.15;letter-spacing:-1.6px;font-weight:850;}
 .pricing-marketing .pricing-page .page-title p {font-size:16px;line-height:1.6;margin-top:14px;}
 .pricing-marketing .pricing-grid {max-width:850px;gap:24px;align-items:stretch;}
@@ -18,6 +18,11 @@
 .pricing-marketing .pricing-card li {font-size:14px;line-height:1.55;gap:10px;align-items:flex-start;color:var(--ink);}
 .pricing-marketing li svg {flex:0 0 auto;margin-top:2px;color:var(--success);}
 .pricing-marketing .pricing-card .btn {min-height:48px;font-size:14px;gap:10px;line-height:1.4;}
+.pricing-marketing .pricing-card .pricing-includes-label{font-size:11px;font-weight:800;line-height:1.6;letter-spacing:.02em;color:var(--gold-text);margin:22px 0 0;}
+.pricing-marketing .pricing-card ul{margin-top:12px;margin-bottom:16px;flex:1;}
+.pricing-marketing .pricing-ai-terms{font-size:12px;line-height:1.5;margin:0 0 16px;color:var(--gold-text);text-underline-offset:3px;}
+.pricing-marketing .pricing-page>.public-ai-limits{max-width:850px;margin:0 auto 32px;border-top:0;padding:18px 22px;border-radius:16px;background:var(--surface-soft);scroll-margin-top:110px;}
+.pricing-marketing .public-ai-section{max-width:850px;}
 .pricing-marketing .pricing-secure {display:flex;align-items:center;justify-content:center;gap:8px;margin:22px auto 36px;font-size:12px;color:var(--muted);text-align:center;}
 .pricing-marketing .pricing-secure svg {flex-shrink:0;}
 .pricing-marketing .pricing-included {max-width:850px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:28px;padding:28px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
