@@ -523,28 +523,6 @@
       "permanent": true
     },
     {
-      "source": "/cgu",
-      "has": [
-        {
-          "type": "host",
-          "value": "simdcg.vercel.app"
-        }
-      ],
-      "destination": "https://www.simdcg.com/cgu",
-      "permanent": true
-    },
-    {
-      "source": "/confidentialite",
-      "has": [
-        {
-          "type": "host",
-          "value": "simdcg.vercel.app"
-        }
-      ],
-      "destination": "https://www.simdcg.com/confidentialite",
-      "permanent": true
-    },
-    {
       "source": "/qcm-gratuits/dcg-ue-1-fondamentaux-du-droit",
       "has": [
         {
@@ -1414,6 +1392,28 @@
       "permanent": true
     },
     {
+      "source": "/cgu",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/cgu",
+      "permanent": true
+    },
+    {
+      "source": "/confidentialite",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/confidentialite",
+      "permanent": true
+    },
+    {
       "source": "/sitemap.xml",
       "has": [
         {
@@ -1940,6 +1940,24 @@
         {
           "key": "X-Frame-Options",
           "value": "SAMEORIGIN"
+        }
+      ]
+    },
+    {
+      "source": "/cgu",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
+        }
+      ]
+    },
+    {
+      "source": "/confidentialite",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
         }
       ]
     }

@@ -4,13 +4,14 @@ import { createServer } from 'vite';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { PUBLIC_PAGES, PUBLIC_ORIGIN } from '../lib/public-study-pages.mjs';
-import { CORE_PUBLIC_META, APP_PATHS, INDEXABLE_PATHS, seoForPath, structuredData } from '../lib/public-seo.mjs';
+import { CORE_PUBLIC_META, APP_PATHS, INDEXABLE_PATHS, PUBLIC_NOINDEX_PATHS, seoForPath, structuredData } from '../lib/public-seo.mjs';
 import { curriculumFor } from '../lib/curriculum.mjs';
 
 // Server rendering creates public HTML only. It never reads user documents or calls APIs.
 for(const [key,value] of Object.entries({VITE_FIREBASE_API_KEY:'public-render-placeholder',VITE_FIREBASE_PROJECT_ID:'public-render-placeholder',VITE_FIREBASE_AUTH_DOMAIN:'localhost',VITE_FIREBASE_APP_ID:'public-render-placeholder'}))process.env[key] ||= value;
 const dist=resolve(process.cwd(),'dist');
 const template=await readFile(resolve(dist,'index.html'),'utf8');
+if(!template.includes('<div id="root"></div>'))throw Error('Public rendering requires a fresh Vite template. Run npm run build instead of rendering an already-built site.');
 const manifest=JSON.parse(await readFile(resolve(dist,'.vite/manifest.json'),'utf8'));
 const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function cssFor(entry,seen=new Set()){if(seen.has(entry)||!manifest[entry])return [];seen.add(entry);return [...(manifest[entry].css||[]),...(manifest[entry].imports||[]).flatMap(key=>cssFor(key,seen))];}
@@ -66,13 +67,14 @@ await writeFile(resolve(dist,'robots.txt'),`User-agent: *\nAllow: /\nDisallow: /
 // Known app paths remain usable; unrecognised paths fall through to Vercel's real 404.
 const config=JSON.parse(await readFile(resolve(process.cwd(),'vercel.json'),'utf8'));
 config.rewrites=[...rewrites,...APP_PATHS.map(source=>({source,destination:'/app.html'}))];
+config.headers=[...(config.headers||[]).filter(rule=>!PUBLIC_NOINDEX_PATHS.includes(rule.source)),...PUBLIC_NOINDEX_PATHS.map(source=>({source,headers:[{key:'X-Robots-Tag',value:'noindex, follow'}]}))];
 // Only public documents on the old alias move host. API/webhook and signed-in routes are untouched.
 config.trailingSlash=false;
 config.redirects=[
  {source:'/decouverte',destination:'/tarifs',permanent:true},
  {source:'/index.html',destination:'/',permanent:true},
  ...rewrites.map(route=>({source:route.destination,destination:route.source,permanent:true})),
- ...[...INDEXABLE_PATHS,'/sitemap.xml','/robots.txt'].map(source=>({source,has:[{type:'host',value:'simdcg.vercel.app'}],destination:PUBLIC_ORIGIN+source,permanent:true})),
+ ...[...new Set([...INDEXABLE_PATHS,...Object.keys(CORE_PUBLIC_META),'/sitemap.xml','/robots.txt'])].map(source=>({source,has:[{type:'host',value:'simdcg.vercel.app'}],destination:PUBLIC_ORIGIN+source,permanent:true})),
 ];
 await writeFile(resolve(process.cwd(),'vercel.json'),JSON.stringify(config,null,2)+'\n');
 await writeFile(resolve(dist,'public-page-manifest.json'),JSON.stringify({origin:PUBLIC_ORIGIN,pages:INDEXABLE_PATHS.map(path=>({path,...seoForPath(path),page:undefined})),rewrites},null,2));
