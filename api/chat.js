@@ -43,7 +43,9 @@ export default async function handler(req, res) {
       );
     }
     const result = await response.json();
-    const text = result.choices?.[0]?.message?.content;
+    const rawText = result.choices?.[0]?.message?.content;
+    // The conversation uses escaped plain text; remove Markdown decoration.
+    const text = typeof rawText==='string' ? rawText.replace(/\*\*([^*\n]+)\*\*/g,'$1').replace(/^\s*[*-]\s+/gm,'• ') : rawText;
     if (!text || result.choices?.[0]?.finish_reason === 'length')
       throw Object.assign(
         new Error(
