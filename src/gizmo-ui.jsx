@@ -78,7 +78,7 @@ export function GizmoShell({children,screen,user,onNav,onLogout}) {
       <nav aria-label="Navigation de l’espace étudiant">{links.filter(([key])=>!secondaryKeys.includes(key)).map(([key,icon,label])=>{const i=links.findIndex(link=>link[0]===key);const active=screen===key||key==='library'&&['subject_hub','qcm','flashcards','resume_cours','cas_pratique'].includes(screen);return <button key={key} className={(active?'active ':'')+'g-nav-'+i} aria-current={active?'page':undefined} onClick={()=>go(key)}>
         <span className="g-nav-icon g-nav-icon-art"><NavigationArt screen={key}/></span><span>{label}</span>
       </button>;})}
-      <details className="g-more-tools" open={moreOpen} onToggle={e=>setMoreOpen(e.currentTarget.open)}><summary>Autres outils <span aria-hidden="true">⌄</span></summary><div>{links.filter(([key])=>secondaryKeys.includes(key)).map(([key,icon,label])=><button key={key} aria-current={screen===key?'page':undefined} className={screen===key?'active':''} onClick={()=>go(key)}><span className="g-nav-icon"><StudyIcon name={icon}/></span><span>{label}</span></button>)}</div></details>
+      <details className="g-more-tools" open={moreOpen} onToggle={e=>setMoreOpen(e.currentTarget.open)}><summary>Autres outils <span aria-hidden="true">⌄</span></summary><div>{links.filter(([key])=>secondaryKeys.includes(key)).map(([key,icon,label])=><button key={key} aria-current={screen===key?'page':undefined} className={screen===key?'active':''} onClick={()=>go(key)}><span className="g-nav-icon g-nav-icon-art"><NavigationArt screen={key}/></span><span>{label}</span></button>)}</div></details>
       </nav>
       <div className="g-sidebar-footer">
         <button onClick={()=>go('feedback')}>Partager mon retour </button>

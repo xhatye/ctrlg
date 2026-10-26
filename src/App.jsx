@@ -631,7 +631,7 @@ function QCMSession({ ue, user, onDone, onBack }) {
                 return <button key={i} onClick={() => pick(i)} className={`answer-option${sel!==null?(i===q.answer?" answer-correct":i===sel?" answer-incorrect":""):""}`} disabled={sel!==null} aria-pressed={sel===i} style={{ background: bg, border: `1px solid ${border}`, color, padding: "12px 16px", textAlign: "left", cursor: sel === null ? "pointer" : "default", fontSize: 13, transition: "all .2s", fontFamily: "inherit" }}>{String.fromCharCode(65 + i)}. {opt}</button>;
               })}
             </div>
-            {sel !== null && <AnswerFeedback question={q} choice={sel}/>}
+            {sel !== null && <AnswerFeedback question={q} choice={sel} allowAI/>}
             {sel !== null && <button disabled={finishing} style={{ ...S.ctag, width: "100%", padding: 13 }} onClick={next}>{finishing?'Enregistrement…':qi + 1 >= questions.length ? "Voir les résultats" : "Question suivante"}</button>}
           </div>
         )}

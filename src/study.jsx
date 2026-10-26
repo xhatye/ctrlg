@@ -7,6 +7,7 @@ import {checkCaseStep} from "../lib/case-checks.mjs";
 import { ChapterSelect } from './chapter-navigation';
 
 import CaseRubric from './CaseRubric';
+import StudyAIHelp from './StudyAIHelp';
 
 
 export function StudyNotice() {
@@ -120,6 +121,7 @@ export function CasePractice({ ue, user, onDone, onBack, onLearning, onNav }) {
       <div className="case-modes" role="group" aria-label="Mode du cas"><button aria-pressed={mode==='guided'} disabled={busy||saving} onClick={()=>setMode('guided')}>Exercice guidé<span>Une question, une vérification, une explication.</span></button><button aria-pressed={mode==='written'} disabled={busy||saving} onClick={()=>setMode('written')}>Réponse écrite + retour IA<span>Facultatif · jusqu’à 5 demandes/jour · 60/mois.</span></button></div>
       <article className="panel case-context"><span className="eyebrow">{state.data.format || 'LE DOSSIER'} · {state.data.duree_estimee}</span><p>{state.data.contexte}</p></article>
       {mode==='guided'?<>
+        <StudyAIHelp key={ue.id+':'+state.data.chapter+':'+variant} request={{purpose:'case-hint',module:ue.id,chapter:state.data.chapter,variant}} label="Donne-moi un indice"/>
         <div className="case-step-progress"><strong>{completed}/{questions.length} étapes travaillées</strong><div className="progress-track"><i style={{width:(completed/questions.length*100)+'%'}}/></div><span className="helper">Le suivi enregistre votre travail. Il ne constitue pas une note d’examen.</span></div>
         <div className="case-steps">{questions.map(q=>{const result=checked[q.num];return <article className="panel case-step" key={q.num}>
           <span className="eyebrow">ÉTAPE {q.num}</span><h2>{q.enonce}</h2>
@@ -148,7 +150,7 @@ export function OralSetup({ onStart, onBack }) {
       <section className="panel">
         <p>
           Un exercice de départ, trois questions et des éléments de réponse pour
-          vous comparer, sans notation automatique.
+          vous comparer, sans notation automatique. Vous pourrez aussi demander un retour IA sur vos notes : clarté, idées à compléter et prochaine étape. Cette aide est facultative et partage le budget du tuteur.
         </p>
         <label className="study-answer">
           Thématique
@@ -179,7 +181,13 @@ const topicModule = {
 export function OralPractice({ cfg, onDone, onBack }) {
   const state = useModule(topicModule[cfg.topic] || "UE9", "case"),
     [answer, setAnswer] = useState(""),
-    [revealed, setRevealed] = useState(false);
+    [revealed, setRevealed] = useState(false),[aiBusy,setAIBusy]=useState(false),[aiFeedback,setAIFeedback]=useState(null),[aiError,setAIError]=useState('');
+  const review=async()=>{
+    if(aiBusy)return;setAIBusy(true);setAIError('');
+    try{const data=await reviewCase({purpose:'oral-review',module:topicModule[cfg.topic]||'UE9',chapter:state.data.chapter,variant:state.data.variant??0,answer});setAIFeedback(data.feedback);}
+    catch(e){setAIError(e.name==='TimeoutError'?'Le retour prend trop de temps. Vos notes et les éléments attendus restent disponibles.':e.message);}
+    finally{setAIBusy(false);}
+  };
   return (
     <Frame title="Préparer sa réponse par écrit" onBack={onBack}>
       <p>
@@ -204,7 +212,8 @@ export function OralPractice({ cfg, onDone, onBack }) {
               rows={7}
               maxLength={12000}
               value={answer}
-              onChange={(e) => setAnswer(e.target.value)}
+              disabled={aiBusy}
+              onChange={(e) => {setAnswer(e.target.value);setAIFeedback(null);setAIError('');}}
             />
           </label>
           <button
@@ -214,6 +223,7 @@ export function OralPractice({ cfg, onDone, onBack }) {
           >
             Voir les éléments attendus
           </button>
+          <section className="panel study-ai-help"><h2>Un retour sur votre préparation écrite</h2><p>Le tuteur compare vos notes aux attendus et vous aide à mieux structurer votre réponse. Il ne peut pas évaluer votre voix ni attribuer une note d’oral.</p><button className="btn btn-secondary" disabled={aiBusy||!!aiFeedback||answer.trim().length<40||answer.length>6000} onClick={review}>{aiBusy?'Lecture de vos notes…':aiFeedback?'Retour IA affiché':'Obtenir un retour IA sur mes notes'}</button><small>Facultatif · de 40 à 6 000 caractères pour l’IA · même enveloppe de 0,36 $ par mois que le tuteur et les cas, sans supplément. Les retours écrits partagent aussi la limite de 5 par jour et 60 par mois. Vos notes et le contexte utile sont transmis à Groq à votre demande.</small>{aiError&&<p role="alert">{aiError}</p>}{aiFeedback&&<WrittenOralFeedback feedback={aiFeedback}/>}</section>
           {revealed && (
             <section className="panel">
               <h2>Points de comparaison</h2>
@@ -237,6 +247,7 @@ export function OralPractice({ cfg, onDone, onBack }) {
                     mode: "self-review",
                     reponse: answer,
                     expected: state.data.questions.map((q) => q.answer),
+                    ...(aiFeedback?{aiFeedback}:{}),
                   })
                 }
               >
@@ -261,7 +272,11 @@ export function OralSummary({ data, onBack }) {
         {data.expected?.map((x, i) => (
           <p key={i}>{x}</p>
         ))}
+        {data.aiFeedback&&<WrittenOralFeedback feedback={data.aiFeedback}/>}
       </section>
     </Frame>
   );
+}
+function WrittenOralFeedback({feedback}){
+ return <div className="written-oral-feedback" role="status"><h3>Retour pédagogique IA</h3>{[['strengths','Vos points solides'],['improvements','Pour clarifier votre réponse'],['nextSteps','Pour poursuivre l’entraînement']].map(([key,label])=><div key={key}><h4>{label}</h4><ul>{feedback[key]?.map((text,i)=><li key={i}>{text}</li>)}</ul></div>)}<p className="helper">Relisez ces suggestions avec les éléments attendus. Ce retour n’est ni une note ni une validation par un jury.</p></div>;
 }

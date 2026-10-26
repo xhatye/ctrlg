@@ -5,6 +5,7 @@ import { requestTutor } from '../lib/tutor-provider.mjs';
 import { tutorInstructions, validateTutorReply } from '../lib/tutor-grounding.mjs';
 import { retrieveLessons } from '../lib/study-retrieval.mjs';
 import { MODULES } from '../lib/study-content.mjs';
+import {studyHelp} from '../lib/study-help.mjs';
 export default async function handler(req, res) {
   res.setHeader("Cache-Control", "no-store");
   if (req.method !== "POST")
@@ -13,11 +14,12 @@ export default async function handler(req, res) {
     const deps = firebaseServices(),
       user = await authenticated(req, deps.auth);
     const body=typeof req.body === 'string'?JSON.parse(req.body):req.body;
-    const data = validateChat(body);
+    const help=body?.purpose!==undefined?studyHelp(body):null;
+    const data = validateChat(help?{messages:[{role:'user',content:help.question}],max_tokens:1200}:body);
     // The server owns tutoring instructions; client prose is not a system policy.
     data.messages=data.messages.filter(m=>m.role!=='system');
     const lastQuestion=[...data.messages].reverse().find(m=>m.role==='user')?.content || '';
-    const retrieved=retrieveLessons(lastQuestion,typeof body.module==='string'?body.module:undefined);
+    const retrieved=help?{context:help.context,references:help.references}:retrieveLessons(lastQuestion,typeof body.module==='string'?body.module:undefined);
     if (!process.env.GROQ_API_KEY)
       throw Object.assign(
         new Error(
@@ -27,7 +29,7 @@ export default async function handler(req, res) {
       );
     data.messages.unshift({
       role: "system",
-      content:tutorInstructions(typeof body.module==='string'&&Object.hasOwn(MODULES,body.module)?body.module+' '+MODULES[body.module].title:'DCG et DSCG',retrieved.context),
+      content:tutorInstructions(help?.module || (typeof body.module==='string'&&Object.hasOwn(MODULES,body.module)?body.module+' '+MODULES[body.module].title:'DCG et DSCG'),retrieved.context),
     });
     const remaining = await reserveTutor(deps.db, user.uid, data);
     const response = await requestTutor(data);
