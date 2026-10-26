@@ -4,9 +4,1519 @@
       "source": "/decouverte",
       "destination": "/tarifs",
       "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dcg-ue-1-fondamentaux-du-droit.html",
+      "destination": "/qcm-gratuits/dcg-ue-1-fondamentaux-du-droit",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dcg-ue-2-droit-des-affaires.html",
+      "destination": "/qcm-gratuits/dcg-ue-2-droit-des-affaires",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dcg-ue-3-droit-social.html",
+      "destination": "/qcm-gratuits/dcg-ue-3-droit-social",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dcg-ue-4-droit-fiscal.html",
+      "destination": "/qcm-gratuits/dcg-ue-4-droit-fiscal",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dcg-ue-5-economie-contemporaine.html",
+      "destination": "/qcm-gratuits/dcg-ue-5-economie-contemporaine",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dcg-ue-6-finance-entreprise.html",
+      "destination": "/qcm-gratuits/dcg-ue-6-finance-entreprise",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dcg-ue-7-management.html",
+      "destination": "/qcm-gratuits/dcg-ue-7-management",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dcg-ue-8-systemes-information-gestion.html",
+      "destination": "/qcm-gratuits/dcg-ue-8-systemes-information-gestion",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dcg-ue-9-comptabilite.html",
+      "destination": "/qcm-gratuits/dcg-ue-9-comptabilite",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dcg-ue-10-comptabilite-approfondie.html",
+      "destination": "/qcm-gratuits/dcg-ue-10-comptabilite-approfondie",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dcg-ue-11-controle-gestion.html",
+      "destination": "/qcm-gratuits/dcg-ue-11-controle-gestion",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dcg-ue-12-anglais-des-affaires.html",
+      "destination": "/qcm-gratuits/dcg-ue-12-anglais-des-affaires",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dcg-ue-13-communication-professionnelle.html",
+      "destination": "/qcm-gratuits/dcg-ue-13-communication-professionnelle",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dscg-ue-1-gestion-juridique-fiscale-sociale.html",
+      "destination": "/qcm-gratuits/dscg-ue-1-gestion-juridique-fiscale-sociale",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dscg-ue-2-finance.html",
+      "destination": "/qcm-gratuits/dscg-ue-2-finance",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dscg-ue-3-controle-gestion-strategie.html",
+      "destination": "/qcm-gratuits/dscg-ue-3-controle-gestion-strategie",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dscg-ue-4-comptabilite-audit.html",
+      "destination": "/qcm-gratuits/dscg-ue-4-comptabilite-audit",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dscg-ue-5-management-systemes-information.html",
+      "destination": "/qcm-gratuits/dscg-ue-5-management-systemes-information",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dscg-ue-6-anglais-des-affaires.html",
+      "destination": "/qcm-gratuits/dscg-ue-6-anglais-des-affaires",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/qcm-gratuits__dscg-ue-7-memoire-professionnel.html",
+      "destination": "/qcm-gratuits/dscg-ue-7-memoire-professionnel",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/annales__dscg-2025.html",
+      "destination": "/annales/dscg-2025",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/annales__dscg-2024.html",
+      "destination": "/annales/dscg-2024",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/annales__dscg-2023.html",
+      "destination": "/annales/dscg-2023",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/annales__dscg-2022.html",
+      "destination": "/annales/dscg-2022",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/annales__dscg-2021.html",
+      "destination": "/annales/dscg-2021",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/annales__dscg-2020.html",
+      "destination": "/annales/dscg-2020",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/annales__dcg-2026.html",
+      "destination": "/annales/dcg-2026",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/annales__dcg-2025.html",
+      "destination": "/annales/dcg-2025",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/annales__dcg-2024.html",
+      "destination": "/annales/dcg-2024",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/annales__dcg-2023.html",
+      "destination": "/annales/dcg-2023",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/annales__dcg-2022.html",
+      "destination": "/annales/dcg-2022",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/annales__dcg-2021.html",
+      "destination": "/annales/dcg-2021",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/annales__dcg-2020.html",
+      "destination": "/annales/dcg-2020",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/documents-examen.html",
+      "destination": "/documents-examen",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/fiches.html",
+      "destination": "/fiches",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/fiches__dcg-ue9-achats-reglements.html",
+      "destination": "/fiches/dcg-ue9-achats-reglements",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/fiches__dscg-ue2-valeur-entreprise-actions.html",
+      "destination": "/fiches/dscg-ue2-valeur-entreprise-actions",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/a-propos.html",
+      "destination": "/a-propos",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/outils__planning-revision.html",
+      "destination": "/outils/planning-revision",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dcg.html",
+      "destination": "/dcg",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dscg.html",
+      "destination": "/dscg",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dcg__ue-1-fondamentaux-du-droit.html",
+      "destination": "/dcg/ue-1-fondamentaux-du-droit",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dcg__ue-2-droit-des-affaires.html",
+      "destination": "/dcg/ue-2-droit-des-affaires",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dcg__ue-3-droit-social.html",
+      "destination": "/dcg/ue-3-droit-social",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dcg__ue-4-droit-fiscal.html",
+      "destination": "/dcg/ue-4-droit-fiscal",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dcg__ue-5-economie-contemporaine.html",
+      "destination": "/dcg/ue-5-economie-contemporaine",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dcg__ue-6-finance-entreprise.html",
+      "destination": "/dcg/ue-6-finance-entreprise",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dcg__ue-7-management.html",
+      "destination": "/dcg/ue-7-management",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dcg__ue-8-systemes-information-gestion.html",
+      "destination": "/dcg/ue-8-systemes-information-gestion",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dcg__ue-9-comptabilite.html",
+      "destination": "/dcg/ue-9-comptabilite",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dcg__ue-10-comptabilite-approfondie.html",
+      "destination": "/dcg/ue-10-comptabilite-approfondie",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dcg__ue-11-controle-gestion.html",
+      "destination": "/dcg/ue-11-controle-gestion",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dcg__ue-12-anglais-des-affaires.html",
+      "destination": "/dcg/ue-12-anglais-des-affaires",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dcg__ue-13-communication-professionnelle.html",
+      "destination": "/dcg/ue-13-communication-professionnelle",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dscg__ue-1-gestion-juridique-fiscale-sociale.html",
+      "destination": "/dscg/ue-1-gestion-juridique-fiscale-sociale",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dscg__ue-2-finance.html",
+      "destination": "/dscg/ue-2-finance",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dscg__ue-3-controle-gestion-strategie.html",
+      "destination": "/dscg/ue-3-controle-gestion-strategie",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dscg__ue-4-comptabilite-audit.html",
+      "destination": "/dscg/ue-4-comptabilite-audit",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dscg__ue-5-management-systemes-information.html",
+      "destination": "/dscg/ue-5-management-systemes-information",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dscg__ue-6-anglais-des-affaires.html",
+      "destination": "/dscg/ue-6-anglais-des-affaires",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/dscg__ue-7-memoire-professionnel.html",
+      "destination": "/dscg/ue-7-memoire-professionnel",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/ressources.html",
+      "destination": "/ressources",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/sources.html",
+      "destination": "/sources",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/annales.html",
+      "destination": "/annales",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/guides.html",
+      "destination": "/guides",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/guides__organiser-revisions-dcg-dscg.html",
+      "destination": "/guides/organiser-revisions-dcg-dscg",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/guides__utiliser-annales-dcg-dscg.html",
+      "destination": "/guides/utiliser-annales-dcg-dscg",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/guides__reviser-comptabilite-dcg-ue9-ue10.html",
+      "destination": "/guides/reviser-comptabilite-dcg-ue9-ue10",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/guides__reussir-dossier-juridique-fiscal.html",
+      "destination": "/guides/reussir-dossier-juridique-fiscal",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/guides__reviser-dscg-comptabilite-audit.html",
+      "destination": "/guides/reviser-dscg-comptabilite-audit",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/guides__flashcards-qcm-revisions-utiles.html",
+      "destination": "/guides/flashcards-qcm-revisions-utiles",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/guides__amortissement-lineaire-exercice-corrige.html",
+      "destination": "/guides/amortissement-lineaire-exercice-corrige",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/guides__valeur-actuelle-nette-van-exemple.html",
+      "destination": "/guides/valeur-actuelle-nette-van-exemple",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/guides__debit-credit-comptabilite-exemple.html",
+      "destination": "/guides/debit-credit-comptabilite-exemple",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/guides__bilan-compte-resultat-difference.html",
+      "destination": "/guides/bilan-compte-resultat-difference",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/guides__choisir-plateforme-revision-dcg-dscg.html",
+      "destination": "/guides/choisir-plateforme-revision-dcg-dscg",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/outils.html",
+      "destination": "/outils",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/outils__calcul-moyenne-dcg.html",
+      "destination": "/outils/calcul-moyenne-dcg",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/outils__calcul-moyenne-dscg.html",
+      "destination": "/outils/calcul-moyenne-dscg",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/test-gratuit.html",
+      "destination": "/test-gratuit",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/exemple-gratuit.html",
+      "destination": "/exemple-gratuit",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/tarifs.html",
+      "destination": "/tarifs",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/fonctionnalites.html",
+      "destination": "/fonctionnalites",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/contact.html",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/avis.html",
+      "destination": "/avis",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/cgu.html",
+      "destination": "/cgu",
+      "permanent": true
+    },
+    {
+      "source": "/public-pages/confidentialite.html",
+      "destination": "/confidentialite",
+      "permanent": true
+    },
+    {
+      "source": "/test-gratuit",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/test-gratuit",
+      "permanent": true
+    },
+    {
+      "source": "/exemple-gratuit",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/exemple-gratuit",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/",
+      "permanent": true
+    },
+    {
+      "source": "/tarifs",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/tarifs",
+      "permanent": true
+    },
+    {
+      "source": "/fonctionnalites",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/fonctionnalites",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/contact",
+      "permanent": true
+    },
+    {
+      "source": "/avis",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/avis",
+      "permanent": true
+    },
+    {
+      "source": "/cgu",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/cgu",
+      "permanent": true
+    },
+    {
+      "source": "/confidentialite",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/confidentialite",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-1-fondamentaux-du-droit",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dcg-ue-1-fondamentaux-du-droit",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-2-droit-des-affaires",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dcg-ue-2-droit-des-affaires",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-3-droit-social",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dcg-ue-3-droit-social",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-4-droit-fiscal",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dcg-ue-4-droit-fiscal",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-5-economie-contemporaine",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dcg-ue-5-economie-contemporaine",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-6-finance-entreprise",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dcg-ue-6-finance-entreprise",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-7-management",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dcg-ue-7-management",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-8-systemes-information-gestion",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dcg-ue-8-systemes-information-gestion",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-9-comptabilite",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dcg-ue-9-comptabilite",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-10-comptabilite-approfondie",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dcg-ue-10-comptabilite-approfondie",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-11-controle-gestion",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dcg-ue-11-controle-gestion",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-12-anglais-des-affaires",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dcg-ue-12-anglais-des-affaires",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-13-communication-professionnelle",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dcg-ue-13-communication-professionnelle",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dscg-ue-1-gestion-juridique-fiscale-sociale",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dscg-ue-1-gestion-juridique-fiscale-sociale",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dscg-ue-2-finance",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dscg-ue-2-finance",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dscg-ue-3-controle-gestion-strategie",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dscg-ue-3-controle-gestion-strategie",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dscg-ue-4-comptabilite-audit",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dscg-ue-4-comptabilite-audit",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dscg-ue-5-management-systemes-information",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dscg-ue-5-management-systemes-information",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dscg-ue-6-anglais-des-affaires",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dscg-ue-6-anglais-des-affaires",
+      "permanent": true
+    },
+    {
+      "source": "/qcm-gratuits/dscg-ue-7-memoire-professionnel",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/qcm-gratuits/dscg-ue-7-memoire-professionnel",
+      "permanent": true
+    },
+    {
+      "source": "/annales/dscg-2025",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/annales/dscg-2025",
+      "permanent": true
+    },
+    {
+      "source": "/annales/dscg-2024",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/annales/dscg-2024",
+      "permanent": true
+    },
+    {
+      "source": "/annales/dscg-2023",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/annales/dscg-2023",
+      "permanent": true
+    },
+    {
+      "source": "/annales/dscg-2022",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/annales/dscg-2022",
+      "permanent": true
+    },
+    {
+      "source": "/annales/dscg-2021",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/annales/dscg-2021",
+      "permanent": true
+    },
+    {
+      "source": "/annales/dscg-2020",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/annales/dscg-2020",
+      "permanent": true
+    },
+    {
+      "source": "/annales/dcg-2026",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/annales/dcg-2026",
+      "permanent": true
+    },
+    {
+      "source": "/annales/dcg-2025",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/annales/dcg-2025",
+      "permanent": true
+    },
+    {
+      "source": "/annales/dcg-2024",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/annales/dcg-2024",
+      "permanent": true
+    },
+    {
+      "source": "/annales/dcg-2023",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/annales/dcg-2023",
+      "permanent": true
+    },
+    {
+      "source": "/annales/dcg-2022",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/annales/dcg-2022",
+      "permanent": true
+    },
+    {
+      "source": "/annales/dcg-2021",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/annales/dcg-2021",
+      "permanent": true
+    },
+    {
+      "source": "/annales/dcg-2020",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/annales/dcg-2020",
+      "permanent": true
+    },
+    {
+      "source": "/documents-examen",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/documents-examen",
+      "permanent": true
+    },
+    {
+      "source": "/fiches",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/fiches",
+      "permanent": true
+    },
+    {
+      "source": "/fiches/dcg-ue9-achats-reglements",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/fiches/dcg-ue9-achats-reglements",
+      "permanent": true
+    },
+    {
+      "source": "/fiches/dscg-ue2-valeur-entreprise-actions",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/fiches/dscg-ue2-valeur-entreprise-actions",
+      "permanent": true
+    },
+    {
+      "source": "/a-propos",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/a-propos",
+      "permanent": true
+    },
+    {
+      "source": "/outils/planning-revision",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/outils/planning-revision",
+      "permanent": true
+    },
+    {
+      "source": "/dcg",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dcg",
+      "permanent": true
+    },
+    {
+      "source": "/dscg",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dscg",
+      "permanent": true
+    },
+    {
+      "source": "/dcg/ue-1-fondamentaux-du-droit",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dcg/ue-1-fondamentaux-du-droit",
+      "permanent": true
+    },
+    {
+      "source": "/dcg/ue-2-droit-des-affaires",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dcg/ue-2-droit-des-affaires",
+      "permanent": true
+    },
+    {
+      "source": "/dcg/ue-3-droit-social",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dcg/ue-3-droit-social",
+      "permanent": true
+    },
+    {
+      "source": "/dcg/ue-4-droit-fiscal",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dcg/ue-4-droit-fiscal",
+      "permanent": true
+    },
+    {
+      "source": "/dcg/ue-5-economie-contemporaine",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dcg/ue-5-economie-contemporaine",
+      "permanent": true
+    },
+    {
+      "source": "/dcg/ue-6-finance-entreprise",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dcg/ue-6-finance-entreprise",
+      "permanent": true
+    },
+    {
+      "source": "/dcg/ue-7-management",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dcg/ue-7-management",
+      "permanent": true
+    },
+    {
+      "source": "/dcg/ue-8-systemes-information-gestion",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dcg/ue-8-systemes-information-gestion",
+      "permanent": true
+    },
+    {
+      "source": "/dcg/ue-9-comptabilite",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dcg/ue-9-comptabilite",
+      "permanent": true
+    },
+    {
+      "source": "/dcg/ue-10-comptabilite-approfondie",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dcg/ue-10-comptabilite-approfondie",
+      "permanent": true
+    },
+    {
+      "source": "/dcg/ue-11-controle-gestion",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dcg/ue-11-controle-gestion",
+      "permanent": true
+    },
+    {
+      "source": "/dcg/ue-12-anglais-des-affaires",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dcg/ue-12-anglais-des-affaires",
+      "permanent": true
+    },
+    {
+      "source": "/dcg/ue-13-communication-professionnelle",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dcg/ue-13-communication-professionnelle",
+      "permanent": true
+    },
+    {
+      "source": "/dscg/ue-1-gestion-juridique-fiscale-sociale",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dscg/ue-1-gestion-juridique-fiscale-sociale",
+      "permanent": true
+    },
+    {
+      "source": "/dscg/ue-2-finance",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dscg/ue-2-finance",
+      "permanent": true
+    },
+    {
+      "source": "/dscg/ue-3-controle-gestion-strategie",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dscg/ue-3-controle-gestion-strategie",
+      "permanent": true
+    },
+    {
+      "source": "/dscg/ue-4-comptabilite-audit",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dscg/ue-4-comptabilite-audit",
+      "permanent": true
+    },
+    {
+      "source": "/dscg/ue-5-management-systemes-information",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dscg/ue-5-management-systemes-information",
+      "permanent": true
+    },
+    {
+      "source": "/dscg/ue-6-anglais-des-affaires",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dscg/ue-6-anglais-des-affaires",
+      "permanent": true
+    },
+    {
+      "source": "/dscg/ue-7-memoire-professionnel",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/dscg/ue-7-memoire-professionnel",
+      "permanent": true
+    },
+    {
+      "source": "/ressources",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/ressources",
+      "permanent": true
+    },
+    {
+      "source": "/sources",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/sources",
+      "permanent": true
+    },
+    {
+      "source": "/annales",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/annales",
+      "permanent": true
+    },
+    {
+      "source": "/guides",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/guides",
+      "permanent": true
+    },
+    {
+      "source": "/guides/organiser-revisions-dcg-dscg",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/guides/organiser-revisions-dcg-dscg",
+      "permanent": true
+    },
+    {
+      "source": "/guides/utiliser-annales-dcg-dscg",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/guides/utiliser-annales-dcg-dscg",
+      "permanent": true
+    },
+    {
+      "source": "/guides/reviser-comptabilite-dcg-ue9-ue10",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/guides/reviser-comptabilite-dcg-ue9-ue10",
+      "permanent": true
+    },
+    {
+      "source": "/guides/reussir-dossier-juridique-fiscal",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/guides/reussir-dossier-juridique-fiscal",
+      "permanent": true
+    },
+    {
+      "source": "/guides/reviser-dscg-comptabilite-audit",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/guides/reviser-dscg-comptabilite-audit",
+      "permanent": true
+    },
+    {
+      "source": "/guides/flashcards-qcm-revisions-utiles",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/guides/flashcards-qcm-revisions-utiles",
+      "permanent": true
+    },
+    {
+      "source": "/guides/amortissement-lineaire-exercice-corrige",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/guides/amortissement-lineaire-exercice-corrige",
+      "permanent": true
+    },
+    {
+      "source": "/guides/valeur-actuelle-nette-van-exemple",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/guides/valeur-actuelle-nette-van-exemple",
+      "permanent": true
+    },
+    {
+      "source": "/guides/debit-credit-comptabilite-exemple",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/guides/debit-credit-comptabilite-exemple",
+      "permanent": true
+    },
+    {
+      "source": "/guides/bilan-compte-resultat-difference",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/guides/bilan-compte-resultat-difference",
+      "permanent": true
+    },
+    {
+      "source": "/guides/choisir-plateforme-revision-dcg-dscg",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/guides/choisir-plateforme-revision-dcg-dscg",
+      "permanent": true
+    },
+    {
+      "source": "/outils",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/outils",
+      "permanent": true
+    },
+    {
+      "source": "/outils/calcul-moyenne-dcg",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/outils/calcul-moyenne-dcg",
+      "permanent": true
+    },
+    {
+      "source": "/outils/calcul-moyenne-dscg",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/outils/calcul-moyenne-dscg",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap.xml",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/sitemap.xml",
+      "permanent": true
+    },
+    {
+      "source": "/robots.txt",
+      "has": [
+        {
+          "type": "host",
+          "value": "simdcg.vercel.app"
+        }
+      ],
+      "destination": "https://www.simdcg.com/robots.txt",
+      "permanent": true
     }
   ],
   "rewrites": [
+    {
+      "source": "/qcm-gratuits/dcg-ue-1-fondamentaux-du-droit",
+      "destination": "/public-pages/qcm-gratuits__dcg-ue-1-fondamentaux-du-droit.html"
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-2-droit-des-affaires",
+      "destination": "/public-pages/qcm-gratuits__dcg-ue-2-droit-des-affaires.html"
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-3-droit-social",
+      "destination": "/public-pages/qcm-gratuits__dcg-ue-3-droit-social.html"
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-4-droit-fiscal",
+      "destination": "/public-pages/qcm-gratuits__dcg-ue-4-droit-fiscal.html"
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-5-economie-contemporaine",
+      "destination": "/public-pages/qcm-gratuits__dcg-ue-5-economie-contemporaine.html"
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-6-finance-entreprise",
+      "destination": "/public-pages/qcm-gratuits__dcg-ue-6-finance-entreprise.html"
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-7-management",
+      "destination": "/public-pages/qcm-gratuits__dcg-ue-7-management.html"
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-8-systemes-information-gestion",
+      "destination": "/public-pages/qcm-gratuits__dcg-ue-8-systemes-information-gestion.html"
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-9-comptabilite",
+      "destination": "/public-pages/qcm-gratuits__dcg-ue-9-comptabilite.html"
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-10-comptabilite-approfondie",
+      "destination": "/public-pages/qcm-gratuits__dcg-ue-10-comptabilite-approfondie.html"
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-11-controle-gestion",
+      "destination": "/public-pages/qcm-gratuits__dcg-ue-11-controle-gestion.html"
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-12-anglais-des-affaires",
+      "destination": "/public-pages/qcm-gratuits__dcg-ue-12-anglais-des-affaires.html"
+    },
+    {
+      "source": "/qcm-gratuits/dcg-ue-13-communication-professionnelle",
+      "destination": "/public-pages/qcm-gratuits__dcg-ue-13-communication-professionnelle.html"
+    },
+    {
+      "source": "/qcm-gratuits/dscg-ue-1-gestion-juridique-fiscale-sociale",
+      "destination": "/public-pages/qcm-gratuits__dscg-ue-1-gestion-juridique-fiscale-sociale.html"
+    },
+    {
+      "source": "/qcm-gratuits/dscg-ue-2-finance",
+      "destination": "/public-pages/qcm-gratuits__dscg-ue-2-finance.html"
+    },
+    {
+      "source": "/qcm-gratuits/dscg-ue-3-controle-gestion-strategie",
+      "destination": "/public-pages/qcm-gratuits__dscg-ue-3-controle-gestion-strategie.html"
+    },
+    {
+      "source": "/qcm-gratuits/dscg-ue-4-comptabilite-audit",
+      "destination": "/public-pages/qcm-gratuits__dscg-ue-4-comptabilite-audit.html"
+    },
+    {
+      "source": "/qcm-gratuits/dscg-ue-5-management-systemes-information",
+      "destination": "/public-pages/qcm-gratuits__dscg-ue-5-management-systemes-information.html"
+    },
+    {
+      "source": "/qcm-gratuits/dscg-ue-6-anglais-des-affaires",
+      "destination": "/public-pages/qcm-gratuits__dscg-ue-6-anglais-des-affaires.html"
+    },
+    {
+      "source": "/qcm-gratuits/dscg-ue-7-memoire-professionnel",
+      "destination": "/public-pages/qcm-gratuits__dscg-ue-7-memoire-professionnel.html"
+    },
     {
       "source": "/annales/dscg-2025",
       "destination": "/public-pages/annales__dscg-2025.html"
@@ -433,5 +1943,6 @@
         }
       ]
     }
-  ]
+  ],
+  "trailingSlash": false
 }

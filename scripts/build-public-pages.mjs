@@ -31,7 +31,7 @@ function htmlFor(path,body=''){
  for(const [key,value]of Object.entries({'og:title':meta.title,'og:description':meta.description,'og:url':meta.canonical,'og:type':meta.page?.kind==='guide'?'article':'website','og:image':meta.image,'twitter:image':meta.image,'og:image:alt':meta.title,'twitter:image:alt':meta.title,'twitter:title':meta.title,'twitter:description':meta.description})){
   const attr=key.startsWith('og:')?'property':'name';html=html.replace(new RegExp(`<meta ${attr}="${key}"[^>]*>`),`<meta ${attr}="${key}" content="${escape(value)}">`);
  }
- html=html.replace('</head>',extraStyles+(path==='/test-gratuit'?trialStyles:'')+'\n'+structuredData(path).map(data=>`<script type="application/ld+json">${JSON.stringify(data).replace(/</g,'\\u003c')}</script>`).join('\n')+'\n</head>');
+ html=html.replace('</head>',extraStyles+(path==='/test-gratuit'||meta.page?.kind==='trial'?trialStyles:'')+'\n'+structuredData(path).map(data=>`<script type="application/ld+json">${JSON.stringify(data).replace(/</g,'\\u003c')}</script>`).join('\n')+'\n</head>');
  return html.replace('<div id="root"></div>',`<div id="root">${body}</div>`);
 }
 const server=await createServer({root:process.cwd(),mode:'production',server:{middlewareMode:true},optimizeDeps:{noDiscovery:true,include:[]},appType:'custom'});
@@ -44,7 +44,7 @@ try{
  const {Marketing,OfferPage,PublicInfo,StudentReviews}=await server.ssrLoadModule('/src/modern.jsx');
  const {LegalScreen}=await server.ssrLoadModule('/src/App.jsx');
  const noop=()=>{};await mkdir(resolve(dist,'public-pages'),{recursive:true});
- for(const page of PUBLIC_PAGES){const file=page.path.slice(1).replaceAll('/','__')+'.html';await writeFile(resolve(dist,'public-pages',file),htmlFor(page.path,renderToString(React.createElement(PublicStudySite,{page}))));rewrites.push({source:page.path,destination:'/public-pages/'+file});}
+ for(const page of PUBLIC_PAGES){const file=page.path.slice(1).replaceAll('/','__')+'.html';const Component=page.kind==='trial'?TrialPage:PublicStudySite;await writeFile(resolve(dist,'public-pages',file),htmlFor(page.path,renderToString(React.createElement(Component,{page}))));rewrites.push({source:page.path,destination:'/public-pages/'+file});}
  for(const path of Object.keys(CORE_PUBLIC_META)){
   let element;
   if(path==='/test-gratuit')element=React.createElement(TrialPage);
@@ -62,10 +62,18 @@ await writeFile(resolve(dist,'404.html'),htmlFor('/page-introuvable','<main styl
 const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${INDEXABLE_PATHS.map(path=>`\n<url><loc>${PUBLIC_ORIGIN}${path}</loc></url>`).join('')}\n</urlset>\n`;
 await writeFile(resolve(dist,'sitemap.xml'),sitemap);
 // Crawlers may read the noindex login shells. Protected API content remains inaccessible.
-await writeFile(resolve(dist,'robots.txt'),`User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /public-pages/\nDisallow: /app.html\nDisallow: /404.html\nDisallow: /*?design=\n\nSitemap: ${PUBLIC_ORIGIN}/sitemap.xml\n`);
+await writeFile(resolve(dist,'robots.txt'),`User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /app.html\nDisallow: /404.html\nDisallow: /*?design=\n\nSitemap: ${PUBLIC_ORIGIN}/sitemap.xml\n`);
 // Known app paths remain usable; unrecognised paths fall through to Vercel's real 404.
 const config=JSON.parse(await readFile(resolve(process.cwd(),'vercel.json'),'utf8'));
 config.rewrites=[...rewrites,...APP_PATHS.map(source=>({source,destination:'/app.html'}))];
+// Only public documents on the old alias move host. API/webhook and signed-in routes are untouched.
+config.trailingSlash=false;
+config.redirects=[
+ {source:'/decouverte',destination:'/tarifs',permanent:true},
+ {source:'/index.html',destination:'/',permanent:true},
+ ...rewrites.map(route=>({source:route.destination,destination:route.source,permanent:true})),
+ ...[...INDEXABLE_PATHS,'/sitemap.xml','/robots.txt'].map(source=>({source,has:[{type:'host',value:'simdcg.vercel.app'}],destination:PUBLIC_ORIGIN+source,permanent:true})),
+];
 await writeFile(resolve(process.cwd(),'vercel.json'),JSON.stringify(config,null,2)+'\n');
 await writeFile(resolve(dist,'public-page-manifest.json'),JSON.stringify({origin:PUBLIC_ORIGIN,pages:INDEXABLE_PATHS.map(path=>({path,...seoForPath(path),page:undefined})),rewrites},null,2));
 console.log(JSON.stringify({publicPages:INDEXABLE_PATHS.length,subjects:20,guides:PUBLIC_PAGES.filter(p=>p.kind==='guide').length,initialHtml:true,privateShellNoindex:true,sitemap:true}));

@@ -6,6 +6,7 @@ import {QUIZ_V2} from '../lib/quiz-v2-data.mjs';
 import {quizResult} from '../lib/first-session.mjs';
 import {publicShareUrl} from '../lib/public-sharing.mjs';
 import {publicAnalyticsEvent} from '../lib/public-analytics.mjs';
+import {PUBLIC_TRIAL_PAGES,publicTrialPath} from '../lib/public-study-pages.mjs';
 import {INDEXABLE_PATHS,seoForPath,structuredData} from '../lib/public-seo.mjs';
 const data=JSON.parse(await readFile(new URL('../src/trial-samples.json',import.meta.url),'utf8'));
 test('public trials cover every UE with a bounded fixed sample, not a public full bank',()=>{
@@ -32,11 +33,42 @@ test('trial is server-rendered, indexable and connected to the homepage and all 
  const seo=seoForPath('/test-gratuit');assert.equal(seo.index,true);assert.ok(INDEXABLE_PATHS.includes('/test-gratuit'));assert.ok(!structuredData('/test-gratuit').some(s=>s['@type']==='Quiz'));
  const html=await readFile(new URL('../dist/public-pages/test-gratuit.html',import.meta.url),'utf8');assert.ok(html.includes('Testez votre prochaine UE.'));assert.ok(html.includes('index, follow'));assert.ok(html.includes(seo.image));assert.ok(html.includes('trial-'));assert.ok(html.includes('href="/tarifs?ue=UE1"'));await access(new URL('../public/social/test-gratuit.png',import.meta.url));
  const home=await readFile(new URL('../dist/index.html',import.meta.url),'utf8');assert.ok(home.includes('href="/test-gratuit"'));assert.ok(home.includes('Tester mon UE gratuitement'));
- for(const s of data.subjects){const page=await readFile(new URL('../dist/public-pages/'+s.path.slice(1).replaceAll('/','__')+'.html',import.meta.url),'utf8');assert.ok(page.includes('href="/test-gratuit?ue='+s.id+'"'),s.id);}
+ for(const s of data.subjects){const page=await readFile(new URL('../dist/public-pages/'+s.path.slice(1).replaceAll('/','__')+'.html',import.meta.url),'utf8');assert.ok(page.includes('href="'+publicTrialPath(s.id)+'"'),s.id);}
 });
 test('trial entry does not import authentication or the private bank; answers have no persistence code',async()=>{
  const manifest=JSON.parse(await readFile(new URL('../dist/.vite/manifest.json',import.meta.url),'utf8')),entry=Object.keys(manifest).find(k=>manifest[k].name==='TrialPage');assert.ok(entry);
  const seen=new Set(),visit=k=>{if(seen.has(k))return;seen.add(k);for(const p of manifest[k]?.imports||[])visit(p);};visit(entry);
  for(const k of seen)assert.ok(!/firebase|App\.jsx|study-content|quiz-v2-data|DesignPreview/.test(k),k);
  const source=await readFile(new URL('../src/TrialPage.jsx',import.meta.url),'utf8');assert.ok(!/trainingRequest|loadStudy|localStorage|sessionStorage|fetch\s*\(/.test(source));
+});
+
+
+test('each subject trial exposes its real fixed questions, corrections and canonical entry in initial HTML',async()=>{
+ const escape=text=>String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#x27;'}[c]));
+ assert.equal(PUBLIC_TRIAL_PAGES.length,20);
+ for(const page of PUBLIC_TRIAL_PAGES){
+  const sample=data.subjects.find(s=>s.id===page.id),seo=seoForPath(page.path);
+  const html=await readFile(new URL('../dist/public-pages/'+page.path.slice(1).replaceAll('/','__')+'.html',import.meta.url),'utf8');
+  assert.equal(seo.index,true);assert.equal(seo.canonical,'https://www.simdcg.com'+page.path);
+  const heading=html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1].replace(/<!--.*?-->/g,'').replace(/<[^>]+>/g,'');
+  assert.ok(heading?.startsWith('QCM '+sample.level+' '+sample.id.replace('DSCG','UE')+' gratuits'));
+  assert.ok(html.includes(escape(sample.chapterTitle)));
+  for(const q of sample.questions){assert.ok(html.includes(escape(q.q)),q.id);assert.ok(html.includes(escape(q.options[q.answer])),q.id);assert.ok(html.includes(escape(q.expl)),q.id);}
+  for(const card of sample.cards){assert.ok(html.includes(escape(card.q)));assert.ok(html.includes(escape(card.a)));}
+  assert.ok(html.includes('href="'+sample.path+'"'));assert.ok(html.includes('href="/tarifs?ue='+sample.id+'"'));
+  for(const other of PUBLIC_TRIAL_PAGES)assert.ok(html.includes('href="'+other.path+'"'));
+ }
+});
+
+test('duplicate document URLs consolidate onto public routes without redirecting payment APIs or private sessions',async()=>{
+ const config=JSON.parse(await readFile(new URL('../vercel.json',import.meta.url),'utf8'));
+ assert.equal(config.trailingSlash,false);
+ assert.ok(config.redirects.some(r=>r.source==='/index.html'&&r.destination==='/'&&r.permanent));
+ for(const path of INDEXABLE_PATHS){
+  const alias=config.redirects.find(r=>r.source===path&&r.has?.some(c=>c.type==='host'&&c.value==='simdcg.vercel.app'));
+  assert.equal(alias?.destination,'https://www.simdcg.com'+path);assert.equal(alias.permanent,true);
+ }
+ for(const route of config.rewrites.filter(r=>r.destination.startsWith('/public-pages/'))){assert.ok(config.redirects.some(r=>r.source===route.destination&&r.destination===route.source&&r.permanent));}
+ assert.ok(config.redirects.every(r=>!r.source.startsWith('/api')&&!['/compte','/interface','/inscription','/connexion'].includes(r.source)));
+ const robots=await readFile(new URL('../dist/robots.txt',import.meta.url),'utf8');assert.ok(!robots.includes('Disallow: /public-pages/'));assert.ok(robots.includes('Disallow: /api/'));
 });
