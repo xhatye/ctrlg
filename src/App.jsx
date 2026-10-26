@@ -112,7 +112,7 @@ async function callClaude(system, messages, maxTokens = 1200, user = null, modul
     });
     if (!r.ok) { const error = await r.json().catch(() => ({})); throw new Error(error.error || `API ${r.status}`); }
     const d = await r.json();
-    return {text:d.content?.[0]?.text || '',dailyRemaining:d.dailyRemaining,monthlyRemaining:d.monthlyRemaining,references:d.references || []};
+    return {...d,text:d.content?.[0]?.text || '',references:d.references || []};
   } catch (e) {
     if (e.name === "AbortError") console.error("callClaude timeout after 30s");
     else console.error("callClaude error:", e);

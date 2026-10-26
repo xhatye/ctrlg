@@ -6,6 +6,8 @@ import {
   periods,
   GLOBAL_BUDGET,
   USER_BUDGET,
+  AI_MODEL,
+  tutorUsage,
 } from "../lib/ai-budget.mjs";
 const data = {
   messages: [{ role: "user", content: "Expliquez un bilan." }],
@@ -40,6 +42,72 @@ test("usage periods follow Paris midnight and calendar month boundaries", () => 
     day: "2026-11-01",
     month: "2026-11",
   });
+});
+
+test('GPT-OSS 120B reserves at current input/output prices and hard-caps each account at 36 US cents',()=>{
+  assert.equal(AI_MODEL,'openai/gpt-oss-120b');
+  assert.equal(USER_BUDGET,360000);
+  const prompt={messages:[{role:'system',content:'é'},{role:'user',content:'abc'}],max_tokens:1000};
+  assert.equal(reserveCost(prompt),Math.ceil(((5+4096)*15+1000*60)/100));
+});
+
+test('concurrent requests cannot cross either last monetary slot',async()=>{
+  const cost=reserveCost(data);
+  for(const override of [
+    {'aiUsage/u_month_2026-10':{reservedMicros:USER_BUDGET-cost}},
+    {'aiUsage/global_2026-10':{reservedMicros:GLOBAL_BUDGET-cost}},
+  ]){
+    const db=database(override);
+    const results=await Promise.allSettled([reserveTutor(db,'u',data,now),reserveTutor(db,'u',data,now)]);
+    assert.equal(results.filter(r=>r.status==='fulfilled').length,1);
+    assert.ok(db.store.get('aiUsage/u_month_2026-10').reservedMicros<=USER_BUDGET);
+    assert.ok(db.store.get('aiUsage/global_2026-10').reservedMicros<=GLOBAL_BUDGET);
+  }
+});
+
+test('a demand costing one micro-dollar too much is blocked without writes',async()=>{
+  const db=database({'aiUsage/u_month_2026-10':{reservedMicros:USER_BUDGET-reserveCost(data)+1}});
+  const before=JSON.stringify([...db.store]);
+  await assert.rejects(reserveTutor(db,'u',data,now),{status:429});
+  assert.equal(JSON.stringify([...db.store]),before);
+});
+
+test('long mixed tutor/case requests, including failed generations, stop below the monetary ceiling',async()=>{
+  const db=database();let accepted=0,lastTotal=0;
+  const long={messages:[{role:'system',content:'é'.repeat(5000)},{role:'user',content:'Un exemple concret ?'}],max_tokens:2048};
+  for(let i=0;i<300;i++){
+    // Provider outcomes deliberately do not refund: even ambiguous timeouts consume reservation.
+    try{await reserveTutor(db,'u',{...long,...(i%5===0?{purpose:'case-review'}:{})},new Date(now.getTime()+i*86400000/15));accepted++;}
+    catch(e){assert.equal(e.status,429);break;}
+    lastTotal=db.store.get('aiUsage/u_month_2026-10')?.reservedMicros||0;
+    assert.ok(lastTotal<=USER_BUDGET);
+  }
+  assert.ok(accepted>0&&accepted<300);
+  assert.ok(lastTotal<=USER_BUDGET);
+});
+
+test('invalid budgets and completion limits fail closed',async()=>{
+  for(const reservedMicros of [-1,NaN,Infinity,'0',.5]){
+    const db=database({'aiUsage/u_month_2026-10':{reservedMicros}});
+    await assert.rejects(reserveTutor(db,'u',data,now),{status:503});
+    assert.equal(db.store.size,2);
+  }
+  for(const max_tokens of [-1,Infinity,NaN,2049,1600.5])assert.throws(()=>reserveCost({...data,max_tokens}),{status:400});
+  assert.throws(()=>reserveCost({...data,messages:[{role:'user',content:'a'.repeat(80001)}]}),{status:400});
+});
+
+test('usage reads preserve existing monthly spending, historical metadata and learner profile',async()=>{
+  const profile={isPro:true,history:[{score:8}],mastery:{UE1:42}};
+  const db=database({'users/u':profile,'aiUsage/u_month_2026-10':{count:12,reservedMicros:180000,note:'historical'}});
+  const before=JSON.stringify([...db.store]);const usage=await tutorUsage(db,'u',now);
+  assert.equal(usage.budgetPercentRemaining,50);assert.equal(usage.monthlyRemaining,288);
+  assert.equal(usage.budgetCurrency,'USD');assert.equal(JSON.stringify([...db.store]),before);
+  await reserveTutor(db,'u',data,now);
+  assert.equal(db.store.get('aiUsage/u_month_2026-10').note,'historical');
+  assert.deepEqual(db.store.get('users/u'),profile);
+  const exhausted=database({'aiUsage/u_month_2026-10':{reservedMicros:1500000}});
+  assert.equal((await tutorUsage(exhausted,'u',now)).canRequest,false);
+  await assert.rejects(reserveTutor(exhausted,'u',data,now),{status:429});
 });
 test("reservation accounts conservatively for multibyte prompts and all completion tokens", () => {
   assert.ok(

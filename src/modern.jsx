@@ -913,7 +913,7 @@ export function AccountPage({ user, onNav, onCheckout, request }) {
   );
 }
 export function TutorPage({ ues, call, user, onNav }) {
-  const [ue, setUE] = useState(ues[0]),
+  const [ue, setUE] = useState(()=>ues.find(x=>x.id===new URLSearchParams(location.search).get('ue'))||ues[0]),
     [input, setInput] = useState(""),
     [messages, setMessages] = useState([]),
     [busy, setBusy] = useState(false),
@@ -929,20 +929,21 @@ export function TutorPage({ ues, call, user, onNav }) {
       setAvailable(true);
       return;
     }
-    fetch("/api/tutor-status")
-      .then((r) => r.json())
+    Promise.resolve(auth.currentUser?.getIdToken()).then(token=>fetch("/api/tutor-status",{headers:token?{Authorization:`Bearer ${token}`}:{},cache:'no-store'}))
+      .then(async r=>{const d=await r.json();if(!r.ok)throw new Error(d.error||'Le tuteur est indisponible.');return d;})
       .then((d) => {
-        if (alive) setAvailable(d.available === true);
+        if (alive) {setAvailable(d.available === true);if(d.usage)setRemaining(d.usage);}
       })
-      .catch(() => {
-        if (alive) setAvailable(false);
+      .catch(e => {
+        if (alive) {setAvailable(false);setError(e.message);}
       });
     return () => {
       alive = false;
     };
-  }, []);
+  }, [user?.uid]);
+  const exhausted=remaining?.canRequest===false;
   const send = async (text) => {
-    if (!text.trim() || busy || available !== true) return;
+    if (!text.trim() || busy || available !== true || exhausted) return;
     const next = [...messages, { role: "user", content: text }];
     setMessages(next);
     setInput("");
@@ -952,7 +953,7 @@ export function TutorPage({ ues, call, user, onNav }) {
       const reply = await call(
         `Vous êtes un tuteur pour ${ue.level}, ${ue.label}. Répondez en français, avec des exemples concrets. Signalez les incertitudes et les règles qui doivent être vérifiées dans un cours à jour. Ne prétendez pas fournir une correction officielle.`,
         next.slice(-10),
-        2048,
+        1600,
         user,
         ue.id,
       );
@@ -969,6 +970,11 @@ export function TutorPage({ ues, call, user, onNav }) {
       setError(e.message);
       setMessages(messages);
       setInput(text);
+      // An upstream timeout can still have consumed its server-side reservation.
+      try {
+        const token=await auth.currentUser?.getIdToken();
+        if(token){const r=await fetch('/api/tutor-status',{headers:{Authorization:`Bearer ${token}`},cache:'no-store'});if(r.ok){const d=await r.json();if(d.usage)setRemaining(d.usage);}}
+      } catch { /* The server remains the authority if this refresh is offline. */ }
     } finally {
       setBusy(false);
     }
@@ -977,18 +983,18 @@ export function TutorPage({ ues, call, user, onNav }) {
     <div className="page tutor-page">
       <Title
         eyebrow="VOTRE TUTEUR IA"
-        title="Le déclic commence par une question."
-        desc="Une explication, un exemple, un raisonnement pas à pas."
+        title="Comprendre, avec un coup de pouce."
+        desc="Choisissez une matière. Le tuteur s’appuie sur les supports SIMDCG pour expliquer une notion et vous aider à raisonner."
       />
       <p className="study-notice">
-        Complément optionnel · 20 demandes par jour · 300 par mois · budget de
-        génération limité. Les fiches et exercices fonctionnent sans ce tuteur.
+        Inclus dans votre accès · GPT-OSS 120B · Jusqu’à 20 demandes par jour et 300 par mois, dans la limite du budget disponible. Les demandes longues peuvent réduire ce nombre. Le tuteur et les retours IA sur les cas partagent la même enveloppe.
       </p>
       {remaining && (
-        <p role="status">
-          {remaining.dailyRemaining} demandes restantes aujourd’hui ·{" "}
-          {remaining.monthlyRemaining} ce mois-ci.
-        </p>
+        <div className="panel tutor-allowance" role="status">
+          <div><strong>Votre enveloppe de révision</strong><span>Jusqu’à {remaining.dailyRemaining} demandes aujourd’hui · {remaining.monthlyRemaining} ce mois-ci</span></div>
+          {Number.isFinite(remaining.budgetPercentRemaining)&&<><progress max="100" value={remaining.budgetPercentRemaining} aria-label="Enveloppe IA restante"/><small>{remaining.budgetPercentRemaining} % de l’enveloppe disponible · remise à disposition le mois prochain</small></>}
+          {exhausted&&<p>Votre limite de révision IA est atteinte ou le tuteur est momentanément en pause. Vos cours, QCM, cartes et corrigés restent accessibles.</p>}
+        </div>
       )}
       {available !== true && (
         <div className="panel" role="status">
@@ -1013,6 +1019,7 @@ export function TutorPage({ ues, call, user, onNav }) {
             onChange={(e) => {
               setUE(ues.find((x) => x.id === e.target.value));
               setMessages([]);
+              setError('');setInput('');
             }}
           >
             {ues.map((x) => (
@@ -1025,7 +1032,7 @@ export function TutorPage({ ues, call, user, onNav }) {
         <button
           className="text-button"
           disabled={busy}
-          onClick={() => setMessages([])}
+          onClick={() => {setMessages([]);setError('');setInput('');}}
         >
           Nouvelle discussion
         </button>
@@ -1036,17 +1043,17 @@ export function TutorPage({ ues, call, user, onNav }) {
             <span className="icon-tile large gold">
               <Icon name="spark" size={32} />
             </span>
-            <h2>Quelle notion vous résiste ?</h2>
-            <p>Précisez le contexte pour obtenir une réponse plus utile.</p>
+            <h2>Qu’est-ce qui vous bloque ?</h2>
+            <p>Indiquez la notion ou le chapitre, puis choisissez le type d’aide dont vous avez besoin.</p>
             <div className="prompt-grid">
               {[
-                "Expliquez-moi une notion essentielle de cette matière.",
-                "Donnez-moi un exemple concret avec des chiffres.",
-                "Posez-moi une question pour vérifier ma compréhension.",
+                "Aidez-moi à comprendre une notion : demandez-moi laquelle avant de commencer.",
+                "Je bloque sur un exercice : demandez-moi l’énoncé et mon raisonnement, puis donnez-moi un indice.",
+                "Interrogez-moi sur une notion : demandez-moi le chapitre, puis posez une question à la fois.",
               ].map((x) => (
                 <button
                   key={x}
-                  disabled={busy || available !== true}
+                  disabled={busy || available !== true || exhausted}
                   onClick={() => send(x)}
                 >
                   {x}
@@ -1085,12 +1092,12 @@ export function TutorPage({ ues, call, user, onNav }) {
             aria-label="Votre question"
             value={input}
             maxLength={4000}
-            disabled={busy || available !== true}
+            disabled={busy || available !== true || exhausted}
             placeholder={`Votre question en ${ue.short.toLowerCase()}…`}
             onChange={(e) => setInput(e.target.value)}
           />
           <Button
-            disabled={busy || !input.trim() || available !== true}
+            disabled={busy || !input.trim() || available !== true || exhausted}
             type="submit"
           >
             Envoyer
@@ -1099,7 +1106,7 @@ export function TutorPage({ ues, call, user, onNav }) {
         <p className="helper">
           L’IA peut se tromper. Vérifiez les règles juridiques et fiscales avec
           vos cours à jour. L’historique de cette discussion reste dans la
-          session ouverte.
+          session ouverte. Votre question et les extraits utiles sont transmis à Groq pour préparer la réponse.
         </p>
       </section>
     </div>
