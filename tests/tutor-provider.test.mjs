@@ -36,3 +36,10 @@ test('invalid request and missing credentials never make a provider call; networ
   assert.equal(calls,0);
   await assert.rejects(requestTutor(data,options),/network/);assert.equal(calls,1);
 });
+test('grounding accepts equivalent French number formats but still rejects invented amounts and source numbers',()=>{
+ const evidence='[1] La machine coûte 12 000 euros et dure quatre ans. Son taux est de 5,50 %.';
+ assert.equal(validateTutorReply('Le coût est de 12000 euros, sur 4 ans, au taux de 5.5 % [1].',evidence).includes('12000'),true);
+ assert.doesNotThrow(()=>validateTutorReply('1. Repérez la base.\n2. Choisissez la durée.\n3. Vérifiez votre conclusion.',evidence));
+ assert.throws(()=>validateTutorReply('L’annuité est de 3000 euros.',evidence),{status:503});
+ assert.throws(()=>validateTutorReply('Voir [2].',evidence),{status:503});
+});

@@ -47,7 +47,7 @@ export default async function handler(req, res) {
     const result = await response.json();
     const rawText = result.choices?.[0]?.message?.content;
     // The conversation uses escaped plain text; remove Markdown decoration.
-    const text = typeof rawText==='string' ? rawText.replace(/\*\*([^*\n]+)\*\*/g,'$1').replace(/^\s*[*-]\s+/gm,'• ') : rawText;
+    let text = typeof rawText==='string' ? rawText.replace(/\*\*([^*\n]+)\*\*/g,'$1').replace(/^\s*[*-]\s+/gm,'• ') : rawText;
     if (!text || result.choices?.[0]?.finish_reason === 'length')
       throw Object.assign(
         new Error(
@@ -55,7 +55,9 @@ export default async function handler(req, res) {
         ),
         { status: 503 },
       );
-    validateTutorReply(text,retrieved.context+'\n'+lastQuestion);
+    let helpSource='ai';
+    try{validateTutorReply(text,retrieved.context+'\n'+lastQuestion);}
+    catch(error){if(help?.purpose!=='case-hint')throw error;text=help.fallback;helpSource='support';}
     return res
       .status(200)
       .json({
@@ -63,6 +65,7 @@ export default async function handler(req, res) {
         role: "assistant",
         ...remaining,
         references:retrieved.references,
+        ...(help?{helpSource}:{}),
       });
   } catch (error) {
     if (error instanceof SyntaxError)
