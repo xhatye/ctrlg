@@ -60,7 +60,7 @@ try{
 }finally{await server.close();}
 await writeFile(resolve(dist,'app.html'),htmlFor('/interface'));
 await writeFile(resolve(dist,'404.html'),htmlFor('/page-introuvable','<main style="max-width:700px;margin:15vh auto;padding:24px"><h1>Cette page est introuvable.</h1><p>Retrouvez les révisions DCG et DSCG sur SIMDCG.</p><p><a href="/">Accueil</a> · <a href="/dcg">DCG</a> · <a href="/dscg">DSCG</a></p></main>').replace(/<script type="module"[^>]*><\/script>/g,''));
-const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${INDEXABLE_PATHS.map(path=>`\n<url><loc>${PUBLIC_ORIGIN}${path}</loc></url>`).join('')}\n</urlset>\n`;
+const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${INDEXABLE_PATHS.map(path=>`\n<url><loc>${PUBLIC_ORIGIN}${path}</loc>${seoForPath(path).page?.updated?`<lastmod>${seoForPath(path).page.updated}</lastmod>`:''}</url>`).join('')}\n</urlset>\n`;
 await writeFile(resolve(dist,'sitemap.xml'),sitemap);
 // Crawlers may read the noindex login shells. Protected API content remains inaccessible.
 await writeFile(resolve(dist,'robots.txt'),`User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /app.html\nDisallow: /404.html\nDisallow: /*?design=\n\nSitemap: ${PUBLIC_ORIGIN}/sitemap.xml\n`);

@@ -135,7 +135,7 @@ function PublicFooter({ onNav }) {
     <footer className="public-footer container">
       <Brand onClick={() => onNav("landing")} />
       <div>
-        <a href="/sources">Sources officielles</a><a href="/annales">Annales</a><a href="/guides">Guides de révision</a>
+        <a href="/dcg">Révision DCG</a><a href="/dscg">Révision DSCG</a><a href="/sources">Sources officielles</a><a href="/annales">Annales</a><a href="/guides">Guides de révision</a>
         {[
           ["resources", "Ressources"],
           ["support", "Contact"],
